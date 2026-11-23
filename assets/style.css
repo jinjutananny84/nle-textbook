@@ -245,3 +245,11 @@ mark.user-hl.c-y{background:var(--u-y)} mark.user-hl.c-g{background:var(--u-g)} 
 .hl-pop button.sw{width:34px;height:34px;padding:0;border-radius:999px;border:2px solid var(--line)}
 .hl-pop .sw.c-y{background:var(--u-y)} .hl-pop .sw.c-g{background:var(--u-g)} .hl-pop .sw.c-p{background:var(--u-p)} .hl-pop .sw.c-r{background:var(--u-r)}
 .jump #undoBtn{color:var(--accent);font-weight:700;font-size:20px}.jump #undoBtn[hidden]{display:none}
+/* ไฮไลต์บางลง ให้สูงเกือบเท่าตัวอักษร */
+.content b{--c:var(--hl-key)}
+mark{--c:var(--hl-key)}
+mark.user-hl.c-y{--c:var(--u-y)} mark.user-hl.c-g{--c:var(--u-g)} mark.user-hl.c-p{--c:var(--u-p)} mark.user-hl.c-r{--c:var(--u-r)}
+.content b,mark,mark.user-hl,mark.user-hl.c-y,mark.user-hl.c-g,mark.user-hl.c-p,mark.user-hl.c-r{background:linear-gradient(transparent 22%,var(--c) 22%,var(--c) 84%,transparent 84%);padding:0 2px;border-radius:0}
+.no-hl .content b{background:none}
+.content .card b{background:none}
+.hl-pop[hidden]{display:none}

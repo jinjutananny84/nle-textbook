@@ -273,8 +273,8 @@
       const sel = getSelection();
       if (!curSec || !document.contains(curSec.art) || !sel.rangeCount || sel.isCollapsed) { if (pop.dataset.mode !== 'del') pop.hidden = true; return; }
       const r = sel.getRangeAt(0);
-      if (!curSec.art.contains(r.commonAncestorContainer)) return;
-      const t = r.toString(); if (t.trim().length < 2) return;
+      if (!curSec.art.contains(r.commonAncestorContainer)) { pop.hidden = true; return; }
+      const t = r.toString(); if (t.trim().length < 2) { pop.hidden = true; return; }
       pop.dataset.mode = 'add';
       showPop(r.getBoundingClientRect(), 'colors', c => {
         const pre = document.createRange(); pre.setStart(curSec.art, 0); pre.setEnd(r.startContainer, r.startOffset);
@@ -292,7 +292,9 @@
       const { k } = curSec; const [item] = S.hl[k].splice(idx, 1); undoStack.push({ type: 'del', k, item, idx }); if (!S.hl[k].length) delete S.hl[k]; save(); pop.dataset.mode = ''; rerender();
     });
   });
-  window.addEventListener('scroll', () => { if (pop.dataset.mode === 'del') { pop.hidden = true; pop.dataset.mode = ''; } }, { passive: true });
+  const hidePop = () => { if (!pop.hidden) { pop.hidden = true; pop.dataset.mode = ''; } };
+  window.addEventListener('scroll', hidePop, { passive: true });
+  document.addEventListener('pointerdown', e => { if (!pop.contains(e.target) && !e.target.closest('mark.user-hl')) hidePop(); });
 
   /* ---------- views ---------- */
   async function vHome() {
