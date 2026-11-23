@@ -234,15 +234,17 @@
   });
 
   /* ---------- ไฮไลต์ของผู้ใช้ ---------- */
-  let curSec = null;
+  let curSec = null; const undoStack = [];
+  function syncUndo() { const b = document.getElementById('undoBtn'); if (b) b.hidden = !undoStack.some(u => curSec && u.k === curSec.k); }
+  function rerender() { const y = scrollY; return route().then(() => scrollTo(0, y)); }
   function textNodes(root) { const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); const a = []; let n; while ((n = w.nextNode())) a.push(n); return a; }
-  function wrapRange(root, start, end, idx) {
+  function wrapRange(root, start, end, idx, c) {
     let pos = 0;
     for (const n of textNodes(root)) {
       const len = n.nodeValue.length, s = Math.max(start, pos), e = Math.min(end, pos + len);
       if (s < e && !n.parentNode.closest('svg')) {
         const r = document.createRange(); r.setStart(n, s - pos); r.setEnd(n, e - pos);
-        const m = document.createElement('mark'); m.className = 'user-hl'; m.dataset.hl = idx; r.surroundContents(m);
+        const m = document.createElement('mark'); m.className = 'user-hl c-' + (c || 'g'); m.dataset.hl = idx; r.surroundContents(m);
       }
       pos += len;
     }
@@ -251,16 +253,18 @@
     const full = art.textContent;
     (S.hl[k] || []).forEach((h, i) => {
       let s = full.substr(h.s, h.t.length) === h.t ? h.s : full.indexOf(h.t);
-      if (s >= 0) wrapRange(art, s, s + h.t.length, i);
+      if (s >= 0) wrapRange(art, s, s + h.t.length, i, h.c);
     });
   }
   const pop = document.createElement('div'); pop.className = 'hl-pop'; pop.hidden = true; document.body.appendChild(pop);
   pop.addEventListener('mousedown', e => e.preventDefault());
   function showPop(rect, label, fn) {
-    pop.innerHTML = `<button>${label}</button>`; pop.hidden = false;
+    if (label === 'colors') pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="สี"></button>`).join('');
+    else pop.innerHTML = `<button>${label}</button>`;
+    pop.hidden = false;
     const top = Math.min(rect.bottom + 8, innerHeight - 50), left = Math.max(8, Math.min(rect.left + rect.width / 2 - 60, innerWidth - 130));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
-    pop.firstChild.onclick = () => { fn(); pop.hidden = true; };
+    pop.querySelectorAll('button').forEach(b => b.onclick = () => { fn(b.dataset.c); pop.hidden = true; });
   }
   let selT;
   document.addEventListener('selectionchange', () => {
@@ -272,11 +276,11 @@
       if (!curSec.art.contains(r.commonAncestorContainer)) return;
       const t = r.toString(); if (t.trim().length < 2) return;
       pop.dataset.mode = 'add';
-      showPop(r.getBoundingClientRect(), '🖍 ไฮไลต์', () => {
+      showPop(r.getBoundingClientRect(), 'colors', c => {
         const pre = document.createRange(); pre.setStart(curSec.art, 0); pre.setEnd(r.startContainer, r.startOffset);
         const { k, art } = curSec;
-        (S.hl[k] = S.hl[k] || []).push({ s: pre.toString().length, t }); save();
-        sel.removeAllRanges(); wrapRange(art, pre.toString().length, pre.toString().length + t.length, S.hl[k].length - 1);
+        (S.hl[k] = S.hl[k] || []).push({ s: pre.toString().length, t, c }); save(); undoStack.push({ type: 'add', k, item: S.hl[k][S.hl[k].length - 1] }); syncUndo();
+        sel.removeAllRanges(); wrapRange(art, pre.toString().length, pre.toString().length + t.length, S.hl[k].length - 1, c);
       });
     }, 250);
   });
@@ -285,7 +289,7 @@
     if (!m || !curSec || !getSelection().isCollapsed) return;
     const idx = +m.dataset.hl; pop.dataset.mode = 'del';
     showPop(m.getBoundingClientRect(), '✕ ลบไฮไลต์', () => {
-      const { k } = curSec; S.hl[k].splice(idx, 1); if (!S.hl[k].length) delete S.hl[k]; save(); pop.dataset.mode = ''; const y = scrollY; route().then(() => scrollTo(0, y));
+      const { k } = curSec; const [item] = S.hl[k].splice(idx, 1); undoStack.push({ type: 'del', k, item, idx }); if (!S.hl[k].length) delete S.hl[k]; save(); pop.dataset.mode = ''; rerender();
     });
   });
   window.addEventListener('scroll', () => { if (pop.dataset.mode === 'del') { pop.hidden = true; pop.dataset.mode = ''; } }, { passive: true });
@@ -301,7 +305,7 @@
       return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p><div class="bar"><i style="width:${p.pct}%"></i></div><div class="bar-label">เข้าใจแล้ว ${p.d}/${p.n} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div></a>`;
     }).join('');
     view.innerHTML = `<div class="hero"><h1>ตำราคู่ชีท NLE Step 1</h1><p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p></div><div class="grid">${tiles}</div>
-    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl">ไฮไลต์ของฉัน</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
+    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-p">ฉัน</mark> <mark class="user-hl c-r">4 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
   }
   async function vChapter(id) {
     await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
@@ -335,7 +339,7 @@
     const myHl = (S.hl[k] || []).length;
     h += `<details class="panel mynote" ${S.notes[k] ? 'open' : ''}><summary>🗒️ โน้ตของฉัน${S.notes[k] ? ' ·  มีโน้ต' : ''}${myHl ? ` · ไฮไลต์ ${myHl} จุด` : ''}</summary>
       <textarea id="noteIn" rows="4" placeholder="จดสิ่งที่อยากจำของกล่องนี้ (บันทึกอัตโนมัติ)">${esc(S.notes[k] || '')}</textarea>
-      <div class="bar-label">เลือกข้อความในเนื้อหาแล้วกด 🖍 เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
+      <div class="bar-label">เลือกข้อความในเนื้อหาแล้วกดเลือกสี (เหลือง เขียว ชมพู แดงอ่อน) เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
     if (s.examIds.length) {
       h += `<section class="exam-sec"><h2>📝 ข้อสอบเก่าของหัวข้อนี้</h2><p class="bar-label">กดเลือกคำตอบ ข้อที่ตอบผิดจะเข้ากองข้อผิดให้อัตโนมัติ</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid]);
@@ -343,13 +347,22 @@
     }
     h += `<div class="understood"><button class="btn ${S.done[k] ? 'done' : 'primary'}" id="doneBtn">${S.done[k] ? '✓ เข้าใจแล้ว' : 'ติ๊กว่าเข้าใจแล้ว'}</button></div>
       <nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
-      <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
+      <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><button id="undoBtn" hidden title="เลิกทำไฮไลต์ล่าสุด" aria-label="เลิกทำ">↶</button><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
     view.innerHTML = h;
     $('#doneBtn').onclick = () => { if (S.done[k]) delete S.done[k]; else S.done[k] = Date.now(); save(); vSection(id, no); };
+    pop.hidden = true; pop.dataset.mode = '';
     const art = $('.content', view);
     applyHL(art, k);
     curSec = { k, art };
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
+    syncUndo();
+    $('#undoBtn').onclick = () => {
+      let i = undoStack.length - 1; while (i >= 0 && undoStack[i].k !== k) i--;
+      if (i < 0) return; const u = undoStack.splice(i, 1)[0];
+      if (u.type === 'add') { const a = S.hl[k] || []; const j = a.lastIndexOf(u.item); if (j < 0) { const jj = a.findIndex(x => x.s === u.item.s && x.t === u.item.t); if (jj >= 0) a.splice(jj, 1); } else a.splice(j, 1); if (!a.length) delete S.hl[k]; }
+      else { (S.hl[k] = S.hl[k] || []).splice(Math.min(u.idx, S.hl[k].length), 0, u.item); }
+      save(); rerender();
+    };
     const ji = $('#jumpIn');
     ji.addEventListener('keydown', e => { if (e.key === 'Enter') { const n = parseInt(ji.value); if (n) location.hash = `#/${id}/${n}`; } });
     window.scrollTo(0, 0);
@@ -490,7 +503,7 @@
     for (const ch of Object.values(CH)) for (const s of ch.sections) {
       const k = secKey(ch.id, s.no), note = S.notes[k], hl = S.hl[k] || [];
       if (!note && !hl.length) continue; any = true;
-      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl">${esc(x.t)}</mark></p>`).join('')}</div>`;
+      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl c-${x.c || 'g'}">${esc(x.t)}</mark></p>`).join('')}</div>`;
     }
     view.innerHTML = h + (any ? '' : '<p class="empty">ยังไม่มีโน้ต เปิดกล่องไหนก็ได้แล้วจดที่ "โน้ตของฉัน" หรือเลือกข้อความเพื่อไฮไลต์</p>');
   }

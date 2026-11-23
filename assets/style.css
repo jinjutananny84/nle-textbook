@@ -230,9 +230,18 @@ svg text{font-family:inherit}
 .content .card b{background:none}
 .no-hl .content b{background:none}
 .no-hl .content p.hl-exam,.no-hl .content li.hl-exam{background:none;border-left-color:transparent}
-mark.user-hl{background:var(--hl-user);color:inherit;box-shadow:none;border-radius:3px;padding:0 1px;cursor:pointer}
+mark.user-hl{background:var(--u-g);color:inherit;box-shadow:none;border-radius:3px;padding:0 1px;cursor:pointer}
 .hl-pop{position:fixed;z-index:60}
 .hl-pop button{border:0;background:var(--fg);color:var(--bg);font-size:15px;font-weight:600;padding:8px 16px;border-radius:999px;box-shadow:var(--shadow)}
 .mynote summary{cursor:pointer;font-weight:600}
 .mynote textarea{width:100%;margin:10px 0 6px;font:inherit;font-size:15px;line-height:1.6;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface2);color:var(--fg);resize:vertical}
 .legend-row{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14.5px;margin-top:8px}
+/* ไฮไลต์ของผู้ใช้ 4 สี */
+:root{--u-y:#fff09a;--u-g:#b8f0c6;--u-p:#ffd0ea;--u-r:#ffc9c4}
+:root[data-theme="dark"]{--u-y:#5c4a0c;--u-g:#1e5a33;--u-p:#5e2347;--u-r:#62261f}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--u-y:#5c4a0c;--u-g:#1e5a33;--u-p:#5e2347;--u-r:#62261f}}
+mark.user-hl.c-y{background:var(--u-y)} mark.user-hl.c-g{background:var(--u-g)} mark.user-hl.c-p{background:var(--u-p)} mark.user-hl.c-r{background:var(--u-r)}
+.hl-pop{display:flex;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:var(--shadow)}
+.hl-pop button.sw{width:34px;height:34px;padding:0;border-radius:999px;border:2px solid var(--line)}
+.hl-pop .sw.c-y{background:var(--u-y)} .hl-pop .sw.c-g{background:var(--u-g)} .hl-pop .sw.c-p{background:var(--u-p)} .hl-pop .sw.c-r{background:var(--u-r)}
+.jump #undoBtn{color:var(--accent);font-weight:700;font-size:20px}.jump #undoBtn[hidden]{display:none}
