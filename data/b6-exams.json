@@ -1,0 +1,2335 @@
+{
+"exams": {
+"74.1/4": {
+"box": 29,
+"stem": "ภาพไข่ของ lung fluke (Paragonimus) จากเสมหะผู้ป่วย ผู้ป่วยน่าจะติดจากการกินอาหารใด",
+"options": {
+"A": "ปูน้ำจืดดิบ/ปูดอง",
+"B": "ปลาน้ำจืดดิบ (ก้อยปลา)",
+"C": "เนื้อหมูดิบ",
+"D": "ผักน้ำ เช่น ผักบุ้ง/กระจับ",
+"E": "หอยทากดิบ"
+},
+"answer": "A",
+"options_reconstructed": true,
+"needs_image": true,
+"why": "Paragonimus มี second intermediate host คือปูน้ำจืด ติดจากกินปูดิบ/ปูดอง; ปลาดิบให้ Opisthorchis, ผักน้ำให้ Fasciolopsis/Fasciola, หมูให้ Taenia/Trichinella",
+"source": "วิเคราะห์"
+},
+"74.1/12": {
+"box": 9,
+"stem": "การฝึกออกกำลังกายแบบแอโรบิกทำให้ aerobic capacity (VO2max) เพิ่มขึ้น ปัจจัยหลักคือข้อใด",
+"options": {
+"A": "Decrease maximal heart rate",
+"B": "Increase maximal cardiac output",
+"C": "Increase maximal blood pressure",
+"D": "Increase arterial O2 content",
+"E": "Decrease venous O2 content"
+},
+"answer": "B",
+"why": "การฝึกเพิ่ม stroke volume ทำให้ maximal cardiac output สูงขึ้น ซึ่งเป็นตัวกำหนดหลักของ VO2max; max HR แทบไม่เปลี่ยน และ arterial O2 content ในคนปกติอิ่มตัวอยู่แล้ว ส่วนการดึง O2 ที่กล้ามเนื้อเพิ่มเป็นผลรอง",
+"source": "วิเคราะห์"
+},
+"74.1/14": {
+"box": 27,
+"stem": "SARS-CoV/SARS-CoV-2 เข้าสู่เซลล์ทางเดินหายใจโดยจับกับ receptor ใด",
+"options": {
+"A": "ACE2",
+"B": "CD21 (CR2)",
+"C": "CD4",
+"D": "Sialic acid",
+"E": "ICAM-1"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Spike protein ของ SARS-CoV จับ ACE2 บน type II pneumocyte; CD21 เป็น receptor ของ EBV, sialic acid ของ influenza, ICAM-1 ของ rhinovirus",
+"source": "วิเคราะห์"
+},
+"74.1/17": {
+"box": 31,
+"stem": "ผู้ป่วย TB ตรวจพบ mutation ของ inhA gene ยาใดไม่ควรใช้",
+"options": {
+"A": "Ethionamide",
+"B": "High-dose isoniazid",
+"C": "Rifampicin",
+"D": "Pyrazinamide",
+"E": "Ethambutol"
+},
+"answer": "A",
+"why": "inhA mutation ทำให้ดื้อ ethionamide (cross-resistance เพราะเป้าหมาย InhA เดียวกัน) และดื้อ INH ระดับต่ำซึ่ง high-dose INH ยังเอาชนะได้; rifampicin/PZA/EMB ไม่เกี่ยวกับ inhA",
+"source": "วิเคราะห์"
+},
+"74.1/19": {
+"box": 16,
+"stem": "กลไกการออกฤทธิ์ของ montelukast ในการรักษา asthma/allergic rhinitis คือข้อใด",
+"options": {
+"A": "CysLT1 (leukotriene) receptor antagonist",
+"B": "5-lipoxygenase inhibitor",
+"C": "Beta2-adrenergic agonist",
+"D": "Mast cell stabilizer",
+"E": "Muscarinic antagonist"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Montelukast/zafirlukast ยับยั้ง CysLT1 receptor; zileuton คือ 5-lipoxygenase inhibitor ส่วน cromolyn เป็น mast cell stabilizer",
+"source": "วิเคราะห์"
+},
+"74.1/20": {
+"box": 15,
+"stem": "ผู้ป่วยแพ้เกสรดอกไม้ มีคันจมูก จามบ่อย ยาใดเหมาะสมที่สุดในการบรรเทาอาการ",
+"options": {
+"A": "Cetirizine",
+"B": "Dextromethorphan",
+"C": "Ipratropium",
+"D": "Oxymetazoline ใช้ต่อเนื่องระยะยาว",
+"E": "Salmeterol"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Allergic rhinitis อาการคัน/จามตอบสนองดีต่อ H1 antihistamine รุ่นสอง เช่น cetirizine; oxymetazoline ใช้นานเกิน 3 วันเกิด rhinitis medicamentosa, ipratropium ช่วยแค่น้ำมูกไหล",
+"source": "วิเคราะห์"
+},
+"74.1/35": {
+"box": 31,
+"stem": "ผู้ป่วย TB ตรวจพบ inhA gene mutation ยาใดจะไม่ได้ผล",
+"options": {
+"A": "Rifampicin",
+"B": "Ethambutol",
+"C": "Ethionamide",
+"D": "High-dose isoniazid"
+},
+"answer": "C",
+"why": "inhA mutation ทำให้ดื้อ ethionamide (cross-resistance) และดื้อ INH ระดับต่ำซึ่งยังใช้ high-dose INH ได้; katG mutation จึงจะดื้อ INH ระดับสูง",
+"source": "วิเคราะห์"
+},
+"74.1/45": {
+"box": 3,
+"stem": "ชนิดของ macrophage กับตำแหน่งในร่างกาย ข้อใดจับคู่ถูกต้อง",
+"options": {
+"A": "Langerhans cell – dermis",
+"B": "Kupffer cell – liver sinusoid",
+"C": "Dust cell – visceral pleura",
+"D": "Microglia – peripheral nerve",
+"E": "Osteoclast – cartilage"
+},
+"answer": "B",
+"options_reconstructed": true,
+"why": "Kupffer cell อยู่ใน hepatic sinusoid; Langerhans cell อยู่ใน epidermis, dust cell (alveolar macrophage) อยู่ใน alveoli ไม่ใช่ pleura, microglia อยู่ใน CNS",
+"source": "วิเคราะห์"
+},
+"74.1/51": {
+"box": 16,
+"stem": "ให้ methacholine สูดดมในผู้ป่วยที่สงสัย asthma จะเกิดผลใด",
+"options": {
+"A": "Bronchoconstriction/airway obstruction (FEV1 ลด)",
+"B": "Bronchodilation",
+"C": "Mucus secretion ลดลง",
+"D": "Tachycardia",
+"E": "Mydriasis"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Methacholine เป็น muscarinic agonist กระตุ้น M3 ทำให้หลอดลมหดตัว ใช้ใน bronchial challenge test; ผู้ป่วย asthma มี airway hyperresponsiveness FEV1 ลด ≥20% ที่ขนาดต่ำ",
+"source": "วิเคราะห์"
+},
+"74.1/55": {
+"box": 26,
+"stem": "เสมหะผู้ป่วยปอดอักเสบพบ Gram-positive diplococci (lancet-shaped) เชื้อใช้โครงสร้างใดหลบเลี่ยง phagocytosis",
+"options": {
+"A": "Polysaccharide capsule",
+"B": "Pneumolysin",
+"C": "IgA protease",
+"D": "Teichoic acid",
+"E": "M protein"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "S. pneumoniae ใช้ polysaccharide capsule ต้าน phagocytosis เป็น virulence หลัก; pneumolysin ทำลายเซลล์, IgA protease ช่วย colonization, M protein เป็นของ S. pyogenes",
+"source": "วิเคราะห์"
+},
+"74.1/74": {
+"box": 22,
+"stem": "ผู้ป่วยมะเร็งปอดมีระดับฮอร์โมน (เช่น ACTH/ADH) สูงจาก paraneoplastic syndrome ลักษณะพยาธิวิทยาที่น่าจะพบคือ",
+"options": {
+"A": "Keratin pearls และ intercellular bridges",
+"B": "Glandular formation with mucin",
+"C": "Small round blue cells, scant cytoplasm, nuclear molding",
+"D": "Lepidic growth along alveolar wall",
+"E": "Large pleomorphic cells without differentiation"
+},
+"answer": "C",
+"options_reconstructed": true,
+"why": "Small cell carcinoma (neuroendocrine) หลั่ง ACTH/ADH เห็นเซลล์เล็ก nuclear molding salt-and-pepper chromatin; ถ้าเป็น PTHrP/hypercalcemia จะเป็น SCC (keratin pearl), glandular คือ adenocarcinoma",
+"source": "วิเคราะห์"
+},
+"74.1/86": {
+"box": 1,
+"stem": "ผู้ป่วย sinusitis เมื่อเอียงศีรษะไปด้านขวา มี fluid ไหลออกที่ middle nasal meatus fluid นี้น่าจะมาจากโครงสร้างใด",
+"options": {
+"A": "Frontal sinus",
+"B": "Maxillary sinus",
+"C": "Sphenoid sinus",
+"D": "Anterior ethmoidal air cell",
+"E": "Nasolacrimal duct"
+},
+"answer": "B",
+"why": "Maxillary sinus มี ostium อยู่สูงบน medial wall เปิดที่ hiatus semilunaris ของ middle meatus จึงระบายได้ดีเมื่อเอียงศีรษะ (ท่า dependent); sphenoid ระบาย sphenoethmoidal recess, nasolacrimal duct ระบาย inferior meatus",
+"source": "วิเคราะห์"
+},
+"74.2/24": {
+"box": 6,
+"stem": "ทารกคลอดก่อนกำหนดมีภาวะ neonatal respiratory distress syndrome (hyaline membrane disease) พยาธิกำเนิดหลักคือข้อใด",
+"options": {
+"A": "Surfactant insufficiency จาก type II pneumocyte ยังไม่เจริญเต็มที่",
+"B": "Inadequate type I pneumocyte",
+"C": "Meconium aspiration",
+"D": "Congenital diaphragmatic hernia",
+"E": "Increased lung compliance"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "NRDS เกิดจาก type II pneumocyte สร้าง surfactant ไม่พอ ทำให้ surface tension สูง alveoli แฟบ compliance ลด; type I pneumocyte ทำหน้าที่แลกเปลี่ยนก๊าซไม่ได้สร้าง surfactant",
+"source": "วิเคราะห์"
+},
+"74.2/33": {
+"box": 8,
+"stem": "ก๊าซชนิดใดต่อไปนี้ไม่ระคายเคืองต่อทางเดินหายใจส่วนบน",
+"options": {
+"A": "HCl",
+"B": "Cl2",
+"C": "Nitrous oxide",
+"D": "Ammonia",
+"E": "SO2"
+},
+"answer": "C",
+"options_reconstructed": true,
+"why": "ก๊าซละลายน้ำดี (HCl, NH3, SO2) และ Cl2 ระคายเคือง upper airway ทันที; N2O ไม่มีฤทธิ์ระคายเคือง ใช้เป็นยาสลบทางการหายใจได้",
+"source": "วิเคราะห์"
+},
+"74.2/38": {
+"box": 3,
+"stem": "ก้อน nodule ที่ true vocal cord เกิดจากเยื่อบุชนิดใด (true vocal fold บุด้วย epithelium อะไร)",
+"options": {
+"A": "Simple columnar",
+"B": "Stratified squamous",
+"C": "Pseudostratified squamous",
+"D": "Pseudostratified columnar"
+},
+"answer": "B",
+"why": "True vocal fold บุด้วย non-keratinized stratified squamous epithelium ทนแรงเสียดสี vocal nodule จึงเกิดที่ชั้นนี้; ส่วนอื่นของ larynx เป็น pseudostratified ciliated columnar",
+"source": "วิเคราะห์"
+},
+"74.2/45": {
+"box": 29,
+"stem": "ผู้ป่วยมีโรคปอด ตรวจเสมหะพบ filamentous branching Gram-positive rod (weakly acid-fast) เชื้อใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Nocardia",
+"B": "Actinomyces",
+"C": "Pneumocystis"
+},
+"answer": "A",
+"why": "Nocardia เป็น filamentous branching GPR, aerobic, partially acid-fast ก่อ pulmonary infection ในผู้ภูมิต้านทานต่ำ; Actinomyces เป็น anaerobe ไม่ติด acid-fast มักเกิดที่ cervicofacial มี sulfur granule, Pneumocystis เป็นเชื้อรา",
+"source": "วิเคราะห์"
+},
+"74.2/46": {
+"box": 29,
+"stem": "ผู้ป่วย DM (มักมี ketoacidosis) มีรอยโรคที่ maxillary sinus/จมูก ตรวจพบ broad, sparsely septate hyphae แตกแขนงมุมฉาก เชื้อจัดอยู่ในกลุ่มใด",
+"options": {
+"A": "Oomycetes",
+"B": "Ascomycota",
+"C": "Basidiomycota",
+"D": "Mucoromycota",
+"E": "Entomophthoromycota"
+},
+"answer": "D",
+"why": "Rhinocerebral mucormycosis (Rhizopus, Mucor) อยู่ในกลุ่ม Mucoromycota มี hyphae กว้างผนังกั้นน้อย; Aspergillus (Ascomycota) มี septate hyphae แตกแขนงมุมแหลม",
+"source": "วิเคราะห์"
+},
+"74.2/48": {
+"box": 2,
+"stem": "ผู้ป่วยกลืนก้างปลาแล้วติดคอ ก้างมักไปติดค้างที่ตำแหน่งใด",
+"options": {
+"A": "Piriform recess",
+"B": "Fossa of Rosenmüller",
+"C": "Vallecula... (nasopharynx)",
+"D": "Laryngeal ventricle",
+"E": "Sphenoethmoidal recess"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Piriform recess ข้าง laryngeal inlet เป็นตำแหน่งที่สิ่งแปลกปลอมติดบ่อย และใต้เยื่อบุมี internal laryngeal nerve อาจบาดเจ็บได้; fossa of Rosenmüller อยู่ใน nasopharynx (ตำแหน่ง NPC)",
+"source": "วิเคราะห์"
+},
+"74.2/50": {
+"box": 27,
+"stem": "SARS-CoV จับกับ receptor ใดบนเซลล์เพื่อเข้าสู่เซลล์",
+"options": {
+"A": "ACE2",
+"B": "CD4",
+"C": "Sialic acid",
+"D": "ICAM-1",
+"E": "CD21"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Spike protein ของ SARS-CoV จับ ACE2; sialic acid เป็นของ influenza, ICAM-1 ของ rhinovirus, CD21 ของ EBV",
+"source": "วิเคราะห์"
+},
+"74.2/54": {
+"box": 26,
+"stem": "เสมหะพบ Gram-positive diplococci (สงสัย S. pneumoniae) เชื้อใช้ virulence factor ใดป้องกันการถูก phagocytosis",
+"options": {
+"A": "Polysaccharide capsule",
+"B": "Pneumolysin",
+"C": "IgA protease",
+"D": "Teichoic acid",
+"E": "M protein"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Capsule ของ pneumococcus ต้าน phagocytosis และ complement; pneumolysin เป็น cytotoxin, M protein เป็นของ S. pyogenes",
+"source": "วิเคราะห์"
+},
+"74.2/55": {
+"box": 13,
+"stem": "ผู้ป่วยตรวจพบ expiratory wheezing สงสัยโรคหลอดลมอุดกั้น ค่าใดใน spirometry ที่ควรดูเพื่อยืนยัน obstruction",
+"options": {
+"A": "FVC",
+"B": "FEV1/FVC",
+"C": "TLC",
+"D": "DLCO",
+"E": "Residual volume"
+},
+"answer": "B",
+"options_reconstructed": true,
+"why": "FEV1/FVC < 0.7 (หรือ < LLN) บ่งชี้ obstructive defect; FVC ลดได้ทั้ง obstructive และ restrictive, TLC/RV/DLCO ต้องใช้ body plethysmography/diffusion test ไม่ใช่ spirometry",
+"source": "วิเคราะห์"
+},
+"74.2/57": {
+"box": 9,
+"stem": "ผลของการฝึกออกกำลังกายสม่ำเสมอ (endurance training) ข้อใดถูกต้อง",
+"options": {
+"A": "เพิ่ม maximal blood pressure",
+"B": "เพิ่ม arterial O2 concentration ขณะพัก",
+"C": "ลด resting heart rate และเพิ่ม stroke volume",
+"D": "เพิ่ม venous O2 content ขณะออกกำลัง",
+"E": "ลด maximal cardiac output"
+},
+"answer": "C",
+"options_reconstructed": true,
+"why": "Endurance training เพิ่ม stroke volume ทำให้ resting HR ลดและ maximal CO เพิ่ม; arterial O2 content ขณะพักไม่เปลี่ยน และ venous O2 ขณะออกกำลังลดลงเพราะดึง O2 มากขึ้น",
+"source": "วิเคราะห์"
+},
+"74.2/60": {
+"box": 31,
+"stem": "ผู้ป่วย TB ที่มี inhA mutation ยาต้าน TB ตัวใดไม่ควรให้",
+"options": {
+"A": "Rifampicin",
+"B": "Ethambutol",
+"C": "Ethionamide",
+"D": "Pyrazinamide",
+"E": "High-dose isoniazid"
+},
+"answer": "C",
+"why": "inhA เป็นเป้าหมายร่วมของ INH และ ethionamide จึงดื้อ ethionamide ชัดเจน ส่วน INH ดื้อระดับต่ำยังใช้ high dose ได้; katG mutation คือดื้อ INH ระดับสูง",
+"source": "วิเคราะห์"
+},
+"74.2/79": {
+"box": 16,
+"stem": "ยาป้องกัน migraine ตัวใดไม่ควรใช้ในผู้ป่วยที่เป็น asthma",
+"options": {
+"A": "Propranolol",
+"B": "Amitriptyline",
+"C": "Valproate",
+"D": "Topiramate",
+"E": "Flunarizine"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Propranolol เป็น non-selective beta blocker ยับยั้ง beta2 ที่หลอดลม ทำให้ bronchospasm ใน asthma; ยาอื่นไม่มีผลต่อ beta2",
+"source": "วิเคราะห์"
+},
+"74.2/95": {
+"box": 7,
+"stem": "ยาที่ทำให้หลอดลมหดตัว (bronchoconstrictor) จะมีผลต่อกลศาสตร์ทางเดินหายใจอย่างไร",
+"options": {
+"A": "เพิ่ม airway resistance",
+"B": "เพิ่ม lung compliance",
+"C": "ลด lung elastic recoil",
+"D": "เพิ่ม FEV1/FVC",
+"E": "ลด work of breathing"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Resistance แปรผกผันกับรัศมียกกำลังสี่ (Poiseuille) การหดหลอดลมจึงเพิ่ม airway resistance มาก ทำให้ FEV1/FVC ลดและ work of breathing เพิ่ม; elastic recoil/compliance เป็นคุณสมบัติของ parenchyma ไม่ได้เปลี่ยนโดยตรง",
+"source": "วิเคราะห์"
+},
+"74.2/106": {
+"box": 30,
+"stem": "นักบินมีอาการน้ำมูกไหลจาก common cold แพทย์สั่ง fexofenadine การสั่งยานี้สมเหตุผลหรือไม่ ถ้าไม่ ขัดหลักข้อใด",
+"options": {
+"A": "Rational drug use",
+"B": "Irrational – against cost",
+"C": "Irrational – against safety",
+"D": "Irrational – against efficacy",
+"E": "Irrational – against compliance"
+},
+"answer": "D",
+"why": "Antihistamine รุ่นที่สอง (fexofenadine) ไม่ได้ผลในน้ำมูกจาก common cold ซึ่งไม่ได้เกิดจาก histamine จึงขัดหลัก efficacy; fexofenadine ไม่ง่วงจึงไม่ได้ขัดเรื่อง safety สำหรับนักบิน",
+"source": "วิเคราะห์"
+},
+"74.2/107": {
+"box": 22,
+"stem": "ผู้ป่วย lung cancer มี hyperglycemia (จาก ectopic ACTH/Cushing syndrome) ลักษณะพยาธิวิทยาที่น่าจะพบคือ",
+"options": {
+"A": "Intercellular bridges และ keratin pearls",
+"B": "Glandular formation with mucin",
+"C": "Small cells, scant cytoplasm, nuclear molding",
+"D": "Lepidic growth",
+"E": "Large pleomorphic cells without differentiation"
+},
+"answer": "C",
+"options_reconstructed": true,
+"why": "Ectopic ACTH พบใน small cell carcinoma (neuroendocrine) ทำให้ hyperglycemia/hypokalemia; ถ้าโจทย์จริงเป็น hypercalcemia (PTHrP) คำตอบจะเป็น SCC ที่มี intercellular bridges",
+"source": "วิเคราะห์"
+},
+"75.1/9": {
+"box": 18,
+"stem": "ชายทำงานพ่นสี electrodeposition และตัดโลหะ มี sore throat, headache, myalgia ร่วมกับ progressive dyspnea; spirometry พบ forced expiratory volume ลดลง สารก่อโรคถูกดูดซึมเข้าทางใดเป็นหลัก",
+"options": {
+"A": "Lung",
+"B": "Skin",
+"C": "Mucous membrane",
+"D": "Gastrointestinal tract",
+"E": "Open sore"
+},
+"answer": "A",
+"why": "ฟูมโลหะ/ไอระเหยสีจากการทำงานเป็นอนุภาคและก๊าซที่สูดเข้าไปแล้วดูดซึมผ่าน alveoli (inhalation route) ทำให้ metal fume fever/occupational lung disease; ผิวหนังและทางเดินอาหารไม่ใช่ทางหลักของ occupational inhalant",
+"source": "วิเคราะห์"
+},
+"75.1/27": {
+"box": 28,
+"stem": "ชาย 30 ปี ไข้ ไอมีเสมหะ เจ็บหน้าอก เบื่ออาหาร sputum culture พบ M. tuberculosis เซลล์ใดมีบทบาทกระตุ้น macrophage ให้กำจัดเชื้อ",
+"options": {
+"A": "Gamma-delta T cell",
+"B": "CD8 T cell",
+"C": "CD4 T cell",
+"D": "T helper 2 cell",
+"E": "Regulatory T cell"
+},
+"answer": "C",
+"why": "CD4 Th1 cell หลั่ง IFN-γ กระตุ้น macrophage ให้ฆ่าเชื้อในเซลล์ (สร้าง phagolysosome, NO); Th2 กระตุ้น humoral/eosinophil, CD8 ฆ่าเซลล์ติดเชื้อแต่ไม่ใช่ตัวหลักกระตุ้น macrophage",
+"source": "วิเคราะห์"
+},
+"75.1/40": {
+"box": 28,
+"stem": "ชายไอแห้ง น้ำหนักลด sputum AFB positive CXR พบ cavitary lesion ที่ right upper lobe พยาธิกำเนิดของรอยโรคคือข้อใด",
+"options": {
+"A": "Th2 response",
+"B": "Epithelioid granuloma formation (type IV hypersensitivity)",
+"C": "Exotoxin-mediated neutrophilic necrosis",
+"D": "Type I hypersensitivity",
+"E": "Immune complex deposition"
+},
+"answer": "B",
+"options_reconstructed": true,
+"why": "TB เกิด Th1-mediated type IV hypersensitivity ทำให้เกิด caseating epithelioid granuloma ซึ่งเนื้อตายแล้วกลายเป็นโพรง (cavity) ใน upper lobe; M. tuberculosis ไม่มี exotoxin และไม่ใช่ Th2/immune complex",
+"source": "วิเคราะห์"
+},
+"75.1/65": {
+"box": 27,
+"stem": "ผู้ป่วยไข้ น้ำมูกใส ไอ 3 วัน แล้วเหนื่อยมากขึ้น CBC พบ lymphocytosis CXR มี bilateral perihilar infiltration การวินิจฉัยที่น่าจะเป็นที่สุด",
+"options": {
+"A": "Viral pneumonia",
+"B": "Fungal pneumonia",
+"C": "Parasitic pneumonia",
+"D": "Pulmonary TB",
+"E": "Pneumococcal pneumonia"
+},
+"answer": "A",
+"why": "Prodrome URI (น้ำมูกใส) + lymphocytosis + interstitial/perihilar infiltrate เข้ากับ viral pneumonia; pneumococcal จะมี neutrophilia และ lobar consolidation, TB เป็นเรื้อรังมี upper lobe cavity",
+"source": "วิเคราะห์"
+},
+"75.1/78": {
+"box": 26,
+"stem": "ทารกแรกเกิดได้รับ pneumococcal conjugate vaccine แทน polysaccharide vaccine เพราะเหตุใด conjugate จึงดีกว่า",
+"options": {
+"A": "Conjugate เป็น live attenuated vaccine",
+"B": "Conjugate กระตุ้น T-cell dependent response ได้",
+"C": "ผลข้างเคียงน้อยกว่า",
+"D": "ครอบคลุมจำนวน serotype มากกว่า"
+},
+"answer": "B",
+"why": "Polysaccharide เป็น T-independent antigen กระตุ้นภูมิได้ไม่ดีในเด็ก < 2 ปี ไม่มี memory; การ conjugate กับ carrier protein ทำให้เกิด T-dependent response มี class switch และ memory; PPSV23 ครอบคลุม serotype มากกว่า PCV",
+"source": "วิเคราะห์"
+},
+"75.1/80": {
+"box": 27,
+"stem": "ชาย 40 ปี ไข้ น้ำมูกใส ไอ แล้วเหนื่อยมากขึ้น lymphocytosis ฟังปอดมี fine crepitation ทั้งสองข้าง หลัง admit CXR พบ bilateral perihilar infiltration วินิจฉัยใด",
+"options": {
+"A": "Viral pneumonia",
+"B": "Fungal pneumonia",
+"C": "Pulmonary tuberculosis",
+"D": "Pneumococcal pneumonia",
+"E": "Parasitic pneumonia"
+},
+"answer": "A",
+"why": "อาการนำแบบ URI ร่วมกับ lymphocytosis และ bilateral perihilar interstitial infiltrate เป็นลักษณะ viral pneumonia; pneumococcal มี neutrophilia และ lobar consolidation",
+"source": "วิเคราะห์"
+},
+"75.1/89": {
+"box": 28,
+"stem": "ผู้ป่วยมีอาการเข้าได้กับ pulmonary TB immune response ชนิดใดสำคัญที่สุดในการควบคุมเชื้อ",
+"options": {
+"A": "Th2",
+"B": "Th1",
+"C": "Cytotoxic T cell",
+"D": "Th17",
+"E": "Th22"
+},
+"answer": "B",
+"why": "Th1 (IL-12 → IFN-γ) กระตุ้น macrophage และสร้าง granuloma ควบคุม M. tuberculosis; ผู้ขาด IFN-γ/IL-12 receptor ติด mycobacteria ง่าย ส่วน Th2/Th17 ไม่ใช่กลไกหลัก",
+"source": "วิเคราะห์"
+},
+"75.1/92": {
+"box": 28,
+"stem": "ชายมีเหงื่อออกกลางคืน ปวดกล้ามเนื้อ ไข้ sputum AFB positive กลไกใดมีประสิทธิภาพที่สุดในการกำจัดเชื้อนี้",
+"options": {
+"A": "IgA",
+"B": "NK cell",
+"C": "Opsonization",
+"D": "IFN-γ–activated macrophage (Th1)",
+"E": "ADCC"
+},
+"answer": "D",
+"options_reconstructed": true,
+"why": "M. tuberculosis เป็น facultative intracellular อยู่ใน macrophage จึงต้องอาศัย Th1 หลั่ง IFN-γ กระตุ้น macrophage; antibody (IgA, opsonization, ADCC) เข้าไม่ถึงเชื้อในเซลล์",
+"source": "วิเคราะห์"
+},
+"75.2/8": {
+"box": 22,
+"stem": "ผู้ป่วย lung cancer มีภาวะ euvolemia serum Na 110 mEq/L ส่วน urine osmolality และ urine Na อยู่ในช่วงปกติ (ไม่เจือจางตามที่ควร) วินิจฉัยใด",
+"options": {
+"A": "SIADH",
+"B": "Diabetes insipidus",
+"C": "Psychogenic polydipsia",
+"D": "Adrenal insufficiency",
+"E": "Cerebral salt wasting"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Hyponatremia แบบ euvolemic ที่ urine ไม่เจือจาง (osm > 100) และ urine Na ไม่ต่ำ คือ SIADH ซึ่งพบใน small cell lung cancer จาก ectopic ADH; DI ทำให้ hypernatremia, polydipsia จะมี urine osm ต่ำมาก, salt wasting มี hypovolemia",
+"source": "วิเคราะห์"
+},
+"75.2/25": {
+"box": 21,
+"stem": "ผู้ป่วยมี pleural effusion ผลวิเคราะห์เป็น transudate และ amylase ปกติ สาเหตุที่น่าจะเป็นที่สุดคือ",
+"options": {
+"A": "Malignancy",
+"B": "Congestive heart failure",
+"C": "Acute pancreatitis",
+"D": "Bacterial infection (parapneumonic)"
+},
+"answer": "B",
+"why": "Transudate เกิดจากแรงดัน hydrostatic สูงหรือ oncotic ต่ำ สาเหตุบ่อยที่สุดคือ CHF; malignancy, infection และ pancreatitis (amylase สูง) ให้ exudate ตาม Light's criteria",
+"source": "วิเคราะห์"
+},
+"75.2/29": {
+"box": 29,
+"stem": "ผู้ป่วยมีประวัติ chronic bronchitis มาด้วย hemoptysis CXR พบ bronchus ขยาย และก้อนกลมในโพรงเดิม ตรวจพบเชื้อราที่มี septate hyphae แตกแขนงมุมแหลม วินิจฉัยใด",
+"options": {
+"A": "Aspergilloma",
+"B": "Invasive aspergillosis",
+"C": "Aspergillus tracheobronchitis",
+"D": "Allergic bronchopulmonary aspergillosis",
+"E": "Chronic necrotizing granulomatous aspergillosis"
+},
+"answer": "A",
+"why": "Aspergilloma (fungus ball) เกิดในโพรง/หลอดลมที่ขยายเดิมในคนภูมิปกติ เห็นเป็นก้อนกลม (air crescent) และทำให้ hemoptysis; invasive เกิดใน neutropenia, ABPA เป็น asthma/CF ร่วม eosinophilia และ IgE สูง",
+"source": "วิเคราะห์"
+},
+"75.2/31": {
+"box": 24,
+"stem": "เด็กหญิงมี barking cough, wheeze, เจ็บคอ คัดจมูก หายใจลำบาก และไข้สูง (croup) ไวรัสก่อโรคใช้ virulence factor ใด",
+"options": {
+"A": "NS1",
+"B": "Neuraminidase",
+"C": "Hemagglutinin",
+"D": "Fusion protein",
+"E": "Nucleoporin"
+},
+"answer": "D",
+"why": "Croup ส่วนใหญ่เกิดจาก parainfluenza (Paramyxoviridae) ซึ่งใช้ HN protein จับเซลล์และ F (fusion) protein ทำให้ไวรัสหลอมกับเซลล์และเกิด syncytia; NS1 เป็น virulence factor ของ influenza ซึ่งไม่ใช่สาเหตุหลักของ croup",
+"source": "วิเคราะห์"
+},
+"75.2/43": {
+"box": 1,
+"stem": "หญิง 50 ปี น้ำตาไหลมาก ได้รับการวินิจฉัย distal nasolacrimal duct obstruction รักษาแล้วกลับเป็นซ้ำ ควรตรวจหาพยาธิสภาพที่บริเวณใด",
+"options": {
+"A": "Nasopharynx",
+"B": "Middle nasal meatus",
+"C": "Inferior nasal meatus",
+"D": "Superior nasal meatus",
+"E": "Sphenoethmoidal recess"
+},
+"answer": "C",
+"why": "Nasolacrimal duct เปิดที่ inferior nasal meatus (ใต้ inferior turbinate, valve of Hasner) ก้อน/รอยโรคที่นี่ทำให้อุดตันส่วนปลาย; middle meatus รับ frontal/maxillary/anterior ethmoid, sphenoethmoidal recess รับ sphenoid",
+"source": "วิเคราะห์"
+},
+"75.2/44": {
+"box": 8,
+"stem": "ชาย 65 ปี มี hypertension เหนื่อย 2 วัน O2 sat 92% CXR พบ pulmonary edema และ cardiomegaly สาเหตุที่ O2 saturation ลดลงคือ",
+"options": {
+"A": "Decreased tidal volume",
+"B": "Decreased cardiac pumping",
+"C": "Decreased cardiac contraction",
+"D": "Decreased alveolar diffusion",
+"E": "Decreased pulmonary perfusion"
+},
+"answer": "D",
+"why": "น้ำใน interstitium/alveoli เพิ่มความหนาของ diffusion barrier (และเกิด shunt) ทำให้ O2 แพร่เข้าเลือดได้น้อย SaO2 จึงลด; cardiac output ที่ลดมีผลต่อ O2 delivery และ venous O2 มากกว่า arterial saturation",
+"source": "วิเคราะห์"
+},
+"75.2/47": {
+"box": 8,
+"stem": "ผู้ป่วยมี pulmonary edema ร่วม cardiomegaly วัด O2 saturation ได้ 92% กลไกที่ทำให้ saturation ต่ำคือ",
+"options": {
+"A": "Decreased tidal volume",
+"B": "Decreased cardiac output",
+"C": "Decreased cardiac pumping",
+"D": "Decreased alveolar diffusion",
+"E": "Decreased pulmonary perfusion"
+},
+"answer": "D",
+"why": "Pulmonary edema ทำให้ alveolar-capillary membrane หนาขึ้นและ alveoli มีน้ำ O2 จึงแพร่ได้ลดลงเกิด hypoxemia; ตัวเลือกด้าน cardiac output ไม่ได้ลด arterial saturation โดยตรง",
+"source": "วิเคราะห์"
+},
+"75.2/61": {
+"box": 26,
+"stem": "ชาย 45 ปี ไอมีเสมหะปนเลือด เจ็บหน้าอก หนาวสั่น ไข้สูงเฉียบพลัน เสมหะพบ neutrophil มากและ kidney-shaped Gram-negative diplococci โคโลนีบน blood agar สีเทาขาว hockey puck test positive เชื้อใด",
+"options": {
+"A": "Moraxella catarrhalis",
+"B": "Neisseria meningitidis",
+"C": "Eikenella corrodens",
+"D": "Bordetella pertussis",
+"E": "Pasteurella multocida"
+},
+"answer": "A",
+"why": "M. catarrhalis เป็น GN diplococci โคโลนีเลื่อนไปมาบนอาหารได้ทั้งก้อน (hockey puck sign) ก่อ pneumonia ในผู้ใหญ่/COPD; N. meningitidis ไม่มี hockey puck sign, Bordetella/Pasteurella เป็น coccobacilli",
+"source": "วิเคราะห์"
+},
+"75.2/68": {
+"box": 31,
+"stem": "ยาต้าน TB ตัวใดที่ทำให้ปวดข้อ (arthralgia) จาก hyperuricemia",
+"options": {
+"A": "Isoniazid",
+"B": "Rifampicin",
+"C": "Pyrazinamide",
+"D": "Ethambutol",
+"E": "Streptomycin"
+},
+"answer": "C",
+"options_reconstructed": true,
+"why": "Pyrazinamide (metabolite pyrazinoic acid) ลดการขับ uric acid ทำให้ arthralgia/gout; INH ทำ neuropathy/hepatitis, rifampicin ทำ hepatitis/สีส้ม, ethambutol ทำ optic neuritis",
+"source": "วิเคราะห์"
+},
+"75.2/82": {
+"box": 21,
+"stem": "ผู้ป่วยเคาะปอดขวาได้เสียงโปร่ง (hyperresonance/hollow) และ trachea เอียงไปทางซ้าย สาเหตุที่น่าจะเป็นคือข้อใด",
+"options": {
+"A": "Ruptured bleb/bullae (tension pneumothorax)",
+"B": "Emphysema",
+"C": "Massive pleural effusion",
+"D": "Right lobar collapse",
+"E": "Lobar consolidation"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Hyperresonance ข้างเดียวร่วม trachea ถูกดันไปฝั่งตรงข้าม = tension pneumothorax ซึ่งมักเกิดจาก bleb/bullae แตก; emphysema ให้ hyperresonance สองข้างโดย trachea อยู่กลาง, effusion เคาะทึบ, collapse ดึง trachea เข้าหาข้างที่เป็น",
+"source": "วิเคราะห์"
+},
+"75.2/83": {
+"box": 25,
+"stem": "Virulence factor สำคัญของ respiratory syncytial virus (RSV) ที่ทำให้เกิด syncytium คือ",
+"options": {
+"A": "NS1",
+"B": "Hemagglutinin",
+"C": "Neuraminidase",
+"D": "F (fusion) protein"
+},
+"answer": "D",
+"why": "RSV ไม่มี HA และ NA ใช้ G protein จับเซลล์และ F protein หลอมเยื่อหุ้มเกิด syncytia (เป็นเป้าของ palivizumab/nirsevimab); HA/NA เป็นของ influenza",
+"source": "วิเคราะห์"
+},
+"75.2/86": {
+"box": 22,
+"stem": "ผู้ป่วยสูบบุหรี่จัด เป็น lung cancer และพบ hematocrit สูง (polycythemia) ควรส่งตรวจใดต่อเพื่อแยกสาเหตุ",
+"options": {
+"A": "Serum erythropoietin",
+"B": "JAK2 V617F mutation",
+"C": "Bone marrow biopsy",
+"D": "Serum PTHrP",
+"E": "Serum ACTH"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Polycythemia ในผู้สูบบุหรี่/มะเร็งปอดน่าจะเป็น secondary (hypoxia, carboxyhemoglobin หรือ ectopic EPO) ตรวจ serum EPO ก่อนเพื่อแยกจาก polycythemia vera ที่ EPO ต่ำ; PTHrP/ACTH ใช้กับ paraneoplastic อื่น",
+"source": "วิเคราะห์"
+},
+"75.2/87": {
+"box": 31,
+"stem": "ยาต้าน TB ตัวใดทำให้เกิด gout",
+"options": {
+"A": "Isoniazid",
+"B": "Pyrazinamide",
+"C": "Rifampicin",
+"D": "Ethambutol"
+},
+"answer": "B",
+"why": "Pyrazinamide ยับยั้งการขับ uric acid ที่ไตทำให้ hyperuricemia และ gout บ่อยที่สุด; ethambutol ก็เพิ่ม uric acid ได้แต่น้อยกว่า, INH/rifampicin ไม่เกี่ยว",
+"source": "วิเคราะห์"
+},
+"75.2/95": {
+"box": 12,
+"stem": "ผู้ป่วยอุบัติเหตุ ซี่โครงหักหลายซี่หลายตำแหน่ง ผนังทรวงอกเคลื่อนไหวสวนทางการหายใจ (paradoxical movement) ภาวะนี้คือ",
+"options": {
+"A": "Flail chest",
+"B": "Chylothorax",
+"C": "Hemothorax",
+"D": "Pneumothorax",
+"E": "Pleural effusion"
+},
+"answer": "A",
+"why": "ซี่โครงหัก ≥3 ซี่ ซี่ละ ≥2 ตำแหน่ง ทำให้ส่วนผนังอกลอยยุบเข้าขณะหายใจเข้า = flail chest; hemothorax/pneumothorax ไม่ทำให้ paradoxical movement ของผนังอก",
+"source": "วิเคราะห์"
+},
+"75.2/109": {
+"box": 22,
+"stem": "ภาพพยาธิวิทยาของ lung cancer (ลักษณะ adenocarcinoma) ควรตรวจหา mutation ของยีนใดเพื่อเลือก targeted therapy",
+"options": {
+"A": "EGFR",
+"B": "MYC",
+"C": "RB1",
+"D": "TP53",
+"E": "NF1"
+},
+"answer": "A",
+"options_reconstructed": true,
+"needs_image": true,
+"why": "Lung adenocarcinoma (โดยเฉพาะผู้หญิง/ไม่สูบบุหรี่/คนเอเชีย) มี EGFR mutation บ่อยและรักษาด้วย EGFR-TKI; MYC amplification และ RB1/TP53 loss พบใน small cell carcinoma",
+"source": "วิเคราะห์"
+},
+"75.2/111": {
+"box": 31,
+"stem": "ชายมี acute gout attack ก่อนหน้านี้เป็น TB และได้รับยาสูตรมาตรฐาน ยาใดเป็นสาเหตุ",
+"options": {
+"A": "Isoniazid",
+"B": "Rifampicin",
+"C": "Ethambutol",
+"D": "Pyrazinamide",
+"E": "Streptomycin"
+},
+"answer": "D",
+"why": "Pyrazinamide ลดการขับ urate ทำให้ hyperuricemia/gout; ethambutol เพิ่ม urate ได้เล็กน้อย แต่ PZA เป็นสาเหตุหลัก ส่วน streptomycin ทำ ototoxicity",
+"source": "วิเคราะห์"
+},
+"75.2/120": {
+"box": 5,
+"stem": "Thymoma จะเห็นเป็นก้อนในตำแหน่งใดของ mediastinum บน CXR",
+"options": {
+"A": "Anterior (anterosuperior) mediastinum",
+"B": "Middle mediastinum",
+"C": "Posterior mediastinum",
+"D": "Pulmonary hilum",
+"E": "Paravertebral gutter"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Thymus อยู่หลัง sternum ใน anterior/superior mediastinum จึงเป็นตำแหน่งของ thymoma (4T: thymoma, teratoma, thyroid, terrible lymphoma); ก้อนที่กด sympathetic trunk เช่น neurogenic tumor อยู่ posterior mediastinum",
+"source": "วิเคราะห์"
+},
+"75.2/124": {
+"box": 2,
+"stem": "ผู้ป่วยเสียงแหบ (hoarseness) หลังผ่าตัด thyroidectomy หรือสงสัย aortic arch aneurysm เส้นประสาทใดได้รับผลกระทบ",
+"options": {
+"A": "Recurrent laryngeal nerve",
+"B": "External branch of superior laryngeal nerve",
+"C": "Internal branch of superior laryngeal nerve",
+"D": "Phrenic nerve",
+"E": "Hypoglossal nerve"
+},
+"answer": "A",
+"options_reconstructed": true,
+"why": "Left RLN อ้อมใต้ aortic arch และ RLN วิ่งใกล้ inferior thyroid artery จึงบาดเจ็บได้ทั้งจาก aneurysm และ thyroidectomy ทำให้ intrinsic laryngeal muscles อ่อนแรง; external SLN ทำให้เสียงสูงไม่ได้ (cricothyroid) ไม่ใช่แหบชัด",
+"source": "วิเคราะห์"
+},
+"75.2/139": {
+"box": 26,
+"stem": "Gram-negative diplococci รูปไต ก่อ pneumonia และให้ผล hockey puck test positive เชื้อใด",
+"options": {
+"A": "Neisseria meningitidis",
+"B": "Moraxella catarrhalis",
+"C": "Neisseria gonorrhoeae",
+"D": "Haemophilus influenzae",
+"E": "Kingella kingae"
+},
+"answer": "B",
+"options_reconstructed": true,
+"why": "M. catarrhalis มี hockey puck sign (เลื่อนโคโลนีได้ทั้งก้อน) ก่อ otitis/sinusitis/pneumonia ใน COPD; N. meningitidis ไม่มีลักษณะนี้ และ H. influenzae เป็น coccobacilli",
+"source": "วิเคราะห์"
+},
+"76/5": {
+"box": 2,
+"stem": "ผู้ป่วยผ่าตัด thyroidectomy ระหว่างผูก superior thyroid artery ศัลยแพทย์ทำเส้นประสาทที่วิ่งคู่กับหลอดเลือดนี้บาดเจ็บ เส้นประสาทนั้นคืออะไร",
+"options": {
+"A": "Vagus nerve",
+"B": "Recurrent laryngeal nerve",
+"C": "External branch of superior laryngeal nerve",
+"D": "Internal branch of superior laryngeal nerve",
+"E": "Phrenic nerve"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "External branch of SLN วิ่งคู่ superior thyroid artery ไปเลี้ยง cricothyroid (เสียงแหบ/ร้องเสียงสูงไม่ได้) ส่วน RLN วิ่งคู่ inferior thyroid artery และ internal branch แทง thyrohyoid membrane ไปรับความรู้สึกเหนือ vocal cord"
+},
+"76/11": {
+"box": 24,
+"stem": "toxin ชนิดใดออกฤทธิ์ยับยั้งการสังเคราะห์โปรตีนของเซลล์เจ้าบ้าน",
+"options": {
+"A": "Diphtheria toxin",
+"B": "Tetanus toxin",
+"C": "Aflatoxin",
+"D": "Shiga toxin",
+"E": "Tetrodotoxin"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Diphtheria toxin ทำ ADP-ribosylation ของ EF-2 ยับยั้ง protein synthesis (Shiga toxin ก็ยับยั้งผ่าน 60S rRNA แต่ข้อนี้คาดหวัง diphtheria เป็นต้นแบบ) ส่วน tetanus toxin ตัด synaptobrevin, tetrodotoxin block Na channel, aflatoxin ทำ DNA mutation (p53)"
+},
+"76/18": {
+"box": 31,
+"stem": "ผู้ป่วย pulmonary TB เชื้อไม่ดื้อยา ได้สูตรยามาตรฐาน ต่อมามีอาการทางประสาท เช่น ชา รับความเจ็บปวดลดลง ควรให้วิตามินใดแก้",
+"options": {
+"A": "Thiamine",
+"B": "Riboflavin",
+"C": "Niacin",
+"D": "Pyridoxine",
+"E": "Mecobalamin"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Isoniazid ทำให้ขาด vitamin B6 (pyridoxine) เกิด peripheral neuropathy จึงให้ B6 ป้องกัน/รักษา วิตามินอื่นไม่เกี่ยวกับกลไกของ INH"
+},
+"76/20": {
+"box": 15,
+"stem": "ชายเล่นกับแมวทีไรมีน้ำมูกไหลและคันจมูกทุกครั้ง mediator ใดเป็นตัวหลักของอาการนี้",
+"options": {
+"A": "Histamine",
+"B": "TNF-alpha",
+"C": "Leukotrienes",
+"D": "IL-1",
+"E": "PGE1"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Allergic rhinitis ระยะ early phase เกิดจาก mast cell degranulation ปล่อย histamine ทำให้คัน จาม น้ำมูกไหล ส่วน leukotrienes เด่นใน late phase/คัดจมูก, TNF-α/IL-1 เป็น cytokine อักเสบทั่วไป"
+},
+"76/29": {
+"box": 26,
+"stem": "แบคทีเรียใดเพาะขึ้นบน chocolate agar ได้แต่ไม่ขึ้นบน blood agar ธรรมดา",
+"options": {
+"A": "Haemophilus influenzae type b",
+"B": "Staphylococcus aureus",
+"C": "Legionella pneumophila",
+"D": "Moraxella catarrhalis",
+"E": "Salmonella typhi"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "H. influenzae ต้องการ X factor (hemin) และ V factor (NAD) ที่ปล่อยออกมาเมื่อ RBC แตกใน chocolate agar; Legionella ต้องใช้ BCYE ไม่ขึ้นบน chocolate ส่วนตัวอื่นขึ้นบน blood agar ได้"
+},
+"76/34": {
+"box": 31,
+"stem": "Mycobacterium tuberculosis ที่มี mutation ของยีน rpoB จะดื้อต่อยาใด",
+"options": {
+"A": "Isoniazid",
+"B": "Rifampicin",
+"C": "Pyrazinamide",
+"D": "Ethambutol",
+"E": "Penicillin"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "rpoB ถอดรหัส β-subunit ของ RNA polymerase ซึ่งเป็นเป้าหมายของ rifampicin (GeneXpert ใช้ตรวจ) ส่วน INH ดื้อจาก katG/inhA, PZA จาก pncA, ethambutol จาก embB"
+},
+"76/36": {
+"box": 18,
+"stem": "อาชีพใดเสี่ยงต่อ silicosis มากที่สุด",
+"options": {
+"A": "Cotton plantation worker",
+"B": "Road construction site worker",
+"C": "Barber",
+"D": "Scuba diver",
+"E": "Medical student"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Silicosis เกิดจากหายใจฝุ่น crystalline silica จากงานก่อสร้าง ตัดหิน ขุดเจาะ เหมือง; คนงานฝ้ายเสี่ยง byssinosis, นักดำน้ำเสี่ยง decompression sickness"
+},
+"76/50": {
+"box": 26,
+"stem": "ผู้ป่วยไข้ ไอ หอบ เสมหะสีสนิม (rust-colored) Gram stain พบ Gram-positive diplococci เชื้อก่อโรคคือ",
+"options": {
+"A": "Haemophilus influenzae type b",
+"B": "Legionella pneumophila",
+"C": "Mycoplasma pneumoniae",
+"D": "Streptococcus pneumoniae",
+"E": "Staphylococcus aureus"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Rust-colored sputum + GPC เป็นคู่ (lancet-shaped diplococci) = pneumococcal lobar pneumonia; S. aureus เป็น GPC in clusters, Hib เป็น GN coccobacilli, Mycoplasma/Legionella ไม่ติด Gram"
+},
+"76/63": {
+"box": 3,
+"stem": "ผู้ป่วย nasopharyngeal carcinoma เก็บชิ้นเนื้อทั้งส่วนที่เป็นมะเร็งและส่วนปกติของ nasopharynx ส่วนที่ปกติจะบุด้วย epithelium ชนิดใด",
+"options": {
+"A": "Stratified columnar epithelium",
+"B": "Pseudostratified columnar epithelium",
+"C": "Transitional epithelium",
+"D": "Stratified squamous epithelium",
+"E": "Pseudostratified squamous epithelium"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Nasopharynx (ส่วนหายใจ) บุด้วย respiratory epithelium = pseudostratified ciliated columnar with goblet cells; stratified squamous พบใน oropharynx/บางส่วนของ nasopharynx ที่ผ่าน metaplasia ส่วน pseudostratified squamous ไม่มีอยู่จริง"
+},
+"76/67": {
+"box": 1,
+"stem": "ผู้ป่วยมีการอุดกั้นของ inferior nasal meatus โครงสร้างใดจะได้รับผลกระทบ",
+"options": {
+"A": "Maxillary sinus",
+"B": "Frontonasal duct",
+"C": "Nasolacrimal duct",
+"D": "Anterior ethmoid cells",
+"E": "Middle ethmoid cells"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Inferior meatus รับเฉพาะ nasolacrimal duct (อุดแล้วน้ำตาไหล) ส่วน maxillary, frontal, anterior ethmoid เปิดที่ middle meatus และ middle ethmoid เปิดที่ ethmoidal bulla ใน middle meatus"
+},
+"76/68": {
+"box": 23,
+"stem": "คนงานโรงงานผลิตฉนวนกันความร้อนพบ mesothelioma สูง เป็นผลจากการสัมผัสสารใด",
+"options": {
+"A": "Asbestos",
+"B": "Coal dust",
+"C": "Silica",
+"D": "Uranium",
+"E": "Livermorium"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Asbestos (ใช้ทำฉนวน) สัมพันธ์กับ mesothelioma, pleural plaque และ bronchogenic carcinoma; coal dust ทำ CWP, silica ทำ silicosis, uranium/radon สัมพันธ์ lung cancer"
+},
+"76/69": {
+"box": 25,
+"stem": "เด็กมีอาการไอกรน (whooping cough) เชื้อก่อโรคคือ",
+"options": {
+"A": "Bordetella pertussis",
+"B": "Corynebacterium diphtheriae",
+"C": "Mycobacterium tuberculosis",
+"D": "Streptococcus pneumoniae",
+"E": "RSV"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ไอเป็นชุดตามด้วยเสียง whoop เป็นลักษณะของ pertussis จาก Bordetella pertussis (GN coccobacilli) ส่วน C. diphtheriae ทำ pseudomembrane, RSV ทำ bronchiolitis"
+},
+"76/81": {
+"box": 1,
+"stem": "ผู้ป่วยมีการอุดกั้นของ middle nasal meatus โครงสร้างใดได้รับผลกระทบ",
+"options": {
+"A": "Nasolacrimal duct",
+"B": "Sphenoidal sinus",
+"C": "Eustachian tube",
+"D": "Maxillary sinus",
+"E": "Posterior ethmoid cells"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Middle meatus รับ maxillary, frontal และ anterior/middle ethmoid sinus; nasolacrimal duct เปิด inferior meatus, posterior ethmoid เปิด superior meatus, sphenoid เปิด sphenoethmoidal recess, Eustachian tube อยู่ nasopharynx"
+},
+"76/87": {
+"box": 8,
+"stem": "ผู้ป่วยเกิด pulmonary fibrosis จากยาเคมีบำบัด (เช่น bleomycin) การแพร่ของก๊าซใดได้รับผลกระทบมากที่สุด",
+"options": {
+"A": "O2",
+"B": "CO",
+"C": "CO2",
+"D": "NO2",
+"E": "CO2 and NO2"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ผนัง alveoli หนาทำให้ O2 ซึ่งแพร่ยากกว่า CO2 ~20 เท่า กลายเป็น diffusion-limited เกิด hypoxemia (ตรวจพบ DLCO ต่ำ ซึ่งใช้ CO เป็นตัววัด ไม่ใช่ก๊าซที่ผู้ป่วยเสียจริง) ส่วน CO2 แพร่ง่ายจึงแทบไม่กระทบ",
+"doubt": "บางเฉลยอาจตอบ CO เพราะ DLCO ลดลง"
+},
+"76/120": {
+"box": 12,
+"stem": "ผู้ป่วยอุบัติเหตุรถยนต์ พวงมาลัยกระแทกเข้าที่ sternum ส่วนใดของหัวใจบาดเจ็บได้มากที่สุด",
+"options": {
+"A": "Right ventricle",
+"B": "Right atrium",
+"C": "Left ventricle",
+"D": "Left atrium",
+"E": "Aortic arch"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Right ventricle เป็นส่วนที่อยู่หน้าสุด ชิดหลัง sternum จึงเกิด blunt cardiac injury บ่อยสุด LA อยู่หลังสุด, LV เป็นส่วน apex/ด้านซ้าย"
+},
+"76/134": {
+"box": 5,
+"stem": "ผู้ป่วยถูกแทงบริเวณข้างขวาของ sternum มีอาการเจ็บเวลาหายใจ เส้นประสาทใดน่าจะเกี่ยวข้องมากที่สุด",
+"options": {
+"A": "Vagus nerve",
+"B": "Phrenic nerve",
+"C": "Intercostal nerve",
+"D": "Lateral thoracic nerve",
+"E": "Sympathetic trunk"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Costal parietal pleura และผนังทรวงอกด้านหน้ารับความรู้สึกจาก intercostal nerve ทำให้เจ็บแบบ pleuritic เฉพาะที่; phrenic เลี้ยง mediastinal/diaphragmatic pleura (ปวดร้าวไหล่), vagus/sympathetic เป็น visceral"
+},
+"76/153": {
+"box": 7,
+"stem": "หญิง BMI 37 kg/m2 ข้อใดอธิบายพยาธิสรีรวิทยาของปอดในโรคอ้วนได้ถูกต้อง",
+"options": {
+"A": "Lung compliance decreases less than chest wall compliance",
+"B": "Less diaphragm upward movement",
+"C": "RV/TLC ratio increases"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ไขมันรอบทรวงอก/ช่องท้องทำให้ chest wall compliance ลดลงเด่นกว่า lung compliance และดัน diaphragm ขึ้นสูง (ไม่ใช่ลดลง) ทำให้ FRC/ERV ลด; RV มักปกติ การเพิ่ม RV/TLC เป็นลักษณะ air trapping ใน obstructive"
+},
+"76/156": {
+"box": 29,
+"stem": "ทารก 10 เดือน PCP, otitis media ซ้ำ, oral thrush, น้ำหนักต่ำ B และ T cell จำนวนปกติแต่ Ig ต่ำทุกชนิด พบ AR mutation ของ regulation การถอดรหัส HLA (flow cytometry ไม่พบ HLA-DR) กระบวนการใดบกพร่อง",
+"options": {
+"A": "Development of pharyngeal pouches",
+"B": "Capability of activated CD4+ T cells to express CD40L",
+"C": "Maturation of pro-B cells into pre-B cells",
+"D": "Presentation of antigens processed in lysosomes",
+"E": "Transport of cytosolic proteins into ER"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Bare lymphocyte syndrome (MHC class II deficiency จาก CIITA/RFX) ทำให้ไม่สามารถนำเสนอ antigen ที่ผ่าน endosome/lysosome ให้ CD4 ได้ จึงขาด T help และ Ig ต่ำ; pharyngeal pouch = DiGeorge, CD40L = hyper-IgM, pro-B→pre-B = Bruton, TAP = MHC I deficiency",
+"needs_image": true
+},
+"76/164": {
+"box": 9,
+"stem": "ข้อใดเป็นการปรับตัวของระบบหัวใจและหายใจขณะออกกำลังกาย",
+"options": {
+"A": "Increased CO, MV, SpO2",
+"B": "Increased CO, MV, SpCO2",
+"C": "Decreased tidal volume",
+"D": "Decreased tidal volume (ซ้ำ)"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ออกกำลังกายเพิ่ม cardiac output และ minute ventilation โดย O2 saturation คงที่/ดีขึ้นเล็กน้อยจาก V/Q ที่สม่ำเสมอขึ้น ส่วน PaCO2 ไม่เพิ่ม (คงที่หรือลดลงในงานหนัก) และ tidal volume เพิ่มขึ้นไม่ใช่ลด",
+"doubt": "ตัวเลือกจากความจำไม่ครบ ถ้อยคำ SpO2 ไม่เพิ่มจริงในทางสรีรวิทยา"
+},
+"76/168": {
+"box": 13,
+"stem": "ให้ flow-volume loop หลายแบบเทียบกับปกติ (สีน้ำเงิน) แบบใดเข้าได้กับ COPD",
+"options": {
+"A": "Loop เล็กลงทั้งวงแต่รูปร่างปกติ เลื่อนไปทางขวา (low TLC)",
+"B": "Expiratory limb เว้าลง (scooped/concave) เลื่อนไปทางซ้าย (high TLC/RV)",
+"C": "Inspiratory limb แบนราบอย่างเดียว",
+"D": "ทั้ง inspiratory และ expiratory limb แบนราบ (plateau)",
+"E": "Loop ปกติ"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "COPD มี expiratory flow ลดลงหลัง peak เป็นรูป scooped-out และ air trapping ทำให้ loop เลื่อนไปที่ lung volume สูง; loop เล็กแบบ restrictive เลื่อนขวา ส่วน limb แบนเป็น upper airway obstruction",
+"options_reconstructed": true,
+"needs_image": true
+},
+"76/172": {
+"box": 6,
+"stem": "ข้อใดเป็นความแตกต่างระหว่างภาวะขาด surfactant กับ pulmonary fibrosis",
+"options": {
+"A": "Diffusion defect",
+"B": "Restriction pattern in function test",
+"C": "Collapsed small alveoli and distended large alveoli"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "ขาด surfactant ทำให้ alveoli เล็กมีแรงตึงผิวสูงตามกฎ Laplace จึงยุบและไล่ลมไปถุงใหญ่ เกิดเฉพาะในภาวะนี้ ส่วน diffusion defect และ restrictive pattern พบได้ทั้งสองภาวะ"
+},
+"76/207": {
+"box": 8,
+"stem": "ผู้ป่วยกล้ามเนื้อ diaphragm อ่อนแรงเกิดภาวะ hypoxia กลไกหลักคือ",
+"options": {
+"A": "Alveolar hypoventilation",
+"B": "Diffusion defect",
+"C": "High V/Q ratio"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ปั๊มหายใจอ่อนแรงทำให้ ventilation ลด PaCO2 สูงและ PAO2 ต่ำ โดย A–a gradient ปกติ = hypoventilation ไม่ใช่ปัญหาที่ alveolar membrane หรือ dead space"
+},
+"76/213": {
+"box": 6,
+"stem": "ทารกแรกเกิดน้ำลายไหลล้นจากปากและจมูก ปอดมีเสมหะ/สำลัก ท้องอืด ไม่ค่อยยอมกลืนนม น่าจะเป็นโรคใด",
+"options": {
+"A": "Tracheoesophageal fistula",
+"B": "Pyloric sphincter hyperplasia"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Esophageal atresia ร่วมกับ distal TEF ทำให้กลืนน้ำลายไม่ได้ สำลักเข้าปอด และอากาศผ่าน fistula เข้ากระเพาะจนท้องอืด; pyloric stenosis มาด้วย projectile non-bilious vomiting อายุ 2–6 สัปดาห์"
+},
+"76/222": {
+"box": 14,
+"stem": "ผู้ป่วยมา ER ด้วย morphine overdose ผล blood gas ใดเข้าได้มากที่สุด",
+"options": {
+"A": "pH 7.27, PCO2 60, HCO3 26, AG 12",
+"B": "pH 7.04, PCO2 60, HCO3 19",
+"C": "PCO2 20",
+"D": "PCO2 14"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Opioid กดศูนย์หายใจ เกิด acute respiratory acidosis: PCO2 สูง และ HCO3 เพิ่มเพียง ~1 ต่อ PCO2 10 (≈26) pH ~7.27; ข้อ B มี HCO3 ต่ำร่วม = mixed metabolic acidosis, PCO2 ต่ำเป็น hyperventilation"
+},
+"76/240": {
+"box": 28,
+"stem": "ชาย 40 ปี น้ำหนักลด เหงื่อออกกลางคืน ไอเป็นเลือด ไข้ต่ำๆ CXR มีรอยโรค/โพรงที่ปอดส่วนบน แต่ AFB smear ลบ เชื้อที่น่าจะเป็นที่สุดคือ",
+"options": {
+"A": "Mycobacterium tuberculosis",
+"B": "Nocardia asteroides",
+"C": "Mycoplasma pneumoniae"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "อาการเรื้อรัง + upper lobe cavity เป็น post-primary TB และ AFB smear มี sensitivity เพียง ~50% จึงลบได้ ต้องเพาะเชื้อ/GeneXpert; Nocardia มักพบในผู้ภูมิต้านทานต่ำและติด modified AFB, Mycoplasma เป็น atypical pneumonia เฉียบพลัน",
+"needs_image": true,
+"doubt": "AFB ลบอาจตั้งใจให้ตอบ Nocardia แต่ไม่มีข้อมูล immunocompromised"
+},
+"76/256": {
+"box": 24,
+"stem": "ย้อม immunofluorescence เซลล์ที่ติดเชื้อ influenza จะพบ antigen ที่ตำแหน่งใด",
+"options": {
+"A": "Cytoplasm",
+"B": "Nuclear membrane",
+"C": "Cytoplasm & nuclear membrane"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Influenza เป็น RNA virus ที่ replicate ใน nucleus (ใช้ cap-snatching) แล้ว nucleoprotein ส่งออกไป cytoplasm จึงติดสีทั้ง nucleus และ cytoplasm ต่างจาก RNA virus ทั่วไปที่อยู่ใน cytoplasm อย่างเดียว"
+},
+"76/261": {
+"box": 16,
+"stem": "ผู้ป่วยมี air trapping หอบ wheeze ดีขึ้นด้วย bronchodilator บอกว่าเหนื่อยแค่จากการพยายามหายใจ เพราะเหตุใด",
+"options": {
+"A": "Inspiration requires accessory muscle use",
+"B": "Expiration requires breathing slowly to not collapse airway",
+"C": "Increase work of breathing"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "หลอดลมตีบและ dynamic hyperinflation ทำให้ต้องหายใจที่ lung volume สูงซึ่ง compliance ต่ำ และต้องเอาชนะ airway resistance จึงเพิ่ม work of breathing เป็นเหตุหลักของอาการเหนื่อย; ข้ออื่นเป็นผลหรือกลยุทธ์ปรับตัวเท่านั้น"
+},
+"76/270": {
+"box": 26,
+"stem": "กลไกภูมิคุ้มกันหลักในการกำจัด Streptococcus pneumoniae คือ",
+"options": {
+"A": "Opsonization",
+"B": "Cytotoxic T cell killing",
+"C": "NK cell activity",
+"D": "IgE-mediated mast cell degranulation",
+"E": "Eosinophil ADCC"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Pneumococcus มี polysaccharide capsule ต้านการจับกิน ต้องอาศัย antibody และ complement (C3b) opsonization ให้ macrophage ในม้ามจับกิน จึงพบบ่อยในผู้ไม่มีม้าม; CTL/NK ใช้กับเชื้อในเซลล์",
+"options_reconstructed": true
+},
+"76/274": {
+"box": 11,
+"stem": "กลุ่มเซลล์ประสาทใดทำหน้าที่สร้างจังหวะการหายใจ (rhythm generator)",
+"options": {
+"A": "Nucleus ambiguus",
+"B": "Dorsal respiratory group",
+"C": "Bötzinger complex",
+"D": "Pre-Bötzinger complex",
+"E": "Midpons"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Pre-Bötzinger complex ใน ventrolateral medulla เป็น pacemaker สร้างจังหวะหายใจเข้า; DRG (NTS) รับ input และส่งสัญญาณหายใจเข้า, Bötzinger complex เป็น expiratory neuron, nucleus ambiguus เป็น motor ของ larynx"
+},
+"76/277": {
+"box": 17,
+"stem": "ข้อใดอธิบายพยาธิสรีรวิทยาของ COPD ได้ถูกต้อง",
+"options": {
+"A": "Loss of elastic recoil and radial traction leads to dynamic airway collapse during expiration",
+"B": "Increased lung elastic recoil increases FEV1",
+"C": "Decreased TLC and RV due to fibrosis",
+"D": "Pure diffusion defect with normal FEV1/FVC",
+"E": "Upper airway fixed obstruction"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Emphysema ทำลาย elastin สูญ elastic recoil และ radial traction ทำให้ airway ยุบตอนหายใจออก (dynamic compression) เกิด air trapping RV/TLC สูง FEV1/FVC < 0.7; ข้ออื่นเป็นลักษณะของ restrictive/upper airway",
+"options_reconstructed": true
+},
+"76/126": {
+"box": 16,
+"stem": "Albuterol เป็นยาโมเลกุลเล็กให้ทางการสูด กลไกหลักในการผ่านเข้าเซลล์คืออะไร",
+"options": {
+"A": "Lipid diffusion",
+"B": "Aqueous diffusion",
+"C": "Active transport",
+"D": "Facilitated diffusion",
+"E": "Receptor-mediated endocytosis"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "โจทย์เน้นว่าเป็นโมเลกุลเล็ก และ albuterol ค่อนข้างมีขั้ว จึงผ่านแบบ aqueous diffusion ผ่าน pore/junction (Katzung) ส่วน lipid diffusion เหมาะกับยาที่ละลายไขมันได้ดี active/facilitated ต้องมี carrier เฉพาะ",
+"doubt": "Lipid diffusion เป็นกลไกหลักของยาส่วนใหญ่ เฉลยอาจตอบ A"
+},
+"77/4": {
+"box": 25,
+"stem": "ชาย 30 ปี มีบุตรยากจากอสุจิเคลื่อนไหวน้อย มีประวัติติดเชื้อทางเดินหายใจส่วนล่างซ้ำ CXR พบ situs inversus ความผิดปกติอยู่ที่ใด",
+"options": {
+"A": "Dynein arm defect",
+"B": "Kinesin loss-of-function mutation",
+"C": "Microtubule polymerization defect",
+"D": "Ion channel defect"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Kartagener syndrome (primary ciliary dyskinesia) เกิดจาก dynein arm ของ axoneme ผิดปกติ ทำให้ cilia/flagella เคลื่อนไหวไม่ได้ เกิด bronchiectasis, sinusitis, เป็นหมัน, situs inversus; ion channel defect คือ CF ซึ่งไม่ทำให้ situs inversus"
+},
+"77/36": {
+"box": 21,
+"stem": "ผล pleural fluid: fluid/serum protein ratio 0.45, fluid/serum LDH ratio 0.35 สาเหตุที่น่าจะเป็นที่สุดคือ",
+"options": {
+"A": "Malignancy",
+"B": "Congestive heart failure",
+"C": "Pneumonia"
+},
+"answer": "B",
+"source": "เฉลย77",
+"why": "ตาม Light's criteria ค่า protein ratio ≤0.5 และ LDH ratio ≤0.6 เป็น transudate ซึ่งพบบ่อยสุดจาก CHF ส่วน malignancy และ parapneumonic effusion เป็น exudate"
+},
+"77/39": {
+"box": 31,
+"stem": "ผู้ป่วย TB เชื้อไม่ดื้อยา ได้ยาแล้วเกิดตับอักเสบ ยาใดมีโอกาสทำให้เกิดผลข้างเคียงนี้น้อยที่สุด",
+"options": {
+"A": "Linezolid",
+"B": "Rifampicin",
+"C": "Isoniazid",
+"D": "Ethambutol",
+"E": "Pyrazinamide"
+},
+"answer": "D",
+"source": "เฉลย77",
+"why": "ยา first-line ที่เป็นพิษต่อตับคือ INH, rifampicin, PZA ส่วน ethambutol ไม่ค่อย hepatotoxic (ผลข้างเคียงหลัก optic neuritis/ตาบอดสีแดง-เขียว) จึงเป็นยาที่คงไว้ได้เมื่อเกิด DILI; linezolid ไม่ใช่ยาในสูตรที่ให้"
+},
+"77/45": {
+"box": 22,
+"stem": "ผู้ป่วย NSCLC ได้ยา erlotinib ผลข้างเคียงที่พบบ่อยที่สุดคือ",
+"options": {
+"A": "Acne-like rash",
+"B": "Cardiotoxicity",
+"C": "Peripheral neuropathy",
+"D": "Eye irritation"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Erlotinib เป็น EGFR tyrosine kinase inhibitor ซึ่งยับยั้ง EGFR ในผิวหนังด้วย ทำให้เกิด acneiform (papulopustular) rash และท้องเสียบ่อยที่สุด; cardiotoxicity พบกับ trastuzumab/anthracycline, neuropathy กับ taxane/platinum"
+},
+"77/58": {
+"box": 22,
+"stem": "การศึกษา case-control: ผู้ป่วย lung cancer 100 คน สูบบุหรี่ 80 คน; กลุ่มควบคุม 100 คน สูบบุหรี่ 40 คน odds ratio ของการสูบบุหรี่ต่อ lung cancer เท่ากับเท่าใด",
+"options": {
+"A": "2",
+"B": "3",
+"C": "4",
+"D": "6",
+"E": "8"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "OR = (80×60)/(20×40) = 4800/800 = 6 ใช้ odds ratio เพราะเป็น case-control ไม่สามารถคำนวณ incidence/relative risk ได้ ค่า 2 เป็นการเอาสัดส่วน 80%/40% มาหารกันผิดวิธี",
+"options_reconstructed": true
+},
+"77/128": {
+"box": 14,
+"stem": "ผลเลือด Na 138, Cl 108, K 3.56, pH 7.43, HCO3 9, PCO2 20 แปลผลภาวะกรด-ด่างว่าอย่างไร",
+"options": {
+"A": "Respiratory alkalosis with pure wide AG metabolic acidosis",
+"B": "Respiratory acidosis with metabolic alkalosis",
+"C": "Respiratory alkalosis with WAGMA and concurrent metabolic alkalosis",
+"D": "Respiratory alkalosis with WAGMA and NAGMA"
+},
+"answer": "D",
+"source": "เฉลย77",
+"why": "AG = 138−(108+9) = 21 (กว้าง) ΔAG 9 แต่ ΔHCO3 15 → delta ratio ≈0.6 แสดงว่ามี NAGMA ร่วม; pH ปกติ-ค่อนด่างทั้งที่ HCO3 ต่ำมาก จึงมี respiratory alkalosis ร่วม ถ้ามี metabolic alkalosis ร่วม delta ratio จะ >2"
+},
+"77/129": {
+"box": 16,
+"stem": "ยาสูดชนิดผสมที่ใช้เป็นประจำทุกวัน (controller) สำหรับผู้ป่วย asthma คือข้อใด",
+"options": {
+"A": "Formoterol + Budesonide",
+"B": "Loratadine + Terbutaline",
+"C": "Cetirizine + Salbutamol"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "ICS + LABA (budesonide/formoterol) เป็นยาควบคุมอาการและใช้เป็น MART ได้ ส่วน antihistamine ไม่มีบทบาทรักษา asthma และ SABA ใช้เป็นยาบรรเทาอาการเท่านั้น"
+},
+"77/130": {
+"box": 13,
+"stem": "หญิงไทย 63 ปี เหนื่อย หายใจลำบาก ไอแห้ง CXR พบ low lung volume ร่วมกับ reticular opacity ผล spirometry ข้อใดเข้าได้",
+"options": {
+"A": "FEV1 ↓, FVC ปกติ, FEV1/FVC 0.50 (scooped curve)",
+"B": "FEV1 ↓, FVC ↓↓, FEV1/FVC ≥0.85 (curve เล็กแต่สูงชัน)",
+"C": "FEV1 ปกติ, FVC ปกติ, FEV1/FVC 0.80",
+"D": "FEV1/FVC ต่ำ ดีขึ้นมากหลังให้ bronchodilator",
+"E": "Flow-volume loop แบนทั้ง inspiration และ expiration"
+},
+"answer": "B",
+"source": "เฉลย77",
+"why": "ภาพเข้าได้กับ IPF ซึ่งเป็น restrictive: FVC ลดมากกว่า FEV1 จึงได้ ratio ปกติหรือสูง (elastic recoil สูง) ส่วน ratio ต่ำเป็น obstructive (COPD/asthma) และ loop แบนเป็น fixed upper airway obstruction",
+"needs_image": true,
+"options_reconstructed": true
+},
+"77/131": {
+"box": 30,
+"stem": "ผู้ป่วยอายุ 20 ปี เดิมแข็งแรง ไอมีเสมหะขาว ไม่มีไข้ ถ้าให้ oral dextromethorphan ถือว่าเป็นการใช้ยาอย่างสมเหตุผลหรือไม่",
+"options": {
+"A": "Rational drug use",
+"B": "Irrational: against cost",
+"C": "Irrational: against route",
+"D": "Irrational: against safety",
+"E": "Irrational: against compliance"
+},
+"answer": "D",
+"source": "เฉลย77",
+"why": "Dextromethorphan เป็น antitussive กดศูนย์ไอ ไม่ควรใช้ในไอมีเสมหะเพราะทำให้เสมหะคั่งค้าง เสี่ยงต่อการติดเชื้อ/อุดกั้น จึงผิดในแง่ safety ยานี้ราคาถูกและให้ทางกินถูกต้อง จึงไม่ผิดด้าน cost หรือ route"
+},
+"77/132": {
+"box": 6,
+"stem": "ทารกคลอดก่อนกำหนด 27 สัปดาห์ มีภาวะหายใจลำบาก สาเหตุคืออะไร",
+"options": {
+"A": "Immature function of type II pneumocyte",
+"B": "Immature connection in pore of Kohn",
+"C": "No lung lubricant production"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "NRDS เกิดจาก type II pneumocyte ยังสร้าง surfactant ได้ไม่พอ (เพียงพอหลัง ~34–35 สัปดาห์) alveoli จึงยุบ; pore of Kohn เกี่ยวกับ collateral ventilation ไม่ใช่สาเหตุ"
+},
+"77/133": {
+"box": 17,
+"stem": "ชาย 50 ปี สูบบุหรี่ 20 ปี ไอ เหนื่อย 6 เดือน spirometry เป็น obstructive ข้อใดอธิบายพยาธิสรีรวิทยาได้ดีที่สุด",
+"options": {
+"A": "Dynamic airway obstruction",
+"B": "Increased radial traction"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "COPD สูญเสีย elastic recoil และ radial traction ของ alveoli ที่ยึดหลอดลมเล็กไว้ ทำให้ airway ยุบขณะหายใจออก (dynamic compression); radial traction ลดลง ไม่ใช่เพิ่ม"
+},
+"77/134": {
+"box": 4,
+"stem": "เด็กกลืน/สำลักลูกบอลเล็กๆ ของเล่น เข้าทางเดินหายใจ สิ่งแปลกปลอมน่าจะไปอุดปอดส่วนใด",
+"options": {
+"A": "Right lower lobe",
+"B": "Right upper lobe",
+"C": "Left upper lobe",
+"D": "Left lower lobe",
+"E": "Both lungs equally"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "Right main bronchus กว้าง สั้น และตั้งชันกว่า สิ่งแปลกปลอมจึงตกไปขวา และในท่าตั้งตรงมักลงสู่ right lower lobe; RUL (posterior segment) เป็นตำแหน่งสำลักในท่านอนหงาย"
+},
+"77/135": {
+"box": 7,
+"stem": "ผู้ป่วยถูกแทงที่หน้าอก มา ER หอบเหนื่อย trachea ไม่เอียง แต่ SpO2 ลดลงเหลือ 84% ข้อใดอธิบายพยาธิสรีรวิทยาได้ดีที่สุด",
+"options": {
+"A": "Intrapleural pressure becomes equal to atmospheric pressure",
+"B": "Increased lung compliance",
+"C": "Decreased chest wall compliance",
+"D": "Increased radial traction of airway"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "แผลทะลุทำให้เกิด (open/simple) pneumothorax ความดันใน pleura เท่าบรรยากาศ สูญเสียแรงดูดที่ทำให้ปอดขยาย ปอดยุบเกิด shunt/hypoxemia; ไม่มี tracheal shift จึงยังไม่ใช่ tension pneumothorax"
+},
+"77/136": {
+"box": 5,
+"stem": "ผู้ป่วยมี thymoma หลอดเลือดดำใดมีโอกาสถูกกดเบียดมากที่สุด",
+"options": {
+"A": "Right brachiocephalic vein",
+"B": "Left brachiocephalic vein",
+"C": "Right subclavian vein",
+"D": "Left internal jugular vein",
+"E": "Right internal jugular vein"
+},
+"answer": "B",
+"source": "เฉลย77",
+"why": "Left brachiocephalic vein ทอดผ่านแนวนอนใน superior mediastinum ทางด้านหลัง thymus โดยตรง จึงถูก thymoma กดได้ง่ายสุด ส่วน right brachiocephalic สั้นและอยู่ด้านขวาค่อนข้างตั้ง"
+},
+"77/137": {
+"box": 16,
+"stem": "ผู้ป่วยหอบเหนื่อยรุนแรง wheezing เป็นซ้ำ ต้องมาโรงพยาบาล 3 ครั้งใน 1 ปี มีเสมหะเหนียวและตรวจเสมหะพบ eosinophil สูง วินิจฉัยว่า",
+"options": {
+"A": "Asthma",
+"B": "Acute bronchitis",
+"C": "COPD",
+"D": "Atelectasis",
+"E": "Bronchiectasis"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "Wheeze เป็นซ้ำร่วมกับ eosinophilic sputum (Curschmann spirals, Charcot-Leyden crystals) เป็น type 2 inflammation ของ asthma; COPD มักเป็น neutrophilic ในผู้สูบบุหรี่ bronchiectasis มีเสมหะหนองปริมาณมาก"
+},
+"77/138": {
+"box": 8,
+"stem": "ผู้ป่วยมีโรคที่ทำให้เกิด phrenic nerve paralysis ภาวะ hypoxemia เกิดจากกลไกใด",
+"options": {
+"A": "Alveolar hypoventilation",
+"B": "High V/Q mismatch",
+"C": "Right-to-left shunt",
+"D": "Low atmospheric pressure",
+"E": "Increased infiltration of blood-air barrier"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "อัมพาตของ diaphragm ทำให้ปั๊มหายใจอ่อนแรง ventilation ลด PaCO2 สูง และ PAO2 ต่ำ A–a gradient ปกติ = hypoventilation; low atmospheric pressure คือที่สูง ส่วน barrier หนาคือ diffusion defect"
+},
+"77/139": {
+"box": 18,
+"stem": "ชาย 40 ปี ทำงานในโรงงานรถยนต์ (ผ้าเบรก/คลัตช์) CXR พบ reticular opacity ร่วมกับ calcified pleural plaque วินิจฉัยว่า",
+"options": {
+"A": "Asbestosis",
+"B": "Silicosis"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "Calcified pleural plaque เป็นเครื่องหมายของการสัมผัส asbestos (ผ้าเบรก ฉนวน ต่อเรือ) และ asbestosis เด่นที่ lower lobe; silicosis เด่น upper lobe มี eggshell calcification ของต่อมน้ำเหลือง hilar"
+},
+"77/140": {
+"box": 30,
+"stem": "ชาย 30 ปี ขับ grab-bike ย้ายมากรุงเทพ คันตา น้ำมูกไหล โดยเฉพาะตอนทำงาน ไม่ไอ ไม่มีไข้ ควรใช้ยาใด",
+"options": {
+"A": "Loratadine",
+"B": "Chlorpheniramine",
+"C": "Ambroxol",
+"D": "Prednisolone"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "Allergic rhinitis ในคนขับรถ ควรใช้ 2nd-generation antihistamine (loratadine) ที่ไม่ผ่าน BBB จึงไม่ง่วง; chlorpheniramine ง่วงเสี่ยงอุบัติเหตุ, ambroxol เป็น mucolytic, systemic steroid ไม่ใช่ยาหลัก"
+},
+"77/141": {
+"box": 16,
+"stem": "ผู้ป่วย acute asthmatic attack พ่นยาขยายหลอดลมที่ใช้ประจำแล้วไม่ดีขึ้น มา ER ควรให้ยาใดทางหลอดเลือดดำ",
+"options": {
+"A": "Ipratropium",
+"B": "Dexamethasone",
+"C": "Salbutamol"
+},
+"answer": "B",
+"source": "เฉลย77",
+"why": "Acute exacerbation ที่ตอบสนองไม่ดีต่อ SABA ต้องให้ systemic corticosteroid (dexamethasone/hydrocortisone IV) เพื่อลดการอักเสบ; ipratropium และ salbutamol ให้ทางพ่น ไม่ใช่ทางหลอดเลือดดำ"
+},
+"77/142": {
+"box": 6,
+"stem": "ทารกคลอดก่อนกำหนด หายใจลำบาก ภาพรังสีไม่พบลมของลำไส้ในช่องท้อง (no bowel gas) วินิจฉัยว่า",
+"options": {
+"A": "Congenital diaphragmatic hernia",
+"B": "Respiratory distress syndrome"
+},
+"answer": "A",
+"source": "เฉลย77",
+"why": "CDH (มักเป็น Bochdalek ด้านซ้าย) ลำไส้เคลื่อนขึ้นไปในทรวงอก ท้องแฟบ ไม่มีลมในช่องท้องและเห็นเงาลำไส้ในอก; RDS มี ground-glass + air bronchogram โดยลมในช่องท้องปกติ",
+"needs_image": true
+},
+"77/143": {
+"box": 29,
+"stem": "ผู้ป่วยไอเป็นเลือด ชิ้นเนื้อปอดพบเชื้อราที่มี hyphae แตกแขนงทำมุมแหลม (acute-angle branching) วินิจฉัยว่า",
+"options": {
+"A": "Aspergilloma",
+"B": "Angioinvasive aspergillosis"
+},
+"answer": "B",
+"source": "เฉลย77",
+"why": "Hyphae มี septum แตกแขนงมุมแหลม = Aspergillus และเฉลยเลือก angioinvasive เพราะเห็นเชื้อในเนื้อปอดลุกลามหลอดเลือดจนเลือดออก ส่วน aspergilloma คือก้อนราอยู่ในโพรงเก่า ไม่รุกเนื้อเยื่อ"
+},
+"77/144": {
+"box": 4,
+"stem": "ให้ภาพรังสีทรวงอก ถามว่ารอยโรคอยู่ที่ lobe ใด",
+"options": {
+"A": "Left upper lobe",
+"B": "Left lower lobe",
+"C": "Right upper lobe",
+"D": "Right middle lobe",
+"E": "Right lower lobe"
+},
+"answer": "D",
+"source": "เฉลย77",
+"why": "ไม่เห็นภาพ เดาจากรูปแบบที่ออกบ่อย: รอยโรคบดขอบหัวใจขวา (silhouette sign) บ่งชี้ right middle lobe ส่วนรอยโรคที่บดขอบ diaphragm บ่งชี้ lower lobe",
+"needs_image": true
+},
+"77/240": {
+"box": 17,
+"stem": "ผู้ป่วยไอ หอบเหนื่อย 6 เดือน สูบบุหรี่ 20 ปี (COPD) แพทย์สั่งยาพ่นเพื่อบรรเทาอาการ ยานี้น่าจะออกฤทธิ์อย่างไร",
+"options": {
+"A": "Nicotinic receptor antagonist",
+"B": "Nicotinic receptor agonist",
+"C": "Muscarinic receptor agonist",
+"D": "Muscarinic receptor antagonist",
+"E": "Beta-adrenergic antagonist"
+},
+"answer": "D",
+"source": "เฉลย77",
+"why": "ยาหลักใน COPD คือ inhaled antimuscarinic (tiotropium/ipratropium) ที่ block M3 ลด bronchoconstriction และเสมหะ; muscarinic agonist ทำให้หลอดลมหดตัว และ beta-blocker ทำให้หลอดลมตีบ (ยาที่ถูกคือ beta agonist)"
+},
+"78/86": {
+"box": 30,
+"stem": "หญิงตั้งครรภ์ได้ tocolytic drug แล้วเกิด pulmonary edema และ tachycardia ยาตัวใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Terbutaline",
+"B": "MgSO4",
+"C": "Nifedipine",
+"D": "Indomethacin"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Terbutaline เป็น β2 agonist ทำให้ tachycardia (β1 spillover) และ pulmonary edema จาก fluid retention ได้ MgSO4 ทำให้ hyporeflexia/respiratory depression, Nifedipine ทำให้ reflex tachycardia แต่ pulmonary edema น้อยกว่า, Indomethacin ทำให้ ductus ปิดก่อนกำหนด"
+},
+"78/99": {
+"box": 8,
+"stem": "CO2 ที่ขนส่งจากเนื้อเยื่อไปปอด ส่วนใหญ่อยู่ในรูปใด",
+"options": {
+"A": "Carbaminohemoglobin",
+"B": "Carbamino compounds",
+"C": "HCO3- จาก carbonic anhydrase ใน RBC",
+"D": "Carbonic acid ที่เกิดโดยไม่ใช้ enzyme",
+"E": "ละลายใน plasma"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "~70% ของ CO2 ขนส่งในรูป HCO3- ที่สร้างใน RBC ผ่าน carbonic anhydrase (แล้ว chloride shift ออก plasma) carbamino ~20-23% และ dissolved ~7-10% ปฏิกิริยาที่ไม่ใช้ enzyme ช้ามาก"
+},
+"78/104": {
+"box": 27,
+"stem": "ผู้ป่วย pneumonia CXR เป็น bilateral infiltration เพาะเชื้อบน PPLO agar ได้ colony ลักษณะ fried egg เชื้อใด",
+"options": {
+"A": "Klebsiella pneumoniae",
+"B": "Mycoplasma pneumoniae",
+"C": "Streptococcus pneumoniae"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Mycoplasma ไม่มี cell wall ต้องใช้ PPLO (Eaton) agar ที่มี sterol และ colony เป็นแบบ fried egg ทำให้เกิด atypical pneumonia แบบ interstitial ทั้งสองข้าง Klebsiella ให้ mucoid colony/currant jelly sputum, S. pneumoniae เป็น alpha-hemolytic lobar pneumonia"
+},
+"78/110": {
+"box": 30,
+"stem": "ผู้ป่วยไอแห้งจนรบกวนการนอน ควรให้ยาใด",
+"options": {
+"A": "Acetylcysteine",
+"B": "Ambroxol",
+"C": "Bromhexine",
+"D": "Codeine",
+"E": "Guaifenesin"
+},
+"answer": "D",
+"source": "เฉลย78",
+"why": "ไอแห้งไม่มีเสมหะควรใช้ antitussive (Codeine กดศูนย์ไอที่ medulla) ตัวเลือกอื่นเป็น mucolytic/expectorant ใช้กับไอมีเสมหะ อาจทำให้ไอมากขึ้น"
+},
+"78/124": {
+"box": 24,
+"stem": "ผู้ป่วยมี pseudomembrane สีเทาในคอ ต้องการทดสอบว่าเชื้อที่น่าจะเป็นสร้าง toxin หรือไม่ ควรใช้การทดสอบใด",
+"options": {
+"A": "Elek test",
+"B": "CAMP test",
+"C": "Catalase test"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Pseudomembranous pharyngitis = diphtheria; Elek test (immunodiffusion) ตรวจการสร้าง diphtheria toxin CAMP test ใช้กับ GBS/Listeria, catalase แยก Staph/Strep"
+},
+"78/132": {
+"box": 27,
+"stem": "ผู้ป่วย pneumonia ไข้ต่ำ ไอแห้ง 2 สัปดาห์ ได้ azithromycin ครบแล้วไม่ดีขึ้น (สงสัย macrolide-resistant Mycoplasma) ควรเปลี่ยนเป็นยาใด",
+"options": {
+"A": "Clindamycin",
+"B": "Doxycycline",
+"C": "Clarithromycin",
+"D": "Cefditoren"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Atypical pneumonia ที่ดื้อ macrolide ให้ tetracycline (doxycycline) หรือ fluoroquinolone Clarithromycin เป็น macrolide กลุ่มเดียวกัน ดื้อข้ามกัน; Mycoplasma ไม่มี cell wall จึงไม่ตอบสนองต่อ cephalosporin, clindamycin ไม่ครอบคลุม"
+},
+"78/135": {
+"box": 22,
+"stem": "ผู้สูงอายุสูบบุหรี่ มี pleural effusion นำน้ำมาดูใต้กล้อง (ให้รูป cytology) น่าจะเป็นโรคใด",
+"options": {
+"A": "Mesothelioma",
+"B": "Small cell lung cancer",
+"C": "Squamous cell lung cancer",
+"D": "Lymphoma",
+"E": "HSV"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "รูปน่าจะเป็นเซลล์เล็ก nucleus เข้ม cytoplasm น้อย nuclear molding (small cell carcinoma) สัมพันธ์กับ smoking มาก Mesothelioma สัมพันธ์ asbestos, SCC มี keratin pearl/intercellular bridge",
+"needs_image": true
+},
+"78/149": {
+"box": 4,
+"stem": "มะเร็งปอดจะแพร่กระจายไป lymph node กลุ่มใดเป็นอันดับแรก",
+"options": {
+"A": "Sternal node",
+"B": "Axillary node",
+"C": "Hilar node",
+"D": "Virchow node",
+"E": "Pectoral node"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "Lymph จากปอดไหลจาก intrapulmonary → bronchopulmonary (hilar) → tracheobronchial → mediastinal จึงไป hilar ก่อน Virchow (supraclavicular) เป็นระยะท้าย axillary/pectoral ระบายผนังทรวงอก/เต้านม"
+},
+"78/161": {
+"box": 5,
+"stem": "ผู้ป่วยมีก้อนบริเวณคอ/ทรวงอก ร่วมกับ ptosis, diplopia ที่แย่ลงเมื่อมองขึ้นค้างไว้ และ proximal muscle weakness น่าจะเป็นอะไร",
+"options": {
+"A": "Thymoma",
+"B": "Thymic carcinoma",
+"C": "Thyroiditis",
+"D": "Small cell lung cancer"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "อาการ fatigable ptosis/diplopia = Myasthenia gravis ซึ่งสัมพันธ์กับ thymoma (anterior mediastinum) Small cell lung cancer สัมพันธ์กับ LEMS ที่อาการดีขึ้นเมื่อใช้กล้ามเนื้อซ้ำและเด่น proximal limb มากกว่าตา"
+},
+"78/179": {
+"box": 12,
+"stem": "ผู้ป่วยอุบัติเหตุ หอบ ความดันต่ำ เจ็บอกเวลาหายใจ มีรอยช้ำ CXR พบ cardiothoracic ratio เพิ่ม และ neck vein โป่ง วินิจฉัยใด",
+"options": {
+"A": "Cardiac tamponade",
+"B": "Pneumothorax",
+"C": "Hemopneumothorax",
+"D": "Rib fracture"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Hypotension + JVD + เงาหัวใจโต (Beck triad) หลัง trauma = cardiac tamponade Tension pneumothorax ก็มี JVD/hypotension แต่ CXR จะเห็น hyperlucency/mediastinal shift ไม่ใช่ CT ratio เพิ่ม"
+},
+"78/189": {
+"box": 6,
+"stem": "ทารกคลอด GA 27 สัปดาห์ หายใจลำบากหลังคลอดไม่กี่ชั่วโมง CXR opacity ทั้งสองปอด (ให้รูปเซลล์ที่ผิดปกติ) หน้าที่ใดของปอดบกพร่อง",
+"options": {
+"A": "Lung lubricant",
+"B": "Surfactant production",
+"C": "Air passage ผ่าน pore of Kohn",
+"D": "Gene mutation",
+"E": "CC16 leakage"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Preterm <34 wk ขาด surfactant จาก type II pneumocyte → NRDS (ground-glass, air bronchogram) ไม่เกี่ยวกับ pores of Kohn หรือ club cell (CC16)",
+"needs_image": true
+},
+"78/197": {
+"box": 1,
+"stem": "ผู้ป่วยปวดใบหน้า เมื่อเอียงศีรษะไปทางขวามีน้ำไหลลงมาทาง middle nasal meatus สารน้ำน่าจะมาจากโครงสร้างใด",
+"options": {
+"A": "Frontal sinus",
+"B": "Maxillary sinus",
+"C": "Sphenoid sinus",
+"D": "Anterior ethmoidal cells",
+"E": "Nasolacrimal duct"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Maxillary sinus เปิดสู่ middle meatus ที่ hiatus semilunaris ซึ่งอยู่สูง ต้องเอียงศีรษะจึงระบายได้ Nasolacrimal duct เปิดที่ inferior meatus, sphenoid เปิด sphenoethmoidal recess; frontal/anterior ethmoid ก็เปิด middle meatus แต่ระบายลงตามแรงโน้มถ่วงโดยไม่ต้องเอียง",
+"doubt": "เฉลยเดิมเขียน E?B (โจทย์ใช้คำว่า medial meatus กำกวม) ถ้าหมายถึง middle meatus ตอบ maxillary"
+},
+"78/198": {
+"box": 10,
+"stem": "ผู้ป่วย hypoxemia (PaCO2 ไม่สูง) ให้ O2 แล้ว PaO2 ไม่ดีขึ้น กลไกใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Shunt",
+"B": "Diffusion defect",
+"C": "Hypoventilation",
+"D": "V/Q mismatch"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Shunt (V/Q = 0) เลือดไม่ผ่าน alveoli ที่มีอากาศ ให้ O2 จึงแก้ไม่ได้ ส่วน diffusion defect, V/Q mismatch และ hypoventilation ตอบสนองต่อ O2 ได้ดี hypoventilation ยังมี PaCO2 สูง"
+},
+"78/199": {
+"box": 7,
+"stem": "ผู้ป่วย GBS มี diaphragm paralysis ใส่ท่อช่วยหายใจและ assisted ventilation ช่วยเรื่องใด",
+"options": {
+"A": "Increase ventilation",
+"B": "Increase perfusion",
+"C": "Increase diffusion"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "ปัญหาคือ respiratory pump failure → alveolar hypoventilation (PaCO2 สูง) เครื่องช่วยหายใจแก้โดยเพิ่ม alveolar ventilation ปอดและ diffusion/perfusion ยังปกติ"
+},
+"78/201": {
+"box": 13,
+"stem": "ผู้ป่วย wheezing ให้ flow-volume loop และ volume-time curve พร้อมตาราง FEV1/FVC พบว่าหลังให้ bronchodilator ดีขึ้นชัดเจน โรคใด",
+"options": {
+"A": "Asthma",
+"B": "Small airway obstruction",
+"C": "COPD",
+"D": "Lung fibrosis"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Obstructive pattern (FEV1/FVC ต่ำ, scooped loop) ที่ reversible หลัง bronchodilator (FEV1 เพิ่ม ≥12% และ ≥200 mL) = asthma COPD เป็น obstruction ที่ไม่ reversible เต็มที่ ส่วน fibrosis เป็น restrictive",
+"needs_image": true
+},
+"78/202": {
+"box": 16,
+"stem": "ผู้ป่วย asthma พ่นยาก่อนออกกำลังกาย (SABA) กลไกของยาคืออะไร",
+"options": {
+"A": "Increase cAMP",
+"B": "Inhibit phosphodiesterase",
+"C": "Inhibit muscarinic receptor"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "ยาพ่นก่อนออกกำลังกายคือ SABA กระตุ้น β2 → Gs → adenylyl cyclase → cAMP เพิ่ม → หลอดลมคลาย ส่วน inhibit PDE คือ theophylline และ muscarinic antagonist คือ ipratropium",
+"doubt": "ตารางเฉลยพิมพ์ B แต่คำอธิบายในเฉลยเองชี้ A (SABA เพิ่ม cAMP) · PDE inhibitor คือ theophylline"
+},
+"78/203": {
+"box": 28,
+"stem": "เด็ก 2 ขวบ สัมผัสใกล้ชิดกับพ่อที่เป็น TB ปอด ข้อใดเป็นเกณฑ์ตัดสินว่าเด็กควรได้ TB preventive treatment",
+"options": {
+"A": "CXR ของพ่อ",
+"B": "Tuberculin skin test ของเด็กเป็นบวก",
+"C": "เสมหะพ่อ AFB ≥2+",
+"D": "อายุของเด็ก"
+},
+"answer": "D",
+"source": "เฉลย78",
+"why": "เด็ก <5 ปีที่สัมผัสผู้ป่วย TB ปอด ให้ TPT ได้เลยหลัง exclude active TB โดยไม่ต้องรอผล TST/IGRA เพราะเสี่ยง disseminated TB สูง ผล TST ในเด็กเล็กไม่ใช้ตัดสิน"
+},
+"78/205": {
+"box": 18,
+"stem": "พบ lesion ที่ upper lobe ของปอด macrophage มี black pigment ผู้ป่วยน่าจะทำงานที่ใด",
+"options": {
+"A": "Coal mine",
+"B": "Plastic factory",
+"C": "Glass factory",
+"D": "Grass factory"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Anthracosis/coal worker pneumoconiosis: macrophage กิน carbon (dust cell สีดำ) เด่น upper lobe Glass factory/sandblasting = silicosis (upper lobe แต่เป็น nodule birefringent ไม่ใช่สีดำ), plastic (PVC) สัมพันธ์ angiosarcoma ตับ"
+},
+"78/211": {
+"box": 24,
+"stem": "ไข้และน้ำมูกนำมา 2 วัน วันนี้เจ็บคอ ATK COVID ผลลบ น่าจะเป็นเชื้อใด",
+"options": {
+"A": "Influenza",
+"B": "Coronavirus",
+"C": "Parainfluenza virus",
+"D": "Adenovirus"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "ไข้นำเฉียบพลันร่วมอาการทางเดินหายใจส่วนบน (influenza-like illness) และ ATK ลบ คิดถึง influenza มากสุด Parainfluenza เด่น croup ในเด็ก, adenovirus เด่น pharyngoconjunctival fever"
+},
+"78/217": {
+"box": 11,
+"stem": "ผู้ป่วย COPD (chronic CO2 retention) ยังหายใจต่อไปได้เพราะกลไกใดเป็นตัวขับเคลื่อนหลัก",
+"options": {
+"A": "↓O2 กระตุ้น peripheral chemoreceptor",
+"B": "↑CO2 กระตุ้น central chemoreceptor",
+"C": "↑CO2 กระตุ้น peripheral chemoreceptor"
+},
+"answer": "A",
+"source": "เฉลย78",
+"options_reconstructed": true,
+"why": "ใน chronic hypercapnia CSF HCO3- ปรับชดเชย central chemoreceptor จึงไม่ไวต่อ CO2 ระบบหายใจจึงพึ่ง hypoxic drive ผ่าน carotid/aortic body (ให้ O2 สูงเกินอาจกด drive) ตัวเลือก 'Increased O2' ในต้นฉบับผิด เฉลยแก้เป็น decreased O2"
+},
+"78/218": {
+"box": 11,
+"stem": "ผู้ป่วยหายใจเร็วตื้น (rapid shallow breathing) receptor ใดรับผิดชอบ",
+"options": {
+"A": "Peripheral chemoreceptor",
+"B": "Juxtacapillary (J) receptor"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "J receptor อยู่ใน alveolar wall ใกล้ capillary ถูกกระตุ้นโดย interstitial edema/congestion (pulmonary edema, PE) ทำให้ rapid shallow breathing และ dyspnea Peripheral chemoreceptor ตอบสนองต่อ hypoxemia เพิ่มทั้ง rate และ depth"
+},
+"78/220": {
+"box": 28,
+"stem": "TB granuloma ต้องอาศัย cytokine ใดเป็นหลักในการคงสภาพ granuloma ไว้",
+"options": {
+"A": "TNF-alpha",
+"B": "IFN-gamma"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "TNF-α จาก macrophage จำเป็นต่อการคง granuloma ไว้ จึงต้องคัดกรอง latent TB ก่อนให้ anti-TNF (infliximab) IFN-γ จาก Th1 สำคัญในการ activate macrophage และเริ่ม granuloma"
+},
+"78/X13": {
+"box": 24,
+"stem": "เด็กมีอาการ croup (barking cough, inspiratory stridor หลังไข้หวัด) pathophysiology ที่ทำให้เกิดอาการคืออะไร",
+"options": {
+"A": "Edema และ subglottic narrowing",
+"B": "Supraglottic (epiglottis) swelling",
+"C": "Pseudomembrane อุดทางเดินหายใจ",
+"D": "Bronchiolar inflammation"
+},
+"answer": "A",
+"source": "เฉลย78",
+"options_reconstructed": true,
+"why": "Croup (laryngotracheobronchitis จาก parainfluenza) ทำให้ subglottis บวม เห็น steeple sign Supraglottic swelling = epiglottitis (thumb sign), pseudomembrane = diphtheria, bronchiolitis = RSV ให้ wheeze"
+},
+"78/X16": {
+"box": 17,
+"stem": "ผู้ป่วย obstructive lung disease ที่ spirometry ไม่ตอบสนองต่อ bronchodilator (FEV1/FVC ยังต่ำหลังพ่นยา) น่าจะเป็นโรคใด",
+"options": {
+"A": "COPD",
+"B": "Asthma",
+"C": "Pulmonary fibrosis",
+"D": "Pleural effusion"
+},
+"answer": "A",
+"source": "เฉลย78",
+"options_reconstructed": true,
+"why": "COPD มี airflow limitation ที่ไม่ reversible เต็มที่ (post-BD FEV1/FVC <0.7) Asthma ตอบสนองต่อ bronchodilator ชัด ส่วน fibrosis/effusion เป็น restrictive"
+},
+"79/10": {
+"box": 31,
+"stem": "ผู้ป่วย pulmonary TB ได้ยาสูตรมาตรฐานไปหลายสัปดาห์ เกิดปวดข้อและ serum uric acid สูง ยาตัวใดเป็นสาเหตุ",
+"options": {
+"A": "Isoniazid",
+"B": "Rifampicin",
+"C": "Pyrazinamide",
+"D": "Ethambutol",
+"E": "Streptomycin"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "Pyrazinamide (และ ethambutol บ้าง) ลดการขับ urate ที่ไต → hyperuricemia/gout Isoniazid ทำ peripheral neuropathy/hepatitis, rifampicin ทำปัสสาวะสีส้ม/enzyme induction, ethambutol ทำ optic neuritis"
+},
+"79/36": {
+"box": 29,
+"stem": "ผู้ป่วย HIV หอบเหนื่อยมากขึ้น CXR ตามรูป (สงสัย PCP) มี oral hairy leukoplakia แพ้ sulfonamide รุนแรง ควรรักษาด้วยยาใด",
+"options": {
+"A": "Dapsone",
+"B": "TMP-SMX (Bactrim)",
+"C": "Clarithromycin + ethambutol",
+"D": "Clindamycin + primaquine",
+"E": "Amoxicillin-clavulanate"
+},
+"answer": "D",
+"source": "เฉลย79",
+"why": "PCP ที่แพ้ sulfa ใช้ clindamycin + primaquine (หรือ pentamidine) TMP-SMX ห้ามเพราะแพ้, dapsone เป็น sulfone มี cross-reactivity และต้องคู่ trimethoprim, clarithromycin+ethambutol ใช้กับ MAC",
+"needs_image": true
+},
+"79/66": {
+"box": 22,
+"stem": "ผู้ป่วยอ่อนแรงต้นแขนขา (เป่าผม ขึ้นบันได) ptosis เป็นพักๆ DTR +1 แต่เพิ่มเป็น +2 หลังเกร็งกล้ามเนื้อซ้ำ ภาวะนี้สัมพันธ์กับมะเร็งใดมากที่สุด",
+"options": {
+"A": "Thymoma",
+"B": "Small cell lung carcinoma",
+"C": "Papillary thyroid carcinoma",
+"D": "Colon adenocarcinoma",
+"E": "Renal cell carcinoma"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "อาการดีขึ้นหลังใช้กล้ามเนื้อซ้ำ (post-exercise facilitation) = LEMS จาก antibody ต่อ presynaptic VGCC เป็น paraneoplastic ของ small cell lung cancer Thymoma สัมพันธ์กับ MG ที่อ่อนแรงมากขึ้นเมื่อใช้ซ้ำและ reflex ปกติ"
+},
+"79/110": {
+"box": 5,
+"stem": "ผู้ป่วย pleural effusion ทำ needle aspiration ที่ intercostal space ที่ 8 เข็มไม่ควรผ่านโครงสร้างใด",
+"options": {
+"A": "Parietal pleura",
+"B": "Visceral pleura",
+"C": "External intercostal m.",
+"D": "Internal intercostal m.",
+"E": "Innermost intercostal m."
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "เข็มผ่านผิวหนัง → external/internal/innermost intercostal → endothoracic fascia → parietal pleura เข้าสู่ pleural cavity ที่มีน้ำ ไม่ควรแทงทะลุ visceral pleura เพราะจะเข้าเนื้อปอดเกิด pneumothorax"
+},
+"79/115": {
+"box": 2,
+"stem": "ผ่าตัด total thyroidectomy ศัลยแพทย์ต้องระวังเส้นประสาทใดเพื่อป้องกันเสียงแหบ/vocal cord dysfunction หลังผ่าตัด",
+"options": {
+"A": "Hypoglossal n.",
+"B": "Phrenic n.",
+"C": "Recurrent laryngeal n.",
+"D": "Glossopharyngeal n.",
+"E": "Greater auricular n."
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "Recurrent laryngeal n. วิ่งใน tracheoesophageal groove ใกล้ inferior thyroid a. เลี้ยงกล้ามเนื้อ intrinsic larynx ทั้งหมดยกเว้น cricothyroid บาดเจ็บทำให้เสียงแหบ (ข้างเดียว) หรือ stridor (สองข้าง) Phrenic อยู่บน anterior scalene ไม่ใกล้ต่อมไทรอยด์"
+},
+"79/116": {
+"box": 17,
+"stem": "ชาย 62 ปี สูบบุหรี่ 40 pack-year ไอเรื้อรังมีเสมหะ เหนื่อยมากขึ้น ให้ผล PFT (ภาพ) วินิจฉัยใด",
+"options": {
+"A": "Pulmonary fibrosis",
+"B": "Asthma",
+"C": "Restrictive lung disease",
+"D": "COPD",
+"E": "Pulmonary embolism"
+},
+"answer": "D",
+"source": "เฉลย79",
+"why": "ประวัติสูบบุหรี่ + chronic productive cough + obstructive pattern ที่ไม่ reversible (post-BD FEV1/FVC <0.7) = COPD Asthma จะ reversible และอายุน้อยกว่า, fibrosis/restrictive มี FEV1/FVC ปกติหรือสูง",
+"needs_image": true
+},
+"79/117": {
+"box": 3,
+"stem": "ชาย 55 ปี สูบบุหรี่นาน ไอเรื้อรังและ airflow limitation ค่อยๆ เพิ่ม ควันบุหรี่ทำลายเซลล์ใดโดยตรง",
+"options": {
+"A": "Clara (club) cell",
+"B": "Goblet cell",
+"C": "Type I pneumocyte",
+"D": "Type II pneumocyte",
+"E": "Alveolar macrophage"
+},
+"answer": "A",
+"source": "เฉลย79",
+"why": "Club cell ใน bronchiole หลั่ง CC16 และมี cytochrome P450 detoxify สารในควันบุหรี่ จึงถูกทำลายโดยตรง ส่วน goblet cell กลับ hyperplasia, macrophage ถูก activate หลั่ง protease ไม่ใช่ถูกทำลาย"
+},
+"79/118": {
+"box": 9,
+"stem": "ชาย 25 ปี วิ่งมาราธอนที่ระดับความสูง 2,960 m หลังอยู่นานพอ ร่างกายปรับตัวอย่างไร",
+"options": {
+"A": "↓EPO, ↓Hb-O2 affinity, ↑2,3-BPG",
+"B": "↓EPO, ↑affinity, ↓2,3-BPG",
+"C": "↑EPO, ↓Hb-O2 affinity, ↑2,3-BPG",
+"D": "↑EPO, ↑affinity, ↓2,3-BPG",
+"E": "ไม่เปลี่ยนแปลง"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "Hypoxia กระตุ้น HIF → EPO เพิ่ม → polycythemia และ 2,3-BPG ใน RBC เพิ่ม → right shift (affinity ลด) ช่วยปล่อย O2 สู่เนื้อเยื่อ ตัวเลือกที่ EPO ลดหรือ affinity เพิ่มขัดกับการปรับตัว"
+},
+"79/119": {
+"box": 7,
+"stem": "ชาย 28 ปี หอบเฉียบพลัน เจ็บอกแบบ pleuritic CXR เป็น pneumothorax ใส่ chest tube แล้วดีขึ้นทันที อธิบายการหายใจลำบากได้อย่างไร",
+"options": {
+"A": "Intrapleural P เท่ากับ atmospheric ขณะหายใจเข้า",
+"B": "Intrapleural P ยังต่ำกว่า atmospheric",
+"C": "Alveolar P ต่ำกว่า atmospheric ถาวร",
+"D": "Transpulmonary P เพิ่ม ปอดขยายมาก",
+"E": "Airway resistance ลด"
+},
+"answer": "A",
+"source": "เฉลย79",
+"why": "เมื่ออากาศเข้า pleural space ความดันลบหายไป intrapleural P = atmospheric ทำให้ transpulmonary pressure ≈ 0 ปอดยุบตาม elastic recoil และขยายตามการเคลื่อนของผนังอกไม่ได้ ข้อ B คือสภาพปกติ, D กลับด้าน"
+},
+"79/120": {
+"box": 8,
+"stem": "ชาย 35 ปี ทำงานอู่รถ สัมผัสไอเสียรถยนต์นาน มีปวดศีรษะ มึนงง สับสน (CO poisoning) จะเกิดการเปลี่ยนแปลงใด",
+"options": {
+"A": "P50 เพิ่ม",
+"B": "Left shift ของ O2-Hb dissociation curve",
+"C": "Right shift",
+"D": "Hb affinity ต่อ O2 ลด",
+"E": "ส่ง O2 ให้เนื้อเยื่อเพิ่ม"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "CO จับ Hb แน่นกว่า O2 ~240 เท่า ลด O2 content และทำให้ heme ที่เหลือจับ O2 แน่นขึ้น → left shift, P50 ลด ปล่อย O2 สู่เนื้อเยื่อได้น้อย ตัวเลือก A, C, D, E ล้วนเป็นลักษณะของ right shift"
+},
+"79/121": {
+"box": 10,
+"stem": "ชาย 68 ปี COPD exacerbation SpO2 83% ให้ O2 แล้ว SpO2 ดีขึ้นช่วงแรก แต่ต่อมา hypercapnia แย่ลง อธิบายด้วยกลไกใด",
+"options": {
+"A": "V/Q matching ดีขึ้นจากการกระจายเลือด",
+"B": "PVR เพิ่มทำ dead space เพิ่ม",
+"C": "O2 ยกเลิก hypoxic pulmonary vasoconstriction → V/Q mismatch แย่ลง",
+"D": "Hb affinity ต่อ O2 เพิ่ม",
+"E": "Surfactant เพิ่มทำ alveoli ยุบ"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "O2 ทำให้ HPV หายไป เลือดไหลกลับเข้าบริเวณที่ระบายอากาศไม่ดี ทำให้ dead space ในส่วนอื่นเพิ่มและ V/Q แย่ลง ร่วมกับ Haldane effect จึง PaCO2 สูงขึ้น การกดศูนย์หายใจ (hypoxic drive) มีบทบาทน้อยกว่า"
+},
+"79/122": {
+"box": 17,
+"stem": "ชาย 68 ปี COPD exacerbation รุนแรง ต้องใส่ท่อช่วยหายใจและ mechanical ventilation นอกจาก ventilatory support ควรให้ยาใด",
+"options": {
+"A": "Prednisolone",
+"B": "Montelukast",
+"C": "Theophylline",
+"D": "Inhaled corticosteroid อย่างเดียว",
+"E": "Cromolyn"
+},
+"answer": "A",
+"source": "เฉลย79",
+"why": "AECOPD ให้ systemic corticosteroid (prednisolone 40 mg 5 วัน) + bronchodilator ± antibiotic ลดระยะเวลาและ treatment failure ICS อย่างเดียวไม่พอใน acute setting, montelukast/cromolyn ไม่มีบทบาท, theophylline ไม่แนะนำเพราะ toxicity"
+},
+"79/123": {
+"box": 27,
+"stem": "ชาย 22 ปี ไข้ ไอแห้ง เจ็บคอ CXR เข้ากับ atypical pneumonia ยืนยันเป็น Mycoplasma pneumoniae ได้ ceftriaxone ไม่ดีขึ้น ควรให้ยาใด",
+"options": {
+"A": "Amoxicillin",
+"B": "Clindamycin",
+"C": "Clarithromycin",
+"D": "Vancomycin",
+"E": "Cefazolin"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "Mycoplasma ไม่มี cell wall จึงดื้อ β-lactam และ vancomycin ทุกตัว ยาหลักคือ macrolide (clarithromycin/azithromycin) หรือ doxycycline/FQ"
+},
+"79/124": {
+"box": 6,
+"stem": "ทารกแรกเกิดหายใจลำบาก CXR พบ multicystic lesion ที่ปอดซ้าย mediastinum/trachea เบี่ยงไปขวา เสียงหายใจซ้ายลดลง ท้องไม่แฟบ (scaphoid ไม่ชัด) กระบวนการใดผิดปกติ",
+"options": {
+"A": "Fusion ของ pleuroperitoneal membranes",
+"B": "การแยก foregut โดย tracheoesophageal septum",
+"C": "การแตกแขนงของ bronchial tree ผิดปกติ",
+"D": "Midgut rotation",
+"E": "Fusion ของ lateral body folds"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "Multicystic lesion ในปอดและท้องไม่แฟบ = CPAM จากการแตกแขนง bronchial tree ผิดปกติ CDH (pleuroperitoneal membrane) ก็มี cystic-looking bowel ในอกแต่ท้องจะแฟบ (scaphoid), TE septum ผิดปกติให้ TEF"
+},
+"79/125": {
+"box": 20,
+"stem": "ชาย 72 ปี CHF หายใจเร็วตื้น ฟัง fine inspiratory crackles ทั้งสองข้าง SpO2 92% ข้อใดอธิบายความผิดปกติได้ถูกต้อง",
+"options": {
+"A": "Pulmonary edema ทำให้เจ็บอกเป็นหลัก",
+"B": "Edema ทำให้หายใจช้าลึกเพราะ compliance เพิ่ม",
+"C": "Airway resistance ไม่เปลี่ยน",
+"D": "Severe pulmonary edema ทำ hypoxemia ที่แก้ด้วย 100% O2 ไม่ได้ทั้งหมด",
+"E": "Edema เพิ่ม compliance ลด WOB"
+},
+"answer": "D",
+"source": "เฉลย79",
+"why": "Alveoli ที่เต็มไปด้วยน้ำทำหน้าที่เหมือน shunt และ interstitial edema ลด diffusion จึงให้ 100% O2 แล้วแก้ hypoxemia ได้ไม่สมบูรณ์ ข้ออื่นผิดเพราะ edema ลด compliance เพิ่ม airway resistance และกระตุ้น J receptor ให้หายใจเร็วตื้น ไม่ได้ทำให้เจ็บอก"
+},
+"79/126": {
+"box": 17,
+"stem": "ชาย 65 ปี สูบบุหรี่ 40 pack-year ไอเรื้อรังมีเสมหะ PFT เป็น persistent obstruction กลไกใดทำให้เกิด airflow limitation",
+"options": {
+"A": "V/Q ratio เพิ่ม",
+"B": "Radial traction ลดลง",
+"C": "Pulmonary shunt",
+"D": "Lung compliance ลด",
+"E": "Elastic recoil เพิ่ม"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "Emphysema ทำลาย alveolar wall ที่ดึงรั้ง small airway ไว้ (radial traction/tethering) ร่วมกับ elastic recoil ลด → airway ยุบขณะหายใจออก (dynamic compression) ใน emphysema compliance เพิ่มและ recoil ลด จึงตัด D, E"
+},
+"79/127": {
+"box": 25,
+"stem": "เด็ก 6 ปี ไอเป็นชุดตามด้วยเสียง whoop ซ้ำๆ gram stain พบ gram-negative coccobacilli ขนาดเล็ก virulence factor ใดทำให้เกิดอาการเด่น",
+"options": {
+"A": "Pertussis toxin",
+"B": "Hyaluronidase",
+"C": "Protein A",
+"D": "M protein",
+"E": "Exotoxin A"
+},
+"answer": "A",
+"source": "เฉลย79",
+"why": "Bordetella pertussis: pertussis toxin ADP-ribosylate Gi → cAMP เพิ่ม เป็นตัวหลักของอาการทาง systemic (lymphocytosis) ร่วมกับ tracheal cytotoxin Protein A (S. aureus), M protein (GAS), exotoxin A (Pseudomonas) เป็นของเชื้ออื่น"
+},
+"79/128": {
+"box": 16,
+"stem": "ชาย 20 ปี เป็น asthma มี wheeze และหอบมากขึ้น พ่น SABA 2 ครั้งแล้วไม่ดีขึ้น ควรเพิ่มยารับประทานตัวใด",
+"options": {
+"A": "Theophylline",
+"B": "Fexofenadine",
+"C": "Prednisolone",
+"D": "Fluticasone",
+"E": "Budesonide"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "Asthma exacerbation ที่ไม่ตอบสนองต่อ SABA ให้ systemic corticosteroid ทางปาก (prednisolone) Fluticasone/budesonide เป็นยาพ่น ไม่ใช่ยากิน, theophylline therapeutic window แคบ, antihistamine ไม่มีบทบาท"
+},
+"79/129": {
+"box": 24,
+"stem": "เด็ก 2 ปี ไอเสียงก้อง (barking) เสียงแหบ inspiratory stridor เป็นมากกลางคืน neck X-ray เห็น steeple sign เชื้อใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "RSV",
+"B": "Parainfluenza virus",
+"C": "Influenza A",
+"D": "Adenovirus",
+"E": "Coronavirus"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "Croup (laryngotracheobronchitis) สาเหตุหลักคือ parainfluenza virus (type 1) ทำให้ subglottis บวม → steeple sign RSV เด่น bronchiolitis ในทารก, epiglottitis (H. influenzae b) เห็น thumb sign"
+},
+"79/130": {
+"box": 26,
+"stem": "ชาย 55 ปี เป็นเบาหวาน มีไข้ ไอ pneumonia เพาะเสมหะได้ gram-negative bacillus oxidase-positive ติดสีแบบ bipolar (safety pin) เชื้อใด",
+"options": {
+"A": "Klebsiella pneumoniae",
+"B": "Burkholderia pseudomallei",
+"C": "Pseudomonas aeruginosa",
+"D": "Haemophilus influenzae",
+"E": "Acinetobacter baumannii"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "Melioidosis (B. pseudomallei) พบมากในอีสาน กลุ่มเสี่ยงคือเบาหวาน/ชาวนา ย้อมติดแบบ bipolar safety-pin และ oxidase positive Klebsiella/Acinetobacter เป็น oxidase negative, Pseudomonas oxidase positive แต่ไม่ติดสี bipolar"
+},
+"79/131": {
+"box": 18,
+"stem": "ชาย 45 ปี สูบบุหรี่ ทำงานก่อสร้างถนน 10 ปี เหนื่อยมากขึ้นเรื่อยๆ ให้ CXR (ภาพ) วินิจฉัยใด",
+"options": {
+"A": "Asbestosis",
+"B": "Silicosis",
+"C": "Sarcoidosis",
+"D": "Hypersensitivity pneumonitis",
+"E": "Coal workers' pneumoconiosis"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "งานก่อสร้าง/ตัดหิน/ทราย สัมผัส silica → nodule ที่ upper lobe และ eggshell calcification ของ hilar node Asbestosis เด่น lower lobe + pleural plaque (ต่อเรือ/ฉนวน), CWP พบในเหมืองถ่านหิน",
+"needs_image": true
+},
+"79/132": {
+"box": 24,
+"stem": "เด็ก 7 ปี ไข้ น้ำมูกเป็นหนอง ปวดใบหน้า (acute bacterial sinusitis) gram stain พบ gram-negative diplococci รูปไต เชื้อใด",
+"options": {
+"A": "Moraxella catarrhalis",
+"B": "Haemophilus influenzae",
+"C": "Bordetella pertussis",
+"D": "Abiotrophia spp.",
+"E": "Mycoplasma pneumoniae"
+},
+"answer": "A",
+"source": "เฉลย79",
+"why": "Gram-negative kidney-bean diplococci ในทางเดินหายใจ = Moraxella catarrhalis (สาเหตุ sinusitis/otitis media อันดับ 3) H. influenzae เป็น coccobacilli, Mycoplasma ไม่ติด gram stain"
+},
+"79/133": {
+"box": 20,
+"stem": "ชาย 55 ปี หอบเฉียบพลันและเจ็บอกแบบ pleuritic หลังบินระยะไกล สงสัย PE การตรวจใดยืนยันการวินิจฉัยได้ดีที่สุด",
+"options": {
+"A": "Chest X-ray",
+"B": "D-dimer",
+"C": "CT pulmonary angiography",
+"D": "ECG",
+"E": "ABG"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "CTPA เห็น filling defect ใน pulmonary artery เป็นการยืนยันวินิจฉัยหลัก D-dimer ไวแต่ไม่จำเพาะ ใช้ rule out ในคนเสี่ยงต่ำ, ECG/CXR/ABG ช่วยประกอบเท่านั้น"
+},
+"79/134": {
+"box": 28,
+"stem": "ชาย 35 ปี ไอเรื้อรัง ไข้ เหงื่อออกกลางคืน น้ำหนักลด สงสัย pulmonary TB การตรวจใดเร็วและแนะนำเป็นอันดับแรกเพื่อหาเชื้อพร้อมดูการดื้อยา",
+"options": {
+"A": "Xpert MTB/RIF",
+"B": "Mycobacterial culture",
+"C": "AFB smear",
+"D": "Tuberculin skin test",
+"E": "IGRA"
+},
+"answer": "A",
+"source": "เฉลย79",
+"why": "Xpert MTB/RIF (NAAT) ได้ผลใน ~2 ชม. และตรวจ rpoB mutation บอก rifampicin resistance Culture เป็น gold standard แต่ช้าหลายสัปดาห์, AFB smear ไม่บอกการดื้อยา, TST/IGRA ไม่แยก latent กับ active"
+},
+"79/135": {
+"box": 25,
+"stem": "เด็กหญิง 1 ปี ไข้ ไอ น้ำมูก 4 วัน T 38.5°C คอแดง ฟังปอดมี fine crackles และ expiratory wheeze ทั้งสองข้าง เชื้อใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Adenovirus 41",
+"B": "Enterovirus 71",
+"C": "Haemophilus influenzae",
+"D": "RSV",
+"E": "Streptococcus pneumoniae"
+},
+"answer": "D",
+"source": "เฉลย79",
+"why": "Bronchiolitis (URI นำ แล้ว wheeze + crackles ในเด็ก <2 ปี) สาเหตุหลักคือ RSV Adenovirus 41 ทำ gastroenteritis, EV71 ทำ HFMD, S. pneumoniae ให้ lobar pneumonia ไม่ค่อย wheeze"
+},
+"79/136": {
+"box": 28,
+"stem": "เด็ก 3 ปี สัมผัสใกล้ชิดกับพ่อที่เป็น active pulmonary TB ไม่มีอาการ ประเมินเบื้องต้นไม่พบ active TB ได้วัคซีนครบ ควรทำอย่างไร",
+"options": {
+"A": "ไม่ต้องรักษาเพราะผลตรวจเบื้องต้นลบ",
+"B": "ไม่ต้องรักษาเพราะได้ BCG แล้ว",
+"C": "ทำ TST ถ้าลบไม่ต้องรักษา",
+"D": "เริ่ม TB preventive therapy ใน window period แล้วตรวจซ้ำภายหลัง",
+"E": "รักษาเมื่อ CXR ผิดปกติเท่านั้น"
+},
+"answer": "D",
+"source": "เฉลย79",
+"why": "เด็ก <5 ปีสัมผัส TB ปอดเสี่ยง disseminated/TB meningitis สูง และอาจอยู่ใน window period ที่ TST ยังลบ จึงให้ TPT ทันทีหลัง exclude active TB BCG ป้องกันได้ไม่สมบูรณ์ และการรอผล TST/CXR ล่าช้าเกินไป"
+},
+"79/137": {
+"box": 21,
+"stem": "ชาย 30 ปี อุบัติเหตุรถยนต์ เคาะทึบและเสียงหายใจลดลงที่อกซ้าย CXR opacity ทึบสม่ำเสมอทั้งซีกซ้าย mediastinum เบี่ยงไปขวา วินิจฉัยใด",
+"options": {
+"A": "Chylothorax",
+"B": "Hemothorax",
+"C": "Pneumothorax",
+"D": "Pleural effusion จาก heart failure",
+"E": "Atelectasis"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "Blunt chest trauma + dullness + opacity เต็มซีก + mediastinal shift ไปด้านตรงข้าม = massive hemothorax Pneumothorax เคาะโปร่ง CXR hyperlucent, atelectasis ดึง mediastinum เข้าหาด้านที่เป็น, HF effusion มักเป็นสองข้าง"
+},
+"79/138": {
+"box": 13,
+"stem": "ชาย 60 ปี เหนื่อยมากขึ้น PFT: FVC 51%, FEV1 52% predicted, FEV1/FVC 98% ไม่ตอบสนองต่อ bronchodilator ข้อใดถูก",
+"options": {
+"A": "Obstructive defect",
+"B": "Restrictive defect",
+"C": "FEV1/FVC จะลดลงมากในระยะท้าย",
+"D": "Bronchodilator จะทำให้ FEV1 ปกติ",
+"E": "Mixed pattern"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "FVC และ FEV1 ลดลงพอๆ กัน ทำให้ FEV1/FVC ปกติหรือสูง = restrictive pattern (ยืนยันด้วย TLC ลด) Obstructive ต้อง FEV1/FVC <0.7, restrictive ระยะท้ายอัตราส่วนยิ่งสูงขึ้นไม่ใช่ลดลง"
+},
+"79/139": {
+"box": 10,
+"stem": "ผู้ป่วยมี partial obstruction ของ right main bronchus สมมติว่าไม่เกิด hypoxic pulmonary vasoconstriction จะเกิดการเปลี่ยนแปลงใด",
+"options": {
+"A": "Right-to-left shunt (shunt-like effect)",
+"B": "A–a gradient ลดลง",
+"C": "Physiologic dead space ลดลง",
+"D": "V/Q ratio ในปอดข้างนั้นเพิ่ม",
+"E": "เลือดออกจากปอดข้างนั้นมี O2 มากขึ้น"
+},
+"answer": "A",
+"source": "เฉลย79",
+"why": "ทางเดินหายใจอุด ventilation ลดแต่ perfusion คงเดิม (ไม่มี HPV) → V/Q ต่ำ/เป็น shunt เลือด deoxygenated ผสมเข้า systemic circulation → A–a gradient เพิ่ม V/Q เพิ่มและ dead space เพิ่มเป็นลักษณะของ PE ไม่ใช่ airway obstruction"
+},
+"79/140": {
+"box": 27,
+"stem": "ผู้ป่วย 20 ปี ไข้ ไอแห้งนาน atypical pneumonia ตรวจพบ cold agglutinins เป็นบวก เชื้อใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Haemophilus influenzae",
+"B": "Mycoplasma pneumoniae",
+"C": "Streptococcus pneumoniae",
+"D": "Klebsiella pneumoniae",
+"E": "Legionella pneumophila"
+},
+"answer": "B",
+"source": "เฉลย79",
+"why": "Cold agglutinin (IgM anti-I) เป็นลักษณะของ Mycoplasma pneumoniae ใน walking pneumonia ของคนหนุ่มสาว Legionella เป็น atypical แต่มี hyponatremia/diarrhea ไม่มี cold agglutinin, Klebsiella พบในคนดื่มเหล้า currant jelly sputum"
+},
+"79/141": {
+"box": 20,
+"stem": "ชาย 70 ปี CHF เหนื่อยมากขึ้น crackles ทั้งสองข้าง CXR มี pulmonary edema และ pleural effusion เล็กน้อยสองข้าง ข้อใดถูกต้อง",
+"options": {
+"A": "Alveolar edema ทำให้เจ็บอกแบบ pleuritic บ่อย",
+"B": "Edema ไม่มีผลต่อ airway resistance",
+"C": "Pulmonary edema ลด lung compliance และเพิ่ม work of breathing",
+"D": "Pleural effusion เพิ่ม compliance",
+"E": "Edema ทำ airway obstruction อย่างเดียวไม่กระทบ compliance"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "น้ำใน interstitium/alveoli ทำให้ปอดแข็งและ surfactant เสียหน้าที่ → compliance ลด ต้องออกแรงหายใจมากขึ้น และ peribronchial edema ยังเพิ่ม airway resistance (cardiac asthma) Effusion จำกัดการขยายปอด ไม่ได้เพิ่ม compliance"
+},
+"79/150": {
+"box": 30,
+"stem": "ชายมาติดตามความดันโลหิตสูง บ่นไอแห้งเรื้อรัง ใช้ยา enalapril, losartan, atorvastatin ยาใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Enalapril",
+"B": "Losartan",
+"C": "Atorvastatin",
+"D": "Losartan และ atorvastatin",
+"E": "Enalapril และ atorvastatin"
+},
+"answer": "A",
+"source": "เฉลย79",
+"why": "ACE inhibitor ยับยั้งการสลาย bradykinin และ substance P สะสมในทางเดินหายใจ → ไอแห้ง (~10%) ARB (losartan) ไม่ยับยั้ง kininase II จึงไม่ไอ เป็นทางเลือกแทน; statin ไม่ทำให้ไอ"
+},
+"79/156": {
+"box": 26,
+"stem": "ชาย 30 ปี ใช้ยาเสพติดทางหลอดเลือด ไข้สูง ไอ หอบ 5 วัน SpO2 88% มี conjunctival hemorrhage, pansystolic murmur, JVD, basal crackles และ Janeway lesion เชื้อใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Enterococcus spp.",
+"B": "Streptococcus viridans",
+"C": "Staphylococcus aureus",
+"D": "Haemophilus influenzae",
+"E": "Listeria monocytogenes"
+},
+"answer": "C",
+"source": "เฉลย79",
+"why": "IVDU + acute infective endocarditis (tricuspid) ร่วม septic pulmonary emboli/pneumonia → S. aureus เป็นเชื้อหลัก Viridans streptococci ทำ subacute IE หลังทำฟัน, Enterococcus สัมพันธ์ GU/GI procedure"
+},
+"79/200": {
+"box": 19,
+"stem": "ชาย 25 ปี ไอเป็นเลือดและปัสสาวะเป็นเลือด creatinine สูง ความดันสูง UA มี dysmorphic RBC และ RBC cast anti-GBM antibody บวก วินิจฉัยใด",
+"options": {
+"A": "Lupus nephritis",
+"B": "IgA nephropathy",
+"C": "Alport syndrome",
+"D": "Goodpasture syndrome",
+"E": "Granulomatosis with polyangiitis"
+},
+"answer": "D",
+"source": "เฉลย79",
+"why": "Anti-GBM antibody (ต่อ α3 chain ของ type IV collagen) + pulmonary hemorrhage + RPGN = Goodpasture syndrome (type II HSR, linear IF) GPA ก็มีปอด+ไต แต่เป็น c-ANCA และ pauci-immune, Alport เป็นกรรมพันธุ์มีหูหนวก"
+},
+"79/234": {
+"box": 6,
+"stem": "ทารกชายคลอด GA 30 สัปดาห์ หายใจลำบากรุนแรงหลังคลอด ได้ 100% O2 ยัง hypoxic CXR ground-glass + air bronchogram ควรให้ยาใดแก่มารดาก่อนคลอดเพื่อป้องกัน",
+"options": {
+"A": "Misoprostol",
+"B": "Methylergonovine",
+"C": "Magnesium hydroxide",
+"D": "Betamethasone",
+"E": "Indomethacin"
+},
+"answer": "D",
+"source": "เฉลย79",
+"why": "NRDS จากขาด surfactant ป้องกันด้วย antenatal corticosteroid (betamethasone/dexamethasone) ใน GA 24–34 wk กระตุ้น type II pneumocyte สร้าง surfactant Misoprostol/methylergonovine เป็น uterotonic, indomethacin เป็น tocolytic, Mg hydroxide เป็น antacid (สับสนกับ MgSO4)"
+},
+"79/83": {
+"box": 30,
+"stem": "หญิง 80 ปี สับสนและความจำระยะสั้นเสียมา 2 สัปดาห์ ใช้ first-generation antihistamine อยู่ ตรวจระบบประสาทไม่มี focal deficit ควรจัดการอย่างไร",
+"options": {
+"A": "หยุดยาที่เป็นสาเหตุ",
+"B": "MRI สมองทันที",
+"C": "เริ่ม antipsychotic",
+"D": "ส่งตรวจ neuropsychological testing",
+"E": "เริ่ม cholinesterase inhibitor"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "First-gen antihistamine (เช่น chlorpheniramine, diphenhydramine) ผ่าน BBB และมีฤทธิ์ anticholinergic ทำให้ delirium/cognitive impairment ในผู้สูงอายุ (Beers criteria) จัดการโดยหยุดยาก่อน ไม่ควรรีบให้ antipsychotic หรือวินิจฉัย dementia"
+}
+}
+}

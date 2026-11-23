@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ตำราคู่ชีท NLE</title>
+<meta name="description" content="ตำราอธิบายละเอียดคู่กับชีท A3 สรุป NLE Step 1 พร้อมโจทย์ ข้อสอบเก่า และ flashcard">
+<meta name="theme-color" content="#1f2a24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  try { var s = JSON.parse(localStorage.getItem('nle-tb-v1') || '{}'); if (s.theme) document.documentElement.dataset.theme = s.theme; if (s.font) document.documentElement.style.setProperty('--fs', s.font + 'px'); } catch (e) {}
+</script>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn" id="menuBtn" aria-label="เมนู">☰</button>
+  <a class="brand" href="#/">ตำราคู่ชีท</a>
+  <form class="search" id="searchForm" role="search">
+    <input id="searchInput" type="search" placeholder="ค้นหาคำ…" autocomplete="off">
+  </form>
+  <nav class="tools">
+    <a class="tool" href="#/quiz" title="โหมดทำข้อสอบ">📝<span>ข้อสอบ</span></a>
+    <a class="tool" href="#/wrong" title="กองข้อที่ทำผิด">📕<span>ข้อผิด</span><b id="wrongCount" class="pill" hidden></b></a>
+    <a class="tool" href="#/cards" title="Flashcard">🃏<span>การ์ด</span></a>
+    <button class="tool" id="fontBtn" title="ขนาดตัวอักษร">Aa</button>
+    <button class="tool" id="themeBtn" title="โหมดมืด">🌙</button>
+  </nav>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar" aria-label="สารบัญ"></aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="main" id="view" tabindex="-1"><p class="loading">กำลังโหลด…</p></main>
+</div>
+<script src="assets/app.js"></script>
+</body>
+</html>
