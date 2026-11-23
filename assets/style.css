@@ -219,3 +219,20 @@ svg text{font-family:inherit}
 .flash-acts{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 
 @media print{.topbar,.sidebar,.jump,.pager,.understood{display:none}.main{padding:0}}
+
+/* ไฮไลต์อัตโนมัติ: คำสำคัญ (เหลือง) + ประโยคที่ออกสอบ (ชมพู) */
+:root{--hl-key:#ffe27a;--hl-exam:#fde3e6;--hl-user:#b8f0c6}
+:root[data-theme="dark"]{--hl-key:#5c4a0c;--hl-exam:#3d1c21;--hl-user:#1e5a33}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--hl-key:#5c4a0c;--hl-exam:#3d1c21;--hl-user:#1e5a33}}
+.content b{background:linear-gradient(transparent 55%,var(--hl-key) 55%);padding:0 1px}
+.content p.hl-exam,.content li.hl-exam{background:var(--hl-exam);border-left:3px solid var(--exam);padding:2px 10px;border-radius:0 8px 8px 0}
+.content li.hl-exam{list-style-position:inside;margin-left:-1.3em}
+.content .card b{background:none}
+.no-hl .content b{background:none}
+.no-hl .content p.hl-exam,.no-hl .content li.hl-exam{background:none;border-left-color:transparent}
+mark.user-hl{background:var(--hl-user);color:inherit;box-shadow:none;border-radius:3px;padding:0 1px;cursor:pointer}
+.hl-pop{position:fixed;z-index:60}
+.hl-pop button{border:0;background:var(--fg);color:var(--bg);font-size:15px;font-weight:600;padding:8px 16px;border-radius:999px;box-shadow:var(--shadow)}
+.mynote summary{cursor:pointer;font-weight:600}
+.mynote textarea{width:100%;margin:10px 0 6px;font:inherit;font-size:15px;line-height:1.6;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface2);color:var(--fg);resize:vertical}
+.legend-row{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14.5px;margin-top:8px}

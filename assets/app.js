@@ -9,7 +9,8 @@
   /* ---------- storage ---------- */
   let S = {};
   try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { S = {}; }
-  S.done = S.done || {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {};
+  S.done = S.done || {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {};
+  if (S.hlOff) document.documentElement.classList.add('no-hl');
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} updateWrongCount(); }
 
   /* ---------- data ---------- */
@@ -92,10 +93,13 @@
     flush();
     return ch;
   }
+  // ประโยคที่อ้างข้อสอบเก่า (เช่น 79/117) หรือมีป้าย {E} = ไฮไลต์ "ออกสอบ" ให้อัตโนมัติ
+  const EXAM_RE = /(^|[^\d.])(7\d(\.\d)?\/\d{1,3})(?!\d)|\{E\}/;
+  function exCls(t) { return EXAM_RE.test(t) ? ' class="hl-exam"' : ''; }
   function renderBlocks(lines) {
     let out = '', i = 0;
     const para = [];
-    const flushP = () => { if (para.length) { out += `<p>${inline(para.join(' '))}</p>`; para.length = 0; } };
+    const flushP = () => { if (para.length) { const t = para.join(' '); out += `<p${exCls(t)}>${inline(t)}</p>`; para.length = 0; } };
     while (i < lines.length) {
       const L = lines[i];
       if (!L.trim()) { flushP(); i++; continue; }
@@ -116,7 +120,7 @@
       if (L.startsWith('- ')) {
         flushP(); const items = [];
         while (i < lines.length && lines[i].startsWith('- ')) { items.push(lines[i].slice(2)); i++; }
-        out += `<ul>${items.map(x => `<li>${inline(x)}</li>`).join('')}</ul>`; continue;
+        out += `<ul>${items.map(x => `<li${exCls(x)}>${inline(x)}</li>`).join('')}</ul>`; continue;
       }
       if (/^\d+\. /.test(L)) {
         flushP(); const items = [];
@@ -181,7 +185,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 หน้าแรก</a><a href="#/quiz">📝 โหมดทำข้อสอบ</a><a href="#/wrong">📕 กองข้อที่ทำผิด</a><a href="#/cards">🃏 Flashcard</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 หน้าแรก</a><a href="#/quiz">📝 โหมดทำข้อสอบ</a><a href="#/wrong">📕 กองข้อที่ทำผิด</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 จุดอ่อนของฉัน</a><a href="#/notes">🗒️ โน้ตของฉัน</a><a href="#" id="hlToggle">🖍 ไฮไลต์จุดสำคัญ: ${S.hlOff ? 'ปิด' : 'เปิด'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -229,6 +233,63 @@
     if (bx) { e.preventDefault(); const cur = location.hash.split('/')[1]; location.hash = `#/${cur}/${bx.dataset.box}`; }
   });
 
+  /* ---------- ไฮไลต์ของผู้ใช้ ---------- */
+  let curSec = null;
+  function textNodes(root) { const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); const a = []; let n; while ((n = w.nextNode())) a.push(n); return a; }
+  function wrapRange(root, start, end, idx) {
+    let pos = 0;
+    for (const n of textNodes(root)) {
+      const len = n.nodeValue.length, s = Math.max(start, pos), e = Math.min(end, pos + len);
+      if (s < e && !n.parentNode.closest('svg')) {
+        const r = document.createRange(); r.setStart(n, s - pos); r.setEnd(n, e - pos);
+        const m = document.createElement('mark'); m.className = 'user-hl'; m.dataset.hl = idx; r.surroundContents(m);
+      }
+      pos += len;
+    }
+  }
+  function applyHL(art, k) {
+    const full = art.textContent;
+    (S.hl[k] || []).forEach((h, i) => {
+      let s = full.substr(h.s, h.t.length) === h.t ? h.s : full.indexOf(h.t);
+      if (s >= 0) wrapRange(art, s, s + h.t.length, i);
+    });
+  }
+  const pop = document.createElement('div'); pop.className = 'hl-pop'; pop.hidden = true; document.body.appendChild(pop);
+  pop.addEventListener('mousedown', e => e.preventDefault());
+  function showPop(rect, label, fn) {
+    pop.innerHTML = `<button>${label}</button>`; pop.hidden = false;
+    const top = Math.min(rect.bottom + 8, innerHeight - 50), left = Math.max(8, Math.min(rect.left + rect.width / 2 - 60, innerWidth - 130));
+    pop.style.top = top + 'px'; pop.style.left = left + 'px';
+    pop.firstChild.onclick = () => { fn(); pop.hidden = true; };
+  }
+  let selT;
+  document.addEventListener('selectionchange', () => {
+    clearTimeout(selT);
+    selT = setTimeout(() => {
+      const sel = getSelection();
+      if (!curSec || !document.contains(curSec.art) || !sel.rangeCount || sel.isCollapsed) { if (pop.dataset.mode !== 'del') pop.hidden = true; return; }
+      const r = sel.getRangeAt(0);
+      if (!curSec.art.contains(r.commonAncestorContainer)) return;
+      const t = r.toString(); if (t.trim().length < 2) return;
+      pop.dataset.mode = 'add';
+      showPop(r.getBoundingClientRect(), '🖍 ไฮไลต์', () => {
+        const pre = document.createRange(); pre.setStart(curSec.art, 0); pre.setEnd(r.startContainer, r.startOffset);
+        const { k, art } = curSec;
+        (S.hl[k] = S.hl[k] || []).push({ s: pre.toString().length, t }); save();
+        sel.removeAllRanges(); wrapRange(art, pre.toString().length, pre.toString().length + t.length, S.hl[k].length - 1);
+      });
+    }, 250);
+  });
+  view.addEventListener('click', e => {
+    const m = e.target.closest('mark.user-hl');
+    if (!m || !curSec || !getSelection().isCollapsed) return;
+    const idx = +m.dataset.hl; pop.dataset.mode = 'del';
+    showPop(m.getBoundingClientRect(), '✕ ลบไฮไลต์', () => {
+      const { k } = curSec; S.hl[k].splice(idx, 1); if (!S.hl[k].length) delete S.hl[k]; save(); pop.dataset.mode = ''; const y = scrollY; route().then(() => scrollTo(0, y));
+    });
+  });
+  window.addEventListener('scroll', () => { if (pop.dataset.mode === 'del') { pop.hidden = true; pop.dataset.mode = ''; } }, { passive: true });
+
   /* ---------- views ---------- */
   async function vHome() {
     await loadAll();
@@ -240,7 +301,7 @@
       return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p><div class="bar"><i style="width:${p.pct}%"></i></div><div class="bar-label">เข้าใจแล้ว ${p.d}/${p.n} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div></a>`;
     }).join('');
     view.innerHTML = `<div class="hero"><h1>ตำราคู่ชีท NLE Step 1</h1><p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p></div><div class="grid">${tiles}</div>
-    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p></div>`;
+    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl">ไฮไลต์ของฉัน</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
   }
   async function vChapter(id) {
     await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
@@ -271,6 +332,10 @@
       <div class="sec-head"><div class="sec-no">${s.no}</div><div><h1>${esc(s.title)}</h1><div class="meta">${freqBadge(s)}${s.examIds.length ? `<span class="badge">ข้อสอบเก่า ${s.examIds.length} ข้อ</span>` : ''}</div></div></div>
       <article class="content">${s.lead ? `<p><b>${inline(esc(s.lead))}</b></p>` : ''}${s.html}</article>`;
     if (s.kw.length) h += `<div class="kws">${s.kw.map(x => `<span class="kw">${esc(x)}</span>`).join('')}</div>`;
+    const myHl = (S.hl[k] || []).length;
+    h += `<details class="panel mynote" ${S.notes[k] ? 'open' : ''}><summary>🗒️ โน้ตของฉัน${S.notes[k] ? ' ·  มีโน้ต' : ''}${myHl ? ` · ไฮไลต์ ${myHl} จุด` : ''}</summary>
+      <textarea id="noteIn" rows="4" placeholder="จดสิ่งที่อยากจำของกล่องนี้ (บันทึกอัตโนมัติ)">${esc(S.notes[k] || '')}</textarea>
+      <div class="bar-label">เลือกข้อความในเนื้อหาแล้วกด 🖍 เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
     if (s.examIds.length) {
       h += `<section class="exam-sec"><h2>📝 ข้อสอบเก่าของหัวข้อนี้</h2><p class="bar-label">กดเลือกคำตอบ ข้อที่ตอบผิดจะเข้ากองข้อผิดให้อัตโนมัติ</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid]);
@@ -281,6 +346,10 @@
       <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
     view.innerHTML = h;
     $('#doneBtn').onclick = () => { if (S.done[k]) delete S.done[k]; else S.done[k] = Date.now(); save(); vSection(id, no); };
+    const art = $('.content', view);
+    applyHL(art, k);
+    curSec = { k, art };
+    let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
     const ji = $('#jumpIn');
     ji.addEventListener('keydown', e => { if (e.key === 'Enter') { const n = parseInt(ji.value); if (n) location.hash = `#/${id}/${n}`; } });
     window.scrollTo(0, 0);
@@ -375,6 +444,56 @@
       show();
     };
   }
+  /* แดชบอร์ดจุดอ่อน */
+  async function vStats() {
+    await loadAll(); renderSidebar();
+    const pct = (r, n) => n ? Math.round(r * 100 / n) : null;
+    const boxes = [], years = {};
+    let tr = 0, tn = 0;
+    for (const ch of Object.values(CH)) {
+      for (const s of ch.sections) {
+        let r = 0, n = 0, tried = 0;
+        for (const qid of s.examIds) {
+          const st = S.stats[`${ch.id}|${qid}`]; if (!st) continue;
+          tried++; r += st.r; n += st.r + st.w;
+          const y = qid.split('/')[0].split('.')[0];
+          years[y] = years[y] || { r: 0, n: 0 }; years[y].r += st.r; years[y].n += st.r + st.w;
+        }
+        tr += r; tn += n;
+        if (s.examIds.length) boxes.push({ ch, s, r, n, tried, total: s.examIds.length, p: pct(r, n) });
+      }
+    }
+    const done = boxes.filter(b => b.n);
+    const weak = done.slice().sort((a, b) => a.p - b.p || b.n - a.n);
+    const bar = p => `<div class="bar"><i style="width:${p ?? 0}%;background:${p == null ? 'var(--line)' : p < 50 ? 'var(--bad)' : p < 75 ? 'var(--key)' : 'var(--ok)'}"></i></div>`;
+    let h = `<div class="hero"><h1>📊 จุดอ่อนของฉัน</h1><p>คิดจากทุกครั้งที่กดตอบข้อสอบในเว็บ (ท้ายกล่องและโหมดทำข้อสอบ)</p></div>`;
+    if (!tn) { view.innerHTML = h + '<p class="empty">ยังไม่มีข้อมูล ลองทำข้อสอบท้ายกล่องหรือโหมดทำข้อสอบก่อนนะ</p>'; return; }
+    const w = weak[0];
+    h += `<div class="panel"><h3>ภาพรวม: ถูก ${pct(tr, tn)}% (${tr}/${tn} ครั้ง) · ทำแล้ว ${done.length}/${boxes.length} กล่อง</h3>${bar(pct(tr, tn))}
+      <div class="choice" style="margin-top:12px"><a class="btn primary" href="#/${w.ch.id}/${w.s.no}">ไปกล่องที่อ่อนสุด: ${w.s.no}. ${esc(w.s.title)} (${w.p}%)</a><button class="btn" id="weakGo">สุ่มข้อจากกล่องที่ต่ำกว่า 70%</button></div></div>`;
+    h += `<h2>แยกตามปีข้อสอบ</h2><div class="tbl-wrap"><table class="t"><thead><tr><th>ปี</th><th>ถูก</th><th style="width:45%"></th></tr></thead><tbody>${Object.keys(years).sort().map(y => { const p = pct(years[y].r, years[y].n); return `<tr><td>MDCU${y}</td><td>${p}% (${years[y].r}/${years[y].n})</td><td>${bar(p)}</td></tr>`; }).join('')}</tbody></table></div>`;
+    h += `<h2>แยกตามกล่อง (อ่อนสุดอยู่บน)</h2><div class="tbl-wrap"><table class="t"><thead><tr><th>กล่อง</th><th>ถูก</th><th>ทำแล้ว</th><th style="width:30%"></th></tr></thead><tbody>${weak.concat(boxes.filter(b => !b.n)).map(b => `<tr><td><a href="#/${b.ch.id}/${b.s.no}">${b.s.no}. ${esc(b.s.title)}</a></td><td>${b.p == null ? '–' : b.p + '%'}</td><td>${b.tried}/${b.total} ข้อ</td><td>${bar(b.p)}</td></tr>`).join('')}</tbody></table></div>
+      <div class="choice"><button class="btn small" id="statReset">ล้างสถิติ</button></div>`;
+    view.innerHTML = h;
+    $('#weakGo').onclick = () => {
+      const ws = new Set(done.filter(b => b.p < 70).map(b => `${b.ch.id}/${b.s.no}`));
+      const items = shuffle(pool(Object.keys(CH), (c, qid, q) => ws.has(`${c}/${q.box}`)));
+      if (items.length) runQuiz(items.slice(0, 20), 'ทวนกล่องที่อ่อน');
+    };
+    $('#statReset').onclick = () => { if (confirm('ล้างสถิติการตอบทั้งหมด?')) { S.stats = {}; save(); vStats(); } };
+  }
+  /* หน้ารวมโน้ต */
+  async function vNotes() {
+    await loadAll(); renderSidebar();
+    let h = `<div class="hero"><h1>🗒️ โน้ตและไฮไลต์ของฉัน</h1><p>เรียงตามบทและกล่อง กดชื่อกล่องเพื่อไปอ่านต่อ</p></div>`;
+    let any = false;
+    for (const ch of Object.values(CH)) for (const s of ch.sections) {
+      const k = secKey(ch.id, s.no), note = S.notes[k], hl = S.hl[k] || [];
+      if (!note && !hl.length) continue; any = true;
+      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl">${esc(x.t)}</mark></p>`).join('')}</div>`;
+    }
+    view.innerHTML = h + (any ? '' : '<p class="empty">ยังไม่มีโน้ต เปิดกล่องไหนก็ได้แล้วจดที่ "โน้ตของฉัน" หรือเลือกข้อความเพื่อไฮไลต์</p>');
+  }
   async function vSearch(q) {
     await loadAll(); renderSidebar();
     q = (q || '').trim();
@@ -410,6 +529,8 @@
       if (parts[0] === 'wrong') return vWrong();
       if (parts[0] === 'cards') return vCards(params);
       if (parts[0] === 'search') return vSearch(params.get('q'));
+      if (parts[0] === 'stats') return vStats();
+      if (parts[0] === 'notes') return vNotes();
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
       return vChapter(parts[0]);
     } catch (err) {
@@ -420,6 +541,12 @@
   window.addEventListener('hashchange', route);
   $('#menuBtn').onclick = () => document.body.classList.toggle('nav-open');
   $('#scrim').onclick = closeNav;
+  sidebar.addEventListener('click', e => {
+    if (e.target.id !== 'hlToggle') return;
+    e.preventDefault(); S.hlOff = !S.hlOff; save();
+    document.documentElement.classList.toggle('no-hl', S.hlOff);
+    e.target.textContent = `🖍 ไฮไลต์จุดสำคัญ: ${S.hlOff ? 'ปิด' : 'เปิด'}`;
+  });
   $('#searchForm').onsubmit = e => { e.preventDefault(); location.hash = '#/search?q=' + encodeURIComponent($('#searchInput').value); };
   const themeBtn = $('#themeBtn');
   const isDark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;

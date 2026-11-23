@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script>
-  try { var s = JSON.parse(localStorage.getItem('nle-tb-v1') || '{}'); if (s.theme) document.documentElement.dataset.theme = s.theme; if (s.font) document.documentElement.style.setProperty('--fs', s.font + 'px'); } catch (e) {}
+  try { var s = JSON.parse(localStorage.getItem('nle-tb-v1') || '{}'); if (s.theme) document.documentElement.dataset.theme = s.theme; if (s.font) document.documentElement.style.setProperty('--fs', s.font + 'px'); if (s.hlOff) document.documentElement.classList.add('no-hl'); } catch (e) {}
 </script>
 </head>
 <body>
@@ -25,6 +25,8 @@
     <a class="tool" href="#/quiz" title="โหมดทำข้อสอบ">📝<span>ข้อสอบ</span></a>
     <a class="tool" href="#/wrong" title="กองข้อที่ทำผิด">📕<span>ข้อผิด</span><b id="wrongCount" class="pill" hidden></b></a>
     <a class="tool" href="#/cards" title="Flashcard">🃏<span>การ์ด</span></a>
+    <a class="tool" href="#/stats" title="จุดอ่อนของฉัน">📊<span>จุดอ่อน</span></a>
+    <a class="tool" href="#/notes" title="โน้ตของฉัน">🗒️<span>โน้ต</span></a>
     <button class="tool" id="fontBtn" title="ขนาดตัวอักษร">Aa</button>
     <button class="tool" id="themeBtn" title="โหมดมืด">🌙</button>
   </nav>
