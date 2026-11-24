@@ -27,12 +27,13 @@
     const meta = INDEX.find(c => c.id === id);
     if (!meta || !meta.ready) return null;
     const j = u => fetch(u, { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
-    const [md, ex, ga, ca] = await Promise.all([
+    const [md, ex, ga, ca, nu] = await Promise.all([
       fetch(`data/${id}.md`, { cache: 'no-cache' }).then(r => r.text()),
-      j(`data/${id}-exams.json`), j('data/abbr.json'), j(`data/${id}-abbr.json`)
+      j(`data/${id}-exams.json`), j('data/abbr.json'), j(`data/${id}-abbr.json`), j(`data/${id}-numbers.json`)
     ]);
     const ch = parseChapter(md, meta);
     ch.abbr = Object.assign({}, ga, ca);
+    ch.numbers = nu.items || [];
     ch.exams = ex.exams || ex;
     for (const s of ch.sections) s.examIds = [];
     for (const [qid, q] of Object.entries(ch.exams)) {
@@ -251,7 +252,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -354,11 +355,13 @@
     sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
     moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
     back: '<path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>',
+    save: '<path d="M5 4h11l3 3v13H5z"/><path d="M8 4v5h7V4M8 20v-6h8v6"/>',
+    hash: '<path d="M5 9h14M5 15h14M10 4L8 20M16 4l-2 16"/>',
     pill: '<rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M9.5 9.5l5 5"/>',
     brain: '<path d="M9 4a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 10a3 3 0 0 0 1 2.2A3 3 0 0 0 6 17a3 3 0 0 0 3 3 3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/><path d="M15 4a3 3 0 0 1 3 3v.2A3 3 0 0 1 20 10a3 3 0 0 1-1 2.2A3 3 0 0 1 18 17a3 3 0 0 1-3 3 3 3 0 0 1-3-3"/>',
     img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>'
   };
-  const EMO = { '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
+  const EMO = { '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => `<svg class="ic ic-${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
   // แปลง emoji ในข้อความของหน้าเว็บเป็นไอคอน (ไม่แตะเนื้อหาที่ไฮไลต์ได้ และช่องพิมพ์)
@@ -406,7 +409,8 @@
   /* รูปที่แทรกเอง: ไฟล์เก็บใน IndexedDB (ไม่เต็ม localStorage) ย่อเหลือกว้างไม่เกิน 1400px */
   const IDB = (() => { let dbp; const db = () => dbp || (dbp = new Promise((ok, no) => { const r = indexedDB.open('nle-img', 1); r.onupgradeneeded = () => r.result.createObjectStore('img'); r.onsuccess = () => ok(r.result); r.onerror = () => no(r.error); }));
     const tx = (m, f) => db().then(d => new Promise((ok, no) => { const t = d.transaction('img', m); const q = f(t.objectStore('img')); t.oncomplete = () => ok(q && q.result); t.onerror = () => no(t.error); }));
-    return { put: (k, v) => tx('readwrite', s => s.put(v, k)), get: k => tx('readonly', s => s.get(k)), del: k => tx('readwrite', s => s.delete(k)) }; })();
+    return { put: (k, v) => tx('readwrite', s => s.put(v, k)), get: k => tx('readonly', s => s.get(k)), del: k => tx('readwrite', s => s.delete(k)),
+      keys: () => tx('readonly', s => s.getAllKeys()) }; })();
   const imgURL = {};
   function shrink(file) {
     return new Promise((ok, no) => {
@@ -678,6 +682,41 @@
   });
 
   /* ---------- views ---------- */
+  /* ---------- Backup: ไฮไลต์ โน้ต keyword รูป อยู่ในเบราว์เซอร์เครื่องเดียว → สำรองเป็นไฟล์ ---------- */
+  const b2u = b => new Promise(ok => { const r = new FileReader(); r.onload = () => ok(r.result); r.readAsDataURL(b); });
+  const hasData = () => Object.keys(S.hl).length || S.kw.length || Object.keys(S.lvl).length || Object.keys(S.notes).length;
+  const backupDue = () => hasData() && (!S.lastBackup || Date.now() - S.lastBackup > 7 * 864e5);
+  async function vBackup() {
+    renderSidebar();
+    const nHl = Object.values(S.hl).reduce((a, x) => a + x.length, 0);
+    const keys = await IDB.keys().catch(() => []);
+    view.innerHTML = `<div class="hero"><h1>💾 Backup</h1><p>ไฮไลต์ โน้ต keyword ดาวประเมิน ข้อที่พลาด และรูปที่แทรก ถูกเก็บไว้ในเบราว์เซอร์เครื่องนี้เท่านั้น ถ้าล้างข้อมูล Safari เปลี่ยนเครื่อง หรือไม่ได้เปิดเว็บนาน ๆ ข้อมูลอาจหายได้ ควรสำรองเป็นไฟล์ไว้สัปดาห์ละครั้ง</p></div>
+      <div class="panel"><h3>ข้อมูลในเครื่องนี้</h3><div class="today-chips"><span>ไฮไลต์/โน้ต <b>${nHl}</b></span><span>Keywords <b>${S.kw.length}</b></span><span>ประเมินแล้ว <b>${Object.keys(S.lvl).length}</b></span><span>รูป <b>${keys.length}</b></span></div>
+      <p class="muted">สำรองล่าสุด: ${S.lastBackup ? new Date(S.lastBackup).toLocaleString('th-TH') : 'ยังไม่เคย'}</p>
+      <div class="choice"><button class="btn primary" id="bkOut">Download backup</button></div></div>
+      <div class="panel"><h3>กู้คืนจากไฟล์</h3><p class="muted">ข้อมูลในไฟล์จะ<b>แทนที่</b>ข้อมูลทั้งหมดในเครื่องนี้ (ใช้ตอนย้ายไปเครื่องใหม่ หรือข้อมูลหาย)</p>
+      <input type="file" id="bkFile" accept=".json,application/json"> <button class="btn" id="bkIn" disabled>Restore</button><div id="bkMsg" class="muted"></div></div>`;
+    $('#bkOut').onclick = async () => {
+      const img = {}; for (const k of keys) { const b = await IDB.get(k); if (b) img[k] = await b2u(b); }
+      S.lastBackup = Date.now(); save();
+      const blob = new Blob([JSON.stringify({ app: 'nannie-compre', v: 1, at: S.lastBackup, S, img })], { type: 'application/json' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `nannie-backup-${new Date().toISOString().slice(0, 10)}.json`; document.body.appendChild(a); a.click(); a.remove();
+      toast('ดาวน์โหลดไฟล์สำรองแล้ว'); setTimeout(vBackup, 300);
+    };
+    let data = null;
+    $('#bkFile').onchange = async e => {
+      data = null; $('#bkIn').disabled = true; const f = e.target.files[0]; if (!f) return;
+      try { const d = JSON.parse(await f.text()); if (d.app !== 'nannie-compre' || !d.S) throw 0; data = d;
+        $('#bkMsg').textContent = `ไฟล์วันที่ ${new Date(d.at).toLocaleString('th-TH')} · รูป ${Object.keys(d.img || {}).length} รูป · กด Restore เพื่อแทนที่`; $('#bkIn').disabled = false;
+      } catch (_) { $('#bkMsg').textContent = 'ไฟล์นี้ไม่ใช่ไฟล์สำรองของเว็บนี้'; }
+    };
+    $('#bkIn').onclick = async () => {
+      const b = $('#bkIn'); if (!data) return;
+      if (!b.dataset.sure) { b.dataset.sure = 1; b.textContent = 'กดอีกครั้งเพื่อยืนยันแทนที่'; b.classList.add('primary'); return; }
+      for (const [k, u] of Object.entries(data.img || {})) await IDB.put(k, await (await fetch(u)).blob());
+      localStorage.setItem(KEY, JSON.stringify(data.S)); toast('กู้คืนแล้ว กำลังโหลดใหม่'); setTimeout(() => { location.hash = '#/'; location.reload(); }, 600);
+    };
+  }
   async function vHome() {
     await loadAll();
     renderSidebar();
@@ -693,7 +732,7 @@
     const lrSec = lr && CH[lr[1]] && CH[lr[1]].sections.find(x => x.no === +lr[2]);
     const rtAll = readToday(); const rvDone = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
     const chips = `<div class="today-chips"><span>📖 Read today <b>${rtAll.done}</b> boxes</span><span>📅 Reviewed <b>${rvDone}</b></span><span>🔥 Streak <b>${streak()}</b> days</span></div>`;
-    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 Continue reading · Box ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 Review today · ${n} due</a>` : ''; })()}</div></div><div class="grid">${tiles}</div>
+    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}${backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : ''}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 Continue reading · Box ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 Review today · ${n} due</a>` : ''; })()}</div></div><div class="grid">${tiles}</div>
     <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-p">ฉัน</mark> <mark class="user-hl c-r">4 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
   }
   async function vChapter(id) {
@@ -1187,6 +1226,31 @@
     grid.addEventListener('click', e => { if (!f.cover) return; const v = e.target.closest('.db-v'); if (v && !e.target.closest('a')) v.classList.toggle('shown'); });
     draw();
   }
+  /* ---------- Numbers: cutpoint · ค่าปกติ · สูตร ของทุกบท (data/<id>-numbers.json) ---------- */
+  async function vNumbers(params) {
+    await loadAll(); renderSidebar();
+    const all = Object.values(CH).flatMap(ch => (ch.numbers || []).map(x => Object.assign({ ch: ch.id }, x)));
+    const f = S.nuf || (S.nuf = { k: 'all', cover: 0 });
+    const n = k => all.filter(x => k === 'all' || x.t === k).length;
+    view.innerHTML = `<div class="hero"><h1>🔢 Numbers</h1><p>ตัวเลข cutpoint ค่าปกติ และสูตรคำนวณของทุกบทในหน้าเดียว · เปิด Cover mode แล้วแตะทีละช่องเพื่อท่อง · เพิ่มบทใหม่แล้วหน้านี้อัปเดตเอง</p></div>
+      <div class="db-bar"><div class="seg">${[['all', 'All'], ['cut', 'Cutpoints'], ['f', 'Formulas']].map(([k, l]) => `<button class="${f.k === k ? 'on' : ''}" data-k="${k}">${l} <small>${n(k)}</small></button>`).join('')}</div>
+        <input id="nuq" type="search" placeholder="ค้น เช่น PaO2, Light, FEV1…">
+        <label class="db-cv"><input type="checkbox" id="nuCover" ${f.cover ? 'checked' : ''}> Cover mode</label></div>
+      <div class="nu-grid" id="nuGrid"></div>`;
+    const grid = $('#nuGrid');
+    const draw = () => {
+      const q = $('#nuq').value.trim().toLowerCase();
+      const list = all.filter(x => (f.k === 'all' || x.t === f.k) && (!q || (x.cat + ' ' + x.name + ' ' + x.v + ' ' + (x.note || '')).toLowerCase().includes(q)));
+      const groups = {}; list.forEach(x => (groups[(x.t === 'f' ? 'สูตร · ' : '') + x.cat] = groups[(x.t === 'f' ? 'สูตร · ' : '') + x.cat] || []).push(x));
+      grid.innerHTML = Object.entries(groups).map(([g, xs]) => `<section class="nu-card ${xs[0].t === 'f' ? 'f' : ''}"><h3>${esc(g)}</h3>${xs.map(x => `<div class="nu-row"><div class="nu-n">${esc(x.name)} <a href="#/${x.ch}/${x.box}" title="ไปที่กล่อง ${x.box}">${x.ch.toUpperCase()}·${x.box}</a></div><div class="nu-v${x.t === 'f' ? ' flow' : ''}">${inline(esc(x.v))}</div>${x.note ? `<div class="nu-note">${inline(esc(x.note))}</div>` : ''}</div>`).join('')}</section>`).join('') || '<p class="empty">ไม่เจอที่ค้น</p>';
+      grid.classList.toggle('covering', !!f.cover);
+    };
+    view.querySelectorAll('.seg button').forEach(b => b.onclick = () => { f.k = b.dataset.k; save(); view.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b)); draw(); });
+    $('#nuq').oninput = draw;
+    $('#nuCover').onchange = e => { f.cover = e.target.checked ? 1 : 0; save(); draw(); };
+    grid.addEventListener('click', e => { if (!f.cover) return; const v = e.target.closest('.nu-v'); if (v) v.classList.toggle('shown'); });
+    draw();
+  }
   function runDrill(qs) {
     let i = 0, score = 0; const miss = [];
     const step = () => {
@@ -1261,6 +1325,8 @@
       if (parts[0] === 'review') return vReview();
       if (parts[0] === 'drill') return vDrill(params);
       if (parts[0] === 'db') return vDB(params);
+      if (parts[0] === 'numbers') return vNumbers(params);
+      if (parts[0] === 'backup') return vBackup();
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
       return vChapter(parts[0]);

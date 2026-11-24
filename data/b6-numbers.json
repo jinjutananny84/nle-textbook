@@ -1,0 +1,410 @@
+{
+ "note": "ตัวเลข cutpoint ค่าปกติ และสูตรของบท B6 · t = cut (ค่า/เกณฑ์) หรือ f (สูตร) · box = กล่องที่มา",
+ "items": [
+  {
+   "t": "cut",
+   "cat": "ABG · ค่าปกติ",
+   "name": "PaO2 ปกติ",
+   "v": "80–100 mmHg",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "ABG · ค่าปกติ",
+   "name": "PaCO2 ปกติ",
+   "v": "35–45 mmHg",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "ABG · ค่าปกติ",
+   "name": "HCO3 ปกติ",
+   "v": "~24",
+   "note": "ใช้เป็นฐานคิด delta-delta",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "ABG · ค่าปกติ",
+   "name": "Anion gap ปกติ",
+   "v": "~12",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "ABG · ค่าปกติ",
+   "name": "Respiratory compensation (PCO2 เปลี่ยนทุก 10)",
+   "v": "acidosis: HCO3 **+1** acute / **+4** chronic · alkalosis: **−2** acute / **−5** chronic",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "ABG · ค่าปกติ",
+   "name": "A–a gradient ปกติ",
+   "v": "< 10–15",
+   "note": "หรือ อายุ/4 + 4",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "ABG · ค่าปกติ",
+   "name": "V/Q ทั้งปอด",
+   "v": "≈ 0.8",
+   "note": "apex สูง (TB reactivation) · base ต่ำ",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "O2 · Hb",
+   "name": "O2–Hb curve: PO2 → SaO2",
+   "v": "100 → ~98% · **60 → 90%** · 40 → 75% (เลือดดำ)",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 · Hb",
+   "name": "P50",
+   "v": "≈ 26–27 mmHg",
+   "note": "right shift = P50 สูงขึ้น",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 · Hb",
+   "name": "CO จับ Hb แน่นกว่า O2",
+   "v": "~250 เท่า",
+   "note": "SpO2 ปกติหลอก → co-oximetry",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 · Hb",
+   "name": "Methemoglobin SpO2 ค้างที่",
+   "v": "~85%",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 · Hb",
+   "name": "CO2 ขนส่งในเลือด",
+   "v": "HCO3⁻ **~70%** · carbamino ~20% · ละลาย ~10%",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 · Hb",
+   "name": "CO2 แพร่เร็วกว่า O2",
+   "v": "~20 เท่า",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 · Hb",
+   "name": "Peripheral chemoreceptor ตอบสนองเมื่อ",
+   "v": "PaO2 < ~60 mmHg",
+   "note": "central รับแค่ H⁺ จาก CO2 ใน CSF",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "O2 · Hb",
+   "name": "เป้า SpO2 ใน COPD exacerbation",
+   "v": "88–92%",
+   "note": "O2 มากไป → CO2 คั่ง",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Mechanics",
+   "name": "Intrapleural pressure",
+   "v": "−5 cmH2O ที่ FRC · −8 ตอนหายใจเข้า",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Mechanics",
+   "name": "รัศมีท่อลดครึ่งหนึ่ง",
+   "v": "resistance เพิ่ม 16 เท่า",
+   "note": "R ∝ 1/r⁴",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "Obstructive",
+   "v": "FEV1/FVC < **0.70**",
+   "note": "อาจารย์ใช้ตัด 75%",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "FVC ลด",
+   "v": "< 80% predicted",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "Bronchodilator response บวก",
+   "v": "FEV1 เพิ่ม **≥ 12% และ ≥ 200 mL**",
+   "note": "→ asthma",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "Small airway disease",
+   "v": "FEF25–75 < 65%",
+   "note": "เมื่อ ratio และ FVC ปกติ",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "COPD วินิจฉัย",
+   "v": "post-BD FEV1/FVC < 0.7",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Pleura · Light criteria",
+   "name": "Protein ratio (pleural/serum)",
+   "v": "> 0.5 = exudate",
+   "box": 21
+  },
+  {
+   "t": "cut",
+   "cat": "Pleura · Light criteria",
+   "name": "LDH ratio (pleural/serum)",
+   "v": "> 0.6 = exudate",
+   "box": 21
+  },
+  {
+   "t": "cut",
+   "cat": "Pleura · Light criteria",
+   "name": "Pleural LDH",
+   "v": "> 2/3 ของ ULN serum = exudate",
+   "note": "มีข้อใดข้อหนึ่งก็พอ",
+   "box": 21
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "ขอบล่างปอด",
+   "v": "ซี่ 6–8–10",
+   "note": "midclavicular – midaxillary – paravertebral",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "ขอบล่าง pleura",
+   "v": "ซี่ 8–10–12",
+   "note": "ลึกกว่าปอด 2 ซี่เสมอ",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "Horizontal fissure",
+   "v": "ราวซี่โครงที่ 4",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "ฟังเสียง lobe ด้านหน้า",
+   "v": "RUL ICS 1–3 (ตอบ ICS 2) · RML ICS 4–5",
+   "note": "lower lobe ฟังหลัง ลงถึง T10",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "Phrenic nerve",
+   "v": "C3–5",
+   "note": "ปวดร้าวไปไหล่",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "Anterior epistaxis",
+   "v": "~90%",
+   "note": "Kiesselbach plexus",
+   "box": 1
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "Type I pneumocyte คลุมพื้นที่ถุงลม",
+   "v": "~95%",
+   "box": 3
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology · ทารก",
+   "name": "Lung bud เกิด",
+   "v": "สัปดาห์ที่ 4",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology · ทารก",
+   "name": "ระยะพัฒนาปอด (wk)",
+   "v": "Pseudoglandular 5–16 · Canalicular 16–26 · Saccular 26–36 · Alveolar 36 wk – 8 ปี",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology · ทารก",
+   "name": "Surfactant พอใช้",
+   "v": "อายุครรภ์ ~34–35 wk",
+   "note": "คลอด < 34 wk → NRDS → ให้ antenatal steroid",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology · ทารก",
+   "name": "L/S ratio ปอดพร้อม",
+   "v": "> 2",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "เกณฑ์ทางคลินิก",
+   "name": "Chronic bronchitis",
+   "v": "ไอมีเสมหะ ≥ 3 เดือน/ปี × 2 ปีติดกัน",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "เกณฑ์ทางคลินิก",
+   "name": "Flail chest",
+   "v": "ซี่โครงหัก ≥ 2 ซี่ ซี่ละ ≥ 2 ตำแหน่ง",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "เกณฑ์ทางคลินิก",
+   "name": "PCP · ให้ TMP-SMX ป้องกัน",
+   "v": "HIV CD4 < 200",
+   "box": 29
+  },
+  {
+   "t": "cut",
+   "cat": "เกณฑ์ทางคลินิก",
+   "name": "RSV bronchiolitis",
+   "v": "ทารก < 2 ปี",
+   "box": 25
+  },
+  {
+   "t": "cut",
+   "cat": "เกณฑ์ทางคลินิก",
+   "name": "Polysaccharide vaccine ใช้ไม่ได้",
+   "v": "เด็ก < 2 ปี",
+   "note": "T-independent → ใช้ conjugate",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "เกณฑ์ทางคลินิก",
+   "name": "TB contact → preventive therapy แม้ผลแรกลบ",
+   "v": "เด็ก < 5 ปี",
+   "box": 28
+  },
+  {
+   "t": "cut",
+   "cat": "เกณฑ์ทางคลินิก",
+   "name": "Hypersensitivity pneumonitis อาการหลังสัมผัส",
+   "v": "4–6 ชั่วโมง",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "เกณฑ์ทางคลินิก",
+   "name": "EVALI",
+   "v": "บุหรี่ไฟฟ้าใน 3 เดือน",
+   "box": 18
+  },
+  {
+   "t": "f",
+   "cat": "Gas exchange",
+   "name": "O2 content",
+   "v": "CaO2 = 1.34 × Hb × SaO2 + 0.003 × PaO2",
+   "note": "เกือบทั้งหมดจับ Hb",
+   "box": 8
+  },
+  {
+   "t": "f",
+   "cat": "Gas exchange",
+   "name": "Alveolar gas equation",
+   "v": "PAO2 = FiO2 × (760 − 47) − PaCO2 / 0.8",
+   "note": "อากาศห้อง ≈ 150 − 1.25 × PaCO2",
+   "box": 10
+  },
+  {
+   "t": "f",
+   "cat": "Gas exchange",
+   "name": "A–a gradient",
+   "v": "A–a = PAO2 − PaO2",
+   "note": "ปกติ < 10–15 · ค่าที่คาด ≈ อายุ/4 + 4",
+   "box": 10
+  },
+  {
+   "t": "f",
+   "cat": "Mechanics",
+   "name": "Laplace",
+   "v": "P = 2T / r",
+   "note": "ถุงลมเล็กยุบง่าย · surfactant ลด T",
+   "box": 7
+  },
+  {
+   "t": "f",
+   "cat": "Mechanics",
+   "name": "Poiseuille",
+   "v": "R ∝ 1 / r⁴",
+   "note": "รวมสูงสุดที่ medium bronchi",
+   "box": 7
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Anion gap",
+   "v": "AG = Na − (Cl + HCO3)",
+   "note": "ปกติ ~12",
+   "box": 14
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Winter formula (metabolic acidosis)",
+   "v": "PCO2 ที่คาด = 1.5 × HCO3 + 8 ± 2",
+   "box": 14
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Metabolic alkalosis compensation",
+   "v": "PCO2 ≈ 0.7 × HCO3 + 21",
+   "box": 14
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Delta-delta",
+   "v": "HCO3 ที่ควร = 24 − ΔAG  (ΔAG = AG − 12)",
+   "note": "จริงต่ำกว่า = NAGMA ซ้อน · จริงสูงกว่า = metabolic alkalosis ซ้อน",
+   "box": 14
+  },
+  {
+   "t": "f",
+   "cat": "PFT",
+   "name": "แก้ FVC เมื่อมี air trapping",
+   "v": "FVC ที่แก้ = FVC + (70 − ratio)",
+   "note": "ถ้ายังต่ำ = มี restrictive ร่วม",
+   "box": 13
+  }
+ ]
+}
