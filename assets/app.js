@@ -26,11 +26,13 @@
     if (CH[id]) return CH[id];
     const meta = INDEX.find(c => c.id === id);
     if (!meta || !meta.ready) return null;
-    const [md, ex] = await Promise.all([
+    const j = u => fetch(u, { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+    const [md, ex, ga, ca] = await Promise.all([
       fetch(`data/${id}.md`, { cache: 'no-cache' }).then(r => r.text()),
-      fetch(`data/${id}-exams.json`, { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+      j(`data/${id}-exams.json`), j('data/abbr.json'), j(`data/${id}-abbr.json`)
     ]);
     const ch = parseChapter(md, meta);
+    ch.abbr = Object.assign({}, ga, ca);
     ch.exams = ex.exams || ex;
     for (const s of ch.sections) s.examIds = [];
     for (const [qid, q] of Object.entries(ch.exams)) {
@@ -252,6 +254,33 @@
     if (bx) { e.preventDefault(); const cur = location.hash.split('/')[1]; location.hash = `#/${cur}/${bx.dataset.box}`; }
   });
 
+  /* ---------- ตัวย่อ: ครั้งแรกในแต่ละกล่องเติมชื่อเต็มในวงเล็บ ----------
+     ชื่อเต็มอยู่ใน data/abbr.json (ใช้ทุกบท) และ data/<id>-abbr.json (เฉพาะบท ทับของกลาง)
+     ใส่เป็น span ว่างที่แสดงผ่าน CSS จึงไม่กระทบตำแหน่งไฮไลต์ */
+  const esRe = x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  function expandAbbr(root, dict) {
+    const keys = Object.keys(dict || {}).sort((a, b) => b.length - a.length);
+    if (!keys.length) return;
+    const re = new RegExp(`(^|[^A-Za-z0-9])(${keys.map(esRe).join('|')})(?![A-Za-z0-9])`, 'g');
+    const seen = new Set(); const low = root.textContent.toLowerCase();
+    for (const n of textNodes(root)) if (!n.parentNode.closest('svg,h1,h2,h3,h4,code')) expandAbbrNode(n, re, seen, dict, low);
+  }
+  function expandAbbrNode(n, re, seen, dict, low) {
+    while (n) {
+      re.lastIndex = 0; let m, hit = null;
+      while ((m = re.exec(n.nodeValue))) {
+        const k = m[2]; if (seen.has(k)) continue; seen.add(k);
+        const at = m.index + m[1].length, end = at + k.length, v = n.nodeValue;
+        if (/^\s*\(/.test(v.slice(end)) || /\(\s*$/.test(v.slice(0, at)) || low.includes(dict[k].toLowerCase())) continue;
+        hit = { end, f: dict[k] }; break;
+      }
+      if (!hit) return;
+      const rest = n.splitText(hit.end);
+      const sp = document.createElement('span'); sp.className = 'abx'; sp.dataset.f = hit.f;
+      n.parentNode.insertBefore(sp, rest); n = rest;
+    }
+  }
+
   /* ---------- ไฮไลต์ของผู้ใช้ ----------
      ทุกพื้นที่ที่ไฮไลต์ได้มี data-hlk = คีย์ใน S.hl
      เนื้อหา: "b6/3" · ข้อสอบ: "q:b6|79/117|stem" / "|why" / "|A" (ตัวเลือก) */
@@ -444,6 +473,7 @@
     view.innerHTML = h;
     view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => { const l = +b.dataset.lv; if (S.lvl[k] === l) delete S.lvl[k]; else S.lvl[k] = l; save(); rerender(); });
     pop.hidden = true; pop.dataset.mode = '';
+    expandAbbr($('article.content', view), ch.abbr);
     applyAllHL(view);
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
     const ji = $('#jumpIn');
@@ -587,7 +617,7 @@
     for (const ch of Object.values(CH)) for (const s of ch.sections) {
       const k = secKey(ch.id, s.no), note = S.notes[k], hl = S.hl[k] || [];
       if (!note && !hl.length) continue; any = true;
-      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl c-${x.c || 'g'}">${esc(x.t)}</mark>${x.n ? `<span class="inote-txt">📝 ${esc(x.n)}</span>` : ''}</p>`).join('')}</div>`;
+      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl c-${x.c || 'g'}">${esc(x.t)}</mark>${x.n ? `<span class="inote-txt">★ ${esc(x.n)}</span>` : ''}</p>`).join('')}</div>`;
     }
     const qk = {};
     for (const k of Object.keys(S.hl)) { const m = k.match(/^q:([^|]+)\|(.+)\|([^|]+)$/); if (m && S.hl[k].length) (qk[m[1] + '|' + m[2]] = qk[m[1] + '|' + m[2]] || []).push(...S.hl[k]); }
@@ -595,7 +625,7 @@
     if (qs.length) {
       any = true; h += '<h2 style="margin:22px 0 8px">📝 ไฮไลต์ในข้อสอบ</h2>';
       for (const x of qs) { const [c, qid] = x.split('|'); const q = CH[c] && CH[c].exams[qid];
-        h += `<div class="panel"><h3>${q ? `<a href="#/${c}/${q.box}">ข้อ ${esc(qid)} · กล่อง ${q.box}</a>` : esc(qid)}</h3>${qk[x].map(y => `<p style="margin:6px 0"><mark class="user-hl c-${y.c || 'g'}">${esc(y.t)}</mark>${y.n ? `<span class="inote-txt">📝 ${esc(y.n)}</span>` : ''}</p>`).join('')}</div>`; }
+        h += `<div class="panel"><h3>${q ? `<a href="#/${c}/${q.box}">ข้อ ${esc(qid)} · กล่อง ${q.box}</a>` : esc(qid)}</h3>${qk[x].map(y => `<p style="margin:6px 0"><mark class="user-hl c-${y.c || 'g'}">${esc(y.t)}</mark>${y.n ? `<span class="inote-txt">★ ${esc(y.n)}</span>` : ''}</p>`).join('')}</div>`; }
     }
     view.innerHTML = h + (any ? '' : '<p class="empty">ยังไม่มีโน้ต เปิดกล่องไหนก็ได้แล้วจดที่ "โน้ตของฉัน" หรือเลือกข้อความเพื่อไฮไลต์</p>');
   }
