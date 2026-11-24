@@ -258,43 +258,60 @@
   }
   const pop = document.createElement('div'); pop.className = 'hl-pop'; pop.hidden = true; document.body.appendChild(pop);
   pop.addEventListener('mousedown', e => e.preventDefault());
-  function showPop(rect, label, fn) {
-    if (label === 'colors') pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="สี"></button>`).join('');
-    else pop.innerHTML = `<button>${label}</button>`;
+  // เก็บสถานะก่อนแก้ไว้สำหรับปุ่มเลิกทำ
+  function snap(k) { undoStack.push({ k, before: JSON.parse(JSON.stringify(S.hl[k] || [])) }); }
+  function setHL(k, arr) { if (arr.length) S.hl[k] = arr; else delete S.hl[k]; save(); }
+  // แถบสี: 4 สี + ยางลบ · วางตามตำแหน่งในหน้า จึงเลื่อนตามข้อความ ไม่หายตอนเลื่อน
+  function showPalette(rect, onColor, onErase) {
+    pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('') + `<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>`;
     pop.hidden = false;
-    const top = Math.min(rect.bottom + 8, innerHeight - 50), left = Math.max(8, Math.min(rect.left + rect.width / 2 - 60, innerWidth - 130));
+    const w = 230, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
-    pop.querySelectorAll('button').forEach(b => b.onclick = () => { fn(b.dataset.c); pop.hidden = true; });
+    pop.querySelectorAll('button').forEach(b => b.onclick = () => { if (b.dataset.c === 'x') onErase(); else onColor(b.dataset.c); hidePop(); });
   }
+  function hidePop() { pop.hidden = true; pop.dataset.mode = ''; }
+  function selOffsets(r) {
+    const pre = document.createRange(); pre.setStart(curSec.art, 0); pre.setEnd(r.startContainer, r.startOffset);
+    const s = pre.toString().length; return { s, e: s + r.toString().length };
+  }
+  function hlPos(h) { const full = curSec.art.textContent; const s = full.substr(h.s, h.t.length) === h.t ? h.s : full.indexOf(h.t); return s; }
   let selT;
   document.addEventListener('selectionchange', () => {
     clearTimeout(selT);
     selT = setTimeout(() => {
       const sel = getSelection();
-      if (!curSec || !document.contains(curSec.art) || !sel.rangeCount || sel.isCollapsed) { if (pop.dataset.mode !== 'del') pop.hidden = true; return; }
+      if (!curSec || !document.contains(curSec.art) || !sel.rangeCount || sel.isCollapsed) { if (pop.dataset.mode === 'add') hidePop(); return; }
       const r = sel.getRangeAt(0);
-      if (!curSec.art.contains(r.commonAncestorContainer)) { pop.hidden = true; return; }
-      const t = r.toString(); if (t.trim().length < 2) { pop.hidden = true; return; }
+      if (!curSec.art.contains(r.commonAncestorContainer)) return;
+      const t = r.toString(); if (t.trim().length < 2) return;
       pop.dataset.mode = 'add';
-      showPop(r.getBoundingClientRect(), 'colors', c => {
-        const pre = document.createRange(); pre.setStart(curSec.art, 0); pre.setEnd(r.startContainer, r.startOffset);
-        const { k, art } = curSec;
-        (S.hl[k] = S.hl[k] || []).push({ s: pre.toString().length, t, c }); save(); undoStack.push({ type: 'add', k, item: S.hl[k][S.hl[k].length - 1] }); syncUndo();
-        sel.removeAllRanges(); wrapRange(art, pre.toString().length, pre.toString().length + t.length, S.hl[k].length - 1, c);
+      showPalette(r.getBoundingClientRect(), c => {
+        const { k } = curSec; const { s } = selOffsets(r);
+        snap(k); setHL(k, (S.hl[k] || []).concat([{ s, t, c }]));
+        sel.removeAllRanges(); rerender(); syncUndo();
+      }, () => {
+        // ลบไฮไลต์ทุกอันที่ซ้อนกับข้อความที่เลือก
+        const { k } = curSec; const { s, e } = selOffsets(r);
+        const arr = S.hl[k] || [];
+        const keep = arr.filter(h => { const hs = hlPos(h); return hs < 0 || hs + h.t.length <= s || hs >= e; });
+        if (keep.length === arr.length) return;
+        snap(k); setHL(k, keep); sel.removeAllRanges(); rerender();
       });
     }, 250);
   });
+  // แตะไฮไลต์เดิม: เปลี่ยนสี หรือ ✕ ลบ
   view.addEventListener('click', e => {
     const m = e.target.closest('mark.user-hl');
     if (!m || !curSec || !getSelection().isCollapsed) return;
-    const idx = +m.dataset.hl; pop.dataset.mode = 'del';
-    showPop(m.getBoundingClientRect(), '✕ ลบไฮไลต์', () => {
-      const { k } = curSec; const [item] = S.hl[k].splice(idx, 1); undoStack.push({ type: 'del', k, item, idx }); if (!S.hl[k].length) delete S.hl[k]; save(); pop.dataset.mode = ''; rerender();
+    const idx = +m.dataset.hl, { k } = curSec; pop.dataset.mode = 'edit';
+    showPalette(m.getBoundingClientRect(), c => {
+      snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k])); arr[idx].c = c; setHL(k, arr); rerender();
+    }, () => {
+      snap(k); const arr = S.hl[k].slice(); arr.splice(idx, 1); setHL(k, arr); rerender();
     });
   });
-  const hidePop = () => { if (!pop.hidden) { pop.hidden = true; pop.dataset.mode = ''; } };
-  window.addEventListener('scroll', hidePop, { passive: true });
-  document.addEventListener('pointerdown', e => { if (!pop.contains(e.target) && !e.target.closest('mark.user-hl')) hidePop(); });
+  // ปิดแถบสีเมื่อแตะที่อื่น (การเลื่อนหน้าไม่ปิด)
+  document.addEventListener('click', e => { if (!pop.hidden && pop.dataset.mode === 'edit' && !pop.contains(e.target) && !e.target.closest('mark.user-hl')) hidePop(); });
 
   /* ---------- views ---------- */
   async function vHome() {
@@ -361,9 +378,7 @@
     $('#undoBtn').onclick = () => {
       let i = undoStack.length - 1; while (i >= 0 && undoStack[i].k !== k) i--;
       if (i < 0) return; const u = undoStack.splice(i, 1)[0];
-      if (u.type === 'add') { const a = S.hl[k] || []; const j = a.lastIndexOf(u.item); if (j < 0) { const jj = a.findIndex(x => x.s === u.item.s && x.t === u.item.t); if (jj >= 0) a.splice(jj, 1); } else a.splice(j, 1); if (!a.length) delete S.hl[k]; }
-      else { (S.hl[k] = S.hl[k] || []).splice(Math.min(u.idx, S.hl[k].length), 0, u.item); }
-      save(); rerender();
+      setHL(k, u.before); rerender();
     };
     const ji = $('#jumpIn');
     ji.addEventListener('keydown', e => { if (e.key === 'Enter') { const n = parseInt(ji.value); if (n) location.hash = `#/${id}/${n}`; } });

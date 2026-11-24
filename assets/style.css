@@ -253,3 +253,5 @@ mark.user-hl.c-y{--c:var(--u-y)} mark.user-hl.c-g{--c:var(--u-g)} mark.user-hl.c
 .no-hl .content b{background:none}
 .content .card b{background:none}
 .hl-pop[hidden]{display:none}
+.hl-pop{position:absolute}
+.hl-pop .sw.erase{background:var(--surface);color:var(--fg);font-size:16px;font-weight:700;display:grid;place-items:center;border-style:dashed}
