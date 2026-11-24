@@ -380,3 +380,25 @@ mark.kw-hi{background:linear-gradient(transparent 22%,var(--hl-key) 22%,var(--hl
 .kwi .kw-go{flex:0 0 22px;text-align:center;color:var(--accent);text-decoration:none;font-weight:700}
 .kwi.ok .kwt{opacity:.7}
 mark.kw-hi{cursor:pointer}
+
+/* ===== ปรับให้อ่านง่าย มีสีสัน ===== */
+/* หัวข้อย่อยในเนื้อหา: แถบสีซ้าย + พื้นอ่อน */
+.content h2{border-bottom:0;background:var(--accent-soft);border-left:5px solid var(--accent);border-radius:0 10px 10px 0;padding:6px 12px;margin:1.8em 0 .6em}
+.content h3{display:flex;align-items:center;gap:8px}
+.content h3::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--accent);transform:rotate(45deg);flex:0 0 8px}
+/* สารบัญย่อในกล่อง */
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 18px;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;position:sticky;top:60px;z-index:5;max-height:96px;overflow-y:auto}
+.toc button{border:1px solid var(--line);background:var(--surface2);color:var(--fg);border-radius:999px;padding:3px 10px;font-size:12.5px;cursor:pointer;line-height:1.4}
+.toc button.sub{background:none;border-style:dashed}
+.toc button.on{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.toc button.ex{border-color:var(--exam);color:var(--exam);background:var(--exam-soft)}
+@media (max-width: 620px){.toc{position:static;max-height:none}}
+/* แถบความคืบหน้าการอ่าน */
+.readbar{position:fixed;top:54px;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--lv4),var(--lv3));z-index:31;transition:width .1s linear;pointer-events:none}
+/* โหมดอ่าน: ซ่อนเมนูข้าง เนื้อหากึ่งกลาง */
+@media (min-width: 961px){
+  body.focus .sidebar{display:none}
+  body.focus .main{max-width:860px;margin:0 auto}
+}
+body.focus .content{line-height:1.85}
+.jump #focusBtn{font-size:17px;color:var(--muted)}

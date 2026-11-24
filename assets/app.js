@@ -9,7 +9,7 @@
   /* ---------- storage ---------- */
   let S = {};
   try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { S = {}; }
-  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {}; S.kw = S.kw || [];
+  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {}; S.kw = S.kw || []; if (S.focus) document.body.classList.add('focus');
   if (S.hlOff) document.documentElement.classList.add('no-hl');
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} updateWrongCount(); }
 
@@ -574,11 +574,13 @@
     }
     h += `<div class="lvpick"><div class="lvq">หัวข้อนี้เข้าใจแค่ไหน (กดเปลี่ยนได้ตลอด กดซ้ำเพื่อล้าง)</div>${[4, 3, 2, 1].map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
       <nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
-      <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><button id="undoBtn" hidden title="เลิกทำไฮไลต์ล่าสุด" aria-label="เลิกทำ">↶</button><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
+      <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><button id="undoBtn" hidden title="เลิกทำไฮไลต์ล่าสุด" aria-label="เลิกทำ">↶</button><button id="focusBtn" title="โหมดอ่าน: ซ่อนเมนูข้าง" aria-label="โหมดอ่าน">${S.focus ? '⤡' : '⤢'}</button><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
     view.innerHTML = h;
     view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => { const l = +b.dataset.lv; if (S.lvl[k] === l) delete S.lvl[k]; else S.lvl[k] = l; save(); rerender(); });
     pop.hidden = true; pop.dataset.mode = '';
     expandAbbr($('article.content', view), ch.abbr);
+    buildToc();
+    $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
     const ji = $('#jumpIn');
@@ -589,6 +591,36 @@
       setTimeout(flashKw, 60);
     }
   }
+
+  // สารบัญย่อในกล่อง: ชิปหัวข้อย่อย กดแล้วเลื่อนไปทันที และไฮไลต์หัวข้อที่กำลังอ่าน
+  function buildToc() {
+    const art = $('article.content', view); if (!art) return;
+    const hs = [...art.querySelectorAll('h2,h3')];
+    const head = $('.sec-head', view);
+    if (hs.length < 3 || !head) return;
+    const nav = document.createElement('nav'); nav.className = 'toc';
+    nav.innerHTML = hs.map((h, i) => `<button data-i="${i}" class="${h.tagName === 'H3' ? 'sub' : ''}">${esc(h.textContent.replace(/\s+/g, ' ').trim())}</button>`).join('')
+      + (S.focus === undefined ? '' : '') + ($('.exam-sec', view) ? '<button data-ex="1" class="ex">📝 ข้อสอบ</button>' : '');
+    head.after(nav);
+    nav.addEventListener('click', e => {
+      const b = e.target.closest('button'); if (!b) return;
+      const t = b.dataset.ex ? $('.exam-sec', view) : hs[+b.dataset.i];
+      scrollTo({ top: t.getBoundingClientRect().top + scrollY - 70, behavior: 'smooth' });
+    });
+    tocHs = hs; tocNav = nav;
+  }
+  let tocHs = [], tocNav = null;
+  // แถบความคืบหน้าการอ่านใต้แถบบน + หัวข้อที่กำลังอ่าน
+  const rbar = document.createElement('div'); rbar.className = 'readbar'; document.body.appendChild(rbar);
+  addEventListener('scroll', () => {
+    const onSec = /^#\/[^/]+\/\d+$/.test(location.hash);
+    const h = document.documentElement.scrollHeight - innerHeight;
+    rbar.style.width = onSec && h > 0 ? Math.min(100, scrollY * 100 / h) + '%' : '0';
+    if (onSec && tocNav && document.contains(tocNav)) {
+      let cur = -1; tocHs.forEach((x, i) => { if (x.getBoundingClientRect().top < 120) cur = i; });
+      tocNav.querySelectorAll('button[data-i]').forEach(b => b.classList.toggle('on', +b.dataset.i === cur));
+    }
+  }, { passive: true });
 
   /* quiz */
   function pool(chIds, filter) {
