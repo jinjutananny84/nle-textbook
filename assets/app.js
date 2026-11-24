@@ -336,14 +336,22 @@
   function snap(k) { undoStack.push({ k, before: JSON.parse(JSON.stringify(S.hl[k] || [])) }); }
   function setHL(k, arr) { if (arr.length) S.hl[k] = arr; else delete S.hl[k]; save(); }
   // แถบสี: 4 สี + ยางลบ · วางตามตำแหน่งในหน้า จึงเลื่อนตามข้อความ ไม่หายตอนเลื่อน
+  // คัดลอกข้อความ แล้วเปิด Google ค้นหาในแท็บใหม่
+  let popText = '';
+  function searchOut(t) {
+    t = (t || '').replace(/\s+/g, ' ').trim(); if (!t) return;
+    try { navigator.clipboard && navigator.clipboard.writeText(t).catch(() => {}); } catch (e) {}
+    window.open('https://www.google.com/search?q=' + encodeURIComponent(t), '_blank', 'noopener');
+  }
   function showPalette(rect, onColor, onErase, onNote, curNote) {
     pop.classList.remove('writing');
-    pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('') + `<button class="sw nb" data-c="n" aria-label="เขียนโน้ต" title="เขียนโน้ตใต้เนื้อหา">📝</button><button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>`;
+    pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('') + `<button class="sw nb" data-c="n" aria-label="เขียนโน้ต" title="เขียนโน้ตใต้เนื้อหา">📝</button><button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button><button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>`;
     pop.hidden = false;
-    const w = 280, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
+    const w = 324, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
     pop.querySelectorAll('button').forEach(b => b.onclick = () => {
       if (b.dataset.c === 'n') return openNote(onNote, curNote);
+      if (b.dataset.c === 's') { searchOut(popText); return hidePop(); }
       if (b.dataset.c === 'x') onErase(); else onColor(b.dataset.c); hidePop();
     });
   }
@@ -372,6 +380,7 @@
       const t = r.toString(); if (t.trim().length < 2) return;
       const k = z.dataset.hlk;
       pop.dataset.mode = 'add';
+      popText = t;
       showPalette(r.getBoundingClientRect(), c => {
         const { s } = selOffsets(z, r);
         snap(k); setHL(k, (S.hl[k] || []).concat([{ s, t, c }]));
@@ -396,6 +405,7 @@
     if (!z || !getSelection().isCollapsed) return;
     e.stopPropagation();
     const idx = +m.dataset.hl, k = z.dataset.hlk; pop.dataset.mode = 'edit';
+    popText = (S.hl[k][idx] || {}).t || m.textContent;
     showPalette(m.getBoundingClientRect(), c => {
       snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k])); arr[idx].c = c; setHL(k, arr); refreshZone(z);
     }, () => {
