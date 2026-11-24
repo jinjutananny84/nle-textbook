@@ -1,0 +1,281 @@
+{
+ "note": "ตัวเลข cutpoint ค่าปกติ และสูตรของบท B3 · t = cut หรือ f · box = กล่องที่มา",
+ "items": [
+  {
+   "t": "cut",
+   "cat": "Neuron · เซลล์",
+   "name": "Resting membrane potential",
+   "v": "**−70** mV",
+   "box": 1,
+   "note": "Na⁺/K⁺-ATPase 3Na⁺ ออก 2K⁺ เข้า"
+  },
+  {
+   "t": "cut",
+   "cat": "Neuron · เซลล์",
+   "name": "Threshold ของ action potential",
+   "v": "**−55** mV",
+   "box": 1,
+   "note": "ถึงแล้ว voltage-gated Na⁺ เปิด"
+  },
+  {
+   "t": "cut",
+   "cat": "Neuron · เซลล์",
+   "name": "Na⁺/K⁺-ATPase stoichiometry",
+   "v": "Na⁺ ออก **3** : K⁺ เข้า **2**",
+   "box": 1
+  },
+  {
+   "t": "cut",
+   "cat": "ทางเดิน · ไขว้",
+   "name": "Lateral corticospinal tract ไขว้",
+   "v": "**~85–90%** ที่ pyramidal decussation (caudal medulla)",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "Neuroembryology",
+   "name": "Folic acid ป้องกัน NTD (ทั่วไป)",
+   "v": "**0.4** mg/d ก่อนตั้งครรภ์",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Neuroembryology",
+   "name": "Folic acid (กินยากันชัก/เคยมีลูก NTD)",
+   "v": "**4–5** mg/d",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Neuroembryology",
+   "name": "Hirschsprung: ไม่ถ่าย meconium",
+   "v": "> **48** ชม.",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "CSF",
+   "name": "CSF สร้างต่อวัน",
+   "v": "**~500** mL/d (Choroid plexus)",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "CSF",
+   "name": "CSF ที่มีอยู่ในระบบครั้งละ",
+   "v": "**~150** mL",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "CSF",
+   "name": "Bacterial meningitis",
+   "v": "PMN ↑↑ · protein ↑↑ · glucose **↓↓** · OP สูง",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "CSF",
+   "name": "Viral meningitis",
+   "v": "lymph ↑ · protein ปกติ/↑เล็กน้อย · glucose **ปกติ**",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "CSF",
+   "name": "Eosinophilic meningitis",
+   "v": "eosinophil > **10%** ของเซลล์ใน CSF",
+   "box": 26,
+   "note": "Angiostrongylus / Gnathostoma"
+  },
+  {
+   "t": "cut",
+   "cat": "CSF",
+   "name": "GBS (CSF)",
+   "v": "protein ↑ · เซลล์ **ปกติ**",
+   "box": 4,
+   "note": "albuminocytologic dissociation"
+  },
+  {
+   "t": "cut",
+   "cat": "CSF",
+   "name": "เชื้อ meningitis ทารกอายุ",
+   "v": "< **1** เดือน = GBS (S. agalactiae), E. coli, Listeria",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "หู",
+   "name": "Noise-induced hearing loss: notch ที่",
+   "v": "**4** kHz",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "ตา",
+   "name": "Aqueous humor ระบายออกทาง trabecular meshwork–Schlemm",
+   "v": "**80–90%**",
+   "box": 37
+  },
+  {
+   "t": "cut",
+   "cat": "ตา",
+   "name": "Aqueous humor ระบายออกทาง uveoscleral",
+   "v": "**10–20%**",
+   "box": 37
+  },
+  {
+   "t": "cut",
+   "cat": "สมอง · โรค",
+   "name": "Absence seizure: EEG",
+   "v": "**3** Hz spike-wave",
+   "box": 34,
+   "note": "ethosuximide / valproate"
+  },
+  {
+   "t": "cut",
+   "cat": "Stroke · ICH",
+   "name": "Alteplase (rtPA) หน้าต่างเวลา",
+   "v": "≤ **4.5** ชม. จาก onset",
+   "box": 23,
+   "note": "CT ต้องไม่มีเลือด"
+  },
+  {
+   "t": "cut",
+   "cat": "Stroke · ICH",
+   "name": "BP ก่อนให้ alteplase",
+   "v": "< **185/110** mmHg",
+   "box": 23,
+   "note": "ต่ำกว่านี้ไม่ต้องลด BP"
+  },
+  {
+   "t": "cut",
+   "cat": "Stroke · ICH",
+   "name": "Mechanical thrombectomy (LVO)",
+   "v": "ภายใน **24** ชม.",
+   "box": 23
+  },
+  {
+   "t": "cut",
+   "cat": "Stroke · ICH",
+   "name": "TIA: ช่วงเสี่ยง stroke สูงสุด",
+   "v": "**48** ชม.–**7** วันแรก",
+   "box": 23
+  },
+  {
+   "t": "cut",
+   "cat": "Stroke · ICH",
+   "name": "Nimodipine หลัง SAH",
+   "v": "วันที่ **4–10**",
+   "box": 24,
+   "note": "ป้องกัน vasospasm"
+  },
+  {
+   "t": "cut",
+   "cat": "Stroke · ICH",
+   "name": "ICH + BP สูง: เป้า SBP",
+   "v": "**~140** mmHg",
+   "box": 24,
+   "note": "nicardipine/labetalol"
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Status epilepticus: BZD",
+   "v": "ให้ได้ไม่เกิน **2** dose",
+   "box": 34
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Status epilepticus: ลำดับเวลา",
+   "v": "0–5 · 5–20 · 20–40 · > **40** นาที",
+   "box": 34,
+   "note": "> 40 นาที = refractory"
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Alcohol withdrawal: tremor",
+   "v": "**6–24** ชม.",
+   "box": 32
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Alcohol withdrawal: ชัก/hallucinosis",
+   "v": "**12–48** ชม.",
+   "box": 32
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Alcohol withdrawal: delirium tremens",
+   "v": "**48–96** ชม.",
+   "box": 32
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Fluoxetine washout ก่อนเริ่ม MAOI",
+   "v": "**5** สัปดาห์",
+   "box": 31
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Succinylcholine onset",
+   "v": "**30–60** วินาที",
+   "box": 38
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Valproate hepatotoxicity เสี่ยงในเด็ก",
+   "v": "อายุ < **2** ปี",
+   "box": 34
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Cluster headache: O2",
+   "v": "**100%** · **12–15** L/min",
+   "box": 35
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Migraine: ระยะเวลาปวด",
+   "v": "**4–72** ชม.",
+   "box": 35
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Cluster headache: ระยะเวลาปวด",
+   "v": "**15–180** นาที",
+   "box": 35
+  },
+  {
+   "t": "cut",
+   "cat": "Neuropharm",
+   "name": "Medication-overuse headache",
+   "v": "ยาแก้ปวดกิน ≥ **10–15** วัน/เดือน",
+   "box": 35
+  },
+  {
+   "t": "cut",
+   "cat": "ANS",
+   "name": "Adrenal medulla: epinephrine",
+   "v": "**~80%** (NE ~20%)",
+   "box": 36
+  },
+  {
+   "t": "cut",
+   "cat": "Neuro · โรค",
+   "name": "GBS: ท้องเสียนำหน้า (C. jejuni)",
+   "v": "**1–2** สัปดาห์ก่อน",
+   "box": 4
+  }
+ ]
+}

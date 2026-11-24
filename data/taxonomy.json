@@ -2,6 +2,71 @@
  "note": "กฎจัดหมวดหน้า Drug & Bug · แต่ละแถว [regex (ไม่สนตัวพิมพ์), หมวดใหญ่, หมวดย่อย] · ใช้กฎแรกที่ตรงกับชื่อการ์ด · ไม่ตรงข้อไหน → Others / Unclassified · เพิ่มบทใหม่ให้เติมกฎของยา/เชื้อที่ยังไม่เข้าหมวด",
  "drug": [
   [
+   "haloperidol|chlorpromazine|risperidone|olanzapine|quetiapine|clozapine",
+   "Neuro / Psych",
+   "Antipsychotic"
+  ],
+  [
+   "ssri|snri|\\btca\\b|maoi|fluoxetine|sertraline|escitalopram|venlafaxine|duloxetine|amitriptyline|nortriptyline|phenelzine|mirtazapine|trazodone|bupropion",
+   "Neuro / Psych",
+   "Antidepressant"
+  ],
+  [
+   "diazepam|chlordiazepoxide|alprazolam|triazolam|lorazepam|oxazepam|temazepam|midazolam|zolpidem|z-drug|flumazenil|modafinil",
+   "Neuro / Psych",
+   "BZD / sedative / hypnotic"
+  ],
+  [
+   "propofol|etomidate|ketamine|succinylcholine|rocuronium|vecuronium|cisatracurium|dantrolene|sugammadex|neostigmine",
+   "Neuro / Psych",
+   "Anesthetic / neuromuscular blocker"
+  ],
+  [
+   "phenytoin|carbamazepine|valproate|lamotrigine|levetiracetam|ethosuximide|topiramate|gabapentin|pregabalin",
+   "Neuro / Psych",
+   "Antiepileptic"
+  ],
+  [
+   "levodopa|carbidopa|benserazide|pramipexole|ropinirole|selegiline|rasagiline|entacapone|amantadine|trihexyphenidyl|benztropine",
+   "Neuro / Psych",
+   "Anti-Parkinson"
+  ],
+  [
+   "donepezil|rivastigmine|galantamine|memantine|lecanemab|riluzole",
+   "Neuro / Psych",
+   "Dementia / ALS"
+  ],
+  [
+   "morphine|naloxone|codeine|dextromethorphan|loperamide|methadone|buprenorphine|tramadol",
+   "Neuro / Psych",
+   "Opioid / antidote"
+  ],
+  [
+   "metoclopramide|domperidone|ondansetron|aprepitant",
+   "Neuro / Psych",
+   "Antiemetic"
+  ],
+  [
+   "sumatriptan|lasmiditan|gepant|flunarizine",
+   "Neuro / Psych",
+   "Migraine"
+  ],
+  [
+   "hydroxychloroquine",
+   "Others",
+   "Immunomodulator (DMARD)"
+  ],
+  [
+   "pyridoxine|thiamine|vitamin",
+   "Others",
+   "Vitamin"
+  ],
+  [
+   "cisplatin",
+   "Others",
+   "Chemotherapy"
+  ],
+  [
    "metformin|sulfonylurea|glinide|tzd|pioglitazone|glucosidase|acarbose|dpp-4|gliptin|sglt2|gliflozin|glp-1|glutide|insulin",
    "Endocrine",
    "Antidiabetic"
@@ -57,7 +122,7 @@
    "Antiarrhythmic / digoxin"
   ],
   [
-   "aspirin|clopidogrel|prasugrel|ticagrelor|abciximab|eptifibatide|heparin|enoxaparin|warfarin|doac|rivaroxaban|apixaban|alteplase|tenecteplase|streptokinase",
+   "aspirin|clopidogrel|prasugrel|ticagrelor|abciximab|eptifibatide|heparin|enoxaparin|warfarin|doac|rivaroxaban|apixaban|alteplase|tenecteplase|streptokinase|dabigatran",
    "Cardiovascular",
    "Antithrombotic / thrombolytic"
   ],
@@ -132,12 +197,52 @@
    "Electrolyte"
   ],
   [
-   "phenytoin",
-   "Others",
-   "Antiepileptic"
+   "methacholine|bethanechol|pilocarpine|oxybutynin|tolterodine|solifenacin|darifenacin|trospium|mirabegron|tropicamide|doxazosin|terazosin|tamsulosin|timolol|brimonidine|latanoprost|dorzolamide",
+   "Autonomic / eye",
+   "Cholinergic · antimuscarinic · adrenergic · glaucoma"
   ]
  ],
  "bug": [
+  [
+   "agalactiae|\\bs\\. suis|suis",
+   "Bacteria",
+   "Gram + cocci"
+  ],
+  [
+   "botulinum",
+   "Bacteria",
+   "Gram + rods"
+  ],
+  [
+   "meningitidis",
+   "Bacteria",
+   "Gram − cocci"
+  ],
+  [
+   "jejuni|campylobacter",
+   "Bacteria",
+   "Gram − rods"
+  ],
+  [
+   "naegleria",
+   "Parasite",
+   "Protozoa"
+  ],
+  [
+   "angiostrongylus|gnathostoma",
+   "Parasite",
+   "Helminth"
+  ],
+  [
+   "hsv|vzv|jc virus|\\bjcv\\b",
+   "Virus",
+   "DNA virus"
+  ],
+  [
+   "rabies|zika|polio",
+   "Virus",
+   "RNA virus"
+  ],
   [
    "croup|epiglottitis|pharyngitis|sinusitis|หวัด|mononucleosis",
    "Clinical syndrome",
