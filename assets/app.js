@@ -313,12 +313,12 @@
     arr.forEach((h, i) => {
       if (!h.n) return;
       const m = z.querySelector(`mark.user-hl[data-hl="${i}"]`); if (!m) return;
-      const d = document.createElement('div'); d.className = 'inote'; d.dataset.n = h.n; d.dataset.hl = i;
-      const blk = m.closest('p,li,td,th,h2,h3,h4,.card');
-      if (blk && z.contains(blk) && blk !== z) {
-        if (blk.tagName === 'P' || /^H/.test(blk.tagName)) { let a = blk; while (a.nextElementSibling && a.nextElementSibling.classList.contains('inote')) a = a.nextElementSibling; a.after(d); }
-        else blk.appendChild(d);
-      } else z.appendChild(d);
+      const d = document.createElement('span'); d.className = 'inote'; d.dataset.n = h.n; d.dataset.hl = i;
+      // วางต่อจากข้อความที่จุดไว้ทันที (ออกจากตัวหนา/ลิงก์ก่อน เพื่อไม่ให้สีพื้นติดมา)
+      const segs = z.querySelectorAll(`mark.user-hl[data-hl="${i}"]`); let at = segs[segs.length - 1];
+      while (at.parentNode !== z && /^(B|STRONG|I|EM|A|SPAN|MARK|CODE|SUB|SUP)$/.test(at.parentNode.tagName)) at = at.parentNode;
+      let after = at; while (after.nextSibling && after.nextSibling.nodeType === 1 && after.nextSibling.classList.contains('inote')) after = after.nextSibling;
+      after.after(d);
     });
   }
   // วาดไฮไลต์ใหม่เฉพาะพื้นที่นั้น ไม่ต้องโหลดหน้าใหม่ (ข้อสอบที่กำลังทำอยู่จึงไม่หาย)
@@ -345,7 +345,7 @@
   }
   function showPalette(rect, onColor, onErase, onNote, curNote) {
     pop.classList.remove('writing');
-    pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('') + `<button class="sw nb" data-c="n" aria-label="เขียนโน้ต" title="เขียนโน้ตใต้เนื้อหา">📝</button><button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button><button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>`;
+    pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('') + `<button class="sw nb" data-c="n" aria-label="เขียนโน้ต" title="เขียนโน้ตต่อจากข้อความนี้">★</button><button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button><button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>`;
     pop.hidden = false;
     const w = 324, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
@@ -472,7 +472,7 @@
     const myHl = (S.hl[k] || []).length;
     h += `<details class="panel mynote" ${S.notes[k] ? 'open' : ''}><summary>🗒️ โน้ตของฉัน${S.notes[k] ? ' ·  มีโน้ต' : ''}<span id="myHlCount" data-k="${k}">${myHl ? ` · ไฮไลต์ ${myHl} จุด` : ''}</span></summary>
       <textarea id="noteIn" rows="4" placeholder="จดสิ่งที่อยากจำของกล่องนี้ (บันทึกอัตโนมัติ)">${esc(S.notes[k] || '')}</textarea>
-      <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี หรือกด 📝 เพื่อเขียนโน้ตใต้บรรทัดนั้น (เหลือง เขียว ชมพู แดงอ่อน) เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
+      <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี หรือกด ★ เพื่อเขียนโน้ตต่อจากข้อความนั้น (เหลือง เขียว ชมพู แดงอ่อน) เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
     if (s.examIds.length) {
       h += `<section class="exam-sec"><h2>📝 ข้อสอบเก่าของหัวข้อนี้</h2><p class="bar-label">กดเลือกคำตอบ ข้อที่ตอบผิดจะเข้ากองข้อผิดให้อัตโนมัติ</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid]);
