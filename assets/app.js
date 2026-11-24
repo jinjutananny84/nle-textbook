@@ -275,29 +275,56 @@
   function hlPos(z, h) { const full = z.textContent; return full.substr(h.s, h.t.length) === h.t ? h.s : full.indexOf(h.t); }
   function applyHL(z) {
     (S.hl[z.dataset.hlk] || []).forEach((h, i) => { const s = hlPos(z, h); if (s >= 0) wrapRange(z, s, s + h.t.length, i, h.c); });
+    drawNotes(z);
+  }
+  // โน้ตสั้นใต้เนื้อหา: วางใต้ย่อหน้า/ข้อ/ช่องตารางที่มีไฮไลต์นั้น
+  function drawNotes(z) {
+    const arr = S.hl[z.dataset.hlk] || [];
+    arr.forEach((h, i) => {
+      if (!h.n) return;
+      const m = z.querySelector(`mark.user-hl[data-hl="${i}"]`); if (!m) return;
+      const d = document.createElement('div'); d.className = 'inote'; d.dataset.n = h.n; d.dataset.hl = i;
+      const blk = m.closest('p,li,td,th,h2,h3,h4,.card');
+      if (blk && z.contains(blk) && blk !== z) {
+        if (blk.tagName === 'P' || /^H/.test(blk.tagName)) { let a = blk; while (a.nextElementSibling && a.nextElementSibling.classList.contains('inote')) a = a.nextElementSibling; a.after(d); }
+        else blk.appendChild(d);
+      } else z.appendChild(d);
+    });
   }
   // วาดไฮไลต์ใหม่เฉพาะพื้นที่นั้น ไม่ต้องโหลดหน้าใหม่ (ข้อสอบที่กำลังทำอยู่จึงไม่หาย)
   function refreshZone(z) {
     if (!z) return;
+    z.querySelectorAll('.inote').forEach(n => n.remove());
     z.querySelectorAll('mark.user-hl').forEach(m => m.replaceWith(...m.childNodes));
     z.normalize(); applyHL(z); syncUndo(); updHlCount();
   }
   function applyAllHL(root) { root.querySelectorAll('[data-hlk]').forEach(applyHL); syncUndo(); }
   function updHlCount() { const el = document.getElementById('myHlCount'); if (el) { const n = (S.hl[el.dataset.k] || []).length; el.textContent = n ? ` · ไฮไลต์ ${n} จุด` : ''; } }
   const pop = document.createElement('div'); pop.className = 'hl-pop'; pop.hidden = true; document.body.appendChild(pop);
-  pop.addEventListener('mousedown', e => e.preventDefault());
+  pop.addEventListener('mousedown', e => { if (!e.target.closest('textarea')) e.preventDefault(); });
   // เก็บสถานะก่อนแก้ไว้สำหรับปุ่มเลิกทำ
   function snap(k) { undoStack.push({ k, before: JSON.parse(JSON.stringify(S.hl[k] || [])) }); }
   function setHL(k, arr) { if (arr.length) S.hl[k] = arr; else delete S.hl[k]; save(); }
   // แถบสี: 4 สี + ยางลบ · วางตามตำแหน่งในหน้า จึงเลื่อนตามข้อความ ไม่หายตอนเลื่อน
-  function showPalette(rect, onColor, onErase) {
-    pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('') + `<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>`;
+  function showPalette(rect, onColor, onErase, onNote, curNote) {
+    pop.classList.remove('writing');
+    pop.innerHTML = ['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('') + `<button class="sw nb" data-c="n" aria-label="เขียนโน้ต" title="เขียนโน้ตใต้เนื้อหา">📝</button><button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>`;
     pop.hidden = false;
-    const w = 230, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
+    const w = 280, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
-    pop.querySelectorAll('button').forEach(b => b.onclick = () => { if (b.dataset.c === 'x') onErase(); else onColor(b.dataset.c); hidePop(); });
+    pop.querySelectorAll('button').forEach(b => b.onclick = () => {
+      if (b.dataset.c === 'n') return openNote(onNote, curNote);
+      if (b.dataset.c === 'x') onErase(); else onColor(b.dataset.c); hidePop();
+    });
   }
-  function hidePop() { pop.hidden = true; pop.dataset.mode = ''; }
+  // กล่องพิมพ์โน้ตในแถบเดียวกัน
+  function openNote(onNote, cur) {
+    pop.dataset.mode = 'note'; pop.classList.add('writing');
+    pop.innerHTML = `<textarea class="note-in" rows="2" placeholder="โน้ตสั้น ๆ จะแสดงใต้เนื้อหานี้">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">ลบโน้ต</button>' : ''}<button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">บันทึก</button></div>`;
+    const ta = pop.querySelector('textarea'); ta.focus();
+    pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { const a = b.dataset.a; if (a === 'ok') onNote(ta.value.trim()); if (a === 'del') onNote(''); hidePop(); });
+  }
+  function hidePop() { pop.hidden = true; pop.dataset.mode = ''; pop.classList.remove('writing'); }
   function selOffsets(z, r) {
     const pre = document.createRange(); pre.setStart(z, 0); pre.setEnd(r.startContainer, r.startOffset);
     const s = pre.toString().length; return { s, e: s + r.toString().length };
@@ -307,6 +334,7 @@
     clearTimeout(selT);
     selT = setTimeout(() => {
       const sel = getSelection();
+      if (pop.dataset.mode === 'note') return;
       if (!sel.rangeCount || sel.isCollapsed) { if (pop.dataset.mode === 'add') hidePop(); return; }
       const r = sel.getRangeAt(0);
       let a = r.commonAncestorContainer; if (a.nodeType !== 1) a = a.parentNode;
@@ -325,7 +353,11 @@
         const keep = arr.filter(h => { const hs = hlPos(z, h); return hs < 0 || hs + h.t.length <= s || hs >= e; });
         if (keep.length === arr.length) return;
         snap(k); setHL(k, keep); sel.removeAllRanges(); refreshZone(z);
-      });
+      }, (() => { const { s } = selOffsets(z, r); return n => {
+        // โน้ตอย่างเดียว = ขีดเส้นใต้ประแดง ไม่ระบายสี
+        if (!n) return; snap(k); setHL(k, (S.hl[k] || []).concat([{ s, t, c: 'n', n }]));
+        getSelection().removeAllRanges(); refreshZone(z);
+      }; })());
     }, 250);
   });
   // แตะไฮไลต์เดิม: เปลี่ยนสี หรือ ✕ ลบ
@@ -338,10 +370,14 @@
       snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k])); arr[idx].c = c; setHL(k, arr); refreshZone(z);
     }, () => {
       snap(k); const arr = S.hl[k].slice(); arr.splice(idx, 1); setHL(k, arr); refreshZone(z);
-    });
+    }, n => {
+      snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k]));
+      if (n) arr[idx].n = n; else { delete arr[idx].n; if (arr[idx].c === 'n') arr.splice(idx, 1); }
+      setHL(k, arr); refreshZone(z);
+    }, (S.hl[k][idx] || {}).n);
   }, true);
   // ปิดแถบสีเมื่อแตะที่อื่น (การเลื่อนหน้าไม่ปิด)
-  document.addEventListener('click', e => { if (!pop.hidden && pop.dataset.mode === 'edit' && !pop.contains(e.target) && !e.target.closest('mark.user-hl')) hidePop(); });
+  document.addEventListener('click', e => { if (!pop.hidden && (pop.dataset.mode === 'edit' || pop.dataset.mode === 'note') && e.target.isConnected && !pop.contains(e.target) && !e.target.closest('mark.user-hl')) hidePop(); });
   // ปุ่มเลิกทำ (มุมขวาล่าง) ใช้ได้ทั้งเนื้อหาและข้อสอบในหน้านั้น
   document.addEventListener('click', e => {
     if (!e.target.closest('#undoBtn')) return;
@@ -396,7 +432,7 @@
     const myHl = (S.hl[k] || []).length;
     h += `<details class="panel mynote" ${S.notes[k] ? 'open' : ''}><summary>🗒️ โน้ตของฉัน${S.notes[k] ? ' ·  มีโน้ต' : ''}<span id="myHlCount" data-k="${k}">${myHl ? ` · ไฮไลต์ ${myHl} จุด` : ''}</span></summary>
       <textarea id="noteIn" rows="4" placeholder="จดสิ่งที่อยากจำของกล่องนี้ (บันทึกอัตโนมัติ)">${esc(S.notes[k] || '')}</textarea>
-      <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี (เหลือง เขียว ชมพู แดงอ่อน) เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
+      <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี หรือกด 📝 เพื่อเขียนโน้ตใต้บรรทัดนั้น (เหลือง เขียว ชมพู แดงอ่อน) เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
     if (s.examIds.length) {
       h += `<section class="exam-sec"><h2>📝 ข้อสอบเก่าของหัวข้อนี้</h2><p class="bar-label">กดเลือกคำตอบ ข้อที่ตอบผิดจะเข้ากองข้อผิดให้อัตโนมัติ</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid]);
@@ -551,7 +587,7 @@
     for (const ch of Object.values(CH)) for (const s of ch.sections) {
       const k = secKey(ch.id, s.no), note = S.notes[k], hl = S.hl[k] || [];
       if (!note && !hl.length) continue; any = true;
-      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl c-${x.c || 'g'}">${esc(x.t)}</mark></p>`).join('')}</div>`;
+      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl c-${x.c || 'g'}">${esc(x.t)}</mark>${x.n ? `<span class="inote-txt">📝 ${esc(x.n)}</span>` : ''}</p>`).join('')}</div>`;
     }
     const qk = {};
     for (const k of Object.keys(S.hl)) { const m = k.match(/^q:([^|]+)\|(.+)\|([^|]+)$/); if (m && S.hl[k].length) (qk[m[1] + '|' + m[2]] = qk[m[1] + '|' + m[2]] || []).push(...S.hl[k]); }
@@ -559,7 +595,7 @@
     if (qs.length) {
       any = true; h += '<h2 style="margin:22px 0 8px">📝 ไฮไลต์ในข้อสอบ</h2>';
       for (const x of qs) { const [c, qid] = x.split('|'); const q = CH[c] && CH[c].exams[qid];
-        h += `<div class="panel"><h3>${q ? `<a href="#/${c}/${q.box}">ข้อ ${esc(qid)} · กล่อง ${q.box}</a>` : esc(qid)}</h3>${qk[x].map(y => `<p style="margin:6px 0"><mark class="user-hl c-${y.c || 'g'}">${esc(y.t)}</mark></p>`).join('')}</div>`; }
+        h += `<div class="panel"><h3>${q ? `<a href="#/${c}/${q.box}">ข้อ ${esc(qid)} · กล่อง ${q.box}</a>` : esc(qid)}</h3>${qk[x].map(y => `<p style="margin:6px 0"><mark class="user-hl c-${y.c || 'g'}">${esc(y.t)}</mark>${y.n ? `<span class="inote-txt">📝 ${esc(y.n)}</span>` : ''}</p>`).join('')}</div>`; }
     }
     view.innerHTML = h + (any ? '' : '<p class="empty">ยังไม่มีโน้ต เปิดกล่องไหนก็ได้แล้วจดที่ "โน้ตของฉัน" หรือเลือกข้อความเพื่อไฮไลต์</p>');
   }

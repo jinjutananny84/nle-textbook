@@ -288,3 +288,18 @@ mark.user-hl.c-y{--c:var(--u-y)} mark.user-hl.c-g{--c:var(--u-g)} mark.user-hl.c
 .home-btn{font-weight:600}
 
 .lvlegend .dot.lv4{background:var(--lv4)}.lvlegend .dot.lv3{background:var(--lv3)}.lvlegend .dot.lv2{background:var(--lv2)}.lvlegend .dot.lv1{background:var(--lv1)}
+
+/* โน้ตใต้เนื้อหา: แดงบนพื้นขาว · เหลืองนีออนบนพื้นมืด */
+:root{--inote:#d0021b}
+:root[data-theme="dark"]{--inote:#e8ff3a}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--inote:#e8ff3a}}
+.inote{color:var(--inote);font-size:.82em;line-height:1.45;margin:2px 0 8px;padding-left:10px;border-left:2px solid var(--inote);white-space:pre-wrap;-webkit-user-select:none;user-select:none}
+.inote::before{content:"📝 " attr(data-n)}
+td .inote,th .inote,li .inote{margin:4px 0 2px}
+.inote-txt{display:block;color:var(--inote);font-size:.85em;margin-top:2px;white-space:pre-wrap}
+mark.user-hl.c-n{--c:transparent;background:none;text-decoration:underline dotted var(--inote) 2px;text-underline-offset:3px}
+.hl-pop .sw.nb{background:var(--surface);font-size:16px;display:grid;place-items:center}
+.hl-pop.writing{flex-direction:column;border-radius:14px;padding:10px;width:min(320px,calc(100vw - 16px))}
+.hl-pop .note-in{width:100%;box-sizing:border-box;font:inherit;font-size:15px;padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);resize:vertical}
+.hl-pop .note-act{display:flex;gap:6px;justify-content:flex-end}
+.hl-pop .note-act .btn{padding:6px 12px;font-size:14px;box-shadow:none}
