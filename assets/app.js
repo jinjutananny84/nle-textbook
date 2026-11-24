@@ -9,7 +9,7 @@
   /* ---------- storage ---------- */
   let S = {};
   try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { S = {}; }
-  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {};
+  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {}; S.kw = S.kw || [];
   if (S.hlOff) document.documentElement.classList.add('no-hl');
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} updateWrongCount(); }
 
@@ -205,7 +205,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 หน้าแรก</a><a href="#/quiz">📝 โหมดทำข้อสอบ</a><a href="#/wrong">📕 กองข้อที่ทำผิด</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 จุดอ่อนของฉัน</a><a href="#/notes">🗒️ โน้ตของฉัน</a><a href="#" id="hlToggle">🖍 ไฮไลต์จุดสำคัญ: ${S.hlOff ? 'ปิด' : 'เปิด'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 หน้าแรก</a><a href="#/quiz">📝 โหมดทำข้อสอบ</a><a href="#/wrong">📕 กองข้อที่ทำผิด</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 จุดอ่อนของฉัน</a><a href="#/notes">🗒️ โน้ตของฉัน</a><a href="#/keywords">🔑 Keyword ของฉัน</a><a href="#" id="hlToggle">🖍 ไฮไลต์จุดสำคัญ: ${S.hlOff ? 'ปิด' : 'เปิด'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -342,7 +342,27 @@
   function setHL(k, arr) { if (arr.length) S.hl[k] = arr; else delete S.hl[k]; save(); }
   // แถบสี: 4 สี + ยางลบ · วางตามตำแหน่งในหน้า จึงเลื่อนตามข้อความ ไม่หายตอนเลื่อน
   // คัดลอกข้อความ แล้วเปิด Google ค้นหาในแท็บใหม่
-  let popText = '';
+  let popText = '', popZone = '';
+  // Keyword: เก็บคำที่เลือกไว้ทวนในหน้า #/keywords
+  const kwNorm = t => (t || '').replace(/\s+/g, ' ').trim();
+  function kwBox(k) {
+    k = k.split('~')[0];
+    const q = k.match(/^q:([^|]+)\|(.+)\|[^|]+$/);
+    if (q) { const e = CH[q[1]] && CH[q[1]].exams[q[2]]; return { ch: q[1], box: e ? Number(e.box) : 0, q: q[2] }; }
+    const m = k.match(/^([^/]+)\/(\d+)$/); return m ? { ch: m[1], box: +m[2] } : { ch: '', box: 0 };
+  }
+  const kwHas = (k, t) => S.kw.some(x => x.k === k && x.t === kwNorm(t));
+  function kwToggle(k, t) {
+    t = kwNorm(t); if (!t || !k) return;
+    const i = S.kw.findIndex(x => x.k === k && x.t === t);
+    if (i >= 0) S.kw.splice(i, 1); else S.kw.push(Object.assign({ t, k, at: Date.now() }, kwBox(k)));
+    save(); toast(i >= 0 ? 'เอาออกจาก Keyword แล้ว' : '🔑 เก็บเข้า Keyword แล้ว');
+  }
+  function toast(msg) {
+    let el = document.getElementById('toast');
+    if (!el) { el = document.createElement('div'); el.id = 'toast'; document.body.appendChild(el); }
+    el.textContent = msg; el.classList.add('show'); clearTimeout(el._t); el._t = setTimeout(() => el.classList.remove('show'), 1600);
+  }
   function searchOut(t) {
     t = (t || '').replace(/\s+/g, ' ').trim(); if (!t) return;
     try { navigator.clipboard && navigator.clipboard.writeText(t).catch(() => {}); } catch (e) {}
@@ -354,13 +374,14 @@
     pop.innerHTML = `<div class="row">${['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button></div>`
       + `<div class="row">${['ty', 'tr', 'tp'].map(c => `<button class="sw tc c-${c}" data-c="${c}" aria-label="เปลี่ยนสีตัวอักษร" title="เปลี่ยนสีตัวอักษร">A</button>`).join('')}`
       + (noNote ? '' : `<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button><button class="sw nb" data-c="k" aria-label="sticky note" title="sticky note ต่อจากข้อความนี้">🗒️</button>`)
-      + `<button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button></div>`;
+      + `<button class="sw nb kwb${kwHas(popZone, popText) ? ' on' : ''}" data-c="w" aria-label="เก็บเป็น keyword" title="เก็บเข้าหน้า Keyword">🔑</button><button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button></div>`;
     pop.hidden = false;
-    const w = 236, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
+    const w = 300, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
     pop.querySelectorAll('button').forEach(b => b.onclick = () => {
       if (b.dataset.c === 'n' || b.dataset.c === 'k') return openNote(onNote, curNote, b.dataset.c === 'k');
       if (b.dataset.c === 's') { searchOut(popText); return hidePop(); }
+      if (b.dataset.c === 'w') { kwToggle(popZone, popText); return hidePop(); }
       if (b.dataset.c === 'x') onErase(); else onColor(b.dataset.c); hidePop();
     });
   }
@@ -393,7 +414,7 @@
       const t = r.toString(); if (t.trim().length < 2) return;
       const k = z.dataset.hlk;
       pop.dataset.mode = 'add'; pop.dataset.inNote = z.classList.contains('inote') ? '1' : '';
-      popText = t;
+      popText = t; popZone = k;
       showPalette(r.getBoundingClientRect(), c => {
         const { s } = selOffsets(z, r);
         snap(k); setHL(k, (S.hl[k] || []).concat([{ s, t, c }]));
@@ -419,7 +440,7 @@
     if (!z || !getSelection().isCollapsed) return;
     e.stopPropagation();
     const idx = +m.dataset.hl, k = z.dataset.hlk; pop.dataset.mode = 'edit'; pop.dataset.inNote = z.classList.contains('inote') ? '1' : '';
-    popText = (S.hl[k][idx] || {}).t || m.textContent;
+    popText = (S.hl[k][idx] || {}).t || m.textContent; popZone = k;
     showPalette(m.getBoundingClientRect(), c => {
       snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k])); arr[idx].c = c; setHL(k, arr); refreshZone(z);
     }, () => {
@@ -505,6 +526,10 @@
     const ji = $('#jumpIn');
     ji.addEventListener('keydown', e => { if (e.key === 'Enter') { const n = parseInt(ji.value); if (n) location.hash = `#/${id}/${n}`; } });
     window.scrollTo(0, 0);
+    if (kwFlash) {
+      // keyword ในข้อสอบ: เปิดเฉลยไม่ได้ แต่โจทย์/ตัวเลือกยังหาเจอ
+      setTimeout(flashKw, 60);
+    }
   }
 
   /* quiz */
@@ -655,6 +680,47 @@
     }
     view.innerHTML = h + (any ? '' : '<p class="empty">ยังไม่มีโน้ต เปิดกล่องไหนก็ได้แล้วจดที่ "โน้ตของฉัน" หรือเลือกข้อความเพื่อไฮไลต์</p>');
   }
+  /* หน้า Keyword: เรียงตามบทและกล่อง ติ๊กว่าทวนแล้วได้ */
+  let kwFlash = '';
+  async function vKeywords() {
+    await loadAll(); renderSidebar();
+    const left = S.kw.filter(x => !x.ok).length;
+    let h = `<div class="hero"><h1>🔑 Keyword ของฉัน</h1><p>คำที่เลือกเก็บจากแถบไฮไลต์ (ปุ่ม 🔑) แตะคำเพื่อกลับไปอ่านตรงจุดนั้น · ติ๊ก ✓ เมื่อทวนแล้ว · ยังไม่ได้ทวน ${left} จาก ${S.kw.length} คำ</p></div>`;
+    if (!S.kw.length) { view.innerHTML = h + '<p class="empty">ยังไม่มี keyword ลองเลือกข้อความในเนื้อหาหรือข้อสอบแล้วกด 🔑</p>'; return; }
+    h += `<div class="choice kw-filter"><label><input type="checkbox" id="kwHide" ${S.kwHide ? 'checked' : ''}> ซ่อนคำที่ทวนแล้ว</label><button class="btn small" id="kwShuffle">สุ่มทวน</button></div>`;
+    const groups = {};
+    S.kw.forEach((x, i) => { const g = `${x.ch}|${x.box}`; (groups[g] = groups[g] || []).push(i); });
+    const keys = Object.keys(groups).sort((a, b) => { const [ca, ba] = a.split('|'), [cb, bb] = b.split('|'); return ca === cb ? ba - bb : ca < cb ? -1 : 1; });
+    for (const g of keys) {
+      const [c, box] = g.split('|'); const ch = CH[c]; const sec = ch && ch.sections.find(x => x.no === +box);
+      const items = groups[g].filter(i => !(S.kwHide && S.kw[i].ok)); if (!items.length) continue;
+      h += `<div class="panel kw-group"><h3><a href="#/${c}/${box}">${ch ? esc(ch.title) + ' · ' : ''}${box}. ${sec ? esc(sec.title) : ''}</a></h3><div class="kw-list">`
+        + items.map(i => { const x = S.kw[i]; return `<span class="kwi${x.ok ? ' ok' : ''}"><button class="kw-ok" data-i="${i}" title="ทวนแล้ว">${x.ok ? '✓' : '○'}</button><a href="#/${c}/${box}" data-kwt="${esc(x.t)}">${esc(x.t)}</a>${x.q ? `<small>ข้อ ${esc(x.q)}</small>` : ''}<button class="kw-del" data-i="${i}" title="ลบ">✕</button></span>`; }).join('')
+        + '</div></div>';
+    }
+    view.innerHTML = h;
+    view.querySelectorAll('.kw-ok').forEach(b => b.onclick = () => { const x = S.kw[+b.dataset.i]; x.ok = x.ok ? 0 : Date.now(); save(); vKeywords(); });
+    view.querySelectorAll('.kw-del').forEach(b => b.onclick = () => { S.kw.splice(+b.dataset.i, 1); save(); vKeywords(); });
+    view.querySelectorAll('[data-kwt]').forEach(a => a.onclick = () => { kwFlash = a.dataset.kwt; });
+    $('#kwHide').onchange = e => { S.kwHide = e.target.checked; save(); vKeywords(); };
+    $('#kwShuffle').onclick = () => {
+      const pool = S.kw.filter(x => !x.ok); if (!pool.length) return toast('ทวนครบทุกคำแล้ว');
+      const x = pool[Math.floor(Math.random() * pool.length)]; kwFlash = x.t; location.hash = `#/${x.ch}/${x.box}`;
+    };
+  }
+  // พากลับไปจุดที่เก็บ keyword แล้วกะพริบให้เห็น
+  function flashKw() {
+    if (!kwFlash) return; const t = kwFlash; kwFlash = '';
+    for (const n of textNodes(view)) {
+      const i = n.nodeValue.indexOf(t); if (i < 0) continue;
+      const r = document.createRange(); r.setStart(n, i); r.setEnd(n, i + t.length);
+      const mk = document.createElement('span'); mk.className = 'kw-flash';
+      try { r.surroundContents(mk); } catch (e) { n.parentNode.scrollIntoView({ block: 'center' }); return; }
+      mk.scrollIntoView({ block: 'center' }); setTimeout(() => mk.replaceWith(...mk.childNodes), 2600); return;
+    }
+    // ข้อความยาวข้ามหลายส่วน: เลื่อนไปที่ต้นคำ
+    const head = t.slice(0, 12); for (const n of textNodes(view)) if (n.nodeValue.includes(head)) { n.parentNode.scrollIntoView({ block: 'center' }); n.parentNode.classList.add('kw-flash-blk'); setTimeout(() => n.parentNode.classList.remove('kw-flash-blk'), 2600); return; }
+  }
   async function vSearch(q) {
     await loadAll(); renderSidebar();
     q = (q || '').trim();
@@ -692,6 +758,7 @@
       if (parts[0] === 'search') return vSearch(params.get('q'));
       if (parts[0] === 'stats') return vStats();
       if (parts[0] === 'notes') return vNotes();
+      if (parts[0] === 'keywords') return vKeywords();
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
       return vChapter(parts[0]);
     } catch (err) {

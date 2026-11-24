@@ -323,3 +323,18 @@ mark.user-hl.c-ty{color:var(--t-y)} mark.user-hl.c-tr{color:var(--t-r)} mark.use
 .inote.sticky::before{content:"🗒️ "}
 .hl-pop .note-kind{font-size:13px;font-weight:700;color:var(--muted)}
 .hl-pop .note-in.sticky{background:var(--stk);color:var(--stk-fg)}
+
+/* Keyword */
+.hl-pop .sw.kwb.on{border-color:var(--accent,#2f9e57);border-style:solid;background:var(--ok-soft)}
+#toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%) translateY(20px);background:var(--fg);color:var(--bg);padding:8px 16px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:80}
+#toast.show{opacity:1;transform:translateX(-50%)}
+.kw-filter{display:flex;gap:12px;align-items:center;justify-content:space-between;margin:0 0 12px}
+.kw-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.kwi{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:4px 6px 4px 4px}
+.kwi a{color:var(--fg);text-decoration:none;font-weight:600}
+.kwi small{color:var(--muted)}
+.kwi button{border:0;background:none;color:var(--muted);font-size:14px;width:26px;height:26px;border-radius:999px;cursor:pointer}
+.kwi .kw-ok{border:1.5px solid var(--line);background:var(--surface)}
+.kwi.ok{opacity:.6} .kwi.ok a{text-decoration:line-through} .kwi.ok .kw-ok{background:var(--ok);border-color:var(--ok);color:#fff}
+.kw-flash,.kw-flash-blk{animation:kwf 2.6s ease}
+@keyframes kwf{0%,60%{background:#ffb347;box-shadow:0 0 0 4px #ffb347}100%{background:transparent;box-shadow:none}}
