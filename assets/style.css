@@ -338,3 +338,23 @@ mark.user-hl.c-ty{color:var(--t-y)} mark.user-hl.c-tr{color:var(--t-r)} mark.use
 .kwi.ok{opacity:.6} .kwi.ok a{text-decoration:line-through} .kwi.ok .kw-ok{background:var(--ok);border-color:var(--ok);color:#fff}
 .kw-flash,.kw-flash-blk{animation:kwf 2.6s ease}
 @keyframes kwf{0%,60%{background:#ffb347;box-shadow:0 0 0 4px #ffb347}100%{background:transparent;box-shadow:none}}
+
+/* Keyword page v2: ตัวเล็ก 2 คอลัมน์ */
+.kw-cols{columns:2 230px;column-gap:14px}
+.kw-group{break-inside:avoid;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 14px;font-size:.86em}
+.kw-group h3{margin:0 0 6px;font-size:1em;display:flex;flex-direction:column;gap:1px}
+.kw-group h3 a{color:var(--fg);text-decoration:none} .kw-group h3 b{color:var(--accent)}
+.kw-group h3 small{color:var(--muted);font-weight:400;font-size:.85em}
+.kw-list{list-style:none;margin:0;padding:0;display:block}
+.kwi{display:flex;align-items:flex-start;gap:6px;background:none;border:0;border-top:1px dashed var(--line);border-radius:0;padding:5px 0;line-height:1.45}
+.kwi:first-child{border-top:0}
+.kwi a{flex:1;font-weight:400;color:var(--fg)}
+.kwi small{font-size:.8em;white-space:nowrap;margin-top:2px}
+.kwi button{width:22px;height:22px;font-size:12px;flex:0 0 22px}
+.kwi .kw-ok{border-radius:5px}
+.kwi.ok a{text-decoration:none;opacity:.7}
+mark.kw-hi{background:linear-gradient(transparent 22%,var(--hl-key) 22%,var(--hl-key) 84%,transparent 84%);color:inherit;padding:0 2px;font-weight:600}
+.kw-edit{flex:1;display:flex;flex-direction:column;gap:6px}
+.kw-edit textarea{width:100%;box-sizing:border-box;font:inherit;padding:6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
+.kw-edit .note-act{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.hl-pop.writing .note-act{flex-wrap:wrap}

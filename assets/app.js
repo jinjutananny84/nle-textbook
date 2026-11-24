@@ -342,7 +342,7 @@
   function setHL(k, arr) { if (arr.length) S.hl[k] = arr; else delete S.hl[k]; save(); }
   // แถบสี: 4 สี + ยางลบ · วางตามตำแหน่งในหน้า จึงเลื่อนตามข้อความ ไม่หายตอนเลื่อน
   // คัดลอกข้อความ แล้วเปิด Google ค้นหาในแท็บใหม่
-  let popText = '', popZone = '';
+  let popText = '', popZone = '', popRange = null;
   // Keyword: เก็บคำที่เลือกไว้ทวนในหน้า #/keywords
   const kwNorm = t => (t || '').replace(/\s+/g, ' ').trim();
   function kwBox(k) {
@@ -352,6 +352,29 @@
     const m = k.match(/^([^/]+)\/(\d+)$/); return m ? { ch: m[1], box: +m[2] } : { ch: '', box: 0 };
   }
   const kwHas = (k, t) => S.kw.some(x => x.k === k && x.t === kwNorm(t));
+  // เดาคำสำคัญไว้ให้ก่อน: ตัวหนาในช่วงที่เลือก > หลังลูกศรตัวสุดท้าย > หลัง = หรือ : > ทั้งข้อความ (ผู้ใช้แก้ได้)
+  function kwGuess(t, r) {
+    const z = r && (r.commonAncestorContainer.nodeType === 1 ? r.commonAncestorContainer : r.commonAncestorContainer.parentNode).closest('[data-hlk]');
+    const bold = [];
+    if (z) z.querySelectorAll('b,strong').forEach(el => { const x = kwNorm(el.textContent); if (x.length > 1 && r.intersectsNode(el) && t.includes(x) && !bold.includes(x)) bold.push(x); });
+    if (bold.length) { let o = t; bold.sort((a, b) => b.length - a.length).forEach(x => { o = o.replace(x, '==' + x + '=='); }); return o.replace(/====/g, ''); }
+    for (const sep of ['→', '=', ':']) { const i = t.lastIndexOf(sep); if (i >= 0 && i < t.length - 2) { const a = t.slice(0, i + sep.length), b = t.slice(i + sep.length); const lead = b.match(/^\s*/)[0]; return a + lead + '==' + b.trim() + '=='; } }
+    return '==' + t + '==';
+  }
+  // ช่องแก้คำก่อนส่งเป็น keyword (เหมือนช่องโน้ต)
+  function openKw() {
+    const k = popZone, t = kwNorm(popText), init = kwGuess(t, popRange);
+    pop.dataset.mode = 'note'; pop.classList.add('writing');
+    pop.innerHTML = `<div class="note-kind">🔑 ส่งเป็น keyword · ครอบ ==คำ== เพื่อเน้นสีเหลือง</div><textarea class="note-in" rows="3">${esc(init)}</textarea><div class="note-act"><button class="btn small" data-a="mk" title="เน้นคำที่เลือกในช่องนี้">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">ส่งเป็น keyword</button></div>`;
+    const ta = pop.querySelector('textarea'); ta.focus();
+    pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => {
+      const a = b.dataset.a;
+      if (a === 'mk') { const v = ta.value, s0 = ta.selectionStart, e0 = ta.selectionEnd; if (e0 > s0) { ta.value = v.slice(0, s0) + '==' + v.slice(s0, e0) + '==' + v.slice(e0); } ta.focus(); return; }
+      if (a === 'ok') { const d = ta.value.trim(); if (d) { S.kw.push(Object.assign({ t, k, d, at: Date.now() }, kwBox(k))); save(); toast('🔑 เก็บเข้า Keyword แล้ว'); } }
+      hidePop();
+    });
+  }
+  const kwHTML = d => esc(d).replace(/==(.+?)==/g, '<mark class="kw-hi">$1</mark>');
   function kwToggle(k, t) {
     t = kwNorm(t); if (!t || !k) return;
     const i = S.kw.findIndex(x => x.k === k && x.t === t);
@@ -381,7 +404,7 @@
     pop.querySelectorAll('button').forEach(b => b.onclick = () => {
       if (b.dataset.c === 'n' || b.dataset.c === 'k') return openNote(onNote, curNote, b.dataset.c === 'k');
       if (b.dataset.c === 's') { searchOut(popText); return hidePop(); }
-      if (b.dataset.c === 'w') { kwToggle(popZone, popText); return hidePop(); }
+      if (b.dataset.c === 'w') { if (kwHas(popZone, popText)) { kwToggle(popZone, popText); return hidePop(); } return openKw(); }
       if (b.dataset.c === 'x') onErase(); else onColor(b.dataset.c); hidePop();
     });
   }
@@ -414,7 +437,7 @@
       const t = r.toString(); if (t.trim().length < 2) return;
       const k = z.dataset.hlk;
       pop.dataset.mode = 'add'; pop.dataset.inNote = z.classList.contains('inote') ? '1' : '';
-      popText = t; popZone = k;
+      popText = t; popZone = k; popRange = r.cloneRange();
       showPalette(r.getBoundingClientRect(), c => {
         const { s } = selOffsets(z, r);
         snap(k); setHL(k, (S.hl[k] || []).concat([{ s, t, c }]));
@@ -441,6 +464,7 @@
     e.stopPropagation();
     const idx = +m.dataset.hl, k = z.dataset.hlk; pop.dataset.mode = 'edit'; pop.dataset.inNote = z.classList.contains('inote') ? '1' : '';
     popText = (S.hl[k][idx] || {}).t || m.textContent; popZone = k;
+    popRange = document.createRange(); popRange.selectNodeContents(m);
     showPalette(m.getBoundingClientRect(), c => {
       snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k])); arr[idx].c = c; setHL(k, arr); refreshZone(z);
     }, () => {
@@ -685,20 +709,31 @@
   async function vKeywords() {
     await loadAll(); renderSidebar();
     const left = S.kw.filter(x => !x.ok).length;
-    let h = `<div class="hero"><h1>🔑 Keyword ของฉัน</h1><p>คำที่เลือกเก็บจากแถบไฮไลต์ (ปุ่ม 🔑) แตะคำเพื่อกลับไปอ่านตรงจุดนั้น · ติ๊ก ✓ เมื่อทวนแล้ว · ยังไม่ได้ทวน ${left} จาก ${S.kw.length} คำ</p></div>`;
+    let h = `<div class="hero"><h1>🔑 Keyword ของฉัน</h1><p>แตะคำเพื่อกลับไปอ่านตรงจุดนั้น · ติ๊กช่องเมื่อทวนแล้ว · ✎ แก้คำหรือคำที่เน้น · ยังไม่ได้ทวน ${left} จาก ${S.kw.length} คำ</p></div>`;
     if (!S.kw.length) { view.innerHTML = h + '<p class="empty">ยังไม่มี keyword ลองเลือกข้อความในเนื้อหาหรือข้อสอบแล้วกด 🔑</p>'; return; }
     h += `<div class="choice kw-filter"><label><input type="checkbox" id="kwHide" ${S.kwHide ? 'checked' : ''}> ซ่อนคำที่ทวนแล้ว</label><button class="btn small" id="kwShuffle">สุ่มทวน</button></div>`;
+    h += '<div class="kw-cols">';
     const groups = {};
     S.kw.forEach((x, i) => { const g = `${x.ch}|${x.box}`; (groups[g] = groups[g] || []).push(i); });
     const keys = Object.keys(groups).sort((a, b) => { const [ca, ba] = a.split('|'), [cb, bb] = b.split('|'); return ca === cb ? ba - bb : ca < cb ? -1 : 1; });
     for (const g of keys) {
       const [c, box] = g.split('|'); const ch = CH[c]; const sec = ch && ch.sections.find(x => x.no === +box);
       const items = groups[g].filter(i => !(S.kwHide && S.kw[i].ok)); if (!items.length) continue;
-      h += `<div class="panel kw-group"><h3><a href="#/${c}/${box}">${ch ? esc(ch.title) + ' · ' : ''}${box}. ${sec ? esc(sec.title) : ''}</a></h3><div class="kw-list">`
-        + items.map(i => { const x = S.kw[i]; return `<span class="kwi${x.ok ? ' ok' : ''}"><button class="kw-ok" data-i="${i}" title="ทวนแล้ว">${x.ok ? '✓' : '○'}</button><a href="#/${c}/${box}" data-kwt="${esc(x.t)}">${esc(x.t)}</a>${x.q ? `<small>ข้อ ${esc(x.q)}</small>` : ''}<button class="kw-del" data-i="${i}" title="ลบ">✕</button></span>`; }).join('')
-        + '</div></div>';
+      h += `<div class="kw-group"><h3><a href="#/${c}/${box}"><b>${box}</b> ${sec ? esc(sec.title) : ''}</a><small>${ch ? esc(ch.title) : ''}</small></h3><ul class="kw-list">`
+        + items.map(i => { const x = S.kw[i]; return `<li class="kwi${x.ok ? ' ok' : ''}"><button class="kw-ok" data-i="${i}" title="ทวนแล้ว">${x.ok ? '✓' : ''}</button><a href="#/${c}/${box}" data-kwt="${esc(x.t)}">${kwHTML(x.d || '==' + x.t + '==')}</a>${x.q ? `<small>ข้อ ${esc(x.q)}</small>` : ''}<button class="kw-ed" data-i="${i}" title="แก้ไข">✎</button><button class="kw-del" data-i="${i}" title="ลบ">✕</button></li>`; }).join('')
+        + '</ul></div>';
     }
-    view.innerHTML = h;
+    view.innerHTML = h + '</div>';
+    view.querySelectorAll('.kw-ed').forEach(b => b.onclick = () => {
+      const i = +b.dataset.i, x = S.kw[i], li = b.closest('li');
+      li.innerHTML = `<div class="kw-edit"><textarea rows="2">${esc(x.d || '==' + x.t + '==')}</textarea><div class="note-act"><button class="btn small" data-a="mk">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">บันทึก</button></div></div>`;
+      const ta = li.querySelector('textarea'); ta.focus();
+      li.querySelectorAll('[data-a]').forEach(c => c.onclick = () => {
+        if (c.dataset.a === 'mk') { const v = ta.value, s0 = ta.selectionStart, e0 = ta.selectionEnd; if (e0 > s0) ta.value = v.slice(0, s0) + '==' + v.slice(s0, e0) + '==' + v.slice(e0); return ta.focus(); }
+        if (c.dataset.a === 'ok' && ta.value.trim()) { x.d = ta.value.trim(); save(); }
+        vKeywords();
+      });
+    });
     view.querySelectorAll('.kw-ok').forEach(b => b.onclick = () => { const x = S.kw[+b.dataset.i]; x.ok = x.ok ? 0 : Date.now(); save(); vKeywords(); });
     view.querySelectorAll('.kw-del').forEach(b => b.onclick = () => { S.kw.splice(+b.dataset.i, 1); save(); vKeywords(); });
     view.querySelectorAll('[data-kwt]').forEach(a => a.onclick = () => { kwFlash = a.dataset.kwt; });
