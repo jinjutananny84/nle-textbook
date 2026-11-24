@@ -457,3 +457,7 @@ body.focus .content{line-height:1.85}
 .mn.today{box-shadow:0 0 0 2px #ff9f1c}
 .mn.lv1 .bxs{color:#fff}
 @media (max-width:620px){.search{min-width:34px}.search input{padding:6px 8px}.tool{padding:6px 4px}}
+
+/* ไฮไลต์ซ้อนกันไม่ทำให้ตัวอักษรห่างออก */
+mark.user-hl,mark.user-hl[class*="c-"],.content b mark.user-hl,mark.user-hl mark.user-hl,mark.kw-hi{padding:0!important;margin:0;letter-spacing:inherit}
+mark.user-hl.c-ty,mark.user-hl.c-tr,mark.user-hl.c-tp,mark.kw-hi{font-weight:inherit}

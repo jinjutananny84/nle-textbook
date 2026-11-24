@@ -109,7 +109,7 @@
       if (L.startsWith('#### ')) { flushP(); out += `<h2>${inline(L.slice(5))}</h2>`; i++; continue; }
       if (L.startsWith('?? ')) {
         flushP(); const [q, a] = L.slice(3).split('::');
-        out += `<div class="card think"><div class="lbl">🤔 หยุดคิดก่อน</div><p class="think-q">${inline(q.trim())}</p><button class="reveal-btn" data-reveal>ดูเฉลย</button><div class="think-a" hidden>${inline((a || '').trim())}</div></div>`;
+        out += `<div class="card think"><div class="lbl">🤔 หยุดคิดก่อน</div><p class="think-q">${inline(q.trim())}</p><button class="reveal-btn" data-reveal>Show answer</button><div class="think-a" hidden>${inline((a || '').trim())}</div></div>`;
         i++; continue;
       }
       if (L.startsWith('!! ') || L.startsWith('>> ')) {
@@ -187,7 +187,7 @@
   function freqBadge(s) {
     if (!s.freq) return '';
     const k = parseInt(s.freq); const cls = k >= 4 ? 'hot' : k >= 2 ? 'mid' : '';
-    return `<span class="badge ${cls}">ออก ${esc(s.freq)} ปี ${stars(s.stars)}</span>`;
+    return `<span class="badge ${cls}">Tested ${esc(s.freq)} yrs ${stars(s.stars)}</span>`;
   }
   function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
   function updateWrongCount() { const n = Object.keys(S.wrong).length; const el = $('#wrongCount'); el.hidden = !n; el.textContent = n; const r = $('#reviewCount'); if (r) { const d = dueItems().length; r.hidden = !d; r.textContent = d; } }
@@ -251,7 +251,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 หน้าแรก</a><a href="#/quiz">📝 โหมดทำข้อสอบ</a><a href="#/wrong">📕 กองข้อที่ทำผิด</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 จุดอ่อนของฉัน</a><a href="#/review">📅 ทวนวันนี้</a>${curCh ? `<a href="#/map/${curCh}">🗺️ แผนผังบทนี้</a>` : ''}<a href="#/notes">🗒️ โน้ตของฉัน</a><a href="#/keywords">🔑 Keyword ของฉัน</a><a href="#" id="hlToggle">🖍 ไฮไลต์จุดสำคัญ: ${S.hlOff ? 'ปิด' : 'เปิด'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -287,7 +287,7 @@
     save();
     const ex = box.querySelector('.explain');
     ex.hidden = false;
-    ex.innerHTML = `<div class="res ${ok ? 'ok' : 'no'}">${ok ? '✓ ถูกต้อง' : `✗ ยังไม่ใช่ ตอบ ${q.answer}`}</div><div data-hlk="${esc(qKey(chId, qid, 'why'))}">${inline(esc(q.why || ''))}</div>${q.doubt ? `<div class="warn">⚠ ${esc(q.doubt)}</div>` : ''}${note}`;
+    ex.innerHTML = `<div class="res ${ok ? 'ok' : 'no'}">${ok ? '✓ Correct' : `✗ ยังไม่ใช่ ตอบ ${q.answer}`}</div><div data-hlk="${esc(qKey(chId, qid, 'why'))}">${inline(esc(q.why || ''))}</div>${q.doubt ? `<div class="warn">⚠ ${esc(q.doubt)}</div>` : ''}${note}`;
     applyAllHL(ex);
     if (onDone) onDone(ok);
     if (/^#\/[^/]+\/\d+/.test(location.hash)) { const m = location.hash.match(/^#\/([^/]+)\/(\d+)/); const y = sidebar.scrollTop; renderSidebar(m[1], +m[2]); sidebar.scrollTop = y; }
@@ -298,7 +298,7 @@
     const opt = e.target.closest('.opt');
     if (opt && !opt.classList.contains('off')) { if (!getSelection().isCollapsed) return; const box = opt.closest('.mcq'); answerMCQ(box, opt.dataset.l, box._onDone); return; }
     const rv = e.target.closest('[data-reveal]');
-    if (rv) { const a = rv.nextElementSibling; a.hidden = !a.hidden; rv.textContent = a.hidden ? 'ดูเฉลย' : 'ซ่อนเฉลย'; return; }
+    if (rv) { const a = rv.nextElementSibling; a.hidden = !a.hidden; rv.textContent = a.hidden ? 'Show answer' : 'Hide answer'; return; }
     const bx = e.target.closest('[data-box]');
     if (bx) { e.preventDefault(); const cur = location.hash.split('/')[1]; location.hash = `#/${cur}/${bx.dataset.box}`; }
   });
@@ -414,12 +414,12 @@
   function openKw() {
     const k = popZone, t = kwNorm(popText), init = t;
     pop.dataset.mode = 'note'; pop.classList.add('writing');
-    pop.innerHTML = `<div class="note-kind">🔑 ส่งเป็น keyword · แก้คำได้ก่อนส่ง (เน้นเหลือง: เลือกคำแล้วกดเน้นคำที่เลือก)</div><textarea class="note-in" rows="3">${esc(init)}</textarea><div class="note-act"><button class="btn small" data-a="mk" title="เน้นคำที่เลือกในช่องนี้">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">ส่งเป็น keyword</button></div>`;
+    pop.innerHTML = `<div class="note-kind">🔑 ส่งเป็น keyword · แก้คำได้ก่อนส่ง (เน้นเหลือง: เลือกคำแล้วกดเน้นคำที่เลือก)</div><textarea class="note-in" rows="3">${esc(init)}</textarea><div class="note-act"><button class="btn small" data-a="mk" title="Emphasize selected words">Emphasize</button><button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save keyword</button></div>`;
     const ta = pop.querySelector('textarea'); ta.focus();
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => {
       const a = b.dataset.a;
       if (a === 'mk') { const v = ta.value, s0 = ta.selectionStart, e0 = ta.selectionEnd; if (e0 > s0) { ta.value = v.slice(0, s0) + '==' + v.slice(s0, e0) + '==' + v.slice(e0); } ta.focus(); return; }
-      if (a === 'ok') { const d = ta.value.trim(); if (d) { S.kw.push(Object.assign({ t, k, d, at: Date.now() }, kwBox(k))); save(); toast('🔑 เก็บเข้า Keyword แล้ว'); } }
+      if (a === 'ok') { const d = ta.value.trim(); if (d) { S.kw.push(Object.assign({ t, k, d, at: Date.now() }, kwBox(k))); save(); toast('🔑 Saved to Keywords'); } }
       hidePop();
     });
   }
@@ -435,7 +435,7 @@
     t = kwNorm(t); if (!t || !k) return;
     const i = S.kw.findIndex(x => x.k === k && x.t === t);
     if (i >= 0) S.kw.splice(i, 1); else S.kw.push(Object.assign({ t, k, at: Date.now() }, kwBox(k)));
-    save(); toast(i >= 0 ? 'เอาออกจาก Keyword แล้ว' : '🔑 เก็บเข้า Keyword แล้ว');
+    save(); toast(i >= 0 ? 'Removed from Keywords' : '🔑 Saved to Keywords');
   }
   function toast(msg) {
     let el = document.getElementById('toast');
@@ -450,7 +450,7 @@
   // ช่องปรับคำก่อนค้นหา (เหมือนช่องโน้ต)
   function openSearch() {
     pop.dataset.mode = 'note'; pop.classList.add('writing');
-    pop.innerHTML = `<div class="note-kind">🔍 ค้นหาใน Google · แก้หรือเพิ่มคำก่อนค้นได้</div><textarea class="note-in" rows="2">${esc(kwNorm(popText))}</textarea><div class="note-act"><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">ค้นหา</button></div>`;
+    pop.innerHTML = `<div class="note-kind">🔍 ค้นหาใน Google · แก้หรือเพิ่มคำก่อนค้นได้</div><textarea class="note-in" rows="2">${esc(kwNorm(popText))}</textarea><div class="note-act"><button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Search</button></div>`;
     const ta = pop.querySelector('textarea'); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
     ta.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); searchOut(ta.value); hidePop(); } });
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { if (b.dataset.a === 'ok') searchOut(ta.value); hidePop(); });
@@ -475,7 +475,7 @@
   // กล่องพิมพ์โน้ตในแถบเดียวกัน
   function openNote(onNote, cur, sticky) {
     pop.dataset.mode = 'note'; pop.classList.add('writing');
-    pop.innerHTML = `<div class="note-kind">${sticky ? '🗒️ sticky note' : '★ โน้ตดาว'}</div><textarea class="note-in${sticky ? ' sticky' : ''}" rows="3" placeholder="พิมพ์โน้ต จะแสดงต่อจากข้อความที่เลือก">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">ลบโน้ต</button>' : ''}<button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">บันทึก</button></div>`;
+    pop.innerHTML = `<div class="note-kind">${sticky ? '🗒️ Sticky note' : '★ Star note'}</div><textarea class="note-in${sticky ? ' sticky' : ''}" rows="3" placeholder="พิมพ์โน้ต จะแสดงต่อจากข้อความที่เลือก">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">Delete note</button>' : ''}<button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div>`;
     const ta = pop.querySelector('textarea'); ta.focus();
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { const a = b.dataset.a; if (a === 'ok') onNote(ta.value.trim(), sticky); if (a === 'del') onNote('', sticky); hidePop(); });
   }
@@ -574,14 +574,14 @@
       if (!c.ready) return `<div class="tile soon"><h3>${esc(c.title)}</h3><p>${esc(c.desc || 'เร็ว ๆ นี้')}</p></div>`;
       const p = chProgress(ch);
       const rt = readToday(c.id);
-      const todayLine = `<div class="today-line"><b>วันนี้</b> อ่านจบ ${rt.done} กล่อง · ${Math.round(rt.done * 100 / p.n)}% ของบท${rt.seen > rt.done ? ` · เปิดค้างไว้ ${rt.seen - rt.done}` : ''}<i style="width:${Math.round(rt.done * 100 / p.n)}%"></i></div>`;
+      const todayLine = `<div class="today-line"><b>Today</b> ${rt.done} boxes read · ${Math.round(rt.done * 100 / p.n)}% of chapter${rt.seen > rt.done ? ` · ${rt.seen - rt.done} in progress` : ''}<i style="width:${Math.round(rt.done * 100 / p.n)}%"></i></div>`;
       return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p>${todayLine}${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</a>`;
     }).join('');
     const lr = S.lastRead && S.lastRead.h.match(/^#\/([^/]+)\/(\d+)$/);
     const lrSec = lr && CH[lr[1]] && CH[lr[1]].sections.find(x => x.no === +lr[2]);
     const rtAll = readToday(); const rvDone = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
-    const chips = `<div class="today-chips"><span>📖 วันนี้อ่านจบ <b>${rtAll.done}</b> กล่อง</span><span>📅 ทวนแล้ว <b>${rvDone}</b> รายการ</span><span>🔥 อ่านต่อเนื่อง <b>${streak()}</b> วัน</span></div>`;
-    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 อ่านต่อจากกล่อง ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 วันนี้ต้องทวน ${n} รายการ</a>` : ''; })()}</div></div><div class="grid">${tiles}</div>
+    const chips = `<div class="today-chips"><span>📖 Read today <b>${rtAll.done}</b> boxes</span><span>📅 Reviewed <b>${rvDone}</b></span><span>🔥 Streak <b>${streak()}</b> days</span></div>`;
+    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 Continue reading · Box ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 Review today · ${n} due</a>` : ''; })()}</div></div><div class="grid">${tiles}</div>
     <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-p">ฉัน</mark> <mark class="user-hl c-r">4 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
   }
   async function vChapter(id) {
@@ -590,7 +590,7 @@
     const p = chProgress(ch);
     let h = `<div class="crumb"><a href="#/">หน้าแรก</a></div><div class="hero"><h1>${esc(ch.title)}</h1><p>${esc(ch.source || '')}</p></div>
       ${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ</div>${lvLegend(p)}
-      <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 สุ่มข้อสอบทั้งบท</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcard บทนี้</a><a class="btn" href="#/map/${id}">🗺️ แผนผังบท</a></div>`;
+      <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 Quiz this chapter</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcards</a><a class="btn" href="#/map/${id}">🗺️ Chapter map</a></div>`;
     for (const pg of ch.pages) {
       h += `<h2 style="margin-top:22px">หน้า ${pg.no} · ${esc(pg.title)}</h2><ul class="sec-list">`;
       for (const s of ch.sections.filter(x => x.page === pg.no)) {
@@ -610,19 +610,19 @@
     const k = secKey(id, s.no);
     const pg = ch.pages.find(p => p.no === s.page);
     let h = `<div class="crumb"><a href="#/${id}">${esc(ch.title)}</a> · หน้า ${s.page}${pg ? ' ' + esc(pg.title) : ''}</div>
-      <div class="sec-head"><div class="sec-no">${s.no}</div><div><h1>${esc(s.title)}</h1><div class="meta">${freqBadge(s)}${s.examIds.length ? `<span class="badge">ข้อสอบเก่า ${s.examIds.length} ข้อ</span>` : ''}</div></div></div>
+      <div class="sec-head"><div class="sec-no">${s.no}</div><div><h1>${esc(s.title)}</h1><div class="meta">${freqBadge(s)}${s.examIds.length ? `<span class="badge">${s.examIds.length} past Qs</span>` : ''}</div></div></div>
       <article class="content" data-hlk="${secKey(id, s.no)}">${s.lead ? `<p><b>${inline(esc(s.lead))}</b></p>` : ''}${s.html}</article>`;
     if (s.kw.length) h += `<div class="kws">${s.kw.map(x => `<span class="kw">${esc(x)}</span>`).join('')}</div>`;
     const myHl = (S.hl[k] || []).length;
-    h += `<details class="panel mynote" ${S.notes[k] ? 'open' : ''}><summary>🗒️ โน้ตของฉัน${S.notes[k] ? ' ·  มีโน้ต' : ''}<span id="myHlCount" data-k="${k}">${myHl ? ` · ไฮไลต์ ${myHl} จุด` : ''}</span></summary>
+    h += `<details class="panel mynote" ${S.notes[k] ? 'open' : ''}><summary>🗒️ My notes${S.notes[k] ? ' ·  มีโน้ต' : ''}<span id="myHlCount" data-k="${k}">${myHl ? ` · ไฮไลต์ ${myHl} จุด` : ''}</span></summary>
       <textarea id="noteIn" rows="4" placeholder="จดสิ่งที่อยากจำของกล่องนี้ (บันทึกอัตโนมัติ)">${esc(S.notes[k] || '')}</textarea>
       <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี เปลี่ยนสีตัวอักษร (A) เขียนโน้ต ★ หรือ sticky note 🗒️ ต่อจากข้อความนั้น และไฮไลต์ข้อความในโน้ตได้ด้วย (เหลือง เขียว ชมพู แดงอ่อน) เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
     if (s.examIds.length) {
-      h += `<section class="exam-sec"><h2>📝 ข้อสอบเก่าของหัวข้อนี้</h2><p class="bar-label">กดเลือกคำตอบ ข้อที่ตอบผิดจะเข้ากองข้อผิดให้อัตโนมัติ</p>`;
+      h += `<section class="exam-sec"><h2>📝 Past exam questions</h2><p class="bar-label">กดเลือกคำตอบ ข้อที่ตอบผิดจะเข้ากองข้อผิดให้อัตโนมัติ</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid]);
       h += '</section>';
     }
-    h += `<div class="lvpick"><div class="lvq">หัวข้อนี้เข้าใจแค่ไหน (กดเปลี่ยนได้ตลอด กดซ้ำเพื่อล้าง)</div>${[4, 3, 2, 1].map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
+    h += `<div class="lvpick"><div class="lvq">How well do you understand this box? (tap again to clear)</div>${[4, 3, 2, 1].map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
       <nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
       <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><button id="undoBtn" hidden title="เลิกทำไฮไลต์ล่าสุด" aria-label="เลิกทำ">↶</button><button id="focusBtn" title="โหมดอ่าน: ซ่อนเมนูข้าง" aria-label="โหมดอ่าน">${S.focus ? '⤡' : '⤢'}</button><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
     view.innerHTML = h;
@@ -650,7 +650,7 @@
     if (hs.length < 3 || !head) return;
     const nav = document.createElement('nav'); nav.className = 'toc';
     nav.innerHTML = hs.map((h, i) => `<button data-i="${i}" class="${h.tagName === 'H3' ? 'sub' : ''}">${esc(h.textContent.replace(/\s+/g, ' ').trim())}</button>`).join('')
-      + (S.focus === undefined ? '' : '') + ($('.exam-sec', view) ? '<button data-ex="1" class="ex">📝 ข้อสอบ</button>' : '');
+      + (S.focus === undefined ? '' : '') + ($('.exam-sec', view) ? '<button data-ex="1" class="ex">📝 Exam</button>' : '');
     head.after(nav);
     nav.addEventListener('click', e => {
       const b = e.target.closest('button'); if (!b) return;
@@ -683,11 +683,11 @@
     await loadAll(); renderSidebar(params.get('ch'));
     const ready = INDEX.filter(c => c.ready);
     const pre = params.get('ch');
-    view.innerHTML = `<div class="hero"><h1>📝 โหมดทำข้อสอบ</h1><p>เลือกบทแล้วสุ่มข้อ ข้อที่ผิดจะเก็บเข้ากองข้อผิด</p></div>
+    view.innerHTML = `<div class="hero"><h1>📝 Quiz</h1><p>เลือกบทแล้วสุ่มข้อ ข้อที่ผิดจะเก็บเข้ากองข้อผิด</p></div>
     <div class="panel"><h3>บท</h3><div class="choice" id="qCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
     <h3>ขอบเขต</h3><div class="choice" id="qScope"><label><input type="radio" name="sc" value="all" checked>ทุกหัวข้อ</label><label><input type="radio" name="sc" value="weak">เฉพาะหัวข้อที่ยังไม่แม่น (★–★★)</label><label><input type="radio" name="sc" value="done">เฉพาะหัวข้อที่ประเมินแล้ว</label><label><input type="radio" name="sc" value="hot">เฉพาะหัวข้อออกบ่อย (★★★)</label><label><input type="radio" name="sc" value="new">ข้อที่ยังไม่เคยทำ</label></div>
     <h3>จำนวนข้อ</h3><div class="choice" id="qN">${[10, 20, 40].map((n, i) => `<label><input type="radio" name="qn" value="${n}" ${i === 0 ? 'checked' : ''}>${n} ข้อ</label>`).join('')}<label><input type="radio" name="qn" value="999">ทั้งหมด</label></div>
-    <button class="btn primary" id="qGo">เริ่มทำ</button> <span class="bar-label" id="qInfo"></span></div>`;
+    <button class="btn primary" id="qGo">Start</button> <span class="bar-label" id="qInfo"></span></div>`;
     const go = () => {
       const chs = [...view.querySelectorAll('#qCh input:checked')].map(x => x.value);
       const sc = view.querySelector('#qScope input:checked').value;
@@ -709,13 +709,13 @@
     let i = 0, score = 0;
     const step = () => {
       if (i >= items.length) {
-        view.innerHTML = `<div class="hero"><h1>${title}</h1><p>ได้ ${score} จาก ${items.length} ข้อ (${Math.round(score * 100 / items.length)}%)</p></div><div class="choice"><a class="btn primary" href="#/wrong">📕 ไปกองข้อผิด</a><a class="btn" href="#/quiz">ทำชุดใหม่</a></div>`;
+        view.innerHTML = `<div class="hero"><h1>${title}</h1><p>ได้ ${score} จาก ${items.length} ข้อ (${Math.round(score * 100 / items.length)}%)</p></div><div class="choice"><a class="btn primary" href="#/wrong">📕 Go to Mistakes</a><a class="btn" href="#/quiz">New set</a></div>`;
         return;
       }
       const it = items[i], q = CH[it.ch].exams[it.id];
-      view.innerHTML = `<div class="qhead"><span>ข้อ ${i + 1} / ${items.length}</span><span>ถูก ${score}</span></div><div class="bar"><i style="width:${Math.round(i * 100 / items.length)}%"></i></div>${mcqHTML(it.ch, it.id, q, { showBox: true })}<div class="choice" style="justify-content:flex-end"><button class="btn" id="skip">ข้าม</button></div>`;
+      view.innerHTML = `<div class="qhead"><span>ข้อ ${i + 1} / ${items.length}</span><span>ถูก ${score}</span></div><div class="bar"><i style="width:${Math.round(i * 100 / items.length)}%"></i></div>${mcqHTML(it.ch, it.id, q, { showBox: true })}<div class="choice" style="justify-content:flex-end"><button class="btn" id="skip">Skip</button></div>`;
       const box = $(".mcq", view); applyAllHL(view);
-      box._onDone = ok => { if (ok) score++; $('#skip').textContent = i + 1 < items.length ? 'ข้อต่อไป →' : 'ดูผล'; $('#skip').classList.add('primary'); };
+      box._onDone = ok => { if (ok) score++; $('#skip').textContent = i + 1 < items.length ? 'Next →' : 'See result'; $('#skip').classList.add('primary'); };
       $('#skip').onclick = () => { i++; step(); window.scrollTo(0, 0); };
     };
     step();
@@ -723,9 +723,9 @@
   async function vWrong() {
     await loadAll(); renderSidebar();
     const list = Object.values(S.wrong).filter(w => CH[w.ch] && CH[w.ch].exams[w.id]).sort((a, b) => b.t - a.t);
-    let h = `<div class="hero"><h1>📕 กองข้อที่ทำผิด</h1><p>ตอบถูกเมื่อไหร่ ข้อนั้นจะออกจากกองเอง</p></div>`;
+    let h = `<div class="hero"><h1>📕 Mistakes</h1><p>ตอบถูกเมื่อไหร่ ข้อนั้นจะออกจากกองเอง</p></div>`;
     if (!list.length) { view.innerHTML = h + '<p class="empty">ยังไม่มีข้อผิด ลองทำข้อสอบท้ายหัวข้อหรือโหมดทำข้อสอบดูนะ</p>'; return; }
-    h += `<div class="choice"><button class="btn primary" id="wGo">ทวนทั้งกอง (${list.length} ข้อ)</button><button class="btn" id="wClear">ล้างกอง</button></div>`;
+    h += `<div class="choice"><button class="btn primary" id="wGo">Review all (${list.length})</button><button class="btn" id="wClear">Clear</button></div>`;
     h += list.map(w => { const q = CH[w.ch].exams[w.id]; return `<a class="search-hit" href="#/${w.ch}/${q.box}"><b>${esc(w.id)}</b> · ${esc(CH[w.ch].title)} กล่อง ${q.box} · ผิด ${w.n} ครั้ง<small>${esc(q.stem)}</small></a>`; }).join('');
     view.innerHTML = h; applyAllHL(view);
     $('#wGo').onclick = () => runQuiz(shuffle(list.map(w => ({ ch: w.ch, id: w.id }))), 'ทวนกองข้อผิด');
@@ -735,10 +735,10 @@
     await loadAll(); renderSidebar(params.get('ch'));
     const pre = params.get('ch');
     const ready = INDEX.filter(c => c.ready);
-    view.innerHTML = `<div class="hero"><h1>🃏 Flashcard</h1><p>ทำจาก keyword ท้ายกล่อง แตะการ์ดเพื่อพลิก</p></div>
+    view.innerHTML = `<div class="hero"><h1>🃏 Flashcards</h1><p>ทำจาก keyword ท้ายกล่อง แตะการ์ดเพื่อพลิก</p></div>
       <div class="panel"><div class="choice" id="fCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
       <div class="choice" id="fSc"><label><input type="radio" name="fs" value="todo" checked>เฉพาะที่ยังจำไม่ได้</label><label><input type="radio" name="fs" value="all">ทั้งหมด</label></div>
-      <button class="btn primary" id="fGo">เริ่ม</button> <span class="bar-label" id="fInfo"></span></div><div id="fArea"></div>`;
+      <button class="btn primary" id="fGo">Start</button> <span class="bar-label" id="fInfo"></span></div><div id="fArea"></div>`;
     const build = () => {
       const chs = [...view.querySelectorAll('#fCh input:checked')].map(x => x.value);
       const todo = view.querySelector('#fSc input:checked').value === 'todo';
@@ -755,7 +755,7 @@
         if (i >= cards.length) { area.innerHTML = '<p class="empty">ครบทุกใบแล้ว 🎉</p>'; return; }
         const c = cards[i];
         area.innerHTML = `<div class="qhead"><span>ใบที่ ${i + 1}/${cards.length}</span><a href="#/${c.ch}/${c.no}">กล่อง ${c.no}</a></div><div class="flash"><div class="flash-inner" id="fc"><div class="flash-face">${flipped ? `<div class="b">${inline(esc(c.b))}</div><small>${esc(c.f)}</small>` : `<div class="f">${inline(esc(c.f))}</div><small>แตะเพื่อพลิก</small>`}</div></div></div>
-        <div class="flash-acts"><button class="btn" id="fNo">ยังจำไม่ได้</button><button class="btn primary" id="fYes">จำได้แล้ว</button></div>`;
+        <div class="flash-acts"><button class="btn" id="fNo">Not yet</button><button class="btn primary" id="fYes">Got it</button></div>`;
         $('#fc').onclick = () => { flipped = !flipped; show(); };
         $('#fNo').onclick = () => { delete S.known[c.key]; save(); i++; flipped = false; show(); };
         $('#fYes').onclick = () => { S.known[c.key] = 1; save(); i++; flipped = false; show(); };
@@ -785,14 +785,14 @@
     const done = boxes.filter(b => b.n);
     const weak = done.slice().sort((a, b) => a.p - b.p || b.n - a.n);
     const bar = p => `<div class="bar"><i style="width:${p ?? 0}%;background:${p == null ? 'var(--line)' : p < 50 ? 'var(--bad)' : p < 75 ? 'var(--key)' : 'var(--ok)'}"></i></div>`;
-    let h = `<div class="hero"><h1>📊 จุดอ่อนของฉัน</h1><p>คิดจากทุกครั้งที่กดตอบข้อสอบในเว็บ (ท้ายกล่องและโหมดทำข้อสอบ)</p></div>`;
+    let h = `<div class="hero"><h1>📊 Weak spots</h1><p>คิดจากทุกครั้งที่กดตอบข้อสอบในเว็บ (ท้ายกล่องและโหมดทำข้อสอบ)</p></div>`;
     if (!tn) { view.innerHTML = h + '<p class="empty">ยังไม่มีข้อมูล ลองทำข้อสอบท้ายกล่องหรือโหมดทำข้อสอบก่อนนะ</p>'; return; }
     const w = weak[0];
     h += `<div class="panel"><h3>ภาพรวม: ถูก ${pct(tr, tn)}% (${tr}/${tn} ครั้ง) · ทำแล้ว ${done.length}/${boxes.length} กล่อง</h3>${bar(pct(tr, tn))}
       <div class="choice" style="margin-top:12px"><a class="btn primary" href="#/${w.ch.id}/${w.s.no}">ไปกล่องที่อ่อนสุด: ${w.s.no}. ${esc(w.s.title)} (${w.p}%)</a><button class="btn" id="weakGo">สุ่มข้อจากกล่องที่ต่ำกว่า 70%</button></div></div>`;
     h += `<h2>แยกตามปีข้อสอบ</h2><div class="tbl-wrap"><table class="t"><thead><tr><th>ปี</th><th>ถูก</th><th style="width:45%"></th></tr></thead><tbody>${Object.keys(years).sort().map(y => { const p = pct(years[y].r, years[y].n); return `<tr><td>MDCU${y}</td><td>${p}% (${years[y].r}/${years[y].n})</td><td>${bar(p)}</td></tr>`; }).join('')}</tbody></table></div>`;
     h += `<h2>แยกตามกล่อง (อ่อนสุดอยู่บน)</h2><div class="tbl-wrap"><table class="t"><thead><tr><th>กล่อง</th><th>ถูก</th><th>ทำแล้ว</th><th style="width:30%"></th></tr></thead><tbody>${weak.concat(boxes.filter(b => !b.n)).map(b => `<tr><td><a href="#/${b.ch.id}/${b.s.no}">${b.s.no}. ${esc(b.s.title)}</a></td><td>${b.p == null ? '–' : b.p + '%'}</td><td>${b.tried}/${b.total} ข้อ</td><td>${bar(b.p)}</td></tr>`).join('')}</tbody></table></div>
-      <div class="choice"><button class="btn small" id="statReset">ล้างสถิติ</button></div>`;
+      <div class="choice"><button class="btn small" id="statReset">Reset stats</button></div>`;
     view.innerHTML = h;
     $('#weakGo').onclick = () => {
       const ws = new Set(done.filter(b => b.p < 70).map(b => `${b.ch.id}/${b.s.no}`));
@@ -804,7 +804,7 @@
   /* หน้ารวมโน้ต */
   async function vNotes() {
     await loadAll(); renderSidebar();
-    let h = `<div class="hero"><h1>🗒️ โน้ตและไฮไลต์ของฉัน</h1><p>เรียงตามบทและกล่อง กดชื่อกล่องเพื่อไปอ่านต่อ</p></div>`;
+    let h = `<div class="hero"><h1>🗒️ My notes & highlights</h1><p>เรียงตามบทและกล่อง กดชื่อกล่องเพื่อไปอ่านต่อ</p></div>`;
     let any = false;
     for (const ch of Object.values(CH)) for (const s of ch.sections) {
       const k = secKey(ch.id, s.no), note = S.notes[k], hl = S.hl[k] || [];
@@ -848,31 +848,31 @@
     const done = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
     const nb = items.filter(x => x.type === 'box'), ne = items.filter(x => x.type === 'exam'), nk = items.filter(x => x.type === 'kw');
     const total = items.length + done;
-    let h = `<div class="hero rv-hero"><h1>📅 ทวนวันนี้</h1><p>ระบบนัดทวนให้เอง: ตอบ "จำได้" รอบถัดไปจะห่างออก (1 → 2 → 5 → 11 วัน…) ตอบ "ยังไม่แม่น" จะกลับมาพรุ่งนี้</p>
-      <div class="rv-stat"><div><b>${items.length}</b><span>ค้างทวน</span></div><div><b>${done}</b><span>ทวนแล้ววันนี้</span></div><div class="rv-ring" style="--p:${total ? Math.round(done * 100 / total) : 100}"><span>${total ? Math.round(done * 100 / total) : 100}%</span></div></div></div>`;
+    let h = `<div class="hero rv-hero"><h1>📅 Today's review</h1><p>ระบบนัดทวนให้เอง: ตอบ "จำได้" รอบถัดไปจะห่างออก (1 → 2 → 5 → 11 วัน…) ตอบ "ยังไม่แม่น" จะกลับมาพรุ่งนี้</p>
+      <div class="rv-stat"><div><b>${items.length}</b><span>Due</span></div><div><b>${done}</b><span>Done today</span></div><div class="rv-ring" style="--p:${total ? Math.round(done * 100 / total) : 100}"><span>${total ? Math.round(done * 100 / total) : 100}%</span></div></div></div>`;
     if (!items.length) {
       view.innerHTML = h + `<p class="empty">🎉 วันนี้ทวนครบแล้ว${Object.keys(S.lvl).length ? '' : '<br>ให้ดาวกล่องที่อ่าน (★–★★★) เก็บ keyword หรือทำข้อสอบ แล้วรายการจะมาโผล่ที่นี่เอง'}</p>`;
       return;
     }
     const sec = (title, cls, arr, fn) => arr.length ? `<section class="rv-sec ${cls}"><h2>${title} <small>${arr.length}</small></h2>${arr.slice(0, 30).map(fn).join('')}</section>` : '';
-    h += sec('📖 กล่องที่ควรกลับไปอ่าน', 'rv-box', nb.sort((a, b) => a.l - b.l), it => {
+    h += sec('📖 Boxes to re-read', 'rv-box', nb.sort((a, b) => a.l - b.l), it => {
       const [c, no] = it.k.split('/'); const ch = CH[c]; const s = ch && ch.sections.find(x => x.no === +no);
-      return `<div class="rv-card lv${it.l}" data-id="${it.id}" data-base="${BASE[it.l]}"><div class="rv-main"><span class="rv-lv">${LV[it.l].s}</span><a href="#/${c}/${no}"><b>${no}.</b> ${s ? esc(s.title) : ''}</a><small>${ivText(it.id)}</small></div><div class="rv-act"><button class="btn small" data-g="0">ยังไม่แม่น</button><button class="btn small primary" data-g="1">อ่านแล้ว จำได้</button></div></div>`;
+      return `<div class="rv-card lv${it.l}" data-id="${it.id}" data-base="${BASE[it.l]}"><div class="rv-main"><span class="rv-lv">${LV[it.l].s}</span><a href="#/${c}/${no}"><b>${no}.</b> ${s ? esc(s.title) : ''}</a><small>${ivText(it.id)}</small></div><div class="rv-act"><button class="btn small" data-g="0">Not yet</button><button class="btn small primary" data-g="1">Read · Got it</button></div></div>`;
     });
-    h += sec('📝 ข้อสอบที่เคยผิด ลองทำใหม่', 'rv-exam', ne, it => {
+    h += sec('📝 Retry past mistakes', 'rv-exam', ne, it => {
       const q = CH[it.w.ch] && CH[it.w.ch].exams[it.w.id]; if (!q) return '';
       return `<div class="rv-q" data-id="${it.id}">${mcqHTML(it.w.ch, it.w.id, q, { showBox: true })}</div>`;
     });
-    h += sec('🔑 Keyword', 'rv-kw', nk, it => {
+    h += sec('🔑 Keywords', 'rv-kw', nk, it => {
       const x = it.x, ch = CH[x.ch], s = ch && ch.sections.find(y => y.no === x.box);
-      return `<div class="rv-card kw" data-id="${it.id}" data-base="1"><div class="rv-main"><span class="kwt" data-hlk="kw:${x.at}">${kwHTML(x.d || x.t)}</span><small><a href="#/${x.ch}/${x.box}" data-kwt="${esc(x.t)}">กล่อง ${x.box}${s ? ' ' + esc(s.title) : ''} ↗</a> · ${ivText(it.id)}</small></div><div class="rv-act"><button class="btn small" data-g="0">ยังไม่แม่น</button><button class="btn small primary" data-g="1">จำได้</button></div></div>`;
+      return `<div class="rv-card kw" data-id="${it.id}" data-base="1"><div class="rv-main"><span class="kwt" data-hlk="kw:${x.at}">${kwHTML(x.d || x.t)}</span><small><a href="#/${x.ch}/${x.box}" data-kwt="${esc(x.t)}">กล่อง ${x.box}${s ? ' ' + esc(s.title) : ''} ↗</a> · ${ivText(it.id)}</small></div><div class="rv-act"><button class="btn small" data-g="0">Not yet</button><button class="btn small primary" data-g="1">Got it</button></div></div>`;
     });
     view.innerHTML = h; applyAllHL(view);
     const bump = card => { card.classList.add('rv-gone'); setTimeout(() => { const y = scrollY; vReview().then(() => scrollTo(0, y)); updateWrongCount(); }, 380); };
     view.querySelectorAll('.rv-card [data-g]').forEach(b => b.onclick = () => { const c = b.closest('.rv-card'); schedule(c.dataset.id, b.dataset.g === '1', +c.dataset.base); bump(c); });
     view.querySelectorAll('.rv-q').forEach(w => { const m = w.querySelector('.mcq'); m._onDone = ok => {
       schedule(w.dataset.id, ok, 2);
-      const nx = document.createElement('div'); nx.className = 'rv-act'; nx.innerHTML = `<button class="btn small primary">ข้อต่อไป</button>`; m.appendChild(nx);
+      const nx = document.createElement('div'); nx.className = 'rv-act'; nx.innerHTML = `<button class="btn small primary">Next</button>`; m.appendChild(nx);
       nx.querySelector('button').onclick = () => bump(w);
     }; });
     view.querySelectorAll('[data-kwt]').forEach(a => a.onclick = () => { kwFlash = a.dataset.kwt; });
@@ -882,9 +882,9 @@
   async function vKeywords() {
     await loadAll(); renderSidebar();
     const left = S.kw.filter(x => !x.ok).length;
-    let h = `<div class="hero"><h1>🔑 Keyword ของฉัน</h1><p>ลากเลือกคำเพื่อไฮไลต์/เปลี่ยนสีได้ · ↗ กลับไปอ่านตรงจุดนั้น · ติ๊กช่องเมื่อทวนแล้ว · ✎ แก้คำหรือคำที่เน้น · ยังไม่ได้ทวน ${left} จาก ${S.kw.length} คำ</p></div>`;
+    let h = `<div class="hero"><h1>🔑 My keywords</h1><p>ลากเลือกคำเพื่อไฮไลต์/เปลี่ยนสีได้ · ↗ กลับไปอ่านตรงจุดนั้น · ติ๊กช่องเมื่อทวนแล้ว · ✎ แก้คำหรือคำที่เน้น · ยังไม่ได้ทวน ${left} จาก ${S.kw.length} คำ</p></div>`;
     if (!S.kw.length) { view.innerHTML = h + '<p class="empty">ยังไม่มี keyword ลองเลือกข้อความในเนื้อหาหรือข้อสอบแล้วกด 🔑</p>'; return; }
-    h += `<div class="choice kw-filter"><label><input type="checkbox" id="kwHide" ${S.kwHide ? 'checked' : ''}> ซ่อนคำที่ทวนแล้ว</label><button class="btn small" id="kwShuffle">สุ่มทวน</button></div>`;
+    h += `<div class="choice kw-filter"><label><input type="checkbox" id="kwHide" ${S.kwHide ? 'checked' : ''}> Hide reviewed</label><button class="btn small" id="kwShuffle">Random review</button></div>`;
     h += '<div class="kw-cols">';
     const groups = {};
     S.kw.forEach((x, i) => { const g = `${x.ch}|${x.box}`; (groups[g] = groups[g] || []).push(i); });
@@ -900,7 +900,7 @@
     applyAllHL(view);
     view.querySelectorAll('.kw-ed').forEach(b => b.onclick = () => {
       const i = +b.dataset.i, x = S.kw[i], li = b.closest('li');
-      li.innerHTML = `<div class="kw-edit"><textarea rows="2">${esc(x.d || x.t)}</textarea><div class="note-act"><button class="btn small" data-a="mk">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">บันทึก</button></div></div>`;
+      li.innerHTML = `<div class="kw-edit"><textarea rows="2">${esc(x.d || x.t)}</textarea><div class="note-act"><button class="btn small" data-a="mk">Emphasize</button><button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div></div>`;
       const ta = li.querySelector('textarea'); ta.focus();
       li.querySelectorAll('[data-a]').forEach(c => c.onclick = () => {
         if (c.dataset.a === 'mk') { const v = ta.value, s0 = ta.selectionStart, e0 = ta.selectionEnd; if (e0 > s0) ta.value = v.slice(0, s0) + '==' + v.slice(s0, e0) + '==' + v.slice(e0); return ta.focus(); }
@@ -913,7 +913,7 @@
     view.querySelectorAll('[data-kwt]').forEach(a => a.onclick = () => { kwFlash = a.dataset.kwt; });
     $('#kwHide').onchange = e => { S.kwHide = e.target.checked; save(); vKeywords(); };
     $('#kwShuffle').onclick = () => {
-      const pool = S.kw.filter(x => !x.ok); if (!pool.length) return toast('ทวนครบทุกคำแล้ว');
+      const pool = S.kw.filter(x => !x.ok); if (!pool.length) return toast('All keywords reviewed');
       const x = pool[Math.floor(Math.random() * pool.length)]; kwFlash = x.t; location.hash = `#/${x.ch}/${x.box}`;
     };
   }
@@ -996,7 +996,7 @@
   });
   function goBack(e) {
     if (e) e.preventDefault(); hidePop();
-    const last = hist.pop(); saveHist(); if (!last) return toast('ยังไม่มีหน้าก่อนหน้า');
+    const last = hist.pop(); saveHist(); if (!last) return toast('No previous page');
     goingBack = true; backY = last.y;
     if (location.hash === last.h || (!location.hash && last.h === '#/')) { goingBack = false; route().then(() => scrollTo(0, last.y)); curHash = last.h; }
     else location.hash = last.h;
@@ -1014,7 +1014,7 @@
     if (e.target.id !== 'hlToggle') return;
     e.preventDefault(); S.hlOff = !S.hlOff; save();
     document.documentElement.classList.toggle('no-hl', S.hlOff);
-    e.target.textContent = `🖍 ไฮไลต์จุดสำคัญ: ${S.hlOff ? 'ปิด' : 'เปิด'}`;
+    e.target.textContent = `🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}`;
   });
   $('#searchForm').onsubmit = e => { e.preventDefault(); location.hash = '#/search?q=' + encodeURIComponent($('#searchInput').value); };
   const themeBtn = $('#themeBtn');
