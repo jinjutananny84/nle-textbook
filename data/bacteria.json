@@ -1,0 +1,149 @@
+{
+ "note": "แท็กกลุ่มแบคทีเรียที่เว็บเติมในวงเล็บหลังชื่อเชื้อทุกบท (แสดงด้วย CSS ไม่กระทบไฮไลต์) · [regex (case-sensitive), ป้าย] · ใส่ตัวที่ยาว/จำเพาะไว้ก่อน",
+ "items": [
+  [
+   "Staphylococcus aureus|S\\. ?aureus",
+   "G+ cocci"
+  ],
+  [
+   "Staphylococcus epidermidis|S\\. ?epidermidis|CoNS|coagulase-negative [Ss]taphylococc\\w*",
+   "G+ cocci"
+  ],
+  [
+   "Staphylococc\\w*",
+   "G+ cocci"
+  ],
+  [
+   "Streptococcus pneumoniae|S\\. ?pneumoniae|[Pp]neumococc\\w*",
+   "G+ cocci"
+  ],
+  [
+   "Streptococcus pyogenes|S\\. ?pyogenes|[Gg]roup A [Ss]trep\\w*",
+   "G+ cocci"
+  ],
+  [
+   "Streptococcus agalactiae|S\\. ?agalactiae|GBS",
+   "G+ cocci"
+  ],
+  [
+   "S\\. ?mutans|S\\. ?sanguinis|S\\. ?gallolyticus|S\\. ?bovis|[Vv]iridans strep\\w*|[Vv]iridans",
+   "G+ cocci"
+  ],
+  [
+   "Streptococc\\w*",
+   "G+ cocci"
+  ],
+  [
+   "Enterococc\\w*|E\\. ?faecalis|E\\. ?faecium",
+   "G+ cocci"
+  ],
+  [
+   "Abiotrophia( defectiva)?|Granulicatella( adiacens)?",
+   "G+ coccobacilli"
+  ],
+  [
+   "Corynebacterium diphtheriae|C\\. ?diphtheriae|Corynebacteri\\w*",
+   "G+ rod"
+  ],
+  [
+   "Listeria( monocytogenes)?",
+   "G+ rod"
+  ],
+  [
+   "Clostridi\\w*( \\w+)?|C\\. ?difficile|C\\. ?perfringens|C\\. ?botulinum|C\\. ?tetani",
+   "G+ rod (anaerobe)"
+  ],
+  [
+   "Bacillus (anthracis|cereus)|B\\. ?anthracis|B\\. ?cereus",
+   "G+ rod"
+  ],
+  [
+   "Nocardia( asteroides)?",
+   "G+ branching rod · weak AFB"
+  ],
+  [
+   "Actinomyces( israelii)?",
+   "G+ branching rod (anaerobe)"
+  ],
+  [
+   "Moraxella( catarrhalis)?|M\\. ?catarrhalis",
+   "G− diplococci"
+  ],
+  [
+   "Neisseria( meningitidis| gonorrhoeae)?|N\\. ?meningitidis|N\\. ?gonorrhoeae",
+   "G− diplococci"
+  ],
+  [
+   "Haemophilus influenzae|H\\. ?influenzae|Haemophilus",
+   "G− coccobacilli"
+  ],
+  [
+   "Bordetella pertussis|B\\. ?pertussis|Bordetella",
+   "G− coccobacilli"
+  ],
+  [
+   "Burkholderia pseudomallei|B\\. ?pseudomallei|Burkholderia",
+   "G− rod"
+  ],
+  [
+   "Pseudomonas( aeruginosa)?|P\\. ?aeruginosa",
+   "G− rod"
+  ],
+  [
+   "Klebsiella( pneumoniae)?|K\\. ?pneumoniae",
+   "G− rod"
+  ],
+  [
+   "Escherichia coli|E\\. ?coli",
+   "G− rod"
+  ],
+  [
+   "Salmonella( \\w+)?|Shigella|Proteus|Enterobacter|Serratia|Vibrio( cholerae)?|Campylobacter|Helicobacter( pylori)?|H\\. ?pylori|Yersinia( \\w+)?|Brucella|Francisella|Pasteurella",
+   "G− rod"
+  ],
+  [
+   "Legionella( pneumophila)?",
+   "G− rod (atypical)"
+  ],
+  [
+   "Bartonella( henselae)?",
+   "G− rod"
+  ],
+  [
+   "HACEK",
+   "G− rods"
+  ],
+  [
+   "Bacteroides( fragilis)?",
+   "G− rod (anaerobe)"
+  ],
+  [
+   "Treponema pallidum|T\\. ?pallidum|Treponema",
+   "spirochete"
+  ],
+  [
+   "Borrelia( burgdorferi)?|B\\. ?burgdorferi",
+   "spirochete"
+  ],
+  [
+   "Leptospira( interrogans)?",
+   "spirochete"
+  ],
+  [
+   "Mycobacterium tuberculosis|M\\. ?tuberculosis|Mycobacteri\\w*( \\w+)?|M\\. ?leprae",
+   "AFB"
+  ],
+  [
+   "Mycoplasma( pneumoniae)?|M\\. ?pneumoniae",
+   "no cell wall · atypical"
+  ],
+  [
+   "Chlamydophila( pneumoniae)?|Chlamydia( \\w+)?|C\\. ?pneumoniae",
+   "obligate intracellular"
+  ],
+  [
+   "Rickettsia( \\w+)?|Coxiella( burnetii)?",
+   "obligate intracellular"
+  ]
+ ]
+}

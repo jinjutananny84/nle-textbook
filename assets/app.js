@@ -9,7 +9,7 @@
   /* ---------- storage ---------- */
   let S = {};
   try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { S = {}; }
-  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; if (S.focus) document.body.classList.add('focus');
+  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; S.figw = S.figw || {}; if (S.focus) document.body.classList.add('focus');
   if (S.hlOff) document.documentElement.classList.add('no-hl');
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} updateWrongCount(); }
 
@@ -332,6 +332,36 @@
     }
   }
 
+  /* ---------- ชื่อแบคทีเรีย: เติม (G+ cocci) ฯลฯ หลังชื่อทุกครั้ง ทุกหน้า ----------
+     กฎอยู่ใน data/bacteria.json · แสดงผ่าน CSS (span ว่าง) จึงไม่กระทบตำแหน่งไฮไลต์ · เฝ้า view ด้วย MutationObserver */
+  let BACT = null;
+  const loadBact = () => BACT ? Promise.resolve(BACT) : fetch('data/bacteria.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+    .then(j => (BACT = (j.items || []).map(([p, g]) => { try { return [new RegExp(`(?<![A-Za-z])(?:${p})(?![A-Za-z])`, 'g'), g]; } catch (e) { return null; } }).filter(Boolean)));
+  const INL = /^(MARK|B|STRONG|EM|I|U|SPAN|SUB|SUP|A)$/;
+  function nextAfter(n) { while (n && !n.nextSibling && n.parentNode && INL.test(n.parentNode.tagName) && !n.parentNode.classList.contains('gtag')) n = n.parentNode; return n && n.nextSibling; }
+  function gramTag(root) {
+    if (!BACT || !BACT.length || !root) return;
+    for (let n of textNodes(root)) {
+      const pe = n.parentNode; if (!pe || pe.closest('svg,code,textarea,.gtag,.db-cats,.hl-pop,figcaption + *')) continue;
+      let pos = 0;
+      while (n) {
+        const v = n.nodeValue; let best = null;
+        for (const [re, g] of BACT) { re.lastIndex = pos; const m = re.exec(v); if (m && (!best || m.index < best.i || (m.index === best.i && m[0].length > best.len))) best = { i: m.index, len: m[0].length, g }; }
+        if (!best) break;
+        const end = best.i + best.len, after = v.slice(end);
+        const nx = !after.length && nextAfter(n);
+        if (/^\s*\(\s*(G[+−-]|gram|AFB|spiro|no cell wall|obligate)/i.test(after) || (nx && nx.nodeType === 1 && nx.classList.contains('gtag'))) { pos = end; continue; }
+        const rest = after.length ? n.splitText(end) : null;
+        const sp = document.createElement('span'); sp.className = 'gtag'; sp.dataset.g = best.g;
+        n.parentNode.insertBefore(sp, rest || n.nextSibling); n = rest; pos = 0;
+      }
+    }
+  }
+  loadBact().then(() => {
+    gramTag(view); let gT;
+    new MutationObserver(() => { clearTimeout(gT); gT = setTimeout(() => gramTag(view), 40); }).observe(view, { childList: true, subtree: true });
+  });
+
 
   /* ---------- ไอคอนเส้นสีเดียวกับตัวอักษร (แทน emoji ทั้งเว็บ) ---------- */
   const ICON = {
@@ -581,6 +611,16 @@
     const ta = pop.querySelector('textarea'); ta.focus();
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { const a = b.dataset.a; if (a === 'ok') onNote(ta.value.trim(), sticky); if (a === 'del') onNote('', sticky); hidePop(); });
   }
+  function figSize(fig) {
+    const h = S.figw[fig.dataset.fk] || {};
+    fig.classList.remove('al-l', 'al-r', 'sized'); fig.style.removeProperty('--w');
+    if (h.w && h.w !== 100) { fig.classList.add('sized'); fig.style.setProperty('--w', h.w + '%'); }
+    if (h.al === 'l' || h.al === 'r') fig.classList.add('sized', 'al-' + h.al);
+  }
+  function initFigs(art, k) {
+    if (!S.figw) S.figw = {};
+    art.querySelectorAll('figure.fig').forEach((f, i) => { const im = f.querySelector('img'); f.dataset.fk = k + '|' + (im ? im.getAttribute('src').split('/').pop() : 'fig' + i); f.title = 'แตะเพื่อปรับขนาดรูป'; figSize(f); });
+  }
   function hidePop() { pop.hidden = true; pop.dataset.mode = ''; pop.dataset.inNote = ''; pop.classList.remove('writing'); }
   function selOffsets(z, r) {
     let s = 0;
@@ -627,6 +667,19 @@
       }; })());
     }, 250);
   });
+  // รูปในเนื้อหา (รูปครอป/SVG ของบท): แตะรูป → ปรับขนาด / ชิดซ้าย-กลาง-ขวา · จำแยกทีละรูปใน S.figw
+  view.addEventListener('click', e => {
+    const fig = e.target.closest('figure.fig[data-fk]'); if (!fig || e.target.closest('a,mark.user-hl') || !getSelection().isCollapsed) return;
+    e.stopPropagation(); const fk = fig.dataset.fk, h = S.figw[fk] || {}, cw = h.w || 100;
+    pop.dataset.mode = 'edit'; pop.classList.remove('writing'); pop.hidden = false;
+    const W = [30, 45, 60, 80, 100];
+    pop.innerHTML = `<div class="row img-tools"><span class="lbl">ขนาดรูป</span><button data-d="-">−</button><b>${cw}%</b><button data-d="+">+</button></div><div class="row img-tools"><button data-a="l" class="${h.al === 'l' ? 'on' : ''}" title="ชิดซ้าย ข้อความไหลรอบ">⇤</button><button data-a="c" class="${!h.al || h.al === 'c' ? 'on' : ''}" title="กึ่งกลาง">↔</button><button data-a="r" class="${h.al === 'r' ? 'on' : ''}" title="ชิดขวา ข้อความไหลรอบ">⇥</button><button data-z="1" title="กลับเป็นขนาดเดิม">รีเซ็ต</button></div>`;
+    const r = fig.getBoundingClientRect(); pop.style.top = (r.top + scrollY + Math.min(r.height, 120)) + 'px'; pop.style.left = Math.max(8, r.left + scrollX) + 'px';
+    const upd = ch => { const n = Object.assign({}, h, ch); if ((n.w || 100) === 100 && (!n.al || n.al === 'c')) delete S.figw[fk]; else S.figw[fk] = n; save(); figSize(fig); hidePop(); };
+    pop.querySelectorAll('[data-d]').forEach(b => b.onclick = () => { let i = W.findIndex(x => x >= cw); if (i < 0) i = W.length - 1; i = b.dataset.d === '+' ? Math.min(W.length - 1, W[i] > cw ? i : i + 1) : Math.max(0, W[i] < cw ? i : i - 1); upd({ w: W[i] }); });
+    pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => upd({ al: b.dataset.a, w: b.dataset.a !== 'c' && cw === 100 ? 45 : cw }));
+    pop.querySelector('[data-z]').onclick = () => { delete S.figw[fk]; save(); figSize(fig); hidePop(); };
+  }, true);
   // แตะรูป: ปรับขนาด / ชิดซ้าย-กลาง-ขวา / ลบ
   view.addEventListener('click', e => {
     const fig = e.target.closest('figure.uimg'); if (!fig) return;
@@ -780,6 +833,7 @@
     view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => { const l = +b.dataset.lv; if (S.lvl[k] === l) delete S.lvl[k]; else S.lvl[k] = l; save(); rerender(); });
     pop.hidden = true; pop.dataset.mode = '';
     expandAbbr($('article.content', view), ch.abbr);
+    initFigs($('article.content', view), k);
     buildToc(); setTimeout(trackRead, 300); coverTools(view);
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
@@ -1193,6 +1247,13 @@
   async function vDB(params) {
     await loadAll(); renderSidebar();
     const all = dbEntries(), f = S.dbf || (S.dbf = { k: 'all', cover: 0 });
+    // หมวดยา/เชื้อ 2 ชั้น จาก data/taxonomy.json (กฎ regex แรกที่ตรงชื่อ) → ตะแกรงอีกชั้นนอกจากบท
+    const TX = await fetch('data/taxonomy.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+    const rules = {}; for (const k of ['drug', 'bug']) rules[k] = (TX[k] || []).map(([p, g, s]) => { try { return [new RegExp(p, 'i'), g, s]; } catch (e) { return null; } }).filter(Boolean);
+    all.forEach(e => { const m = rules[e.kind].find(([re]) => re.test(e.name)); e.g = m ? m[1] : 'Others'; e.sub = m ? m[2] : 'Unclassified'; });
+    const tree = { drug: [], bug: [] };
+    for (const k of ['drug', 'bug']) { const seen = new Map(); rules[k].forEach(([, g, s]) => { if (!seen.has(g)) seen.set(g, []); if (!seen.get(g).includes(s)) seen.get(g).push(s); }); if (all.some(e => e.kind === k && e.sub === 'Unclassified')) { if (!seen.has('Others')) seen.set('Others', []); seen.get('Others').push('Unclassified'); } tree[k] = [...seen].map(([g, subs]) => ({ g, subs })); }
+    f.cat = Array.isArray(f.cat) ? f.cat : [];
     const chs = [...new Set(all.flatMap(e => e.src.map(x => x.ch)))];
     const n = k => all.filter(e => k === 'all' || e.kind === k).length;
     view.innerHTML = `<div class="hero"><h1>💊 Drug & Bug</h1><p>รวมยาและเชื้อจากตารางของทุกบทไว้ที่เดียว เรียง A–Z ถ้าชื่อเดียวกันอยู่หลายกล่องจะรวมเป็นการ์ดเดียว · เพิ่มบทใหม่แล้วหน้านี้อัปเดตเอง</p></div>
@@ -1201,30 +1262,52 @@
         <label class="db-cv"><input type="checkbox" id="dbCover" ${f.cover ? 'checked' : ''}> Cover mode</label>
         <a class="btn small" href="#/drill">🧠 Drill</a></div>
       ${chs.length > 1 ? `<div class="db-chs">${chs.map(c => `<label><input type="checkbox" value="${c}" checked> ${c.toUpperCase()}</label>`).join('')}</div>` : ''}
+      <details class="db-cats" id="dbCats"${f.cat.length ? ' open' : ''}><summary>🗂️ กรองตามหมวด <small id="dbCatN"></small></summary><div id="dbCatBody"></div></details>
       <div class="db-az" id="dbAz"></div><div class="db-grid" id="dbGrid"></div>`;
-    const grid = $('#dbGrid'), az = $('#dbAz');
+    const grid = $('#dbGrid'), az = $('#dbAz'), catBody = $('#dbCatBody');
+    const chOn = () => { const on = new Set([...view.querySelectorAll('.db-chs input:checked')].map(x => x.value)); return e => !view.querySelector('.db-chs') || e.src.some(x => on.has(x.ch)); };
+    const ck = (kind, s) => kind + '|' + s;
+    const drawCats = () => {
+      const okCh = chOn(), kinds = f.k === 'all' ? ['drug', 'bug'] : [f.k], cat = new Set(f.cat);
+      catBody.innerHTML = kinds.map(kind => `<div class="cat-kind"><div class="cat-kh">${kind === 'drug' ? '💊 Drugs' : '🦠 Bugs'}</div>${tree[kind].map(({ g, subs }) => {
+        const cnt = s => all.filter(e => e.kind === kind && e.sub === s && okCh(e)).length;
+        const vis = subs.filter(s => cnt(s)); if (!vis.length) return '';
+        const n = vis.filter(s => cat.has(ck(kind, s))).length;
+        return `<div class="cat-g"><label class="cat-gl"><input type="checkbox" data-g="${esc(kind + '|' + g)}" ${n === vis.length ? 'checked' : ''} ${n && n < vis.length ? 'data-ind="1"' : ''}><b>${esc(g)}</b></label><div class="cat-subs">${vis.map(s => `<label><input type="checkbox" data-s="${esc(ck(kind, s))}" ${cat.has(ck(kind, s)) ? 'checked' : ''}> ${esc(s)} <small>${cnt(s)}</small></label>`).join('')}</div></div>`;
+      }).join('')}</div>`).join('') + `<button class="btn small" id="dbCatClr">ล้างหมวด (แสดงทั้งหมด)</button>`;
+      catBody.querySelectorAll('[data-ind]').forEach(x => x.indeterminate = true);
+      $('#dbCatN').textContent = f.cat.length ? `· เลือก ${f.cat.length} หมวด` : '· ยังไม่เลือก = แสดงทุกหมวด';
+    };
+    catBody.addEventListener('change', e => {
+      const x = e.target; const set = new Set(f.cat);
+      if (x.dataset.s) { x.checked ? set.add(x.dataset.s) : set.delete(x.dataset.s); }
+      else if (x.dataset.g) { x.closest('.cat-g').querySelectorAll('[data-s]').forEach(s => x.checked ? set.add(s.dataset.s) : set.delete(s.dataset.s)); }
+      f.cat = [...set]; save(); drawCats(); draw();
+    });
+    catBody.addEventListener('click', e => { if (e.target.id === 'dbCatClr') { f.cat = []; save(); drawCats(); draw(); } });
     const draw = () => {
-      const q = $('#dbq').value.trim().toLowerCase(), on = new Set([...view.querySelectorAll('.db-chs input:checked')].map(x => x.value));
-      const list = all.filter(e => (f.k === 'all' || e.kind === f.k) && (!on.size || e.src.some(x => on.has(x.ch)) || !view.querySelector('.db-chs'))
+      const q = $('#dbq').value.trim().toLowerCase(), okCh = chOn(), cat = new Set(f.cat);
+      const list = all.filter(e => (f.k === 'all' || e.kind === f.k) && okCh(e)
+        && (!cat.size || cat.has(ck(e.kind, e.sub)))
         && (!q || (e.name + ' ' + e.facts.map(x => x.v.replace(/<[^>]+>/g, '')).join(' ')).toLowerCase().includes(q)));
       let last = '', letters = [];
       grid.innerHTML = list.map(e => {
         const L = /^[a-z]/i.test(e.name) ? e.name[0].toUpperCase() : '#'; let anc = '';
         if (L !== last) { last = L; letters.push(L); anc = ` id="db-${L}"`; }
-        return `<div class="db-card ${e.kind}"${anc}><div class="db-h"><span class="db-k">${e.kind === 'drug' ? 'Drug' : 'Bug'}</span><b>${esc(e.name)}</b></div>
+        return `<div class="db-card ${e.kind}"${anc}><div class="db-h"><span class="db-k">${e.kind === 'drug' ? 'Drug' : 'Bug'}</span><b>${esc(e.name)}</b><span class="db-cat">${esc(e.g)} › ${esc(e.sub)}</span></div>
           ${e.facts.map(x => `<div class="db-f"><span>${esc(x.k)}</span><div class="db-v">${x.v}</div></div>`).join('')}
           <div class="db-src">${e.src.map(x => `<a href="#/${x.h}">${x.ch.toUpperCase()} · กล่อง ${x.no} ↗</a>`).join('')}${e.ex.length ? `<span class="db-ex">ออกสอบ ${e.ex.length} ข้อ</span>` : ''}</div></div>`;
       }).join('') || '<p class="empty">ไม่เจอชื่อที่ค้น</p>';
       az.innerHTML = letters.map(L => `<a href="#" data-l="${L}">${L}</a>`).join('');
       grid.classList.toggle('covering', !!f.cover);
     };
-    view.querySelectorAll('.seg button').forEach(b => b.onclick = () => { f.k = b.dataset.k; save(); view.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b)); draw(); });
+    view.querySelectorAll('.seg button').forEach(b => b.onclick = () => { f.k = b.dataset.k; save(); view.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b)); drawCats(); draw(); });
     $('#dbq').oninput = draw;
     $('#dbCover').onchange = e => { f.cover = e.target.checked ? 1 : 0; save(); grid.querySelectorAll('.db-v.shown').forEach(x => x.classList.remove('shown')); draw(); };
-    view.querySelectorAll('.db-chs input').forEach(x => x.onchange = draw);
+    view.querySelectorAll('.db-chs input').forEach(x => x.onchange = () => { drawCats(); draw(); });
     az.onclick = e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); const t = document.getElementById('db-' + a.dataset.l); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 70, behavior: 'smooth' }); };
     grid.addEventListener('click', e => { if (!f.cover) return; const v = e.target.closest('.db-v'); if (v && !e.target.closest('a')) v.classList.toggle('shown'); });
-    draw();
+    drawCats(); draw();
   }
   /* ---------- Numbers: cutpoint · ค่าปกติ · สูตร ของทุกบท (data/<id>-numbers.json) ---------- */
   async function vNumbers(params) {
