@@ -1,0 +1,2372 @@
+{
+ "exams": {
+  "74.1/6": {
+   "box": 21,
+   "stem": "ข้อใดไม่ได้มีส่วนเกี่ยวข้องกับระบบ renin–angiotensin–aldosterone (RAAS)",
+   "options": {
+    "A": "Liver",
+    "B": "Zona fasciculata"
+   },
+   "answer": "B",
+   "why": "RAAS ใช้ angiotensinogen ที่ตับสร้าง และ angiotensin II กระตุ้น zona glomerulosa ให้หลั่ง aldosterone ส่วน zona fasciculata สร้าง cortisol ภายใต้ ACTH จึงไม่อยู่ในวงจร RAAS ตับจึงเกี่ยวข้องโดยตรง",
+   "source": "วิเคราะห์"
+  },
+  "74.1/22": {
+   "box": 24,
+   "stem": "ข้อใดไม่ใช่ปัจจัยเสี่ยงของเบาหวานชนิดที่ 2",
+   "options": {
+    "A": "High cholesterol",
+    "B": "Gestational DM",
+    "C": "Family history of type 1 DM"
+   },
+   "answer": "C",
+   "why": "ประวัติ GDM และ dyslipidemia เป็นปัจจัยเสี่ยงของ T2DM ตามเกณฑ์คัดกรอง ส่วนประวัติครอบครัวที่เป็นปัจจัยเสี่ยงคือญาติสายตรงเป็น T2DM ไม่ใช่ T1DM ซึ่งเป็น autoimmune คนละกลไก",
+   "source": "วิเคราะห์"
+  },
+  "74.1/27": {
+   "box": 14,
+   "stem": "รูปเด็กขาโก่ง ถามว่าขาดวิตามินใด",
+   "options": {
+    "A": "Vitamin A",
+    "B": "Vitamin D"
+   },
+   "answer": "B",
+   "why": "ขาโก่ง (bowed legs) ในเด็กเป็นลักษณะของ rickets จากการขาด vitamin D ทำให้ mineralization ของ growth plate บกพร่อง ส่วนขาด vitamin A ทำให้ night blindness/xerophthalmia ไม่ทำให้ขาโก่ง",
+   "source": "วิเคราะห์",
+   "needs_image": true
+  },
+  "74.1/31": {
+   "box": 26,
+   "stem": "ผู้ป่วยเบาหวานกินยาชนิดหนึ่งแล้วเกิดการติดเชื้อทางเดินปัสสาวะซ้ำ ๆ ยาที่น่าจะเป็นสาเหตุคือข้อใด",
+   "options": {
+    "A": "SGLT2 inhibitor",
+    "B": "Metformin",
+    "C": "Sulfonylurea",
+    "D": "DPP-4 inhibitor",
+    "E": "Pioglitazone"
+   },
+   "answer": "A",
+   "why": "SGLT2 inhibitor ยับยั้งการดูดกลับ glucose ที่ proximal tubule ทำให้มี glucosuria เป็นอาหารเชื้อ จึงเกิด UTI และ genital mycotic infection ซ้ำ ยาอื่นไม่ทำให้ glucose ออกทางปัสสาวะ (metformin ทำ GI upset/lactic acidosis, sulfonylurea ทำ hypoglycemia, TZD ทำบวมน้ำ)",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/33": {
+   "box": 28,
+   "stem": "ผู้ป่วย Zollinger–Ellison syndrome จะพบการเพิ่มจำนวน (hyperplasia) ของเซลล์ใดในกระเพาะ",
+   "options": {
+    "A": "Chief cell",
+    "B": "Parietal cell",
+    "C": "Surface mucous cell",
+    "D": "Mucous neck cell",
+    "E": "Enterochromaffin cell"
+   },
+   "answer": "B",
+   "why": "gastrinoma หลั่ง gastrin สูงตลอดเวลา gastrin มี trophic effect ต่อ parietal cell ทำให้ hyperplasia และหลั่งกรดมาก (rugal fold หนา, แผลหลายตำแหน่ง) chief cell และ mucous cell ไม่ใช่เป้าหลักของ gastrin ส่วน ECL cell ก็เพิ่มได้แต่ตัวที่สร้างกรดคือ parietal cell",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/39": {
+   "box": 29,
+   "stem": "ฮอร์โมนใดทำหน้าที่เพิ่มความอยากอาหาร",
+   "options": {
+    "A": "Ghrelin",
+    "B": "Insulin",
+    "C": "Leptin",
+    "D": "Catecholamine",
+    "E": "Cortisol"
+   },
+   "answer": "A",
+   "why": "ghrelin หลั่งจากกระเพาะช่วงท้องว่าง กระตุ้น NPY/AgRP ใน arcuate nucleus ทำให้หิว ส่วน leptin (จากไขมัน) และ insulin ส่งสัญญาณอิ่ม catecholamine ลดความอยากอาหาร cortisol เพิ่มความอยากได้บ้างแต่ไม่ใช่ฮอร์โมนหลักของความหิว",
+   "source": "วิเคราะห์"
+  },
+  "74.1/50": {
+   "box": 18,
+   "stem": "การกระตุ้นต่อม adrenal (medulla) ให้ผลเทียบเท่ากับการทำงานของส่วนใด",
+   "options": {
+    "A": "Presynaptic (preganglionic) sympathetic",
+    "B": "Postsynaptic (postganglionic) sympathetic",
+    "C": "Presynaptic parasympathetic",
+    "D": "Postsynaptic parasympathetic",
+    "E": "Target organ activation of parasympathetic"
+   },
+   "answer": "B",
+   "why": "chromaffin cell ของ adrenal medulla เปรียบเหมือน postganglionic sympathetic neuron ที่ไม่มี axon รับ ACh จาก preganglionic ผ่าน nicotinic receptor แล้วหลั่ง epinephrine/norepinephrine เข้ากระแสเลือด จึงไม่ใช่ preganglionic และไม่เกี่ยวกับ parasympathetic",
+   "source": "วิเคราะห์"
+  },
+  "74.1/70": {
+   "box": 24,
+   "stem": "ลักษณะทางพยาธิของ glomerulus ในผู้ป่วยเบาหวานคือข้อใด",
+   "options": {
+    "A": "Amyloidosis",
+    "B": "Sclerosing glomerulonephritis (nodular glomerulosclerosis)"
+   },
+   "answer": "B",
+   "why": "diabetic nephropathy มี GBM หนา, mesangial expansion และ nodular glomerulosclerosis (Kimmelstiel–Wilson nodule) ซึ่งเป็น sclerosing lesion ส่วน amyloidosis เป็นการสะสม amyloid ย้อม Congo red ติด ไม่ใช่ลักษณะของ DM",
+   "source": "วิเคราะห์"
+  },
+  "74.1/71": {
+   "box": 10,
+   "stem": "ทารกมี upslanting palpebral fissure และ transverse palmar crease (Down syndrome) สัมพันธ์กับความผิดปกติของต่อมใด",
+   "options": {
+    "A": "Thyroid",
+    "B": "Parathyroid"
+   },
+   "answer": "A",
+   "why": "Down syndrome เสี่ยง congenital hypothyroidism และ autoimmune thyroiditis สูง จึงต้องคัดกรอง thyroid function ตั้งแต่แรกเกิดและเป็นระยะ ส่วน parathyroid ไม่ได้สัมพันธ์เด่นกับ trisomy 21 (ที่สัมพันธ์คือ 22q11 deletion)",
+   "source": "วิเคราะห์"
+  },
+  "74.2/52": {
+   "box": 3,
+   "stem": "ผู้ป่วย heat stroke ข้อใดไม่ควรทำในการรักษา",
+   "options": {
+    "A": "ถอดเสื้อผ้าที่เกินออก",
+    "B": "ให้ paracetamol ลดไข้",
+    "C": "ประคบน้ำแข็งที่รักแร้และขาหนีบ"
+   },
+   "answer": "B",
+   "why": "heat stroke เกิดจากร่างกายระบายความร้อนไม่ทัน set point ของ hypothalamus ไม่ได้สูงขึ้น ยาลดไข้ซึ่งออกฤทธิ์ลด PGE2 set point จึงไม่ได้ผลและอาจเป็นพิษต่อตับ การรักษาคือ cooling ทางกายภาพ เช่น ถอดเสื้อผ้า ประคบเย็นตำแหน่งหลอดเลือดใหญ่",
+   "source": "วิเคราะห์"
+  },
+  "74.2/77": {
+   "box": 18,
+   "stem": "adrenal medulla เปรียบเทียบได้กับโครงสร้างใดของระบบประสาทอัตโนมัติ",
+   "options": {
+    "A": "Preganglionic sympathetic neuron",
+    "B": "Postganglionic sympathetic neuron"
+   },
+   "answer": "B",
+   "why": "chromaffin cell มีต้นกำเนิดจาก neural crest เหมือน postganglionic sympathetic neuron รับ preganglionic fiber (ACh, nicotinic) โดยตรง แล้วหลั่ง catecholamine เข้าเลือดแทนการปล่อยที่ synapse ส่วน preganglionic คือ fiber ที่มาเลี้ยงต่อม",
+   "source": "วิเคราะห์"
+  },
+  "74.2/96": {
+   "box": 3,
+   "stem": "คนที่ย้ายมาอยู่เขตร้อนใหม่ ๆ ช่วงสัปดาห์แรก ๆ (heat acclimatization) เหงื่อจะเปลี่ยนแปลงอย่างไร",
+   "options": {
+    "A": "More oily",
+    "B": "More salty",
+    "C": "More dilute"
+   },
+   "answer": "C",
+   "why": "เมื่อ acclimatize ต่อความร้อน aldosterone เพิ่มทำให้ท่อของ sweat gland ดูดกลับ NaCl มากขึ้น เหงื่อจึงเจือจางลง (Na ต่ำ) และปริมาณเหงื่อเพิ่ม ช่วยสงวนเกลือ เหงื่อจึงไม่เค็มขึ้นหรือมันขึ้น",
+   "source": "วิเคราะห์"
+  },
+  "74.2/100": {
+   "box": 3,
+   "stem": "คนจากเขตอากาศเย็นย้ายมาอยู่เขตร้อนใหม่ ๆ องค์ประกอบของเหงื่อจะเป็นอย่างไร",
+   "options": {
+    "A": "More lipid content",
+    "B": "More dilute",
+    "C": "More concentrated"
+   },
+   "answer": "B",
+   "why": "heat acclimatization ทำให้ aldosterone เพิ่ม ท่อ eccrine gland ดูดกลับ Na และ Cl ได้มาก เหงื่อจึงเจือจางขึ้นแม้ปริมาณมากขึ้น ไม่ได้เข้มข้นขึ้น และ eccrine gland ไม่ได้หลั่งไขมัน",
+   "source": "วิเคราะห์"
+  },
+  "75.1/2": {
+   "box": 18,
+   "stem": "ข้อใดไม่ใช่โรคต่อมไร้ท่อที่เกิดจาก autoimmune",
+   "options": {
+    "A": "Type 1 DM",
+    "B": "Hashimoto thyroiditis",
+    "C": "Graves disease",
+    "D": "Addison disease",
+    "E": "Pheochromocytoma"
+   },
+   "answer": "E",
+   "why": "pheochromocytoma เป็นเนื้องอกของ chromaffin cell (อาจสัมพันธ์ MEN2, VHL, NF1) ไม่ใช่ autoimmune ส่วน T1DM, Hashimoto, Graves และ Addison เป็น autoimmune endocrine disease และอาจพบร่วมกันใน autoimmune polyglandular syndrome",
+   "source": "วิเคราะห์"
+  },
+  "75.1/8": {
+   "box": 10,
+   "stem": "หญิงสูงอายุ อ่อนเพลีย ท้องผูก ผิวแห้ง ไขมันในเลือดสูง TSH สูง free T4 ต่ำ กลไกพยาธิสรีรวิทยาข้อใดเหมาะสม",
+   "options": {
+    "A": "Autoantibody ต่อ TSH receptor",
+    "B": "เนื้อไทรอยด์ถูกทำลายจึงปล่อยฮอร์โมนออกมา",
+    "C": "การอักเสบเรื้อรังทำให้การทำงานของไทรอยด์ลดลง",
+    "D": "เนื้อไทรอยด์ถูกทำลายแล้วเกิด autoantibody",
+    "E": "ได้ iodine มากเกินจนต่อมทำงานเกิน"
+   },
+   "answer": "C",
+   "why": "ภาพเป็น primary hypothyroidism ที่พบบ่อยสุดคือ Hashimoto ซึ่งมี chronic lymphocytic inflammation ทำลายต่อมจนสร้างฮอร์โมนลดลง ข้อ A และ E ทำให้ hyperthyroid ข้อ B คือ thyroiditis ระยะ thyrotoxic ส่วนข้อ D กลับลำดับกลไก (autoimmunity นำก่อนการทำลาย)",
+   "source": "วิเคราะห์"
+  },
+  "75.1/13": {
+   "box": 24,
+   "stem": "เด็กเป็นเบาหวานชนิดที่ 1 เซลล์ใดของตับอ่อนถูกทำลาย",
+   "options": {
+    "A": "Alpha cell",
+    "B": "Beta cell",
+    "C": "Delta cell",
+    "D": "PP cell",
+    "E": "Pancreatic acinar cell"
+   },
+   "answer": "B",
+   "why": "T1DM เกิดจาก autoimmune (T cell) ทำลาย beta cell ใน islet จนขาด insulin (insulitis) alpha cell สร้าง glucagon delta cell สร้าง somatostatin PP cell สร้าง pancreatic polypeptide และ acinar cell เป็นส่วน exocrine ซึ่งไม่ได้เป็นเป้าหลัก",
+   "source": "วิเคราะห์"
+  },
+  "75.1/17": {
+   "box": 2,
+   "stem": "ผู้ป่วย acromegaly ต้องการตรวจการแสดงออกของ growth hormone ในต่อมใต้สมอง จะพบในเซลล์ใด",
+   "options": {
+    "A": "Thyrotroph",
+    "B": "Gonadotroph",
+    "C": "Somatotroph",
+    "D": "Lactotroph",
+    "E": "Corticotroph"
+   },
+   "answer": "C",
+   "why": "GH สร้างจาก somatotroph (acidophil) ของ anterior pituitary เนื้องอกที่ทำให้ acromegaly จึงย้อม GH ติดใน somatotroph ส่วน thyrotroph สร้าง TSH gonadotroph สร้าง FSH/LH lactotroph สร้าง prolactin corticotroph สร้าง ACTH",
+   "source": "วิเคราะห์"
+  },
+  "75.1/19": {
+   "box": 29,
+   "stem": "lipid profile: TC 180, TG 900, HDL 45 การรักษาที่เหมาะสมที่สุดคือข้อใด",
+   "options": {
+    "A": "Ezetimibe",
+    "B": "Gemfibrozil",
+    "C": "Simvastatin",
+    "D": "Nicotinic acid",
+    "E": "Cholestyramine"
+   },
+   "answer": "B",
+   "why": "TG สูงมาก (เกิน 500) เสี่ยง acute pancreatitis ต้องลด TG ก่อนด้วย fibrate ซึ่งกระตุ้น PPAR-alpha เพิ่ม lipoprotein lipase statin และ ezetimibe เน้นลด LDL niacin ลด TG ได้แต่ SE มากไม่ใช่ตัวแรก ส่วน cholestyramine ทำให้ TG สูงขึ้น",
+   "source": "วิเคราะห์"
+  },
+  "75.1/24": {
+   "box": 19,
+   "stem": "ทารกครบกำหนด 46,XX อวัยวะเพศกำกวม คลำไม่พบก้อนที่ขาหนีบหรือ labia อัลตราซาวด์พบอวัยวะภายในเพศหญิงปกติ สาเหตุที่น่าจะเป็นมากที่สุด",
+   "options": {
+    "A": "Aromatase deficiency",
+    "B": "Mosaic Turner syndrome",
+    "C": "21-hydroxylase deficiency",
+    "D": "SRY loss-of-function mutation",
+    "E": "Androgen insensitivity syndrome"
+   },
+   "answer": "C",
+   "why": "46,XX ที่มีมดลูกรังไข่ปกติแต่อวัยวะเพศภายนอกถูก virilize สาเหตุที่พบบ่อยสุดคือ CAH จาก 21-hydroxylase deficiency ที่ทำให้ adrenal androgen สูง aromatase deficiency ก็ทำได้แต่พบน้อยมาก SRY loss และ AIS เป็นภาวะของ 46,XY ส่วน Turner ไม่ทำให้ virilization",
+   "source": "วิเคราะห์"
+  },
+  "75.1/39": {
+   "box": 29,
+   "stem": "ชายมาปรึกษาเรื่อง erectile dysfunction แพทย์สงสัย obesity ร่วมกับ hypogonadism การตรวจใดช่วยยืนยันการวินิจฉัย",
+   "options": {
+    "A": "Estradiol",
+    "B": "Testosterone",
+    "C": "Leptin",
+    "D": "Inhibin B",
+    "E": "Prostate specific antigen"
+   },
+   "answer": "B",
+   "why": "การวินิจฉัย male hypogonadism ต้องยืนยันด้วยระดับ testosterone ตอนเช้าที่ต่ำร่วมกับอาการ estradiol อาจสูงในคนอ้วนแต่ไม่ใช่ตัวยืนยัน leptin ไม่ใช้วินิจฉัย inhibin B สะท้อน Sertoli/spermatogenesis และ PSA ใช้ติดตามต่อมลูกหมาก",
+   "source": "วิเคราะห์"
+  },
+  "75.1/44": {
+   "box": 29,
+   "stem": "หญิง 55 ปี TC 180, TG 900, HDL 45 ยาที่เหมาะสมที่สุดคือข้อใด",
+   "options": {
+    "A": "Ezetimibe",
+    "B": "Gemfibrozil",
+    "C": "Simvastatin",
+    "D": "Nicotinic acid",
+    "E": "Cholestyramine"
+   },
+   "answer": "B",
+   "why": "ภาวะ severe hypertriglyceridemia (TG เกิน 500–1000) ต้องลด TG เพื่อป้องกันตับอ่อนอักเสบ ยาหลักคือ fibrate (gemfibrozil) ที่เพิ่ม LPL ผ่าน PPAR-alpha ยาอื่นเน้น LDL หรือทำ TG สูงขึ้น (bile acid sequestrant)",
+   "source": "วิเคราะห์"
+  },
+  "75.1/53": {
+   "box": 20,
+   "stem": "หญิง 54 ปี มีเบาหวาน กระดูกพรุน ความดันสูง น้ำหนักเพิ่ม มี abdominal striae ACTH ต่ำ CT พบก้อนเดียวชิดไตขวา dexamethasone ทั้งขนาดต่ำและสูงกด cortisol ไม่ลง คำอธิบายที่เหมาะสมที่สุด",
+   "options": {
+    "A": "Adrenal adenoma",
+    "B": "Bilateral adrenal hyperplasia",
+    "C": "Ectopic ACTH secretion",
+    "D": "Exogenous corticosteroid administration",
+    "E": "Pituitary adenoma"
+   },
+   "answer": "A",
+   "why": "Cushing syndrome ที่ ACTH ต่ำ = ACTH-independent และพบก้อนที่ต่อมหมวกไตข้างเดียว จึงเป็น cortisol-secreting adrenal adenoma pituitary adenoma และ ectopic ACTH จะมี ACTH สูง exogenous steroid ไม่พบก้อน bilateral hyperplasia จะเห็นต่อมโตสองข้าง",
+   "source": "วิเคราะห์"
+  },
+  "75.1/57": {
+   "box": 12,
+   "stem": "ผู้ป่วยได้รับการผ่าตัดต่อมไทรอยด์ ต่อมาทำ I-131 total body scan พบก้อนที่จับ iodine สูงในตำแหน่งอื่น มะเร็งไทรอยด์ชนิดใดน่าจะเป็นมากที่สุด",
+   "options": {
+    "A": "Follicular thyroid carcinoma",
+    "B": "Medullary thyroid carcinoma",
+    "C": "Anaplastic thyroid carcinoma"
+   },
+   "answer": "A",
+   "why": "follicular carcinoma กระจายทางกระแสเลือดไปกระดูกและปอด และเซลล์ยังจับ iodine ได้ จึงเห็นใน I-131 scan และใช้ radioiodine รักษาได้ medullary มาจาก C cell ไม่จับ iodine (ติดตามด้วย calcitonin/CEA) anaplastic เป็น undifferentiated ไม่จับ iodine",
+   "source": "วิเคราะห์"
+  },
+  "75.1/62": {
+   "box": 29,
+   "stem": "หญิง 55 ปี TC 180, TG 900, HDL 45 ยาที่เหมาะสมที่สุดคือข้อใด",
+   "options": {
+    "A": "Simvastatin",
+    "B": "Nicotinic acid",
+    "C": "Gemfibrozil",
+    "D": "Ezetimibe",
+    "E": "Cholestyramine"
+   },
+   "answer": "C",
+   "why": "TG 900 จัดเป็น severe hypertriglyceridemia เป้าหมายแรกคือลด TG ป้องกัน pancreatitis ใช้ fibrate เป็นหลัก statin และ ezetimibe ลด TG ได้น้อย niacin มี SE flushing และ hyperglycemia ส่วน bile acid sequestrant ห้ามใช้เพราะเพิ่ม TG",
+   "source": "วิเคราะห์"
+  },
+  "75.1/69": {
+   "box": 26,
+   "stem": "ผู้ป่วยเบาหวานกิน metformin แล้ว FBG ยัง 220 จึงเพิ่มยาอีกตัว ต่อมามีใจสั่นและมือสั่นช่วงก่อนมื้ออาหาร ยาที่เพิ่มมีกลไกอย่างไร",
+   "options": {
+    "A": "กระตุ้น PPAR receptor",
+    "B": "ปิด K-ATP channel",
+    "C": "เพิ่ม hepatic gluconeogenesis",
+    "D": "GLP-1 agonist"
+   },
+   "answer": "B",
+   "why": "อาการใจสั่นมือสั่นก่อนอาหารคือ hypoglycemia ซึ่งพบจาก sulfonylurea ที่ปิด K-ATP channel ของ beta cell ทำให้หลั่ง insulin โดยไม่ขึ้นกับระดับ glucose TZD (PPAR) และ GLP-1 agonist แทบไม่ทำ hypoglycemia เมื่อใช้เดี่ยว ส่วนการเพิ่ม gluconeogenesis จะทำให้น้ำตาลสูง",
+   "source": "วิเคราะห์"
+  },
+  "75.1/71": {
+   "box": 10,
+   "stem": "ทารกแรกเกิดมีลิ้นโต สะดือจุ่น กล้ามเนื้ออ่อนแรง ตัวเหลือง มารดามีต่อมที่หน้าคอโตไม่สม่ำเสมอ มารดาน่าจะขาดธาตุใด",
+   "options": {
+    "A": "Na",
+    "B": "I",
+    "C": "Ca",
+    "D": "K"
+   },
+   "answer": "B",
+   "why": "ทารกมีลักษณะ congenital hypothyroidism (cretinism) ร่วมกับมารดามีคอพอก บ่งชี้การขาด iodine ซึ่งจำเป็นต่อการสร้าง T3/T4 ทั้งแม่และลูก แร่ธาตุอื่นไม่ทำให้เกิดคอพอกและภาพทารกแบบนี้",
+   "source": "วิเคราะห์"
+  },
+  "75.1/72": {
+   "box": 2,
+   "stem": "ผู้ป่วย acromegaly นำชิ้นเนื้อต่อมใต้สมองมาย้อม จะย้อมติดในเซลล์ชนิดใด",
+   "options": {
+    "A": "Somatotroph",
+    "B": "Lactotroph",
+    "C": "Thyrotroph",
+    "D": "Corticotroph",
+    "E": "Gonadotroph"
+   },
+   "answer": "A",
+   "why": "acromegaly เกิดจาก GH เกินในผู้ใหญ่ ส่วนใหญ่เป็น pituitary adenoma ของ somatotroph ซึ่งย้อม GH ติด เซลล์อื่นสร้าง prolactin, TSH, ACTH และ FSH/LH ตามลำดับ (mixed somatolactotroph adenoma พบได้แต่คำตอบที่ตรงที่สุดคือ somatotroph)",
+   "source": "วิเคราะห์"
+  },
+  "75.1/73": {
+   "box": 21,
+   "stem": "หญิงความดันโลหิตสูงที่คุมด้วยยาไม่ได้ CT พบก้อนอยู่ด้านหลังติดกับ IVC ก้อนนี้น่าจะมาจากอวัยวะใด",
+   "options": {
+    "A": "Pancreas",
+    "B": "Uterus",
+    "C": "Ovary",
+    "D": "Gallbladder",
+    "E": "Adrenal gland"
+   },
+   "answer": "E",
+   "why": "secondary hypertension ที่ดื้อยาและมีก้อน retroperitoneal ชิดด้านหลังของ IVC ตรงกับต่อมหมวกไตขวา (เช่น aldosteronoma หรือ pheochromocytoma) อวัยวะอื่นไม่ได้อยู่ตำแหน่งนี้และไม่ทำให้ความดันสูงดื้อยา",
+   "source": "วิเคราะห์"
+  },
+  "75.1/79": {
+   "box": 28,
+   "stem": "ชาย 50 ปี ปวดท้องบริเวณลิ้นปี่ ถ่ายเป็นไขมัน ตรวจพบ gastrinoma ภาวะ steatorrhea เกิดจากกลไกใด",
+   "options": {
+    "A": "Obstruction of bile duct",
+    "B": "Inactivation of pancreatic lipase"
+   },
+   "answer": "B",
+   "why": "gastrinoma ทำให้หลั่งกรดมากจนลำไส้เล็กส่วนต้นมี pH ต่ำ pancreatic lipase ถูก inactivate และ bile salt ตกตะกอน จึงย่อยไขมันไม่ได้ ไม่ได้เกิดจากท่อน้ำดีอุดตัน",
+   "source": "วิเคราะห์"
+  },
+  "75.1/83": {
+   "box": 14,
+   "stem": "เด็กหญิง 2 ปี เลี้ยงไม่โต เดินผิดปกติ ขาโก่ง ข้อมือหนา ฟันผุ กินนมแม่เป็นหลัก อยู่แต่ในบ้าน ควรให้สารเสริมใดเหมาะสมที่สุด",
+   "options": {
+    "A": "Iodine",
+    "B": "Calcium",
+    "C": "Vitamin D",
+    "D": "Phosphate",
+    "E": "PTH"
+   },
+   "answer": "C",
+   "why": "นมแม่มี vitamin D ต่ำและเด็กไม่ได้รับแสงแดด จึงเกิด nutritional rickets (ขาโก่ง ข้อมือบาน ฟันผุ) การรักษาคือเสริม vitamin D (ร่วมกับ Ca ให้เพียงพอ) การให้ Ca หรือ phosphate อย่างเดียวไม่แก้สาเหตุ PTH ไม่ใช้รักษา และ iodine ไม่เกี่ยว",
+   "source": "วิเคราะห์",
+   "needs_image": true
+  },
+  "75.1/84": {
+   "box": 22,
+   "stem": "หญิง 50 ปี หมดสติ BP 70/40 ผิวหนังและกระพุ้งแก้มคล้ำทั่วไป glucose และ cortisol ต่ำ เบื่ออาหาร คลื่นไส้อาเจียน น้ำหนักลด 3 เดือน การวินิจฉัยเบื้องต้น",
+   "options": {
+    "A": "Insulinoma",
+    "B": "Gastrinoma",
+    "C": "Addison disease",
+    "D": "Cushing syndrome",
+    "E": "Pheochromocytoma"
+   },
+   "answer": "C",
+   "why": "hyperpigmentation จาก ACTH/POMC สูง ร่วมกับ cortisol ต่ำ hypoglycemia และช็อก คือ primary adrenal insufficiency (Addison) ที่เข้าสู่ adrenal crisis insulinoma มี hypoglycemia แต่ cortisol ไม่ต่ำและไม่คล้ำ Cushing มี cortisol สูง pheochromocytoma ทำความดันสูง",
+   "source": "วิเคราะห์"
+  },
+  "75.1/85": {
+   "box": 29,
+   "stem": "TG 900, cholesterol 150, HDL 45 ควรให้ยาใด",
+   "options": {
+    "A": "Simvastatin",
+    "B": "Gemfibrozil",
+    "C": "Cholestyramine",
+    "D": "Nicotinic acid"
+   },
+   "answer": "B",
+   "why": "ภาวะ TG สูงมากเสี่ยงตับอ่อนอักเสบ ยาลด TG ที่ได้ผลดีที่สุดคือ fibrate statin ลด LDL เป็นหลัก cholestyramine ทำ TG เพิ่ม niacin ลด TG ได้แต่ไม่ใช่ยาตัวแรกเพราะ SE มาก",
+   "source": "วิเคราะห์"
+  },
+  "75.1/86": {
+   "box": 29,
+   "stem": "เด็กชายมี xanthelasma และ xanthoma ที่ Achilles tendon พี่น้องเป็นเหมือนกัน บิดาเป็น MI อายุ 45 ปี ตรวจพบ LDL receptor mutation นอกจาก cholesterol สูงแล้วจะพบผลแล็บใด",
+   "options": {
+    "A": "High LDL",
+    "B": "High HDL",
+    "C": "High VLDL",
+    "D": "High triglycerides",
+    "E": "Very high triglycerides but low HDL"
+   },
+   "answer": "A",
+   "why": "familial hypercholesterolemia (type IIa) มี LDL receptor บกพร่อง ทำให้ LDL ค้างในเลือดสูงมาก TG และ VLDL มักปกติ HDL ไม่สูง ส่วน TG สูงมากกับ HDL ต่ำเป็นลักษณะของภาวะ TG สูงชนิดอื่น",
+   "source": "วิเคราะห์"
+  },
+  "75.1/88": {
+   "box": 29,
+   "stem": "ชาย 60 ปี อ้วนลงพุง (visceral obesity) ร่วมกับ male hypogonadism ผลแล็บใดสอดคล้องกับการวินิจฉัย",
+   "options": {
+    "A": "Increased estradiol",
+    "B": "Increased free testosterone",
+    "C": "Increased inhibin B",
+    "D": "Decreased cortisol",
+    "E": "Increased prostate specific antigen"
+   },
+   "answer": "A",
+   "why": "เนื้อเยื่อไขมันมี aromatase เปลี่ยน testosterone เป็น estradiol ที่สูงขึ้นจะ negative feedback กด GnRH/LH ทำให้ testosterone ต่ำ จึงพบ estradiol สูง ข้อ B ขัดกับ hypogonadism inhibin B มักลดลง cortisol และ PSA ไม่เกี่ยวข้อง",
+   "source": "วิเคราะห์"
+  },
+  "75.1/91": {
+   "box": 26,
+   "stem": "หญิง 50 ปี T2DM กินยาลดน้ำตาลประจำ FBG 110, HbA1c 5.8% แต่ urine glucose 4+ ตรวจอื่นปกติ ยาที่กินน่าจะเป็นยาใด",
+   "options": {
+    "A": "Biguanide",
+    "B": "Sulfonylurea",
+    "C": "DPP-4 inhibitor",
+    "D": "Alpha-glucosidase inhibitor",
+    "E": "Glucose transporter 2 inhibitor (หมายถึง SGLT2 inhibitor)"
+   },
+   "answer": "E",
+   "why": "น้ำตาลในเลือดคุมได้ดีแต่มี glucosuria มาก แสดงว่ายาเพิ่มการขับ glucose ทางไตโดยยับยั้ง SGLT2 ที่ proximal tubule ยากลุ่มอื่นลดน้ำตาลโดยไม่ทำให้ glucose รั่วในปัสสาวะเมื่อระดับน้ำตาลในเลือดต่ำกว่า renal threshold",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ตัวเลือกในข้อสอบความจำเขียนว่า glucose transporter 2 inhibitor ซึ่งตามหลักควรเป็น SGLT2 (sodium-glucose cotransporter 2) ไม่ใช่ GLUT2"
+  },
+  "75.1/97": {
+   "box": 29,
+   "stem": "ชาย 21 ปี มี xanthelasma และ tendon xanthoma ที่ Achilles พี่ชายเป็นเหมือนกัน บิดาเป็น MI ตรวจพบ LDL receptor mutation และ cholesterol สูง จะพบผลแล็บใด",
+   "options": {
+    "A": "High LDL",
+    "B": "High VLDL",
+    "C": "High HDL",
+    "D": "High triglyceride",
+    "E": "High triglyceride but low HDL"
+   },
+   "answer": "A",
+   "why": "LDL receptor mutation (familial hypercholesterolemia) ทำให้ตับจับ LDL กลับไม่ได้ LDL จึงสูงมาก ขณะที่ VLDL และ TG มักปกติ HDL ไม่ได้สูงขึ้น ภาพ TG สูงและ HDL ต่ำเป็นของ metabolic syndrome หรือ hypertriglyceridemia",
+   "source": "วิเคราะห์"
+  },
+  "75.2/1": {
+   "box": 24,
+   "stem": "ใน diabetic nephropathy เซลล์ใดของไตเพิ่มจำนวน (proliferate)",
+   "options": {
+    "A": "JG cell",
+    "B": "Intraglomerular mesangial cell",
+    "C": "Visceral cell of Bowman capsule",
+    "D": "Glomerular endothelial cell",
+    "E": "Podocyte"
+   },
+   "answer": "B",
+   "why": "diabetic nephropathy มี mesangial expansion จาก mesangial cell เพิ่มจำนวนและสร้าง matrix จนเกิด Kimmelstiel–Wilson nodule podocyte (visceral epithelium) กลับลดจำนวนและหลุดออก endothelial cell และ JG cell ไม่ใช่เซลล์ที่ proliferate เด่น",
+   "source": "วิเคราะห์"
+  },
+  "75.2/6": {
+   "box": 29,
+   "stem": "หญิง BP 145/90 cholesterol 200, LDL 130 และ FBS สูง (เข้าได้กับ metabolic syndrome) ข้อใดน่าจะพบ",
+   "options": {
+    "A": "High serum renin และ aldosterone",
+    "B": "High serum cortisol",
+    "C": "High C-reactive protein"
+   },
+   "answer": "C",
+   "why": "metabolic syndrome สัมพันธ์กับ visceral adiposity ที่หลั่ง cytokine (IL-6, TNF-alpha) ทำให้มี chronic low-grade inflammation และ CRP สูง ส่วน renin–aldosterone สูงหรือ cortisol สูงเป็นภาพของ secondary hypertension เฉพาะโรค ไม่ใช่ลักษณะทั่วไป (ตัวเลือกในข้อสอบความจำไม่ครบ)",
+   "source": "วิเคราะห์"
+  },
+  "75.2/8": {
+   "box": 6,
+   "stem": "ผู้ป่วย lung cancer ภาวะน้ำในร่างกายปกติ (euvolemia) serum Na 110 แต่ urine osmolality และ urine Na ไม่ต่ำ น่าจะเป็นภาวะใด",
+   "options": {
+    "A": "SIADH",
+    "B": "Diabetes insipidus"
+   },
+   "answer": "A",
+   "why": "hyponatremia แบบ euvolemic ที่ urine ไม่เจือจางทั้งที่ plasma osm ต่ำ (urine osm และ urine Na ไม่ต่ำ) บ่งว่า ADH หลั่งไม่เหมาะสม ซึ่งพบบ่อยจาก small cell lung cancer DI จะทำให้ปัสสาวะเจือจางและ Na ในเลือดสูง",
+   "source": "วิเคราะห์"
+  },
+  "75.2/13": {
+   "box": 24,
+   "stem": "diabetic nephropathy มีผลต่อโครงสร้างใดเป็นหลัก",
+   "options": {
+    "A": "Glomerular basement membrane (endothelial side)",
+    "B": "Podocyte"
+   },
+   "answer": "A",
+   "why": "ลักษณะเด่นแรกสุดของ diabetic nephropathy คือ GBM หนาตัวทั่วไป ร่วมกับ mesangial expansion จาก nonenzymatic glycosylation podocyte มีการเสียหายตามมาแต่ไม่ใช่ลักษณะเด่น",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ตัวเลือกจำมาไม่ชัด (glomerular endothelial membrane) ตีความว่าเป็น GBM ถ้าข้อสอบจริงมี mesangium ให้เลือก mesangium"
+  },
+  "75.2/26": {
+   "box": 18,
+   "stem": "ข้อใดไม่ใช่โรค autoimmune",
+   "options": {
+    "A": "Pheochromocytoma",
+    "B": "Addison disease",
+    "C": "Hashimoto thyroiditis",
+    "D": "Graves disease"
+   },
+   "answer": "A",
+   "why": "pheochromocytoma เป็นเนื้องอกของ chromaffin cell ของ adrenal medulla ไม่ได้เกิดจาก autoimmunity ส่วน Addison (autoimmune adrenalitis), Hashimoto และ Graves เป็น autoimmune endocrine disease",
+   "source": "วิเคราะห์"
+  },
+  "75.2/124": {
+   "box": 7,
+   "stem": "ผู้ป่วยเสียงแหบ (hoarseness) หลังผ่าตัดต่อมไทรอยด์ หรือจากสงสัย aortic aneurysm เกิดจากการบาดเจ็บของเส้นประสาทใด",
+   "options": {
+    "A": "Recurrent laryngeal nerve",
+    "B": "External branch of superior laryngeal nerve",
+    "C": "Internal branch of superior laryngeal nerve",
+    "D": "Hypoglossal nerve",
+    "E": "Phrenic nerve"
+   },
+   "answer": "A",
+   "why": "recurrent laryngeal nerve วิ่งใน tracheoesophageal groove ใกล้ inferior thyroid artery และฝั่งซ้ายอ้อม aortic arch จึงบาดเจ็บได้ทั้งจาก thyroidectomy และ aortic aneurysm ทำให้ vocal cord อัมพาตเสียงแหบ external branch of SLN ทำให้เสียงสูงไม่ได้ internal branch เป็น sensory hypoglossal และ phrenic ไม่เกี่ยวกับเสียง",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/125": {
+   "box": 3,
+   "stem": "ข้อใดถูกต้องเกี่ยวกับ eccrine sweat gland",
+   "options": {
+    "A": "ตำแหน่งแรกที่เหงื่อออกคือฝ่ามือฝ่าเท้า",
+    "B": "ตำแหน่งสุดท้ายที่เหงื่อออกคือหน้าผากและหนังศีรษะ",
+    "C": "ควบคุมการหลั่งน้ำ (ปริมาณเหงื่อ)",
+    "D": "ควบคุมการหลั่ง electrolyte"
+   },
+   "answer": "C",
+   "why": "eccrine gland ถูกควบคุมโดย sympathetic cholinergic จาก hypothalamus เพื่อปรับปริมาณน้ำที่หลั่งในการระบายความร้อน thermoregulatory sweating เริ่มที่หน้าผากและลำตัว ส่วนฝ่ามือฝ่าเท้าตอบสนองต่ออารมณ์ จึงข้อ A และ B ผิด ส่วน electrolyte ถูกปรับที่ท่อโดย aldosterone ไม่ใช่หน้าที่ควบคุมหลัก",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ไม่มีเฉลยและตัวเลือก C กับ D กำกวม (aldosterone ปรับ Na ในเหงื่อได้) เลือก C ตามบทบาทหลักในการระบายความร้อน"
+  },
+  "76/5": {
+   "box": 7,
+   "stem": "ระหว่างผ่าตัด thyroidectomy ศัลยแพทย์ผูก superior thyroid artery แล้วไปโดนเส้นประสาทที่วิ่งคู่ไปกับหลอดเลือดนี้ เส้นประสาทนั้นคืออะไร",
+   "options": {
+    "A": "Vagus nerve",
+    "B": "Recurrent laryngeal nerve",
+    "C": "External branch of superior laryngeal nerve",
+    "D": "Internal branch of superior laryngeal nerve",
+    "E": "Phrenic nerve"
+   },
+   "answer": "C",
+   "why": "External branch of SLN วิ่งชิด superior thyroid artery และเลี้ยง cricothyroid ถ้าบาดเจ็บจะเปล่งเสียงสูงไม่ได้ ส่วน RLN วิ่งคู่กับ inferior thyroid artery ส่วน internal branch เป็น sensory เหนือ vocal cord และอยู่สูงกว่า ไม่ได้วิ่งชิดหลอดเลือดนี้",
+   "source": "วิเคราะห์"
+  },
+  "76/12": {
+   "box": 1,
+   "stem": "Insulin receptor จัดเป็นตัวรับชนิดใด",
+   "options": {
+    "A": "G protein-coupled receptor",
+    "B": "Tyrosine kinase receptor",
+    "C": "Serine/threonine kinase receptor",
+    "D": "Nuclear receptor",
+    "E": "Guanylyl cyclase-coupled receptor"
+   },
+   "answer": "B",
+   "why": "Insulin receptor เป็น receptor tyrosine kinase (α2β2) จับแล้ว autophosphorylation ต่อด้วย IRS → PI3K/Akt (GLUT4) และ MAPK ส่วน GPCR ใช้กับ glucagon/PTH, serine/threonine kinase ใช้กับ TGF-β, nuclear receptor ใช้กับ steroid/T3 และ guanylyl cyclase ใช้กับ ANP",
+   "source": "วิเคราะห์"
+  },
+  "76/14": {
+   "box": 8,
+   "stem": "หญิงตรวจพบระดับ thyroid hormone ต่ำกว่าปกติ น่าจะขาดกรดอะมิโนชนิดใด",
+   "options": {
+    "A": "Asparagine",
+    "B": "Glycine",
+    "C": "Phenylalanine",
+    "D": "Tryptophan",
+    "E": "Alanine"
+   },
+   "answer": "C",
+   "why": "T3/T4 สร้างจาก tyrosine residue บน thyroglobulin ซึ่ง tyrosine ได้จาก phenylalanine (phenylalanine hydroxylase) ตัวเลือกไม่มี tyrosine จึงตอบสารตั้งต้นคือ phenylalanine ส่วน tryptophan เป็นสารตั้งต้นของ serotonin/melatonin และกรดอะมิโนอื่นไม่เกี่ยวกับการสร้าง thyroid hormone",
+   "source": "วิเคราะห์"
+  },
+  "76/17": {
+   "box": 6,
+   "stem": "ชายถูกบังคับให้ดื่มน้ำ 20 ลิตรในเวลาสั้น ๆ (water load) ค่าใดจะลดลง",
+   "options": {
+    "A": "Urine flow rate",
+    "B": "Urine osmolality",
+    "C": "Glomerular filtration rate",
+    "D": "Extracellular fluid volume",
+    "E": "Intracellular fluid volume"
+   },
+   "answer": "B",
+   "why": "น้ำปริมาณมากทำให้ plasma osmolality ลด กด ADH จึงขับปัสสาวะเจือจางจำนวนมาก urine osmolality ลดลง ขณะที่ urine flow เพิ่ม ส่วนน้ำกระจายเข้าทั้ง ECF และ ICF (เซลล์บวม) ทำให้ปริมาตรทั้งสองเพิ่ม และ GFR ไม่ลด",
+   "source": "วิเคราะห์"
+  },
+  "76/19": {
+   "box": 29,
+   "stem": "ชายมีผลไขมัน total cholesterol 200, TG 150 แต่ HDL ต่ำมาก (10) กระบวนการใดบกพร่อง",
+   "options": {
+    "A": "Cholesterol transport from liver to tissue",
+    "B": "Cholesterol transport from tissue to liver",
+    "C": "Triglyceride transport from liver to tissue",
+    "D": "Triglyceride transport from intestine to liver",
+    "E": "Liver receptor mediated endocytosis"
+   },
+   "answer": "B",
+   "why": "HDL ทำหน้าที่ reverse cholesterol transport คือขนคอเลสเตอรอลจากเนื้อเยื่อกลับตับ HDL ต่ำจึงสะท้อนกระบวนการนี้บกพร่อง ส่วนการขนจากตับไปเนื้อเยื่อเป็นของ VLDL/LDL, TG จากลำไส้ไปด้วย chylomicron และ receptor-mediated endocytosis คือ LDL receptor",
+   "source": "วิเคราะห์"
+  },
+  "76/25": {
+   "box": 19,
+   "stem": "นักกีฬาชายสงสัยใช้ doping ด้วย anabolic steroid ข้อใดไม่ใช่ผลของการใช้",
+   "options": {
+    "A": "Increased libido",
+    "B": "Increased sperm count",
+    "C": "Muscular hypertrophy",
+    "D": "Severe acne",
+    "E": "Increased RBC count"
+   },
+   "answer": "B",
+   "why": "Androgen จากภายนอกกด LH/FSH (negative feedback) ทำให้ intratesticular testosterone ลด อัณฑะฝ่อและ sperm count ลดลง จึงไม่ใช่ผลที่พบ ส่วน libido เพิ่ม กล้ามโต สิว และ erythrocytosis เป็นผลของ androgen ที่พบได้",
+   "source": "วิเคราะห์"
+  },
+  "76/76": {
+   "box": 19,
+   "stem": "ฮอร์โมนที่ทำให้ plasma Na เพิ่มและ K ลด สร้างจากส่วนใดของต่อมหมวกไต",
+   "options": {
+    "A": "Adrenal capsule",
+    "B": "Zona glomerulosa",
+    "C": "Zona fasciculata",
+    "D": "Zona reticularis",
+    "E": "Adrenal medulla"
+   },
+   "answer": "B",
+   "why": "ฮอร์โมนนี้คือ aldosterone สร้างที่ zona glomerulosa (มี aldosterone synthase) เพิ่ม ENaC และ Na/K-ATPase ที่ principal cell ส่วน fasciculata สร้าง cortisol, reticularis สร้าง androgen และ medulla สร้าง catecholamine",
+   "source": "วิเคราะห์"
+  },
+  "76/82": {
+   "box": 29,
+   "stem": "ชายมาด้วย erectile dysfunction แพทย์พบว่าอ้วนและสงสัย hypogonadism การตรวจใดช่วยยืนยันการวินิจฉัย",
+   "options": {
+    "A": "Estradiol",
+    "B": "Leptin",
+    "C": "Testosterone",
+    "D": "Inhibin B",
+    "E": "PSA"
+   },
+   "answer": "C",
+   "why": "การวินิจฉัย male hypogonadism ต้องยืนยันด้วย morning total testosterone ต่ำ (ร่วมกับอาการ) ส่วน estradiol อาจสูงในคนอ้วนจาก aromatase แต่ไม่ใช่ตัวยืนยัน leptin ไม่ใช้วินิจฉัย inhibin B ใช้ประเมิน spermatogenesis และ PSA ใช้ตรวจต่อมลูกหมาก",
+   "source": "วิเคราะห์"
+  },
+  "76/91": {
+   "box": 12,
+   "stem": "ให้ภาพชิ้นเนื้อจากต่อมไทรอยด์ ถามการวินิจฉัย",
+   "options": {
+    "A": "Papillary thyroid adenoma",
+    "B": "Papillary thyroid carcinoma",
+    "C": "Toxic goiter",
+    "D": "Graves' disease",
+    "E": "Hashimoto thyroiditis"
+   },
+   "answer": "B",
+   "why": "ต้องดูรูป ถ้าเห็น Orphan Annie eye nuclei, nuclear groove, pseudoinclusion และ psammoma body จะเป็น papillary thyroid carcinoma ซึ่งพบบ่อยที่สุด ส่วน papillary adenoma ไม่ใช่ entity มาตรฐาน Graves/toxic goiter เห็น hyperplastic follicle with scalloped colloid และ Hashimoto เห็น lymphoid follicle กับ Hürthle cell",
+   "source": "วิเคราะห์",
+   "needs_image": true,
+   "doubt": "⚠ ไม่เห็นรูปในไฟล์ คำตอบอิงลักษณะที่ออกบ่อย ต้องตรวจกับรูปจริง"
+  },
+  "76/93": {
+   "box": 5,
+   "stem": "หญิงตกเลือดมากหลังคลอด ต่อมาปัสสาวะมากและให้นมลูกไม่ได้ ฮอร์โมนใดได้รับผลกระทบน้อยที่สุด",
+   "options": {
+    "A": "ADH",
+    "B": "Cortisol",
+    "C": "Thyroid",
+    "D": "Prolactin",
+    "E": "Aldosterone"
+   },
+   "answer": "E",
+   "why": "Sheehan syndrome คือ pituitary infarction หลัง PPH ทำให้ฮอร์โมนจาก anterior pituitary ลด (PRL → ให้นมไม่ได้, ACTH → cortisol ต่ำ, TSH → thyroid ต่ำ) และอาจกระทบ ADH ส่วน aldosterone คุมโดย RAAS และ K เป็นหลัก จึงยังปกติ",
+   "source": "วิเคราะห์"
+  },
+  "76/94": {
+   "box": 20,
+   "stem": "ผลใดเกิดจาก steroid-induced skin atrophy",
+   "options": {
+    "A": "Telangiectasia",
+    "B": "Acne",
+    "C": "Infection",
+    "D": "Hypertrichosis",
+    "E": "Hypopigmentation"
+   },
+   "answer": "A",
+   "why": "Topical steroid ยับยั้ง fibroblast และการสร้าง collagen ทำให้ผิวบางจนเห็นหลอดเลือดฝอยขยาย (telangiectasia) ร่วมกับ striae ส่วน acne, infection, hypertrichosis และ hypopigmentation เป็น SE ของ steroid ได้เช่นกัน แต่ไม่ได้เป็นผลโดยตรงจากการฝ่อของผิว",
+   "source": "วิเคราะห์"
+  },
+  "76/109": {
+   "box": 22,
+   "stem": "หญิงมีผิวคล้ำขึ้น เบื่ออาหาร และน้ำหนักลด การวินิจฉัยที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Cushing syndrome",
+    "B": "Crohn's disease",
+    "C": "Sheehan's syndrome",
+    "D": "Addison's disease",
+    "E": "Diabetes insipidus"
+   },
+   "answer": "D",
+   "why": "Primary adrenal insufficiency ทำให้ cortisol ต่ำ ACTH สูง (POMC → MSH) จึงมี hyperpigmentation ร่วมกับเบื่ออาหาร น้ำหนักลด อ่อนเพลีย ส่วน Sheehan เป็น secondary ACTH ต่ำจึงผิวซีดไม่คล้ำ Cushing จะน้ำหนักเพิ่ม และ DI/Crohn ไม่อธิบายผิวคล้ำ",
+   "source": "วิเคราะห์"
+  },
+  "76/119": {
+   "box": 15,
+   "stem": "หลังผ่าตัด thyroidectomy ผู้ป่วยชาและมี tetany การรักษาแรกคืออะไร",
+   "options": {
+    "A": "Parathyroid hormone",
+    "B": "Calcitonin",
+    "C": "Bisphosphonate",
+    "D": "Denosumab",
+    "E": "Calcium"
+   },
+   "answer": "E",
+   "why": "อาการเกิดจาก hypocalcemia จาก parathyroid ถูกตัดหรือขาดเลือด การรักษาเร่งด่วนคือให้ IV calcium gluconate ส่วน PTH ไม่ใช่การรักษาแรก และ calcitonin, bisphosphonate, denosumab ล้วนลด Ca ซึ่งจะทำให้แย่ลง",
+   "source": "วิเคราะห์"
+  },
+  "76/140": {
+   "box": 11,
+   "stem": "ผู้ป่วยมีไข้ ปวดคอ ต่อมไทรอยด์โตกดเจ็บ ขนาดราว 3x3 cm ไม่มีตาโปน แล็บเข้าได้กับ hyperthyroidism",
+   "options": {
+    "A": "Graves' disease",
+    "B": "Hashimoto thyroiditis",
+    "C": "De Quervain thyroiditis",
+    "D": "Toxic adenoma",
+    "E": "Nodular goiter"
+   },
+   "answer": "C",
+   "why": "ไข้ + ต่อมไทรอยด์เจ็บ + hyperthyroid ชั่วคราว (มักตามหลัง viral infection) คือ subacute granulomatous (De Quervain) thyroiditis ซึ่ง ESR สูง RAIU ต่ำ ส่วน Graves มีตาโปนและไม่เจ็บ toxic adenoma และ nodular goiter ไม่เจ็บไม่มีไข้ และ Hashimoto มักเป็น hypothyroid",
+   "source": "วิเคราะห์"
+  },
+  "76/149": {
+   "box": 26,
+   "stem": "ยาเบาหวานกลุ่มใดไม่ทำให้เกิด hypoglycemia",
+   "options": {
+    "A": "GLP-1 agonist",
+    "B": "Alpha-glucosidase inhibitor",
+    "C": "SGLT2 inhibitor",
+    "D": "Sulfonylurea",
+    "E": "Non-sulfonylurea insulin secretagogue (glinide)"
+   },
+   "answer": "B",
+   "why": "Alpha-glucosidase inhibitor (acarbose) แค่ชะลอการย่อยคาร์โบไฮเดรต ไม่กระตุ้นการหลั่ง insulin จึงไม่ทำ hypoglycemia เมื่อใช้เดี่ยว ส่วน sulfonylurea และ glinide กระตุ้น insulin โดยไม่ขึ้นกับระดับน้ำตาลจึงทำ hypoglycemia ได้ ส่วน GLP-1 agonist และ SGLT2i ก็เสี่ยงต่ำเช่นกันเมื่อใช้เดี่ยว",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ตัวเลือกกำกวม GLP-1RA, AGI และ SGLT2i เมื่อใช้เดี่ยวไม่ทำ hypoglycemia ทั้งสามกลุ่ม คำตอบนี้อิงตำราแบบดั้งเดิม"
+  },
+  "76/175": {
+   "box": 13,
+   "stem": "ผลเลือดพบ phosphate ต่ำ แต่ electrolyte อื่นรวมถึง calcium ปกติ สาเหตุที่เป็นไปได้",
+   "options": {
+    "A": "Hyperparathyroidism",
+    "B": "Impaired sodium phosphate cotransporter",
+    "C": "Lab error"
+   },
+   "answer": "B",
+   "why": "Phosphate ต่ำเดี่ยว ๆ โดย Ca ปกติ เข้าได้กับการสูญเสีย phosphate ทางไตจาก NaPi cotransporter ที่ PCT บกพร่อง (เช่น FGF23 สูง หรือ Fanconi) ส่วน primary hyperparathyroidism ควรมี Ca สูงร่วมด้วย และไม่มีข้อมูลชี้ว่าเป็น lab error",
+   "source": "วิเคราะห์"
+  },
+  "76/176": {
+   "box": 3,
+   "stem": "การออกกำลังกายและไข้ต่างทำให้อุณหภูมิกายสูง ข้อใดเป็นลักษณะของไข้แต่ไม่ใช่ของการออกกำลังกาย",
+   "options": {
+    "A": "Increased setpoint",
+    "B": "Sweating",
+    "C": "Nonshivering thermogenesis"
+   },
+   "answer": "A",
+   "why": "ไข้เกิดจาก pyrogen (IL-1, IL-6, TNF → PGE2) ไปยก set point ที่ hypothalamus ร่างกายจึงสร้างความร้อนจนถึงจุดใหม่ ส่วนการออกกำลังกาย (และ heat stroke) set point ปกติแต่สร้างความร้อนเกินการระบาย เหงื่อออกพบได้ทั้งคู่ และ nonshivering thermogenesis ไม่ใช่ลักษณะเฉพาะของไข้",
+   "source": "วิเคราะห์"
+  },
+  "76/180": {
+   "box": 9,
+   "stem": "ให้ค่า FT3, FT4, TSH เทียบกับตารางค่าปกติ ได้ FT3 และ FT4 ปกติ แต่ TSH สูง การวินิจฉัยคืออะไร",
+   "options": {
+    "A": "Subclinical hypothyroidism",
+    "B": "Subclinical hyperthyroidism",
+    "C": "Primary hyperthyroidism",
+    "D": "Secondary hyperthyroidism"
+   },
+   "answer": "A",
+   "why": "TSH สูงโดย FT4/FT3 ยังปกติ คือ subclinical hypothyroidism (ต่อมเริ่มเสื่อม pituitary ต้องกระตุ้นมากขึ้น) ส่วน subclinical hyperthyroidism คือ TSH ต่ำ FT4 ปกติ, primary hyperthyroidism คือ TSH ต่ำ FT4 สูง และ secondary hyperthyroidism คือ TSH สูง FT4 สูง ระวังหน่วยในตารางค่าปกติ",
+   "source": "วิเคราะห์"
+  },
+  "76/193": {
+   "box": 12,
+   "stem": "FNA ก้อนไทรอยด์พบ empty (ground-glass) nucleus, nuclear groove และ intranuclear pseudoinclusion",
+   "options": {
+    "A": "Papillary",
+    "B": "Follicular",
+    "C": "Anaplastic",
+    "D": "Medullary",
+    "E": "Parathyroid"
+   },
+   "answer": "A",
+   "why": "ลักษณะ nucleus แบบ Orphan Annie, nuclear groove และ pseudoinclusion เป็นลักษณะเฉพาะของ papillary thyroid carcinoma ส่วน follicular วินิจฉัยจาก capsular/vascular invasion (FNA แยกจาก adenoma ไม่ได้), medullary เห็น spindle cell กับ amyloid และ anaplastic เป็น pleomorphic undifferentiated cell",
+   "source": "วิเคราะห์"
+  },
+  "76/197": {
+   "box": 19,
+   "stem": "ผู้ป่วย karyotype 46,XY อวัยวะเพศภายนอกเป็นแบบหญิง แต่อวัยวะเพศภายในเป็นแบบชาย",
+   "options": {
+    "A": "21-hydroxylase deficiency",
+    "B": "17α-hydroxylase deficiency",
+    "C": "5α-reductase deficiency",
+    "D": "Androgen receptor deficiency",
+    "E": "Aromatase deficiency"
+   },
+   "answer": "C",
+   "why": "5α-reductase deficiency ทำให้เปลี่ยน testosterone เป็น DHT ไม่ได้ อวัยวะภายนอก (ต้องใช้ DHT) จึงเป็นแบบหญิง แต่ Wolffian duct ใช้ testosterone จึงยังเจริญเป็นแบบชาย ส่วน complete AIS ไม่มี Wolffian structure, 17α-OHase มีความดันสูง K ต่ำ และ 21-OHase ทำให้ 46,XX virilization",
+   "source": "วิเคราะห์"
+  },
+  "76/198": {
+   "box": 4,
+   "stem": "ชายมาด้วย libido ลด FSH/LH ต่ำ prolactin สูง และฮอร์โมนอื่นต่ำ ข้อใดน่าจะเป็นน้อยที่สุด",
+   "options": {
+    "A": "Hyperprolactinemia",
+    "B": "Macroprolactinemia",
+    "C": "Macroprolactinoma",
+    "D": "Secondary hypothyroidism",
+    "E": "Central hypogonadism"
+   },
+   "answer": "B",
+   "why": "Macroprolactin คือ PRL จับกับ IgG เป็นโมเลกุลใหญ่ ไม่มีฤทธิ์ทางชีวภาพ จึงไม่กด GnRH และไม่ทำให้ LH/FSH ต่ำหรือมีอาการ ส่วน macroprolactinoma และ hyperprolactinemia กด GnRH จนเกิด central hypogonadism และก้อนใหญ่กดต่อมทำให้ secondary hypothyroidism ได้",
+   "source": "วิเคราะห์"
+  },
+  "76/200": {
+   "box": 4,
+   "stem": "เด็กหญิงอายุ 7 ปี LH และ estrogen สูง bone age 10 ปี เต้านม Tanner 2",
+   "options": {
+    "A": "Central precocious puberty",
+    "B": "Peripheral precocious puberty",
+    "C": "Growth hormone excess",
+    "D": "Normal menarche",
+    "E": "Normal thelarche"
+   },
+   "answer": "A",
+   "why": "เด็กหญิงอายุน้อยกว่า 8 ปีที่มี breast development ร่วมกับ bone age advance และ LH สูง แสดงว่าแกน HPG ทำงานก่อนวัย คือ central (GnRH-dependent) precocious puberty ส่วน peripheral precocious puberty จะมี estrogen สูงแต่ LH ถูกกดต่ำ และ GH excess ไม่ทำให้ LH/estrogen สูง",
+   "source": "วิเคราะห์"
+  },
+  "76/208": {
+   "box": 20,
+   "stem": "Glucocorticoid ออกฤทธิ์ต้านการอักเสบโดยยับยั้ง enzyme ใด",
+   "options": {
+    "A": "Phospholipase A2",
+    "B": "Cyclooxygenase (แปลง AA เป็น prostaglandin)",
+    "C": "Lipoxygenase (แปลง AA เป็น leukotriene)"
+   },
+   "answer": "A",
+   "why": "Steroid กระตุ้นการสร้าง annexin-1 (lipocortin) ซึ่งยับยั้ง phospholipase A2 จึงไม่มีการปลดปล่อย arachidonic acid จาก membrane phospholipid ลดทั้ง prostaglandin และ leukotriene ส่วน COX ถูกยับยั้งโดย NSAID และ lipoxygenase ถูกยับยั้งโดย zileuton",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "76/215": {
+   "box": 27,
+   "stem": "ผลเลือดพบ hyperlactatemia ร่วมกับ hypoglycemia น่าจะขาด enzyme ใด",
+   "options": {
+    "A": "Liver glucose-6-phosphatase",
+    "B": "Pyruvate dehydrogenase",
+    "C": "Liver glycogen phosphorylase"
+   },
+   "answer": "A",
+   "why": "ขาด glucose-6-phosphatase (von Gierke, GSD I) ทำให้ตับปล่อยกลูโคสไม่ได้ทั้งจาก glycogenolysis และ gluconeogenesis จึง fasting hypoglycemia รุนแรง และ G6P ที่ค้างถูกเปลี่ยนเป็น lactate ส่วน PDH deficiency ทำ lactic acidosis แต่ไม่เด่นเรื่อง hypoglycemia และ liver phosphorylase deficiency (Hers) อาการเบากว่าและไม่มี lactate สูง",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "76/217": {
+   "box": 26,
+   "stem": "ยาเบาหวานที่มีผลข้างเคียงท้องเสีย/ท้องอืดจากน้ำตาลที่ไม่ถูกดูดซึม",
+   "options": {
+    "A": "Alpha-glucosidase inhibitor",
+    "B": "GLP1 inhibitor",
+    "C": "GLUT4"
+   },
+   "answer": "A",
+   "why": "Acarbose ยับยั้ง α-glucosidase ที่ brush border คาร์โบไฮเดรตที่ไม่ถูกย่อยลงไปลำไส้ใหญ่ถูกแบคทีเรียหมักจนเกิดแก๊ส ท้องอืด ท้องเสีย ส่วน GLP-1 ใช้เป็น agonist ไม่ใช่ inhibitor (SE คือคลื่นไส้) และ GLUT4 เป็นตัวขนส่งกลูโคสไม่ใช่ยา",
+   "source": "วิเคราะห์"
+  },
+  "76/220": {
+   "box": 12,
+   "stem": "ก้อนที่คอ ย้อม calcitonin ให้ผลบวก",
+   "options": {
+    "A": "Papillary",
+    "B": "Follicular",
+    "C": "Anaplastic",
+    "D": "Medullary",
+    "E": "Parathyroid"
+   },
+   "answer": "D",
+   "why": "Medullary thyroid carcinoma มาจาก parafollicular C cell (neural crest) จึงสร้าง calcitonin มี amyloid stroma และสัมพันธ์กับ RET/MEN2 ส่วน papillary, follicular, anaplastic มาจาก follicular cell (thyroglobulin บวก) และ parathyroid สร้าง PTH",
+   "source": "วิเคราะห์"
+  },
+  "76/221": {
+   "box": 16,
+   "stem": "พบ ectopic thymus จะพบอวัยวะใดอยู่ผิดที่ร่วมด้วยได้",
+   "options": {
+    "A": "Inferior parathyroid gland",
+    "B": "Thyroid gland"
+   },
+   "answer": "A",
+   "why": "Thymus และ inferior parathyroid เจริญมาจาก third pharyngeal pouch และเคลื่อนลงมาด้วยกัน ถ้า thymus อยู่ผิดที่ inferior parathyroid จึงมักผิดที่ตามไปด้วย ส่วน thyroid มาจาก endoderm ที่ foramen cecum แล้วเคลื่อนลงตาม thyroglossal duct แยกต่างหาก",
+   "source": "วิเคราะห์"
+  },
+  "76/243": {
+   "box": 27,
+   "stem": "ผู้ป่วยหมดสติ POCT glucose 32 mg/dL ฟื้นหลังได้ dextrose ผลใดสอดคล้อง",
+   "options": {
+    "A": "High C peptide",
+    "B": "Low insulin",
+    "C": "High glucagon"
+   },
+   "answer": "A",
+   "why": "ในบริบทของข้อสอบคาดว่าเป็น endogenous hyperinsulinism (insulinoma หรือ sulfonylurea) ซึ่ง insulin และ C-peptide สูงขณะน้ำตาลต่ำ ส่วน low insulin ขัดกับ hypoglycemia จาก insulin และ glucagon ในภาวะนี้ถูก insulin กดไว้",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ โจทย์ให้ข้อมูลไม่ครบ ถ้าฉีด insulin เองจะ C-peptide ต่ำ และ hypoglycemia ทั่วไปที่ไม่ใช่จาก insulin glucagon ก็สูงได้"
+  },
+  "76/258": {
+   "box": 20,
+   "stem": "ผู้ป่วยกระดูกหักและพบ osteopenia ยาใดเป็นสาเหตุได้",
+   "options": {
+    "A": "Diclofenac",
+    "B": "Prednisolone"
+   },
+   "answer": "B",
+   "why": "Glucocorticoid ลด osteoblast function และการดูดซึม Ca ที่ลำไส้ เพิ่ม osteoclast (RANKL) เป็นสาเหตุที่พบบ่อยของ secondary osteoporosis ส่วน diclofenac ไม่ใช่สาเหตุของ osteopenia",
+   "source": "วิเคราะห์"
+  },
+  "76/260": {
+   "box": 24,
+   "stem": "เจาะเลือดตรวจ FPG ใส่หลอดฝาสีฟ้า และ CBC ใส่หลอดสีม่วง ถูกหรือผิด เพราะอะไร",
+   "options": {
+    "A": "ถูก citrate ใช้กับ FPG และ EDTA ใช้กับ CBC",
+    "B": "ถูก EDTA ใช้ได้ทั้งคู่ citrate ใส่เผื่อ",
+    "C": "ผิด EDTA ใช้กับ CBC แต่ FPG ต้องใช้ NaF",
+    "D": "ผิด EDTA ใช้กับ CBC แต่ FPG ต้องใช้ clotted blood",
+    "E": "ผิด EDTA ใช้กับ CBC แต่ FPG ต้องใช้ heparin"
+   },
+   "answer": "C",
+   "why": "FPG ต้องใช้หลอด sodium fluoride (ฝาเทา) เพื่อยับยั้ง enolase ไม่ให้เซลล์ใช้กลูโคสระหว่างรอตรวจ ส่วน EDTA (ม่วง) ใช้กับ CBC ถูกต้อง และ citrate (ฟ้า) ใช้ตรวจ coagulation ไม่ใช่กลูโคส",
+   "source": "วิเคราะห์"
+  },
+  "76/264": {
+   "box": 4,
+   "stem": "หญิงมี nipple discharge, amenorrhea, prolactin สูง, LH/FSH ต่ำ, thyroid ปกติ TSH ค่อนสูงแต่ยังอยู่ในเกณฑ์ปกติ",
+   "options": {
+    "A": "Pituitary stalk tumor",
+    "B": "Thyroid problem"
+   },
+   "answer": "A",
+   "why": "ก้อนที่กด pituitary stalk ขัดการไหลของ dopamine จาก hypothalamus มายัง lactotroph (stalk effect) ทำให้ PRL สูง และ PRL ไปกด GnRH ทำให้ LH/FSH ต่ำ ส่วน primary hypothyroidism ที่ทำ PRL สูงผ่าน TRH ต้องมี TSH สูงชัดและ FT4 ต่ำ ซึ่งไม่ตรงกับโจทย์",
+   "source": "วิเคราะห์"
+  },
+  "77/1": {
+   "box": 29,
+   "stem": "เด็กชาย 10 ปีมี mutation ของ LEPR ทำให้ leptin ใช้ไม่ได้ เสี่ยงต่อโรคใดมากที่สุด",
+   "options": {
+    "A": "Marasmus",
+    "B": "Kwashiorkor",
+    "C": "Marasmus-Kwashiorkor",
+    "D": "Diabetes mellitus type I",
+    "E": "Diabetes mellitus type II"
+   },
+   "answer": "E",
+   "why": "Leptin signaling บกพร่องทำให้ไม่รู้สึกอิ่ม กินมาก อ้วนรุนแรงตั้งแต่เด็ก เกิด insulin resistance จึงเสี่ยง T2DM ส่วน marasmus/kwashiorkor เป็นภาวะขาดสารอาหาร และ T1DM เกิดจาก autoimmune ทำลาย β-cell ไม่เกี่ยวกับ leptin",
+   "source": "เฉลย77"
+  },
+  "77/5": {
+   "box": 27,
+   "stem": "Glycogen storage disease type I มี hepatomegaly และ hypoglycemia เกิด defect ใน pathway ใด",
+   "options": {
+    "A": "Gluconeogenesis",
+    "B": "Glycogenolysis",
+    "C": "Glycolysis"
+   },
+   "answer": "B",
+   "why": "GSD I ขาด glucose-6-phosphatase ซึ่งเป็นขั้นสุดท้ายในการปล่อยกลูโคสจากตับ ตามชื่อโรคคือ glycogen สลายเป็นกลูโคสไม่ได้จึงสะสมจนตับโตและ fasting hypoglycemia ส่วน glycolysis ไม่ได้บกพร่อง (กลับเพิ่มจนเกิด lactate)",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ G6Pase เป็นขั้นสุดท้ายของทั้ง glycogenolysis และ gluconeogenesis บางเฉลยอาจตอบ gluconeogenesis (จุดที่ต่างจาก GSD อื่น)"
+  },
+  "77/20": {
+   "box": 16,
+   "stem": "ผู้ป่วยมีอาการเข้าได้กับ DiGeorge syndrome โครงสร้างใดผิดปกติ",
+   "options": {
+    "A": "2nd pharyngeal cleft",
+    "B": "3rd pharyngeal pouch"
+   },
+   "answer": "B",
+   "why": "DiGeorge (22q11.2 deletion) เกิดจาก 3rd และ 4th pharyngeal pouch เจริญผิดปกติ ทำให้ไม่มี thymus (T cell ต่ำ) และ parathyroid (hypocalcemia) ส่วน 2nd pharyngeal cleft ผิดปกติจะเกิด branchial cleft cyst ที่ด้านข้างคอ",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "77/22": {
+   "box": 18,
+   "stem": "Neural crest cell ไม่ migrate จะขาดเซลล์ใด",
+   "options": {
+    "A": "Chromaffin cell",
+    "B": "Zona glomerulosa",
+    "C": "Zona fasciculata",
+    "D": "Zona reticularis"
+   },
+   "answer": "A",
+   "why": "Adrenal medulla (chromaffin cell) มาจาก neural crest ขณะที่ adrenal cortex ทั้งสาม zone มาจาก mesoderm (coelomic epithelium) จึงไม่ได้รับผลกระทบ",
+   "source": "เฉลย77"
+  },
+  "77/53": {
+   "box": 15,
+   "stem": "ผู้ป่วยความดันสูงได้ยาแล้วเกิด hypokalemia, metabolic alkalosis และ hypercalcemia ยาใดเป็นสาเหตุ",
+   "options": {
+    "A": "Hydrochlorothiazide",
+    "B": "Furosemide",
+    "C": "Spironolactone"
+   },
+   "answer": "A",
+   "why": "Thiazide ยับยั้ง NCC ที่ DCT ทำให้ส่ง Na ไปท่อปลายมากขึ้นจึงเสีย K และ H (hypokalemia, metabolic alkalosis) และเพิ่มการดูดกลับ Ca จึง Ca สูง ส่วน furosemide ทำ K ต่ำ alkalosis แต่ขับ Ca ออก (Ca ต่ำ) และ spironolactone ทำ K สูง",
+   "source": "เฉลย77"
+  },
+  "77/101": {
+   "box": 4,
+   "stem": "ภาพ X-ray พบก้อนที่ต่อม pituitary จะเกิดความผิดปกติของลานสายตาแบบใด",
+   "options": {
+    "A": "Bitemporal hemianopia",
+    "B": "Binasal hemianopia"
+   },
+   "answer": "A",
+   "why": "ก้อน pituitary โตขึ้นด้านบนกด optic chiasm ตรงกลางซึ่งเป็นใยประสาทจาก nasal retina ที่ไขว้ ทำให้เสียลานสายตาด้าน temporal ทั้งสองข้าง ส่วน binasal hemianopia ต้องเกิดจากรอยโรคด้านข้างของ chiasm ทั้งสองข้างซึ่งพบน้อย",
+   "source": "เฉลย77"
+  },
+  "77/113": {
+   "box": 3,
+   "stem": "ขนลุก (piloerection) เมื่ออากาศหนาว มีจุดประสงค์ใด",
+   "options": {
+    "A": "Heat insulation",
+    "B": "Heat production from shivering",
+    "C": "Heat production from muscle metabolism"
+   },
+   "answer": "A",
+   "why": "Piloerection ผ่าน sympathetic ทำให้ขนตั้งและกักชั้นอากาศไว้เป็นฉนวนลดการเสียความร้อน (เด่นในสัตว์ ในคนมีผลน้อย) ไม่ได้สร้างความร้อน ส่วนการสร้างความร้อนมาจาก shivering ของกล้ามเนื้อลายและ nonshivering thermogenesis",
+   "source": "วิเคราะห์"
+  },
+  "77/163": {
+   "box": 28,
+   "stem": "ผู้ป่วยถ่ายเหลวเป็นน้ำสีน้ำตาลหลายครั้ง Na K Cl ต่ำ มี achlorhydria และ flushing น่าจะเป็นเนื้องอกชนิดใด",
+   "options": {
+    "A": "Gastrinoma",
+    "B": "VIPoma",
+    "C": "Insulinoma",
+    "D": "Glucagonoma",
+    "E": "Somatostatinoma"
+   },
+   "answer": "B",
+   "why": "VIPoma (Verner-Morrison, WDHA) หลั่ง VIP กระตุ้น cAMP ในลำไส้ให้หลั่งน้ำและ electrolyte จึงท้องเสียรุนแรง K ต่ำ และกดการหลั่งกรด (achlorhydria) ร่วมกับ flushing จาก vasodilation ส่วน gastrinoma มีกรดมาก, glucagonoma มี necrolytic migratory erythema และ somatostatinoma มีนิ่วถุงน้ำดี steatorrhea",
+   "source": "เฉลย77"
+  },
+  "77/174": {
+   "box": 24,
+   "stem": "ผู้ป่วย autoimmune pancreatitis ต่อมามี polyuria, polydipsia และ steatorrhea กลไกคืออะไร",
+   "options": {
+    "A": "Alpha cell pancreas โดนทำลาย",
+    "B": "Beta cell pancreas โดนทำลาย",
+    "C": "Chronic inflammation of pancreas"
+   },
+   "answer": "C",
+   "why": "อาการมีทั้ง endocrine (เบาหวาน) และ exocrine (steatorrhea จากขาด lipase) จึงอธิบายด้วยการอักเสบเรื้อรังทำลายตับอ่อนทั้งต่อม (pancreatogenic/type 3c DM) ส่วนการทำลาย β-cell อย่างเดียวไม่ทำ steatorrhea และ α-cell ถูกทำลายไม่ทำให้เกิดเบาหวาน",
+   "source": "วิเคราะห์"
+  },
+  "77/198": {
+   "box": 6,
+   "stem": "ผู้ป่วย SIADH มี serum Na 120 และ urine osmolality 800 ข้อใดถูกต้อง",
+   "options": {
+    "A": "Increase thirst center activation",
+    "B": "Increased reabsorption of urea at medullary collecting tubule",
+    "C": "Increased aquaporin expression at loop of Henle"
+   },
+   "answer": "B",
+   "why": "ADH เพิ่ม UT-A1 urea transporter ที่ inner medullary collecting duct ทำให้ดูดกลับ urea เพิ่ม medullary osmolality และปัสสาวะเข้มข้นได้ ส่วน serum hypoosmolality กดศูนย์กระหายน้ำ และ aquaporin-2 ที่ ADH เพิ่มอยู่ที่ collecting duct ไม่ใช่ loop of Henle",
+   "source": "เฉลย77"
+  },
+  "77/216": {
+   "box": 29,
+   "stem": "ชายอ้วนอายุ 60 ปี erectile dysfunction ไม่มี morning erection LH ลดลงเล็กน้อย วินิจฉัย hypogonadism สาเหตุที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Andropause",
+    "B": "Hypogonadotropic hypogonadism",
+    "C": "Chronic fatigue syndrome"
+   },
+   "answer": "B",
+   "why": "ความอ้วนทำให้ aromatase ในไขมันเปลี่ยน testosterone เป็น estradiol มากขึ้น ร่วมกับ leptin/insulin resistance ไปกด GnRH ได้ LH ต่ำและ testosterone ต่ำ คือ functional hypogonadotropic hypogonadism ส่วน andropause (primary testicular aging) LH ควรสูงขึ้น และ chronic fatigue syndrome ไม่อธิบาย LH ต่ำ",
+   "source": "วิเคราะห์"
+  },
+  "77/219": {
+   "box": 10,
+   "stem": "หญิงสูงอายุมีอ่อนเพลีย ท้องผูก ผิวแห้ง ไขมันในเลือดสูง TSH สูง free T4 ต่ำ ข้อใดอธิบาย pathophysiology ได้เหมาะสม",
+   "options": {
+    "A": "Autoantibody to TSH receptor",
+    "B": "Breakdown thyroid tissue ทำให้ release thyroid hormone",
+    "C": "Chronic inflammation reduce thyroid activity",
+    "D": "Breakdown thyroid tissue เกิด autoantibody",
+    "E": "Profound iodine ingestion เกิด exaggerated hyperthyroid activity"
+   },
+   "answer": "C",
+   "why": "Primary hypothyroidism ในผู้สูงอายุที่พบบ่อยคือ Hashimoto ซึ่ง lymphocyte แทรกและอักเสบเรื้อรังทำลาย follicle จนการทำงานลดลง ส่วน TSH receptor antibody (กระตุ้น) คือ Graves, การปล่อยฮอร์โมนจากเนื้อเยื่อแตกคือ thyroiditis ระยะ thyrotoxic และ iodine excess ที่กระตุ้นการทำงานคือ Jod-Basedow",
+   "source": "เฉลย77"
+  },
+  "77/220": {
+   "box": 9,
+   "stem": "TSH ต่ำ แต่ T3 และ T4 ปกติ",
+   "options": {
+    "A": "Subclinical hyperthyroidism",
+    "B": "Subclinical hypothyroidism"
+   },
+   "answer": "A",
+   "why": "TSH ต่ำโดย FT4/T3 ยังอยู่ในเกณฑ์ปกติคือ subclinical hyperthyroidism เพราะ TSH ไวต่อการเปลี่ยนแปลงของ thyroid hormone ก่อน ส่วน subclinical hypothyroidism จะเป็น TSH สูงกับ FT4 ปกติ",
+   "source": "เฉลย77"
+  },
+  "77/221": {
+   "box": 17,
+   "stem": "ผู้ป่วยมี pituitary adenoma และ insulinoma ควรพบเนื้องอกใดอีก",
+   "options": {
+    "A": "Medullary thyroid carcinoma",
+    "B": "Parathyroid adenoma",
+    "C": "Pheochromocytoma",
+    "D": "Glucagonoma",
+    "E": "VIPoma"
+   },
+   "answer": "B",
+   "why": "Pituitary + pancreatic NET เข้าได้กับ MEN1 (menin) ซึ่ง primary hyperparathyroidism พบบ่อยที่สุด (มากกว่า 90%) ส่วน medullary thyroid carcinoma และ pheochromocytoma เป็นของ MEN2 และ glucagonoma, VIPoma ก็อยู่ใน MEN1 ได้แต่พบน้อยกว่า parathyroid มาก",
+   "source": "เฉลย77"
+  },
+  "77/222": {
+   "box": 7,
+   "stem": "ผ่าตัดต่อมไทรอยด์และต้องการหยุดเลือดที่ inferior thyroid artery ควร ligate ที่จุดกำเนิดใด",
+   "options": {
+    "A": "External carotid",
+    "B": "Internal carotid",
+    "C": "Thyrocervical trunk",
+    "D": "Costocervical trunk",
+    "E": "Brachiocephalic trunk"
+   },
+   "answer": "C",
+   "why": "Inferior thyroid artery แตกจาก thyrocervical trunk ของ subclavian artery ส่วน superior thyroid artery แตกจาก external carotid และ thyroid ima (ถ้ามี) อาจมาจาก brachiocephalic trunk ส่วน internal carotid ไม่มีแขนงที่คอ",
+   "source": "เฉลย77"
+  },
+  "77/223": {
+   "box": 13,
+   "stem": "ผลของ PTH ต่อการดูดกลับที่ไตเป็นอย่างไร",
+   "options": {
+    "A": "Calcium ดูดกลับเพิ่ม phosphate ดูดกลับลด sodium ดูดกลับลด",
+    "B": "Calcium ดูดกลับลด phosphate ดูดกลับเพิ่ม sodium ดูดกลับเพิ่ม",
+    "C": "Calcium ดูดกลับเพิ่ม phosphate ดูดกลับเพิ่ม sodium ไม่เปลี่ยน",
+    "D": "Calcium ดูดกลับลด phosphate ดูดกลับลด sodium ดูดกลับลด"
+   },
+   "answer": "A",
+   "why": "PTH เพิ่มการดูดกลับ Ca ที่ DCT และลดการดูดกลับ phosphate ที่ PCT โดยลด NaPi-IIa ซึ่งเป็น Na-coupled transport จึงดูดกลับ Na ที่ PCT ลดลงเล็กน้อยด้วย (ยับยั้ง NHE3) ตัวเลือกอื่นกลับทิศของ Ca หรือ phosphate",
+   "source": "เฉลย77",
+   "options_reconstructed": true
+  },
+  "77/224": {
+   "box": 21,
+   "stem": "ผู้ป่วยความดันสูงดื้อยา renin ต่ำ aldosterone สูง Na 142 K 3 Cl 105",
+   "options": {
+    "A": "Conn syndrome",
+    "B": "Pheochromocytoma",
+    "C": "Renal artery stenosis",
+    "D": "Addison disease"
+   },
+   "answer": "A",
+   "why": "Aldosterone สูงร่วมกับ renin ถูกกดต่ำ (ARR สูง) และ hypokalemia คือ primary hyperaldosteronism (Conn) ส่วน renal artery stenosis เป็น secondary ซึ่ง renin สูง pheochromocytoma ไม่ได้ทำ aldosterone สูง renin ต่ำ และ Addison มี aldosterone ต่ำ K สูง",
+   "source": "เฉลย77"
+  },
+  "77/225": {
+   "box": 14,
+   "stem": "ผู้ป่วย CKD stage 4 ปวดเวลาเคี้ยว ภาพรังสีพบ lytic lesion ที่ mandible Ca ปกติ PTH 1180 สาเหตุที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Primary hyperparathyroidism",
+    "B": "Secondary hyperparathyroidism",
+    "C": "Tertiary hyperparathyroidism"
+   },
+   "answer": "C",
+   "why": "CKD นาน ๆ ทำให้ต่อม parathyroid ถูกกระตุ้นเรื้อรังจนทำงานเป็นอิสระ PTH สูงมาก (มากกว่าพัน) จนเกิด osteitis fibrosa cystica/brown tumor ตามเฉลยจัดเป็น tertiary ส่วน primary ไม่เกี่ยวกับ CKD และ secondary มักมี Ca ต่ำถึงปกติร่วมกับ PTH สูงตอบสนองต่อ Ca/vitamin D",
+   "source": "เฉลย77",
+   "doubt": "⚠ ตามนิยามคลาสสิก tertiary HPT มักมี Ca สูง ข้อนี้ Ca ปกติ ซึ่งแยกจาก severe secondary HPT ได้ยาก เฉลยตอบ tertiary"
+  },
+  "77/226": {
+   "box": 24,
+   "stem": "บุคคลใดควรได้รับการคัดกรองเบาหวานมากที่สุด",
+   "options": {
+    "A": "History of gestational DM",
+    "B": "High LDL-C",
+    "C": "History of second degree relative having DM",
+    "D": "Struma ovarii"
+   },
+   "answer": "A",
+   "why": "ประวัติ GDM เป็นปัจจัยเสี่ยงสูงที่ต้องคัดกรองเบาหวาน (เสี่ยง T2DM ในอนาคตสูงมาก) ส่วนเกณฑ์คัดกรองใช้ญาติสายตรงลำดับแรกไม่ใช่ลำดับสอง ไขมันผิดปกติที่ใช้คือ HDL ต่ำหรือ TG สูง และ struma ovarii เกี่ยวกับ thyroid hormone ไม่ใช่เบาหวาน",
+   "source": "เฉลย77"
+  },
+  "77/227": {
+   "box": 10,
+   "stem": "เด็กมี upslanting palpebral fissure, hypotonia และ macroglossia ควรตรวจอะไรเพิ่มเติม",
+   "options": {
+    "A": "Thyroid",
+    "B": "Parathyroid"
+   },
+   "answer": "A",
+   "why": "ลักษณะเข้าได้กับ Down syndrome ซึ่งเสี่ยง congenital hypothyroidism และ autoimmune thyroid disease จึงต้องตรวจ thyroid function (อีกทั้ง hypotonia กับ macroglossia เป็นอาการของ congenital hypothyroidism เอง) ส่วน parathyroid ไม่ได้สัมพันธ์กับ Down syndrome",
+   "source": "เฉลย77"
+  },
+  "77/228": {
+   "box": 26,
+   "stem": "ผู้ป่วยได้ยา GLP-1 analog จะมีค่าใดเพิ่มขึ้น",
+   "options": {
+    "A": "Lipolysis",
+    "B": "Insulin sensitivity",
+    "C": "Gastric emptying time",
+    "D": "Glycogenolysis",
+    "E": "Gluconeogenesis"
+   },
+   "answer": "C",
+   "why": "GLP-1 agonist ชะลอการบีบตัวของกระเพาะ ทำให้ gastric emptying time ยาวขึ้น อิ่มเร็ว ลดน้ำตาลหลังอาหาร ร่วมกับกระตุ้น insulin แบบ glucose-dependent และกด glucagon จึงลด glycogenolysis และ gluconeogenesis ส่วนการเพิ่ม insulin sensitivity เป็นฤทธิ์หลักของ TZD/metformin",
+   "source": "เฉลย77"
+  },
+  "77/229": {
+   "box": 22,
+   "stem": "ผู้ป่วยผิวคล้ำ ทำ ACTH stimulation test แล้ว cortisol ไม่เพิ่มขึ้น",
+   "options": {
+    "A": "Addison disease",
+    "B": "Secondary adrenal insufficiency",
+    "C": "Cushing disease",
+    "D": "Congenital adrenal hyperplasia"
+   },
+   "answer": "A",
+   "why": "ผิวคล้ำบ่งว่า ACTH/MSH สูง และ cortisol ไม่ตอบสนองต่อ ACTH แสดงว่าต่อมหมวกไตเสียเอง คือ primary adrenal insufficiency (Addison) ส่วน secondary AI จะ ACTH ต่ำผิวไม่คล้ำ และ Cushing มี cortisol สูง",
+   "source": "เฉลย77",
+   "options_reconstructed": true
+  },
+  "77/230": {
+   "box": 5,
+   "stem": "หญิงตกเลือดหลังคลอด (postpartum hemorrhage) แล้วมีความผิดปกติของต่อมใต้สมอง การวินิจฉัยคืออะไร",
+   "options": {
+    "A": "Sheehan syndrome",
+    "B": "Pituitary apoplexy จาก adenoma",
+    "C": "Lymphocytic hypophysitis",
+    "D": "Empty sella syndrome"
+   },
+   "answer": "A",
+   "why": "ต่อมใต้สมองโตขึ้นขณะตั้งครรภ์ (lactotroph hyperplasia) แต่เลือดเลี้ยงไม่เพิ่ม เมื่อตกเลือดมากความดันต่ำจึงขาดเลือดตาย คือ Sheehan syndrome ส่วน lymphocytic hypophysitis เป็น autoimmune ช่วงรอบคลอดแต่ไม่สัมพันธ์กับการตกเลือด และ apoplexy ต้องมีก้อนเดิมร่วมกับปวดศีรษะเฉียบพลัน",
+   "source": "เฉลย77",
+   "options_reconstructed": true
+  },
+  "77/231": {
+   "box": 4,
+   "stem": "ชายมาด้วย libido ลด FSH/LH ต่ำ prolactin สูง และฮอร์โมนอื่นต่ำ ข้อใดน่าจะเป็นน้อยที่สุด",
+   "options": {
+    "A": "Hyperprolactinemia",
+    "B": "Macroprolactinemia",
+    "C": "Macroprolactinoma",
+    "D": "Secondary hypothyroidism",
+    "E": "Central hypogonadism"
+   },
+   "answer": "B",
+   "why": "Macroprolactin เป็นคอมเพล็กซ์ PRL-IgG ที่ไม่มีฤทธิ์ ไม่กด GnRH จึงไม่อธิบาย LH/FSH ต่ำและอาการ ส่วน prolactinoma ขนาดใหญ่ทำ hyperprolactinemia กด GnRH (central hypogonadism) และกดต่อมจนเกิด secondary hypothyroidism ได้",
+   "source": "เฉลย77"
+  },
+  "77/232": {
+   "box": 9,
+   "stem": "ใน Graves' disease การตรวจใดช่วยวินิจฉัยน้อยที่สุด",
+   "options": {
+    "A": "T3",
+    "B": "T4",
+    "C": "Anti-TG"
+   },
+   "answer": "C",
+   "why": "Anti-thyroglobulin ไม่จำเพาะ พบได้ทั้ง Hashimoto และคนปกติ จึงช่วยวินิจฉัย Graves น้อยที่สุด ส่วน T3/T4 ที่สูง (ร่วมกับ TSH ต่ำ) ยืนยันภาวะ hyperthyroidism และตัวจำเพาะของ Graves คือ TRAb",
+   "source": "เฉลย77"
+  },
+  "77/233": {
+   "box": 26,
+   "stem": "ผู้ป่วย T2DM ได้ metformin แล้ว FPG ยัง 220 จึงเพิ่มยาอีกตัว ต่อมามีใจสั่น มือสั่นก่อนมื้ออาหาร ยาที่เพิ่มมีกลไกใด",
+   "options": {
+    "A": "PPAR receptor",
+    "B": "Closed K+/ATP channel",
+    "C": "Increase hepatic gluconeogenesis",
+    "D": "GLP-1 agonist",
+    "E": "SGLT2 inhibitor"
+   },
+   "answer": "B",
+   "why": "อาการ hypoglycemia ก่อนอาหารเข้าได้กับ sulfonylurea ซึ่งปิด K-ATP channel ที่ β-cell ทำให้ depolarize และหลั่ง insulin โดยไม่ขึ้นกับระดับน้ำตาล ส่วน TZD (PPARγ), GLP-1 agonist และ SGLT2i แทบไม่ทำ hypoglycemia และการเพิ่ม gluconeogenesis จะทำให้น้ำตาลสูงขึ้น",
+   "source": "เฉลย77"
+  },
+  "77/241": {
+   "box": 8,
+   "stem": "ผลของ thyroid hormone ต่อระบบหัวใจและหลอดเลือดคือข้อใด",
+   "options": {
+    "A": "Increased cardiac contractility",
+    "B": "Increased heart rate",
+    "C": "Increased heart rate and decreased peripheral vascular resistance",
+    "D": "Increased cardiac contractility and increased heart rate",
+    "E": "Increased cardiac contractility, increased heart rate and decreased peripheral vascular resistance"
+   },
+   "answer": "E",
+   "why": "T3 เพิ่ม β1 receptor, SERCA2 และ α-MHC ทำให้ทั้ง HR และ contractility เพิ่ม และเพิ่ม metabolic demand กับการสร้างความร้อนจน peripheral vasodilation (SVR ลด) ทำให้ pulse pressure กว้าง ข้อ E ครบที่สุด ตัวเลือกอื่นถูกแต่ไม่ครบ",
+   "source": "เฉลย77"
+  },
+  "78/3": {
+   "box": 3,
+   "stem": "ยาพาราเซตามอลลด set point ของอุณหภูมิกายด้วยกลไกจำเพาะใด",
+   "options": {
+    "A": "กระตุ้นกลไกระบายความร้อนที่ผิวหนัง",
+    "B": "ยับยั้ง COX ที่เนื้อเยื่อส่วนปลาย",
+    "C": "ยับยั้งการสร้าง prostaglandin ที่ hypothalamus",
+    "D": "เพิ่มเลือดไปเลี้ยงส่วนปลาย",
+    "E": "ยับยั้ง interleukin"
+   },
+   "answer": "C",
+   "why": "ไข้เกิดจาก PGE2 ใน hypothalamus ยก set point ขึ้น paracetamol ยับยั้ง COX ในระบบประสาทส่วนกลางเป็นหลัก จึงลดการสร้าง PG ที่ hypothalamus. ฤทธิ์ต่อ COX ส่วนปลายอ่อนมาก (ต้านอักเสบน้อย) และไม่ได้ออกฤทธิ์โดยตรงที่ผิวหนังหรือ interleukin",
+   "source": "เฉลย78"
+  },
+  "78/9": {
+   "box": 13,
+   "stem": "ผู้ป่วย CKD กระดูกหักง่าย เกิดจากขาดเอนไซม์ใด",
+   "options": {
+    "A": "1α-hydroxylase",
+    "B": "20α-hydroxylase",
+    "C": "23α-hydroxylase",
+    "D": "24α-hydroxylase",
+    "E": "25α-hydroxylase"
+   },
+   "answer": "A",
+   "why": "ไตที่เสียสร้าง 1α-hydroxylase ใน proximal tubule ได้น้อย จึงเปลี่ยน 25-OH vitamin D เป็น calcitriol ไม่ได้ ทำให้ดูดซึม Ca ลดลงและเกิด CKD-MBD. 25-hydroxylase อยู่ที่ตับ ส่วน 24-hydroxylase เป็นตัวทำลาย vitamin D",
+   "source": "เฉลย78"
+  },
+  "78/13": {
+   "box": 8,
+   "stem": "กลไกการออกฤทธิ์ของ methimazole",
+   "options": {
+    "A": "ยับยั้ง coupling ของ iodine",
+    "B": "ยับยั้งการเปลี่ยน T4 เป็น T3 ส่วนปลาย",
+    "C": "ยับยั้งการนำ I- เข้าเซลล์"
+   },
+   "answer": "A",
+   "why": "Methimazole ยับยั้ง thyroid peroxidase (TPO) จึงยับยั้ง oxidation, organification และ coupling. การยับยั้ง deiodinase ส่วนปลายเป็นฤทธิ์ของ PTU/propranolol/steroid ส่วนการยับยั้ง NIS เป็นของ perchlorate/thiocyanate",
+   "source": "เฉลย78"
+  },
+  "78/28": {
+   "box": 24,
+   "stem": "วัยรุ่นอายุ 15 ปี มาด้วย polyuria polydipsia ข้อใดไม่เกี่ยวข้องกับภาวะนี้",
+   "options": {
+    "A": "Insulin deficiency",
+    "B": "Insulin resistance",
+    "C": "Volume depletion",
+    "D": "DKA"
+   },
+   "answer": "B",
+   "why": "เด็กวัยนี้ที่มีอาการปัสสาวะมากดื่มน้ำมากนึกถึง T1DM ซึ่งพยาธิกำเนิดคือขาด insulin นำไปสู่ osmotic diuresis ภาวะขาดน้ำ และ DKA. Insulin resistance เป็นกลไกหลักของ T2DM จึงไม่เกี่ยว",
+   "source": "เฉลย78"
+  },
+  "78/29": {
+   "box": 19,
+   "stem": "หญิงมีขนดก (hirsutism) อัตราส่วนฮอร์โมน gonadotropin ผิดปกติ (โจทย์จำมาว่า FSH:LH สูง) ระดับ 17-hydroxy steroid ปกติ วินิจฉัยใด",
+   "options": {
+    "A": "PCOS",
+    "B": "Cushing syndrome"
+   },
+   "answer": "A",
+   "why": "Hirsutism ร่วมกับ LH:FSH สูงเข้าได้กับ PCOS และ 17-OH ปกติช่วยตัด non-classic CAH. Cushing จะมีลักษณะ cushingoid และ cortisol สูง ไม่ได้เด่นที่สัดส่วน LH:FSH",
+   "source": "เฉลย78",
+   "doubt": "⚠ โจทย์จำมาเป็น FSH:LH สูง แต่ PCOS คือ LH:FSH สูง และน่าจะเป็น 17-OH progesterone ไม่ใช่ pregnenolone"
+  },
+  "78/30": {
+   "box": 24,
+   "stem": "วัยรุ่น 18 ปีเป็น T1DM HbA1c 15% ไม่ยอมฉีด insulin เพราะกลัวน้ำหนักขึ้น ควรทำอย่างไร",
+   "options": {
+    "A": "เพิ่มขนาด insulin",
+    "B": "เปลี่ยนเป็น long-acting ฉีดวันละครั้ง",
+    "C": "ส่งพบนักโภชนาการวางแผนอาหาร",
+    "D": "ให้ psychosocial support และประเมิน eating disorder",
+    "E": "ติดตามน้ำตาลต่อเนื่อง"
+   },
+   "answer": "D",
+   "why": "การจงใจงด insulin เพื่อคุมน้ำหนัก (diabulimia) เป็นสัญญาณ eating disorder ที่พบใน T1DM วัยรุ่น ต้องแก้ปัญหาจิตสังคมก่อน. การเพิ่มหรือเปลี่ยนชนิด insulin ไม่ช่วยถ้าผู้ป่วยไม่ยอมฉีด และการคุมอาหาร/ติดตามน้ำตาลไม่แก้ต้นเหตุ",
+   "source": "เฉลย78"
+  },
+  "78/31": {
+   "box": 6,
+   "stem": "ให้ 5% dextrose in half-NSS (D5/N/2) ปริมาณมากแบบ bolus ร่างกายตอบสนองอย่างไร",
+   "options": {
+    "A": "ADH ลดลง ANP ถูกกด",
+    "B": "ADH ลดลง RAAS ลดลง",
+    "C": "ADH เพิ่ม RAAS ลดลง",
+    "D": "ADH เพิ่ม ANP เพิ่ม"
+   },
+   "answer": "B",
+   "why": "เมื่อ dextrose ถูกใช้ไป สารน้ำที่เหลือเป็น hypotonic ทำให้ osmolality ลดลง ADH จึงลด. ปริมาตรที่เพิ่มขึ้นกด RAAS และกระตุ้น ANP (ไม่ใช่กด ANP) ส่วน ADH ไม่ควรเพิ่มเพราะทั้ง osmolality และ volume ไม่ได้กระตุ้น",
+   "source": "เฉลย78"
+  },
+  "78/33": {
+   "box": 4,
+   "stem": "แม่กังวลเรื่องความสูงของลูก สิ่งใดช่วยเพิ่มการหลั่ง GH ตามสรีรวิทยา",
+   "options": {
+    "A": "Somatomedin",
+    "B": "Somatostatin",
+    "C": "การออกกำลังกาย",
+    "D": "ไม่ต้องทำอะไร"
+   },
+   "answer": "C",
+   "why": "การออกกำลังกาย การนอนหลับลึก ภาวะอดอาหาร/hypoglycemia กระตุ้นการหลั่ง GH. Somatomedin (IGF-1) และ somatostatin เป็นตัว feedback ยับยั้งการหลั่ง GH",
+   "source": "เฉลย78"
+  },
+  "78/44": {
+   "box": 20,
+   "stem": "ผลข้างเคียงของ glucocorticoid ข้อใดถูก",
+   "options": {
+    "A": "Hyperglycemia",
+    "B": "Hyperkalemia",
+    "C": "ไขมันเพิ่มที่แขนขา",
+    "D": "Hyponatremia"
+   },
+   "answer": "A",
+   "why": "Glucocorticoid เพิ่ม gluconeogenesis และทำให้ดื้อ insulin จึงเกิด hyperglycemia. ฤทธิ์ mineralocorticoid ทำให้เกิด hypokalemia และคั่ง Na ไม่ใช่ Na ต่ำ ส่วนไขมันกระจายไปที่ลำตัว (central obesity) แขนขาลีบ",
+   "source": "เฉลย78"
+  },
+  "78/45": {
+   "box": 10,
+   "stem": "เด็กชาวเขามีต่อมไทรอยด์โต สาเหตุน่าจะเป็นอะไร",
+   "options": {
+    "A": "Iodine deficiency",
+    "B": "Graves disease",
+    "C": "Toxic goiter"
+   },
+   "answer": "A",
+   "why": "พื้นที่ภูเขาห่างทะเลขาดไอโอดีนเป็นสาเหตุ endemic goiter ที่พบบ่อยที่สุด ต่อมโตจาก TSH ที่สูงขึ้น. Graves และ toxic goiter มักมีอาการ hyperthyroid และไม่สัมพันธ์กับภูมิลำเนา",
+   "source": "เฉลย78"
+  },
+  "78/55": {
+   "box": 6,
+   "stem": "ดื่มน้ำวันละ 4 L, Sosm 300, Uosm 100 หลังงดน้ำ Uosm ไม่เปลี่ยน แต่ให้ desmopressin แล้ว Uosm สูงขึ้น วินิจฉัยใด",
+   "options": {
+    "A": "Nephrogenic DI",
+    "B": "Central DI",
+    "C": "Psychogenic (อื่น ๆ)",
+    "D": "Primary polydipsia",
+    "E": "SIADH"
+   },
+   "answer": "B",
+   "why": "Sosm สูงปกติ-สูงกับ Uosm ต่ำบ่งว่าไตไม่เข้มข้นปัสสาวะ การงดน้ำไม่ช่วย แต่ตอบสนองต่อ desmopressin แปลว่าไตยังตอบสนองได้ ขาด ADH จากส่วนกลาง. Nephrogenic DI จะไม่ตอบสนองต่อ desmopressin ส่วน primary polydipsia จะมี Sosm ต่ำและ Uosm ขึ้นหลังงดน้ำ",
+   "source": "เฉลย78"
+  },
+  "78/56": {
+   "box": 4,
+   "stem": "เด็กหญิง 7 ขวบ เต้านมโตก่อนวัย Tanner breast stage 2 เซลล์ใดมีการเพิ่มจำนวน",
+   "options": {
+    "A": "GnRH neuron",
+    "B": "Gonadotroph",
+    "C": "Theca cell",
+    "D": "Granulosa cell",
+    "E": "Oocyte"
+   },
+   "answer": "D",
+   "why": "Central precocious puberty: แกน GnRH-FSH/LH ทำงานเร็ว FSH กระตุ้น granulosa cell ให้ proliferate และเปลี่ยน androgen เป็น estrogen (aromatase) ทำให้เต้านมโต. Theca cell สร้าง androgen ไม่ใช่ estrogen โดยตรง ส่วน GnRH neuron และ gonadotroph เพิ่มการหลั่งมากกว่าเพิ่มจำนวนเซลล์",
+   "source": "เฉลย78"
+  },
+  "78/69": {
+   "box": 20,
+   "stem": "ข้อใดไม่ใช้ในการตรวจคัดกรอง Cushing syndrome",
+   "options": {
+    "A": "Morning cortisol",
+    "B": "Morning ACTH",
+    "C": "Dexamethasone suppression test",
+    "D": "Morning saliva cortisol",
+    "E": "24-hour urine free cortisol"
+   },
+   "answer": "B",
+   "why": "การคัดกรอง Cushing ใช้ 1 mg overnight DST, 24-h UFC และ late-night salivary cortisol. ACTH ใช้หลังยืนยัน hypercortisolism แล้วเพื่อแยกว่าขึ้นกับ ACTH หรือไม่ จึงไม่ใช่ตัวคัดกรอง",
+   "source": "เฉลย78",
+   "doubt": "⚠ เฉลยเขียน 'B A,D' เพราะ morning cortisol และ morning saliva cortisol ก็ไม่ใช้คัดกรองเช่นกัน (ที่ใช้คือ late-night saliva)"
+  },
+  "78/74": {
+   "box": 24,
+   "stem": "ปัจจัยใดทำให้ค่าน้ำตาลจาก POCT ไม่ตรงกับผลจาก lab",
+   "options": {
+    "A": "Hct สูงมาก",
+    "B": "Hemoglobinopathy",
+    "C": "ภาวะเหล็กเกิน"
+   },
+   "answer": "A",
+   "why": "เครื่องตรวจน้ำตาลปลายนิ้วใช้ whole blood เมื่อ Hct สูงสัดส่วน plasma น้อย ทำให้อ่านค่าน้ำตาลต่ำกว่าจริง (Hct ต่ำให้ค่าสูงเกิน). Hemoglobinopathy มีผลต่อ HbA1c มากกว่าค่าน้ำตาล ส่วนเหล็กเกินไม่รบกวนการวัด",
+   "source": "เฉลย78"
+  },
+  "78/80": {
+   "box": 22,
+   "stem": "มีสีคล้ำที่ oral mucosa เหนื่อยง่าย น้ำหนักลด ซึมเศร้า เบื่ออาหาร วินิจฉัยใด",
+   "options": {
+    "A": "Primary aldosteronism",
+    "B": "Cushing syndrome",
+    "C": "Addison disease",
+    "D": "Pheochromocytoma",
+    "E": "Graves disease"
+   },
+   "answer": "C",
+   "why": "ต่อมหมวกไตล้มเหลวปฐมภูมิทำให้ cortisol ต่ำ ACTH (และ POMC/MSH) สูงจึงเกิดผิวและเยื่อบุคล้ำ ร่วมกับอ่อนเพลีย น้ำหนักลด. Cushing และ Conn ไม่มีผิวคล้ำร่วมกับน้ำหนักลด ส่วน pheo/Graves ไม่มี hyperpigmentation ของเยื่อบุ",
+   "source": "เฉลย78"
+  },
+  "78/81": {
+   "box": 22,
+   "stem": "ผู้ป่วย Addison (สีคล้ำเยื่อบุ เหนื่อยง่าย น้ำหนักลด cortisol ต่ำ) พยาธิกำเนิดที่พบบ่อยคือ",
+   "options": {
+    "A": "Autoimmune ทำลายต่อมหมวกไตทำให้สร้าง cortisol ลดลง",
+    "B": "เลือดออกในต่อมหมวกไต"
+   },
+   "answer": "A",
+   "why": "สาเหตุที่พบบ่อยที่สุดของ Addison ในประเทศพัฒนาแล้วคือ autoimmune adrenalitis (anti-21-hydroxylase) ซึ่งเป็นแบบค่อยเป็นค่อยไป. Adrenal hemorrhage (เช่น Waterhouse-Friderichsen) มักเป็นเฉียบพลันรุนแรง ไม่ใช่อาการเรื้อรังแบบนี้ (ในไทย TB ก็พบได้)",
+   "source": "เฉลย78"
+  },
+  "78/82": {
+   "box": 9,
+   "stem": "การตรวจใดช่วยวินิจฉัย Graves disease ได้น้อยที่สุด",
+   "options": {
+    "A": "FT3",
+    "B": "FT4",
+    "C": "TSH",
+    "D": "TRAb",
+    "E": "Anti-thyroglobulin"
+   },
+   "answer": "E",
+   "why": "Graves วินิจฉัยด้วย TSH ต่ำ FT4/FT3 สูง และ TRAb ซึ่งจำเพาะต่อโรค. Anti-thyroglobulin พบได้ใน autoimmune thyroiditis หลายชนิด (เด่นใน Hashimoto) จึงไม่จำเพาะและช่วยวินิจฉัย Graves น้อยที่สุด",
+   "source": "เฉลย78"
+  },
+  "78/85": {
+   "box": 13,
+   "stem": "ยารักษากระดูกพรุนหลังหมดประจำเดือนตัวใดเป็นยาเพิ่มการสร้างกระดูก (anabolic)",
+   "options": {
+    "A": "Teriparatide",
+    "B": "Alendronate",
+    "C": "Raloxifene",
+    "D": "Calcitonin"
+   },
+   "answer": "A",
+   "why": "Teriparatide (PTH 1-34) ให้แบบเป็นช่วงกระตุ้น osteoblast จึงเป็นยา anabolic. Alendronate, raloxifene และ calcitonin เป็นยาต้านการสลายกระดูก (antiresorptive)",
+   "source": "เฉลย78"
+  },
+  "78/90": {
+   "box": 23,
+   "stem": "ดื่มชานมไข่มุกหวาน ตัวรับของฮอร์โมนที่จัดการระดับน้ำตาลในเลือดเป็นชนิดใด",
+   "options": {
+    "A": "Tyrosine kinase",
+    "B": "Gs",
+    "C": "Gi"
+   },
+   "answer": "A",
+   "why": "น้ำตาลสูงกระตุ้นการหลั่ง insulin ซึ่งจับกับ insulin receptor ที่เป็น receptor tyrosine kinase (autophosphorylation → IRS → PI3K → GLUT4). Gs เป็นตัวรับของ glucagon/epinephrine ซึ่งทำงานตรงข้าม",
+   "source": "เฉลย78"
+  },
+  "78/92": {
+   "box": 13,
+   "stem": "กลไกของการให้ PTH แบบเป็นช่วง (intermittent) ในการรักษา osteoporosis",
+   "options": {
+    "A": "ยับยั้ง osteoclast",
+    "B": "กระตุ้น osteoblast",
+    "C": "เพิ่ม OPG",
+    "D": "ยับยั้ง RANKL"
+   },
+   "answer": "B",
+   "why": "PTH แบบเป็นช่วงกระตุ้น osteoblast เพิ่มการสร้างกระดูกมากกว่าการสลาย (anabolic window). PTH สูงต่อเนื่องจะเพิ่ม RANKL ลด OPG จนกระดูกถูกสลาย ส่วนการยับยั้ง RANKL เป็นกลไกของ denosumab",
+   "source": "เฉลย78"
+  },
+  "78/94": {
+   "box": 14,
+   "stem": "ทำไม secondary hyperparathyroidism (จาก CKD) จึงมี Ca ต่ำ",
+   "options": {
+    "A": "Ca จับกับ anion เกิด complex",
+    "B": "25-hydroxycholecalciferol ลดลง"
+   },
+   "answer": "A",
+   "why": "ไตขับ phosphate ไม่ได้ phosphate ที่คั่งจับ Ca ทำให้ ionized Ca ลดลง กระตุ้น PTH. ร่วมกับ calcitriol (1,25-OH) ลดลงจากขาด 1α-hydroxylase ไม่ใช่ 25-OH vitamin D ลด เพราะ 25-hydroxylation เกิดที่ตับ",
+   "source": "เฉลย78"
+  },
+  "78/96": {
+   "box": 27,
+   "stem": "ผู้ป่วยตับแข็งเกิด hypoglycemia ระหว่างมื้ออาหาร เกิดจากกลไกใดบกพร่อง",
+   "options": {
+    "A": "การเก็บ glycogen ในตับ",
+    "B": "Gluconeogenesis ในตับ"
+   },
+   "answer": "A",
+   "why": "ตับแข็งมีเนื้อตับที่ทำงานน้อยลง เก็บ glycogen ได้น้อย ช่วงอดอาหารสั้น ๆ ระหว่างมื้อจึงไม่มี glycogen สลายมาเป็นน้ำตาล. Gluconeogenesis มีบทบาทมากเมื่ออดอาหารนาน ซึ่งในตับแข็งก็ลดลงได้ แต่ไม่ใช่กลไกหลักของการตกระหว่างมื้อ",
+   "source": "เฉลย78",
+   "doubt": "⚠ เฉลยเขียน 'B, A' ไม่ชัด ชีท A3 ใช้ A (glycogen storage)"
+  },
+  "78/98": {
+   "box": 20,
+   "stem": "หญิง 70 ปีไม่มีประวัติจิตเวช ได้ prednisolone 5 วันแล้วไลฟ์สดทั้งคืน จะให้เงินพยาบาลแสนบาท วินิจฉัยใด",
+   "options": {
+    "A": "Acute manic episode",
+    "B": "Steroid-induced mania",
+    "C": "Substance abuse",
+    "D": "Steroid-induced psychosis",
+    "E": "Psychosis"
+   },
+   "answer": "B",
+   "why": "อาการอารมณ์ครึกครื้น ใช้เงินเกินตัว นอนน้อย เกิดหลังเริ่ม steroid ในคนที่ไม่เคยมีประวัติ จึงเป็น mania จากยา. ไม่มีหลงผิด/ประสาทหลอนเด่นจึงไม่ใช่ psychosis และไม่ควรวินิจฉัย primary manic episode เมื่อมีสาเหตุจากยาชัดเจน",
+   "source": "เฉลย78"
+  },
+  "78/113": {
+   "box": 27,
+   "stem": "หญิงสูงอายุหน้ามืดเหงื่อแตกซ้ำ ๆ ลูกสาวเรียกรถพยาบาลบ่อย glucose 25 mg/dL ในโรงพยาบาลปกติ กลับบ้านไม่กี่ชั่วโมงเป็นซ้ำ insulin สูงแต่ C-peptide ต่ำ วินิจฉัยใด",
+   "options": {
+    "A": "Insulinoma",
+    "B": "Factitious disorder (ทำกับตัวเอง)",
+    "C": "Somatic symptom disorder",
+    "D": "Conversion disorder",
+    "E": "Munchausen syndrome by proxy"
+   },
+   "answer": "E",
+   "why": "Insulin สูงแต่ C-peptide ต่ำบ่งว่าเป็น insulin จากภายนอก จึงไม่ใช่ insulinoma (ซึ่ง C-peptide สูง). อาการเกิดเมื่ออยู่กับลูกสาวและหายในโรงพยาบาล บ่งว่าผู้ดูแลเป็นผู้ทำ (factitious disorder imposed on another) ไม่ใช่ผู้ป่วยทำเอง",
+   "source": "เฉลย78",
+   "doubt": "⚠ เฉลยเขียน 'B E' ลังเลระหว่าง factitious กับ by proxy"
+  },
+  "78/140": {
+   "box": 29,
+   "stem": "ลดน้ำหนักได้แล้ว ต่อมากลับกินมากขึ้น ฮอร์โมนใดเป็นสาเหตุ",
+   "options": {
+    "A": "Leptin",
+    "B": "Adiponectin",
+    "C": "Betatrophin",
+    "D": "Resistin"
+   },
+   "answer": "A",
+   "why": "Leptin สร้างจากเซลล์ไขมันตามมวลไขมัน เมื่อน้ำหนักลด leptin ลดลง จึงลดการกด appetite ที่ hypothalamus ทำให้หิวมากขึ้น (weight regain). Adiponectin และ resistin เกี่ยวกับ insulin sensitivity ส่วน betatrophin เกี่ยวกับ lipid/β-cell ไม่ใช่ตัวคุมความหิวหลัก",
+   "source": "เฉลย78"
+  },
+  "78/164": {
+   "box": 26,
+   "stem": "ผู้ป่วย T1DM มีปัญหาน้ำตาลสูงหลังอาหาร insulin ตัวใดควรใช้เป็น bolus ใน intensive regimen",
+   "options": {
+    "A": "NPH",
+    "B": "Aspart",
+    "C": "Regular insulin",
+    "D": "Detemir",
+    "E": "Glargine"
+   },
+   "answer": "B",
+   "why": "Bolus ก่อนอาหารควรใช้ rapid-acting analog (aspart, lispro, glulisine) ที่ออกฤทธิ์เร็วตรงกับช่วงน้ำตาลขึ้นหลังอาหาร. Regular insulin ออกฤทธิ์ช้ากว่า ส่วน NPH, detemir, glargine เป็น basal insulin",
+   "source": "เฉลย78"
+  },
+  "78/167": {
+   "box": 16,
+   "stem": "เด็กมีลักษณะ DiGeorge syndrome (micrognathia, low-set ears, del 22q11.2) โครงสร้างใดไม่มีความผิดปกติโดยตรง",
+   "options": {
+    "A": "หัวใจ",
+    "B": "Chief cell ของ parathyroid",
+    "C": "Thymus",
+    "D": "B cell ที่ทำงานได้",
+    "E": "Follicular T cell"
+   },
+   "answer": "D",
+   "why": "DiGeorge เกิดจาก pharyngeal pouch 3–4 เจริญผิดปกติ ทำให้ thymus (T cell บกพร่อง), parathyroid (hypocalcemia) และหัวใจ (conotruncal) ผิดปกติ. B cell สร้างจากไขกระดูกจึงไม่มี defect โดยตรง แม้การสร้าง antibody อาจลดจากขาด T helper",
+   "source": "เฉลย78"
+  },
+  "78/196": {
+   "box": 29,
+   "stem": "ชายมี cholesterol สูง พ่อเสียชีวิตก่อนวัยจาก atherosclerosis นอกจาก cholesterol สูงจะพบ lipoprotein ใดสูงอีก",
+   "options": {
+    "A": "Chylomicron",
+    "B": "VLDL",
+    "C": "LDL",
+    "D": "HDL"
+   },
+   "answer": "C",
+   "why": "ประวัติครอบครัวหลอดเลือดแข็งก่อนวัยร่วมกับ cholesterol สูงเข้าได้กับ familial hypercholesterolemia (LDL receptor defect) จึงมี LDL สูง. Chylomicron และ VLDL สูงจะเด่นที่ triglyceride ส่วน HDL สูงไม่ก่อโรค",
+   "source": "เฉลย78"
+  },
+  "78/215": {
+   "box": 2,
+   "stem": "ผู้ป่วยขาด GnRH, FSH, LH ต่อม anterior pituitary เจริญมาจากโครงสร้างใด",
+   "options": {
+    "A": "Oral ectoderm",
+    "B": "Neuroectoderm",
+    "C": "Neural crest cell",
+    "D": "Paraxial mesoderm",
+    "E": "Lateral mesoderm"
+   },
+   "answer": "A",
+   "why": "Anterior pituitary (adenohypophysis) มาจาก Rathke pouch ซึ่งเป็น oral (surface) ectoderm. Posterior pituitary มาจาก neuroectoderm (diencephalon) ส่วน neural crest และ mesoderm ไม่ใช่ต้นกำเนิดของต่อมใต้สมอง",
+   "source": "เฉลย78"
+  },
+  "78/216": {
+   "box": 7,
+   "stem": "ก้อนที่คอแนวกลาง ขยับขึ้นลงตามการกลืน มีลักษณะใด",
+   "options": {
+    "A": "ส่วนใหญ่ทำให้เกิด hyperthyroidism",
+    "B": "อยู่ตามแนวทางเคลื่อนลงของต่อมไทรอยด์"
+   },
+   "answer": "B",
+   "why": "ก้อนกลางคอที่ขยับตามการกลืน (และแลบลิ้น) นึกถึง thyroglossal duct cyst ซึ่งเกิดจากเศษ thyroglossal duct ตามแนวที่ต่อมไทรอยด์เคลื่อนจาก foramen cecum ลงมา. ก้อนชนิดนี้ไม่ทำให้เกิด hyperthyroidism",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ เฉลย78 ระบุว่า 'ข้อมูลไม่เพียงพอ' คำตอบนี้มาจากการวิเคราะห์"
+  },
+  "78/X2": {
+   "box": 15,
+   "stem": "ผู้ป่วย PTH สูง (ข้อท้ายไฟล์ จำมาเพียงสั้น ๆ) สาเหตุที่พบบ่อยที่สุดคือ",
+   "options": {
+    "A": "Parathyroid adenoma",
+    "B": "Parathyroid hyperplasia",
+    "C": "Parathyroid carcinoma",
+    "D": "Secondary hyperparathyroidism จาก CKD"
+   },
+   "answer": "A",
+   "why": "Primary hyperparathyroidism (PTH สูงร่วมกับ Ca สูง) เกิดจาก parathyroid adenoma เดี่ยวประมาณ 85% ที่เหลือเป็น hyperplasia (เช่นใน MEN) และ carcinoma พบน้อยมาก. Secondary HPT จาก CKD จะมี Ca ต่ำหรือปกติ",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true,
+   "doubt": "⚠ โจทย์จำมาไม่ครบ ไฟล์ให้คำตอบมาเพียง PTH adenoma"
+  },
+  "79/1": {
+   "box": 27,
+   "stem": "ผู้ป่วยตับแข็ง decompensated แพทย์แนะนำกินมื้อเล็กบ่อย 4–6 มื้อ และต้องมีอาหารคาร์โบไฮเดรตก่อนนอน เพื่อชดเชยความบกพร่องของ pathway ใด",
+   "options": {
+    "A": "Glycogenolysis",
+    "B": "Gluconeogenesis",
+    "C": "Glycogenesis",
+    "D": "Fatty acid oxidation",
+    "E": "Transaminase"
+   },
+   "answer": "C",
+   "why": "ตับแข็งเก็บ glycogen ได้น้อย (glycogenesis/glycogen storage บกพร่อง) ข้ามคืนจึงหมด glycogen เร็วและเข้าสู่ภาวะ accelerated starvation สลายกล้ามเนื้อ อาหารก่อนนอนช่วยแทนแหล่ง glycogen ที่ไม่มี. Gluconeogenesis ไม่ใช่สิ่งที่อาหารว่างก่อนนอนชดเชย ส่วน fatty acid oxidation และ transaminase ไม่ใช่ปัญหาหลัก",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ บางแหล่งอาจตอบ A (glycogenolysis) เพราะปลายทางคือปล่อย glucose ไม่ได้ แต่ต้นเหตุคือเก็บ glycogen ได้น้อย สอดคล้อง 78/96"
+  },
+  "79/3": {
+   "box": 29,
+   "stem": "ผู้ป่วยมี xanthoma ที่ข้อศอก ไขมันผิดปกติ และ plasma ขุ่นขาวหลังปั่น สาเหตุคือ",
+   "options": {
+    "A": "Triglyceride สูง",
+    "B": "LDL สูง",
+    "C": "HDL สูง",
+    "D": "VLDL สูง",
+    "E": "Lp(a) สูง"
+   },
+   "answer": "A",
+   "why": "Plasma ขุ่นขาว (lipemic) เกิดจาก triglyceride-rich lipoprotein โดยเฉพาะ chylomicron และ TG สูงมากทำให้เกิด eruptive xanthoma. LDL สูงไม่ทำให้ plasma ขุ่น (ให้ tendon xanthoma) ส่วน HDL และ Lp(a) ไม่เกี่ยว",
+   "source": "วิเคราะห์"
+  },
+  "79/23": {
+   "box": 1,
+   "stem": "เซลล์มี rough ER เสียหายรุนแรง ฮอร์โมนใดได้รับผลกระทบโดยตรงที่สุด",
+   "options": {
+    "A": "Insulin",
+    "B": "Estrogen",
+    "C": "Thyroid hormone",
+    "D": "Androgen",
+    "E": "Cortisol"
+   },
+   "answer": "A",
+   "why": "ฮอร์โมน peptide เช่น insulin สังเคราะห์บน ribosome ของ RER แล้วผ่าน Golgi. Steroid (estrogen, androgen, cortisol) สร้างใน SER/mitochondria ส่วน thyroid hormone เป็น amine ที่สร้างบน thyroglobulin ใน colloid",
+   "source": "เฉลย79"
+  },
+  "79/26": {
+   "box": 10,
+   "stem": "เด็ก Down syndrome จาก Robertsonian translocation ควรตรวจคัดกรองอะไรเป็นประจำ",
+   "options": {
+    "A": "Thyroid function test",
+    "B": "Liver function test",
+    "C": "Renal function test",
+    "D": "Serum calcium",
+    "E": "Coagulation profile"
+   },
+   "answer": "A",
+   "why": "Down syndrome เสี่ยงทั้ง congenital hypothyroidism และ autoimmune thyroid disease จึงแนะนำตรวจ TFT แรกเกิดและเป็นระยะทุกปี. LFT, RFT, Ca และ coagulation ไม่ใช่การคัดกรองประจำ",
+   "source": "เฉลย79"
+  },
+  "79/27": {
+   "box": 23,
+   "stem": "ติดถ้ำไม่มีอาหาร 7 วัน สารใดจากเนื้อเยื่อไขมันถูกส่งไปตับเพื่อใช้ใน gluconeogenesis",
+   "options": {
+    "A": "Urea",
+    "B": "Ketone bodies",
+    "C": "Glycerol",
+    "D": "Lactate",
+    "E": "Acetyl-CoA"
+   },
+   "answer": "C",
+   "why": "Lipolysis ได้ fatty acid กับ glycerol; glycerol เข้าตับเป็น glycerol-3-P แล้วเป็น substrate ของ gluconeogenesis. Fatty acid/acetyl-CoA เปลี่ยนเป็น glucose ไม่ได้ (ได้ ketone) ส่วน lactate มาจากกล้ามเนื้อ/RBC ไม่ใช่ไขมัน",
+   "source": "วิเคราะห์"
+  },
+  "79/37": {
+   "box": 3,
+   "stem": "วิ่ง 10 km กลางแดดร้อน เหงื่อออกมาก กลไกหลักคือ",
+   "options": {
+    "A": "Adrenergic กระตุ้น apocrine gland",
+    "B": "Cholinergic กระตุ้น eccrine gland",
+    "C": "กระตุ้น sebaceous gland",
+    "D": "หลอดเลือดผิวหนังหดตัว",
+    "E": "Insensible loss ผ่าน stratum corneum"
+   },
+   "answer": "B",
+   "why": "เหงื่อเพื่อระบายความร้อนมาจาก eccrine gland ซึ่งเลี้ยงด้วย sympathetic แต่ใช้ acetylcholine (muscarinic). Apocrine เกี่ยวกับอารมณ์/กลิ่นตัว การหดหลอดเลือดผิวหนังเป็นการเก็บความร้อน ส่วน insensible loss ไม่ใช่การตอบสนองต่อความร้อน",
+   "source": "วิเคราะห์"
+  },
+  "79/44": {
+   "box": 29,
+   "stem": "เด็กกินไม่หยุด อ้วน กล้ามเนื้ออ่อนแรง พัฒนาการช้า ตัวเตี้ย กลุ่มอาการใด",
+   "options": {
+    "A": "Prader-Willi syndrome",
+    "B": "Angelman syndrome",
+    "C": "Down syndrome",
+    "D": "Williams syndrome",
+    "E": "Turner syndrome"
+   },
+   "answer": "A",
+   "why": "Prader-Willi (ขาดยีน paternal 15q11-13) มี hypotonia ช่วงทารก ต่อมาหิวไม่หยุด อ้วน เตี้ย hypogonadism และ ghrelin สูง. Angelman เด่นเรื่องหัวเราะ ชัก ataxia ส่วน Down, Williams, Turner ไม่มี hyperphagia เด่น",
+   "source": "เฉลย79"
+  },
+  "79/47": {
+   "box": 15,
+   "stem": "ผู้สูงอายุปวดหลังเรื้อรัง albumin 3.0, Cr 2.0, Ca 13 mg/dL น่าจะพบผลแล็บใด",
+   "options": {
+    "A": "Free light chain ชนิด monoclonal เพิ่มขึ้น",
+    "B": "Immunoglobulin ในซีรัมลดลง",
+    "C": "ALP สูง",
+    "D": "Erythropoietin เพิ่ม",
+    "E": "การสลายกระดูกลดลง"
+   },
+   "answer": "A",
+   "why": "ผู้สูงอายุ ปวดหลัง Ca สูง ไตเสื่อม นึกถึง multiple myeloma ซึ่งมี monoclonal light chain (Bence Jones) สูง. Myeloma มีการสลายกระดูกเพิ่ม (lytic) แต่ ALP มักปกติเพราะ osteoblast ถูกกด และ EPO ไม่เพิ่มจากไตเสื่อม",
+   "source": "วิเคราะห์"
+  },
+  "79/94": {
+   "box": 6,
+   "stem": "บาดเจ็บที่ hypothalamus จากอุบัติเหตุ ฮอร์โมนใดเกี่ยวข้องโดยตรงกับการคั่งน้ำ",
+   "options": {
+    "A": "Cortisol",
+    "B": "ADH",
+    "C": "Renin",
+    "D": "Aldosterone",
+    "E": "ANP"
+   },
+   "answer": "B",
+   "why": "ADH สร้างที่ supraoptic/paraventricular nucleus ของ hypothalamus ออกฤทธิ์ใส่ aquaporin-2 ที่ collecting duct เพิ่มการดูดน้ำกลับ บาดเจ็บบริเวณนี้จึงเกิด central DI. Aldosterone เพิ่ม Na ไม่ใช่น้ำอิสระ ส่วน renin, cortisol ไม่ได้สร้างที่ hypothalamus และ ANP ขับน้ำ",
+   "source": "เฉลย79"
+  },
+  "79/102": {
+   "box": 29,
+   "stem": "หญิงมีผิวหนาสีดำนุ่มที่คอและรักแร้ ร่วมกับน้ำตาลสูงและไขมันผิดปกติ ภาวะใดสัมพันธ์มากที่สุด",
+   "options": {
+    "A": "Metabolic syndrome",
+    "B": "Cushing disease",
+    "C": "SIADH",
+    "D": "Addison disease",
+    "E": "Hyperthyroidism"
+   },
+   "answer": "A",
+   "why": "Acanthosis nigricans สะท้อน insulin resistance ร่วมกับ hyperglycemia และ dyslipidemia เข้ากับ metabolic syndrome. Cushing มี insulin resistance ได้แต่โจทย์ไม่มีลักษณะ cushingoid ส่วน Addison ทำให้ผิวคล้ำทั่วไป ไม่ใช่ velvety plaque",
+   "source": "เฉลย79"
+  },
+  "79/111": {
+   "box": 13,
+   "stem": "หญิง osteoporosis มีการสลายกระดูกเพิ่ม สารใดที่ osteoblast สร้างแล้วกระตุ้นการเจริญและทำงานของ osteoclast",
+   "options": {
+    "A": "Osteoprotegerin",
+    "B": "Calcitonin",
+    "C": "Osteocalcin",
+    "D": "RANK",
+    "E": "RANKL"
+   },
+   "answer": "E",
+   "why": "Osteoblast แสดง RANKL ซึ่งจับ RANK บน osteoclast precursor ให้เจริญเป็น osteoclast (ร่วมกับ M-CSF). OPG เป็น decoy receptor ยับยั้ง RANKL, RANK อยู่บน osteoclast เอง ส่วน calcitonin มาจาก C cell และยับยั้ง osteoclast",
+   "source": "วิเคราะห์"
+  },
+  "79/115": {
+   "box": 7,
+   "stem": "ผ่าตัด total thyroidectomy ต้องระวังไม่ให้เส้นประสาทใดบาดเจ็บเพื่อป้องกันสายเสียงผิดปกติ",
+   "options": {
+    "A": "Hypoglossal nerve",
+    "B": "Phrenic nerve",
+    "C": "Recurrent laryngeal nerve",
+    "D": "Glossopharyngeal nerve",
+    "E": "Greater auricular nerve"
+   },
+   "answer": "C",
+   "why": "RLN วิ่งใน tracheoesophageal groove ชิดด้านหลังต่อมไทรอยด์และใกล้ inferior thyroid artery เลี้ยงกล้ามเนื้อกล่องเสียงเกือบทั้งหมด บาดเจ็บทำให้เสียงแหบ. เส้นอื่นไม่ได้เลี้ยงสายเสียงหรืออยู่ห่างจากต่อม",
+   "source": "เฉลย79"
+  },
+  "79/183": {
+   "box": 29,
+   "stem": "ชาย LDL 60, HDL 30, TG 1,500 mg/dL ยาใดเหมาะที่สุดเพื่อลด TG และป้องกันตับอ่อนอักเสบ",
+   "options": {
+    "A": "PCSK9 inhibitor",
+    "B": "HMG-CoA reductase inhibitor",
+    "C": "Ezetimibe",
+    "D": "Bile acid sequestrant",
+    "E": "Fibrate"
+   },
+   "answer": "E",
+   "why": "TG >1,000 เสี่ยง acute pancreatitis ยาที่ลด TG ได้มากที่สุดคือ fibrate (PPAR-α เพิ่ม lipoprotein lipase). Statin, PCSK9 inhibitor และ ezetimibe เน้นลด LDL ส่วน bile acid sequestrant ทำให้ TG สูงขึ้น",
+   "source": "วิเคราะห์"
+  },
+  "79/184": {
+   "box": 28,
+   "stem": "ชายมีแผลในกระเพาะซ้ำและท้องเสียเรื้อรัง gastrin สูงมาก (Zollinger-Ellison) เซลล์ใดในกระเพาะน่าจะ hyperplasia",
+   "options": {
+    "A": "Mucous neck cell",
+    "B": "Parietal cell",
+    "C": "ECL cell",
+    "D": "Chief cell",
+    "E": "G cell"
+   },
+   "answer": "C",
+   "why": "Gastrin มีฤทธิ์ trophic ต่อ ECL cell โดยตรง ภาวะ hypergastrinemia จึงเกิด ECL hyperplasia จนถึง gastric carcinoid ได้ (ร่วมกับ parietal cell mass เพิ่มด้วย). G cell เป็นผู้สร้าง gastrin ซึ่งใน ZES มาจาก gastrinoma ไม่ใช่ G cell hyperplasia ส่วน mucous neck และ chief cell ไม่ใช่เป้าหมายหลัก",
+   "source": "วิเคราะห์"
+  },
+  "79/189": {
+   "box": 29,
+   "stem": "ชายเป็น acute pancreatitis ผลแล็บใดเป็นสาเหตุที่ยอมรับของตับอ่อนอักเสบ",
+   "options": {
+    "A": "Lp(a) สูง",
+    "B": "LDL สูง",
+    "C": "HDL ต่ำ",
+    "D": "Total cholesterol สูง",
+    "E": "Triglyceride >1,000 mg/dL"
+   },
+   "answer": "E",
+   "why": "Hypertriglyceridemia รุนแรง (มักเกิน 1,000 mg/dL) เป็นสาเหตุอันดับสามของ acute pancreatitis รองจากนิ่วและแอลกอฮอล์. ความผิดปกติของ cholesterol, LDL, HDL และ Lp(a) เกี่ยวกับหลอดเลือดแข็ง ไม่ทำให้ตับอ่อนอักเสบ",
+   "source": "วิเคราะห์"
+  },
+  "79/193": {
+   "box": 15,
+   "stem": "หญิงเป็นมะเร็งโพรงหลังจมูก อ่อนเพลีย ท้องผูก กระหายน้ำ Ca 13.7 mg/dL หลังให้น้ำเกลือเพียงพอแล้ว ควรให้ยาใดเพิ่ม",
+   "options": {
+    "A": "Acetazolamide",
+    "B": "Tolvaptan",
+    "C": "Furosemide",
+    "D": "Chlorothiazide",
+    "E": "Spironolactone"
+   },
+   "answer": "C",
+   "why": "Loop diuretic ยับยั้ง NKCC ลดการดูด Ca กลับที่ thick ascending limb จึงเพิ่มการขับ Ca (ใช้หลังแก้ภาวะขาดน้ำแล้ว). Thiazide ลดการขับ Ca ทำให้ Ca สูงขึ้น ส่วน acetazolamide, tolvaptan, spironolactone ไม่ช่วยขับ Ca",
+   "source": "เฉลย79",
+   "doubt": "⚠ แนวปฏิบัติปัจจุบันเน้น bisphosphonate/calcitonin ส่วน loop diuretic ให้เฉพาะเมื่อมีภาวะน้ำเกิน"
+  },
+  "79/196": {
+   "box": 21,
+   "stem": "ชาย 42 ปี ความดันสูงต่อเนื่อง K ต่ำก้ำกึ่ง HCO3 สูง ไม่ได้ใช้ยาขับปัสสาวะ ตรวจเบื้องต้นใดเพื่อหา primary hyperaldosteronism",
+   "options": {
+    "A": "EKG",
+    "B": "CT angiography สมอง",
+    "C": "Plasma aldosterone-to-renin ratio",
+    "D": "Serum cortisol อย่างเดียว",
+    "E": "24-h urine metanephrine"
+   },
+   "answer": "C",
+   "why": "HT ร่วมกับ hypokalemia และ metabolic alkalosis นึกถึง primary aldosteronism ซึ่งคัดกรองด้วย ARR (aldosterone สูง renin ถูกกด). Metanephrine ใช้หา pheochromocytoma cortisol ใช้หา Cushing ส่วน EKG/CTA ไม่ใช่การวินิจฉัยสาเหตุ",
+   "source": "เฉลย79"
+  },
+  "79/198": {
+   "box": 24,
+   "stem": "ผู้ป่วยเบาหวานนานมี albuminuria เพิ่มขึ้น การเปลี่ยนแปลงของ glomerular filtration barrier ใดเป็นลักษณะของ diabetic nephropathy",
+   "options": {
+    "A": "สูญเสีย negative charge ของ GBM",
+    "B": "GBM มี positive charge เพิ่ม",
+    "C": "Podocyte หายทั้งหมด",
+    "D": "Endothelial fenestration เพิ่ม",
+    "E": "GBM บางลง"
+   },
+   "answer": "A",
+   "why": "ใน diabetic nephropathy มี nonenzymatic glycation ทำให้ heparan sulfate ลดลง GBM เสีย negative charge จึงรั่ว albumin (ร่วมกับ GBM หนาขึ้น). GBM บางลงเป็นลักษณะของ thin basement membrane disease และ podocyte ไม่ได้หายทั้งหมด",
+   "source": "วิเคราะห์"
+  },
+  "79/199": {
+   "box": 24,
+   "stem": "หญิงเบาหวานคุมไม่ดี (HbA1c 9.2%) มี microalbuminuria biopsy ไตพบ tubular basement membrane หนาร่วมกับการอักเสบเรื้อรังใน interstitium วินิจฉัยใด",
+   "options": {
+    "A": "Diabetic glomerulosclerosis",
+    "B": "Acute interstitial nephritis",
+    "C": "Diabetic tubulointerstitial nephropathy",
+    "D": "Minimal change disease",
+    "E": "Acute tubular necrosis"
+   },
+   "answer": "C",
+   "why": "ผลชิ้นเนื้อเน้นที่ tubule และ interstitium (TBM หนา + chronic interstitial change) ในผู้ป่วยเบาหวาน จึงเป็น diabetic tubulointerstitial nephropathy. Diabetic glomerulosclerosis จะเห็น mesangial expansion/KW nodule ที่ glomerulus ส่วน AIN และ ATN เป็นภาวะเฉียบพลัน",
+   "source": "วิเคราะห์"
+  },
+  "79/207": {
+   "box": 6,
+   "stem": "ชายเป็น schizophrenia สับสน Na 120, Sosm 270, Uosm 70 (ต่ำมาก), urine Na <20 สาเหตุคือ",
+   "options": {
+    "A": "SIADH",
+    "B": "Central DI",
+    "C": "Nephrogenic DI",
+    "D": "Psychogenic polydipsia",
+    "E": "Cerebral salt wasting"
+   },
+   "answer": "D",
+   "why": "Hyponatremia ที่ Uosm ต่ำมาก (<100) แสดงว่า ADH ถูกกดและไตขับน้ำเต็มที่ แต่ดื่มน้ำเกินความสามารถในการขับ พบบ่อยในผู้ป่วยจิตเวช. SIADH และ cerebral salt wasting มี Uosm สูง/UNa สูง ส่วน DI ทำให้ Na สูงไม่ใช่ต่ำ",
+   "source": "เฉลย79"
+  },
+  "79/214": {
+   "box": 4,
+   "stem": "หญิงหลังคลอดที่ให้นมลูกยังไม่มีประจำเดือนและไม่ตกไข่ กลไกหลักคือ",
+   "options": {
+    "A": "Corpus luteum หลั่ง progesterone เพิ่ม",
+    "B": "Oxytocin กระตุ้นการตกไข่ต่อเนื่อง",
+    "C": "Prolactin ยับยั้งการหลั่ง GnRH",
+    "D": "LH เพิ่มขึ้น",
+    "E": "FSH เพิ่มขึ้น"
+   },
+   "answer": "C",
+   "why": "การดูดนมกระตุ้น prolactin ซึ่งกดการหลั่ง GnRH แบบ pulsatile ทำให้ LH/FSH ต่ำจึงไม่ตกไข่ (lactational amenorrhea). LH/FSH จึงลดลงไม่ใช่เพิ่ม ส่วน oxytocin ทำหน้าที่ขับน้ำนมไม่ได้กระตุ้นการตกไข่",
+   "source": "วิเคราะห์"
+  },
+  "79/231": {
+   "box": 19,
+   "stem": "ทารก 46,XY อวัยวะเพศภายนอกกำกวม ต่อมามีความดันสูงและ K ต่ำ ขาดเอนไซม์ใด",
+   "options": {
+    "A": "21α-hydroxylase",
+    "B": "17α-hydroxylase",
+    "C": "5α-reductase",
+    "D": "Aromatase",
+    "E": "11β-hydroxylase"
+   },
+   "answer": "B",
+   "why": "ขาด 17α-hydroxylase ทำให้สร้าง androgen และ cortisol ไม่ได้ เพศชายจึง undervirilized และสารตั้งต้นไหลไปเป็น 11-deoxycorticosterone เกิด HT + hypokalemia. 21-OH deficiency ทำให้เสียเกลือ 11β-OH ทำให้ HT แต่มี androgen เกิน (virilization) ส่วน 5α-reductase ไม่มี HT",
+   "source": "วิเคราะห์"
+  },
+  "79/241": {
+   "box": 18,
+   "stem": "ชายเผชิญแผ่นดินไหว ตกใจกลัว ร่างกายเกิด fight-or-flight ภายในไม่กี่วินาที ฮอร์โมนใดหลั่งออกมาก่อน",
+   "options": {
+    "A": "ACTH",
+    "B": "Cortisol",
+    "C": "Epinephrine",
+    "D": "GH",
+    "E": "Glucagon"
+   },
+   "answer": "C",
+   "why": "Sympathetic preganglionic fiber กระตุ้น chromaffin cell ของ adrenal medulla โดยตรง จึงหลั่ง epinephrine ภายในวินาที. แกน HPA (CRH → ACTH → cortisol) ต้องใช้เวลานาทีขึ้นไป ส่วน GH และ glucagon ตามมาภายหลัง",
+   "source": "เฉลย79"
+  },
+  "79/243": {
+   "box": 4,
+   "stem": "ชาย 80 ปี IGF-1 ในเลือดต่ำมาก อธิบายได้ดีที่สุดด้วย",
+   "options": {
+    "A": "GH หลั่งลดลง",
+    "B": "GH หลั่งเพิ่มขึ้น",
+    "C": "ตับไวต่อ GH เพิ่มขึ้น",
+    "D": "Somatostatin หลั่งลดลง",
+    "E": "GHRH หลั่งเพิ่มขึ้น"
+   },
+   "answer": "A",
+   "why": "การหลั่ง GH ลดลงตามอายุ (somatopause) ตับจึงสร้าง IGF-1 น้อยลง. GH สูงหรือตับไวต่อ GH จะทำให้ IGF-1 สูง และ somatostatin ลด/GHRH เพิ่มจะกระตุ้น GH ไม่ทำให้ IGF-1 ต่ำ",
+   "source": "เฉลย79"
+  },
+  "79/244": {
+   "box": 24,
+   "stem": "หญิงตั้งครรภ์ไตรมาสแรก มีประวัติโรคภูมิต้านตนเองและโรคต่อมไร้ท่อคุมไม่ดี ภาวะใดเสี่ยงภาวะแทรกซ้อนต่อแม่และทารกสูงเป็นพิเศษ",
+   "options": {
+    "A": "Hashimoto thyroiditis",
+    "B": "Graves disease",
+    "C": "Type 1 DM",
+    "D": "Iron deficiency anemia",
+    "E": "Thyroid storm"
+   },
+   "answer": "C",
+   "why": "T1DM คุมไม่ดีช่วง organogenesis เพิ่มความพิการแต่กำเนิด (เช่น caudal regression หัวใจ) แท้ง macrosomia hypoglycemia ทารก และ DKA/preeclampsia ในแม่. Hashimoto/Graves คุมไม่ดีก็มีความเสี่ยงแต่น้อยกว่า ส่วนโลหิตจางขาดเหล็กไม่ใช่โรคต่อมไร้ท่อและ thyroid storm เป็นภาวะแทรกซ้อนไม่ใช่โรคพื้นฐาน",
+   "source": "เฉลย79"
+  },
+  "79/245": {
+   "box": 12,
+   "stem": "หญิงมีก้อนไทรอยด์ ตรวจพบ RET mutation และ calcitonin สูง วินิจฉัยใด",
+   "options": {
+    "A": "Papillary carcinoma",
+    "B": "Follicular carcinoma",
+    "C": "Anaplastic carcinoma",
+    "D": "Medullary carcinoma",
+    "E": "Thyroid lymphoma"
+   },
+   "answer": "D",
+   "why": "Medullary thyroid carcinoma มาจาก parafollicular C cell จึงหลั่ง calcitonin และสัมพันธ์กับ RET mutation (MEN2A/2B). Papillary สัมพันธ์ BRAF/RET-PTC rearrangement ไม่มี calcitonin สูง follicular สัมพันธ์ RAS ส่วน anaplastic และ lymphoma ไม่สร้าง calcitonin",
+   "source": "เฉลย79"
+  },
+  "79/246": {
+   "box": 22,
+   "stem": "หญิงอ่อนเพลีย น้ำหนักลด ผิวคล้ำ Na ต่ำ K สูง น้ำตาลต่ำ cortisol เช้าต่ำ ACTH สูงมาก ผลใดสนับสนุนว่าเป็น primary adrenal insufficiency มากที่สุด",
+   "options": {
+    "A": "DHEA ต่ำ",
+    "B": "Urine Na ต่ำ",
+    "C": "17-OH progesterone ต่ำ",
+    "D": "11-deoxycorticosterone สูง",
+    "E": "Renin สูง"
+   },
+   "answer": "E",
+   "why": "Primary (Addison) ทำลายทั้ง zona glomerulosa ทำให้ aldosterone ต่ำ renin จึงสูงชดเชย ต่างจาก secondary ที่ RAAS ยังปกติ. Urine Na ใน Addison จะสูง (เสียเกลือ) DOC สูงเป็นลักษณะ CAH บางชนิด ส่วน DHEA ต่ำพบได้ทั้ง primary และ secondary",
+   "source": "เฉลย79"
+  },
+  "79/247": {
+   "box": 26,
+   "stem": "ชาย T2DM น้ำหนักเกิน ต้องเพิ่มยาและกังวลน้ำหนักขึ้น ยาใดช่วยลดน้ำหนัก",
+   "options": {
+    "A": "Insulin",
+    "B": "Sulfonylurea",
+    "C": "GLP-1 receptor agonist",
+    "D": "DPP-4 inhibitor",
+    "E": "Alpha-glucosidase inhibitor"
+   },
+   "answer": "C",
+   "why": "GLP-1RA ทำให้อิ่มเร็ว ชะลอการเคลื่อนของกระเพาะ และลดความอยากอาหารที่สมอง จึงลดน้ำหนักได้ชัด. Insulin และ SU ทำให้น้ำหนักขึ้น DPP-4 inhibitor เป็นกลาง ส่วน α-glucosidase inhibitor ลดน้ำหนักได้น้อยมาก",
+   "source": "เฉลย79"
+  },
+  "79/248": {
+   "box": 8,
+   "stem": "หญิงเป็น Graves ใจสั่น ตาโปน ขี้ร้อน อุณหภูมิกายสูง กลไกใดเพิ่มการสร้างความร้อนโดยตรง",
+   "options": {
+    "A": "หลอดเลือดแดงเล็กหดตัว",
+    "B": "กดการทำงานของ mitochondria ลด ATP",
+    "C": "เพิ่ม uncoupling ของ oxidative phosphorylation ใน brown fat",
+    "D": "เหงื่อออกเป็นกลไกหลักของการสร้างความร้อน",
+    "E": "Set point ที่ hypothalamus สูงขึ้น"
+   },
+   "answer": "C",
+   "why": "Thyroid hormone เพิ่ม UCP-1 (thermogenin) และ Na/K-ATPase ทำให้พลังงานจากการหายใจระดับเซลล์ออกมาเป็นความร้อนแทน ATP. Set point ไม่เปลี่ยน (ต่างจากไข้) เหงื่อเป็นการระบายความร้อน และ thyroid hormone เพิ่มไม่ใช่กดการทำงานของ mitochondria",
+   "source": "เฉลย79"
+  },
+  "79/249": {
+   "box": 3,
+   "stem": "ชายออกกำลังกลางแจ้งวันร้อนชื้นหลายชั่วโมง สับสน อุณหภูมิแกน 41°C และยังสูงขึ้นแม้พยายามระบายความร้อน พยาธิสรีรวิทยาคือ",
+   "options": {
+    "A": "PGE2 ยก set point",
+    "B": "IL-1 ทำให้หลอดเลือด hypothalamus หดตัว",
+    "C": "ระบายความร้อนล้มเหลวจนอุณหภูมิแกนสูงขึ้น",
+    "D": "TRH เพิ่มทำให้ metabolic rate สูง",
+    "E": "Endotoxin ยก set point"
+   },
+   "answer": "C",
+   "why": "Heat stroke คือการสร้างความร้อนและรับความร้อนเกินความสามารถในการระบาย โดย set point ยังปกติ จึงไม่ตอบสนองต่อยาลดไข้. ตัวเลือกที่เกี่ยวกับ PGE2, IL-1 และ endotoxin เป็นกลไกของไข้ ส่วน TRH ไม่ใช่กลไก",
+   "source": "เฉลย79"
+  },
+  "79/250": {
+   "box": 3,
+   "stem": "หญิงติดเชื้อแบคทีเรียมีไข้ 39°C หนาวสั่นก่อนไข้ขึ้น กลไกหลักของไข้คือ",
+   "options": {
+    "A": "Toxin กระตุ้นต่อมเหงื่อโดยตรง",
+    "B": "PGE2 ใน hypothalamus เพิ่มขึ้นทำให้ set point สูงขึ้น",
+    "C": "Hypothalamus ควบคุมอุณหภูมิล้มเหลว",
+    "D": "สร้างความร้อนเพิ่มโดย set point ไม่เปลี่ยน",
+    "E": "Endotoxin กระตุ้น brown fat โดยตรง"
+   },
+   "answer": "B",
+   "why": "Pyrogen (IL-1, IL-6, TNF) กระตุ้น COX-2 ที่ OVLT สร้าง PGE2 ยก set point ร่างกายจึงรู้สึกหนาว สั่นและหดหลอดเลือดเพื่อให้ถึง set point ใหม่. การสร้างความร้อนโดย set point ไม่เปลี่ยนหรือระบบควบคุมล้มเหลวคือ hyperthermia/heat stroke",
+   "source": "เฉลย79"
+  },
+  "79/251": {
+   "box": 21,
+   "stem": "ชายมีก้อนต่อมหมวกไตพบขณะตรวจหาสาเหตุความดันสูง (มีภาพ histology) ก้อนนี้น่าจะสร้างฮอร์โมนใดเกิน",
+   "options": {
+    "A": "Aldosterone",
+    "B": "Cortisol",
+    "C": "Estrogen",
+    "D": "Progesterone",
+    "E": "Epinephrine"
+   },
+   "answer": "A",
+   "why": "ก้อน adrenal cortex ที่มาด้วยความดันสูงเป็นหลักนึกถึง aldosterone-producing adenoma (Conn) ภาพมักเป็นเซลล์ใสคล้าย zona glomerulosa/fasciculata มี spironolactone body ได้. Cortisol เกินจะมีลักษณะ cushingoid ส่วน epinephrine มาจาก medulla (pheo) ซึ่งภาพเป็น zellballen",
+   "source": "เฉลย79",
+   "needs_image": true
+  },
+  "79/252": {
+   "box": 26,
+   "stem": "หญิง T2DM เริ่มยาเบาหวานชนิดกินใหม่ หลายสัปดาห์ต่อมามี UTI ซ้ำและระคายเคืองอวัยวะเพศ ยานี้ออกฤทธิ์อย่างไร",
+   "options": {
+    "A": "ยับยั้ง DPP-4",
+    "B": "กระตุ้น GLP-1 receptor",
+    "C": "ยับยั้ง SGLT2 ที่ proximal tubule",
+    "D": "ปิด K-ATP channel ที่ β-cell",
+    "E": "ยับยั้ง α-glucosidase ในลำไส้"
+   },
+   "answer": "C",
+   "why": "SGLT2 inhibitor ลดการดูด glucose กลับที่ proximal tubule ทำให้มี glucosuria เชื้อจึงเจริญง่าย เกิด UTI และ genital mycotic infection. DPP-4 inhibitor/GLP-1RA มี SE ทางเดินอาหาร SU ทำให้ hypoglycemia ส่วน α-glucosidase inhibitor ทำให้ท้องอืด",
+   "source": "เฉลย79"
+  },
+  "79/253": {
+   "box": 9,
+   "stem": "หญิงเป็น primary hypothyroidism เริ่ม levothyroxine หลายสัปดาห์ ควรติดตามด้วยการตรวจใด",
+   "options": {
+    "A": "Free T4",
+    "B": "TSH",
+    "C": "Anti-thyroglobulin",
+    "D": "Anti-TPO",
+    "E": "Thyroglobulin"
+   },
+   "answer": "B",
+   "why": "ใน primary hypothyroidism แกน hypothalamus-pituitary ปกติ TSH จึงเป็นตัวสะท้อนที่ไวที่สุด ตรวจหลังปรับยา 6–8 สัปดาห์. FT4 ใช้ติดตามใน central hypothyroidism ส่วน antibody และ thyroglobulin ไม่ได้ใช้ปรับขนาดยา",
+   "source": "เฉลย79"
+  },
+  "79/254": {
+   "box": 9,
+   "stem": "หญิงเป็น Graves ได้ยาต้านไทรอยด์ การตรวจใดเหมาะสำหรับติดตามระหว่างการรักษา (ตามตัวเลือกที่มี)",
+   "options": {
+    "A": "Anti-TPO",
+    "B": "TSH receptor antibody",
+    "C": "Anti-thyroglobulin",
+    "D": "Thyroglobulin",
+    "E": "Calcitonin"
+   },
+   "answer": "B",
+   "why": "ในตัวเลือก มีเพียง TRAb ที่สัมพันธ์กับกลไกโรค Graves และใช้ประเมินการสงบของโรคก่อนหยุดยา. Anti-TPO/anti-Tg ไม่จำเพาะ thyroglobulin ใช้ติดตามมะเร็ง ส่วน calcitonin ใช้กับ medullary carcinoma",
+   "source": "เฉลย79",
+   "doubt": "⚠ ทางคลินิกช่วงแรกติดตามด้วย FT4/T3 (TSH ฟื้นช้าเป็นเดือน) TRAb ใช้ทำนาย remission ก่อนหยุดยา"
+  },
+  "79/255": {
+   "box": 9,
+   "stem": "หญิงอ่อนเพลีย ขี้หนาว น้ำหนักขึ้น TSH สูง FT4 ต่ำ antibody ใดสัมพันธ์กับ Hashimoto มากที่สุด",
+   "options": {
+    "A": "Anti-TPO",
+    "B": "TSH receptor-stimulating antibody",
+    "C": "Anti-dsDNA",
+    "D": "Anti-centromere",
+    "E": "Anti-mitochondrial"
+   },
+   "answer": "A",
+   "why": "Anti-TPO พบได้ราว 90% ของ Hashimoto thyroiditis และเป็นตัวบ่งชี้ที่ไวที่สุด. TSI เป็นของ Graves anti-dsDNA ของ SLE anti-centromere ของ limited scleroderma และ anti-mitochondrial ของ primary biliary cholangitis",
+   "source": "เฉลย79"
+  },
+  "79/256": {
+   "box": 6,
+   "stem": "ชายบาดเจ็บที่ hypothalamus จากอุบัติเหตุ ฮอร์โมนใดเพิ่มการดูดน้ำกลับที่ไตโดยตรง",
+   "options": {
+    "A": "Cortisol",
+    "B": "ADH",
+    "C": "Renin",
+    "D": "Aldosterone",
+    "E": "Angiotensin II"
+   },
+   "answer": "B",
+   "why": "ADH จาก supraoptic/paraventricular nucleus จับ V2 receptor ที่ collecting duct แทรก aquaporin-2 เพิ่มการดูดน้ำอิสระกลับ บาดเจ็บ hypothalamus จึงเกิด central DI. Aldosterone และ angiotensin II ดูด Na เป็นหลัก ส่วน renin เป็นเอนไซม์",
+   "source": "เฉลย79"
+  },
+  "79/257": {
+   "box": 2,
+   "stem": "หญิงมี pituitary adenoma อาจรบกวนการส่งฮอร์โมนผ่าน hypothalamic-hypophyseal portal system ฮอร์โมนใดปกติส่งไปถึง anterior pituitary ทางนี้",
+   "options": {
+    "A": "Oxytocin",
+    "B": "ADH",
+    "C": "GHRH",
+    "D": "Vasopressin",
+    "E": "Neurophysin"
+   },
+   "answer": "C",
+   "why": "Releasing hormone ของ hypothalamus (GHRH, CRH, TRH, GnRH, dopamine, somatostatin) ปล่อยที่ median eminence เข้าสู่ portal vein ไปยัง anterior pituitary. Oxytocin, ADH/vasopressin และ neurophysin ส่งตาม axon ไปเก็บที่ posterior pituitary",
+   "source": "เฉลย79"
+  },
+  "79/258": {
+   "box": 25,
+   "stem": "หญิง T2DM ป่วยแล้วหยุด insulin ดื่มแต่น้ำ คลื่นไส้อ่อนแรง pH 7.29, PCO2 27, HCO3 15, glucose 454, ketone สูงมาก น่าจะพบความผิดปกติของ electrolyte ใด",
+   "options": {
+    "A": "Hypokalemia",
+    "B": "Hyperkalemia",
+    "C": "Hypernatremia",
+    "D": "Hypocalcemia",
+    "E": "Pseudohyperkalemia"
+   },
+   "answer": "B",
+   "why": "ใน DKA ขาด insulin และภาวะ hyperosmolar ทำให้ K เคลื่อนออกนอกเซลล์ ค่า K ในเลือดแรกรับจึงมักสูงหรือปกติ ทั้งที่ total body K ต่ำจาก osmotic diuresis. Hypokalemia มักเกิดหลังเริ่ม insulin ส่วน Na มักต่ำเทียม (pseudohyponatremia จากน้ำตาลสูง)",
+   "source": "เฉลย79"
+  },
+  "79/259": {
+   "box": 20,
+   "stem": "หญิงลักษณะ cushingoid ชัด (หน้ากลม ช้ำง่าย striae ม่วง buffalo hump ความดันสูง) 1-mg overnight DST cortisol เช้า 12 μg/dL ขั้นต่อไปเพื่อหาสาเหตุคือ",
+   "options": {
+    "A": "วัด plasma ACTH",
+    "B": "High-dose DST",
+    "C": "24-h urine free cortisol",
+    "D": "CT ช่องท้อง",
+    "E": "Inferior petrosal sinus sampling"
+   },
+   "answer": "A",
+   "why": "เมื่อยืนยัน hypercortisolism แล้ว (DST ไม่กด) ขั้นต่อไปในการหาสาเหตุคือวัด ACTH เพื่อแยก ACTH-dependent กับ independent. High-dose DST, CT และ IPSS ทำหลังทราบผล ACTH ส่วน 24-h UFC เป็นการยืนยัน hypercortisolism ไม่ใช่หาสาเหตุ",
+   "source": "เฉลย79",
+   "doubt": "⚠ ตามแนวทางควรยืนยัน hypercortisolism ด้วยการตรวจคัดกรองอย่างน้อย 2 วิธีก่อน (24-h UFC, late-night salivary) แล้วจึงวัด ACTH"
+  },
+  "79/260": {
+   "box": 11,
+   "stem": "หญิงเป็น Graves ได้ propylthiouracil (PTU) ผลข้างเคียงร้ายแรงใดสัมพันธ์กับยานี้มากที่สุด",
+   "options": {
+    "A": "Aplastic anemia",
+    "B": "Severe hepatotoxicity",
+    "C": "Pulmonary fibrosis",
+    "D": "Renal papillary necrosis",
+    "E": "Cardiomyopathy"
+   },
+   "answer": "B",
+   "why": "PTU มี black box warning เรื่อง fulminant hepatic necrosis จึงใช้เฉพาะไตรมาสแรกของการตั้งครรภ์หรือ thyroid storm. ยาต้านไทรอยด์ทำให้ agranulocytosis ได้ แต่ไม่ใช่ aplastic anemia ส่วน pulmonary fibrosis (amiodarone) papillary necrosis (NSAID) cardiomyopathy ไม่เกี่ยว",
+   "source": "เฉลย79"
+  },
+  "79/261": {
+   "box": 23,
+   "stem": "ภายใต้ภาวะปกติ เมื่อน้ำตาลในเลือดสูง กลไกใดเป็นตัวกระตุ้นโดยตรงให้ β-cell หลั่ง insulin",
+   "options": {
+    "A": "ปิด ATP-sensitive K+ channel",
+    "B": "Insulin ถูกทำลายมากขึ้น",
+    "C": "Insulin receptor ไวขึ้น",
+    "D": "เปิด voltage-gated K+ channel",
+    "E": "ยับยั้ง voltage-gated Ca2+ channel"
+   },
+   "answer": "A",
+   "why": "Glucose เข้าทาง GLUT2 ถูก glucokinase เผาผลาญได้ ATP เพิ่ม ปิด K-ATP channel เซลล์ depolarize เปิด voltage-gated Ca2+ channel Ca เข้าเซลล์จึงเกิด exocytosis. การเปิด K channel หรือยับยั้ง Ca channel จะลดการหลั่ง ส่วนการทำลาย insulin และความไวของ receptor ไม่ใช่กลไกการหลั่ง",
+   "source": "เฉลย79"
+  },
+  "79/262": {
+   "box": 4,
+   "stem": "หญิงพบก้อนต่อมใต้สมองโดยบังเอิญจาก MRI ในบรรดา pituitary adenoma ชนิดใดพบบ่อยที่สุด",
+   "options": {
+    "A": "ACTH-secreting",
+    "B": "Nonfunctioning adenoma",
+    "C": "GH-secreting",
+    "D": "Prolactinoma",
+    "E": "TSH-secreting"
+   },
+   "answer": "D",
+   "why": "เฉลยตอบ prolactinoma ซึ่งเป็น adenoma ชนิดสร้างฮอร์โมน (functioning) ที่พบบ่อยที่สุด. ACTH, GH และ TSH adenoma พบน้อยกว่า",
+   "source": "เฉลย79",
+   "doubt": "⚠ ในบริบท incidentaloma ส่วนใหญ่เป็น nonfunctioning adenoma (B) และในหลายการศึกษา nonfunctioning ก็พบบ่อยใกล้เคียงหรือมากกว่า prolactinoma"
+  },
+  "79/263": {
+   "box": 15,
+   "stem": "ชาย 25 ปี Ca สูงเล็กน้อยคงที่ ขับ Ca ทางปัสสาวะต่ำมาก PTH สูงเล็กน้อยหรือปกติไม่สมควร พบ inactivating mutation ของ CaSR อธิบายได้อย่างไร",
+   "options": {
+    "A": "PTH ลดลงเพราะ CaSR ไวขึ้น",
+    "B": "PTH เพิ่มขึ้นเพราะ CaSR ไวลดลง",
+    "C": "PTH เพิ่มเพราะ osteoblast ไวต่อ PTH",
+    "D": "PTH ลดเพราะไตดูด Ca กลับบกพร่อง",
+    "E": "PTH เพิ่มเพราะขับ Ca ทางไตเพิ่ม"
+   },
+   "answer": "B",
+   "why": "Familial hypocalciuric hypercalcemia: CaSR ที่ parathyroid ไวลดลง ต้องใช้ Ca สูงขึ้นจึงจะกด PTH ส่วน CaSR ที่ไตก็ไวลดลงจึงดูด Ca กลับมาก ปัสสาวะมี Ca ต่ำ. Activating mutation ต่างหากที่ทำให้ CaSR ไวขึ้นและ PTH ต่ำ ส่วนการขับ Ca ทางไตในโรคนี้ลดลงไม่ใช่เพิ่ม",
+   "source": "เฉลย79"
+  }
+ }
+}

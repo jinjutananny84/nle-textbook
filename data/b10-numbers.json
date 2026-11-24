@@ -1,0 +1,425 @@
+{
+"note": "ตัวเลข cutpoint ค่าปกติ และสูตรของบท B10 · t = cut (ค่า/เกณฑ์) หรือ f (สูตร) · box = กล่องที่มา",
+"items": [
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "Prolactinoma",
+"v": "PRL > **200** ng/mL",
+"box": 4,
+"note": "ใช้แยกจากเหตุอื่นของ PRL สูง"
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "Stalk effect",
+"v": "PRL มักไม่เกิน ~**100–150**",
+"box": 4
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "Microadenoma vs macroadenoma",
+"v": "macro ≥ **1 cm**",
+"box": 4
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "Serum osmolality ปกติ",
+"v": "**280–295** mOsm/kg",
+"box": 6
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "Primary polydipsia",
+"v": "Uosm < **100**",
+"box": 6,
+"note": "ร่วมกับ Na ต่ำ"
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "SIADH: urine",
+"v": "Uosm > **100** · UNa > **30**",
+"box": 6
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "Desmopressin test บวก (central DI)",
+"v": "Uosm ขึ้น > **50%**",
+"box": 6
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "Uosm ที่คาดหวังเมื่อไตเข้มข้นได้",
+"v": "> **300** (งดน้ำแล้ว ~800)",
+"box": 6
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "แก้ Na ต่ำเรื้อรัง",
+"v": "ไม่เกิน **8–10** mEq/L ใน 24 ชม.",
+"box": 6,
+"note": "กันภาวะแทรกซ้อนทางสมอง"
+},
+{
+"t": "cut",
+"cat": "Pituitary · น้ำ",
+"name": "Heat stroke",
+"v": "core temp > **40°C** + CNS",
+"box": 3
+},
+{
+"t": "f",
+"cat": "Pituitary · น้ำ",
+"name": "Serum osmolality",
+"v": "Posm = **2×Na + glucose/18 + BUN/2.8**",
+"box": 6
+},
+{
+"t": "cut",
+"cat": "Thyroid",
+"name": "T4 : T3 ที่ต่อมปล่อย",
+"v": "T4 ≈ **90%**",
+"box": 8
+},
+{
+"t": "cut",
+"cat": "Thyroid",
+"name": "ตรวจ TSH หลังปรับ levothyroxine",
+"v": "**6–8** สัปดาห์",
+"box": 9
+},
+{
+"t": "cut",
+"cat": "Thyroid",
+"name": "Papillary carcinoma สัดส่วน",
+"v": "~**80%** ของมะเร็งไทรอยด์",
+"box": 12
+},
+{
+"t": "cut",
+"cat": "Thyroid",
+"name": "Hot nodule โอกาสเป็นมะเร็ง",
+"v": "< **1%**",
+"box": 12
+},
+{
+"t": "cut",
+"cat": "Thyroid",
+"name": "ตำแหน่งต่อมไทรอยด์",
+"v": "หน้า trachea **C5–T1**",
+"box": 7
+},
+{
+"t": "cut",
+"cat": "Thyroid",
+"name": "Thyroid ima artery พบ",
+"v": "~**10%**",
+"box": 7
+},
+{
+"t": "cut",
+"cat": "Thyroid",
+"name": "ให้ iodide หลัง thionamide",
+"v": "อย่างน้อย **1 ชม.**",
+"box": 11,
+"note": "ลำดับยา thyroid storm"
+},
+{
+"t": "f",
+"cat": "Ca · Bone",
+"name": "Corrected calcium",
+"v": "Ca + **0.8 × (4 − albumin)**",
+"box": 13
+},
+{
+"t": "cut",
+"cat": "Ca · Bone",
+"name": "Ca ที่จับ albumin",
+"v": "~**40%**",
+"box": 13
+},
+{
+"t": "cut",
+"cat": "Ca · Bone",
+"name": "FHH: Ca/Cr clearance ratio",
+"v": "< **0.01**",
+"box": 15
+},
+{
+"t": "cut",
+"cat": "Ca · Bone",
+"name": "1° HPT จาก adenoma เดี่ยว",
+"v": "~**85%**",
+"box": 15
+},
+{
+"t": "cut",
+"cat": "Ca · Bone",
+"name": "Hypercalcemia รุนแรง",
+"v": "Ca > **14** mg/dL",
+"box": 15
+},
+{
+"t": "cut",
+"cat": "Ca · Bone",
+"name": "PTH ในข้อ 77/225 (3° HPT)",
+"v": "~**1,180** pg/mL",
+"box": 14
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "21-hydroxylase ใน CAH",
+"v": "~**90%**",
+"box": 19
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "Adrenal medulla หลั่ง",
+"v": "Epi ~**80%** · NE ~20%",
+"box": 18
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "Pheochromocytoma rule of",
+"v": "**10** (familial ปัจจุบัน ~30%)",
+"box": 18
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "1 mg overnight DST",
+"v": "dexamethasone **1 mg** 23.00 น. → วัด cortisol เช้า",
+"box": 20
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "Plasma ACTH แยก Cushing",
+"v": "> **20** = dependent · < **10** = independent",
+"box": 20,
+"note": "pg/mL"
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "ใช้ steroid นานเสี่ยงกด HPA",
+"v": "> **3** สัปดาห์",
+"box": 20
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "Aldosterone : renin ratio คัดกรองบวก",
+"v": "ARR > **20**",
+"box": 21
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "Conn ที่มี hypoK",
+"v": "~**1/3**",
+"box": 21
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "Morning cortisol (AI)",
+"v": "< **3.5** = AI · > **18** = ตัดออก",
+"box": 22,
+"note": "µg/dL เจาะ 8–9 น."
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "Adrenal cortex ต้องเสียเท่าไรจึงมีอาการ",
+"v": "~**90%** ทั้ง 2 ข้าง",
+"box": 22
+},
+{
+"t": "cut",
+"cat": "Adrenal",
+"name": "Adrenal crisis: hydrocortisone IV",
+"v": "**100 mg**",
+"box": 22
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "FPG วินิจฉัย DM",
+"v": "≥ **126** mg/dL",
+"box": 24,
+"note": "อดอาหาร ≥ 8 ชม."
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "2-h OGTT 75 g วินิจฉัย DM",
+"v": "≥ **200**",
+"box": 24
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "HbA1c วินิจฉัย DM",
+"v": "≥ **6.5%**",
+"box": 24
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "Random glucose + อาการ",
+"v": "≥ **200**",
+"box": 24
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "Prediabetes: FPG",
+"v": "**100–125** (IFG)",
+"box": 24
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "Prediabetes: 2-h OGTT",
+"v": "**140–199** (IGT)",
+"box": 24
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "Prediabetes: HbA1c",
+"v": "**5.7–6.4%**",
+"box": 24
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "คัดกรอง GDM",
+"v": "GA **24–28** สัปดาห์",
+"box": 24
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "DKA: glucose",
+"v": "> **250** (guideline ใหม่ ~200)",
+"box": 25
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "HHS: glucose",
+"v": "> **600** · osm > **320**",
+"box": 25
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "DKA: ให้ K ก่อน insulin เมื่อ",
+"v": "K < **3.3**",
+"box": 25
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "DKA: เติม K เมื่อ",
+"v": "K < **5.3**",
+"box": 25
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "Metformin ห้ามใช้",
+"v": "eGFR < **30**",
+"box": 26
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "SGLT2 ดูด glucose ที่ PCT",
+"v": "~**90%** (SGLT1 ~10%)",
+"box": 26
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "Whipple triad: glucose ต่ำ",
+"v": "< **55** mg/dL",
+"box": 27
+},
+{
+"t": "cut",
+"cat": "DM · Glucose",
+"name": "Insulinoma: fast test",
+"v": "**72** ชม.",
+"box": 27
+},
+{
+"t": "f",
+"cat": "DM · Glucose",
+"name": "Anion gap",
+"v": "AG = **Na − (Cl + HCO₃)**",
+"box": 25
+},
+{
+"t": "cut",
+"cat": "Obesity · Metabolic",
+"name": "Metabolic syndrome",
+"v": "≥ **3 ใน 5** เกณฑ์",
+"box": 29
+},
+{
+"t": "cut",
+"cat": "Obesity · Metabolic",
+"name": "รอบเอว (ไทย)",
+"v": "ชาย ≥ **90** · หญิง ≥ **80** cm",
+"box": 29
+},
+{
+"t": "cut",
+"cat": "Obesity · Metabolic",
+"name": "TG (metabolic syndrome)",
+"v": "≥ **150** mg/dL",
+"box": 29
+},
+{
+"t": "cut",
+"cat": "Obesity · Metabolic",
+"name": "HDL ต่ำ",
+"v": "ชาย < **40** · หญิง < **50**",
+"box": 29
+},
+{
+"t": "cut",
+"cat": "Obesity · Metabolic",
+"name": "BP (metabolic syndrome)",
+"v": "≥ **130/85**",
+"box": 29
+},
+{
+"t": "cut",
+"cat": "Obesity · Metabolic",
+"name": "FPG (metabolic syndrome)",
+"v": "≥ **100**",
+"box": 29
+},
+{
+"t": "cut",
+"cat": "Obesity · Metabolic",
+"name": "TG ที่ต้องให้ fibrate กัน pancreatitis",
+"v": "> **500–1000** (คลิป TG 800)",
+"box": 29
+}
+]
+}
