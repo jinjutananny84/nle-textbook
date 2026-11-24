@@ -408,7 +408,7 @@
     pop.innerHTML = `<div class="row">${['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button></div>`
       + `<div class="row">${['ty', 'tr', 'tp'].map(c => `<button class="sw tc c-${c}" data-c="${c}" aria-label="เปลี่ยนสีตัวอักษร" title="เปลี่ยนสีตัวอักษร">A</button>`).join('')}`
       + (noNote ? '' : `<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button><button class="sw nb" data-c="k" aria-label="sticky note" title="sticky note ต่อจากข้อความนี้">🗒️</button>`)
-      + `<button class="sw nb kwb${kwHas(popZone, popText) ? ' on' : ''}" data-c="w" aria-label="เก็บเป็น keyword" title="เก็บเข้าหน้า Keyword">🔑</button><button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button></div>`;
+      + (noNote ? '' : `<button class="sw nb kwb${kwHas(popZone, popText) ? ' on' : ''}" data-c="w" aria-label="เก็บเป็น keyword" title="เก็บเข้าหน้า Keyword">🔑</button>`) + `<button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button></div>`;
     pop.hidden = false;
     const w = 300, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
@@ -447,7 +447,7 @@
       const z = a.closest('[data-hlk]'); if (!z || !view.contains(z)) return;
       const t = r.toString(); if (t.trim().length < 2) return;
       const k = z.dataset.hlk;
-      pop.dataset.mode = 'add'; pop.dataset.inNote = z.classList.contains('inote') ? '1' : '';
+      pop.dataset.mode = 'add'; pop.dataset.inNote = z.classList.contains('inote') || k.startsWith('kw:') ? '1' : '';
       popText = t; popZone = k; popRange = r.cloneRange();
       showPalette(r.getBoundingClientRect(), c => {
         const { s } = selOffsets(z, r);
@@ -473,7 +473,7 @@
     const m = e.target.closest('mark.user-hl'); const z = m && m.closest('[data-hlk]');
     if (!z || !getSelection().isCollapsed) return;
     e.stopPropagation();
-    const idx = +m.dataset.hl, k = z.dataset.hlk; pop.dataset.mode = 'edit'; pop.dataset.inNote = z.classList.contains('inote') ? '1' : '';
+    const idx = +m.dataset.hl, k = z.dataset.hlk; pop.dataset.mode = 'edit'; pop.dataset.inNote = z.classList.contains('inote') || k.startsWith('kw:') ? '1' : '';
     popText = (S.hl[k][idx] || {}).t || m.textContent; popZone = k;
     popRange = document.createRange(); popRange.selectNodeContents(m);
     showPalette(m.getBoundingClientRect(), c => {
@@ -508,7 +508,9 @@
       const p = chProgress(ch);
       return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p>${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</a>`;
     }).join('');
-    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1><p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p></div><div class="grid">${tiles}</div>
+    const lr = S.lastRead && S.lastRead.h.match(/^#\/([^/]+)\/(\d+)$/);
+    const lrSec = lr && CH[lr[1]] && CH[lr[1]].sections.find(x => x.no === +lr[2]);
+    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1><p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p>${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 อ่านต่อจากกล่อง ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}</div><div class="grid">${tiles}</div>
     <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-p">ฉัน</mark> <mark class="user-hl c-r">4 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
   }
   async function vChapter(id) {
@@ -720,7 +722,7 @@
   async function vKeywords() {
     await loadAll(); renderSidebar();
     const left = S.kw.filter(x => !x.ok).length;
-    let h = `<div class="hero"><h1>🔑 Keyword ของฉัน</h1><p>แตะคำเพื่อกลับไปอ่านตรงจุดนั้น · ติ๊กช่องเมื่อทวนแล้ว · ✎ แก้คำหรือคำที่เน้น · ยังไม่ได้ทวน ${left} จาก ${S.kw.length} คำ</p></div>`;
+    let h = `<div class="hero"><h1>🔑 Keyword ของฉัน</h1><p>ลากเลือกคำเพื่อไฮไลต์/เปลี่ยนสีได้ · ↗ กลับไปอ่านตรงจุดนั้น · ติ๊กช่องเมื่อทวนแล้ว · ✎ แก้คำหรือคำที่เน้น · ยังไม่ได้ทวน ${left} จาก ${S.kw.length} คำ</p></div>`;
     if (!S.kw.length) { view.innerHTML = h + '<p class="empty">ยังไม่มี keyword ลองเลือกข้อความในเนื้อหาหรือข้อสอบแล้วกด 🔑</p>'; return; }
     h += `<div class="choice kw-filter"><label><input type="checkbox" id="kwHide" ${S.kwHide ? 'checked' : ''}> ซ่อนคำที่ทวนแล้ว</label><button class="btn small" id="kwShuffle">สุ่มทวน</button></div>`;
     h += '<div class="kw-cols">';
@@ -731,10 +733,11 @@
       const [c, box] = g.split('|'); const ch = CH[c]; const sec = ch && ch.sections.find(x => x.no === +box);
       const items = groups[g].filter(i => !(S.kwHide && S.kw[i].ok)); if (!items.length) continue;
       h += `<div class="kw-group"><h3><a href="#/${c}/${box}"><b>${box}</b> ${sec ? esc(sec.title) : ''}</a><small>${ch ? esc(ch.title) : ''}</small></h3><ul class="kw-list">`
-        + items.map(i => { const x = S.kw[i]; return `<li class="kwi${x.ok ? ' ok' : ''}"><button class="kw-ok" data-i="${i}" title="ทวนแล้ว">${x.ok ? '✓' : ''}</button><a href="#/${c}/${box}" data-kwt="${esc(x.t)}">${kwHTML(x.d || '==' + x.t + '==')}</a>${x.q ? `<small>ข้อ ${esc(x.q)}</small>` : ''}<button class="kw-ed" data-i="${i}" title="แก้ไข">✎</button><button class="kw-del" data-i="${i}" title="ลบ">✕</button></li>`; }).join('')
+        + items.map(i => { const x = S.kw[i]; return `<li class="kwi${x.ok ? ' ok' : ''}"><button class="kw-ok" data-i="${i}" title="ทวนแล้ว">${x.ok ? '✓' : ''}</button><span class="kwt" data-hlk="kw:${x.at}">${kwHTML(x.d || '==' + x.t + '==')}</span><a class="kw-go" href="#/${c}/${box}" data-kwt="${esc(x.t)}" title="ไปอ่านตรงจุดนั้น">↗</a>${x.q ? `<small>ข้อ ${esc(x.q)}</small>` : ''}<button class="kw-ed" data-i="${i}" title="แก้ไข">✎</button><button class="kw-del" data-i="${i}" title="ลบ">✕</button></li>`; }).join('')
         + '</ul></div>';
     }
     view.innerHTML = h + '</div>';
+    applyAllHL(view);
     view.querySelectorAll('.kw-ed').forEach(b => b.onclick = () => {
       const i = +b.dataset.i, x = S.kw[i], li = b.closest('li');
       li.innerHTML = `<div class="kw-edit"><textarea rows="2">${esc(x.d || '==' + x.t + '==')}</textarea><div class="note-act"><button class="btn small" data-a="mk">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">บันทึก</button></div></div>`;
@@ -746,7 +749,7 @@
       });
     });
     view.querySelectorAll('.kw-ok').forEach(b => b.onclick = () => { const x = S.kw[+b.dataset.i]; x.ok = x.ok ? 0 : Date.now(); save(); vKeywords(); });
-    view.querySelectorAll('.kw-del').forEach(b => b.onclick = () => { S.kw.splice(+b.dataset.i, 1); save(); vKeywords(); });
+    view.querySelectorAll('.kw-del').forEach(b => b.onclick = () => { const x = S.kw.splice(+b.dataset.i, 1)[0]; if (x) delete S.hl['kw:' + x.at]; save(); vKeywords(); });
     view.querySelectorAll('[data-kwt]').forEach(a => a.onclick = () => { kwFlash = a.dataset.kwt; });
     $('#kwHide').onchange = e => { S.kwHide = e.target.checked; save(); vKeywords(); };
     $('#kwShuffle').onclick = () => {
@@ -812,7 +815,37 @@
       view.innerHTML = `<p class="empty">โหลดข้อมูลไม่สำเร็จ (${esc(err.message)})<br>ถ้าเปิดไฟล์จากเครื่องโดยตรง ให้เปิดผ่านลิงก์เว็บแทน</p>`;
     }
   }
-  window.addEventListener('hashchange', route);
+  /* ย้อนกลับไปหน้าเดิม + ตำแหน่งเดิมเสมอ · จำจุดที่อ่านล่าสุดไว้ให้ "อ่านต่อ" */
+  let curHash = location.hash, curY = 0, backY = null, goingBack = false, lrT;
+  const hist = (() => { try { return JSON.parse(sessionStorage.getItem('nle-back') || '[]'); } catch (e) { return []; } })();
+  const saveHist = () => { try { sessionStorage.setItem('nle-back', JSON.stringify(hist.slice(-40))); } catch (e) {} syncBack(); };
+  function syncBack() { const b = document.getElementById('backBtn'); if (b) b.classList.toggle('dim', !hist.length); }
+  addEventListener('scroll', () => {
+    curY = scrollY;
+    if (/^#\/[^/]+\/\d+$/.test(location.hash)) {
+      clearTimeout(lrT); lrT = setTimeout(() => { S.lastRead = { h: location.hash, y: Math.round(scrollY) }; save(); }, 500);
+    }
+  }, { passive: true });
+  window.addEventListener('hashchange', () => {
+    if (!goingBack && curHash !== location.hash) { hist.push({ h: curHash || '#/', y: Math.round(curY) }); saveHist(); }
+    goingBack = false; curHash = location.hash;
+    const y = backY; backY = null;
+    route().then(() => { if (y != null) setTimeout(() => scrollTo(0, y), 30); });
+  });
+  function goBack(e) {
+    if (e) e.preventDefault(); hidePop();
+    const last = hist.pop(); saveHist(); if (!last) return toast('ยังไม่มีหน้าก่อนหน้า');
+    goingBack = true; backY = last.y;
+    if (location.hash === last.h || (!location.hash && last.h === '#/')) { goingBack = false; route().then(() => scrollTo(0, last.y)); curHash = last.h; }
+    else location.hash = last.h;
+  }
+  document.getElementById('backBtn').addEventListener('click', goBack);
+  syncBack();
+  // อ่านต่อจากจุดล่าสุด
+  document.addEventListener('click', e => {
+    const a = e.target.closest('#resumeBtn'); if (!a || !S.lastRead) return;
+    e.preventDefault(); backY = S.lastRead.y; location.hash = S.lastRead.h;
+  });
   $('#menuBtn').onclick = () => document.body.classList.toggle('nav-open');
   $('#scrim').onclick = closeNav;
   sidebar.addEventListener('click', e => {

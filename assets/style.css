@@ -371,3 +371,11 @@ mark.kw-hi{background:linear-gradient(transparent 22%,var(--hl-key) 22%,var(--hl
 .bxs{font-size:11px;font-weight:700;color:var(--bad);white-space:nowrap;margin-left:2px}
 .bxs.full{color:var(--ok)}
 .side-sec.lv1 .bxs{color:#fff}
+
+/* ย้อนกลับ + อ่านต่อ */
+#backBtn.dim{opacity:.4}
+.hero .resume{display:inline-block;margin-top:10px;text-decoration:none}
+
+.kwi .kwt{flex:1;-webkit-user-select:text;user-select:text}
+.kwi .kw-go{flex:0 0 22px;text-align:center;color:var(--accent);text-decoration:none;font-weight:700}
+.kwi.ok .kwt{opacity:.7}

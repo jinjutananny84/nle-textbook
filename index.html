@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=19">
+<link rel="stylesheet" href="assets/style.css?v=21">
 <script>
   try { var s = JSON.parse(localStorage.getItem('nle-tb-v1') || '{}'); if (s.theme) document.documentElement.dataset.theme = s.theme; if (s.font) document.documentElement.style.setProperty('--fs', s.font + 'px'); if (s.hlOff) document.documentElement.classList.add('no-hl'); } catch (e) {}
 </script>
@@ -22,6 +22,7 @@
     <input id="searchInput" type="search" placeholder="ค้นหาคำ…" autocomplete="off">
   </form>
   <nav class="tools">
+    <a class="tool" id="backBtn" href="#" title="ย้อนกลับไปหน้าและตำแหน่งก่อนหน้า">↩<span>ย้อนกลับ</span></a>
     <a class="tool home-btn" href="#/" title="กลับหน้าหลัก">🏠<span>หน้าหลัก</span></a>
     <a class="tool" href="#/quiz" title="โหมดทำข้อสอบ">📝<span>ข้อสอบ</span></a>
     <a class="tool" href="#/wrong" title="กองข้อที่ทำผิด">📕<span>ข้อผิด</span><b id="wrongCount" class="pill" hidden></b></a>
@@ -38,6 +39,6 @@
   <div class="scrim" id="scrim"></div>
   <main class="main" id="view" tabindex="-1"><p class="loading">กำลังโหลด…</p></main>
 </div>
-<script src="assets/app.js?v=19"></script>
+<script src="assets/app.js?v=21"></script>
 </body>
 </html>
