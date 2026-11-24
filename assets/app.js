@@ -337,20 +337,19 @@
   let BACT = null;
   const loadBact = () => BACT ? Promise.resolve(BACT) : fetch('data/bacteria.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
     .then(j => (BACT = (j.items || []).map(([p, g]) => { try { return [new RegExp(`(?<![A-Za-z])(?:${p})(?![A-Za-z])`, 'g'), g]; } catch (e) { return null; } }).filter(Boolean)));
-  const INL = /^(MARK|B|STRONG|EM|I|U|SPAN|SUB|SUP|A)$/;
-  function nextAfter(n) { while (n && !n.nextSibling && n.parentNode && INL.test(n.parentNode.tagName) && !n.parentNode.classList.contains('gtag')) n = n.parentNode; return n && n.nextSibling; }
+  // ล้างแท็กเดิมทั้งหมดแล้วเติมใหม่ทุกครั้ง (กันวงเล็บซ้ำเมื่อไฮไลต์ห่อ/แกะ mark รอบชื่อเชื้อ)
   function gramTag(root) {
     if (!BACT || !BACT.length || !root) return;
+    root.querySelectorAll('.gtag').forEach(x => x.remove());
     for (let n of textNodes(root)) {
-      const pe = n.parentNode; if (!pe || pe.closest('svg,code,textarea,.gtag,.db-cats,.hl-pop,figcaption + *')) continue;
+      const pe = n.parentNode; if (!pe || pe.closest('svg,code,textarea,.db-cats,.hl-pop')) continue;
       let pos = 0;
       while (n) {
         const v = n.nodeValue; let best = null;
         for (const [re, g] of BACT) { re.lastIndex = pos; const m = re.exec(v); if (m && (!best || m.index < best.i || (m.index === best.i && m[0].length > best.len))) best = { i: m.index, len: m[0].length, g }; }
         if (!best) break;
         const end = best.i + best.len, after = v.slice(end);
-        const nx = !after.length && nextAfter(n);
-        if (/^\s*\(\s*(G[+−-]|gram|AFB|spiro|no cell wall|obligate)/i.test(after) || (nx && nx.nodeType === 1 && nx.classList.contains('gtag'))) { pos = end; continue; }
+        if (/^\s*\(\s*(G[+−-]|gram|AFB|spiro|no cell wall|obligate)/i.test(after)) { pos = end; continue; }
         const rest = after.length ? n.splitText(end) : null;
         const sp = document.createElement('span'); sp.className = 'gtag'; sp.dataset.g = best.g;
         n.parentNode.insertBefore(sp, rest || n.nextSibling); n = rest; pos = 0;
@@ -358,8 +357,11 @@
     }
   }
   loadBact().then(() => {
-    gramTag(view); let gT;
-    new MutationObserver(() => { clearTimeout(gT); gT = setTimeout(() => gramTag(view), 40); }).observe(view, { childList: true, subtree: true });
+    let gT; const opt = { childList: true, subtree: true };
+    const mo = new MutationObserver(() => { clearTimeout(gT); gT = setTimeout(run, 40); });
+    // หยุดเฝ้าระหว่างเติมแท็ก ไม่ให้การเติมของตัวเองไปปลุกรอบใหม่
+    const run = () => { mo.disconnect(); try { gramTag(view); } finally { mo.takeRecords(); mo.observe(view, opt); } };
+    run();
   });
 
 
