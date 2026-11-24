@@ -385,6 +385,13 @@
       hidePop();
     });
   }
+  // เอาการเน้นสีเหลือง (==คำ==) ของ keyword ออก
+  function kwUnemph(k, texts) {
+    const x = S.kw.find(y => 'kw:' + y.at === k); if (!x) return false;
+    let d = x.d || '==' + x.t + '==', ch = false;
+    for (const t of texts) { const n = d.replace('==' + t + '==', t); if (n !== d) { d = n; ch = true; } }
+    if (ch) { x.d = d; save(); } return ch;
+  }
   const kwHTML = d => esc(d).replace(/==(.+?)==/g, '<mark class="kw-hi">$1</mark>');
   function kwToggle(k, t) {
     t = kwNorm(t); if (!t || !k) return;
@@ -458,6 +465,10 @@
         const { s, e } = selOffsets(z, r);
         const arr = S.hl[k] || [];
         const keep = arr.filter(h => { const hs = hlPos(z, h); return hs < 0 || hs + h.t.length <= s || hs >= e; });
+        if (k.startsWith('kw:') && kwUnemph(k, [...z.querySelectorAll('mark.kw-hi')].filter(m => r.intersectsNode(m)).map(m => m.textContent))) {
+          if (keep.length !== arr.length) { snap(k); setHL(k, keep); }
+          sel.removeAllRanges(); return rerender();
+        }
         if (keep.length === arr.length) return;
         snap(k); setHL(k, keep); sel.removeAllRanges(); refreshZone(z);
       }, (() => { const { s } = selOffsets(z, r); return (n, st) => {
@@ -468,6 +479,16 @@
       }; })());
     }, 250);
   });
+  // หน้า Keyword: แตะคำที่เน้นเหลือง → ✕ เอาการเน้นออก หรือเลือกสีอื่นแทน
+  view.addEventListener('click', e => {
+    const m = e.target.closest('mark.kw-hi'); const z = m && m.closest('[data-hlk^="kw:"]');
+    if (!z || e.target.closest('mark.user-hl') || !getSelection().isCollapsed) return;
+    e.stopPropagation();
+    const k = z.dataset.hlk, t = m.textContent; pop.dataset.mode = 'edit'; pop.dataset.inNote = '1'; popText = t; popZone = k;
+    const r = document.createRange(); r.selectNodeContents(m); const { s } = selOffsets(z, r);
+    showPalette(m.getBoundingClientRect(), c => { kwUnemph(k, [t]); snap(k); setHL(k, (S.hl[k] || []).concat([{ s, t, c }])); rerender(); },
+      () => { if (kwUnemph(k, [t])) rerender(); });
+  }, true);
   // แตะไฮไลต์เดิม: เปลี่ยนสี หรือ ✕ ลบ
   view.addEventListener('click', e => {
     const m = e.target.closest('mark.user-hl'); const z = m && m.closest('[data-hlk]');

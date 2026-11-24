@@ -379,3 +379,4 @@ mark.kw-hi{background:linear-gradient(transparent 22%,var(--hl-key) 22%,var(--hl
 .kwi .kwt{flex:1;-webkit-user-select:text;user-select:text}
 .kwi .kw-go{flex:0 0 22px;text-align:center;color:var(--accent);text-decoration:none;font-weight:700}
 .kwi.ok .kwt{opacity:.7}
+mark.kw-hi{cursor:pointer}
