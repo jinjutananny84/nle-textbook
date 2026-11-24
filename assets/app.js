@@ -9,7 +9,7 @@
   /* ---------- storage ---------- */
   let S = {};
   try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { S = {}; }
-  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {}; S.kw = S.kw || []; if (S.focus) document.body.classList.add('focus');
+  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; if (S.focus) document.body.classList.add('focus');
   if (S.hlOff) document.documentElement.classList.add('no-hl');
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} updateWrongCount(); }
 
@@ -190,7 +190,45 @@
     return `<span class="badge ${cls}">ออก ${esc(s.freq)} ปี ${stars(s.stars)}</span>`;
   }
   function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
-  function updateWrongCount() { const n = Object.keys(S.wrong).length; const el = $('#wrongCount'); el.hidden = !n; el.textContent = n; }
+  function updateWrongCount() { const n = Object.keys(S.wrong).length; const el = $('#wrongCount'); el.hidden = !n; el.textContent = n; const r = $('#reviewCount'); if (r) { const d = dueItems().length; r.hidden = !d; r.textContent = d; } }
+  /* ---------- แผนทวนรายวัน (เว้นระยะ) ----------
+     รายการ: กล่อง ★/★★/★★★ · ข้อสอบในกองข้อผิด · keyword ที่ยังไม่ติ๊ก
+     S.srs[id] = { due: วันที่ครบกำหนด (นับเป็นวัน), iv: ระยะห่าง (วัน), n: จำนวนครั้งที่ทวน } */
+  const today = () => Math.floor((Date.now() - new Date().getTimezoneOffset() * 6e4) / 864e5);
+  const BASE = { 1: 1, 2: 2, 3: 4 };
+  function dueItems() {
+    const t = today(), out = [];
+    const due = id => { const r = S.srs[id]; return !r || r.due <= t; };
+    for (const k in S.lvl) { const l = S.lvl[k]; if (l >= 1 && l <= 3 && due('b:' + k)) out.push({ type: 'box', id: 'b:' + k, k, l }); }
+    for (const k in S.wrong) if (due('q:' + k)) out.push({ type: 'exam', id: 'q:' + k, w: S.wrong[k] });
+    for (const x of S.kw) if (!x.ok && due('k:' + x.at)) out.push({ type: 'kw', id: 'k:' + x.at, x });
+    return out;
+  }
+  // จำได้ → ระยะห่างยาวขึ้น · ยังไม่แม่น → กลับมาพรุ่งนี้
+  function schedule(id, good, base) {
+    const r = S.srs[id] || { iv: 0, n: 0 };
+    r.iv = good ? Math.max(base || 1, Math.round((r.iv || base || 1) * 2.2)) : 1;
+    r.n = (r.n || 0) + 1; r.due = today() + r.iv; r.last = Date.now();
+    S.srs[id] = r; S.revDone = S.revDone && S.revDone.d === today() ? { d: today(), n: S.revDone.n + 1 } : { d: today(), n: 1 };
+    save();
+  }
+  // บันทึกการอ่านรายวัน: S.read[วัน][กล่อง] = % ที่เลื่อนอ่านถึง (นับว่าอ่านจบเมื่อ ≥ 60%)
+  let rdT;
+  function trackRead() {
+    const m = location.hash.match(/^#\/([^/]+)\/(\d+)$/); if (!m) return;
+    const h = document.documentElement.scrollHeight - innerHeight;
+    const pct = h <= 0 ? 100 : Math.min(100, Math.round(scrollY * 100 / h));
+    S.read = S.read || {}; const d = today(); const day = S.read[d] = S.read[d] || {};
+    const k = m[1] + '/' + m[2]; if (k in day && day[k] >= pct) return; day[k] = Math.min(100, pct);
+    clearTimeout(rdT); rdT = setTimeout(() => { for (const x in S.read) if (x < d - 60) delete S.read[x]; save(); }, 800);
+  }
+  function readToday(chId) {
+    const day = (S.read || {})[today()] || {}; let done = 0, seen = 0;
+    for (const k in day) if (!chId || k.startsWith(chId + '/')) { seen++; if (day[k] >= 60) done++; }
+    return { done, seen };
+  }
+  function streak() { let n = 0, d = today(); const R = S.read || {}; const has = x => R[x] && Object.values(R[x]).some(v => v >= 60); if (!has(d)) d--; while (has(d)) { n++; d--; } return n; }
+  const ivText = id => { const r = S.srs[id]; return r ? `ทวนแล้ว ${r.n} ครั้ง · รอบถัดไปอีก ${r.iv} วัน` : 'ยังไม่เคยทวน'; };
   function closeNav() { document.body.classList.remove('nav-open'); }
 
   /* ---------- sidebar ---------- */
@@ -213,7 +251,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 หน้าแรก</a><a href="#/quiz">📝 โหมดทำข้อสอบ</a><a href="#/wrong">📕 กองข้อที่ทำผิด</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 จุดอ่อนของฉัน</a><a href="#/notes">🗒️ โน้ตของฉัน</a><a href="#/keywords">🔑 Keyword ของฉัน</a><a href="#" id="hlToggle">🖍 ไฮไลต์จุดสำคัญ: ${S.hlOff ? 'ปิด' : 'เปิด'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 หน้าแรก</a><a href="#/quiz">📝 โหมดทำข้อสอบ</a><a href="#/wrong">📕 กองข้อที่ทำผิด</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 จุดอ่อนของฉัน</a><a href="#/review">📅 ทวนวันนี้</a>${curCh ? `<a href="#/map/${curCh}">🗺️ แผนผังบทนี้</a>` : ''}<a href="#/notes">🗒️ โน้ตของฉัน</a><a href="#/keywords">🔑 Keyword ของฉัน</a><a href="#" id="hlToggle">🖍 ไฮไลต์จุดสำคัญ: ${S.hlOff ? 'ปิด' : 'เปิด'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -527,11 +565,15 @@
       const ch = CH[c.id];
       if (!c.ready) return `<div class="tile soon"><h3>${esc(c.title)}</h3><p>${esc(c.desc || 'เร็ว ๆ นี้')}</p></div>`;
       const p = chProgress(ch);
-      return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p>${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</a>`;
+      const rt = readToday(c.id);
+      const todayLine = `<div class="today-line"><b>วันนี้</b> อ่านจบ ${rt.done} กล่อง · ${Math.round(rt.done * 100 / p.n)}% ของบท${rt.seen > rt.done ? ` · เปิดค้างไว้ ${rt.seen - rt.done}` : ''}<i style="width:${Math.round(rt.done * 100 / p.n)}%"></i></div>`;
+      return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p>${todayLine}${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</a>`;
     }).join('');
     const lr = S.lastRead && S.lastRead.h.match(/^#\/([^/]+)\/(\d+)$/);
     const lrSec = lr && CH[lr[1]] && CH[lr[1]].sections.find(x => x.no === +lr[2]);
-    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1><p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p>${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 อ่านต่อจากกล่อง ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}</div><div class="grid">${tiles}</div>
+    const rtAll = readToday(); const rvDone = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
+    const chips = `<div class="today-chips"><span>📖 วันนี้อ่านจบ <b>${rtAll.done}</b> กล่อง</span><span>📅 ทวนแล้ว <b>${rvDone}</b> รายการ</span><span>🔥 อ่านต่อเนื่อง <b>${streak()}</b> วัน</span></div>`;
+    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 อ่านต่อจากกล่อง ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 วันนี้ต้องทวน ${n} รายการ</a>` : ''; })()}</div></div><div class="grid">${tiles}</div>
     <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-p">ฉัน</mark> <mark class="user-hl c-r">4 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
   }
   async function vChapter(id) {
@@ -540,7 +582,7 @@
     const p = chProgress(ch);
     let h = `<div class="crumb"><a href="#/">หน้าแรก</a></div><div class="hero"><h1>${esc(ch.title)}</h1><p>${esc(ch.source || '')}</p></div>
       ${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ</div>${lvLegend(p)}
-      <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 สุ่มข้อสอบทั้งบท</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcard บทนี้</a></div>`;
+      <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 สุ่มข้อสอบทั้งบท</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcard บทนี้</a><a class="btn" href="#/map/${id}">🗺️ แผนผังบท</a></div>`;
     for (const pg of ch.pages) {
       h += `<h2 style="margin-top:22px">หน้า ${pg.no} · ${esc(pg.title)}</h2><ul class="sec-list">`;
       for (const s of ch.sections.filter(x => x.page === pg.no)) {
@@ -579,7 +621,7 @@
     view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => { const l = +b.dataset.lv; if (S.lvl[k] === l) delete S.lvl[k]; else S.lvl[k] = l; save(); rerender(); });
     pop.hidden = true; pop.dataset.mode = '';
     expandAbbr($('article.content', view), ch.abbr);
-    buildToc();
+    buildToc(); setTimeout(trackRead, 300);
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
@@ -616,6 +658,7 @@
     const onSec = /^#\/[^/]+\/\d+$/.test(location.hash);
     const h = document.documentElement.scrollHeight - innerHeight;
     rbar.style.width = onSec && h > 0 ? Math.min(100, scrollY * 100 / h) + '%' : '0';
+    if (onSec) trackRead();
     if (onSec && tocNav && document.contains(tocNav)) {
       let cur = -1; tocHs.forEach((x, i) => { if (x.getBoundingClientRect().top < 120) cur = i; });
       tocNav.querySelectorAll('button[data-i]').forEach(b => b.classList.toggle('on', +b.dataset.i === cur));
@@ -770,6 +813,62 @@
     }
     view.innerHTML = h + (any ? '' : '<p class="empty">ยังไม่มีโน้ต เปิดกล่องไหนก็ได้แล้วจดที่ "โน้ตของฉัน" หรือเลือกข้อความเพื่อไฮไลต์</p>');
   }
+  /* แผนผังภาพรวมบท: แยกตามหน้า A3 ระบายสีตามดาว มีคะแนนข้อสอบและสิ่งที่อ่านวันนี้ */
+  async function vMap(id) {
+    await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
+    renderSidebar(id);
+    const p = chProgress(ch), day = (S.read || {})[today()] || {};
+    const HUE = [150, 200, 265, 330, 25, 45, 100, 180];
+    let h = `<div class="crumb"><a href="#/${id}">${esc(ch.title)}</a> · แผนผัง</div>
+      <div class="map-root"><div class="map-core"><b>${esc(ch.title)}</b><small>${p.n} กล่อง · มั่นใจ ${p.c[4]} · ประเมินแล้ว ${p.d}</small>${lvBar(p, true)}</div></div>
+      <div class="map-legend">${[4, 3, 2, 1].map(l => `<span class="mn lv${l}">${LV[l].s}</span>`).join('')}<span class="mn">ยังไม่ประเมิน</span><span class="mn today">อ่านวันนี้</span><span class="mn"><span class="bxs full">(4/4)</span> คะแนนข้อสอบ</span></div>
+      <div class="map-grid">`;
+    ch.pages.forEach((pg, i) => {
+      const secs = ch.sections.filter(x => x.page === pg.no);
+      const pp = { n: secs.length, c: { 4: 0, 3: 0, 2: 0, 1: 0 } }; secs.forEach(x => { const l = lvOf(id, x.no); if (l) pp.c[l]++; }); pp.d = pp.c[4] + pp.c[3] + pp.c[2] + pp.c[1];
+      h += `<section class="map-br" style="--h:${HUE[i % HUE.length]}"><h3><span>หน้า ${pg.no}</span>${esc(pg.title)}</h3>${lvBar(pp)}<div class="map-nodes">`
+        + secs.map(x => { const l = lvOf(id, x.no), k = secKey(id, x.no); const rd = day[k] >= 60;
+          return `<a class="mn${l ? ' lv' + l : ''}${rd ? ' today' : ''}" href="#/${id}/${x.no}" title="${esc(x.title)}"><b>${x.no}</b><span>${esc(x.title)}</span>${boxScore(id, x)}${x.stars >= 3 ? '<em>🔥</em>' : ''}</a>`; }).join('')
+        + '</div></section>';
+    });
+    view.innerHTML = h + '</div><p class="bar-label">🔥 = ออกสอบบ่อย (★★★) · แตะกล่องเพื่อไปอ่าน</p>';
+  }
+  /* หน้าแผนทวนวันนี้ */
+  async function vReview() {
+    await loadAll(); renderSidebar();
+    const items = dueItems();
+    const done = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
+    const nb = items.filter(x => x.type === 'box'), ne = items.filter(x => x.type === 'exam'), nk = items.filter(x => x.type === 'kw');
+    const total = items.length + done;
+    let h = `<div class="hero rv-hero"><h1>📅 ทวนวันนี้</h1><p>ระบบนัดทวนให้เอง: ตอบ "จำได้" รอบถัดไปจะห่างออก (1 → 2 → 5 → 11 วัน…) ตอบ "ยังไม่แม่น" จะกลับมาพรุ่งนี้</p>
+      <div class="rv-stat"><div><b>${items.length}</b><span>ค้างทวน</span></div><div><b>${done}</b><span>ทวนแล้ววันนี้</span></div><div class="rv-ring" style="--p:${total ? Math.round(done * 100 / total) : 100}"><span>${total ? Math.round(done * 100 / total) : 100}%</span></div></div></div>`;
+    if (!items.length) {
+      view.innerHTML = h + `<p class="empty">🎉 วันนี้ทวนครบแล้ว${Object.keys(S.lvl).length ? '' : '<br>ให้ดาวกล่องที่อ่าน (★–★★★) เก็บ keyword หรือทำข้อสอบ แล้วรายการจะมาโผล่ที่นี่เอง'}</p>`;
+      return;
+    }
+    const sec = (title, cls, arr, fn) => arr.length ? `<section class="rv-sec ${cls}"><h2>${title} <small>${arr.length}</small></h2>${arr.slice(0, 30).map(fn).join('')}</section>` : '';
+    h += sec('📖 กล่องที่ควรกลับไปอ่าน', 'rv-box', nb.sort((a, b) => a.l - b.l), it => {
+      const [c, no] = it.k.split('/'); const ch = CH[c]; const s = ch && ch.sections.find(x => x.no === +no);
+      return `<div class="rv-card lv${it.l}" data-id="${it.id}" data-base="${BASE[it.l]}"><div class="rv-main"><span class="rv-lv">${LV[it.l].s}</span><a href="#/${c}/${no}"><b>${no}.</b> ${s ? esc(s.title) : ''}</a><small>${ivText(it.id)}</small></div><div class="rv-act"><button class="btn small" data-g="0">ยังไม่แม่น</button><button class="btn small primary" data-g="1">อ่านแล้ว จำได้</button></div></div>`;
+    });
+    h += sec('📝 ข้อสอบที่เคยผิด ลองทำใหม่', 'rv-exam', ne, it => {
+      const q = CH[it.w.ch] && CH[it.w.ch].exams[it.w.id]; if (!q) return '';
+      return `<div class="rv-q" data-id="${it.id}">${mcqHTML(it.w.ch, it.w.id, q, { showBox: true })}</div>`;
+    });
+    h += sec('🔑 Keyword', 'rv-kw', nk, it => {
+      const x = it.x, ch = CH[x.ch], s = ch && ch.sections.find(y => y.no === x.box);
+      return `<div class="rv-card kw" data-id="${it.id}" data-base="1"><div class="rv-main"><span class="kwt" data-hlk="kw:${x.at}">${kwHTML(x.d || x.t)}</span><small><a href="#/${x.ch}/${x.box}" data-kwt="${esc(x.t)}">กล่อง ${x.box}${s ? ' ' + esc(s.title) : ''} ↗</a> · ${ivText(it.id)}</small></div><div class="rv-act"><button class="btn small" data-g="0">ยังไม่แม่น</button><button class="btn small primary" data-g="1">จำได้</button></div></div>`;
+    });
+    view.innerHTML = h; applyAllHL(view);
+    const bump = card => { card.classList.add('rv-gone'); setTimeout(() => { const y = scrollY; vReview().then(() => scrollTo(0, y)); updateWrongCount(); }, 380); };
+    view.querySelectorAll('.rv-card [data-g]').forEach(b => b.onclick = () => { const c = b.closest('.rv-card'); schedule(c.dataset.id, b.dataset.g === '1', +c.dataset.base); bump(c); });
+    view.querySelectorAll('.rv-q').forEach(w => { const m = w.querySelector('.mcq'); m._onDone = ok => {
+      schedule(w.dataset.id, ok, 2);
+      const nx = document.createElement('div'); nx.className = 'rv-act'; nx.innerHTML = `<button class="btn small primary">ข้อต่อไป</button>`; m.appendChild(nx);
+      nx.querySelector('button').onclick = () => bump(w);
+    }; });
+    view.querySelectorAll('[data-kwt]').forEach(a => a.onclick = () => { kwFlash = a.dataset.kwt; });
+  }
   /* หน้า Keyword: เรียงตามบทและกล่อง ติ๊กว่าทวนแล้วได้ */
   let kwFlash = '';
   async function vKeywords() {
@@ -861,6 +960,8 @@
       if (parts[0] === 'stats') return vStats();
       if (parts[0] === 'notes') return vNotes();
       if (parts[0] === 'keywords') return vKeywords();
+      if (parts[0] === 'review') return vReview();
+      if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
       return vChapter(parts[0]);
     } catch (err) {
