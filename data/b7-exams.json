@@ -1,0 +1,2927 @@
+{
+"exams": {
+"74.1/1": {
+"box": 28,
+"stem": "ผู้ป่วย HT + DM (GFR >60) เริ่มยา ARB เช่น losartan ผลทาง renal hemodynamics ที่คาดว่าจะพบคืออะไร",
+"options": {
+"A": "Decreased GFR (เล็กน้อย)",
+"B": "Increased GFR",
+"C": "Increased aldosterone secretion",
+"D": "Hypokalemia",
+"E": "Efferent arteriolar constriction"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ARB ยับยั้ง Ang II ที่ทำให้ efferent arteriole หด → efferent ขยาย glomerular pressure ลด จึง GFR ลดเล็กน้อย (และลด proteinuria); aldosterone ลดจึงเสี่ยง hyperK ไม่ใช่ hypoK",
+"options_reconstructed": true
+},
+"74.1/6": {
+"box": 9,
+"stem": "ข้อใดไม่เกี่ยวข้องกับระบบ RAAS",
+"options": {
+"A": "Liver",
+"B": "Zona fasciculata",
+"C": "Lung endothelium (ACE)",
+"D": "Juxtaglomerular cell",
+"E": "Zona glomerulosa"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Liver สร้าง angiotensinogen, JG cell หลั่ง renin, ปอดมี ACE, zona glomerulosa หลั่ง aldosterone; zona fasciculata สร้าง cortisol ไม่อยู่ใน RAAS",
+"options_reconstructed": true
+},
+"74.1/10": {
+"box": 28,
+"stem": "หญิง 40 ปี เป็น HT ตั้งครรภ์ 10 สัปดาห์ ยาลดความดันใดห้ามใช้",
+"options": {
+"A": "Irbesartan",
+"B": "Nifedipine",
+"C": "Hydralazine",
+"D": "Methyldopa"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ARB (และ ACEI) teratogenic/fetotoxic (renal dysgenesis, oligohydramnios) จึงห้ามในครรภ์; nifedipine, hydralazine, methyldopa ใช้ได้ในหญิงตั้งครรภ์"
+},
+"74.1/12": {
+"box": 10,
+"stem": "ปัจจัยหลักที่ทำให้ aerobic capacity (VO₂max) เพิ่มขึ้นหลังฝึกออกกำลังกายคืออะไร",
+"options": {
+"A": "Decrease maximal heart rate",
+"B": "Increase maximal cardiac output",
+"C": "Increase maximal blood pressure",
+"D": "Increase arterial oxygen content",
+"E": "Decrease venous oxygen content"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "VO₂max = CO × (a−v)O₂ difference; การฝึกเพิ่ม stroke volume จึงเพิ่ม maximal CO เป็นหลัก ส่วน max HR ไม่เปลี่ยน/ลดเล็กน้อย, CaO₂ แทบคงที่, การเพิ่ม O₂ extraction มีส่วนน้อยกว่า"
+},
+"74.1/15": {
+"box": 28,
+"stem": "ผู้ป่วย HT ที่ตั้งครรภ์ ยาใดเป็นข้อห้ามใช้",
+"options": {
+"A": "Losartan",
+"B": "Methyldopa",
+"C": "Nifedipine",
+"D": "Labetalol"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Losartan เป็น ARB ห้ามในครรภ์เพราะทำให้ fetal renal toxicity; methyldopa, labetalol, nifedipine เป็นยาที่แนะนำในครรภ์",
+"options_reconstructed": true
+},
+"74.1/18": {
+"box": 21,
+"stem": "หลังได้ furosemide ผู้ป่วยมีหูอื้อและสูญเสียการได้ยิน 2 ข้าง พยาธิสภาพอยู่ที่ใด",
+"options": {
+"A": "Middle ear",
+"B": "Inner ear",
+"C": "Inferior colliculus"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Loop diuretic เป็น ototoxic ต่อ stria vascularis ใน cochlea (inner ear) ทำให้ sensorineural hearing loss; ไม่กระทบ middle ear หรือ central auditory pathway"
+},
+"74.1/40": {
+"box": 2,
+"stem": "กล้ามเนื้อชนิดใดมี nucleus อยู่กลางเซลล์ (central nuclei)",
+"options": {
+"A": "Cardiac muscle",
+"B": "Tensor tympani (skeletal muscle)",
+"C": "Biceps brachii (skeletal muscle)"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Cardiac muscle มี 1–2 nuclei อยู่กลางเซลล์ ส่วน skeletal muscle (รวม tensor tympani) เป็น syncytium ที่ nuclei อยู่ชิดขอบ (peripheral)",
+"options_reconstructed": true
+},
+"74.1/41": {
+"box": 2,
+"stem": "ให้รูป histology กล้ามเนื้อหัวใจที่เซลล์ใหญ่ ซีด (มี glycogen มาก) ถามว่ามาจากตำแหน่งใด",
+"options": {
+"A": "Bundle of His / Purkinje fibers",
+"B": "Papillary muscle"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Purkinje fiber เป็น cardiac muscle ดัดแปลง เซลล์ใหญ่ cytoplasm ซีดเพราะ glycogen มาก myofibril น้อย อยู่ใต้ endocardium; papillary muscle เป็น working myocardium ปกติ",
+"needs_image": true
+},
+"74.1/88": {
+"box": 30,
+"stem": "รายใดควรส่งตรวจหา thrombophilia มากที่สุด",
+"options": {
+"A": "อายุ 25 ปี เป็น pulmonary embolism โดยไม่มีปัจจัยกระตุ้น",
+"B": "อายุ 40 ปี DVT จากมะเร็งรังไข่",
+"C": "อายุ 40 ปี DVT ขณะกินยาคุมกำเนิด"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "VTE ที่อายุน้อยและไม่มีปัจจัยกระตุ้น (unprovoked) ชวนสงสัย inherited thrombophilia; DVT จาก cancer หรือ OCP เป็น provoked จึงไม่ใช่ข้อบ่งชี้"
+},
+"74.1/90": {
+"box": 2,
+"stem": "ต้องการศึกษาการบีบตัวพร้อมกัน (synchronous contraction) ของกล้ามเนื้อหัวใจ ควรศึกษาโครงสร้างใด",
+"options": {
+"A": "Desmosome",
+"B": "Gap junction",
+"C": "Tight junction",
+"D": "Hemidesmosome"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Gap junction (connexin) ใน intercalated disc ให้ไอออนผ่านเซลล์ต่อเซลล์ จึงเป็น electrical syncytium บีบพร้อมกัน; desmosome ยึดเชิงกลเท่านั้น",
+"options_reconstructed": true
+},
+"74.2/4": {
+"box": 31,
+"stem": "ชาย 60 ปี bacterial pneumonia → septic shock ต้องใช้ vasopressor; AST/ALT ขึ้นเป็นหลักพันจากที่สัปดาห์ก่อนปกติ สาเหตุคืออะไร",
+"options": {
+"A": "Liver ischemia",
+"B": "Acute viral hepatitis",
+"C": "Autoimmune hepatitis",
+"D": "Acute drug-induced hepatitis"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Shock + vasopressor ทำให้ตับขาดเลือด (ischemic hepatitis/shock liver) transaminase ขึ้นเป็นพันอย่างรวดเร็ว; บริบทไม่ชี้ viral หรือ autoimmune",
+"options_reconstructed": true
+},
+"74.2/5": {
+"box": 28,
+"stem": "หญิงตั้งครรภ์ที่มีความดันสูง ห้ามใช้ยาใด",
+"options": {
+"A": "Nifedipine",
+"B": "Methyldopa",
+"C": "Hydralazine",
+"D": "Losartan"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "ACEI/ARB เป็นข้อห้ามในครรภ์ (fetal renal toxicity); nifedipine, methyldopa, hydralazine ใช้ได้ในครรภ์ — choice ที่จำมาไม่มี ARB จึงเติมคืน",
+"options_reconstructed": true
+},
+"74.2/6": {
+"box": 20,
+"stem": "ผู้ป่วย migraine ที่มีประวัติ MI ห้ามใช้ยาใด",
+"options": {
+"A": "Ergot alkaloid",
+"B": "5-HT1B/1D agonist (triptan)",
+"C": "CGRP antagonist"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Ergotamine ทำให้หลอดเลือดหดตัวแรงและยาวนาน ห้ามใน CAD; CGRP antagonist (gepant) ใช้ได้",
+"doubt": "⚠ triptan ก็ห้ามใน CAD/ประวัติ MI เช่นกัน — ตอบ ergot เพราะ vasoconstriction รุนแรงกว่า"
+},
+"74.2/12": {
+"box": 5,
+"stem": "ข้อใดไม่ใช่องค์ประกอบของ Tetralogy of Fallot",
+"options": {
+"A": "ASD",
+"B": "VSD",
+"C": "Overriding aorta",
+"D": "Pulmonary stenosis",
+"E": "Right ventricular hypertrophy"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ToF = VSD + overriding aorta + RV outflow (pulmonary) stenosis + RVH; ASD ไม่ใช่องค์ประกอบ (ถ้ามีเรียก pentalogy)"
+},
+"74.2/13": {
+"box": 2,
+"stem": "Anterior interventricular septum ได้เลือดจากหลอดเลือดใด",
+"options": {
+"A": "RCA",
+"B": "LAD",
+"C": "LCx"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Anterior 2/3 ของ IVS เลี้ยงด้วย septal branches ของ LAD; posterior 1/3 มาจาก PDA (มักจาก RCA)",
+"options_reconstructed": true
+},
+"74.2/14": {
+"box": 15,
+"stem": "STEMI มี ST elevation ที่ lead II, III, aVF และ V1 (±aVR) หลอดเลือดใดอุดตัน",
+"options": {
+"A": "PDA",
+"B": "RCA",
+"C": "LAD",
+"D": "LCx"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Inferior wall (II, III, aVF) ร่วมกับ RV involvement (V1) บ่งชี้ proximal RCA ซึ่งให้ทั้ง RV branch และ PDA; LCx ไม่ทำ ST↑ V1"
+},
+"74.2/16": {
+"box": 25,
+"stem": "ผู้ป่วยมีอาการของ rheumatic fever อาการเกิดจากปัจจัยใดของเชื้อ",
+"options": {
+"A": "Streptolysin O",
+"B": "M protein",
+"C": "Hyaluronic acid capsule",
+"D": "Streptokinase"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "M protein ของ GAS มี molecular mimicry กับ cardiac myosin/tissue → antibody cross-react; streptolysin O เป็นแค่ marker (ASO) ไม่ใช่กลไกโรค",
+"options_reconstructed": true
+},
+"74.2/20": {
+"box": 1,
+"stem": "Aortic arch dissection จะพบรอยโรคใน mediastinum ส่วนใด",
+"options": {
+"A": "Superior mediastinum",
+"B": "Middle mediastinum",
+"C": "Anterior mediastinum",
+"D": "Inferior mediastinum",
+"E": "Anterior and superior mediastinum"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Aortic arch อยู่ใน superior mediastinum (เหนือ sternal angle–T4/5); ascending aorta อยู่ middle, descending อยู่ posterior"
+},
+"74.2/25": {
+"box": 30,
+"stem": "ผู้ป่วยรายใดควรสงสัยและส่งตรวจ thrombophilia",
+"options": {
+"A": "อายุน้อย DVT โดยไม่มีปัจจัยกระตุ้น",
+"B": "DVT ขณะกิน OCP",
+"C": "DVT ในผู้ป่วยมะเร็ง"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Unprovoked VTE ในคนอายุน้อยชวนหา inherited thrombophilia; DVT จาก OCP หรือมะเร็งเป็น provoked อธิบายได้แล้ว",
+"options_reconstructed": true
+},
+"74.2/39": {
+"box": 22,
+"stem": "นักกีฬามีเหนื่อย ตรวจพบ septal hypertrophy มากร่วมกับ subaortic stenosis (LVOT obstruction) คือโรคใด",
+"options": {
+"A": "Dilated cardiomyopathy",
+"B": "Restrictive cardiomyopathy",
+"C": "Hypertrophic cardiomyopathy",
+"D": "Athlete's heart"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Asymmetric septal hypertrophy + dynamic subaortic obstruction = HCM (สาเหตุ sudden death ในนักกีฬา); DCM ห้องโตผนังบาง, RCM ผนังแข็ง, athlete's heart ไม่ทำ LVOT obstruction",
+"options_reconstructed": true
+},
+"74.2/51": {
+"box": 20,
+"stem": "Celecoxib เพิ่มความเสี่ยง MI ผ่านกลไกใด",
+"options": {
+"A": "PGE2 เพิ่ม",
+"B": "PGD2 เพิ่ม",
+"C": "PGI2 ลด",
+"D": "PGF2 ลด",
+"E": "TXA2 ลด"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "COX-2 inhibitor ลด prostacyclin (PGI₂, ต้าน platelet + vasodilate) จาก endothelium แต่ไม่ลด TXA₂ จาก platelet (COX-1) → สมดุลเอียงไปทาง thrombosis"
+},
+"74.2/56": {
+"box": 7,
+"stem": "ESV 60 mL, EDV 125 mL ejection fraction เท่ากับเท่าใด",
+"options": {
+"A": "50%",
+"B": "52%",
+"C": "48%",
+"D": "60%"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "SV = 125 − 60 = 65 mL; EF = SV/EDV = 65/125 = 52%",
+"options_reconstructed": true,
+"doubt": "⚠ ตัวเลขจาก recall (มีการเปลี่ยนเลขระหว่างชุด)"
+},
+"74.2/57": {
+"box": 10,
+"stem": "ผลของการฝึกออกกำลังกายแบบ endurance ต่อระบบไหลเวียนคือข้อใด",
+"options": {
+"A": "เพิ่ม maximal blood pressure",
+"B": "เพิ่ม arterial O₂ content ขณะพัก",
+"C": "ลด venous O₂ content ขณะพัก",
+"D": "เพิ่ม maximal cardiac output / stroke volume"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "การฝึกเพิ่ม SV และ maximal CO (และ O₂ extraction ขณะออกแรงสูงสุด) ส่วน max BP, CaO₂ และค่าขณะพักไม่ใช่ผลหลัก",
+"options_reconstructed": true
+},
+"74.2/66": {
+"box": 18,
+"stem": "ผู้ป่วย MI มา 3 ชั่วโมง ควรตรวจ marker ใดดีที่สุด",
+"options": {
+"A": "Myoglobin",
+"B": "CK-MB",
+"C": "Cardiac troponin"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Cardiac troponin sensitive และ specific ที่สุด ขึ้นภายใน 3–4 ชม. และเป็น marker มาตรฐาน; myoglobin ขึ้นเร็วแต่ไม่ specific, CK-MB ด้อยกว่า"
+},
+"74.2/67": {
+"box": 24,
+"stem": "ผู้ป่วยมี diastolic blowing murmur ที่ right 2nd ICS (aortic regurgitation) ข้อใดไม่ใช่ hemodynamic change",
+"options": {
+"A": "Increased stroke volume",
+"B": "Increased pulse pressure",
+"C": "Increased SBP",
+"D": "Decreased DBP",
+"E": "Decreased LV EDV"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "AR → volume overload เลือดไหลย้อนเข้า LV จึง LVEDV เพิ่ม, SV เพิ่ม, SBP สูง DBP ต่ำ pulse pressure กว้าง; LVEDV ลดจึงผิด"
+},
+"74.2/79": {
+"box": 28,
+"stem": "ยาป้องกัน migraine ข้อใดไม่ควรใช้ในผู้ป่วย asthma",
+"options": {
+"A": "Propranolol",
+"B": "Amitriptyline",
+"C": "Valproate"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Propranolol เป็น non-selective β-blocker บล็อก β2 ทำให้ bronchospasm ห้ามใน asthma; amitriptyline, valproate ไม่มีผลนี้"
+},
+"74.2/81": {
+"box": 28,
+"stem": "ผู้ป่วยลืมกินยาบ่อย ควรเลือก β-blocker ตัวใดที่ออกฤทธิ์ยาว (วันละครั้ง)",
+"options": {
+"A": "Pindolol",
+"B": "Atenolol",
+"C": "Acebutolol",
+"D": "Propranolol"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Atenolol hydrophilic ขับทางไต half-life ยาว ให้วันละครั้งได้; propranolol, pindolol half-life สั้นต้องให้หลายครั้ง"
+},
+"74.2/86": {
+"box": 11,
+"stem": "ยาใดใช้แก้ arrhythmia จาก hyperkalemia (stabilize myocardium) เป็นอันดับแรก",
+"options": {
+"A": "10% calcium gluconate",
+"B": "5% dextrose",
+"C": "K-binding resin",
+"D": "Sodium bicarbonate"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Calcium gluconate IV ทำให้ membrane stabilize (เพิ่ม threshold) ทันทีโดยไม่ลด K; resin ช้ามาก, bicarbonate/insulin ช่วย shift K แต่ไม่ป้องกัน arrhythmia ทันที",
+"options_reconstructed": true
+},
+"74.2/90": {
+"box": 21,
+"stem": "Furosemide มีผลเสีย (ototoxicity) ต่อโครงสร้างใด",
+"options": {
+"A": "Inner ear",
+"B": "Middle ear",
+"C": "Tympanic membrane",
+"D": "Auditory cortex"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Loop diuretic ยับยั้ง NKCC ที่ stria vascularis ใน cochlea ทำให้ endolymph ผิดปกติ → sensorineural hearing loss (inner ear)",
+"options_reconstructed": true
+},
+"74.2/91": {
+"box": 24,
+"stem": "ข้อใดทำให้เกิด diastolic murmur",
+"options": {
+"A": "Aortic stenosis",
+"B": "Mitral stenosis",
+"C": "PDA"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "MS ให้ mid-diastolic rumble ที่ apex; AS เป็น systolic ejection murmur, PDA เป็น continuous murmur"
+},
+"74.2/92": {
+"box": 5,
+"stem": "ข้อใดไม่ใช่องค์ประกอบของ Tetralogy of Fallot",
+"options": {
+"A": "ASD",
+"B": "Pulmonary stenosis",
+"C": "Overriding aorta",
+"D": "RV hypertrophy"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ToF มี VSD, overriding aorta, RVOT/pulmonary stenosis, RVH; ASD ไม่ใช่องค์ประกอบ"
+},
+"74.2/98": {
+"box": 9,
+"stem": "สุนัขทดลองได้สาร Y แล้ว BP และ HR เพิ่ม แต่ GI motility เท่าเดิม สาร Y คืออะไร",
+"options": {
+"A": "Muscarinic agonist",
+"B": "Alpha agonist",
+"C": "Alpha antagonist",
+"D": "Beta agonist",
+"E": "Beta antagonist"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "β agonist (เช่น β1) เพิ่ม HR + contractility → BP สูง ไม่กระทบ GI motility ชัด; α agonist ทำ BP สูงแต่ HR ลดจาก baroreflex, muscarinic agonist เพิ่ม GI motility"
+},
+"75.1/19": {
+"box": 17,
+"stem": "Lipid profile: TC 180, TG 900, HDL 45 การรักษาที่เหมาะสมคือยาใด",
+"options": {
+"A": "Ezetimibe",
+"B": "Gemfibrozil",
+"C": "Simvastatin",
+"D": "Nicotinic acid",
+"E": "Cholestyramine"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "TG สูงมาก (>500–1000) เสี่ยง acute pancreatitis ต้องลด TG ด้วย fibrate (PPAR-α agonist); statin/ezetimibe เน้น LDL, bile acid resin ทำ TG สูงขึ้น"
+},
+"75.1/32": {
+"box": 11,
+"stem": "EKG เข้าได้กับ hyperkalemia การรักษาใดมีประโยชน์น้อยที่สุด (ในภาวะเฉียบพลัน)",
+"options": {
+"A": "Beta-2 agonist",
+"B": "IV sodium bicarbonate",
+"C": "IV glucose + insulin",
+"D": "IV calcium",
+"E": "PO sodium polystyrene sulfonate"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "Resin กินออกฤทธิ์ช้าหลายชั่วโมงจึงช่วยน้อยในภาวะฉุกเฉิน; calcium stabilize membrane ทันที, insulin+glucose, β2 agonist, bicarbonate shift K เข้าเซลล์เร็ว",
+"doubt": "⚠ ไม่แน่ใจ — recall ตัวเลือกไม่ชัด (IV sodium อาจหมายถึง bicarbonate ซึ่งได้ผลน้อยถ้าไม่มี acidosis)"
+},
+"75.1/44": {
+"box": 17,
+"stem": "หญิง 55 ปี TC 180, TG 900, HDL 45 ยาที่เหมาะสมที่สุดคือ",
+"options": {
+"A": "Ezetimibe",
+"B": "Gemfibrozil",
+"C": "Simvastatin",
+"D": "Nicotinic acid",
+"E": "Cholestyramine"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Hypertriglyceridemia รุนแรงต้องใช้ fibrate เพื่อป้องกัน pancreatitis; ยาอื่นลด LDL เป็นหลัก cholestyramine เพิ่ม TG"
+},
+"75.1/50": {
+"box": 30,
+"stem": "หญิงที่มีความผิดปกติของระบบการแข็งตัวของเลือด (thrombosis) และตรวจ syphilis (VDRL) ให้ผลบวกลวง นึกถึงภาวะใด",
+"options": {
+"A": "Antiphospholipid syndrome",
+"B": "Factor V Leiden",
+"C": "Protein C deficiency",
+"D": "Hemophilia A"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Antiphospholipid antibody (anticardiolipin) cross-react กับ cardiolipin ใน VDRL → false positive และทำให้ thrombophilia (aPTT ยาวในหลอดทดลองแต่ thrombosis ในร่างกาย)",
+"options_reconstructed": true
+},
+"75.1/54": {
+"box": 19,
+"stem": "ชาย 60 ปี หลัง MI ความดันต่ำ perfusion ไม่พอ 3 วัน BUN 44 Cr 3.3 urine มี granular/muddy brown cast ส่วนใดของไตรับผิดชอบ",
+"options": {
+"A": "Glomerulus",
+"B": "Proximal convoluted tubule",
+"C": "Henle's loop",
+"D": "Distal convoluted tubule",
+"E": "Collecting duct"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Cardiogenic shock → ischemic ATN; PCT (และ thick ascending limb) ไวต่อขาดเลือดที่สุดเพราะใช้พลังงานสูง เซลล์หลุดเป็น muddy brown cast; glomerulus ไม่ใช่ตำแหน่งหลัก"
+},
+"75.1/62": {
+"box": 17,
+"stem": "หญิง 60 ปี TC 180, TG 900, HDL 45 ยาที่เหมาะสมที่สุดคือ",
+"options": {
+"A": "Simvastatin",
+"B": "Nicotinic acid",
+"C": "Gemfibrozil",
+"D": "Ezetimibe",
+"E": "Cholestyramine"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "TG 900 ต้องลด TG เร่งด่วนด้วย fibrate (gemfibrozil) ป้องกัน pancreatitis; statin/ezetimibe เน้น LDL, resin ทำ TG สูงขึ้น"
+},
+"75.1/70": {
+"box": 4,
+"stem": "เด็ก 2 ปี มี PDA, microphthalmia และ bilateral cataract เป็นโรคใด",
+"options": {
+"A": "Congenital rubella",
+"B": "Congenital toxoplasmosis",
+"C": "Thalidomide embryopathy"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Congenital rubella triad = PDA (± pulmonary artery stenosis) + cataract + sensorineural deafness; toxoplasma ให้ chorioretinitis/hydrocephalus/intracranial calcification, thalidomide ให้ phocomelia"
+},
+"75.1/73": {
+"box": 27,
+"stem": "หญิง HT ที่คุมด้วยยาไม่ได้ CT พบก้อนอยู่ด้านหลังต่อ IVC ก้อนน่าจะมาจากอวัยวะใด",
+"options": {
+"A": "Pancreas",
+"B": "Uterus",
+"C": "Ovary",
+"D": "Gallbladder",
+"E": "Adrenal gland"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "Right adrenal อยู่หลัง IVC; resistant HT + adrenal mass นึกถึง secondary HT เช่น pheochromocytoma/aldosteronoma"
+},
+"75.1/85": {
+"box": 17,
+"stem": "TG 900, cholesterol 150, HDL 45 ควรให้ยาใด",
+"options": {
+"A": "Simvastatin",
+"B": "Gemfibrozil",
+"C": "Cholestyramine",
+"D": "Nicotinic acid"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "TG สูงมาก → fibrate เป็น first line ลด TG; cholestyramine เพิ่ม TG, statin เน้น LDL"
+},
+"75.1/86": {
+"box": 17,
+"stem": "เด็กชายมี xanthelasma และ Achilles tendon xanthoma พี่ชายเป็นเหมือนกัน พ่อเป็น MI อายุ 45 ตรวจพบ LDL receptor mutation นอกจาก cholesterol สูงจะพบผลแล็บใด",
+"options": {
+"A": "High LDL",
+"B": "High HDL",
+"C": "High VLDL",
+"D": "High triglycerides",
+"E": "Very high TG but low HDL"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Familial hypercholesterolemia (type IIa) จาก LDL-R defect ทำให้ LDL clearance ลด LDL สูงมาก TG/VLDL ปกติ"
+},
+"75.1/97": {
+"box": 17,
+"stem": "ชาย 21 ปี มี xanthelasma, tendon xanthoma พี่ชายเป็นเหมือนกัน พ่อเป็น MI ตรวจพบ LDL receptor mutation จะพบแล็บใด",
+"options": {
+"A": "High LDL",
+"B": "High VLDL",
+"C": "High HDL",
+"D": "High triglyceride",
+"E": "High TG but low HDL"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "FH (LDL-R mutation) → LDL สูงเด่น (type IIa) ไม่มี TG/VLDL สูง"
+},
+"75.2/6": {
+"box": 16,
+"stem": "หญิง BP 145/90, cholesterol 200, LDL 130 สิ่งใดน่าจะตรวจพบ",
+"options": {
+"A": "High serum renin/aldosterone",
+"B": "High serum cortisol",
+"C": "High C-reactive protein"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "ผู้ป่วยมี HT + dyslipidemia เป็น atherosclerosis risk ซึ่งสัมพันธ์กับ chronic vascular inflammation → hs-CRP สูง; ไม่มีลักษณะ hyperaldosteronism หรือ Cushing",
+"doubt": "⚠ recall ไม่ครบ ตัวเลขในโจทย์ไม่ชัด — ไม่แน่ใจ"
+},
+"75.2/10": {
+"box": 21,
+"stem": "เด็กหอบ DTR ลดลง cardiomegaly + pulmonary edema แม่ให้กินแต่นมข้นหวานผสมน้ำ ขาด vitamin ใด",
+"options": {
+"A": "Thiamine",
+"B": "Niacin",
+"C": "Cobalamin",
+"D": "Tocopherol",
+"E": "Ascorbic acid"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "นมข้นหวานแทบไม่มี B1 → wet beriberi (high-output HF, cardiomegaly) ร่วม neuropathy (DTR ลด); niacin → pellagra, B12 → megaloblastic/SCD"
+},
+"75.2/11": {
+"box": 4,
+"stem": "เด็กมี PDA และ cataract ติดเชื้อใดในครรภ์",
+"options": {
+"A": "Congenital rubella infection",
+"B": "Toxoplasma gondii"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "PDA + cataract + deafness = congenital rubella syndrome; toxoplasma ให้ chorioretinitis, hydrocephalus, diffuse calcification"
+},
+"75.2/25": {
+"box": 21,
+"stem": "Pleural effusion ชนิด transudate และ amylase ปกติ สาเหตุคืออะไร",
+"options": {
+"A": "Malignancy",
+"B": "Congestive heart failure",
+"C": "Acute pancreatitis",
+"D": "Bacterial infection"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "CHF เพิ่ม hydrostatic pressure ทำให้ transudate (สาเหตุพบบ่อยที่สุด); malignancy/infection เป็น exudate, pancreatitis มี amylase สูง"
+},
+"75.2/28": {
+"box": 7,
+"stem": "CO 4 L/min, HR 100/min, ESV 160 mL ejection fraction เท่าใด",
+"options": {
+"A": "80%",
+"B": "40%",
+"C": "25%",
+"D": "20%",
+"E": "75%"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "SV = CO/HR = 4000/100 = 40 mL; EDV = ESV + SV = 200 mL; EF = 40/200 = 20%"
+},
+"75.2/30": {
+"box": 5,
+"stem": "ทารกแรกเกิดเขียว ให้ภาพ CXR (egg-on-a-string) ถามว่าเป็นโรคใด",
+"options": {
+"A": "Tetralogy of Fallot",
+"B": "Patent ductus arteriosus",
+"C": "Pulmonary stenosis",
+"D": "Truncus arteriosus",
+"E": "Transposition of great vessels"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "Egg-on-a-string + เขียวตั้งแต่แรกเกิด = TGA (สาเหตุเขียวในทารกแรกเกิดที่พบบ่อย); ToF ให้ boot-shaped heart, PDA ไม่เขียว",
+"needs_image": true,
+"options_reconstructed": true,
+"doubt": "⚠ ไม่เห็นรูป — ถ้ารูปเป็น boot-shaped ตอบ ToF"
+},
+"75.2/32": {
+"box": 18,
+"stem": "หญิง 50 ปี เจ็บอกร้าวไปคอ มาถึง ER ใน 30 นาที biomarker ใด sensitive ที่สุดในเวลานั้น",
+"options": {
+"A": "Troponin I",
+"B": "Troponin T",
+"C": "CK-MB mass",
+"D": "LDH",
+"E": "Myoglobin"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "Myoglobin ขึ้นเร็วที่สุด (ภายใน 1–2 ชม.) จึงไวที่สุดในช่วงแรกมาก; troponin/CK-MB ขึ้นหลัง 3–4 ชม., LDH ขึ้นช้าสุด",
+"doubt": "⚠ แนวปัจจุบันใช้ hs-troponin เป็นหลักแม้ในช่วงแรก แต่โจทย์ตั้งใจ marker ที่ขึ้นเร็วสุด"
+},
+"75.2/33": {
+"box": 3,
+"stem": "การไม่เชื่อม (non-fusion) ของ septum primum กับ endocardial cushion เรียกว่าอะไร",
+"options": {
+"A": "Common ASD",
+"B": "Ostium secundum ASD",
+"C": "Ostium primum ASD",
+"D": "Endocardial cushion defect with ostium primum ASD"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Septum primum ไม่เชื่อมกับ endocardial cushion → ostium primum ไม่ปิด = ostium primum ASD (partial AV septal/endocardial cushion defect); secundum ASD เกิดจาก septum primum resorb มากเกิน/septum secundum ไม่พอ",
+"doubt": "⚠ ตัวเลือก C และ D ใกล้กันมาก (recall) — D ตรงกับถ้อยคำในชุด 75.2/76"
+},
+"75.2/35": {
+"box": 18,
+"stem": "ผู้ป่วย MI มา 30 นาที marker ใด sensitive ที่สุด",
+"options": {
+"A": "LDH1",
+"B": "Troponin T",
+"C": "Troponin I",
+"D": "Myoglobin",
+"E": "CK-MB"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Myoglobin หลั่งเร็วที่สุดหลัง myocyte injury จึงไวที่สุดใน 30 นาที–2 ชม. แต่ไม่ specific; troponin/CK-MB ขึ้นช้ากว่า",
+"doubt": "⚠ ถ้าใช้ hs-troponin แนวปัจจุบันจะเลือก troponin"
+},
+"75.2/36": {
+"box": 15,
+"stem": "หญิง 65 ปี เจ็บอกรุนแรง peripheral edema และ JVD ECG มี ST elevation ที่ V3R–V4R (ผนังหลัง sternum คือ RV) หลอดเลือดใดอุดตัน",
+"options": {
+"A": "Left circumflex",
+"B": "Left marginal",
+"C": "Right coronary",
+"D": "Posterior descending",
+"E": "Left anterior descending"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "RV infarction (ST↑ V3R–V4R, JVD, ไม่มี pulmonary congestion) เกิดจาก proximal RCA ที่ให้ RV marginal branch; PDA ไม่เลี้ยง RV free wall"
+},
+"75.2/44": {
+"box": 21,
+"stem": "ชาย 65 ปี HT มีเหนื่อย 2 วัน O₂ sat 92% CXR พบ pulmonary edema + cardiomegaly สาเหตุของ O₂ sat ลดคืออะไร",
+"options": {
+"A": "Decreased tidal volume",
+"B": "Decreased cardiac pumping",
+"C": "Decreased cardiac contraction",
+"D": "Decreased alveolar diffusion",
+"E": "Decreased pulmonary perfusion"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Pulmonary edema ทำให้ interstitium/alveoli มีน้ำ ระยะ diffusion ยาว (และ V/Q mismatch) → hypoxemia; การบีบตัวที่ลดเป็นต้นเหตุของ edema แต่ไม่ใช่กลไกโดยตรงของ SpO₂ ต่ำ"
+},
+"75.2/47": {
+"box": 21,
+"stem": "ผู้ป่วย pulmonary edema + cardiomegaly O₂ sat 92% ทำไม O₂ sat จึงต่ำ",
+"options": {
+"A": "Decreased tidal volume",
+"B": "Decreased cardiac output",
+"C": "Decreased cardiac pumping",
+"D": "Decreased alveolar diffusion",
+"E": "Decreased pulmonary perfusion"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "น้ำในช่อง interstitial/alveolar ขัดขวาง gas diffusion → O₂ sat ลด; CO ลดไม่ทำให้ arterial saturation ลดโดยตรง",
+"options_reconstructed": true
+},
+"75.2/48": {
+"box": 24,
+"stem": "ผู้ป่วยเหนื่อย มี severe mitral valve prolapse ฟังเสียงได้ชัดที่สุดที่ใด",
+"options": {
+"A": "เหนือ manubrium",
+"B": "Lower sternum",
+"C": "Left 5th ICS midclavicular line",
+"D": "Left 2nd ICS lateral to sternum",
+"E": "Right 2nd ICS lateral to sternum"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Mitral area อยู่ที่ apex (left 5th ICS MCL) — MVP ให้ mid-systolic click + late systolic murmur ที่ apex; 2nd ICS ซ้าย/ขวาเป็น pulmonic/aortic area"
+},
+"75.2/52": {
+"box": 13,
+"stem": "BP 140/70 HR 150 EKG เป็น narrow complex tachycardia มี sawtooth P wave กลไกของ tachycardia คืออะไร",
+"options": {
+"A": "Reentry",
+"B": "Early afterdepolarization",
+"C": "Delayed afterdepolarization",
+"D": "Enhanced automaticity",
+"E": "Abnormal automaticity"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Sawtooth flutter wave + HR 150 (2:1 block) = typical atrial flutter ซึ่งเป็น macro-reentry รอบ tricuspid annulus (cavotricuspid isthmus); EAD → torsades, DAD → digoxin toxicity"
+},
+"75.2/55": {
+"box": 20,
+"stem": "ผู้ป่วย STEMI ได้ streptokinase กลไกของยาคืออะไร",
+"options": {
+"A": "จับกับ plasminogen ทำให้เปลี่ยนเป็น plasmin",
+"B": "ยับยั้ง plasminogen",
+"C": "ยับยั้ง thrombin โดยตรง",
+"D": "ยับยั้ง P2Y12 ADP receptor",
+"E": "ยับยั้ง vitamin K epoxide reductase"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Streptokinase จับ plasminogen เป็น complex ที่เปลี่ยน plasminogen อื่นเป็น plasmin → ย่อย fibrin (fibrinolysis); ไม่ได้ยับยั้ง plasminogen",
+"options_reconstructed": true,
+"doubt": "⚠ recall เขียนว่า 'inhibit plasminogen' ซึ่งผิด"
+},
+"75.2/60": {
+"box": 13,
+"stem": "ชาย 60 ปี ใจสั่น 1 ชม. BP 140/70 HR 150 EKG regular narrow complex tachycardia มี sawtooth P wave กลไกคืออะไร",
+"options": {
+"A": "Reentry",
+"B": "Early afterdepolarization",
+"C": "Delayed afterdepolarization",
+"D": "Enhanced automaticity",
+"E": "Abnormal automaticity"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Atrial flutter เกิดจาก macro-reentrant circuit ใน RA; afterdepolarization และ automaticity เป็นกลไกของ arrhythmia ชนิดอื่น"
+},
+"75.2/74": {
+"box": 31,
+"stem": "ผู้ป่วย sepsis มี hypotension แพทย์ให้ vasoconstrictor ที่ออกฤทธิ์ที่ α1 adrenergic receptor กลไกออกฤทธิ์คือแบบใด",
+"options": {
+"A": "Full agonist",
+"B": "Inverse agonist",
+"C": "Competitive antagonist",
+"D": "Non-competitive antagonist",
+"E": "Physiological antagonist"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Norepinephrine/phenylephrine เป็น full agonist ที่ α1 → Gq → vasoconstriction เพิ่ม SVR; antagonist จะลดความดัน"
+},
+"75.2/75": {
+"box": 18,
+"stem": "หญิงมีอาการแบบ angina มา ER ภายใน 30 นาที marker ใด sensitive ที่สุด",
+"options": {
+"A": "LDH1",
+"B": "Myoglobin",
+"C": "Troponin I",
+"D": "Troponin T",
+"E": "CK-MB"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "ช่วงแรกมาก (<1–2 ชม.) myoglobin ขึ้นก่อนจึงไวที่สุด; troponin specific กว่าแต่ขึ้นช้ากว่า",
+"doubt": "⚠ ถ้าใช้ hs-troponin แนวปัจจุบันจะเลือก troponin"
+},
+"75.2/76": {
+"box": 3,
+"stem": "ภาวะใดเกิดจากการไม่เชื่อมของ septum primum กับ endocardial cushion",
+"options": {
+"A": "Normal atrial septum",
+"B": "Membranous VSD",
+"C": "Endocardial cushion defect with ostium primum ASD",
+"D": "Common atrium",
+"E": "Ostium secundum defect"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Septum primum ไม่ fuse กับ endocardial cushion → ostium primum ASD (มักร่วมกับ AV valve cleft); secundum ASD เกิดจาก foramen secundum/septum secundum ผิดปกติ"
+},
+"75.2/94": {
+"box": 4,
+"stem": "เด็กมี murmur ที่ left upper parasternal border (2nd ICS) ร่วมกับ aortic arch โป่งและ LVH เป็นโรคใด",
+"options": {
+"A": "Tetralogy of Fallot",
+"B": "Pulmonary stenosis",
+"C": "VSD",
+"D": "Patent ductus arteriosus",
+"E": "Coarctation of aorta"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "PDA ให้ continuous machine murmur ที่ left infraclavicular/2nd ICS, L→R shunt → LA/LV volume overload และ aortic arch โป่ง; VSD murmur อยู่ LLSB",
+"doubt": "⚠ recall เขียน 'pansystolic' แต่ชุดซ้ำ 75.2/98 ระบุ continuous murmur"
+},
+"75.2/96": {
+"box": 15,
+"stem": "หญิง 65 ปี เจ็บอกรุนแรง JVD peripheral edema ECG ST elevation V3R–V4R บ่ง infarct ส่วนหลัง sternum หลอดเลือดใดอุดตัน",
+"options": {
+"A": "Circumflex",
+"B": "Left marginal",
+"C": "Right coronary",
+"D": "Posterior descending",
+"E": "Left anterior descending"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "ผนังหลัง sternum คือ RV ซึ่งเลี้ยงด้วย RCA (RV marginal branch); RV infarct ให้ JVD + hypotension ปอดใส"
+},
+"75.2/98": {
+"box": 4,
+"stem": "เด็ก 1 ปี กินได้น้อย เหนื่อย ไม่เขียว continuous murmur ที่ left 2nd upper parasternal border CXR aortic arch โป่ง LV โต ความผิดปกติคืออะไร",
+"options": {
+"A": "Pulmonary stenosis",
+"B": "ASD",
+"C": "PDA",
+"D": "Tetralogy of Fallot",
+"E": "VSD",
+"F": "Coarctation of aorta"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Continuous murmur ที่ LUSB + L→R shunt ทำให้ aorta/LA/LV รับเลือดมาก = PDA; ASD/VSD ไม่ให้ continuous murmur, ToF เขียว"
+},
+"75.2/99": {
+"box": 8,
+"stem": "PV loop ของ LV เปลี่ยนจากเส้นสีส้มเป็นสีดำ น่าจะเกิดจากอะไร (ดูรูป)",
+"options": {
+"A": "Aortic stenosis",
+"B": "Hypertensive emergency",
+"C": "Acute MI",
+"D": "Dopamine",
+"E": "Inferior vena cava obstruction"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "ตามที่ติวอนุมาน loop เล็กลงและเลื่อนซ้าย (EDV ลด SV ลด) = preload ลด เช่น IVC obstruction; AS/HT emergency ทำ loop สูงขึ้น (afterload↑), inotrope ทำ ESV ลด",
+"needs_image": true,
+"doubt": "⚠ ไม่เห็นรูป — คำตอบอนุมานจากติว MDCU80"
+},
+"75.2/102": {
+"box": 24,
+"stem": "ตำแหน่งที่ดีที่สุดในการฟัง mitral valve prolapse",
+"options": {
+"A": "Left 5th ICS midclavicular line",
+"B": "Left 2nd ICS near sternal border",
+"C": "Right 2nd ICS near sternal border"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Mitral area = apex (left 5th ICS MCL); left 2nd = pulmonic, right 2nd = aortic area"
+},
+"75.2/104": {
+"box": 8,
+"stem": "Pressure-volume loop ของ LV เปลี่ยนจากเส้นสีดำเป็นสีเขียว เกิดจากอะไร (ดูรูป)",
+"options": {
+"A": "Aortic stenosis",
+"B": "Hypertensive emergency",
+"C": "Adrenaline administration",
+"D": "Acute MI",
+"E": "IVC obstruction"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "หลักอ่าน: loop สูงขึ้น ESV คงหรือเพิ่ม = afterload↑ (AS/HT emergency); ESV ลด SV เพิ่ม ESPVR ชันขึ้น = inotrope (adrenaline); ESPVR ลด ESV เพิ่ม = acute MI; loop เล็กเลื่อนซ้าย = preload↓ (IVC obstruction)",
+"needs_image": true,
+"doubt": "⚠ ไม่เห็นรูป — คำตอบเดาจากชุดตัวเลือก ต้องดูทิศ loop ในรูปจริง"
+},
+"75.2/112": {
+"box": 25,
+"stem": "ชายมีประวัติ IVDU มีไข้ echo พบ vegetation ที่ลิ้นหัวใจ เกิดจากเชื้อใด",
+"options": {
+"A": "Staphylococcus aureus",
+"B": "Streptococcus viridans",
+"C": "Enterococcus faecalis",
+"D": "Staphylococcus epidermidis",
+"E": "Candida albicans"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "IE ใน IVDU (มักลิ้น tricuspid) เกิดจาก S. aureus มากที่สุด เป็น acute IE; viridans → subacute บนลิ้นผิดปกติเดิม, S. epidermidis → prosthetic valve",
+"options_reconstructed": true
+},
+"75.2/113": {
+"box": 25,
+"stem": "ผู้ป่วยมีอาการ rheumatic heart disease เกิดจากปัจจัยใดของเชื้อ",
+"options": {
+"A": "M protein",
+"B": "Streptolysin O",
+"C": "Streptokinase",
+"D": "Hyaluronic acid capsule"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "M protein ของ Group A Strep มี molecular mimicry กับ cardiac myosin/valve → type II hypersensitivity; streptolysin O ใช้เป็น marker (ASO) เท่านั้น",
+"options_reconstructed": true
+},
+"75.2/114": {
+"box": 23,
+"stem": "เด็กเล็กมีไข้ เจ็บหน้าอกร้าวไปหลัง พบ pericardial effusion ควรตรวจหาเชื้อใด",
+"options": {
+"A": "Coxsackie B virus PCR",
+"B": "Hemoculture for bacteria",
+"C": "RSV antigen",
+"D": "Mycobacterium tuberculosis culture"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Acute viral pericarditis/myocarditis ในเด็กสาเหตุหลักคือ Coxsackie B (enterovirus) ตรวจด้วย RT-PCR; TB/bacterial พบน้อยกว่า",
+"options_reconstructed": true
+},
+"75.2/120": {
+"box": 1,
+"stem": "Thymoma จะเห็นเป็นก้อนอยู่ตรงไหนของ mediastinum บน CXR",
+"options": {
+"A": "Anterior (and superior) mediastinum",
+"B": "Middle mediastinum",
+"C": "Posterior mediastinum",
+"D": "Inferior-middle (pericardium)"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Thymus อยู่ anterior/superior mediastinum หลัง sternum; posterior เป็นตำแหน่งของ neurogenic tumor, middle เป็นของ lymph node/หัวใจ",
+"options_reconstructed": true
+},
+"75.2/121": {
+"box": 21,
+"stem": "กลไกการออกฤทธิ์ของ spironolactone",
+"options": {
+"A": "Aldosterone (mineralocorticoid receptor) antagonist",
+"B": "ยับยั้ง ENaC โดยตรง",
+"C": "ยับยั้ง Na-K-2Cl cotransporter",
+"D": "ยับยั้ง Na-Cl cotransporter ที่ DCT",
+"E": "ยับยั้ง carbonic anhydrase"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Spironolactone แย่งจับ MR ที่ collecting duct เป็น K-sparing diuretic ลด mortality ใน HFrEF; ยับยั้ง ENaC โดยตรงคือ amiloride, NKCC คือ loop, NCC คือ thiazide",
+"options_reconstructed": true
+},
+"75.2/124": {
+"box": 1,
+"stem": "ผู้ป่วยเสียงแหบ (หลังผ่าตัดต่อมไทรอยด์ หรือสงสัย aortic arch aneurysm) เส้นประสาทใดได้รับผลกระทบ",
+"options": {
+"A": "Recurrent laryngeal nerve",
+"B": "External branch of superior laryngeal nerve",
+"C": "Phrenic nerve",
+"D": "Hypoglossal nerve"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Left recurrent laryngeal n. คล้อง aortic arch (ligamentum arteriosum) จึงถูกกดจาก aneurysm/LA โต และอยู่ใกล้ thyroid → vocal cord palsy เสียงแหบ; superior laryngeal ทำให้เสียงสูงไม่ได้",
+"options_reconstructed": true
+},
+"75.2/131": {
+"box": 15,
+"stem": "ST elevation ที่ V3R, V4R หลอดเลือดใดรับผิดชอบ",
+"options": {
+"A": "Right coronary artery",
+"B": "Left anterior descending",
+"C": "Left circumflex",
+"D": "Left main"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Right-sided leads ดู RV ซึ่งเลี้ยงด้วย RCA (proximal); LAD → anterior, LCx → lateral/posterior",
+"options_reconstructed": true
+},
+"75.2/132": {
+"box": 23,
+"stem": "เด็ก 10 ขวบ มีไข้ เจ็บหน้าอกแบบแหลม นอนหงายแล้วแย่ลง ฟังได้ friction rub ควรส่งตรวจอะไร",
+"options": {
+"A": "Echocardiography",
+"B": "Hemoculture for bacteria",
+"C": "Blood Coxsackie B RT-PCR",
+"D": "hMPV RT-PCR",
+"E": "Nasopharyngeal RSV"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "อาการเข้าได้กับ acute pericarditis สาเหตุหลักคือ viral โดยเฉพาะ Coxsackie B ตรวจด้วย RT-PCR; hMPV/RSV เป็นเชื้อทางเดินหายใจ ไม่ใช่สาเหตุหลัก",
+"options_reconstructed": true
+},
+"76/19": {
+"box": 17,
+"stem": "ผล lipid: TC 200, TG 150, HDL 10 กระบวนการใดบกพร่อง",
+"options": {
+"A": "Cholesterol transport จาก liver ไป tissue",
+"B": "Cholesterol transport จาก tissue กลับ liver",
+"C": "TG transport จาก liver ไป tissue",
+"D": "TG transport จาก intestine ไป liver",
+"E": "Liver receptor-mediated endocytosis"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "HDL ต่ำมาก = reverse cholesterol transport (tissue → liver) บกพร่อง; liver→tissue คือ LDL/VLDL และ receptor-mediated endocytosis คือ LDL-R ซึ่งจะทำ LDL สูง"
+},
+"76/28": {
+"box": 28,
+"stem": "ยาลดความดันใดไม่ควรให้ในหญิงตั้งครรภ์",
+"options": {
+"A": "Labetalol",
+"B": "Nicardipine",
+"C": "Losartan",
+"D": "Hydralazine",
+"E": "Methyldopa"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "ARB/ACEI เป็น teratogen (fetal renal dysgenesis, oligohydramnios) ห้ามใช้; ตัวเลือกอื่นใช้ได้ในครรภ์"
+},
+"76/30": {
+"box": 28,
+"stem": "ACE inhibitor ออกฤทธิ์ที่ตำแหน่งใดในไต",
+"options": {
+"A": "Afferent arteriole",
+"B": "Efferent arteriole",
+"C": "Collecting duct",
+"D": "DCT",
+"E": "Glomerular capillary"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Angiotensin II หด efferent arteriole เป็นหลัก ACEI จึงขยาย efferent → ลด intraglomerular pressure; afferent ถูกควบคุมโดย prostaglandin/NSAID"
+},
+"76/43": {
+"box": 24,
+"stem": "Systolic ejection murmur ที่ left 2nd ICS ชิด sternum วินิจฉัยใด",
+"options": {
+"A": "Pulmonary valve stenosis",
+"B": "Aortic valve stenosis",
+"C": "Aortic valve regurgitation",
+"D": "Mitral regurgitation",
+"E": "Tricuspid regurgitation"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "LUSB (pulmonic area) + SEM = PS; AS อยู่ที่ right 2nd ICS, AR เป็น diastolic, MR/TR เป็น holosystolic ที่ apex/LLSB"
+},
+"76/47": {
+"box": 21,
+"stem": "ผู้ป่วย HFrEF ควรได้ยาใดเพื่อป้องกัน cardiac remodeling",
+"options": {
+"A": "Enalapril",
+"B": "Propranolol",
+"C": "Digoxin",
+"D": "Furosemide",
+"E": "Verapamil"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ACEI ยับยั้ง RAAS ลด remodeling และ mortality; propranolol ไม่ใช่ BB ที่มีหลักฐานใน HF, digoxin/furosemide ลดอาการเท่านั้น, verapamil ห้ามใน HFrEF"
+},
+"76/53": {
+"box": 25,
+"stem": "Subacute endocarditis, culture พบ Gram-positive coccobacilli เชื้อใดน่าจะเป็น",
+"options": {
+"A": "Abiotrophia defectiva",
+"B": "Granulicatella adiacens",
+"C": "Aggregatibacter aphrophilus",
+"D": "Eikenella corrodens",
+"E": "Enterococcus faecium"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Nutritionally variant streptococci (Abiotrophia) ก่อ subacute IE และอาจเห็นเป็น pleomorphic GP coccobacilli; Aggregatibacter/Eikenella เป็น gram-negative HACEK, Enterococcus เป็น cocci",
+"doubt": "⚠ Granulicatella adiacens ก็เป็น NVS ลักษณะคล้ายกัน — ไม่แน่ใจ A vs B"
+},
+"76/70": {
+"box": 11,
+"stem": "ผู้ป่วยโรคหัวใจ ECG มี tented T wave ยาใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Losartan",
+"B": "Acetazolamide",
+"C": "Mannitol",
+"D": "Furosemide",
+"E": "Thiazide"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ARB ลด aldosterone → K สูง; acetazolamide, furosemide, thiazide ทำ K ต่ำ ส่วน mannitol ไม่ใช่สาเหตุหลักของ hyperK"
+},
+"76/84": {
+"box": 25,
+"stem": "Valvular vegetation, hemoculture พบ Gram-positive cocci in clusters ใช้ test ใดแยก species",
+"options": {
+"A": "Oxidase",
+"B": "Indole",
+"C": "Coagulase",
+"D": "Motility",
+"E": "Urease"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "GPC clusters = Staphylococcus แยก S. aureus (coagulase +) จาก CoNS ด้วย coagulase; oxidase/indole/urease ใช้กับ gram-negative"
+},
+"76/86": {
+"box": 2,
+"stem": "ระหว่างหัตถการรักษา arrhythmia บาด posterior interventricular branch ของ RCA หลอดเลือดดำใดที่วิ่งคู่กันน่าจะบาดเจ็บด้วย",
+"options": {
+"A": "Small cardiac vein",
+"B": "Middle cardiac vein",
+"C": "Great cardiac vein",
+"D": "Vein of left atrium",
+"E": "Left marginal vein"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Middle cardiac vein วิ่งใน posterior IV groove คู่กับ PDA; great cardiac vein คู่ LAD, small cardiac vein คู่ right marginal a."
+},
+"76/99": {
+"box": 28,
+"stem": "หญิงตั้งครรภ์มีความดันโลหิตสูง ควรได้ยาใด",
+"options": {
+"A": "Nitroglycerine",
+"B": "Nicardipine",
+"C": "Labetalol",
+"D": "Losartan",
+"E": "Lithium"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Labetalol เป็น first-line ใน pregnancy (ร่วมกับ methyldopa, nifedipine); losartan ห้าม, nicardipine ใช้ IV ใน severe HT เฉพาะกรณี, lithium ไม่ใช่ยาลดความดัน"
+},
+"76/108": {
+"box": 2,
+"stem": "ผู้ป่วยมีความผิดปกติของหลอดเลือดใหญ่ที่ tunica media หนาและมี elastic fiber แทรกหลายชั้น หลอดเลือดใดน่าจะเป็น",
+"options": {
+"A": "Pulmonary vein",
+"B": "Inferior vena cava",
+"C": "Thoracic aorta",
+"D": "Left main coronary artery",
+"E": "Coronary sinus"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Elastic artery (aorta) มี media หนาและ elastic laminae หลายชั้น; vein มี media บาง, coronary artery เป็น muscular artery"
+},
+"76/117": {
+"box": 3,
+"stem": "ผู้ป่วย coarctation of aorta มี BP แขนซ้ายต่ำผิดปกติ แขนขวาสูง เกิดจากความผิดปกติของโครงสร้างใด",
+"options": {
+"A": "2nd pharyngeal aortic arch",
+"B": "3rd pharyngeal aortic arch",
+"C": "4th pharyngeal aortic arch",
+"D": "6th pharyngeal aortic arch",
+"E": "Truncus arteriosus"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Arch of aorta ส่วนระหว่าง L common carotid ถึง L subclavian มาจาก left 4th arch artery (ตำแหน่ง CoA ใกล้ ductus); 3rd = carotid, 6th = pulmonary/ductus, 2nd = stapedial"
+},
+"76/120": {
+"box": 1,
+"stem": "อุบัติเหตุรถยนต์ พวงมาลัยกระแทก sternum ส่วนใดของหัวใจบาดเจ็บมากที่สุด",
+"options": {
+"A": "Right ventricle",
+"B": "Right atrium",
+"C": "Left ventricle",
+"D": "Left atrium",
+"E": "Aortic arch"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "RV อยู่ด้านหน้าสุด (sternocostal surface) ชิดหลัง sternum จึงโดนก่อน ส่วน LA อยู่หลังสุด LV/RA อยู่ด้านข้างและลึกกว่า"
+},
+"76/142": {
+"box": 16,
+"stem": "คำแนะนำใดเหมาะกับผู้ที่มีความเสี่ยงสูงต่อ CAD",
+"options": {
+"A": "กิน DASH/Mediterranean/animal-based diet",
+"B": "Vigorous exercise 75–150 min/week",
+"C": "เปลี่ยน unsaturated fat เป็น saturated fat",
+"D": "คง LDL ให้สูง",
+"E": "ลดเกลือ < 5 g/day"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "ลดเกลือ <5 g/day (Na <2 g) ตามแนวทาง; animal-based diet ไม่ใช่ healthy diet, ต้องเปลี่ยน saturated เป็น unsaturated และลด LDL ส่วน vigorous แนะนำ 75 min/wk (ช่วง 75–150 เป็นของ moderate ที่ 150–300)"
+},
+"76/144": {
+"box": 30,
+"stem": "ข้อใดผิดเกี่ยวกับ protein C ในผู้ป่วย DVT/PE",
+"options": {
+"A": "Vitamin K dependent",
+"B": "Activated by thrombin",
+"C": "Inhibit factor VII",
+"D": "Deficiency ทำให้ pregnancy loss",
+"E": "เป็นส่วนหนึ่งของระบบ anticoagulation"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Activated protein C ทำลาย factor Va และ VIIIa ไม่ใช่ VII; ข้ออื่นถูก — เป็น vit K-dependent ถูก activate โดย thrombin–thrombomodulin และ deficiency สัมพันธ์ thrombophilia/pregnancy loss"
+},
+"76/147": {
+"box": 20,
+"stem": "นักศึกษาแพทย์เป็น angina ยาใดใช้ป้องกัน angina ระยะยาว",
+"options": {
+"A": "Atenolol",
+"B": "Pindolol",
+"C": "Propranolol",
+"D": "Isosorbide mononitrate",
+"E": "Nitroglycerin"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Isosorbide mononitrate เป็น long-acting nitrate สำหรับ prophylaxis; nitroglycerin SL ใช้ระงับอาการเฉียบพลัน, pindolol มี ISA ไม่เหมาะใน angina",
+"doubt": "⚠ Atenolol (β1-selective) ก็เป็นยา first-line ป้องกัน angina ระยะยาว — คำตอบ A/D ไม่แน่ใจ"
+},
+"76/164": {
+"box": 10,
+"stem": "ขณะออกแรง (exertion) การปรับตัวของระบบหัวใจและหายใจเป็นอย่างไร",
+"options": {
+"A": "Increased CO, minute ventilation; SpO2 คงที่",
+"B": "Increased CO, minute ventilation, SpCO2",
+"C": "Decreased tidal volume",
+"D": "Decreased CO"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ออกกำลังกาย CO และ minute ventilation เพิ่มเพื่อให้ SpO2 คงปกติ; PaCO2 ไม่เพิ่ม (คงที่/ลดเล็กน้อย) และ TV เพิ่มไม่ใช่ลด",
+"options_reconstructed": true
+},
+"76/167": {
+"box": 23,
+"stem": "ชาย 45 ปี หอบขณะพัก distant heart sounds, hypotension, ECG low-voltage QRS, มี pericardial fluid ลิ้นหัวใจปกติ จะพบอะไรอีก",
+"options": {
+"A": "ไม่มี pulsus paradoxus",
+"B": "มี cardiac murmur",
+"C": "Increased central venous pressure",
+"D": "Increased pulse pressure"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "เป็น cardiac tamponade (Beck triad) → CVP/JVP สูง; จะมี pulsus paradoxus และ pulse pressure แคบ ไม่มี murmur"
+},
+"76/169": {
+"box": 29,
+"stem": "ให้รูปความผิดปกติของหลอดเลือดที่มือ/นิ้ว ถามสาเหตุ",
+"options": {
+"A": "Vasoconstriction",
+"B": "Thrombosis",
+"C": "Vasculitis"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ตามชีท รูปเข้ากับ Raynaud phenomenon = vasospasm (vasoconstriction); ถ้าเป็น palpable purpura จะตอบ vasculitis",
+"needs_image": true
+},
+"76/185": {
+"box": 20,
+"stem": "ให้ aspirin ป้องกันหลอดเลือดอุดตัน ยาไปยับยั้งการสร้างสารใด",
+"options": {
+"A": "Arachidonic acid จาก oleic acid",
+"B": "Thromboxane จาก arachidonic acid",
+"C": "Leukotriene จาก arachidonic acid",
+"D": "Lipoxin จาก arachidonic acid"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Aspirin acetylate COX-1 ใน platelet แบบ irreversible → ลด TXA2 จาก arachidonic acid; leukotriene มาจาก lipoxygenase ไม่ใช่ COX",
+"options_reconstructed": true
+},
+"76/187": {
+"box": 12,
+"stem": "ชายสูงอายุ 69 ปี มา ER ด้วย syncope ให้ ECG มา ถามตำแหน่ง lesion",
+"options": {
+"A": "SA node",
+"B": "Atrium",
+"C": "Bundle of His",
+"D": "Purkinje fiber",
+"E": "Ventricle"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "ตามชีท ECG น่าจะเป็น complete heart block/infranodal block ใน elderly → conduction disease ที่ His bundle; ถ้าเป็น sinus pause จะตอบ SA node",
+"needs_image": true
+},
+"76/203": {
+"box": 25,
+"stem": "Pansystolic murmur ที่ apex มีประวัติ subcutaneous nodules ปวดข้อ และเจ็บคอ ควรส่งตรวจใดก่อน",
+"options": {
+"A": "ASO titer",
+"B": "HACEK hemoculture",
+"C": "Echocardiogram for vegetation",
+"D": "Rheumatoid factor"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ภาพ acute rheumatic fever (carditis+MR, nodules, arthritis หลัง strep pharyngitis) → ยืนยัน strep infection ด้วย ASO titer; HACEK ใช้ใน culture-negative IE",
+"options_reconstructed": true
+},
+"76/210": {
+"box": 22,
+"stem": "เด็กหลังติด COVID-19 มี LVEF ลดลง NT-proBNP สูง กลไกคืออะไร",
+"options": {
+"A": "Sensitization to myocardium",
+"B": "Delayed hypersensitivity",
+"C": "Immune dysregulation"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "เป็น MIS-C — hyperinflammation จาก immune dysregulation หลังติดเชื้อ ไม่ใช่ sensitization ต่อ myocardial antigen แบบ rheumatic หรือ type IV"
+},
+"76/212": {
+"box": 22,
+"stem": "เจ็บอก 1 วัน fine crackles, cardiomegaly, apical impulse เลื่อนไป ICS 6 lateral ต่อ MCL ควรส่งตรวจใด",
+"options": {
+"A": "Coxsackie B virus RT-PCR",
+"B": "ASO titer",
+"C": "Blood culture (HACEK)",
+"D": "Troponin เพียงอย่างเดียว"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ภาพ acute myocarditis + dilated heart สาเหตุบ่อยสุดคือ Coxsackie B; ASO ใช้กับ rheumatic fever ซึ่งต้องมีประวัติ strep/Jones criteria",
+"options_reconstructed": true
+},
+"76/216": {
+"box": 29,
+"stem": "เด็กเป็น intussusception ได้รับการรักษา ต่อมามี purplish spot และถ่ายเป็นเลือด วินิจฉัยใด",
+"options": {
+"A": "Henoch-Schönlein purpura",
+"B": "Crohn disease ระยะเริ่มต้น",
+"C": "Intestinal polyp with intermittent intussusception"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "HSP (IgA vasculitis) มี palpable purpura + ปวดท้อง/GI bleed และเป็นสาเหตุ ileo-ileal intussusception ในเด็ก; Crohn/polyp ไม่อธิบาย purpura"
+},
+"76/229": {
+"box": 31,
+"stem": "ผู้ป่วย septic shock ภาวะช็อกเกิดจากกลไก hemodynamic ใดเป็นหลัก",
+"options": {
+"A": "Decreased blood volume",
+"B": "Decreased cardiac output",
+"C": "Arterial outflow tract obstruction",
+"D": "Decreased peripheral vascular resistance"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Septic shock เป็น distributive shock — vasodilation ลด SVR (CO มักปกติ/สูงในระยะแรก); hypovolemic/cardiogenic/obstructive ไม่ใช่กลไกหลัก"
+},
+"76/234": {
+"box": 15,
+"stem": "ECG ST elevation ใน I, aVL, V5, V6 หลอดเลือดใดอุดตัน",
+"options": {
+"A": "Left circumflex artery",
+"B": "Left main coronary artery",
+"C": "Left anterior descending artery",
+"D": "Right main coronary artery",
+"E": "Right posterior descending artery"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "I, aVL, V5–V6 = lateral wall เลี้ยงโดย LCx; LAD ให้ anterior V1–V4, left main จะ ST↑ aVR + diffuse ST↓",
+"needs_image": true
+},
+"76/235": {
+"box": 15,
+"stem": "ECG ST elevation ใน V1–V4 หลอดเลือดใดอุดตัน",
+"options": {
+"A": "Left circumflex artery",
+"B": "Left main coronary artery",
+"C": "Left anterior descending artery",
+"D": "Right main coronary artery",
+"E": "Right posterior descending artery"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "V1–V4 = septal/anterior wall เลี้ยงโดย LAD; LCx = lateral (I, aVL, V5–V6), RCA/PDA = inferior",
+"needs_image": true
+},
+"76/241": {
+"box": 8,
+"stem": "ให้กราฟ LV pressure-volume loop ถามภาวะใดทำให้ระยะระหว่าง LVEDV กับ LVESV (stroke volume) กว้างขึ้น",
+"options": {
+"A": "Aortic stenosis",
+"B": "IVC obstruction",
+"C": "Acute myocardial infarction",
+"D": "Cardiac tamponade",
+"E": "Adrenaline"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "Adrenaline เพิ่ม contractility → ESV ลด SV กว้างขึ้น; AS/AMI ทำ ESV เพิ่ม ส่วน IVC obstruction/tamponade ลด preload → EDV ลด SV แคบลง",
+"needs_image": true,
+"options_reconstructed": true
+},
+"76/251": {
+"box": 11,
+"stem": "ผู้ป่วย hyperkalemia ต้องการ stabilize myocardium ให้ยาใดก่อน",
+"options": {
+"A": "10% calcium gluconate",
+"B": "IV beta blocker",
+"C": "7.5% sodium bicarbonate"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Calcium gluconate IV ต้าน membrane excitability ทันที (ไม่ลด K); bicarbonate shift K เข้าเซลล์แต่ไม่ stabilize, beta blocker กลับทำให้ K สูงขึ้น",
+"options_reconstructed": true
+},
+"76/252": {
+"box": 23,
+"stem": "ไข้ร่วมกับ pericardial friction rub (acute pericarditis) รักษาด้วยยาใด",
+"options": {
+"A": "Paracetamol",
+"B": "Indomethacin",
+"C": "Nifedipine"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Acute pericarditis รักษาด้วย NSAID (aspirin/ibuprofen/indomethacin) ± colchicine; paracetamol ไม่ต้านการอักเสบพอ, nifedipine ไม่เกี่ยว"
+},
+"76/253": {
+"box": 11,
+"stem": "ECG มี tall peaked T รักษาด้วยอะไร (เพื่อปกป้องหัวใจทันที)",
+"options": {
+"A": "Potassium binding resin",
+"B": "Calcium gluconate IV",
+"C": "Insulin + glucose",
+"D": "Salbutamol nebulizer"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Tall peaked T = hyperK มีผลต่อหัวใจ → ให้ calcium ก่อน stabilize membrane; resin ออกฤทธิ์ช้า, insulin/salbutamol เป็นขั้นตอน shift K ตามมา",
+"options_reconstructed": true
+},
+"77/36": {
+"box": 21,
+"stem": "Pleural fluid: fluid/serum protein ratio 0.45, fluid/serum LDH ratio 0.35 สาเหตุใดเป็นไปได้มากที่สุด",
+"options": {
+"A": "Malignancy",
+"B": "Congestive heart failure",
+"C": "Pneumonia"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "ตาม Light's criteria protein ratio <0.5 และ LDH ratio <0.6 = transudate → CHF; malignancy และ pneumonia (parapneumonic) ให้ exudate"
+},
+"77/40": {
+"box": 20,
+"stem": "ผู้ป่วยได้ clopidogrel แล้วยังเกิด stroke ซ้ำ genotype ใดอธิบายได้",
+"options": {
+"A": "CYP2D6 *10/*10",
+"B": "CYP2D6 *2/*2",
+"C": "CYP2C19 *1/*1",
+"D": "CYP2C19 *3/*3",
+"E": "CYP2C19 *17/*17"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Clopidogrel เป็น prodrug ต้องถูก activate โดย CYP2C19; *2/*3 เป็น loss-of-function → poor metabolizer; *1 คือ wild type, *17 เป็น gain-of-function, CYP2D6 ไม่เกี่ยว"
+},
+"77/53": {
+"box": 11,
+"stem": "ผู้ป่วย HT ได้ยาแล้วเกิด hypokalemia, metabolic alkalosis, hypercalcemia ยาใดเป็นสาเหตุ",
+"options": {
+"A": "Hydrochlorothiazide",
+"B": "Furosemide",
+"C": "Spironolactone"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Thiazide ลด Ca excretion (hyperCa) และทำ hypoK + metabolic alkalosis; furosemide ทำ hypoCa, spironolactone ทำ hyperK + acidosis"
+},
+"77/69": {
+"box": 30,
+"stem": "ผู้ป่วยมีขาแดงบวมระหว่างเดินทางด้วยเครื่องบิน แล้วเจ็บอกเฉียบพลัน D-dimer สูง สาเหตุของอาการคืออะไร",
+"options": {
+"A": "DVT (embolize เป็น pulmonary embolism)",
+"B": "Thrombocytopenia",
+"C": "Acute myocardial infarction",
+"D": "Aortic dissection"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "นั่งนาน (stasis) → DVT ที่ขา หลุดไปเป็น PE ทำเจ็บอก D-dimer สูง; thrombocytopenia ไม่ทำ thrombosis แบบนี้ ส่วน MI/dissection ไม่อธิบายขาบวม",
+"options_reconstructed": true
+},
+"77/105": {
+"box": 29,
+"stem": "เด็ก 10 ปี palpable purpura, ปัสสาวะเป็นเลือด, ถ่ายเป็นเลือด, ปวดข้อ ถาม pathogenesis",
+"options": {
+"A": "Eosinophil activation",
+"B": "IgA immune complex deposition",
+"C": "Fibrinoid necrosis จาก ANCA",
+"D": "Anti-GBM antibody"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "HSP (IgA vasculitis) เกิดจาก IgA1 immune complex สะสมที่ small vessel/mesangium; ไม่ใช่ eosinophil (EGPA), ANCA หรือ anti-GBM",
+"options_reconstructed": true
+},
+"77/136": {
+"box": 1,
+"stem": "มี thymoma ใน anterior/superior mediastinum หลอดเลือดดำใดน่าจะถูกกดเป็นอันดับแรก",
+"options": {
+"A": "Right brachiocephalic vein",
+"B": "Left brachiocephalic vein",
+"C": "Right subclavian vein",
+"D": "Left internal jugular vein",
+"E": "Right internal jugular vein"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Left brachiocephalic vein ทอดขวางอยู่หลัง manubrium ด้านหน้าของ arch branches ชิด thymus ที่สุด; right brachiocephalic สั้นและอยู่ด้านขวา"
+},
+"77/145": {
+"box": 9,
+"stem": "ผู้ป่วย HT ที่คุมได้ดี กินเกลือแล้ววัดความดันพบว่าสูงขึ้น reflex/กลไกใดเสียไป",
+"options": {
+"A": "Baroreceptor reflex",
+"B": "RAAS",
+"C": "Chemoreceptors",
+"D": "ADH",
+"E": "Loss function of NO secretion"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ใน HT เรื้อรัง baroreceptor ถูก reset/sensitivity ลด จึงชดเชย BP ที่สูงขึ้นหลังได้ volume จากเกลือไม่ได้ (salt sensitivity); chemoreceptor ไม่ได้คุม BP ระยะสั้นเป็นหลัก",
+"doubt": "⚠ ชีทระบุไม่แน่ใจ baroreceptor (reset) vs RAAS (salt load ควรกด renin — การกดไม่ได้ก็ทำ BP ขึ้น)"
+},
+"77/146": {
+"box": 14,
+"stem": "ชาย 60 ปี AF with rapid ventricular response ยาใดเหมาะที่สุดสำหรับ rate control",
+"options": {
+"A": "Lidocaine",
+"B": "Phenytoin",
+"C": "Verapamil",
+"D": "Flecainide",
+"E": "Procainamide"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Non-DHP CCB (verapamil) ชะลอ AV node conduction → rate control; lidocaine/phenytoin (IB) ใช้ ventricular arrhythmia, flecainide/procainamide เป็น rhythm control"
+},
+"77/147": {
+"box": 2,
+"stem": "Purkinje cell hamartoma เกิดอยู่ที่ชั้นใดของหัวใจ",
+"options": {
+"A": "Myocardium",
+"B": "Endocardium",
+"C": "Subendocardium",
+"D": "Epicardium",
+"E": "Pericardium"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Purkinje fibers อยู่ใน subendocardial layer จึงเป็นตำแหน่งของ Purkinje cell hamartoma; endocardium เป็นเพียง endothelium บาง ๆ"
+},
+"77/148": {
+"box": 24,
+"stem": "Holosystolic blowing murmur ที่ right sternal border ร่วมกับขาบวมสองข้าง สาเหตุคืออะไร",
+"options": {
+"A": "ASD",
+"B": "VSD",
+"C": "MS",
+"D": "MR",
+"E": "TS",
+"F": "TR"
+},
+"answer": "F",
+"source": "วิเคราะห์",
+"why": "Holosystolic murmur ที่ RSB/LLSB + right-sided congestion (ขาบวม) = tricuspid regurgitation; MR ได้ยินที่ apex ร้าวไป axilla, VSD ที่ LLSB, MS/TS เป็น diastolic"
+},
+"77/149": {
+"box": 4,
+"stem": "Wide fixed splitting S2 ร่วมกับ systolic murmur ที่ sternal border วินิจฉัยใด",
+"options": {
+"A": "ASD",
+"B": "VSD",
+"C": "TOF",
+"D": "PDA"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ASD: L→R shunt ทำ RV volume เพิ่มคงที่ทั้งหายใจเข้า-ออก → fixed split S2 + flow murmur ที่ pulmonic area; VSD เป็น holosystolic, PDA continuous, TOF S2 single"
+},
+"77/150": {
+"box": 5,
+"stem": "เด็กมี cyanosis ที่ดีขึ้นเมื่อนั่งยอง (squatting)",
+"options": {
+"A": "ASD",
+"B": "VSD",
+"C": "Coarctation of aorta",
+"D": "TOF",
+"E": "PDA"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Squatting เพิ่ม SVR ลด R→L shunt ผ่าน VSD ใน Tetralogy of Fallot; ข้ออื่นเป็น acyanotic lesion"
+},
+"77/151": {
+"box": 15,
+"stem": "ECG ST elevation ใน II, III, aVF ร่วมกับ AV block และ bradycardia หลอดเลือดใดอุดตัน",
+"options": {
+"A": "Left main coronary a.",
+"B": "Right coronary a.",
+"C": "LAD",
+"D": "Posterior descending a.",
+"E": "Left circumflex a."
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Inferior STEMI + AV block/brady → RCA (เลี้ยง AV node ใน right-dominant ~85–90% และ SA node); PDA เป็นแขนงปลายไม่เลี้ยง SA node, LCx มักให้ lateral changes"
+},
+"77/152": {
+"box": 15,
+"stem": "ECG ST elevation ใน V5, V6 หลอดเลือดใดน่าจะอุดตัน",
+"options": {
+"A": "Left main coronary a.",
+"B": "Right coronary a.",
+"C": "Posterior descending a.",
+"D": "Left circumflex a."
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "V5–V6 = lateral wall เลี้ยงโดย LCx; RCA/PDA ให้ inferior (II, III, aVF), left main ให้ ST↑ aVR"
+},
+"77/153": {
+"box": 21,
+"stem": "ยาใดไม่ช่วยปรับ neurohormonal regulation และ cardiac remodeling ใน non-ischemic HFrEF",
+"options": {
+"A": "Aspirin",
+"B": "Beta blocker",
+"C": "SGLT2 inhibitor",
+"D": "Mineralocorticoid receptor antagonist",
+"E": "Angiotensin receptor antagonist"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "BB, SGLT2i, MRA, ARB เป็น GDMT ที่ลด remodeling/mortality; aspirin ไม่มีบทบาทใน non-ischemic HF"
+},
+"77/154": {
+"box": 8,
+"stem": "Echo พบ EF 0.3, EDV 180 mL ค่า end-diastolic volume วัดได้ที่ช่วงใดของ cardiac cycle",
+"options": {
+"A": "End of atrial systole",
+"B": "Before isovolumic relaxation",
+"C": "After rapid filling",
+"D": "End of ejection"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "EDV คือปริมาตร LV สูงสุดหลัง atrial kick (สิ้นสุด atrial systole ก่อน isovolumic contraction); ก่อน IVR คือ ESV ส่วนหลัง rapid filling ยังไม่เต็ม",
+"options_reconstructed": true
+},
+"77/155": {
+"box": 8,
+"stem": "ให้ P-V loop ถามภาวะใดทำให้ loop เปลี่ยนจากเส้นสีดำเป็นสีเขียว (loop เล็กลงและเลื่อนซ้าย)",
+"options": {
+"A": "Acute diarrhea",
+"B": "Hyperthyroidism",
+"C": "IV fluid infusion",
+"D": "Aortic regurgitation",
+"E": "Norepinephrine"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ตามชีท loop เล็กลง เลื่อนซ้าย = preload ลด (volume depletion จาก acute diarrhea); IV fluid/AR เพิ่ม EDV, hyperthyroid/NE เพิ่ม contractility หรือ afterload",
+"needs_image": true
+},
+"77/156": {
+"box": 1,
+"stem": "ถูกกระแทกที่ sternum แบบ crushing injury โครงสร้างใดน่าจะบาดเจ็บเป็นอันดับแรก",
+"options": {
+"A": "Right atrium",
+"B": "Right ventricle",
+"C": "Thymus",
+"D": "Left ventricle",
+"E": "Left atrium"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "RV เป็นส่วนหน้าสุดของหัวใจอยู่หลัง sternum โดยตรง; thymus ในผู้ใหญ่ฝ่อแล้ว, LA อยู่หลังสุด"
+},
+"77/157": {
+"box": 28,
+"stem": "ผู้ป่วย HT, GFR >60, FBS สูง เริ่ม losartan 1 สัปดาห์ จะเกิดอะไรขึ้น",
+"options": {
+"A": "Decrease urine volume",
+"B": "Decrease eGFR",
+"C": "Higher BUN",
+"D": "Higher FBS",
+"E": "Increased protein in urine"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "ARB ขยาย efferent arteriole → intraglomerular pressure ลด → eGFR ลดเล็กน้อย (ยอมรับได้ <30%) และลด proteinuria; ไม่ทำ FBS สูงหรือโปรตีนในปัสสาวะเพิ่ม"
+},
+"77/158": {
+"box": 25,
+"stem": "ผู้ป่วยทำหัตถการทางทันตกรรม เสี่ยงต่อ infective endocarditis จากเชื้อใด",
+"options": {
+"A": "Streptococcus mutans",
+"B": "Staphylococcus aureus",
+"C": "Staphylococcus epidermidis"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Viridans streptococci (เช่น S. mutans) ในช่องปากเข้ากระแสเลือดหลังทำฟัน → subacute IE; S. aureus สัมพันธ์ IVDU, S. epidermidis สัมพันธ์ prosthetic valve"
+},
+"77/159": {
+"box": 25,
+"stem": "ผู้ป่วยใช้สารเสพติดทางหลอดเลือด (IVDU) เสี่ยงต่อ IE จากเชื้อใด",
+"options": {
+"A": "Streptococcus mutans",
+"B": "Staphylococcus aureus",
+"C": "Staphylococcus epidermidis"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "IVDU → S. aureus จากผิวหนัง มักเป็น acute IE ที่ tricuspid valve; S. mutans สัมพันธ์ทำฟัน, S. epidermidis สัมพันธ์ prosthetic valve/device"
+},
+"77/160": {
+"box": 25,
+"stem": "เกิด vegetation หลังผ่าตัดใส่ prosthetic valve เชื้อใดเป็นสาเหตุ",
+"options": {
+"A": "Viridans streptococcus",
+"B": "Coagulase-negative Staphylococcus"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Early prosthetic valve endocarditis เกิดจาก CoNS (S. epidermidis) ที่สร้าง biofilm บนวัสดุ; viridans strep สัมพันธ์ native valve หลังทำฟัน"
+},
+"77/161": {
+"box": 12,
+"stem": "Second-degree AV block มีลักษณะ ECG ใด",
+"options": {
+"A": "Prolonged QT interval",
+"B": "QRS complex distorted",
+"C": "Atrial rate เร็วกว่า ventricular rate"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "2° AV block มีบาง P ไม่ถูกนำลง ventricle จึงมี P มากกว่า QRS (atrial rate > ventricular rate); QT ยาวและ QRS กว้างไม่ใช่ลักษณะจำเพาะ"
+},
+"77/162": {
+"box": 26,
+"stem": "คำแนะนำใดเหมาะสำหรับผู้ป่วยความดันโลหิตสูง",
+"options": {
+"A": "Sodium intake < 5 g/day",
+"B": "สูบบุหรี่เท่าที่จำเป็น",
+"C": "Moderate exercise 150 min/week",
+"D": "ไม่แนะนำ Mediterranean diet"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "แนะนำ moderate aerobic exercise ≥150 นาที/สัปดาห์; ต้องเลิกบุหรี่, Mediterranean/DASH diet แนะนำ ส่วนข้อ A ตัวเลข <5 g ถูกสำหรับ 'เกลือ' แต่ sodium ควร <2 g/day",
+"doubt": "⚠ ตัวเลือก A 'sodium <5 g' ผิดหน่วย (เกลือ <5 g = Na <2 g) ถ้าโจทย์จริงเขียน salt อาจถูกด้วย"
+},
+"77/189": {
+"box": 27,
+"stem": "ผู้ป่วย BP 200/100 ฟังได้ abdominal bruit วินิจฉัยใดเป็นไปได้มากที่สุด",
+"options": {
+"A": "Renal artery stenosis",
+"B": "Primary aldosteronism",
+"C": "Pheochromocytoma",
+"D": "Coarctation of aorta",
+"E": "Essential hypertension"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Abdominal (renal) bruit + severe HT ชี้ renovascular HT จาก renal artery stenosis; aldosteronism/pheo ไม่มี bruit, CoA มี BP แขน-ขาต่างกัน",
+"options_reconstructed": true
+},
+"77/224": {
+"box": 27,
+"stem": "Resistant HT, renin ต่ำ aldosterone สูง Na 142 K 3 Cl 105 วินิจฉัยใด",
+"options": {
+"A": "Conn syndrome",
+"B": "Pheochromocytoma",
+"C": "Renal artery stenosis",
+"D": "Addison disease"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Primary hyperaldosteronism: aldosterone สูง กด renin + hypoK; renal artery stenosis จะ renin สูง, Addison aldosterone ต่ำ, pheo ไม่เกี่ยว RAAS"
+},
+"77/241": {
+"box": 9,
+"stem": "ข้อใดคือผลของ thyroid hormone ต่อระบบหัวใจและหลอดเลือด",
+"options": {
+"A": "Increased cardiac contractility",
+"B": "Increased heart rate",
+"C": "Increased HR และ decreased PVR",
+"D": "Increased contractility และ HR",
+"E": "Increased contractility, HR และ decreased PVR"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "T3 เพิ่ม β-receptor/SERCA/α-MHC → contractility และ HR เพิ่ม และทำ peripheral vasodilation → SVR ลด; ข้ออื่นถูกแค่บางส่วน"
+},
+"78/10": {
+"box": 21,
+"stem": "ผู้ป่วย pulmonary HT + heart failure มี ascites: serum albumin 3, ascitic albumin 1.2, ascitic protein 1 g/dL, WBC 5 — สาเหตุของ ascites คืออะไร",
+"options": {
+"A": "Back pressure from heart",
+"B": "Capillarization of hepatic sinusoids",
+"C": "Intrahepatic obstruction",
+"D": "Extrahepatic protein loss",
+"E": "Malignancy at peritoneum"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "SAAG = 1.8 (>1.1) = portal HT แต่ ascitic protein <2.5 บ่งว่า sinusoid ไม่รั่วโปรตีน = capillarization ของ sinusoid แบบ cirrhosis; ถ้าเป็น cardiac (back pressure) protein จะ ≥2.5 ส่วน malignancy/protein loss ให้ SAAG <1.1"
+},
+"78/X10": {
+"box": 27,
+"stem": "ผู้ป่วยความดันสูง เริ่ม ACEI แล้ว creatinine ขึ้นสูงมากจนต้องหยุดยา — ภาวะพื้นฐานคืออะไร",
+"options": {
+"A": "Renal artery stenosis (bilateral)",
+"B": "Primary aldosteronism",
+"C": "Pheochromocytoma",
+"D": "Essential hypertension",
+"E": "Cushing syndrome"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ใน bilateral RAS GFR อาศัย Ang II บีบ efferent arteriole; ACEI ตัดกลไกนี้ → GFR ตก Cr ขึ้นมาก; สาเหตุ secondary HT อื่นไม่ทำให้ Cr พุ่งจาก ACEI แบบนี้",
+"options_reconstructed": true
+},
+"78/12": {
+"box": 26,
+"stem": "ให้รูป arteriole ผนังหนาแบบ hyaline arteriolosclerosis — ผู้ป่วยน่าจะมีโรคพื้นฐานอะไร",
+"options": {
+"A": "Kawasaki disease",
+"B": "Severe hypertension",
+"C": "Polyarteritis nodosa"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Hyaline arteriolosclerosis เกิดจากโปรตีนพลาสมารั่วเข้าผนัง arteriole จากความดันสูงเรื้อรัง (หรือ DM/อายุ); Kawasaki และ PAN เป็น vasculitis ของหลอดเลือดขนาดกลาง ไม่ใช่ hyaline change",
+"needs_image": true,
+"doubt": "⚠ hyaline มักเป็น benign HT/DM ส่วน severe HT ให้ onion-skin (hyperplastic) — แต่ในตัวเลือกที่มี HT เหมาะสุด"
+},
+"78/31": {
+"box": 9,
+"stem": "ให้ D5/NSS/2 แบบ bolus ปริมาณมาก ร่างกายตอบสนองทาง hormone อย่างไร",
+"options": {
+"A": "Decreased ADH, suppressed ANP",
+"B": "Decreased ADH, decreased RAAS",
+"C": "Increased ADH, decreased RAAS",
+"D": "Increased ADH, increased ANP"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "สารน้ำ hypotonic ปริมาณมาก → volume เพิ่ม + osmolality ลด → ADH ลด, RAAS ลด, ANP เพิ่ม; ข้อที่บอก ANP ลดหรือ ADH เพิ่มจึงผิด"
+},
+"78/46": {
+"box": 11,
+"stem": "กินยาแล้วเกิด arrhythmia และ ECG มี tented T wave — ยานี้ออกฤทธิ์อย่างไร",
+"options": {
+"A": "Inhibit carbonic anhydrase",
+"B": "Inhibit NKCC",
+"C": "Inhibit Na-Cl cotransporter",
+"D": "Binding at mineralocorticoid receptor"
+},
+"answer": "D",
+"source": "เฉลย78",
+"why": "Tented T = hyperkalemia; spironolactone จับ mineralocorticoid receptor ต้าน aldosterone → ไม่ขับ K; acetazolamide, furosemide (NKCC), thiazide (NCC) ทำให้เสีย K → hypokalemia"
+},
+"78/70": {
+"box": 9,
+"stem": "หลัง spinal anesthesia ความดันตกมาก สงสัยกด sympathetic outflow ไปหลอดเลือดส่วนปลาย — receptor ใดเป็นตัวที่ทำให้ BP ลด",
+"options": {
+"A": "Beta-1 receptor",
+"B": "Beta-2 receptor",
+"C": "Alpha-1 receptor",
+"D": "Muscarinic receptor",
+"E": "Nicotinic receptor"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "Vascular tone ของหลอดเลือดส่วนปลายคุมโดย sympathetic ผ่าน α1 (vasoconstriction) เมื่อถูก block → vasodilate → BP ตก; β1 คุมหัวใจ, β2 ทำให้ขยายหลอดเลือด, muscarinic/nicotinic ไม่ใช่ตัวคุม tone หลัก"
+},
+"78/97": {
+"box": 31,
+"stem": "ไฟไหม้ second-degree 45% TBSA ต่อมามี hypotension, bradycardia, BUN/Cr สูง, hyperkalemia — กลไกหลักคืออะไร",
+"options": {
+"A": "Cytokine from overall inflammation",
+"B": "Fluid loss due to skin loss"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Burn กว้างทำให้เสียสารน้ำ/plasma ทางผิวและ capillary leak → hypovolemia → prerenal AKI (BUN/Cr ขึ้น) + K สูงจากเซลล์ถูกทำลายและไตขับไม่ได้; cytokine มีส่วนแต่ไม่ใช่กลไกหลักของภาพนี้"
+},
+"78/112": {
+"box": 16,
+"stem": "ข้อใดไม่ใช่ส่วนประกอบของ atherosclerotic plaque",
+"options": {
+"A": "Fibrous cap",
+"B": "Thrombosis",
+"C": "Foamy macrophage",
+"D": "Lipid",
+"E": "Smooth muscle cell"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Plaque ประกอบด้วย fibrous cap, foam cell, lipid core, SMC; thrombosis เป็นภาวะแทรกซ้อนเมื่อ plaque แตก ไม่ใช่ส่วนประกอบของ plaque"
+},
+"78/121": {
+"box": 30,
+"stem": "ผู้ป่วย DVT ควรตรวจประเมินแล็บพื้นฐาน (เช่น CBC, coagulation, renal/liver) เมื่อใด",
+"options": {
+"A": "Before giving anticoagulant",
+"B": "After anticoagulant 1 month",
+"C": "After anticoagulant 2 months",
+"D": "Immediately after giving anticoagulant",
+"E": "No need to evaluate"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "ต้องตรวจ baseline (CBC/platelet, PT/aPTT, Cr, LFT) ก่อนเริ่ม anticoagulant เพื่อเลือกยา/ขนาดและไว้เปรียบเทียบ; การตรวจหลังให้ยาแล้วหรือไม่ตรวจเลยไม่เหมาะ",
+"doubt": "⚠ key ระบุว่าจำโจทย์ไม่ครบ — หากโจทย์ถาม thrombophilia work-up คำตอบอาจต่างออกไป"
+},
+"78/131": {
+"box": 7,
+"stem": "คำนวณ resistance ของหลอดเลือดในกล้ามเนื้อ: MAP 120 mmHg, venous pressure ในกล้ามเนื้อ 5 mmHg, blood flow ไปกล้ามเนื้อ 120 mL/min, CO 4 L/min",
+"options": {
+"A": "0.2",
+"B": "2",
+"C": "0.6",
+"D": "0.48",
+"E": "0.16"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "R ของอวัยวะ = (MAP − venous P)/flow ของอวัยวะนั้น = 115/120 ≈ 0.96 mmHg·min/mL ไม่ใช่หารด้วย CO; ตัวเลือกที่จำมาไม่มี 0.96 ชีทเลือก 0.48 (ตรงเมื่อ flow 240) — ข้อที่หารด้วย CO (≈0.03) หรือคิดผิดหน่วยตัดได้",
+"doubt": "⚠ ค่าที่คำนวณได้ 0.96 ไม่มีในตัวเลือกที่จำมา (key ไม่ระบุคำตอบ) — ตัวเลขโจทย์น่าจะจำมาไม่ตรง"
+},
+"78/137": {
+"box": 26,
+"stem": "ผู้ป่วย HT ผนัง LV หนา ขนาดโพรง LV ปกติ LVEF 60% — วินิจฉัยอะไร",
+"options": {
+"A": "Eccentric hypertrophy",
+"B": "Concentric hypertrophy",
+"C": "LV infarction"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Pressure overload (HT) → sarcomere เพิ่มแบบขนาน → ผนังหนาโพรงไม่โต = concentric LVH; eccentric เกิดจาก volume overload (โพรงโต) ส่วน infarction จะมี EF ลด/ผนังบาง"
+},
+"78/138": {
+"box": 29,
+"stem": "ปวดอกแบบฉีกร้าวไปหลัง วัด pulse 2 แขนไม่เท่ากัน ฟังได้ diastolic blowing murmur — วินิจฉัยอะไร",
+"options": {
+"A": "MI with AR",
+"B": "MI with AS",
+"C": "MI with MR",
+"D": "Aortic dissection with AR",
+"E": "Aortic dissection with MR"
+},
+"answer": "D",
+"source": "เฉลย78",
+"why": "Tearing pain ร้าวหลัง + pulse/BP 2 แขนต่างกัน = aortic dissection; diastolic blowing murmur = AR จาก dissection ลาม aortic root; MR/AS เป็น systolic murmur"
+},
+"78/139": {
+"box": 15,
+"stem": "ECG มี ST elevation ใน II, III ร่วมกับ ST depression V1–V3 — หลอดเลือดใดอุดตัน",
+"options": {
+"A": "LCX occlusion",
+"B": "RCA occlusion",
+"C": "LAD occlusion",
+"D": "Left main occlusion",
+"E": "Restrictive cardiomyopathy",
+"F": "Stress-induced cardiomyopathy"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "ST↑ inferior (II, III) + ST↓ V1–V3 (mirror ของ posterior) = inferoposterior MI ซึ่งพบบ่อยจาก RCA (dominant); LAD ให้ ST↑ anterior, LCX มัก ST↑ lateral (I, aVL, V5–6)",
+"needs_image": true
+},
+"78/141": {
+"box": 5,
+"stem": "เด็กมี R→L shunt ผ่าน VSD + RV outflow tract stenosis + systolic ejection murmur ที่ LUSB — วินิจฉัยอะไร",
+"options": {
+"A": "Tetralogy of Fallot",
+"B": "Truncus arteriosus",
+"C": "Tricuspid atresia",
+"D": "Transposition of great vessels",
+"E": "TAPVR"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "VSD + RVOT obstruction (PS) → R→L shunt + SEM ที่ LUSB จาก PS = ToF; truncus มี single trunk, TGA เป็น 2 วงจรขนาน, tricuspid atresia/TAPVR ไม่มี RVOT stenosis เป็นหลัก"
+},
+"78/143": {
+"box": 28,
+"stem": "Hemorrhagic stroke ร่วมกับความดันสูง — ควรให้ยาลดความดันตัวใดก่อน",
+"options": {
+"A": "Nicardipine",
+"B": "Nitroprusside",
+"C": "Methyldopa",
+"D": "Hydralazine",
+"E": "Labetalol"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "ICH ใช้ยา IV titrate ได้ดี — nicardipine (หรือ labetalol) เป็นตัวแรก ชีท/สไลด์เน้น nicardipine; nitroprusside เพิ่ม ICP, methyldopa ออกฤทธิ์ช้า, hydralazine คุมยาก",
+"doubt": "⚠ labetalol (E) ก็ใช้ได้ตามแนวทาง key ระบุ A เป็นหลัก E รอง"
+},
+"78/165": {
+"box": 4,
+"stem": "ได้ยิน continuous murmur — โครงสร้างใดผิดปกติ",
+"options": {
+"A": "Ductus arteriosus",
+"B": "Ductus venosus",
+"C": "Ventricular septum",
+"D": "Fossa ovalis"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Continuous machinery murmur = PDA (aorta→PA ตลอด cycle); VSD ให้ pansystolic, ASD (fossa ovalis) ให้ SEM + fixed split S2, ductus venosus ไม่ทำให้มี murmur"
+},
+"78/171": {
+"box": 25,
+"stem": "สงสัย rheumatic fever (ปวดข้อ หลังเจ็บคอ) — ควรตรวจอะไร",
+"options": {
+"A": "Antistreptolysin O (ASO)",
+"B": "Hemoculture"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "ARF ต้องมีหลักฐานติดเชื้อ GAS นำมา → ASO titer; hemoculture ใช้ใน infective endocarditis ไม่ใช่ RF ซึ่งเป็น immune-mediated"
+},
+"78/173": {
+"box": 25,
+"stem": "เด็ก ToF มีไข้ Roth spot ที่จอตา splinter hemorrhage ที่เล็บ RV heave และ SEM ที่ LUSB — วินิจฉัยอะไร",
+"options": {
+"A": "Infective endocarditis",
+"B": "Rheumatic heart disease"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Roth spot + splinter hemorrhage + ไข้ ในผู้มี CHD (ToF) = infective endocarditis; RHD ไม่มี embolic/immune vascular phenomena แบบนี้"
+},
+"78/177": {
+"box": 7,
+"stem": "ทำไม left coronary artery จึงมีเลือดไหลมากขึ้นช่วง diastole",
+"options": {
+"A": "Autoregulation",
+"B": "Sympathetic",
+"C": "Pressure gradient",
+"D": "Metabolism"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "ช่วง systole LV บีบกด intramyocardial vessel; ช่วง diastole แรงกดหาย pressure gradient จาก aorta→myocardium สูงสุดจึงไหลมาก; autoregulation/metabolism คุม flow โดยรวมไม่ใช่การเปลี่ยนตาม phase"
+},
+"78/178": {
+"box": 7,
+"stem": "Atherosclerosis รุนแรงทำให้หลอดเลือดแดงมีผลอย่างไร",
+"options": {
+"A": "Increased laminar flow",
+"B": "Narrow pulse pressure",
+"C": "Increased SBP",
+"D": "Decreased velocity"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "หลอดเลือดแข็ง compliance ลด → SBP สูง DBP ต่ำ pulse pressure กว้าง; ไม่ทำให้ laminar flow เพิ่ม (กลับเป็น turbulent) และ velocity ที่ตีบเพิ่มขึ้น"
+},
+"78/179": {
+"box": 23,
+"stem": "หลังอุบัติเหตุ หอบ ความดันต่ำ เจ็บอก มีรอยช้ำ CXR cardiothoracic ratio โต neck vein โป่ง — วินิจฉัยอะไร",
+"options": {
+"A": "Cardiac tamponade",
+"B": "Pneumothorax",
+"C": "Pneumohemothorax",
+"D": "Fractured rib"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Hypotension + JVD (+ muffled HS) = Beck's triad และเงาหัวใจโตจาก pericardial fluid = tamponade; pneumothorax/hemothorax ไม่ทำให้ cardiac silhouette โต"
+},
+"78/180": {
+"box": 24,
+"stem": "มีประวัติ ARF ตอนเด็ก มาด้วย pitting edema แขนขา ไม่มี PND ไม่มี crackles ไม่มี neck vein โป่ง — วินิจฉัยลิ้นใด",
+"options": {
+"A": "MR",
+"B": "AS",
+"C": "AR",
+"D": "TS",
+"E": "TR"
+},
+"answer": "D",
+"source": "เฉลย78",
+"why": "มี systemic congestion (edema) แต่ไม่มีอาการปอด → คิดถึง lesion ลิ้นซีกขวาจาก RHD เช่น tricuspid stenosis; lesion ลิ้นซีกซ้าย (MR/AS/AR) จะมี PND/crackles",
+"doubt": "⚠ TS/TR ควรมี JVP สูง แต่โจทย์บอกไม่มี JVD — เฉลยอาจขัดหลัก"
+},
+"78/181": {
+"box": 12,
+"stem": "ECG: atrial rate 80, ventricular rate 40, QRS แคบ PR คงที่ — วินิจฉัยอะไร",
+"options": {
+"A": "First-degree AV block",
+"B": "Mobitz type I",
+"C": "Mobitz type II (2:1)",
+"D": "Third-degree AV block"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "Atrial > ventricular rate ด้วย PR คงที่ ทุก P ที่ conduct มี PR เท่าเดิม = 2nd degree แบบ 2:1 ตามเฉลยคือ Mobitz II; first-degree ไม่มี P ตก, Wenckebach PR ยาวขึ้นเรื่อย, CHB PR ไม่คงที่ (AV dissociation)",
+"doubt": "⚠ ทางทฤษฎี 2:1 block แยก Mobitz I/II ไม่ได้ (QRS แคบชวนคิด nodal) — ตอบตามเฉลย"
+},
+"78/183": {
+"box": 13,
+"stem": "หลังได้ยารักษา atrial fibrillation กลับมาด้วย ECG ตามรูป (torsades) — เกี่ยวกับกลไกใด",
+"options": {
+"A": "Automatic pulse formation",
+"B": "Irregular pulse conduction",
+"C": "Early afterdepolarization",
+"D": "Delayed afterdepolarization",
+"E": "Reentry"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "ยา class IA/III (เช่น sotalol, amiodarone, quinidine) block K channel → QT ยาว → EAD ช่วง phase 2–3 → torsades; DAD (phase 4) สัมพันธ์ digoxin toxicity ส่วน reentry เป็นกลไกของ flutter/AVNRT",
+"needs_image": true
+},
+"78/185": {
+"box": 29,
+"stem": "รูปผิวหนังเป็น leukocytoclastic vasculitis — มีกลไกคล้ายโรคใด",
+"options": {
+"A": "Atopic dermatitis",
+"B": "SLE",
+"C": "Staphylococcal scalded skin syndrome"
+},
+"answer": "B",
+"source": "เฉลย78",
+"why": "Leukocytoclastic vasculitis เป็น type III hypersensitivity (immune complex) เหมือน SLE; atopic dermatitis เป็น type I/Th2 และ SSSS เกิดจาก exfoliative toxin",
+"needs_image": true
+},
+"78/186": {
+"box": 23,
+"stem": "เจ็บอกแบบแหลม (sharp) จาก pericardium — เชื้อก่อโรคที่พบบ่อยคืออะไร",
+"options": {
+"A": "Coxsackie B",
+"B": "Norovirus",
+"C": "Streptococcus pyogenes"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "Acute pericarditis ส่วนใหญ่ idiopathic/viral ซึ่ง Coxsackie B เด่นที่สุด; norovirus ทำ gastroenteritis, S. pyogenes ไม่ใช่สาเหตุหลักของ pericarditis"
+},
+"78/192": {
+"box": 28,
+"stem": "ผู้ป่วย HT + DM รักษาด้วย ACEI แล้วความดันยังสูง — ควรเพิ่มยาใด",
+"options": {
+"A": "Thiazide",
+"B": "Labetalol",
+"C": "-osin (alpha blocker)"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "ยาตัวที่สองควรเป็น first-line อีกกลุ่ม (thiazide หรือ CCB) ร่วมกับ ACEI; BB/labetalol ไม่ใช่ first-line เมื่อไม่มี compelling indication และ alpha blocker เป็นยาเสริมท้ายๆ"
+},
+"78/193": {
+"box": 13,
+"stem": "ให้ ECG (VF/pulseless VT) — next step management คืออะไร",
+"options": {
+"A": "Defibrillation",
+"B": "Adenosine",
+"C": "Beta blocker"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "VF/pulseless VT เป็น shockable rhythm ต้อง defibrillate ทันที; adenosine ใช้ใน stable SVT และ beta blocker ไม่ใช้ใน cardiac arrest",
+"needs_image": true
+},
+"78/194": {
+"box": 6,
+"stem": "ให้ norepinephrine แล้ว heart rate เพิ่ม เรียกผลนี้ว่าอะไร",
+"options": {
+"A": "Positive inotropic",
+"B": "Negative inotropic",
+"C": "Positive dromotropic",
+"D": "Positive chronotropic",
+"E": "Negative chronotropic"
+},
+"answer": "D",
+"source": "เฉลย78",
+"why": "Chronotropic = อัตราการเต้น จึงเป็น positive chronotropic; inotropic = แรงบีบ, dromotropic = ความเร็วการนำไฟฟ้า AV node"
+},
+"78/195": {
+"box": 26,
+"stem": "Essential hypertension เกิดจากกลไกใด",
+"options": {
+"A": "Renal pressure natriuresis shift to left",
+"B": "Enhanced release of endothelium constricting factor",
+"C": "Vascular remodelling",
+"D": "Sympathetic suppression",
+"E": "RAAS suppression"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "Essential HT สัมพันธ์ vascular remodeling (ผนังหนา lumen แคบ TPR สูง); pressure natriuresis ต้อง shift ไปขวา (ต้องใช้ BP สูงขึ้นเพื่อขับ Na) ส่วน sympathetic/RAAS จะเพิ่ม ไม่ใช่ถูกกด"
+},
+"78/196": {
+"box": 17,
+"stem": "ชาย hypercholesterolemia พ่อเสียชีวิตก่อนวัยจาก atherosclerosis — นอกจาก cholesterol สูง จะตรวจพบอะไรสูงอีก",
+"options": {
+"A": "Chylomicron",
+"B": "VLDL",
+"C": "LDL",
+"D": "HDL"
+},
+"answer": "C",
+"source": "เฉลย78",
+"why": "Familial hypercholesterolemia (LDL receptor defect, AD) → LDL สูงมาก → premature CAD ในครอบครัว; chylomicron/VLDL สูงเป็น hypertriglyceridemia และ HDL สูงเป็นปัจจัยป้องกัน"
+},
+"78/213": {
+"box": 29,
+"stem": "ไข้ไม่ลงด้วย paracetamol มี strawberry tongue และมือเท้าบวม — น่าจะเป็นโรคใด",
+"options": {
+"A": "Kawasaki disease",
+"B": "Scarlet fever"
+},
+"answer": "A",
+"source": "เฉลย78",
+"why": "ไข้นาน + strawberry tongue + extremity edema เข้ากับ Kawasaki (medium-vessel vasculitis เสี่ยง coronary aneurysm); scarlet fever มี sandpaper rash และตอบสนองต่อ antibiotic ไม่ใช่มือเท้าบวม"
+},
+"79/3": {
+"box": 17,
+"stem": "ผู้ป่วยมี xanthoma ที่ข้อศอก plasma ขุ่นขาวหลังปั่น — lipid ผิดปกติแบบใด",
+"options": {
+"A": "Increased triglycerides",
+"B": "Increased LDL cholesterol",
+"C": "Increased HDL cholesterol",
+"D": "Increased VLDL",
+"E": "Increased lipoprotein(a)"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Plasma ขุ่นขาว (lipemic/creamy) เกิดจาก TG-rich lipoprotein (chylomicron) → hypertriglyceridemia ร่วมกับ eruptive xanthoma; LDL/HDL/Lp(a) สูงไม่ทำให้ plasma ขุ่น"
+},
+"79/7": {
+"box": 3,
+"stem": "ทารกเป็น ASD ร่วมกับ endocardial cushion defect — โครงสร้าง embryo ใดผิดปกติ",
+"options": {
+"A": "Septum primum and endocardial cushions",
+"B": "Septum secundum and truncus arteriosus",
+"C": "Septum primum and septum secundum",
+"D": "Bulbus cordis and truncus arteriosus",
+"E": "Sinus venosus and septum secundum"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Ostium primum ASD เกิดจาก septum primum ไม่เชื่อมกับ endocardial cushion (พบใน Down); secundum ASD เกี่ยวกับ septum secundum/foramen ovale ส่วน truncus/bulbus เกี่ยวกับ outflow tract"
+},
+"79/8": {
+"box": 4,
+"stem": "ทารกได้ยิน continuous machine-like murmur — โครงสร้างของ fetal circulation ใดยังเปิดอยู่",
+"options": {
+"A": "Ductus venosus",
+"B": "Ductus arteriosus",
+"C": "Sinus venosus",
+"D": "Foramen ovale",
+"E": "Umbilical vein"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Machinery murmur = PDA (ductus arteriosus ไม่ปิด) เลือดไหล aorta→PA ตลอด cycle; PFO ไม่ค่อยมี murmur, ductus venosus/umbilical vein ไม่ทำให้มี murmur"
+},
+"79/29": {
+"box": 29,
+"stem": "ทารกมี facial hemangioma — รอยโรคนี้กำเนิดจาก germ layer ใด",
+"options": {
+"A": "Ectoderm only",
+"B": "Mesoderm only",
+"C": "Ectoderm and mesoderm",
+"D": "Endoderm only",
+"E": "Neural crest cells only"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Hemangioma เป็นเนื้องอกของ endothelial cell หลอดเลือดซึ่งมาจาก mesoderm; ไม่ใช่เซลล์จาก ectoderm/endoderm/neural crest"
+},
+"79/30": {
+"box": 5,
+"stem": "ทารกแรกเกิดเป็น TGA เขียวมากแม้ให้ O₂ — initial management คืออะไร",
+"options": {
+"A": "IV prostaglandin E1",
+"B": "IV indomethacin",
+"C": "Immediate surgical closure of ductus arteriosus",
+"D": "High-dose furosemide",
+"E": "High-dose misoprostol"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "TGA เป็น 2 วงจรขนาน ต้องมีทางผสมเลือด → PGE1 (alprostadil) คง ductus เปิด แล้วค่อย balloon atrial septostomy; indomethacin หรือการปิด ductus ทำให้แย่ลง"
+},
+"79/34": {
+"box": 20,
+"stem": "หลัง PCI ต้องใช้ยาต้าน P2Y12 แต่ genotype เป็น CYP2C19*3/*3 — ควรเลือกยาใด",
+"options": {
+"A": "Clopidogrel",
+"B": "Aspirin",
+"C": "Prasugrel",
+"D": "Warfarin",
+"E": "Abciximab"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "CYP2C19 poor metabolizer เปลี่ยน clopidogrel (prodrug) เป็น active form ไม่ได้ → ใช้ prasugrel/ticagrelor แทน; aspirin ไม่ใช่ P2Y12 inhibitor, warfarin เป็น anticoagulant, abciximab เป็น GP IIb/IIIa IV"
+},
+"79/40": {
+"box": 25,
+"stem": "เด็กเป็น acute rheumatic fever (carditis) แล้วได้ penicillin V ต่อเนื่องอีก 10 ปี — การใช้ยาแบบนี้เรียกว่าอะไร",
+"options": {
+"A": "Switch therapy",
+"B": "Primary prophylaxis",
+"C": "Secondary prophylaxis",
+"D": "Pre-exposure prophylaxis",
+"E": "Post-exposure prophylaxis"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "ให้ยาต่อเนื่องหลังเคยเป็น ARF เพื่อป้องกันการติด GAS ซ้ำและ RHD = secondary prophylaxis; primary คือรักษา strep pharyngitis เพื่อกันไม่ให้เกิด ARF ครั้งแรก"
+},
+"79/57": {
+"box": 30,
+"stem": "หญิง HT หลังผ่าตัดเปลี่ยนข้อสะโพกนอนติดเตียง วันที่ 3 น่องบวมกดเจ็บข้างเดียว — ปัจจัยร่วมที่ทำให้เกิดคืออะไร",
+"options": {
+"A": "Low fibrinogen level",
+"B": "Increased arterial resistance",
+"C": "Decreased platelet production",
+"D": "Increased venous oxygen saturation",
+"E": "Endothelial injury, venous stasis, and hypercoagulability"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "DVT หลังผ่าตัดเกิดจาก Virchow's triad: ผ่าตัด (endothelial injury) + นอนนิ่ง (stasis) + ภาวะ hypercoagulable หลังผ่าตัด; fibrinogen/platelet ต่ำทำให้เลือดออกง่าย ไม่ใช่ thrombosis"
+},
+"79/69": {
+"box": 28,
+"stem": "Acute ischemic stroke เริ่มมีอาการ 30 นาที BP 150/90 — management ที่เหมาะสมคืออะไร",
+"options": {
+"A": "Alteplase alone",
+"B": "Alteplase with labetalol",
+"C": "Labetalol alone",
+"D": "Aspirin alone",
+"E": "No treatment"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "อยู่ใน window ให้ rtPA ได้ และ BP <185/110 จึงไม่ต้องลดความดันก่อน → alteplase อย่างเดียว; ไม่ต้องใช้ labetalol, aspirin ให้หลัง rtPA 24 ชม."
+},
+"79/113": {
+"box": 10,
+"stem": "นักวิ่งมาราธอนเร่งความเร็วช่วงใกล้เส้นชัย — การเปลี่ยนแปลงของระบบหัวใจหลอดเลือดข้อใดน่าจะเกิด",
+"options": {
+"A": "↑HR, ↑SV, ↓arteriovenous CO₂ difference",
+"B": "↑HR, ↑SV, ↓arteriovenous O₂ difference",
+"C": "↓HR, ↑SV, ↑a-vO₂ difference",
+"D": "↑HR, ↓SV, ↓cardiac output",
+"E": "↓HR, ↓SV, ↑cardiac output"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ออกแรงมากขึ้น → HR และ SV เพิ่ม (CO เพิ่ม) จึงเหลือ A/B; a-vO₂ difference ต้องเพิ่มเสมอ ข้อ B ผิดชัด ชีทจึงเลือก A",
+"doubt": "⚠ ไม่มีตัวเลือกถูกครบ — จริงๆ a-v CO₂ difference ก็เพิ่มเมื่อออกแรง ตอบ A ตามชีท"
+},
+"79/125": {
+"box": 21,
+"stem": "ชาย CHF หายใจเร็วตื้น crackles สองข้าง SpO₂ 92% — ข้อใดอธิบายความผิดปกติทางหายใจได้ดีที่สุด",
+"options": {
+"A": "Pulmonary edema primarily causes chest pain",
+"B": "Edema causes deep slow breathing via ↑compliance",
+"C": "Airway resistance unchanged in pulmonary edema",
+"D": "Severe pulmonary edema may cause hypoxemia not fully corrected by 100% O₂",
+"E": "Edema ↑compliance and ↓work of breathing"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Alveolar edema ทำให้ diffusion บกพร่อง + alveoli ที่เต็มน้ำทำตัวเป็น shunt จึงแก้ด้วย O₂ ได้ไม่หมด; edema ทำให้ compliance ลด หายใจเร็วตื้น work of breathing เพิ่ม ไม่ใช่ตรงข้าม"
+},
+"79/133": {
+"box": 30,
+"stem": "หอบเฉียบพลัน + pleuritic chest pain หลังบินนาน สงสัย PE — การตรวจที่ยืนยันวินิจฉัยได้คืออะไร",
+"options": {
+"A": "Chest X-ray",
+"B": "D-dimer assay",
+"C": "CT pulmonary angiography",
+"D": "Electrocardiography",
+"E": "Arterial blood gas"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "CTPA เห็น filling defect ใน pulmonary artery = definitive test; D-dimer ใช้ rule out (ไวแต่ไม่จำเพาะ), CXR/ECG/ABG ไม่จำเพาะ"
+},
+"79/141": {
+"box": 21,
+"stem": "ชาย CHF หอบ crackles สองข้าง CXR pulmonary edema + pleural effusion เล็กน้อย — ข้อใดถูก",
+"options": {
+"A": "Alveolar edema commonly causes pleuritic pain",
+"B": "Airway resistance unaffected by edema",
+"C": "Pulmonary edema decreases lung compliance and increases work of breathing",
+"D": "Pleural effusion increases lung compliance",
+"E": "Edema causes airway obstruction without affecting compliance"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "น้ำในปอดทำให้ปอดแข็ง compliance ลด ต้องออกแรงหายใจมากขึ้น; edema ไม่ทำให้ pleuritic pain, peribronchial edema เพิ่ม airway resistance และ effusion ลด compliance"
+},
+"79/142": {
+"box": 23,
+"stem": "ชายเจ็บอกแหลม แย่ลงตอนหายใจเข้า หัวใจเต้นเร็ว ความดันต่ำ JVD และ heart sound เบา — วินิจฉัยอะไร",
+"options": {
+"A": "Acute pericarditis with cardiac tamponade",
+"B": "Acute MI",
+"C": "Massive PE",
+"D": "Tension pneumothorax",
+"E": "Acute aortic dissection"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Pleuritic chest pain = pericarditis ร่วมกับ Beck's triad (hypotension, JVD, muffled HS) = tamponade; tension PTX จะมีเสียงหายใจหายข้างเดียว ส่วน PE/MI/dissection ไม่มี muffled HS แบบนี้"
+},
+"79/143": {
+"box": 8,
+"stem": "ชาย tachycardia JVD เด่น ฟังได้ holosystolic murmur ดังขึ้นตอนหายใจเข้า — JVP จะพบลักษณะใด",
+"options": {
+"A": "Absent A wave",
+"B": "Giant V wave",
+"C": "Cannon A waves",
+"D": "Prominent X descent",
+"E": "Prominent Y descent"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "Holosystolic murmur ที่ดังขึ้นตอนหายใจเข้า (Carvallo sign) = TR → เลือดย้อนเข้า RA ช่วง systole → giant V (CV) wave และ x descent หายไป; absent a = AF, cannon a = CHB"
+},
+"79/144": {
+"box": 8,
+"stem": "ผู้ป่วย HF มี S3 gallop — S3 เกิดในช่วงใดของ cardiac cycle",
+"options": {
+"A": "Rapid ventricular filling",
+"B": "Ventricular ejection",
+"C": "Isovolumetric relaxation",
+"D": "Isovolumetric contraction",
+"E": "Atrial systole"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "S3 เกิดช่วง early diastole ตอน rapid ventricular filling เมื่อเลือดไหลเข้าโพรงที่ขยาย/volume overload; S4 เกิดตอน atrial systole"
+},
+"79/145": {
+"box": 15,
+"stem": "เจ็บอกรุนแรงเฉียบพลัน ECG ST elevation ใน lead I และ aVL — หลอดเลือดใดน่าจะอุดตัน",
+"options": {
+"A": "LAD",
+"B": "RCA",
+"C": "Left circumflex artery",
+"D": "Posterior descending artery",
+"E": "Right marginal artery"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "I, aVL (± V5–V6) = high lateral wall เลี้ยงโดย LCX; LAD → V1–V4, RCA/PDA → II, III, aVF"
+},
+"79/146": {
+"box": 11,
+"stem": "ผู้ป่วย CKD K 7.2 ECG peaked T + QRS กว้าง — การรักษาทันทีคืออะไร",
+"options": {
+"A": "Oral sodium polystyrene sulfonate",
+"B": "IV calcium gluconate",
+"C": "IV furosemide",
+"D": "IV insulin without glucose",
+"E": "Sodium bicarbonate alone"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "มี ECG change ต้อง stabilize membrane ด้วย IV calcium gluconate ก่อน แล้วค่อย shift (insulin + glucose) และขับ K; resin ออกฤทธิ์ช้า และ insulin ต้องให้พร้อม glucose"
+},
+"79/147": {
+"box": 15,
+"stem": "ชายเจ็บอกรุนแรง 45 นาที ให้ ECG และ troponin T สูง — วินิจฉัยอะไร",
+"options": {
+"A": "Stable angina",
+"B": "Unstable angina",
+"C": "NSTEMI",
+"D": "STEMI",
+"E": "GERD"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Troponin สูง = MI (ตัด stable/unstable angina และ GERD); ถ้า ECG มี ST elevation = STEMI ถ้าไม่มี = NSTEMI — ชีทเลือก STEMI ตามภาพที่น่าจะให้",
+"needs_image": true,
+"doubt": "⚠ ขึ้นกับรูป ECG ที่ไม่เห็น — ถ้าไม่มี ST elevation ให้ตอบ NSTEMI"
+},
+"79/148": {
+"box": 6,
+"stem": "คืนก่อนวิ่งมาราธอน พักและกินอาหารปกติ — ขณะพักหัวใจใช้อะไรเป็นเชื้อเพลิงหลัก",
+"options": {
+"A": "Fatty acids",
+"B": "Glucose",
+"C": "Ketone bodies",
+"D": "Lactate",
+"E": "Amino acids"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "กล้ามเนื้อหัวใจขณะพักได้ ATP ส่วนใหญ่ (~60–90%) จาก fatty acid β-oxidation; glucose/lactate ใช้มากขึ้นหลังอาหารคาร์บสูงหรือขณะออกกำลัง ketone ใช้ตอนอดอาหาร"
+},
+"79/149": {
+"box": 10,
+"stem": "ชายสุขภาพดีเริ่มออกกำลังหนัก — การเปลี่ยนแปลงของระบบหัวใจหลอดเลือดข้อใดน่าจะเกิด",
+"options": {
+"A": "Increased SVR",
+"B": "Decreased heart rate",
+"C": "Decreased cardiac output",
+"D": "Decreased diastolic time",
+"E": "Decreased venous return"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "HR เพิ่ม → ช่วง diastole สั้นลงมากกว่า systole; ขณะออกกำลัง SVR ลด (vasodilation ในกล้ามเนื้อ) ส่วน HR, CO และ venous return เพิ่ม"
+},
+"79/150": {
+"box": 28,
+"stem": "ผู้ป่วย HT ไอแห้งเรื้อรัง ได้ enalapril, losartan และ atorvastatin — ยาใดน่าจะเป็นสาเหตุ",
+"options": {
+"A": "Enalapril",
+"B": "Losartan",
+"C": "Atorvastatin",
+"D": "Losartan and atorvastatin",
+"E": "Enalapril and atorvastatin"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ACEI ยับยั้งการสลาย bradykinin → ไอแห้ง; ARB (losartan) ไม่เพิ่ม bradykinin และ statin ไม่ทำให้ไอ (และไม่ควรให้ ACEI ร่วมกับ ARB)"
+},
+"79/151": {
+"box": 14,
+"stem": "ผู้ป่วย HFrEF ได้ digoxin — ผลทางเภสัชวิทยาเฉพาะของ digoxin คืออะไร",
+"options": {
+"A": "Blockade of L-type Ca channels",
+"B": "Inhibition of Ang II binding to AT1",
+"C": "Increased myocardial contractility",
+"D": "Inhibition of NKCC2",
+"E": "Inhibition of PDE-3"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Digoxin ยับยั้ง Na⁺/K⁺-ATPase → Na ในเซลล์สูง → NCX ขับ Ca ออกน้อยลง → Ca ใน SR เพิ่ม → contractility เพิ่ม (+ vagal effect); ตัวเลือกอื่นเป็นกลไกของ CCB, ARB, loop diuretic, milrinone"
+},
+"79/152": {
+"box": 26,
+"stem": "ชายสูบบุหรี่ BP ~150/90 ซ้ำหลายครั้ง ไม่มี target organ damage เฉียบพลัน — คำแนะนำ lifestyle ข้อใดเหมาะสม",
+"options": {
+"A": "Limit sodium <5 mg/day",
+"B": "Moderate aerobic exercise ≥150 min/week",
+"C": "Reduce smoking without aiming for cessation",
+"D": "Avoid DASH/Mediterranean diet",
+"E": "Target BMI 25–30"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "แนะนำ aerobic ระดับปานกลาง ≥150 นาที/สัปดาห์; โซเดียมต้อง <2 g (เกลือ <5 g) ไม่ใช่ 5 mg, ต้องเลิกบุหรี่เด็ดขาด, ควรใช้ DASH และ BMI เป้าหมาย <23–25"
+},
+"79/153": {
+"box": 25,
+"stem": "หญิง 20 ปี ไข้ migratory polyarthritis murmur ใหม่ หลังเจ็บคอไม่กี่สัปดาห์ — วินิจฉัยอะไร",
+"options": {
+"A": "Infective endocarditis",
+"B": "Acute rheumatic fever",
+"C": "Viral myocarditis",
+"D": "Acute pericarditis",
+"E": "Kawasaki disease"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "หลัง GAS pharyngitis 2–4 สัปดาห์ + migratory polyarthritis + carditis (murmur ใหม่) = Jones criteria ของ ARF; IE ไม่มี latency หลังเจ็บคอแบบนี้ และ Kawasaki เป็นในเด็กเล็ก"
+},
+"79/154": {
+"box": 13,
+"stem": "ผู้ป่วยหมดสติทันที คลำชีพจรไม่ได้ ให้ ECG — management ทันทีคืออะไร",
+"options": {
+"A": "Carotid massage",
+"B": "IV epinephrine",
+"C": "IV propranolol",
+"D": "IV adenosine",
+"E": "Defibrillation"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "Pulseless + ECG แบบ VF/pulseless VT = shockable → defibrillate ทันที; epinephrine ใช้หลัง shock หรือใน non-shockable rhythm, carotid massage/adenosine ใช้ใน SVT ที่มีชีพจร",
+"needs_image": true,
+"doubt": "⚠ ไม่เห็นรูป — ถ้า ECG เป็น asystole/PEA จะตอบ epinephrine"
+},
+"79/155": {
+"box": 7,
+"stem": "ชายมี claudication: brachial ขวา 140 ซ้าย 120; ขวา DP 80 PT 100; ซ้าย DP 60 PT 120 — ABI ขวาและซ้ายเป็นเท่าใด",
+"options": {
+"A": "0.57, 0.50",
+"B": "0.64, 0.75",
+"C": "0.71, 0.86",
+"D": "0.83, 0.75",
+"E": "1.40, 1.00"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "ABI = SBP ข้อเท้าสูงสุดข้างนั้น / brachial สูงสุดของ 2 แขน (140): ขวา 100/140 = 0.71, ซ้าย 120/140 = 0.86; ตัวเลือกอื่นใช้ค่าต่ำสุดของข้อเท้าหรือหารด้วยแขนผิดข้าง"
+},
+"79/156": {
+"box": 25,
+"stem": "ชายใช้ยาเสพติดทางเส้นเลือด ไข้สูง หอบ SpO₂ 88% conjunctival hemorrhage JVD pansystolic murmur crackles และ macule ไม่เจ็บที่ฝ่ามือ — เชื้อที่น่าจะเป็นคืออะไร",
+"options": {
+"A": "Enterococcus spp.",
+"B": "Streptococcus viridans",
+"C": "Staphylococcus aureus",
+"D": "Haemophilus influenzae",
+"E": "Listeria monocytogenes"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "IVDU + acute IE (ไข้สูง) + Janeway lesion + right-sided (TR, septic lung emboli) = S. aureus; viridans เป็น subacute หลังทำฟัน, enterococcus หลังหัตถการ GU/GI"
+},
+"79/157": {
+"box": 6,
+"stem": "Amlodipine ยับยั้ง L-type Ca²⁺ channel — ออกฤทธิ์ช่วง phase ใดของ cardiac action potential (myocyte)",
+"options": {
+"A": "Phase 0",
+"B": "Phase 1",
+"C": "Phase 2",
+"D": "Phase 3",
+"E": "Phase 4"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "ใน ventricular myocyte Ca เข้าทาง L-type ช่วง phase 2 (plateau) → CCB ลดช่วงนี้; phase 0 ของ myocyte เป็น Na (phase 0 ของ nodal เป็น Ca), phase 3 เป็น K efflux"
+},
+"79/158": {
+"box": 15,
+"stem": "Anterior STEMI (ST↑ V1–V4) ไม่ได้ reperfusion — 24 ชม. ต่อมา ECG น่าจะพบอะไร",
+"options": {
+"A": "New pathologic Q waves in V1–V4",
+"B": "Complete heart block",
+"C": "LBBB",
+"D": "RBBB",
+"E": "Diffuse ST elevation in all leads"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Transmural infarct ที่ไม่ได้ reperfusion จะเกิด pathologic Q wave ใน lead เดิมภายในหลายชั่วโมง–1 วัน; CHB สัมพันธ์ inferior MI, diffuse ST↑ เป็นลักษณะ pericarditis"
+},
+"79/159": {
+"box": 6,
+"stem": "ยา HF ตัวหนึ่งทำให้ระยะคลายตัวของกล้ามเนื้อหัวใจยาวขึ้นเพราะขน Ca²⁺ ออกจาก cytosol ช้าลง — protein ใดเกี่ยวข้องโดยตรงที่สุด",
+"options": {
+"A": "L-type Ca channel",
+"B": "SERCA",
+"C": "Phospholamban",
+"D": "Na⁺/Ca²⁺ exchanger (NCX)",
+"E": "Ryanodine receptor"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "การดึง Ca กลับเข้า SR ด้วย SERCA เป็นตัวหลักที่กำหนดอัตราการคลายตัว; L-type และ RyR เกี่ยวกับการปล่อย Ca ตอนบีบ, NCX ขับ Ca ออกนอกเซลล์ส่วนน้อย, phospholamban เป็นตัวควบคุม SERCA ไม่ใช่ตัวขน"
+},
+"79/160": {
+"box": 8,
+"stem": "ผู้ป่วย ADHF + pulmonary edema ได้ยา IV แล้ว PV loop จุด C เลื่อนเข้าใกล้จุด A — ยาใดทำให้เกิด",
+"options": {
+"A": "Verapamil",
+"B": "Dobutamine",
+"C": "Phenylephrine",
+"D": "Digoxin",
+"E": "Furosemide"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "การเปลี่ยนแปลงตามรูปเป็นการลด preload (EDV ลด loop แคบลงทางซ้าย) ซึ่งเข้ากับ loop diuretic; dobutamine/digoxin เพิ่ม contractility (ESV ลด), phenylephrine เพิ่ม afterload, verapamil ลด contractility",
+"needs_image": true,
+"doubt": "⚠ ขึ้นกับ label จุด A/C ในรูปที่ไม่เห็น"
+},
+"79/161": {
+"box": 22,
+"stem": "ชาย DM + HT มีไข้ หอบ บวม อาการ acute HF ไม่กี่วันหลังฉีดวัคซีน COVID-19 — กลไกพื้นฐานคืออะไร",
+"options": {
+"A": "Acute vaccine-associated myocarditis",
+"B": "Plaque rupture causing acute MI",
+"C": "Acute bacterial endocarditis",
+"D": "Coronary vasospasm",
+"E": "Acute PE causing RV failure"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "อาการ HF + ไข้ ภายในไม่กี่วันหลัง mRNA vaccine เข้ากับ vaccine-associated myocarditis; MI/vasospasm ไม่มีไข้นำ, IE ต้องมี bacteremia และ PE ไม่สัมพันธ์วัคซีน"
+},
+"79/162": {
+"box": 9,
+"stem": "เสียเลือดมากจากอุบัติเหตุ ความดันตก กระตุ้น baroreceptor reflex — การเปลี่ยนแปลงใดน่าจะเกิด",
+"options": {
+"A": "Increased afferent vagal nerve activity",
+"B": "Activation of the cardio-acceleratory center",
+"C": "Increased parasympathetic outflow to the heart",
+"D": "Decreased sympathetic outflow",
+"E": "Decreased heart rate"
+},
+"answer": "B",
+"source": "วิเคราะห์",
+"why": "BP ลด → stretch ลด → afferent firing (CN IX/X) ลด → ลด vagal และกระตุ้น cardioacceleratory/vasomotor center → HR และ sympathetic เพิ่ม; ตัวเลือกอื่นเป็นทิศตรงข้าม"
+},
+"79/163": {
+"box": 14,
+"stem": "ชายใจสั่น ECG regular rhythm 125/min (ตามรูป) ต้องการ rate control — ยาใดเหมาะสม",
+"options": {
+"A": "Verapamil",
+"B": "Digoxin",
+"C": "Amiodarone",
+"D": "Metoprolol",
+"E": "Adenosine"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "Rate control ใช้ beta blocker (metoprolol) หรือ non-DHP CCB; amiodarone เป็น rhythm control, adenosine ใช้ยุติ/วินิจฉัย SVT ไม่ใช่ rate control ระยะยาว, digoxin ช้าและใช้เมื่อมี HF",
+"needs_image": true,
+"doubt": "⚠ ไม่เห็นรูป — ถ้าเป็น flutter 2:1 verapamil ก็ใช้ได้ ไม่แน่ใจระหว่าง A/D"
+},
+"79/164": {
+"box": 29,
+"stem": "ชาย HT คุมไม่ได้ ปวดอกเฉียบพลันร้าวไปหลัง ได้ยิน blowing murmur ใหม่ที่ LSB — วินิจฉัยอะไร",
+"options": {
+"A": "Acute AR due to ascending aortic dissection",
+"B": "Acute MR due to papillary muscle rupture",
+"C": "AR due to infective endocarditis",
+"D": "VSR after MI",
+"E": "Calcific AS"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "HT + ปวดอกร้าวหลังเฉียบพลัน = aortic dissection; diastolic blowing murmur ที่ LSB = AR จาก dissection ลาม aortic root; papillary rupture/VSR ให้ systolic murmur หลัง MI, AS เป็น SEM"
+},
+"79/183": {
+"box": 17,
+"stem": "Lipid profile: LDL 60, HDL 30, TG 1,500 mg/dL — ยาใดเหมาะลด TG เพื่อป้องกัน pancreatitis",
+"options": {
+"A": "PCSK9 inhibitor",
+"B": "HMG-CoA reductase inhibitor",
+"C": "Ezetimibe",
+"D": "Bile acid sequestrant",
+"E": "Fibrate"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "TG >1,000 เสี่ยง pancreatitis ต้องลด TG ด้วย fibrate (PPAR-α → ↑LPL); statin/PCSK9/ezetimibe เน้นลด LDL และ bile acid sequestrant ทำให้ TG สูงขึ้น"
+},
+"79/189": {
+"box": 17,
+"stem": "ชายเป็น acute pancreatitis — ผล lipid ใดเป็นสาเหตุของ acute pancreatitis ได้",
+"options": {
+"A": "Elevated lipoprotein(a)",
+"B": "Elevated LDL",
+"C": "Decreased HDL",
+"D": "Elevated total cholesterol",
+"E": "Triglyceride >1,000 mg/dL"
+},
+"answer": "E",
+"source": "วิเคราะห์",
+"why": "Hypertriglyceridemia รุนแรง (>1,000 mg/dL) ทำให้เกิด pancreatitis จาก FFA ที่ lipase ปล่อยออกมาทำลายตับอ่อน; Lp(a), LDL, HDL, total cholesterol สัมพันธ์ atherosclerosis ไม่ใช่ pancreatitis"
+},
+"79/196": {
+"box": 27,
+"stem": "ชายสุขภาพดีมีความดันสูงต่อเนื่อง K ต่ำค่อนข้างปกติ HCO₃ สูง ไม่ได้ใช้ diuretic — initial test เพื่อหา primary hyperaldosteronism คืออะไร",
+"options": {
+"A": "Electrocardiography",
+"B": "CT angiography of brain",
+"C": "Plasma aldosterone-to-renin ratio",
+"D": "Serum cortisol alone",
+"E": "24-h urine metanephrine"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Screening test ของ primary aldosteronism = plasma aldosterone/renin ratio (aldo สูง renin ต่ำ); metanephrine ใช้หา pheochromocytoma, cortisol ใช้ Cushing"
+},
+"79/205": {
+"box": 21,
+"stem": "ชายมี ascites: serum albumin 3.0, ascitic albumin 1.2, ascitic protein 1.0 g/dL — พยาธิสรีรวิทยาใดอธิบายได้",
+"options": {
+"A": "Increased hepatic lymphatic drainage",
+"B": "Increased hepatic venous outflow",
+"C": "Increased plasma oncotic pressure",
+"D": "Capillarization of hepatic sinusoids",
+"E": "Decreased portal venous pressure"
+},
+"answer": "D",
+"source": "วิเคราะห์",
+"why": "SAAG 1.8 = portal HT และ protein ต่ำ (<2.5) = sinusoid กลายเป็น capillary (cirrhosis) โปรตีนรั่วออกน้อย; cardiac ascites protein สูง, portal pressure ต้องเพิ่ม ไม่ใช่ลด"
+},
+"79/216": {
+"box": 28,
+"stem": "หญิงตั้งครรภ์ 35 สัปดาห์ ความดันสูงมาก ปวดหัว ปวดท้องขวาบน เป็น HELLP syndrome — ยาใดป้องกันการชักแบบ eclampsia",
+"options": {
+"A": "Labetalol",
+"B": "Nifedipine",
+"C": "Magnesium sulfate",
+"D": "Hydralazine",
+"E": "Methyldopa"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "MgSO₄ เป็นยาป้องกัน/รักษาการชักใน severe preeclampsia/HELLP; labetalol, nifedipine, hydralazine, methyldopa ใช้ลดความดันแต่ไม่ป้องกันการชัก"
+},
+"79/233": {
+"box": 28,
+"stem": "หญิงตั้งครรภ์ได้รับวินิจฉัย chronic hypertension — ยาลดความดันใดใช้ได้",
+"options": {
+"A": "Methyldopa",
+"B": "Enalapril",
+"C": "Losartan",
+"D": "Aliskiren",
+"E": "Spironolactone"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "ยาที่ปลอดภัยในครรภ์: methyldopa, labetalol, nifedipine; ACEI/ARB/aliskiren ห้ามเพราะเป็นพิษต่อไตทารก และ spironolactone มีฤทธิ์ antiandrogen ต่อทารกเพศชาย"
+},
+"79/249": {
+"box": 10,
+"stem": "ชายออกกำลังกลางแดดร้อนชื้นหลายชั่วโมง สับสน อุณหภูมิกาย 41°C และยังสูงขึ้นแม้พยายามระบายความร้อน — พยาธิสรีรวิทยาคืออะไร",
+"options": {
+"A": "↑hypothalamic set point by PGE2",
+"B": "↑IL-1 causing hypothalamic vasoconstriction",
+"C": "Failure of heat dissipation causing rise in core temperature",
+"D": "↑TRH increasing metabolic rate",
+"E": "↑set point from bacterial endotoxin"
+},
+"answer": "C",
+"source": "วิเคราะห์",
+"why": "Exertional heat stroke = hyperthermia ที่ set point ปกติแต่การระบายความร้อนล้มเหลว; ตัวเลือกที่พูดถึง PGE2/IL-1/endotoxin เป็นกลไกของไข้ (set point สูงขึ้น)"
+},
+"79/251": {
+"box": 27,
+"stem": "ชายพบก้อนที่ต่อมหมวกไตระหว่าง evaluate ความดันสูง ให้รูป histology — ก้อนน่าจะสร้าง hormone ใดเกิน",
+"options": {
+"A": "Aldosterone",
+"B": "Cortisol",
+"C": "Estrogen",
+"D": "Progesterone",
+"E": "Epinephrine"
+},
+"answer": "A",
+"source": "วิเคราะห์",
+"why": "Adrenal mass ที่พบจากการหาสาเหตุ HT ที่พบบ่อยสุดคือ aldosterone-producing adenoma (เซลล์ใสคล้าย zona glomerulosa); ถ้ารูปเป็น nest ของ chromaffin cell (zellballen) จะเป็น pheochromocytoma → epinephrine; estrogen/progesterone ไม่ทำให้ HT",
+"needs_image": true,
+"doubt": "⚠ ไม่เห็นรูป ไม่แน่ใจระหว่าง aldosterone (adenoma) กับ epinephrine (pheochromocytoma)"
+}
+}
+}
