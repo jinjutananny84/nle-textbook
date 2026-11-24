@@ -374,9 +374,9 @@
   }
   // ช่องแก้คำก่อนส่งเป็น keyword (เหมือนช่องโน้ต)
   function openKw() {
-    const k = popZone, t = kwNorm(popText), init = kwGuess(t, popRange);
+    const k = popZone, t = kwNorm(popText), init = t;
     pop.dataset.mode = 'note'; pop.classList.add('writing');
-    pop.innerHTML = `<div class="note-kind">🔑 ส่งเป็น keyword · ครอบ ==คำ== เพื่อเน้นสีเหลือง</div><textarea class="note-in" rows="3">${esc(init)}</textarea><div class="note-act"><button class="btn small" data-a="mk" title="เน้นคำที่เลือกในช่องนี้">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">ส่งเป็น keyword</button></div>`;
+    pop.innerHTML = `<div class="note-kind">🔑 ส่งเป็น keyword · แก้คำได้ก่อนส่ง (เน้นเหลือง: เลือกคำแล้วกดเน้นคำที่เลือก)</div><textarea class="note-in" rows="3">${esc(init)}</textarea><div class="note-act"><button class="btn small" data-a="mk" title="เน้นคำที่เลือกในช่องนี้">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">ส่งเป็น keyword</button></div>`;
     const ta = pop.querySelector('textarea'); ta.focus();
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => {
       const a = b.dataset.a;
@@ -388,7 +388,7 @@
   // เอาการเน้นสีเหลือง (==คำ==) ของ keyword ออก
   function kwUnemph(k, texts) {
     const x = S.kw.find(y => 'kw:' + y.at === k); if (!x) return false;
-    let d = x.d || '==' + x.t + '==', ch = false;
+    let d = x.d || x.t, ch = false;
     for (const t of texts) { const n = d.replace('==' + t + '==', t); if (n !== d) { d = n; ch = true; } }
     if (ch) { x.d = d; save(); } return ch;
   }
@@ -754,14 +754,14 @@
       const [c, box] = g.split('|'); const ch = CH[c]; const sec = ch && ch.sections.find(x => x.no === +box);
       const items = groups[g].filter(i => !(S.kwHide && S.kw[i].ok)); if (!items.length) continue;
       h += `<div class="kw-group"><h3><a href="#/${c}/${box}"><b>${box}</b> ${sec ? esc(sec.title) : ''}</a><small>${ch ? esc(ch.title) : ''}</small></h3><ul class="kw-list">`
-        + items.map(i => { const x = S.kw[i]; return `<li class="kwi${x.ok ? ' ok' : ''}"><button class="kw-ok" data-i="${i}" title="ทวนแล้ว">${x.ok ? '✓' : ''}</button><span class="kwt" data-hlk="kw:${x.at}">${kwHTML(x.d || '==' + x.t + '==')}</span><a class="kw-go" href="#/${c}/${box}" data-kwt="${esc(x.t)}" title="ไปอ่านตรงจุดนั้น">↗</a>${x.q ? `<small>ข้อ ${esc(x.q)}</small>` : ''}<button class="kw-ed" data-i="${i}" title="แก้ไข">✎</button><button class="kw-del" data-i="${i}" title="ลบ">✕</button></li>`; }).join('')
+        + items.map(i => { const x = S.kw[i]; return `<li class="kwi${x.ok ? ' ok' : ''}"><button class="kw-ok" data-i="${i}" title="ทวนแล้ว">${x.ok ? '✓' : ''}</button><span class="kwt" data-hlk="kw:${x.at}">${kwHTML(x.d || x.t)}</span><a class="kw-go" href="#/${c}/${box}" data-kwt="${esc(x.t)}" title="ไปอ่านตรงจุดนั้น">↗</a>${x.q ? `<small>ข้อ ${esc(x.q)}</small>` : ''}<button class="kw-ed" data-i="${i}" title="แก้ไข">✎</button><button class="kw-del" data-i="${i}" title="ลบ">✕</button></li>`; }).join('')
         + '</ul></div>';
     }
     view.innerHTML = h + '</div>';
     applyAllHL(view);
     view.querySelectorAll('.kw-ed').forEach(b => b.onclick = () => {
       const i = +b.dataset.i, x = S.kw[i], li = b.closest('li');
-      li.innerHTML = `<div class="kw-edit"><textarea rows="2">${esc(x.d || '==' + x.t + '==')}</textarea><div class="note-act"><button class="btn small" data-a="mk">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">บันทึก</button></div></div>`;
+      li.innerHTML = `<div class="kw-edit"><textarea rows="2">${esc(x.d || x.t)}</textarea><div class="note-act"><button class="btn small" data-a="mk">เน้นคำที่เลือก</button><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">บันทึก</button></div></div>`;
       const ta = li.querySelector('textarea'); ta.focus();
       li.querySelectorAll('[data-a]').forEach(c => c.onclick = () => {
         if (c.dataset.a === 'mk') { const v = ta.value, s0 = ta.selectionStart, e0 = ta.selectionEnd; if (e0 > s0) ta.value = v.slice(0, s0) + '==' + v.slice(s0, e0) + '==' + v.slice(e0); return ta.focus(); }
