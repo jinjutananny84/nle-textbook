@@ -240,6 +240,56 @@
    "methacholine|bethanechol|pilocarpine|oxybutynin|tolterodine|solifenacin|darifenacin|trospium|mirabegron|tropicamide|doxazosin|terazosin|tamsulosin|timolol|brimonidine|latanoprost|dorzolamide",
    "Autonomic / eye",
    "Cholinergic · antimuscarinic · adrenergic · glaucoma"
+  ],
+  [
+   "clobetasol|triamcinolone|hydrocortisone|betamethasone|mometasone|fluorometholone|tacrolimus|pimecrolimus",
+   "Dermatology",
+   "Topical steroid / calcineurin-i"
+  ],
+  [
+   "retinoin|isotretinoin|tretinoin|adapalene|tazarotene|acitretin|benzoyl peroxide|azelaic|salicylic",
+   "Dermatology",
+   "Retinoid / acne"
+  ],
+  [
+   "calcipotriol|coal tar|anthralin|uvb|puva|apremilast|etanercept|infliximab|adalimumab|ustekinumab|secukinumab|ixekizumab|guselkumab",
+   "Dermatology",
+   "Psoriasis / biologic"
+  ],
+  [
+   "methotrexate|cyclosporine",
+   "Others",
+   "Immunomodulator (DMARD)"
+  ],
+  [
+   "permethrin|sulfur|benzyl benzoate|lindane|ivermectin|albendazole",
+   "Antimicrobial",
+   "Antiparasitic"
+  ],
+  [
+   "mupirocin|fusidic|silver sulfadiazine|polymyxin|tobramycin|chloramphenicol",
+   "Antimicrobial",
+   "Antibiotic"
+  ],
+  [
+   "famciclovir|foscarnet|acyclovir|valacyclovir",
+   "Antimicrobial",
+   "Antiviral"
+  ],
+  [
+   "griseofulvin|selenium sulfide|terbinafine|nystatin|azole",
+   "Antimicrobial",
+   "Antifungal"
+  ],
+  [
+   "atropine|tropicamide|phenylephrine|netarsudil|latanoprost|timolol|brimonidine|pilocarpine|acetazolamide|tetracaine",
+   "Autonomic / eye",
+   "Cholinergic · antimuscarinic · adrenergic · glaucoma"
+  ],
+  [
+   "allopurinol|abacavir|carbamazepine|erlotinib|gefitinib|cetuximab",
+   "Others",
+   "ยาที่ก่อผื่น / HLA"
   ]
  ],
  "bug": [
@@ -392,6 +442,46 @@
    "paragonimus|strongyloides|ascaris|echinococcus|schistosoma|filaria|wuchereria|toxocara|taenia",
    "Parasite",
    "Helminth"
+  ],
+  [
+   "staphylococcus aureus|s\\. aureus",
+   "Bacteria",
+   "Gram + cocci"
+  ],
+  [
+   "capnocytophaga|pasteurella",
+   "Bacteria",
+   "Gram − rods"
+  ],
+  [
+   "sarcoptes|pthirus|pediculus|gnathostom|larva migrans|cysticerc|sparganosis|cercarial",
+   "Parasite",
+   "Helminth / ectoparasite"
+  ],
+  [
+   "malassezia|candida",
+   "Fungi",
+   "Yeast"
+  ],
+  [
+   "trichophyton|microsporum|epidermophyton|dermatophyt",
+   "Fungi",
+   "Mold"
+  ],
+  [
+   "molluscum|erythema infectiosum|roseola",
+   "Virus",
+   "DNA virus"
+  ],
+  [
+   "hfmd|coxsackie",
+   "Virus",
+   "RNA virus"
+  ],
+  [
+   "scarlet fever|syphilis",
+   "Clinical syndrome",
+   "Syndrome (ไม่ใช่ชื่อเชื้อ)"
   ]
  ]
 }

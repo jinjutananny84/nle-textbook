@@ -2,6 +2,34 @@
  "note": "แท็กกลุ่มแบคทีเรียที่เว็บเติมในวงเล็บหลังชื่อเชื้อทุกบท (แสดงด้วย CSS ไม่กระทบไฮไลต์) · [regex (case-sensitive), ป้าย] · ใส่ตัวที่ยาว/จำเพาะไว้ก่อน · GBS (แท็กเฉพาะเมื่อตามด้วย (S. agalactiae) หรือ intrapartum — เพราะ GBS = Guillain-Barré ใน B3)",
  "items": [
   [
+   "Cutibacterium acnes|C\\. ?acnes|Propionibacterium( acnes)?",
+   "G+ rod (anaerobe)"
+  ],
+  [
+   "Capnocytophaga( canimorsus)?|C\\. ?canimorsus",
+   "G− rod"
+  ],
+  [
+   "Eikenella( corrodens)?",
+   "G− rod"
+  ],
+  [
+   "H\\. ?ducreyi",
+   "G− coccobacilli"
+  ],
+  [
+   "Aeromonas( hydrophila)?",
+   "G− rod"
+  ],
+  [
+   "Mycobacterium marinum|M\\. ?marinum",
+   "AFB"
+  ],
+  [
+   "Peptostreptococc\\w*",
+   "G+ cocci (anaerobe)"
+  ],
+  [
    "Salmonella (enterica serovar )?Typhi|S\\. ?Typhi",
    "G− rod"
   ],
