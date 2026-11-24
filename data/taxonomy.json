@@ -1,0 +1,202 @@
+{
+ "note": "กฎจัดหมวดหน้า Drug & Bug · แต่ละแถว [regex (ไม่สนตัวพิมพ์), หมวดใหญ่, หมวดย่อย] · ใช้กฎแรกที่ตรงกับชื่อการ์ด · ไม่ตรงข้อไหน → Others / Unclassified · เพิ่มบทใหม่ให้เติมกฎของยา/เชื้อที่ยังไม่เข้าหมวด",
+ "drug": [
+  [
+   "isoniazid|rifamp|pyrazinamide|ethambutol|h · r · z · e|bedaquiline|streptomycin",
+   "Antimicrobial",
+   "Anti-TB"
+  ],
+  [
+   "oseltamivir|acyclovir|ganciclovir|tenofovir|zidovudine|antiviral|remdesivir",
+   "Antimicrobial",
+   "Antiviral"
+  ],
+  [
+   "azole|amphotericin|echinocandin|caspofungin|nystatin|terbinafine|flucytosine",
+   "Antimicrobial",
+   "Antifungal"
+  ],
+  [
+   "albendazole|mebendazole|praziquantel|ivermectin|metronidazole|chloroquine|artesunate|antiparasit",
+   "Antimicrobial",
+   "Antiparasitic"
+  ],
+  [
+   "cillin|cephal|cef|penem|vancomycin|macrolide|azithro|clarithro|erythro|doxycycline|tetracycline|tmp-smx|trimethoprim|fluoroquinolone|floxacin|aminoglycoside|gentamicin|clindamycin|linezolid|antibiotic",
+   "Antimicrobial",
+   "Antibiotic"
+  ],
+  [
+   "class i\\b|class iii|lidocaine|flecainide|quinidine|procainamide|amiodarone|sotalol|dofetilide|adenosine|digoxin|mgso",
+   "Cardiovascular",
+   "Antiarrhythmic / digoxin"
+  ],
+  [
+   "aspirin|clopidogrel|prasugrel|ticagrelor|abciximab|eptifibatide|heparin|enoxaparin|warfarin|doac|rivaroxaban|apixaban|alteplase|tenecteplase|streptokinase",
+   "Cardiovascular",
+   "Antithrombotic / thrombolytic"
+  ],
+  [
+   "statin|fibrate|gemfibrozil|ezetimibe|pcsk9|niacin|omega-3|bile acid",
+   "Cardiovascular",
+   "Lipid-lowering"
+  ],
+  [
+   "ace inhibitor|acei|\\barb\\b|arni|sacubitril|losartan|irbesartan|enalapril|captopril|aliskiren",
+   "Cardiovascular",
+   "RAAS blocker"
+  ],
+  [
+   "furosemide|thiazide|chlorthalidone|spironolactone|eplerenone|amiloride|triamterene|acetazolamide|mannitol",
+   "Cardiovascular",
+   "Diuretic"
+  ],
+  [
+   "ccb|amlodipine|nifedipine|nicardipine|verapamil|diltiazem",
+   "Cardiovascular",
+   "Calcium channel blocker"
+  ],
+  [
+   "β-blocker|atenolol|metoprolol|bisoprolol|carvedilol|propranolol|labetalol|esmolol|nadolol",
+   "Cardiovascular",
+   "β-blocker"
+  ],
+  [
+   "hydralazine|methyldopa|nitroprusside|nitrate|nitroglycerin|isosorbide|clonidine",
+   "Cardiovascular",
+   "Vasodilator / other antiHT"
+  ],
+  [
+   "norepinephrine|epinephrine|dopamine|dobutamine|phenylephrine|vasopressin|milrinone",
+   "Cardiovascular",
+   "Vasopressor / inotrope"
+  ],
+  [
+   "dapagliflozin|empagliflozin|sglt2",
+   "Cardiovascular",
+   "SGLT2 inhibitor"
+  ],
+  [
+   "pge|alprostadil|indomethacin",
+   "Cardiovascular",
+   "Ductus (PGE₁ / NSAID)"
+  ],
+  [
+   "saba|laba|sama|lama|salbutamol|terbutaline|ipratropium|tiotropium|theophylline",
+   "Respiratory",
+   "Bronchodilator"
+  ],
+  [
+   "\\bics\\b|budesonide|fluticasone|montelukast|biologic|omalizumab|steroid|betamethasone|dexa",
+   "Respiratory",
+   "Anti-inflammatory / steroid"
+  ],
+  [
+   "codeine|dextromethorphan|nrt|bupropion|varenicline|antihistamine|decongestant",
+   "Respiratory",
+   "Cough / smoking / allergy"
+  ],
+  [
+   "nsaid|celecoxib|ibuprofen|cox",
+   "Others",
+   "NSAID / COX-2"
+  ],
+  [
+   "ergot|triptan",
+   "Others",
+   "Migraine (ergot / triptan)"
+  ],
+  [
+   "gluconate|potassium|calcium",
+   "Others",
+   "Electrolyte"
+  ],
+  [
+   "phenytoin",
+   "Others",
+   "Antiepileptic"
+  ]
+ ],
+ "bug": [
+  [
+   "croup|epiglottitis|pharyngitis|sinusitis|หวัด|mononucleosis",
+   "Clinical syndrome",
+   "Syndrome (ไม่ใช่ชื่อเชื้อ)"
+  ],
+  [
+   "mycobacter|tuberculosis|\\bm\\. |leprae",
+   "Bacteria",
+   "Mycobacteria"
+  ],
+  [
+   "borrelia|pallidum|treponema|leptospira",
+   "Bacteria",
+   "Spirochete"
+  ],
+  [
+   "mycoplasma|chlamyd|rickettsia|legionella|coxiella",
+   "Bacteria",
+   "Atypical / intracellular"
+  ],
+  [
+   "s\\. aureus|epidermidis|cons|s\\. pneumoniae|pyogenes|viridans|strep|enterococ|gallolyticus|abiotrophia|granulicatella",
+   "Bacteria",
+   "Gram + cocci"
+  ],
+  [
+   "diphther|nocardia|listeria|clostrid|bacillus|actinomyc",
+   "Bacteria",
+   "Gram + rods"
+  ],
+  [
+   "moraxella|neisseria",
+   "Bacteria",
+   "Gram − cocci"
+  ],
+  [
+   "influenzae|pertussis|pseudomallei|bartonella|hacek|klebsiella|pseudomonas|e\\. coli|salmonella|haemophilus",
+   "Bacteria",
+   "Gram − rods"
+  ],
+  [
+   "hbv|hhv|herpes|adenovirus|parvovirus|ebv|cmv|hpv|varicella|pox",
+   "Virus",
+   "DNA virus"
+  ],
+  [
+   "coxsackie|rsv|parainfluenza|rubella|sars|covid|influenza|measles|mumps|hcv|hiv|rhino|entero",
+   "Virus",
+   "RNA virus"
+  ],
+  [
+   "cryptococcus|candida",
+   "Fungi",
+   "Yeast"
+  ],
+  [
+   "histoplasma|blastomyces|coccidioides|talaromyces|penicillium marneffei|sporothrix",
+   "Fungi",
+   "Dimorphic"
+  ],
+  [
+   "aspergillus|mucor|rhizopus",
+   "Fungi",
+   "Mold"
+  ],
+  [
+   "pneumocystis",
+   "Fungi",
+   "Pneumocystis"
+  ],
+  [
+   "cruzi|trypanosoma|plasmodium|toxoplasma|leishmania|entamoeba|giardia",
+   "Parasite",
+   "Protozoa"
+  ],
+  [
+   "paragonimus|strongyloides|ascaris|echinococcus|schistosoma|filaria|wuchereria|toxocara|taenia",
+   "Parasite",
+   "Helminth"
+  ]
+ ]
+}
