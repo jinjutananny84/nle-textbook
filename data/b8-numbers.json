@@ -1,0 +1,408 @@
+{
+ "note": "ตัวเลข cutpoint ค่าปกติ และสูตรของบท B8 · t = cut หรือ f · box = กล่องที่มา",
+ "items": [
+  {
+   "t": "cut",
+   "cat": "Anatomy · หลอดเลือด",
+   "name": "ระดับ celiac trunk",
+   "v": "**T12**",
+   "box": 2,
+   "note": "foregut"
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy · หลอดเลือด",
+   "name": "ระดับ SMA",
+   "v": "**L1**",
+   "box": 2,
+   "note": "midgut"
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy · หลอดเลือด",
+   "name": "ระดับ IMA",
+   "v": "**L3**",
+   "box": 2,
+   "note": "hindgut"
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy · หลอดเลือด",
+   "name": "ขอบเขต midgut/hindgut",
+   "v": "**2/3** ของ transverse colon",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy · หลอดเลือด",
+   "name": "ซี่โครงที่ม้ามอยู่ใต้",
+   "v": "ซี่โครงซ้าย **9–11**",
+   "box": 3,
+   "note": "ซี่โครงซ้ายล่างหัก + shock"
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy · หลอดเลือด",
+   "name": "สัดส่วนเลือดเข้าตับจาก portal vein",
+   "v": "**~75%**",
+   "box": 4,
+   "note": "ที่เหลือมาจาก hepatic artery"
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology",
+   "name": "Physiologic herniation ของ midgut",
+   "v": "สัปดาห์ที่ **6** → กลับท้องสัปดาห์ **10–11**",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology",
+   "name": "Midgut หมุนรอบ SMA",
+   "v": "**270°** ทวนเข็มนาฬิกา",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology",
+   "name": "Meckel rule of 2",
+   "v": "**2%** · **2 ฟุต** จาก ileocecal valve · **2 นิ้ว** · อายุ < **2** ปี",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology",
+   "name": "Hirschsprung: ไม่ถ่ายขี้เทาเกิน",
+   "v": "**48 ชม.**",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology",
+   "name": "Pyloric stenosis อายุที่เริ่มอาการ",
+   "v": "**2–6 สัปดาห์**",
+   "box": 6,
+   "note": "projectile non-bilious"
+  },
+  {
+   "t": "cut",
+   "cat": "Physiology · ดูดซึม",
+   "name": "น้ำเข้าลำไส้ต่อวัน",
+   "v": "**~9 L**",
+   "box": 11,
+   "note": "รวมอาหารและน้ำย่อย"
+  },
+  {
+   "t": "cut",
+   "cat": "Physiology · ดูดซึม",
+   "name": "น้ำในอุจจาระต่อวัน",
+   "v": "**~100 mL**",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "Physiology · ดูดซึม",
+   "name": "รอบของ MMC ช่วงอดอาหาร",
+   "v": "ทุก **~90 นาที**",
+   "box": 10,
+   "note": "ควบคุมโดย motilin"
+  },
+  {
+   "t": "cut",
+   "cat": "Physiology · ดูดซึม",
+   "name": "Anorectal angle ขณะกลั้น → ขณะถ่าย",
+   "v": "**~90°** → **~130°**",
+   "box": 10,
+   "note": "puborectalis คลาย"
+  },
+  {
+   "t": "f",
+   "cat": "Physiology · ดูดซึม",
+   "name": "Stool osmotic gap",
+   "v": "**290 − 2 × (Na + K)** ในอุจจาระ",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Physiology · ดูดซึม",
+   "name": "Osmotic gap ของ secretory diarrhea",
+   "v": "**< 50** mOsm/kg",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Physiology · ดูดซึม",
+   "name": "Osmotic gap ของ osmotic diarrhea",
+   "v": "**> 125** mOsm/kg",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Physiology · ดูดซึม",
+   "name": "Rotavirus: stool pH",
+   "v": "**< 5.5** + reducing substance",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "Stomach · pancreas",
+   "name": "ZES: fasting gastrin",
+   "v": "**> 1,000** pg/mL ร่วมกับ pH < 2",
+   "box": 9
+  },
+  {
+   "t": "cut",
+   "cat": "Stomach · pancreas",
+   "name": "H. pylori triple therapy",
+   "v": "**14 วัน**",
+   "box": 12,
+   "note": "PPI + clarithromycin + amoxicillin"
+  },
+  {
+   "t": "cut",
+   "cat": "Stomach · pancreas",
+   "name": "Acute pancreatitis: amylase/lipase",
+   "v": "**> 3 × ULN**",
+   "box": 15,
+   "note": "1 ใน 3 เกณฑ์"
+  },
+  {
+   "t": "cut",
+   "cat": "Stomach · pancreas",
+   "name": "Acute pancreatitis: เกณฑ์วินิจฉัย",
+   "v": "**2 ใน 3** ข้อ",
+   "box": 15,
+   "note": "ปวด · เอนไซม์ · imaging"
+  },
+  {
+   "t": "cut",
+   "cat": "Stomach · pancreas",
+   "name": "TG ที่ทำให้เกิด pancreatitis",
+   "v": "**> 1,000** mg/dL",
+   "box": 15,
+   "note": "ป้องกันด้วย fibrate"
+  },
+  {
+   "t": "cut",
+   "cat": "Stomach · pancreas",
+   "name": "BISAP: BUN",
+   "v": "**> 25** mg/dL",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "Stomach · pancreas",
+   "name": "BISAP: อายุ",
+   "v": "**> 60** ปี",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "Preformed toxin (S. aureus, B. cereus emetic)",
+   "v": "**1–6 ชม.**",
+   "box": 18,
+   "note": "อาเจียนเด่น"
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "C. perfringens / B. cereus diarrheal",
+   "v": "**8–16 ชม.**",
+   "box": 18
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "ETEC, V. cholerae, invasive bacteria",
+   "v": "**> 16 ชม.**",
+   "box": 18
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "Non-typhoidal Salmonella incubation",
+   "v": "**6–48 ชม.**",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "Typhoid fever ไข้นาน",
+   "v": "**~3 สัปดาห์**",
+   "box": 19,
+   "note": "relative bradycardia"
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "Campylobacter โตที่",
+   "v": "**42°C** microaerophilic",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "Norovirus ขนาด",
+   "v": "**27–40 nm**",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "Opisthorchis ไข่ขนาด",
+   "v": "**~30 µm**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "Praziquantel ใน Opisthorchis",
+   "v": "**40 mg/kg** ครั้งเดียว",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Food poisoning · เชื้อ",
+   "name": "Albendazole/mebendazole ใน nematode",
+   "v": "**3 วัน**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "CRC · screening",
+   "name": "FAP จำนวน polyp",
+   "v": "**> 100**",
+   "box": 22,
+   "note": "CRC เกือบ 100% อายุ 30–40"
+  },
+  {
+   "t": "cut",
+   "cat": "CRC · screening",
+   "name": "Adenoma → carcinoma ใช้เวลา",
+   "v": "**~10 ปี**",
+   "box": 22
+  },
+  {
+   "t": "f",
+   "cat": "CRC · screening",
+   "name": "PPV",
+   "v": "**TP / (TP + FP)**",
+   "box": 22,
+   "note": "อ่านตามแนวนอน (ผลตรวจบวก)"
+  },
+  {
+   "t": "cut",
+   "cat": "CRC · screening",
+   "name": "ตัวอย่างโจทย์ PPV (sens 80 spec 90 prev 10%)",
+   "v": "**0.47**",
+   "box": 22,
+   "note": "80 / (80 + 90)"
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "Ischemic/toxic hepatitis AST/ALT",
+   "v": "**> 1,000** U/L",
+   "box": 27,
+   "note": "เฉียบพลัน"
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "Alcoholic liver AST:ALT",
+   "v": "**> 2**",
+   "box": 27
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "Albumin half-life",
+   "v": "**~3 สัปดาห์**",
+   "box": 27,
+   "note": "จึงไม่ไวต่อ acute"
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "HBsAg นานเกินเท่าไรเรียก chronic",
+   "v": "**> 6 เดือน**",
+   "box": 28
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "ติด HBV แรกเกิดกลายเป็น chronic",
+   "v": "**~90%**",
+   "box": 28,
+   "note": "ผู้ใหญ่ < 5%"
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "Inactive carrier: HBV DNA",
+   "v": "**< 2,000** IU/mL",
+   "box": 28,
+   "note": "ALT ปกติ HBeAg−"
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "HCV กลายเป็น chronic",
+   "v": "**~70–80%**",
+   "box": 28
+  },
+  {
+   "t": "f",
+   "cat": "Liver",
+   "name": "SAAG",
+   "v": "**serum albumin − ascitic albumin**",
+   "box": 29
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "SAAG บอก portal HT",
+   "v": "**≥ 1.1** g/dL",
+   "box": 29
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "Ascitic protein แยก cirrhosis vs cardiac",
+   "v": "**2.5** g/dL",
+   "box": 29,
+   "note": "cirrhosis ต่ำกว่า · cardiac สูงกว่า"
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "SBP: ascitic PMN",
+   "v": "**≥ 250** cells/mm³",
+   "box": 29
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "HCC surveillance",
+   "v": "US ± AFP ทุก **6 เดือน**",
+   "box": 29
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "Kasai operation ควรทำก่อนอายุ",
+   "v": "**~60 วัน**",
+   "box": 25,
+   "note": "biliary atresia"
+  },
+  {
+   "t": "cut",
+   "cat": "Liver",
+   "name": "4F ของนิ่ว cholesterol: อายุ",
+   "v": "**forty (40)**",
+   "box": 26,
+   "note": "fat female fertile"
+  }
+ ]
+}

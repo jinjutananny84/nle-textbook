@@ -2,6 +2,30 @@
  "note": "แท็กกลุ่มแบคทีเรียที่เว็บเติมในวงเล็บหลังชื่อเชื้อทุกบท (แสดงด้วย CSS ไม่กระทบไฮไลต์) · [regex (case-sensitive), ป้าย] · ใส่ตัวที่ยาว/จำเพาะไว้ก่อน · GBS (แท็กเฉพาะเมื่อตามด้วย (S. agalactiae) หรือ intrapartum — เพราะ GBS = Guillain-Barré ใน B3)",
  "items": [
   [
+   "Salmonella (enterica serovar )?Typhi|S\\. ?Typhi",
+   "G− rod"
+  ],
+  [
+   "EHEC|ETEC|EPEC|EIEC|EAEC|UPEC",
+   "G− rod"
+  ],
+  [
+   "Vibrio parahaemolyticus|V\\. ?parahaemolyticus|V\\. ?cholerae",
+   "G− rod"
+  ],
+  [
+   "Burkholderia gladioli|B\\. ?gladioli",
+   "G− rod"
+  ],
+  [
+   "Clostridium botulinum|C\\. ?botulinum",
+   "G+ rod (anaerobe)"
+  ],
+  [
+   "Tropheryma whipplei|T\\. ?whipplei",
+   "G+ rod"
+  ],
+  [
    "Staphylococcus aureus|S\\. ?aureus",
    "G+ cocci"
   ],

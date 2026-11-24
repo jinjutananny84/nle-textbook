@@ -2,6 +2,46 @@
  "note": "กฎจัดหมวดหน้า Drug & Bug · แต่ละแถว [regex (ไม่สนตัวพิมพ์), หมวดใหญ่, หมวดย่อย] · ใช้กฎแรกที่ตรงกับชื่อการ์ด · ไม่ตรงข้อไหน → Others / Unclassified · เพิ่มบทใหม่ให้เติมกฎของยา/เชื้อที่ยังไม่เข้าหมวด",
  "drug": [
   [
+   "\\bppi\\b|prazole|vonoprazan|p-cab|h2 blocker|ranitidine|famotidine|cimetidine|misoprostol|sucralfate|antacid|bismuth",
+   "GI",
+   "Acid suppression / mucosal protection"
+  ],
+  [
+   "ondansetron|metoclopramide|domperidone|dimenhydrinate|scopolamine|aprepitant",
+   "GI",
+   "Antiemetic / prokinetic"
+  ],
+  [
+   "loperamide|racecadotril|\\bors\\b",
+   "GI",
+   "Antidiarrheal / rehydration"
+  ],
+  [
+   "ispaghula|psyllium|lactulose|\\bpeg\\b|senna|bisacodyl|glycerin|castor|mineral oil|laxative",
+   "GI",
+   "Laxative"
+  ],
+  [
+   "hyoscine|mebeverine",
+   "GI",
+   "Antispasmodic"
+  ],
+  [
+   "octreotide|terlipressin|rifaximin|n-acetylcysteine",
+   "GI",
+   "Liver / portal HT / toxin"
+  ],
+  [
+   "paromomycin|nitazoxanide|niclosamide",
+   "Antimicrobial",
+   "Antiparasitic"
+  ],
+  [
+   "benzodiazepine",
+   "Neuro / Psych",
+   "BZD / sedative / hypnotic"
+  ],
+  [
    "haloperidol|chlorpromazine|risperidone|olanzapine|quetiapine|clozapine",
    "Neuro / Psych",
    "Antipsychotic"
@@ -203,6 +243,36 @@
   ]
  ],
  "bug": [
+  [
+   "difficile|perfringens|b\\. cereus",
+   "Bacteria",
+   "Gram + rods"
+  ],
+  [
+   "shigella|typhi|ehec|etec|epec|eiec|eaec|vibrio|v\\. cholerae|v\\. parahaemolyticus|h\\. pylori|helicobacter",
+   "Bacteria",
+   "Gram − rods"
+  ],
+  [
+   "rotavirus|norovirus|hav|hev|hdv",
+   "Virus",
+   "RNA virus"
+  ],
+  [
+   "e\\. histolytica",
+   "Parasite",
+   "Protozoa"
+  ],
+  [
+   "cryptosporidium",
+   "Parasite",
+   "Protozoa"
+  ],
+  [
+   "opisthorchis|capillaria|enterobius|trichuris|hookworm|fasciolopsis",
+   "Parasite",
+   "Helminth"
+  ],
   [
    "agalactiae|\\bs\\. suis|suis",
    "Bacteria",
