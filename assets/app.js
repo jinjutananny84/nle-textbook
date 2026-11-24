@@ -251,7 +251,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -354,9 +354,10 @@
     sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
     moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
     back: '<path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>',
+    brain: '<path d="M9 4a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 10a3 3 0 0 0 1 2.2A3 3 0 0 0 6 17a3 3 0 0 0 3 3 3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/><path d="M15 4a3 3 0 0 1 3 3v.2A3 3 0 0 1 20 10a3 3 0 0 1-1 2.2A3 3 0 0 1 18 17a3 3 0 0 1-3 3 3 3 0 0 1-3-3"/>',
     img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>'
   };
-  const EMO = { '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
+  const EMO = { '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => `<svg class="ic ic-${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
   // แปลง emoji ในข้อความของหน้าเว็บเป็นไอคอน (ไม่แตะเนื้อหาที่ไฮไลต์ได้ และช่องพิมพ์)
@@ -739,7 +740,7 @@
     view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => { const l = +b.dataset.lv; if (S.lvl[k] === l) delete S.lvl[k]; else S.lvl[k] = l; save(); rerender(); });
     pop.hidden = true; pop.dataset.mode = '';
     expandAbbr($('article.content', view), ch.abbr);
-    buildToc(); setTimeout(trackRead, 300);
+    buildToc(); setTimeout(trackRead, 300); coverTools(view);
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
@@ -1040,6 +1041,115 @@
     // ข้อความยาวข้ามหลายส่วน: เลื่อนไปที่ต้นคำ
     const head = t.slice(0, 12); for (const n of textNodes(view)) if (n.nodeValue.includes(head)) { n.parentNode.scrollIntoView({ block: 'center' }); n.parentNode.classList.add('kw-flash-blk'); setTimeout(() => n.parentNode.classList.remove('kw-flash-blk'), 2600); return; }
   }
+  /* ---------- ตารางท่องจำ: ปิดคำตอบแล้วแตะทีละช่อง ---------- */
+  function coverTools(root) {
+    root.querySelectorAll('article.content .tbl-wrap').forEach((w, ti) => {
+      const t = w.querySelector('table'); if (!t || t.rows.length < 3 || w.previousElementSibling?.classList.contains('cover-bar')) return;
+      const bar = document.createElement('div'); bar.className = 'cover-bar';
+      bar.innerHTML = `<span class="cb-l">ท่องจำตาราง</span><button data-m="ans">ปิดคำตอบ</button><button data-m="name">ปิดชื่อ</button><button data-m="shuf">สลับแถว</button><button data-m="off" hidden>เปิดทั้งหมด</button>`;
+      w.before(bar);
+      const cells = mode => [...t.tBodies[0].rows].flatMap(r => [...r.cells].filter((c, i) => mode === 'name' ? i === 0 : i > 0));
+      const off = () => { t.querySelectorAll('td.cv').forEach(c => c.classList.remove('cv', 'shown')); t.classList.remove('covering'); bar.querySelector('[data-m="off"]').hidden = true; };
+      bar.addEventListener('click', e => {
+        const b = e.target.closest('button'); if (!b) return; const m = b.dataset.m;
+        if (m === 'off') return off();
+        if (m === 'shuf') { const tb = t.tBodies[0]; [...tb.rows].sort(() => Math.random() - .5).forEach(r => tb.appendChild(r)); return; }
+        off(); cells(m).forEach(c => c.classList.add('cv')); t.classList.add('covering'); bar.querySelector('[data-m="off"]').hidden = false;
+      });
+      t.addEventListener('click', e => { const c = e.target.closest('td.cv'); if (c && !e.target.closest('mark.user-hl')) { c.classList.toggle('shown'); } });
+    });
+  }
+
+  /* ---------- Drill: สร้างข้อสอบจับคู่อัตโนมัติจากตารางในเนื้อหา (เหมาะกับยา/เชื้อ/ชื่อเยอะ) ---------- */
+  const clean = x => x.replace(/\s+/g, ' ').trim();
+  function tableFacts(ch) {
+    const out = [];
+    for (const s of ch.sections) {
+      if (!/<table/.test(s.html)) continue;
+      const d = document.createElement('div'); d.innerHTML = s.html;
+      d.querySelectorAll('table').forEach((t, ti) => {
+        const head = [...t.tHead.rows[0].cells].map(c => clean(c.textContent));
+        const rows = [...t.tBodies[0].rows].map(r => [...r.cells].map(c => clean(c.textContent))).filter(r => r[0] && r.length === head.length);
+        if (rows.length >= 4) out.push({ box: s.no, title: s.title, ti, head, rows });
+      });
+    }
+    return out;
+  }
+  const DRUGBUG = /ยา|เชื้อ|clue|drug|bug|organism|รักษา|โรค/i;
+  function makeDrill(tables, n) {
+    const qs = [];
+    for (const T of tables) for (let j = 1; j < T.head.length; j++) {
+      const col = [...new Set(T.rows.map(r => r[j]).filter(v => v && v !== '–' && v !== '-'))]; if (col.length < 3) continue;
+      if (/^ข้อ$|ปีที่ออก|^กล่อง$/.test(T.head[j])) continue;
+      T.rows.forEach((r, ri) => {
+        if (!r[j] || r[j] === '–') return;
+        const wrong = shuffle(col.filter(v => v !== r[j])).slice(0, 3);
+        qs.push({ T, ri, j, dir: 'f', q: r[0], ask: T.head[j], ans: r[j], opts: shuffle([r[j], ...wrong]) });
+        const names = [...new Set(T.rows.filter(x => x[j] !== r[j]).map(x => x[0]))];
+        if (names.length >= 3 && r[j].length <= 90) qs.push({ T, ri, j, dir: 'r', q: r[j], ask: T.head[0], ans: r[0], opts: shuffle([r[0], ...shuffle(names).slice(0, 3)]) });
+      });
+    }
+    return shuffle(qs).slice(0, n);
+  }
+  async function vDrill(params) {
+    await loadAll(); renderSidebar();
+    const chs = Object.values(CH);
+    const all = chs.flatMap(ch => tableFacts(ch).map(t => Object.assign(t, { ch: ch.id, chTitle: ch.title })));
+    const db = all.filter(t => DRUGBUG.test(t.head.join(' ')));
+    const weak = S.drillWrong || {};
+    let h = `<div class="hero"><h1>🧠 Name drill</h1><p>ข้อสอบจับคู่ที่สร้างเองจากตารางในเนื้อหา เหมาะกับเรื่องที่ต้องจำชื่อเยอะ (ยา เชื้อ โรค อาชีพ) ถามทั้งสองทาง: ชื่อ → คุณสมบัติ และ คุณสมบัติ → ชื่อ</p></div>
+      <div class="panel"><h3>เลือกตาราง</h3><div class="drill-pick">
+        <label class="dp"><input type="radio" name="dsc" value="db" checked><b>ยา & เชื้อ</b><small>${db.length} ตาราง</small></label>
+        <label class="dp"><input type="radio" name="dsc" value="all"><b>ทุกตาราง</b><small>${all.length} ตาราง</small></label>
+        <label class="dp"><input type="radio" name="dsc" value="weak" ${Object.keys(weak).length ? '' : 'disabled'}><b>ข้อที่เคยพลาด</b><small>${Object.keys(weak).length} ข้อ</small></label>
+      </div><div class="drill-tables">${all.map((t, i) => `<label><input type="checkbox" value="${i}" ${DRUGBUG.test(t.head.join(' ')) ? 'checked' : ''}> <b>${t.box}</b> ${esc(t.head.join(' · '))}</label>`).join('')}</div>
+      <div class="choice"><label><input type="radio" name="dn" value="10" checked>10 ข้อ</label><label><input type="radio" name="dn" value="20">20 ข้อ</label><label><input type="radio" name="dn" value="40">40 ข้อ</label></div>
+      <button class="btn primary" id="dGo">Start drill</button></div>`;
+    view.innerHTML = h;
+    const boxes = [...view.querySelectorAll('.drill-tables input')];
+    view.querySelectorAll('[name=dsc]').forEach(r => r.onchange = () => { boxes.forEach((b, i) => b.checked = r.value === 'all' ? true : r.value === 'db' ? DRUGBUG.test(all[+b.value].head.join(' ')) : false); });
+    $('#dGo').onclick = () => {
+      const n = +view.querySelector('[name=dn]:checked').value, sc = view.querySelector('[name=dsc]:checked').value;
+      let qs;
+      if (sc === 'weak') { const keys = new Set(Object.keys(weak)); qs = makeDrill(all, 9999).filter(q => keys.has(`${q.T.ch}|${q.T.box}|${q.T.ti}|${q.ri}|${q.j}|${q.dir}`)).slice(0, n); }
+      else qs = makeDrill(boxes.filter(b => b.checked).map(b => all[+b.value]), n);
+      if (!qs.length) return toast('ไม่มีข้อในตารางที่เลือก');
+      runDrill(qs);
+    };
+  }
+  function runDrill(qs) {
+    let i = 0, score = 0; const miss = [];
+    const step = () => {
+      if (i >= qs.length) {
+        view.innerHTML = `<div class="hero"><h1>🧠 Drill result</h1><p>ถูก ${score} จาก ${qs.length} (${Math.round(score * 100 / qs.length)}%)</p></div>`
+          + (miss.length ? `<div class="panel"><h3>ที่พลาด ทวนอีกที</h3>${miss.map(q => `<div class="dr-miss"><b>${esc(q.q)}</b> → <span>${esc(q.ask)}:</span> ${esc(q.ans)} <a href="#/${q.T.ch}/${q.T.box}">กล่อง ${q.T.box} ↗</a></div>`).join('')}</div>` : '')
+          + `<div class="choice"><a class="btn primary" href="#/drill">New drill</a>${miss.length ? '<button class="btn" id="dAgain">Retry misses</button>' : ''}</div>`;
+        const ag = $('#dAgain'); if (ag) ag.onclick = () => runDrill(shuffle(miss.slice()));
+        return;
+      }
+      const q = qs[i], key = `${q.T.ch}|${q.T.box}|${q.T.ti}|${q.ri}|${q.j}|${q.dir}`;
+      view.innerHTML = `<div class="qhead"><span>Drill ${i + 1} / ${qs.length}</span><span>ถูก ${score}</span></div><div class="bar"><i style="width:${Math.round(i * 100 / qs.length)}%"></i></div>
+        <div class="mcq drill"><div class="qid">กล่อง ${q.T.box} · ${esc(q.T.title)}</div>
+        <div class="dq"><span class="dq-k">${esc(q.dir === 'f' ? q.T.head[0] : q.ask === q.T.head[0] ? q.T.head[q.j] : q.T.head[q.j])}</span><div class="dq-v">${esc(q.q)}</div><div class="dq-ask">${q.dir === 'f' ? 'มี ' : 'คือ '}<b>${esc(q.ask)}</b> อะไร?</div></div>
+        <div class="opts">${q.opts.map((o, k) => `<div class="opt" role="button" data-o="${k}"><span class="l">${'ABCD'[k]}</span><span class="ot">${esc(o)}</span></div>`).join('')}</div><div class="explain" hidden></div></div>
+        <div class="choice" style="justify-content:flex-end"><button class="btn" id="dNext">Skip</button></div>`;
+      const box = $('.mcq.drill', view);
+      box.querySelectorAll('.opt').forEach(o => o.onclick = () => {
+        if (box.dataset.done) return; box.dataset.done = 1;
+        const ok = q.opts[+o.dataset.o] === q.ans;
+        box.querySelectorAll('.opt').forEach(x => { x.classList.add('off'); if (q.opts[+x.dataset.o] === q.ans) x.classList.add('right'); else if (x === o) x.classList.add('wrong'); });
+        S.drillWrong = S.drillWrong || {};
+        if (ok) { score++; delete S.drillWrong[key]; } else { miss.push(q); S.drillWrong[key] = Date.now(); }
+        save();
+        const row = q.T.rows[q.ri];
+        const ex = box.querySelector('.explain'); ex.hidden = false;
+        ex.innerHTML = `<div class="res ${ok ? 'ok' : 'no'}">${ok ? '✓ Correct' : '✗ ' + esc(q.ans)}</div><div class="dr-row">${q.T.head.map((hh, k) => `<div><span>${esc(hh)}</span>${esc(row[k] || '')}</div>`).join('')}</div>`;
+        const nb = $('#dNext'); nb.textContent = i + 1 < qs.length ? 'Next →' : 'See result'; nb.classList.add('primary');
+      });
+      $('#dNext').onclick = () => { i++; step(); scrollTo(0, 0); };
+    };
+    step();
+  }
   async function vSearch(q) {
     await loadAll(); renderSidebar();
     q = (q || '').trim();
@@ -1079,6 +1189,7 @@
       if (parts[0] === 'notes') return vNotes();
       if (parts[0] === 'keywords') return vKeywords();
       if (parts[0] === 'review') return vReview();
+      if (parts[0] === 'drill') return vDrill(params);
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
       return vChapter(parts[0]);

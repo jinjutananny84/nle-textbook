@@ -493,3 +493,31 @@ mark.user-hl.c-i{--c:transparent;background:none}
 .hl-pop .img-tools button{width:auto;min-width:36px;height:34px;padding:0 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font-size:16px;box-shadow:none}
 .hl-pop .img-tools button.on{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
 .hl-pop .img-tools button.del{font-size:13px;color:var(--bad)}
+
+/* ===== ท่องจำตาราง ===== */
+.cover-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0 -6px}
+.cover-bar .cb-l{font-size:12px;color:var(--muted);margin-right:2px}
+.cover-bar button{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:3px 11px;font-size:12.5px;cursor:pointer}
+.cover-bar button:hover{border-color:var(--accent)}
+table.covering td.cv{position:relative;cursor:pointer;color:transparent!important}
+table.covering td.cv *{visibility:hidden}
+table.covering td.cv::after{content:"แตะดู";position:absolute;inset:4px;border-radius:6px;background:repeating-linear-gradient(135deg,var(--surface2) 0 8px,var(--accent-soft) 8px 16px);display:grid;place-items:center;font-size:11px;color:var(--muted)}
+table.covering td.cv.shown{color:inherit!important} table.covering td.cv.shown *{visibility:visible} table.covering td.cv.shown::after{display:none}
+/* ===== Drill ===== */
+.drill-pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:6px 0 10px}
+.dp{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;background:var(--surface)}
+.dp input{position:absolute;opacity:0} .dp small{color:var(--muted)}
+.dp:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+.dp:has(input:disabled){opacity:.45}
+.drill-tables{display:flex;flex-direction:column;gap:3px;max-height:220px;overflow:auto;font-size:13px;border:1px dashed var(--line);border-radius:10px;padding:8px 10px;margin-bottom:10px}
+.drill-tables b{color:var(--accent);display:inline-block;min-width:22px}
+.dq{background:var(--accent-soft);border-radius:12px;padding:12px 14px;margin:6px 0 12px}
+.dq-k{font-size:12px;color:var(--muted)}
+.dq-v{font-size:1.25em;font-weight:700;margin:2px 0 6px;line-height:1.35}
+.dq-ask{font-size:.95em}
+.dr-row{display:grid;gap:4px;margin-top:6px}
+.dr-row div{display:grid;grid-template-columns:minmax(90px,30%) 1fr;gap:8px;font-size:.92em}
+.dr-row span{color:var(--muted)}
+.dr-miss{padding:6px 0;border-top:1px dashed var(--line);font-size:.92em}
+.dr-miss span{color:var(--muted)} .dr-miss a{color:var(--accent);margin-left:4px}
+.mcq.drill .opt{padding-right:12px}
