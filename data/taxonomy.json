@@ -2,6 +2,31 @@
  "note": "กฎจัดหมวดหน้า Drug & Bug · แต่ละแถว [regex (ไม่สนตัวพิมพ์), หมวดใหญ่, หมวดย่อย] · ใช้กฎแรกที่ตรงกับชื่อการ์ด · ไม่ตรงข้อไหน → Others / Unclassified · เพิ่มบทใหม่ให้เติมกฎของยา/เชื้อที่ยังไม่เข้าหมวด",
  "drug": [
   [
+   "metformin|sulfonylurea|glinide|tzd|pioglitazone|glucosidase|acarbose|dpp-4|gliptin|sglt2|gliflozin|glp-1|glutide|insulin",
+   "Endocrine",
+   "Antidiabetic"
+  ],
+  [
+   "levothyroxine|methimazole|\\bptu\\b|propylthiouracil|lugol|\\bki\\b|radioactive iodine|i-131",
+   "Endocrine",
+   "Thyroid / antithyroid"
+  ],
+  [
+   "hydrocortisone|prednisolone|dexamethasone|fludrocortisone|ketoconazole|metyrapone|mifepristone|phenoxybenzamine",
+   "Endocrine",
+   "Adrenal / corticosteroid"
+  ],
+  [
+   "cabergoline|bromocriptine|octreotide|pegvisomant|desmopressin|tolvaptan",
+   "Endocrine",
+   "Pituitary / ADH"
+  ],
+  [
+   "bisphosphonate|teriparatide|denosumab|romosozumab|raloxifene|calcitonin|cinacalcet|calcitriol",
+   "Endocrine",
+   "Bone / calcium"
+  ],
+  [
    "isoniazid|rifamp|pyrazinamide|ethambutol|h · r · z · e|bedaquiline|streptomycin",
    "Antimicrobial",
    "Anti-TB"
@@ -70,11 +95,6 @@
    "norepinephrine|epinephrine|dopamine|dobutamine|phenylephrine|vasopressin|milrinone",
    "Cardiovascular",
    "Vasopressor / inotrope"
-  ],
-  [
-   "dapagliflozin|empagliflozin|sglt2",
-   "Cardiovascular",
-   "SGLT2 inhibitor"
   ],
   [
    "pge|alprostadil|indomethacin",
