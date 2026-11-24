@@ -447,6 +447,14 @@
     try { navigator.clipboard && navigator.clipboard.writeText(t).catch(() => {}); } catch (e) {}
     window.open('https://www.google.com/search?q=' + encodeURIComponent(t), '_blank', 'noopener');
   }
+  // ช่องปรับคำก่อนค้นหา (เหมือนช่องโน้ต)
+  function openSearch() {
+    pop.dataset.mode = 'note'; pop.classList.add('writing');
+    pop.innerHTML = `<div class="note-kind">🔍 ค้นหาใน Google · แก้หรือเพิ่มคำก่อนค้นได้</div><textarea class="note-in" rows="2">${esc(kwNorm(popText))}</textarea><div class="note-act"><button class="btn small" data-a="x">ยกเลิก</button><button class="btn small primary" data-a="ok">ค้นหา</button></div>`;
+    const ta = pop.querySelector('textarea'); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
+    ta.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); searchOut(ta.value); hidePop(); } });
+    pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { if (b.dataset.a === 'ok') searchOut(ta.value); hidePop(); });
+  }
   function showPalette(rect, onColor, onErase, onNote, curNote) {
     pop.classList.remove('writing');
     const noNote = pop.dataset.inNote === '1';
@@ -459,7 +467,7 @@
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
     pop.querySelectorAll('button').forEach(b => b.onclick = () => {
       if (b.dataset.c === 'n' || b.dataset.c === 'k') return openNote(onNote, curNote, b.dataset.c === 'k');
-      if (b.dataset.c === 's') { searchOut(popText); return hidePop(); }
+      if (b.dataset.c === 's') return openSearch();
       if (b.dataset.c === 'w') { if (kwHas(popZone, popText)) { kwToggle(popZone, popText); return hidePop(); } return openKw(); }
       if (b.dataset.c === 'x') onErase(); else onColor(b.dataset.c); hidePop();
     });
