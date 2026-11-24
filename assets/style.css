@@ -153,14 +153,14 @@ svg text{font-family:inherit}
 .mcq .qid .src{font-weight:500;color:var(--muted)}
 .mcq .stem{margin:6px 0 10px;font-weight:500}
 .opts{display:grid;gap:6px}
-.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;line-height:1.5;font-size:.95em}
-.opt:hover:not([disabled]){border-color:var(--exam);background:var(--exam-soft)}
+.opt{cursor:pointer;-webkit-user-select:text;user-select:text;display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;line-height:1.5;font-size:.95em}
+.opt:hover:not(.off){border-color:var(--exam);background:var(--exam-soft)}
 .opt .l{flex:0 0 22px;font-weight:700;color:var(--muted)}
 .opt.right{border-color:var(--ok);background:var(--ok-soft)}
 .opt.right .l{color:var(--ok)}
 .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
 .opt.wrong .l{color:var(--bad)}
-.opt[disabled]{cursor:default}
+.opt.off{cursor:text}
 .explain{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--surface2);font-size:.95em}
 .explain .res{font-weight:700;margin-bottom:2px}
 .explain .res.ok{color:var(--ok)} .explain .res.no{color:var(--bad)}

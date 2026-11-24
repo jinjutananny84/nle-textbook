@@ -1,4 +1,4 @@
-# ตำราคู่ชีท NLE Step 1
+# nannie compre website (NLE Step 1)
 
 เว็บอ่านคู่กับชีท A3 สรุป NLE Step 1 · เปิดที่ https://jinjutananny84.github.io/nle-textbook/
 
