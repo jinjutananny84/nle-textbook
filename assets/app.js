@@ -109,13 +109,13 @@
       if (L.startsWith('#### ')) { flushP(); out += `<h2>${inline(L.slice(5))}</h2>`; i++; continue; }
       if (L.startsWith('?? ')) {
         flushP(); const [q, a] = L.slice(3).split('::');
-        out += `<div class="card think"><div class="lbl">🤔 หยุดคิดก่อน</div><p class="think-q">${inline(q.trim())}</p><button class="reveal-btn" data-reveal>Show answer</button><div class="think-a" hidden>${inline((a || '').trim())}</div></div>`;
+        out += `<div class="card think"><div class="lbl">${ic('think')} หยุดคิดก่อน</div><p class="think-q">${inline(q.trim())}</p><button class="reveal-btn" data-reveal>Show answer</button><div class="think-a" hidden>${inline((a || '').trim())}</div></div>`;
         i++; continue;
       }
       if (L.startsWith('!! ') || L.startsWith('>> ')) {
         flushP(); const kind = L.startsWith('!!') ? 'trap' : 'note'; const tag = L.slice(0, 2); const items = [];
         while (i < lines.length && lines[i].startsWith(tag + ' ')) { items.push(lines[i].slice(3)); i++; }
-        const lbl = kind === 'trap' ? '⚠️ กับดักข้อสอบ' : '📌 อาจารย์เน้น';
+        const lbl = kind === 'trap' ? ic('warn') + ' กับดักข้อสอบ' : ic('pin') + ' อาจารย์เน้น';
         out += `<div class="card ${kind}"><div class="lbl">${lbl}</div>` + (items.length > 1 ? `<ul>${items.map(x => `<li>${inline(x)}</li>`).join('')}</ul>` : `<p>${inline(items[0])}</p>`) + '</div>';
         continue;
       }
@@ -331,6 +331,47 @@
     }
   }
 
+
+  /* ---------- ไอคอนเส้นสีเดียวกับตัวอักษร (แทน emoji ทั้งเว็บ) ---------- */
+  const ICON = {
+    home: '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/>',
+    quiz: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v3H9z"/><path d="m9 13.5 2 2 4-4"/>',
+    wrong: '<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="m10 8 4 4m0-4-4 4"/>',
+    cards: '<rect x="3" y="7" width="13" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>',
+    stats: '<path d="M3 21h18"/><path d="M6 17v-6M11 17V5M16 17v-9M20 17v-3"/>',
+    cal: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="m9 15.5 2 2 4-4"/>',
+    note: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/>',
+    key: '<circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.3-9.3M16 7l3 3M13.5 9.5l2 2"/>',
+    map: '<path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/>',
+    hl: '<path d="m14.5 4.5 5 5-8.5 8.5H6v-5z"/><path d="M3 21h9"/>',
+    search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+    book: '<path d="M2 5h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2z"/><path d="M22 5h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/>',
+    flame: '<path d="M12 3c.8 3 5 5.2 5 10a5 5 0 0 1-10 0c0-2.2 1.1-3.7 2.2-4.6.1 1.8.9 3 2 3.1-.2-2.9-.9-5.3.8-8.5z"/>',
+    done: '<circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16 9.5"/>',
+    think: '<circle cx="12" cy="12" r="9"/><path d="M9.6 9.2a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.7"/><path d="M12 17h.01"/>',
+    warn: '<path d="M10.3 4.2 2.6 18a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0z"/><path d="M12 10v4M12 17.5h.01"/>',
+    pin: '<path d="M9 3h6l-1 6 4 3v2H6v-2l4-3z"/><path d="M12 14v7"/>',
+    sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+    moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
+    back: '<path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>'
+  };
+  const EMO = { '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
+  const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
+  const ic = n => `<svg class="ic ic-${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
+  // แปลง emoji ในข้อความของหน้าเว็บเป็นไอคอน (ไม่แตะเนื้อหาที่ไฮไลต์ได้ และช่องพิมพ์)
+  function iconize(root) {
+    if (!root || (root.nodeType !== 3 && !root.querySelectorAll)) return;
+    const nodes = root.nodeType === 3 ? [root] : textNodes(root);
+    for (const n of nodes) {
+      if (!EMO_RE.test(n.nodeValue)) continue; EMO_RE.lastIndex = 0;
+      const par = n.parentNode; if (!par || par.closest('[data-hlk],textarea,input,script,style')) continue;
+      const span = document.createElement('span');
+      span.innerHTML = esc(n.nodeValue).replace(EMO_RE, (m, e) => ic(EMO[e]));
+      par.replaceChild(span, n); span.replaceWith(...span.childNodes);
+    }
+  }
+  new MutationObserver(ms => { for (const m of ms) for (const n of m.addedNodes) if (n.nodeType === 1 || n.nodeType === 3) iconize(n); })
+    .observe(document.body, { childList: true, subtree: true });
   /* ---------- ไฮไลต์ของผู้ใช้ ----------
      ทุกพื้นที่ที่ไฮไลต์ได้มี data-hlk = คีย์ใน S.hl
      เนื้อหา: "b6/3" · ข้อสอบ: "q:b6|79/117|stem" / "|why" / "|A" (ตัวเลือก) */
@@ -988,9 +1029,10 @@
       clearTimeout(lrT); lrT = setTimeout(() => { S.lastRead = { h: location.hash, y: Math.round(scrollY) }; save(); }, 500);
     }
   }, { passive: true });
+  iconize(document.querySelector('.topbar'));
   window.addEventListener('hashchange', () => {
     if (!goingBack && curHash !== location.hash) { hist.push({ h: curHash || '#/', y: Math.round(curY) }); saveHist(); }
-    goingBack = false; curHash = location.hash;
+    goingBack = false; curHash = location.hash; hidePop();
     const y = backY; backY = null;
     route().then(() => { if (y != null) setTimeout(() => scrollTo(0, y), 30); });
   });

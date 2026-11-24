@@ -461,3 +461,17 @@ body.focus .content{line-height:1.85}
 /* ไฮไลต์ซ้อนกันไม่ทำให้ตัวอักษรห่างออก */
 mark.user-hl,mark.user-hl[class*="c-"],.content b mark.user-hl,mark.user-hl mark.user-hl,mark.kw-hi{padding:0!important;margin:0;letter-spacing:inherit}
 mark.user-hl.c-ty,mark.user-hl.c-tr,mark.user-hl.c-tp,mark.kw-hi{font-weight:inherit}
+
+/* ===== ไอคอนเส้น ===== */
+.ic{width:1.1em;height:1.1em;vertical-align:-.2em;flex:0 0 auto;display:inline-block}
+.tool .ic{width:19px;height:19px}
+.side-links .ic{width:17px;height:17px;margin-right:4px;opacity:.85}
+.hero h1 .ic{width:.95em;height:.95em;vertical-align:-.12em;margin-right:4px;color:var(--accent)}
+.card .lbl .ic{width:15px;height:15px;margin-right:2px}
+.hl-pop .sw .ic{width:17px;height:17px}
+.icon-btn,.tool{color:var(--fg)}
+.inote.sticky::before{content:"";display:inline-block;width:.95em;height:.95em;margin-right:4px;vertical-align:-.12em;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 3v6h6M8 13h8M8 17h5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z'/%3E%3Cpath d='M14 3v6h6M8 13h8M8 17h5'/%3E%3C/svg%3E") center/contain no-repeat}
+.mn em .ic{width:13px;height:13px;color:#e8590c}
+.toc .ic{width:13px;height:13px}
+.hl-pop .sw.nb{color:var(--fg)}
+.hl-pop .sw.nb[data-c="n"]{color:var(--inote)}
