@@ -353,9 +353,10 @@
     pin: '<path d="M9 3h6l-1 6 4 3v2H6v-2l4-3z"/><path d="M12 14v7"/>',
     sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
     moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
-    back: '<path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>'
+    back: '<path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>',
+    img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>'
   };
-  const EMO = { '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
+  const EMO = { '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => `<svg class="ic ic-${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
   // แปลง emoji ในข้อความของหน้าเว็บเป็นไอคอน (ไม่แตะเนื้อหาที่ไฮไลต์ได้ และช่องพิมพ์)
@@ -400,12 +401,44 @@
     (S.hl[z.dataset.hlk] || []).forEach((h, i) => { const s = hlPos(z, h); if (s >= 0) wrapRange(z, s, s + h.t.length, i, h.c); });
     drawNotes(z);
   }
+  /* รูปที่แทรกเอง: ไฟล์เก็บใน IndexedDB (ไม่เต็ม localStorage) ย่อเหลือกว้างไม่เกิน 1400px */
+  const IDB = (() => { let dbp; const db = () => dbp || (dbp = new Promise((ok, no) => { const r = indexedDB.open('nle-img', 1); r.onupgradeneeded = () => r.result.createObjectStore('img'); r.onsuccess = () => ok(r.result); r.onerror = () => no(r.error); }));
+    const tx = (m, f) => db().then(d => new Promise((ok, no) => { const t = d.transaction('img', m); const q = f(t.objectStore('img')); t.oncomplete = () => ok(q && q.result); t.onerror = () => no(t.error); }));
+    return { put: (k, v) => tx('readwrite', s => s.put(v, k)), get: k => tx('readonly', s => s.get(k)), del: k => tx('readwrite', s => s.delete(k)) }; })();
+  const imgURL = {};
+  function shrink(file) {
+    return new Promise((ok, no) => {
+      const u = URL.createObjectURL(file), im = new Image();
+      im.onload = () => { const sc = Math.min(1, 1400 / im.naturalWidth); const c = document.createElement('canvas'); c.width = Math.round(im.naturalWidth * sc); c.height = Math.round(im.naturalHeight * sc);
+        const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height); g.drawImage(im, 0, 0, c.width, c.height); URL.revokeObjectURL(u);
+        c.toBlob(b => b ? ok(b) : no(new Error('encode')), file.type === 'image/png' ? 'image/png' : 'image/jpeg', .85); };
+      im.onerror = () => no(new Error('ไฟล์รูปเปิดไม่ได้')); im.src = u;
+    });
+  }
+  const fileIn = document.createElement('input'); fileIn.type = 'file'; fileIn.accept = 'image/*'; fileIn.hidden = true; document.body.appendChild(fileIn);
+  let onFile = null; fileIn.onchange = () => { const f = fileIn.files[0]; fileIn.value = ''; if (f && onFile) onFile(f); };
+  function pickImage(cb) { onFile = cb; fileIn.click(); }
+  function drawImg(fig, h) {
+    const set = u => { fig.querySelector('img').src = u; };
+    if (imgURL[h.img]) set(imgURL[h.img]);
+    else IDB.get(h.img).then(b => { if (b) { imgURL[h.img] = URL.createObjectURL(b); set(imgURL[h.img]); } else fig.classList.add('missing'); }).catch(() => fig.classList.add('missing'));
+  }
   // โน้ตสั้นใต้เนื้อหา: วางใต้ย่อหน้า/ข้อ/ช่องตารางที่มีไฮไลต์นั้น
   function drawNotes(z) {
     const arr = S.hl[z.dataset.hlk] || [];
     arr.forEach((h, i) => {
-      if (!h.n) return;
+      if (!h.n && !h.img) return;
       const m = z.querySelector(`mark.user-hl[data-hl="${i}"]`); if (!m) return;
+      if (h.img) {
+        const fig = document.createElement('figure'); fig.className = `uimg al-${h.al || 'c'}`; fig.style.setProperty('--w', (h.w || 60) + '%');
+        fig.dataset.hl = i; fig.dataset.k = z.dataset.hlk; fig.innerHTML = '<img alt="รูปที่แทรก">';
+        // รูปวางใต้ย่อหน้านั้น (ในข้อ/ช่องตาราง วางท้ายช่องนั้น)
+        const blk = m.closest('p,li,td,th,h2,h3,h4');
+        if (blk && z.contains(blk) && blk !== z && /^(LI|TD|TH)$/.test(blk.tagName)) blk.appendChild(fig);
+        else if (blk && z.contains(blk) && blk !== z) { let a = blk; while (a.nextElementSibling && a.nextElementSibling.matches('.uimg,.inote')) a = a.nextElementSibling; a.after(fig); }
+        else { let a = m; while (a.parentNode !== z && /^(B|STRONG|I|EM|A|SPAN|MARK|CODE|SUB|SUP)$/.test(a.parentNode.tagName)) a = a.parentNode; a.after(fig); }
+        drawImg(fig, h); return;
+      }
       if (!h.id) { h.id = Date.now().toString(36) + i; save(); }
       const d = document.createElement('span'); d.className = 'inote' + (h.ns ? ' sticky' : ''); d.dataset.hl = i;
       d.dataset.hlk = z.dataset.hlk + '~' + h.id; d.textContent = h.n;
@@ -419,7 +452,7 @@
   // วาดไฮไลต์ใหม่เฉพาะพื้นที่นั้น ไม่ต้องโหลดหน้าใหม่ (ข้อสอบที่กำลังทำอยู่จึงไม่หาย)
   function refreshZone(z) {
     if (!z) return;
-    z.querySelectorAll('.inote').forEach(n => n.remove());
+    z.querySelectorAll('.inote,.uimg').forEach(n => n.remove());
     z.querySelectorAll('mark.user-hl').forEach(m => m.replaceWith(...m.childNodes));
     z.normalize(); applyHL(z); syncUndo(); updHlCount();
   }
@@ -432,7 +465,28 @@
   function setHL(k, arr) { if (arr.length) S.hl[k] = arr; else delete S.hl[k]; save(); }
   // แถบสี: 4 สี + ยางลบ · วางตามตำแหน่งในหน้า จึงเลื่อนตามข้อความ ไม่หายตอนเลื่อน
   // คัดลอกข้อความ แล้วเปิด Google ค้นหาในแท็บใหม่
-  let popText = '', popZone = '', popRange = null;
+  let popText = '', popZone = '', popRange = null, popImg = null;
+  let moveImg = null;
+  // ย้ายรูปไปวางต่อจากข้อความใหม่ (ข้ามกล่อง/ข้อสอบได้)
+  function placeMoved(ctx) {
+    const { k, idx } = moveImg; moveImg = null; const old = (S.hl[k] || [])[idx]; if (!old || !old.img) return;
+    const a1 = S.hl[k].slice(); if (old.c === 'i') a1.splice(idx, 1); else { a1[idx] = Object.assign({}, old); delete a1[idx].img; }
+    snap(k); setHL(k, a1);
+    const a2 = (S.hl[ctx.k] || []).slice(); a2.push({ s: ctx.s, t: ctx.t, c: 'i', img: old.img, w: old.w, al: old.al });
+    snap(ctx.k); setHL(ctx.k, a2); getSelection().removeAllRanges();
+    refreshZone(zoneEl(k)); if (ctx.k !== k) refreshZone(zoneEl(ctx.k)); toast('ย้ายรูปแล้ว');
+  }
+  async function insertImage(ctx, f) {
+    if (!ctx) return;
+    try {
+      toast('กำลังใส่รูป…'); const b = await shrink(f); const id = 'img' + Date.now().toString(36);
+      await IDB.put(id, b);
+      const z = zoneEl(ctx.k); const arr = (S.hl[ctx.k] || []).slice();
+      if (ctx.idx != null) { arr[ctx.idx] = Object.assign({}, arr[ctx.idx], { img: id, w: 60, al: 'c' }); }
+      else arr.push({ s: ctx.s, t: ctx.t, c: 'i', img: id, w: 60, al: 'c' });
+      snap(ctx.k); setHL(ctx.k, arr); refreshZone(z); toast('ใส่รูปแล้ว · แตะรูปเพื่อปรับขนาด/ตำแหน่ง');
+    } catch (e) { toast('ใส่รูปไม่สำเร็จ: ' + e.message); }
+  }
   // Keyword: เก็บคำที่เลือกไว้ทวนในหน้า #/keywords
   const kwNorm = t => (t || '').replace(/\s+/g, ' ').trim();
   function kwBox(k) {
@@ -501,13 +555,14 @@
     const noNote = pop.dataset.inNote === '1';
     pop.innerHTML = `<div class="row">${['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button></div>`
       + `<div class="row">${['ty', 'tr', 'tp'].map(c => `<button class="sw tc c-${c}" data-c="${c}" aria-label="เปลี่ยนสีตัวอักษร" title="เปลี่ยนสีตัวอักษร">A</button>`).join('')}`
-      + (noNote ? '' : `<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button><button class="sw nb" data-c="k" aria-label="sticky note" title="sticky note ต่อจากข้อความนี้">🗒️</button>`)
+      + (noNote ? '' : `<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button><button class="sw nb" data-c="i" aria-label="แทรกรูป" title="แทรกรูปต่อจากข้อความนี้">🖼</button><button class="sw nb" data-c="k" aria-label="sticky note" title="sticky note ต่อจากข้อความนี้">🗒️</button>`)
       + (noNote ? '' : `<button class="sw nb kwb${kwHas(popZone, popText) ? ' on' : ''}" data-c="w" aria-label="เก็บเป็น keyword" title="เก็บเข้าหน้า Keyword">🔑</button>`) + `<button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button></div>`;
     pop.hidden = false;
     const w = 300, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
     pop.querySelectorAll('button').forEach(b => b.onclick = () => {
       if (b.dataset.c === 'n' || b.dataset.c === 'k') return openNote(onNote, curNote, b.dataset.c === 'k');
+      if (b.dataset.c === 'i') { const ctx = popImg; hidePop(); if (moveImg && ctx && ctx.idx == null) return placeMoved(ctx); return pickImage(f => insertImage(ctx, f)); }
       if (b.dataset.c === 's') return openSearch();
       if (b.dataset.c === 'w') { if (kwHas(popZone, popText)) { kwToggle(popZone, popText); return hidePop(); } return openKw(); }
       if (b.dataset.c === 'x') onErase(); else onColor(b.dataset.c); hidePop();
@@ -542,7 +597,7 @@
       const t = r.toString(); if (t.trim().length < 2) return;
       const k = z.dataset.hlk;
       pop.dataset.mode = 'add'; pop.dataset.inNote = z.classList.contains('inote') || k.startsWith('kw:') ? '1' : '';
-      popText = t; popZone = k; popRange = r.cloneRange();
+      popText = t; popZone = k; popRange = r.cloneRange(); popImg = { k, s: selOffsets(z, r).s, t };
       showPalette(r.getBoundingClientRect(), c => {
         const { s } = selOffsets(z, r);
         snap(k); setHL(k, (S.hl[k] || []).concat([{ s, t, c }]));
@@ -566,6 +621,20 @@
       }; })());
     }, 250);
   });
+  // แตะรูป: ปรับขนาด / ชิดซ้าย-กลาง-ขวา / ลบ
+  view.addEventListener('click', e => {
+    const fig = e.target.closest('figure.uimg'); if (!fig) return;
+    e.stopPropagation(); const k = fig.dataset.k, idx = +fig.dataset.hl, h = (S.hl[k] || [])[idx]; if (!h) return;
+    pop.dataset.mode = 'edit'; pop.classList.remove('writing'); pop.hidden = false;
+    const W = [30, 45, 60, 80, 100];
+    pop.innerHTML = `<div class="row img-tools"><span class="lbl">ขนาด</span><button data-d="-">−</button><b>${h.w || 60}%</b><button data-d="+">+</button></div><div class="row img-tools"><button data-a="l" class="${h.al === 'l' ? 'on' : ''}" title="ชิดซ้าย ข้อความไหลรอบ">⇤</button><button data-a="c" class="${!h.al || h.al === 'c' ? 'on' : ''}" title="กึ่งกลาง">↔</button><button data-a="r" class="${h.al === 'r' ? 'on' : ''}" title="ชิดขวา ข้อความไหลรอบ">⇥</button><button data-m="1" title="ย้ายรูปไปต่อจากข้อความอื่น">ย้าย</button><button data-x="1" class="del" title="ลบรูป">ลบรูป</button></div>`;
+    const r = fig.getBoundingClientRect(); pop.style.top = (r.top + scrollY + Math.min(r.height, 120)) + 'px'; pop.style.left = Math.max(8, r.left + scrollX) + 'px';
+    const upd = ch => { const arr = JSON.parse(JSON.stringify(S.hl[k])); Object.assign(arr[idx], ch); snap(k); setHL(k, arr); refreshZone(zoneEl(k)); hidePop(); };
+    pop.querySelectorAll('[data-d]').forEach(b => b.onclick = () => { const cur = h.w || 60; let i = W.findIndex(x => x >= cur); if (i < 0) i = W.length - 1; i = b.dataset.d === '+' ? Math.min(W.length - 1, W[i] > cur ? i : i + 1) : Math.max(0, W[i] < cur ? i : i - 1); upd({ w: W[i] }); });
+    pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => upd({ al: b.dataset.a }));
+    pop.querySelector('[data-m]').onclick = () => { moveImg = { k, idx }; hidePop(); toast('เลือกข้อความที่จะวางรูป แล้วกดปุ่มรูปในแถบไฮไลต์'); };
+    pop.querySelector('[data-x]').onclick = () => { const arr = S.hl[k].slice(); const x = arr[idx]; if (x.c === 'i') arr.splice(idx, 1); else { arr[idx] = Object.assign({}, x); delete arr[idx].img; } snap(k); setHL(k, arr); refreshZone(zoneEl(k)); hidePop(); };
+  }, true);
   // หน้า Keyword: แตะคำที่เน้นเหลือง → ✕ เอาการเน้นออก หรือเลือกสีอื่นแทน
   view.addEventListener('click', e => {
     const m = e.target.closest('mark.kw-hi'); const z = m && m.closest('[data-hlk^="kw:"]');
@@ -583,7 +652,7 @@
     e.stopPropagation();
     const idx = +m.dataset.hl, k = z.dataset.hlk; pop.dataset.mode = 'edit'; pop.dataset.inNote = z.classList.contains('inote') || k.startsWith('kw:') ? '1' : '';
     popText = (S.hl[k][idx] || {}).t || m.textContent; popZone = k;
-    popRange = document.createRange(); popRange.selectNodeContents(m);
+    popRange = document.createRange(); popRange.selectNodeContents(m); popImg = { k, idx };
     showPalette(m.getBoundingClientRect(), c => {
       snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k])); arr[idx].c = c; setHL(k, arr); refreshZone(z);
     }, () => {

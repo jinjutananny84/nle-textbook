@@ -475,3 +475,21 @@ mark.user-hl.c-ty,mark.user-hl.c-tr,mark.user-hl.c-tp,mark.kw-hi{font-weight:inh
 .toc .ic{width:13px;height:13px}
 .hl-pop .sw.nb{color:var(--fg)}
 .hl-pop .sw.nb[data-c="n"]{color:var(--inote)}
+
+/* ===== รูปที่แทรกเอง ===== */
+figure.uimg{margin:10px auto;width:var(--w,60%);max-width:100%;cursor:pointer;position:relative}
+figure.uimg img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:var(--surface2);min-height:40px}
+figure.uimg.al-l{float:left;margin:6px 16px 8px 0;max-width:60%}
+figure.uimg.al-r{float:right;margin:6px 0 8px 16px;max-width:60%}
+figure.uimg.al-c{clear:both}
+figure.uimg.missing img{display:none}
+figure.uimg.missing::after{content:"(รูปนี้อยู่ในอีกเครื่อง/เบราว์เซอร์)";font-size:12px;color:var(--muted)}
+.content li figure.uimg,.content td figure.uimg{margin:6px 0}
+.content::after,.content li::after{content:"";display:block;clear:both}
+mark.user-hl.c-i{--c:transparent;background:none}
+.hl-pop .img-tools{align-items:center;gap:6px}
+.hl-pop .img-tools .lbl{font-size:13px;color:var(--muted);margin-right:2px}
+.hl-pop .img-tools b{min-width:44px;text-align:center;font-size:14px}
+.hl-pop .img-tools button{width:auto;min-width:36px;height:34px;padding:0 10px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font-size:16px;box-shadow:none}
+.hl-pop .img-tools button.on{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.hl-pop .img-tools button.del{font-size:13px;color:var(--bad)}
