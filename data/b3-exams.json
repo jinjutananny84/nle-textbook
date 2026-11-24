@@ -1,0 +1,3699 @@
+{
+ "exams": {
+  "74.1/11": {
+   "box": 19,
+   "stem": "หลังผ่าตัด temporal lobe ทั้งสองข้างรักษาลมชัก ผู้ป่วยกินมาก เชื่อง พฤติกรรมทางเพศเพิ่ม และ psychic blindness ภาวะนี้คืออะไร",
+   "options": {
+    "A": "Korsakoff syndrome",
+    "B": "Klüver–Bucy syndrome",
+    "C": "Gerstmann syndrome",
+    "D": "Anton syndrome",
+    "E": "Frontal lobe syndrome"
+   },
+   "answer": "B",
+   "why": "Klüver–Bucy เกิดจาก amygdala ทั้งสองข้างเสีย: hyperorality, hypersexuality, placidity, visual agnosia · Korsakoff = mammillary body จากขาด B1 · Anton = cortical blindness แต่ปฏิเสธว่าตาบอด",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/13": {
+   "box": 28,
+   "stem": "ทารก microcephaly, macular scar, subcortical calcification แม่มีไข้ ผื่น ตาแดงช่วงสัปดาห์ที่ 12 ควรส่งตรวจอะไร",
+   "options": {
+    "A": "CMV PCR ในปัสสาวะ",
+    "B": "Toxoplasma IgG",
+    "C": "Zika IgM",
+    "D": "Rubella IgG",
+    "E": "VDRL"
+   },
+   "answer": "C",
+   "why": "ประวัติแม่ไข้ ผื่น ตาแดง (ยุง Aedes) ร่วม microcephaly รุนแรงและ subcortical calcification เข้าได้กับ congenital Zika · CMV เด่น periventricular · toxoplasma เด่น diffuse calcification + hydrocephalus",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/18": {
+   "box": 17,
+   "stem": "หูอื้อและได้ยินลดลงหลังได้ furosemide ขนาดสูง ความผิดปกติอยู่ที่ใด",
+   "options": {
+    "A": "External ear",
+    "B": "Middle ear",
+    "C": "Inner ear (cochlea)",
+    "D": "Auditory cortex",
+    "E": "CN VIII ที่ cerebellopontine angle"
+   },
+   "answer": "C",
+   "why": "Loop diuretic ยับยั้ง Na-K-2Cl ที่ stria vascularis ของ cochlea ทำให้ endolymph ผิดปกติ → SNHL ชนิด ototoxic · aminoglycoside ทำลาย hair cell ใน inner ear เช่นกัน",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/24": {
+   "box": 28,
+   "stem": "ทารก microcephaly ร่วม subcortical calcification เชื้อใดน่าจะเป็นสาเหตุ",
+   "options": {
+    "A": "Rubella virus",
+    "B": "Zika virus",
+    "C": "Toxoplasma gondii",
+    "D": "Treponema pallidum",
+    "E": "Parvovirus B19"
+   },
+   "answer": "B",
+   "why": "Zika (flavivirus) ทำลาย neural progenitor cell จึง microcephaly รุนแรง และ calcification ที่ subcortical · rubella = cataract PDA SNHL · parvovirus = hydrops",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/32": {
+   "box": 2,
+   "stem": "รอยโรคที่ spiral groove ของกระดูก humerus จะพบอาการใด",
+   "options": {
+    "A": "Claw hand",
+    "B": "Wrist drop",
+    "C": "Ape hand",
+    "D": "Winged scapula",
+    "E": "อ่อนแรงงอศอก"
+   },
+   "answer": "B",
+   "why": "Radial nerve วิ่งใน spiral groove บาดเจ็บแล้วเหยียดข้อมือและนิ้วไม่ได้ = wrist drop · claw hand = ulnar · ape hand = median · winged scapula = long thoracic · งอศอก = musculocutaneous",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/38": {
+   "box": 39,
+   "stem": "ชายรู้สึกอยากเป็นหญิงอย่างต่อเนื่องตั้งแต่เด็ก และทุกข์ใจกับเพศกำเนิด ภาวะนี้คืออะไร",
+   "options": {
+    "A": "Transvestic disorder",
+    "B": "Gender dysphoria",
+    "C": "Homosexuality",
+    "D": "Delusional disorder",
+    "E": "Body dysmorphic disorder"
+   },
+   "answer": "B",
+   "why": "Gender dysphoria = ความทุกข์ต่อเนื่องจากเพศกำเนิดไม่ตรงกับ gender identity · sexual orientation เป็นเรื่องเพศที่ดึงดูด ไม่ใช่ความผิดปกติ · transvestic = ตื่นเต้นทางเพศจากการแต่งกายเพศตรงข้าม",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/43": {
+   "box": 33,
+   "stem": "ผู้ป่วยกระวนกระวาย ม่านตาขยาย ใจสั่น ความดันสูง เหงื่อออก สารที่น่าจะใช้คือข้อใด",
+   "options": {
+    "A": "Heroin",
+    "B": "Cocaine",
+    "C": "Diazepam",
+    "D": "Alcohol",
+    "E": "Atropine"
+   },
+   "answer": "B",
+   "why": "Sympathomimetic toxidrome (ยับยั้ง reuptake ของ NE/DA/5-HT) → กระวนกระวาย ม่านตาขยาย HR/BP สูง เหงื่อออก · anticholinergic จะผิวแห้ง · heroin ม่านตาเล็ก ซึม",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/50": {
+   "box": 36,
+   "stem": "Adrenal medulla เทียบเท่ากับส่วนใดของ autonomic nervous system",
+   "options": {
+    "A": "Preganglionic sympathetic neuron",
+    "B": "Postganglionic sympathetic neuron",
+    "C": "Preganglionic parasympathetic neuron",
+    "D": "Postganglionic parasympathetic neuron",
+    "E": "Somatic motor neuron"
+   },
+   "answer": "B",
+   "why": "Chromaffin cell มาจาก neural crest รับสัญญาณจาก preganglionic (splanchnic) โดยตรงผ่าน Nn แล้วหลั่ง Epi/NE เข้ากระแสเลือด จึงเทียบกับ postganglionic sympathetic neuron",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/51": {
+   "box": 37,
+   "stem": "ให้ methacholine ในผู้ป่วย asthma จะเกิดผลใด",
+   "options": {
+    "A": "หลอดลมขยาย",
+    "B": "Airway obstruction จากหลอดลมตีบ",
+    "C": "Tachycardia เป็นหลัก",
+    "D": "ม่านตาขยาย",
+    "E": "ปัสสาวะคั่ง"
+   },
+   "answer": "B",
+   "why": "Methacholine เป็น muscarinic agonist กระตุ้น M3 ที่ smooth muscle หลอดลม → bronchoconstriction · ผู้ป่วย asthma ไวต่อยามาก จึงใช้เป็น bronchial challenge test",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.1/82": {
+   "box": 1,
+   "stem": "ความผิดปกติของ microtubule ใน neuron จะกระทบหน้าที่ใดมากที่สุด",
+   "options": {
+    "A": "Saltatory conduction",
+    "B": "Axonal transport",
+    "C": "การสร้าง myelin",
+    "D": "Resting membrane potential",
+    "E": "การเปิด voltage-gated Na⁺ channel"
+   },
+   "answer": "B",
+   "why": "Microtubule เป็นรางให้ kinesin (anterograde) และ dynein (retrograde) ขนส่งสารตามแอกซอน · saltatory conduction ขึ้นกับ myelin และ node of Ranvier · RMP ขึ้นกับ Na⁺/K⁺-ATPase และ K⁺ leak",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/3": {
+   "box": 37,
+   "stem": "ยารักษา glaucoma ที่ออกฤทธิ์ลดการสร้าง aqueous humor คือข้อใด",
+   "options": {
+    "A": "Latanoprost",
+    "B": "Pilocarpine",
+    "C": "Timolol",
+    "D": "α2 antagonist",
+    "E": "Atropine"
+   },
+   "answer": "C",
+   "why": "Timolol (β-blocker) ลดการสร้าง aqueous ที่ ciliary epithelium · latanoprost เพิ่ม uveoscleral outflow · pilocarpine เพิ่ม trabecular outflow · ต้องเป็น α2 agonist ไม่ใช่ antagonist · atropine ห้ามใน angle-closure",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/6": {
+   "box": 35,
+   "stem": "ผู้ป่วย migraine ที่เคยเป็น myocardial infarction ยาใดห้ามใช้",
+   "options": {
+    "A": "Paracetamol",
+    "B": "Ergotamine",
+    "C": "Ibuprofen",
+    "D": "Metoclopramide",
+    "E": "Gepant"
+   },
+   "answer": "B",
+   "why": "Ergot และ triptan หดหลอดเลือดหัวใจ จึงห้ามใน CAD · ergot หดแรงกว่าและเป็นคำตอบคลาสสิก · gepant ไม่หดหลอดเลือด",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/7": {
+   "box": 15,
+   "stem": "ผู้ป่วยมี nystagmus, miosis, ptosis และ vocal cord paralysis รอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "Medial medulla",
+    "B": "Lateral medulla",
+    "C": "Medial pons",
+    "D": "Midbrain tegmentum",
+    "E": "Cerebellar hemisphere"
+   },
+   "answer": "B",
+   "why": "Lateral medullary (Wallenberg, PICA/vertebral): nucleus ambiguus → เสียงแหบ กลืนลำบาก · descending sympathetic → Horner (ptosis, miosis) · vestibular nucleus → nystagmus · medial medulla = hemiparesis + tongue deviation",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/10": {
+   "box": 13,
+   "stem": "Parinaud syndrome (มองขึ้นไม่ได้ light-near dissociation) รอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "Medial longitudinal fasciculus",
+    "B": "Rostral midbrain tectum (superior colliculus/pretectal)",
+    "C": "Pons (PPRF)",
+    "D": "Lateral medulla",
+    "E": "Cerebellar vermis"
+   },
+   "answer": "B",
+   "why": "มักเกิดจาก pinealoma กด dorsal midbrain บริเวณ superior colliculus และ pretectal area · MLF = INO · PPRF = horizontal gaze palsy",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/15": {
+   "box": 13,
+   "stem": "ฉายไฟเข้าตาซ้าย ตาขวาหด แต่ตาซ้ายไม่หด รอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "Left optic n.",
+    "B": "Right optic n.",
+    "C": "Left oculomotor n.",
+    "D": "Right oculomotor n.",
+    "E": "Edinger-Westphal ทั้งสองข้าง"
+   },
+   "answer": "C",
+   "why": "ตาขวาหด แสดงว่าทางรับแสง (afferent) จากตาซ้ายปกติ · ตาซ้ายไม่หดเองทั้งที่ได้สัญญาณ = efferent ข้างซ้ายเสีย (left CN III parasympathetic) · ถ้า left optic เสีย ฉายตาซ้ายแล้วทั้งสองตาจะไม่หด",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/22": {
+   "box": 39,
+   "stem": "ผู้ป่วย Alzheimer สูงอายุมี agitation เฉียบพลันร่วมกับ pneumonia การจัดการที่เหมาะสมที่สุดคือข้อใด",
+   "options": {
+    "A": "ให้ haloperidol ขนาดสูง",
+    "B": "ให้ diazepam",
+    "C": "รักษา pneumonia ด้วย antibiotic (รักษาสาเหตุ)",
+    "D": "เพิ่มยา donepezil",
+    "E": "ผูกยึดตลอดเวลา"
+   },
+   "answer": "C",
+   "why": "Agitation เฉียบพลันในผู้ป่วย dementia ที่มีการติดเชื้อ คือ delirium ซ้อน ต้องรักษาสาเหตุก่อน · BZD ทำให้สับสนมากขึ้น · antipsychotic ใช้เฉพาะเมื่ออันตรายและขนาดต่ำ",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/23": {
+   "box": 26,
+   "stem": "เด็กไข้ ซึม มีฟันผุหลายซี่ สงสัย brain abscess การจัดการที่เหมาะสมคือข้อใด",
+   "options": {
+    "A": "LP ทันที",
+    "B": "CT/MRI สมองก่อน แล้ว aspirate หนอง + antibiotic",
+    "C": "ให้ steroid อย่างเดียว",
+    "D": "สังเกตอาการ",
+    "E": "EEG"
+   },
+   "answer": "B",
+   "why": "Brain abscess มีรอยโรคกินที่ ทำ LP อาจทำให้ herniation · ต้อง imaging ยืนยันแล้วเจาะดูดหนองเพื่อรักษาและส่งเพาะเชื้อ ร่วมกับ antibiotic ครอบคลุม Streptococcus/anaerobe จากช่องปาก",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/27": {
+   "box": 26,
+   "stem": "Meningitis CSF พบ lymphocyte เด่น protein สูง glucose ต่ำ ย้อมพบ gram-positive bacilli เชื้อใดน่าจะเป็น",
+   "options": {
+    "A": "S. pneumoniae",
+    "B": "N. meningitidis",
+    "C": "Listeria monocytogenes",
+    "D": "H. influenzae",
+    "E": "Cryptococcus neoformans"
+   },
+   "answer": "C",
+   "why": "Gram-positive bacilli ใน CSF = Listeria (ทารก ผู้สูงอายุ ภูมิต่ำ ตั้งครรภ์) · CSF อาจมี lymphocyte เด่นได้ · S. pneumoniae = gram-positive diplococci · N. meningitidis/H. influenzae = gram-negative",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/53": {
+   "box": 2,
+   "stem": "ทารกแขนหุบ หมุนเข้าใน ศอกเหยียด แขนคว่ำ (waiter's tip) รอยโรคอยู่ที่ root ใด",
+   "options": {
+    "A": "C5–C6",
+    "B": "C7",
+    "C": "C8–T1",
+    "D": "C3–C4",
+    "E": "T2"
+   },
+   "answer": "A",
+   "why": "Erb palsy จาก upper trunk C5–6 เสีย abductor, external rotator, elbow flexor และ supinator · C8–T1 = Klumpke (claw hand)",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/59": {
+   "box": 19,
+   "stem": "หลังผ่าตัด temporal lobe ทั้งสองข้างรักษาลมชัก ผู้ป่วยกินมาก เชื่อง พฤติกรรมทางเพศเพิ่ม และ psychic blindness ภาวะนี้คืออะไร",
+   "options": {
+    "A": "Korsakoff syndrome",
+    "B": "Klüver–Bucy syndrome",
+    "C": "Gerstmann syndrome",
+    "D": "Anton syndrome",
+    "E": "Frontal lobe syndrome"
+   },
+   "answer": "B",
+   "why": "Klüver–Bucy เกิดจาก amygdala ทั้งสองข้างเสีย: hyperorality, hypersexuality, placidity, visual agnosia · Korsakoff = mammillary body จากขาด B1 · Anton = cortical blindness แต่ปฏิเสธว่าตาบอด",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/76": {
+   "box": 4,
+   "stem": "ผู้ป่วยขาด vitamin B12 มีอาการทางระบบประสาท metabolite ใดสูงในเลือด",
+   "options": {
+    "A": "Homocysteine อย่างเดียว",
+    "B": "Methylmalonic acid",
+    "C": "Pyruvate",
+    "D": "Lactate",
+    "E": "Phenylalanine"
+   },
+   "answer": "B",
+   "why": "B12 เป็น cofactor ของ methylmalonyl-CoA mutase · ขาดแล้ว methylmalonyl-CoA/MMA คั่ง ทำให้สร้าง myelin ผิด (subacute combined degeneration) · homocysteine สูงได้ทั้งขาด B12 และ folate จึงแยกไม่ได้ ส่วน MMA จำเพาะกับ B12",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/77": {
+   "box": 36,
+   "stem": "Adrenal medulla เทียบเท่ากับส่วนใดของ autonomic nervous system",
+   "options": {
+    "A": "Preganglionic sympathetic neuron",
+    "B": "Postganglionic sympathetic neuron",
+    "C": "Preganglionic parasympathetic neuron",
+    "D": "Postganglionic parasympathetic neuron",
+    "E": "Somatic motor neuron"
+   },
+   "answer": "B",
+   "why": "Chromaffin cell มาจาก neural crest รับสัญญาณจาก preganglionic (splanchnic) โดยตรงผ่าน Nn แล้วหลั่ง Epi/NE เข้ากระแสเลือด จึงเทียบกับ postganglionic sympathetic neuron",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/78": {
+   "box": 39,
+   "stem": "หญิงสาวมีอาการเป็นพัก ๆ หายใจเร็ว เหงื่อออก กลัวหายใจไม่ออก 3 ครั้ง/สัปดาห์ ตรวจร่างกายปกติ วินิจฉัยใด",
+   "options": {
+    "A": "Generalized anxiety disorder",
+    "B": "Panic disorder",
+    "C": "Hyperthyroidism",
+    "D": "Specific phobia",
+    "E": "Somatic symptom disorder"
+   },
+   "answer": "B",
+   "why": "Panic attack ที่เกิดซ้ำโดยไม่มีตัวกระตุ้นจำเพาะ ร่วมกังวลว่าจะเกิดอีก ตรวจปกติ = panic disorder · GAD กังวลต่อเนื่องหลายเรื่องไม่เป็นพัก · phobia มีสิ่งกระตุ้นจำเพาะ",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/79": {
+   "box": 35,
+   "stem": "ยาป้องกัน migraine ที่ต้องเลี่ยงในผู้ป่วย asthma คือข้อใด",
+   "options": {
+    "A": "Amitriptyline",
+    "B": "Topiramate",
+    "C": "Propranolol",
+    "D": "Flunarizine",
+    "E": "Valproate"
+   },
+   "answer": "C",
+   "why": "Propranolol เป็น non-selective β-blocker บล็อก β2 ที่หลอดลม → bronchospasm · เลือกยาป้องกันตามโรคร่วม",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/80": {
+   "box": 39,
+   "stem": "ชายรู้สึกอยากเป็นหญิงอย่างต่อเนื่องตั้งแต่เด็ก และทุกข์ใจกับเพศกำเนิด ภาวะนี้คืออะไร",
+   "options": {
+    "A": "Transvestic disorder",
+    "B": "Gender dysphoria",
+    "C": "Homosexuality",
+    "D": "Delusional disorder",
+    "E": "Body dysmorphic disorder"
+   },
+   "answer": "B",
+   "why": "Gender dysphoria = ความทุกข์ต่อเนื่องจากเพศกำเนิดไม่ตรงกับ gender identity · sexual orientation เป็นเรื่องเพศที่ดึงดูด ไม่ใช่ความผิดปกติ · transvestic = ตื่นเต้นทางเพศจากการแต่งกายเพศตรงข้าม",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/85": {
+   "box": 18,
+   "stem": "ผู้ป่วยหลงทาง ไม่สนใจซีกซ้ายของร่างกายและสิ่งแวดล้อม (visuospatial neglect) รอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "Dominant frontal lobe",
+    "B": "Non-dominant parieto-occipital (parietal) lobe",
+    "C": "Dominant temporal lobe",
+    "D": "Occipital lobe ทั้งสองข้าง",
+    "E": "Cerebellum"
+   },
+   "answer": "B",
+   "why": "Hemineglect และ visuospatial disorientation เกิดจาก non-dominant (มักขวา) parietal lobe · dominant parietal = Gerstmann (acalculia, agraphia, finger agnosia, L-R confusion)",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/90": {
+   "box": 17,
+   "stem": "หูอื้อและได้ยินลดลงหลังได้ furosemide ขนาดสูง ความผิดปกติอยู่ที่ใด",
+   "options": {
+    "A": "External ear",
+    "B": "Middle ear",
+    "C": "Inner ear (cochlea)",
+    "D": "Auditory cortex",
+    "E": "CN VIII ที่ cerebellopontine angle"
+   },
+   "answer": "C",
+   "why": "Loop diuretic ยับยั้ง Na-K-2Cl ที่ stria vascularis ของ cochlea ทำให้ endolymph ผิดปกติ → SNHL ชนิด ototoxic · aminoglycoside ทำลาย hair cell ใน inner ear เช่นกัน",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/93": {
+   "box": 7,
+   "stem": "ชาซ้ายตั้งแต่ใต้สะดือลงไป ร่วมกับอ่อนแรงขาขวา รอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "T8–T10 ซีกซ้าย",
+    "B": "T8–T10 ซีกขวา",
+    "C": "L1 ซีกขวา",
+    "D": "T4 ซีกขวา",
+    "E": "Cauda equina"
+   },
+   "answer": "B",
+   "why": "Brown-Séquard: อ่อนแรงและเสีย proprioception ข้างเดียวกับรอยโรค แต่เสีย pain/temp ฝั่งตรงข้าม · อ่อนแรงขาขวา = รอยโรคขวา · ระดับสะดือ = T10 (ระดับรอยโรคอยู่สูงกว่า level ชาเล็กน้อย)",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/94": {
+   "box": 1,
+   "stem": "Wallerian degeneration สัมพันธ์กับข้อใด",
+   "options": {
+    "A": "Cell body ตายทันที",
+    "B": "Axon ส่วนต้นต่อรอยโรคสลาย",
+    "C": "Axon ส่วนปลายต่อรอยโรคสลายพร้อม demyelination",
+    "D": "เกิดเฉพาะใน CNS",
+    "E": "เกิดจาก autoimmune ต่อ myelin"
+   },
+   "answer": "C",
+   "why": "หลังแอกซอนถูกตัด ส่วนปลายขาดการส่งสารจาก cell body จึงสลายพร้อม myelin แล้ว Schwann cell และ macrophage เก็บกวาด · เกิดได้ทั้ง PNS และ CNS ไม่ใช่กลไก autoimmune",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/97": {
+   "box": 37,
+   "stem": "กลไกที่ α1 blocker ช่วยผู้ป่วย BPH คือข้อใด",
+   "options": {
+    "A": "ลดขนาดต่อมลูกหมาก",
+    "B": "ลด smooth muscle tone ของ prostate และ bladder neck",
+    "C": "เพิ่มการหดตัวของ detrusor",
+    "D": "ยับยั้ง 5α-reductase",
+    "E": "ลดการสร้างปัสสาวะ"
+   },
+   "answer": "B",
+   "why": "α1A อยู่ที่ smooth muscle ของ prostate/bladder neck · บล็อกแล้วคลาย (dynamic component) ปัสสาวะคล่องเร็ว · ลดขนาดต่อมเป็นกลไกของ finasteride",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/98": {
+   "box": 37,
+   "stem": "สุนัขได้ยา Y แล้ว BP เพิ่ม HR เพิ่ม แต่ GI motility ไม่เปลี่ยน ยา Y น่าจะเป็นกลุ่มใด",
+   "options": {
+    "A": "α1 agonist",
+    "B": "β agonist",
+    "C": "Muscarinic agonist",
+    "D": "Muscarinic antagonist",
+    "E": "Ganglionic blocker"
+   },
+   "answer": "B",
+   "why": "β1 เพิ่ม HR และแรงบีบ → BP สูง · α1 agonist ทำ BP สูงแต่ HR ลดจาก baroreceptor reflex · muscarinic drug เปลี่ยน GI motility",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/104": {
+   "box": 6,
+   "stem": "Tract ใดนำความรู้สึกเจ็บปวดและอุณหภูมิ",
+   "options": {
+    "A": "Dorsal column–medial lemniscus",
+    "B": "Lateral spinothalamic tract",
+    "C": "Lateral corticospinal tract",
+    "D": "Spinocerebellar tract",
+    "E": "Rubrospinal tract"
+   },
+   "answer": "B",
+   "why": "Pain/temperature ขึ้นทาง lateral spinothalamic ซึ่งข้ามฝั่งใน 1–2 segment · dorsal column นำ fine touch/proprioception/vibration · corticospinal เป็น motor",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "74.2/105": {
+   "box": 18,
+   "stem": "ผู้ป่วยหลงทาง ไม่สนใจซีกซ้ายของร่างกายและสิ่งแวดล้อม (visuospatial neglect) รอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "Dominant frontal lobe",
+    "B": "Non-dominant parieto-occipital (parietal) lobe",
+    "C": "Dominant temporal lobe",
+    "D": "Occipital lobe ทั้งสองข้าง",
+    "E": "Cerebellum"
+   },
+   "answer": "B",
+   "why": "Hemineglect และ visuospatial disorientation เกิดจาก non-dominant (มักขวา) parietal lobe · dominant parietal = Gerstmann (acalculia, agraphia, finger agnosia, L-R confusion)",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/4": {
+   "box": 39,
+   "stem": "Gender identity หมายถึงข้อใด",
+   "options": {
+    "A": "เพศที่ถูกดึงดูดทางเพศ",
+    "B": "การรับรู้ภายในของตนเองว่าเป็นชายหรือหญิง",
+    "C": "เพศตามโครโมโซม",
+    "D": "บทบาทที่สังคมคาดหวัง",
+    "E": "การแต่งกายตามเพศ"
+   },
+   "answer": "B",
+   "why": "Gender identity = การรับรู้ตนเองว่าเป็นชาย หญิง หรืออื่น ๆ · sexual orientation = เพศที่ดึงดูด · gender role = บทบาทตามความคาดหวังของสังคม · sex = เพศทางชีวภาพ",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/10": {
+   "box": 30,
+   "stem": "หญิงสูงอายุได้ metoclopramide ระยะยาว ความเสี่ยงสำคัญที่สุดคือข้อใด",
+   "options": {
+    "A": "Serotonin syndrome",
+    "B": "Tardive dyskinesia",
+    "C": "Hyperkalemia",
+    "D": "Agranulocytosis",
+    "E": "Ototoxicity"
+   },
+   "answer": "B",
+   "why": "Metoclopramide เป็น D2 antagonist ที่ผ่าน BBB · ใช้นานในผู้สูงอายุ (โดยเฉพาะหญิง) เสี่ยง tardive dyskinesia ซึ่งอาจไม่หาย · ระยะแรกพบ acute dystonia ได้ในคนอายุน้อย",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/25": {
+   "box": 10,
+   "stem": "ทารกใบหน้าผิดรูปกึ่งกลาง ร่วมกับ holoprosencephaly ความผิดปกติของยีนใดน่าจะเป็นสาเหตุ",
+   "options": {
+    "A": "Sonic hedgehog (SHH)",
+    "B": "PAX3",
+    "C": "HOX",
+    "D": "WNT7",
+    "E": "FGF8"
+   },
+   "answer": "A",
+   "why": "SHH จำเป็นต่อการแยก prosencephalon เป็นสองซีกและการสร้างใบหน้าส่วนกลาง · ขาดแล้วเกิด holoprosencephaly ร่วม cyclopia/cleft · PAX3 = Waardenburg · HOX = แกนหัว-หาง",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/33": {
+   "box": 10,
+   "stem": "ทารกใบหน้าผิดรูปกึ่งกลาง ร่วมกับ holoprosencephaly ความผิดปกติของยีนใดน่าจะเป็นสาเหตุ",
+   "options": {
+    "A": "Sonic hedgehog (SHH)",
+    "B": "PAX3",
+    "C": "HOX",
+    "D": "WNT7",
+    "E": "FGF8"
+   },
+   "answer": "A",
+   "why": "SHH จำเป็นต่อการแยก prosencephalon เป็นสองซีกและการสร้างใบหน้าส่วนกลาง · ขาดแล้วเกิด holoprosencephaly ร่วม cyclopia/cleft · PAX3 = Waardenburg · HOX = แกนหัว-หาง",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/42": {
+   "box": 39,
+   "stem": "Gender identity หมายถึงข้อใด",
+   "options": {
+    "A": "เพศที่ถูกดึงดูดทางเพศ",
+    "B": "การรับรู้ภายในของตนเองว่าเป็นชายหรือหญิง",
+    "C": "เพศตามโครโมโซม",
+    "D": "บทบาทที่สังคมคาดหวัง",
+    "E": "การแต่งกายตามเพศ"
+   },
+   "answer": "B",
+   "why": "Gender identity = การรับรู้ตนเองว่าเป็นชาย หญิง หรืออื่น ๆ · sexual orientation = เพศที่ดึงดูด · gender role = บทบาทตามความคาดหวังของสังคม · sex = เพศทางชีวภาพ",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/61": {
+   "box": 30,
+   "stem": "หญิงสูงอายุได้ metoclopramide ระยะยาว ความเสี่ยงสำคัญที่สุดคือข้อใด",
+   "options": {
+    "A": "Serotonin syndrome",
+    "B": "Tardive dyskinesia",
+    "C": "Hyperkalemia",
+    "D": "Agranulocytosis",
+    "E": "Ototoxicity"
+   },
+   "answer": "B",
+   "why": "Metoclopramide เป็น D2 antagonist ที่ผ่าน BBB · ใช้นานในผู้สูงอายุ (โดยเฉพาะหญิง) เสี่ยง tardive dyskinesia ซึ่งอาจไม่หาย · ระยะแรกพบ acute dystonia ได้ในคนอายุน้อย",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/67": {
+   "box": 20,
+   "stem": "ผู้สูงอายุหลงลืม PET พบ tau aggregate แรงหลักที่ทำให้โปรตีนจับกลุ่มคืออะไร",
+   "options": {
+    "A": "Covalent disulfide bond",
+    "B": "Hydrophobic interaction",
+    "C": "Ionic bond กับ phosphate",
+    "D": "Hydrogen bond ภายในสายเดียว",
+    "E": "Glycosidic bond"
+   },
+   "answer": "B",
+   "why": "เมื่อ tau ถูก hyperphosphorylate จะหลุดจาก microtubule และพับผิดรูป เผยส่วน hydrophobic ให้จับกันเป็น β-sheet/paired helical filament ด้วย hydrophobic interaction เป็นหลัก",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/70": {
+   "box": 16,
+   "stem": "เด็กมี PDA, microphthalmia และต้อกระจกสองข้าง น่าจะเกิดจากอะไร",
+   "options": {
+    "A": "Congenital CMV",
+    "B": "Congenital rubella",
+    "C": "Congenital toxoplasmosis",
+    "D": "Congenital syphilis",
+    "E": "Congenital Zika"
+   },
+   "answer": "B",
+   "why": "Congenital rubella triad: cataract, PDA, sensorineural hearing loss · CMV = periventricular calcification + SNHL · toxoplasma = chorioretinitis + hydrocephalus",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/82": {
+   "box": 10,
+   "stem": "ทารกอายุ 5 วัน ท้องอืด ไม่ถ่ายขี้เทา เกิดจากเซลล์ neural crest ไม่เคลื่อนมาที่ลำไส้ ภาวะนี้คืออะไร",
+   "options": {
+    "A": "Meconium ileus",
+    "B": "Colonic aganglionosis (Hirschsprung)",
+    "C": "Pyloric stenosis",
+    "D": "Intussusception",
+    "E": "Duodenal atresia"
+   },
+   "answer": "B",
+   "why": "Neural crest ไม่ migrate ลงไปสร้าง myenteric/submucosal plexus ของลำไส้ส่วนปลาย ทำให้ลำไส้ช่วงนั้นบีบไม่คลาย (Hirschsprung, RET) · meconium ileus = cystic fibrosis · pyloric stenosis อาเจียนพุ่งอายุ 2–6 สัปดาห์",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/93": {
+   "box": 27,
+   "stem": "เปรียบเทียบผู้ได้ IPV กับ OPV ที่ 1 เดือน ภูมิคุ้มกันชนิดใดต่างกันมากที่สุด",
+   "options": {
+    "A": "IgG ในเลือด",
+    "B": "IgM ในเลือด",
+    "C": "IgA ใน duodenal lumen",
+    "D": "T cell ใน lymph node",
+    "E": "IgE"
+   },
+   "answer": "C",
+   "why": "OPV เป็นเชื้อเป็นที่เพิ่มจำนวนในลำไส้ จึงกระตุ้น secretory IgA ที่เยื่อบุลำไส้ (mucosal immunity) ป้องกันการติดเชื้อและแพร่เชื้อ · IPV ฉีดเข้ากล้ามกระตุ้น IgG ในเลือดได้ดีพอกันแต่ IgA ในลำไส้น้อย",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.1/100": {
+   "box": 30,
+   "stem": "หญิงสูงอายุได้ metoclopramide ระยะยาว ความเสี่ยงสำคัญที่สุดคือข้อใด",
+   "options": {
+    "A": "Serotonin syndrome",
+    "B": "Tardive dyskinesia",
+    "C": "Hyperkalemia",
+    "D": "Agranulocytosis",
+    "E": "Ototoxicity"
+   },
+   "answer": "B",
+   "why": "Metoclopramide เป็น D2 antagonist ที่ผ่าน BBB · ใช้นานในผู้สูงอายุ (โดยเฉพาะหญิง) เสี่ยง tardive dyskinesia ซึ่งอาจไม่หาย · ระยะแรกพบ acute dystonia ได้ในคนอายุน้อย",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/9": {
+   "box": 30,
+   "stem": "ให้ ondansetron คู่กับ cisplatin เพื่อวัตถุประสงค์ใด",
+   "options": {
+    "A": "ป้องกันพิษต่อไต",
+    "B": "ลดคลื่นไส้อาเจียนจากเคมีบำบัด (CINV)",
+    "C": "ป้องกัน ototoxicity",
+    "D": "เพิ่มฤทธิ์ต้านมะเร็ง",
+    "E": "ป้องกัน peripheral neuropathy"
+   },
+   "answer": "B",
+   "why": "Cisplatin ทำให้ enterochromaffin cell หลั่ง 5-HT กระตุ้น 5-HT3 ที่ vagal afferent และ CTZ · ondansetron เป็น 5-HT3 antagonist จึงลด CINV · ป้องกันพิษไตใช้ hydration",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/11": {
+   "box": 16,
+   "stem": "เด็กมี PDA, microphthalmia และต้อกระจกสองข้าง น่าจะเกิดจากอะไร",
+   "options": {
+    "A": "Congenital CMV",
+    "B": "Congenital rubella",
+    "C": "Congenital toxoplasmosis",
+    "D": "Congenital syphilis",
+    "E": "Congenital Zika"
+   },
+   "answer": "B",
+   "why": "Congenital rubella triad: cataract, PDA, sensorineural hearing loss · CMV = periventricular calcification + SNHL · toxoplasma = chorioretinitis + hydrocephalus",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/12": {
+   "box": 10,
+   "stem": "ทารกใบหน้าผิดรูปกึ่งกลาง ร่วมกับ holoprosencephaly ความผิดปกติของยีนใดน่าจะเป็นสาเหตุ",
+   "options": {
+    "A": "Sonic hedgehog (SHH)",
+    "B": "PAX3",
+    "C": "HOX",
+    "D": "WNT7",
+    "E": "FGF8"
+   },
+   "answer": "A",
+   "why": "SHH จำเป็นต่อการแยก prosencephalon เป็นสองซีกและการสร้างใบหน้าส่วนกลาง · ขาดแล้วเกิด holoprosencephaly ร่วม cyclopia/cleft · PAX3 = Waardenburg · HOX = แกนหัว-หาง",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/37": {
+   "box": 32,
+   "stem": "ผู้ป่วยหมดสติ หายใจช้า พบขวดยา alprazolam ว่าง ยาต้านพิษที่จำเพาะคือข้อใด",
+   "options": {
+    "A": "Naloxone",
+    "B": "Flumazenil",
+    "C": "Physostigmine",
+    "D": "N-acetylcysteine",
+    "E": "Atropine"
+   },
+   "answer": "B",
+   "why": "Flumazenil เป็น competitive antagonist ที่ BZD site ของ GABA-A · ต้องระวังชักในผู้ใช้ BZD เรื้อรังหรือได้ยาที่ทำให้ชักร่วม · naloxone ใช้กับ opioid",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/39": {
+   "box": 31,
+   "stem": "กลไกการออกฤทธิ์ของ fluoxetine คือข้อใด",
+   "options": {
+    "A": "ยับยั้ง MAO-A",
+    "B": "ยับยั้ง serotonin transporter (SERT)",
+    "C": "5-HT2A antagonist",
+    "D": "ยับยั้ง NE reuptake เป็นหลัก",
+    "E": "D2 partial agonist"
+   },
+   "answer": "B",
+   "why": "Fluoxetine เป็น SSRI ยับยั้ง SERT ทำให้ 5-HT ใน synapse เพิ่ม · half-life ยาวมาก (norfluoxetine) ต้องเว้น ~5 สัปดาห์ก่อนเริ่ม MAOI",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/41": {
+   "box": 32,
+   "stem": "ผู้ป่วยหมดสติ หายใจช้า พบขวดยา alprazolam ว่าง ยาต้านพิษที่จำเพาะคือข้อใด",
+   "options": {
+    "A": "Naloxone",
+    "B": "Flumazenil",
+    "C": "Physostigmine",
+    "D": "N-acetylcysteine",
+    "E": "Atropine"
+   },
+   "answer": "B",
+   "why": "Flumazenil เป็น competitive antagonist ที่ BZD site ของ GABA-A · ต้องระวังชักในผู้ใช้ BZD เรื้อรังหรือได้ยาที่ทำให้ชักร่วม · naloxone ใช้กับ opioid",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/43": {
+   "box": 16,
+   "stem": "น้ำตาไหลซ้ำหลังรักษา distal nasolacrimal duct obstruction ต้องตรวจทางออกของท่อที่ใด",
+   "options": {
+    "A": "Superior nasal meatus",
+    "B": "Middle nasal meatus",
+    "C": "Inferior nasal meatus",
+    "D": "Sphenoethmoidal recess",
+    "E": "Nasopharynx"
+   },
+   "answer": "C",
+   "why": "Nasolacrimal duct เปิดที่ inferior meatus ใต้ inferior turbinate · middle meatus รับ frontal/maxillary/anterior ethmoid sinus · sphenoethmoidal recess รับ sphenoid sinus",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/46": {
+   "box": 12,
+   "stem": "ถุงน้ำใน interpeduncular cistern กดเส้นประสาทสมองเส้นใดมากที่สุด",
+   "options": {
+    "A": "CN II",
+    "B": "CN III",
+    "C": "CN IV",
+    "D": "CN V",
+    "E": "CN VI"
+   },
+   "answer": "B",
+   "why": "CN III ออกจาก midbrain ที่ interpeduncular fossa จึงถูกกดก่อน · CN IV ออกด้านหลัง · CN VI ออกที่ pontomedullary junction",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/53": {
+   "box": 11,
+   "stem": "ผู้ป่วย NPH มี triad ข้อใดเป็นลักษณะการเดินที่พบ",
+   "options": {
+    "A": "Gait apraxia (magnetic gait)",
+    "B": "Steppage gait",
+    "C": "Waddling gait",
+    "D": "Festinating gait ร่วม resting tremor",
+    "E": "Scissor gait"
+   },
+   "answer": "A",
+   "why": "NPH: wet (ปัสสาวะราด), wacky (dementia), wobbly (gait apraxia ก้าวสั้นเท้าติดพื้น) · steppage = foot drop · waddling = proximal myopathy · festinating = Parkinson · scissor = spastic diplegia",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/54": {
+   "box": 3,
+   "stem": "กระดูก tibia/fibula หัก มี foot drop แต่ eversion ปกติ เส้นประสาทใดบาดเจ็บ",
+   "options": {
+    "A": "Common peroneal n.",
+    "B": "Superficial peroneal n.",
+    "C": "Deep peroneal n.",
+    "D": "Tibial n.",
+    "E": "Femoral n."
+   },
+   "answer": "C",
+   "why": "Deep peroneal เลี้ยง anterior compartment (dorsiflexion) จึงมี foot drop แต่ superficial peroneal (eversion) ยังดี · ถ้าเป็น common peroneal จะเสียทั้ง dorsiflexion และ eversion",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/62": {
+   "box": 32,
+   "stem": "ผู้ป่วยหมดสติ หายใจช้า พบขวดยา alprazolam ว่าง ยาต้านพิษที่จำเพาะคือข้อใด",
+   "options": {
+    "A": "Naloxone",
+    "B": "Flumazenil",
+    "C": "Physostigmine",
+    "D": "N-acetylcysteine",
+    "E": "Atropine"
+   },
+   "answer": "B",
+   "why": "Flumazenil เป็น competitive antagonist ที่ BZD site ของ GABA-A · ต้องระวังชักในผู้ใช้ BZD เรื้อรังหรือได้ยาที่ทำให้ชักร่วม · naloxone ใช้กับ opioid",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/63": {
+   "box": 38,
+   "stem": "ยาคลายกล้ามเนื้อที่ onset เร็วที่สุด นิยมใช้ใน rapid sequence intubation คือข้อใด",
+   "options": {
+    "A": "Succinylcholine",
+    "B": "Vecuronium",
+    "C": "Pancuronium",
+    "D": "Neostigmine",
+    "E": "Dantrolene"
+   },
+   "answer": "A",
+   "why": "Succinylcholine เป็น depolarizing Nm agonist onset 30–60 วินาที ฤทธิ์สั้น · vecuronium/pancuronium onset ช้ากว่า · neostigmine ใช้ reverse · dantrolene รักษา malignant hyperthermia",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือกจริงในชีทหลุด ถ้าโจทย์ถาม induction agent แทน NMB คำตอบอาจต่างไป ให้ตรวจกับข้อสอบจริง"
+  },
+  "75.2/66": {
+   "box": 12,
+   "stem": "ถุงน้ำใน interpeduncular cistern กดเส้นประสาทสมองเส้นใดมากที่สุด",
+   "options": {
+    "A": "CN II",
+    "B": "CN III",
+    "C": "CN IV",
+    "D": "CN V",
+    "E": "CN VI"
+   },
+   "answer": "B",
+   "why": "CN III ออกจาก midbrain ที่ interpeduncular fossa จึงถูกกดก่อน · CN IV ออกด้านหลัง · CN VI ออกที่ pontomedullary junction",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/69": {
+   "box": 18,
+   "stem": "ผู้ป่วยพูดคล่องแต่ไร้ความหมาย ไม่เข้าใจคำสั่ง และพูดทวนไม่ได้ รอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "Broca area",
+    "B": "Wernicke area",
+    "C": "Arcuate fasciculus",
+    "D": "Angular gyrus",
+    "E": "Watershed zone รอบ perisylvian"
+   },
+   "answer": "B",
+   "why": "Wernicke aphasia: fluent, comprehension เสีย, repetition เสีย · Broca = non-fluent เข้าใจดี · conduction (arcuate) = เข้าใจดีแต่ทวนไม่ได้ · transcortical = ทวนได้",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/71": {
+   "box": 3,
+   "stem": "กระดูก tibia/fibula หัก มี foot drop แต่ eversion ปกติ เส้นประสาทใดบาดเจ็บ",
+   "options": {
+    "A": "Common peroneal n.",
+    "B": "Superficial peroneal n.",
+    "C": "Deep peroneal n.",
+    "D": "Tibial n.",
+    "E": "Femoral n."
+   },
+   "answer": "C",
+   "why": "Deep peroneal เลี้ยง anterior compartment (dorsiflexion) จึงมี foot drop แต่ superficial peroneal (eversion) ยังดี · ถ้าเป็น common peroneal จะเสียทั้ง dorsiflexion และ eversion",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/72": {
+   "box": 2,
+   "stem": "กล้ามเนื้อ infraspinatus ฝ่อ เกิดจากเส้นประสาทใดบาดเจ็บ",
+   "options": {
+    "A": "Axillary n.",
+    "B": "Suprascapular n.",
+    "C": "Long thoracic n.",
+    "D": "Thoracodorsal n.",
+    "E": "Dorsal scapular n."
+   },
+   "answer": "B",
+   "why": "Suprascapular nerve เลี้ยง supraspinatus และ infraspinatus (ถูกกดที่ spinoglenoid notch → infraspinatus ฝ่ออย่างเดียว) · axillary เลี้ยง deltoid/teres minor · thoracodorsal เลี้ยง latissimus dorsi",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/73": {
+   "box": 34,
+   "stem": "ADR รุนแรงที่ต้องระวังของ valproate คือข้อใด",
+   "options": {
+    "A": "Gingival hyperplasia",
+    "B": "Hepatotoxicity",
+    "C": "Stevens-Johnson จาก HLA-B*15:02",
+    "D": "Nephrolithiasis",
+    "E": "Agranulocytosis"
+   },
+   "answer": "B",
+   "why": "Valproate เสี่ยง hepatotoxicity (โดยเฉพาะเด็กเล็ก) และ pancreatitis, teratogen (NTD) · gingival hyperplasia = phenytoin · HLA-B*15:02 = carbamazepine · นิ่ว = topiramate",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/74": {
+   "box": 37,
+   "stem": "ยา vasopressor ที่ออกฤทธิ์ที่ α1 ใน septic shock (norepinephrine) มีลักษณะการออกฤทธิ์แบบใด",
+   "options": {
+    "A": "Partial agonist",
+    "B": "Full agonist",
+    "C": "Inverse agonist",
+    "D": "Competitive antagonist",
+    "E": "Allosteric modulator"
+   },
+   "answer": "B",
+   "why": "Norepinephrine เป็น endogenous ligand จับ α1 แล้วให้ผลสูงสุด (full agonist) ผ่าน Gq → IP3/Ca²⁺ → หดหลอดเลือด",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/85": {
+   "box": 35,
+   "stem": "ยาหลักรักษา acute migraine attack ออกฤทธิ์อย่างไร",
+   "options": {
+    "A": "5-HT1B/1D agonist",
+    "B": "5-HT3 antagonist",
+    "C": "β1 antagonist",
+    "D": "CGRP agonist",
+    "E": "D2 agonist"
+   },
+   "answer": "A",
+   "why": "Triptan เป็น 5-HT1B/1D agonist: 1B หดหลอดเลือดที่ขยาย 1D ยับยั้งการหลั่ง CGRP · CGRP agonist เป็นตัวหลอกเพราะต้องการยับยั้ง CGRP · β-blocker ใช้ป้องกัน",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/119": {
+   "box": 38,
+   "stem": "ยาคลายกล้ามเนื้อที่ใช้ช่วยใส่ท่อช่วยหายใจออกฤทธิ์อย่างไร",
+   "options": {
+    "A": "Muscarinic antagonist",
+    "B": "Nicotinic (Nm) antagonist ที่ NMJ",
+    "C": "GABA-A agonist",
+    "D": "ยับยั้ง acetylcholinesterase",
+    "E": "Ryanodine receptor blocker"
+   },
+   "answer": "B",
+   "why": "Neuromuscular blocker ออกฤทธิ์ที่ Nm ของ motor end plate · rocuronium เป็น competitive antagonist · succinylcholine เป็น depolarizing agonist แต่ผลสุดท้ายคือบล็อกการส่งสัญญาณ · dantrolene ออกฤทธิ์ที่ RyR1",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/122": {
+   "box": 26,
+   "stem": "ผู้ป่วย cryptococcal meningitis รุนแรง ยาที่ใช้ secondary prophylaxis ออกฤทธิ์ที่เป้าหมายใด",
+   "options": {
+    "A": "β-glucan synthase",
+    "B": "Lanosterol 14α-demethylase",
+    "C": "Ergosterol ใน membrane โดยตรง",
+    "D": "Squalene epoxidase",
+    "E": "Thymidylate synthase"
+   },
+   "answer": "B",
+   "why": "Fluconazole (azole) ยับยั้ง lanosterol 14α-demethylase (CYP51) ลดการสร้าง ergosterol · amphotericin B จับ ergosterol โดยตรง · echinocandin ยับยั้ง β-glucan synthase · terbinafine ยับยั้ง squalene epoxidase · flucytosine รบกวนการสร้าง DNA/RNA",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/124": {
+   "box": 14,
+   "stem": "เสียงแหบหลังผ่าตัด thyroid หรือจาก aortic aneurysm เส้นประสาทใดได้รับบาดเจ็บ",
+   "options": {
+    "A": "Superior laryngeal n. (external branch)",
+    "B": "Recurrent laryngeal n.",
+    "C": "Hypoglossal n.",
+    "D": "Glossopharyngeal n.",
+    "E": "Phrenic n."
+   },
+   "answer": "B",
+   "why": "Recurrent laryngeal nerve เลี้ยงกล้ามเนื้อกล่องเสียงทุกมัดยกเว้น cricothyroid · ซ้ายอ้อมใต้ aortic arch จึงถูกกดจาก aneurysm · external branch ของ superior laryngeal เสียงสูงไม่ได้แต่ไม่แหบชัด",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/126": {
+   "box": 32,
+   "stem": "ผู้ป่วยหมดสติ หายใจช้า พบขวดยา alprazolam ว่าง ยาต้านพิษที่จำเพาะคือข้อใด",
+   "options": {
+    "A": "Naloxone",
+    "B": "Flumazenil",
+    "C": "Physostigmine",
+    "D": "N-acetylcysteine",
+    "E": "Atropine"
+   },
+   "answer": "B",
+   "why": "Flumazenil เป็น competitive antagonist ที่ BZD site ของ GABA-A · ต้องระวังชักในผู้ใช้ BZD เรื้อรังหรือได้ยาที่ทำให้ชักร่วม · naloxone ใช้กับ opioid",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/130": {
+   "box": 5,
+   "stem": "ทารกได้กินน้ำผึ้ง ต่อมาท้องผูก ดูดนมแรงลดลง อ่อนแรงปวกเปียก วินิจฉัยใดเหมาะสมที่สุด",
+   "options": {
+    "A": "Spinal muscular atrophy",
+    "B": "Infant botulism",
+    "C": "Guillain-Barré syndrome",
+    "D": "Congenital hypothyroidism",
+    "E": "Myasthenia gravis"
+   },
+   "answer": "B",
+   "why": "ประวัติน้ำผึ้งในทารกร่วมท้องผูกและ floppy infant ที่เกิดเฉียบพลัน เข้าได้กับ infant botulism (ปัญหาที่ presynaptic NMJ ดู [[5]]) · SMA ค่อยเป็นและมี fasciculation ของลิ้น · GBS พบน้อยในทารกและเป็นแบบ ascending",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "75.2/134": {
+   "box": 26,
+   "stem": "คลอดที่บ้าน ไม่ฝากครรภ์ ทารกเป็น neonatal meningitis ซึ่งป้องกันได้ด้วย intrapartum antibiotic prophylaxis เชื้อคืออะไร",
+   "options": {
+    "A": "Listeria monocytogenes",
+    "B": "E. coli K1",
+    "C": "S. agalactiae",
+    "D": "S. aureus",
+    "E": "H. influenzae type b"
+   },
+   "answer": "C",
+   "why": "Group B Streptococcus (S. agalactiae) คัดกรองด้วย rectovaginal swab ช่วง 35–37 สัปดาห์ แล้วให้ intrapartum penicillin ป้องกัน early-onset sepsis/meningitis · ผู้ที่ไม่ฝากครรภ์จึงพลาดการป้องกัน",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "76/5": {
+   "box": 14,
+   "stem": "หญิงผ่าตัด thyroidectomy ระหว่างผูก superior thyroid vessels ศัลยแพทย์ทำให้เส้นประสาทที่วิ่งคู่ superior thyroid artery บาดเจ็บ ถามว่าเป็นเส้นใด",
+   "options": {
+    "A": "Vagus nerve",
+    "B": "Recurrent laryngeal nerve",
+    "C": "External branch of superior laryngeal nerve",
+    "D": "Internal branch of superior laryngeal nerve",
+    "E": "Phrenic nerve"
+   },
+   "answer": "C",
+   "why": "External branch ของ superior laryngeal nerve วิ่งคู่กับ superior thyroid artery ไปเลี้ยง cricothyroid muscle บาดเจ็บแล้วเสียงแหบเบา ร้องเสียงสูงไม่ได้ recurrent laryngeal nerve สัมพันธ์กับ inferior thyroid artery ส่วน internal branch วิ่งเข้า thyrohyoid membrane เป็น sensory เหนือ vocal cord",
+   "source": "วิเคราะห์"
+  },
+  "76/7": {
+   "box": 26,
+   "stem": "เด็กว่ายน้ำในทะเลสาบน้ำจืด 2 วันก่อน แล้วมีพยาธิสภาพในสมองรุนแรงภายในไม่กี่วัน ถามเชื้อก่อโรคที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Entamoeba coli",
+    "B": "Entamoeba histolytica",
+    "C": "Balamuthia mandrillaris",
+    "D": "Acanthamoeba spp.",
+    "E": "Naegleria fowleri"
+   },
+   "answer": "E",
+   "why": "Naegleria fowleri อยู่ในน้ำจืดอุ่น เข้าทางจมูกผ่าน cribriform plate ไปตาม olfactory nerve ทำให้ primary amebic meningoencephalitis ที่ดำเนินโรคเร็วมากและเสียชีวิตภายในไม่กี่วัน ส่วน Acanthamoeba และ Balamuthia ทำให้ granulomatous amebic encephalitis แบบ subacute/chronic ในผู้ภูมิคุ้มกันต่ำ",
+   "source": "วิเคราะห์"
+  },
+  "76/9": {
+   "box": 10,
+   "stem": "เด็กมี cleft lip/palate ร่วมกับ holoprosencephaly ถามการวินิจฉัยที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Patau syndrome",
+    "B": "Edwards syndrome",
+    "C": "Down syndrome",
+    "D": "Cri-du-chat syndrome",
+    "E": "Prader-Willi syndrome"
+   },
+   "answer": "A",
+   "why": "Patau syndrome (trisomy 13) มีลักษณะเด่นคือ holoprosencephaly, cleft lip/palate, polydactyly, microphthalmia และ cutis aplasia เพราะความผิดปกติของ midline forebrain development (เกี่ยวกับ SHH pathway) Edwards syndrome เด่นที่ clenched fist, rocker-bottom feet ส่วน Down syndrome เด่นที่ upslanting palpebral fissure",
+   "source": "วิเคราะห์"
+  },
+  "76/18": {
+   "box": 4,
+   "stem": "ผู้ป่วย pulmonary TB ไม่ดื้อยาได้ยาสูตรมาตรฐาน ต่อมามีอาการทางระบบประสาท เช่น รับรู้ความเจ็บปวดลดลง ถามว่าควรให้วิตามินใดเพื่อแก้ไข",
+   "options": {
+    "A": "Thiamine",
+    "B": "Riboflavin",
+    "C": "Niacin",
+    "D": "Pyridoxine",
+    "E": "Mecobalamin"
+   },
+   "answer": "D",
+   "why": "Isoniazid จับกับ pyridoxine (B6) และยับยั้ง pyridoxal phosphate ทำให้ขาด B6 เกิด peripheral sensory neuropathy จึงต้องให้ pyridoxine ป้องกัน/รักษา ส่วน mecobalamin (B12) และ thiamine (B1) ก็ทำให้ neuropathy ได้แต่ไม่ใช่กลไกของยา INH",
+   "source": "วิเคราะห์"
+  },
+  "76/21": {
+   "box": 30,
+   "stem": "ถามกลไกการออกฤทธิ์ของ ondansetron",
+   "options": {
+    "A": "Histamine receptor antagonist",
+    "B": "Dopamine receptor antagonist",
+    "C": "Dopamine receptor agonist",
+    "D": "Serotonin receptor agonist",
+    "E": "Serotonin receptor antagonist"
+   },
+   "answer": "E",
+   "why": "Ondansetron เป็น 5-HT3 receptor antagonist ออกฤทธิ์ที่ vagal afferent ในลำไส้และ chemoreceptor trigger zone ใช้ป้องกันคลื่นไส้อาเจียนจากเคมีบำบัด ผลข้างเคียงคือ QT prolongation, ท้องผูก, ปวดศีรษะ ส่วน D2 antagonist คือ metoclopramide/domperidone และ H1 antagonist คือ dimenhydrinate",
+   "source": "วิเคราะห์"
+  },
+  "76/26": {
+   "box": 16,
+   "stem": "ถามว่า autacoid ชนิดใดใช้ลดความดันลูกตาในการรักษา glaucoma",
+   "options": {
+    "A": "Prostacyclin",
+    "B": "Serotonin",
+    "C": "Leukotriene B4",
+    "D": "Prostaglandin F2 alpha",
+    "E": "IL-5"
+   },
+   "answer": "D",
+   "why": "PGF2α analog (latanoprost, travoprost) เพิ่ม uveoscleral outflow ของ aqueous humor จึงลด IOP เป็น first-line ของ open-angle glaucoma ผลข้างเคียงคือ iris hyperpigmentation และขนตายาว ส่วน prostacyclin ขยายหลอดเลือด/ยับยั้งเกล็ดเลือด และ LTB4 เป็น chemotaxin ของ neutrophil",
+   "source": "วิเคราะห์"
+  },
+  "76/27": {
+   "box": 2,
+   "stem": "ผู้ป่วยไหล่อ่อนแรง ได้รับการวินิจฉัย quadrangular space syndrome ถามว่าเส้นประสาทใดถูกกดทับ",
+   "options": {
+    "A": "Suprascapular nerve",
+    "B": "Subscapular nerve",
+    "C": "Radial nerve",
+    "D": "Ulnar nerve",
+    "E": "Axillary nerve"
+   },
+   "answer": "E",
+   "why": "Quadrangular space (teres minor, teres major, long head of triceps, surgical neck of humerus) มี axillary nerve กับ posterior circumflex humeral artery ผ่าน การกดทับทำให้ deltoid และ teres minor อ่อนแรง abduct ไหล่ลำบาก ส่วน radial nerve ผ่าน triangular interval และ suprascapular nerve ผ่าน suprascapular notch",
+   "source": "วิเคราะห์"
+  },
+  "76/31": {
+   "box": 1,
+   "stem": "ผู้ป่วยบาดเจ็บ radial nerve (เส้นประสาทส่วนปลาย) ถามว่าเซลล์ชนิดใดจำเป็นต่อการซ่อมแซม/regeneration ของเส้นประสาท",
+   "options": {
+    "A": "Astrocyte",
+    "B": "Ependymal cell",
+    "C": "Schwann cell",
+    "D": "Microglia",
+    "E": "Oligodendrocyte"
+   },
+   "answer": "C",
+   "why": "ใน PNS Schwann cell เป็นทั้งตัวสร้าง myelin และช่วย regeneration หลัง Wallerian degeneration โดยเก็บกวาด debris, หลั่ง neurotrophic factor และเรียงตัวเป็น band of Büngner นำทาง axon ที่งอกใหม่ ส่วน astrocyte, microglia, oligodendrocyte, ependymal cell เป็น glia ของ CNS ไม่เกี่ยวกับ radial nerve",
+   "source": "วิเคราะห์"
+  },
+  "76/37": {
+   "box": 30,
+   "stem": "ถามกลไกการออกฤทธิ์ของ haloperidol",
+   "options": {
+    "A": "Inhibit dopamine reuptake",
+    "B": "Dopamine receptor antagonist",
+    "C": "Serotonin receptor antagonist",
+    "D": "Acetylcholine receptor antagonist",
+    "E": "Norepinephrine receptor agonist"
+   },
+   "answer": "B",
+   "why": "Haloperidol เป็น typical (first-generation) high-potency antipsychotic ที่ block D2 receptor ใน mesolimbic pathway ลด positive symptom แต่การ block ใน nigrostriatal ทำให้ EPS และใน tuberoinfundibular ทำให้ hyperprolactinemia การยับยั้ง 5-HT2A เด่นใน atypical antipsychotic ส่วน reuptake inhibitor เป็นกลไกของ cocaine/bupropion",
+   "source": "วิเคราะห์"
+  },
+  "76/40": {
+   "box": 30,
+   "stem": "ถามกลไกของยาที่ใช้ป้องกันคลื่นไส้อาเจียนในผู้ป่วยที่ได้รับเคมีบำบัด",
+   "options": {
+    "A": "5-HT2 agonist",
+    "B": "5-HT2 antagonist",
+    "C": "5-HT3 agonist",
+    "D": "5-HT3 antagonist",
+    "E": "5-HT4 antagonist"
+   },
+   "answer": "D",
+   "why": "เคมีบำบัดทำให้ enterochromaffin cell หลั่ง serotonin ไปกระตุ้น 5-HT3 receptor บน vagal afferent และใน CTZ ยากลุ่ม -setron (ondansetron, granisetron) จึงเป็น 5-HT3 antagonist ส่วน 5-HT4 agonist (prucalopride) ใช้เพิ่ม GI motility และ 5-HT2 ไม่ใช่เป้าหมายของยาแก้อาเจียน",
+   "source": "วิเคราะห์"
+  },
+  "76/44": {
+   "box": 26,
+   "stem": "คนชำแหละหมูโดนมีดบาดนิ้วระหว่างหั่นเนื้อหมูดิบ ต่อมาเป็น meningitis ถามเชื้อก่อโรคที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Streptococcus suis",
+    "B": "Streptococcus pneumoniae",
+    "C": "Streptococcus pyogenes",
+    "D": "Neisseria meningitidis",
+    "E": "Haemophilus influenzae type b"
+   },
+   "answer": "A",
+   "why": "Streptococcus suis เป็น zoonosis จากหมู ติดต่อผ่านบาดแผลที่สัมผัสเนื้อหมูดิบหรือการกินหมูดิบ ทำให้ meningitis ร่วมกับ sensorineural hearing loss ได้บ่อย เป็นสาเหตุสำคัญของ adult meningitis ในไทย ส่วนเชื้ออื่นติดต่อทาง respiratory droplet ไม่สัมพันธ์กับประวัติสัมผัสหมู",
+   "source": "วิเคราะห์"
+  },
+  "76/46": {
+   "box": 23,
+   "stem": "ผู้ป่วยที่ใช้ dabigatran มีภาวะเลือดออกในกะโหลกศีรษะ ถามยาต้านฤทธิ์ (antidote)",
+   "options": {
+    "A": "Rivaroxaban",
+    "B": "Andexanet alfa",
+    "C": "Vitamin K",
+    "D": "Idarucizumab",
+    "E": "Protamine sulfate"
+   },
+   "answer": "D",
+   "why": "Dabigatran เป็น direct thrombin inhibitor ยาแก้ฤทธิ์คือ idarucizumab ซึ่งเป็น monoclonal antibody fragment ที่จับ dabigatran โดยตรง andexanet alfa แก้ factor Xa inhibitor (rivaroxaban, apixaban) vitamin K แก้ warfarin และ protamine แก้ heparin",
+   "source": "วิเคราะห์"
+  },
+  "76/55": {
+   "box": 32,
+   "stem": "ถามว่า flumazenil ใช้เป็น antidote ของยาใด",
+   "options": {
+    "A": "Barbiturates",
+    "B": "Zolpidem",
+    "C": "Naloxone",
+    "D": "Fentanyl",
+    "E": "Paracetamol"
+   },
+   "answer": "B",
+   "why": "Flumazenil เป็น competitive antagonist ที่ benzodiazepine binding site (α-γ interface) ของ GABA-A receptor จึงแก้ฤทธิ์ benzodiazepine และ Z-drug (zolpidem, zaleplon) ที่จับ site เดียวกันได้ แต่ barbiturate จับ site อื่นจึงแก้ไม่ได้ fentanyl ใช้ naloxone และ paracetamol ใช้ N-acetylcysteine",
+   "source": "วิเคราะห์"
+  },
+  "76/59": {
+   "box": 27,
+   "stem": "หลังรักษา herpes zoster แล้ว ผู้ป่วยบางรายอาจยังมีอาการใดหลงเหลือ",
+   "options": {
+    "A": "Postherpetic neuralgia",
+    "B": "Myasthenia gravis",
+    "C": "Multiple sclerosis",
+    "D": "NMO",
+    "E": "ADEM"
+   },
+   "answer": "A",
+   "why": "VZV ที่ reactivate จาก dorsal root/trigeminal ganglion ทำลาย sensory neuron และ nerve fiber ทำให้ปวดแบบ neuropathic ต่อเนื่องเกิน 3 เดือนหลังผื่นหาย (postherpetic neuralgia) พบบ่อยในผู้สูงอายุ รักษาด้วย gabapentin/pregabalin, TCA, lidocaine patch ส่วนโรคอื่นไม่ใช่ผลแทรกซ้อนจำเพาะของ zoster",
+   "source": "วิเคราะห์"
+  },
+  "76/67": {
+   "box": 16,
+   "stem": "ผู้ป่วยมีการอุดตันที่ inferior nasal meatus ถามว่าโครงสร้างใดที่เปิดเข้าช่องนี้จะได้รับผลกระทบ",
+   "options": {
+    "A": "Maxillary sinus",
+    "B": "Frontonasal duct",
+    "C": "Nasolacrimal duct",
+    "D": "Anterior ethmoid cells",
+    "E": "Middle ethmoid cells"
+   },
+   "answer": "C",
+   "why": "Nasolacrimal duct เปิดเข้า inferior meatus การอุดตันจึงทำให้น้ำตาระบายไม่ได้ (epiphora) ส่วน maxillary sinus, frontonasal duct และ anterior/middle ethmoid cells เปิดเข้า middle meatus (semilunar hiatus/ethmoid bulla) และ posterior ethmoid เปิดเข้า superior meatus",
+   "source": "วิเคราะห์"
+  },
+  "76/71": {
+   "box": 39,
+   "stem": "ถามข้อที่อธิบาย gender identity ได้ดีที่สุด",
+   "options": {
+    "A": "Gender role",
+    "B": "Biological identity",
+    "C": "Chromosome identity",
+    "D": "Sense of femaleness/maleness",
+    "E": "Sexual attraction and sexual orientation"
+   },
+   "answer": "D",
+   "why": "Gender identity คือความรู้สึกภายในของบุคคลว่าตนเป็นหญิง ชาย หรือเพศอื่น ซึ่งอาจไม่ตรงกับเพศกำเนิด gender role คือพฤติกรรมที่สังคมคาดหวังตามเพศ biological/chromosomal identity คือเพศทางชีวภาพ และ sexual orientation คือเพศที่ตนรู้สึกดึงดูด",
+   "source": "วิเคราะห์"
+  },
+  "76/75": {
+   "box": 12,
+   "stem": "ผู้ป่วยมี palsy ของ CN III, IV, VI, V1 และ V2 ร่วมกัน ถามตำแหน่งรอยโรค",
+   "options": {
+    "A": "Parasellar region",
+    "B": "Pineal gland",
+    "C": "Pons",
+    "D": "Midbrain",
+    "E": "Medulla oblongata"
+   },
+   "answer": "A",
+   "why": "Cavernous sinus อยู่บริเวณ parasellar มี CN III, IV, V1, V2 วิ่งในผนังด้านข้าง และ CN VI กับ ICA วิ่งกลาง sinus รอยโรคที่นี่ (เช่น thrombosis, tumor) จึงทำให้เสียหลายเส้นพร้อมกัน ส่วน midbrain/pons/medulla จะเสียบางเส้นร่วมกับ long tract sign และ pineal tumor ทำให้ Parinaud syndrome",
+   "source": "วิเคราะห์"
+  },
+  "76/79": {
+   "box": 28,
+   "stem": "ผู้ป่วยมีรอยโรคผิวหนังที่ชา (hyposensory) หลังเดินทางไปเชียงราย ตรวจพบ AFB บวก ถามเชื้อก่อโรคที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Mycobacterium leprae",
+    "B": "Nocardia brasiliensis",
+    "C": "Mycobacterium tuberculosis",
+    "D": "Malassezia furfur",
+    "E": "Actinomyces israelii"
+   },
+   "answer": "A",
+   "why": "Mycobacterium leprae ชอบอุณหภูมิต่ำ เข้าไปอยู่ใน Schwann cell ของ peripheral nerve จึงทำให้ผื่นที่ชาและเส้นประสาทโต เป็นลักษณะเด่นของโรคเรื้อน (AFB บวก) M. tuberculosis ไม่ทำให้ผื่นชา Nocardia เป็น weakly acid-fast แต่ทำให้ mycetoma/ปอด ส่วน Malassezia ทำให้ tinea versicolor ที่ไม่ชา",
+   "source": "วิเคราะห์"
+  },
+  "76/88": {
+   "box": 19,
+   "stem": "เด็กหญิงเคยเป็น HSV encephalitis ที่ temporal lobe ต่อมาครูสังเกตว่ากินมากผิดปกติและถูอวัยวะเพศในห้องเรียน ถามว่าพยาธิสภาพอยู่ที่ส่วนใดของสมอง",
+   "options": {
+    "A": "Amygdala",
+    "B": "Hippocampus",
+    "C": "Prefrontal cortex",
+    "D": "Parietal lobe",
+    "E": "Basal ganglion"
+   },
+   "answer": "A",
+   "why": "Hyperphagia, hypersexuality, hyperorality และความกลัวลดลงคือ Klüver-Bucy syndrome จากรอยโรค amygdala ทั้งสองข้าง (medial temporal) ซึ่ง HSV-1 encephalitis ชอบทำลาย hippocampus เสียจะเกิด anterograde amnesia ส่วน prefrontal lesion ทำให้ disinhibition แต่ไม่ใช่ภาพ hyperphagia/hypersexuality แบบนี้",
+   "source": "วิเคราะห์"
+  },
+  "76/95": {
+   "box": 16,
+   "stem": "ให้ภาพผลตรวจลานสายตา (visual field) ถามว่าเกิดจากการอุดตันของหลอดเลือดใด",
+   "options": {
+    "A": "Left anterior cerebral artery",
+    "B": "Left middle cerebral artery",
+    "C": "Left posterior cerebral artery",
+    "D": "Right middle cerebral artery",
+    "E": "Right posterior cerebral artery"
+   },
+   "answer": "C",
+   "why": "Homonymous hemianopia with macular sparing มักเกิดจาก PCA อุดตันทำให้ occipital cortex (calcarine) ฝั่งตรงข้ามขาดเลือด macula ได้รับเลือดเสริมจาก MCA จึงรอด ส่วน MCA occlusion ทำให้ field defect ร่วมกับอ่อนแรง/aphasia ACA ไม่เกี่ยวกับ visual pathway ฝั่งของรอยโรคต้องตรงข้ามกับ field ที่เสียในภาพ",
+   "source": "วิเคราะห์",
+   "needs_image": true,
+   "doubt": "⚠ ไม่เห็นภาพ จึงไม่ทราบว่า field ฝั่งใดเสีย หากภาพแสดง left homonymous hemianopia คำตอบจะเป็น E (right PCA)"
+  },
+  "76/96": {
+   "box": 10,
+   "stem": "ผู้ป่วยมีความผิดปกติจากการ migrate ของ neural crest cell ไม่ได้ ถามว่าโครงสร้างใดได้รับผลกระทบมากที่สุด",
+   "options": {
+    "A": "Spinal (dorsal root) ganglion",
+    "B": "Pyramidal cell in cerebrum",
+    "C": "Purkinje cell in cerebellum",
+    "D": "Anterior horn motor neuron",
+    "E": "Microglia"
+   },
+   "answer": "A",
+   "why": "Neural crest ให้กำเนิด sensory neuron ใน dorsal root ganglion, autonomic ganglia, Schwann cell, melanocyte, adrenal medulla ฯลฯ ส่วน pyramidal cell, Purkinje cell และ anterior horn motor neuron มาจาก neural tube (neuroectoderm) และ microglia มาจาก mesoderm (yolk sac macrophage)",
+   "source": "วิเคราะห์"
+  },
+  "76/97": {
+   "box": 5,
+   "stem": "ผู้ป่วยกล้ามเนื้ออ่อนแรงหลังกินหน่อไม้ปี๊บ (canned bamboo shoot) ถามว่า toxin ใดเป็นสาเหตุ",
+   "options": {
+    "A": "Botulinum toxin",
+    "B": "Tetanus toxin",
+    "C": "Shiga toxin",
+    "D": "Cholera toxin",
+    "E": "Tetrodotoxin"
+   },
+   "answer": "A",
+   "why": "หน่อไม้ปี๊บที่ไม่ผ่านความร้อนเพียงพอเป็นแหล่งของ Clostridium botulinum ซึ่งสร้าง botulinum toxin ไปตัด SNARE protein ที่ presynaptic terminal ยับยั้งการหลั่ง ACh เกิด descending flaccid paralysis tetanus toxin ทำให้เกร็ง tetrodotoxin มาจากปลาปักเป้า ส่วน shiga/cholera toxin ทำให้ท้องเสีย",
+   "source": "วิเคราะห์"
+  },
+  "76/105": {
+   "box": 39,
+   "stem": "ผู้ป่วย UTI นอนโรงพยาบาล มีอาการกระสับกระส่าย นอนไม่หลับ และเห็นภาพหลอน ถามการวินิจฉัยที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Delirium",
+    "B": "Insomnia disorder",
+    "C": "Anxiety disorder",
+    "D": "Schizophrenia",
+    "E": "Depression"
+   },
+   "answer": "A",
+   "why": "อาการเกิดเฉียบพลันในผู้ป่วยที่มีโรคทางกายเช่นติดเชื้อ ร่วมกับ agitation, sleep-wake cycle ผิดปกติ และ visual hallucination เป็นลักษณะของ delirium (acute fluctuating disturbance of attention) ซึ่งต้องหาและรักษาสาเหตุ schizophrenia มักมี auditory hallucination และเป็นเรื้อรังไม่สัมพันธ์กับการติดเชื้อ",
+   "source": "วิเคราะห์"
+  },
+  "76/118": {
+   "box": 30,
+   "stem": "ผู้ป่วยมีอาการเดินไม่มั่นคงและ bradykinesia ถามว่ายาใดทำให้เกิดผลข้างเคียงนี้",
+   "options": {
+    "A": "Dopamine receptor antagonist",
+    "B": "Levodopa",
+    "C": "Histamine receptor antagonist",
+    "D": "Norepinephrine receptor agonist",
+    "E": "Muscarinic receptor agonist"
+   },
+   "answer": "A",
+   "why": "Dopamine receptor (D2) antagonist เช่น antipsychotic หรือ metoclopramide ยับยั้ง nigrostriatal pathway ทำให้ drug-induced parkinsonism (bradykinesia, rigidity, gait instability) levodopa ใช้รักษา parkinsonism ส่วน muscarinic agonist อาจทำให้ tremor แย่ลงได้บ้างแต่ไม่ใช่สาเหตุหลัก",
+   "source": "วิเคราะห์"
+  },
+  "76/123": {
+   "box": 33,
+   "stem": "ชายไทย 20 ปี มี tachycardia, hyperthermia และกระสับกระส่าย วินิจฉัยว่า amphetamine overdose ถามว่าข้อใดเป็น antidote",
+   "options": {
+    "A": "Ascorbic acid",
+    "B": "Procainamide",
+    "C": "Probenecid",
+    "D": "Idarucizumab",
+    "E": "Vitamin K"
+   },
+   "answer": "A",
+   "why": "Amphetamine เป็น weak base การทำให้ปัสสาวะเป็นกรด (เช่นด้วย ascorbic acid หรือ NH4Cl) จะเพิ่มการแตกตัว (ion trapping) และเพิ่มการขับทางไต จึงเป็นคำตอบตามแนวเภสัชวิทยา ส่วน idarucizumab แก้ dabigatran และ vitamin K แก้ warfarin procainamide และ probenecid ไม่ใช่ antidote",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ แนวทางปัจจุบันไม่แนะนำ urine acidification เพราะเสี่ยง rhabdomyolysis/AKI การรักษาจริงคือ supportive และ benzodiazepine"
+  },
+  "76/125": {
+   "box": 9,
+   "stem": "ผู้ป่วยมี resting tremor, bradykinesia, rigidity และ postural instability ถามตำแหน่งรอยโรค",
+   "options": {
+    "A": "Basal ganglia",
+    "B": "Dorsal thalamus",
+    "C": "Subthalamus",
+    "D": "Substantia nigra",
+    "E": "Cerebellum"
+   },
+   "answer": "D",
+   "why": "อาการครบทั้ง 4 อย่างคือ Parkinson disease ซึ่งเกิดจากการตายของ dopaminergic neuron ใน substantia nigra pars compacta ทำให้ nigrostriatal pathway เสีย แม้ substantia nigra จัดเป็นส่วนหนึ่งของ basal ganglia แต่เป็นตำแหน่งที่เจาะจงที่สุด subthalamus เสียทำให้ hemiballismus และ cerebellum เสียทำให้ intention tremor/ataxia",
+   "source": "วิเคราะห์"
+  },
+  "76/127": {
+   "box": 27,
+   "stem": "ผู้ป่วยถูกสุนัขกัดและไม่ได้รับวัคซีน ต่อมามีอาการกลัวน้ำ ถามว่าเชื้อ rabies เข้าสู่ระบบประสาทส่วนกลางด้วยกลไกใด",
+   "options": {
+    "A": "Lymphatic spread",
+    "B": "Hematogenous spread",
+    "C": "Retrograde transport by sensory nerve",
+    "D": "Endocytosis then retrograde transport to cell body",
+    "E": "Enters via nicotinic acetylcholine receptor then retrograde transport to cell body"
+   },
+   "answer": "E",
+   "why": "Rabies virus เพิ่มจำนวนในกล้ามเนื้อบริเวณแผล แล้ว glycoprotein G จับ nicotinic ACh receptor ที่ NMJ เข้าสู่ motor nerve terminal และเดินทางแบบ retrograde fast axonal transport (dynein) ไปยัง cell body ใน CNS ไม่แพร่ทางเลือดหรือ lymphatic ข้อ C/D ไม่ระบุ receptor ที่เป็นจุดเด่น",
+   "source": "วิเคราะห์"
+  },
+  "76/128": {
+   "box": 3,
+   "stem": "ผู้ป่วยปวดหลังเฉียบพลันร้าวลงขาซ้ายหลังยกของหนัก ถามการวินิจฉัยที่เป็นไปได้มากที่สุด",
+   "options": {
+    "A": "Lumbar scoliosis",
+    "B": "Lumbar spondylolisthesis",
+    "C": "Lumbar disc herniation",
+    "D": "Spinal canal stenosis",
+    "E": "Lumbar strain"
+   },
+   "answer": "C",
+   "why": "อาการปวดหลังเฉียบพลันหลังยกของหนักร่วมกับปวดร้าวลงขา (radicular pain/sciatica) เข้ากับ nucleus pulposus เคลื่อนออกมากด nerve root ส่วน lumbar strain ปวดเฉพาะที่ไม่ร้าวตาม dermatome, spinal stenosis มักเป็นผู้สูงอายุมี neurogenic claudication และ spondylolisthesis/scoliosis เป็นภาวะเรื้อรัง",
+   "source": "วิเคราะห์"
+  },
+  "76/133": {
+   "box": 28,
+   "stem": "ผลตรวจ Sabin-Feldman dye test เป็นบวก (สงสัย toxoplasmosis ในหญิงตั้งครรภ์) ถามการจัดการที่เหมาะสม",
+   "options": {
+    "A": "Retina biopsy",
+    "B": "Brain biopsy",
+    "C": "Pyrimethamine 1 year",
+    "D": "Test tachyzoite in amniotic fluid",
+    "E": "Test tissue cyst in placenta"
+   },
+   "answer": "D",
+   "why": "Sabin-Feldman dye test ตรวจ antibody ต่อ Toxoplasma gondii ผลบวกบอกว่าเคยติดเชื้อ แต่ในหญิงตั้งครรภ์ต้องยืนยันว่าทารกติดเชื้อหรือไม่โดยตรวจ tachyzoite/PCR ในน้ำคร่ำ ไม่จำเป็นต้อง biopsy สมองหรือ retina ส่วน pyrimethamine ใช้หลังยืนยัน fetal infection และห้ามใช้ในไตรมาสแรก",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ตัวเลือกในไฟล์จำมาไม่ชัด บริบทหญิงตั้งครรภ์ไม่ได้ระบุไว้ในโจทย์ที่จดมา"
+  },
+  "76/139": {
+   "box": 37,
+   "stem": "ชายได้ยารักษา overactive bladder และกินยา ketoconazole ร่วมด้วย ต่อมามีปากแห้งมาก ถามว่าควรเปลี่ยนเป็นยาใดเพื่อเลี่ยงผลข้างเคียงนี้",
+   "options": {
+    "A": "Oxybutynin",
+    "B": "Trospium",
+    "C": "Tolterodine",
+    "D": "Solifenacin",
+    "E": "Darifenacin"
+   },
+   "answer": "B",
+   "why": "Ketoconazole ยับยั้ง CYP3A4 ทำให้ระดับยา antimuscarinic ที่ถูก metabolize ผ่าน CYP3A4 (oxybutynin, tolterodine, solifenacin, darifenacin) สูงขึ้นจนผลข้างเคียงแบบปากแห้งเด่น trospium เป็น quaternary amine ที่ไม่ผ่าน CYP450 (ขับทางไตเป็นหลัก) และไม่ผ่าน BBB จึงไม่มี interaction นี้",
+   "source": "วิเคราะห์"
+  },
+  "76/141": {
+   "box": 13,
+   "stem": "ชาย 30 ปี ตาซ้าย adduct, elevate, depress ไม่ได้ ส่องไฟที่ตาขวา pupil ขวาหดแต่ซ้ายไม่หด และส่องไฟที่ตาซ้ายก็ได้ผลเหมือนกัน ถามตำแหน่งรอยโรค",
+   "options": {
+    "A": "Oculomotor nerve",
+    "B": "Abducens nerve",
+    "C": "Medial longitudinal fasciculus",
+    "D": "Superior colliculus",
+    "E": "Pons"
+   },
+   "answer": "A",
+   "why": "ตาซ้ายเสีย medial rectus, superior/inferior rectus, inferior oblique และ pupil ซ้ายไม่หดทั้ง direct และ consensual (efferent defect) แสดงว่า left CN III เสียทั้ง somatic motor และ parasympathetic fiber ส่วน afferent (CN II) ปกติเพราะส่องตาซ้ายแล้วตาขวายังหด abducens เสียจะ abduct ไม่ได้ และ MLF lesion ทำให้ INO โดย pupil ปกติ",
+   "source": "วิเคราะห์"
+  },
+  "76/151": {
+   "box": 33,
+   "stem": "หญิงไทย 25 ปี หลังงานปาร์ตี้ปีใหม่รู้สึกไม่สบาย ตรวจพบปากแห้ง ตาแดง (conjunctival injection) และใจสั่น ถามว่าน่าจะเกิดจากสารใด",
+   "options": {
+    "A": "Cannabis",
+    "B": "Heroin",
+    "C": "Alcohol",
+    "D": "Morphine",
+    "E": "Amphetamine"
+   },
+   "answer": "A",
+   "why": "Cannabis (THC จับ CB1 receptor) ทำให้ conjunctival injection, ปากแห้ง, tachycardia, หิว และ euphoria ร่วมกับ time distortion amphetamine ทำให้ tachycardia แต่จะมี mydriasis และไม่เด่นเรื่องตาแดง heroin/morphine ทำให้ miosis, respiratory depression และ alcohol ไม่ทำให้ปากแห้งตาแดงเด่นแบบนี้",
+   "source": "วิเคราะห์"
+  },
+  "76/152": {
+   "box": 22,
+   "stem": "นักศึกษาแพทย์ง่วงหลังอ่านหนังสือถึงตี 3 ถามว่าสารสื่อประสาทใดไม่เกี่ยวข้องกับภาวะตื่น (wakefulness)",
+   "options": {
+    "A": "Acetylcholine",
+    "B": "Norepinephrine",
+    "C": "GABA",
+    "D": "Orexin",
+    "E": "Serotonin"
+   },
+   "answer": "C",
+   "why": "ระบบ ascending arousal ใช้ ACh (pedunculopontine/basal forebrain), NE (locus coeruleus), serotonin (raphe), histamine (tuberomammillary) และ orexin/hypocretin (lateral hypothalamus) GABA จาก ventrolateral preoptic nucleus (VLPO) ยับยั้งศูนย์เหล่านี้จึงส่งเสริมการนอน ไม่ใช่การตื่น",
+   "source": "วิเคราะห์"
+  },
+  "76/159": {
+   "box": 2,
+   "stem": "ผู้ป่วยมี claw hand ร่วมกับการเคลื่อนไหวของกล้ามเนื้อมือผิดปกติ ถามว่าหน้าที่ใดน่าจะเสีย",
+   "options": {
+    "A": "Thumb abduction",
+    "B": "Thumb flexion",
+    "C": "Thumb extension",
+    "D": "Finger adduction",
+    "E": "Wrist extension"
+   },
+   "answer": "D",
+   "why": "Claw hand (ulnar claw) เกิดจาก ulnar nerve เสียทำให้ interossei และ medial lumbricals อ่อนแรง palmar interossei ทำหน้าที่ finger adduction (PAD) จึงเสีย ส่วน thumb abduction/flexion เป็นของ median nerve และ thumb/wrist extension เป็นของ radial nerve",
+   "source": "วิเคราะห์"
+  },
+  "76/161": {
+   "box": 39,
+   "stem": "ถามว่าคำถามใดเหมาะสำหรับประเมิน cognitive impairment",
+   "options": {
+    "A": "What is this season?",
+    "B": "Do you hear something others cannot hear?",
+    "C": "Do you have any anxiety about yourself?",
+    "D": "Do you lose your memory about stressful experiences?"
+   },
+   "answer": "A",
+   "why": "การถามฤดู/วัน/เดือน/สถานที่เป็นการประเมิน orientation ซึ่งเป็นส่วนหนึ่งของ MMSE/MoCA สำหรับ cognitive impairment ข้อ B ถาม auditory hallucination (psychosis) ข้อ C ถามความวิตกกังวล และข้อ D เกี่ยวกับ dissociative amnesia ซึ่งไม่ใช่การประเมิน cognition",
+   "source": "วิเคราะห์"
+  },
+  "76/176": {
+   "box": 21,
+   "stem": "ไข้และการออกกำลังกายทำให้อุณหภูมิกายสูงทั้งคู่ ถามว่าลักษณะใดพบในไข้แต่ไม่พบใน exercise",
+   "options": {
+    "A": "Increased set point",
+    "B": "Sweating",
+    "C": "Nonshivering thermogenesis"
+   },
+   "answer": "A",
+   "why": "ไข้เกิดจาก pyrogen (IL-1, IL-6, TNF) กระตุ้น PGE2 ที่ hypothalamus (OVLT/preoptic area) ทำให้ set point สูงขึ้น ส่วนการออกกำลังกายเป็น hyperthermia ที่ set point ปกติแต่สร้างความร้อนเกินกว่าระบายได้ sweating พบได้ทั้งสองภาวะ (ไข้จะเหงื่อออกตอนไข้ลง)",
+   "source": "วิเคราะห์"
+  },
+  "76/178": {
+   "box": 22,
+   "stem": "ผู้ป่วยหลับทันทีเมื่อตกใจเสียงปิดตู้ล็อกเกอร์ดัง และแม้นอนครบ 8 ชั่วโมงยังง่วงตลอด ถามยาที่เป็น drug of choice",
+   "options": {
+    "A": "Modafinil",
+    "B": "Methamphetamine",
+    "C": "Orexin"
+   },
+   "answer": "A",
+   "why": "อาการ excessive daytime sleepiness ร่วมกับอาการกำเริบเมื่อมีอารมณ์รุนแรง (cataplexy-like) เข้ากับ narcolepsy ซึ่งเกิดจากขาด orexin neuron ใน lateral hypothalamus ยาหลักคือ modafinil (wake-promoting agent) ส่วน methamphetamine ติดง่าย ไม่ใช้เป็นยาแรก และ orexin ยังไม่มีในรูปยารักษา",
+   "source": "วิเคราะห์"
+  },
+  "76/179": {
+   "box": 14,
+   "stem": "ผู้ป่วยมีอาการปวดบริเวณ mastoid ตามด้วยใบหน้าอ่อนแรงครึ่งซีกทั้งส่วนบนและล่าง ถามการวินิจฉัยที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Bell's palsy",
+    "B": "Stroke at facial area",
+    "C": "Myasthenia gravis"
+   },
+   "answer": "A",
+   "why": "อ่อนแรงทั้งหน้าผากและใบหน้าส่วนล่างข้างเดียวคือ LMN facial palsy (รอยโรคที่ facial nucleus หรือ nerve) ซึ่งเข้ากับ Bell's palsy ที่มักนำด้วยปวดหลังหู ส่วน stroke (UMN) จะ spare หน้าผากเพราะ upper face ได้ bilateral cortical input และ MG มักเป็นทั้งสองข้าง fluctuating ร่วมกับ ptosis",
+   "source": "วิเคราะห์"
+  },
+  "76/183": {
+   "box": 18,
+   "stem": "ผู้ป่วยพูดคล่องแต่ไม่มีความหมาย ฟังไม่เข้าใจ ทำตามคำสั่งไม่ได้ และพูดทวนไม่ได้ ถามตำแหน่งรอยโรค",
+   "options": {
+    "A": "Arcuate fasciculus",
+    "B": "Watershed zone",
+    "C": "Inferior frontal gyrus",
+    "D": "Superior temporal gyrus",
+    "E": "Prefrontal gyrus"
+   },
+   "answer": "D",
+   "why": "Fluent aphasia ที่ comprehension และ repetition เสียคือ Wernicke aphasia รอยโรคที่ posterior superior temporal gyrus (Wernicke area) ของ dominant hemisphere arcuate fasciculus เสียทำให้ conduction aphasia (เข้าใจดีแต่ทวนไม่ได้) watershed lesion ทำให้ transcortical aphasia (repetition ปกติ) และ inferior frontal gyrus ทำให้ Broca aphasia",
+   "source": "วิเคราะห์"
+  },
+  "76/184": {
+   "box": 18,
+   "stem": "ผู้ป่วยพูดไม่ออก/พูดไม่คล่อง หงุดหงิดที่พูดไม่ได้ แต่ฟังเข้าใจและทำตามคำสั่งได้ ถามตำแหน่งรอยโรค",
+   "options": {
+    "A": "Arcuate fasciculus",
+    "B": "Watershed zone",
+    "C": "Inferior frontal gyrus",
+    "D": "Superior temporal gyrus",
+    "E": "Prefrontal gyrus"
+   },
+   "answer": "C",
+   "why": "Non-fluent aphasia ที่ comprehension ดีและผู้ป่วยรู้ตัวจนหงุดหงิดคือ Broca aphasia รอยโรคที่ posterior inferior frontal gyrus (pars opercularis/triangularis) ของ dominant hemisphere ส่วน superior temporal gyrus ทำให้ Wernicke aphasia ที่ผู้ป่วยมักไม่รู้ตัว",
+   "source": "วิเคราะห์"
+  },
+  "76/185": {
+   "box": 23,
+   "stem": "ให้ aspirin เพื่อป้องกันลิ่มเลือด ถามว่ายายับยั้งขั้นตอนใด",
+   "options": {
+    "A": "Arachidonic acid from oleic acid",
+    "B": "Thromboxane from arachidonic acid",
+    "C": "Leukotriene from arachidonic acid",
+    "D": "สารอื่น from arachidonic acid"
+   },
+   "answer": "B",
+   "why": "Aspirin acetylate COX-1 แบบ irreversible ในเกล็ดเลือด ทำให้เปลี่ยน arachidonic acid เป็น thromboxane A2 ไม่ได้ เกล็ดเลือดไม่มี nucleus จึงสร้าง COX ใหม่ไม่ได้ ผลอยู่ตลอดอายุเกล็ดเลือด 7-10 วัน การสร้าง leukotriene ผ่าน lipoxygenase ไม่ถูกยับยั้ง (จึงอาจทำให้ aspirin-exacerbated asthma)",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "76/195": {
+   "box": 3,
+   "stem": "ผู้ป่วยปวดหลังร้าวมาบริเวณผิวหนังเหนือ pubic symphysis ถามว่าเกิดจากเส้นประสาทใด",
+   "options": {
+    "A": "Ilioinguinal nerve",
+    "B": "Obturator nerve",
+    "C": "Femoral nerve",
+    "D": "Lateral femoral cutaneous nerve",
+    "E": "Subcostal nerve"
+   },
+   "answer": "A",
+   "why": "ผิวหนังเหนือ pubic symphysis และ inguinal region เลี้ยงโดยแขนงจาก L1 (iliohypogastric และ ilioinguinal) ซึ่งในตัวเลือกมีเพียง ilioinguinal nerve obturator nerve เลี้ยงต้นขาด้านใน femoral nerve เลี้ยงต้นขาด้านหน้า lateral femoral cutaneous เลี้ยงต้นขาด้านข้าง ส่วน subcostal (T12) อยู่สูงกว่า",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ตามตำราผิวหนังเหนือ pubis เลี้ยงโดย iliohypogastric nerve เป็นหลัก แต่ไม่มีในตัวเลือก จึงเลือก ilioinguinal (L1 เหมือนกัน)"
+  },
+  "76/218": {
+   "box": 25,
+   "stem": "ผู้ป่วยมี central cord lesion ยาวช่วง T1-T5 ร่วมกับ optic neuritis เป็นซ้ำ ๆ ถามว่า antibody ใดเกี่ยวข้อง",
+   "options": {
+    "A": "Anti-AQP4",
+    "B": "Anti-GQ1b",
+    "C": "Anti-GM1",
+    "D": "Anti-GBM",
+    "E": "Anti-GAD"
+   },
+   "answer": "A",
+   "why": "Longitudinally extensive transverse myelitis (≥3 segment) ร่วมกับ recurrent optic neuritis เป็นลักษณะของ NMOSD ที่เกิดจาก anti-aquaporin-4 IgG ทำลาย astrocyte anti-GQ1b พบใน Miller Fisher syndrome anti-GM1 พบใน AMAN และ anti-GAD พบใน stiff-person syndrome",
+   "source": "วิเคราะห์"
+  },
+  "76/222": {
+   "box": 33,
+   "stem": "ผู้ป่วยมาห้องฉุกเฉินด้วย morphine overdose ถามว่าผล blood gas น่าจะเป็นแบบใด",
+   "options": {
+    "A": "pH 7.27, PCO2 60, HCO3 26, AG 12",
+    "B": "pH 7.04, PCO2 60, HCO3 19",
+    "C": "PCO2 20",
+    "D": "PCO2 14"
+   },
+   "answer": "A",
+   "why": "Opioid กด respiratory center ที่ medulla (ลดการตอบสนองต่อ CO2) ทำให้ hypoventilation เกิด acute respiratory acidosis คือ PCO2 สูง pH ต่ำ HCO3 เพิ่มเล็กน้อย (ราว 1 ต่อ PCO2 ที่เพิ่ม 10) ซึ่งตรงกับข้อ A ข้อ B มี HCO3 ต่ำจึงมี metabolic acidosis ร่วม ข้อที่ PCO2 ต่ำเป็นการหายใจเร็ว",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "76/227": {
+   "box": 10,
+   "stem": "ทารกไม่ถ่าย meconium และมี distal colon โป่งขยาย ถามว่าความผิดปกติมาจาก embryonic component ใด",
+   "options": {
+    "A": "Neural crest cell",
+    "B": "Visceral mesoderm"
+   },
+   "answer": "A",
+   "why": "Hirschsprung disease เกิดจาก neural crest cell migrate ลงมาไม่ถึงส่วนปลายของลำไส้ ทำให้ไม่มี ganglion cell ใน Meissner และ Auerbach plexus ส่วนที่ aganglionic จะหดเกร็งและส่วนต้นโป่งขยาย (megacolon) visceral mesoderm ให้กำเนิดกล้ามเนื้อเรียบของลำไส้ซึ่งปกติ",
+   "source": "วิเคราะห์"
+  },
+  "76/230": {
+   "box": 2,
+   "stem": "ภาพ X-ray แสดง lunate เคลื่อนไปทางด้านหน้า (anterior lunate dislocation) ถามว่าหน้าที่ใดจะทำไม่ได้",
+   "options": {
+    "A": "Thumb abduction",
+    "B": "Thumb adduction",
+    "C": "Finger abduction",
+    "D": "Finger adduction",
+    "E": "Thumb dorsal sensory"
+   },
+   "answer": "A",
+   "why": "Lunate ที่หลุดไปด้านหน้าจะกดเบียดใน carpal tunnel ทำให้ median nerve ถูกกด (acute carpal tunnel syndrome) เสีย thenar muscle โดยเฉพาะ abductor pollicis brevis จึง abduct นิ้วโป้งไม่ได้ ส่วน thumb adduction และ finger abduction/adduction เป็นของ ulnar nerve และ dorsal thumb sensation เป็นของ superficial radial nerve",
+   "source": "วิเคราะห์",
+   "needs_image": true
+  },
+  "76/242": {
+   "box": 24,
+   "stem": "ให้ภาพสมอง (CT/specimen) เห็นเลือดอยู่ในช่องที่ปกติควรมี CSF ถามการวินิจฉัย",
+   "options": {
+    "A": "Abscess",
+    "B": "Cortical necrosis",
+    "C": "Subarachnoid hemorrhage",
+    "D": "Herniation"
+   },
+   "answer": "C",
+   "why": "เลือดใน subarachnoid space (basal cistern, sulci, fissure) ซึ่งปกติมี CSF คือ subarachnoid hemorrhage ที่มักเกิดจาก ruptured berry aneurysm ผู้ป่วยมาด้วย thunderclap headache abscess จะเป็นก้อนมีขอบ ring enhancement ส่วน herniation เป็นการเคลื่อนของเนื้อสมอง",
+   "source": "วิเคราะห์",
+   "needs_image": true
+  },
+  "76/246": {
+   "box": 3,
+   "stem": "หลังผ่าตัด inguinal hernia ผู้ป่วยชาที่ scrotum ส่วนบนและโคนองคชาต แต่ cremasteric reflex ยังปกติ ถามว่าเส้นประสาทใดได้รับบาดเจ็บ",
+   "options": {
+    "A": "Ilioinguinal nerve",
+    "B": "Obturator nerve",
+    "C": "Genitofemoral nerve",
+    "D": "Iliohypogastric nerve",
+    "E": "Lateral femoral cutaneous nerve"
+   },
+   "answer": "A",
+   "why": "Ilioinguinal nerve (L1) วิ่งใน inguinal canal และเลี้ยงผิวหนัง anterior scrotum กับโคนองคชาต จึงบาดเจ็บบ่อยในการผ่าตัดไส้เลื่อน ส่วน cremasteric reflex มี efferent คือ genital branch ของ genitofemoral nerve ซึ่งยังปกติ จึงตัด genitofemoral ออก iliohypogastric เลี้ยงผิวหนังเหนือ pubis ไม่ใช่ scrotum",
+   "source": "วิเคราะห์"
+  },
+  "76/249": {
+   "box": 3,
+   "stem": "ผู้ป่วยหญิงปวดบริเวณ vulva มีฝีคัณฑสูตร ต้องผ่าตัดที่ anterior recess ของ ischiorectal fossa ถามว่าควร block เส้นประสาทใด",
+   "options": {
+    "A": "Anterior labial nerve",
+    "B": "Perineal nerve",
+    "C": "Lateral femoral cutaneous nerve",
+    "D": "Obturator nerve"
+   },
+   "answer": "B",
+   "why": "บริเวณ perineum ด้านหน้าและ vulva ส่วนหลังเลี้ยงโดย perineal nerve ซึ่งเป็นแขนงของ pudendal nerve ที่วิ่งผ่าน pudendal canal บนผนังด้านข้างของ ischioanal fossa anterior labial nerve มาจาก ilioinguinal เลี้ยงเฉพาะ mons/labia ส่วนหน้า ส่วน obturator และ lateral femoral cutaneous เลี้ยงต้นขา",
+   "source": "วิเคราะห์"
+  },
+  "76/250": {
+   "box": 4,
+   "stem": "ผู้ป่วยอ่อนแรงทั้งแขนขา (quadriplegia) ร่วมกับไม่มี reflex ลักษณะเหมือน GBS ถามการวินิจฉัย",
+   "options": {
+    "A": "Acute inflammatory demyelinating polyneuropathy",
+    "B": "Motor neuron disease"
+   },
+   "answer": "A",
+   "why": "Ascending flaccid paralysis ร่วม areflexia แบบเฉียบพลันเป็นลักษณะของ Guillain-Barré syndrome (AIDP) จาก autoimmune ต่อ myelin ของ peripheral nerve หลังติดเชื้อ ส่วน motor neuron disease (ALS) เป็นแบบค่อยเป็นค่อยไปและมีทั้ง UMN sign (hyperreflexia) และ LMN sign",
+   "source": "วิเคราะห์"
+  },
+  "76/254": {
+   "box": 26,
+   "stem": "ผู้ป่วยมี purpura ร่วมกับ meningitis ต้องการตรวจ CSF เพื่อหาเชื้อ ถามวิธีตรวจที่เหมาะสม",
+   "options": {
+    "A": "Gene-specific PCR",
+    "B": "18S rRNA PCR"
+   },
+   "answer": "A",
+   "why": "Purpura ร่วม meningitis ชี้ไปที่ Neisseria meningitidis ซึ่งเป็นแบคทีเรีย จึงควรใช้ PCR ที่จำเพาะต่อยีนของเชื้อ (เช่น ctrA) หรือ 16S rRNA ส่วน 18S rRNA เป็นยีนของ eukaryote (เชื้อรา/ปรสิต) จึงไม่เหมาะกับแบคทีเรีย",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือกในไฟล์ไม่ครบ (ข้อ A เขียนแค่ gen) ตีความว่าเป็น gene-specific PCR"
+  },
+  "76/265": {
+   "box": 20,
+   "stem": "ถามข้อความที่ถูกต้องเกี่ยวกับกลไกการเกิด Alzheimer's disease",
+   "options": {
+    "A": "Tau โดน covalent bond แล้วสะสม",
+    "B": "Tau hyperphosphorylation ทำให้เกิด neurofibrillary tangles",
+    "C": "Amyloid mutation ทำให้มี disulfide bond มากขึ้น",
+    "D": "Amyloid aggregation becomes toxic"
+   },
+   "answer": "B",
+   "why": "ใน Alzheimer's disease tau ซึ่งเป็น microtubule-associated protein ถูก hyperphosphorylate จึงหลุดจาก microtubule และรวมตัวเป็น paired helical filament กลายเป็น intracellular neurofibrillary tangle ซึ่งสัมพันธ์กับความรุนแรงของ dementia ข้อ amyloid aggregation (D) ก็มีส่วนจริง (Aβ oligomer เป็นพิษ) แต่ข้อ B เป็นข้อความที่ถูกต้องตรงตามตำราที่สุด",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ข้อ D ก็เป็นข้อความที่ถูกตามสมมติฐาน amyloid ไม่มีเฉลย จึงเลือก B ซึ่งชัดเจนที่สุด"
+  },
+  "76/267": {
+   "box": 5,
+   "stem": "ทารกที่ได้กินน้ำผึ้ง มีกล้ามเนื้ออ่อนแรงแบบปวกเปียก (flaccid paralysis) ถามว่า toxin ใดเป็นสาเหตุ",
+   "options": {
+    "A": "Tetanus toxin",
+    "B": "Botulinum toxin"
+   },
+   "answer": "B",
+   "why": "Infant botulism เกิดจากทารกกิน spore ของ C. botulinum (เช่นในน้ำผึ้ง) ซึ่งงอกในลำไส้ที่ flora ยังไม่สมบูรณ์และสร้าง toxin ยับยั้งการหลั่ง ACh ที่ NMJ ทำให้ floppy baby ส่วน tetanus toxin ยับยั้งการหลั่ง GABA/glycine จาก inhibitory interneuron ทำให้เกร็ง ไม่ใช่ปวกเปียก",
+   "source": "วิเคราะห์"
+  },
+  "76/274": {
+   "box": 15,
+   "stem": "ถามว่า nucleus/กลุ่มเซลล์ใดเป็นตัวสร้างจังหวะการหายใจ (respiratory rhythm generator)",
+   "options": {
+    "A": "Nucleus ambiguus",
+    "B": "Dorsal respiratory group",
+    "C": "Bötzinger complex",
+    "D": "Pre-Bötzinger complex",
+    "E": "Midpons"
+   },
+   "answer": "D",
+   "why": "Pre-Bötzinger complex ใน ventrolateral medulla มี pacemaker neuron ที่สร้าง rhythm ของการหายใจเข้า (inspiratory rhythm generator) ส่วน dorsal respiratory group รับ sensory input และส่งสัญญาณ inspiration Bötzinger complex เป็น expiratory neuron และ pons (pneumotaxic/apneustic) ปรับจังหวะเท่านั้น",
+   "source": "วิเคราะห์"
+  },
+  "76/275": {
+   "box": 26,
+   "stem": "ผู้ป่วย meningitis โจทย์ให้ค่า lab ของ CSF มาแล้วถามว่าเกิดจากสาเหตุใด (ไฟล์ไม่ได้บันทึกค่า lab)",
+   "options": {
+    "A": "Bacterial meningitis",
+    "B": "Tuberculous meningitis",
+    "C": "Viral meningitis",
+    "D": "Autoimmune meningitis",
+    "E": "Cryptococcal meningitis"
+   },
+   "answer": "A",
+   "why": "ต้องแปลตามตาราง CSF: bacterial มี PMN สูงมาก protein สูง glucose ต่ำมาก, TB มี lymphocyte protein สูงมาก glucose ต่ำ, viral มี lymphocyte protein ปกติหรือสูงเล็กน้อย glucose ปกติ, cryptococcus มี lymphocyte glucose ต่ำ opening pressure สูงมาก India ink บวก คำตอบในที่นี้เป็นการเดาเพราะไม่มีค่า lab",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ไฟล์ข้อสอบไม่ได้ให้ค่า CSF ไว้ คำตอบ A เป็นการเดา ให้ใช้ข้อนี้เพื่อฝึกแปลตาราง CSF เท่านั้น"
+  },
+  "77/15": {
+   "box": 8,
+   "stem": "โรค spinal muscular atrophy ถ่ายทอดแบบ autosomal recessive ชาย A มีพี่ชายเป็นโรค แต่งงานกับหญิง B ทั้งคู่ phenotype ปกติ prevalence ของโรคในทารกแรกเกิดคือ 1/14400 ถามโอกาสที่ลูกจะเป็นโรค",
+   "options": {
+    "A": "1/480",
+    "B": "1/300",
+    "C": "1/360",
+    "D": "1/200",
+    "E": "1/400"
+   },
+   "answer": "C",
+   "why": "ชาย A ปกติและมีพี่น้องเป็นโรค (พ่อแม่เป็น carrier) โอกาสเป็น carrier = 2/3 ส่วนหญิง B จาก prevalence 1/14400 ได้ q = 1/120 โอกาส carrier ประมาณ 2q = 1/60 และโอกาสลูกเป็นโรคเมื่อทั้งคู่เป็น carrier = 1/4 ดังนั้น 2/3 x 1/60 x 1/4 = 1/360 SMA เกิดจาก SMN1 deletion ทำให้ anterior horn cell เสื่อม",
+   "source": "วิเคราะห์"
+  },
+  "77/21": {
+   "box": 10,
+   "stem": "ทารกแรกเกิดไม่ถ่าย meconium รูทวารปกติ มี megacolon และ rectum ตีบแคบ ถามว่าจะพบอะไรหายไปใน biopsy",
+   "options": {
+    "A": "Ganglion cell (Meissner/Auerbach plexus)",
+    "B": "Smooth muscle layer",
+    "C": "Interstitial cell of Cajal",
+    "D": "Mucosal crypt",
+    "E": "Lymphoid follicle"
+   },
+   "answer": "A",
+   "why": "Hirschsprung disease เกิดจาก neural crest ไม่ migrate ลงมาถึงส่วนปลายของลำไส้ rectal suction biopsy จะไม่พบ ganglion cell ใน submucosal และ myenteric plexus (มักร่วมกับ hypertrophied nerve fiber และ acetylcholinesterase staining เพิ่ม) ส่วนที่ aganglionic จึงหดเกร็งตีบแคบและลำไส้ส่วนต้นโป่ง",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "77/22": {
+   "box": 10,
+   "stem": "ถ้า neural crest cell ไม่ migrate ถามว่าเซลล์หรือโครงสร้างใดจะขาดหายไป",
+   "options": {
+    "A": "Chromaffin cell",
+    "B": "Zona glomerulosa",
+    "C": "Zona fasciculata",
+    "D": "Zona reticularis"
+   },
+   "answer": "A",
+   "why": "Adrenal medulla (chromaffin cell ที่หลั่ง epinephrine/norepinephrine) มาจาก neural crest ส่วน adrenal cortex ทั้ง 3 zone (glomerulosa, fasciculata, reticularis) มาจาก intermediate/coelomic mesoderm จึงไม่ได้รับผลกระทบ",
+   "source": "วิเคราะห์"
+  },
+  "77/25": {
+   "box": 10,
+   "stem": "ถามว่าการให้ folate ในหญิงตั้งครรภ์ช่วยป้องกันความผิดปกติใด",
+   "options": {
+    "A": "Neural tube defect",
+    "B": "Cleft lip",
+    "C": "Congenital heart disease",
+    "D": "Down syndrome",
+    "E": "Hirschsprung disease"
+   },
+   "answer": "A",
+   "why": "Folate จำเป็นต่อการสังเคราะห์ nucleotide และ methylation ช่วงที่ neural tube ปิด (สัปดาห์ที่ 3-4 หลังปฏิสนธิ) การเสริม folic acid ตั้งแต่ก่อนตั้งครรภ์จึงลดความเสี่ยง neural tube defect (anencephaly, spina bifida) ได้มาก ไม่ป้องกัน chromosomal abnormality อย่าง Down syndrome",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "77/29": {
+   "box": 26,
+   "stem": "ถามลักษณะ CSF ใน meningitis ที่เกิดจาก gram-positive diplococci",
+   "options": {
+    "A": "Opening pressure สูง, protein สูง, glucose ปกติ",
+    "B": "Opening pressure สูง, protein สูง, glucose สูง",
+    "C": "Opening pressure ปกติ, protein ปกติ, glucose ปกติ",
+    "D": "Opening pressure ปกติ, protein สูง, glucose ปกติ",
+    "E": "Opening pressure สูง, protein สูง, glucose สูง"
+   },
+   "answer": "A",
+   "why": "Gram-positive diplococci คือ Streptococcus pneumoniae ซึ่งเป็น bacterial meningitis จะมี opening pressure สูง, PMN สูง, protein สูง และ glucose ต่ำ (bacteria และ neutrophil ใช้ glucose) ในตัวเลือกไม่มี glucose ต่ำ จึงเลือกข้อที่ใกล้เคียงที่สุดคือ OP และ protein สูง ข้อที่ glucose สูงผิดแน่นอน",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ตัวเลือกที่จดมาไม่มี glucose ต่ำซึ่งเป็นคำตอบที่ถูกจริง ข้อ B กับ E ซ้ำกัน ตัวเลือกจริงอาจต่างจากนี้"
+  },
+  "77/33": {
+   "box": 27,
+   "stem": "ถามว่าข้อใดทำให้ inactivated polio vaccine (IPV) ดีกว่า oral polio vaccine (OPV)",
+   "options": {
+    "A": "ไม่มีโอกาสเกิด vaccine-associated paralytic polio",
+    "B": "หยุดการแพร่เชื้อในประชากรได้ดีกว่า",
+    "C": "Mucosal immunity ดีกว่า"
+   },
+   "answer": "A",
+   "why": "IPV (Salk) เป็นเชื้อตายจึงไม่มีโอกาส revert เป็นเชื้อก่อโรค ไม่เกิด VAPP หรือ cVDPV ต่างจาก OPV (Sabin) ที่เป็น live attenuated ส่วน OPV สร้าง mucosal IgA ในลำไส้ได้ดีกว่าและหยุดการแพร่เชื้อในชุมชนได้ดีกว่า ข้อ B และ C จึงเป็นข้อดีของ OPV",
+   "source": "วิเคราะห์"
+  },
+  "77/35": {
+   "box": 5,
+   "stem": "เด็กเล็กกินมันหวาน (sweet potato) แล้วมีน้ำลายไหล ร้องเสียงเบา และ hypotonia ถามว่าเกิดจากอะไร",
+   "options": {
+    "A": "Botulinum toxin",
+    "B": "Tetanus toxin"
+   },
+   "answer": "A",
+   "why": "อาการน้ำลายยืด ร้องเสียงเบา ดูดกลืนไม่ดี และกล้ามเนื้ออ่อนปวกเปียกในเด็กเล็กคือ infant botulism จากการกิน spore ของ C. botulinum (มักพบในดินที่ติดผักราก เช่นมันหวาน หรือน้ำผึ้ง) toxin ยับยั้งการหลั่ง ACh ที่ NMJ ส่วน tetanus toxin ทำให้ spastic paralysis ไม่ใช่ hypotonia",
+   "source": "วิเคราะห์"
+  },
+  "77/40": {
+   "box": 23,
+   "stem": "ผู้ป่วยได้ clopidogrel แล้วยังเกิด stroke ซ้ำ ถามว่าน่าจะเกิดจาก genotype ใด",
+   "options": {
+    "A": "CYP2D6 *10/*10",
+    "B": "CYP2D6 *2/*2",
+    "C": "CYP2C19 *1/*1",
+    "D": "CYP2C19 *3/*3",
+    "E": "CYP2C19 *17/*17"
+   },
+   "answer": "D",
+   "why": "Clopidogrel เป็น prodrug ต้องถูก CYP2C19 เปลี่ยนเป็น active metabolite ที่ block P2Y12 receptor แบบ irreversible ผู้ที่มี loss-of-function allele สองตัว (*2 หรือ *3) เป็น poor metabolizer ได้ฤทธิ์ต้านเกล็ดเลือดน้อยจึงเกิด stroke ซ้ำ *1 เป็น normal และ *17 เป็น gain-of-function (ultrarapid) ส่วน CYP2D6 ไม่เกี่ยวกับ clopidogrel",
+   "source": "วิเคราะห์"
+  },
+  "77/46": {
+   "box": 35,
+   "stem": "ถามว่า NSAID ตัวใดสัมพันธ์กับการเกิดอาการทางระบบประสาท (เช่นปวดศีรษะ เวียนศีรษะ สับสน) มากที่สุด",
+   "options": {
+    "A": "Aspirin",
+    "B": "Ibuprofen",
+    "C": "Indomethacin",
+    "D": "Celecoxib"
+   },
+   "answer": "C",
+   "why": "Indomethacin เป็น NSAID ที่ผ่าน BBB ได้ดีและมีผลข้างเคียงทาง CNS สูงที่สุดในกลุ่ม ได้แก่ frontal headache, dizziness, confusion, depression และอาจทำให้ psychosis ส่วน aspirin ขนาดสูงทำให้ tinnitus (salicylism) ibuprofen และ celecoxib มี CNS side effect ต่ำกว่า",
+   "source": "วิเคราะห์"
+  },
+  "77/79": {
+   "box": 4,
+   "stem": "ผู้ป่วยมี polyneuropathy ร่วมกับ megaloblastic anemia ถามว่าขาดวิตามินใด",
+   "options": {
+    "A": "Vitamin B12",
+    "B": "Folate"
+   },
+   "answer": "A",
+   "why": "ทั้ง B12 และ folate ทำให้ megaloblastic anemia แต่เฉพาะ B12 ที่ทำให้มีอาการทางระบบประสาท เพราะ B12 เป็น cofactor ของ methylmalonyl-CoA mutase การขาดทำให้ methylmalonic acid สะสมและสร้าง myelin ผิดปกติ เกิด polyneuropathy และ subacute combined degeneration",
+   "source": "วิเคราะห์"
+  },
+  "77/82": {
+   "box": 13,
+   "stem": "หญิง 25 ปี ตรวจร่างกายไม่มี ptosis การกลอกตาปกติ pupil หดได้ปกติเมื่อมองใกล้ แต่ swinging flashlight test จากตาซ้ายไปตาขวาแล้ว pupil ทั้งสองข้างขยาย ถามว่าความผิดปกติทำให้สัญญาณส่งไปไม่ถึงบริเวณใด",
+   "options": {
+    "A": "Lateral geniculate nucleus",
+    "B": "Medial geniculate",
+    "C": "Oculomotor nerve",
+    "D": "Edinger-Westphal nucleus",
+    "E": "Interstitial nucleus of Cajal"
+   },
+   "answer": "D",
+   "why": "Pupil ขยายเมื่อย้ายไฟไปที่ตาขวาคือ relative afferent pupillary defect ของตาขวา (optic nerve ขวาเสีย) ทาง afferent ของ pupillary light reflex วิ่งจาก optic nerve ไป pretectal nucleus แล้วส่งต่อไป Edinger-Westphal nucleus ทั้งสองข้าง ไม่ผ่าน LGN (LGN เป็นทางของการมองเห็น) ส่วน CN III ปกติเพราะ EOM และ near response ปกติ",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ โจทย์ไม่ชัด รอยโรคจริงคือ afferent (optic nerve) ซึ่งส่งข้อมูลไม่ถึง pretectal/EW nucleus จึงเลือก EW เป็นข้อใกล้เคียงที่สุด"
+  },
+  "77/83": {
+   "box": 39,
+   "stem": "ชายหมกมุ่นกับความสำเร็จของตนเอง ต้องการได้รับการปฏิบัติเป็นพิเศษ มองว่าผู้อื่นด้อยกว่า และขาด empathy ถามการวินิจฉัย",
+   "options": {
+    "A": "Narcissistic personality",
+    "B": "Histrionic personality",
+    "C": "Dependent",
+    "D": "Antisocial",
+    "E": "Paranoid"
+   },
+   "answer": "A",
+   "why": "Narcissistic personality disorder (cluster B) มี grandiosity, ต้องการคำชม, entitlement, ใช้ประโยชน์ผู้อื่น และขาด empathy histrionic เน้นเรียกร้องความสนใจด้วยอารมณ์ที่เกินจริงและ seductive antisocial เน้นละเมิดสิทธิผู้อื่นและกฎหมาย ส่วน paranoid ระแวงไม่ไว้ใจผู้อื่น",
+   "source": "วิเคราะห์"
+  },
+  "77/84": {
+   "box": 31,
+   "stem": "ผู้ป่วย major depressive disorder ได้ MAO inhibitor ร่วมกับ fluoxetine 2 สัปดาห์ต่อมามีเหงื่อออก กระสับกระส่าย สั่น และไข้สูง ถามว่าสารสื่อประสาทใดเป็นตัวก่ออาการ",
+   "options": {
+    "A": "Histamine",
+    "B": "Serotonin",
+    "C": "Orexin",
+    "D": "Dopamine"
+   },
+   "answer": "B",
+   "why": "MAOI ยับยั้งการสลาย serotonin ส่วน SSRI ยับยั้งการ reuptake เมื่อใช้ร่วมกันทำให้ serotonin ล้นเกิด serotonin syndrome (autonomic instability, altered mental status, neuromuscular hyperactivity เช่น clonus, tremor, hyperreflexia) รักษาด้วยการหยุดยาและให้ cyproheptadine ต่างจาก NMS ที่เกิดจาก dopamine blockade มี rigidity แบบ lead-pipe และเกิดช้ากว่า",
+   "source": "วิเคราะห์"
+  },
+  "77/85": {
+   "box": 24,
+   "stem": "ผู้ป่วยมี right hemiparesis มา 1 ชั่วโมง CT สมองพบ lobar hemorrhage ที่สมองซีกซ้าย ถามสาเหตุที่พบบ่อยที่สุดของภาวะนี้",
+   "options": {
+    "A": "Contusion",
+    "B": "Hypertension",
+    "C": "Berry aneurysm",
+    "D": "Hemorrhagic infarction",
+    "E": "Cerebral amyloid angiopathy"
+   },
+   "answer": "E",
+   "why": "Lobar (cortical-subcortical) hemorrhage ในผู้สูงอายุสัมพันธ์มากที่สุดกับ cerebral amyloid angiopathy ที่ Aβ สะสมในผนังหลอดเลือดเล็กของ cortex ทำให้เปราะ ส่วน hypertensive ICH มักอยู่ลึก (basal ganglia, thalamus, pons, cerebellum) จาก Charcot-Bouchard microaneurysm และ berry aneurysm ทำให้ SAH",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ โจทย์ที่จดมาไม่ระบุอายุ ถ้าผู้ป่วยอายุน้อยและมี hypertension ชัดเจนอาจตอบ hypertension"
+  },
+  "77/86": {
+   "box": 15,
+   "stem": "ผู้ป่วยเสียความรู้สึกเจ็บปวดที่ใบหน้าและลำตัวคนละข้างกัน มี Horner syndrome และ gag reflex หาย ถามว่าหลอดเลือดใดเสียหาย",
+   "options": {
+    "A": "ACA",
+    "B": "MCA",
+    "C": "PCA",
+    "D": "AICA",
+    "E": "PICA"
+   },
+   "answer": "E",
+   "why": "Lateral medullary (Wallenberg) syndrome จาก PICA หรือ vertebral artery: spinal trigeminal nucleus เสียทำให้ปวดหน้าข้างเดียวกัน spinothalamic เสียทำให้ปวดลำตัวข้างตรงข้าม descending sympathetic ทำให้ Horner และ nucleus ambiguus (IX, X) ทำให้ gag หาย กลืนลำบาก เสียงแหบ AICA (lateral pons) จะมี facial palsy และหูหนวกแทนอาการของ nucleus ambiguus",
+   "source": "วิเคราะห์"
+  },
+  "77/87": {
+   "box": 13,
+   "stem": "ผู้ป่วยมีประวัติ right hemiparesis พูดผิด ๆ และไม่เข้าใจภาษา ถามว่าน่าจะพบความผิดปกติของตาแบบใด",
+   "options": {
+    "A": "Right side bilateral eye deviation",
+    "B": "Left side bilateral eye deviation",
+    "C": "Eye upward deviation",
+    "D": "Eye downward deviation",
+    "E": "INO"
+   },
+   "answer": "B",
+   "why": "Right hemiparesis ร่วม aphasia บอกว่ารอยโรคอยู่ที่ left cerebral hemisphere (MCA territory) ซึ่งเสีย frontal eye field ซ้าย ทำให้ FEF ขวาที่ยังทำงานผลักตาไปทางซ้าย ผู้ป่วยจึงมองไปทางรอยโรค (look toward lesion, away from hemiparesis) ถ้าเป็นรอยโรคที่ pons ตาจะเบนไปทางด้านอ่อนแรง ส่วน downward deviation พบใน thalamic/Parinaud",
+   "source": "วิเคราะห์"
+  },
+  "77/88": {
+   "box": 18,
+   "stem": "ผู้ป่วยมีประวัติ stroke ปัจจุบันพูดไม่มีความหมาย บอกชื่อสิ่งของไม่ได้ พูดทวนไม่ได้ และทำตามคำสั่งไม่ได้ ถามตำแหน่งรอยโรค",
+   "options": {
+    "A": "Arcuate fasciculus",
+    "B": "Inferior frontal gyrus",
+    "C": "Superior temporal gyrus"
+   },
+   "answer": "C",
+   "why": "Fluent แต่ไร้ความหมาย ร่วมกับเสียทั้ง comprehension และ repetition คือ Wernicke aphasia จากรอยโรค posterior superior temporal gyrus (inferior division ของ MCA) arcuate fasciculus ทำให้ conduction aphasia ซึ่งยังเข้าใจและทำตามคำสั่งได้ inferior frontal gyrus ทำให้ Broca aphasia ที่พูดไม่คล่อง",
+   "source": "วิเคราะห์"
+  },
+  "77/89": {
+   "box": 20,
+   "stem": "ภรรยาสงสัยว่าสามีเป็น dementia 2 ปีก่อนเริ่มวางแผนและจัดระบบงานไม่ได้จนต้องลาออก ต่อมามี disinhibition ทำตามใจตัวเอง เปลือยกายในที่สาธารณะ ถามตำแหน่งที่ผิดปกติ",
+   "options": {
+    "A": "Lateral temporal lobe",
+    "B": "Medial temporal lobe",
+    "C": "Frontal lobe",
+    "D": "Occipital lobe",
+    "E": "Parietal lobe"
+   },
+   "answer": "C",
+   "why": "Executive dysfunction ที่นำมาก่อน ตามด้วย behavioral disinhibition และพฤติกรรมไม่เหมาะสมทางสังคม เข้ากับ behavioral variant frontotemporal dementia ซึ่งฝ่อที่ frontal lobe (และ anterior temporal) ส่วน medial temporal lobe เสียก่อนใน Alzheimer's disease ซึ่งนำด้วย episodic memory loss",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ มีอาจารย์บางท่านเฉลยข้อคล้ายกันเป็น medial temporal แต่ภาพทางคลินิกเข้ากับ frontal lobe มากกว่า"
+  },
+  "77/90": {
+   "box": 7,
+   "stem": "ชาย 30 ปี หลังอุบัติเหตุรถจักรยานยนต์ ตรวจพบเสีย vibration sense ขาขวา hyperreflexia ขาขวา และเสีย pain sensation ด้านซ้ายตั้งแต่ใต้สะดือลงไป ถามการวินิจฉัย",
+   "options": {
+    "A": "Posterolateral cord syndrome",
+    "B": "Anterior spinal artery occlusion",
+    "C": "Brown-Séquard syndrome"
+   },
+   "answer": "C",
+   "why": "Hemisection ของ spinal cord ด้านขวาทำให้เสีย dorsal column (vibration/proprioception) และ corticospinal tract (UMN sign) ข้างเดียวกันกับรอยโรค ส่วน spinothalamic tract ไขว้ข้ามที่ระดับ 1-2 segment เหนือจุดเข้า จึงเสีย pain/temperature ด้านตรงข้าม ASA occlusion จะ spare dorsal column และ posterolateral (SCD) ไม่เสีย pain",
+   "source": "วิเคราะห์"
+  },
+  "77/91": {
+   "box": 8,
+   "stem": "ผู้ป่วยได้รับการวินิจฉัย amyotrophic lateral sclerosis ถามว่าโรคนี้เกี่ยวข้องกับความผิดปกติของ channel ใด",
+   "options": {
+    "A": "Calcium channel",
+    "B": "Sodium channel",
+    "C": "Chloride channel",
+    "D": "Potassium channel"
+   },
+   "answer": "A",
+   "why": "สมมติฐานหลักของ ALS คือ glutamate excitotoxicity โดย glutamate กระตุ้น AMPA/NMDA receptor มากเกินไปทำให้ Ca2+ ไหลเข้า motor neuron มากจนเซลล์ตาย (Ca2+-permeable AMPA receptor ใน motor neuron) จึงตอบ calcium channel ส่วนยา riluzole ลด glutamate release ผ่านการ block Na+ channel ซึ่งเป็นการรักษา ไม่ใช่ defect หลัก",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ โจทย์และตัวเลือกจำมาไม่ชัด อาจตีความเป็น Na+ channel (กลไกของ riluzole) ได้"
+  },
+  "77/92": {
+   "box": 27,
+   "stem": "เด็กเล่นกับสุนัข ทั้งเด็กและสุนัขไม่เคยได้รับวัคซีนพิษสุนัขบ้า มีแผล 2 แผล คือแผลถลอกตื้นที่ไหล่และแผลฉีกขาดลึก 0.5 cm ที่แขน ทั้งสองแผลมีเลือดออก ถามการจัดการ",
+   "options": {
+    "A": "Vaccine 2 เข็ม ไม่ให้ RIG",
+    "B": "Vaccine 2 เข็ม + RIG ที่แผลฉีกขาด",
+    "C": "Vaccine 4-5 เข็ม + RIG ที่แผลฉีกขาด",
+    "D": "Vaccine 4-5 เข็ม + RIG ทุกแผล"
+   },
+   "answer": "D",
+   "why": "แผลที่มีเลือดออก (รวมถึงแผลถลอกที่เลือดซึม) จัดเป็น WHO category III ในผู้ที่ไม่เคยได้รับวัคซีนต้องให้วัคซีนครบชุด (4-5 เข็ม) ร่วมกับ rabies immunoglobulin ฉีดรอบทุกแผลให้มากที่สุด เพื่อ neutralize เชื้อเฉพาะที่ก่อนเข้าเส้นประสาท วัคซีน 2 เข็มใช้เฉพาะผู้ที่เคยได้รับวัคซีนครบมาก่อนและไม่ต้องให้ RIG",
+   "source": "วิเคราะห์"
+  },
+  "77/93": {
+   "box": 5,
+   "stem": "ผู้ป่วยไปสวนพฤกษศาสตร์แล้วมีน้ำตาไหลและน้ำลายไหลมาก ถามว่าสารที่ได้รับมีกลไกใด",
+   "options": {
+    "A": "Anticholinesterase",
+    "B": "Nicotinic antagonist",
+    "C": "Muscarinic antagonist"
+   },
+   "answer": "A",
+   "why": "น้ำตาไหลน้ำลายไหลเป็นอาการ muscarinic excess (SLUDGE/DUMBELS) เกิดจากสารยับยั้ง acetylcholinesterase เช่น organophosphate/carbamate ในยาฆ่าแมลงที่ใช้ในสวน ทำให้ ACh สะสม muscarinic antagonist (เช่น atropine-like จากพืช Datura) ทำให้ตรงข้ามคือปากแห้งตาแห้ง ส่วน nicotinic antagonist ทำให้อ่อนแรง",
+   "source": "วิเคราะห์"
+  },
+  "77/94": {
+   "box": 39,
+   "stem": "การให้รางวัลเด็กเมื่อทำความดี จัดเป็นหลักการเรียนรู้แบบใด",
+   "options": {
+    "A": "Positive reinforcement",
+    "B": "Negative reinforcement",
+    "C": "Punishment",
+    "D": "Classical conditioning"
+   },
+   "answer": "A",
+   "why": "ใน operant conditioning การให้สิ่งที่พึงพอใจหลังพฤติกรรมเพื่อเพิ่มพฤติกรรมนั้นคือ positive reinforcement ส่วน negative reinforcement คือการเอาสิ่งไม่พึงพอใจออกเพื่อเพิ่มพฤติกรรม punishment มุ่งลดพฤติกรรม และ classical conditioning เป็นการจับคู่ stimulus โดยไม่ขึ้นกับผลของพฤติกรรม",
+   "source": "วิเคราะห์"
+  },
+  "77/95": {
+   "box": 39,
+   "stem": "ผู้ป่วยเห็นศาลเจ้าแล้วมีความคิดอยากด่าตลอด จึงต้องขอขมาศาลซ้ำ ๆ จนหายรู้สึกผิด ถ้าไม่ได้ทำจะกังวลและหมกมุ่น ถามการวินิจฉัย",
+   "options": {
+    "A": "OCD",
+    "B": "Anxiety",
+    "C": "Generalized anxiety disorder",
+    "D": "Paranoid"
+   },
+   "answer": "A",
+   "why": "ความคิดที่ผุดขึ้นซ้ำ ๆ ไม่ต้องการ (obsession เรื่องดูหมิ่นสิ่งศักดิ์สิทธิ์) ทำให้วิตกกังวล และต้องทำพฤติกรรมซ้ำ (compulsion คือการขอขมา) เพื่อลดความกังวล เป็นลักษณะของ obsessive-compulsive disorder ซึ่งรักษาด้วย SSRI ขนาดสูงร่วมกับ exposure and response prevention GAD เป็นความกังวลหลายเรื่องโดยไม่มี compulsion",
+   "source": "วิเคราะห์"
+  },
+  "77/96": {
+   "box": 26,
+   "stem": "เด็กเล็กเป็น meningitis ตรวจพบ gram-positive bacilli ถามลักษณะของเชื้อตัวนี้",
+   "options": {
+    "A": "Umbilicated colony",
+    "B": "Umbrella shape on motility tube",
+    "C": "Gamma hemolysis on blood agar",
+    "D": "CAMP test negative"
+   },
+   "answer": "B",
+   "why": "Gram-positive bacilli ที่ทำให้ neonatal meningitis คือ Listeria monocytogenes ซึ่งมี tumbling motility ที่ 25°C และใน semisolid agar จะเกิดรูปแบบ umbrella shape เชื้อเป็น narrow beta-hemolysis (ไม่ใช่ gamma) และ CAMP test positive กับ S. aureus จึงตัดข้อ C, D ออก",
+   "source": "วิเคราะห์"
+  },
+  "77/97": {
+   "box": 17,
+   "stem": "ชาย 70 ปี ได้ยินลดลงทั้งสองหู Weber ไม่ lateralize Rinne AC > BC ทั้งสองข้าง ได้ยินเสียงความถี่ต่ำปกติแต่เสียงความถี่สูงลดลง ถามตำแหน่งรอยโรค",
+   "options": {
+    "A": "Ossicles",
+    "B": "Stereocilia (hair cell)",
+    "C": "Cochlear nerve",
+    "D": "Semicircular canal",
+    "E": "Tympanic membrane"
+   },
+   "answer": "B",
+   "why": "ภาพเข้ากับ presbycusis ซึ่งเป็น bilateral symmetric sensorineural hearing loss (Rinne positive, Weber กลาง) เริ่มที่ความถี่สูงเพราะ hair cell และ stereocilia ที่ฐานของ cochlea (รับเสียงความถี่สูง) เสื่อมก่อน ossicle และ tympanic membrane เป็น conductive loss (BC > AC) ส่วน cochlear nerve lesion มักเป็นข้างเดียว และ semicircular canal เกี่ยวกับการทรงตัว",
+   "source": "วิเคราะห์"
+  },
+  "77/98": {
+   "box": 6,
+   "stem": "ผู้ป่วยรับรู้การสั่นสะเทือน (vibration) ลดลงที่ขาทั้งสองข้าง ถามตำแหน่งรอยโรค",
+   "options": {
+    "A": "Fasciculus gracilis",
+    "B": "Fasciculus cuneatus",
+    "C": "Anterior spinothalamic tract",
+    "D": "Lateral spinothalamic tract"
+   },
+   "answer": "A",
+   "why": "Vibration และ proprioception วิ่งใน dorsal column-medial lemniscus โดยใยจากขาและลำตัวส่วนล่าง (ต่ำกว่า T6) อยู่ใน fasciculus gracilis ด้าน medial ส่วนใยจากแขนอยู่ใน fasciculus cuneatus ด้าน lateral spinothalamic tract นำ pain/temperature (lateral) และ crude touch (anterior)",
+   "source": "วิเคราะห์"
+  },
+  "77/99": {
+   "box": 34,
+   "stem": "เด็กชักมาที่ห้องฉุกเฉิน ได้ diazepam ไปแล้ว 2 ครั้งยังไม่หยุดชัก ถามว่าควรทำอะไรต่อ",
+   "options": {
+    "A": "Oral carbamazepine",
+    "B": "IV propofol",
+    "C": "IV phenytoin",
+    "D": "IV diazepam third dose"
+   },
+   "answer": "C",
+   "why": "Status epilepticus ที่ไม่ตอบสนองต่อ benzodiazepine 2 dose (established SE) ให้ second-line antiseizure drug ทาง IV เช่น phenytoin/fosphenytoin, valproate หรือ levetiracetam benzodiazepine dose ที่ 3 เพิ่มความเสี่ยงกดการหายใจโดยไม่ได้ผลเพิ่ม propofol ใช้ใน refractory SE หลัง second-line ล้มเหลว ส่วนยากินออกฤทธิ์ช้าเกินไป",
+   "source": "วิเคราะห์"
+  },
+  "77/100": {
+   "box": 31,
+   "stem": "ชาย 20 ปี มีอาการอ่อนเพลีย anhedonia และมีความคิดอยากฆ่าตัวตาย ถามยาที่เหมาะสมที่สุด",
+   "options": {
+    "A": "Fluoxetine",
+    "B": "Carbamazepine"
+   },
+   "answer": "A",
+   "why": "อาการเข้ากับ major depressive disorder ยาแรกคือ SSRI เช่น fluoxetine ซึ่งปลอดภัยเมื่อกินเกินขนาดมากกว่า TCA (สำคัญในผู้ที่มีความคิดฆ่าตัวตาย) แต่ต้องติดตามใกล้ชิดเพราะในวัยรุ่นและผู้ใหญ่ตอนต้นอาจเพิ่ม suicidality ช่วงแรก carbamazepine เป็น anticonvulsant/mood stabilizer ใช้ใน bipolar ไม่ใช่ยาแรกของ depression",
+   "source": "วิเคราะห์"
+  },
+  "77/101": {
+   "box": 16,
+   "stem": "ให้ภาพ X-ray/ภาพถ่ายรังสีแสดงก้อนที่ pituitary gland ถามว่าจะพบความผิดปกติของลานสายตาแบบใด",
+   "options": {
+    "A": "Bitemporal hemianopia",
+    "B": "Binasal hemianopia"
+   },
+   "answer": "A",
+   "why": "Pituitary adenoma โตขึ้นด้านบนกด optic chiasm ตรงกลาง ซึ่งเป็นใยประสาทที่มาจาก nasal retina ของสองตาและรับภาพ temporal field จึงเกิด bitemporal hemianopia (มักเริ่มที่ superior quadrant) ส่วน binasal hemianopia ต้องกดด้านข้างของ chiasm ทั้งสองฝั่ง เช่นจาก ICA calcification ซึ่งพบน้อย",
+   "source": "วิเคราะห์",
+   "needs_image": true
+  },
+  "77/102": {
+   "box": 35,
+   "stem": "ถามยาที่ใช้รักษา trigeminal neuralgia",
+   "options": {
+    "A": "Anticonvulsant",
+    "B": "Beta blocker",
+    "C": "Nicotinic agonist",
+    "D": "Muscarinic agonist"
+   },
+   "answer": "A",
+   "why": "ยาตัวแรกของ trigeminal neuralgia คือ carbamazepine (หรือ oxcarbazepine) ซึ่งเป็น anticonvulsant ที่ block voltage-gated Na+ channel ลด ectopic discharge ของ trigeminal nerve ที่ถูกหลอดเลือดกด (มัก superior cerebellar artery) beta blocker ใช้ป้องกัน migraine ไม่ใช่ trigeminal neuralgia",
+   "source": "วิเคราะห์"
+  },
+  "77/113": {
+   "box": 21,
+   "stem": "ขนลุก (piloerection) เมื่ออากาศหนาว ถามว่ากลไกนี้มีจุดประสงค์เพื่ออะไร",
+   "options": {
+    "A": "Heat insulation",
+    "B": "Heat production from shivering",
+    "C": "Heat production from muscle metabolism"
+   },
+   "answer": "A",
+   "why": "เมื่อ posterior hypothalamus รับรู้ความเย็นจะกระตุ้น sympathetic (α1) ให้ arrector pili หดตัวทำให้ขนตั้ง ในสัตว์ที่มีขนหนาจะกักชั้นอากาศไว้เป็นฉนวนลดการสูญเสียความร้อน (ในคนเป็นกลไกหลงเหลือ) ไม่ได้สร้างความร้อน ส่วน shivering และ muscle metabolism เป็นกลไกเพิ่มการผลิตความร้อนแยกต่างหาก",
+   "source": "วิเคราะห์"
+  },
+  "77/115": {
+   "box": 2,
+   "stem": "เด็กตกต้นไม้มี supracondylar humerus fracture ถามว่ากล้ามเนื้อใดน่าจะได้รับผลกระทบ",
+   "options": {
+    "A": "Deltoid",
+    "B": "Brachialis",
+    "C": "Flexor pollicis longus",
+    "D": "Extensor pollicis longus",
+    "E": "Interossei"
+   },
+   "answer": "C",
+   "why": "Supracondylar fracture ทำให้ median nerve โดยเฉพาะแขนง anterior interosseous nerve บาดเจ็บบ่อยที่สุด ซึ่งเลี้ยง flexor pollicis longus, FDP นิ้วชี้-กลาง และ pronator quadratus จึงทำ OK sign ไม่ได้ deltoid เป็นของ axillary nerve, EPL เป็นของ radial nerve (PIN) และ interossei เป็นของ ulnar nerve",
+   "source": "วิเคราะห์"
+  },
+  "77/116": {
+   "box": 3,
+   "stem": "ผู้ป่วยถูกกระแทกด้านข้างเข่าขณะเล่นฟุตบอล มี fracture ที่ head of fibula กระดกข้อเท้าขึ้นและ evert เท้าไม่ได้ ถามว่าเส้นประสาทใดเสีย",
+   "options": {
+    "A": "Superficial peroneal nerve",
+    "B": "Common peroneal nerve",
+    "C": "Deep peroneal nerve",
+    "D": "Sciatic nerve"
+   },
+   "answer": "B",
+   "why": "Common peroneal (fibular) nerve พันรอบ neck of fibula จึงบาดเจ็บง่ายเมื่อหักบริเวณนี้ เสียทั้ง deep branch (dorsiflexion → foot drop) และ superficial branch (eversion) superficial หรือ deep peroneal อย่างเดียวจะเสียเพียงหน้าที่เดียว ส่วน sciatic nerve จะเสีย knee flexion และ plantarflexion ด้วย",
+   "source": "วิเคราะห์"
+  },
+  "77/118": {
+   "box": 3,
+   "stem": "ถามว่า brachioradialis reflex บกพร่องสะท้อนการบาดเจ็บของ nerve root ระดับใดเป็นหลัก",
+   "options": {
+    "A": "C5",
+    "B": "C6",
+    "C": "C7",
+    "D": "C8",
+    "E": "T1"
+   },
+   "answer": "B",
+   "why": "Brachioradialis reflex ใช้ radial nerve ระดับ C5-C6 โดยเด่นที่ C6 (ร่วมกับ biceps reflex C5-C6) ส่วน triceps reflex เป็น C7 และ C8-T1 เกี่ยวกับกล้ามเนื้อมือ (finger flexor, intrinsic) ไม่มี deep tendon reflex มาตรฐาน",
+   "source": "วิเคราะห์"
+  },
+  "77/119": {
+   "box": 6,
+   "stem": "ขโมยกระชากแขนเพื่อแย่งกระเป๋า ถามว่า reflex ใดช่วยป้องกันการบาดเจ็บของกล้ามเนื้อ",
+   "options": {
+    "A": "Stretch reflex",
+    "B": "Tendon reflex",
+    "C": "Mass reflex",
+    "D": "Withdrawal reflex",
+    "E": "Autonomic reflex"
+   },
+   "answer": "B",
+   "why": "แรงตึงสูงที่ tendon กระตุ้น Golgi tendon organ ส่งสัญญาณทาง Ib afferent ไปยัง inhibitory interneuron ทำให้กล้ามเนื้อนั้นคลายตัว (autogenic inhibition หรือ inverse stretch reflex) จึงป้องกันกล้ามเนื้อและ tendon ฉีกขาด stretch reflex (muscle spindle, Ia) กลับทำให้กล้ามเนื้อหดตัวต้านการยืด withdrawal reflex ตอบสนองต่อ noxious stimulus",
+   "source": "วิเคราะห์"
+  },
+  "77/120": {
+   "box": 3,
+   "stem": "ผู้ป่วยยกของหนักแล้วปวดหลังร้าวลงขา ชาที่หลังเท้าและฝ่าเท้า hip abduction อ่อนแรงและกระดกเท้าขึ้นไม่ได้ ถาม provisional diagnosis",
+   "options": {
+    "A": "Lumbar sprain",
+    "B": "Spondylosis",
+    "C": "Disc herniation of L3-L4",
+    "D": "Disc herniation of L4-L5",
+    "E": "Disc herniation of L5-S1"
+   },
+   "answer": "D",
+   "why": "Hip abduction (gluteus medius) และ dorsiflexion/big toe extension รวมถึงชาหลังเท้าเป็นหน้าที่ของ L5 root ซึ่ง posterolateral disc herniation ที่ L4-L5 จะกด L5 root เป็นหลัก L5-S1 กด S1 (plantarflexion, ankle jerk, ชาฝ่าเท้าด้านข้าง) และ L3-L4 กด L4 (knee jerk, quadriceps)",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ การชาที่ฝ่าเท้าเป็นของ S1 มากกว่า แต่ภาพรวม motor (hip abduction + dorsiflexion) ชี้ L5 มากที่สุด"
+  },
+  "77/125": {
+   "box": 12,
+   "stem": "ผู้ป่วยมีก้อนที่ internal acoustic meatus ถามการวินิจฉัยที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Schwannoma (vestibular)",
+    "B": "Meningioma",
+    "C": "Ependymoma",
+    "D": "Glioblastoma",
+    "E": "Pituitary adenoma"
+   },
+   "answer": "A",
+   "why": "Vestibular schwannoma (acoustic neuroma) เกิดจาก Schwann cell ของ vestibular nerve ใน internal acoustic meatus ขยายไปที่ cerebellopontine angle อาการคือ unilateral SNHL, tinnitus, เสียการทรงตัว และกด CN V/VII ได้ ถ้าเป็นสองข้างนึกถึง NF2 meningioma ที่ CPA พบได้รองลงมาแต่ไม่อยู่ใน IAM เป็นหลัก",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "77/126": {
+   "box": 1,
+   "stem": "Neuron บริเวณ corpus callosum ได้รับความเสียหาย ถามว่าเซลล์ใดช่วยซ่อมแซม (สร้าง myelin ใหม่) ในบริเวณนี้",
+   "options": {
+    "A": "Schwann cell",
+    "B": "Oligodendrocyte"
+   },
+   "answer": "B",
+   "why": "Corpus callosum เป็น white matter ของ CNS ซึ่ง myelin สร้างจาก oligodendrocyte (1 เซลล์หุ้มได้หลาย axon) การ remyelination ใน CNS อาศัย oligodendrocyte precursor cell Schwann cell เป็น glia ของ PNS จึงไม่ใช่คำตอบ (แม้ regeneration ใน CNS จะจำกัดกว่า PNS มาก)",
+   "source": "วิเคราะห์"
+  },
+  "77/175": {
+   "box": 30,
+   "stem": "ผู้ป่วยได้ยาแก้อาเจียนหลังเคมีบำบัด แล้วเกิด acute dystonia ถามกลไกของยาที่ได้รับ",
+   "options": {
+    "A": "Inhibit D2 receptor",
+    "B": "Inhibit 5-HT3 receptor",
+    "C": "Inhibit 5-HT4 receptor"
+   },
+   "answer": "A",
+   "why": "Acute dystonia เป็น extrapyramidal side effect จากการ block D2 receptor ใน nigrostriatal pathway ซึ่งเกิดกับ metoclopramide หรือ prochlorperazine ที่ใช้เป็นยาแก้อาเจียน รักษาด้วย anticholinergic (benztropine) หรือ diphenhydramine ส่วน 5-HT3 antagonist (ondansetron) ไม่ทำให้ EPS",
+   "source": "วิเคราะห์"
+  },
+  "77/206": {
+   "box": 28,
+   "stem": "ทารกแรกเกิดมี chorioretinitis, hepatosplenomegaly, periventricular calcification และ sensorineural hearing loss ถามว่าควรตรวจอะไร",
+   "options": {
+    "A": "HSV",
+    "B": "CMV",
+    "C": "Rubella IgM",
+    "D": "VDRL",
+    "E": "Zika RT-PCR"
+   },
+   "answer": "B",
+   "why": "Congenital CMV เป็นการติดเชื้อแต่กำเนิดที่พบบ่อยที่สุด มี periventricular calcification, microcephaly, SNHL (สาเหตุ non-genetic SNHL อันดับหนึ่ง), chorioretinitis และ hepatosplenomegaly ส่วน toxoplasmosis มี diffuse/parenchymal calcification และ hydrocephalus congenital rubella มี cataract, PDA และ SNHL แต่ไม่เด่นเรื่อง periventricular calcification",
+   "source": "วิเคราะห์"
+  },
+  "77/236": {
+   "box": 33,
+   "stem": "นักเรียนแอบสูบบุหรี่ในห้องน้ำ เมื่อครูจับได้ก็หัวเราะ ตาแดงปรือ ถามว่าจะตรวจพบสารใดในปัสสาวะ",
+   "options": {
+    "A": "Methamphetamine",
+    "B": "Delta-9-tetrahydrocannabinol"
+   },
+   "answer": "B",
+   "why": "อาการหัวเราะง่าย euphoria ร่วมกับตาแดง (conjunctival injection) หลังสูบ เข้ากับ cannabis ซึ่งสารออกฤทธิ์คือ Δ9-THC จับ CB1 receptor และตรวจพบ metabolite (THC-COOH) ในปัสสาวะได้นาน methamphetamine ทำให้ตื่นตัว mydriasis กระวนกระวาย ไม่เด่นเรื่องตาแดง",
+   "source": "วิเคราะห์"
+  },
+  "77/240": {
+   "box": 37,
+   "stem": "ผู้ป่วยไอและหอบเหนื่อยมา 6 เดือน สูบบุหรี่ 20 ปี (นึกถึง COPD) แพทย์ให้ยาพ่นเพื่อบรรเทาอาการ ถามกลไกของยาที่น่าจะเป็น",
+   "options": {
+    "A": "Nicotinic receptor antagonist",
+    "B": "Nicotinic receptor agonist",
+    "C": "Muscarinic receptor agonist",
+    "D": "Muscarinic receptor antagonist",
+    "E": "Beta adrenergic antagonist"
+   },
+   "answer": "D",
+   "why": "ยาพ่นหลักของ COPD คือ long-acting muscarinic antagonist (tiotropium) หรือ ipratropium ซึ่ง block M3 receptor บน airway smooth muscle และต่อมเมือก ลด bronchoconstriction และเสมหะ muscarinic agonist ทำให้หลอดลมตีบ beta blocker ทำให้หลอดลมหดตัวมากขึ้น ส่วน nicotinic receptor ไม่ได้ควบคุม airway tone โดยตรง",
+   "source": "วิเคราะห์"
+  },
+  "78/3": {
+   "box": 21,
+   "stem": "ถามกลไกของ paracetamol ที่ทำให้ลด temperature set point ได้โดยเฉพาะ",
+   "options": {
+    "A": "กระตุ้นกลไกระบายความร้อนที่ผิวหนัง",
+    "B": "ยับยั้ง COX ที่ peripheral tissue",
+    "C": "ยับยั้งการสร้าง prostaglandin ที่ hypothalamus",
+    "D": "เพิ่ม peripheral blood flow",
+    "E": "ยับยั้ง interleukin"
+   },
+   "answer": "C",
+   "why": "ไข้เกิดจาก pyrogen (IL-1, IL-6, TNF) กระตุ้น COX-2 ใน hypothalamus ให้สร้าง PGE2 ไปยก set point. Paracetamol ยับยั้ง COX ได้ดีใน CNS (ที่ peroxide ต่ำ) จึงลด PGE2 ใน hypothalamus ทำให้ set point กลับลง. แต่แทบไม่ยับยั้ง COX ที่ peripheral tissue (ที่มี peroxide สูง) จึงไม่ต้านการอักเสบ ข้อ B จึงผิด. การระบายความร้อนที่ผิวเป็นผลตามมา ไม่ใช่กลไกหลัก",
+   "source": "เฉลย78"
+  },
+  "78/49": {
+   "box": 37,
+   "stem": "ผู้ป่วยกินยารักษา urge urinary incontinence (กลุ่ม antimuscarinic เช่น oxybutynin) ถาม side effect ของยา",
+   "options": {
+    "A": "Diarrhea",
+    "B": "Dementia",
+    "C": "Dry mouth"
+   },
+   "answer": "C",
+   "why": "ยา OAB หลักคือ antimuscarinic (oxybutynin, tolterodine) ซึ่งบล็อก M3 ที่ detrusor และบล็อก M3 ที่ต่อมน้ำลายด้วย จึงปากแห้ง (พบบ่อยที่สุด). Antimuscarinic ทำให้ท้องผูก ไม่ใช่ท้องเสีย. ภาวะสับสน/cognitive impairment เกิดได้ในผู้สูงอายุ (oxybutynin ผ่าน BBB) แต่ dry mouth เป็น SE ที่เด่นและพบบ่อยกว่ามาก",
+   "source": "เฉลย78"
+  },
+  "78/55": {
+   "box": 21,
+   "stem": "ผู้ป่วยดื่มน้ำวันละ 4 ลิตร serum osm 300 urine osm 100 หลังอดน้ำ urine osm ไม่เพิ่ม แต่หลังให้ desmopressin urine osm เพิ่มขึ้น ถามการวินิจฉัย",
+   "options": {
+    "A": "Nephrogenic DI",
+    "B": "Central DI",
+    "C": "Psychogenic polydipsia",
+    "D": "Primary polydipsia",
+    "E": "SIADH"
+   },
+   "answer": "B",
+   "why": "อดน้ำแล้วปัสสาวะยังเจือจาง แปลว่าไตเข้มข้นปัสสาวะเองไม่ได้ (เป็น DI ไม่ใช่ primary polydipsia ซึ่งจะเข้มข้นได้และ serum osm มักต่ำ). เมื่อให้ desmopressin (V2 agonist) แล้ว urine osm เพิ่ม แปลว่าไตตอบสนองต่อ ADH ปกติ ปัญหาอยู่ที่ hypothalamus/posterior pituitary สร้าง ADH ไม่ได้ = central DI. ถ้าเป็น nephrogenic DI จะไม่ตอบสนองต่อ desmopressin",
+   "source": "เฉลย78"
+  },
+  "78/70": {
+   "box": 37,
+   "stem": "ทำ spinal anesthesia เพื่อผ่าตัด hysterectomy แล้วความดันตกมาก สงสัยว่า sympathetic outflow ไปหลอดเลือดส่วนปลายถูกกดมากเกิน ถาม receptor ที่รับผิดชอบการลดลงของ BP",
+   "options": {
+    "A": "Beta-1 receptor",
+    "B": "Beta-2 receptor",
+    "C": "Alpha-1 receptor",
+    "D": "Muscarinic receptor",
+    "E": "Nicotinic receptor"
+   },
+   "answer": "C",
+   "why": "Spinal anesthesia บล็อก preganglionic sympathetic fiber ทำให้ norepinephrine ที่ปลายประสาทไปกระตุ้น alpha-1 ที่ vascular smooth muscle ลดลง จึงเกิด vasodilation ทั้ง arteriole (SVR ลด) และ vein (venous return ลด) BP จึงตก. Beta-1 เกี่ยวกับหัวใจไม่ใช่หลอดเลือดส่วนปลาย. Beta-2 ทำให้ vasodilate อยู่แล้ว. Nicotinic ที่ ganglion เป็นจุดที่ถูกตัดสัญญาณต้นทาง แต่ receptor ที่ควบคุม tone หลอดเลือดโดยตรงคือ alpha-1",
+   "source": "เฉลย78"
+  },
+  "78/71": {
+   "box": 28,
+   "stem": "ทารกมี chorioretinitis และแม่มีความเสี่ยงติดเชื้อโปรโตซัว ถาม definitive host ของเชื้อนี้",
+   "options": {
+    "A": "Human",
+    "B": "Cat",
+    "C": "Dog",
+    "D": "Pig"
+   },
+   "answer": "B",
+   "why": "Chorioretinitis + โปรโตซัวที่ติดจากแม่ = congenital toxoplasmosis (Toxoplasma gondii) ซึ่งมี triad chorioretinitis, hydrocephalus, diffuse intracranial calcification. Sexual reproduction ของ T. gondii เกิดในลำไส้แมว แมวจึงเป็น definitive host และขับ oocyst ออกทางอุจจาระ. คน หมู และสัตว์อื่นเป็น intermediate host (มี tissue cyst)",
+   "source": "เฉลย78"
+  },
+  "78/79": {
+   "box": 37,
+   "stem": "หยอดยาตาที่ทำให้ม่านตาขยาย (mydriasis) ก่อนตรวจหรือผ่าตัด ถามว่ายานั้นอยู่ในกลุ่มใด",
+   "options": {
+    "A": "Beta-1 agonist",
+    "B": "Beta-2 agonist",
+    "C": "Alpha-1 agonist",
+    "D": "Beta-2 antagonist",
+    "E": "Antimuscarinic"
+   },
+   "answer": "C",
+   "why": "ยาขยายม่านตาตัวคลาสสิกคือ phenylephrine ซึ่งเป็น alpha-1 agonist กระตุ้น radial (dilator) muscle ของ iris ให้หดตัว ม่านตาจึงขยายโดยไม่เสีย accommodation (ไม่มี cycloplegia). Antimuscarinic (tropicamide, atropine) ก็ขยายม่านตาได้โดยคลาย sphincter pupillae แต่จะมี cycloplegia ร่วมด้วย. Beta receptor ไม่มีบทบาทสำคัญต่อขนาดรูม่านตา",
+   "source": "เฉลย78",
+   "doubt": "⚠ เฉลย78 ให้ทั้ง C และ E เพราะ antimuscarinic ก็ขยายม่านตาได้ ต้องดูโจทย์จริงว่าระบุว่าไม่มี cycloplegia หรือไม่ ถ้าระบุให้ตอบ alpha-1 agonist"
+  },
+  "78/86": {
+   "box": 37,
+   "stem": "ถามว่ายา tocolytic ตัวใดทำให้เกิด pulmonary edema และ tachycardia",
+   "options": {
+    "A": "Terbutaline",
+    "B": "MgSO4",
+    "C": "Nifedipine",
+    "D": "Indomethacin"
+   },
+   "answer": "A",
+   "why": "Terbutaline เป็น beta-2 agonist ที่คลาย myometrium แต่กระตุ้น beta receptor ที่หัวใจด้วย ทำให้ tachycardia ใจสั่น และร่วมกับการกักเก็บน้ำ/ADH-like effect ทำให้เกิด pulmonary edema ได้ (เป็น SE ที่เด่นของ beta-mimetic). MgSO4 ทำให้กดการหายใจ reflex หาย. Nifedipine ทำให้ hypotension ปวดศีรษะ (reflex tachycardia เล็กน้อย). Indomethacin ทำให้ ductus arteriosus ปิดก่อนกำหนดและ oligohydramnios",
+   "source": "เฉลย78"
+  },
+  "78/98": {
+   "box": 39,
+   "stem": "หญิงอายุ 70 ปีไม่มีประวัติโรคจิตหรือใช้สารเสพติด ได้ prednisolone 5 วัน แล้ว live สดทั้งคืน แจกเงินพยาบาลแสนบาท ถามการวินิจฉัย",
+   "options": {
+    "A": "Acute manic episode",
+    "B": "Steroid-induced mania",
+    "C": "Substance abuse",
+    "D": "Steroid-induced psychosis",
+    "E": "Psychosis"
+   },
+   "answer": "B",
+   "why": "อาการ manic (ไม่นอน ใช้จ่ายเกินตัว grandiosity) เกิดขึ้นหลังเริ่ม corticosteroid ในผู้สูงอายุที่ไม่เคยมีประวัติจิตเวช จึงเป็น substance/medication-induced bipolar disorder คือ steroid-induced mania ซึ่งเป็น neuropsychiatric SE ที่พบบ่อยในช่วงแรกของการได้ steroid ขนาดสูง. ไม่ใช่ primary manic episode เพราะมีสาเหตุจากยาชัดเจน. ไม่มี hallucination หรือ delusion จึงไม่ใช่ psychosis",
+   "source": "เฉลย78"
+  },
+  "78/100": {
+   "box": 16,
+   "stem": "ผู้ป่วย rheumatoid arthritis ได้ยาตัวหนึ่งแล้วมีการมองเห็นลดลง ถามว่ายาใด",
+   "options": {
+    "A": "Methotrexate",
+    "B": "Leflunomide",
+    "C": "Infliximab",
+    "D": "Hydroxychloroquine",
+    "E": "Sulfasalazine"
+   },
+   "answer": "D",
+   "why": "Hydroxychloroquine สะสมใน retinal pigment epithelium ทำให้เกิด retinopathy แบบ bull's-eye maculopathy ซึ่งสูญเสียการมองเห็นถาวร จึงต้องตรวจตาเป็นระยะ. Methotrexate ทำให้ hepatotoxicity, myelosuppression, mucositis. Leflunomide ทำให้ hepatotoxicity และ teratogenic. Infliximab เสี่ยง TB reactivation",
+   "source": "เฉลย78"
+  },
+  "78/102": {
+   "box": 9,
+   "stem": "ผู้ป่วยเดินลากเท้า สั่นขณะพัก (อาการ Parkinson disease) ถามลักษณะ muscle tone และการเคลื่อนไหว",
+   "options": {
+    "A": "tone ปกติ การเคลื่อนไหวเพิ่ม",
+    "B": "tone เพิ่ม การเคลื่อนไหวเพิ่ม",
+    "C": "tone ลด การเคลื่อนไหวลด",
+    "D": "tone ลด การเคลื่อนไหวเพิ่ม",
+    "E": "tone เพิ่ม การเคลื่อนไหวลด"
+   },
+   "answer": "E",
+   "why": "Parkinson disease เกิดจากการเสื่อมของ dopaminergic neuron ใน substantia nigra pars compacta ทำให้ direct pathway ทำงานลดและ indirect pathway เด่น thalamus ถูกยับยั้งมากเกิน จึงเป็น hypokinetic disorder (bradykinesia). ขณะเดียวกันมี rigidity แบบ cogwheel/lead-pipe คือ tone เพิ่ม. ภาวะที่การเคลื่อนไหวเพิ่ม (hyperkinetic) เช่น Huntington chorea หรือ hemiballismus",
+   "source": "เฉลย78"
+  },
+  "78/105": {
+   "box": 12,
+   "stem": "ผู้ป่วยมีความผิดปกติของ CN III, IV, V1, VI แต่ CN V2 ปกติ ถามตำแหน่ง lesion",
+   "options": {
+    "A": "Cavernous sinus",
+    "B": "Superior orbital fissure"
+   },
+   "answer": "B",
+   "why": "Superior orbital fissure มี CN III, IV, V1 และ VI ผ่าน แต่ไม่มี V2 (V2 ออกทาง foramen rotundum) จึงตรงกับโจทย์ที่ V2 ปกติ. Cavernous sinus มี V2 วิ่งอยู่ใน lateral wall ด้วย lesion ที่ cavernous sinus จึงมักเสีย V2 ร่วม (และอาจมี Horner จาก sympathetic plexus รอบ ICA)",
+   "source": "เฉลย78"
+  },
+  "78/106": {
+   "box": 13,
+   "stem": "ผู้ป่วยเห็นภาพซ้อน แย่ลงเมื่อมองไปทางซ้ายและมองไกล ดีขึ้นเมื่อมองขวาและมองใกล้ ถามตำแหน่งพยาธิสภาพ",
+   "options": {
+    "A": "Left CN VI",
+    "B": "Left CN III"
+   },
+   "answer": "A",
+   "why": "Horizontal diplopia ที่แย่ลงเมื่อมองไปด้านซ้ายหมายถึงกล้ามเนื้อที่ทำหน้าที่มองซ้ายอ่อนแรง คือ left lateral rectus (CN VI ซ้าย). การมองไกลต้องให้ตา diverge ซึ่งอาศัย lateral rectus จึงยิ่งแย่ ส่วนมองใกล้ตา converge (medial rectus) จึงดีขึ้น. ถ้าเป็น left CN III จะมองขวา (adduct ตาซ้าย) ไม่ได้ และมี ptosis หรือรูม่านตาขยายร่วม",
+   "source": "เฉลย78"
+  },
+  "78/107": {
+   "box": 28,
+   "stem": "ผู้ป่วยมีผื่นด่างขาวร่วมกับชา (โรคเรื้อน) ถาม virulence factor ของเชื้อ",
+   "options": {
+    "A": "Phenolic glycolipid 1",
+    "B": "Lipopolysaccharide",
+    "C": "Teichoic acid",
+    "D": "Galactomannan",
+    "E": "Beta 1,3 D glucan"
+   },
+   "answer": "A",
+   "why": "Hypopigmented patch + sensory loss = leprosy จาก Mycobacterium leprae. Phenolic glycolipid-1 (PGL-1) ที่ผนังเซลล์จับกับ laminin-alpha2 บน basal lamina ของ Schwann cell ทำให้เชื้อเข้า Schwann cell และทำลายเส้นประสาทส่วนปลาย (ทั้งยังใช้ตรวจ serology). LPS เป็นของ gram-negative. Teichoic acid เป็นของ gram-positive. Galactomannan และ beta-D-glucan เป็นของเชื้อรา",
+   "source": "เฉลย78"
+  },
+  "78/109": {
+   "box": 12,
+   "stem": "มี lesion ที่ cisterna pontis (prepontine cistern) ถามเส้นประสาทสมองที่ได้รับผลกระทบ",
+   "options": {
+    "A": "CN3",
+    "B": "CN4",
+    "C": "CN8",
+    "D": "CN6",
+    "E": "CN12"
+   },
+   "answer": "D",
+   "why": "Prepontine (pontine) cistern อยู่หน้า pons มี basilar artery และ CN VI ซึ่งออกจาก pontomedullary junction แล้ววิ่งขึ้นผ่าน cistern นี้ก่อนเข้า Dorello canal. CN III อยู่ใน interpeduncular cistern. CN IV อ้อมรอบ midbrain ใน ambient cistern. CN VIII อยู่ที่ cerebellopontine cistern. CN XII อยู่ระดับ medulla",
+   "source": "เฉลย78"
+  },
+  "78/110": {
+   "box": 33,
+   "stem": "ผู้ป่วยไอแห้งจนรบกวนการนอน ถามยาที่ควรให้",
+   "options": {
+    "A": "Acetylcysteine",
+    "B": "Ambroxol",
+    "C": "Bromhexine",
+    "D": "Codeine",
+    "E": "Guaifenesin"
+   },
+   "answer": "D",
+   "why": "ไอแห้งไม่มีเสมหะที่รบกวนการนอนควรใช้ antitussive ที่กด cough center. Codeine เป็น opioid ที่ออกฤทธิ์ที่ mu receptor ใน medulla กด cough reflex (ระวังง่วง ท้องผูก). Acetylcysteine, ambroxol, bromhexine เป็น mucolytic และ guaifenesin เป็น expectorant ใช้กับไอมีเสมหะเหนียว ไม่ช่วยกดไอแห้ง",
+   "source": "เฉลย78"
+  },
+  "78/114": {
+   "box": 25,
+   "stem": "ผู้ป่วยตามัวลงเรื่อย ๆ พบ optic nerve glioma ร่วมกับ café-au-lait spot และ axillary freckling ถามการวินิจฉัย",
+   "options": {
+    "A": "NF1",
+    "B": "NF2",
+    "C": "Tuberous sclerosis",
+    "D": "Sturge-Weber"
+   },
+   "answer": "A",
+   "why": "NF1 (von Recklinghausen, ยีน NF1 บน chr 17 สร้าง neurofibromin) มี café-au-lait ≥6, axillary/inguinal freckling, neurofibroma, Lisch nodule และ optic pathway glioma. NF2 (chr 22, merlin) เด่นที่ bilateral vestibular schwannoma และ meningioma. Tuberous sclerosis มี ash-leaf spot, cortical tuber, angiofibroma. Sturge-Weber มี port-wine stain ตาม V1 และ leptomeningeal angioma",
+   "source": "เฉลย78"
+  },
+  "78/115": {
+   "box": 30,
+   "stem": "ผู้ป่วยมีหูแว่วมา 4 เดือน วินิจฉัย schizophrenia ถามยาที่เหมาะสม",
+   "options": {
+    "A": "Risperidone",
+    "B": "Clonazepam",
+    "C": "Fluoxetine",
+    "D": "Modafinil"
+   },
+   "answer": "A",
+   "why": "Schizophrenia รักษาด้วย antipsychotic. Risperidone เป็น atypical antipsychotic ที่บล็อก D2 ใน mesolimbic pathway (ลด positive symptom) และบล็อก 5-HT2A ร่วม. Clonazepam เป็น benzodiazepine ใช้ลด anxiety หรือ agitation ไม่รักษา psychosis. Fluoxetine เป็น SSRI สำหรับ depression. Modafinil เป็นยากระตุ้นการตื่นสำหรับ narcolepsy",
+   "source": "เฉลย78"
+  },
+  "78/116": {
+   "box": 30,
+   "stem": "ผู้ป่วยได้ antipsychotic แล้วต่อมามี rigidity ถามกลไกของยานี้",
+   "options": {
+    "A": "Dopaminergic receptor antagonist",
+    "B": "Dopaminergic receptor agonist",
+    "C": "Selective serotonin reuptake inhibitor",
+    "D": "GABA agonist"
+   },
+   "answer": "A",
+   "why": "Antipsychotic ออกฤทธิ์โดยบล็อก D2 receptor. เมื่อบล็อก D2 ใน nigrostriatal pathway ด้วย จะเกิดภาวะคล้ายขาด dopamine คือ extrapyramidal symptom เช่น drug-induced parkinsonism (rigidity, tremor), acute dystonia, akathisia. Dopamine agonist ใช้รักษา Parkinson และไม่ทำให้ rigidity. SSRI และ GABA agonist ไม่ใช่กลไกของ antipsychotic",
+   "source": "เฉลย78"
+  },
+  "78/118": {
+   "box": 24,
+   "stem": "ผู้ป่วย right epidural hematoma ต่อมาซึมลง และรูม่านตาขวาขยายไม่ตอบสนองต่อแสง ถามสาเหตุของการเปลี่ยนแปลงระดับความรู้สึกตัว",
+   "options": {
+    "A": "Right uncal herniation",
+    "B": "Left uncal herniation",
+    "C": "Right cerebral herniation",
+    "D": "Right tonsillar herniation",
+    "E": "Left tonsillar herniation"
+   },
+   "answer": "A",
+   "why": "ก้อนเลือดด้านขวาดัน uncus ของ medial temporal lobe ด้านเดียวกันลงผ่าน tentorial notch กด CN III ข้างขวา (parasympathetic fiber อยู่ด้านนอก จึงเสียก่อน ทำให้ pupil ขยาย fixed) และกด midbrain/reticular activating system ทำให้ซึม. Herniation เกิดด้านเดียวกับก้อน จึงไม่ใช่ซ้าย. Tonsillar herniation กด medulla ทำให้หยุดหายใจ ไม่ได้ให้ pupil ขยายข้างเดียวเป็นอาการแรก",
+   "source": "เฉลย78"
+  },
+  "78/119": {
+   "box": 20,
+   "stem": "ถามสิ่งตรวจพบที่จำเพาะที่สุดสำหรับการวินิจฉัย Alzheimer disease",
+   "options": {
+    "A": "CSF amyloid-beta 42 ต่อ phospho-tau ratio ลดลง",
+    "B": "cognitive impairment ชัดเจนในแบบทดสอบ",
+    "C": "FDG-PET พบ hypometabolism ที่ hypothalamus สองข้าง",
+    "D": "MRI พบ hippocampal atrophy รุนแรงสองข้าง"
+   },
+   "answer": "A",
+   "why": "Biomarker ใน CSF สะท้อนพยาธิสภาพจริงของ AD: amyloid-beta 42 ถูกดึงไปสะสมเป็น plaque ในสมองจึงลดลงใน CSF ขณะที่ phospho-tau (neurofibrillary tangle) เพิ่ม ratio จึงลดลง จำเพาะต่อ AD. Cognitive test บอกได้แค่ว่ามี dementia ไม่บอกสาเหตุ. Hippocampal atrophy พบได้ในหลายโรคจึงไม่จำเพาะ. FDG-PET ใน AD เป็น temporoparietal hypometabolism ไม่ใช่ hypothalamus",
+   "source": "เฉลย78"
+  },
+  "78/123": {
+   "box": 25,
+   "stem": "ผู้ป่วยมี AQP4 antibody ผลบวก ถามการวินิจฉัย",
+   "options": {
+    "A": "NMO (neuromyelitis optica)",
+    "B": "Multiple sclerosis",
+    "C": "GBS",
+    "D": "Myasthenia gravis"
+   },
+   "answer": "A",
+   "why": "Anti-aquaporin-4 IgG จำเพาะต่อ neuromyelitis optica spectrum disorder โดยจับ AQP4 water channel บน astrocyte foot process ทำให้ complement ทำลาย astrocyte และเกิด demyelination รอง ลักษณะคือ optic neuritis รุนแรงและ longitudinally extensive transverse myelitis (≥3 segment). MS ไม่มี AQP4 Ab (พบ oligoclonal band). GBS สัมพันธ์กับ anti-ganglioside. MG มี anti-AChR",
+   "source": "เฉลย78"
+  },
+  "78/125": {
+   "box": 3,
+   "stem": "กล้ามเนื้อ quadriceps อ่อนแรง ถามว่าเกิดจากเส้นประสาทใด",
+   "options": {
+    "A": "Obturator",
+    "B": "Femoral",
+    "C": "Sciatic",
+    "D": "Tibial",
+    "E": "Peroneal"
+   },
+   "answer": "B",
+   "why": "Femoral nerve (L2-L4) เลี้ยงกล้ามเนื้อ anterior compartment ของต้นขา คือ quadriceps (เหยียดเข่า) และ iliacus/sartorius เสียแล้วเหยียดเข่าไม่ได้และ patellar reflex ลด. Obturator เลี้ยง adductor. Sciatic เลี้ยง hamstring และขาส่วนล่าง. Tibial และ peroneal เลี้ยงขาท่อนล่างและเท้า",
+   "source": "เฉลย78"
+  },
+  "78/134": {
+   "box": 2,
+   "stem": "ให้ภาพ X-ray (น่าจะเป็นกระดูก surgical neck ของ humerus หักหรือไหล่หลุด) ถามว่า lesion ทำให้เส้นประสาทใดบาดเจ็บ",
+   "options": {
+    "A": "Radial",
+    "B": "Ulnar",
+    "C": "Median",
+    "D": "Axillary",
+    "E": "Musculocutaneous"
+   },
+   "answer": "D",
+   "why": "Axillary nerve (C5-C6) วิ่งรอบ surgical neck ของ humerus ผ่าน quadrangular space ร่วมกับ posterior circumflex humeral artery จึงบาดเจ็บได้บ่อยจาก surgical neck fracture หรือ anterior shoulder dislocation ทำให้ deltoid อ่อนแรง (กางแขนเกิน 15 องศาไม่ได้) และชาบริเวณ regimental badge. Radial nerve บาดเจ็บจาก midshaft humerus fracture. Median บาดเจ็บจาก supracondylar fracture",
+   "source": "เฉลย78",
+   "needs_image": true
+  },
+  "78/140": {
+   "box": 21,
+   "stem": "เข้าคอร์สลดน้ำหนักจนน้ำหนักลด ผ่านไปสักพักกลับกินเยอะขึ้น ถามว่า hormone ใดเป็นสาเหตุ",
+   "options": {
+    "A": "Leptin",
+    "B": "Adiponectin",
+    "C": "Betatrophin",
+    "D": "Resistin"
+   },
+   "answer": "A",
+   "why": "Leptin สร้างจาก adipocyte ตามปริมาณไขมัน ไปที่ arcuate nucleus ของ hypothalamus ยับยั้ง NPY/AgRP และกระตุ้น POMC ทำให้อิ่ม. เมื่อน้ำหนักและไขมันลด leptin จะลดลง ทำให้หิวมากขึ้นและ energy expenditure ลด เป็นเหตุของ weight regain. Adiponectin เพิ่ม insulin sensitivity. Resistin และ betatrophin ไม่ใช่ตัวหลักของการควบคุมความหิว",
+   "source": "เฉลย78"
+  },
+  "78/143": {
+   "box": 24,
+   "stem": "ผู้ป่วย hemorrhagic stroke ที่ความดันสูง ถามยาลดความดันที่ควรให้ก่อน",
+   "options": {
+    "A": "Nicardipine",
+    "B": "Nitroprusside",
+    "C": "Methyldopa",
+    "D": "Hydralazine",
+    "E": "Labetalol"
+   },
+   "answer": "A",
+   "why": "ใน intracerebral hemorrhage ที่ BP สูง ต้องลดความดันอย่างควบคุมได้ด้วยยาฉีด titrate ง่าย ตัวเลือกแรกคือ nicardipine (dihydropyridine CCB IV) หรือ labetalol. Nitroprusside และ hydralazine ทำให้หลอดเลือดสมองขยาย ICP เพิ่มและลด BP ไม่คงที่ จึงเลี่ยง. Methyldopa ออกฤทธิ์ช้า ใช้ในหญิงตั้งครรภ์",
+   "source": "เฉลย78",
+   "doubt": "⚠ เฉลย78 ระบุ A* และ E ทั้งคู่ เพราะ labetalol ก็เป็น first-line ได้ เลือก nicardipine ตามสไลด์ที่เน้น"
+  },
+  "78/145": {
+   "box": 27,
+   "stem": "พบ intracytoplasmic inclusion ที่เรียกว่า Negri body ถามสาเหตุของโรค",
+   "options": {
+    "A": "Rabies",
+    "B": "EBV",
+    "C": "HSV",
+    "D": "CMV",
+    "E": "HBV"
+   },
+   "answer": "A",
+   "why": "Negri body เป็น eosinophilic inclusion ใน cytoplasm ของ neuron (โดยเฉพาะ Purkinje cell ของ cerebellum และ hippocampus) ที่พบใน rabies virus (rhabdovirus, ssRNA) ซึ่งเคลื่อนตาม retrograde axonal transport เข้าสู่ CNS. HSV และ CMV ให้ intranuclear inclusion (Cowdry A, owl's eye). EBV และ HBV ไม่ให้ Negri body",
+   "source": "เฉลย78"
+  },
+  "78/146": {
+   "box": 34,
+   "stem": "ผู้ป่วย status epilepticus ได้ IV diazepam ไปแล้ว 2 ครั้งยังไม่หยุดชัก ถามขั้นต่อไป",
+   "options": {
+    "A": "IV Levetiracetam",
+    "B": "Oral phenytoin",
+    "C": "IV thiopental"
+   },
+   "answer": "A",
+   "why": "Status epilepticus ระยะแรกให้ benzodiazepine (diazepam หรือ lorazepam IV) ได้ 2 ครั้ง ถ้ายังไม่หยุดเป็น established SE ต้องให้ second-line antiseizure ทางหลอดเลือดดำ เช่น levetiracetam, fosphenytoin/phenytoin IV หรือ valproate. Phenytoin ต้องให้ทางหลอดเลือด ไม่ใช่ทางปาก. Thiopental หรือ anesthetic infusion เป็นขั้นที่สามสำหรับ refractory SE",
+   "source": "เฉลย78"
+  },
+  "78/151": {
+   "box": 32,
+   "stem": "ชายทะเลาะกับภรรยาแล้วหยุดดื่มเหล้า 3 วัน มีอาการหลอน ได้ lorazepam ถามกลไกของยา",
+   "options": {
+    "A": "GABA-A full agonist",
+    "B": "GABA-A partial agonist",
+    "C": "GABA-A positive allosteric modulator",
+    "D": "GABA-A negative allosteric modulator"
+   },
+   "answer": "C",
+   "why": "Benzodiazepine จับที่ BZ site (ระหว่าง alpha และ gamma subunit) ซึ่งต่างจาก GABA binding site ไม่เปิด chloride channel เอง แต่เพิ่ม affinity ของ GABA และเพิ่มความถี่ของการเปิด channel จึงเป็น positive allosteric modulator. Barbiturate ขนาดสูงเปิด channel ได้เองและเพิ่ม duration. Negative allosteric modulator (inverse agonist) ทำให้ชักและวิตกกังวล",
+   "source": "เฉลย78"
+  },
+  "78/160": {
+   "box": 26,
+   "stem": "ผู้ป่วย meningitis ตรวจ CSF พบ protein และ glucose ปกติ opening pressure 16 cmH2O ถามการวินิจฉัย",
+   "options": {
+    "A": "Viral meningitis",
+    "B": "Bacterial meningitis",
+    "C": "Cryptococcal meningitis",
+    "D": "Fungal meningitis",
+    "E": "TB meningitis"
+   },
+   "answer": "A",
+   "why": "Viral (aseptic) meningitis มี CSF glucose ปกติ protein ปกติหรือเพิ่มเล็กน้อย lymphocyte เด่น และ opening pressure ปกติ. Bacterial meningitis มี glucose ต่ำมาก protein สูง neutrophil เด่น. TB, cryptococcal และ fungal meningitis มี glucose ต่ำ protein สูง ส่วน cryptococcus มักมี opening pressure สูงมาก",
+   "source": "เฉลย78"
+  },
+  "78/161": {
+   "box": 5,
+   "stem": "ผู้ป่วยมีก้อนบริเวณคอ/mediastinum ร่วมกับหนังตาตก ภาพซ้อน ที่แย่ลงเมื่อมองขึ้นค้างนาน และกล้ามเนื้อต้นแขนต้นขาอ่อนแรง ถามว่าก้อนนั้นน่าจะเป็นอะไร",
+   "options": {
+    "A": "Thymoma",
+    "B": "Thymus carcinoma",
+    "C": "Thyroiditis",
+    "D": "Small cell lung cancer"
+   },
+   "answer": "A",
+   "why": "อาการอ่อนแรงแบบ fatigable ที่ ocular และ proximal muscle = myasthenia gravis จาก anti-AChR antibody ที่ NMJ. MG สัมพันธ์กับความผิดปกติของ thymus: thymic hyperplasia และ thymoma (ราว 10-15%) ซึ่งอยู่ใน anterior mediastinum. Small cell lung cancer สัมพันธ์กับ Lambert-Eaton (anti-VGCC) ที่อ่อนแรงดีขึ้นเมื่อออกแรงซ้ำ",
+   "source": "เฉลย78"
+  },
+  "78/162": {
+   "box": 13,
+   "stem": "ผู้ป่วยกลอกตาทั้งสองข้างไปทางซ้ายไม่ได้ แต่ไปทางขวาได้ ถามตำแหน่ง lesion",
+   "options": {
+    "A": "Left CN VI",
+    "B": "FEF",
+    "C": "PPRF",
+    "D": "MLF"
+   },
+   "answer": "C",
+   "why": "การมองไปด้านข้าง (horizontal conjugate gaze) ควบคุมโดย PPRF ใน pons ข้างเดียวกับทิศที่มอง ซึ่งส่งสัญญาณไป CN VI nucleus (ตาข้างเดียวกัน abduct) และผ่าน MLF ไป CN III nucleus ด้านตรงข้าม (ตาอีกข้าง adduct). Lesion ที่ left PPRF ทำให้ตาทั้งสองมองซ้ายไม่ได้ (ipsilateral gaze palsy). Left CN VI เสียเฉพาะตาซ้าย abduct. MLF lesion ทำให้ INO (ตาข้างเดียว adduct ไม่ได้). FEF lesion ทำให้ตาเบนเข้าหา lesion แต่มักชดเชยได้",
+   "source": "เฉลย78",
+   "doubt": "⚠ ในเฉลย78 เขียนว่าเป็นการเดา (C) เพราะโจทย์ที่จดมาไม่ครบ แต่ตามหลักกายวิภาค ipsilateral horizontal gaze palsy = PPRF จริง"
+  },
+  "78/168": {
+   "box": 20,
+   "stem": "ผู้ป่วยดื่มสุราเรื้อรัง มี ophthalmoplegia และความจำเสื่อม วินิจฉัย Wernicke encephalopathy ถามตำแหน่งที่ได้รับผลกระทบ",
+   "options": {
+    "A": "Dorsomedial nucleus (thalamus)",
+    "B": "Centromedial nucleus",
+    "C": "Preoptic nucleus",
+    "D": "Suprachiasmatic nucleus"
+   },
+   "answer": "A",
+   "why": "การขาด thiamine (B1) ทำให้ enzyme ใน glucose metabolism (pyruvate dehydrogenase, alpha-KG dehydrogenase, transketolase) ทำงานไม่ได้ เกิดรอยโรครอบ third ventricle และ aqueduct โดยเฉพาะ mammillary body และ dorsomedial nucleus ของ thalamus ซึ่งเกี่ยวกับความจำ (Korsakoff). Preoptic เกี่ยวกับ thermoregulation. Suprachiasmatic เป็น circadian clock",
+   "source": "เฉลย78"
+  },
+  "78/172": {
+   "box": 2,
+   "stem": "ผู้ป่วยกางแขน (abduct) และหมุนไหล่ออกด้านนอกไม่ได้ เกี่ยวข้องทั้ง supraspinatus และ infraspinatus ถามตำแหน่งที่ผิดปกติ",
+   "options": {
+    "A": "Axillary nerve ที่ quadrilateral space",
+    "B": "Suprascapular nerve ที่ suprascapular notch",
+    "C": "Suprascapular nerve ที่ spinoglenoid notch",
+    "D": "Subscapular nerve",
+    "E": "Long thoracic nerve"
+   },
+   "answer": "B",
+   "why": "Suprascapular nerve เลี้ยงทั้ง supraspinatus (เริ่ม abduct 0-15 องศา) และ infraspinatus (lateral rotation). ถ้าถูกกดที่ suprascapular notch (ใต้ superior transverse scapular ligament) ซึ่งอยู่ก่อนแตกแขนงไป supraspinatus จะเสียทั้งสองมัด. ถ้ากดที่ spinoglenoid notch จะเสียเฉพาะ infraspinatus. Axillary nerve เลี้ยง deltoid และ teres minor",
+   "source": "เฉลย78"
+  },
+  "78/175": {
+   "box": 35,
+   "stem": "ถามยาที่ใช้ป้องกัน (prophylaxis) migraine",
+   "options": {
+    "A": "Ergot",
+    "B": "NSAIDs",
+    "C": "TCA",
+    "D": "Opioid"
+   },
+   "answer": "C",
+   "why": "ยาป้องกัน migraine ได้แก่ beta-blocker (propranolol), TCA (amitriptyline), anticonvulsant (topiramate, valproate), flunarizine และ anti-CGRP ใช้ทุกวันเพื่อลดความถี่การปวด. Ergot, NSAIDs และยาแก้ปวดเป็น abortive therapy ใช้ตอนปวด. Opioid ไม่แนะนำสำหรับ migraine เพราะเสี่ยง medication-overuse headache",
+   "source": "เฉลย78"
+  },
+  "78/184": {
+   "box": 17,
+   "stem": "ผู้ป่วยหูขวาได้ยินลดลง Weber lateralize ไปขวา Rinne หูขวา BC > AC หูซ้าย AC > BC otoscope ปกติ ถามการวินิจฉัย",
+   "options": {
+    "A": "Right conductive hearing loss",
+    "B": "Right sensorineural hearing loss",
+    "C": "Left conductive hearing loss",
+    "D": "Left sensorineural hearing loss",
+    "E": "Wax ในช่องหู",
+    "F": "Otitis externa"
+   },
+   "answer": "A",
+   "why": "Rinne ผิดปกติ (BC > AC) ที่หูขวาบ่งชี้ conductive loss ข้างขวา และ Weber ไปข้างที่เป็น conductive loss (เพราะ masking ของเสียงรอบข้างลดลง) จึงสอดคล้องกัน. ถ้าเป็น right SNHL Weber จะไปข้างดี (ซ้าย) และ Rinne ปกติ. Otoscope ปกติ จึงไม่ใช่ wax หรือ otitis externa (อาจเป็น otosclerosis)",
+   "source": "เฉลย78"
+  },
+  "78/194": {
+   "box": 37,
+   "stem": "ให้ norepinephrine แล้ว heart rate เพิ่มขึ้น ถามว่าผลนี้เรียกว่าอะไร",
+   "options": {
+    "A": "Positive inotropic",
+    "B": "Negative inotropic",
+    "C": "Positive dromotropic",
+    "D": "Positive chronotropic",
+    "E": "Negative chronotropic"
+   },
+   "answer": "D",
+   "why": "Chronotropy คือผลต่ออัตราการเต้นของหัวใจ NE กระตุ้น beta-1 ที่ SA node เพิ่ม If (funny current) และ Ca current ทำให้ phase 4 ชันขึ้น HR เพิ่ม = positive chronotropic. Inotropic คือแรงบีบตัว. Dromotropic คือความเร็วการนำไฟฟ้าผ่าน AV node",
+   "source": "เฉลย78"
+  },
+  "78/199": {
+   "box": 4,
+   "stem": "ผู้ป่วย GBS มีกะบังลมอัมพาต การใส่ท่อช่วยหายใจและ assisted ventilation ช่วยปรับสิ่งใด",
+   "options": {
+    "A": "Increase ventilation",
+    "B": "Increase perfusion",
+    "C": "Increase diffusion"
+   },
+   "answer": "A",
+   "why": "GBS เป็น acute demyelinating polyneuropathy ที่ทำให้ phrenic nerve และกล้ามเนื้อหายใจอ่อนแรง เกิด hypoventilation (ปอดปกติ แต่ปั๊มลมไม่ได้) PaCO2 สูง. เครื่องช่วยหายใจแทนแรงกล้ามเนื้อ จึงเพิ่ม alveolar ventilation โดยตรง. ไม่ได้ช่วย perfusion หรือ diffusion ซึ่งไม่ได้ผิดปกติในภาวะนี้",
+   "source": "เฉลย78"
+  },
+  "78/200": {
+   "box": 18,
+   "stem": "ผู้ป่วยอ่อนแรงซีกซ้ายจาก MCA ด้านขวาอุดตัน ถามว่าจะเสีย function ใดร่วมด้วย",
+   "options": {
+    "A": "Visuospatial",
+    "B": "Motor planning",
+    "C": "Executive function",
+    "D": "Language"
+   },
+   "answer": "A",
+   "why": "สมองซีกขวา (non-dominant) ที่ parietal lobe ทำหน้าที่ visuospatial attention ดังนั้น right MCA stroke มักมี hemispatial neglect ด้านซ้าย และ constructional apraxia. Language อยู่ที่ซีกซ้าย (dominant). Executive function อยู่ที่ prefrontal cortex (ACA และ MCA branch). Motor planning หรือ ideomotor praxis เด่นที่ left parietal",
+   "source": "เฉลย78"
+  },
+  "78/204": {
+   "box": 9,
+   "stem": "ผู้ป่วยมี dysmetria ชี้นิ้วเลยเป้าทางด้านขวา ถามตำแหน่ง lesion",
+   "options": {
+    "A": "Cerebellar vermis",
+    "B": "Left cerebellar hemisphere",
+    "C": "Right cerebellar hemisphere"
+   },
+   "answer": "C",
+   "why": "Cerebellar hemisphere ควบคุมการประสานงานของแขนขาข้างเดียวกัน (เพราะ pathway ไขว้สองครั้ง) lesion ที่ right cerebellar hemisphere จึงทำให้ dysmetria, intention tremor, dysdiadochokinesia ที่ข้างขวา. Vermis lesion ทำให้ truncal ataxia และเดินเซกว้าง มากกว่าอาการที่แขนขา",
+   "source": "เฉลย78"
+  },
+  "78/206": {
+   "box": 4,
+   "stem": "ผู้ป่วยชาแบบ glove and stocking และ reflex หายหมด ถามว่าโครงสร้างใดเสีย",
+   "options": {
+    "A": "Nerve",
+    "B": "NMJ"
+   },
+   "answer": "A",
+   "why": "การชาปลายมือปลายเท้าแบบ glove-stocking คือ length-dependent polyneuropathy (axon ยาวที่สุดเสียก่อน) ร่วมกับ areflexia จากการเสีย sensory afferent ของ reflex arc จึงเป็นปัญหาของ peripheral nerve (เช่น DM, B12, B6 toxicity). โรคของ NMJ (MG) ไม่มีอาการทางประสาทรับความรู้สึก และ reflex มักปกติ",
+   "source": "เฉลย78"
+  },
+  "78/207": {
+   "box": 11,
+   "stem": "ผู้ป่วยมี magnetic gait ยังทำ air cycling ได้ (ขณะนอน) และปัสสาวะราด ถามการวินิจฉัย",
+   "options": {
+    "A": "NPH",
+    "B": "Frontotemporal dementia",
+    "C": "Alzheimer"
+   },
+   "answer": "A",
+   "why": "Normal pressure hydrocephalus มี triad: gait apraxia (magnetic gait เท้าติดพื้น แต่ขยับขาขณะนอนได้ปกติ เพราะไม่ใช่อ่อนแรง), urinary incontinence และ dementia (wet, wobbly, wacky) จาก ventricle ขยายยืด corona radiata fiber ที่ไปขาและกระเพาะปัสสาวะ. FTD เด่นที่บุคลิกภาพเปลี่ยน. Alzheimer เด่นที่ความจำ และปัญหาการเดินมาในระยะท้าย",
+   "source": "เฉลย78"
+  },
+  "78/208": {
+   "box": 23,
+   "stem": "ผู้ป่วยมี transient ischemic attack ถามขั้นต่อไปที่ควรทำ",
+   "options": {
+    "A": "CT imaging",
+    "B": "Lumbar puncture",
+    "C": "ให้กลับบ้าน"
+   },
+   "answer": "A",
+   "why": "TIA คืออาการ neuro deficit ชั่วคราวที่ไม่มี infarct เป็นสัญญาณเตือน stroke ระยะสั้น จึงต้องส่ง brain imaging (CT/MRI) เพื่อแยก hemorrhage และ mimic แล้วหาสาเหตุ (carotid duplex, ECG) และเริ่ม antiplatelet. LP ไม่มีข้อบ่งชี้. การปล่อยกลับบ้านโดยไม่ประเมินเสี่ยงต่อ stroke ตามมา",
+   "source": "เฉลย78"
+  },
+  "78/214": {
+   "box": 22,
+   "stem": "extern นอนไม่พอ ถามว่าจะเกิดอาการ/สิ่งตรวจพบใด",
+   "options": {
+    "A": "Immature neutrophil",
+    "B": "Elevated mood",
+    "C": "Hypoglycemia"
+   },
+   "answer": "A",
+   "why": "เฉลยให้ immature neutrophil โดยอธิบายได้ว่าการอดนอนเป็น physiologic stress เพิ่ม cortisol และ catecholamine ทำให้ demargination และปล่อย neutrophil จาก bone marrow (left shift) เพิ่มขึ้น. Hypoglycemia ไม่ใช่ผลจากการอดนอน (stress hormone ทำให้น้ำตาลสูงขึ้นมากกว่า)",
+   "source": "เฉลย78",
+   "doubt": "⚠ เฉลยอาจขัดหลัก: การอดนอนเฉียบพลันทำให้ elevated mood หรือ euphoria (จาก dopamine เพิ่ม ใช้รักษา depression ชั่วคราวได้) ซึ่งเป็นคำตอบที่สอดคล้องกับเนื้อหาจิตเวชมากกว่า immature neutrophil"
+  },
+  "78/215": {
+   "box": 21,
+   "stem": "ผู้ป่วยขาด FSH LH และ GnRH ถามว่า pituitary (anterior) เจริญมาจากโครงสร้างใด",
+   "options": {
+    "A": "Oral ectoderm",
+    "B": "Neuroectoderm",
+    "C": "Neural crest cell",
+    "D": "Paraxial mesoderm",
+    "E": "Lateral mesoderm"
+   },
+   "answer": "A",
+   "why": "Anterior pituitary (adenohypophysis) มาจาก Rathke pouch ซึ่งเป็น oral ectoderm (stomodeum) ยื่นขึ้นไป ส่วน posterior pituitary (neurohypophysis) มาจาก neuroectoderm ของ diencephalon (infundibulum). Gonadotroph ที่สร้าง FSH/LH อยู่ใน anterior pituitary. Rathke pouch ที่หลงเหลือเป็นต้นกำเนิดของ craniopharyngioma",
+   "source": "เฉลย78"
+  },
+  "78/219": {
+   "box": 39,
+   "stem": "ถามว่า obsessive-compulsive disorder (OCD) มีความผิดปกติที่วงจรใด",
+   "options": {
+    "A": "Mesolimbic pathway",
+    "B": "Nigrostriatal pathway",
+    "C": "Cortico-striato-thalamo-cortical circuit",
+    "D": "Mesocortical pathway"
+   },
+   "answer": "C",
+   "why": "OCD สัมพันธ์กับการทำงานมากเกินของ cortico-striato-thalamo-cortical (CSTC) loop ที่เชื่อม orbitofrontal cortex, anterior cingulate, caudate nucleus และ thalamus ทำให้ความคิดซ้ำ ๆ วนไม่หยุด รักษาด้วย SSRI ขนาดสูงหรือ CBT (ERP). Mesolimbic เกี่ยวกับ positive symptom ของ schizophrenia. Nigrostriatal เกี่ยวกับ Parkinson/EPS. Mesocortical เกี่ยวกับ negative symptom",
+   "source": "เฉลย78"
+  },
+  "78/X14": {
+   "box": 32,
+   "stem": "ผู้ป่วยดื่มสุราเรื้อรัง เมื่อหยุดดื่มมีอาการสับสนและหูแว่ว ถามการวินิจฉัย",
+   "options": {
+    "A": "Alcohol withdrawal delirium (delirium tremens)",
+    "B": "Wernicke encephalopathy",
+    "C": "Korsakoff syndrome",
+    "D": "Alcohol intoxication",
+    "E": "Hepatic encephalopathy"
+   },
+   "answer": "A",
+   "why": "การหยุดดื่มทำให้ GABA-A ที่ downregulate และ NMDA ที่ upregulate ขาดการกด เกิด CNS hyperexcitability. อาการสับสน (disturbance of consciousness) ร่วมกับหลอนหลังหยุดดื่ม 48-96 ชม. พร้อม autonomic hyperactivity คือ delirium tremens รักษาด้วย benzodiazepine (+ thiamine). Wernicke มี ophthalmoplegia กับ ataxia. Korsakoff เด่นที่ความจำเสื่อมและ confabulation ไม่ใช่ภาวะสับสนเฉียบพลันหลังหยุดดื่ม",
+   "source": "วิเคราะห์",
+   "options_reconstructed": true
+  },
+  "79/2": {
+   "box": 4,
+   "stem": "ผู้ป่วยอ่อนเพลียและชาเท้าสองข้าง มี macrocytic anemia ถามว่าผลตรวจใดตัดการขาด vitamin B12 ออกไปได้ว่าไม่ใช่สาเหตุเดียว",
+   "options": {
+    "A": "anti-intrinsic factor antibody ผลบวก",
+    "B": "methylmalonic acid ปกติ",
+    "C": "homocysteine สูง",
+    "D": "vitamin B12 ในเลือดต่ำ",
+    "E": "มีอาการทางระบบประสาท"
+   },
+   "answer": "B",
+   "why": "B12 เป็น cofactor ของ methylmalonyl-CoA mutase และ methionine synthase การขาด B12 จึงทำให้ทั้ง MMA และ homocysteine สูง. ถ้า MMA ปกติแต่มี macrocytic anemia บ่งว่าน่าจะขาด folate (folate ขาดทำให้ homocysteine สูงอย่างเดียว). MMA ที่สะสมทำให้ myelin ผิดปกติ จึงอธิบาย subacute combined degeneration และ neuropathy ของ B12. ข้ออื่นสนับสนุนว่าขาด B12",
+   "source": "วิเคราะห์"
+  },
+  "79/37": {
+   "box": 36,
+   "stem": "คนสุขภาพดีวิ่ง 10 กม. กลางแดดร้อน เหงื่อออกมาก ถามกลไกหลักของการตอบสนองนี้",
+   "options": {
+    "A": "Adrenergic กระตุ้น apocrine gland",
+    "B": "Cholinergic กระตุ้น eccrine gland",
+    "C": "กระตุ้น sebaceous gland",
+    "D": "Cutaneous vasoconstriction",
+    "E": "Insensible loss ผ่าน stratum corneum"
+   },
+   "answer": "B",
+   "why": "Thermoregulatory sweating มาจาก eccrine gland ที่เลี้ยงโดย sympathetic postganglionic fiber แต่ใช้ acetylcholine จับ M3 receptor (ข้อยกเว้นของ sympathetic) จึงเป็น cholinergic. Apocrine gland (รักแร้ อวัยวะเพศ) ตอบสนองต่อ adrenergic/อารมณ์ ไม่ได้ใช้ระบายความร้อน. ตอนร้อนหลอดเลือดผิวหนังขยาย ไม่ใช่หด",
+   "source": "วิเคราะห์"
+  },
+  "79/41": {
+   "box": 30,
+   "stem": "ผู้ป่วยมะเร็งได้ cisplatin ร่วมกับ ondansetron ถามจุดประสงค์หลักของการให้ ondansetron",
+   "options": {
+    "A": "ลดคลื่นไส้อาเจียนจากเคมีบำบัด",
+    "B": "ลด nephrotoxicity ของ cisplatin",
+    "C": "ป้องกัน ototoxicity",
+    "D": "เพิ่มฤทธิ์ต้านมะเร็ง",
+    "E": "ป้องกัน myelosuppression"
+   },
+   "answer": "A",
+   "why": "Cisplatin เป็นยาที่ทำให้อาเจียนรุนแรงมาก (highly emetogenic) โดยกระตุ้น enterochromaffin cell ในลำไส้ปล่อย serotonin ไปจับ 5-HT3 receptor ที่ vagal afferent และ chemoreceptor trigger zone. Ondansetron เป็น 5-HT3 antagonist จึงป้องกัน CINV. การป้องกันพิษต่อไตของ cisplatin ใช้ hydration ส่วน ototoxicity ไม่มียาที่ช่วยได้ชัด",
+   "source": "วิเคราะห์"
+  },
+  "79/64": {
+   "box": 39,
+   "stem": "ชายอายุ 70 ปีในโรงพยาบาลมีสับสนเฉียบพลัน ไม่รู้วันเวลาสถานที่ ความใส่ใจขึ้นลง กระวนกระวายเล็กน้อย แต่ hemodynamic คงที่และไม่เป็นอันตราย ถาม management แรกที่เหมาะสม",
+   "options": {
+    "A": "ให้ IV diazepam",
+    "B": "ใส่ท่อช่วยหายใจและให้ยาสลบ",
+    "C": "หาและรักษาสาเหตุที่กระตุ้น",
+    "D": "ให้ opioid ขนาดสูง",
+    "E": "ผูกมัดทันที"
+   },
+   "answer": "C",
+   "why": "อาการสับสนเฉียบพลันที่ attention ขึ้นลงในผู้สูงอายุที่นอนโรงพยาบาลคือ delirium ซึ่งเป็น acute brain failure จากสาเหตุทางกาย (ติดเชื้อ ยา electrolyte hypoxia) การรักษาหลักคือหาและแก้สาเหตุ ร่วมกับ non-pharmacologic measure. Benzodiazepine ทำให้ delirium แย่ลง (ยกเว้น alcohol withdrawal). Opioid ขนาดสูงและการผูกมัดเพิ่มความเสี่ยง delirium",
+   "source": "วิเคราะห์"
+  },
+  "79/65": {
+   "box": 22,
+   "stem": "นักศึกษาอดนอน 3 วัน แล้วง่วงมากตอนกลางวัน ถามการเปลี่ยนแปลงทางสรีรวิทยาที่น่าจะเกิด",
+   "options": {
+    "A": "adenosine สะสมในสมองเพิ่มขึ้น",
+    "B": "sleep pressure ลดลง",
+    "C": "orexin หลั่งเพิ่มระหว่างตื่นนาน",
+    "D": "sleep-promoting neuron ทำงานลด",
+    "E": "adenosine receptor ไวต่อ caffeine มากขึ้น"
+   },
+   "answer": "A",
+   "why": "ระหว่างตื่น ATP ที่ถูกใช้ใน neuron สลายเป็น adenosine สะสมใน basal forebrain ซึ่งเป็นตัวแทนของ homeostatic sleep pressure (process S) adenosine ยับยั้ง wake-promoting cholinergic neuron และกระตุ้น VLPO จึงง่วง. การอดนอนจึงทำให้ sleep pressure เพิ่ม ไม่ใช่ลด. Caffeine ออกฤทธิ์โดยเป็น adenosine receptor antagonist. Orexin เป็นตัวรักษาการตื่น ไม่ได้อธิบายความง่วง",
+   "source": "วิเคราะห์"
+  },
+  "79/66": {
+   "box": 5,
+   "stem": "ผู้ป่วยอ่อนแรงต้นแขนต้นขา (เป่าผม ขึ้นบันไดลำบาก) มีหนังตาตกเป็นพัก ๆ ตอนเย็น reflex ลดลง (+1) แต่เพิ่มเป็น +2 หลังเกร็งกล้ามเนื้อนาน ๆ ถามภาวะที่สัมพันธ์มากที่สุด",
+   "options": {
+    "A": "Thymoma",
+    "B": "Small-cell lung carcinoma",
+    "C": "Papillary thyroid carcinoma",
+    "D": "Colon adenocarcinoma",
+    "E": "Renal cell carcinoma"
+   },
+   "answer": "B",
+   "why": "Reflex ที่ต่ำแล้วดีขึ้นหลังออกแรงต่อเนื่อง (post-exercise facilitation) เป็นลักษณะจำเพาะของ Lambert-Eaton myasthenic syndrome ซึ่งมี antibody ต่อ presynaptic voltage-gated Ca channel ทำให้ปล่อย ACh น้อย การออกแรงซ้ำทำให้ Ca สะสมใน terminal จึงปล่อย ACh ได้มากขึ้น. LEMS เป็น paraneoplastic ที่สัมพันธ์กับ small cell lung carcinoma. Thymoma สัมพันธ์กับ MG ซึ่ง reflex ปกติและอ่อนแรงแย่ลงเมื่อใช้ซ้ำ",
+   "source": "วิเคราะห์"
+  },
+  "79/68": {
+   "box": 15,
+   "stem": "ผู้ป่วยมีหน้าซ้ายชา เสียงแหบ อาการด้านขวาของลำตัว (โจทย์ให้ hemiparesis) และ anhidrosis ถามการวินิจฉัย",
+   "options": {
+    "A": "Medial medullary syndrome",
+    "B": "Lateral medullary syndrome",
+    "C": "PCA rupture",
+    "D": "ACA rupture",
+    "E": "MCA rupture"
+   },
+   "answer": "B",
+   "why": "Lateral medullary (Wallenberg) syndrome จาก PICA/vertebral artery อุด: spinal trigeminal nucleus ข้างเดียวกันเสียทำให้หน้าชาข้าง lesion, spinothalamic tract เสียทำให้ลำตัวด้านตรงข้ามเสียความรู้สึกเจ็บ/ร้อน, nucleus ambiguus เสียทำให้เสียงแหบกลืนลำบาก และ descending sympathetic ทำให้ Horner/anhidrosis. อาการข้ามฝั่ง (หน้าข้างหนึ่ง ลำตัวอีกข้าง) บ่งชี้ brainstem. Medial medullary เสีย CN XII กับ pyramid ไม่มีหน้าชาหรือเสียงแหบ",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ โจทย์ที่จดมาให้ right hemiparesis ซึ่งไม่ใช่อาการคลาสสิกของ Wallenberg (ควรเป็นการเสีย pain/temperature ด้านตรงข้าม) แต่ lateral medullary เข้ากับอาการชุดนี้มากที่สุด"
+  },
+  "79/69": {
+   "box": 23,
+   "stem": "ผู้ป่วย acute ischemic stroke เริ่มมีอาการ 30 นาที ความดัน 150/90 mmHg ถาม management ที่เหมาะสม",
+   "options": {
+    "A": "Alteplase อย่างเดียว",
+    "B": "Alteplase ร่วมกับ labetalol",
+    "C": "Labetalol อย่างเดียว",
+    "D": "Aspirin อย่างเดียว",
+    "E": "ไม่รักษา"
+   },
+   "answer": "A",
+   "why": "อยู่ในช่วงเวลาให้ thrombolysis (ภายใน 4.5 ชม.) จึงให้ IV alteplase (tPA เปลี่ยน plasminogen เป็น plasmin สลาย fibrin). ต้องลด BP ก่อนให้ tPA เฉพาะเมื่อ BP > 185/110 ซึ่งรายนี้ไม่เกิน จึงไม่ต้องให้ labetalol และการลด BP เกินไปจะลด perfusion ใน penumbra. Aspirin ให้หลัง tPA 24 ชม. หรือเมื่อให้ tPA ไม่ได้",
+   "source": "วิเคราะห์"
+  },
+  "79/70": {
+   "box": 23,
+   "stem": "ผู้ป่วยอ่อนแรงที่ขาขวาเป็นหลัก แขนและส่วนอื่นค่อนข้างปกติ ถามหลอดเลือดสมองที่น่าจะผิดปกติ",
+   "options": {
+    "A": "Left ACA",
+    "B": "Right MCA",
+    "C": "Left MCA",
+    "D": "Right ACA",
+    "E": "PCA"
+   },
+   "answer": "A",
+   "why": "บริเวณ motor cortex ของขาอยู่ที่ medial surface ของ hemisphere (paracentral lobule) ซึ่งเลี้ยงโดย ACA. อ่อนแรงขาขวาจึงเป็น lesion ที่ left ACA (corticospinal ไขว้ที่ medulla). MCA เลี้ยง lateral convexity ทำให้หน้าและแขนอ่อนแรงมากกว่าขา. PCA เลี้ยง occipital lobe ทำให้ homonymous hemianopia",
+   "source": "วิเคราะห์"
+  },
+  "79/71": {
+   "box": 8,
+   "stem": "ผู้ป่วยมีกล้ามเนื้อขาลีบลงเรื่อย ๆ และ reflex ที่แขนไวเกิน ถามการวินิจฉัย",
+   "options": {
+    "A": "Myasthenia gravis",
+    "B": "Guillain-Barré syndrome",
+    "C": "Amyotrophic lateral sclerosis",
+    "D": "Lambert-Eaton",
+    "E": "Multiple sclerosis"
+   },
+   "answer": "C",
+   "why": "ALS มีการเสื่อมของทั้ง upper motor neuron (hyperreflexia, spasticity, Babinski) และ lower motor neuron (atrophy, fasciculation) พร้อมกันในหลายส่วน โดยไม่มี sensory loss. การมี UMN และ LMN sign ปนกันเป็นกุญแจ. MG และ LEMS เป็นโรค NMJ ไม่มี UMN sign. GBS ทำให้ areflexia. MS เป็น CNS demyelination ไม่ทำให้กล้ามเนื้อลีบแบบ LMN",
+   "source": "วิเคราะห์"
+  },
+  "79/72": {
+   "box": 18,
+   "stem": "ผู้ป่วยพูดคล่องแต่ไม่เข้าใจคำพูดที่ได้ยิน และพูดทวนประโยคไม่ได้ ถามบริเวณสมองที่เสียหาย",
+   "options": {
+    "A": "Broca area",
+    "B": "Wernicke area",
+    "C": "Arcuate fasciculus",
+    "D": "Primary motor cortex",
+    "E": "Primary auditory cortex"
+   },
+   "answer": "B",
+   "why": "Wernicke aphasia (receptive) เกิดจาก lesion ที่ posterior superior temporal gyrus ของซีก dominant ทำให้พูดคล่องแต่ไร้ความหมาย (word salad) ไม่เข้าใจภาษา และทวนไม่ได้. Broca aphasia พูดไม่คล่องแต่เข้าใจ. Conduction aphasia (arcuate fasciculus) ทวนไม่ได้แต่ยังเข้าใจภาษา",
+   "source": "วิเคราะห์"
+  },
+  "79/73": {
+   "box": 13,
+   "stem": "ผู้ป่วยมี nystagmus เมื่อพยายามมองไปทางซ้าย และรู้สึกสบายกว่าเมื่อมองขวา ถามโครงสร้างที่น่าจะผิดปกติ",
+   "options": {
+    "A": "CN III",
+    "B": "CN VI",
+    "C": "Frontal eye field",
+    "D": "Medial longitudinal fasciculus",
+    "E": "Left PPRF"
+   },
+   "answer": "D",
+   "why": "MLF เชื่อม CN VI nucleus กับ CN III nucleus ด้านตรงข้ามเพื่อให้ตาสองข้างเคลื่อนพร้อมกัน lesion ที่ MLF ทำให้ internuclear ophthalmoplegia คือตาข้างหนึ่ง adduct ไม่ได้ และตาอีกข้างที่ abduct มี nystagmus ขณะมองไปด้านนั้น (พบบ่อยใน MS). Left PPRF lesion ทำให้มองซ้ายไม่ได้เลยทั้งสองตา ไม่ใช่ nystagmus. CN VI เสียทำให้ abduct ไม่ได้และภาพซ้อน",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ โจทย์ที่จดมาให้ข้อมูลไม่ครบ (ไม่บอกว่าตาข้างไหน adduct ไม่ได้) ตอบตามลักษณะ nystagmus ของ INO"
+  },
+  "79/74": {
+   "box": 24,
+   "stem": "ผู้ป่วยมีหนังตาขวาตกจากการกดทับ oculomotor nerve ถามภาวะที่น่าเป็นสาเหตุมากที่สุด",
+   "options": {
+    "A": "Right uncal herniation",
+    "B": "Left uncal herniation",
+    "C": "Right tonsillar herniation",
+    "D": "Left tonsillar herniation",
+    "E": "Central transtentorial herniation"
+   },
+   "answer": "A",
+   "why": "Uncal (transtentorial) herniation ทำให้ medial temporal lobe ถูกดันลงกด CN III ข้างเดียวกันที่วิ่งผ่านระหว่าง PCA และ SCA ทำให้ pupil ขยาย ptosis และตาเบนลงออก จึงเป็น right uncal herniation. Tonsillar herniation กด medulla ไม่ได้กด CN III. Central herniation ทำให้ pupil เล็กทั้งสองข้างในระยะแรก",
+   "source": "วิเคราะห์"
+  },
+  "79/75": {
+   "box": 5,
+   "stem": "ชาวนาสัมผัสยาฆ่าแมลง มี miosis น้ำลายมาก เหงื่อ เสมหะในหลอดลม และกล้ามเนื้อกระตุก (fasciculation) ถามกลไก",
+   "options": {
+    "A": "ยับยั้ง acetylcholinesterase",
+    "B": "กระตุ้น acetylcholinesterase",
+    "C": "บล็อก muscarinic receptor",
+    "D": "บล็อก nicotinic receptor",
+    "E": "ยับยั้ง COMT"
+   },
+   "answer": "A",
+   "why": "Organophosphate จับ serine ที่ active site ของ acetylcholinesterase แบบ irreversible ACh จึงสะสมกระตุ้นทั้ง muscarinic (miosis, salivation, sweating, bronchorrhea, bradycardia: DUMBELS) และ nicotinic ที่ NMJ (fasciculation แล้วอ่อนแรง). รักษาด้วย atropine (muscarinic) และ pralidoxime (reactivate enzyme ก่อน aging). การบล็อก muscarinic ทำให้อาการตรงข้าม",
+   "source": "วิเคราะห์"
+  },
+  "79/76": {
+   "box": 26,
+   "stem": "ผู้สูงอายุมีไข้ คอแข็ง Kernig sign บวก เพิ่งกินชีสชนิดนิ่มและ coleslaw ถามเชื้อก่อโรค",
+   "options": {
+    "A": "E. coli",
+    "B": "Streptococcus pneumoniae",
+    "C": "Neisseria meningitidis",
+    "D": "Haemophilus influenzae type b",
+    "E": "Listeria monocytogenes"
+   },
+   "answer": "E",
+   "why": "Listeria monocytogenes เป็น gram-positive rod ที่โตได้ในอุณหภูมิตู้เย็น ปนเปื้อนในชีสนิ่ม นมไม่พาสเจอร์ไรส์ deli meat และผักสลัด ก่อ meningitis ในทารกแรกเกิด ผู้สูงอายุ หญิงตั้งครรภ์ และคนภูมิต่ำ (ต้องเติม ampicillin ใน empirical therapy). S. pneumoniae เป็นเชื้อที่พบบ่อยสุดในผู้ใหญ่แต่ไม่สัมพันธ์กับอาหาร. E. coli พบในทารกแรกเกิด",
+   "source": "วิเคราะห์"
+  },
+  "79/77": {
+   "box": 26,
+   "stem": "ผู้ป่วยมี purpura ไข้ คอแข็ง Kernig บวก CSF neutrophil 90% เข้ากับ bacterial meningitis ถามลักษณะของเชื้อก่อโรค",
+   "options": {
+    "A": "G+ cocci in clusters catalase บวก",
+    "B": "G+ cocci in chains ไวต่อ optochin",
+    "C": "G+ lancet-shaped diplococci",
+    "D": "G− kidney-shaped diplococci",
+    "E": "G− coccobacilli ต้องการ X และ V factor"
+   },
+   "answer": "D",
+   "why": "Meningitis ร่วมกับ purpura หรือ petechiae คือ Neisseria meningitidis (gram-negative diplococci รูปไต) ซึ่ง endotoxin (LOS) ทำให้เกิด DIC และ Waterhouse-Friderichsen syndrome. Lancet-shaped diplococci คือ S. pneumoniae (optochin sensitive) ซึ่งเป็นสาเหตุ meningitis ที่พบบ่อยแต่ไม่เด่นเรื่อง purpura. ต้องการ X และ V factor คือ H. influenzae",
+   "source": "วิเคราะห์"
+  },
+  "79/78": {
+   "box": 28,
+   "stem": "ทารกแรกเกิดมี periventricular calcification, sensorineural hearing loss และผื่น blueberry muffin ถามเชื้อก่อโรค",
+   "options": {
+    "A": "Cytomegalovirus",
+    "B": "Rubella virus",
+    "C": "Toxoplasma gondii",
+    "D": "Treponema pallidum",
+    "E": "HSV"
+   },
+   "answer": "A",
+   "why": "Congenital CMV เป็น congenital infection ที่พบบ่อยที่สุด ลักษณะเด่นคือ periventricular calcification, microcephaly, SNHL (สาเหตุ non-genetic ที่พบบ่อยสุด), chorioretinitis และ blueberry muffin rash (extramedullary hematopoiesis). Toxoplasma มี calcification กระจายทั่วสมอง (diffuse) และ hydrocephalus. Rubella มี PDA, cataract, SNHL. Blueberry muffin พบได้ทั้ง CMV และ rubella แต่ periventricular calcification ชี้ CMV",
+   "source": "วิเคราะห์"
+  },
+  "79/79": {
+   "box": 35,
+   "stem": "ผู้ป่วยปวดศีรษะเป็น ๆ หาย ๆ มา 1 ปี ปวดข้างเดียวบริเวณ orbit-temporal-occipital บางครั้งเป็นสองข้าง ครั้งละ 5-8 ชม. เดือนละ 1-2 ครั้ง ถามยาที่เหมาะสมสำหรับบรรเทาอาการตอนปวด",
+   "options": {
+    "A": "Beta blocker",
+    "B": "Tricyclic antidepressant",
+    "C": "5-HT agonist",
+    "D": "Dopamine agonist",
+    "E": "Serotonin 1B/1D receptor agonist"
+   },
+   "answer": "E",
+   "why": "อาการเข้าได้กับ migraine (ปวดข้างเดียว 4-72 ชม. เป็นซ้ำ) ยา abortive จำเพาะคือ triptan ซึ่งเป็น 5-HT1B/1D agonist: 1B ทำให้หลอดเลือดในเยื่อหุ้มสมองหด และ 1D ยับยั้งการหลั่ง CGRP และ substance P จาก trigeminal nerve. Beta blocker และ TCA เป็นยาป้องกัน ใช้ไม่ได้ตอนปวด. ข้อ 5-HT agonist กว้างเกินไป ควรเลือกข้อที่ระบุ subtype",
+   "source": "วิเคราะห์"
+  },
+  "79/80": {
+   "box": 31,
+   "stem": "หญิงอายุ 32 ปีอารมณ์เศร้า 3 เดือน อ่อนเพลีย หมดความสุขในสิ่งที่เคยชอบ นอนไม่หลับ เบื่ออาหาร ผลตรวจปกติ แม่เป็น MDD ถามการเปลี่ยนแปลงทางเคมีประสาท",
+   "options": {
+    "A": "GABA inhibitory function เสีย",
+    "B": "serotonin และ norepinephrine ต่ำใน prefrontal cortex",
+    "C": "dopamine มากเกินใน mesolimbic",
+    "D": "acetylcholine เพิ่มใน basal forebrain",
+    "E": "dopamine เพิ่มใน mesocortical"
+   },
+   "answer": "B",
+   "why": "Monoamine hypothesis ของ major depressive disorder อธิบายว่า serotonin และ norepinephrine (รวมทั้ง dopamine) ในสมองลดลง ซึ่งเป็นพื้นฐานของการใช้ SSRI, SNRI และ TCA ที่เพิ่ม monoamine ใน synapse. Dopamine มากเกินใน mesolimbic คือ positive symptom ของ schizophrenia. Acetylcholine ลดลง (ไม่ใช่เพิ่ม) ใน Alzheimer",
+   "source": "วิเคราะห์"
+  },
+  "79/81": {
+   "box": 26,
+   "stem": "ผู้ป่วยปวดศีรษะ คอแข็ง CSF มี opening pressure สูง glucose ต่ำ protein สูง และ eosinophil 40% เพิ่งกินกุ้งหรือปลาน้ำจืดดิบ ถามการรักษาที่เหมาะสมที่สุด",
+   "options": {
+    "A": "Corticosteroids",
+    "B": "Antifungal",
+    "C": "Anti-TB",
+    "D": "Supportive อย่างเดียว",
+    "E": "Broad-spectrum antibiotic"
+   },
+   "answer": "A",
+   "why": "Eosinophilic meningitis (CSF eosinophil > 10%) ร่วมกับการกินหอย กุ้ง หรือปลาน้ำจืดดิบ คือ Angiostrongylus cantonensis (หรือ Gnathostoma) ตัวอ่อนพยาธิตายในสมองแล้วเกิดการอักเสบ การรักษาหลักคือ corticosteroid (prednisolone) ลดการอักเสบและอาการปวด ร่วมกับเจาะหลังระบายน้ำ. ยาฆ่าพยาธิอาจทำให้อักเสบมากขึ้น. Antifungal, anti-TB และ antibiotic ไม่ตรงกับสาเหตุ",
+   "source": "วิเคราะห์"
+  },
+  "79/82": {
+   "box": 30,
+   "stem": "ผู้ป่วย schizophrenia ได้ risperidone แล้วหน้าเฉย (masked face) และสั่นขณะพัก ถาม management ที่เหมาะสม",
+   "options": {
+    "A": "เปลี่ยนเป็น fluoxetine",
+    "B": "ใช้ risperidone ต่อแล้วเพิ่ม haloperidol",
+    "C": "ใช้ risperidone ต่อแล้วเพิ่ม benztropine",
+    "D": "เปลี่ยนเป็น clozapine",
+    "E": "เพิ่มขนาด risperidone"
+   },
+   "answer": "C",
+   "why": "อาการนี้คือ drug-induced parkinsonism (EPS) จากการบล็อก D2 ใน nigrostriatal pathway ทำให้ cholinergic เด่นเกินใน striatum. การรักษาแบบยังคุมโรคจิตได้คือเพิ่ม anticholinergic (benztropine, trihexyphenidyl) เพื่อคืนสมดุล DA-ACh. เพิ่ม haloperidol หรือเพิ่มขนาด risperidone ทำให้ EPS แย่ลง. Fluoxetine ไม่ใช่ antipsychotic. Clozapine สงวนไว้สำหรับ treatment-resistant เพราะเสี่ยง agranulocytosis",
+   "source": "วิเคราะห์"
+  },
+  "79/83": {
+   "box": 39,
+   "stem": "หญิงอายุ 80 ปีสับสนและความจำระยะสั้นแย่ลงใน 2 สัปดาห์ ได้ first-generation antihistamine อยู่ ตรวจระบบประสาทไม่มี focal deficit ถาม management ที่เหมาะสม",
+   "options": {
+    "A": "หยุดยาที่เป็นสาเหตุ",
+    "B": "MRI สมองทันที",
+    "C": "เริ่ม antipsychotic",
+    "D": "ส่ง neuropsychological testing",
+    "E": "เริ่ม cholinesterase inhibitor"
+   },
+   "answer": "A",
+   "why": "First-generation antihistamine (diphenhydramine, chlorpheniramine) ผ่าน BBB และมีฤทธิ์ anticholinergic สูง เป็นสาเหตุสำคัญของ delirium และ cognitive impairment ในผู้สูงอายุ (Beers criteria) อาการเกิดเร็วภายในสัปดาห์และไม่มี focal sign จึงควรหยุดยาก่อน. Cholinesterase inhibitor ใช้ใน Alzheimer ซึ่งค่อย ๆ เป็นนานหลายปี. MRI ไม่จำเป็นเมื่อไม่มี focal deficit",
+   "source": "วิเคราะห์"
+  },
+  "79/84": {
+   "box": 17,
+   "stem": "ตรวจหูด้วย otoscope ปกติ Weber lateralize ไปหูขวา Rinne หูซ้าย AC > BC หูขวา BC > AC ถามการวินิจฉัย",
+   "options": {
+    "A": "Right conductive hearing loss",
+    "B": "Right sensorineural hearing loss",
+    "C": "Left conductive hearing loss",
+    "D": "Right mixed hearing loss",
+    "E": "Bilateral SNHL"
+   },
+   "answer": "A",
+   "why": "Rinne ผิดปกติ (BC > AC) ที่หูขวาแปลว่าเสียงผ่านทางอากาศถูกขัดขวาง = conductive loss ข้างขวา และ Weber ไปข้างที่เป็น conductive loss สอดคล้องกัน. ถ้าเป็น right SNHL Weber จะไปข้างซ้ายและ Rinne ยังเป็น AC > BC. ไม่มีข้อมูลบ่งชี้ว่ามี SNHL ร่วม จึงไม่ใช่ mixed",
+   "source": "วิเคราะห์"
+  },
+  "79/85": {
+   "box": 25,
+   "stem": "หญิงอายุ 32 ปีมี optic neuritis รุนแรงเป็นซ้ำจนตามัว และ longitudinally extensive transverse myelitis หลาย segment MRI สมองค่อนข้างปกติ ถามการตรวจที่สนับสนุนการวินิจฉัย",
+   "options": {
+    "A": "Anti-MOG antibody",
+    "B": "Anti-AQP4 antibody",
+    "C": "Anti-NMDA receptor antibody",
+    "D": "Anti-AChR antibody",
+    "E": "Anti-VGCC antibody"
+   },
+   "answer": "B",
+   "why": "Optic neuritis รุนแรงร่วมกับ LETM (≥3 vertebral segment) และ MRI สมองไม่มี lesion แบบ MS คือ neuromyelitis optica spectrum disorder ซึ่งตรวจยืนยันด้วย anti-aquaporin-4 IgG (จำเพาะสูง). Anti-MOG ทำให้เกิดภาพคล้ายกันแต่เป็นอีกโรค (MOGAD) และ AQP4 เป็น marker คลาสสิก. Anti-NMDA เป็น autoimmune encephalitis. Anti-AChR และ anti-VGCC เป็นโรค NMJ",
+   "source": "วิเคราะห์"
+  },
+  "79/86": {
+   "box": 18,
+   "stem": "ผู้ป่วยมี infarction ที่ prefrontal cortex และ parietal association cortex ถามความพิการที่น่าจะเกิด",
+   "options": {
+    "A": "แปรงฟันไม่ได้เพราะกล้ามเนื้ออ่อนแรง",
+    "B": "ไม่เข้าใจภาษาพูด",
+    "C": "จำหน้าคนคุ้นเคยไม่ได้",
+    "D": "ใช้ค้อนไม่ได้ทั้งที่กำลังกล้ามเนื้อปกติ",
+    "E": "เคลื่อนไหวไม่ประสานจาก cerebellum"
+   },
+   "answer": "D",
+   "why": "การวางแผนและเรียงลำดับการเคลื่อนไหวที่เรียนรู้มา (praxis) อาศัย parietal association cortex (โดยเฉพาะ left inferior parietal) ร่วมกับ premotor/prefrontal เมื่อเสียจะเกิด ideomotor apraxia คือทำท่าทางหรือใช้เครื่องมือไม่ได้ทั้งที่กำลังและความรู้สึกปกติ. อ่อนแรงมาจาก primary motor cortex. ไม่เข้าใจภาษาคือ Wernicke area. จำหน้าไม่ได้ (prosopagnosia) คือ fusiform gyrus",
+   "source": "วิเคราะห์"
+  },
+  "79/87": {
+   "box": 12,
+   "stem": "ผู้ป่วยมี tinnitus เสียการทรงตัว และ SNHL สงสัย lesion ที่ช่องซึ่งมี vestibulocochlear nerve วิ่งผ่าน ถามช่องใด",
+   "options": {
+    "A": "Cisterna ambiens",
+    "B": "Interpeduncular cistern",
+    "C": "Cerebellopontine angle",
+    "D": "Cisterna magna",
+    "E": "Quadrigeminal cistern"
+   },
+   "answer": "C",
+   "why": "CN VII และ VIII ออกจาก brainstem ที่ pontomedullary junction แล้วผ่าน cerebellopontine angle (CPA cistern) เข้าสู่ internal acoustic meatus. ก้อนที่พบบ่อยที่สุดตรงนี้คือ vestibular schwannoma ทำให้ SNHL ข้างเดียว tinnitus และเสียการทรงตัว. Interpeduncular cistern มี CN III. Ambient cistern มี CN IV และ PCA. Cisterna magna อยู่ระหว่าง cerebellum กับ medulla",
+   "source": "วิเคราะห์"
+  },
+  "79/88": {
+   "box": 16,
+   "stem": "แสงสว่างเข้าตา ถามเหตุการณ์แรกของ phototransduction",
+   "options": {
+    "A": "Rhodopsin ถูกกระตุ้น",
+    "B": "เปลี่ยน GTP เป็น cGMP",
+    "C": "Na channel เปิด",
+    "D": "glutamate หลั่งเพิ่ม",
+    "E": "guanylyl cyclase ถูกกระตุ้น"
+   },
+   "answer": "A",
+   "why": "โฟตอนทำให้ 11-cis-retinal ใน rhodopsin เปลี่ยนเป็น all-trans-retinal จึงกระตุ้น rhodopsin (metarhodopsin II) เป็นขั้นแรก จากนั้นกระตุ้น transducin (Gt) แล้ว phosphodiesterase ย่อย cGMP. cGMP ลดลงทำให้ Na channel ปิด (ไม่ใช่เปิด) เซลล์ hyperpolarize และหลั่ง glutamate ลดลง. Guanylyl cyclase ทำงานในขั้นฟื้นตัวหลังแสง",
+   "source": "วิเคราะห์"
+  },
+  "79/89": {
+   "box": 14,
+   "stem": "ผู้ป่วยหลับตาซ้ายไม่สนิท และมุมปากกับริมฝีปากซ้ายอ่อนแรง ถามโครงสร้างที่น่าจะผิดปกติ",
+   "options": {
+    "A": "Left facial nerve",
+    "B": "Right facial nerve",
+    "C": "Right corticobulbar tract",
+    "D": "Left corticobulbar tract",
+    "E": "Left trigeminal nerve"
+   },
+   "answer": "A",
+   "why": "การอ่อนแรงทั้งหน้าผาก/การหลับตา (upper face) และปาก (lower face) ข้างเดียวกันเป็น LMN facial palsy จาก CN VII ข้างนั้น (เช่น Bell palsy). ถ้าเป็น UMN lesion (corticobulbar tract ด้านตรงข้าม) จะเสียแค่หน้าส่วนล่าง เพราะ upper face nucleus ได้รับ corticobulbar จากทั้งสองข้าง. Trigeminal nerve ควบคุมกล้ามเนื้อเคี้ยวไม่ใช่การหลับตา",
+   "source": "วิเคราะห์"
+  },
+  "79/90": {
+   "box": 20,
+   "stem": "ผู้ป่วยอายุ 72 ปีความจำแย่ลงเรื่อย ๆ ไม่มีประวัติครอบครัว early-onset dementia ส่งตรวจพันธุกรรมเพื่อประเมินความเสี่ยงของ sporadic Alzheimer ถามปัจจัยที่สัมพันธ์มากที่สุด",
+   "options": {
+    "A": "APOE ε4 allele",
+    "B": "MAPT mutation",
+    "C": "TRAM1 mutation",
+    "D": "SORL1 variant",
+    "E": "PSEN1 หรือ PSEN2 mutation"
+   },
+   "answer": "A",
+   "why": "APOE ε4 เป็น genetic risk factor ที่แรงที่สุดของ late-onset sporadic AD (หนึ่ง allele เสี่ยงเพิ่มราว 3 เท่า สอง allele ราว 12 เท่า) เพราะ ApoE4 กำจัด amyloid-beta ได้ไม่ดี. PSEN1, PSEN2 และ APP เป็นสาเหตุของ early-onset familial AD (autosomal dominant). MAPT สัมพันธ์กับ frontotemporal dementia. SORL1 เป็น risk เล็กน้อย",
+   "source": "วิเคราะห์"
+  },
+  "79/91": {
+   "box": 20,
+   "stem": "ผู้ป่วยอายุ 72 ปีความจำและ cognition เสื่อมลงเรื่อย ๆ ถามสิ่งที่เป็นลักษณะเฉพาะของ Alzheimer และตรวจเห็นได้ด้วย brain imaging พิเศษ",
+   "options": {
+    "A": "lateral ventricle โตอย่างเดียว",
+    "B": "cerebral perfusion เพิ่ม",
+    "C": "dopamine uptake ใน basal ganglia เพิ่ม",
+    "D": "Amyloid-beta plaque",
+    "E": "glucose metabolism ที่ temporoparietal เพิ่ม"
+   },
+   "answer": "D",
+   "why": "Amyloid PET ใช้ tracer ที่จับกับ amyloid-beta plaque ซึ่งเป็นพยาธิสภาพหลักของ AD (ร่วมกับ tau tangle) จึงเห็น plaque ได้ในผู้ป่วย. FDG-PET ใน AD พบ temporoparietal hypometabolism (ลดลง ไม่ใช่เพิ่ม) และ perfusion ลดลง. DaT scan ใช้ประเมิน Parkinson หรือ DLB ซึ่ง dopamine uptake ลดลง",
+   "source": "วิเคราะห์"
+  },
+  "79/92": {
+   "box": 32,
+   "stem": "ผู้ป่วยได้ benzodiazepine รักษานอนไม่หลับ ตื่นเช้ายังง่วงและมึน ถามยาที่น่าจะทำให้เกิดผลค้างวันรุ่งขึ้น",
+   "options": {
+    "A": "Alprazolam",
+    "B": "Lorazepam",
+    "C": "Diazepam",
+    "D": "Midazolam",
+    "E": "Triazolam"
+   },
+   "answer": "C",
+   "why": "Diazepam เป็น long-acting BZD ที่ละลายในไขมันสูงและมี active metabolite (desmethyldiazepam) ที่ half-life ยาวมาก จึงเกิด hangover effect ง่วงมึนวันรุ่งขึ้น โดยเฉพาะในผู้สูงอายุ. Triazolam และ midazolam เป็น short-acting ไม่ค่อยมีผลค้างแต่เกิด rebound insomnia ได้. Alprazolam และ lorazepam เป็น intermediate-acting",
+   "source": "วิเคราะห์"
+  },
+  "79/93": {
+   "box": 39,
+   "stem": "ผู้ป่วยเมาสุราเฉียบพลันถูกนำส่งห้องฉุกเฉิน กระวนกระวายรุนแรง ตะโกนและก้าวร้าวกับเจ้าหน้าที่ ถาม management แรกที่เหมาะสม",
+   "options": {
+    "A": "ให้ haloperidol ทันที",
+    "B": "Verbal de-escalation และให้ความมั่นใจ ผูกมัดเมื่อจำเป็นเพื่อความปลอดภัย",
+    "C": "ให้ carbamazepine",
+    "D": "ย้ายเข้า ICU และใส่ท่อช่วยหายใจ",
+    "E": "ให้ disulfiram"
+   },
+   "answer": "B",
+   "why": "หลักการจัดการผู้ป่วย agitation คือเริ่มด้วยวิธีที่รุกล้ำน้อยที่สุด ได้แก่ verbal de-escalation ลดสิ่งกระตุ้น และใช้ physical restraint เฉพาะเมื่อจำเป็นต่อความปลอดภัย. ใน alcohol intoxication การให้ยากดประสาทอาจเสริมฤทธิ์กดการหายใจจึงไม่ควรเป็นอันดับแรก. Disulfiram ใช้ป้องกันการกลับไปดื่มในระยะยาว. การใส่ท่อช่วยหายใจไม่มีข้อบ่งชี้",
+   "source": "วิเคราะห์"
+  },
+  "79/94": {
+   "box": 21,
+   "stem": "ผู้ป่วยอุบัติเหตุจราจรมีการบาดเจ็บที่ hypothalamus ถามว่า hormone ใดเกี่ยวข้องโดยตรงกับการกักเก็บน้ำ",
+   "options": {
+    "A": "Cortisol",
+    "B": "Antidiuretic hormone",
+    "C": "Renin",
+    "D": "Aldosterone",
+    "E": "ANP"
+   },
+   "answer": "B",
+   "why": "ADH (vasopressin) สร้างจาก supraoptic และ paraventricular nucleus ของ hypothalamus แล้วส่งไปเก็บที่ posterior pituitary ทำหน้าที่จับ V2 receptor ที่ collecting duct ใส่ aquaporin-2 เพื่อดูดน้ำกลับ. การบาดเจ็บที่ hypothalamus จึงทำให้เกิด central DI ได้. Aldosterone กักเก็บ Na เป็นหลัก (น้ำตามไป) และสร้างจาก adrenal. Renin มาจากไต. ANP ขับ Na และน้ำ",
+   "source": "วิเคราะห์"
+  },
+  "79/97": {
+   "box": 28,
+   "stem": "ผู้ป่วยมีผื่นด่างขาวร่วมกับการสูญเสียความรู้สึก ตรวจผิวหนังพบ acid-fast bacilli จำนวนน้อย ถามเชื้อก่อโรค",
+   "options": {
+    "A": "Mycobacterium tuberculosis",
+    "B": "Mycobacterium leprae",
+    "C": "Mycobacterium avium complex",
+    "D": "Corynebacterium diphtheriae",
+    "E": "Nocardia asteroides"
+   },
+   "answer": "B",
+   "why": "Hypopigmented anesthetic patch และพบ AFB น้อย (paucibacillary) คือ tuberculoid leprosy จาก Mycobacterium leprae ซึ่งชอบอุณหภูมิต่ำ (ผิวหนัง เส้นประสาทส่วนปลาย) และเข้า Schwann cell ทำให้ชา. ภูมิแบบ Th1 ที่ดีทำให้เชื้อน้อย ส่วน lepromatous (Th2) มีเชื้อมาก. M. tuberculosis ไม่ทำให้ผื่นชา. Nocardia เป็น weakly acid-fast แต่ทำให้ปอดหรือสมองติดเชื้อ",
+   "source": "วิเคราะห์"
+  },
+  "79/100": {
+   "box": 27,
+   "stem": "นักศึกษาอายุ 19 ปีมีแผลเริม (cold sore) ที่ริมฝีปาก เป็นซ้ำทุกไม่กี่เดือนโดยเฉพาะเมื่อเครียดหรือโดนแดด ถามพยาธิกำเนิดของการเป็นซ้ำ",
+   "options": {
+    "A": "humoral immunity บกพร่องให้ไวรัสอยู่ในเลือดปริมาณสูง",
+    "B": "ติดเชื้อสายพันธุ์ใหม่จากภายนอก",
+    "C": "การติดเชื้อครั้งแรกไม่เคยหาย ยังปล่อยไวรัสจากแผลเดิม",
+    "D": "ไวรัสแฝงตัวแบบไม่แบ่งตัวใน sensory nerve ganglion แล้ว reactivate เป็นระยะ",
+    "E": "ไวรัสอยู่แบบเรื้อรังใน epithelial cell ที่ริมฝีปาก"
+   },
+   "answer": "D",
+   "why": "HSV-1 หลังติดเชื้อครั้งแรกจะเดินทางแบบ retrograde axonal transport ไปแฝงที่ trigeminal ganglion ในรูป episome (latency, มี LAT transcript) ไม่สร้างไวรัส. เมื่อมีสิ่งกระตุ้นเช่นความเครียด แสง UV ไข้ ไวรัสจะ reactivate และเดินทาง anterograde กลับมาที่ผิวเดิมทำให้เกิดแผลซ้ำ. ไม่ใช่การติดเชื้อใหม่หรือ viremia เรื้อรัง และไวรัสไม่ได้แฝงใน epithelial cell",
+   "source": "วิเคราะห์"
+  },
+  "79/106": {
+   "box": 2,
+   "stem": "ผู้ป่วยดื่มเหล้าแล้วหลับโดยพาดแขนไว้บนพนักเก้าอี้ ตื่นมาชาที่หลังแขนท่อนปลายและหลังมือ ถามว่า function ใดน่าจะเสีย",
+   "options": {
+    "A": "Thumb opposition",
+    "B": "Finger flexion",
+    "C": "Finger extension",
+    "D": "Wrist flexion",
+    "E": "Elbow flexion"
+   },
+   "answer": "C",
+   "why": "การกดทับ radial nerve ที่ spiral groove ของ humerus (Saturday night palsy) ทำให้กล้ามเนื้อ extensor ของข้อมือและนิ้วอ่อนแรง (wrist drop, เหยียดนิ้วที่ MCP ไม่ได้) และชาหลังมือ. Triceps มักไม่เสียเพราะแขนงแยกออกก่อน spiral groove. Thumb opposition และ wrist/finger flexion เป็นของ median (และ ulnar). Elbow flexion เป็นของ musculocutaneous",
+   "source": "วิเคราะห์"
+  },
+  "79/109": {
+   "box": 2,
+   "stem": "เด็กตกต้นไม้ใช้มือยันพื้นขณะเหยียดศอก X-ray พบ supracondylar fracture ของ humerus ขวา ถามความผิดปกติทางระบบประสาทที่อาจเกิด",
+   "options": {
+    "A": "Wrist drop",
+    "B": "Loss of thumb opposition",
+    "C": "Ulnar claw hand",
+    "D": "Loss of finger abduction",
+    "E": "Inability to extend the fingers"
+   },
+   "answer": "B",
+   "why": "Supracondylar fracture แบบ extension type ทำให้ปลายกระดูกส่วนต้นเคลื่อนไปด้านหน้ากด median nerve (โดยเฉพาะ anterior interosseous) และ brachial artery ทำให้เสีย thumb opposition และ flexion ของนิ้วโป้งนิ้วชี้ (OK sign ไม่ได้). Radial nerve บาดเจ็บได้แต่พบน้อยกว่า (wrist drop). Ulnar claw และ finger abduction เป็นของ ulnar nerve ซึ่งบาดเจ็บจาก medial epicondyle fracture",
+   "source": "วิเคราะห์"
+  },
+  "79/112": {
+   "box": 3,
+   "stem": "ชายอายุ 22 ปีถูกกระแทกที่ด้านข้างเข่าขณะเตะฟุตบอล มีชาที่หลังเท้า และ dorsiflexion อ่อนแรง ถามความผิดปกติที่น่าจะพบ",
+   "options": {
+    "A": "Foot drop",
+    "B": "Plantarflex ข้อเท้าไม่ได้",
+    "C": "กางสะโพกไม่ได้",
+    "D": "เหยียดเข่าไม่ได้",
+    "E": "งอนิ้วเท้าไม่ได้"
+   },
+   "answer": "A",
+   "why": "Common peroneal (fibular) nerve วิ่งอ้อมรอบ neck of fibula ใต้ผิวหนังด้านข้างเข่าจึงบาดเจ็บง่าย deep peroneal เลี้ยง tibialis anterior (dorsiflexion) และ superficial peroneal รับความรู้สึกหลังเท้า เมื่อเสียจึงเกิด foot drop (steppage gait). Plantarflexion และงอนิ้วเท้าเป็นของ tibial nerve. กางสะโพกเป็นของ superior gluteal. เหยียดเข่าเป็นของ femoral",
+   "source": "วิเคราะห์"
+  },
+  "79/115": {
+   "box": 14,
+   "stem": "หญิงอายุ 45 ปีผ่าตัด total thyroidectomy ศัลยแพทย์ต้องระวังเส้นประสาทใกล้ต่อม thyroid เพื่อป้องกัน vocal cord ผิดปกติหลังผ่าตัด ถามเส้นประสาทใด",
+   "options": {
+    "A": "Hypoglossal nerve",
+    "B": "Phrenic nerve",
+    "C": "Recurrent laryngeal nerve",
+    "D": "Glossopharyngeal nerve",
+    "E": "Greater auricular nerve"
+   },
+   "answer": "C",
+   "why": "Recurrent laryngeal nerve (แขนงของ CN X) วิ่งขึ้นใน tracheoesophageal groove ใกล้ inferior thyroid artery เลี้ยงกล้ามเนื้อ intrinsic ของ larynx ทั้งหมดยกเว้น cricothyroid ถ้าบาดเจ็บข้างเดียวทำให้เสียงแหบ ถ้าสองข้างอาจทางเดินหายใจอุดกั้น. External branch ของ superior laryngeal nerve (วิ่งคู่ superior thyroid artery) เลี้ยง cricothyroid เสียแล้วเสียงสูงไม่ได้. Hypoglossal และ phrenic ไม่เกี่ยวกับ vocal cord",
+   "source": "วิเคราะห์"
+  },
+  "79/166": {
+   "box": 33,
+   "stem": "ชายอายุ 28 ปีท้องเสียเฉียบพลันไม่มีเลือด ไม่มีไข้หรืออาการติดเชื้อรุกราน ต้องการรักษาตามอาการด้วย peripheral mu-opioid receptor agonist เพื่อลดการเคลื่อนไหวของลำไส้ ถามยาที่เหมาะสม",
+   "options": {
+    "A": "Racecadotril",
+    "B": "Diphenoxylate",
+    "C": "Bismuth subsalicylate",
+    "D": "Cholestyramine",
+    "E": "Loperamide"
+   },
+   "answer": "E",
+   "why": "Loperamide เป็น mu-opioid agonist ที่ออกฤทธิ์ที่ลำไส้ ลด peristalsis และเพิ่ม tone ของ anal sphincter โดยผ่าน BBB น้อยมากเพราะเป็น substrate ของ P-glycoprotein จึงไม่มีฤทธิ์ทาง CNS และเสี่ยงติดน้อย. Diphenoxylate ก็เป็น opioid แต่ผ่าน CNS ได้บ้าง จึงผสม atropine กันใช้ผิด. Racecadotril เป็น enkephalinase inhibitor ไม่ใช่ opioid agonist โดยตรง",
+   "source": "วิเคราะห์"
+  },
+  "79/216": {
+   "box": 34,
+   "stem": "หญิงตั้งครรภ์ 35 สัปดาห์มีความดันสูงมาก ปวดศีรษะ ปวดใต้ชายโครงขวา ตรวจพบ enzyme ตับสูงและเกล็ดเลือดต่ำ (HELLP syndrome) ถามยาที่ป้องกัน eclamptic seizure",
+   "options": {
+    "A": "Labetalol",
+    "B": "Nifedipine",
+    "C": "Magnesium sulfate",
+    "D": "Hydralazine",
+    "E": "Methyldopa"
+   },
+   "answer": "C",
+   "why": "MgSO4 เป็นยามาตรฐานป้องกันและรักษาการชักใน severe preeclampsia หรือ HELLP กลไกคือบล็อก NMDA receptor และ Ca channel ทำให้ลด neuronal excitability และขยายหลอดเลือดสมองลด vasospasm. ต้องเฝ้าระวัง deep tendon reflex การหายใจ และปัสสาวะ (antidote คือ calcium gluconate). Labetalol, nifedipine, hydralazine และ methyldopa เป็นยาลดความดันที่ไม่ป้องกันการชัก",
+   "source": "วิเคราะห์"
+  },
+  "79/236": {
+   "box": 10,
+   "stem": "หญิงตั้งครรภ์ 30 สัปดาห์ตรวจพบทารกมี neural tube defect บริเวณ lumbosacral ถามว่า maternal serum marker ใดน่าจะสูง",
+   "options": {
+    "A": "Inhibin A",
+    "B": "Sphingomyelin",
+    "C": "Alpha-fetoprotein",
+    "D": "beta-hCG",
+    "E": "Estriol"
+   },
+   "answer": "C",
+   "why": "AFP สร้างจาก fetal yolk sac และตับ ใน open NTD (เช่น myelomeningocele, anencephaly) AFP รั่วจากท่อประสาทที่เปิดเข้าสู่ amniotic fluid และเข้ากระแสเลือดแม่ จึงสูงทั้งใน maternal serum และ amniotic fluid (ร่วมกับ acetylcholinesterase). Inhibin A และ beta-hCG สูงใน Down syndrome. Estriol ต่ำใน trisomy. Sphingomyelin ใช้ใน L/S ratio ดู lung maturity",
+   "source": "วิเคราะห์"
+  },
+  "79/239": {
+   "box": 12,
+   "stem": "ผู้ป่วยได้ยินลดลงเรื่อย ๆ และเดินเซข้างเดียวกัน ภาพถ่ายพบ lesion ที่ cerebellopontine angle กดโครงสร้างที่เกี่ยวกับ CN VII และ VIII ถามว่าบริเวณนี้มี CSF อยู่ใน cistern ใด",
+   "options": {
+    "A": "Cisterna magna",
+    "B": "Interpeduncular cistern",
+    "C": "Cerebellopontine cistern",
+    "D": "Ambient cistern",
+    "E": "Cerebellomedullary cistern"
+   },
+   "answer": "C",
+   "why": "Cerebellopontine cistern อยู่ในมุมระหว่าง cerebellum, pons และ medulla มี CN VII, VIII (และ AICA) วิ่งผ่านไปยัง internal acoustic meatus ก้อนที่พบบ่อยคือ vestibular schwannoma ทำให้หูดับข้างเดียว tinnitus และ ataxia ข้างเดียวกัน. Cisterna magna และ cerebellomedullary cistern เป็นชื่อเดียวกันอยู่ด้านหลังระหว่าง cerebellum กับ medulla. Interpeduncular cistern มี CN III",
+   "source": "วิเคราะห์"
+  },
+  "79/240": {
+   "box": 28,
+   "stem": "หญิงตั้งครรภ์ติดเชื้อ Zika ทารกแรกเกิดมี microcephaly รุนแรงและความผิดปกติทางระบบประสาท ถามภาวะแทรกซ้อนที่เป็นที่รู้จักของ congenital Zika infection",
+   "options": {
+    "A": "Chorioretinitis และ intracranial calcification",
+    "B": "SNHL และ cataract",
+    "C": "Periventricular calcification และชัก",
+    "D": "Blueberry muffin และตับม้ามโต",
+    "E": "Congenital microcephaly"
+   },
+   "answer": "E",
+   "why": "Zika (flavivirus) ติดเชื้อ neural progenitor cell ของทารกทำให้เซลล์ตายและสมองไม่เจริญ ภาพลักษณ์เด่นที่สุดของ congenital Zika syndrome คือ severe microcephaly ร่วมกับ subcortical calcification, กะโหลกยุบ และ arthrogryposis. ตัวเลือกอื่นเป็นลักษณะคลาสสิกของเชื้อ TORCH อื่น: chorioretinitis กับ diffuse calcification (toxoplasma), SNHL กับ cataract (rubella), periventricular calcification (CMV), blueberry muffin (rubella หรือ CMV)",
+   "source": "วิเคราะห์"
+  },
+  "79/241": {
+   "box": 36,
+   "stem": "ชายอายุ 35 ปีตกใจจากแผ่นดินไหว ภายในไม่กี่วินาทีร่างกายเกิด fight-or-flight response ถามว่า hormone ใดหลั่งออกมาเป็นอันดับแรก",
+   "options": {
+    "A": "ACTH",
+    "B": "Cortisol",
+    "C": "Epinephrine",
+    "D": "Growth hormone",
+    "E": "Glucagon"
+   },
+   "answer": "C",
+   "why": "Fight-or-flight เป็นการตอบสนองผ่าน sympathetic nervous system ที่เร็วระดับวินาที preganglionic sympathetic fiber (ปล่อย ACh จับ nicotinic receptor) กระตุ้น chromaffin cell ใน adrenal medulla ให้หลั่ง epinephrine เข้ากระแสเลือดทันที. HPA axis (CRH ไป ACTH ไป cortisol) ต้องผ่านหลายขั้นและสังเคราะห์ใหม่จึงช้ากว่าเป็นนาที. GH และ glucagon ไม่ใช่ hormone ตัวแรกของ acute stress",
+   "source": "วิเคราะห์"
+  },
+  "79/242": {
+   "box": 37,
+   "stem": "หญิงอายุ 42 ปีปัสสาวะบ่อยและกลั้นไม่อยู่ฉับพลันมาหลายเดือน ไม่มีปัสสาวะแสบ เลือดปน หรือไข้ urinalysis ปกติ ถามยาที่เหมาะสม",
+   "options": {
+    "A": "Phenylephrine",
+    "B": "Desmopressin",
+    "C": "Oxybutynin",
+    "D": "Tamsulosin",
+    "E": "Furosemide"
+   },
+   "answer": "C",
+   "why": "อาการคือ overactive bladder จาก detrusor หดตัวโดยไม่ตั้งใจ ซึ่งควบคุมโดย parasympathetic (ACh จับ M3 receptor). Oxybutynin เป็น antimuscarinic บล็อก M3 ทำให้ detrusor คลาย (SE คือปากแห้ง ท้องผูก สับสนในผู้สูงอายุ) อีกทางเลือกคือ mirabegron (beta-3 agonist). Tamsulosin เป็น alpha-1 blocker สำหรับ BPH. Desmopressin ใช้ใน DI หรือ nocturnal enuresis",
+   "source": "วิเคราะห์"
+  },
+  "79/249": {
+   "box": 21,
+   "stem": "ชายอายุ 24 ปีออกกำลังกายหนักกลางแจ้งในวันที่ร้อนชื้นหลายชั่วโมง แล้วสับสน อุณหภูมิกาย 41 องศา และยังสูงขึ้นแม้พยายามระบายความร้อน ถามพยาธิสรีรวิทยา",
+   "options": {
+    "A": "PGE2 ยก hypothalamic set point",
+    "B": "IL-1 ทำให้ hypothalamus หดหลอดเลือด",
+    "C": "การระบายความร้อนล้มเหลว อุณหภูมิแกนกลางจึงสูงขึ้น",
+    "D": "TRH เพิ่ม metabolic rate",
+    "E": "bacterial endotoxin ยก set point"
+   },
+   "answer": "C",
+   "why": "Exertional heat stroke คือ hyperthermia ที่ set point ปกติ แต่ความร้อนที่สร้างจากกล้ามเนื้อและรับจากสิ่งแวดล้อมเกินความสามารถระบาย (อากาศชื้นทำให้เหงื่อระเหยไม่ได้) จึงร้อนเกิน 40 องศาร่วมกับ CNS dysfunction. ต่างจากไข้ที่เกิดจาก pyrogen กระตุ้น PGE2 ยก set point. ยาลดไข้ (paracetamol, NSAIDs) จึงไม่ได้ผลใน heat stroke ต้องทำให้เย็นจากภายนอก",
+   "source": "วิเคราะห์"
+  },
+  "79/250": {
+   "box": 21,
+   "stem": "หญิงอายุ 25 ปีมีไข้ 39 องศาระหว่างติดเชื้อแบคทีเรีย มีหนาวสั่นก่อนไข้ขึ้น ถามกลไกหลักของการเกิดไข้",
+   "options": {
+    "A": "toxin กระตุ้นต่อมเหงื่อโดยตรง",
+    "B": "PGE2 ที่ hypothalamus เพิ่มขึ้น ทำให้ set point สูงขึ้น",
+    "C": "hypothalamus ควบคุมอุณหภูมิล้มเหลว",
+    "D": "สร้างความร้อนมากขึ้นโดย set point ไม่เปลี่ยน",
+    "E": "endotoxin กระตุ้น brown fat โดยตรง"
+   },
+   "answer": "B",
+   "why": "Pyrogen จากเชื้อ (LPS) กระตุ้น macrophage ปล่อย IL-1, IL-6, TNF-alpha ไปที่ OVLT ทำให้ COX-2 สร้าง PGE2 จับ EP3 receptor ใน preoptic hypothalamus ยก set point. อุณหภูมิจริงจึงต่ำกว่า set point ใหม่ ร่างกายจึงหดหลอดเลือดผิวและหนาวสั่นเพื่อเพิ่มความร้อน. การสร้างความร้อนโดย set point ไม่เปลี่ยนหรือระบายความร้อนล้มเหลวคือ hyperthermia",
+   "source": "วิเคราะห์"
+  },
+  "79/256": {
+   "box": 21,
+   "stem": "ชายอายุ 30 ปีอุบัติเหตุจราจรบาดเจ็บที่ hypothalamus ถามว่า hormone ใดทำหน้าที่เพิ่มการดูดน้ำกลับที่ไตโดยตรง",
+   "options": {
+    "A": "Cortisol",
+    "B": "ADH",
+    "C": "Renin",
+    "D": "Aldosterone",
+    "E": "Angiotensin II"
+   },
+   "answer": "B",
+   "why": "ADH สร้างที่ supraoptic และ paraventricular nucleus ของ hypothalamus ขนส่งตาม axon ไป posterior pituitary แล้วหลั่งเข้ากระแสเลือด จับ V2 receptor (Gs, cAMP) ที่ principal cell ของ collecting duct ให้ใส่ aquaporin-2 ที่ apical membrane จึงดูดน้ำอิสระกลับ. การบาดเจ็บที่ hypothalamus หรือ pituitary stalk ทำให้เกิด central DI. Aldosterone และ angiotensin II เพิ่มการดูด Na เป็นหลัก",
+   "source": "วิเคราะห์"
+  },
+  "79/257": {
+   "box": 21,
+   "stem": "MRI พบ pituitary adenoma ซึ่งอาจรบกวนการส่ง hormone จาก hypothalamus ผ่าน hypothalamic-hypophyseal portal system ถามว่า hormone ใดปกติไปถึง anterior pituitary ทาง portal circulation",
+   "options": {
+    "A": "Oxytocin",
+    "B": "ADH",
+    "C": "GHRH",
+    "D": "Vasopressin",
+    "E": "Neurophysin"
+   },
+   "answer": "C",
+   "why": "Releasing hormone จาก hypothalamus (GHRH, CRH, TRH, GnRH, somatostatin, dopamine) หลั่งที่ median eminence เข้าสู่ hypophyseal portal vessel ไปควบคุม anterior pituitary. Oxytocin และ ADH (vasopressin) รวมทั้ง neurophysin ซึ่งเป็น carrier protein ถูกขนส่งตาม axon (hypothalamo-hypophyseal tract) ไปเก็บที่ posterior pituitary โดยตรง ไม่ผ่าน portal system",
+   "source": "วิเคราะห์"
+  },
+  "79/262": {
+   "box": 16,
+   "stem": "หญิงอายุ 35 ปีพบก้อนที่ pituitary โดยบังเอิญจาก MRI ถามว่าในบรรดา pituitary adenoma ชนิดใดพบบ่อยที่สุด",
+   "options": {
+    "A": "ACTH-secreting adenoma",
+    "B": "Nonfunctioning adenoma",
+    "C": "GH-secreting adenoma",
+    "D": "Prolactinoma",
+    "E": "TSH-secreting adenoma"
+   },
+   "answer": "D",
+   "why": "Prolactinoma เป็น pituitary adenoma ที่พบบ่อยที่สุดในตำราคลาสสิก (ประมาณ 30-40% ของ adenoma ที่มีอาการ) ทำให้ galactorrhea และ amenorrhea จาก prolactin ยับยั้ง GnRH รักษาด้วย dopamine agonist (cabergoline, bromocriptine) เป็นอันดับแรก. Nonfunctioning adenoma พบบ่อยรองลงมา มักมาด้วย mass effect เช่น bitemporal hemianopia จากกด optic chiasm. ACTH, GH และ TSH adenoma พบน้อยกว่า",
+   "source": "วิเคราะห์",
+   "doubt": "⚠ ข้อมูลระบาดวิทยาใหม่ และบริบท incidentaloma ในโจทย์ ทำให้ nonfunctioning adenoma (B) อาจเป็นคำตอบที่ถูกได้ ตอบ D ตามแนวที่ A3 ระบุ"
+  }
+ }
+}
