@@ -161,6 +161,14 @@
     1: { s: '★', t: 'ไม่เข้าใจ ไม่แม่นเลย' }
   };
   const lvOf = (c, no) => S.lvl[secKey(c, no)] || 0;
+  // คะแนนข้อสอบของกล่อง (คำตอบล่าสุดแต่ละข้อ) แสดงเมื่อทำครบทุกข้อแล้ว
+  function boxScore(c, s) {
+    const ids = s.examIds || []; if (!ids.length) return '';
+    let done = 0, ok = 0;
+    for (const q of ids) { const k = `${c}|${q}`; if (S.stats[k]) { done++; if (!S.wrong[k]) ok++; } }
+    if (done < ids.length) return '';
+    return `<span class="bxs${ok === ids.length ? ' full' : ''}" title="ข้อสอบในกล่องนี้ ตอบถูก ${ok} จาก ${ids.length} ข้อ (ครั้งล่าสุด)">(${ok}/${ids.length})</span>`;
+  }
   function chProgress(ch) {
     const n = ch.sections.length, c = { 4: 0, 3: 0, 2: 0, 1: 0 };
     ch.sections.forEach(s => { const l = lvOf(ch.id, s.no); if (l) c[l]++; });
@@ -199,7 +207,7 @@
           h += `<div class="side-pg">หน้า ${pg.no} · ${esc(pg.title)}</div>`;
           for (const s of ch.sections.filter(x => x.page === pg.no)) {
             const l = lvOf(ch.id, s.no);
-            h += `<a class="side-sec${s.no === curNo ? ' on' : ''}${l ? ' lv' + l : ''}" href="#/${ch.id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${l ? `<span class="ck">${LV[l].s}</span>` : ''}</a>`;
+            h += `<a class="side-sec${s.no === curNo ? ' on' : ''}${l ? ' lv' + l : ''}" href="#/${ch.id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${boxScore(ch.id, s)}${l ? `<span class="ck">${LV[l].s}</span>` : ''}</a>`;
           }
         }
       }
@@ -219,7 +227,7 @@
       <div class="qid">ข้อ ${esc(qid)} ${src} ${wasWrong} ${opts.showBox ? `<a class="src" href="#/${chId}/${q.box}">กล่อง ${q.box}</a>` : ''}</div>
       <div class="stem" data-hlk="${esc(qKey(chId, qid, 'stem'))}">${inline(esc(q.stem))}</div>
       ${q.needs_image ? '<div class="warn">ข้อนี้ข้อสอบจริงมีรูปประกอบ</div>' : ''}
-      <div class="opts">${letters.map(l => `<div class="opt" role="button" tabindex="0" data-l="${l}"><span class="l">${l}</span><span data-hlk="${esc(qKey(chId, qid, l))}">${inline(esc(q.options[l]))}</span></div>`).join('')}</div>
+      <div class="opts">${letters.map(l => `<div class="opt" role="button" tabindex="0" data-l="${l}"><span class="l">${l}</span><span class="ot" data-hlk="${esc(qKey(chId, qid, l))}">${inline(esc(q.options[l]))}</span><button class="strike" type="button" aria-label="ตัดชอยส์นี้" title="ตัดชอยส์ (ยังไม่ใช่การตอบ)">✕</button></div>`).join('')}</div>
       <div class="explain" hidden></div>
     </div>`;
   }
@@ -229,7 +237,7 @@
     box.dataset.done = '1';
     const ok = letter === q.answer;
     box.querySelectorAll('.opt').forEach(b => {
-      b.classList.add('off'); b.removeAttribute('tabindex');
+      b.classList.add('off'); b.classList.remove('struck'); b.removeAttribute('tabindex');
       if (b.dataset.l === q.answer) b.classList.add('right');
       else if (b.dataset.l === letter) b.classList.add('wrong');
     });
@@ -244,8 +252,11 @@
     ex.innerHTML = `<div class="res ${ok ? 'ok' : 'no'}">${ok ? '✓ ถูกต้อง' : `✗ ยังไม่ใช่ ตอบ ${q.answer}`}</div><div data-hlk="${esc(qKey(chId, qid, 'why'))}">${inline(esc(q.why || ''))}</div>${q.doubt ? `<div class="warn">⚠ ${esc(q.doubt)}</div>` : ''}${note}`;
     applyAllHL(ex);
     if (onDone) onDone(ok);
+    if (/^#\/[^/]+\/\d+/.test(location.hash)) { const m = location.hash.match(/^#\/([^/]+)\/(\d+)/); const y = sidebar.scrollTop; renderSidebar(m[1], +m[2]); sidebar.scrollTop = y; }
   }
   view.addEventListener('click', e => {
+    const stk = e.target.closest('.strike');
+    if (stk) { const o = stk.closest('.opt'); if (!o.classList.contains('off')) o.classList.toggle('struck'); return; }
     const opt = e.target.closest('.opt');
     if (opt && !opt.classList.contains('off')) { if (!getSelection().isCollapsed) return; const box = opt.closest('.mcq'); answerMCQ(box, opt.dataset.l, box._onDone); return; }
     const rv = e.target.closest('[data-reveal]');
@@ -511,7 +522,7 @@
       h += `<h2 style="margin-top:22px">หน้า ${pg.no} · ${esc(pg.title)}</h2><ul class="sec-list">`;
       for (const s of ch.sections.filter(x => x.page === pg.no)) {
         const l = lvOf(id, s.no);
-        h += `<li><a class="${l ? 'lv' + l : ''}" href="#/${id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)} ${l ? `<span class="ck">${LV[l].s}</span>` : ''}</span><span class="f">${s.freq ? 'ออก ' + esc(s.freq) + ' ' + stars(s.stars) : ''}${s.examIds.length ? ' · ' + s.examIds.length + ' ข้อ' : ''}</span></a></li>`;
+        h += `<li><a class="${l ? 'lv' + l : ''}" href="#/${id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)} ${boxScore(id, s)} ${l ? `<span class="ck">${LV[l].s}</span>` : ''}</span><span class="f">${s.freq ? 'ออก ' + esc(s.freq) + ' ' + stars(s.stars) : ''}${s.examIds.length ? ' · ' + s.examIds.length + ' ข้อ' : ''}</span></a></li>`;
       }
       h += '</ul>';
     }

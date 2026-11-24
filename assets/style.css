@@ -358,3 +358,16 @@ mark.kw-hi{background:linear-gradient(transparent 22%,var(--hl-key) 22%,var(--hl
 .kw-edit textarea{width:100%;box-sizing:border-box;font:inherit;padding:6px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
 .kw-edit .note-act{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
 .hl-pop.writing .note-act{flex-wrap:wrap}
+
+/* ตัดชอยส์ระหว่างคิด + คะแนนกล่อง */
+.opt{position:relative;padding-right:44px}
+.opt .ot{flex:1}
+.opt .strike{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:8px;border:1px dashed var(--line);background:var(--surface);color:var(--muted);font-size:14px;cursor:pointer}
+.opt.off .strike{display:none}
+.opt.off{padding-right:12px}
+.opt.struck{opacity:.45}
+.opt.struck .ot{text-decoration:line-through}
+.opt.struck .strike{border-style:solid;background:var(--bad-soft);color:var(--bad);opacity:1}
+.bxs{font-size:11px;font-weight:700;color:var(--bad);white-space:nowrap;margin-left:2px}
+.bxs.full{color:var(--ok)}
+.side-sec.lv1 .bxs{color:#fff}
