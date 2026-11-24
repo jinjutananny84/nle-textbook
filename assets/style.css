@@ -294,7 +294,6 @@ mark.user-hl.c-y{--c:var(--u-y)} mark.user-hl.c-g{--c:var(--u-g)} mark.user-hl.c
 :root[data-theme="dark"]{--inote:#e8ff3a}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--inote:#e8ff3a}}
 .inote{display:block;color:var(--inote);font-size:.82em;line-height:1.45;margin:2px 0 8px;padding-left:10px;border-left:2px solid var(--inote);white-space:pre-wrap;-webkit-user-select:none;user-select:none}
-.inote::before{content:"★ " attr(data-n)}
 td .inote,th .inote,li .inote{margin:4px 0 2px}
 .hl-pop .sw.nb[data-c="n"]{color:var(--inote);font-size:18px}
 .inote-txt{display:block;color:var(--inote);font-size:.85em;margin-top:2px;white-space:pre-wrap}
@@ -307,3 +306,20 @@ mark.user-hl.c-n{--c:transparent;background:none;text-decoration:underline dotte
 
 /* ชื่อเต็มของตัวย่อ (ครั้งแรกในกล่อง) */
 .abx::after{content:" (" attr(data-f) ")";color:var(--muted);font-size:.86em;font-weight:400}
+
+/* สีตัวอักษร · sticky note · แถบสี 2 แถว */
+:root{--t-y:#c99400;--t-r:#d0021b;--t-p:#d6338a;--stk:#fff4a8;--stk-fg:#5a4500}
+:root[data-theme="dark"]{--t-y:#ffd43b;--t-r:#ff6b6b;--t-p:#ff8fc8;--stk:#4a3f12;--stk-fg:#fff1a8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--t-y:#ffd43b;--t-r:#ff6b6b;--t-p:#ff8fc8;--stk:#4a3f12;--stk-fg:#fff1a8}}
+mark.user-hl.c-ty,mark.user-hl.c-tr,mark.user-hl.c-tp{--c:transparent;background:none;font-weight:600}
+mark.user-hl.c-ty{color:var(--t-y)} mark.user-hl.c-tr{color:var(--t-r)} mark.user-hl.c-tp{color:var(--t-p)}
+.hl-pop:not(.writing){flex-direction:column;gap:6px;border-radius:18px;width:auto}
+.hl-pop .row{display:flex;gap:6px}
+.hl-pop .sw.tc{background:var(--surface);font-weight:800;font-size:17px;display:grid;place-items:center}
+.hl-pop .sw.tc.c-ty{color:var(--t-y)} .hl-pop .sw.tc.c-tr{color:var(--t-r)} .hl-pop .sw.tc.c-tp{color:var(--t-p)}
+.inote{-webkit-user-select:text;user-select:text;cursor:text}
+.inote::before{content:"★ "}
+.inote.sticky{color:var(--stk-fg);background:var(--stk);border-left:0;border-radius:4px;padding:6px 10px;margin:6px 0 10px;box-shadow:0 2px 6px rgba(0,0,0,.15);max-width:min(100%,420px);transform:rotate(-.4deg)}
+.inote.sticky::before{content:"🗒️ "}
+.hl-pop .note-kind{font-size:13px;font-weight:700;color:var(--muted)}
+.hl-pop .note-in.sticky{background:var(--stk);color:var(--stk-fg)}
