@@ -553,9 +553,9 @@
   function showPalette(rect, onColor, onErase, onNote, curNote) {
     pop.classList.remove('writing');
     const noNote = pop.dataset.inNote === '1';
-    pop.innerHTML = `<div class="row">${['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button></div>`
+    pop.innerHTML = `<div class="row">${['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>${noNote ? '' : '<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button>'}</div>`
       + `<div class="row">${['ty', 'tr', 'tp'].map(c => `<button class="sw tc c-${c}" data-c="${c}" aria-label="เปลี่ยนสีตัวอักษร" title="เปลี่ยนสีตัวอักษร">A</button>`).join('')}`
-      + (noNote ? '' : `<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button><button class="sw nb" data-c="i" aria-label="แทรกรูป" title="แทรกรูปต่อจากข้อความนี้">🖼</button><button class="sw nb" data-c="k" aria-label="sticky note" title="sticky note ต่อจากข้อความนี้">🗒️</button>`)
+      + (noNote ? '' : `<button class="sw nb" data-c="i" aria-label="แทรกรูป" title="แทรกรูปต่อจากข้อความนี้">🖼</button><button class="sw nb" data-c="k" aria-label="sticky note" title="sticky note ต่อจากข้อความนี้">🗒️</button>`)
       + (noNote ? '' : `<button class="sw nb kwb${kwHas(popZone, popText) ? ' on' : ''}" data-c="w" aria-label="เก็บเป็น keyword" title="เก็บเข้าหน้า Keyword">🔑</button>`) + `<button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button></div>`;
     pop.hidden = false;
     const w = 300, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
