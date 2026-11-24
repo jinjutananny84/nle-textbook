@@ -262,8 +262,8 @@
     const keys = Object.keys(dict || {}).sort((a, b) => b.length - a.length);
     if (!keys.length) return;
     const re = new RegExp(`(^|[^A-Za-z0-9])(${keys.map(esRe).join('|')})(?![A-Za-z0-9])`, 'g');
-    const seen = new Set(); const low = root.textContent.toLowerCase();
-    for (const n of textNodes(root)) if (!n.parentNode.closest('svg,h1,h2,h3,h4,code')) expandAbbrNode(n, re, seen, dict, low);
+    const seen = new Set(), low = '';
+    for (const n of textNodes(root)) if (!n.parentNode.closest('svg,code')) expandAbbrNode(n, re, seen, dict, low);
   }
   function expandAbbrNode(n, re, seen, dict, low) {
     while (n) {
@@ -271,7 +271,8 @@
       while ((m = re.exec(n.nodeValue))) {
         const k = m[2]; if (seen.has(k)) continue; seen.add(k);
         const at = m.index + m[1].length, end = at + k.length, v = n.nodeValue;
-        if (/^\s*\(/.test(v.slice(end)) || /\(\s*$/.test(v.slice(0, at)) || low.includes(dict[k].toLowerCase())) continue;
+        // ข้ามเฉพาะเมื่อวงเล็บถัดไปมีชื่อเต็มนั้นอยู่แล้ว
+        const nx = v.slice(end).match(/^\s*\(([^)]*)\)/); if (nx && nx[1].toLowerCase().includes(dict[k].toLowerCase())) continue;
         hit = { end, f: dict[k] }; break;
       }
       if (!hit) return;

@@ -192,5 +192,16 @@
 "SE": "side effect",
 "VAN": "vein, artery, nerve",
 "BAP1": "BRCA1-associated protein 1",
-"CD40L": "CD40 ligand"
+"CD40L": "CD40 ligand",
+"ACh": "acetylcholine",
+"IL": "interleukin",
+"IgE": "immunoglobulin E",
+"IgG": "immunoglobulin G",
+"IgM": "immunoglobulin M",
+"RNA": "ribonucleic acid",
+"ACE2": "angiotensin-converting enzyme 2",
+"NL": "nasolacrimal",
+"HN": "hemagglutinin-neuraminidase",
+"EF": "elongation factor",
+"TTF": "thyroid transcription factor"
 }
