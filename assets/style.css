@@ -521,3 +521,34 @@ table.covering td.cv.shown{color:inherit!important} table.covering td.cv.shown *
 .dr-miss{padding:6px 0;border-top:1px dashed var(--line);font-size:.92em}
 .dr-miss span{color:var(--muted)} .dr-miss a{color:var(--accent);margin-left:4px}
 .mcq.drill .opt{padding-right:12px}
+
+/* Drug & Bug */
+.db-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px;position:sticky;top:56px;z-index:5;background:var(--bg);padding:6px 0}
+.db-bar .seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.db-bar .seg button{border:0;background:var(--surface);color:var(--fg);padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+.db-bar .seg button.on{background:var(--accent);color:#fff}
+.db-bar .seg small{opacity:.7}
+.db-bar input[type=search]{flex:1;min-width:140px;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--fg);font:inherit;font-size:14px}
+.db-cv{font-size:14px;display:flex;gap:4px;align-items:center;white-space:nowrap}
+.db-chs{display:flex;gap:10px;flex-wrap:wrap;font-size:13px;margin-bottom:6px}
+.db-az{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px}
+.db-az a{min-width:26px;text-align:center;padding:2px 6px;border-radius:6px;background:var(--surface);border:1px solid var(--line);font-size:13px;text-decoration:none;color:var(--fg)}
+.db-grid{columns:2 260px;column-gap:12px}
+.db-card{break-inside:avoid;margin:0 0 12px;background:var(--surface);border:1px solid var(--line);border-left:4px solid #3b7dd8;border-radius:10px;padding:10px 12px;font-size:14px}
+.db-card.bug{border-left-color:#c2410c}
+.db-h{display:flex;gap:8px;align-items:baseline;margin-bottom:6px}
+.db-h b{font-size:15.5px}
+.db-k{font-size:11px;font-weight:600;padding:1px 7px;border-radius:999px;background:#3b7dd822;color:#3b7dd8}
+.bug .db-k{background:#c2410c22;color:#c2410c}
+.db-f{display:grid;grid-template-columns:minmax(70px,32%) 1fr;gap:8px;padding:4px 0;border-top:1px dashed var(--line)}
+.db-f>span{color:var(--muted,#888);font-size:12.5px}
+.db-src{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;font-size:12px}
+.db-ex{color:var(--accent);font-weight:600}
+.db-grid.covering .db-v{background:repeating-linear-gradient(135deg,var(--line) 0 6px,transparent 6px 12px);color:transparent;border-radius:6px;cursor:pointer;user-select:none}
+.db-grid.covering .db-v *{color:transparent!important;background:none!important}
+.db-grid.covering .db-v.shown{background:none;color:inherit}
+.db-grid.covering .db-v.shown *{color:inherit!important}
+/* แถบบนแน่น: ซ่อนป้ายของปุ่มที่ไอคอนชัดอยู่แล้วก่อน แล้วค่อยซ่อนทั้งหมด */
+@media (max-width: 1340px){ #backBtn span,.tool[href="#/"] span{display:none} .tool{padding:6px 6px} }
+@media (max-width: 1120px){ .tool span{display:none} }
+@media (max-width: 620px){ .tools{gap:0} .tool{padding:5px 4px} }

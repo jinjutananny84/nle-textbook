@@ -251,7 +251,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -354,10 +354,11 @@
     sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
     moon: '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
     back: '<path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>',
+    pill: '<rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M9.5 9.5l5 5"/>',
     brain: '<path d="M9 4a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 10a3 3 0 0 0 1 2.2A3 3 0 0 0 6 17a3 3 0 0 0 3 3 3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/><path d="M15 4a3 3 0 0 1 3 3v.2A3 3 0 0 1 20 10a3 3 0 0 1-1 2.2A3 3 0 0 1 18 17a3 3 0 0 1-3 3 3 3 0 0 1-3-3"/>',
     img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>'
   };
-  const EMO = { '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
+  const EMO = { '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => `<svg class="ic ic-${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
   // แปลง emoji ในข้อความของหน้าเว็บเป็นไอคอน (ไม่แตะเนื้อหาที่ไฮไลต์ได้ และช่องพิมพ์)
@@ -1117,6 +1118,75 @@
       runDrill(qs);
     };
   }
+  /* ---------- Drug & Bug: รวมยาและเชื้อจากตารางของทุกบท (อัปเดตเองเมื่อเพิ่มบทใหม่) ---------- */
+  const DRUG_H = /^(ยา|drug|กลุ่มยา|ชื่อยา)/i, BUG_H = /^(เชื้อ|bug|organism|pathogen)/i, SKIP_H = /^(ข้อ|ปีที่ออก|กล่อง)$/;
+  function dbEntries() {
+    const map = new Map();
+    for (const ch of Object.values(CH)) for (const s of ch.sections) {
+      if (!/<table/.test(s.html)) continue;
+      const d = document.createElement('div'); d.innerHTML = s.html;
+      d.querySelectorAll('.abx').forEach(x => x.remove());
+      d.querySelectorAll('table').forEach(t => {
+        if (!t.tHead || !t.tBodies[0]) return;
+        const head = [...t.tHead.rows[0].cells].map(c => clean(c.textContent));
+        let kind = null, ei = head.findIndex(h => DRUG_H.test(h));
+        if (ei >= 0) kind = 'drug'; else { ei = head.findIndex(h => BUG_H.test(h)); if (ei >= 0) kind = 'bug'; }
+        // ตารางโรคที่มีคอลัมน์เชื้อแต่เป็นข้อความยาว → ใช้ชื่อโรคเป็นหัว
+        if (kind === 'bug' && ei > 0 && [...t.tBodies[0].rows].some(r => r.cells[ei] && r.cells[ei].textContent.length > 45)) ei = 0;
+        if (!kind) return;
+        [...t.tBodies[0].rows].forEach(r => {
+          const cells = [...r.cells]; if (cells.length !== head.length) return;
+          const name = clean(cells[ei].textContent); if (!name || name === '–') return;
+          const key = kind + '|' + name.toLowerCase().replace(/\s*\(.*$/, '').replace(/[.\s]+/g, ' ').trim();
+          let e = map.get(key); if (!e) map.set(key, e = { kind, name, facts: [], src: [], ex: [] });
+          const src = `${ch.id}/${s.no}`; if (!e.src.some(x => x.h === src)) e.src.push({ h: src, ch: ch.id, no: s.no, title: s.title });
+          cells.forEach((c, j) => {
+            if (j === ei) return; const v = clean(c.textContent); if (!v || v === '–' || v === '-') return;
+            if (/^ข้อ$/.test(head[j])) { e.ex.push(...v.split(/\s*[·,]\s*/)); return; }
+            if (SKIP_H.test(head[j])) return;
+            e.facts.push({ k: head[j], v: c.innerHTML.trim() });
+          });
+        });
+      });
+    }
+    return [...map.values()].sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+  }
+  async function vDB(params) {
+    await loadAll(); renderSidebar();
+    const all = dbEntries(), f = S.dbf || (S.dbf = { k: 'all', cover: 0 });
+    const chs = [...new Set(all.flatMap(e => e.src.map(x => x.ch)))];
+    const n = k => all.filter(e => k === 'all' || e.kind === k).length;
+    view.innerHTML = `<div class="hero"><h1>💊 Drug & Bug</h1><p>รวมยาและเชื้อจากตารางของทุกบทไว้ที่เดียว เรียง A–Z ถ้าชื่อเดียวกันอยู่หลายกล่องจะรวมเป็นการ์ดเดียว · เพิ่มบทใหม่แล้วหน้านี้อัปเดตเอง</p></div>
+      <div class="db-bar"><div class="seg">${[['all', 'All'], ['drug', 'Drugs'], ['bug', 'Bugs']].map(([k, l]) => `<button class="${f.k === k ? 'on' : ''}" data-k="${k}">${l} <small>${n(k)}</small></button>`).join('')}</div>
+        <input id="dbq" type="search" placeholder="ค้นชื่อ กลไก อาการ…" value="${esc(params.get('q') || '')}">
+        <label class="db-cv"><input type="checkbox" id="dbCover" ${f.cover ? 'checked' : ''}> Cover mode</label>
+        <a class="btn small" href="#/drill">🧠 Drill</a></div>
+      ${chs.length > 1 ? `<div class="db-chs">${chs.map(c => `<label><input type="checkbox" value="${c}" checked> ${c.toUpperCase()}</label>`).join('')}</div>` : ''}
+      <div class="db-az" id="dbAz"></div><div class="db-grid" id="dbGrid"></div>`;
+    const grid = $('#dbGrid'), az = $('#dbAz');
+    const draw = () => {
+      const q = $('#dbq').value.trim().toLowerCase(), on = new Set([...view.querySelectorAll('.db-chs input:checked')].map(x => x.value));
+      const list = all.filter(e => (f.k === 'all' || e.kind === f.k) && (!on.size || e.src.some(x => on.has(x.ch)) || !view.querySelector('.db-chs'))
+        && (!q || (e.name + ' ' + e.facts.map(x => x.v.replace(/<[^>]+>/g, '')).join(' ')).toLowerCase().includes(q)));
+      let last = '', letters = [];
+      grid.innerHTML = list.map(e => {
+        const L = /^[a-z]/i.test(e.name) ? e.name[0].toUpperCase() : '#'; let anc = '';
+        if (L !== last) { last = L; letters.push(L); anc = ` id="db-${L}"`; }
+        return `<div class="db-card ${e.kind}"${anc}><div class="db-h"><span class="db-k">${e.kind === 'drug' ? 'Drug' : 'Bug'}</span><b>${esc(e.name)}</b></div>
+          ${e.facts.map(x => `<div class="db-f"><span>${esc(x.k)}</span><div class="db-v">${x.v}</div></div>`).join('')}
+          <div class="db-src">${e.src.map(x => `<a href="#/${x.h}">${x.ch.toUpperCase()} · กล่อง ${x.no} ↗</a>`).join('')}${e.ex.length ? `<span class="db-ex">ออกสอบ ${e.ex.length} ข้อ</span>` : ''}</div></div>`;
+      }).join('') || '<p class="empty">ไม่เจอชื่อที่ค้น</p>';
+      az.innerHTML = letters.map(L => `<a href="#" data-l="${L}">${L}</a>`).join('');
+      grid.classList.toggle('covering', !!f.cover);
+    };
+    view.querySelectorAll('.seg button').forEach(b => b.onclick = () => { f.k = b.dataset.k; save(); view.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b)); draw(); });
+    $('#dbq').oninput = draw;
+    $('#dbCover').onchange = e => { f.cover = e.target.checked ? 1 : 0; save(); grid.querySelectorAll('.db-v.shown').forEach(x => x.classList.remove('shown')); draw(); };
+    view.querySelectorAll('.db-chs input').forEach(x => x.onchange = draw);
+    az.onclick = e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); const t = document.getElementById('db-' + a.dataset.l); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 70, behavior: 'smooth' }); };
+    grid.addEventListener('click', e => { if (!f.cover) return; const v = e.target.closest('.db-v'); if (v && !e.target.closest('a')) v.classList.toggle('shown'); });
+    draw();
+  }
   function runDrill(qs) {
     let i = 0, score = 0; const miss = [];
     const step = () => {
@@ -1190,6 +1260,7 @@
       if (parts[0] === 'keywords') return vKeywords();
       if (parts[0] === 'review') return vReview();
       if (parts[0] === 'drill') return vDrill(params);
+      if (parts[0] === 'db') return vDB(params);
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
       return vChapter(parts[0]);
