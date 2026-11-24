@@ -9,7 +9,7 @@
   /* ---------- storage ---------- */
   let S = {};
   try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { S = {}; }
-  S.done = S.done || {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {};
+  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {};
   if (S.hlOff) document.documentElement.classList.add('no-hl');
   function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} updateWrongCount(); }
 
@@ -151,9 +151,27 @@
 
   /* ---------- helpers ---------- */
   const secKey = (ch, no) => `${ch}/${no}`;
+  // ระดับความเข้าใจ 4 ระดับ (4 = มั่นใจ) ที่ผู้ใช้เปลี่ยนได้ตลอด
+  const LV = {
+    4: { s: '★★★★', t: 'เข้าใจแล้ว มั่นใจมาก' },
+    3: { s: '★★★', t: 'เข้าใจปานกลาง ถ้ามีเวลาให้กลับมาทวน' },
+    2: { s: '★★', t: 'ไม่ค่อยเข้าใจ กลับมาทวน' },
+    1: { s: '★', t: 'ไม่เข้าใจ ไม่แม่นเลย' }
+  };
+  const lvOf = (c, no) => S.lvl[secKey(c, no)] || 0;
   function chProgress(ch) {
-    const n = ch.sections.length; const d = ch.sections.filter(s => S.done[secKey(ch.id, s.no)]).length;
-    return { n, d, pct: n ? Math.round(d * 100 / n) : 0 };
+    const n = ch.sections.length, c = { 4: 0, 3: 0, 2: 0, 1: 0 };
+    ch.sections.forEach(s => { const l = lvOf(ch.id, s.no); if (l) c[l]++; });
+    const d = c[4] + c[3] + c[2] + c[1];
+    return { n, d, c, pct: n ? Math.round(c[4] * 100 / n) : 0 };
+  }
+  // แถบความคืบหน้าแบ่งสีตามดาว
+  function lvBar(p, big) {
+    const seg = l => p.c[l] ? `<i class="lv${l}" style="width:${p.c[l] * 100 / p.n}%" title="${LV[l].s} ${p.c[l]} หัวข้อ"></i>` : '';
+    return `<div class="lvbar${big ? ' big' : ''}">${seg(4)}${seg(3)}${seg(2)}${seg(1)}</div>`;
+  }
+  function lvLegend(p) {
+    return `<div class="lvlegend">${[4, 3, 2, 1].map(l => `<span><b class="dot lv${l}"></b>${LV[l].s} ${p.c[l]}</span>`).join('')}<span><b class="dot"></b>ยังไม่ประเมิน ${p.n - p.d}</span></div>`;
   }
   const stars = n => n ? '★'.repeat(n) : '';
   function freqBadge(s) {
@@ -173,13 +191,13 @@
       if (!c.ready) continue;
       const p = ch ? chProgress(ch) : null;
       h += `<div class="side-ch"><a href="#/${c.id}">${esc(c.title)}</a>`;
-      if (p) h += `<div class="bar" title="${p.d}/${p.n}"><i style="width:${p.pct}%"></i></div>`;
+      if (p) h += `<div class="side-bar">${lvBar(p)}</div>`;
       if (ch && c.id === curCh) {
         for (const pg of ch.pages) {
           h += `<div class="side-pg">หน้า ${pg.no} · ${esc(pg.title)}</div>`;
           for (const s of ch.sections.filter(x => x.page === pg.no)) {
-            const done = S.done[secKey(ch.id, s.no)];
-            h += `<a class="side-sec${s.no === curNo ? ' on' : ''}" href="#/${ch.id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${done ? '<span class="ck">✓</span>' : ''}</a>`;
+            const l = lvOf(ch.id, s.no);
+            h += `<a class="side-sec${s.no === curNo ? ' on' : ''}${l ? ' lv' + l : ''}" href="#/${ch.id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${l ? `<span class="ck">${LV[l].s}</span>` : ''}</a>`;
           }
         }
       }
@@ -321,7 +339,7 @@
       const ch = CH[c.id];
       if (!c.ready) return `<div class="tile soon"><h3>${esc(c.title)}</h3><p>${esc(c.desc || 'เร็ว ๆ นี้')}</p></div>`;
       const p = chProgress(ch);
-      return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p><div class="bar"><i style="width:${p.pct}%"></i></div><div class="bar-label">เข้าใจแล้ว ${p.d}/${p.n} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div></a>`;
+      return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p>${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</a>`;
     }).join('');
     view.innerHTML = `<div class="hero"><h1>ตำราคู่ชีท NLE Step 1</h1><p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p></div><div class="grid">${tiles}</div>
     <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-p">ฉัน</mark> <mark class="user-hl c-r">4 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
@@ -331,13 +349,13 @@
     renderSidebar(id);
     const p = chProgress(ch);
     let h = `<div class="crumb"><a href="#/">หน้าแรก</a></div><div class="hero"><h1>${esc(ch.title)}</h1><p>${esc(ch.source || '')}</p></div>
-      <div class="bar"><i style="width:${p.pct}%"></i></div><div class="bar-label">เข้าใจแล้ว ${p.d}/${p.n} หัวข้อ</div>
+      ${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ</div>${lvLegend(p)}
       <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 สุ่มข้อสอบทั้งบท</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcard บทนี้</a></div>`;
     for (const pg of ch.pages) {
       h += `<h2 style="margin-top:22px">หน้า ${pg.no} · ${esc(pg.title)}</h2><ul class="sec-list">`;
       for (const s of ch.sections.filter(x => x.page === pg.no)) {
-        const d = S.done[secKey(id, s.no)];
-        h += `<li><a href="#/${id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)} ${d ? '<span style="color:var(--ok)">✓</span>' : ''}</span><span class="f">${s.freq ? 'ออก ' + esc(s.freq) + ' ' + stars(s.stars) : ''}${s.examIds.length ? ' · ' + s.examIds.length + ' ข้อ' : ''}</span></a></li>`;
+        const l = lvOf(id, s.no);
+        h += `<li><a class="${l ? 'lv' + l : ''}" href="#/${id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)} ${l ? `<span class="ck">${LV[l].s}</span>` : ''}</span><span class="f">${s.freq ? 'ออก ' + esc(s.freq) + ' ' + stars(s.stars) : ''}${s.examIds.length ? ' · ' + s.examIds.length + ' ข้อ' : ''}</span></a></li>`;
       }
       h += '</ul>';
     }
@@ -364,11 +382,11 @@
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid]);
       h += '</section>';
     }
-    h += `<div class="understood"><button class="btn ${S.done[k] ? 'done' : 'primary'}" id="doneBtn">${S.done[k] ? '✓ เข้าใจแล้ว' : 'ติ๊กว่าเข้าใจแล้ว'}</button></div>
+    h += `<div class="lvpick"><div class="lvq">หัวข้อนี้เข้าใจแค่ไหน (กดเปลี่ยนได้ตลอด กดซ้ำเพื่อล้าง)</div>${[4, 3, 2, 1].map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
       <nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
       <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><button id="undoBtn" hidden title="เลิกทำไฮไลต์ล่าสุด" aria-label="เลิกทำ">↶</button><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
     view.innerHTML = h;
-    $('#doneBtn').onclick = () => { if (S.done[k]) delete S.done[k]; else S.done[k] = Date.now(); save(); vSection(id, no); };
+    view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => { const l = +b.dataset.lv; if (S.lvl[k] === l) delete S.lvl[k]; else S.lvl[k] = l; save(); rerender(); });
     pop.hidden = true; pop.dataset.mode = '';
     const art = $('.content', view);
     applyHL(art, k);
@@ -397,7 +415,7 @@
     const pre = params.get('ch');
     view.innerHTML = `<div class="hero"><h1>📝 โหมดทำข้อสอบ</h1><p>เลือกบทแล้วสุ่มข้อ ข้อที่ผิดจะเก็บเข้ากองข้อผิด</p></div>
     <div class="panel"><h3>บท</h3><div class="choice" id="qCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
-    <h3>ขอบเขต</h3><div class="choice" id="qScope"><label><input type="radio" name="sc" value="all" checked>ทุกหัวข้อ</label><label><input type="radio" name="sc" value="done">เฉพาะหัวข้อที่ติ๊กเข้าใจแล้ว</label><label><input type="radio" name="sc" value="hot">เฉพาะหัวข้อออกบ่อย (★★★)</label><label><input type="radio" name="sc" value="new">ข้อที่ยังไม่เคยทำ</label></div>
+    <h3>ขอบเขต</h3><div class="choice" id="qScope"><label><input type="radio" name="sc" value="all" checked>ทุกหัวข้อ</label><label><input type="radio" name="sc" value="weak">เฉพาะหัวข้อที่ยังไม่แม่น (★–★★)</label><label><input type="radio" name="sc" value="done">เฉพาะหัวข้อที่ประเมินแล้ว</label><label><input type="radio" name="sc" value="hot">เฉพาะหัวข้อออกบ่อย (★★★)</label><label><input type="radio" name="sc" value="new">ข้อที่ยังไม่เคยทำ</label></div>
     <h3>จำนวนข้อ</h3><div class="choice" id="qN">${[10, 20, 40].map((n, i) => `<label><input type="radio" name="qn" value="${n}" ${i === 0 ? 'checked' : ''}>${n} ข้อ</label>`).join('')}<label><input type="radio" name="qn" value="999">ทั้งหมด</label></div>
     <button class="btn primary" id="qGo">เริ่มทำ</button> <span class="bar-label" id="qInfo"></span></div>`;
     const go = () => {
@@ -405,7 +423,8 @@
       const sc = view.querySelector('#qScope input:checked').value;
       const n = +view.querySelector('#qN input:checked').value;
       const f = (c, qid, q) => {
-        if (sc === 'done') return !!S.done[secKey(c, q.box)];
+        if (sc === 'done') return !!lvOf(c, q.box);
+        if (sc === 'weak') { const l = lvOf(c, q.box); return l === 1 || l === 2; }
         if (sc === 'hot') { const s = CH[c].sections.find(x => x.no === +q.box); return s && s.stars >= 3; }
         if (sc === 'new') return !S.stats[`${c}|${qid}`];
         return true;
