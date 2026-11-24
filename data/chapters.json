@@ -1,5 +1,16 @@
 {
-  "chapters": [
-    { "id": "b6", "title": "B6 ระบบหายใจ", "desc": "Anatomy ถึง Pharmacology · 35 กล่อง · ข้อสอบ MDCU74–79", "ready": true }
-  ]
+ "chapters": [
+  {
+   "id": "b6",
+   "title": "B6 ระบบหายใจ",
+   "desc": "Anatomy ถึง Pharmacology · 35 กล่อง · ข้อสอบ MDCU74–79",
+   "ready": true
+  },
+  {
+   "id": "b7",
+   "title": "B7 ระบบหัวใจ",
+   "desc": "Anatomy ถึง Antihypertensive · 35 กล่อง · ข้อสอบ MDCU74–79",
+   "ready": true
+  }
+ ]
 }
