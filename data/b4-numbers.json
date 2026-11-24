@@ -1,0 +1,492 @@
+{
+ "note": "ตัวเลข cutpoint ค่าปกติ และสูตรของบท B4 · t = cut หรือ f · box = กล่องที่มา",
+ "items": [
+  {
+   "t": "cut",
+   "cat": "ผิวหนังพื้นฐาน",
+   "name": "Keratinocyte ใน epidermis",
+   "v": "~**80%**",
+   "box": 1
+  },
+  {
+   "t": "cut",
+   "cat": "ผิวหนังพื้นฐาน",
+   "name": "Epidermal transit time ทั้งหมด",
+   "v": "**28 วัน** (14 + 14)",
+   "box": 1,
+   "note": "basal → corneum แล้วค้างใน corneum"
+  },
+  {
+   "t": "cut",
+   "cat": "ผิวหนังพื้นฐาน",
+   "name": "Transit time ใน psoriasis",
+   "v": "**3–5 วัน**",
+   "box": 22
+  },
+  {
+   "t": "cut",
+   "cat": "ผิวหนังพื้นฐาน",
+   "name": "Melanocyte ใน basal layer",
+   "v": "**5–10%**",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "ผิวหนังพื้นฐาน",
+   "name": "Epidermal-melanin unit",
+   "v": "melanocyte 1 : keratinocyte **~36**",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "ผิวหนังพื้นฐาน",
+   "name": "Merkel cell",
+   "v": "**<1%** ของเซลล์ basal",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "ผิวหนังพื้นฐาน",
+   "name": "Sweat chloride ใน cystic fibrosis",
+   "v": "**> 60 mmol/L**",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "ผิวหนังพื้นฐาน",
+   "name": "Heat acclimatization ใช้เวลา",
+   "v": "**1–2 สัปดาห์**",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "ขนและเล็บ",
+   "name": "Anagen",
+   "v": "**~3 ปี** (2–7) · ~90%",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "ขนและเล็บ",
+   "name": "Catagen",
+   "v": "**3 สัปดาห์**",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "ขนและเล็บ",
+   "name": "Telogen",
+   "v": "**3 เดือน** · ~10%",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "ขนและเล็บ",
+   "name": "Telogen effluvium เริ่มร่วงหลังเหตุกระตุ้น",
+   "v": "**2–3 เดือน**",
+   "box": 8
+  },
+  {
+   "t": "f",
+   "cat": "Burn",
+   "name": "Parkland formula",
+   "v": "**4 mL × kg × %TBSA** ใน 24 ชม. · ครึ่งแรกใน 8 ชม.",
+   "box": 10,
+   "note": "นับเฉพาะ 2°–3°"
+  },
+  {
+   "t": "cut",
+   "cat": "Burn",
+   "name": "Rule of nines: ศีรษะ / แขน 1 ข้าง",
+   "v": "**9% / 9%**",
+   "box": 10,
+   "note": "ผู้ใหญ่"
+  },
+  {
+   "t": "cut",
+   "cat": "Burn",
+   "name": "Rule of nines: ขา 1 ข้าง",
+   "v": "**18%**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Burn",
+   "name": "Rule of nines: ลำตัวหน้า / หลัง",
+   "v": "**18% / 18%**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Burn",
+   "name": "Rule of nines: perineum",
+   "v": "**1%**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Burn",
+   "name": "Superficial 2° burn หายใน",
+   "v": "**2–3 สัปดาห์**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Burn",
+   "name": "Burn ที่เกิด systemic response",
+   "v": "**> 25% TBSA**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "UV",
+   "name": "UVA",
+   "v": "**320–400 nm**",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "UV",
+   "name": "UVB",
+   "v": "**290–320 nm**",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "UV",
+   "name": "Delayed tanning เริ่ม",
+   "v": "**2–3 วัน** หลังโดน UVB",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "Wound healing",
+   "name": "Inflammation phase",
+   "v": "**0–3 วัน**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Wound healing",
+   "name": "Proliferation phase",
+   "v": "**3 วัน – 3 สัปดาห์**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Wound healing",
+   "name": "Remodeling phase",
+   "v": "**3 สัปดาห์ – 1 ปี**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Wound healing",
+   "name": "Tensile strength ที่ 1 สัปดาห์",
+   "v": "**~10%**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Wound healing",
+   "name": "Tensile strength ที่ 3 เดือน",
+   "v": "**~70–80%**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Wound healing",
+   "name": "Acute vs chronic wound",
+   "v": "**< 4 สัปดาห์** / **> 4 สัปดาห์**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Wound healing",
+   "name": "Hypertrophic scar ยุบเองใน",
+   "v": "**1–2 ปี**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Wound healing",
+   "name": "Collagen type I ในร่างกาย",
+   "v": "**~90%**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "Arthus reaction เกิดหลังฉีด",
+   "v": "**4–12 ชม.**",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "Serum sickness เกิดหลังได้ยา",
+   "v": "**7–14 วัน**",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "Type IV (patch test) อ่านผล",
+   "v": "**48 / 96 ชม.**",
+   "box": 18
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "ACD sensitization ครั้งแรก",
+   "v": "**10–14 วัน**",
+   "box": 18
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "Urticaria wheal หายใน",
+   "v": "**< 24 ชม.**",
+   "box": 18
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "SJS",
+   "v": "**< 10% BSA**",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "SJS/TEN overlap",
+   "v": "**10–30% BSA**",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "TEN",
+   "v": "**> 30% BSA**",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "DRESS เกิดหลังเริ่มยา",
+   "v": "**2–8 สัปดาห์**",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "Kawasaki ไข้นาน",
+   "v": "**≥ 5 วัน**",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "Purpura ขนาด",
+   "v": "petechiae **<3 mm** · purpura **3–10 mm** · ecchymosis **>1 cm**",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Hypersensitivity · ผื่นแพ้ยา",
+   "name": "NF1: café-au-lait",
+   "v": "**≥ 6** จุด",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Topical steroid potency",
+   "v": "**7 class** · class **1** แรงสุด",
+   "box": 21
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Clobetasol ใช้ต่อเนื่องไม่เกิน",
+   "v": "**2 สัปดาห์**",
+   "box": 21
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Isotretinoin คุมกำเนิด",
+   "v": "**2 วิธี** · 1 เดือนก่อน–ระหว่าง–**1 เดือน**หลังหยุด",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Acitretin คุมกำเนิดหลังหยุด",
+   "v": "**3 ปี**",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Tetracycline ห้ามในเด็กอายุ",
+   "v": "**< 8 ปี**",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Permethrin ใช้ได้ในเด็กอายุ",
+   "v": "**≥ 2 เดือน**",
+   "box": 28
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Permethrin scabies",
+   "v": "**5%** ทิ้งไว้ **8–14 ชม.** ทาซ้ำ **1 สัปดาห์**",
+   "box": 28
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Ivermectin",
+   "v": "**200 µg/kg** ซ้ำวันที่ 14",
+   "box": 28
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Acyclovir/valacyclovir ใน zoster ให้ภายใน",
+   "v": "**72 ชม.**",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Bioavailability acyclovir vs valacyclovir",
+   "v": "**15–20%** vs **54–70%**",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "ยาผิวหนัง",
+   "name": "Topical antifungal ทานาน",
+   "v": "**2–4 สัปดาห์**",
+   "box": 27
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "Primary syphilis หลังติดเชื้อ",
+   "v": "**~3 สัปดาห์**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "Secondary syphilis",
+   "v": "**6–8 สัปดาห์**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "Early latent",
+   "v": "**< 1 ปี**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "BPG early syphilis",
+   "v": "**2.4 MU IM ครั้งเดียว**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "BPG late latent/ไม่ทราบระยะ",
+   "v": "**2.4 MU IM weekly × 3**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "Neurosyphilis aqueous PGS IV",
+   "v": "**10–14 วัน**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "RPR ตอบสนองการรักษา",
+   "v": "titer ลด **≥ 4 เท่า**",
+   "box": 24
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "Leprosy paucibacillary",
+   "v": "**≤ 5** ผื่น · MDT **6 เดือน**",
+   "box": 25
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "Leprosy multibacillary",
+   "v": "**> 5** ผื่น · MDT **12 เดือน**",
+   "box": 25
+  },
+  {
+   "t": "cut",
+   "cat": "Syphilis · leprosy",
+   "name": "M. leprae ชอบอุณหภูมิ",
+   "v": "**~30°C**",
+   "box": 25
+  },
+  {
+   "t": "cut",
+   "cat": "เนื้องอก · ตา",
+   "name": "HPV ก่อมะเร็ง",
+   "v": "type **16/18**",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "เนื้องอก · ตา",
+   "name": "Condyloma acuminata",
+   "v": "HPV **6/11**",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "เนื้องอก · ตา",
+   "name": "Acute conjunctivitis",
+   "v": "**< 3 สัปดาห์**",
+   "box": 34
+  },
+  {
+   "t": "cut",
+   "cat": "เนื้องอก · ตา",
+   "name": "Latanoprost ลด IOP",
+   "v": "**25–32%**",
+   "box": 34
+  },
+  {
+   "t": "cut",
+   "cat": "เนื้องอก · ตา",
+   "name": "Steroid หยอดตาเพิ่ม IOP หลังใช้",
+   "v": "**~2 สัปดาห์**",
+   "box": 34
+  },
+  {
+   "t": "cut",
+   "cat": "เนื้องอก · ตา",
+   "name": "Ophthalmia neonatorum จาก gonococcus",
+   "v": "**2–5 วัน**หลังคลอด",
+   "box": 34,
+   "note": "chlamydia ช้ากว่า"
+  }
+ ]
+}
