@@ -1,0 +1,446 @@
+{
+ "items": [
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "ไตอยู่ระดับกระดูกสันหลัง",
+   "v": "T12–L3 (hilum ≈ L1)",
+   "box": 2,
+   "note": "ไตขวาต่ำกว่าซ้ายเล็กน้อย"
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "Ureter วิ่งตามแนว",
+   "v": "ปลาย transverse process L2–L5",
+   "box": 2,
+   "note": "บน psoas"
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "ระยะ ureter ถึง cervix ที่ลอดใต้ uterine a.",
+   "v": "~1.5–2 cm",
+   "box": 2,
+   "note": "จุดเสี่ยงตอนผูกหลอดเลือดใน hysterectomy"
+  },
+  {
+   "t": "cut",
+   "cat": "Embryology",
+   "name": "Metanephros (ไตถาวร) เริ่มสัปดาห์ที่",
+   "v": "5",
+   "box": 1,
+   "note": "pronephros สัปดาห์ที่ 4 แล้วหาย"
+  },
+  {
+   "t": "cut",
+   "cat": "Glomerulus",
+   "name": "รู fenestrated endothelium",
+   "v": "~70 nm",
+   "box": 3,
+   "note": "กันเซลล์เม็ดเลือด"
+  },
+  {
+   "t": "cut",
+   "cat": "Glomerulus",
+   "name": "Proteinuria ระดับ nephrotic",
+   "v": "> 3.5 g/วัน (UA 3+–4+)",
+   "box": 16
+  },
+  {
+   "t": "cut",
+   "cat": "Glomerulus",
+   "name": "Microalbuminuria (A2)",
+   "v": "30–300 mg/g",
+   "box": 18,
+   "note": "ระยะแรกของ diabetic nephropathy"
+  },
+  {
+   "t": "cut",
+   "cat": "Glomerulus",
+   "name": "Duration AGN / RPGN / CGN",
+   "v": "≤ 7 วัน / 7 วัน–3 เดือน / > 3 เดือน",
+   "box": 16
+  },
+  {
+   "t": "cut",
+   "cat": "Glomerulus",
+   "name": "PSGN หลังเจ็บคอ / หลังผิวหนัง",
+   "v": "~2 สัปดาห์ / 2–6 สัปดาห์",
+   "box": 17,
+   "note": "IgA มาเร็วกว่า"
+  },
+  {
+   "t": "cut",
+   "cat": "Glomerulus",
+   "name": "IgA nephropathy หลัง URI",
+   "v": "1–2 วัน",
+   "box": 17,
+   "note": "synpharyngitic"
+  },
+  {
+   "t": "f",
+   "cat": "GFR",
+   "name": "Clearance",
+   "v": "C = (U × V) ÷ P (V เป็น mL/min)",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "GFR",
+   "name": "หารเวลาเก็บปัสสาวะ 24 / 8 ชม.",
+   "v": "1440 / 480 นาที",
+   "box": 4,
+   "note": "โจทย์ชอบหลอกด้วย 8 ชม."
+  },
+  {
+   "t": "cut",
+   "cat": "GFR",
+   "name": "CKD stage G1 / G2 / G3a / G3b / G4 / G5",
+   "v": "≥90 / 60–89 / 45–59 / 30–44 / 15–29 / < 15",
+   "box": 4,
+   "note": "หน่วย mL/min/1.73 m²"
+  },
+  {
+   "t": "cut",
+   "cat": "GFR",
+   "name": "ระยะเวลาที่เรียก chronic",
+   "v": "> 3 เดือน",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "GFR",
+   "name": "Albuminuria A1 / A2 / A3",
+   "v": "< 30 / 30–300 / > 300 mg/g",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "GFR",
+   "name": "ACEI/ARB ทำ Cr ขึ้นได้ไม่เกิน",
+   "v": "30%",
+   "box": 7,
+   "note": "ถ้าขึ้นมากกว่านี้นึกถึง bilateral RAS"
+  },
+  {
+   "t": "f",
+   "cat": "Osmolality",
+   "name": "Calculated Posm",
+   "v": "2Na + glucose/18 + BUN/2.8",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Osmolality",
+   "name": "Osmolar gap ผิดปกติ",
+   "v": "> 10 (มัก > 20)",
+   "box": 12,
+   "note": "นึกถึง toxic alcohol"
+  },
+  {
+   "t": "f",
+   "cat": "Osmolality",
+   "name": "SG → Uosm",
+   "v": "เลข 2 หลักท้ายของ SG × 30 (1.010 ≈ 300)",
+   "box": 21
+  },
+  {
+   "t": "cut",
+   "cat": "Tubule",
+   "name": "PCT ดูด Na/น้ำ",
+   "v": "~65%",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Tubule",
+   "name": "PCT ดูด HCO3",
+   "v": "~80%",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Tubule",
+   "name": "Renal threshold ของ glucose",
+   "v": "~180 mg/dL",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Tubule",
+   "name": "Tm glucose",
+   "v": "~375 mg/min",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Na–water",
+   "name": "Uosm ที่บอกว่าไม่มี ADH effect",
+   "v": "< 100 mOsm/kg",
+   "box": 9,
+   "note": "primary polydipsia, beer potomania"
+  },
+  {
+   "t": "cut",
+   "cat": "Na–water",
+   "name": "UNa ใน SIAD",
+   "v": "> 20–40 mEq/L",
+   "box": 9,
+   "note": "euvolemic"
+  },
+  {
+   "t": "cut",
+   "cat": "Na–water",
+   "name": "UNa แยก extrarenal loss",
+   "v": "< 20 mEq/L",
+   "box": 9,
+   "note": "hypovolemic hypoNa"
+  },
+  {
+   "t": "cut",
+   "cat": "Na–water",
+   "name": "Polyuria ของ DI",
+   "v": "> 3 L/วัน",
+   "box": 9
+  },
+  {
+   "t": "cut",
+   "cat": "Potassium",
+   "name": "Insulin + glucose ใน hyperK",
+   "v": "insulin 10 U + glucose",
+   "box": 10,
+   "note": "เร็วสุดในกลุ่ม shift"
+  },
+  {
+   "t": "cut",
+   "cat": "Potassium",
+   "name": "Salbutamol พ่นใน hyperK",
+   "v": "~10 mg",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Potassium",
+   "name": "Calcium gluconate",
+   "v": "10% IV",
+   "box": 10,
+   "note": "stabilize membrane"
+  },
+  {
+   "t": "cut",
+   "cat": "Potassium",
+   "name": "CKD เริ่ม hyperK เมื่อ GFR",
+   "v": "< 20 mL/min",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Potassium",
+   "name": "Urine K ที่บอกว่าเสียทางไต",
+   "v": "> 15–20 mEq/L",
+   "box": 11,
+   "note": "hypoK approach"
+  },
+  {
+   "t": "cut",
+   "cat": "Potassium",
+   "name": "Urine Cl ของอาเจียน",
+   "v": "< 20 mEq/L",
+   "box": 11,
+   "note": "saline-responsive"
+  },
+  {
+   "t": "cut",
+   "cat": "Acid–base",
+   "name": "pH acidemia / alkalemia",
+   "v": "< 7.35 / > 7.45",
+   "box": 12
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Winter formula",
+   "v": "pCO2 = 1.5 × HCO3 + 8 ± 2",
+   "box": 12,
+   "note": "met. acidosis"
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Metabolic alkalosis compensation",
+   "v": "ΔpCO2 = 0.7 × ΔHCO3",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Acid–base",
+   "name": "Resp. acidosis: HCO3 ↑ ต่อ pCO2 10",
+   "v": "acute 1 · chronic 4",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Acid–base",
+   "name": "Resp. alkalosis: HCO3 ↓ ต่อ pCO2 10",
+   "v": "acute 2 · chronic 5",
+   "box": 12
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Anion gap",
+   "v": "Na − (Cl + HCO3) ≈ 12",
+   "box": 12
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Albumin correction ของ AG",
+   "v": "บวก 2.5 ต่อ albumin ที่ลด 1 g/dL",
+   "box": 12
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Delta ratio",
+   "v": "(AG − 12) ÷ (24 − HCO3) · < 1 + NAGMA · 1–2 pure · > 2 + met. alk",
+   "box": 12
+  },
+  {
+   "t": "f",
+   "cat": "Acid–base",
+   "name": "Urine anion gap",
+   "v": "UNa + UK − UCl (ลบ = GI · บวก = RTA)",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Acid–base",
+   "name": "NSS มี Cl",
+   "v": "154 mEq/L",
+   "box": 13,
+   "note": "ให้มากทำ NAGMA"
+  },
+  {
+   "t": "cut",
+   "cat": "Acid–base",
+   "name": "Urine pH แบ่ง distal RTA",
+   "v": "> 5.5 เสมอ",
+   "box": 14
+  },
+  {
+   "t": "f",
+   "cat": "AKI",
+   "name": "FENa",
+   "v": "(UNa × PCr) ÷ (PNa × UCr) × 100",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "AKI",
+   "name": "BUN/Cr prerenal",
+   "v": "> 20",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "AKI",
+   "name": "FENa prerenal / ATN",
+   "v": "< 1% / > 1–2%",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "AKI",
+   "name": "UNa prerenal / ATN",
+   "v": "< 20 / > 40",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "AKI",
+   "name": "SG prerenal / ATN",
+   "v": "> 1.020 / 1.010",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "AKI",
+   "name": "Prerenal: SBP / postural drop",
+   "v": "SBP < 90 · drop ≥ 20",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "AKI",
+   "name": "AIN เกิดหลังเริ่มยา",
+   "v": "1–2 สัปดาห์",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "Drugs",
+   "name": "Aminoglycoside เป้า peak/MIC",
+   "v": "≥ 8–10",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "Drugs",
+   "name": "Finasteride ลด PSA / เห็นผล",
+   "v": "~50% / 3–6 เดือน",
+   "box": 27
+  },
+  {
+   "t": "cut",
+   "cat": "Drugs",
+   "name": "Spironolactone : furosemide ใน ascites",
+   "v": "100 : 40",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "Ca–PTH",
+   "name": "Hypercalcemia of malignancy โจทย์ชอบให้ Ca",
+   "v": "14–15 mg/dL",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "Cystic / Tumor",
+   "name": "ADPKD hepatic cyst",
+   "v": "~50%",
+   "box": 25,
+   "note": "extrarenal ที่พบบ่อยสุด"
+  },
+  {
+   "t": "cut",
+   "cat": "Cystic / Tumor",
+   "name": "Wilms อายุ",
+   "v": "2–5 ปี",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "Cystic / Tumor",
+   "name": "Wilms gene",
+   "v": "WT1 (11p13)",
+   "box": 26
+  },
+  {
+   "t": "cut",
+   "cat": "Cystic / Tumor",
+   "name": "ADPKD gene",
+   "v": "PKD1 chr16 · PKD2 chr4",
+   "box": 25
+  },
+  {
+   "t": "cut",
+   "cat": "Micturition",
+   "name": "Parasympathetic / sympathetic / somatic ของ bladder",
+   "v": "S2–S4 / T11–L2 / S2–S4",
+   "box": 27
+  }
+ ]
+}

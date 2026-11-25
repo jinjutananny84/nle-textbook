@@ -1,0 +1,2393 @@
+{
+ "exams": {
+  "74.1/1": {
+   "box": 7,
+   "stem": "ยากลุ่ม ARB มีผลต่อไตอย่างไร",
+   "options": {
+    "A": "GFR ลดลง",
+    "B": "Aldosterone เพิ่มขึ้น",
+    "C": "ยับยั้งการเปลี่ยน angiotensin I เป็น II",
+    "D": "Bradykinin เพิ่มขึ้น",
+    "E": "Potassium ในเลือดลดลง"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "ARB บล็อก AT1 receptor → efferent arteriole ขยาย → glomerular capillary pressure ลด → GFR ลด (โดยเฉพาะช่วงแรก/ใน renal artery stenosis) แต่ลด proteinuria ระยะยาว · B ผิด: aldosterone ลดลง · C เป็นกลไก ACEI · D bradykinin สะสมเป็นของ ACEI (ทำให้ไอ) · E ผิด: ทำให้ K สูง",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว (Decreased GFR) ตัวเลือกอื่นสร้างขึ้นใหม่"
+  },
+  "74.1/2": {
+   "box": 24,
+   "stem": "ให้รูปผลึกในปัสสาวะเป็น calcium oxalate พร้อมประวัติผู้ป่วย ถามว่าได้รับสารใด",
+   "options": {
+    "A": "Ethylene glycol",
+    "B": "Methanol",
+    "C": "Isopropyl alcohol",
+    "D": "Salicylate",
+    "E": "Lithium"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Ethylene glycol (น้ำยาหล่อเย็น/antifreeze) ถูก alcohol dehydrogenase เปลี่ยนเป็น glycolate → oxalate จับ Ca เป็นผลึก calcium oxalate (รูปซองจดหมาย/dumbbell) → AKI + HAGMA + osmolar gap สูง · B methanol → formic acid ทำตาบอด ไม่มี oxalate · C isopropyl alcohol → acetone, ketosis without acidosis · D salicylate → mixed resp. alkalosis + HAGMA ไม่มีผลึก · E lithium → nephrogenic DI",
+   "needs_image": true,
+   "options_reconstructed": true
+  },
+  "74.1/6": {
+   "box": 7,
+   "stem": "ข้อใดไม่เกี่ยวข้องกับระบบ RAAS",
+   "options": {
+    "A": "Liver",
+    "B": "Zona fasciculata",
+    "C": "Lung",
+    "D": "Juxtaglomerular cell",
+    "E": "Zona glomerulosa"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Zona fasciculata สร้าง cortisol ไม่ใช่ส่วนของ RAAS · A ตับสร้าง angiotensinogen · C ปอด (endothelium) มี ACE มากที่สุด · D JG cell หลั่ง renin · E zona glomerulosa หลั่ง aldosterone ตาม angiotensin II",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์มี 2 ตัวเลือก (Liver, Zona fasciculata) ที่เหลือสร้างใหม่"
+  },
+  "74.1/10": {
+   "box": 7,
+   "stem": "หญิง 40 ปีเป็นความดันสูง ตั้งครรภ์ 10 สัปดาห์ ยาลดความดันใดห้ามใช้",
+   "options": {
+    "A": "Irbesartan",
+    "B": "Nifedipine",
+    "C": "Hydralazine",
+    "D": "Methyldopa"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "ARB (irbesartan) และ ACEI เป็น teratogen (fetal renal dysgenesis, oligohydramnios, skull hypoplasia) ห้ามใช้ในครรภ์ · B nifedipine, C hydralazine, D methyldopa เป็นยาที่ใช้ได้/แนะนำในหญิงตั้งครรภ์ (methyldopa, labetalol, nifedipine เป็น first line)"
+  },
+  "74.1/15": {
+   "box": 7,
+   "stem": "หญิงตั้งครรภ์เป็นความดันสูง ยาใดเป็นข้อห้าม",
+   "options": {
+    "A": "Losartan",
+    "B": "Methyldopa",
+    "C": "Labetalol",
+    "D": "Nifedipine",
+    "E": "Hydralazine"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Losartan (ARB) ทำให้ไตทารกไม่พัฒนา, oligohydramnios, IUGR → ห้ามใช้ · B methyldopa, C labetalol, D nifedipine เป็น first line ในครรภ์ · E hydralazine ใช้ใน severe HT/preeclampsia ได้",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์มี 2 ตัวเลือก (Losartan, Methyldopa) ที่เหลือสร้างใหม่"
+  },
+  "74.1/18": {
+   "box": 6,
+   "stem": "หูอื้อ 2 ข้าง + มีเสียงในหูหลังได้ furosemide ถามตำแหน่งที่เสีย",
+   "options": {
+    "A": "Middle ear",
+    "B": "Inner ear",
+    "C": "Inferior colliculus"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Loop diuretic ยับยั้ง NKCC1 ที่ stria vascularis ของ cochlea (inner ear) → endolymph ผิดปกติ → sensorineural hearing loss/tinnitus (ototoxicity เสริมกับ aminoglycoside) · A middle ear ทำให้ conductive loss ไม่เกี่ยวกับยา · C inferior colliculus เป็นทางเดินประสาทส่วนกลาง ยาไม่ไปทำลาย"
+  },
+  "74.1/25": {
+   "box": 26,
+   "stem": "เด็ก 3 ปี ท้องโตขึ้นเรื่อย ๆ CT พบก้อนที่ไตขนาด 10 cm วินิจฉัยเบื้องต้น",
+   "options": {
+    "A": "Wilms tumor",
+    "B": "Neuroblastoma",
+    "C": "Pheochromocytoma",
+    "D": "Mature cystic teratoma",
+    "E": "RCC, clear cell type"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Wilms tumor (nephroblastoma) เป็นก้อนในไตที่พบบ่อยที่สุดในเด็ก 2–5 ปี มาด้วยก้อนท้องใหญ่ไม่ข้ามกลางตัว · B neuroblastoma มาจาก adrenal medulla/sympathetic chain (นอกไต, มี calcification, ข้าม midline) · C pheochromocytoma เป็นก้อน adrenal ในผู้ใหญ่ มี HT paroxysmal · D teratoma ไม่ใช่ก้อนในไต · E RCC พบในผู้ใหญ่ 50–70 ปี"
+  },
+  "74.1/29": {
+   "box": 3,
+   "stem": "Macula densa อยู่ที่ส่วนใดของ nephron",
+   "options": {
+    "A": "PCT",
+    "B": "Descending limb",
+    "C": "Collecting duct",
+    "D": "DCT"
+   },
+   "answer": "D",
+   "source": "วิเคราะห์",
+   "why": "Macula densa คือเซลล์ผนัง tubule ที่ปลาย thick ascending limb ต่อกับต้น DCT ซึ่งแนบกับ afferent arteriole ของ glomerulus ตัวเอง (ส่วนหนึ่งของ JGA) ตรวจจับ NaCl → tubuloglomerular feedback · A PCT, B descending limb, C collecting duct ไม่ได้สัมผัส vascular pole",
+   "doubt": "⚠ ตามจริงอยู่ที่รอยต่อ TAL–early DCT ในตัวเลือกที่มี DCT ใกล้ที่สุด"
+  },
+  "74.1/30": {
+   "box": 5,
+   "stem": "H⁺ ที่ tubular cell หลั่งออกสู่ lumen มีแหล่งมาจากอะไร",
+   "options": {
+    "A": "น้ำ (H2O)",
+    "B": "Carbonic acid",
+    "C": "Bicarbonate",
+    "D": "Phosphoric acid"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "ใน tubular cell CO2 + H2O → H2CO3 (โดย carbonic anhydrase) → H⁺ + HCO3⁻ · H⁺ ถูกหลั่งผ่าน NHE3/H⁺-ATPase ส่วน HCO3⁻ กลับเข้าเลือด · A น้ำเป็นสารตั้งต้นแต่แหล่งโดยตรงคือ carbonic acid · C bicarbonate เป็นผลผลิตไม่ใช่แหล่ง H⁺ · D phosphate เป็น urinary buffer (titratable acid) รับ H⁺ ใน lumen ไม่ได้ให้ H⁺",
+   "doubt": "⚠ โจทย์ในไฟล์ไม่ครบ"
+  },
+  "74.1/31": {
+   "box": 8,
+   "stem": "ผู้ป่วยกินยาชนิดใดแล้วเกิด UTI ซ้ำ ๆ",
+   "options": {
+    "A": "SGLT2 inhibitor",
+    "B": "Metformin",
+    "C": "Sulfonylurea",
+    "D": "DPP-4 inhibitor",
+    "E": "Pioglitazone"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "SGLT2 inhibitor (empagliflozin, dapagliflozin) ยับยั้ง glucose reabsorption ที่ PCT → glucosuria → เชื้อเจริญดี → UTI/genital mycotic infection ซ้ำ · B metformin SE = GI, lactic acidosis, B12 ต่ำ · C sulfonylurea = hypoglycemia, น้ำหนักขึ้น · D DPP-4i = nasopharyngitis, pancreatitis · E pioglitazone = edema, HF, bladder ca, fracture",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
+  },
+  "74.1/58": {
+   "box": 23,
+   "stem": "เชื้อจากปัสสาวะขึ้นบน CLED agar เป็นโคโลนีสีเหลือง ถามโครงสร้างที่ช่วยก่อโรคทางเดินปัสสาวะ",
+   "options": {
+    "A": "Pili (P fimbriae)",
+    "B": "Polysaccharide capsule",
+    "C": "Teichoic acid",
+    "D": "Protein A",
+    "E": "M protein"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "CLED เป็น medium สำหรับเพาะเชื้อปัสสาวะ โคโลนีเหลือง = lactose fermenter เช่น uropathogenic E. coli ใช้ P fimbriae (pili) ยึด uroepithelium → ascending infection ถึง pyelonephritis · B capsule (K1) สำคัญใน neonatal meningitis · C teichoic acid, D protein A (S. aureus), E M protein (S. pyogenes) เป็นของ gram positive",
+   "options_reconstructed": true,
+   "doubt": "⚠ โจทย์ไม่สมบูรณ์ ในไฟล์มีตัวเลือกเดียว (pili)"
+  },
+  "74.1/70": {
+   "box": 18,
+   "stem": "ลักษณะ glomerulus ในผู้ป่วยเบาหวาน",
+   "options": {
+    "A": "Amyloidosis",
+    "B": "Sclerosing (nodular) glomerulosclerosis"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Diabetic nephropathy: GBM หนา, mesangial matrix เพิ่ม → diffuse แล้ว nodular glomerulosclerosis (Kimmelstiel–Wilson nodule), hyaline arteriolosclerosis ทั้ง afferent+efferent · A amyloidosis เป็นการสะสม amyloid (Congo red apple-green) สัมพันธ์กับ chronic inflammation/myeloma ไม่ใช่ DM",
+   "doubt": "⚠ ในไฟล์มี 2 ตัวเลือก"
+  },
+  "74.1/75": {
+   "box": 26,
+   "stem": "เด็กหญิงเป็นมะเร็ง (โจทย์ไม่ครบ คาดว่าเป็นก้อนในไตเด็ก)",
+   "options": {
+    "A": "Wilms tumor",
+    "B": "Neuroblastoma",
+    "C": "Renal cell carcinoma",
+    "D": "Hepatoblastoma"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "ก้อนในไตของเด็กเล็กส่วนใหญ่เป็น Wilms tumor (WT1, WAGR, Denys–Drash, Beckwith–Wiedemann) · B neuroblastoma มาจาก adrenal/sympathetic · C RCC พบในผู้ใหญ่ · D hepatoblastoma เป็นก้อนในตับ",
+   "options_reconstructed": true,
+   "doubt": "⚠ โจทย์ในไฟล์ไม่ครบ มีตัวเลือกเดียว"
+  },
+  "74.1/79": {
+   "box": 4,
+   "stem": "สารที่สร้างจากไตแล้วกระตุ้นการสร้าง platelet",
+   "options": {
+    "A": "EPO",
+    "B": "TPO"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Thrombopoietin (TPO) กระตุ้น megakaryocyte → platelet สร้างที่ตับเป็นหลัก ส่วนน้อยจากไต · A EPO สร้างจาก peritubular interstitial cell ของไต แต่กระตุ้น RBC ไม่ใช่ platelet",
+   "doubt": "⚠ TPO สร้างที่ตับเป็นหลัก ไตเป็นส่วนน้อย"
+  },
+  "74.2/5": {
+   "box": 7,
+   "stem": "หญิงตั้งครรภ์ห้ามใช้ยาลดความดันตัวใด",
+   "options": {
+    "A": "Nifedipine",
+    "B": "Methyldopa",
+    "C": "Hydralazine",
+    "D": "Enalapril"
+   },
+   "answer": "D",
+   "source": "วิเคราะห์",
+   "why": "ACEI (enalapril) และ ARB เป็น teratogen ทำ fetal renal failure, oligohydramnios → ห้ามในครรภ์ · A nifedipine, B methyldopa, C hydralazine ใช้ได้ในหญิงตั้งครรภ์",
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือกในไฟล์ (nifedipine, methyldopa, hydralazine) ใช้ได้ทั้งหมด ตัวเลือกที่ถูกน่าจะตกหล่น เติม D ให้"
+  },
+  "74.2/28": {
+   "box": 16,
+   "stem": "ผู้ป่วย minimal change disease จะพบอะไร",
+   "options": {
+    "A": "Oliguria",
+    "B": "Hematuria",
+    "C": "Severe hypertension"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "MCD เป็น nephrotic syndrome ล้วน: proteinuria (selective albumin) มาก, edema, hypoalbuminemia → intravascular volume ลดอาจ oliguria · B hematuria เป็นลักษณะ nephritic ไม่ใช่ MCD · C HT รุนแรงเป็นลักษณะ nephritic/ CKD ไม่ใช่ MCD (BP มักปกติ)",
+   "doubt": "⚠ ตัวเลือกในไฟล์ไม่มี proteinuria/edema ที่เป็นคำตอบหลัก"
+  },
+  "74.2/29": {
+   "box": 2,
+   "stem": "พบ calcification ระดับ transverse process ของ L3 ด้านซ้าย ตำแหน่งรอยโรคคือ",
+   "options": {
+    "A": "Minor calyx",
+    "B": "Major calyx",
+    "C": "Renal pelvis",
+    "D": "Ureter",
+    "E": "Bladder"
+   },
+   "answer": "D",
+   "source": "วิเคราะห์",
+   "why": "Ureter วิ่งลงตามแนวปลาย transverse process ของ L2–L5 บน psoas ก่อนข้าม sacroiliac joint ลง pelvis → นิ่วระดับ L3 = ureteric stone · A–C calyx/pelvis อยู่ใน hilum ระดับ L1–L2 · E bladder อยู่ใน pelvis หลัง pubic symphysis"
+  },
+  "74.2/69": {
+   "box": 8,
+   "stem": "ผู้ป่วยติดเชื้อรุนแรงดื้อยา ได้ amikacin โดยเชื้อมี MIC 2 mg/L ควร monitor อะไรเพื่อให้ได้ผลรักษาสูงสุด",
+   "options": {
+    "A": "Peak concentration > 10 mg/L",
+    "B": "Peak/trough > 10 เท่า",
+    "C": "MIC ของ aminoglycoside < 1 mg/L",
+    "D": "Trough level > 2 mg/L"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Aminoglycoside ฆ่าเชื้อแบบ concentration-dependent + มี post-antibiotic effect → เป้าคือ peak (Cmax) สูงเทียบกับ MIC (Cmax/MIC ≥ 8–10) จึงให้ครั้งเดียวต่อวัน · B peak/trough ไม่ใช่ PK/PD index · C MIC เป็นค่าของเชื้อ ไม่ใช่สิ่งที่ monitor ในผู้ป่วย · D trough สูงสัมพันธ์กับ nephro/ototoxicity ต้องให้ต่ำ ไม่ใช่สูง",
+   "doubt": "⚠ ตัวเลือกในไฟล์อาจถูกบันทึกเพี้ยน หลักที่ถูกคือ Cmax/MIC ≥ 8–10 (= peak ≥ 16–20 mg/L)"
+  },
+  "74.2/84": {
+   "box": 4,
+   "stem": "สารใดเมื่ออยู่ใน extracellular fluid ไม่ทำให้เซลล์เหี่ยว",
+   "options": {
+    "A": "Urea",
+    "B": "Glucose",
+    "C": "Mannitol",
+    "D": "Sucrose",
+    "E": "Sodium"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Urea ผ่าน cell membrane ได้อิสระ (ineffective osmole) ความเข้มข้นในและนอกเซลล์เท่ากันจึงไม่ดึงน้ำออก · B glucose (เมื่อไม่มี insulin), C mannitol, D sucrose, E Na ผ่านเยื่อหุ้มเซลล์ไม่ได้/ได้น้อย เป็น effective osmole → น้ำออกจากเซลล์ เซลล์เหี่ยว"
+  },
+  "74.2/86": {
+   "box": 10,
+   "stem": "ยาใดใช้แก้ arrhythmia จาก hyperkalemia",
+   "options": {
+    "A": "10% calcium gluconate",
+    "B": "5% (ไม่ทราบ)",
+    "C": "Resin จับ K⁺",
+    "D": "Sodium bicarbonate"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Calcium gluconate stabilize cardiac membrane (ยก threshold potential) ออกฤทธิ์ภายในนาที เป็นขั้นแรกเมื่อมี EKG change/arrhythmia แต่ไม่ลด K · C resin (SPS, patiromer) ขับ K ออกช้าหลายชั่วโมง · D NaHCO3 shift K เข้าเซลล์ได้น้อย ใช้เมื่อมี acidosis ไม่ได้ป้องกันหัวใจโดยตรง",
+   "doubt": "⚠ ตัวเลือก B ในไฟล์ไม่ครบ"
+  },
+  "74.2/90": {
+   "box": 6,
+   "stem": "Furosemide มีผลต่อโครงสร้างใด (ototoxicity)",
+   "options": {
+    "A": "Inner ear",
+    "B": "Middle ear",
+    "C": "Cochlear nerve",
+    "D": "Inferior colliculus"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Loop diuretic ยับยั้ง NKCC1 ที่ stria vascularis ใน cochlea (inner ear) → หูอื้อ/tinnitus เมื่อให้ IV เร็ว/ขนาดสูง หรือร่วม aminoglycoside · B middle ear เป็นการนำเสียง ไม่ได้รับผล · C, D ทางประสาทไม่ใช่ตำแหน่งพิษ",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
+  },
+  "74.2/97": {
+   "box": 27,
+   "stem": "α1-antagonist ช่วยอาการ BPH ผ่านกลไกใด",
+   "options": {
+    "A": "ลด smooth muscle tone ที่ bladder neck/prostate",
+    "B": "ลดขนาดต่อมลูกหมาก",
+    "C": "เพิ่มการหดตัวของ detrusor",
+    "D": "ลดการสร้าง DHT",
+    "E": "ยับยั้ง muscarinic receptor ของ bladder"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "α1A receptor อยู่ที่ smooth muscle ของ prostate stroma, capsule และ bladder neck → ยา (tamsulosin, doxazosin) คลาย dynamic obstruction ปัสสาวะออกดีขึ้นเร็ว · B, D เป็นกลไก 5α-reductase inhibitor (finasteride) ซึ่งลดขนาดต่อมช้า · C เป็นผลของ bethanechol · E เป็นกลไกยา OAB (oxybutynin) ซึ่งอาจทำ retention ใน BPH",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
+  },
+  "74.2/101": {
+   "box": 24,
+   "stem": "ปวดบิดร้าวลงขาหนีบ มี hematuria ปัสสาวะพบ uric acid crystal การตรวจที่เหมาะที่สุด",
+   "options": {
+    "A": "MRI whole body",
+    "B": "Plain film KUB",
+    "C": "CT urinary system",
+    "D": "Renal pyelogram",
+    "E": "Ultrasound urinary system"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "Non-contrast CT KUB เป็น gold standard ของ urolithiasis เห็นนิ่วได้ทุกชนิดรวม uric acid ที่ radiolucent · A MRI ไม่ใช่การตรวจนิ่ว · B plain film มองไม่เห็นนิ่ว uric acid (โปร่งรังสี) · D IVP ต้องใช้ contrast ไม่ใช่ทางเลือกแรก · E ultrasound ใช้ในหญิงตั้งครรภ์/เด็ก แต่ sensitivity ต่ำสำหรับ ureteric stone"
+  },
+  "75.1/3": {
+   "box": 19,
+   "stem": "PAP smear ต้อง fix บนสไลด์ด้วยอะไร",
+   "options": {
+    "A": "95% ethanol",
+    "B": "10% formalin",
+    "C": "3% glutaraldehyde",
+    "D": "0.9% sodium chloride",
+    "E": "ไม่ต้อง fix"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "PAP smear เป็น cytology ต้อง wet-fix ทันทีด้วย 95% ethanol (กันเซลล์แห้ง ทำให้ nuclear detail ชัด) · 10% formalin ใช้กับชิ้นเนื้อ (histology) · 3% glutaraldehyde ใช้กับ EM · 0.9% NaCl ไม่ใช่ fixative · ถ้าไม่ fix เซลล์จะ air-dry artifact อ่านผลไม่ได้"
+  },
+  "75.1/18": {
+   "box": 20,
+   "stem": "ผู้ป่วย severe leptospirosis มีไข้ ตัวเหลืองเล็กน้อย UA protein 1+ WBC/RBC น้อย สาเหตุ AKI คือ",
+   "options": {
+    "A": "Prerenal",
+    "B": "Bile cast nephropathy",
+    "C": "ATN",
+    "D": "AIN (tubulointerstitial nephritis)",
+    "E": "Post-infectious glomerulonephritis"
+   },
+   "answer": "D",
+   "source": "วิเคราะห์",
+   "why": "Leptospira ทำลาย tubule ผ่าน outer membrane protein → acute tubulointerstitial nephritis เป็นรอยโรคหลัก (non-oliguric, K ต่ำ, UA protein น้อย) · A prerenal อาจร่วมจาก dehydration แต่ไม่ใช่กลไกหลัก · B bile cast ต้องตัวเหลืองมาก bilirubin สูงมาก · C ATN เกิดร่วมได้ใน severe case แต่ลักษณะเด่นของโรคคือ interstitial nephritis · E post-infectious GN มี hematuria/RBC cast เด่น",
+   "doubt": "⚠ Leptospirosis ทำได้ทั้ง TIN และ ATN"
+  },
+  "75.1/21": {
+   "box": 19,
+   "stem": "สารที่ใช้ fix ชิ้นเนื้อไตสำหรับ LM, IF, EM ตามลำดับ",
+   "options": {
+    "A": "10% formalin, Michel solution, 3% glutaraldehyde",
+    "B": "10% formalin, 3% glutaraldehyde, Michel solution",
+    "C": "3% glutaraldehyde, Michel solution, 10% formalin",
+    "D": "95% ethanol, Michel solution, 3% glutaraldehyde",
+    "E": "Michel solution, 10% formalin, 3% glutaraldehyde"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "LM ใช้ 10% formalin (paraffin section ย้อม H&E/PAS/silver) · IF ต้องใช้เนื้อสดหรือแช่ Michel transport medium (ห้ามใส่ formalin เพราะ cross-link ทำลาย antigen) · EM ใช้ 2.5–3% glutaraldehyde ซึ่งรักษา ultrastructure ได้ดีที่สุด — ตัวเลือกอื่นสลับลำดับ (glutaraldehyde ไม่เหมาะกับ IF, Michel ไม่ใช่ fixative สำหรับ LM) และ 95% ethanol ใช้กับ cytology smear ไม่ใช่ชิ้นเนื้อไต",
+   "options_reconstructed": true
+  },
+  "75.1/26": {
+   "box": 23,
+   "stem": "หญิง 60 ปี DM type 2, CKD stage 3 เป็น acute pyelonephritis ได้ ceftriaxone 3 วันยังไข้ เพาะเชื้อพบ ESBL-producing E. coli ยาที่เหมาะสม",
+   "options": {
+    "A": "Colistin",
+    "B": "Gentamicin",
+    "C": "Ceftazidime",
+    "D": "Meropenem",
+    "E": "Ampicillin/sulbactam"
+   },
+   "answer": "D",
+   "source": "วิเคราะห์",
+   "why": "ESBL ทำลาย penicillin และ cephalosporin ทุกรุ่น (รวม 3rd gen) → ยาที่เชื่อถือได้ในการติดเชื้อรุนแรงคือ carbapenem (meropenem) · A colistin สงวนไว้สำหรับ CRE และ nephrotoxic · B gentamicin nephrotoxic ใน CKD · C ceftazidime ถูก ESBL ทำลาย · E ampicillin/sulbactam ไม่ครอบคลุม ESBL"
+  },
+  "75.1/32": {
+   "box": 10,
+   "stem": "EKG แสดง hyperkalemia การรักษาใดได้ประโยชน์น้อยที่สุด",
+   "options": {
+    "A": "Beta-2 agonist",
+    "B": "IV sodium bicarbonate",
+    "C": "IV glucose + insulin",
+    "D": "IV calcium",
+    "E": "PO sodium polystyrene sulfonate"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Sodium bicarbonate shift K เข้าเซลล์ได้น้อยมาก ได้ผลเฉพาะเมื่อมี metabolic acidosis จึงเป็นการรักษาที่ประโยชน์น้อยสุด · A β2-agonist และ C insulin+glucose shift K เข้าเซลล์ได้ดี · D IV calcium stabilize membrane เป็นอันดับแรกเมื่อมี EKG change · E resin ขับ K ออกจากร่างกายจริง (แม้ออกฤทธิ์ช้า)",
+   "needs_image": true,
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือก B, E ในไฟล์ไม่ครบ (IV sodium…, PO sodium…) ถ้า E เป็น resin ที่ออกฤทธิ์ช้าก็อาจเป็นคำตอบได้"
+  },
+  "75.1/37": {
+   "box": 4,
+   "stem": "Cr 5 mg/dL ลดเหลือ 2.5 mg/dL หลัง 3 เดือน เก็บปัสสาวะ 8 ชม. ได้ 600 mL, UCr 125 mg/dL ถามระยะโรคไต",
+   "options": {
+    "A": "Acute stage 2",
+    "B": "Acute stage 3",
+    "C": "Chronic stage 2",
+    "D": "Chronic stage 3a",
+    "E": "Chronic stage 3b"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "CrCl = (UCr × V)/(PCr × t) = (125 × 600)/(2.5 × 480) ≈ 62.5 mL/min → GFR 60–89 = stage 2 และผิดปกติ ≥ 3 เดือน = chronic · A, B ผิดเพราะเกิน 3 เดือนแล้ว (นิยาม AKI/AKD < 3 เดือน) · D stage 3a = 45–59 · E stage 3b = 30–44",
+   "doubt": "⚠ ตัวเลขในโจทย์ผู้จดไม่แน่ใจ (มี ?)"
+  },
+  "75.1/49": {
+   "box": 2,
+   "stem": "ผ่าตัด myoma uteri มีโอกาสบาดเจ็บโครงสร้างใด",
+   "options": {
+    "A": "Ureter",
+    "B": "Obturator nerve",
+    "C": "Internal iliac vein",
+    "D": "Pudendal nerve",
+    "E": "Urethra"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Ureter ลอดใต้ uterine artery (water under the bridge) ห่างจาก cervix ~2 cm → เสี่ยงถูกหนีบ/ผูกขณะ ligate uterine a. ใน hysterectomy/myomectomy · B obturator nerve อยู่ lateral pelvic wall · C internal iliac vein ลึกกว่า · D pudendal nerve อยู่ใน pudendal canal · E urethra อยู่ต่ำใต้ bladder ไม่อยู่ใน field",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
+  },
+  "75.1/54": {
+   "box": 20,
+   "stem": "ชาย 60 ปี หลัง MI ความดันต่ำ/perfusion ไม่พอ 3 วัน BUN 44 Cr 3.3 UA พบ granular cast และ muddy brown cast ส่วนใดเสียหาย",
+   "options": {
+    "A": "Glomerulus",
+    "B": "Proximal convoluted tubule",
+    "C": "Henle’s loop",
+    "D": "Distal convoluted tubule",
+    "E": "Collecting duct"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Ischemic ATN: muddy brown granular cast · PCT (S3 segment) และ medullary TAL ใช้พลังงานสูงจึงไวต่อ ischemia มากที่สุด · A glomerulus เสียจะมี RBC cast/proteinuria · C, D, E เสียได้น้อยกว่า PCT ใน ischemic ATN"
+  },
+  "75.1/55": {
+   "box": 1,
+   "stem": "ทารกอายุ 2 วัน มี meconium ในปัสสาวะ โครงสร้างใดพัฒนาผิดปกติ",
+   "options": {
+    "A": "Ureteric bud",
+    "B": "Urogenital diaphragm",
+    "C": "Urorectal septum"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "Urorectal septum แบ่ง cloaca เป็น urogenital sinus (ด้านหน้า) กับ anorectal canal (ด้านหลัง) ถ้าแบ่งไม่สมบูรณ์ → rectovesical/rectourethral fistula มี meconium ในปัสสาวะ · A ureteric bud ผิด → agenesis/duplex ureter · B urogenital diaphragm เป็นกล้ามเนื้อ perineum ไม่เกี่ยว"
+  },
+  "75.1/63": {
+   "box": 19,
+   "stem": "ชิ้นเนื้อไตต้องใส่ solution อะไรสำหรับ LM, IF, EM ตามลำดับ",
+   "options": {
+    "A": "10% formalin, Michel solution, 3% glutaraldehyde",
+    "B": "10% formalin, 3% glutaraldehyde, Michel solution",
+    "C": "3% glutaraldehyde, Michel solution, 10% formalin",
+    "D": "95% ethanol, Michel solution, 3% glutaraldehyde",
+    "E": "Michel solution, 10% formalin, 3% glutaraldehyde"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "LM ใช้ 10% formalin (paraffin section ย้อม H&E/PAS/silver) · IF ต้องใช้เนื้อสดหรือแช่ Michel transport medium (ห้ามใส่ formalin เพราะ cross-link ทำลาย antigen) · EM ใช้ 2.5–3% glutaraldehyde ซึ่งรักษา ultrastructure ได้ดีที่สุด — ตัวเลือกอื่นสลับลำดับ (glutaraldehyde ไม่เหมาะกับ IF, Michel ไม่ใช่ fixative สำหรับ LM) และ 95% ethanol ใช้กับ cytology smear ไม่ใช่ชิ้นเนื้อไต",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์ไม่มีตัวเลือก"
+  },
+  "75.1/74": {
+   "box": 19,
+   "stem": "ผู้ป่วยโรคไตต้องทำ LM, IF, EM ใช้ fixative อะไรตามลำดับ",
+   "options": {
+    "A": "10% formalin, Michel solution, 3% glutaraldehyde",
+    "B": "10% formalin, 3% glutaraldehyde, Michel solution"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "LM ใช้ 10% formalin (paraffin section ย้อม H&E/PAS/silver) · IF ต้องใช้เนื้อสดหรือแช่ Michel transport medium (ห้ามใส่ formalin เพราะ cross-link ทำลาย antigen) · EM ใช้ 2.5–3% glutaraldehyde ซึ่งรักษา ultrastructure ได้ดีที่สุด — ตัวเลือกอื่นสลับลำดับ (glutaraldehyde ไม่เหมาะกับ IF, Michel ไม่ใช่ fixative สำหรับ LM) และ 95% ethanol ใช้กับ cytology smear ไม่ใช่ชิ้นเนื้อไต"
+  },
+  "75.1/91": {
+   "box": 8,
+   "stem": "หญิง 50 ปี DM type 2 กินยาลดน้ำตาลประจำ FBG 110, HbA1c 5.8% แต่ urine glucose 4+ ยาที่กินคือ",
+   "options": {
+    "A": "Biguanide",
+    "B": "Sulfonylurea",
+    "C": "DPP-4 inhibitor",
+    "D": "Alpha-glucosidase inhibitor",
+    "E": "Sodium–glucose transporter 2 inhibitor"
+   },
+   "answer": "E",
+   "source": "วิเคราะห์",
+   "why": "SGLT2 inhibitor ยับยั้ง glucose reabsorption ที่ PCT → glucosuria มากทั้งที่น้ำตาลในเลือดปกติ · A metformin ลด hepatic gluconeogenesis · B sulfonylurea กระตุ้น insulin · C DPP-4i เพิ่ม incretin · D acarbose ลดการดูดซึมที่ลำไส้ — ทั้งหมดไม่ทำ glucosuria เมื่อน้ำตาลปกติ"
+  },
+  "75.2/1": {
+   "box": 18,
+   "stem": "Diabetic nephropathy มีการเพิ่มจำนวนของเซลล์ใดในไต",
+   "options": {
+    "A": "JG cell",
+    "B": "Intraglomerular mesangial cell",
+    "C": "Visceral epithelial cell ของ Bowman capsule",
+    "D": "Glomerular endothelial cell",
+    "E": "Podocyte"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Hyperglycemia/AGEs/TGF-β กระตุ้น mesangial cell ให้ proliferate และสร้าง matrix → mesangial expansion → nodular glomerulosclerosis (K–W) · A JG cell ไม่ได้เพิ่ม (DN มัก hyporeninemic) · C, E podocyte เป็นเซลล์ terminally differentiated ใน DN มีแต่ลดจำนวน/effacement · D endothelium บาดเจ็บแต่ไม่ proliferate"
+  },
+  "75.2/3": {
+   "box": 3,
+   "stem": "ยีน NPHS1 มีผลต่อโครงสร้างใด",
+   "options": {
+    "A": "Glomerular basement membrane",
+    "B": "Nephrin ที่ slit diaphragm (กัน albumin รั่ว)",
+    "C": "Mesangial matrix",
+    "D": "Type IV collagen α5"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "NPHS1 encode nephrin ซึ่งเป็นโปรตีนหลักของ slit diaphragm ระหว่าง foot process ของ podocyte → กลายพันธุ์ = congenital nephrotic syndrome (Finnish type) · A GBM, D type IV collagen (COL4A3–5) เกี่ยวกับ Alport · C mesangial matrix ไม่เกี่ยว",
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือกในไฟล์ไม่ครบ"
+  },
+  "75.2/7": {
+   "box": 1,
+   "stem": "ทารก 2 วัน มี meconium ปนในปัสสาวะ ความผิดปกติที่โครงสร้างใด",
+   "options": {
+    "A": "Urogenital diaphragm",
+    "B": "Urorectal septum",
+    "C": "Cloacal membrane"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Urorectal septum แบ่ง cloaca ไม่สมบูรณ์ → fistula ระหว่าง rectum กับ bladder/urethra → meconium ในปัสสาวะ · A urogenital diaphragm เป็นกล้ามเนื้อ perineum · C cloacal membrane แตกไม่ได้ทำ imperforate anus แต่ไม่ทำ fistula ทางปัสสาวะ"
+  },
+  "75.2/8": {
+   "box": 9,
+   "stem": "ผู้ป่วย lung cancer euvolemia Na 110 urine osmolality และ urine Na ไม่ต่ำ คือภาวะใด",
+   "options": {
+    "A": "SIADH",
+    "B": "Diabetes insipidus"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Euvolemic hyponatremia + urine ไม่ dilute (Uosm > 100) + urine Na > 30 = SIADH; small cell lung ca หลั่ง ADH ectopic · B DI ทำให้ปัสสาวะเจือจาง Na ในเลือดปกติหรือสูง ไม่ใช่ต่ำ"
+  },
+  "75.2/13": {
+   "box": 18,
+   "stem": "Diabetic nephropathy มีผลต่อส่วนใด",
+   "options": {
+    "A": "Glomerular endothelial membrane",
+    "B": "Podocyte"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "DN ทำ podocyte บาดเจ็บ (foot process effacement, podocytopenia) → albuminuria และ GBM หนา + mesangial expansion · A endothelium บาดเจ็บได้แต่ไม่ใช่เป้าหมายหลักที่โจทย์ต้องการ",
+   "doubt": "⚠ ตัวเลือกมีแค่ 2 ข้อ ลักษณะเด่นของ DN คือ GBM หนา + mesangial expansion ซึ่งไม่อยู่ในตัวเลือก"
+  },
+  "75.2/15": {
+   "box": 19,
+   "stem": "PAP smear ต้อง fix ด้วยอะไร",
+   "options": {
+    "A": "95% ethanol",
+    "B": "100% formalin",
+    "C": "ไม่ต้อง fix"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "PAP smear เป็น cytology ต้อง wet-fix ทันทีด้วย 95% ethanol (กันเซลล์แห้ง ทำให้ nuclear detail ชัด) · 10% formalin ใช้กับชิ้นเนื้อ (histology) · 3% glutaraldehyde ใช้กับ EM · 0.9% NaCl ไม่ใช่ fixative · ถ้าไม่ fix เซลล์จะ air-dry artifact อ่านผลไม่ได้"
+  },
+  "75.2/16": {
+   "box": 23,
+   "stem": "ผู้ป่วยมี costovertebral angle tenderness (pyelonephritis) เชื้อที่พบบ่อยที่สุด",
+   "options": {
+    "A": "E. coli",
+    "B": "Proteus mirabilis",
+    "C": "Enterococcus",
+    "D": "Staphylococcus saprophyticus"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Uropathogenic E. coli (P fimbriae) เป็นสาเหตุอันดับหนึ่งของทั้ง cystitis และ pyelonephritis · B Proteus (urease, struvite stone) พบน้อยกว่า · C Enterococcus พบใน catheter/nosocomial · D S. saprophyticus เป็นอันดับสองใน cystitis หญิงวัยเจริญพันธุ์ ไม่ค่อยทำ pyelonephritis",
+   "doubt": "⚠ ในไฟล์ตัวเลือกข้ามจาก D ไป E (อาจตกหล่น 1 ข้อ)"
+  },
+  "75.2/17": {
+   "box": 19,
+   "stem": "เตรียมชิ้นเนื้อ (ไต) สำหรับ LM, IF, EM ต้องใช้ fixative อะไรตามลำดับ",
+   "options": {
+    "A": "3% glutaraldehyde, Michel solution, 10% ethylene glycol",
+    "B": "10% formalin, Michel solution, 3% glutaraldehyde",
+    "C": "10% formalin, 3% glutaraldehyde, Michel solution",
+    "D": "Michel solution, 10% formalin, 3% glutaraldehyde"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "LM ใช้ 10% formalin (paraffin section ย้อม H&E/PAS/silver) · IF ต้องใช้เนื้อสดหรือแช่ Michel transport medium (ห้ามใส่ formalin เพราะ cross-link ทำลาย antigen) · EM ใช้ 2.5–3% glutaraldehyde ซึ่งรักษา ultrastructure ได้ดีที่สุด — ตัวเลือกอื่นสลับลำดับ (glutaraldehyde ไม่เหมาะกับ IF, Michel ไม่ใช่ fixative สำหรับ LM) และ 95% ethanol ใช้กับ cytology smear ไม่ใช่ชิ้นเนื้อไต · ethylene glycol ไม่ใช่ fixative",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์มีตัวเลือกเดียวซึ่งผิดลำดับ ตัวเลือกที่ถูกสร้างใหม่"
+  },
+  "75.2/21": {
+   "box": 19,
+   "stem": "Fixative สำหรับ PAP smear",
+   "options": {
+    "A": "10% formalin",
+    "B": "95% ethanol",
+    "C": "3% glutaraldehyde",
+    "D": "0.9% sodium chloride",
+    "E": "ไม่ต้อง fix"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "PAP smear เป็น cytology ต้อง wet-fix ทันทีด้วย 95% ethanol (กันเซลล์แห้ง ทำให้ nuclear detail ชัด) · 10% formalin ใช้กับชิ้นเนื้อ (histology) · 3% glutaraldehyde ใช้กับ EM · 0.9% NaCl ไม่ใช่ fixative · ถ้าไม่ fix เซลล์จะ air-dry artifact อ่านผลไม่ได้"
+  },
+  "75.2/65": {
+   "box": 8,
+   "stem": "ยารักษา diffuse large B-cell lymphoma ที่ทำให้เกิด hemorrhagic cystitis",
+   "options": {
+    "A": "Cyclophosphamide",
+    "B": "Rituximab",
+    "C": "Doxorubicin",
+    "D": "Vincristine",
+    "E": "Prednisolone"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Cyclophosphamide (ใน R-CHOP) ถูกเผาผลาญเป็น acrolein ขับทางปัสสาวะ ทำลาย urothelium → hemorrhagic cystitis ป้องกันด้วย mesna + ดื่มน้ำมาก · B rituximab = infusion reaction, HBV reactivation · C doxorubicin = cardiotoxicity · D vincristine = peripheral neuropathy · E prednisolone = hyperglycemia, Cushingoid",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์ไม่มีตัวเลือก"
+  },
+  "75.2/108": {
+   "box": 8,
+   "stem": "ผู้ป่วย advanced cirrhosis มี hypoalbuminemia กระบวนการใดได้รับผลมากที่สุด",
+   "options": {
+    "A": "Tubular secretion ของยาเบส",
+    "B": "Tubular secretion ของยากรด",
+    "C": "Glomerular filtration ของยาเบส",
+    "D": "Glomerular filtration ของยากรด",
+    "E": "Tubular reabsorption ของยาเบส"
+   },
+   "answer": "D",
+   "source": "วิเคราะห์",
+   "why": "ยากรดส่วนใหญ่จับ albumin (ยาเบสจับ α1-acid glycoprotein) → albumin ต่ำทำ free fraction ของยากรดเพิ่ม และ glomerular filtration กรองได้เฉพาะยาอิสระ จึงเปลี่ยนมากที่สุด · A, B tubular secretion ดึงยาที่จับโปรตีนออกได้ด้วย จึงไม่ขึ้นกับ protein binding มาก · C ยาเบสไม่ค่อยจับ albumin · E reabsorption ขึ้นกับ pH ปัสสาวะ/ion trapping"
+  },
+  "75.2/121": {
+   "box": 6,
+   "stem": "กลไกการออกฤทธิ์ของ spironolactone",
+   "options": {
+    "A": "Mineralocorticoid (aldosterone) receptor antagonist ที่ collecting duct",
+    "B": "ยับยั้ง ENaC โดยตรง",
+    "C": "ยับยั้ง Na–Cl cotransporter ที่ DCT",
+    "D": "ยับยั้ง NKCC2 ที่ TAL",
+    "E": "ยับยั้ง carbonic anhydrase ที่ PCT"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Spironolactone แย่งจับ mineralocorticoid receptor ใน principal cell → ENaC และ ROMK ลด → K-sparing · B เป็นกลไก amiloride/triamterene · C thiazide · D loop diuretic · E acetazolamide",
+   "options_reconstructed": true,
+   "doubt": "⚠ ในไฟล์ไม่มีตัวเลือก"
+  },
+  "75.2/138": {
+   "box": 4,
+   "stem": "ให้ 0.9% NaCl 2000 mL ผ่านไป 7 ชั่วโมง การเปลี่ยนแปลงของ fluid compartment ข้อใดถูก",
+   "options": {
+    "A": "ECF เพิ่ม 500 mL",
+    "B": "ICF เพิ่ม 1500 mL",
+    "C": "ECF เพิ่ม 1500 mL",
+    "D": "ICF เพิ่ม 667 mL",
+    "E": "ICF เพิ่ม 1333 mL"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "NSS เป็น isotonic จึงอยู่ใน ECF ทั้งหมด ไม่เข้า ICF (osmolality ไม่เปลี่ยน) และกระจายเป็น plasma ~1/4, interstitial ~3/4 (500/1500 mL) บางส่วนถูกขับออกทางไตตามเวลา → ข้อที่สอดคล้องที่สุดคือ ECF เพิ่ม · B, D, E ผิดเพราะ isotonic saline ไม่ทำให้ ICF เปลี่ยน (D/E เป็นการกระจายของ D5W) · A 500 mL คือส่วนที่อยู่ใน plasma ไม่ใช่ทั้ง ECF",
+   "doubt": "⚠ ตามทฤษฎี ECF เพิ่ม ~2000 mL ไม่มีในตัวเลือก ตัวเลือกอาจเดิมเป็น plasma +500/ISF +1500"
+  },
+  "76/6": {
+   "box": 23,
+   "stem": "ชายมีหนองเมือก (mucopurulent) ออกจากท่อปัสสาวะ ย้อม Gram ไม่พบเชื้อ เชื้อก่อโรคน่าจะเป็นอะไร",
+   "options": {
+    "A": "Chlamydophila psittaci",
+    "B": "Ureaplasma urealyticum",
+    "C": "Neisseria gonorrhoeae",
+    "D": "Proteus mirabilis",
+    "E": "Haemophilus ducreyi"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Gram stain ไม่เห็นเชื้อ = non-gonococcal urethritis (NGU) เชื้อหลักคือ Chlamydia trachomatis, Ureaplasma, Mycoplasma genitalium · Ureaplasma ไม่มี cell wall จึงย้อม Gram ไม่ติด → ตอบ B · A C. psittaci ก่อ psittacosis (ปอด จากนก) ไม่ใช่ STI · C N. gonorrhoeae จะเห็น Gram-negative intracellular diplococci ใน PMN · D Proteus = UTI/นิ่ว struvite ย้อมเห็น Gram-negative rod · E H. ducreyi ทำ chancroid (แผลเจ็บ) ไม่ใช่ urethritis",
+   "doubt": "⚠ ตัวเลือกไม่มี Chlamydia trachomatis ซึ่งเป็นเชื้อ NGU ที่พบบ่อยที่สุด จึงเลือก Ureaplasma"
+  },
+  "76/17": {
+   "box": 4,
+   "stem": "ชายถูกบังคับดื่มน้ำ 20 ลิตรในเวลาสั้น ๆ ค่าใดจะลดลง",
+   "options": {
+    "A": "Urine flow rate",
+    "B": "Urine osmolality",
+    "C": "GFR",
+    "D": "ECF volume",
+    "E": "ICF volume"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "น้ำเปล่าปริมาณมาก → plasma osmolality ลด → ADH ถูกกด → ขับปัสสาวะเจือจางปริมาณมาก (water diuresis) → urine osmolality ลดลง (ถึง ~50 mOsm/kg) · A urine flow เพิ่ม · C GFR คงที่หรือเพิ่มเล็กน้อยจาก volume expansion · D, E น้ำกระจายทุก compartment ตาม osmolality ที่ลด → ECF และ ICF เพิ่มทั้งคู่ (เซลล์บวม)"
+  },
+  "76/22": {
+   "box": 21,
+   "stem": "ตัวอย่างปัสสาวะที่ส่งแลบมีกลิ่นแอมโมเนีย สาเหตุคืออะไร",
+   "options": {
+    "A": "Nephrotic syndrome",
+    "B": "เก็บ/ขนส่งตัวอย่างไม่ถูกต้อง (ตั้งทิ้งไว้นาน)",
+    "C": "Maple syrup urine disease",
+    "D": "Diabetes mellitus",
+    "E": "อาหารที่กิน"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "ปัสสาวะตั้งทิ้งไว้นานที่อุณหภูมิห้อง แบคทีเรียที่มี urease ย่อย urea → NH3 ทำให้กลิ่นแอมโมเนีย pH เป็นด่าง cast สลาย = pre-analytical error · A nephrotic ปัสสาวะเป็นฟอง · C MSUD กลิ่นน้ำเชื่อม/maple · D DM ketone ให้กลิ่นผลไม้ (acetone) · E อาหาร เช่น หน่อไม้ฝรั่ง ให้กลิ่นกำมะถัน ไม่ใช่แอมโมเนียเด่น"
+  },
+  "76/28": {
+   "box": 7,
+   "stem": "ยาลดความดันใดห้ามให้ในหญิงตั้งครรภ์",
+   "options": {
+    "A": "Labetalol",
+    "B": "Nicardipine",
+    "C": "Losartan",
+    "D": "Hydralazine",
+    "E": "Methyldopa"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "ACEI/ARB (losartan) เป็น teratogen ช่วงไตรมาส 2–3 → fetal renal dysgenesis, oligohydramnios, skull hypoplasia จึงห้ามใช้ · A labetalol, D hydralazine, E methyldopa เป็นยาหลักของ HT ในครรภ์ · B nicardipine (CCB) ใช้ได้โดยเฉพาะ severe HT"
+  },
+  "76/30": {
+   "box": 7,
+   "stem": "ACE inhibitor ออกฤทธิ์เด่นต่อหลอดเลือด/ส่วนใดของ nephron",
+   "options": {
+    "A": "Afferent arteriole",
+    "B": "Efferent arteriole",
+    "C": "Collecting duct",
+    "D": "DCT",
+    "E": "Glomerular capillary"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Angiotensin II หดตัว efferent arteriole เด่นกว่า afferent เพื่อคง GFR · ACEI ลด Ang II → efferent ขยาย → glomerular pressure และ GFR ลด (จึงลด proteinuria แต่ระวังใน bilateral RAS) · A afferent ถูกควบคุมโดย myogenic/TGF และ prostaglandin (NSAID มีผล) · C, D เป็นที่ทำงานของ aldosterone/ADH ไม่ใช่เป้าหลักของ ACEI · E ไม่ใช่จุดออกฤทธิ์โดยตรง"
+  },
+  "76/70": {
+   "box": 7,
+   "stem": "ผู้ป่วยโรคหัวใจ EKG มี tented T wave ยาใดน่าจะเป็นสาเหตุ",
+   "options": {
+    "A": "Losartan",
+    "B": "Acetazolamide",
+    "C": "Mannitol",
+    "D": "Furosemide",
+    "E": "Thiazide"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Tented T = hyperkalemia · ARB ลด aldosterone → ขับ K ลด → K สูง · B acetazolamide, D furosemide, E thiazide เพิ่ม Na delivery ไป collecting duct → K ต่ำ · C mannitol osmotic diuresis มักทำ K ต่ำจากการขับออก (hyperK ชั่วคราวจาก solvent drag พบน้อย)"
+  },
+  "76/76": {
+   "box": 11,
+   "stem": "ฮอร์โมนที่ทำให้ Na ในพลาสมาสูงขึ้นและ K ลดลง สร้างที่ใด",
+   "options": {
+    "A": "Adrenal capsule",
+    "B": "Zona glomerulosa",
+    "C": "Zona fasciculata",
+    "D": "Zona reticularis",
+    "E": "Adrenal medulla"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "ฮอร์โมนคือ aldosterone (ดูด Na ขับ K/H ที่ principal cell) สร้างที่ zona glomerulosa ภายใต้ Ang II และ K · C fasciculata สร้าง cortisol · D reticularis สร้าง androgen · E medulla สร้าง catecholamine · A capsule เป็น connective tissue ไม่สร้างฮอร์โมน"
+  },
+  "76/77": {
+   "box": 3,
+   "stem": "ส่วนประกอบใดอยู่ใน glomerular basement membrane",
+   "options": {
+    "A": "Heparan sulfate",
+    "B": "Dermatan sulfate",
+    "C": "Chondroitin sulfate",
+    "D": "Hyaluronan",
+    "E": "Keratan sulfate"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "GBM ประกอบด้วย type IV collagen, laminin, nidogen และ heparan sulfate proteoglycan (perlecan/agrin) ซึ่งให้ประจุลบ กั้น albumin · B dermatan sulfate อยู่ในผิวหนัง/หลอดเลือด · C chondroitin sulfate ในกระดูกอ่อน · D hyaluronan ใน synovial fluid/vitreous ไม่จับ core protein · E keratan sulfate ใน cornea/กระดูกอ่อน"
+  },
+  "76/103": {
+   "box": 24,
+   "stem": "นิ่วท่อไตมองไม่เห็นใน plain KUB แต่เห็นใน CT นิ่วน่าจะเป็นชนิดใด",
+   "options": {
+    "A": "Magnesium ammonium phosphate",
+    "B": "Calcium oxalate monohydrate",
+    "C": "Calcium oxalate dihydrate",
+    "D": "Calcium phosphate",
+    "E": "Uric acid"
+   },
+   "answer": "E",
+   "source": "วิเคราะห์",
+   "why": "Uric acid stone เป็น radiolucent บน plain film แต่ NCCT เห็นได้ทุกชนิด (ยกเว้น indinavir) · A struvite, B–C calcium oxalate, D calcium phosphate ล้วน radiopaque เห็นใน plain KUB (struvite ทึบปานกลาง)"
+  },
+  "76/135": {
+   "box": 2,
+   "stem": "เด็กชายอุบัติเหตุจักรยานกระแทก perineum มีปัสสาวะรั่วเข้า penis และ scrotum fascia ใดกั้นไม่ให้ปัสสาวะไหลไปบริเวณทวารหนัก",
+   "options": {
+    "A": "Buck's fascia",
+    "B": "Dartos fascia",
+    "C": "Colles fascia",
+    "D": "Scarpa's fascia",
+    "E": "Camper's fascia"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "Straddle injury ทำ bulbar (spongy) urethra ขาด ปัสสาวะเข้า superficial perineal pouch ใต้ Colles fascia · Colles fascia ยึดกับขอบหลังของ perineal membrane และ fascia lata จึงกั้นไม่ให้ไปทวาร/ต้นขา แต่ไปต่อกับ Scarpa ขึ้นผนังหน้าท้องได้ · A Buck's fascia ถ้าไม่ขาดจะจำกัดปัสสาวะอยู่ใน penis · B Dartos เป็นชั้นกล้ามเนื้อเรียบของ scrotum ไม่ใช่ตัวกั้น · D Scarpa เป็นส่วนต่อในผนังหน้าท้อง · E Camper เป็นชั้นไขมันตื้น ไม่จำกัดทิศ"
+  },
+  "76/139": {
+   "box": 27,
+   "stem": "ชายได้ยารักษา overactive bladder ร่วมกับ ketoconazole แล้วปากแห้ง ควรเปลี่ยนเป็นยาใดเพื่อเลี่ยงอาการนี้",
+   "options": {
+    "A": "Oxybutynin",
+    "B": "Trospium",
+    "C": "Tolterodine",
+    "D": "Solifenacin",
+    "E": "Darifenacin"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Ketoconazole ยับยั้ง CYP3A4 → ระดับ antimuscarinic ที่ถูก metabolize ทาง CYP3A4 สูงขึ้น ผลข้างเคียงมากขึ้น · Trospium เป็น quaternary amine ขับทางไตเป็นหลัก ไม่ผ่าน CYP และไม่ผ่าน BBB จึงเหมาะ · A oxybutynin ผลข้างเคียงปากแห้งมากที่สุดและผ่าน CYP3A4 · C tolterodine (CYP2D6/3A4), D solifenacin, E darifenacin ล้วนพึ่ง CYP3A4 จึงมี interaction"
+  },
+  "76/163": {
+   "box": 8,
+   "stem": "ข้อใดเป็นผลข้างเคียงของ tenofovir",
+   "options": {
+    "A": "Hypophosphatemia",
+    "B": "Hyperkalemia",
+    "C": "Hypernatremia",
+    "D": "Metabolic alkalosis"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Tenofovir (TDF) สะสมใน proximal tubule ทำ mitochondrial toxicity → Fanconi syndrome: phosphaturia (hypophosphatemia), glucosuria, aminoaciduria, proximal RTA · B Fanconi ทำ K ต่ำ ไม่ใช่สูง · C ไม่ใช่ผลของยา (อาจเกิด nephrogenic DI ได้แต่น้อย) · D proximal RTA ให้ metabolic acidosis ไม่ใช่ alkalosis"
+  },
+  "76/174": {
+   "box": 1,
+   "stem": "ผู้ป่วยมีเยื่อบุลำไส้ (intestinal mucosa) ที่สะดือ มีต้นกำเนิดจากโครงสร้างใด",
+   "options": {
+    "A": "Urachus",
+    "B": "Umbilical cord",
+    "C": "Vitelline duct"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "เยื่อบุลำไส้ที่สะดือ (umbilical polyp/fistula ที่มีอุจจาระซึม) เกิดจาก vitelline (omphalomesenteric) duct ที่ไม่ปิด ซึ่งเชื่อม midgut กับ yolk sac · A urachus (allantois → median umbilical ligament) ถ้าค้างจะมีปัสสาวะซึมจากสะดือ และเยื่อบุเป็น urothelium · B umbilical cord เป็นโครงสร้างนอกตัวเด็ก ไม่ใช่ต้นกำเนิดของ mucosa ที่ค้าง"
+  },
+  "76/175": {
+   "box": 5,
+   "stem": "ผลแลบมี phosphate ต่ำเพียงอย่างเดียว ส่วน electrolyte อื่นรวมทั้ง Ca ปกติ สาเหตุที่เป็นไปได้คือ",
+   "options": {
+    "A": "Hyperparathyroidism",
+    "B": "Sodium–phosphate cotransporter บกพร่อง",
+    "C": "Lab error"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "PO4 ถูกดูดกลับ ~80% ที่ PCT ผ่าน NaPi-IIa/IIc ถ้าตัวขนส่งบกพร่อง (เช่น hereditary hypophosphatemic rickets) จะเสีย phosphate ทางปัสสาวะอย่างเดียว Ca ปกติ · A hyperPTH ทำ PO4 ต่ำก็จริงแต่ต้องมี Ca สูงร่วม · C lab error ไม่ใช่คำอธิบายแรกเมื่อมีกลไกที่อธิบายได้",
+   "doubt": "⚠ ข้อในไฟล์มีแค่ 3 ตัวเลือก"
+  },
+  "76/214": {
+   "box": 17,
+   "stem": "ชิ้นเนื้อไตย้อม immunofluorescence เห็น IgG เป็นเส้นตรงตาม GBM (linear) ไม่เป็นจุด เกิดจากอะไร",
+   "options": {
+    "A": "Anti-dsDNA",
+    "B": "Anti-GBM",
+    "C": "ANCA"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Linear IgG ตาม GBM = แอนติบอดีจับ type IV collagen (α3 NC1) โดยตรง = anti-GBM disease/Goodpasture (type II hypersensitivity) · A anti-dsDNA (lupus) ให้ immune complex แบบ granular 'full house' · C ANCA = pauci-immune ไม่มี/มี Ig น้อยมาก"
+  },
+  "76/222": {
+   "box": 12,
+   "stem": "ผู้ป่วยมาห้องฉุกเฉินด้วย morphine เกินขนาด ผล blood gas ควรเป็นแบบใด",
+   "options": {
+    "A": "pH 7.27, pCO2 60, HCO3 26, AG 12",
+    "B": "pH 7.04, pCO2 60, HCO3 19",
+    "C": "pCO2 20",
+    "D": "pCO2 14"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Opioid กดศูนย์หายใจ → acute respiratory acidosis: pCO2 สูง HCO3 เพิ่มเพียง ~1 ต่อ pCO2 ที่เพิ่ม 10 (40→60 คาด HCO3 ~26) AG ปกติ pH ~7.27 · B pH 7.04 และ HCO3 ลดลง = มี metabolic acidosis ร่วม (ไม่ใช่ opioid อย่างเดียว) · C, D pCO2 ต่ำ = hyperventilation ตรงข้ามกับ opioid",
+   "doubt": "⚠ ตัวเลือก C, D ในไฟล์ไม่ครบ",
+   "options_reconstructed": true
+  },
+  "76/223": {
+   "box": 12,
+   "stem": "ผู้ป่วยอาเจียนรุนแรง Na 144, Cl 95, HCO3 (total CO2) 14 แปลผลอย่างไร",
+   "options": {
+    "A": "Pure respiratory acidosis",
+    "B": "Pure HAGMA",
+    "C": "Pure NAGMA",
+    "D": "HAGMA ร่วมกับ NAGMA",
+    "E": "HAGMA ร่วมกับ metabolic alkalosis"
+   },
+   "answer": "E",
+   "source": "วิเคราะห์",
+   "why": "AG = 144−(95+14) = 35 → HAGMA · ΔAG = 23, ΔHCO3 = 24−14 = 10 → Δ/Δ = 2.3 (>2) แปลว่า HCO3 สูงกว่าที่ควร = มี metabolic alkalosis ซ้อน (จากอาเจียนเสีย HCl) · A ไม่มี pCO2 ให้และ HCO3 ต่ำ · B, C ไม่ 'pure' เพราะ Δ/Δ ผิดปกติ · D NAGMA ร่วมจะให้ Δ/Δ <1",
+   "doubt": "⚠ ตัวเลือก E ในไฟล์ถูกตัดคำ"
+  },
+  "76/237": {
+   "box": 22,
+   "stem": "ภาพ blood smear ของผู้ป่วย CKD stage 3 สาเหตุของภาวะซีดคืออะไร",
+   "options": {
+    "A": "Iron deficiency",
+    "B": "EPO deficiency",
+    "C": "G-CSF",
+    "D": "Folate deficiency",
+    "E": "Cobalamin deficiency"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Anemia of CKD เป็น normocytic normochromic หลักจาก peritubular interstitial fibroblast สร้าง EPO ลด (ร่วมกับ hepcidin สูง) · A iron deficiency ให้ microcytic hypochromic เป็นปัจจัยร่วมได้แต่ไม่ใช่สาเหตุหลัก · C G-CSF เกี่ยวกับ neutrophil · D, E ให้ macrocytic/hypersegmented neutrophil",
+   "needs_image": true,
+   "doubt": "⚠ ไม่เห็นรูป smear"
+  },
+  "76/238": {
+   "box": 18,
+   "stem": "ภาพชิ้นเนื้อไตแสดง segmental sclerosis ผู้ป่วยน่าจะมีอาการใด",
+   "options": {
+    "A": "Proteinuria",
+    "B": "Hematuria"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Segmental sclerosis = FSGS เป็นโรค podocytopathy → nephrotic-range proteinuria เด่น · B hematuria อาจพบได้บ้างแต่ไม่ใช่ลักษณะหลัก (hematuria เด่นในกลุ่ม nephritic เช่น IgA, PSGN)",
+   "needs_image": true,
+   "doubt": "⚠ ไม่เห็นรูป"
+  },
+  "76/251": {
+   "box": 10,
+   "stem": "ผู้ป่วย hyperkalemia ต้องการ stabilize กล้ามเนื้อหัวใจ ให้อะไร",
+   "options": {
+    "A": "10% calcium gluconate",
+    "B": "IV beta blocker",
+    "C": "7.5% sodium bicarbonate"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Calcium gluconate IV ยก threshold potential ทำให้ membrane เสถียรทันที (ไม่ลด K) เป็นขั้นแรกเมื่อ EKG เปลี่ยน · B beta blocker กลับทำให้ K ออกนอกเซลล์มากขึ้น (ตรงข้ามคือ β2 agonist ที่ shift K เข้าเซลล์) · C 7.5% NaHCO3 shift K เข้าเซลล์ ใช้เมื่อมี acidosis แต่ไม่ stabilize membrane",
+   "options_reconstructed": true
+  },
+  "76/253": {
+   "box": 10,
+   "stem": "EKG มี tall peaked T (hyperkalemia) ให้การรักษาอะไรก่อน",
+   "options": {
+    "A": "Potassium binding resin",
+    "B": "Calcium"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "เมื่อ hyperK มีผลต่อ EKG ต้องให้ calcium (gluconate/chloride) ก่อนเพื่อป้องกัน arrhythmia ออกฤทธิ์ในไม่กี่นาที · A K-binding resin (SPS, patiromer) ขับ K ออกทางลำไส้ ช้าเป็นชั่วโมง ใช้เป็นขั้นตอนต่อมา"
+  },
+  "76/257": {
+   "box": 17,
+   "stem": "หลังเป็น streptococcal pharyngitis ไตจะเกิดพยาธิสภาพอะไร",
+   "options": {
+    "A": "Immune complex deposit",
+    "B": "Anti-glomerular basement membrane"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "PSGN เกิดหลังติดเชื้อ GAS 1–3 สัปดาห์ เป็น type III hypersensitivity: immune complex สะสมแบบ subepithelial 'hump' C3 ต่ำ · B anti-GBM เป็น type II linear IgG ไม่สัมพันธ์กับ strep",
+   "options_reconstructed": true
+  },
+  "76/266": {
+   "box": 17,
+   "stem": "ลักษณะ double contour (tram-track) ในชิ้นเนื้อไตเกิดที่โครงสร้างใด",
+   "options": {
+    "A": "Endothelium",
+    "B": "Mesangial cell",
+    "C": "GBM"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "Tram-track/double contour = GBM ซ้อนสองชั้น จาก mesangial interposition เข้าไประหว่าง endothelium กับ GBM แล้วสร้าง GBM ใหม่ พบใน MPGN (type I) · A endothelium บาดเจ็บเป็นตัวกระตุ้นแต่ไม่ใช่เส้นที่เห็น · B mesangial cell เป็นตัวที่แทรกเข้าไป แต่เส้นคู่ที่ย้อม PAS/silver คือ GBM"
+  },
+  "76/268": {
+   "box": 18,
+   "stem": "ใน membranous nephropathy IgG สะสมที่ตำแหน่งใด",
+   "options": {
+    "A": "Mesangial",
+    "B": "Endocapillary",
+    "C": "Slit diaphragm (subepithelial)"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "Membranous nephropathy: anti-PLA2R จับ antigen บน podocyte → immune complex สะสม subepithelial ใต้ podocyte ใกล้ slit diaphragm เห็น 'spike and dome' · A mesangial deposit = IgA nephropathy, lupus class II · B endocapillary/subendothelial = lupus class IV, MPGN",
+   "doubt": "⚠ โจทย์ในไฟล์ไม่ครบ ตีความจากตัวเลือก (บทเดิมน่าจะให้ภาพ membranous)"
+  },
+  "77/17": {
+   "box": 1,
+   "stem": "ทารกแรกเกิดหายใจล้มเหลวรุนแรง มี renal agenesis ไม่มี minor/major calyx, pelvis และ collecting tubule เกิดจากความผิดปกติของการเจริญส่วนใด",
+   "options": {
+    "A": "Pronephros",
+    "B": "Mesonephros",
+    "C": "Metanephric mesenchyme",
+    "D": "Ureteric bud"
+   },
+   "answer": "D",
+   "source": "เฉลย77",
+   "why": "Ureteric bud ให้กำเนิดระบบท่อรวม: ureter, pelvis, major/minor calyx, collecting duct · ถ้า bud ไม่เกิด metanephric blastema ไม่ถูกเหนี่ยวนำ → agenesis + oligohydramnios → pulmonary hypoplasia (Potter) · A pronephros เสื่อมไปเองไม่ทำงาน · B mesonephros ให้ mesonephric duct (bud งอกจากที่นี่) แต่ไม่ใช่ส่วนที่สร้าง calyx โดยตรง · C metanephric mesenchyme สร้าง nephron (glomerulus ถึง DCT) ไม่ใช่ collecting system"
+  },
+  "77/18": {
+   "box": 1,
+   "stem": "หญิงแท้งบ่อย ตรวจพบ bicornuate uterus เกิดจากความล้มเหลวของอะไร",
+   "options": {
+    "A": "Fusion ของ paramesonephric ducts",
+    "B": "Fusion ของ mesonephric ducts",
+    "C": "Degeneration ของ paramesonephric ducts"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "มดลูกเกิดจาก paramesonephric (Müllerian) duct 2 ข้างมาเชื่อมกันส่วนล่าง ถ้าเชื่อมไม่สมบูรณ์ → bicornuate uterus · B mesonephric (Wolffian) duct ในเพศหญิงเสื่อมไป ให้ ureteric bud และท่อในชาย ไม่เกี่ยวกับมดลูก · C ถ้า paramesonephric เสื่อมจะไม่มีมดลูก (agenesis/MRKH) ไม่ใช่ bicornuate (ส่วน septum ที่ไม่สลาย = septate uterus)"
+  },
+  "77/43": {
+   "box": 10,
+   "stem": "แพทย์เช็ดแอลกอฮอล์แล้วไม่รอให้แห้ง ใช้เข็ม 24G และดูดเลือดแรง ค่าใดจะสูงขึ้นจากการกระทำนี้",
+   "options": {
+    "A": "Potassium",
+    "B": "Sodium",
+    "C": "Chloride",
+    "D": "Calcium",
+    "E": "Hemoconcentration"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "แอลกอฮอล์ที่ยังไม่แห้ง + เข็มเล็ก + ดูดแรง → in vitro hemolysis → K ภายในเม็ดเลือดแดงรั่วออก → pseudohyperkalemia (รวมถึง LDH, AST, PO4) · B, C Na/Cl อยู่นอกเซลล์มากกว่า hemolysis ไม่เพิ่ม (อาจลดเล็กน้อยจากการเจือจาง) · D Ca ไม่เพิ่ม · E hemoconcentration เกิดจากรัด tourniquet นาน ไม่ใช่จากการดูดแรง"
+  },
+  "77/47": {
+   "box": 8,
+   "stem": "ผู้ป่วย UTI รักษา 3 วันไม่ดีขึ้น เปลี่ยนเป็น gentamicin ขนาด 240 mg/วัน ควรบริหารอย่างไร",
+   "options": {
+    "A": "IV bolus 60 mg ทุก 6 ชม.",
+    "B": "IV bolus 80 mg ทุก 8 ชม.",
+    "C": "IV bolus 120 mg ทุก 12 ชม.",
+    "D": "หยด 240 mg ใน 60 นาที วันละครั้ง",
+    "E": "หยด 120 mg ทุก 12 ชม."
+   },
+   "answer": "D",
+   "source": "เฉลย77",
+   "why": "Aminoglycoside ฆ่าเชื้อแบบ concentration-dependent และมี post-antibiotic effect ยาว ให้วันละครั้ง (extended-interval) ได้ peak สูงสุด และ trough ต่ำนาน ลดการสะสมใน proximal tubule/หูชั้นใน → ลด nephrotoxicity และ ototoxicity · หยดใน 30–60 นาทีเลี่ยง peak สูงฉับพลัน (neuromuscular blockade) · A, B, C, E แบ่งให้หลายครั้งทำ peak ต่ำกว่าและ trough สูงต่อเนื่อง เพิ่มพิษต่อไต"
+  },
+  "77/48": {
+   "box": 12,
+   "stem": "ผู้ป่วยซึมเศร้ากิน aspirin เกินขนาด ระดับ salicylate สูง ข้อใดเกิดน้อยที่สุด",
+   "options": {
+    "A": "Respiratory alkalosis",
+    "B": "เสี่ยง peptic ulcer มากขึ้น",
+    "C": "Metabolic acidosis",
+    "D": "Platelet dysfunction",
+    "E": "Hyperprothrombinemia"
+   },
+   "answer": "E",
+   "source": "เฉลย77",
+   "why": "Salicylate กระตุ้นศูนย์หายใจ (A respiratory alkalosis ช่วงแรก) และ uncouple oxidative phosphorylation + สะสมกรด (C HAGMA) · B ยับยั้ง COX-1 ลด prostaglandin ปกป้องกระเพาะ · D ยับยั้ง TXA2 ใน platelet อย่างถาวร · ขนาดสูงยังต้าน vitamin K ทำให้ prothrombin ต่ำ (hypoprothrombinemia) ดังนั้น 'hyperprothrombinemia' จึงเกิดน้อยที่สุด → E"
+  },
+  "77/49": {
+   "box": 8,
+   "stem": "ผู้ป่วยได้ยาเคมีบำบัดแล้วเกิด AKI ยาใดน่าจะเป็นสาเหตุ",
+   "options": {
+    "A": "Cisplatin",
+    "B": "Paclitaxel",
+    "C": "Methotrexate"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "Cisplatin สะสมใน proximal tubule (ผ่าน OCT2) → ATN, Fanconi-like, hypomagnesemia ป้องกันด้วย hydration · B paclitaxel พิษเด่นคือ peripheral neuropathy, myelosuppression ไม่ใช่ไต · C methotrexate ขนาดสูงก็ตกตะกอนในท่อไตทำ AKI ได้ แต่เป็นยาที่โจทย์ถือว่า nephrotoxic น้อยกว่า cisplatin ซึ่งเป็นตัวแทนคลาสสิก",
+   "doubt": "⚠ High-dose methotrexate ก็ทำ crystal nephropathy/AKI ได้ เฉลยเลือก cisplatin ที่เป็นตัวแทนคลาสสิกที่สุด"
+  },
+  "77/53": {
+   "box": 6,
+   "stem": "ผู้ป่วยความดันสูงได้ยาแล้วเกิด hypokalemia, metabolic alkalosis และ hypercalcemia ยาใดเป็นสาเหตุ",
+   "options": {
+    "A": "Hydrochlorothiazide",
+    "B": "Furosemide",
+    "C": "Spironolactone"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "Thiazide ยับยั้ง NCC ที่ DCT → Na ไปถึง collecting duct มาก + RAAS → K และ H ถูกขับ (hypoK + met. alkalosis) และ Na ในเซลล์ต่ำทำให้ basolateral Na/Ca exchanger ดึง Ca กลับมากขึ้น → hypercalcemia · B furosemide ทำ hypoK/alkalosis เหมือนกันแต่ Ca ต่ำ (เสีย Ca ที่ TAL) · C spironolactone ทำ K สูงและ acidosis"
+  },
+  "77/61": {
+   "box": 22,
+   "stem": "ผู้ป่วย CKD stage 4 ได้ erythropoiesis-stimulating agent แต่ Hb ยังต่ำ ควรให้อะไรร่วม",
+   "options": {
+    "A": "Oral ferrous sulfate + folate",
+    "B": "IV iron",
+    "C": "Vitamin A",
+    "D": "Leukocyte-poor packed red cell"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "ESA ต้องมี iron (และ folate) เพียงพอสำหรับสร้างเม็ดเลือด ถ้าตอบสนองไม่ดีต้องเสริม iron · ใน CKD ที่ยังไม่ฟอกเลือด เริ่มด้วย oral iron ได้ · B IV iron ใช้ใน hemodialysis หรือขาด iron มาก/oral ไม่ได้ผล · C vitamin A ไม่เกี่ยว · D การให้เลือดไม่ใช่ทางเลือกแรก เสี่ยง sensitization ก่อนปลูกถ่ายไต",
+   "doubt": "⚠ แนวทาง KDIGO มักให้ IV iron ถ้า iron ต่ำมากหรือฟอกเลือด แต่เฉลยตอบ oral iron + folate"
+  },
+  "77/105": {
+   "box": 17,
+   "stem": "เด็ก 10 ปี มีผื่นแดงคลำได้ ปัสสาวะเป็นเลือด อุจจาระมีเลือด ปวดข้อ กลไกการเกิดโรคคืออะไร",
+   "options": {
+    "A": "Eosinophil activation",
+    "B": "IgA immune complex deposition",
+    "C": "Fibrinoid necrosis จาก ANCA"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "อาการ palpable purpura + ปวดท้อง/GI bleed + arthralgia + hematuria = IgA vasculitis (HSP) เกิดจาก galactose-deficient IgA1 ก่อ immune complex สะสมใน small vessel และ mesangium (เหมือน IgA nephropathy) · A eosinophil เด่นใน EGPA (Churg–Strauss) ที่มีหอบหืด · C ANCA vasculitis เป็น pauci-immune ไม่มี IgA deposit",
+   "options_reconstructed": true
+  },
+  "77/128": {
+   "box": 12,
+   "stem": "Na 138, Cl 108, K 3.56, pH 7.43, HCO3 9, pCO2 20 แปลผลอย่างไร",
+   "options": {
+    "A": "Respiratory alkalosis + pure WAGMA",
+    "B": "Respiratory acidosis + metabolic alkalosis",
+    "C": "Respiratory alkalosis + WAGMA + metabolic alkalosis",
+    "D": "Respiratory alkalosis + WAGMA + NAGMA"
+   },
+   "answer": "D",
+   "source": "เฉลย77",
+   "why": "AG = 138−(108+9) = 21 → WAGMA · ΔAG = 9, ΔHCO3 = 15 → Δ/Δ = 0.6 (<1) = มี NAGMA ร่วม · pH ปกติแต่ HCO3 ต่ำมาก ร่วมกับ pCO2 ต่ำ = มีส่วนหายใจชดเชย/alkalosis · A ผิดเพราะ Δ/Δ <1 ไม่ pure · B pCO2 ต่ำไม่ใช่ respiratory acidosis · C metabolic alkalosis ร่วมต้อง Δ/Δ >2",
+   "doubt": "⚠ ตาม Winter's formula คาด pCO2 = 1.5×9+8 = 21.5±2 ค่า 20 จึงเป็นการชดเชยที่เหมาะสม ไม่ใช่ primary respiratory alkalosis ชัดเจน แต่ pH 7.43 ชวนให้คิดว่ามี respiratory alkalosis ร่วม; ส่วน metabolic ตอบ WAGMA + NAGMA"
+  },
+  "77/157": {
+   "box": 7,
+   "stem": "ผู้ป่วยความดันสูง GFR ราว 60 กว่า น้ำตาลขณะอดอาหารสูง ได้ losartan 1 สัปดาห์ จะเกิดอะไรขึ้น",
+   "options": {
+    "A": "ปริมาณปัสสาวะลดลง",
+    "B": "eGFR ลดลง",
+    "C": "BUN สูงขึ้น",
+    "D": "FBS สูงขึ้น",
+    "E": "โปรตีนในปัสสาวะเพิ่มขึ้น"
+   },
+   "answer": "B",
+   "source": "เฉลย77",
+   "why": "ARB ทำ efferent arteriole ขยาย → glomerular pressure ลด → eGFR ลดลงช่วงแรก (ยอมรับได้ถ้าลด <30%) ซึ่งเป็นผล hemodynamic ไม่ใช่ไตเสีย · A ปริมาณปัสสาวะไม่ลด (aldosterone ลดอาจขับ Na มากขึ้น) · C BUN อาจขึ้นเล็กน้อยได้แต่ผลหลักที่คาดคือ eGFR ลด · D ARB ไม่เพิ่มน้ำตาล (อาจดีขึ้นด้วย) · E ARB ลด proteinuria ไม่ใช่เพิ่ม",
+   "doubt": "⚠ BUN อาจสูงขึ้นเล็กน้อยตาม GFR ที่ลด แต่เฉลยตอบ eGFR ลด"
+  },
+  "77/187": {
+   "box": 25,
+   "stem": "ฝากครรภ์พบว่าทารกมีไตผิดปกติ มี oligohydramnios และ Potter sequence ต้องยุติการตั้งครรภ์ โรคนี้ถ่ายทอดแบบใด",
+   "options": {
+    "A": "Autosomal dominant",
+    "B": "Autosomal recessive",
+    "C": "X-linked dominant",
+    "D": "X-linked recessive",
+    "E": "Mitochondrial"
+   },
+   "answer": "B",
+   "source": "เฉลย77",
+   "why": "ไตผิดปกติรุนแรงตั้งแต่ในครรภ์ จนเกิด oligohydramnios + Potter = ARPKD (PKHD1, fibrocystin) ไตโตทั้งสองข้าง cyst เล็กจาก collecting duct ร่วม congenital hepatic fibrosis · A ADPKD (PKD1/2) แสดงอาการในผู้ใหญ่ ไม่ทำ Potter · C, D, E ไม่ใช่รูปแบบของ polycystic kidney ในทารก"
+  },
+  "77/188": {
+   "box": 14,
+   "stem": "หญิงใช้ tenofovir ซึ่งโจทย์บอกว่ายับยั้งการหลั่ง proton ในเซลล์ท่อไต เป็น RTA ชนิดใด",
+   "options": {
+    "A": "RTA type 1",
+    "B": "RTA type 2",
+    "C": "RTA type 3",
+    "D": "RTA type 4",
+    "E": "RTA mixed type 1 + 2"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "โจทย์ให้กลไก 'ยับยั้ง H⁺ secretion' ซึ่งเป็นนิยามของ distal RTA (type 1) ที่ α-intercalated cell หลั่ง H⁺ ไม่ได้ urine pH >5.5 · B type 2 เกิดจาก proximal ดูดกลับ HCO3 ไม่ได้ · C type 3 เป็น mixed (CA II deficiency) พบน้อย · D type 4 = aldosterone ต่ำ/ดื้อ มี hyperK · E ไม่ตรงกลไกที่ให้",
+   "doubt": "⚠ ในทางคลินิก tenofovir มักทำ proximal tubulopathy/Fanconi (RTA type 2) แต่โจทย์ระบุกลไก H⁺ secretion จึงตอบ type 1 ตามเฉลย"
+  },
+  "77/189": {
+   "box": 7,
+   "stem": "ผู้ป่วย BP 200/100 ฟังได้ abdominal bruit การวินิจฉัยที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Renal artery stenosis",
+    "B": "Essential hypertension",
+    "C": "Primary hyperaldosteronism",
+    "D": "Pheochromocytoma"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "Abdominal (periumbilical) bruit + ความดันสูงรุนแรง = renovascular HT จาก renal artery stenosis (atherosclerosis ในผู้สูงอายุ, fibromuscular dysplasia ในหญิงสาว) ไตขาดเลือดหลั่ง renin มาก · B essential HT ไม่มี bruit · C Conn มี hypoK, renin ต่ำ ไม่มี bruit · D pheochromocytoma มีอาการเป็นพัก (ปวดหัว ใจสั่น เหงื่อ)",
+   "options_reconstructed": true
+  },
+  "77/190": {
+   "box": 23,
+   "stem": "หญิงตั้งครรภ์ 25 ปี เป็น UTI เพาะเชื้อพบ staphylococcus ที่ดื้อ novobiocin เชื้อคือ",
+   "options": {
+    "A": "S. saprophyticus",
+    "B": "S. epidermidis",
+    "C": "S. aureus",
+    "D": "S. lugdunensis"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "S. saprophyticus เป็น coagulase-negative staph ที่ดื้อ novobiocin เป็นสาเหตุ UTI อันดับ 2 ในหญิงวัยเจริญพันธุ์ที่มีเพศสัมพันธ์ · B S. epidermidis ไว novobiocin สัมพันธ์กับสายสวน/อุปกรณ์ · C S. aureus coagulase-positive · D S. lugdunensis ไว novobiocin สัมพันธ์ endocarditis"
+  },
+  "77/191": {
+   "box": 2,
+   "stem": "ผู้ป่วยปัสสาวะเป็นเลือดและเจ็บขณะปัสสาวะ ภาพ plain abdomen เห็นเงานิ่วระดับ L3–L4 รอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "Minor calyx",
+    "B": "Major calyx",
+    "C": "Ureter",
+    "D": "Ureterovesical junction",
+    "E": "Bladder"
+   },
+   "answer": "C",
+   "source": "เฉลย77",
+   "why": "ureter วิ่งลงตามแนว transverse process ของ L2–L5 บน psoas นิ่วระดับ L3–L4 ที่อยู่ต่ำกว่าเงาไตจึงอยู่ใน ureter · A, B calyx อยู่ในเงาไตระดับ T12–L2 · D UVJ และ E bladder อยู่ในอุ้งเชิงกราน ระดับ sacrum/pubic symphysis",
+   "needs_image": true
+  },
+  "77/192": {
+   "box": 24,
+   "stem": "สงสัยนิ่วทางเดินปัสสาวะ แต่ plain film มองไม่เห็นเพราะอุจจาระบัง ควรส่งตรวจอะไรต่อ",
+   "options": {
+    "A": "CT KUB (non-contrast)",
+    "B": "Renal scintigraphy",
+    "C": "MRI",
+    "D": "Urinalysis",
+    "E": "ถ่าย plain film ซ้ำหลังให้ยาระบาย"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "NCCT KUB เป็น gold standard วินิจฉัยนิ่ว เห็นนิ่วเกือบทุกชนิด บอกขนาด ตำแหน่ง hydronephrosis และไม่ถูกเงาอุจจาระรบกวน · B scintigraphy ดูการทำงานแยกข้าง ไม่ใช่วินิจฉัยนิ่ว · C MRI เห็นนิ่วไม่ดี แพง · D UA ช่วยสนับสนุน (hematuria) แต่ไม่บอกตำแหน่ง · E เสียเวลาและยังมีข้อจำกัดของ plain film"
+  },
+  "77/193": {
+   "box": 23,
+   "stem": "Cystitis ไม่ดีขึ้นหลังได้ ceftazidime ผลความไวพบ E. coli ดื้อ 3rd-generation cephalosporin ยาที่เลือกคือ",
+   "options": {
+    "A": "Sulbactam",
+    "B": "Gentamicin",
+    "C": "Colistin",
+    "D": "Ceftaroline"
+   },
+   "answer": "B",
+   "source": "เฉลย77",
+   "why": "E. coli ดื้อ 3rd-gen ceph = ESBL-producer ยาหลักคือ carbapenem แต่ไม่มีในตัวเลือก · aminoglycoside (gentamicin) ยังไวต่อ ESBL ส่วนใหญ่และขับทางไตความเข้มข้นสูงในปัสสาวะ เหมาะกับ cystitis · A sulbactam เดี่ยวใช้กับ Acinetobacter · C colistin สำรองไว้ใช้กับ carbapenem-resistant เท่านั้น พิษต่อไตสูง · D ceftaroline เป็น cephalosporin ที่เด่นเรื่อง MRSA ไม่ทนต่อ ESBL",
+   "doubt": "⚠ ตัวเลือกไม่มี carbapenem/fosfomycin/nitrofurantoin"
+  },
+  "77/194": {
+   "box": 23,
+   "stem": "หญิงตั้งครรภ์เป็น cystitis UA nitrite บวก เพาะบน CLED agar ได้โคโลนีสีเหลือง เชื้อที่น่าจะเป็นคือ",
+   "options": {
+    "A": "Escherichia coli",
+    "B": "Proteus mirabilis",
+    "C": "Klebsiella pneumoniae",
+    "D": "Enterobacter cloacae"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "CLED agar: lactose fermenter ให้โคโลนีเหลือง · E. coli เป็น lactose fermenter โคโลนีเหลืองทึบ และเป็นสาเหตุ UTI อันดับ 1 · B Proteus ไม่หมัก lactose โคโลนีฟ้า/ใส และ CLED ยับยั้ง swarming · C Klebsiella หมัก lactose แต่โคโลนี mucoid เหลืองถึงขาวอมฟ้า พบน้อยกว่า · D Enterobacter ก็หมักได้แต่พบน้อยกว่า E. coli มาก"
+  },
+  "77/195": {
+   "box": 26,
+   "stem": "สาเหตุที่น่าจะเป็นที่สุดของ squamous cell carcinoma ของกระเพาะปัสสาวะ",
+   "options": {
+    "A": "Schistosoma haematobium",
+    "B": "Smoking"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "ไข่ S. haematobium ฝังในผนัง bladder → อักเสบเรื้อรัง → squamous metaplasia → SCC (พบมากในอียิปต์/แอฟริกา) · B smoking เป็นปัจจัยเสี่ยงอันดับ 1 ของ urothelial carcinoma ไม่ใช่ SCC"
+  },
+  "77/196": {
+   "box": 26,
+   "stem": "ชายปัสสาวะเป็นเลือดแบบไม่เจ็บ ทำงานโรงงานสีย้อมและสูบบุหรี่เรื้อรัง สาเหตุที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Urothelial cancer",
+    "B": "Ureteric stone",
+    "C": "BPH",
+    "D": "IgA nephropathy"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "Painless gross hematuria ในผู้ใหญ่ + aromatic amine (สีย้อม aniline, β-naphthylamine) + สูบบุหรี่ = urothelial carcinoma · B นิ่วจะปวดบิด (colicky) · C BPH มีอาการถ่ายปัสสาวะลำบาก hematuria พบได้แต่ไม่สัมพันธ์กับสีย้อม · D IgA nephropathy มักในคนหนุ่มหลังติดเชื้อทางเดินหายใจ"
+  },
+  "77/198": {
+   "box": 9,
+   "stem": "ผู้ป่วย SIADH Na 120 urine osmolality 800 ข้อใดถูก",
+   "options": {
+    "A": "Thirst center ถูกกระตุ้นมากขึ้น",
+    "B": "ดูดกลับ urea ที่ medullary collecting duct เพิ่มขึ้น",
+    "C": "Aquaporin ที่ loop of Henle เพิ่มขึ้น"
+   },
+   "answer": "B",
+   "source": "เฉลย77",
+   "why": "ADH เพิ่ม UT-A1/UT-A3 ที่ inner medullary collecting duct → urea ดูดกลับเข้า interstitium เพิ่ม medullary osmolality ช่วยให้ปัสสาวะเข้มข้น (800) · A plasma osm ต่ำจาก SIADH กดศูนย์กระหายน้ำ ไม่ใช่กระตุ้น · C ADH เพิ่ม AQP2 ที่ collecting duct ไม่ใช่ loop of Henle (descending limb มี AQP1 คงที่ไม่ขึ้นกับ ADH)"
+  },
+  "77/199": {
+   "box": 27,
+   "stem": "Prostate cancer เกิดใน zone ใดมากที่สุด",
+   "options": {
+    "A": "Periurethral",
+    "B": "Peripheral",
+    "C": "Central",
+    "D": "Transitional"
+   },
+   "answer": "B",
+   "source": "เฉลย77",
+   "why": "ประมาณ 70% ของ adenocarcinoma เกิดที่ peripheral zone (ด้านหลัง) จึงคลำได้จาก DRE และไม่ค่อยทำให้ปัสสาวะขัดระยะแรก · A, D periurethral/transition zone เป็นแหล่งของ BPH · C central zone เกิดมะเร็งน้อยที่สุด"
+  },
+  "77/200": {
+   "box": 3,
+   "stem": "หน้าที่ของ mesangial cell คือข้อใด",
+   "options": {
+    "A": "ค้ำจุนผนัง capillary ใน glomerulus",
+    "B": "เป็น filtration barrier หลัก",
+    "C": "แยก Bowman's space ออกจาก capillary",
+    "D": "หลั่ง renin"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "Mesangial cell เป็น modified smooth muscle อยู่ระหว่าง capillary loop: ค้ำจุนโครงสร้าง สร้าง mesangial matrix หดตัวปรับพื้นที่กรอง phagocytose โปรตีน/immune complex · B barrier หลักคือ endothelium + GBM + podocyte slit diaphragm · C ที่แยก Bowman's space คือ podocyte/parietal epithelium · D renin หลั่งจาก JG cell ของ afferent arteriole (extraglomerular mesangial/lacis cell ไม่ใช่ตัวหลั่ง)",
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือก B, C ในไฟล์ถูกตัด เรียบเรียงใหม่"
+  },
+  "77/201": {
+   "box": 17,
+   "stem": "ให้ภาพชิ้นเนื้อไต (PMN แทรกและ endocapillary hypercellularity แบบ PSGN) ข้อใดถูก",
+   "options": {
+    "A": "Microalbuminuria",
+    "B": "WBC cast",
+    "C": "Broad cast"
+   },
+   "answer": "B",
+   "source": "เฉลย77",
+   "why": "PSGN/diffuse proliferative GN มี neutrophil จำนวนมากใน glomerulus → พบ RBC cast และ WBC cast ได้ (nephritic) · A microalbuminuria เป็นลักษณะ diabetic nephropathy ระยะแรก · C broad (waxy) cast บ่งบอก CKD ที่ท่อไตขยาย",
+   "needs_image": true,
+   "doubt": "⚠ ไม่เห็นรูป อาศัยคำอธิบายในชีท"
+  },
+  "77/202": {
+   "box": 16,
+   "stem": "ผู้ป่วยตรวจปัสสาวะพบ protein 3+ น่าจะพบอะไรร่วม",
+   "options": {
+    "A": "Oval fat body",
+    "B": "Broad cast"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "Protein 3+ ชวน nephrotic syndrome → ไขมันในเลือดสูงและ lipiduria: เซลล์ท่อไตที่อมไขมัน = oval fat body (Maltese cross ใต้ polarized light) และ fatty cast · B broad cast พบใน CKD ระยะท้าย ไม่จำเพาะกับ proteinuria"
+  },
+  "77/207": {
+   "box": 2,
+   "stem": "'Bag of worms' (varicocele) เกิดจากความผิดปกติที่รอยต่อของหลอดเลือดใด",
+   "options": {
+    "A": "Left testicular vein – left renal vein",
+    "B": "Left testicular artery – IVC",
+    "C": "Left testicular vein – common iliac vein",
+    "D": "Left testicular vein – internal iliac vein",
+    "E": "Left testicular vein – IVC"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "Left testicular vein เทเข้า left renal vein เป็นมุมฉาก ยาวกว่า และอาจถูกบีบระหว่าง aorta–SMA (nutcracker) → ความดันสูง → varicocele ข้างซ้ายบ่อย · B เป็น artery และไม่เทเข้า IVC · C, D ไม่ใช่ทางระบายของ testicular vein · E เป็นทางของ right testicular vein ไม่ใช่ซ้าย"
+  },
+  "77/212": {
+   "box": 23,
+   "stem": "ชายปัสสาวะแสบและมีหนองจากท่อปัสสาวะ ได้ ceftriaxone แล้วยังมี mucopurulent discharge ควรให้ยาใดเพิ่มเพื่อครอบคลุมเชื้อ",
+   "options": {
+    "A": "Doxycycline",
+    "B": "Ceftriaxone ซ้ำขนาดสูงขึ้น",
+    "C": "Penicillin G benzathine",
+    "D": "Metronidazole"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "ceftriaxone ครอบคลุม N. gonorrhoeae แต่ไม่ครอบคลุม Chlamydia trachomatis (intracellular ไม่มี peptidoglycan แบบปกติ) ซึ่งติดร่วมบ่อย → ให้ doxycycline (หรือ azithromycin) · B ceftriaxone ไม่ได้ผลกับ Chlamydia · C penicillin G benzathine ใช้รักษา syphilis · D metronidazole ใช้กับ Trichomonas ไม่ใช่ตัวแรกที่คิด",
+   "options_reconstructed": true
+  },
+  "77/223": {
+   "box": 15,
+   "stem": "ผลของ PTH ต่อการดูดกลับที่ไตคือข้อใด",
+   "options": {
+    "A": "Ca ↑, phosphate ↓, Na ↓",
+    "B": "Ca ↓, phosphate ↑, Na ↑",
+    "C": "Ca ↑, phosphate ↑, Na ↑",
+    "D": "Ca ↓, phosphate ↓, Na ↓"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "PTH เพิ่มการดูดกลับ Ca ที่ DCT (TRPV5) ลดการดูดกลับ phosphate โดยยับยั้ง NaPi-IIa ที่ PCT (phosphaturia) และยับยั้ง NHE3 ที่ PCT → ดูดกลับ Na (และ HCO3) ลดลง · B, C, D ทิศทางของ Ca/PO4 ไม่ตรงกับฤทธิ์ PTH",
+   "options_reconstructed": true
+  },
+  "77/224": {
+   "box": 11,
+   "stem": "ผู้ป่วยความดันสูงดื้อยา renin ต่ำ aldosterone สูง Na 142, K 3, Cl 105 การวินิจฉัยคือ",
+   "options": {
+    "A": "Conn syndrome",
+    "B": "Pheochromocytoma",
+    "C": "Renal artery stenosis",
+    "D": "Addison disease"
+   },
+   "answer": "A",
+   "source": "เฉลย77",
+   "why": "Aldosterone สูง + renin ต่ำ (ARR สูง) + hypoK + HT ดื้อยา = primary hyperaldosteronism (Conn) · B pheochromocytoma ไม่เกี่ยวกับ RAAS โดยตรง · C RAS ให้ renin สูง aldosterone สูง (secondary) · D Addison มี aldosterone ต่ำ K สูง ความดันต่ำ"
+  },
+  "77/225": {
+   "box": 15,
+   "stem": "ผู้ป่วย CKD stage 4 ปวดเวลาเคี้ยว ภาพรังสีมี lytic lesion ที่ mandible Ca ปกติ PTH 1180 สาเหตุที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "Primary hyperparathyroidism",
+    "B": "Secondary hyperparathyroidism",
+    "C": "Tertiary hyperparathyroidism"
+   },
+   "answer": "C",
+   "source": "เฉลย77",
+   "why": "เฉลยเลือก tertiary โดยมองว่า PTH สูงมาก (>1000) จนเกิด brown tumor/osteitis fibrosa cystica ใน CKD ที่ต่อมทำงานอิสระ · A primary HPT จะมี Ca สูงและไม่มีบริบท CKD · B secondary HPT จาก CKD (PO4 คั่ง, calcitriol ต่ำ) มี Ca ต่ำ/ปกติ เป็นคำตอบตามหลักทั่วไป",
+   "doubt": "⚠ ตามหลัก CKD + Ca ปกติ/ต่ำ + PTH สูง = secondary HPT ส่วน tertiary ต้องมี Ca สูง (มักหลังปลูกถ่ายไต) แต่เฉลย77 ตอบ tertiary"
+  },
+  "78/5": {
+   "box": 5,
+   "stem": "ผู้ป่วยขาด NKCC (ที่ TAL) จะเกิดผลใด",
+   "options": {
+    "A": "Hypertension",
+    "B": "Hyperkalemia",
+    "C": "Metabolic acidosis",
+    "D": "Na ใน medullary interstitium เพิ่ม",
+    "E": "Maximal urine osmolality ลดลง"
+   },
+   "answer": "E",
+   "source": "เฉลย78",
+   "why": "NKCC2 ที่ TAL เป็นตัวสร้าง medullary hypertonicity (countercurrent multiplier) ถ้าขาด (Bartter) interstitium ไม่เข้มข้น → ทำ urine ให้เข้มสุดไม่ได้ → max urine osm ลด (E) · A ผิด: เสีย Na → volume ลด BP ปกติ/ต่ำ · B ผิด: Na มาถึง CD มาก + aldosterone สูง → เสีย K = hypokalemia · C ผิด: เสีย H+ → metabolic alkalosis · D ผิด: Na ใน medulla ลดลงไม่ใช่เพิ่ม"
+  },
+  "78/6": {
+   "box": 27,
+   "stem": "ชายมีประวัติ BPH มาด้วยปัสสาวะออกน้อย/ไม่ออกเฉียบพลัน (acute urinary retention) ควรจัดการอย่างไรก่อน",
+   "options": {
+    "A": "Foley catheterization",
+    "B": "α1 antagonist ทางหลอดเลือด",
+    "C": "Ultrasound KUB",
+    "D": "Suprapubic cystostomy",
+    "E": "สังเกตอาการ"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Acute retention จาก BPH ต้องระบาย bladder ทันทีด้วย urethral (Foley) catheter (A) · B ผิด: α1 blocker เป็นยากิน ใช้ระยะยาว/ช่วย trial without catheter ไม่ใช่แก้เฉียบพลัน · C ผิด: U/S ใช้ประเมินหลังระบายแล้ว ไม่ใช่ขั้นแรก · D ผิด: suprapubic ใช้เมื่อใส่ Foley ไม่ได้ · E ผิด: ปล่อยไว้ → hydronephrosis/postrenal AKI"
+  },
+  "78/9": {
+   "box": 4,
+   "stem": "ผู้ป่วย CKD กระดูกหักง่าย เกิดจากไตขาด enzyme ใด",
+   "options": {
+    "A": "1α-hydroxylase",
+    "B": "20α-hydroxylase",
+    "C": "23α-hydroxylase",
+    "D": "24α-hydroxylase",
+    "E": "25α-hydroxylase"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "1α-hydroxylase ที่ PCT เปลี่ยน 25(OH)D → 1,25(OH)2D (calcitriol) CKD สร้างไม่ได้ → Ca ดูดซึมน้อย + secondary HPT → renal osteodystrophy (A) · D: 24-hydroxylase เป็นตัวทำลาย vitamin D ไม่ได้ขาด · E: 25-hydroxylation เกิดที่ตับ ไม่เกี่ยวกับไต · B, C ไม่มีบทบาทใน vitamin D"
+  },
+  "78/11": {
+   "box": 9,
+   "stem": "ผู้ป่วยขาดน้ำได้ crystalloid ข้อใดเป็นคุณสมบัติของ crystalloid",
+   "options": {
+    "A": "น้ำหนักโมเลกุลสูง",
+    "B": "มีแต่ inorganic ion ไม่มีสารอินทรีย์",
+    "C": "ผ่าน semipermeable membrane (ผนัง capillary) ได้",
+    "D": "เป็น semi-synthetic",
+    "E": "เป็นอนุพันธ์จาก plasma ธรรมชาติ"
+   },
+   "answer": "C",
+   "source": "เฉลย78",
+   "why": "Crystalloid = สารละลายโมเลกุลเล็ก (electrolyte, dextrose) ผ่านผนัง capillary ได้อิสระ จึงกระจายไปทั้ง ECF (C) · A, D, E เป็นลักษณะของ colloid (albumin = plasma-derived, HES/gelatin = semi-synthetic, MW สูงค้างใน vessel) · B ผิด: crystalloid หลายตัวมีสารอินทรีย์ เช่น dextrose, lactate, acetate",
+   "doubt": "⚠ เฉลยพิมพ์ \"C?\" (ไม่มั่นใจ) แต่ตรงหลัก"
+  },
+  "78/14": {
+   "box": 26,
+   "stem": "ผู้ป่วย urothelial carcinoma ของ bladder ปัจจัยเสี่ยงที่พบบ่อยที่สุดคือ",
+   "options": {
+    "A": "Alcohol",
+    "B": "Smoking",
+    "C": "Schistosoma haematobium"
+   },
+   "answer": "B",
+   "source": "เฉลย78",
+   "why": "บุหรี่เป็น risk factor อันดับหนึ่งของ urothelial ca (aromatic amines ขับทางปัสสาวะ) (B) · A: alcohol ไม่ใช่ risk หลัก · C: Schistosoma สัมพันธ์กับ squamous cell carcinoma ของ bladder ไม่ใช่ urothelial และพบในพื้นที่ระบาดเท่านั้น"
+  },
+  "78/18": {
+   "box": 17,
+   "stem": "Kidney biopsy (มีภาพ) immunofluorescence ไม่ติดสี (pauci-immune) ตรวจเลือดน่าจะพบอะไร",
+   "options": {
+    "A": "ANCA",
+    "B": "Anti-GBM"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Crescentic GN ที่ IF ไม่ติด = pauci-immune → สัมพันธ์กับ ANCA (GPA, MPA) (A) · B ผิด: anti-GBM disease ให้ IF แบบ linear IgG ตาม GBM ไม่ใช่ไม่ติด",
+   "doubt": "⚠ เฉลย78 พิมพ์ \"B A?\" และหมายเหตุเห็นด้วยกับ A — ยึดหลัก pauci-immune = ANCA",
+   "needs_image": true
+  },
+  "78/21": {
+   "box": 1,
+   "stem": "เด็กมีของเหลวใสไหลจากสะดือ ตรวจพบช่องต่อกับ bladder เกิดจาก remnant ของโครงสร้างใด",
+   "options": {
+    "A": "Persistent urachus",
+    "B": "Cloacal membrane",
+    "C": "Vitelline duct"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Allantois → urachus เชื่อม bladder กับสะดือ ปกติฝ่อเป็น median umbilical ligament ถ้าไม่ปิด → ปัสสาวะไหลจากสะดือ (A) · B: cloacal membrane เกี่ยวกับ anal/urogenital membrane ไม่ได้ต่อสะดือ · C: vitelline duct ค้าง → ขี้/อุจจาระหรือ mucus จากสะดือ, Meckel diverticulum"
+  },
+  "78/22": {
+   "box": 6,
+   "stem": "ให้ carbonic anhydrase inhibitor แก่หนู 2 สัปดาห์ จะเกิดภาวะใด",
+   "options": {
+    "A": "Metabolic acidosis",
+    "B": "Hypokalemia",
+    "C": "Metabolic alkalosis",
+    "D": "Hypernatremia"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Acetazolamide ยับยั้ง CA ที่ PCT → ดูด HCO3⁻ กลับไม่ได้ → เสีย HCO3⁻ ทางปัสสาวะ → hyperchloremic NAGMA (เหมือน proximal RTA) (A) · B: hypoK ก็เกิดได้ (Na มาถึง CD มาก) แต่เฉลยเลือก acidosis เป็นผลหลัก · C ผิดทิศ · D: Na ถูกขับเพิ่ม ไม่ทำ Na สูง",
+   "doubt": "⚠ เฉลยพิมพ์ \"A > B\" — hypokalemia ก็เป็นผลจริง แต่ acidosis เป็นผลเด่น"
+  },
+  "78/23": {
+   "box": 25,
+   "stem": "ชาย 45 ปี hematuria CT ช่องท้อง (มีภาพ) ถาม mode of inheritance",
+   "options": {
+    "A": "X-linked recessive",
+    "B": "X-linked dominant",
+    "C": "Mitochondrial",
+    "D": "Autosomal dominant",
+    "E": "Autosomal recessive"
+   },
+   "answer": "D",
+   "source": "เฉลย78",
+   "why": "ผู้ใหญ่ hematuria + ไตโตสองข้างมี cyst หลายขนาด = ADPKD (PKD1/PKD2) → autosomal dominant (D) · E: ARPKD เป็นในทารก/เด็ก ไตโต cyst เล็ก · A, B: X-linked ไม่ใช่ (Alport เป็น X-linked แต่ไม่มี cyst) · C ไม่เกี่ยว",
+   "needs_image": true
+  },
+  "78/26": {
+   "box": 17,
+   "stem": "เด็กเป็น nephritis หลังเจ็บคอราว 2 สัปดาห์ outcome ที่น่าเป็นที่สุด",
+   "options": {
+    "A": "หายสนิท",
+    "B": "RPGN",
+    "C": "Tubulointerstitial nephritis",
+    "D": "CKD"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Latency 1–3 สัปดาห์หลัง pharyngitis = PSGN ในเด็กพยากรณ์ดี >95% หายสนิท (A) · B: RPGN พบน้อย (ผู้ใหญ่มากกว่า) · C: ไม่ใช่ tubulointerstitial · D: CKD พบน้อยในเด็ก"
+  },
+  "78/31": {
+   "box": 4,
+   "stem": "ให้ 5% dextrose ใน half-NSS (D5/N/2) ปริมาณมากแบบ bolus ร่างกายตอบสนองอย่างไร",
+   "options": {
+    "A": "ADH ลด, ANP ถูกกด",
+    "B": "ADH ลด, RAAS ลด",
+    "C": "ADH เพิ่ม, RAAS ลด",
+    "D": "ADH เพิ่ม, ANP เพิ่ม"
+   },
+   "answer": "B",
+   "source": "เฉลย78",
+   "why": "Dextrose ถูกใช้หมด เหลือสารน้ำ hypotonic + volume มาก → osmolality ลด → ADH ลด และ volume เพิ่ม → RAAS ลด (ANP เพิ่ม) (B) · A ผิด: volume เพิ่ม ANP ต้องเพิ่มไม่ใช่ถูกกด · C, D ผิด: hypotonic load กด ADH",
+   "doubt": "⚠ เฉลยเขียนว่า \"เดา\" แต่ตรงหลักสรีรวิทยา"
+  },
+  "78/38": {
+   "box": 2,
+   "stem": "ผ่าตัดบริเวณ uterine artery เสี่ยงบาดเจ็บอวัยวะใด",
+   "options": {
+    "A": "Ureter",
+    "B": "Bladder",
+    "C": "Kidney",
+    "D": "Urethra"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Ureter ลอดใต้ uterine artery (water under the bridge) ข้าง cervix ผูก uterine a. ตอน hysterectomy จึงเสี่ยงตัด/ผูก ureter (A) · B: bladder อยู่ด้านหน้า เสี่ยงน้อยกว่าในจุดนี้ · C: ไตอยู่สูงไกล · D: urethra อยู่ต่ำใต้ bladder"
+  },
+  "78/42": {
+   "box": 1,
+   "stem": "รูเปิด urethra อยู่ด้าน ventral ของ penis เรียกว่าอะไร",
+   "options": {
+    "A": "Epispadias",
+    "B": "Hypospadias",
+    "C": "Cryptorchidism",
+    "D": "Phimosis"
+   },
+   "answer": "B",
+   "source": "เฉลย78",
+   "why": "Hypospadias = urethral meatus เปิดด้าน ventral จาก urethral folds เชื่อมไม่สมบูรณ์ (B) · A: epispadias เปิดด้าน dorsal (สัมพันธ์ bladder exstrophy, genital tubercle วางผิดตำแหน่ง) · C: อัณฑะไม่ลง · D: หนังหุ้มปลายตีบ"
+  },
+  "78/46": {
+   "box": 6,
+   "stem": "ผู้ป่วยกินยาแล้วหัวใจเต้นผิดจังหวะ EKG มี tented T wave ยานี้น่าจะออกฤทธิ์อย่างไร",
+   "options": {
+    "A": "ยับยั้ง carbonic anhydrase",
+    "B": "ยับยั้ง NKCC",
+    "C": "ยับยั้ง Na-Cl cotransporter",
+    "D": "จับ mineralocorticoid receptor (antagonist)"
+   },
+   "answer": "D",
+   "source": "เฉลย78",
+   "why": "Tented T = hyperkalemia → ยาขับปัสสาวะที่ทำ K สูง = K-sparing เช่น spironolactone (MR antagonist ที่ principal cell) (D) · A: acetazolamide ทำ hypokalemia · B: loop diuretic ทำ hypokalemia · C: thiazide ทำ hypokalemia"
+  },
+  "78/49": {
+   "box": 27,
+   "stem": "ยารักษา urge urinary incontinence มี side effect ใด",
+   "options": {
+    "A": "Diarrhea",
+    "B": "Dementia",
+    "C": "Dry mouth"
+   },
+   "answer": "C",
+   "source": "เฉลย78",
+   "why": "ยาหลักคือ antimuscarinic (oxybutynin, tolterodine) → ปากแห้งเป็น SE พบบ่อยสุด (C) · A ผิด: antimuscarinic ทำท้องผูก ไม่ใช่ท้องเสีย · B: ทำสับสน/cognitive impairment ในผู้สูงอายุได้ (oxybutynin เข้า CNS) แต่ไม่ใช่ SE เด่น"
+  },
+  "78/51": {
+   "box": 1,
+   "stem": "เด็กชายมี posterior urethral valve สิ่งที่น่าจะพบคือ",
+   "options": {
+    "A": "Urinary tract infection",
+    "B": "Oliguria",
+    "C": "Stone"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "PUV อุดกั้น outlet → ปัสสาวะค้าง/VUR → UTI ซ้ำเป็นอาการแสดงที่พบบ่อย (A) · B: ทารกยังมีปัสสาวะ (อ่อน/หยด) oliguria ไม่ใช่ลักษณะหลัก แต่ในครรภ์อาจ oligohydramnios · C: นิ่วไม่ใช่ลักษณะเด่น",
+   "doubt": "⚠ เฉลยพิมพ์ \"A B?\" — ผู้เฉลยลังเลกับ oliguria"
+  },
+  "78/53": {
+   "box": 27,
+   "stem": "ยารักษา BPH ออกฤทธิ์ยับยั้งที่เป้าหมายใด",
+   "options": {
+    "A": "5α-reductase",
+    "B": "PDE5"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Finasteride/dutasteride ยับยั้ง 5α-reductase → DHT ลด → prostate เล็กลง (A) · B: PDE5 inhibitor (tadalafil) ใช้ได้กับ LUTS แต่เป็นตัวเสริม ไม่ใช่คำตอบหลักของโจทย์นี้"
+  },
+  "78/54": {
+   "box": 23,
+   "stem": "หญิงมีไข้ ปวด costovertebral angle ซ้าย วินิจฉัยใด",
+   "options": {
+    "A": "Acute cystitis",
+    "B": "Acute pyelonephritis"
+   },
+   "answer": "B",
+   "source": "เฉลย78",
+   "why": "ไข้ + CVA tenderness = upper UTI คือ acute pyelonephritis (B) · A: cystitis มีแค่ dysuria frequency ไม่มีไข้สูง/ปวดเอว"
+  },
+  "78/55": {
+   "box": 9,
+   "stem": "ดื่มน้ำ 4 ลิตร/วัน Sosm 300 Uosm 100 อดน้ำแล้ว Uosm ไม่เปลี่ยน แต่ให้ desmopressin แล้ว Uosm เพิ่ม วินิจฉัยใด",
+   "options": {
+    "A": "Nephrogenic DI",
+    "B": "Central DI",
+    "C": "Psychogenic polydipsia",
+    "D": "Primary polydipsia",
+    "E": "SIADH"
+   },
+   "answer": "B",
+   "source": "เฉลย78",
+   "why": "อดน้ำแล้วปัสสาวะยังเจือจาง = DI และตอบสนองต่อ desmopressin = ไตยังทำงานได้ ขาด ADH → central DI (B) · A: nephrogenic ไม่ตอบสนอง desmopressin · C, D: polydipsia มี Sosm ต่ำ-ปกติต่ำ และอดน้ำแล้ว Uosm ต้องขึ้น · E: SIADH ปัสสาวะเข้ม Sosm ต่ำ"
+  },
+  "78/62": {
+   "box": 5,
+   "stem": "ส่วนใดของ tubule มีสารน้ำเจือจางที่สุด",
+   "options": {
+    "A": "Early DCT",
+    "B": "Thick ascending limb",
+    "C": "Tip of loop of Henle",
+    "D": "Medullary collecting duct"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "TAL และ early DCT (NCC) ดูด solute โดยไม่ให้น้ำผ่าน (diluting segment) ของเหลวเจือจางต่อเนื่องจนต่ำสุด (~50–100 mOsm) ที่ early DCT (A) · B: TAL เริ่มเจือจางแต่ยังไม่ต่ำสุด · C: tip of loop เข้มข้นที่สุด · D: medullary CD เข้มขึ้นเมื่อมี ADH",
+   "doubt": "⚠ เฉลยพิมพ์ \"B A?\" — ตามหลัก early DCT เจือจางที่สุด"
+  },
+  "78/63": {
+   "box": 20,
+   "stem": "ผู้ป่วย CKD stage 2 ร่วม OA ได้ NSAID แล้ว Cr ขึ้น ควรทำอย่างไร",
+   "options": {
+    "A": "เปลี่ยนเป็น COX-2 inhibitor",
+    "B": "ดูแลให้สารน้ำเพียงพอ (และหยุด NSAID)",
+    "C": "เพิ่ม ACEI",
+    "D": "ให้ยาขับปัสสาวะ"
+   },
+   "answer": "B",
+   "source": "เฉลย78",
+   "why": "NSAID ลด PG ที่ขยาย afferent arteriole → GFR ลด (hemodynamic AKI) แก้ด้วยหยุดยา + ให้ volume พอ (B) · A: COX-2 inhibitor ก็ลด renal PG เหมือนกัน ไม่ปลอดภัยกว่า · C: ACEI ขยาย efferent → GFR ลดซ้ำ (triple whammy) · D: diuretic ทำ volume ลด ยิ่งแย่",
+   "doubt": "⚠ ตัวเลือกไม่มี \"หยุด NSAID\" ตรง ๆ จึงเลือก fluid"
+  },
+  "78/65": {
+   "box": 17,
+   "stem": "เจ็บคอแล้วปัสสาวะเป็นเลือดภายในไม่กี่วัน เป็นซ้ำหลายครั้ง biopsy ไตจะพบอะไร",
+   "options": {
+    "A": "IgA ใน mesangium",
+    "B": "Diffuse immune complex",
+    "C": "Linear immune complex"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Synpharyngitic hematuria (1–2 วันหลัง URI) ซ้ำ ๆ = IgA nephropathy → IgA deposit ที่ mesangium (A) · B: granular IC ทั่วไปเหมือน PSGN ซึ่งมาหลังติดเชื้อ 1–3 สัปดาห์ · C: linear = anti-GBM"
+  },
+  "78/75": {
+   "box": 18,
+   "stem": "Proteinuria 5 g/วัน โครงสร้างใดผิดปกติ",
+   "options": {
+    "A": "Podocyte",
+    "B": "Lamina densa",
+    "C": "Mesangium"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Nephrotic-range proteinuria สะท้อนความเสียหายของ podocyte/slit diaphragm (foot process effacement) (A) · B: lamina densa (GBM) ผิดปกติใน Alport/thin BM → hematuria เด่น · C: mesangium เด่นใน IgA ให้ hematuria"
+  },
+  "78/78": {
+   "box": 23,
+   "stem": "หญิงไข้หนาวสั่น UA พบ WBC และ WBC cast ควรทำอะไรต่อ",
+   "options": {
+    "A": "Discharge",
+    "B": "Urine culture",
+    "C": "Renal biopsy"
+   },
+   "answer": "B",
+   "source": "เฉลย78",
+   "why": "ไข้ + WBC cast = acute pyelonephritis ต้องส่ง urine culture ก่อนให้ antibiotic (B) · A: ปล่อยกลับโดยไม่ตรวจ/รักษาไม่ได้ · C: biopsy ไม่จำเป็นใน pyelonephritis"
+  },
+  "78/94": {
+   "box": 15,
+   "stem": "ทำไม secondary hyperparathyroidism (จาก CKD) จึงมี Ca ต่ำ",
+   "options": {
+    "A": "Ca จับกับ anion (phosphate) เป็น complex",
+    "B": "25-hydroxycholecalciferol ลดลง"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "CKD ขับ PO4 ไม่ได้ → phosphate จับ Ca ion → ionized Ca ต่ำ กระตุ้น PTH (A) · B ผิด: สิ่งที่ลดคือ 1,25(OH)2D (ไตขาด 1α-hydroxylase) ไม่ใช่ 25(OH)D ที่สร้างจากตับ",
+   "doubt": "⚠ ในความจริงทั้ง phosphate retention และ calcitriol ต่ำร่วมกัน แต่ตัวเลือก B ระบุผิดเป็น 25-OH"
+  },
+  "78/97": {
+   "box": 20,
+   "stem": "ผู้ป่วยแผลไหม้ระดับ 2 45% TBSA มี hypotension, BUN/Cr สูง, K สูง กลไกหลักคืออะไร",
+   "options": {
+    "A": "Cytokine จากการอักเสบทั่วร่าง",
+    "B": "เสียสารน้ำทางผิวหนัง"
+   },
+   "answer": "B",
+   "source": "เฉลย78",
+   "why": "Burn เสีย plasma/fluid ทางแผลจำนวนมาก → hypovolemia → prerenal AKI (B) · A: SIRS มีบทบาทแต่ไม่ใช่กลไกหลักของ AKI ในระยะแรก",
+   "doubt": "⚠ โจทย์ให้ bradycardia ซึ่งไม่เข้ากับ hypovolemia (อาจจากโจทย์จำผิด หรือจาก hyperK)"
+  },
+  "78/120": {
+   "box": 26,
+   "stem": "ชาย 30 ปีปัสสาวะแสบ UA พบไข่ขนาด ~110–170 × 40–70 µm มี terminal spine เด่น เชื้อใด",
+   "options": {
+    "A": "Schistosoma haematobium",
+    "B": "Schistosoma mansoni",
+    "C": "Schistosoma japonicum",
+    "D": "Paragonimus westermani"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "ไข่มี terminal spine พบในปัสสาวะ = S. haematobium (อยู่ venous plexus ของ bladder; เสี่ยง SCC bladder) (A) · B: lateral spine พบในอุจจาระ · C: ไข่กลม spine เล็ก ในอุจจาระ · D: ไข่มี operculum ในเสมหะ"
+  },
+  "78/188": {
+   "box": 12,
+   "stem": "ชายมี lactic acidosis แต่ pH ในเซลล์คงเดิม buffer ใดแรงที่สุดใน ICF",
+   "options": {
+    "A": "Phosphate buffer",
+    "B": "Bicarbonate buffer",
+    "C": "Ammonium buffer",
+    "D": "Protein buffer"
+   },
+   "answer": "D",
+   "source": "เฉลย78",
+   "why": "ใน ICF buffer หลักคือ protein (เช่น hemoglobin, protein ในเซลล์) มีปริมาณมาก (D) · A: phosphate สำคัญใน ICF และปัสสาวะ แต่รองจาก protein · B: bicarbonate เป็น buffer หลักของ ECF · C: ammonium เป็นระบบขับกรดทางปัสสาวะ"
+  },
+  "78/192": {
+   "box": 7,
+   "stem": "ชายเป็น HT + DM ได้ ACEI แล้วความดันยังสูง ควรเพิ่มยาใด",
+   "options": {
+    "A": "Thiazide",
+    "B": "Labetalol",
+    "C": "α-blocker (-osin)"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "ยาขั้นแรกคือ ACEI/ARB, CCB, thiazide การเพิ่ม thiazide (หรือ CCB) ร่วมกับ ACEI เป็นมาตรฐาน (A) · B: β-blocker ไม่ใช่ add-on แรกถ้าไม่มีข้อบ่งชี้ labetalol เก็บไว้ใน pregnancy/emergency · C: α-blocker เป็นยาท้าย ๆ (resistant HT/BPH)"
+  },
+  "78/195": {
+   "box": 7,
+   "stem": "Essential hypertension เกิดจากกลไกใด",
+   "options": {
+    "A": "Renal pressure-natriuresis curve เลื่อนไปซ้าย",
+    "B": "เพิ่มการหลั่ง endothelium-derived constricting factor",
+    "C": "Vascular remodelling",
+    "D": "Sympathetic ถูกกด",
+    "E": "RAAS ถูกกด"
+   },
+   "answer": "C",
+   "source": "เฉลย78",
+   "why": "Essential HT สัมพันธ์กับ vascular remodelling (ผนังหนา lumen แคบ → TPR สูง) (C) · A ผิดทิศ: ใน HT pressure-natriuresis เลื่อนไปขวา (ต้องใช้ BP สูงขึ้นเพื่อขับ Na) · B: มีส่วนได้แต่ไม่ใช่คำตอบที่เฉลยเลือก · D, E ผิด: sympathetic/RAAS ทำงานมากขึ้น ไม่ใช่ถูกกด",
+   "doubt": "⚠ หมายเหตุในเฉลยว่า B ก็อาจถูก — ยึด C ตามเฉลย"
+  },
+  "78/207": {
+   "box": 27,
+   "stem": "ผู้ป่วยมี magnetic gait ปั่นจักรยานในอากาศได้ และปัสสาวะกลั้นไม่อยู่ วินิจฉัยใด",
+   "options": {
+    "A": "Normal pressure hydrocephalus",
+    "B": "Frontotemporal dementia",
+    "C": "Alzheimer"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Triad wet (urinary incontinence), wobbly (magnetic gait แต่ขยับขาท่านอนได้), wacky (dementia) = NPH; ventricle ขยายกด frontal micturition center (A) · B: FTD เด่นพฤติกรรม/ภาษา ไม่มี gait apraxia ระยะแรก · C: Alzheimer เด่นความจำ gait ปกติระยะแรก"
+  },
+  "78/X1": {
+   "box": 23,
+   "stem": "Urethritis ที่ gram stain ไม่พบเชื้อ น่าจะเกิดจากเชื้อใด",
+   "options": {
+    "A": "Chlamydia trachomatis",
+    "B": "Neisseria gonorrhoeae",
+    "C": "Treponema pallidum",
+    "D": "Candida albicans"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Non-gonococcal urethritis ที่ gram stain พบ PMN แต่ไม่เห็นเชื้อ = Chlamydia (obligate intracellular ไม่มี peptidoglycan ชัด ย้อม gram ไม่ติด) (A) · B: gonorrhea เห็น gram-negative diplococci ใน PMN · C: syphilis ให้ painless chancre ไม่ใช่ urethritis · D: Candida เห็น yeast/pseudohyphae",
+   "options_reconstructed": true
+  },
+  "78/X3": {
+   "box": 23,
+   "stem": "Pyuria + CVA tenderness + ไข้ วินิจฉัยใด",
+   "options": {
+    "A": "Acute pyelonephritis",
+    "B": "Acute cystitis",
+    "C": "Urethritis",
+    "D": "Ureteric stone",
+    "E": "Acute interstitial nephritis"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "ไข้ + CVA tenderness + pyuria = ติดเชื้อถึงไต (A) · B: cystitis ไม่มีไข้/CVA tenderness · C: urethritis มี discharge/dysuria ไม่มีไข้สูง · D: นิ่วปวดร้าวแต่ไม่มีไข้หากไม่ติดเชื้อ · E: AIN มักสัมพันธ์ยา ผื่น eosinophiluria",
+   "options_reconstructed": true
+  },
+  "78/X5": {
+   "box": 23,
+   "stem": "UTI เพาะเชื้อได้โคโลนีสีชมพูเยิ้ม (mucoid) บน MacConkey เชื้อใด",
+   "options": {
+    "A": "Klebsiella pneumoniae",
+    "B": "Proteus mirabilis",
+    "C": "Pseudomonas aeruginosa",
+    "D": "Escherichia coli",
+    "E": "Serratia marcescens"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Klebsiella หมัก lactose (ชมพู) + capsule หนา → โคโลนี mucoid (A) · B: Proteus ไม่หมัก lactose และ swarming · C: Pseudomonas non-lactose fermenter สีเขียว กลิ่นองุ่น · D: E. coli ชมพูแต่โคโลนีแห้ง ไม่ mucoid · E: Serratia สร้างสีแดง",
+   "options_reconstructed": true
+  },
+  "78/X7": {
+   "box": 27,
+   "stem": "ยาที่ใช้บ่อยในการรักษา BPH คือ",
+   "options": {
+    "A": "α1 antagonist",
+    "B": "β2 agonist",
+    "C": "Antimuscarinic",
+    "D": "Loop diuretic"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "α1 blocker (tamsulosin, doxazosin) คลาย smooth muscle ที่ bladder neck/prostate ออกฤทธิ์เร็ว เป็นยาแรก (A) · B: ไม่มีบทบาทใน BPH · C: antimuscarinic ใช้ OAB และอาจทำ retention ใน BPH · D: diuretic เพิ่มปัสสาวะ ทำอาการแย่ลง",
+   "options_reconstructed": true
+  },
+  "78/X10": {
+   "box": 7,
+   "stem": "ผู้ป่วยความดันสูง ได้ ACEI แล้ว Cr ขึ้นสูงมากจนต้องหยุดยา น่าจะมีภาวะใด",
+   "options": {
+    "A": "Renal artery stenosis (bilateral)",
+    "B": "Essential hypertension",
+    "C": "Primary hyperaldosteronism",
+    "D": "Pheochromocytoma"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "เมื่อ renal artery ตีบ GFR พึ่ง angiotensin II ที่บีบ efferent arteriole ACEI ตัดกลไกนี้ → GFR ตก Cr พุ่ง (A) · B: essential HT Cr ขึ้นเล็กน้อย (<30%) ยอมรับได้ · C: Conn มี hypoK, renin ต่ำ ไม่ทำ Cr พุ่งจาก ACEI · D: pheo ให้ BP แกว่ง ใจสั่น เหงื่อออก",
+   "options_reconstructed": true
+  },
+  "78/X19": {
+   "box": 22,
+   "stem": "เครื่อง hemodialysis มีไม่พอสำหรับผู้ป่วยทุกคน ควรทำอย่างไร",
+   "options": {
+    "A": "จัดสรรตามเกณฑ์ทางการแพทย์ที่โปร่งใสและเป็นธรรม",
+    "B": "ให้คนที่จ่ายได้มากกว่าก่อน",
+    "C": "ให้คนรู้จักหรือคนสำคัญก่อน",
+    "D": "ให้ตามใจแพทย์เจ้าของไข้แต่ละคน"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "ทรัพยากรจำกัดใช้หลัก justice: จัดสรรด้วยเกณฑ์ทางการแพทย์ (ความจำเป็น ประโยชน์ที่คาดว่าจะได้) ที่โปร่งใส ใช้เท่าเทียมทุกคน (A) · B: ใช้ฐานะเศรษฐกิจเป็นเกณฑ์ไม่เป็นธรรม · C: เลือกปฏิบัติ · D: ไม่มีมาตรฐาน ขาดความสม่ำเสมอ",
+   "doubt": "⚠ ไฟล์ไม่มีตัวเลือกและไม่มีเฉลย — ตัวเลือกสร้างใหม่และคำตอบเป็นการวิเคราะห์",
+   "options_reconstructed": true
+  },
+  "78/X20": {
+   "box": 12,
+   "stem": "แปลผล blood gas (ตัวเลขไม่ได้บันทึกไว้) คำตอบคือ chronic respiratory alkalosis ร่วม metabolic acidosis",
+   "options": {
+    "A": "Chronic respiratory alkalosis ร่วม metabolic acidosis",
+    "B": "Acute respiratory alkalosis อย่างเดียว",
+    "C": "Metabolic acidosis ที่ชดเชยทางหายใจพอดี",
+    "D": "Metabolic alkalosis ร่วม respiratory acidosis"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "เมื่อ pCO2 ต่ำ และ HCO3⁻ ลดลงมากกว่าที่ chronic respiratory alkalosis ชดเชยได้ (คาด ΔHCO3 ≈ 0.4×ΔpCO2) แสดงว่ามี metabolic acidosis ซ้อน (A) · B: acute resp alk HCO3 ลดเพียง 0.2×ΔpCO2 · C: ถ้าชดเชยพอดี pCO2 = 1.5×HCO3+8±2 · D: ทิศทางตรงข้าม",
+   "doubt": "⚠ ไฟล์โจทย์ไม่มีค่าตัวเลขและตัวเลือก มีเพียงคำตอบ — ตัวเลือกสร้างใหม่",
+   "options_reconstructed": true
+  },
+  "79/31": {
+   "box": 1,
+   "stem": "ทารกมีความผิดปกติไตแบบถุงน้ำแต่กำเนิด nephron ของไตถาวรเจริญมาจากโครงสร้างใด",
+   "options": {
+    "A": "Mesonephric duct",
+    "B": "Metanephric blastema",
+    "C": "Paramesonephric duct",
+    "D": "Ureteric bud",
+    "E": "Pronephric duct"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "Metanephric blastema (mesenchyme) ถูก ureteric bud เหนี่ยวนำ → glomerulus, PCT, loop, DCT = nephron (B) · D: ureteric bud ให้ collecting duct, calyces, pelvis, ureter (ไม่ใช่ nephron) · A: mesonephric duct ให้ ureteric bud/ductus deferens ในชาย · C: paramesonephric → มดลูก ท่อนำไข่ · E: pronephros ฝ่อไปไม่ทำงาน"
+  },
+  "79/94": {
+   "box": 9,
+   "stem": "บาดเจ็บ hypothalamus จากอุบัติเหตุ ฮอร์โมนใดเกี่ยวกับการคั่งน้ำโดยตรงที่สุด",
+   "options": {
+    "A": "Cortisol",
+    "B": "ADH",
+    "C": "Renin",
+    "D": "Aldosterone",
+    "E": "ANP"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "ADH สร้างที่ supraoptic/paraventricular nucleus ของ hypothalamus → ใส่ AQP2 ที่ collecting duct ดูดน้ำอิสระกลับ (B) · C, D: renin/aldosterone คั่ง Na (น้ำตาม) และไม่ได้มาจาก hypothalamus · A: cortisol ไม่ใช่ตัวคุมน้ำหลัก · E: ANP ขับ Na และน้ำ"
+  },
+  "79/146": {
+   "box": 10,
+   "stem": "ผู้ป่วย CKD อ่อนแรง K 7.2 EKG peaked T + QRS กว้าง การรักษาทันทีที่เหมาะสมที่สุด",
+   "options": {
+    "A": "Sodium polystyrene sulfonate กิน",
+    "B": "Calcium gluconate IV",
+    "C": "Furosemide IV",
+    "D": "Insulin IV โดยไม่ให้ glucose",
+    "E": "Sodium bicarbonate อย่างเดียว"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "EKG เปลี่ยนแปลง = ต้อง stabilize cardiac membrane ทันทีด้วย IV calcium (ออกฤทธิ์ในนาที ไม่ลด K) (B) แล้วค่อย shift/ขับ K · A: resin ออกฤทธิ์ช้าหลายชั่วโมง · C: furosemide ขับ K ช้าและ CKD ตอบสนองน้อย · D: insulin ต้องให้คู่ glucose กัน hypoglycemia · E: bicarbonate เดี่ยว ๆ ได้ผลน้อย ใช้เมื่อมี acidosis"
+  },
+  "79/191": {
+   "box": 20,
+   "stem": "หญิงมีไข้ ผื่นคัน หลังเริ่มยาปฏิชีวนะรักษา UTI 1 สัปดาห์ ต่อมาปัสสาวะออกน้อยและปวดเอว วินิจฉัยใด",
+   "options": {
+    "A": "Acute tubular necrosis",
+    "B": "Acute interstitial nephritis",
+    "C": "Acute pyelonephritis",
+    "D": "Minimal change disease",
+    "E": "PSGN"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "ยา (β-lactam, sulfa) → hypersensitivity: ไข้ ผื่น (± eosinophilia/eosinophiluria) + AKI = AIN (B) · A: ATN จากยา (aminoglycoside) ไม่มีผื่น/ไข้ · C: pyelonephritis ควรดีขึ้นด้วย antibiotic และไม่มีผื่น · D: MCD ให้ nephrotic ไม่ใช่ไข้ผื่น · E: PSGN ตามหลังติด strep ที่คอ/ผิวหนัง มี hematuria HT"
+  },
+  "79/192": {
+   "box": 2,
+   "stem": "ชายปวดเอวขวาร้าวลงขาหนีบแบบ ureteric colic ทำภาพถ่ายรังสี นิ่วใน ureter น่าจะอยู่ตำแหน่งใดบนภาพ",
+   "options": {
+    "A": "แนว L5 transverse process เหนือ sacroiliac joint",
+    "B": "Rib 12 ด้านข้าง vertebral body",
+    "C": "Pubic symphysis",
+    "D": "Greater trochanter",
+    "E": "Ischial spine"
+   },
+   "answer": "A",
+   "source": "เฉลย79",
+   "why": "บน KUB ureter วิ่งผ่านปลาย transverse process ของ lumbar vertebra แล้วข้าม SI joint ที่ pelvic brim (จุดข้าม iliac vessels เป็นจุดแคบ) จึงเห็นนิ่วตามแนวนี้ (A) · B: rib 12 อยู่ระดับไต ไม่ใช่แนว ureter · C: pubic symphysis อยู่หน้าต่อ bladder · D: greater trochanter อยู่นอกเชิงกราน · E: ureter ส่วน pelvic วิ่งใกล้ ischial spine ได้ แต่ไม่ใช่ตำแหน่งที่เฉลยเลือก",
+   "doubt": "⚠ จุดแคบที่สุดตามตำราคือ UVJ; คำตอบนี้ขึ้นกับภาพในข้อสอบ (pelvic brim/ข้าม iliac vessels)",
+   "needs_image": true
+  },
+  "79/193": {
+   "box": 6,
+   "stem": "ผู้ป่วยมะเร็งโพรงหลังจมูก Ca 13.7 mg/dL หลังให้ IV fluid เพียงพอแล้ว ควรให้ยาใดเพิ่ม",
+   "options": {
+    "A": "Acetazolamide",
+    "B": "Tolvaptan",
+    "C": "Furosemide",
+    "D": "Chlorothiazide",
+    "E": "Spironolactone"
+   },
+   "answer": "C",
+   "source": "เฉลย79",
+   "why": "Loop diuretic ยับยั้ง NKCC2 ที่ TAL → ลด lumen-positive potential → ลด paracellular Ca reabsorption → ขับ Ca (หลัง volume พอ) (C) · D: thiazide เพิ่มการดูด Ca ที่ DCT → Ca สูงขึ้น ห้ามใช้ · A: acetazolamide ไม่ช่วยลด Ca · B: tolvaptan ใช้ hyponatremia/SIADH · E: spironolactone ไม่มีผลต่อ Ca",
+   "doubt": "⚠ แนวปัจจุบันเน้น IV fluid + bisphosphonate/calcitonin; furosemide ใช้เมื่อ volume overload — แต่ในตัวเลือกนี้ furosemide ถูกที่สุด"
+  },
+  "79/194": {
+   "box": 17,
+   "stem": "หญิงเป็น SLE มี proteinuria hematuria และไตเสื่อมลง ผล biopsy ใดจำเพาะกับ lupus nephritis",
+   "options": {
+    "A": "Wire-loop lesion",
+    "B": "Cryoglobulin deposition",
+    "C": "Crescent formation",
+    "D": "Exudative lesion",
+    "E": "Glomerulosclerosis"
+   },
+   "answer": "A",
+   "source": "เฉลย79",
+   "why": "Wire-loop = subendothelial immune complex หนาตาม capillary loop เด่นใน diffuse proliferative lupus nephritis (class IV) (A) · B: cryoglobulin ใน cryoglobulinemic GN (HCV) · C: crescent พบได้หลายโรค (RPGN) ไม่จำเพาะ · D: exudative lesion เป็นลักษณะ diabetic (fibrin cap/capsular drop) · E: glomerulosclerosis เป็นระยะท้ายของหลายโรค"
+  },
+  "79/195": {
+   "box": 22,
+   "stem": "ผู้ป่วย CKD stage 4 สติดี เข้าใจข้อมูลชัดเจน ปฏิเสธการฟอกเลือดซ้ำ ๆ แพทย์ควรยึดหลักจริยธรรมใด",
+   "options": {
+    "A": "Autonomy",
+    "B": "Paternalism",
+    "C": "Beneficence",
+    "D": "Non-maleficence",
+    "E": "Justice"
+   },
+   "answer": "A",
+   "source": "เฉลย79",
+   "why": "ผู้ป่วยมี decision-making capacity และได้รับข้อมูลครบ → เคารพการตัดสินใจ (A) · B: paternalism คือแพทย์ตัดสินแทน ขัดกับ capacity ที่มี · C, D: เป็นหลักสำคัญแต่ไม่ลบล้างการปฏิเสธของผู้มี capacity · E: justice เกี่ยวกับการจัดสรรทรัพยากร"
+  },
+  "79/196": {
+   "box": 11,
+   "stem": "ชายสุขภาพดี ความดันสูงต่อเนื่อง K ต่ำก้ำกึ่ง HCO3 สูง ไม่ได้ใช้ diuretic ควรส่งตรวจใดเป็นอันดับแรกเพื่อหา primary hyperaldosteronism",
+   "options": {
+    "A": "EKG",
+    "B": "CT angiography สมอง",
+    "C": "Plasma aldosterone-to-renin ratio",
+    "D": "Serum cortisol อย่างเดียว",
+    "E": "24-h urine metanephrine"
+   },
+   "answer": "C",
+   "source": "เฉลย79",
+   "why": "HT + hypoK + metabolic alkalosis → สงสัย Conn; screening = ARR (aldosterone สูง renin ต่ำ) (C) · A: EKG ดู hypoK แต่ไม่วินิจฉัยสาเหตุ · B: ไม่เกี่ยว · D: Cushing ต้องใช้ dexamethasone suppression/late-night cortisol ไม่ใช่ cortisol อย่างเดียว · E: ใช้คัดกรอง pheochromocytoma"
+  },
+  "79/197": {
+   "box": 8,
+   "stem": "ยาที่เป็น weak base ขับออกทาง glomerular filtration เป็นหลัก ข้อใดเพิ่มการขับยาทางปัสสาวะ",
+   "options": {
+    "A": "ทำปัสสาวะเป็นด่าง",
+    "B": "เพิ่ม cardiac output",
+    "C": "เพิ่ม α-glucosidase",
+    "D": "ยับยั้ง tubular secretion",
+    "E": "ทำปัสสาวะเป็นกรด"
+   },
+   "answer": "E",
+   "source": "เฉลย79",
+   "why": "Ion trapping: weak base ในปัสสาวะกรดจะอยู่ในรูป ionized (BH⁺) ดูดกลับผ่าน membrane ไม่ได้ → ขับออกมากขึ้น (E) · A: urine ด่างทำ weak base เป็น non-ionized → ถูกดูดกลับ (ใช้กับ weak acid เช่น salicylate) · B: CO เพิ่มมีผลน้อยและไม่ใช่คำตอบหลัก · C: ไม่เกี่ยว · D: ยานี้ไม่ได้อาศัย secretion และการยับยั้งยิ่งลดการขับ",
+   "doubt": "⚠ โจทย์บอก minimal reabsorption ซึ่งทำให้ ion trapping มีผลน้อยในทางทฤษฎี แต่เฉลยตอบตามหลัก ion trapping"
+  },
+  "79/198": {
+   "box": 3,
+   "stem": "ผู้ป่วยเบาหวานนานมี albuminuria เพิ่มขึ้น ความผิดปกติใดของ filtration barrier เป็นลักษณะของ diabetic nephropathy",
+   "options": {
+    "A": "GBM เสียประจุลบ",
+    "B": "GBM มีประจุบวกเพิ่ม",
+    "C": "Podocyte หายไปทั้งหมด",
+    "D": "Endothelial fenestration เพิ่มขึ้น",
+    "E": "GBM บางลง"
+   },
+   "answer": "A",
+   "source": "เฉลย79",
+   "why": "Hyperglycemia → non-enzymatic glycation ของ GBM, heparan sulfate (anionic) ลด → เสีย charge barrier → albumin (ประจุลบ) รั่ว (A) · B: ไม่ได้มีประจุบวกเพิ่ม (ตัวหลอก) · C: podocyte ลดลง (podocytopenia) แต่ไม่ได้หายหมด · D: ไม่ใช่ลักษณะเด่น · E: DN ทำ GBM หนาขึ้น ไม่ใช่บาง (บางคือ thin BM disease)"
+  },
+  "79/199": {
+   "box": 18,
+   "stem": "หญิงเบาหวานคุมไม่ดี (HbA1c 9.2%) มี microalbuminuria biopsy ไตพบ tubular basement membrane หนา ร่วม chronic interstitial inflammation วินิจฉัยใด",
+   "options": {
+    "A": "Diabetic glomerulosclerosis",
+    "B": "Acute interstitial nephritis",
+    "C": "Diabetic tubulointerstitial nephropathy",
+    "D": "Minimal change disease",
+    "E": "Acute tubular necrosis"
+   },
+   "answer": "C",
+   "source": "เฉลย79",
+   "why": "พยาธิสภาพอยู่ที่ tubule/interstitium (TBM หนา + chronic inflammation) ในเบาหวาน = diabetic tubulointerstitial nephropathy (C) · A: glomerulosclerosis ต้องเห็น mesangial expansion/K-W nodule ที่ glomerulus · B: AIN เป็นเฉียบพลันจากยา · D: MCD ไม่มีความผิดปกติใน LM · E: ATN เป็นเฉียบพลัน เซลล์ tubule ตาย ไม่ใช่ TBM หนา"
+  },
+  "79/200": {
+   "box": 17,
+   "stem": "ชาย 25 ปี ไอเป็นเลือด + ปัสสาวะเป็นเลือด Cr สูง HT UA มี dysmorphic RBC + RBC cast anti-GBM บวก วินิจฉัยใด",
+   "options": {
+    "A": "Lupus nephritis",
+    "B": "IgA nephropathy",
+    "C": "Alport syndrome",
+    "D": "Goodpasture syndrome",
+    "E": "Granulomatosis with polyangiitis"
+   },
+   "answer": "D",
+   "source": "เฉลย79",
+   "why": "Anti-GBM (anti-collagen IV α3) โจมตีทั้ง GBM และ alveolar BM → pulmonary hemorrhage + RPGN = Goodpasture (D) · A: lupus ใช้ ANA/dsDNA, IF full house · B: IgA ไม่มีอาการปอด · C: Alport เป็นพันธุกรรม collagen IV + หูหนวก ตา ไม่มี antibody · E: GPA มีปอด-ไตได้แต่ c-ANCA บวก ไม่ใช่ anti-GBM"
+  },
+  "79/201": {
+   "box": 18,
+   "stem": "ชาย 25 ปี บวมรอบตา ปัสสาวะเป็นฟอง protein 4+ ไม่มี hematuria albumin ต่ำ biopsy พบ GBM หนา เซลล์ใดมีบทบาทหลักในการคง filtration barrier ในภาวะนี้",
+   "options": {
+    "A": "Mesangial cell",
+    "B": "Macula densa cell",
+    "C": "Juxtaglomerular cell",
+    "D": "Podocyte",
+    "E": "Parietal cell ของ Bowman capsule"
+   },
+   "answer": "D",
+   "source": "เฉลย79",
+   "why": "Nephrotic (GBM หนา = membranous) ความเสียหายหลักอยู่ที่ podocyte (subepithelial deposit, foot process effacement, slit diaphragm nephrin) (D) · A: mesangial เกี่ยวกับ IgA/DN และ hematuria · B: macula densa รับรู้ NaCl (TGF) · C: JG cell หลั่ง renin · E: parietal cell เกี่ยวกับ crescent ไม่ใช่ barrier"
+  },
+  "79/202": {
+   "box": 26,
+   "stem": "ชาย 55 ปี gross hematuria ไม่เจ็บ biopsy เป็น urothelial carcinoma ของ bladder ปัจจัยเสี่ยงสำคัญที่สุด",
+   "options": {
+    "A": "สูบบุหรี่",
+    "B": "Schistosoma",
+    "C": "Alcohol เรื้อรัง",
+    "D": "การกลายพันธุ์ทางพันธุกรรม",
+    "E": "อาหารโปรตีนสูง"
+   },
+   "answer": "A",
+   "source": "เฉลย79",
+   "why": "Smoking เป็น risk factor อันดับหนึ่ง (aromatic amines เช่น 2-naphthylamine ขับทางปัสสาวะ) (A) · B: Schistosoma → SCC ของ bladder · C, E: ไม่ใช่ risk หลัก · D: hereditary (Lynch) มีน้อยมาก"
+  },
+  "79/203": {
+   "box": 26,
+   "stem": "ชาย 68 ปี urothelial carcinoma ลุกลามชั้นกล้ามเนื้อ จะจัดเป็น muscle-invasive ต้องลุกถึงโครงสร้างใด",
+   "options": {
+    "A": "Muscularis mucosae",
+    "B": "Detrusor muscle",
+    "C": "Basement membrane",
+    "D": "Lamina propria",
+    "E": "Urothelial epithelium"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "Muscle-invasive (≥T2) = ลุกถึง muscularis propria คือ detrusor (B) · A: muscularis mucosae เป็นใยกล้ามเนื้อบาง ๆ ใน lamina propria ยังเป็น T1 (ต้องแยกให้ออก) · C, D: ผ่าน BM เข้า lamina propria = T1 non-muscle invasive · E: อยู่ใน epithelium = Ta/CIS"
+  },
+  "79/204": {
+   "box": 4,
+   "stem": "Cr เพิ่มจาก 1.1 เป็น 2.0 แพทย์ต้องการยืนยันว่าเป็นเพราะ filtration ลดจริง ไม่ใช่การสร้าง creatinine เปลี่ยน ควรวัดอะไร",
+   "options": {
+    "A": "Renal creatinine clearance",
+    "B": "Urine albumin-to-creatinine ratio",
+    "C": "Urine sodium",
+    "D": "FENa",
+    "E": "Urine osmolality"
+   },
+   "answer": "A",
+   "source": "เฉลย79",
+   "why": "CrCl = UCr×V/PCr (เก็บปัสสาวะ 24 ชม.) ประเมิน GFR โดยตรง แยกจากการสร้าง creatinine ที่เปลี่ยน (A) · B: UACR วัดการรั่วของ albumin (ความเสียหาย barrier) ไม่ใช่ GFR · C, D: ใช้แยก prerenal vs ATN · E: ประเมินความสามารถทำปัสสาวะเข้มข้น"
+  },
+  "79/206": {
+   "box": 6,
+   "stem": "ผู้ป่วยเริ่มได้ acetazolamide คาดว่าจะเกิดการเปลี่ยนแปลงใด",
+   "options": {
+    "A": "Urine pH ลดลง",
+    "B": "ขับ HCO3⁻ ทางปัสสาวะเพิ่ม",
+    "C": "PCT หลั่ง H⁺ เพิ่ม",
+    "D": "ขับ NH4Cl เพิ่ม",
+    "E": "PCT ดูด Na กลับเพิ่ม"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "ยับยั้ง CA ที่ PCT → H⁺ secretion ผ่าน NHE3 ลด และ HCO3⁻ ที่กรองดูดกลับไม่ได้ → bicarbonaturia ปัสสาวะด่าง (B) · A: urine pH เพิ่ม ไม่ใช่ลด · C: H⁺ secretion ลด · D: ammoniagenesis/NH4⁺ excretion ลดเมื่อปัสสาวะด่าง · E: Na reabsorption ที่ PCT ลด (จึงเป็น diuretic)"
+  },
+  "79/207": {
+   "box": 9,
+   "stem": "ชายเป็น schizophrenia สับสน Na 120, Sosm 270, Uosm 70, UNa < 20 สาเหตุใดน่าจะเป็นที่สุด",
+   "options": {
+    "A": "SIADH",
+    "B": "Central DI",
+    "C": "Nephrogenic DI",
+    "D": "Psychogenic polydipsia",
+    "E": "Cerebral salt wasting"
+   },
+   "answer": "D",
+   "source": "เฉลย79",
+   "why": "Hypotonic hyponatremia + ปัสสาวะเจือจางสุด (Uosm <100) = ADH ถูกกดเหมาะสม แต่ดื่มน้ำเกินความสามารถขับ (พบบ่อยใน schizophrenia) (D) · A: SIADH ต้อง Uosm >100 และ UNa >20-40 · B, C: DI ทำ Na สูง ไม่ใช่ต่ำ · E: CSW เสีย Na ทางปัสสาวะ (UNa สูง) และ hypovolemia"
+  },
+  "79/208": {
+   "box": 18,
+   "stem": "Nephrotic-range proteinuria biopsy เป็น membranous nephropathy IF พบ IgG และ C3 แบบ granular ตาม GBM antigen เป้าหมายที่น่าจะเป็นที่สุด",
+   "options": {
+    "A": "NELL1",
+    "B": "NCAM1",
+    "C": "PLA2R",
+    "D": "THSD7A",
+    "E": "Type IV collagen ของ GBM"
+   },
+   "answer": "C",
+   "source": "เฉลย79",
+   "why": "Primary membranous ~70–80% มี anti-PLA2R (podocyte antigen) (C) · A: NELL1 เป็น antigen ที่พบรองลงมา สัมพันธ์มะเร็ง · D: THSD7A พบ ~2–3% สัมพันธ์มะเร็ง · B: NCAM1 สัมพันธ์ lupus membranous · E: collagen IV เป็นเป้าของ anti-GBM ให้ linear pattern ไม่ใช่ granular"
+  },
+  "79/209": {
+   "box": 4,
+   "stem": "ชายเป็น AKI BUN และ Cr สูงขึ้นมาก solute อื่นปกติ ผลจาก urea ในพลาสมาที่สูงคืออะไร",
+   "options": {
+    "A": "เซลล์เหี่ยว",
+    "B": "น้ำเคลื่อนเข้าเซลล์",
+    "C": "Plasma tonicity เพิ่ม",
+    "D": "Plasma osmolarity เพิ่ม",
+    "E": "ความเข้มข้น nitrogen ในเซลล์ไม่เปลี่ยน"
+   },
+   "answer": "D",
+   "source": "เฉลย79",
+   "why": "Urea เป็น ineffective osmole ผ่าน membrane ได้อิสระ → เพิ่ม measured osmolarity แต่ไม่เพิ่ม tonicity น้ำจึงไม่ย้ายระหว่าง ICF/ECF (D) · A, B: ไม่มีแรงดึงน้ำ เซลล์ไม่เหี่ยว/ไม่บวม · C: tonicity (effective osmolality) ไม่เปลี่ยน · E: urea เข้าเซลล์ได้ ทำให้ nitrogen ในเซลล์เพิ่มด้วย"
+  },
+  "79/210": {
+   "box": 25,
+   "stem": "ชาย 25 ปี มีประวัติครอบครัวเป็น polycystic kidney disease ภาพ imaging (มีภาพ) โรคนี้ถ่ายทอดแบบใด",
+   "options": {
+    "A": "Autosomal dominant",
+    "B": "Autosomal recessive",
+    "C": "X-linked dominant",
+    "D": "X-linked recessive",
+    "E": "Mitochondrial"
+   },
+   "answer": "A",
+   "source": "เฉลย79",
+   "why": "ผู้ใหญ่ + ประวัติครอบครัว + cyst ไตหลายขนาดสองข้าง = ADPKD (PKD1 polycystin-1 chr16, PKD2) (A) · B: ARPKD (PKHD1, fibrocystin) แสดงอาการในทารก ไตโต cyst เล็ก ร่วม congenital hepatic fibrosis · C, D, E: ไม่ใช่รูปแบบของ PKD",
+   "needs_image": true
+  },
+  "79/211": {
+   "box": 25,
+   "stem": "ทารกชายแรกเกิด ไตโตสองข้าง มี cyst เล็กจำนวนมาก โครงสร้างใดผิดปกติหลัก",
+   "options": {
+    "A": "Urachus",
+    "B": "Collecting duct",
+    "C": "Mesonephric duct",
+    "D": "Paramesonephric duct",
+    "E": "Metanephric blastema"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "ARPKD: cyst เป็นการขยายตัวแบบรัศมีของ collecting duct (มาจาก ureteric bud) ไตโตผิวเรียบ (B) · E: metanephric blastema → nephron; ความผิดปกติจากส่วนนี้คือ multicystic dysplastic/ agenesis ไม่ใช่ ARPKD · A: urachus เกี่ยวกับสะดือ-bladder · C, D: เกี่ยวกับระบบสืบพันธุ์"
+  },
+  "79/212": {
+   "box": 26,
+   "stem": "ผู้ป่วยจากพื้นที่ระบาด ปัสสาวะเป็นเลือดเรื้อรัง ผนัง bladder พบไข่พยาธิมีหินปูนล้อมด้วย granuloma กลไกหลักของปฏิกิริยาเนื้อเยื่อนี้คือ",
+   "options": {
+    "A": "Toxin ทำลายเนื้อเยื่อโดยตรง",
+    "B": "ภูมิคุ้มกันตอบสนองต่อ antigen ของพยาธิ (ไข่)",
+    "C": "ตัวเต็มวัยอุดกั้นเชิงกล",
+    "D": "ติดเชื้อแบคทีเรียซ้ำ",
+    "E": "พยาธิบุกรุกเซลล์ urothelium โดยตรง"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "S. haematobium: ไข่ที่ติดในผนังหลั่ง soluble egg antigen → Th2/type IV hypersensitivity → granuloma, fibrosis, calcification (B) · A: ไม่ได้ทำลายด้วย toxin · C: ตัวเต็มวัยอยู่ใน vesical venous plexus ไม่ได้อุดกั้น · D: superinfection เกิดได้แต่ไม่ใช่สาเหตุ granuloma · E: พยาธิไม่เข้าเซลล์"
+  },
+  "79/242": {
+   "box": 27,
+   "stem": "หญิง 42 ปี ปัสสาวะบ่อย ปวดปัสสาวะกะทันหันกลั้นยาก ไม่มี dysuria/hematuria/ไข้ UA ปกติ ควรให้ยาใด",
+   "options": {
+    "A": "Phenylephrine",
+    "B": "Desmopressin",
+    "C": "Oxybutynin",
+    "D": "Tamsulosin",
+    "E": "Furosemide"
+   },
+   "answer": "C",
+   "source": "เฉลย79",
+   "why": "Overactive bladder (urge) → antimuscarinic (M3 blocker) ลดการบีบตัวของ detrusor (C) · A: α1 agonist เพิ่ม tone ของ sphincter ไม่รักษา OAB · B: desmopressin ใช้ nocturia/DI · D: tamsulosin สำหรับ BPH ในชาย · E: furosemide เพิ่มปัสสาวะ ยิ่งแย่ลง"
+  },
+  "79/252": {
+   "box": 8,
+   "stem": "หญิงเบาหวานชนิด 2 เริ่มยาเบาหวานชนิดกินตัวใหม่ แล้ว UTI ซ้ำและระคายเคืองอวัยวะเพศ ยานี้ออกฤทธิ์อย่างไร",
+   "options": {
+    "A": "ยับยั้ง DPP-4",
+    "B": "กระตุ้น GLP-1 receptor",
+    "C": "ยับยั้ง SGLT2 ที่ proximal tubule",
+    "D": "ปิด K-ATP channel ที่ β-cell",
+    "E": "ยับยั้ง α-glucosidase ในลำไส้"
+   },
+   "answer": "C",
+   "source": "เฉลย79",
+   "why": "SGLT2 inhibitor (-gliflozin) ทำ glucosuria → เชื้อเจริญใน genitourinary tract → genital mycotic infection/UTI (C) · A: DPP-4i SE คือ nasopharyngitis, pancreatitis · B: GLP-1 RA ทำคลื่นไส้ · D: sulfonylurea ทำ hypoglycemia น้ำหนักขึ้น · E: acarbose ทำท้องอืด ผายลม"
+  },
+  "79/256": {
+   "box": 9,
+   "stem": "ชายบาดเจ็บที่ hypothalamus หลังอุบัติเหตุ ฮอร์โมนใดรับผิดชอบโดยตรงต่อการเพิ่มการดูดน้ำกลับที่ไต",
+   "options": {
+    "A": "Cortisol",
+    "B": "ADH",
+    "C": "Renin",
+    "D": "Aldosterone",
+    "E": "Angiotensin II"
+   },
+   "answer": "B",
+   "source": "เฉลย79",
+   "why": "ADH จาก hypothalamus (ปล่อยที่ posterior pituitary) → V2 receptor → AQP2 ที่ collecting duct ดูดน้ำอิสระ; บาดเจ็บ → central DI (B) · C, D, E: RAAS เพิ่มการดูด Na เป็นหลักและไม่ได้สร้างที่ hypothalamus · A: cortisol ไม่ใช่ตัวคุมการดูดน้ำ"
+  },
+  "79/150": {
+   "box": 7,
+   "stem": "ผู้ป่วยความดันสูงไอแห้งเรื้อรัง ใช้ enalapril, losartan, atorvastatin ยาใดน่าเป็นสาเหตุ",
+   "options": {
+    "A": "Enalapril",
+    "B": "Losartan",
+    "C": "Atorvastatin",
+    "D": "Losartan และ atorvastatin",
+    "E": "Enalapril และ atorvastatin"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "ACEI ยับยั้ง kininase II → bradykinin/substance P สะสม → ไอแห้ง (A) · B: ARB ไม่เพิ่ม bradykinin จึงใช้แทนเมื่อไอ · C: statin SE คือ myopathy, transaminase สูง · D, E: ไม่มี atorvastatin หรือ losartan ทำไอ",
+   "doubt": "⚠ ไฟล์ 79 ไม่มีเฉลย (KEY79 เป็นไฮไลต์) และชีทไม่ได้อ้างข้อนี้ — คำตอบจากการวิเคราะห์"
+  },
+  "79/233": {
+   "box": 7,
+   "stem": "หญิงตั้งครรภ์ 28 ปี เป็น chronic hypertension ระหว่างตั้งครรภ์ ยาลดความดันใดเหมาะสม",
+   "options": {
+    "A": "Methyldopa",
+    "B": "Enalapril",
+    "C": "Losartan",
+    "D": "Aliskiren",
+    "E": "Spironolactone"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "Methyldopa (central α2 agonist) ปลอดภัยในครรภ์ (ร่วมกับ labetalol, nifedipine) (A) · B, C, D: ACEI/ARB/direct renin inhibitor เป็น teratogen (fetal renal dysgenesis, oligohydramnios) · E: spironolactone มีฤทธิ์ antiandrogen → feminization ของทารกชาย",
+   "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
+  },
+  "79/258": {
+   "box": 10,
+   "stem": "หญิงเบาหวานชนิด 2 หยุด insulin ดื่มแต่น้ำ คลื่นไส้อ่อนแรง pH 7.29 pCO2 27 HCO3 15 glucose 454 ketone สูงมาก น่าจะพบความผิดปกติ electrolyte ใด",
+   "options": {
+    "A": "Hypokalemia",
+    "B": "Hyperkalemia",
+    "C": "Hypernatremia",
+    "D": "Hypocalcemia",
+    "E": "Pseudohyperkalemia"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "DKA: ขาด insulin + hyperosmolality (solvent drag) + acidosis → K เคลื่อนออกนอกเซลล์ serum K มักสูง ทั้งที่ total body K พร่อง (B) · A: hypoK จะเกิดหลังเริ่ม insulin · C: glucose สูงดึงน้ำออกจากเซลล์ → Na เจือจาง (pseudo/translocational hyponatremia) · D: ไม่ใช่ลักษณะ · E: pseudohyperK เกิดจาก hemolysis ตอนเจาะเลือด ไม่ใช่กลไกนี้",
+   "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
+  },
+  "79/263": {
+   "box": 15,
+   "stem": "ชาย 25 ปี Ca สูงเล็กน้อยต่อเนื่อง Ca ในปัสสาวะต่ำมาก PTH สูงเล็กน้อยหรือปกติ ตรวจพบ inactivating mutation ของ CaSR อธิบายได้อย่างไร",
+   "options": {
+    "A": "PTH ลดเพราะ CaSR ไวขึ้น",
+    "B": "PTH เพิ่มเพราะ CaSR ไวลดลง",
+    "C": "PTH เพิ่มเพราะ osteoblast ไวต่อ PTH",
+    "D": "PTH ลดเพราะไตดูด Ca กลับบกพร่อง",
+    "E": "PTH เพิ่มเพราะไตขับ Ca เพิ่ม"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "FHH: CaSR เสียหน้าที่ → parathyroid ต้องใช้ Ca สูงกว่าปกติจึงกด PTH (set point สูง) และที่ TAL ดูด Ca กลับมาก → urine Ca ต่ำ (B) · A: เป็นลักษณะ activating mutation (autosomal dominant hypocalcemia) · C: ไม่เกี่ยวกับ osteoblast · D, E: ไตดูด Ca กลับเพิ่ม (Ca ปัสสาวะต่ำ) ไม่ใช่ขับเพิ่ม",
+   "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
+  },
+  "79/226": {
+   "box": 1,
+   "stem": "ทารกชายแรกเกิดมีรูเปิด urethra ด้าน ventral ของ penis แทนที่ปลาย glans เป็นความผิดปกติใด",
+   "options": {
+    "A": "Epispadias",
+    "B": "Hypospadias",
+    "C": "Phimosis",
+    "D": "Paraphimosis",
+    "E": "Balanitis"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "Urethral folds เชื่อมไม่สมบูรณ์ → meatus เปิดด้าน ventral = hypospadias (B) · A: epispadias เปิดด้าน dorsal (genital tubercle ผิดตำแหน่ง ร่วม bladder exstrophy) · C: หนังหุ้มปลายรูดไม่ได้ · D: หนังหุ้มรูดแล้วคืนไม่ได้ รัด glans · E: glans อักเสบ",
+   "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
+  }
+ }
+}
