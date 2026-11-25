@@ -2,6 +2,36 @@
  "note": "กฎจัดหมวดหน้า Drug & Bug · แต่ละแถว [regex (ไม่สนตัวพิมพ์), หมวดใหญ่, หมวดย่อย] · ใช้กฎแรกที่ตรงกับชื่อการ์ด · ไม่ตรงข้อไหน → Others / Unclassified · เพิ่มบทใหม่ให้เติมกฎของยา/เชื้อที่ยังไม่เข้าหมวด",
  "drug": [
   [
+   "finasteride|dutasteride|tadalafil|5α-reductase",
+   "Renal / Urology",
+   "BPH / prostate"
+  ],
+  [
+   "^lithium|demeclocycline",
+   "Neuro / Psych",
+   "Mood stabilizer / DI-causing"
+  ],
+  [
+   "cyclophosphamide|ifosfamide",
+   "Others",
+   "Chemotherapy"
+  ],
+  [
+   "nahco3|sodium bicarbonate|calcium gluconate",
+   "Others",
+   "Electrolyte"
+  ],
+  [
+   "nitrofurantoin|fosfomycin",
+   "Antimicrobial",
+   "Antibiotic"
+  ],
+  [
+   "botox|botulinum",
+   "Autonomic / eye",
+   "Cholinergic · antimuscarinic · adrenergic · glaucoma"
+  ],
+  [
    "\\bppi\\b|prazole|vonoprazan|p-cab|h2 blocker|ranitidine|famotidine|cimetidine|misoprostol|sucralfate|antacid|bismuth",
    "GI",
    "Acid suppression / mucosal protection"
@@ -293,6 +323,16 @@
   ]
  ],
  "bug": [
+  [
+   "saprophyticus|epidermidis",
+   "Bacteria",
+   "Gram + cocci"
+  ],
+  [
+   "proteus",
+   "Bacteria",
+   "Gram − rods"
+  ],
   [
    "difficile|perfringens|b\\. cereus",
    "Bacteria",

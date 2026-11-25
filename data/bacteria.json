@@ -2,6 +2,10 @@
  "note": "แท็กกลุ่มแบคทีเรียที่เว็บเติมในวงเล็บหลังชื่อเชื้อทุกบท (แสดงด้วย CSS ไม่กระทบไฮไลต์) · [regex (case-sensitive), ป้าย] · ใส่ตัวที่ยาว/จำเพาะไว้ก่อน · GBS (แท็กเฉพาะเมื่อตามด้วย (S. agalactiae) หรือ intrapartum — เพราะ GBS = Guillain-Barré ใน B3)",
  "items": [
   [
+   "Ureaplasma( urealyticum)?",
+   "no cell wall · atypical"
+  ],
+  [
    "Cutibacterium acnes|C\\. ?acnes|Propionibacterium( acnes)?",
    "G+ rod (anaerobe)"
   ],
