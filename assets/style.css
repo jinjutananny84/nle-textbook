@@ -625,3 +625,4 @@ figure.uimg .crop img{border:0;border-radius:0}
 .crop-sel i{position:absolute;width:16px;height:16px;background:#fff;border:2px solid var(--accent,#2f9e57);border-radius:3px}
 .crop-sel i[data-h="nw"]{left:-2px;top:-2px;cursor:nwse-resize}.crop-sel i[data-h="ne"]{right:-2px;top:-2px;cursor:nesw-resize}
 .crop-sel i[data-h="sw"]{left:-2px;bottom:-2px;cursor:nesw-resize}.crop-sel i[data-h="se"]{right:-2px;bottom:-2px;cursor:nwse-resize}
+.hl-pop .row:first-child .sw[data-c="n"]{margin-left:auto}
