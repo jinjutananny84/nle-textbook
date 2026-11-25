@@ -20,8 +20,12 @@
     if (INDEX) return INDEX;
     const r = await fetch('data/chapters.json', { cache: 'no-cache' });
     INDEX = (await r.json()).chapters;
+    INDEX.sort((a, b) => chNum(a.id) - chNum(b.id) || a.id.localeCompare(b.id));   // เรียงตามเลขบท B3 < B4 < … < B10 อัตโนมัติ
     return INDEX;
   }
+  function chNum(id) { const m = /\d+/.exec(id || ''); return m ? Number(m[0]) : Infinity; }
+  // บทที่โหลดแล้ว เรียงตามลำดับใน INDEX (ไม่ขึ้นกับว่าไฟล์ไหนโหลดเสร็จก่อน)
+  function loadedCH() { return (INDEX || []).map(c => CH[c.id]).filter(Boolean); }
   async function loadChapter(id) {
     if (CH[id]) return CH[id];
     const meta = INDEX.find(c => c.id === id);
@@ -976,7 +980,7 @@
     const pct = (r, n) => n ? Math.round(r * 100 / n) : null;
     const boxes = [], years = {};
     let tr = 0, tn = 0;
-    for (const ch of Object.values(CH)) {
+    for (const ch of loadedCH()) {
       for (const s of ch.sections) {
         let r = 0, n = 0, tried = 0;
         for (const qid of s.examIds) {
@@ -1013,7 +1017,7 @@
     await loadAll(); renderSidebar();
     let h = `<div class="hero"><h1>🗒️ My notes & highlights</h1><p>เรียงตามบทและกล่อง กดชื่อกล่องเพื่อไปอ่านต่อ</p></div>`;
     let any = false;
-    for (const ch of Object.values(CH)) for (const s of ch.sections) {
+    for (const ch of loadedCH()) for (const s of ch.sections) {
       const k = secKey(ch.id, s.no), note = S.notes[k], hl = S.hl[k] || [];
       if (!note && !hl.length) continue; any = true;
       h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl c-${x.c || 'g'}">${esc(x.t)}</mark>${x.n ? `<span class="inote-txt">★ ${esc(x.n)}</span>` : ''}</p>`).join('')}</div>`;
@@ -1095,7 +1099,7 @@
     h += '<div class="kw-cols">';
     const groups = {};
     S.kw.forEach((x, i) => { const g = `${x.ch}|${x.box}`; (groups[g] = groups[g] || []).push(i); });
-    const keys = Object.keys(groups).sort((a, b) => { const [ca, ba] = a.split('|'), [cb, bb] = b.split('|'); return ca === cb ? ba - bb : ca < cb ? -1 : 1; });
+    const keys = Object.keys(groups).sort((a, b) => { const [ca, ba] = a.split('|'), [cb, bb] = b.split('|'); return ca === cb ? ba - bb : chNum(ca) - chNum(cb) || (ca < cb ? -1 : 1); });
     for (const g of keys) {
       const [c, box] = g.split('|'); const ch = CH[c]; const sec = ch && ch.sections.find(x => x.no === +box);
       const items = groups[g].filter(i => !(S.kwHide && S.kw[i].ok)); if (!items.length) continue;
@@ -1189,7 +1193,7 @@
   }
   async function vDrill(params) {
     await loadAll(); renderSidebar();
-    const chs = Object.values(CH);
+    const chs = loadedCH();
     const all = chs.flatMap(ch => tableFacts(ch).map(t => Object.assign(t, { ch: ch.id, chTitle: ch.title })));
     const db = all.filter(t => DRUGBUG.test(t.head.join(' ')));
     const weak = S.drillWrong || {};
@@ -1217,7 +1221,7 @@
   const DRUG_H = /^(ยา|drug|กลุ่มยา|ชื่อยา)/i, BUG_H = /^(เชื้อ|bug|organism|pathogen)/i, SKIP_H = /^(ข้อ|ปีที่ออก|กล่อง)$/;
   function dbEntries() {
     const map = new Map();
-    for (const ch of Object.values(CH)) for (const s of ch.sections) {
+    for (const ch of loadedCH()) for (const s of ch.sections) {
       if (!/<table/.test(s.html)) continue;
       const d = document.createElement('div'); d.innerHTML = s.html;
       d.querySelectorAll('.abx').forEach(x => x.remove());
@@ -1314,7 +1318,7 @@
   /* ---------- Numbers: cutpoint · ค่าปกติ · สูตร ของทุกบท (data/<id>-numbers.json) ---------- */
   async function vNumbers(params) {
     await loadAll(); renderSidebar();
-    const all = Object.values(CH).flatMap(ch => (ch.numbers || []).map(x => Object.assign({ ch: ch.id }, x)));
+    const all = loadedCH().flatMap(ch => (ch.numbers || []).map(x => Object.assign({ ch: ch.id }, x)));
     const f = S.nuf || (S.nuf = { k: 'all', cover: 0 });
     const n = k => all.filter(x => k === 'all' || x.t === k).length;
     view.innerHTML = `<div class="hero"><h1>🔢 Numbers</h1><p>ตัวเลข cutpoint ค่าปกติ และสูตรคำนวณของทุกบทในหน้าเดียว · เปิด Cover mode แล้วแตะทีละช่องเพื่อท่อง · เพิ่มบทใหม่แล้วหน้านี้อัปเดตเอง</p></div>
@@ -1375,7 +1379,7 @@
     $('#searchInput').value = q;
     if (!q) { view.innerHTML = '<p class="empty">พิมพ์คำที่ต้องการค้นหา</p>'; return; }
     const ql = q.toLowerCase(); const hits = [];
-    for (const ch of Object.values(CH)) {
+    for (const ch of loadedCH()) {
       for (const s of ch.sections) {
         const hay = (s.title + ' ' + s.kw.join(' ') + ' ' + s.text).replace(/\*\*|==|`|\{[ESX]\}/g, '').replace(/\s+/g, ' ');
         const pos = hay.toLowerCase().indexOf(ql);
