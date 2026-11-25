@@ -596,3 +596,32 @@ figure.fig.al-r{float:right;margin:6px 0 10px 16px;max-width:60%;width:var(--w,4
 .db-cats .btn{margin-top:8px}
 /* แท็กกลุ่มแบคทีเรียหลังชื่อเชื้อ (data/bacteria.json) */
 .gtag::after{content:" (" attr(data-g) ")";color:var(--think);font-size:.84em;font-weight:600;white-space:nowrap}
+/* ไฮไลต์สีฟ้า · สีตัวอักษรอ่อน 3 สี · ตัวหนา · ขีดเส้นใต้ */
+:root{--u-b:#c4e4ff;--t-ly:#c7a600;--t-lg:#2e9e4f;--t-lb:#1f8ad1}
+:root[data-theme="dark"]{--u-b:#1d4a6b;--t-ly:#fff3a6;--t-lg:#b6f5c4;--t-lb:#a8dcff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--u-b:#1d4a6b;--t-ly:#fff3a6;--t-lg:#b6f5c4;--t-lb:#a8dcff}}
+mark.user-hl.c-b{--c:var(--u-b)}
+.hl-pop .sw.c-b{background:var(--u-b)}
+mark.user-hl.c-tly,mark.user-hl.c-tlg,mark.user-hl.c-tlb,mark.user-hl.c-bd,mark.user-hl.c-ul{--c:transparent;background:none}
+mark.user-hl.c-tly{color:var(--t-ly)} mark.user-hl.c-tlg{color:var(--t-lg)} mark.user-hl.c-tlb{color:var(--t-lb)}
+mark.user-hl.c-bd{font-weight:800}
+mark.user-hl.c-ul{text-decoration:underline 2px currentColor;text-underline-offset:3px}
+.hl-pop .sw.tc.c-tly{color:var(--t-ly)} .hl-pop .sw.tc.c-tlg{color:var(--t-lg)} .hl-pop .sw.tc.c-tlb{color:var(--t-lb)}
+.hl-pop .sw.tc.fx-b{color:var(--fg);font-weight:900}
+.hl-pop .sw.tc.fx-u{color:var(--fg);font-weight:700;text-decoration:underline 2px;text-underline-offset:3px}
+@media (max-width:420px){.hl-pop button.sw{width:31px;height:31px}.hl-pop .row{gap:5px}}
+.inote{cursor:pointer}
+/* ครอปรูป */
+.crop{position:relative;overflow:hidden;width:100%;border-radius:8px}
+figure.uimg .crop{border-radius:10px;border:1px solid var(--line)}
+figure.uimg .crop img{border:0;border-radius:0}
+.crop-ov{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.55);display:grid;place-items:center;padding:16px}
+.crop-dlg{background:var(--surface);color:var(--fg);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px;max-width:min(920px,100%);box-shadow:var(--shadow)}
+.crop-dlg .note-kind{font-size:13px;font-weight:700;color:var(--muted)}
+.crop-dlg .note-act{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.crop-stage{position:relative;align-self:center;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;cursor:crosshair;line-height:0}
+.crop-stage img{display:block;max-width:100%;max-height:68vh;width:auto;height:auto}
+.crop-sel{position:absolute;outline:2px solid #fff;box-shadow:0 0 0 9999px rgba(0,0,0,.5);cursor:move}
+.crop-sel i{position:absolute;width:16px;height:16px;background:#fff;border:2px solid var(--accent,#2f9e57);border-radius:3px}
+.crop-sel i[data-h="nw"]{left:-2px;top:-2px;cursor:nwse-resize}.crop-sel i[data-h="ne"]{right:-2px;top:-2px;cursor:nesw-resize}
+.crop-sel i[data-h="sw"]{left:-2px;bottom:-2px;cursor:nesw-resize}.crop-sel i[data-h="se"]{right:-2px;bottom:-2px;cursor:nwse-resize}
