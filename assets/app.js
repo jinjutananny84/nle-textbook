@@ -49,7 +49,7 @@
     return ch;
   }
   async function loadAll() { await loadIndex(); return Promise.all(INDEX.filter(c => c.ready).map(c => loadChapter(c.id))); }
-  function yearNum(id) { const y = id.split('/')[0]; return parseFloat(y); }
+  function yearNum(id) { const y = parseFloat(id.split('/')[0]); return isNaN(y) ? 0 : y; }
   function byYearDesc(a, b) { return yearNum(b) - yearNum(a) || parseInt(a.split('/')[1]) - parseInt(b.split('/')[1]); }
 
   /* ---------- tiny markdown for chapter files ---------- */
@@ -62,8 +62,13 @@
       .replace(/\{E\}/g, '<span class="tag e">ออกสอบ</span>')
       .replace(/\{S\}/g, '<span class="tag s">เสริม</span>')
       .replace(/\{X\}/g, '<span class="tag x">ข้ามบท</span>')
-      .replace(/\[\[(\d+)\]\]/g, '<a href="#" data-box="$1">กล่อง $1</a>');
+      .replace(/\[\[([a-z][\w-]*):(\d+)\]\]/g, (m, c, n) => `<a href="#/${c}/${n}">${esc(chTitle(c))} กล่อง ${n}</a>`)   // ลิงก์ข้ามบท [[b7:12]]
+      .replace(/\[\[(\d+)\]\]/g, '<a href="#" data-box="$1">กล่อง $1</a>')
+      .replace(/\[t=(\d{1,2}(?::\d{2}){1,2})\]/g, (m, t) => CLIP ? `<a class="clip-t" href="${CLIP}${/drive\.google/.test(CLIP) ? (CLIP.includes('?') ? '&' : '?') + 't=' + toSec(t) : '#t=' + toSec(t)}" target="_blank" rel="noopener">▶ ${t}</a>` : `<span class="clip-t">▶ ${t}</span>`);   // เวลาในคลิป [t=12:34]
   }
+  let CLIP = '';   // ลิงก์คลิปของบทที่กำลังแสดง (frontmatter clip:)
+  const toSec = t => t.split(':').reduce((a, x) => a * 60 + Number(x), 0);
+  function chTitle(c) { const m = (INDEX || []).find(x => x.id === c); return m ? m.title.split(' ')[0] : c.toUpperCase(); }
   function parseChapter(md, meta) {
     const lines = md.replace(/\r/g, '').split('\n');
     const ch = { id: meta.id, title: meta.title, pages: [], sections: [], source: '' };
@@ -75,6 +80,7 @@
       }
       i++;
     }
+    CLIP = /^https:\/\//.test(ch.clip || '') ? ch.clip : '';
     let page = 0, sec = null, buf = [];
     const flush = () => { if (sec) { sec.html = renderBlocks(buf); sec.text = buf.join(' ').replace(/<[^>]+>/g, ' '); } buf = []; };
     for (; i < lines.length; i++) {
@@ -117,10 +123,10 @@
         out += `<div class="card think"><div class="lbl">${ic('think')} หยุดคิดก่อน</div><p class="think-q">${inline(q.trim())}</p><button class="reveal-btn" data-reveal>Show answer</button><div class="think-a" hidden>${inline((a || '').trim())}</div></div>`;
         i++; continue;
       }
-      if (L.startsWith('!! ') || L.startsWith('>> ')) {
-        flushP(); const kind = L.startsWith('!!') ? 'trap' : 'note'; const tag = L.slice(0, 2); const items = [];
+      if (L.startsWith('!! ') || L.startsWith('>> ') || L.startsWith('@@ ')) {
+        flushP(); const tag = L.slice(0, 2); const kind = { '!!': 'trap', '>>': 'note', '@@': 'hint' }[tag]; const items = [];
         while (i < lines.length && lines[i].startsWith(tag + ' ')) { items.push(lines[i].slice(3)); i++; }
-        const lbl = kind === 'trap' ? ic('warn') + ' กับดักข้อสอบ' : ic('pin') + ' อาจารย์เน้น';
+        const lbl = { trap: ic('warn') + ' กับดักข้อสอบ', note: ic('pin') + ' อาจารย์เน้น', hint: '🎯 อาจารย์บอกข้อสอบ' }[kind];
         out += `<div class="card ${kind}"><div class="lbl">${lbl}</div>` + (items.length > 1 ? `<ul>${items.map(x => `<li>${inline(x)}</li>`).join('')}</ul>` : `<p>${inline(items[0])}</p>`) + '</div>';
         continue;
       }
@@ -238,10 +244,11 @@
 
   /* ---------- sidebar ---------- */
   function renderSidebar(curCh, curNo) {
-    let h = '';
+    let h = '', grp = '';
     for (const c of INDEX) {
       const ch = CH[c.id];
       if (!c.ready) continue;
+      if ((c.group || '') !== grp) { grp = c.group || ''; if (grp) h += `<div class="side-grp">${esc(grp)}</div>`; }
       const p = ch ? chProgress(ch) : null;
       h += `<div class="side-ch"><a href="#/${c.id}">${esc(c.title)}</a>`;
       if (p) h += `<div class="side-bar">${lvBar(p)}</div>`;
@@ -845,20 +852,23 @@
   async function vHome() {
     await loadAll();
     renderSidebar();
-    const tiles = INDEX.map(c => {
+    const tile = c => {
       const ch = CH[c.id];
       if (!c.ready) return `<div class="tile soon"><h3>${esc(c.title)}</h3><p>${esc(c.desc || 'เร็ว ๆ นี้')}</p></div>`;
       const p = chProgress(ch);
       const rt = readToday(c.id);
       const todayLine = `<div class="today-line"><b>Today</b> ${rt.done} boxes read · ${Math.round(rt.done * 100 / p.n)}% of chapter${rt.seen > rt.done ? ` · ${rt.seen - rt.done} in progress` : ''}<i style="width:${Math.round(rt.done * 100 / p.n)}%"></i></div>`;
       return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p>${todayLine}${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</a>`;
-    }).join('');
+    };
+    // บทหลักก่อน แล้วตามด้วยกลุ่มพิเศษ (chapters.json → group) เช่น คลิปติวอาจารย์
+    const groups = [...new Set(INDEX.map(c => c.group || ''))];
+    const tiles = groups.map(g => (g ? `<h2 class="grid-h">${esc(g)}</h2>` : '') + `<div class="grid">${INDEX.filter(c => (c.group || '') === g).map(tile).join('')}</div>`).join('');
     const lr = S.lastRead && S.lastRead.h.match(/^#\/([^/]+)\/(\d+)$/);
     const lrSec = lr && CH[lr[1]] && CH[lr[1]].sections.find(x => x.no === +lr[2]);
     const rtAll = readToday(); const rvDone = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
     const chips = `<div class="today-chips"><span>📖 Read today <b>${rtAll.done}</b> boxes</span><span>📅 Reviewed <b>${rvDone}</b></span><span>🔥 Streak <b>${streak()}</b> days</span></div>`;
-    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}${backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : ''}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 Continue reading · Box ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 Review today · ${n} due</a>` : ''; })()}</div></div><div class="grid">${tiles}</div>
-    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-r">5 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
+    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}${backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : ''}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 Continue reading · Box ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 Review today · ${n} due</a>` : ''; })()}</div></div>${tiles}
+    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><div class="card hint" style="margin:8px 0"><div class="lbl">🎯 อาจารย์บอกข้อสอบ</div>ข้อที่อาจารย์ผู้ออกข้อสอบยกมาหรือบอกว่าออก กด ▶ เวลา เพื่อเปิดคลิปตรงจุดนั้น</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-r">5 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
   }
   async function vChapter(id) {
     await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
