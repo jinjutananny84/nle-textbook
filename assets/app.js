@@ -479,11 +479,11 @@
         if (blk && z.contains(blk) && blk !== z && /^(LI|TD|TH)$/.test(blk.tagName)) blk.appendChild(fig);
         else if (blk && z.contains(blk) && blk !== z) { let a = blk; while (a.nextElementSibling && a.nextElementSibling.matches('.uimg,.inote')) a = a.nextElementSibling; a.after(fig); }
         else { let a = m; while (a.parentNode !== z && /^(B|STRONG|I|EM|A|SPAN|MARK|CODE|SUB|SUP)$/.test(a.parentNode.tagName)) a = a.parentNode; a.after(fig); }
-        drawImg(fig, h); return;
+        drawImg(fig, h); cropImg(fig, h.cr); return;
       }
       if (!h.id) { h.id = Date.now().toString(36) + i; save(); }
       const d = document.createElement('span'); d.className = 'inote' + (h.ns ? ' sticky' : ''); d.dataset.hl = i;
-      d.dataset.hlk = z.dataset.hlk + '~' + h.id; d.textContent = h.n;
+      d.dataset.hlk = z.dataset.hlk + '~' + h.id; d.textContent = h.n; d.title = 'แตะเพื่อแก้โน้ต';
       // วางต่อจากข้อความที่จุดไว้ทันที (ออกจากตัวหนา/ลิงก์ก่อน เพื่อไม่ให้สีพื้นติดมา)
       const segs = z.querySelectorAll(`mark.user-hl[data-hl="${i}"]`); let at = segs[segs.length - 1];
       while (at.parentNode !== z && /^(B|STRONG|I|EM|A|SPAN|MARK|CODE|SUB|SUP)$/.test(at.parentNode.tagName)) at = at.parentNode;
@@ -514,7 +514,7 @@
     const { k, idx } = moveImg; moveImg = null; const old = (S.hl[k] || [])[idx]; if (!old || !old.img) return;
     const a1 = S.hl[k].slice(); if (old.c === 'i') a1.splice(idx, 1); else { a1[idx] = Object.assign({}, old); delete a1[idx].img; }
     snap(k); setHL(k, a1);
-    const a2 = (S.hl[ctx.k] || []).slice(); a2.push({ s: ctx.s, t: ctx.t, c: 'i', img: old.img, w: old.w, al: old.al });
+    const a2 = (S.hl[ctx.k] || []).slice(); a2.push({ s: ctx.s, t: ctx.t, c: 'i', img: old.img, w: old.w, al: old.al, cr: old.cr });
     snap(ctx.k); setHL(ctx.k, a2); getSelection().removeAllRanges();
     refreshZone(zoneEl(k)); if (ctx.k !== k) refreshZone(zoneEl(ctx.k)); toast('ย้ายรูปแล้ว');
   }
@@ -595,12 +595,13 @@
   function showPalette(rect, onColor, onErase, onNote, curNote) {
     pop.classList.remove('writing');
     const noNote = pop.dataset.inNote === '1';
-    pop.innerHTML = `<div class="row">${['y', 'g', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>${noNote ? '' : '<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button>'}</div>`
-      + `<div class="row">${['ty', 'tr', 'tp'].map(c => `<button class="sw tc c-${c}" data-c="${c}" aria-label="เปลี่ยนสีตัวอักษร" title="เปลี่ยนสีตัวอักษร">A</button>`).join('')}`
-      + (noNote ? '' : `<button class="sw nb" data-c="i" aria-label="แทรกรูป" title="แทรกรูปต่อจากข้อความนี้">🖼</button><button class="sw nb" data-c="k" aria-label="sticky note" title="sticky note ต่อจากข้อความนี้">🗒️</button>`)
+    // แถว 1 สีไฮไลต์ + ยางลบ · แถว 2 สีตัวอักษร + ตัวหนา/ขีดเส้นใต้ · แถว 3 โน้ต รูป keyword ค้นหา
+    pop.innerHTML = `<div class="row">${['y', 'g', 'b', 'p', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button></div>`
+      + `<div class="row">${['ty', 'tr', 'tp', 'tly', 'tlg', 'tlb'].map(c => `<button class="sw tc c-${c}" data-c="${c}" aria-label="เปลี่ยนสีตัวอักษร" title="เปลี่ยนสีตัวอักษร">A</button>`).join('')}<button class="sw tc fx-b" data-c="bd" aria-label="ตัวหนา" title="ตัวหนา">B</button><button class="sw tc fx-u" data-c="ul" aria-label="ขีดเส้นใต้" title="ขีดเส้นใต้">U</button></div>`
+      + `<div class="row">${noNote ? '' : '<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button><button class="sw nb" data-c="k" aria-label="sticky note" title="sticky note ต่อจากข้อความนี้">🗒️</button><button class="sw nb" data-c="i" aria-label="แทรกรูป" title="แทรกรูปต่อจากข้อความนี้">🖼</button>'}`
       + (noNote ? '' : `<button class="sw nb kwb${kwHas(popZone, popText) ? ' on' : ''}" data-c="w" aria-label="เก็บเป็น keyword" title="เก็บเข้าหน้า Keyword">🔑</button>`) + `<button class="sw nb" data-c="s" aria-label="ค้นหาในแท็บใหม่" title="คัดลอกแล้วค้นใน Google แท็บใหม่">🔍</button></div>`;
     pop.hidden = false;
-    const w = 300, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
+    const w = 340, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
     pop.querySelectorAll('button').forEach(b => b.onclick = () => {
       if (b.dataset.c === 'n' || b.dataset.c === 'k') return openNote(onNote, curNote, b.dataset.c === 'k');
@@ -614,14 +615,72 @@
   function openNote(onNote, cur, sticky) {
     pop.dataset.mode = 'note'; pop.classList.add('writing');
     pop.innerHTML = `<div class="note-kind">${sticky ? '🗒️ Sticky note' : '★ Star note'}</div><textarea class="note-in${sticky ? ' sticky' : ''}" rows="3" placeholder="พิมพ์โน้ต จะแสดงต่อจากข้อความที่เลือก">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">Delete note</button>' : ''}<button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div>`;
-    const ta = pop.querySelector('textarea'); ta.focus();
+    const ta = pop.querySelector('textarea'); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
+    ta.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); onNote(ta.value.trim(), sticky); hidePop(); } });
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { const a = b.dataset.a; if (a === 'ok') onNote(ta.value.trim(), sticky); if (a === 'del') onNote('', sticky); hidePop(); });
+  }
+  // บันทึก/แก้/ลบโน้ตของไฮไลต์ที่มีอยู่แล้ว (ใช้ทั้งตอนแตะไฮไลต์และแตะตัวโน้ต)
+  const noteSaver = (k, idx, z) => (n, st) => {
+    snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k] || [])); if (!arr[idx]) return;
+    if (n) { arr[idx].n = n; if (st) arr[idx].ns = 1; else delete arr[idx].ns; if (!arr[idx].id) arr[idx].id = Date.now().toString(36); }
+    else { delete arr[idx].n; delete arr[idx].ns; if (arr[idx].c === 'n') arr.splice(idx, 1); }
+    setHL(k, arr); refreshZone(z);
+  };
+  /* ครอปรูป: เก็บเป็นสัดส่วน [x, y, กว้าง, สูง] (0–1) ของรูปเต็ม · ไม่แก้ไฟล์จริง กดไม่ครอปเพื่อกลับเป็นรูปเต็มได้เสมอ */
+  function cropImg(fig, cr) {
+    const im = fig.querySelector('img'); if (!im) return;
+    let box = im.parentNode.classList.contains('crop') ? im.parentNode : null;
+    if (!cr) { if (box) { box.replaceWith(im); ['position', 'left', 'top', 'max-width'].forEach(p => im.style.removeProperty(p)); im.style.width = '100%'; } return; }
+    if (!box) { box = document.createElement('div'); box.className = 'crop'; im.before(box); box.appendChild(im); }
+    const [x, y, w, h] = cr;
+    Object.assign(im.style, { position: 'absolute', maxWidth: 'none', width: (100 / w) + '%', height: 'auto', left: (-x / w * 100) + '%', top: (-y / h * 100) + '%' });
+    const fit = () => { const nw = im.naturalWidth || +im.getAttribute('width'), nh = im.naturalHeight || +im.getAttribute('height'); if (nw && nh) box.style.aspectRatio = `${nw * w} / ${nh * h}`; };
+    fit(); if (!im.complete || !im.naturalWidth) im.addEventListener('load', fit, { once: true });
+  }
+  function openCrop(src, cr, onSave) {
+    const ov = document.createElement('div'); ov.className = 'crop-ov';
+    ov.innerHTML = `<div class="crop-dlg"><div class="note-kind">✂️ ครอปรูป · ลากกรอบเพื่อย้าย ลากมุมเพื่อปรับ หรือลากบนรูปเพื่อวาดกรอบใหม่</div><div class="crop-stage"><img alt="" draggable="false"><div class="crop-sel"><i data-h="nw"></i><i data-h="ne"></i><i data-h="sw"></i><i data-h="se"></i></div></div><div class="note-act"><button class="btn small" data-a="full">ไม่ครอป (รูปเต็ม)</button><button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div></div>`;
+    document.body.appendChild(ov); hidePop();
+    const st = ov.querySelector('.crop-stage'), sel = ov.querySelector('.crop-sel'); st.querySelector('img').src = src;
+    let c = cr ? cr.slice() : [.05, .05, .9, .9];
+    const draw = () => Object.assign(sel.style, { left: c[0] * 100 + '%', top: c[1] * 100 + '%', width: c[2] * 100 + '%', height: c[3] * 100 + '%' });
+    draw();
+    const cl = v => Math.max(0, Math.min(1, v)), MIN = .04;
+    let drag = null;
+    const pt = e => { const r = st.getBoundingClientRect(); return [cl((e.clientX - r.left) / r.width), cl((e.clientY - r.top) / r.height)]; };
+    st.addEventListener('pointerdown', e => {
+      e.preventDefault(); st.setPointerCapture(e.pointerId);
+      const p = pt(e), hd = e.target.dataset.h;
+      drag = { p, c0: c.slice(), mode: hd || (e.target === sel ? 'move' : 'new') };
+      if (drag.mode === 'new') { c = [p[0], p[1], 0, 0]; drag.c0 = c.slice(); drag.mode = 'se'; }
+    });
+    st.addEventListener('pointermove', e => {
+      if (!drag) return; const p = pt(e), [x0, y0, w0, h0] = drag.c0, dx = p[0] - drag.p[0], dy = p[1] - drag.p[1];
+      if (drag.mode === 'move') { c = [cl(Math.min(x0 + dx, 1 - w0)), cl(Math.min(y0 + dy, 1 - h0)), w0, h0]; }
+      else {
+        let L = x0, T = y0, R = x0 + w0, B = y0 + h0;
+        if (drag.mode.includes('w')) L = Math.min(p[0], R - MIN); else R = Math.max(p[0], L + MIN);
+        if (drag.mode.includes('n')) T = Math.min(p[1], B - MIN); else B = Math.max(p[1], T + MIN);
+        c = [cl(L), cl(T), Math.min(1, R) - cl(L), Math.min(1, B) - cl(T)];
+      }
+      draw();
+    });
+    st.addEventListener('pointerup', () => { drag = null; });
+    const close = () => ov.remove();
+    ov.addEventListener('click', e => { if (e.target === ov) close(); });
+    ov.querySelectorAll('[data-a]').forEach(b => b.onclick = () => {
+      const a = b.dataset.a;
+      if (a === 'ok') { const full = c[0] < .005 && c[1] < .005 && c[2] > .99 && c[3] > .99; onSave(full ? null : c.map(v => Math.round(v * 10000) / 10000)); }
+      if (a === 'full') onSave(null);
+      close();
+    });
   }
   function figSize(fig) {
     const h = S.figw[fig.dataset.fk] || {};
     fig.classList.remove('al-l', 'al-r', 'sized'); fig.style.removeProperty('--w');
     if (h.w && h.w !== 100) { fig.classList.add('sized'); fig.style.setProperty('--w', h.w + '%'); }
     if (h.al === 'l' || h.al === 'r') fig.classList.add('sized', 'al-' + h.al);
+    cropImg(fig, h.cr);
   }
   function initFigs(art, k) {
     if (!S.figw) S.figw = {};
@@ -679,12 +738,13 @@
     e.stopPropagation(); const fk = fig.dataset.fk, h = S.figw[fk] || {}, cw = h.w || 100;
     pop.dataset.mode = 'edit'; pop.classList.remove('writing'); pop.hidden = false;
     const W = [30, 45, 60, 80, 100];
-    pop.innerHTML = `<div class="row img-tools"><span class="lbl">ขนาดรูป</span><button data-d="-">−</button><b>${cw}%</b><button data-d="+">+</button></div><div class="row img-tools"><button data-a="l" class="${h.al === 'l' ? 'on' : ''}" title="ชิดซ้าย ข้อความไหลรอบ">⇤</button><button data-a="c" class="${!h.al || h.al === 'c' ? 'on' : ''}" title="กึ่งกลาง">↔</button><button data-a="r" class="${h.al === 'r' ? 'on' : ''}" title="ชิดขวา ข้อความไหลรอบ">⇥</button><button data-z="1" title="กลับเป็นขนาดเดิม">รีเซ็ต</button></div>`;
+    pop.innerHTML = `<div class="row img-tools"><span class="lbl">ขนาดรูป</span><button data-d="-">−</button><b>${cw}%</b><button data-d="+">+</button></div><div class="row img-tools"><button data-a="l" class="${h.al === 'l' ? 'on' : ''}" title="ชิดซ้าย ข้อความไหลรอบ">⇤</button><button data-a="c" class="${!h.al || h.al === 'c' ? 'on' : ''}" title="กึ่งกลาง">↔</button><button data-a="r" class="${h.al === 'r' ? 'on' : ''}" title="ชิดขวา ข้อความไหลรอบ">⇥</button>${fig.querySelector('img') ? `<button data-cr="1" title="ครอปรูป">✂️ ครอป</button>` : ''}<button data-z="1" title="กลับเป็นขนาดเดิม">รีเซ็ต</button></div>`;
     const r = fig.getBoundingClientRect(); pop.style.top = (r.top + scrollY + Math.min(r.height, 120)) + 'px'; pop.style.left = Math.max(8, r.left + scrollX) + 'px';
-    const upd = ch => { const n = Object.assign({}, h, ch); if ((n.w || 100) === 100 && (!n.al || n.al === 'c')) delete S.figw[fk]; else S.figw[fk] = n; save(); figSize(fig); hidePop(); };
+    const upd = ch => { const n = Object.assign({}, h, ch); if ((n.w || 100) === 100 && (!n.al || n.al === 'c') && !n.cr) delete S.figw[fk]; else S.figw[fk] = n; save(); figSize(fig); hidePop(); };
     pop.querySelectorAll('[data-d]').forEach(b => b.onclick = () => { let i = W.findIndex(x => x >= cw); if (i < 0) i = W.length - 1; i = b.dataset.d === '+' ? Math.min(W.length - 1, W[i] > cw ? i : i + 1) : Math.max(0, W[i] < cw ? i : i - 1); upd({ w: W[i] }); });
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => upd({ al: b.dataset.a, w: b.dataset.a !== 'c' && cw === 100 ? 45 : cw }));
     pop.querySelector('[data-z]').onclick = () => { delete S.figw[fk]; save(); figSize(fig); hidePop(); };
+    const cb = pop.querySelector('[data-cr]'); if (cb) cb.onclick = () => openCrop(fig.querySelector('img').src, h.cr, cr => { const n = Object.assign({}, S.figw[fk] || {}); if (cr) n.cr = cr; else delete n.cr; if (Object.keys(n).length) S.figw[fk] = n; else delete S.figw[fk]; save(); figSize(fig); });
   }, true);
   // แตะรูป: ปรับขนาด / ชิดซ้าย-กลาง-ขวา / ลบ
   view.addEventListener('click', e => {
@@ -692,11 +752,12 @@
     e.stopPropagation(); const k = fig.dataset.k, idx = +fig.dataset.hl, h = (S.hl[k] || [])[idx]; if (!h) return;
     pop.dataset.mode = 'edit'; pop.classList.remove('writing'); pop.hidden = false;
     const W = [30, 45, 60, 80, 100];
-    pop.innerHTML = `<div class="row img-tools"><span class="lbl">ขนาด</span><button data-d="-">−</button><b>${h.w || 60}%</b><button data-d="+">+</button></div><div class="row img-tools"><button data-a="l" class="${h.al === 'l' ? 'on' : ''}" title="ชิดซ้าย ข้อความไหลรอบ">⇤</button><button data-a="c" class="${!h.al || h.al === 'c' ? 'on' : ''}" title="กึ่งกลาง">↔</button><button data-a="r" class="${h.al === 'r' ? 'on' : ''}" title="ชิดขวา ข้อความไหลรอบ">⇥</button><button data-m="1" title="ย้ายรูปไปต่อจากข้อความอื่น">ย้าย</button><button data-x="1" class="del" title="ลบรูป">ลบรูป</button></div>`;
+    pop.innerHTML = `<div class="row img-tools"><span class="lbl">ขนาด</span><button data-d="-">−</button><b>${h.w || 60}%</b><button data-d="+">+</button></div><div class="row img-tools"><button data-a="l" class="${h.al === 'l' ? 'on' : ''}" title="ชิดซ้าย ข้อความไหลรอบ">⇤</button><button data-a="c" class="${!h.al || h.al === 'c' ? 'on' : ''}" title="กึ่งกลาง">↔</button><button data-a="r" class="${h.al === 'r' ? 'on' : ''}" title="ชิดขวา ข้อความไหลรอบ">⇥</button><button data-cr="1" title="ครอปรูป">✂️ ครอป</button><button data-m="1" title="ย้ายรูปไปต่อจากข้อความอื่น">ย้าย</button><button data-x="1" class="del" title="ลบรูป">ลบรูป</button></div>`;
     const r = fig.getBoundingClientRect(); pop.style.top = (r.top + scrollY + Math.min(r.height, 120)) + 'px'; pop.style.left = Math.max(8, r.left + scrollX) + 'px';
     const upd = ch => { const arr = JSON.parse(JSON.stringify(S.hl[k])); Object.assign(arr[idx], ch); snap(k); setHL(k, arr); refreshZone(zoneEl(k)); hidePop(); };
     pop.querySelectorAll('[data-d]').forEach(b => b.onclick = () => { const cur = h.w || 60; let i = W.findIndex(x => x >= cur); if (i < 0) i = W.length - 1; i = b.dataset.d === '+' ? Math.min(W.length - 1, W[i] > cur ? i : i + 1) : Math.max(0, W[i] < cur ? i : i - 1); upd({ w: W[i] }); });
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => upd({ al: b.dataset.a }));
+    pop.querySelector('[data-cr]').onclick = () => { const im = fig.querySelector('img'); if (!im.src) return toast('รูปนี้ยังไม่โหลด'); openCrop(im.src, h.cr, cr => { const arr = JSON.parse(JSON.stringify(S.hl[k])); if (cr) arr[idx].cr = cr; else delete arr[idx].cr; snap(k); setHL(k, arr); refreshZone(zoneEl(k)); }); };
     pop.querySelector('[data-m]').onclick = () => { moveImg = { k, idx }; hidePop(); toast('เลือกข้อความที่จะวางรูป แล้วกดปุ่มรูปในแถบไฮไลต์'); };
     pop.querySelector('[data-x]').onclick = () => { const arr = S.hl[k].slice(); const x = arr[idx]; if (x.c === 'i') arr.splice(idx, 1); else { arr[idx] = Object.assign({}, x); delete arr[idx].img; } snap(k); setHL(k, arr); refreshZone(zoneEl(k)); hidePop(); };
   }, true);
@@ -722,12 +783,17 @@
       snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k])); arr[idx].c = c; setHL(k, arr); refreshZone(z);
     }, () => {
       snap(k); const arr = S.hl[k].slice(); arr.splice(idx, 1); setHL(k, arr); refreshZone(z);
-    }, (n, st) => {
-      snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k]));
-      if (n) { arr[idx].n = n; if (st) arr[idx].ns = 1; else delete arr[idx].ns; if (!arr[idx].id) arr[idx].id = Date.now().toString(36); }
-      else { delete arr[idx].n; delete arr[idx].ns; if (arr[idx].c === 'n') arr.splice(idx, 1); }
-      setHL(k, arr); refreshZone(z);
-    }, (S.hl[k][idx] || {}).n);
+    }, noteSaver(k, idx, z), (S.hl[k][idx] || {}).n);
+  }, true);
+  // แตะตัวโน้ต ★ / sticky ที่บันทึกแล้ว → เปิดกล่องแก้ข้อความได้ทันที
+  view.addEventListener('click', e => {
+    const d = e.target.closest('.inote'); if (!d || e.target.closest('mark.user-hl') || !getSelection().isCollapsed) return;
+    const z = d.parentElement && d.parentElement.closest('[data-hlk]'); if (!z) return;
+    const k = z.dataset.hlk, idx = +d.dataset.hl, h = (S.hl[k] || [])[idx]; if (!h || !h.n) return;
+    e.stopPropagation();
+    const r = d.getBoundingClientRect(), w = 320;
+    pop.style.top = (r.bottom + scrollY + 8) + 'px'; pop.style.left = Math.max(8, Math.min(r.left + scrollX, document.documentElement.clientWidth - w - 8)) + 'px';
+    pop.hidden = false; openNote(noteSaver(k, idx, z), h.n, !!h.ns);
   }, true);
   // ปิดแถบสีเมื่อแตะที่อื่น (การเลื่อนหน้าไม่ปิด)
   document.addEventListener('click', e => { if (!pop.hidden && (pop.dataset.mode === 'edit' || pop.dataset.mode === 'note') && e.target.isConnected && !pop.contains(e.target) && !e.target.closest('mark.user-hl')) hidePop(); });
@@ -792,7 +858,7 @@
     const rtAll = readToday(); const rvDone = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
     const chips = `<div class="today-chips"><span>📖 Read today <b>${rtAll.done}</b> boxes</span><span>📅 Reviewed <b>${rvDone}</b></span><span>🔥 Streak <b>${streak()}</b> days</span></div>`;
     view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}${backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : ''}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 Continue reading · Box ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 Review today · ${n} due</a>` : ''; })()}</div></div><div class="grid">${tiles}</div>
-    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-p">ฉัน</mark> <mark class="user-hl c-r">4 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
+    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-r">5 สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
   }
   async function vChapter(id) {
     await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
@@ -826,7 +892,7 @@
     const myHl = (S.hl[k] || []).length;
     h += `<details class="panel mynote" ${S.notes[k] ? 'open' : ''}><summary>🗒️ My notes${S.notes[k] ? ' ·  มีโน้ต' : ''}<span id="myHlCount" data-k="${k}">${myHl ? ` · ไฮไลต์ ${myHl} จุด` : ''}</span></summary>
       <textarea id="noteIn" rows="4" placeholder="จดสิ่งที่อยากจำของกล่องนี้ (บันทึกอัตโนมัติ)">${esc(S.notes[k] || '')}</textarea>
-      <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี เปลี่ยนสีตัวอักษร (A) เขียนโน้ต ★ หรือ sticky note 🗒️ ต่อจากข้อความนั้น และไฮไลต์ข้อความในโน้ตได้ด้วย (เหลือง เขียว ชมพู แดงอ่อน) เพื่อไฮไลต์เอง · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
+      <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี เปลี่ยนสีตัวอักษร (A) เขียนโน้ต ★ หรือ sticky note 🗒️ ต่อจากข้อความนั้น ตัวหนา (B) ขีดเส้นใต้ (U) และไฮไลต์ข้อความในโน้ตได้ด้วย (เหลือง เขียว ฟ้า ชมพู แดงอ่อน) · แตะโน้ตที่บันทึกแล้วเพื่อแก้ · แตะรูปเพื่อปรับขนาดหรือครอป · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
     if (s.examIds.length) {
       h += `<section class="exam-sec"><h2>📝 Past exam questions</h2><p class="bar-label">กดเลือกคำตอบ ข้อที่ตอบผิดจะเข้ากองข้อผิดให้อัตโนมัติ</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid]);
