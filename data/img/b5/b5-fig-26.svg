@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 530" width="1000" height="530" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" markerUnits="userSpaceOnUse"><circle cx="5" cy="5" r="5" fill="#1f2937"/></marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">ท่าแขนทารก: Erb (waiter's tip) vs Klumpke (claw hand)</text>
+
+  <!-- panels -->
+  <rect x="10" y="44" width="485" height="476" rx="10" fill="none" stroke="#6b7280" stroke-width="1.2"/>
+  <rect x="505" y="44" width="485" height="476" rx="10" fill="none" stroke="#6b7280" stroke-width="1.2"/>
+  <path d="M10,54 a10,10 0 0 1 10,-10 h465 a10,10 0 0 1 10,10 v22 h-485 z" fill="#0891b2" fill-opacity=".16"/>
+  <path d="M505,54 a10,10 0 0 1 10,-10 h465 a10,10 0 0 1 10,10 v22 h-485 z" fill="#7c3aed" fill-opacity=".16"/>
+  <text x="252" y="66" font-size="15" font-weight="700" fill="#0891b2" text-anchor="middle">Erb palsy — upper trunk C5–C6</text>
+  <text x="747" y="66" font-size="15" font-weight="700" fill="#7c3aed" text-anchor="middle">Klumpke palsy — lower trunk C8–T1</text>
+
+  <!-- ============ ERB INFANT ============ -->
+  <!-- torso -->
+  <path d="M316,228 Q372,210 428,228 L436,410 Q372,422 308,410 Z" fill="#6b7280" fill-opacity=".14" stroke="#6b7280" stroke-width="2"/>
+  <!-- neck -->
+  <rect x="358" y="186" width="28" height="30" fill="#6b7280" fill-opacity=".14" stroke="#6b7280" stroke-width="2"/>
+  <!-- head tilted away from affected side -->
+  <g transform="rotate(14 385 150)">
+    <circle cx="385" cy="150" r="42" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <circle cx="385" cy="150" r="42" fill="#6b7280" fill-opacity=".1"/>
+    <circle cx="371" cy="146" r="3" fill="#6b7280"/>
+    <circle cx="399" cy="146" r="3" fill="#6b7280"/>
+    <path d="M375,166 Q385,172 395,166" fill="none" stroke="#6b7280" stroke-width="2"/>
+  </g>
+  <!-- normal arm (infant's left = viewer's right): flexed -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M426,236 L458,305 L425,350" stroke="#6b7280" stroke-width="24"/>
+    <path d="M426,236 L458,305 L425,350" stroke="#ffffff" stroke-width="20"/>
+    <path d="M426,236 L458,305 L425,350" stroke="#6b7280" stroke-opacity=".14" stroke-width="20"/>
+  </g>
+  <ellipse cx="415" cy="358" rx="14" ry="11" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <!-- affected arm (infant's right = viewer's left): adducted, extended, pronated -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M316,236 L303,312 L300,382" stroke="#6b7280" stroke-width="24"/>
+    <path d="M316,236 L303,312 L300,382" stroke="#ffffff" stroke-width="20"/>
+    <path d="M316,236 L303,312 L300,382" stroke="#6b7280" stroke-opacity=".14" stroke-width="20"/>
+  </g>
+  <!-- flexed hand, palm facing back (waiter's tip) -->
+  <path d="M290,384 Q282,410 296,432 Q312,446 322,430 Q326,412 312,388 Z" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <path d="M296,432 Q306,438 316,432" fill="none" stroke="#6b7280" stroke-width="1.5"/>
+  <!-- medial rotation curved arrow -->
+  <path d="M290,262 Q304,280 322,266" fill="none" stroke="#6b7280" stroke-width="1.8" marker-end="url(#ag)"/>
+
+  <!-- forces: head vs shoulder -->
+  <line x1="318" y1="188" x2="338" y2="128" stroke="#dc2626" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="312" y1="196" x2="284" y2="226" stroke="#dc2626" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="250" y="104" font-size="13" font-weight="700" fill="#dc2626" text-anchor="middle">แรงถ่างคอ-ไหล่</text>
+  <text x="250" y="120" font-size="13" fill="#dc2626" text-anchor="middle">(shoulder dystocia)</text>
+
+  <!-- callouts -->
+  <g font-size="13" fill="#1f2937">
+    <text x="22" y="220"><tspan font-weight="700">adducted</tspan></text>
+    <text x="22" y="236">(deltoid, supraspinatus)</text>
+    <text x="22" y="276"><tspan font-weight="700">medially rotated</tspan></text>
+    <text x="22" y="292">(infraspinatus, teres minor)</text>
+    <text x="22" y="332"><tspan font-weight="700">elbow extended</tspan></text>
+    <text x="22" y="348">(biceps, brachialis)</text>
+    <text x="22" y="404"><tspan font-weight="700">pronated + wrist flexed</tspan></text>
+    <text x="22" y="420">(ฝ่ามือหันไปด้านหลัง)</text>
+  </g>
+  <g stroke="#6b7280" stroke-width="1.2" fill="none" marker-end="url(#dot)">
+    <path d="M190,228 L300,234"/>
+    <path d="M205,284 L285,276"/>
+    <path d="M160,340 L290,314"/>
+    <path d="M190,412 L284,412"/>
+  </g>
+
+  <!-- ============ KLUMPKE INFANT ============ -->
+  <g transform="translate(0,34)">
+  <path d="M600,272 Q656,254 712,272 L720,450 Q656,462 592,450 Z" fill="#6b7280" fill-opacity=".14" stroke="#6b7280" stroke-width="2"/>
+  <rect x="642" y="230" width="28" height="30" fill="#6b7280" fill-opacity=".14" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="656" cy="195" r="42" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="656" cy="195" r="42" fill="#6b7280" fill-opacity=".1"/>
+  <circle cx="642" cy="190" r="3" fill="#6b7280"/>
+  <circle cx="670" cy="190" r="3" fill="#6b7280"/>
+  <path d="M646,212 Q656,218 666,212" fill="none" stroke="#6b7280" stroke-width="2"/>
+  <!-- normal arm -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M710,280 L738,352 L730,410" stroke="#6b7280" stroke-width="24"/>
+    <path d="M710,280 L738,352 L730,410" stroke="#ffffff" stroke-width="20"/>
+    <path d="M710,280 L738,352 L730,410" stroke="#6b7280" stroke-opacity=".14" stroke-width="20"/>
+  </g>
+  <ellipse cx="729" cy="420" rx="11" ry="14" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <!-- arm pulled overhead -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M602,282 L586,200 L578,140" stroke="#6b7280" stroke-width="24"/>
+    <path d="M602,282 L586,200 L578,140" stroke="#ffffff" stroke-width="20"/>
+    <path d="M602,282 L586,200 L578,140" stroke="#6b7280" stroke-opacity=".14" stroke-width="20"/>
+  </g>
+  <!-- clawed hand on raised arm -->
+  <path d="M566,138 Q562,116 572,106 Q584,98 592,110 Q594,124 590,138 Z" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <path d="M570,108 Q566,100 574,96 M580,104 Q578,94 586,94" fill="none" stroke="#6b7280" stroke-width="1.8"/>
+  </g>
+  <!-- traction arrow -->
+  <line x1="578" y1="124" x2="578" y2="84" stroke="#dc2626" stroke-width="3.5" marker-end="url(#ar)"/>
+  <text x="596" y="100" font-size="13" font-weight="700" fill="#dc2626">แรงดึงแขนขึ้น</text>
+  <text x="596" y="116" font-size="13" fill="#dc2626">(hyperabduction)</text>
+
+  <!-- claw hand inset -->
+  <rect x="790" y="88" width="190" height="200" rx="8" fill="#7c3aed" fill-opacity=".06" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="885" y="110" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">total claw hand</text>
+  <!-- forearm + palm, lateral view -->
+  <path d="M800,214 L850,206 Q858,196 880,196 L912,198 Q922,210 912,236 L866,240 Q852,236 850,232 L800,236 Z" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M910,204 L944,178 L962,206 L952,230" stroke="#6b7280" stroke-width="13"/>
+    <path d="M910,204 L944,178 L962,206 L952,230" stroke="#ffffff" stroke-width="9.5"/>
+  </g>
+  <circle cx="910" cy="204" r="3.5" fill="#dc2626"/>
+  <circle cx="944" cy="178" r="3.5" fill="#1f2937"/>
+  <circle cx="962" cy="206" r="3.5" fill="#1f2937"/>
+  <text x="826" y="160" font-size="13" fill="#dc2626">MCP เหยียดเกิน</text>
+  <line x1="880" y1="166" x2="906" y2="198" stroke="#dc2626" stroke-width="1.2"/>
+  <text x="905" y="268" font-size="13" fill="#1f2937">PIP/DIP งอ</text>
+  <line x1="940" y1="255" x2="956" y2="228" stroke="#1f2937" stroke-width="1.2"/>
+
+  <!-- Horner inset -->
+  <rect x="790" y="304" width="190" height="140" rx="8" fill="#6b7280" fill-opacity=".06" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="885" y="326" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">Horner (ถ้า T1 เสีย)</text>
+  <path d="M835,385 Q885,350 935,385 Q885,415 835,385 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <circle cx="885" cy="386" r="14" fill="#6b7280" fill-opacity=".35" stroke="#1f2937" stroke-width="1.5"/>
+  <circle cx="885" cy="386" r="3" fill="#1f2937"/>
+  <!-- drooping lid -->
+  <path d="M833,385 Q885,346 937,385 Q885,388 833,385 Z" fill="#6b7280" fill-opacity=".55" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="885" y="432" font-size="13" fill="#1f2937" text-anchor="middle">ptosis + miosis (± anhidrosis)</text>
+</svg>

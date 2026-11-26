@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker>
+<marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">เป้าของยา RA ใน synovium</text>
+<rect x="20" y="42" width="960" height="552" rx="14" fill="#db2777" fill-opacity=".06" stroke="#db2777" stroke-opacity=".4" stroke-width="1.2"/>
+<text x="36" y="66" font-size="15" font-weight="700" fill="#db2777">Inflamed synovium</text>
+
+<!-- ===== APC ===== -->
+<path d="M120,186 L136,222 L178,214 L156,250 L182,288 L140,282 L120,318 L102,282 L60,290 L84,250 L60,212 L102,220 Z" fill="#ea580c" fill-opacity=".15" stroke="#ea580c" stroke-width="2" stroke-linejoin="round"/>
+<text x="120" y="256" font-size="15" font-weight="700" fill="#ea580c" text-anchor="middle">APC</text>
+<!-- MHC II cup + peptide -->
+<line x1="170" y1="226" x2="196" y2="226" stroke="#2563eb" stroke-width="4"/>
+<path d="M196,214 L196,238 L210,238 M196,214 L210,214" stroke="#2563eb" stroke-width="4" fill="none"/>
+<circle cx="207" cy="226" r="4.5" fill="#dc2626"/>
+<!-- TCR -->
+<path d="M246,226 L222,226 M222,216 L222,236" stroke="#0891b2" stroke-width="4" fill="none"/>
+<!-- B7 + CD28 -->
+<line x1="172" y1="276" x2="204" y2="276" stroke="#16a34a" stroke-width="4"/><circle cx="207" cy="276" r="5" fill="#16a34a"/>
+<path d="M246,276 L222,276 M218,268 L218,284" stroke="#0891b2" stroke-width="4" fill="none"/>
+<!-- second B7 blocked by abatacept -->
+<line x1="166" y1="306" x2="200" y2="318" stroke="#16a34a" stroke-width="4"/><circle cx="203" cy="319" r="5" fill="#16a34a"/>
+<rect x="208" y="312" width="16" height="16" rx="5" fill="#7c3aed" fill-opacity=".35" stroke="#7c3aed" stroke-width="2"/>
+<path d="M224,320 L244,334 M244,334 L256,322 M244,334 L252,348 M244,334 L262,346" stroke="#7c3aed" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="40" y="160" font-size="13" fill="#2563eb" font-weight="600">MHC II +</text>
+<text x="40" y="176" font-size="13" fill="#2563eb" font-weight="600">citrullinated peptide</text>
+<line x1="160" y1="180" x2="200" y2="212" stroke="#6b7280" stroke-width="1"/>
+<text x="34" y="346" font-size="13" fill="#16a34a" font-weight="600">CD80/86 (B7)</text>
+<line x1="90" y1="334" x2="168" y2="306" stroke="#6b7280" stroke-width="1"/>
+<text x="214" y="204" font-size="13" fill="#1f2937" text-anchor="middle">signal 1</text>
+<text x="214" y="262" font-size="13" fill="#1f2937" text-anchor="middle">signal 2</text>
+<text x="150" y="378" font-size="14" fill="#7c3aed" font-weight="700">Abatacept (CTLA4-Ig)</text>
+<text x="150" y="395" font-size="13" fill="#7c3aed">→ T cell anergy</text>
+<line x1="210" y1="364" x2="232" y2="340" stroke="#6b7280" stroke-width="1"/>
+
+<!-- ===== T cell ===== -->
+<circle cx="300" cy="252" r="54" fill="#2563eb" fill-opacity=".12" stroke="#2563eb" stroke-width="2"/>
+<circle cx="308" cy="252" r="24" fill="#2563eb" fill-opacity=".18"/>
+<text x="258" y="231" font-size="13" fill="#0891b2" font-weight="600">TCR</text>
+<text x="256" y="281" font-size="13" fill="#0891b2" font-weight="600">CD28</text>
+<text x="300" y="186" font-size="14" fill="#2563eb" font-weight="700" text-anchor="middle">CD4 T cell (Th1/Th17)</text>
+<!-- T helps B and macrophage -->
+<path d="M346,222 L428,160" stroke="#6b7280" stroke-width="1.5" marker-end="url(#ak)"/>
+<path d="M330,300 L398,428" stroke="#6b7280" stroke-width="1.5" marker-end="url(#ak)"/>
+
+<!-- ===== B cell ===== -->
+<circle cx="470" cy="128" r="42" fill="#0891b2" fill-opacity=".16" stroke="#0891b2" stroke-width="2"/>
+<circle cx="476" cy="128" r="18" fill="#0891b2" fill-opacity=".2"/>
+<text x="470" y="78" font-size="14" fill="#0891b2" font-weight="700" text-anchor="middle">B cell</text>
+<line x1="434" y1="149" x2="418" y2="158" stroke="#0891b2" stroke-width="4"/><circle cx="415" cy="160" r="4.5" fill="#0891b2"/>
+<text x="404" y="140" font-size="13" fill="#0891b2" text-anchor="end">CD20</text>
+<path d="M410,166 L398,184 M398,184 L386,176 M398,184 L398,200" stroke="#7c3aed" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M410,166 L404,176" stroke="#7c3aed" stroke-width="3.5" stroke-linecap="round"/>
+<text x="404" y="222" font-size="14" fill="#7c3aed" font-weight="700">Rituximab</text>
+<text x="522" y="124" font-size="14" fill="#1f2937" font-weight="600">B cell → plasma cell → <tspan fill="#dc2626">RF, anti-CCP</tspan></text>
+
+<!-- ===== Macrophage + cytokines ===== -->
+<path d="M410,440 C430,418 480,420 500,444 C524,450 520,500 496,512 C480,536 420,534 404,512 C380,500 386,452 410,440 Z" fill="#ea580c" fill-opacity=".2" stroke="#ea580c" stroke-width="2"/>
+<ellipse cx="452" cy="478" rx="20" ry="14" fill="#ea580c" fill-opacity=".3"/>
+<text x="452" y="550" font-size="14" fill="#ea580c" font-weight="700" text-anchor="middle">Macrophage</text>
+<!-- TNF triangles -->
+<path d="M528,428 l8,-14 l8,14 z" fill="#2563eb"/>
+<path d="M560,404 l8,-14 l8,14 z" fill="#2563eb"/>
+<text x="580" y="430" font-size="13" fill="#2563eb" font-weight="700">TNF-α</text>
+<!-- IL-6 circles -->
+<circle cx="540" cy="468" r="7" fill="#2563eb"/><circle cx="580" cy="474" r="7" fill="#2563eb"/>
+<text x="596" y="479" font-size="13" fill="#2563eb" font-weight="700">IL-6</text>
+<!-- IL-1 squares -->
+<rect x="532" y="502" width="13" height="13" fill="#2563eb"/><rect x="574" y="510" width="13" height="13" fill="#2563eb"/>
+<text x="596" y="522" font-size="13" fill="#2563eb" font-weight="700">IL-1</text>
+<path d="M600,462 C640,440 650,400 676,366" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5 3" fill="none" marker-end="url(#ab)"/>
+<!-- anti-TNF bound to TNF -->
+<path d="M568,388 L568,370 M568,370 L556,358 M568,370 L580,358 M568,370 L568,350" stroke="#7c3aed" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="392" y="300" font-size="14" fill="#7c3aed" font-weight="700">Anti-TNF: infliximab, adalimumab,</text>
+<text x="392" y="317" font-size="14" fill="#7c3aed" font-weight="700">etanercept (decoy receptor)</text>
+<line x1="540" y1="322" x2="564" y2="350" stroke="#6b7280" stroke-width="1"/>
+
+<!-- ===== Synoviocyte ===== -->
+<path d="M660,300 C720,200 880,200 950,300 C880,400 720,400 660,300 Z" fill="#dc2626" fill-opacity=".14" stroke="#dc2626" stroke-width="2"/>
+<ellipse cx="886" cy="298" rx="30" ry="22" fill="#dc2626" fill-opacity=".2" stroke="#dc2626" stroke-width="1.5"/>
+<text x="886" y="303" font-size="13" fill="#1f2937" text-anchor="middle">nucleus</text>
+<text x="812" y="346" font-size="14" fill="#dc2626" font-weight="700" text-anchor="middle">fibroblast-like synoviocyte</text>
+<!-- receptor crossing membrane -> JAK -> STAT -> nucleus -->
+<path d="M680,250 L706,274 M688,244 L712,268" stroke="#2563eb" stroke-width="3.5"/>
+<rect x="716" y="270" width="44" height="24" rx="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+
+<line x1="760" y1="282" x2="784" y2="282" stroke="#1f2937" stroke-width="1.5" marker-end="url(#ad)"/>
+<rect x="786" y="270" width="48" height="24" rx="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="810" y="287" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">STAT</text>
+<line x1="834" y1="284" x2="854" y2="292" stroke="#1f2937" stroke-width="1.5" marker-end="url(#ad)"/>
+<path d="M726,266 L750,298 M750,266 L726,298" stroke="#7c3aed" stroke-width="3.5" stroke-linecap="round"/>
+<text x="738" y="287" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle" stroke="#ffffff" stroke-width="3.5" paint-order="stroke">JAK</text>
+<text x="690" y="186" font-size="14" fill="#7c3aed" font-weight="700">Tofacitinib, baricitinib</text>
+<text x="690" y="203" font-size="13" fill="#7c3aed">(oral JAK inhibitor)</text>
+<line x1="740" y1="208" x2="740" y2="264" stroke="#6b7280" stroke-width="1"/>
+<!-- IL-6R + tocilizumab -->
+<line x1="694" y1="338" x2="676" y2="350" stroke="#2563eb" stroke-width="4"/><path d="M676,344 L670,356" stroke="#2563eb" stroke-width="4"/>
+<path d="M666,356 L652,368 M652,368 L640,360 M652,368 L652,384 M666,356 L660,364" stroke="#7c3aed" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<text x="640" y="452" font-size="14" fill="#7c3aed" font-weight="700">Tocilizumab</text>
+<text x="640" y="469" font-size="13" fill="#7c3aed">(anti-IL-6R)</text>
+<line x1="652" y1="436" x2="652" y2="390" stroke="#6b7280" stroke-width="1"/>
+<!-- IL-1R + anakinra -->
+<line x1="736" y1="363" x2="728" y2="382" stroke="#2563eb" stroke-width="4"/>
+<path d="M716,384 Q728,378 740,386 L736,398 Q728,394 720,398 Z" fill="#7c3aed" fill-opacity=".35" stroke="#7c3aed" stroke-width="2"/>
+<text x="752" y="424" font-size="14" fill="#7c3aed" font-weight="700">Anakinra (IL-1Ra)</text>
+<line x1="750" y1="418" x2="738" y2="398" stroke="#6b7280" stroke-width="1"/>
+
+<!-- ===== bone + osteoclast ===== -->
+<path d="M690,530 H960 V584 H690 Z" fill="#E8DCC0"/>
+<path d="M690,530 H846 C852,548 902,548 908,530 H960" fill="none" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M846,530 C852,548 902,548 908,530 Z" fill="#ffffff"/>
+<ellipse cx="877" cy="522" rx="34" ry="14" fill="#ea580c" fill-opacity=".25" stroke="#ea580c" stroke-width="2"/>
+<circle cx="862" cy="522" r="3.5" fill="#ea580c"/><circle cx="874" cy="520" r="3.5" fill="#ea580c"/><circle cx="886" cy="523" r="3.5" fill="#ea580c"/><circle cx="897" cy="520" r="3.5" fill="#ea580c"/>
+<text x="836" y="524" font-size="13" fill="#ea580c" font-weight="600" text-anchor="end">osteoclast</text>
+<path d="M890,366 L884,500" stroke="#ea580c" stroke-width="2.2" marker-end="url(#ao)"/>
+<text x="876" y="474" font-size="14" fill="#ea580c" font-weight="700" text-anchor="end">RANKL → erosion</text>
+<text x="700" y="576" font-size="13" fill="#1f2937">bone</text>
+
+<!-- ===== MTX ===== -->
+<rect x="40" y="440" width="260" height="140" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5"/>
+<path d="M90,500 C90,474 130,474 132,492 C134,474 174,474 174,500 C174,526 134,526 132,508 C130,526 90,526 90,500 Z" fill="#16a34a" fill-opacity=".14" stroke="#16a34a" stroke-width="1.8"/>
+<circle cx="110" cy="500" r="8" fill="#16a34a" fill-opacity=".35"/><circle cx="154" cy="500" r="8" fill="#16a34a" fill-opacity=".35"/>
+<text x="132" y="464" font-size="13" fill="#1f2937" text-anchor="middle">เซลล์กำลังแบ่งตัว</text>
+<rect x="200" y="486" width="64" height="28" rx="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+<path d="M206,480 L258,520 M258,480 L206,520" stroke="#7c3aed" stroke-width="3.5" stroke-linecap="round"/>
+<text x="232" y="505" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle" stroke="#ffffff" stroke-width="3.5" paint-order="stroke">DHFR</text>
+<line x1="178" y1="500" x2="198" y2="500" stroke="#6b7280" stroke-width="1.5"/>
+<text x="170" y="552" font-size="14" fill="#7c3aed" font-weight="700" text-anchor="middle">MTX (anchor drug) + folic acid</text>
+<text x="170" y="570" font-size="13" fill="#6b7280" text-anchor="middle">ยับยั้งการสร้าง purine/thymidine</text>
+
+<!-- warning -->
+<rect x="300" y="608" width="400" height="36" rx="8" fill="#ea580c" fill-opacity=".14" stroke="#ea580c" stroke-width="1.5"/>
+<text x="500" y="631" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">⚠ ก่อน biologic/JAK: ตรวจ latent TB, HBV</text>
+</svg>

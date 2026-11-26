@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" markerUnits="userSpaceOnUse"><circle cx="5" cy="5" r="5" fill="#1f2937"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+<marker id="ay" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ca8a04"/></marker>
+<clipPath id="butt"><path d="M104,96 Q260,70 430,140 Q462,240 452,330 Q440,420 410,462 Q260,490 112,474 Q96,300 104,96 Z"/></clipPath>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">Gluteal IM injection และ Trendelenburg sign</text>
+<text x="20" y="54" font-size="14" font-weight="700" fill="#6b7280">ก้นขวา มองจากด้านหลัง</text>
+<text x="20" y="74" font-size="13" fill="#6b7280">← medial</text><text x="480" y="74" font-size="13" fill="#6b7280" text-anchor="end">lateral →</text>
+<line x1="510" y1="44" x2="510" y2="608" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 4"/>
+<g clip-path="url(#butt)">
+<rect x="270" y="60" width="200" height="220" fill="#16a34a" fill-opacity=".2"/>
+<rect x="90" y="60" width="180" height="220" fill="#eab308" fill-opacity=".25"/>
+<rect x="90" y="280" width="380" height="220" fill="#dc2626" fill-opacity=".14"/>
+</g>
+<path d="M104,96 Q260,70 430,140 Q462,240 452,330 Q440,420 410,462 Q260,490 112,474 Q96,300 104,96 Z" fill="none" stroke="#6b7280" stroke-width="2"/>
+<path d="M104,96 Q260,70 430,140" fill="none" stroke="#1f2937" stroke-width="3"/>
+<text x="300" y="98" font-size="13" fill="#1f2937">iliac crest</text>
+<g stroke="#1f2937" stroke-width="1.5" stroke-dasharray="6 4"><line x1="270" y1="84" x2="270" y2="484"/><line x1="100" y1="280" x2="460" y2="280"/></g>
+<!-- sacrum -->
+<path d="M70,150 L112,150 L118,330 Q100,380 80,360 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<text x="0" y="0" font-size="13" fill="#6b7280" transform="translate(96,300) rotate(-90)">sacrum</text>
+<!-- greater trochanter & ischial tuberosity -->
+<ellipse cx="420" cy="322" rx="26" ry="22" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<ellipse cx="200" cy="420" rx="26" ry="20" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<!-- piriformis -->
+<path d="M116,232 L404,300 L402,326 L116,272 Z" fill="#ea580c" fill-opacity=".3" stroke="#ea580c" stroke-width="1.5"/>
+<text x="0" y="0" font-size="13" font-weight="700" fill="#ea580c" transform="translate(290,292) rotate(13)">piriformis</text>
+
+<path d="M150,236 Q196,196 252,168" fill="none" stroke="#dc2626" stroke-width="2"/>
+<path d="M146,226 Q190,186 250,158" fill="none" stroke="#ffffff" stroke-width="7.5" stroke-linecap="round"/><path d="M146,226 Q190,186 250,158" fill="none" stroke="#eab308" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ay)"/>
+<path d="M150,290 Q240,330 290,380 Q312,420 316,500" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round"/><path d="M150,290 Q240,330 290,380 Q312,420 316,500" fill="none" stroke="#eab308" stroke-width="9" stroke-linecap="round" />
+<path d="M140,292 Q200,330 236,350 Q262,364 268,380" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/><path d="M140,292 Q200,330 236,350 Q262,364 268,380" fill="none" stroke="#ca8a04" stroke-width="3" stroke-linecap="round" />
+<path d="M268,380 L280,396 M268,380 L256,398" stroke="#ca8a04" stroke-width="2"/>
+<g font-size="13">
+<text x="296" y="186" font-weight="700" fill="#16a34a" font-size="15">Upper outer</text>
+<text x="296" y="204" font-weight="700" fill="#16a34a" font-size="15">— SAFE</text>
+<text x="126" y="128" font-weight="700" fill="#1f2937">Upper inner</text>
+<text x="118" y="388" font-weight="700" fill="#1f2937">Lower inner</text>
+<text x="336" y="402" font-weight="700" fill="#1f2937">Lower outer</text>
+<text x="336" y="418" fill="#dc2626">(sciatic n.)</text>
+<text x="126" y="146" fill="#a16207">(superior gluteal</text>
+<text x="126" y="162" fill="#a16207">n./vessels)</text>
+</g>
+<g font-size="13" fill="#1f2937">
+<text x="22" y="520" font-weight="700" fill="#a16207">Inferior gluteal n.</text>
+<text x="22" y="536">ใต้ piriformis → gluteus maximus</text>
+<text x="22" y="562" font-weight="700" fill="#a16207">Superior gluteal n. (L4–S1)</text>
+<text x="22" y="578">เหนือ piriformis → glut. medius/minimus</text>
+<text x="300" y="520" font-weight="700" fill="#a16207">Sciatic n. (L4–S3)</text>
+<text x="300" y="536">ใต้ piriformis, ระหว่าง GT–IT</text>
+<text x="300" y="562" font-weight="700">Ischial tuberosity</text>
+<text x="300" y="578">— hamstring origin</text>
+</g>
+<text x="430" y="362" font-size="13" fill="#6b7280" text-anchor="middle">GT</text>
+<g stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)">
+<path d="M14,560 L14,250 L148,228"/>
+<path d="M150,510 L236,372"/>
+<path d="M330,506 L314,470"/>
+<path d="M300,558 L222,432"/>
+</g>
+
+<text x="610" y="62" font-size="14" font-weight="700" fill="#16a34a" text-anchor="middle">ปกติ</text>
+<circle cx="610" cy="104" r="20" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+<path d="M574,140 L646,140 L640,270 L580,270 Z" fill="#6b7280" fill-opacity=".1" stroke="#6b7280" stroke-width="2"/>
+<path d="M574,144 L562,250 M646,144 L658,250" stroke="#6b7280" stroke-width="9" stroke-linecap="round"/>
+<rect x="602" y="124" width="16" height="16" fill="#6b7280" fill-opacity=".1" stroke="#6b7280" stroke-width="1.5"/>
+<path d="M632,320 L634,420 L634,520" stroke="#6b7280" stroke-width="20" stroke-linecap="round" fill="none"/>
+<path d="M632,320 L634,420 L634,520" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none"/>
+<path d="M620,528 L650,528" stroke="#6b7280" stroke-width="6" stroke-linecap="round"/>
+<line x1="530" y1="534" x2="690" y2="534" stroke="#6b7280" stroke-width="2"/>
+<g transform="rotate(0 632 300)">
+<path d="M588,318 L584,400 L586,452" stroke="#6b7280" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M588,318 L584,400 L586,452" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M566,272 L654,272 Q660,300 652,326 L568,326 Q560,300 566,272 Z" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+<path d="M566,272 L654,272 Q660,300 652,326 L568,326 Q560,300 566,272 Z" fill="#6b7280" fill-opacity=".1"/>
+<line x1="540" y1="278" x2="680" y2="278" stroke="#16a34a" stroke-width="3"/>
+</g>
+<path d="M628,280 L656,280 L660,326 L646,330 Z" fill="#16a34a" fill-opacity=".45" stroke="#16a34a" stroke-width="1.5"/>
+<text x="830" y="62" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">Trendelenburg sign (+)</text>
+<circle cx="830" cy="104" r="20" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+<path d="M794,140 L866,140 L860,270 L800,270 Z" fill="#6b7280" fill-opacity=".1" stroke="#6b7280" stroke-width="2"/>
+<path d="M794,144 L782,250 M866,144 L878,250" stroke="#6b7280" stroke-width="9" stroke-linecap="round"/>
+<rect x="822" y="124" width="16" height="16" fill="#6b7280" fill-opacity=".1" stroke="#6b7280" stroke-width="1.5"/>
+<path d="M852,320 L854,420 L854,520" stroke="#6b7280" stroke-width="20" stroke-linecap="round" fill="none"/>
+<path d="M852,320 L854,420 L854,520" stroke="#ffffff" stroke-width="16" stroke-linecap="round" fill="none"/>
+<path d="M840,528 L870,528" stroke="#6b7280" stroke-width="6" stroke-linecap="round"/>
+<line x1="750" y1="534" x2="910" y2="534" stroke="#6b7280" stroke-width="2"/>
+<g transform="rotate(-12 852 300)">
+<path d="M808,318 L804,400 L806,452" stroke="#6b7280" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M808,318 L804,400 L806,452" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M786,272 L874,272 Q880,300 872,326 L788,326 Q780,300 786,272 Z" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+<path d="M786,272 L874,272 Q880,300 872,326 L788,326 Q780,300 786,272 Z" fill="#6b7280" fill-opacity=".1"/>
+<line x1="760" y1="278" x2="900" y2="278" stroke="#dc2626" stroke-width="3"/>
+</g>
+<path d="M848,280 L876,280 L880,326 L866,330 Z" fill="#6b7280" fill-opacity=".15" stroke="#6b7280" stroke-width="1.5"/>
+<path d="M680,340 Q692,312 672,282" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#ag)"/>
+<g font-size="13" fill="#1f2937">
+<text x="522" y="262" font-weight="700" fill="#16a34a">เชิงกรานระนาบ</text>
+<text x="690" y="368" fill="#16a34a">R gluteus</text>
+<text x="690" y="384" fill="#16a34a">medius ดึง</text>
+<text x="610" y="566" text-anchor="middle">ยืนขาขวาเดียว</text>
+<text x="830" y="566" text-anchor="middle">ยืนขาขวาเดียว</text>
+</g>
+<line x1="760" y1="326" x2="760" y2="380" stroke="#dc2626" stroke-width="3.5" marker-end="url(#ar)"/>
+<text x="756" y="408" font-size="13" font-weight="700" fill="#dc2626" text-anchor="end">ฝั่งตรงข้ามตก</text>
+<g font-size="13" text-anchor="end">
+<text x="990" y="300" font-weight="700" fill="#dc2626">right superior</text>
+<text x="990" y="316" font-weight="700" fill="#dc2626">gluteal n.</text>
+<text x="990" y="332" font-weight="700" fill="#dc2626">palsy</text>
+<text x="990" y="352" fill="#6b7280">(R glut. medius</text>
+<text x="990" y="368" fill="#6b7280">อ่อนแรง = เทา)</text>
+</g>
+<path d="M906,326 L876,310" stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)"/>
+<text x="560" y="600" font-size="13" fill="#6b7280">(ภาพมองจากด้านหลัง: ขาขวา = ด้านขวาของภาพ)</text>
+</svg>

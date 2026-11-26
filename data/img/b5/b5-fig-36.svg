@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" markerUnits="userSpaceOnUse"><circle cx="5" cy="5" r="5" fill="#1f2937"/></marker>
+<marker id="ay" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ca8a04"/></marker>
+<marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+<clipPath id="legc"><path d="M112,92 L262,92 Q270,150 286,220 Q300,300 284,400 Q276,480 268,540 L348,560 Q372,572 366,590 L128,592 Q110,580 140,540 Q130,460 116,380 Q96,300 104,220 Q110,140 112,92 Z"/></clipPath>
+<clipPath id="secc"><path d="M765,195 Q890,195 890,330 Q890,465 765,465 Q640,465 640,330 Q640,195 765,195 Z"/></clipPath>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">Common peroneal n. และ compartment ของขา (ขาขวา)</text>
+<text x="20" y="54" font-size="14" font-weight="700" fill="#6b7280">มองด้านข้าง (lateral)</text>
+<text x="20" y="74" font-size="13" fill="#6b7280">← posterior</text><text x="380" y="74" font-size="13" fill="#6b7280">anterior →</text>
+<line x1="572" y1="44" x2="572" y2="708" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 4"/>
+<g clip-path="url(#legc)"><rect x="80" y="40" width="320" height="560" fill="#ffffff"/><path d="M150,330 L290,330 L290,540 L150,540 Z" fill="#16a34a" fill-opacity=".18"/><path d="M200,548 L380,548 L380,575 L200,575 Z" fill="#16a34a" fill-opacity=".18"/></g>
+<path d="M112,92 L262,92 Q270,150 286,220 Q300,300 284,400 Q276,480 268,540 L348,560 Q372,572 366,590 L128,592 Q110,580 140,540 Q130,460 116,380 Q96,300 104,220 Q110,140 112,92 Z" fill="none" stroke="#6b7280" stroke-width="2"/>
+<g fill="#E8DCC0" stroke="#6b7280" stroke-width="2">
+<path d="M196,92 L248,92 L250,190 Q262,214 256,232 L184,232 Q176,212 194,190 Z"/>
+<path d="M212,242 L262,242 Q272,256 262,272 L254,280 L250,520 Q262,540 252,548 L232,548 L230,280 Q214,268 212,242 Z"/>
+<path d="M180,250 Q196,240 206,252 Q208,266 200,276 L198,520 Q206,540 196,552 L180,546 L186,520 L188,276 Q176,266 180,250 Z"/>
+</g>
+<text x="222" y="140" font-size="13" fill="#6b7280" text-anchor="middle">femur</text>
+<text x="0" y="0" font-size="13" fill="#6b7280" transform="translate(246,450) rotate(-90)">tibia</text>
+<text x="0" y="0" font-size="13" fill="#6b7280" transform="translate(197,470) rotate(-90)">fibula</text>
+<path d="M138,96 Q150,170 190,248" fill="none" stroke="#6b7280" stroke-width="10" stroke-opacity=".3" stroke-linecap="round"/>
+<text x="0" y="0" font-size="13" fill="#6b7280" transform="translate(130,200) rotate(-82)">biceps femoris</text>
+<path d="M150,92 L150,170" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round"/><path d="M150,92 L150,170" fill="none" stroke="#eab308" stroke-width="7" stroke-linecap="round" />
+<path d="M150,170 Q140,300 150,420 Q158,500 168,560" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/><path d="M150,170 Q140,300 150,420 Q158,500 168,560" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round" />
+<path d="M150,170 Q164,220 178,256 Q184,276 204,286 Q220,290 232,290" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round"/><path d="M150,170 Q164,220 178,256 Q184,276 204,286 Q220,290 232,290" fill="none" stroke="#eab308" stroke-width="5" stroke-linecap="round" />
+<path d="M222,292 Q216,380 220,460 Q224,520 252,556" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/><path d="M222,292 Q216,380 220,460 Q224,520 252,556" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round" marker-end="url(#ay)"/>
+<path d="M232,290 Q262,300 268,360 Q272,450 272,530 Q290,556 330,566" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/><path d="M232,290 Q262,300 268,360 Q272,450 272,530 Q290,556 330,566" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" />
+<circle cx="196" cy="282" r="20" fill="none" stroke="#dc2626" stroke-width="3"/>
+<g font-size="13" fill="#1f2937">
+<text x="22" y="120" font-weight="700" fill="#a16207">Sciatic n.</text>
+<text x="22" y="330" font-weight="700" fill="#7c3aed">Tibial n.</text>
+<text x="22" y="346" fill="#7c3aed">หลังน่อง</text>
+<text x="300" y="166" font-weight="700" fill="#a16207">Common peroneal n.</text>
+<text x="300" y="182">เลียบ tendon biceps femoris</text>
+<text x="310" y="252" font-weight="700" fill="#dc2626">fibular neck —</text>
+<text x="310" y="268" fill="#dc2626">กระแทก/หัก/เฝือกรัด</text>
+<text x="310" y="328" font-weight="700" fill="#2563eb">Deep peroneal n.</text>
+<text x="310" y="344">→ TA/EHL/EDL</text>
+<text x="310" y="360" font-weight="700" fill="#2563eb">dorsiflexion</text>
+<text x="310" y="408" font-weight="700" fill="#16a34a">Superficial peroneal n.</text>
+<text x="310" y="424">→ fibularis</text>
+<text x="310" y="440" font-weight="700" fill="#16a34a">eversion</text>
+<text x="310" y="476" fill="#16a34a">ผิว lateral leg + หลังเท้า</text>
+<text x="310" y="492" fill="#16a34a">(Superficial peroneal)</text>
+</g>
+<g stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)">
+<path d="M92,124 L146,140"/>
+<path d="M88,330 L144,336"/>
+<path d="M296,170 L166,214"/>
+<path d="M306,258 L216,278"/>
+<path d="M306,334 L270,340"/>
+<path d="M306,414 L224,410"/>
+<path d="M306,482 L268,500"/>
+</g>
+<g font-size="13" fill="#1f2937">
+<rect x="20" y="604" width="194" height="100" rx="8" fill="none" stroke="#6b7280"/>
+<path d="M70,700 Q56,670 60,645 Q64,630 80,630 L136,630 Q150,634 148,652 Q146,680 128,700 Z" fill="#16a34a" fill-opacity=".22" stroke="#6b7280" stroke-width="1.5"/>
+<g fill="#ffffff" stroke="#6b7280" stroke-width="1.5"><circle cx="76" cy="620" r="8"/><circle cx="94" cy="617" r="5.5"/><circle cx="107" cy="617" r="5"/><circle cx="120" cy="619" r="4.5"/><circle cx="132" cy="624" r="4"/></g>
+<path d="M80,628 L86,616 L90,628 Z" fill="#2563eb" fill-opacity=".8"/>
+<text x="152" y="648" font-weight="700" fill="#2563eb">Deep</text>
+<text x="152" y="664" fill="#2563eb">peroneal</text><text x="152" y="680" fill="#2563eb">ง่าม 1–2</text>
+</g>
+<g font-size="13" fill="#1f2937">
+</g>
+<rect x="222" y="604" width="130" height="100" rx="8" fill="none" stroke="#6b7280"/>
+<path d="M242,700 Q230,664 238,640 Q244,624 260,624 Q290,622 296,640 Q300,668 284,700 Z" fill="#7c3aed" fill-opacity=".28" stroke="#6b7280" stroke-width="1.5"/>
+<g fill="#7c3aed" fill-opacity=".28" stroke="#6b7280" stroke-width="1.2"><circle cx="246" cy="616" r="6"/><circle cx="259" cy="613" r="4.5"/><circle cx="270" cy="614" r="4"/><circle cx="280" cy="616" r="3.5"/><circle cx="289" cy="620" r="3"/></g>
+<text x="300" y="650" font-size="13" font-weight="700" fill="#7c3aed">Tibial</text>
+<text x="300" y="666" font-size="13" fill="#7c3aed">ฝ่าเท้า</text>
+<rect x="360" y="604" width="200" height="100" rx="8" fill="none" stroke="#6b7280"/>
+<circle cx="400" cy="622" r="9" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+<path d="M400,631 L402,662 M402,662 L392,698 M402,662 L424,664 L420,690 L428,700" fill="none" stroke="#6b7280" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M400,640 L388,660 M400,640 L414,656" stroke="#6b7280" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M386,698 L398,698" stroke="#6b7280" stroke-width="3" stroke-linecap="round"/>
+<text x="440" y="636" font-size="13" font-weight="700" fill="#1f2937">steppage gait</text>
+<text x="440" y="652" font-size="13" fill="#1f2937">ยกเข่าสูง</text>
+<text x="440" y="668" font-size="13" fill="#1f2937">ปลายเท้าห้อย</text>
+<text x="440" y="684" font-size="13" fill="#6b7280">(foot drop)</text>
+<text x="590" y="54" font-size="14" font-weight="700" fill="#6b7280">ภาพตัดขวางกลางขาขวา (มองจากบน)</text>
+<g clip-path="url(#secc)">
+<rect x="630" y="190" width="270" height="300" fill="#ffffff"/>
+<path d="M712,190 L900,190 L900,250 L878,250 L848,286 L832,296 L740,272 Z" fill="#0891b2" fill-opacity=".24"/>
+<path d="M878,250 L900,250 L900,392 L872,380 L852,312 L848,286 Z" fill="#16a34a" fill-opacity=".3"/>
+<path d="M740,272 L832,296 L842,314 Q770,350 700,290 Z" fill="#ea580c" fill-opacity=".3"/>
+<path d="M630,262 L676,262 L700,290 Q770,350 842,314 L852,312 L872,380 L900,392 L900,490 L630,490 Z" fill="#eab308" fill-opacity=".3"/>
+</g>
+<path d="M765,195 Q890,195 890,330 Q890,465 765,465 Q640,465 640,330 Q640,195 765,195 Z" fill="none" stroke="#6b7280" stroke-width="2"/>
+<g stroke="#6b7280" stroke-width="1.5" fill="none">
+<path d="M848,286 L880,248"/><path d="M852,312 L874,382"/><path d="M700,290 Q770,350 842,314"/>
+</g>
+<path d="M712,206 L740,272 L676,262 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<circle cx="845" cy="300" r="14" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<line x1="740" y1="272" x2="832" y2="296" stroke="#1f2937" stroke-width="2.5"/>
+<text x="710" y="256" font-size="13" fill="#1f2937" text-anchor="middle">T</text>
+<text x="845" y="305" font-size="13" fill="#1f2937" text-anchor="middle">F</text>
+<circle cx="782" cy="276" r="6" fill="#eab308" stroke="#a16207"/><circle cx="796" cy="279" r="5" fill="#dc2626"/>
+<circle cx="868" cy="300" r="6" fill="#eab308" stroke="#a16207"/>
+<circle cx="770" cy="312" r="6" fill="#eab308" stroke="#a16207"/><circle cx="784" cy="315" r="5" fill="#dc2626"/>
+<text x="765" y="186" font-size="13" fill="#6b7280" text-anchor="middle">anterior</text>
+<text x="896" y="440" font-size="13" fill="#6b7280">lateral →</text>
+
+<g font-size="13" fill="#1f2937">
+<text x="590" y="88" font-weight="700" fill="#0891b2">Anterior: TA, EHL, EDL</text>
+<text x="590" y="104">— deep peroneal n. + anterior tibial a.</text>
+<text x="892" y="196" font-weight="700" fill="#16a34a">Lateral:</text>
+<text x="892" y="212">fibularis</text>
+<text x="892" y="228">longus/brevis —</text>
+<text x="892" y="244">superficial</text>
+<text x="892" y="260">peroneal n.</text>
+<text x="590" y="496" font-weight="700" fill="#ea580c">Deep posterior: TP, FDL, FHL</text>
+<text x="590" y="512">— tibial n. + posterior tibial a.</text>
+<text x="590" y="538" font-weight="700" fill="#a16207">Superficial posterior:</text>
+<text x="590" y="554">gastrocnemius, soleus</text>
+</g>
+<g stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)">
+<path d="M660,110 L790,240"/>
+<path d="M888,216 L870,280"/>
+<path d="M650,484 L760,322"/>
+<path d="M760,530 L770,420"/>
+</g>
+<text x="852" y="534" font-size="13" fill="#6b7280">จุดเหลือง = เส้นประสาท</text>
+<text x="852" y="550" font-size="13" fill="#6b7280">จุดแดง = หลอดเลือด</text>
+<rect x="590" y="570" width="400" height="56" rx="8" fill="#2563eb" fill-opacity=".1" stroke="#2563eb" stroke-width="1.5"/>
+<text x="790" y="593" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">PED: peroneal = eversion + dorsiflexion</text>
+<text x="790" y="614" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">TIP: tibial = inversion + plantarflexion</text>
+<rect x="590" y="640" width="400" height="60" rx="8" fill="#dc2626" fill-opacity=".1" stroke="#dc2626" stroke-width="1.5"/>
+<text x="790" y="664" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">Compartment syndrome:</text>
+<text x="790" y="686" font-size="13" fill="#1f2937" text-anchor="middle">pain on passive stretch, &gt; 30 mmHg → fasciotomy</text>
+</svg>

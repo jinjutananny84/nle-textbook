@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 690" width="1000" height="690" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+<marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+<marker id="tp" viewBox="0 0 4 18" refX="2" refY="9" markerWidth="4" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto"><rect width="4" height="18" fill="#7c3aed"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">แผนที่ยา osteoporosis บน remodeling unit</text>
+<text x="20" y="62" font-size="15" fill="#16a34a" font-weight="700" text-anchor="start">Anabolic (กระตุ้นการสร้าง)</text>
+<text x="980" y="62" font-size="15" fill="#7c3aed" font-weight="700" text-anchor="end">Antiresorptive (ยับยั้งการสลาย)</text>
+<path d="M290,330 L540,330 C552,332 560,352 590,352 L650,352 C675,352 684,332 696,330 L712,330 L712,432 L290,432 Z" fill="#E8DCC0" stroke="#1f2937" stroke-width="1.5"/>
+<text x="700" y="424" font-size="13" fill="#1f2937" font-weight="600" text-anchor="end">Bone (hydroxyapatite)</text>
+<rect x="310" y="282" width="44" height="46" rx="5" fill="#16a34a" fill-opacity=".18" stroke="#16a34a" stroke-width="2"/>
+<ellipse cx="332" cy="314" rx="9" ry="7" fill="#16a34a" fill-opacity=".5"/>
+<rect x="358" y="282" width="44" height="46" rx="5" fill="#16a34a" fill-opacity=".18" stroke="#16a34a" stroke-width="2"/>
+<ellipse cx="380" cy="314" rx="9" ry="7" fill="#16a34a" fill-opacity=".5"/>
+<rect x="406" y="282" width="44" height="46" rx="5" fill="#16a34a" fill-opacity=".18" stroke="#16a34a" stroke-width="2"/>
+<ellipse cx="428" cy="314" rx="9" ry="7" fill="#16a34a" fill-opacity=".5"/>
+<text x="304" y="302" font-size="13" fill="#16a34a" font-weight="700" text-anchor="end">Osteoblast</text>
+<line x1="440" y1="282" x2="440" y2="266" stroke="#16a34a" stroke-width="3"/><rect x="434" y="258" width="12" height="9" rx="2" fill="#16a34a"/>
+<circle cx="456" cy="232" r="22" fill="#ea580c" fill-opacity=".14" stroke="#ea580c" stroke-width="2"/><circle cx="456" cy="230" r="8" fill="#ea580c" fill-opacity=".5"/>
+<path d="M440,253 L440,258" stroke="#ea580c" stroke-width="4"/>
+<text x="456" y="200" font-size="13" fill="#ea580c" font-weight="600" text-anchor="middle">precursor (RANK)</text>
+<text x="430" y="256" font-size="13" fill="#16a34a" font-weight="700" text-anchor="end">RANKL</text>
+<path d="M548,334 C540,300 560,262 616,258 C672,262 694,300 684,334 L675,342 L667,334 L659,342 L651,334 L643,342 L635,334 L627,342 L619,334 L611,342 L603,334 L595,342 L587,334 L579,342 L571,334 L563,342 L555,334 Z" fill="#ea580c" fill-opacity=".2" stroke="#ea580c" stroke-width="2.2"/>
+<ellipse cx="590" cy="290" rx="9" ry="7" fill="#ea580c" fill-opacity=".6"/>
+<ellipse cx="612" cy="282" rx="9" ry="7" fill="#ea580c" fill-opacity=".6"/>
+<ellipse cx="636" cy="286" rx="9" ry="7" fill="#ea580c" fill-opacity=".6"/>
+<ellipse cx="600" cy="310" rx="9" ry="7" fill="#ea580c" fill-opacity=".6"/>
+<ellipse cx="630" cy="310" rx="9" ry="7" fill="#ea580c" fill-opacity=".6"/>
+<text x="616" y="372" font-size="13" fill="#ea580c" font-weight="700" text-anchor="middle">Osteoclast</text>
+<g stroke="#16a34a" stroke-width="1.3"><path d="M385,392 l-22,-18 M385,392 l24,-20 M385,392 l-20,20 M385,392 l26,16"/></g>
+<ellipse cx="385" cy="392" rx="14" ry="8" fill="#16a34a" fill-opacity=".35" stroke="#16a34a" stroke-width="1.5"/>
+<text x="404" y="410" font-size="13" fill="#16a34a" font-weight="600" text-anchor="start">Osteocyte</text>
+<path d="M372,386 C360,378 352,372 346,360" fill="none" stroke="#0891b2" stroke-width="1.2" stroke-dasharray="3 3"/>
+<path d="M344,349 L349,354 L344,359 L339,354 Z" fill="#0891b2"/>
+<path d="M334,341 L339,346 L334,351 L329,346 Z" fill="#0891b2"/>
+<path d="M354,341 L359,346 L354,351 L349,346 Z" fill="#0891b2"/>
+<text x="300" y="456" font-size="13" fill="#0891b2" font-weight="600" text-anchor="start">Sclerostin (ฟ้า) ⊣ Wnt ใน osteoblast</text>
+<rect x="15" y="150" width="260" height="66" rx="8" fill="#16a34a" fill-opacity=".12" stroke="#16a34a" stroke-width="1.6"/>
+<text x="27" y="172" font-size="14" fill="#16a34a" font-weight="700" text-anchor="start">Teriparatide / Abaloparatide</text>
+<text x="27" y="190" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">PTH เป็นพัลส์</text>
+<text x="27" y="208" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">→ กระตุ้น osteoblast</text>
+<line x1="276" y1="190" x2="326" y2="276" stroke="#16a34a" stroke-width="2.5" marker-end="url(#ag)"/>
+<rect x="15" y="320" width="260" height="66" rx="8" fill="#16a34a" fill-opacity=".12" stroke="#16a34a" stroke-width="1.6"/>
+<text x="27" y="342" font-size="14" fill="#16a34a" font-weight="700" text-anchor="start">Romosozumab</text>
+<text x="27" y="360" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">anti-sclerostin → Wnt ↑</text>
+<text x="27" y="378" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">(ลด resorption ด้วย)</text>
+<line x1="276" y1="352" x2="324" y2="348" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#tp)"/>
+<rect x="730" y="80" width="255" height="48" rx="8" fill="#7c3aed" fill-opacity=".12" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="742" y="102" font-size="14" fill="#7c3aed" font-weight="700" text-anchor="start">Denosumab</text>
+<text x="742" y="120" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">anti-RANKL</text>
+<line x1="728" y1="108" x2="452" y2="260" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#tp)"/>
+<rect x="730" y="150" width="255" height="48" rx="8" fill="#7c3aed" fill-opacity=".12" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="742" y="172" font-size="14" fill="#7c3aed" font-weight="700" text-anchor="start">Raloxifene / Estrogen</text>
+<text x="742" y="190" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">↑OPG ↓RANKL</text>
+<line x1="728" y1="178" x2="438" y2="284" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#tp)"/>
+<rect x="730" y="220" width="255" height="48" rx="8" fill="#7c3aed" fill-opacity=".12" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="742" y="242" font-size="14" fill="#7c3aed" font-weight="700" text-anchor="start">Calcitonin</text>
+<text x="742" y="260" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">receptor บน osteoclast</text>
+<line x1="728" y1="248" x2="664" y2="270" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#tp)"/>
+<rect x="730" y="300" width="255" height="84" rx="8" fill="#7c3aed" fill-opacity=".12" stroke="#7c3aed" stroke-width="1.6"/>
+<text x="742" y="322" font-size="14" fill="#7c3aed" font-weight="700" text-anchor="start">Bisphosphonate</text>
+<text x="742" y="340" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">(alendronate, zoledronate)</text>
+<text x="742" y="358" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">จับ hydroxyapatite → osteoclast</text>
+<text x="742" y="376" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">กลืนเข้าไป → ยับยั้ง FPP synthase</text>
+<line x1="728" y1="372" x2="672" y2="352" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#tp)"/>
+<line x1="20" y1="480" x2="980" y2="480" stroke="#6b7280" stroke-width=".8"/>
+<line x1="80" y1="650" x2="80" y2="504" stroke="#1f2937" stroke-width="1.8" marker-end="url(#ak)"/>
+<line x1="80" y1="650" x2="600" y2="650" stroke="#1f2937" stroke-width="1.8" marker-end="url(#ak)"/>
+<text transform="translate(66,580.0) rotate(-90)" font-size="13" font-weight="600" fill="#1f2937" text-anchor="middle">PTH level</text>
+<text x="600" y="670" font-size="13" fill="#1f2937" font-weight="600" text-anchor="end">เวลา (วัน)</text>
+<polyline points="80,636 110,636 118,524 132,630 150,636 225,636 225,636 233,524 247,630 265,636 340,636 340,636 348,524 362,630 380,636 455,636 455,636 463,524 477,630 495,636 570,636" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="80" y1="560" x2="580" y2="560" stroke="#ea580c" stroke-width="3"/>
+<text x="584" y="556" font-size="13" fill="#ea580c" font-weight="700" text-anchor="start">Continuous (hyperPTH)</text>
+<text x="584" y="574" font-size="13" fill="#ea580c" font-weight="700" text-anchor="start">→ สลาย</text>
+<text x="584" y="512" font-size="13" fill="#2563eb" font-weight="700" text-anchor="start">Intermittent (ฉีดวันละครั้ง)</text>
+<text x="584" y="530" font-size="13" fill="#2563eb" font-weight="700" text-anchor="start">→ สร้าง</text>
+<line x1="580" y1="508" x2="482" y2="524" stroke="#2563eb" stroke-width="1" stroke-dasharray="3 3"/>
+</svg>

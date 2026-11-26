@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker>
+<pattern id="trab" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#E8DCC0"/><path d="M0,9 Q9,3 18,9 M9,0 Q13,9 9,18" stroke="#6b7280" stroke-opacity=".4" stroke-width=".9" fill="none"/></pattern>
+<pattern id="trabpale" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#ffffff"/><rect width="30" height="30" fill="#E8DCC0" fill-opacity=".45"/><path d="M0,15 Q15,8 30,15" stroke="#6b7280" stroke-opacity=".3" stroke-width=".8" fill="none"/></pattern>
+<clipPath id="oaUp"><path d="M50,60 V130 Q30,150 30,190 A65,40 0 0 0 160,190 Q160,150 140,130 V60 Z"/></clipPath>
+<clipPath id="oaLo"><path d="M24,198 C30,208 40,216 60,227 C72,232 85,235 98,237 C125,252 158,252 165,215 Q174,245 170,290 Q150,320 145,330 V440 H45 V330 Q40,320 20,290 Q14,250 24,198 Z"/></clipPath>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">ข้อปกติ vs Osteoarthritis vs Rheumatoid arthritis (ภาพตัดขวาง synovial joint)</text>
+
+<!-- ================= PANEL 1 NORMAL ================= -->
+<g transform="translate(8,0)">
+<rect x="0" y="40" width="318" height="490" rx="10" fill="none" stroke="#6b7280" stroke-width="1.2"/>
+<text x="159" y="64" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">Normal joint</text>
+<g transform="translate(14,66) scale(.8)">
+<path d="M35,155 C-8,165 -12,250 19,260 L171,260 C202,250 198,165 155,155 Z" fill="#0891b2" fill-opacity=".12"/>
+<path d="M36,161 C2,170 -2,246 21,254" stroke="#F4C9C9" stroke-width="7" fill="none"/>
+<path d="M154,161 C188,170 192,246 169,254" stroke="#F4C9C9" stroke-width="7" fill="none"/>
+<path d="M50,60 V130 Q30,150 30,190 A65,40 0 0 0 160,190 Q160,150 140,130 V60" fill="url(#trab)" stroke="#1f2937" stroke-width="2"/>
+<path d="M30,190 A65,40 0 0 0 160,190 A65,52 0 0 1 30,190 Z" fill="#CFE3EA" stroke="#0891b2" stroke-width="1.2"/>
+<path d="M25,215 A70,51 0 0 0 165,215 Q174,245 170,290 Q150,320 145,330 V440 H45 V330 Q40,320 20,290 Q16,245 25,215 Z" fill="url(#trab)"/><path d="M45,440 V330 Q40,320 20,290 Q16,245 25,215 A70,51 0 0 0 165,215 Q174,245 170,290 Q150,320 145,330 V440" fill="none" stroke="#1f2937" stroke-width="2"/>
+<path d="M25,215 A70,39 0 0 0 165,215 A70,51 0 0 1 25,215 Z" fill="#CFE3EA" stroke="#0891b2" stroke-width="1.2"/>
+<path d="M35,155 C-8,165 -12,250 19,260 M155,155 C198,165 202,250 171,260" stroke="#1f2937" stroke-width="3.5" fill="none"/>
+</g>
+<g font-size="13" fill="#1f2937">
+<text x="186" y="182">bare area</text>
+<line x1="184" y1="178" x2="141" y2="204" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="212" fill="#0891b2">synovial fluid</text>
+<line x1="184" y1="208" x2="153" y2="232" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="240">joint capsule</text>
+<line x1="184" y1="236" x2="168" y2="236" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="272" fill="#db2777">synovium</text>
+<line x1="184" y1="268" x2="159" y2="257" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="300" fill="#0891b2">articular cartilage</text>
+<text x="186" y="316" fill="#0891b2">(type II collagen</text>
+<text x="186" y="332" fill="#0891b2">+ aggrecan)</text>
+<line x1="184" y1="296" x2="128" y2="266" stroke="#6b7280" stroke-width="1"/>
+</g>
+<text x="159" y="508" font-size="15" fill="#6b7280" text-anchor="middle">—</text>
+</g>
+
+<!-- ================= PANEL 2 OA ================= -->
+<g transform="translate(341,0)">
+<rect x="0" y="40" width="318" height="490" rx="10" fill="none" stroke="#6b7280" stroke-width="1.2"/>
+<text x="159" y="64" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">Osteoarthritis</text>
+<g transform="translate(14,66) scale(.8)">
+<path d="M35,155 C-8,165 -12,250 19,260 L171,260 C202,250 198,165 155,155 Z" fill="#0891b2" fill-opacity=".12"/>
+<path d="M36,161 C2,170 -2,246 21,254" stroke="#F4C9C9" stroke-width="7" fill="none"/>
+<path d="M154,161 C188,170 192,246 169,254" stroke="#F4C9C9" stroke-width="7" fill="none"/>
+<!-- upper bone -->
+<path d="M50,60 V130 Q30,150 30,190 A65,40 0 0 0 160,190 Q160,150 140,130 V60" fill="url(#trab)" stroke="#1f2937" stroke-width="2"/>
+<!-- lower bone -->
+<path d="M24,198 C30,208 40,216 60,227 C72,232 85,235 98,237 C125,252 158,252 165,215 Q174,245 170,290 Q150,320 145,330 V440 H45 V330 Q40,320 20,290 Q14,250 24,198 Z" fill="url(#trab)"/><path d="M45,440 V330 Q40,320 20,290 Q14,250 24,198 C30,208 40,216 60,227 C72,232 85,235 98,237 C125,252 158,252 165,215 Q174,245 170,290 Q150,320 145,330 V440" fill="none" stroke="#1f2937" stroke-width="2"/>
+<!-- sclerosis -->
+<g clip-path="url(#oaUp)"><path d="M30,190 A65,40 0 0 0 100,230" stroke="#1f2937" stroke-opacity=".45" stroke-width="16" fill="none"/></g>
+<g clip-path="url(#oaLo)"><path d="M24,198 C30,208 40,216 60,227 C72,232 85,235 100,238" stroke="#1f2937" stroke-opacity=".45" stroke-width="16" fill="none"/></g>
+<!-- cysts -->
+<circle cx="58" cy="262" r="9" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+<circle cx="66" cy="205" r="6" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+<!-- thin irregular cartilage (right part only) -->
+<path d="M100,230 A65,40 0 0 0 160,190 L157,199 L152,207 L148,206 L146,213 L140,219 L134,222 L131,219 L128,226 L120,230 L112,232 L106,231 L102,233 Z" fill="#CFE3EA" stroke="#0891b2" stroke-width="1.2"/>
+<path d="M104,240 C127,252 157,251 163,222 L160,222 L156,232 L152,231 L148,240 L140,244 L134,242 L130,247 L122,247 L114,246 L110,241 Z" fill="#CFE3EA" stroke="#0891b2" stroke-width="1.2"/>
+<g stroke="#ffffff" stroke-width="1.5"><line x1="131" y1="219" x2="132" y2="225"/><line x1="148" y1="206" x2="149" y2="211"/><line x1="134" y1="242" x2="135" y2="247"/><line x1="152" y1="231" x2="153" y2="236"/></g>
+<!-- osteophytes -->
+<g fill="#E8DCC0" stroke="#1f2937" stroke-width="2" stroke-linejoin="round">
+<path d="M34,150 Q20,152 8,160 Q20,166 31,172 Z"/><path d="M156,150 Q170,152 182,160 Q170,166 159,172 Z"/>
+<path d="M24,204 Q8,196 -2,178 Q2,206 18,228 Z"/><path d="M166,204 Q182,196 192,178 Q188,206 172,228 Z"/>
+</g>
+<!-- loose body -->
+<ellipse cx="176" cy="243" rx="6" ry="4.5" fill="#E8DCC0" stroke="#1f2937" stroke-width="1.5"/>
+<path d="M35,155 C-8,165 -12,250 19,260 M155,155 C198,165 202,250 171,260" stroke="#1f2937" stroke-width="3.5" fill="none"/>
+</g>
+<g font-size="13" fill="#1f2937">
+<text x="186" y="150" fill="#ea580c" font-weight="600">osteophyte</text>
+<line x1="184" y1="146" x2="167" y2="210" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="186" fill="#0891b2">fibrillation</text>
+<line x1="184" y1="182" x2="135" y2="243" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="268">loose body</text>
+<line x1="184" y1="264" x2="156" y2="260" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="314" fill="#dc2626" font-weight="600">asymmetric joint</text>
+<text x="186" y="330" fill="#dc2626" font-weight="600">space narrowing</text>
+<line x1="184" y1="310" x2="62" y2="248" stroke="#6b7280" stroke-width="1"/>
+<text x="20" y="444">subchondral sclerosis (eburnation)</text>
+<line x1="40" y1="432" x2="40" y2="252" stroke="#6b7280" stroke-width="1"/>
+<text x="20" y="466">subchondral cyst</text>
+<line x1="120" y1="462" x2="60" y2="282" stroke="#6b7280" stroke-width="1"/>
+</g>
+<text x="159" y="508" font-size="15" font-weight="700" fill="#0891b2" text-anchor="middle">เริ่มที่ cartilage · non-inflammatory</text>
+</g>
+
+<!-- ================= PANEL 3 RA ================= -->
+<g transform="translate(674,0)">
+<rect x="0" y="40" width="318" height="490" rx="10" fill="none" stroke="#6b7280" stroke-width="1.2"/>
+<text x="159" y="64" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">Rheumatoid arthritis</text>
+<g transform="translate(14,66) scale(.8)">
+<path d="M35,155 C-8,165 -12,234 19,244 L171,244 C202,234 198,165 155,155 Z" fill="#0891b2" fill-opacity=".12"/>
+<!-- upper bone with marginal erosions -->
+<path d="M50,60 V130 Q33,145 34,160 C46,164 46,182 31,186 L30,190 A65,40 0 0 0 160,190 L159,186 C144,182 144,164 156,160 Q157,145 140,130 V60" fill="url(#trabpale)" stroke="#1f2937" stroke-width="2"/>
+<path d="M30,190 A65,40 0 0 0 160,190 A65,46 0 0 1 30,190 Z" fill="#CFE3EA" stroke="#0891b2" stroke-width="1.2"/>
+<!-- lower bone (shifted up: symmetric narrowing) -->
+<g transform="translate(0,-16)">
+<path d="M25,215 A70,51 0 0 0 165,215 C162,226 154,236 168,252 Q174,270 170,290 Q150,320 145,330 V456 H45 V330 Q40,320 20,290 Q16,270 22,252 C36,236 28,226 25,215 Z" fill="url(#trabpale)"/><path d="M45,456 V330 Q40,320 20,290 Q16,270 22,252 C36,236 28,226 25,215 A70,51 0 0 0 165,215 C162,226 154,236 168,252 Q174,270 170,290 Q150,320 145,330 V456" fill="none" stroke="#1f2937" stroke-width="2"/>
+<path d="M25,215 A70,45 0 0 0 165,215 A70,51 0 0 1 25,215 Z" fill="#CFE3EA" stroke="#0891b2" stroke-width="1.2"/>
+</g>
+<!-- thick synovium + pannus -->
+<g fill="#dc2626" fill-opacity=".38" stroke="#dc2626" stroke-width="1.5" stroke-linejoin="round">
+<path d="M35,155 C-8,165 -12,234 19,244 L28,236 Q30,228 22,222 Q32,214 24,206 Q34,200 33,196 Q40,201 50,204 Q42,196 33,188 Q44,180 40,172 Q44,164 36,160 Z"/>
+<path d="M155,155 C198,165 202,234 171,244 L162,236 Q160,228 168,222 Q158,214 166,206 Q156,200 157,196 Q150,201 140,204 Q148,196 157,188 Q146,180 150,172 Q146,164 154,160 Z"/>
+<path d="M2,186 Q-4,200 4,212 Q12,206 10,196 Z M188,186 Q194,200 186,212 Q178,206 180,196 Z"/>
+</g>
+<!-- infiltrate cells -->
+<g stroke="none">
+<circle cx="8" cy="200" r="3.2" fill="#2563eb"/><circle cx="12" cy="222" r="3.2" fill="#7c3aed"/><circle cx="16" cy="180" r="3.6" fill="#ea580c"/><circle cx="5" cy="232" r="3.2" fill="#2563eb"/><circle cx="24" cy="170" r="3.2" fill="#7c3aed"/>
+<circle cx="182" cy="200" r="3.2" fill="#2563eb"/><circle cx="178" cy="222" r="3.2" fill="#7c3aed"/><circle cx="174" cy="180" r="3.6" fill="#ea580c"/><circle cx="185" cy="232" r="3.2" fill="#2563eb"/><circle cx="166" cy="170" r="3.2" fill="#7c3aed"/>
+</g>
+<!-- osteoclast at right erosion -->
+<ellipse cx="147" cy="173" rx="7" ry="11" fill="#ea580c" fill-opacity=".3" stroke="#ea580c" stroke-width="1.5"/>
+<circle cx="147" cy="166" r="2" fill="#ea580c"/><circle cx="147" cy="173" r="2" fill="#ea580c"/><circle cx="147" cy="180" r="2" fill="#ea580c"/>
+<path d="M35,155 C-8,165 -12,234 19,244 M155,155 C198,165 202,234 171,244" stroke="#1f2937" stroke-width="3.5" fill="none"/>
+</g>
+<!-- cytokine arrows from pannus -->
+<path d="M160,232 C176,252 190,258 214,270" stroke="#2563eb" stroke-width="1.8" fill="none" marker-end="url(#ab)" transform="translate(-20,0)"/>
+<g font-size="13" fill="#1f2937">
+<text x="159" y="86" fill="#dc2626" font-weight="600" text-anchor="middle">synovial hyperplasia + inflammatory</text>
+<text x="159" y="102" fill="#dc2626" font-weight="600" text-anchor="middle">infiltrate (lymphocyte, plasma cell, Mφ)</text>
+<line x1="40" y1="106" x2="22" y2="214" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="164" fill="#dc2626" font-weight="700">pannus</text>
+<line x1="184" y1="164" x2="132" y2="226" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="190">marginal erosion</text>
+<text x="186" y="206">(bare area)</text>
+<line x1="184" y1="196" x2="141" y2="208" stroke="#6b7280" stroke-width="1"/>
+<text x="182" y="234" fill="#ea580c" font-weight="600">osteoclast ← RANKL</text>
+<line x1="184" y1="230" x2="133" y2="206" stroke="#6b7280" stroke-width="1"/>
+<text x="198" y="280" fill="#2563eb" font-weight="700">TNF-α, IL-1, IL-6</text>
+<text x="186" y="318">symmetric narrowing</text>
+<line x1="184" y1="314" x2="100" y2="252" stroke="#6b7280" stroke-width="1"/>
+<text x="186" y="356">periarticular</text>
+<text x="186" y="372">osteopenia</text>
+<line x1="184" y1="360" x2="120" y2="340" stroke="#6b7280" stroke-width="1"/>
+</g>
+<text x="159" y="508" font-size="15" font-weight="700" fill="#dc2626" text-anchor="middle">เริ่มที่ synovium · autoimmune</text>
+</g>
+</svg>

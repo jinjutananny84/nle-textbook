@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs><marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20.0" y="28.0" font-size="18" fill="#1f2937" text-anchor="start" font-weight="700" >แผนที่ autoantibody → โรค</text>
+<ellipse cx="470" cy="84" rx="200" ry="32" fill="#2563eb" fill-opacity=".16" stroke="#2563eb" stroke-width="1.2"/>
+<text x="470.0" y="90.0" font-size="17" fill="#2563eb" text-anchor="middle" font-weight="700" >ANA (screening, &gt;95% in SLE)</text>
+<rect x="770" y="46" width="210" height="76" rx="8" fill="#ffffff" stroke="#6b7280" stroke-width="1"/>
+<rect x="784" y="58" width="50" height="22" rx="11" fill="#ffffff" stroke="#1f2937" stroke-width="3"/>
+<text x="844.0" y="74.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="400" >specific</text>
+<rect x="784" y="90" width="50" height="22" rx="11" fill="#ffffff" stroke="#1f2937" stroke-width="1"/>
+<text x="844.0" y="106.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="400" >sensitive/screening</text>
+<line x1="470" y1="116" x2="470" y2="142" stroke="#2563eb" stroke-width="2"/>
+<line x1="91.0" y1="142" x2="909.0" y2="142" stroke="#2563eb" stroke-width="2"/>
+<line x1="91.0" y1="142" x2="91.0" y2="168" stroke="#2563eb" stroke-width="2" marker-end="url(#ad)"/>
+<line x1="243.0" y1="142" x2="243.0" y2="168" stroke="#2563eb" stroke-width="2" marker-end="url(#ad)"/>
+<line x1="395.0" y1="142" x2="395.0" y2="168" stroke="#2563eb" stroke-width="2" marker-end="url(#ad)"/>
+<line x1="576.0" y1="142" x2="576.0" y2="168" stroke="#2563eb" stroke-width="2" marker-end="url(#ad)"/>
+<line x1="757.0" y1="142" x2="757.0" y2="168" stroke="#2563eb" stroke-width="2" marker-end="url(#ad)"/>
+<line x1="909.0" y1="142" x2="909.0" y2="168" stroke="#2563eb" stroke-width="2" marker-end="url(#ad)"/>
+<rect x="20" y="170" width="142" height="212" rx="10" fill="#db2777" fill-opacity="0.16" stroke="#db2777" stroke-width="1.5"/>
+<rect x="172" y="170" width="142" height="212" rx="10" fill="#db2777" fill-opacity="0.07" stroke="#db2777" stroke-width="1.5"/>
+<rect x="324" y="170" width="142" height="212" rx="10" fill="#0891b2" fill-opacity="0.12" stroke="#0891b2" stroke-width="1.5"/>
+<rect x="476" y="170" width="200" height="212" rx="10" fill="#6b7280" fill-opacity="0.12" stroke="#6b7280" stroke-width="1.5"/>
+<rect x="686" y="170" width="142" height="212" rx="10" fill="#7c3aed" fill-opacity="0.1" stroke="#7c3aed" stroke-width="1.5"/>
+<rect x="838" y="170" width="142" height="212" rx="10" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="1.5"/>
+<text x="91.0" y="196.0" font-size="16" fill="#db2777" text-anchor="middle" font-weight="700" >SLE</text>
+<rect x="28" y="210" width="126" height="59" rx="12" fill="#ffffff" stroke="#db2777" stroke-width="3"/>
+<text x="91.0" y="228.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-dsDNA</text>
+<text x="91.0" y="245.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="400" >→ activity,</text>
+<text x="91.0" y="262.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="400" >nephritis</text>
+<rect x="28" y="277" width="126" height="42" rx="12" fill="#ffffff" stroke="#db2777" stroke-width="3"/>
+<text x="91.0" y="295.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-Sm</text>
+<text x="91.0" y="312.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="400" >→ most specific</text>
+<rect x="20" y="394" width="142" height="52" rx="8" fill="#ffffff" stroke="#db2777" stroke-width="1"/>
+<text x="91.0" y="415.0" font-size="15" fill="#1f2937" text-anchor="middle" font-weight="700" >C3 / C4 <tspan fill='#dc2626'>↓</tspan></text>
+<text x="91.0" y="436.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="400" >low C3, C4, CH50</text>
+<text x="243.0" y="194.0" font-size="15" fill="#db2777" text-anchor="middle" font-weight="700" >Drug-induced</text>
+<text x="243.0" y="212.0" font-size="15" fill="#db2777" text-anchor="middle" font-weight="700" >lupus</text>
+<rect x="180" y="224" width="126" height="25" rx="12" fill="#ffffff" stroke="#db2777" stroke-width="1"/>
+<text x="243.0" y="242.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-histone</text>
+<text x="243.0" y="273.0" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400" >ยา:</text>
+<text x="243.0" y="291.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="400" >hydralazine,</text>
+<text x="243.0" y="308.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="400" >procainamide,</text>
+<text x="243.0" y="325.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="400" >INH, anti-TNF</text>
+<text x="395.0" y="196.0" font-size="16" fill="#0891b2" text-anchor="middle" font-weight="700" >Sjögren</text>
+<rect x="332" y="210" width="126" height="25" rx="12" fill="#ffffff" stroke="#0891b2" stroke-width="1"/>
+<text x="395.0" y="228.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-SSA (Ro)</text>
+<rect x="332" y="243" width="126" height="25" rx="12" fill="#ffffff" stroke="#0891b2" stroke-width="3"/>
+<text x="395.0" y="261.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-SSB (La)</text>
+<text x="395.0" y="294.0" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="600" >neonatal heart block</text>
+<text x="395.0" y="316.0" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="600" >↑ MALT lymphoma</text>
+<text x="576.0" y="196.0" font-size="16" fill="#1f2937" text-anchor="middle" font-weight="700" >Systemic sclerosis</text>
+<line x1="484" y1="278" x2="668" y2="278" stroke="#6b7280" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="488.0" y="220.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="700" >Limited / CREST:</text>
+<rect x="484" y="228" width="184" height="25" rx="12" fill="#ffffff" stroke="#6b7280" stroke-width="3"/>
+<text x="576.0" y="246.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-centromere → PAH</text>
+<text x="488.0" y="298.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="700" >Diffuse:</text>
+<rect x="484" y="306" width="184" height="25" rx="12" fill="#ffffff" stroke="#6b7280" stroke-width="3"/>
+<text x="576.0" y="324.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-Scl-70 → ILD</text>
+<rect x="484" y="337" width="184" height="42" rx="12" fill="#ffffff" stroke="#6b7280" stroke-width="3"/>
+<text x="576.0" y="355.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-RNA pol III</text>
+<text x="576.0" y="372.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="400" >→ renal crisis</text>
+<text x="757.0" y="196.0" font-size="16" fill="#7c3aed" text-anchor="middle" font-weight="700" >MCTD</text>
+<rect x="694" y="210" width="126" height="25" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+<text x="757.0" y="228.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-U1 RNP</text>
+<text x="909.0" y="196.0" font-size="16" fill="#16a34a" text-anchor="middle" font-weight="700" >Myositis</text>
+<rect x="846" y="210" width="126" height="25" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+<text x="909.0" y="228.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-Jo-1</text>
+<rect x="846" y="243" width="126" height="25" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+<text x="909.0" y="261.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-MDA5 (ILD)</text>
+<rect x="846" y="276" width="126" height="25" rx="12" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+<text x="909.0" y="294.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-Mi-2</text>
+<line x1="20" y1="462" x2="980" y2="462" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="8 6"/>
+<text x="980.0" y="454.0" font-size="13" fill="#6b7280" text-anchor="end" font-weight="600" >ไม่อยู่ใต้ร่ม ANA</text>
+<rect x="20" y="478" width="300" height="140" rx="10" fill="#dc2626" fill-opacity=".1" stroke="#dc2626" stroke-width="1.5"/>
+<text x="170.0" y="504.0" font-size="16" fill="#dc2626" text-anchor="middle" font-weight="700" >RA</text>
+<rect x="340" y="478" width="320" height="140" rx="10" fill="#ea580c" fill-opacity=".1" stroke="#ea580c" stroke-width="1.5"/>
+<text x="500.0" y="504.0" font-size="16" fill="#ea580c" text-anchor="middle" font-weight="700" >Vasculitis</text>
+<rect x="680" y="478" width="300" height="140" rx="10" fill="#7c3aed" fill-opacity=".1" stroke="#7c3aed" stroke-width="1.5"/>
+<text x="830.0" y="504.0" font-size="16" fill="#7c3aed" text-anchor="middle" font-weight="700" >APS</text>
+<rect x="36" y="516" width="268" height="25" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="1"/>
+<text x="170.0" y="534.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >RF (IgM anti-Fc IgG)</text>
+<rect x="36" y="549" width="268" height="25" rx="12" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+<text x="170.0" y="567.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-CCP (most specific)</text>
+<rect x="356" y="516" width="288" height="25" rx="12" fill="#ffffff" stroke="#ea580c" stroke-width="3"/>
+<text x="500.0" y="534.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >c-ANCA / PR3 → GPA</text>
+<rect x="356" y="549" width="288" height="25" rx="12" fill="#ffffff" stroke="#ea580c" stroke-width="3"/>
+<text x="500.0" y="567.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >p-ANCA / MPO → MPA, EGPA</text>
+<rect x="696" y="516" width="268" height="25" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="1"/>
+<text x="830.0" y="534.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >lupus anticoagulant</text>
+<rect x="696" y="547" width="268" height="25" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="1"/>
+<text x="830.0" y="565.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anticardiolipin</text>
+<rect x="696" y="578" width="268" height="25" rx="12" fill="#ffffff" stroke="#7c3aed" stroke-width="1"/>
+<text x="830.0" y="596.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >anti-β2GPI</text>
+</svg>

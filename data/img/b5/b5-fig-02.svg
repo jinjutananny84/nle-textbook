@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 710" width="1000" height="710" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+  <defs>
+    <marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+    <clipPath id="z5"><rect x="580" y="460" width="160" height="100"/></clipPath>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="30" font-size="18" font-weight="700" fill="#1f2937">Growth plate zones</text>
+
+  <!-- ===== Left: long bone (upper half) ===== -->
+  <path d="M40,215 L40,140 C40,72 220,72 220,140 L220,215 Z" fill="#CFE3EA" stroke="#1f2937" stroke-width="1.5"/>
+  <ellipse cx="130" cy="150" rx="55" ry="36" fill="#E8DCC0" stroke="#6b7280" stroke-width="1.2"/>
+  <rect x="40" y="215" width="180" height="25" fill="#0891b2" fill-opacity=".2" stroke="#0891b2" stroke-width="1.2"/>
+  <path d="M40,240 L220,240 C220,290 185,310 180,340 L180,580 L80,580 L80,340 C75,310 40,290 40,240 Z" fill="#E8DCC0" stroke="#1f2937" stroke-width="1.5"/>
+  <path d="M90,250 L170,250 C165,295 152,318 152,345 L152,580 L108,580 L108,345 C108,318 95,295 90,250 Z" fill="#dc2626" fill-opacity=".14"/>
+  <g stroke="#6b7280" stroke-width="1.2" fill="none">
+    <path d="M100,252 L112,290 M120,252 L124,300 M140,252 L136,300 M160,252 L148,290"/>
+  </g>
+  <path d="M74,578 Q90,570 105,580 T135,580 T165,578 T186,580" fill="#ffffff" stroke="#ffffff" stroke-width="6"/>
+  <path d="M78,580 Q92,572 107,580 T137,580 T167,578 L182,582" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <text x="130" y="276" font-size="13" fill="#1f2937" text-anchor="middle">metaphysis</text>
+  <text x="130" y="420" font-size="13" fill="#1f2937" text-anchor="middle">diaphysis</text>
+  <!-- zoom box -->
+  <rect x="32" y="208" width="196" height="39" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <line x1="228" y1="208" x2="580" y2="60" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <line x1="228" y1="247" x2="580" y2="560" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <!-- left labels -->
+  <g font-size="13" fill="#1f2937">
+    <text x="232" y="120">Secondary</text>
+    <text x="232" y="136">ossification center</text>
+    <line x1="230" y1="130" x2="186" y2="146" stroke="#1f2937" stroke-width="1"/>
+    <text x="238" y="224" font-weight="600" fill="#0891b2">Epiphyseal</text>
+    <text x="238" y="240" font-weight="600" fill="#0891b2">(growth) plate</text>
+    <text x="190" y="452">Primary ossification</text>
+    <text x="190" y="468">center (diaphysis)</text>
+    <line x1="188" y1="455" x2="148" y2="470" stroke="#1f2937" stroke-width="1"/>
+    <text x="60" y="64" font-weight="600">epiphysis</text>
+  </g>
+
+  <!-- ===== Right: zoomed growth plate ===== -->
+  <!-- zone 1 reserve -->
+  <rect x="580" y="60" width="160" height="100" fill="#CFE3EA"/>
+  <g fill="#ffffff" stroke="#0891b2" stroke-width="1.2">
+    <circle cx="600" cy="80" r="6"/><circle cx="640" cy="95" r="6"/><circle cx="688" cy="78" r="6"/><circle cx="722" cy="100" r="6"/>
+    <circle cx="612" cy="128" r="6"/><circle cx="660" cy="138" r="6"/><circle cx="705" cy="135" r="6"/><circle cx="630" cy="112" r="5"/>
+  </g>
+  <g fill="#0891b2">
+    <circle cx="600" cy="80" r="2"/><circle cx="640" cy="95" r="2"/><circle cx="688" cy="78" r="2"/><circle cx="722" cy="100" r="2"/>
+    <circle cx="612" cy="128" r="2"/><circle cx="660" cy="138" r="2"/><circle cx="705" cy="135" r="2"/><circle cx="630" cy="112" r="2"/>
+  </g>
+  <!-- zone 2 proliferative -->
+  <rect x="580" y="160" width="160" height="100" fill="#CFE3EA"/>
+  <g fill="#ffffff" stroke="#0891b2" stroke-width="1.2">
+    <ellipse cx="597" cy="172" rx="11" ry="4"/><ellipse cx="597" cy="183" rx="11" ry="4"/><ellipse cx="597" cy="194" rx="11" ry="4"/><ellipse cx="597" cy="205" rx="11" ry="4"/><ellipse cx="597" cy="216" rx="11" ry="4"/><ellipse cx="597" cy="227" rx="11" ry="4"/><ellipse cx="597" cy="238" rx="11" ry="4"/><ellipse cx="597" cy="249" rx="11" ry="4"/>
+    <ellipse cx="628" cy="172" rx="11" ry="4"/><ellipse cx="628" cy="183" rx="11" ry="4"/><ellipse cx="628" cy="194" rx="11" ry="4"/><ellipse cx="628" cy="205" rx="11" ry="4"/><ellipse cx="628" cy="216" rx="11" ry="4"/><ellipse cx="628" cy="227" rx="11" ry="4"/><ellipse cx="628" cy="238" rx="11" ry="4"/><ellipse cx="628" cy="249" rx="11" ry="4"/>
+    <ellipse cx="660" cy="172" rx="11" ry="4"/><ellipse cx="660" cy="183" rx="11" ry="4"/><ellipse cx="660" cy="194" rx="11" ry="4"/><ellipse cx="660" cy="205" rx="11" ry="4"/><ellipse cx="660" cy="216" rx="11" ry="4"/><ellipse cx="660" cy="227" rx="11" ry="4"/><ellipse cx="660" cy="238" rx="11" ry="4"/><ellipse cx="660" cy="249" rx="11" ry="4"/>
+    <ellipse cx="692" cy="172" rx="11" ry="4"/><ellipse cx="692" cy="183" rx="11" ry="4"/><ellipse cx="692" cy="194" rx="11" ry="4"/><ellipse cx="692" cy="205" rx="11" ry="4"/><ellipse cx="692" cy="216" rx="11" ry="4"/><ellipse cx="692" cy="227" rx="11" ry="4"/><ellipse cx="692" cy="238" rx="11" ry="4"/><ellipse cx="692" cy="249" rx="11" ry="4"/>
+    <ellipse cx="723" cy="172" rx="11" ry="4"/><ellipse cx="723" cy="183" rx="11" ry="4"/><ellipse cx="723" cy="194" rx="11" ry="4"/><ellipse cx="723" cy="205" rx="11" ry="4"/><ellipse cx="723" cy="216" rx="11" ry="4"/><ellipse cx="723" cy="227" rx="11" ry="4"/><ellipse cx="723" cy="238" rx="11" ry="4"/><ellipse cx="723" cy="249" rx="11" ry="4"/>
+  </g>
+  <!-- zone 3 hypertrophic -->
+  <rect x="580" y="260" width="160" height="100" fill="#CFE3EA"/>
+  <g fill="#ffffff" stroke="#0891b2" stroke-width="1.2">
+    <ellipse cx="597" cy="273" rx="12" ry="10"/><ellipse cx="597" cy="297" rx="12" ry="11"/><ellipse cx="597" cy="322" rx="12" ry="11"/><ellipse cx="597" cy="347" rx="12" ry="11"/>
+    <ellipse cx="628" cy="273" rx="12" ry="10"/><ellipse cx="628" cy="297" rx="12" ry="11"/><ellipse cx="628" cy="322" rx="12" ry="11"/><ellipse cx="628" cy="347" rx="12" ry="11"/>
+    <ellipse cx="660" cy="273" rx="12" ry="10"/><ellipse cx="660" cy="297" rx="12" ry="11"/><ellipse cx="660" cy="322" rx="12" ry="11"/><ellipse cx="660" cy="347" rx="12" ry="11"/>
+    <ellipse cx="692" cy="273" rx="12" ry="10"/><ellipse cx="692" cy="297" rx="12" ry="11"/><ellipse cx="692" cy="322" rx="12" ry="11"/><ellipse cx="692" cy="347" rx="12" ry="11"/>
+    <ellipse cx="723" cy="273" rx="12" ry="10"/><ellipse cx="723" cy="297" rx="12" ry="11"/><ellipse cx="723" cy="322" rx="12" ry="11"/><ellipse cx="723" cy="347" rx="12" ry="11"/>
+  </g>
+  <g fill="#0891b2" fill-opacity=".6">
+    <circle cx="597" cy="297" r="2.5"/><circle cx="628" cy="322" r="2.5"/><circle cx="660" cy="297" r="2.5"/><circle cx="692" cy="347" r="2.5"/><circle cx="723" cy="322" r="2.5"/>
+  </g>
+  <!-- zone 4 calcification -->
+  <rect x="580" y="360" width="160" height="100" fill="#E8DCC0"/>
+  <rect x="580" y="360" width="160" height="100" fill="#6b7280" fill-opacity=".18"/>
+  <g fill="#ffffff" stroke="#6b7280" stroke-width="1.2" stroke-dasharray="3 2">
+    <ellipse cx="597" cy="373" rx="12" ry="10"/><ellipse cx="597" cy="398" rx="12" ry="11"/><ellipse cx="597" cy="423" rx="12" ry="11"/><ellipse cx="597" cy="447" rx="12" ry="10"/>
+    <ellipse cx="628" cy="373" rx="12" ry="10"/><ellipse cx="628" cy="398" rx="12" ry="11"/><ellipse cx="628" cy="423" rx="12" ry="11"/><ellipse cx="628" cy="447" rx="12" ry="10"/>
+    <ellipse cx="660" cy="373" rx="12" ry="10"/><ellipse cx="660" cy="398" rx="12" ry="11"/><ellipse cx="660" cy="423" rx="12" ry="11"/><ellipse cx="660" cy="447" rx="12" ry="10"/>
+    <ellipse cx="692" cy="373" rx="12" ry="10"/><ellipse cx="692" cy="398" rx="12" ry="11"/><ellipse cx="692" cy="423" rx="12" ry="11"/><ellipse cx="692" cy="447" rx="12" ry="10"/>
+    <ellipse cx="723" cy="373" rx="12" ry="10"/><ellipse cx="723" cy="398" rx="12" ry="11"/><ellipse cx="723" cy="423" rx="12" ry="11"/><ellipse cx="723" cy="447" rx="12" ry="10"/>
+  </g>
+  <!-- zone 5 ossification -->
+  <rect x="580" y="460" width="160" height="100" fill="#dc2626" fill-opacity=".12"/>
+  <g clip-path="url(#z5)">
+    <g fill="#E8DCC0" stroke="#6b7280" stroke-width="1">
+      <path d="M607,460 L620,460 L618,560 L609,560 Z"/>
+      <path d="M638,460 L651,460 L649,560 L640,560 Z"/>
+      <path d="M670,460 L683,460 L681,560 L672,560 Z"/>
+      <path d="M701,460 L714,460 L712,560 L703,560 Z"/>
+    </g>
+    <g fill="#16a34a" fill-opacity=".55" stroke="#16a34a" stroke-width=".8">
+      <ellipse cx="603" cy="480" rx="3.5" ry="6"/><ellipse cx="603" cy="505" rx="3.5" ry="6"/><ellipse cx="604" cy="530" rx="3.5" ry="6"/>
+      <ellipse cx="624" cy="485" rx="3.5" ry="6"/><ellipse cx="623" cy="512" rx="3.5" ry="6"/><ellipse cx="622" cy="540" rx="3.5" ry="6"/>
+      <ellipse cx="634" cy="480" rx="3.5" ry="6"/><ellipse cx="635" cy="507" rx="3.5" ry="6"/><ellipse cx="636" cy="534" rx="3.5" ry="6"/>
+      <ellipse cx="655" cy="486" rx="3.5" ry="6"/><ellipse cx="654" cy="514" rx="3.5" ry="6"/><ellipse cx="653" cy="541" rx="3.5" ry="6"/>
+      <ellipse cx="666" cy="481" rx="3.5" ry="6"/><ellipse cx="667" cy="508" rx="3.5" ry="6"/><ellipse cx="668" cy="535" rx="3.5" ry="6"/>
+      <ellipse cx="687" cy="486" rx="3.5" ry="6"/><ellipse cx="686" cy="513" rx="3.5" ry="6"/><ellipse cx="685" cy="541" rx="3.5" ry="6"/>
+      <ellipse cx="697" cy="481" rx="3.5" ry="6"/><ellipse cx="698" cy="508" rx="3.5" ry="6"/><ellipse cx="699" cy="535" rx="3.5" ry="6"/>
+      <ellipse cx="718" cy="486" rx="3.5" ry="6"/><ellipse cx="717" cy="513" rx="3.5" ry="6"/><ellipse cx="716" cy="541" rx="3.5" ry="6"/>
+    </g>
+    <g stroke="#dc2626" stroke-width="2.2" fill="none">
+      <path d="M594,562 C592,540 596,520 593,488" marker-end="url(#ar)"/>
+      <path d="M661,562 C659,540 663,520 660,492" marker-end="url(#ar)"/>
+      <path d="M729,562 C731,540 727,520 730,488" marker-end="url(#ar)"/>
+    </g>
+  </g>
+  <!-- zone borders -->
+  <rect x="580" y="60" width="160" height="500" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+  <g stroke="#1f2937" stroke-width="1" stroke-dasharray="4 3">
+    <line x1="580" y1="160" x2="740" y2="160"/><line x1="580" y1="260" x2="740" y2="260"/>
+    <line x1="580" y1="360" x2="740" y2="360"/><line x1="580" y1="460" x2="740" y2="460"/>
+  </g>
+  <!-- zone names -->
+  <g font-size="14" font-weight="700" fill="#1f2937">
+    <text x="752" y="115">1. Reserve (resting) zone</text>
+    <text x="752" y="215">2. Proliferative zone</text>
+    <text x="752" y="315">3. Hypertrophic zone</text>
+    <text x="752" y="415">4. Zone of calcification</text>
+    <text x="752" y="492">5. Zone of ossification</text>
+  </g>
+  <text x="752" y="514" font-size="13" fill="#16a34a" font-weight="600">Osteoblast สร้างกระดูก</text>
+  <text x="752" y="531" font-size="13" fill="#16a34a" font-weight="600">บนแกน cartilage</text>
+  <text x="752" y="550" font-size="13" fill="#dc2626">หลอดเลือดเข้าจากล่าง</text>
+  <!-- role labels (left) -->
+  <g font-size="13" text-anchor="end">
+    <text x="568" y="196" fill="#2563eb" font-weight="600">GH/IGF-1, T3 → กระตุ้น</text>
+    <text x="568" y="222" fill="#7c3aed" font-weight="600">FGFR3 ⊣ (achondroplasia</text>
+    <text x="568" y="238" fill="#7c3aed" font-weight="600">= เบรกค้าง)</text>
+    <text x="568" y="292" fill="#1f2937">type X collagen, VEGF</text>
+    <text x="568" y="318" fill="#ea580c" font-weight="600">Rickets: โซนนี้หนาขึ้น</text>
+    <text x="568" y="334" fill="#ea580c" font-weight="600">(PO4 ต่ำ เซลล์ไม่ตาย)</text>
+  </g>
+  <!-- growth direction arrow -->
+  <line x1="962" y1="62" x2="962" y2="560" stroke="#1f2937" stroke-width="2.5" marker-end="url(#ak)"/>
+  <text transform="translate(982,310) rotate(90)" font-size="14" font-weight="600" fill="#1f2937" text-anchor="middle">ทิศการเจริญ: กระดูกยาวขึ้น</text>
+
+  <!-- bottom note box -->
+  <rect x="30" y="604" width="560" height="88" rx="8" fill="#2563eb" fill-opacity=".08" stroke="#2563eb" stroke-width="1.2"/>
+  <g font-size="14" fill="#1f2937">
+    <text x="46" y="630"><tspan font-weight="700">ยาวขึ้น</tspan> = chondrocyte ของ growth plate</text>
+    <text x="46" y="654"><tspan font-weight="700">กว้างขึ้น</tspan> = osteoblast ของ periosteum (appositional)</text>
+    <text x="46" y="678"><tspan font-weight="700" fill="#db2777">Estrogen ปิด plate</tspan> (ทั้งชายและหญิง)</text>
+  </g>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" markerUnits="userSpaceOnUse"><circle cx="5" cy="5" r="5" fill="#1f2937"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker>
+<marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+<clipPath id="lg"><path d="M0,0 L72,0 L70,40 Q66,120 58,190 Q62,204 56,216 L50,370 Q56,386 64,398 Q62,410 46,410 L24,410 Q14,400 20,384 L18,216 Q12,204 14,190 Q4,120 0,40 Z"/></clipPath>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">Disc herniation L4–L5 และ dermatome ขา</text>
+<text x="20" y="54" font-size="14" font-weight="700" fill="#6b7280">ภาพตัดระดับหมอนรอง L4–L5 มองจากบน</text>
+<line x1="490" y1="44" x2="490" y2="628" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="240" y="78" font-size="13" fill="#6b7280" text-anchor="middle">anterior</text>
+<text x="240" y="470" font-size="13" fill="#6b7280" text-anchor="middle">posterior</text>
+
+<path d="M240,96 Q370,96 372,190 Q374,256 330,270 Q290,276 268,262 L212,262 Q190,276 150,270 Q106,256 108,190 Q110,96 240,96 Z" fill="#6b7280" fill-opacity=".22" stroke="#6b7280" stroke-width="2"/>
+<path d="M240,114 Q348,114 350,190 Q352,240 316,252 Q286,256 266,246 L214,246 Q194,256 164,252 Q128,240 130,190 Q132,114 240,114 Z" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-opacity=".7"/>
+<path d="M240,134 Q326,134 328,190 Q330,228 300,236 L180,236 Q150,228 152,190 Q154,134 240,134 Z" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-opacity=".7"/>
+<ellipse cx="240" cy="188" rx="48" ry="32" fill="#0891b2" fill-opacity=".35" stroke="#0891b2" stroke-width="2"/>
+<text x="240" y="193" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">nucleus</text>
+<text x="0" y="0" font-size="13" fill="#6b7280" transform="translate(126,154) rotate(-50)">annulus</text>
+<!-- posterior elements -->
+<path d="M196,268 L170,300 Q160,330 150,350 L120,360 Q110,380 130,388 L176,376 Q210,420 240,440 Q270,420 304,376 L350,388 Q370,380 360,360 L330,350 Q320,330 310,300 L284,268 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<path d="M240,440 L240,462" stroke="#6b7280" stroke-width="10" stroke-linecap="round"/>
+<!-- spinal canal -->
+<path d="M200,274 L280,274 Q300,300 290,330 Q270,370 240,378 Q210,370 190,330 Q180,300 200,274 Z" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+<g fill="#eab308" fill-opacity=".8">
+<circle cx="226" cy="310" r="4"/><circle cx="240" cy="306" r="4"/><circle cx="254" cy="310" r="4"/><circle cx="232" cy="324" r="4"/><circle cx="248" cy="324" r="4"/>
+<circle cx="220" cy="338" r="4"/><circle cx="240" cy="340" r="4"/><circle cx="260" cy="338" r="4"/><circle cx="240" cy="356" r="4"/>
+</g>
+<!-- PLL thick middle -->
+<path d="M196,266 Q240,282 284,266 L284,270 Q240,292 196,270 Z" fill="#7c3aed" fill-opacity=".6"/>
+<!-- L5 traversing roots in lateral recess -->
+<circle cx="204" cy="292" r="9" fill="#ca8a04" stroke="#a16207" stroke-width="1.5"/>
+<circle cx="276" cy="292" r="9" fill="#ca8a04" stroke="#a16207" stroke-width="1.5"/>
+<!-- L4 exiting roots in foramen far lateral -->
+<circle cx="132" cy="284" r="10" fill="#eab308" stroke="#a16207" stroke-width="1.5"/>
+<circle cx="348" cy="284" r="10" fill="#eab308" stroke="#a16207" stroke-width="1.5"/>
+<!-- herniations -->
+<path d="M262,250 Q290,252 292,268 Q290,280 278,278 Q266,270 256,262 Z" fill="#0891b2" fill-opacity=".55" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M144,252 Q124,252 118,266 Q120,276 132,272 Q144,266 150,258 Z" fill="#0891b2" fill-opacity=".55" stroke="#0891b2" stroke-width="1.5"/>
+<line x1="372" y1="226" x2="290" y2="276" stroke="#dc2626" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="84" y1="232" x2="124" y2="272" stroke="#ea580c" stroke-width="3" marker-end="url(#ao)"/>
+
+<g font-size="13" fill="#1f2937">
+<text x="376" y="204" font-weight="700" fill="#dc2626">Posterolateral</text>
+<text x="376" y="220" fill="#dc2626">(พบบ่อย) → L5</text>
+<text x="22" y="200" font-weight="700" fill="#ea580c">Far lateral</text>
+<text x="22" y="216" fill="#ea580c">→ L4</text>
+<text x="370" y="306" font-weight="700" fill="#a16207">L4 exiting</text>
+<text x="370" y="322" fill="#a16207">root (foramen)</text>
+<text x="22" y="330" font-weight="700" fill="#a16207">L5 traversing root</text>
+<text x="22" y="346" fill="#a16207">(lateral recess)</text>
+<text x="22" y="410" fill="#7c3aed" font-weight="700">PLL</text>
+<text x="22" y="426" fill="#7c3aed">หนากลาง บางที่ขอบ</text>
+<text x="360" y="420" fill="#a16207">cauda equina</text>
+</g>
+<g stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)">
+<path d="M366,300 L354,290"/>
+<path d="M150,334 L198,298"/>
+<path d="M60,404 L232,278"/>
+<path d="M400,410 L258,340"/>
+</g>
+<rect x="60" y="492" width="360" height="44" rx="8" fill="#2563eb" fill-opacity=".1" stroke="#2563eb" stroke-width="1.5"/>
+<text x="240" y="520" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">L4–L5 → L5   ·   L5–S1 → S1</text>
+<text x="240" y="560" font-size="13" fill="#6b7280" text-anchor="middle">posterolateral กดราก "ตัวล่าง" (traversing)</text>
+<text x="240" y="578" font-size="13" fill="#6b7280" text-anchor="middle">far lateral กดราก "ตัวบน" (exiting)</text>
+
+<text x="608" y="70" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">ด้านหน้า</text>
+<text x="828" y="70" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">ด้านหลัง</text>
+<path d="M540,100 Q548,80 608,80 Q668,80 677,100" fill="none" stroke="#6b7280" stroke-width="2"/>
+<g transform="translate(540,100) scale(0.85,0.9)"><g clip-path="url(#lg)"><rect x="-5" y="-5" width="90" height="430" fill="#ffffff"/><polygon points="30,0 72,0 72,34" fill="#6b7280" fill-opacity=".3"/><polygon points="0,0 30,0 72,34 72,100 0,70" fill="#0891b2" fill-opacity=".22"/><polygon points="0,70 72,100 72,200 50,190 20,180 0,186" fill="#2563eb" fill-opacity=".32"/><polygon points="0,186 20,180 50,190 72,200 72,376 48,376 40,222 24,212 0,216" fill="#16a34a" fill-opacity=".35"/><polygon points="0,216 24,212 40,222 48,376 72,376 72,420 16,420 16,376 0,370" fill="#eab308" fill-opacity=".45"/><polygon points="0,370 16,376 16,420 0,420" fill="#ea580c" fill-opacity=".38"/></g><path d="M0,0 L72,0 L70,40 Q66,120 58,190 Q62,204 56,216 L50,370 Q56,386 64,398 Q62,410 46,410 L24,410 Q14,400 20,384 L18,216 Q12,204 14,190 Q4,120 0,40 Z" fill="none" stroke="#6b7280" stroke-width="2"/></g>
+<g transform="translate(616,100) scale(0.85,0.9) translate(72,0) scale(-1,1)"><g clip-path="url(#lg)"><rect x="-5" y="-5" width="90" height="430" fill="#ffffff"/><polygon points="30,0 72,0 72,34" fill="#6b7280" fill-opacity=".3"/><polygon points="0,0 30,0 72,34 72,100 0,70" fill="#0891b2" fill-opacity=".22"/><polygon points="0,70 72,100 72,200 50,190 20,180 0,186" fill="#2563eb" fill-opacity=".32"/><polygon points="0,186 20,180 50,190 72,200 72,376 48,376 40,222 24,212 0,216" fill="#16a34a" fill-opacity=".35"/><polygon points="0,216 24,212 40,222 48,376 72,376 72,420 16,420 16,376 0,370" fill="#eab308" fill-opacity=".45"/><polygon points="0,370 16,376 16,420 0,420" fill="#ea580c" fill-opacity=".38"/></g><path d="M0,0 L72,0 L70,40 Q66,120 58,190 Q62,204 56,216 L50,370 Q56,386 64,398 Q62,410 46,410 L24,410 Q14,400 20,384 L18,216 Q12,204 14,190 Q4,120 0,40 Z" fill="none" stroke="#6b7280" stroke-width="2"/></g>
+<ellipse cx="571" cy="280" rx="11" ry="10" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+<ellipse cx="647" cy="280" rx="11" ry="10" fill="none" stroke="#1f2937" stroke-width="1.5"/>
+<text x="588" y="120" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">L1</text>
+<text x="566" y="154" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">L2</text>
+<text x="571" y="233" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">L3</text>
+<text x="589" y="370" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">L4</text>
+<text x="562" y="370" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">L5</text>
+<path d="M760,100 Q768,76 828,76 Q888,76 897,100" fill="none" stroke="#6b7280" stroke-width="2"/>
+<g transform="translate(760,100) scale(0.85,0.9)"><g clip-path="url(#lg)"><rect x="-5" y="-5" width="90" height="430" fill="#ffffff"/><polygon points="12,8 60,8 56,196 16,196" fill="#db2777" fill-opacity=".3"/><polygon points="0,216 20,206 0,300" fill="#eab308" fill-opacity=".45"/><polygon points="20,206 48,206 46,376 72,390 72,420 0,420 0,300" fill="#ea580c" fill-opacity=".38"/><polygon points="48,206 72,206 72,390 46,376" fill="#16a34a" fill-opacity=".35"/></g><path d="M0,0 L72,0 L70,40 Q66,120 58,190 Q62,204 56,216 L50,370 Q56,386 64,398 Q62,410 46,410 L24,410 Q14,400 20,384 L18,216 Q12,204 14,190 Q4,120 0,40 Z" fill="none" stroke="#6b7280" stroke-width="2"/></g>
+<g transform="translate(836,100) scale(0.85,0.9) translate(72,0) scale(-1,1)"><g clip-path="url(#lg)"><rect x="-5" y="-5" width="90" height="430" fill="#ffffff"/><polygon points="12,8 60,8 56,196 16,196" fill="#db2777" fill-opacity=".3"/><polygon points="0,216 20,206 0,300" fill="#eab308" fill-opacity=".45"/><polygon points="20,206 48,206 46,376 72,390 72,420 0,420 0,300" fill="#ea580c" fill-opacity=".38"/><polygon points="48,206 72,206 72,390 46,376" fill="#16a34a" fill-opacity=".35"/></g><path d="M0,0 L72,0 L70,40 Q66,120 58,190 Q62,204 56,216 L50,370 Q56,386 64,398 Q62,410 46,410 L24,410 Q14,400 20,384 L18,216 Q12,204 14,190 Q4,120 0,40 Z" fill="none" stroke="#6b7280" stroke-width="2"/></g>
+<text x="867" y="199" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">S2</text>
+<text x="872" y="397" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">S1</text>
+<text x="846" y="370" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">L4</text>
+<g fill="none" stroke="#dc2626" stroke-width="2.5"><circle cx="828" cy="100" r="7"/><circle cx="828" cy="100" r="14" stroke-opacity=".6"/><circle cx="828" cy="100" r="21" stroke-opacity=".35"/></g>
+<g font-size="13" fill="#dc2626"><text x="906" y="118" font-weight="700">S3–S5</text><text x="906" y="134">Saddle area</text><text x="906" y="150">— cauda</text><text x="906" y="166">equina</text></g>
+<path d="M904,124 L852,104" stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)"/>
+<text x="684" y="262" font-size="13" font-weight="700" fill="#16a34a">Knee jerk</text><text x="684" y="278" font-size="13" font-weight="700" fill="#16a34a">L4</text>
+<line x1="704" y1="284" x2="658" y2="280" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<text x="906" y="404" font-size="13" font-weight="700" fill="#ea580c">Ankle jerk</text><text x="906" y="420" font-size="13" font-weight="700" fill="#ea580c">S1 (Achilles)</text>
+<line x1="904" y1="414" x2="871" y2="420" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="506" y="488" width="22" height="16" rx="3" fill="#6b7280" fill-opacity=".3" stroke="#6b7280"/><text x="536" y="501" font-size="13" fill="#1f2937"><tspan font-weight="700">L1</tspan> ขาหนีบ</text>
+<rect x="506" y="508" width="22" height="16" rx="3" fill="#0891b2" fill-opacity=".22" stroke="#0891b2"/><text x="536" y="521" font-size="13" fill="#1f2937"><tspan font-weight="700">L2</tspan> ต้นขาหน้าบน</text>
+<rect x="506" y="528" width="22" height="16" rx="3" fill="#2563eb" fill-opacity=".32" stroke="#2563eb"/><text x="536" y="541" font-size="13" fill="#1f2937"><tspan font-weight="700">L3</tspan> ต้นขาหน้าล่าง → เข่าใน</text>
+<rect x="506" y="548" width="22" height="16" rx="3" fill="#16a34a" fill-opacity=".35" stroke="#16a34a"/><text x="536" y="561" font-size="13" fill="#1f2937"><tspan font-weight="700">L4</tspan> สะบ้า → ขาด้านใน → medial malleolus</text>
+<rect x="506" y="568" width="22" height="16" rx="3" fill="#eab308" fill-opacity=".45" stroke="#eab308"/><text x="536" y="581" font-size="13" fill="#1f2937"><tspan font-weight="700">L5</tspan> ขาด้านนอก → หลังเท้า → นิ้วโป้งเท้า</text>
+<rect x="506" y="588" width="22" height="16" rx="3" fill="#ea580c" fill-opacity=".38" stroke="#ea580c"/><text x="536" y="601" font-size="13" fill="#1f2937"><tspan font-weight="700">S1</tspan> หลังน่อง → lateral malleolus → ขอบนอกเท้า/ฝ่าเท้า</text>
+<rect x="506" y="608" width="22" height="16" rx="3" fill="#db2777" fill-opacity=".3" stroke="#db2777"/><text x="536" y="621" font-size="13" fill="#1f2937"><tspan font-weight="700">S2</tspan> หลังต้นขา</text>
+</svg>
