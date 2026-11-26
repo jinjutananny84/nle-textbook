@@ -1,0 +1,592 @@
+{
+ "exams": {
+  "Par/1": {
+   "box": 1,
+   "stem": "A 55-year-old patient was admitted with fever, cough, shortness of breath and dyspnea for 7 days. Chest X-ray reveals bilateral lower zone patch consolidation. Sputum smear and gram stain were negative. Agar plate culture of sputum and stool were negative. WBC=5,200/mm3(N45% L33% M8% E13% B1%). What is the most likely diagnosis?",
+   "options": {
+    "A": "Acute bacterial community acquired pneumonia (CAP)",
+    "B": "Capillariasis",
+    "C": "Disseminated strongyloidiasis",
+    "D": "Hookworm pneumonitis",
+    "E": "Loeffler’s syndrome"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "eosinophil 13% + ปอดอักเสบชั่วคราว ตรวจเสมหะ/อุจจาระไม่เจอ (ระยะ larva ผ่านปอด ยังไม่มีไข่) = ==Loeffler syndrome== · ไม่ใช่ disseminated strongyloidiasis (ต้องมีภูมิต่ำ ติดเชื้อแบคทีเรียร่วม) · ▶ [t=40:45]"
+  },
+  "Par/2": {
+   "box": 2,
+   "stem": "An adult patient presented with chronic diarrhea, abdominal pain, and significant weight loss. The patient frequently consumed undercooked freshwater fish. Stool examination revealed ova with a thin shell and flat bipolar plugs. Which of the following is the most common complication of this infection?",
+   "options": {
+    "A": "Anemia",
+    "B": "Intestinal obstruction due to hyperinfection",
+    "C": "Liver abscess",
+    "D": "Malnutrition and protein-losing enteropathy (PLE)",
+    "E": "Rectal prolapse"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "กินปลาน้ำจืด + ไข่ flat bipolar plug (peanut) = ==Capillaria== → ท้องเสียเรื้อรัง ==malnutrition + protein-losing enteropathy== · rectal prolapse = Trichuris · ▶ [t=41:09]"
+  },
+  "Par/3": {
+   "box": 4,
+   "stem": "A patient presented with complaints of persistent coughing, wheezing, intermittent diarrhea, and unexplained weight loss over the past three months. He had worked as a farmer, usually walking barefoot in his fields. His past medical history included a recent episode of pneumonia unresponsive with antibiotics. CBC showed WBC=5,500/mm3 (N45% L31% M8% E15% B1%), Hgb of 15.5 g/dl. Which of the following would you expect to find in the stool sample?",
+   "options": {
+    "A": "Eggs with thin transparent shell",
+    "B": "Eggs with mucous polar plugs",
+    "C": "Larvae with apparent genital primordium",
+    "D": "Larvae with notched tail",
+    "E": "Gravid proglottids"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "เดินเท้าเปล่า + ปอดอักเสบไม่ตอบยา + eosinophil = Strongyloides · อุจจาระเจอ ==rhabditiform larva ที่ genital primordium ใหญ่== (hookworm เจอไข่เปลือกบาง) · ▶ [t=20:42]"
+  },
+  "Par/4": {
+   "box": 4,
+   "stem": "A patient with underlying rheumatoid arthritis presents to the emergency department with severe diarrhea, abdominal pain, and weight loss. She has been on high-dose glucocorticoids for management. Laboratory findings reveal WBC=14,200/ul (N45, L33, M8, E13, B1%). The modified trichrome stain was negative. Hemocultures were positive for gram-negative rod bacteremia. A chest X-ray demonstrates bilateral patchy infiltrates, and a CT scan of the abdomen shows diffuse bowel wall thickening. Based on the clinical presentation and laboratory findings, which of the following is the most likely diagnosis?",
+   "options": {
+    "A": "Cryptosporidiosis",
+    "B": "Cystoisosporiasis",
+    "C": "Cytomegalovirus (CMV) pneumonitis",
+    "D": "Disseminated strongyloidiasis",
+    "E": "Disseminated aspergillosis"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "กิน steroid ขนาดสูง + gram-negative bacteremia (แบคทีเรียติดตัว larva ออกจากลำไส้) + ปอดและลำไส้ = ==disseminated strongyloidiasis== · ▶ [t=27:56]"
+  },
+  "Par/5": {
+   "box": 5,
+   "stem": "A 10-year- old boy developed bloody mucus diarrhea, anemia and mild rectal prolapse. Which of the following is the most likely causative organism of the disease?",
+   "options": {
+    "A": "Balantidium coli",
+    "B": "Entamoeba histolytica",
+    "C": "Enterobius vermicularis",
+    "D": "Necator americanus",
+    "E": "Trichuris trichiura"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "เด็ก ถ่ายมูกเลือด ซีด ==rectal prolapse== = ==Trichuris trichiura== · ▶ [t=44:12]"
+  },
+  "Par/6": {
+   "box": 5,
+   "stem": "A 6-year-old boy is brought to the pediatric clinic because of persistent perianal itching, particularly at night. His mother reports that he frequently scratches the anal area during sleep and has difficulty sleeping. A routine stool examination is negative for ova and parasites. Which of the following is the most appropriate diagnostic method?",
+   "options": {
+    "A": "Formalin-ether concentration technique (FECT)",
+    "B": "Modified Kato-Katz technique",
+    "C": "Cellophane tape test",
+    "D": "Agar plate culture",
+    "E": "Baermann technique"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "คันก้นกลางคืน ตรวจอุจจาระไม่เจอ (ตัวเมียออกมาไข่รอบทวาร) = Enterobius → ==scotch/cellophane tape test== ตอนเช้า · ▶ [t=34:43]"
+  },
+  "Par/7": {
+   "box": 6,
+   "stem": "A 52-year-old man from northeastern Thailand presents with intermittent right upper quadrant abdominal discomfort, dyspepsia, and fatigue. He reports frequently eating raw freshwater fish. Physical examination reveals mild hepatomegaly. Stool examination demonstrates small, operculated eggs. Which of the following parasites is the most likely cause of this infection?",
+   "options": {
+    "A": "Clonorchis sinensis",
+    "B": "Fasciola hepatica",
+    "C": "Opisthorchis viverrini",
+    "D": "Paragonimus westermani",
+    "E": "Heterophyes heterophyes"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "อีสาน + ปลาน้ำจืดดิบ + ไข่เล็กมี operculum = ==Opisthorchis viverrini== · Clonorchis อยู่จีน/ญี่ปุ่น · ▶ [t=47:02]"
+  },
+  "Par/8": {
+   "box": 6,
+   "stem": "A 45-year-old man is diagnosed with opisthorchiasis after consuming raw freshwater fish. Which of the following represents the infective stage for humans?",
+   "options": {
+    "A": "Miracidium",
+    "B": "Sporocyst",
+    "C": "Redia",
+    "D": "Cercaria",
+    "E": "Metacercaria"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "trematode ติดคนด้วย ==metacercaria== (ใน IH ตัวที่ 2 = ปลา) · cercaria ไชผิวเฉพาะ Schistosoma · ▶ [t=45:26]"
+  },
+  "Par/9": {
+   "box": 6,
+   "stem": "A 65-year-old man from an endemic region presents with progressive jaundice, weight loss, anorexia, and right upper quadrant discomfort. Imaging reveals an irregular hilar biliary mass with intrahepatic bile duct dilatation. He has a long history of eating raw freshwater fish. Which malignancy is most strongly associated with chronic O. viverrini infection?",
+   "options": {
+    "A": "Hepatocellular carcinoma",
+    "B": "Pancreatic adenocarcinoma",
+    "C": "Cholangiocarcinoma",
+    "D": "Gastric adenocarcinoma",
+    "E": "Colorectal adenocarcinoma"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "OV เรื้อรัง → ==cholangiocarcinoma== (ไม่ใช่ HCC) · ▶ [t=50:46]"
+  },
+  "Par/10": {
+   "box": 6,
+   "stem": "A 48-year-old man is diagnosed with chronic opisthorchiasis following detection of O. viverrini eggs in his stool. He has no evidence of advanced cholangiocarcinoma or hepatic failure. The physician decides to initiate antiparasitic treatment. Which of the following is the most appropriate drug and regimen?",
+   "options": {
+    "A": "Albendazole 400 mg orally once",
+    "B": "Ivermectin 200 µg/kg orally once",
+    "C": "Praziquantel 25 mg/kg orally three times daily for 2 days",
+    "D": "Mebendazole 100 mg orally twice daily for 3 days",
+    "E": "Diethylcarbamazine 6 mg/kg/day orally for 12 days"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "trematode (ยกเว้น Fasciola) ใช้ ==praziquantel== · OV 25 mg/kg tid × 2 วัน (หรือ 40 mg/kg ครั้งเดียว) · albendazole ใช้กับ nematode · ▶ [t=45:26]"
+  },
+  "Par/11": {
+   "box": 7,
+   "stem": "A 35-year-old man presents to the outpatient clinic with mild abdominal discomfort and intermittent passage of motile, flat, white segments in his stool. He reports frequently consuming undercooked beef. A gravid proglottid is submitted to the parasitology laboratory for identification. After staining with India ink, microscopic examination reveals a central uterine stem with approximately 18 lateral branches on each side. Which of the following parasites is the most likely cause of this infection?",
+   "options": {
+    "A": "Taenia solium",
+    "B": "Taenia saginata",
+    "C": "Hymenolepis nana",
+    "D": "Dibothriocephalus latus",
+    "E": "Echinococcus granulosus"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "กินเนื้อวัวดิบ + proglottid แขนง ==18 ข้าง (>13)== = ==T. saginata== · solium แขนงน้อย 7–13 · ▶ [t=57:03]"
+  },
+  "Par/12": {
+   "box": 7,
+   "stem": "A 32-year-old man is diagnosed with intestinal taeniasis caused by T. saginata. He has no neurological symptoms or other evidence of tissue infection. Which of the following is the most appropriate pharmacological treatment?",
+   "options": {
+    "A": "Praziquantel 5–10 mg/kg orally as a single dose",
+    "B": "Albendazole 400 mg orally once daily for 3 days",
+    "C": "Ivermectin 200 µg/kg orally as a single dose",
+    "D": "Diethylcarbamazine 6 mg/kg/day for 12 days",
+    "E": "Metronidazole 500 mg orally three times daily for 7 days"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "taeniasis ในลำไส้ ใช้ ==praziquantel 5–10 mg/kg ครั้งเดียว== (หรือ niclosamide) · ▶ [t=56:25]"
+  },
+  "Par/13": {
+   "box": 7,
+   "stem": "A 38-year-old woman presents with recurrent seizures. Brain MRI reveals multiple cystic lesions containing eccentric hyperintense nodules, described as having a characteristic \"hole-with-dot\" appearance. Which of the following is the most likely route of infection?",
+   "options": {
+    "A": "Ingestion of T. solium cysticerci in undercooked pork",
+    "B": "Ingestion of T. solium eggs through fecal–oral transmission",
+    "C": "Penetration of cercariae through the skin",
+    "D": "Ingestion of metacercariae in freshwater fish",
+    "E": "Ingestion of hydatid cysts in contaminated vegetables"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "neurocysticercosis (hole-with-dot) = คนเป็น IH โดยบังเอิญ ติดจาก ==กินไข่ T. solium (fecal–oral)== ไม่ใช่กินหมูดิบ (กินหมูดิบ = taeniasis ในลำไส้) · ▶ [t=58:03]"
+  },
+  "Par/14": {
+   "box": 7,
+   "stem": "A 30-year-old man presents with seizures. MRI demonstrates two viable parenchymal cysticerci with visible scoleces and surrounding edema. Which of the following represents the most appropriate antiparasitic treatment strategy?",
+   "options": {
+    "A": "Albendazole alone without corticosteroids",
+    "B": "Praziquantel alone without antiseizure medication",
+    "C": "Albendazole combined with corticosteroids, together with appropriate antiseizure treatment",
+    "D": "Ivermectin combined with diethylcarbamazine",
+    "E": "Immediate surgical removal of all intracranial lesions"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "viable cyst หลายก้อน ให้ ==albendazole + steroid + ยากันชัก== · ▶ [t=59:33]"
+  },
+  "Par/15": {
+   "box": 8,
+   "stem": "A patient presented with a 4-week history of persistent diarrhea, bloating, and foul-smelling, greasy stools. She reported that her symptoms began after returning from a camping trip. Stool examination revealed oval-shaped thin\u0002walled cyst. How did the patient get the infection?",
+   "options": {
+    "A": "Ingestion of contaminated water",
+    "B": "Ingestion of raw vegetables",
+    "C": "Insect biting",
+    "D": "Person-to-person contact",
+    "E": "Skin penetration by larvae"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "camping แล้วท้องเสียมันเหม็น cyst รูปไข่ผนังบาง = Giardia ติดจาก ==ดื่มน้ำปนเปื้อน cyst== · ▶ [t=1:06:02]"
+  },
+  "Par/16": {
+   "box": 8,
+   "stem": "Direct smears of stool samples revealed organisms (รูปในสไลด์). Which of the following is the best method for culture this organism?",
+   "options": {
+    "A": "Agar plate culture",
+    "B": "Boeck and Drbohlav Locke egg serum medium culture",
+    "C": "Harada Mori culture",
+    "D": "MacConkey agar plate culture",
+    "E": "YPD plate culture"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "protozoa ในลำไส้ (Blastocystis/amoeba) culture ด้วย ==LES (Boeck & Drbohlav Locke-egg-serum)== · agar plate / Harada-Mori ใช้กับ nematode larva · ▶ [t=1:09:50]"
+  },
+  "Par/17": {
+   "box": 8,
+   "stem": "A 13-year-old orphan girl presented with diarrhea and steatorrhea. Direct smears of stool samples revealed organisms with falling leaf motility. What is the infective stage of this parasite?",
+   "options": {
+    "A": "Embryonated eggs",
+    "B": "Filariform larvae",
+    "C": "Flagellate trophozoites",
+    "D": "Mature cysts",
+    "E": "Oocysts"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "falling leaf motility + steatorrhea = Giardia · infective stage = ==mature cyst (4 nuclei)== · ▶ [t=1:07:28]"
+  },
+  "Par/18": {
+   "box": 8,
+   "stem": "A 20-year-old man was presented with diarrhea, abdominal pain, tenesmus. Stool examination of specimen from a patient presenting with irregular shape, finger-like pseudopods and ingested RBC in the cytoplasm. What is the most likely causative agent?",
+   "options": {
+    "A": "Blastocystis sp.",
+    "B": "Entamoeba coli",
+    "C": "Giardia intestinalis",
+    "D": "Dientamoeba fragilis",
+    "E": "Entamoeba histolytica"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "pseudopod ยื่นแบบนิ้ว + ==กิน RBC== = ==E. histolytica== · ▶ [t=1:01:18]"
+  },
+  "Par/19": {
+   "box": 8,
+   "stem": "A 25-year-old female was admitted with bloody mucous diarrhea. Stool examination revealed the organisms moving actively by pseudopod (รูปในสไลด์). Which of the following is the causative agent?",
+   "options": {
+    "A": "Balantidium coli",
+    "B": "Giardia lamblia",
+    "C": "Chilomastix mesnili",
+    "D": "Entamoeba histolytica",
+    "E": "Cryptosporidium parvum"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "amoeba เคลื่อนด้วย pseudopod + มูกเลือด = ==E. histolytica== · Balantidium เป็น ciliate · ▶ [t=1:01:18]"
+  },
+  "Par/20": {
+   "box": 8,
+   "stem": "A 30-year-old male presented with bloody mucus diarrhea and tenesmus for 5 days. Examination of his stool revealed an actively moving amoeba with many red blood cells in its cytoplasm. Which of the following is the pathogenic lesion site of this parasite?",
+   "options": {
+    "A": "Stomach",
+    "B": "Duodenum",
+    "C": "Small intestine",
+    "D": "Bile duct",
+    "E": "Large intestine"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "E. histolytica ก่อแผล ==flask-shaped ulcer ที่ลำไส้ใหญ่== (cecum, ascending colon) แพร่ต่อไปตับได้ · ▶ [t=1:01:38]"
+  },
+  "Par/21": {
+   "box": 9,
+   "stem": "An AIDS patient presented with chronic watery diarrhea. Observation of stool under UV microscope revealed the rounded, neon blue organism with a diameter about 10 µm (รูปในสไลด์). Which of the following is this organism?",
+   "options": {
+    "A": "Cyclospora cayetanensis",
+    "B": "Cryptosporidium parvum",
+    "C": "Enterocytozoon",
+    "D": "Entamoeba histolytica",
+    "E": "Isospora belli"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "AIDS + ใต้ UV เรืองแสงฟ้า (autofluorescence) ขนาด ==8–10 µm== = ==Cyclospora== · Crypto เล็กกว่า 4–6 µm · ▶ [t=1:16:25]"
+  },
+  "Par/22": {
+   "box": 9,
+   "stem": "An AIDS patient presented with chronic diarrhea and wasting syndrome. Stool smear stained by gram-chromotrope showed numerous 1-2-micron spores with belt-like appearance. What is the most likely causative agent?",
+   "options": {
+    "A": "Microsporidia",
+    "B": "Isospora belli",
+    "C": "Giardia lamblia",
+    "D": "Cryptosporidium spp.",
+    "E": "Cyclospora cayetanensis"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "spore 1–2 µm ==belt-like== ย้อม modified trichrome/gram-chromotrope = ==microsporidia== (Enterocytozoon) · ▶ [t=1:21:30]"
+  },
+  "Par/23": {
+   "box": 9,
+   "stem": "An HIV-positive man presented with chronic watery diarrhea and weight loss. Stool smear stained by modified-acid fast stain revealed numerous 5 µm round shaped with 4 sporozoites. What is the most likely diagnosis?",
+   "options": {
+    "A": "Giardiasis",
+    "B": "Isosporiasis",
+    "C": "Amoebiasis",
+    "D": "Microsporidiosis",
+    "E": "Cryptosporidiosis"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "modified acid-fast ติดแดง ==4–6 µm มี 4 sporozoites== = ==Cryptosporidium== · Isospora ใหญ่กว่า (oocyst รี 2 sporocyst) · ▶ [t=1:16:25]"
+  },
+  "Par/24": {
+   "box": 6,
+   "stem": "A 35-year-old male presented with fatigue and chronic cough with rusty sputum. Sputum examination revealed eggs about 50×90 µm (รูปในสไลด์). Which of the following is the causative agent?",
+   "options": {
+    "A": "Fasciolopsis buski",
+    "B": "Necator americanus",
+    "C": "Opisthorchis viverrini",
+    "D": "Paragonimus westermani",
+    "E": "Schistosoma haematobium"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "==เสมหะสีสนิม== + ไข่มี operculum ~50×90 µm = ==Paragonimus== (ติดจากกินปู/กุ้งน้ำจืดดิบ) · ▶ [t=1:24:33]"
+  },
+  "Par/25": {
+   "box": 11,
+   "stem": "A 25-year-old woman complain with itching in vagina and leucorrhea. From vagina swab Jerky movement organisms were detected in vagina swab. What is the characteristic of this organism?",
+   "options": {
+    "A": "Pear-shaped with sucking disc",
+    "B": "Pear-shaped with undulating membrane",
+    "C": "Spindle shaped with an anterior flagellum",
+    "D": "Flagellated trophozoite with a large karyosome",
+    "E": "Elongated trophozoite with 2 nuclei containing 3-8 chromatin granules"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "==jerky movement== ในตกขาว = Trichomonas vaginalis → ==pear-shaped + undulating membrane== (ยาวไม่ถึงครึ่งตัว) · A = Giardia · ▶ [t=1:31:45]"
+  },
+  "Par/26": {
+   "box": 11,
+   "stem": "A 24-year-old man presents with blurred vision and floaters in his right eye. Ophthalmological examination reveals focal necrotizing retinochoroiditis with adjacent old pigmented scars. Serological testing shows positive anti-Toxoplasma gondii IgG. The patient is diagnosed with recurrent ocular toxoplasmosis. Which of the following parasitic stages is responsible for active multiplication and retinal tissue destruction following reactivation of latent infection?",
+   "options": {
+    "A": "Sporozoite",
+    "B": "Bradyzoite",
+    "C": "Tachyzoite",
+    "D": "Merozoite",
+    "E": "Microgamete"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "ocular toxo จาก reactivation: bradyzoite ใน tissue cyst กลับเป็น ==tachyzoite== ที่แบ่งตัวเร็วทำลายเนื้อเยื่อ · ▶ [t=1:37:04]"
+  },
+  "Par/27": {
+   "box": 11,
+   "stem": "A 26-year-old pregnant woman at 10 weeks of gestation presents for routine antenatal care. Serological testing reveals positive anti-Toxoplasma gondii IgM and negative IgG. She has no history of previous toxoplasmosis. Which of the following is the most appropriate next step?",
+   "options": {
+    "A": "Perform Sabin–Feldman dye test to detect IgM",
+    "B": "Diagnose acute toxoplasmosis and immediately conclude fetal infection",
+    "C": "No further investigation is required",
+    "D": "Repeat IgM testing only after delivery",
+    "E": "Confirm serological findings and repeat IgG testing to assess seroconversion"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "IgM บวก IgG ลบในหญิงตั้งครรภ์ ยังสรุปไม่ได้ (IgM false positive บ่อย) → ==ยืนยันผลและตรวจ IgG ซ้ำดู seroconversion== · ▶ [t=1:38:27] · [t=1:43:35]"
+  },
+  "Par/28": {
+   "box": 10,
+   "stem": "A 35-year-old male came back from the forest 2 weeks ago and presented with fever and chills every 48 hours. Thin blood smear revealed the organisms (รูปในสไลด์). Which of the following is the causative agent?",
+   "options": {
+    "A": "Plasmodium falciparum",
+    "B": "Plasmodium vivax",
+    "C": "Plasmodium malariae",
+    "D": "Plasmodium ovale",
+    "E": "Plasmodium knowlesi"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "ไข้หนาวสั่น ==ทุก 48 ชม.== กลับจากป่า + RBC โต = ==P. vivax== · ▶ [t=2:05:33]"
+  },
+  "Par/29": {
+   "box": 12,
+   "stem": "A 30-year-old Burmese male came to work in Thailand. Upon health checking, thin blood smear revealed the organism (รูปในสไลด์). Which of the following parasite is he infected?",
+   "options": {
+    "A": "Loa loa",
+    "B": "Brugia malayi",
+    "C": "Dirofilaria immitis",
+    "D": "Onchocerca volvulus",
+    "E": "Wuchereria bancrofti"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "คนพม่า microfilaria ใน thin smear มีปลอกหุ้ม หัวไม่มี nucleus ถึงปลายหาง = ==W. bancrofti== (B. malayi ทางใต้ มี nucleus ปลายหาง 2 อัน) · ▶ [t=1:50:41]"
+  },
+  "Par/30": {
+   "box": 10,
+   "stem": "A 28-year-old woman presents with recurrent episodes of fever several months after completing treatment for Plasmodium vivax malaria. Peripheral blood smear confirms recurrent parasitemia. Which of the following best explains this recurrence?",
+   "options": {
+    "A": "Persistence of gametocytes in peripheral blood",
+    "B": "Reinfection from mosquito bites",
+    "C": "Reactivation of dormant hepatic forms",
+    "D": "Persistence of merozoites in the spleen",
+    "E": "Antigenic variation of erythrocytic schizonts"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "vivax/ovale กลับเป็นซ้ำจาก ==hypnozoite ในตับ (relapse)== · ▶ [t=2:05:33]"
+  },
+  "Par/31": {
+   "box": 10,
+   "stem": "A 45-year-old man presents with recurrent fever occurring every 72 hours. Peripheral blood smear reveals band-form trophozoites and rosette-shaped schizonts containing approximately 6–12 merozoites. Which of the following is the most likely causative species?",
+   "options": {
+    "A": "P. falciparum",
+    "B": "P. vivax",
+    "C": "P. ovale",
+    "D": "P. malariae",
+    "E": "P. knowlesi"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "ไข้ทุก ==72 ชม.== + band form + rosette 6–12 merozoite = ==P. malariae== · ▶ [t=2:09:32]"
+  },
+  "Par/32": {
+   "box": 10,
+   "stem": "A 30-year-old man is diagnosed with P. vivax malaria. After receiving blood-stage treatment, the physician plans radical cure to eliminate dormant hepatic parasites. Which of the following investigations is essential before prescribing primaquine?",
+   "options": {
+    "A": "Hemoglobin electrophoresis",
+    "B": "G6PD enzyme activity",
+    "C": "Direct Coombs test",
+    "D": "Serum IgE level",
+    "E": "Eosinophil count"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "ก่อน primaquine/tafenoquine ต้องตรวจ ==G6PD== (เสี่ยง hemolysis) · ▶ [t=1:48:45]"
+  },
+  "Par/33": {
+   "box": 10,
+   "stem": "A medical technologist examines a Giemsa-stained bone marrow aspirate from a patient with suspected visceral leishmaniasis. Numerous intracellular oval organisms are observed within macrophages. Each organism contains a nucleus and a distinct kinetoplast. Which of the following forms is being observed?",
+   "options": {
+    "A": "Promastigote",
+    "B": "Amastigote",
+    "C": "Epimastigote",
+    "D": "Trypomastigote",
+    "E": "Sporozoite"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "bone marrow ใน macrophage มี nucleus + kinetoplast = ==amastigote== อย่าตอบ promastigote (ระยะในริ้นฝอยทราย) · ▶ [t=2:04:18]"
+  },
+  "Par/34": {
+   "box": 11,
+   "stem": "A 26-year-old woman presents with severe unilateral eye pain, photophobia, blurred vision, and excessive tearing. She has been wearing soft contact lenses and occasionally rinses them with tap water. Slit-lamp examination reveals a ring-shaped corneal infiltrate. Which of the following is the most likely diagnosis?",
+   "options": {
+    "A": "Bacterial keratitis",
+    "B": "Herpes simplex keratitis",
+    "C": "Acanthamoeba keratitis",
+    "D": "Fungal keratitis",
+    "E": "Microsporidial keratoconjunctivitis"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "contact lens + ล้างน้ำประปา + ==ring infiltrate== = ==Acanthamoeba keratitis== · ▶ [t=2:18:54]"
+  },
+  "Par/35": {
+   "box": 11,
+   "stem": "A corneal scraping specimen from a patient with suspected Acanthamoeba keratitis is examined microscopically. Two morphological forms of the parasite are identified. Which of the following characteristics is most useful for identifying the cyst stage of Acanthamoeba?",
+   "options": {
+    "A": "Single nucleus with a prominent kinetoplast",
+    "B": "Double-walled cyst consisting of an ectocyst and endocyst",
+    "C": "Crescent-shaped intracellular form",
+    "D": "Flagellated trophozoite with an undulating membrane",
+    "E": "Thin-walled cyst containing four nuclei"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "cyst Acanthamoeba = ==double wall (ectocyst + endocyst)== · E = E. histolytica cyst · ▶ [t=2:18:54]"
+  },
+  "Par/36": {
+   "box": 11,
+   "stem": "A 17-year-old boy develops severe headache, fever, nausea, vomiting, and neck stiffness five days after swimming in a warm freshwater lake. His condition rapidly deteriorates, followed by seizures and loss of consciousness. CSF examination reveals numerous motile amoeboid organisms. Which of the following is the most likely causative organism?",
+   "options": {
+    "A": "Acanthamoeba spp.",
+    "B": "Balamuthia mandrillaris",
+    "C": "Naegleria fowleri",
+    "D": "Entamoeba histolytica",
+    "E": "Sappinia spp."
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "ว่ายน้ำจืดอุ่น + meningitis ลุกลามเร็ว 4–5 วันในคนปกติ = ==Naegleria fowleri (PAM)== · ▶ [t=2:14:43]"
+  },
+  "Par/37": {
+   "box": 12,
+   "stem": "A 35-year-old man from Thailand presents with recurrent episodes of painful, migratory subcutaneous swelling over his abdominal wall and upper extremities. He reports consuming raw freshwater fish several months earlier. Laboratory investigations reveal marked peripheral eosinophilia. Which of the following is the most likely causative parasite?",
+   "options": {
+    "A": "Angiostrongylus cantonensis",
+    "B": "Gnathostoma spinigerum",
+    "C": "Paragonimus westermani",
+    "D": "Spirometra spp.",
+    "E": "Trichinella spiralis"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "==migratory subcutaneous swelling== + กินปลาดิบ + eosinophil = ==Gnathostoma== · ▶ [t=2:21:36]"
+  },
+  "Par/38": {
+   "box": 12,
+   "stem": "A 32-year-old man presents with fever, severe myalgia, periorbital edema, and weakness approximately 2 weeks after consuming undercooked wild boar meat. Laboratory investigations reveal marked eosinophilia and elevated serum creatine phosphokinase (CPK). Which of the following is the most likely causative parasite?",
+   "options": {
+    "A": "Gnathostoma spinigerum",
+    "B": "Trichuris trichiura",
+    "C": "Trichinella spiralis",
+    "D": "Strongyloides stercoralis",
+    "E": "Ancylostoma duodenale"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "กินหมูป่าดิบ + ปวดกล้ามเนื้อ หนังตาบวม CPK สูง = ==Trichinella spiralis== · ▶ [t=2:25:46]"
+  },
+  "Par/39": {
+   "box": 13,
+   "stem": "A 9-year-old girl presents with severe scalp itching, particularly behind the ears and at the nape of the neck. Physical examination reveals excoriations and numerous small whitish structures firmly attached to the hair shafts. These structures cannot be easily removed by brushing. Which of the following is the most likely diagnosis?",
+   "options": {
+    "A": "Seborrheic dermatitis",
+    "B": "Pediculosis capitis",
+    "C": "Tinea capitis",
+    "D": "Scabies",
+    "E": "Allergic contact dermatitis"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "ไข่ (nit) ==firmly attached== ที่เส้นผม หลังหู ท้ายทอย = ==pediculosis capitis== · ▶ [t=2:31:00]"
+  },
+  "Par/40": {
+   "box": 13,
+   "stem": "A 35-year-old man presents with intense itching in the pubic region. Physical examination reveals small grayish insects attached to pubic hair. He also has blue-gray macules on the lower abdomen and thighs. Which of the following is the most likely causative parasite?",
+   "options": {
+    "A": "Pediculus humanus capitis",
+    "B": "Pediculus humanus corporis",
+    "C": "Pthirus pubis",
+    "D": "Sarcoptes scabiei",
+    "E": "Cimex lectularius"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
+   "why": "คันหัวหน่าว + ==maculae ceruleae== (ปื้นเทาฟ้า) = ==Pthirus pubis== · ▶ [t=2:32:01]"
+  },
+  "Par/41": {
+   "box": 13,
+   "stem": "A 24-year-old woman is diagnosed with phthiriasis pubis. She asks the physician how she acquired the infection. Which of the following is the most common route of transmission?",
+   "options": {
+    "A": "Inhalation of airborne eggs",
+    "B": "Penetration of larvae through intact skin",
+    "C": "Sexual or close intimate contact with an infested person",
+    "D": "Ingestion of contaminated food",
+    "E": "Mosquito-borne transmission"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "โลนติดต่อทาง ==sexual/close contact== · ▶ [t=2:28:17]"
+  },
+  "Par/42": {
+   "box": 13,
+   "stem": "A 24-year-old woman presents with severe itching, particularly at night. Physical examination reveals multiple small erythematous papules and burrows in the interdigital spaces, wrists, and waistline. Her roommate has developed similar symptoms. Which of the following is the most likely causative organism?",
+   "options": {
+    "A": "Pediculus humanus corporis",
+    "B": "Sarcoptes scabiei var. hominis",
+    "C": "Demodex folliculorum",
+    "D": "Pthirus pubis",
+    "E": "Cimex lectularius"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
+   "why": "คันกลางคืน + burrow ที่ง่ามนิ้ว ข้อมือ เอว + คนใกล้ชิดเป็น = ==Sarcoptes scabiei== · ▶ [t=2:28:17]"
+  }
+ }
+}
