@@ -1,5 +1,5 @@
 ---
-source: คลิปติว Reproductive system อ.นพ.กฤตัชญ์ (Compre MDCU80 · 24 พ.ย. 2026) · เนื้อหาจากสไลด์ 80 หน้า (Embryology · Gross anatomy · Physiology · STIs/PID) · ส่วน Pathology/Pharmacology/Neoplasm ยังไม่มีในสไลด์ที่ได้มา · ข้อสอบที่อาจารย์ยกมา (เฉลยเป็นการวิเคราะห์ รอเทียบกับคลิป) + ข้อ MDCU74–79 ที่ตรงกัน
+source: คลิปติว Reproductive system อ.นพ.กฤตัชญ์ (Compre MDCU80 · 24 พ.ย. 2026) · เนื้อหาจากสไลด์ 80 หน้า (Embryology · Gross anatomy · Physiology · STIs/PID) · กล่อง 17–22 เป็นเนื้อหาที่อาจารย์สอนเพิ่มในคลิป (ไม่มีในสไลด์) · ▶ เวลาในกล่อง 🎯 กดแล้วเปิดคลิปตรงจุด · ข้อสอบที่อาจารย์ยกมาเทียบเฉลยในคลิปแล้ว + ข้อ MDCU74–79 ที่ตรงกัน
 clip: https://drive.google.com/file/d/1U9AapaGZfa5DovFfYHCzhMH7lLTuWz34/view
 ---
 # PAGE 1 | Embryology และ DSD
@@ -31,6 +31,7 @@ card: Urogenital sinus → ชาย/หญิง :: Prostate, Cowper gland, pen
 ?? ทำไมช่องคลอดมาจาก 2 แหล่ง :: Upper 1/3 มาจาก Müllerian duct · lower 2/3 มาจาก urogenital sinus → รอยต่อนี้ถ้า canalize ไม่สำเร็จ = transverse vaginal septum
 
 @@ อาจารย์ยกข้อ Comprehensive 75 ข้อ 35: epididymis มาจาก ==mesonephric duct== (Mock/15)
+@@ คลิป [t=4:34] ligament ของรังไข่ ==ไม่ออกข้อสอบ== · [t=5:07] ตารางท่อยังไม่เคยออก รู้ไว้พอ · [t=19:21] เฉลย Mock/1 = urorectal septum
 
 {X} Embryology ไตและ urorectal septum อยู่ใน [[b9:1]] · ภาพรวม germ layer ดู [[kt-embryo:1]]
 
@@ -63,6 +64,7 @@ card: Transverse vaginal septum อาการ :: Primary amenorrhea, hematocol
 
 @@ อาจารย์ยก NLE 2024: uterus didelphys เกิดจาก ==paramesonephric duct ไม่เชื่อมกัน== (Mock/5)
 @@ อาจารย์ยกข้อ Comprehensive 75 ข้อ 29: primary amenorrhea เต้านมปกติ ไม่มีมดลูกและช่องคลอดส่วนบน = ==Müllerian agenesis== (Mock/13)
+@@ คลิป [t=23:02] อาจารย์เฉลย Mock/5 = paramesonephric duct ไม่เชื่อมกัน
 
 !! Didelphys = ไม่เชื่อมเลย · bicornuate = เชื่อมไม่หมด · septate = เชื่อมแล้วแต่ผนังกลางไม่หาย อย่าสลับ
 
@@ -107,6 +109,7 @@ card: อัณฑะลงถุงโดยอาศัยอะไร :: Gube
 
 @@ อาจารย์ยก NLE 2025 และ 2024: ชายมีบุตรยาก คลำอัณฑะได้ในช่องขาหนีบ = cryptorchidism · ถ้าไม่รักษาเสี่ยง ==testicular cancer== (Mock/3, Mock/4)
 @@ อาจารย์ยกข้อ Comprehensive 75 ข้อ 36: โครงสร้างที่ทำให้อัณฑะลงถุง = ==gubernaculum== (Mock/16)
+@@ คลิป [t=20:25] hypospadias อาจารย์ให้ทั้ง urethral fold และ urogenital fold ถูก · [t=21:00] Mock/3 อาจารย์เฉลย ==A สร้างอสุจิลดลง== (บอกว่าโจทย์กำกวม ควรถามเป็น ectopic testis) · [t=21:30] Mock/4 = testicular cancer · [t=23:33] gubernaculum
 
 {X} hypospadias 78/42, 79/226 ใน [[b9:1]]
 
@@ -157,6 +160,10 @@ Androgen เกินในทารก 46,XX: fetal (==21- หรือ 11-hydr
 
 @@ อาจารย์ยก NLE 2024: หญิงมีก้อนขาหนีบ 46,XY = ==androgen receptor deficiency== (Mock/7)
 @@ อาจารย์ยกข้อ Comprehensive 75 ข้อ 32: ทารก 46,XX อวัยวะเพศกำกวม = ==21-hydroxylase deficiency== (Mock/14)
+@@ คลิป [t=11:19] ovotesticular และ testicular DSD ==เกินหลักสูตร ไม่ออก== จำแค่กรอบแดงซ้ายขวา
+@@ [t=11:51] CAH: โจทย์มาเป็น ==46,XX อวัยวะเพศกำกวม + electrolyte ผิดปกติ== ถามพยาธิกำเนิดตอบ ==androgen excess== · ส่วนใหญ่ 21-OH · 11β = ความดันสูง · วินิจฉัยด้วย ==17-OH progesterone== · เป็นในเด็กหญิง
+@@ [t=15:13] AIS vs 5ARD: ==T คุมอวัยวะภายใน DHT คุมอวัยวะภายนอก== (prostate ต้องใช้ DHT) · [t=24:33] ถ้ามีทั้ง AIS และ 5ARD ในตัวเลือก ให้ดูว่ามีอวัยวะภายในชายไหม
+@@ [t=17:51] Turner: ==horseshoe kidney, coarctation of aorta== · Klinefelter: อัณฑะเล็กแข็ง hypogonadism · อาจารย์บอก Genetic ไม่ออก
 
 !! AIS ไม่มีทั้งมดลูกและท่อ Wolffian · 5α-reductase มีท่อ Wolffian (เพราะ T ทำงานได้) แต่ภายนอกไม่เป็นชาย (ขาด DHT)
 
@@ -196,6 +203,7 @@ Anal triangle: ผิวหนัง → subcutaneous → external anal sphincte
 Sensory ของ scrotum/vulva: ilioinguinal (L1) และ genital branch ของ genitofemoral (L1–2) ด้านหน้า · pudendal (S2–4) และ posterior femoral cutaneous (S1–3) ด้านหลัง
 
 @@ อาจารย์ยก Comprehensive: หลังผ่าตัด prostate คุมปัสสาวะไม่ได้เพราะบีบ external urethral sphincter ไม่ได้ = ==pudendal nerve== เสียหาย (Mock/24)
+@@ คลิป [t=41:02] ข้อ prostatectomy (Mock/24) เป็นข้อปีเก่า ==ไม่ค่อยออก==
 
 ## 6 | Penis · scrotum · spermatic cord · ก้อนที่ถุงอัณฑะ
 freq: 4/6
@@ -242,6 +250,8 @@ Spermatic cord: ==testicular + cremasteric artery · pampiniform plexus · genit
 @@ อาจารย์ยก NLE 2023, 2025: ชาย 25 ปี ก้อนถุงอัณฑะซ้าย bag of worms ไม่ปวด = ==varicocele== (Mock/18)
 @@ อาจารย์ยก NLE 2020: pampiniform plexus ซ้ายโป่ง ระบายตรงเข้า ==left renal vein== (ผ่าน left testicular vein) (Mock/12)
 @@ อาจารย์ยก NLE 2024: ก้อนถุงอัณฑะซ้ายอยู่เหนือและหน้าอัณฑะ ส่องไฟผ่าน (Mock/26)
+@@ คลิป [t=25:38] phimosis/paraphimosis · urethral injury กับ Buck's fascia · [t=26:12] ==ต้องแยกให้ได้== hydrocele vs varicocele vs torsion vs tumor · [t=43:36] Mock/26 = hydrocele เพราะส่องไฟผ่าน
+@@ [t=31:46] left gonadal vein → ==left renal vein== → IVC ส่วนขวาเข้า IVC ตรง อาจารย์บอก ==เขาชอบออก สำคัญ==
 
 {X} ข้อ 77/207 varicocele ↔ left testicular vein – left renal vein ใน [[b9:2]]
 
@@ -275,6 +285,8 @@ card: Imperforate hymen อาการ :: วัยรุ่นหญิงไ�
 
 @@ อาจารย์ยก NLE 2024: ตัด mediolateral episiotomy ต้องระวัง ==external anal sphincter== (Mock/8)
 @@ อาจารย์ยก NLE 2024: ก้อนปวดบวมข้างปากช่องคลอด แย่ลงเวลานั่ง = ==Bartholin's gland== (Mock/9)
+@@ คลิป [t=28:01] orchitis = ==mumps== · epididymitis = GC/Chlamydia ให้ยาฆ่าเชื้อ Prehn sign · [t=29:04] Bartholin อยู่ที่ 4 และ 8 นาฬิกา รักษาด้วย marsupialization
+@@ [t=29:35] episiotomy ตัดผ่าน bulbospongiosus ระวัง external anal sphincter · imperforate hymen · ==เคยออก==: episiotomy กัน EAS บาดเจ็บ และรูป Bartholin gland
 
 ## 8 | หลอดเลือด และน้ำเหลืองของอุ้งเชิงกราน
 freq: 4/6
@@ -315,7 +327,9 @@ Gonadal (ovarian/testicular) artery ออกจาก abdominal aorta โดย
 
 @@ อาจารย์ยก NLE 2024: vulva carcinoma กระจายไป ==superficial inguinal== ก่อน (Mock/11)
 @@ อาจารย์ยก NLE 2025: มะเร็งที่ shaft of penis → ==superficial inguinal== (Mock/27)
-@@ อาจารย์ยก Comprehensive: SCC ที่ glans penis → ต่อมน้ำเหลืองใด (Mock/30 ดูหมายเหตุในเฉลย)
+@@ อาจารย์ยก Comprehensive: SCC ที่ glans penis → ==superficial inguinal== (Mock/30)
+@@ คลิป [t=31:46] หลอดเลือดแดงไม่ต้องจำ · [t=32:18] ต่อมน้ำเหลืองจำแค่ ==para-aortic กับ superficial inguinal== · CA ovary → para-aortic (==ห้ามตอบ external iliac==) · vulva → superficial inguinal (เคยออก)
+@@ [t=45:15] Mock/30 อาจารย์เฉลย SCC ที่ glans penis → ==superficial inguinal== ข้อนี้ถามบ่อย · [t=44:41] shaft of penis ก็ superficial inguinal
 
 !! Shaft of penis → superficial inguinal · glans → deep inguinal (ตามตารางอาจารย์) · testis → para-aortic อย่าสลับ
 
@@ -371,6 +385,8 @@ card: Level I support ของมดลูกคือ :: Cardinal + uterosacra
 @@ อาจารย์ยก NLE 2023, 2025 (ปี 2566, 2568): โครงสร้างสำคัญที่สุดที่กันมดลูกหย่อน (Mock/19) · NLE 2018: uterine prolapse เกี่ยวกับ ==cardinal ligament== (Mock/20)
 @@ อาจารย์ยก NLE 2024: กล้ามเนื้อ pelvic floor หลักที่กันมดลูกหย่อน = ==levator ani== (Mock/22)
 @@ อาจารย์ยก NLE 2024: ท้องนอกมดลูกมีเลือดออก เจาะผ่าน posterior fornix เจอ ==rectouterine pouch== (Mock/21)
+@@ คลิป [t=33:55] BPH (transitional/periurethral zone, LUTS) vs CA prostate (posterior, ปวดหลัง) · [t=34:28] Pomeroy ทำที่ ==isthmus== · ampulla = ที่ปฏิสนธิและท้องนอกมดลูก · [t=35:34] ureter ลอดใต้ uterine artery ที่ cardinal ligament
+@@ [t=36:46] Mock/19 อาจารย์ถามอาจารย์ภาคมาแล้ว ตอบ ==transverse cervical (cardinal) ligament== · [t=37:20] vasectomy · เทคนิคทำข้อสอบ: จับ keyword แล้วตอบเร็ว
 
 !! Round ligament และ broad ligament เป็น secondary support ไม่ใช่ตัวหลักที่กันมดลูกหย่อน
 
@@ -442,6 +458,9 @@ Microcalcification ที่บอกมะเร็ง: amorphous, coarse heter
 ผ่าตัด: wide excision / mastectomy + sentinel LN biopsy หรือ ALND · mastectomy + ALND = modified radical mastectomy (MRM) · ฉายแสงหลัง breast conservation, axillary LN บวก, margin บวก, stage IIIA–IIIB
 
 @@ อาจารย์ยก NLE 2025: มะเร็งเต้านมกระจายไปต่อมน้ำเหลือง ==axillary== ก่อน (Mock/28)
+@@ คลิป [t=42:03] ischial spine ใช้ทั้ง ==pudendal block== และเป็น ==station 0 (mid-plane)== ระวังโจทย์ integrate
+@@ [t=44:11] axillary vs parasternal node · triple assessment · [t=45:15] มะเร็งเต้านม → axillary ==ข้อนี้ออกบ่อย== · [t=45:48] BI-RADS 3 ตามดู 3–6 เดือน · ≥ 4 เอาชิ้นเนื้อ · คัดกรองเริ่ม 40 ปี
+@@ [t=47:20] ER/PR, HER2, Ki-67 · tamoxifen = SERM ==ไม่ให้วัยหมดประจำเดือน== (เสี่ยงมะเร็งเยื่อบุโพรงมดลูก) ใช้ aromatase inhibitor แทน · letrozole ใช้กระตุ้นไข่ใน PCOS ได้ (เทียบ clomiphene)
 
 # PAGE 3 | Physiology
 
@@ -473,6 +492,7 @@ card: ชายอ้วนลงพุง + hypogonadism ผลแล็บใ�
 
 @@ อาจารย์ยก NLE 2024: BPH = ==DHT สูง== (Mock/39)
 @@ อาจารย์ยก NLE 2023: ชาย 60 ปี อ้วนลงพุง ED + hypogonadism → ==estradiol สูง== (Mock/36)
+@@ คลิป [t=53:03] steroid receptor ไม่น่าออก · Leydig ตอบ ==LH== Sertoli ตอบ ==FSH== · [t=1:15:49] Mock/36 ยืนยัน estradiol เพิ่ม (aromatase ในไขมัน) · [t=1:21:03] Mock/39 = DHT
 
 {X} ข้อ 75.1/88, 77/216 (hypogonadism ในชายอ้วน) ใน [[b10:29]] · 74.2/97 α1 blocker ใน [[b9:27]]
 
@@ -519,6 +539,8 @@ card: รอบ 24 วัน ตกไข่วันที่เท่าไร
 
 @@ อาจารย์ยก Comprehensive: LMP 15 มิ.ย. คำนวณ EDD (Mock/35) · Comprehensive 77 ข้อ 214: รอบ 24 วัน LMP 1 ต.ค. ถามวันที่ 13 ต.ค. อยู่ phase ใด (Mock/41)
 @@ อาจารย์ยกข้อ Comprehensive 75 ข้อ 25: ฮอร์โมนที่ทำให้ตกไข่ = ==LH== (Mock/37)
+@@ คลิป [t=55:34] LH surge ต้องการ E2 > 200 pg/mL นาน 48 ชม. · [t=58:17] puberty น่าจะไม่ออก · [t=1:01:06] Naegele's rule ==เคยออก==
+@@ [t=1:17:55] Mock/41: luteal phase ยาว ==14 วันคงที่== รอบ 24 วันจึงตกไข่วันที่ 10 · [t=1:16:24] Mock/37 อาจารย์บอกตอบได้ทั้งคู่ (estrogen ก็มีบทบาท)
 
 ?? รอบ 24 วัน LMP 1 ต.ค. วันที่ 13 ต.ค. อยู่ phase ใด :: ตกไข่วันที่ 10 (24 − 14) วันที่ 13 จึงเป็น luteal phase + secretory endometrium
 
@@ -579,6 +601,8 @@ card: 3 Ps ของการคลอด :: Power, Passenger, Passage (gynecoid
 
 @@ อาจารย์ยก NLE 2024, 2025: ตั้งครรภ์ 6 สัปดาห์ ฮอร์โมนหลักที่คงการตั้งครรภ์ไตรมาสแรก (Mock/31) · NLE 2025: แพ้ท้องรุนแรงที่ 10 สัปดาห์ = ==hCG สูง== (Mock/32)
 @@ อาจารย์ยก Comprehensive: hCG สร้างจาก ==syncytiotrophoblast== (Mock/33)
+@@ คลิป [t=1:01:39] progesterone จาก corpus luteum คงครรภ์ · [t=1:02:53] dilutional anemia, เสี่ยง VTE/PE, ทุกอย่างที่มี 'V' เพิ่ม · hPL สูงช่วง 24–28 สัปดาห์ จึงคัดกรอง GDM ด้วย 50 g ช่วงนั้น · [t=1:06:03] positive signs, Chadwick, Montgomery, linea nigra · [t=1:07:09] ระยะคลอด 0–3
+@@ [t=1:14:05] Mock/31 ยืนยัน ==progesterone== · Mock/32 = hCG · [t=1:14:38] Mock/33 = syncytiotrophoblast
 
 {X} Week 2, hCG และ molar pregnancy ดู [[kt-embryo:4]]
 
@@ -615,6 +639,8 @@ card: ฮอร์โมนหลั่งน้ำนม (milk ejection) :: Oxy
 @@ อาจารย์ยกข้อ Comprehensive 75 ข้อ 27: ฮอร์โมนที่ทำให้น้ำนมไหล (milk ejection) = ==oxytocin== (Mock/38)
 @@ อาจารย์ยกข้อ Comprehensive 75 ข้อ 34: ชาย 65 ปี gynecomastia สองข้าง (Mock/42) · Comprehensive: FSH สูงบ่งถึงโรคใด (Mock/34)
 @@ อาจารย์ยก NLE 2024: หญิง 20 ปีขาดประจำเดือน มาขอคุมกำเนิด ตรวจอะไรก่อน = ==urine hCG== (Mock/43)
+@@ คลิป [t=1:09:51] POI: autoimmune หรือ ==Fragile X premutation== (anticipation) · andropause LH สูง · ==เคยออกปีที่แล้ว==: สาเหตุ ED ที่พบบ่อยสุด = ==vascular==
+@@ [t=1:14:38] Mock/34 = menopause (หญิงจำ FSH ชายจำ LH) · [t=1:16:54] Mock/42 gynecomastia ส่วนใหญ่ estrogen เพิ่ม · [t=1:17:24] Mock/38 oxytocin (let-down reflex) · [t=1:19:27] Mock/40 · [t=1:20:32] Mock/43 urine hCG
 
 !! ขาดประจำเดือนในหญิงวัยเจริญพันธุ์ ตรวจ hCG ก่อนเสมอ
 
@@ -646,6 +672,9 @@ card: Chlamydia serovar L1–L3 ทำโรคอะไร :: Lymphogranuloma v
 
 @@ อาจารย์ยก NLE 2025: urethritis Gram − diplococci ให้ยาตัวแรก = ==ceftriaxone== (Mock/44) · NLE 2024: เชื้อ = ==Neisseria gonorrhoeae== (Mock/47)
 @@ อาจารย์ยก NLE 2024: ปวดเข่าหลัง urethritis เจาะข้อเจอเชื้อ = ==gonococcal arthritis== (Mock/45)
+@@ คลิป [t=1:21:46] BV และ VVC ==ไม่ใช่ STD== · BV กลิ่นคาวปลา (amine) Amsel criteria clue cell · [t=1:23:29] Candida 80–90% ตกขาวเป็นก้อน budding yeast · [t=1:24:34] clotrimazole/fluconazole · fluconazole กับ CYP3A4 ==อาจโดนถาม== · [t=1:25:06] Trichomonas ตกขาวเขียว strawberry cervix → metronidazole
+@@ [t=1:25:39] GC → ceftriaxone ==ออกมาทุกรูปแบบแล้ว== (รูป เชื้อ ยา virulence factor) · Chlamydia serovar เคยถาม · [t=1:27:13] non-GC → azithromycin/doxycycline · [t=1:29:33] PCR panel เจอ Ureaplasma บ่อย
+@@ [t=1:37:35] Gram stain เห็น PMN แต่ไม่เห็นเชื้อ = ==Chlamydia== (obligate intracellular) · [t=1:39:15] clue cell = BV · [t=1:36:31] Mock/44, 45, 47 อาจารย์บอก ==ถามวนไปวนมา==
 
 {X} ข้อที่ออกจริง: urethritis ที่ Gram ไม่พบเชื้อ = Chlamydia/Ureaplasma (76/6, 78/X1) ใน [[b9:23]] · ophthalmia neonatorum (78/35) ใน [[b4:34]]
 
@@ -706,18 +735,209 @@ card: Treponemal test บวก non-treponemal ลบ แปลว่าอะ�
 **Jarisch-Herxheimer reaction**: cytokine จากเชื้อที่ตาย เริ่ม 1–2 ชม. สูงสุด 8 ชม. หาย 48 ชม. → ประคับประคอง · ในคนท้องระวังคลอดก่อนกำหนด มดลูกบีบ และ FHS ผิดปกติ
 
 @@ อาจารย์ยก NLE 2024, 2025: ก้อนที่อวัยวะเพศเหมือนดอกกะหล่ำ = ==HPV== (Mock/46)
+@@ คลิป [t=1:27:13] herpes → Tzanck · syphilis แผลสะอาดไม่เจ็บ · chancroid แผลสกปรก · ยา STD วนอยู่ที่ Pen G, ceftriaxone, azithro/erythro, doxy · [t=1:30:08] LGV L1–L3 → doxycycline
+@@ [t=1:30:39] PID: cervical motion tenderness · Fitz-Hugh-Curtis ==เคยออกครั้งเดียว== · TOA · [t=1:48:48] ภาวะแทรกซ้อน PID = มีบุตรยากจากพังผืด
+@@ [t=1:32:12] HPV 6/11 vs 16/18 · Pap เริ่ม 25 ปี · วัคซีน 0, 2, 6 เดือน เริ่ม 9 ปี · [t=1:33:19] condyloma → TCA · molluscum umbilication, Koebner · [t=1:34:21] จำ 3 ยา: ==ceftriaxone (GC), doxycycline (non-GC), metronidazole==
+@@ [t=1:34:54] reverse algorithm: CMIA → RPR → TPHA · [t=1:35:58] benzathine penicillin: early 1 dose, late 3 doses · [t=1:36:31] Jarisch-Herxheimer · [t=1:39:15] ผื่นฝ่ามือฝ่าเท้า + condyloma lata = ==secondary syphilis== บางปีให้เป็นรูป
 
 {X} ข้อที่ออกจริง: dark-field ใน syphilis (75.2/23), painless ulcer (78/37), benzathine penicillin (79/238) ใน [[b4:24]] · HPV koilocyte (77/114) และ HSV giant cell (78/93) ใน [[b4:26]]
 
-# PAGE 5 | ข้อสอบที่อาจารย์ยกมา
+# PAGE 5 | เนื้อหาเพิ่มจากคลิป (ไม่มีในสไลด์)
 
-## 17 | Hit list จากข้อสอบที่อาจารย์ยกมาในสไลด์
+## 17 | TORCH · ติดเชื้อในคนท้องและทารก
+stars: 3
+kw: TORCH | parvovirus B19 | CMV | rubella | toxoplasma | congenital syphilis | Zika | HBIG | ophthalmia neonatorum
+card: Parvovirus B19 ในครรภ์ทำอะไร :: Fetal anemia → ==hydrops fetalis==
+card: CMV แต่กำเนิด ลักษณะเด่น :: Chorioretinitis, microcephaly, ==periventricular calcification==
+card: Congenital rubella triad :: ==หู ตา ใจ==: SNHL, cataract/glaucoma, PDA · blueberry muffin rash
+card: Toxoplasma ติดจากอะไร :: แมว (อุจจาระแมว) และเนื้อดิบ · hydrocephalus, diffuse calcification, chorioretinitis
+card: Congenital syphilis ฟันลักษณะใด :: Hutchinson teeth
+card: แม่ HBsAg บวก ทารกต้องได้อะไร :: HBV vaccine + HBIG ภายใน 12 ชม.
+
+>> เนื้อหากล่องนี้อาจารย์สอนในคลิป ไม่มีในสไลด์ 80 หน้าที่ได้มา
+
+| เชื้อ | สิ่งที่ข้อสอบชอบถาม |
+|---|---|
+| Parvovirus B19 | ==hydrops fetalis== (fetal anemia) |
+| CMV | chorioretinitis, microcephaly, ==periventricular calcification== |
+| Rubella | ==หู ตา ใจ== (SNHL, cataract/glaucoma, PDA) · blueberry muffin |
+| Toxoplasma | ==แมว== · hydrocephalus, calcification กระจาย |
+| Varicella | แผลเป็นตามผิวหนัง แขนขาลีบ |
+| Syphilis | ==Hutchinson teeth==, saddle nose, snuffles |
+| Zika | microcephaly |
+| HBV | เน้นการติดต่อ และ ==vaccine + HBIG== ในทารก |
+
+@@ คลิป [t=1:40:49] TORCH ทั้งชุด · [t=1:49:32] โจทย์ที่อาจารย์ยก: ทารกมีปัญหาหูและหัวใจ = ==rubella== · [t=1:50:37] ophthalmia neonatorum และ toxoplasma
+
+{X} ophthalmia neonatorum (78/35) ใน [[b4:34]]
+
+## 18 | ภาวะแทรกซ้อนก่อน 20 สัปดาห์: abortion · ectopic · molar pregnancy
+stars: 3
+kw: threatened abortion | inevitable | incomplete | complete | missed abortion | ectopic | partial mole | complete mole | snowstorm | choriocarcinoma
+card: Threatened vs inevitable abortion :: Threatened: os ปิด ทารกยังอยู่ · inevitable: ==os เปิด== ยังไม่มีชิ้นเนื้อหลุด
+card: Incomplete vs complete abortion :: Incomplete: os เปิด มีชิ้นเนื้อค้าง · complete: หลุดหมด os ปิด
+card: Missed abortion :: ทารกตายในครรภ์ ไม่มีอาการ os ปิด
+card: Complete mole กำเนิดจากอะไร :: ไข่ว่าง (ไม่มี DNA แม่) + sperm · 46,XX ทั้งหมดจากพ่อ · ==ไม่มีส่วนทารก==
+card: Partial mole กำเนิดจากอะไร :: ไข่ปกติ + ==2 sperm== → triploid · มีส่วนของทารก
+card: Complete mole ลักษณะทางคลินิก :: hCG สูงหลักแสน มดลูกโตกว่าอายุครรภ์ ==snowstorm== เสี่ยง choriocarcinoma มากกว่า
+
+>> เนื้อหากล่องนี้อาจารย์สอนในคลิป ไม่มีในสไลด์
+
+| ชนิด abortion | Os | ชิ้นเนื้อ |
+|---|---|---|
+| Threatened | ปิด | ยังอยู่ ทารกมีชีวิต |
+| Inevitable | ==เปิด== | ยังไม่หลุด |
+| Incomplete | เปิด | หลุดบางส่วน ค้างบางส่วน |
+| Complete | ปิด | หลุดหมด |
+| Missed | ปิด | ทารกตาย ไม่มีอาการ |
+
+| | Complete mole | Partial mole |
+|---|---|---|
+| กำเนิด | ไข่ว่าง + sperm (46,XX จากพ่อ) | ไข่ + ==2 sperm== (69,XXY) |
+| ส่วนทารก | ไม่มี | ==มี== |
+| hCG | ==สูงมาก (หลักแสน)== | สูงเล็กน้อย |
+| มดลูก | ใหญ่กว่าอายุครรภ์ | ปกติหรือเล็ก |
+| Ultrasound | ==snowstorm== | ทารกผิดปกติ + รก cystic |
+| เสี่ยง choriocarcinoma | ==มากกว่า== | น้อย |
+
+@@ คลิป [t=1:51:14] abortion ทุกชนิดและ ectopic pregnancy · [t=1:56:08] partial vs complete mole
+
+{X} hCG และ week 2 ดู [[kt-embryo:4]] · ectopic ที่ ampulla ดู [[9]]
+
+## 19 | เลือดออกหลัง 20 สัปดาห์ · ครรภ์แฝด
+stars: 3
+kw: placenta previa | placental abruption | vasa previa | velamentous | succenturiate | uterine rupture | placenta accreta | TTTS | TAPS | TRAP | MCMA
+card: Placenta previa vs abruption :: Previa: เลือดออก ==ไม่เจ็บ== · abruption: ==เจ็บ== มดลูกแข็ง
+card: Vasa previa สัมพันธ์กับอะไร :: Velamentous cord insertion หรือ succenturiate lobe · เลือดที่เสียเป็นของทารก FHR ตกหลังเจาะถุงน้ำ
+card: ปัจจัยเสี่ยง placenta accreta spectrum :: ==เคยผ่าตัดคลอด== (previous C/S) ร่วมกับ previa
+card: TTTS, TAPS, TRAP เกิดจากอะไร :: Vascular anastomosis ของรกใน ==monochorionic twins==
+card: สายสะดือพันกันเกิดในแฝดชนิดใด :: MCMA (monochorionic monoamniotic) เท่านั้น
+
+>> เนื้อหากล่องนี้อาจารย์สอนในคลิป ไม่มีในสไลด์
+
+| ภาวะ | เจ็บไหม | Clue |
+|---|---|---|
+| Placenta previa | ==ไม่เจ็บ== | รกเกาะต่ำ เลือดแดงสด |
+| Placental abruption | ==เจ็บ== | มดลูกแข็ง ความดันสูง |
+| Vasa previa | ไม่เจ็บ | velamentous cord / succenturiate lobe · ==FHR ตกหลังเจาะถุงน้ำ== (เลือดทารก) |
+| Uterine rupture | เจ็บมาก | เคยผ่าตัดมดลูก ส่วนนำลอยขึ้น |
+| Placenta accreta spectrum | – | ==เคยผ่าตัดคลอด== + previa |
+
+#### ครรภ์แฝด
+
+Zygosity (ไข่ใบเดียวหรือสองใบ) ต่างกับ chorionicity (รกกี่อัน) · ภาวะ ==TTTS, TAPS, TRAP== มาจาก vascular anastomosis ใน ==monochorionic== twins · สายสะดือพันกันเกิดเฉพาะ ==MCMA==
+
+@@ คลิป [t=1:58:35] previa vs abruption, vasa previa, uterine rupture, accreta · [t=2:09:29] ครรภ์แฝด zygosity vs chorionicity, TTTS/TAPS/TRAP
+@@ [t=2:23:23] โจทย์ที่อาจารย์ยก: ปัจจัยเสี่ยง placenta accreta = ==previous cesarean delivery==
+
+## 20 | ติดเชื้อในครรภ์/หลังคลอด · preterm · PROM · PIH · PPH
+stars: 3
+kw: septic abortion | chorioamnionitis | GBS | ampicillin | breast abscess | dicloxacillin | preterm | PROM | preeclampsia | eclampsia | HELLP | PPH | 4T | atosiban | nifedipine
+card: Chorioamnionitis เชื้อหลักและยา :: GBS → ==ampicillin==
+card: Breast abscess หลังคลอด เชื้อและยา :: Staph aureus → ==dicloxacillin==
+card: PIH นิยามเริ่มต้น :: GA > 20 สัปดาห์ BP ≥ 140/90
+card: Preeclampsia with severe features :: BP ≥ 160/110 หรือ ≥ 140/90 ร่วมกับอาการ (ปวดหัว ตามัว ปวดจุกลิ้นปี่ ฯลฯ)
+card: Eclampsia :: Preeclampsia + ชัก
+card: สาเหตุ PPH ที่พบบ่อยที่สุด :: ==Tone== (uterine atony) · 4T = tone, trauma, tissue, thrombin
+card: Tocolytic ที่ต้องแยกให้ได้ :: Nifedipine (CCB) vs atosiban (oxytocin receptor antagonist)
+
+>> เนื้อหากล่องนี้อาจารย์สอนในคลิป ไม่มีในสไลด์
+
+| ภาวะ | เชื้อ/ประเด็น | ยา |
+|---|---|---|
+| Septic abortion | Gram + และ anaerobe | – |
+| Chorioamnionitis | ==GBS== | ==ampicillin== |
+| Endometritis หลังคลอด | polymicrobial (ไม่น่าออก) | – |
+| Breast abscess | ==Staph aureus== | ==dicloxacillin== |
+| PROM | กลัวติดเชื้อ | ampicillin คลุม GBS |
+
+Preterm labor: ตัดที่ 24 สัปดาห์ (terminal sac) · ปริมาณน้ำคร่ำ ไม่ออก
+
+| ภาวะ | เกณฑ์ |
+|---|---|
+| Chronic hypertension | ความดันสูง ==ก่อน 20 สัปดาห์== |
+| Gestational hypertension | > 20 สัปดาห์ BP ≥ 140/90 ไม่มี proteinuria |
+| Preeclampsia without severe features | + ==proteinuria== |
+| Preeclampsia with severe features | ==≥ 160/110== หรือ ≥ 140/90 + อาการ |
+| Eclampsia | ==ชัก== |
+| HELLP | อาจารย์ว่าไม่น่าออก |
+
+@@ คลิป [t=2:15:51] ติดเชื้อ septic abortion, chorioamnionitis, breast abscess · [t=2:17:56] preterm และ PROM · [t=2:20:06] PIH ทั้งชุด
+@@ [t=2:23:58] PPH สาเหตุบ่อยสุด = ==tone== (4T) · [t=2:39:53] ยาที่ให้จำ: แยก ==nifedipine กับ atosiban==
+
+## 21 | เนื้องอกอัณฑะ · พยาธิของเต้านม
+stars: 3
+kw: seminoma | fried egg | yolk sac tumor | Schiller-Duval | AFP | Leydig cell tumor | Reinke crystal | fibroadenoma | phyllodes | intraductal papilloma | Paget | DCIS | inflammatory breast cancer | peau d'orange
+card: Seminoma ลักษณะ :: พบบ่อยสุด อายุ 30–40 ก้อนไม่เจ็บ · ==fried egg== (เซลล์เหมือนกัน cytoplasm ใส nucleus กลาง)
+card: Yolk sac tumor :: เด็ก · ==Schiller-Duval body== · ==AFP สูง== (จำ "SAC")
+card: Leydig cell tumor :: ==Reinke crystals== · gynecomastia, precocious puberty
+card: ก้อนเต้านมในหญิงอายุน้อย เคลื่อนได้ :: Fibroadenoma
+card: Phyllodes tumor :: อายุ 40–60 ก้อนโตเร็ว ลักษณะ leaf-like
+card: สาเหตุ nipple discharge (bloody) ที่พบบ่อยสุด :: Intraductal papilloma
+card: Inflammatory breast cancer :: ==Peau d'orange== (dermal lymphatic invasion)
+
+>> เนื้อหากล่องนี้อาจารย์สอนในคลิป ไม่มีในสไลด์
+
+| เนื้องอกอัณฑะ | Clue |
+|---|---|
+| ==Seminoma== | พบบ่อยสุด 30–40 ปี ไม่เจ็บ ==fried egg== |
+| ==Yolk sac tumor== | เด็ก ==Schiller-Duval body, AFP== |
+| Teratoma | มีหลาย germ layer |
+| Embryonal carcinoma | ก้าวร้าว |
+| ==Leydig cell tumor== | ==Reinke crystals==, gynecomastia, precocious puberty |
+
+| พยาธิเต้านม | Clue |
+|---|---|
+| Fibroadenoma | หญิงอายุน้อย |
+| Phyllodes | 40–60 ปี leaf-like |
+| Intraductal papilloma | ==nipple discharge บ่อยสุด== |
+| ==Paget disease== | ผื่นแดงที่หัวนม (ออกบ่อย) |
+| DCIS | เริ่มที่ TDLU |
+| Inflammatory breast cancer | ==peau d'orange== |
+| IDC | มะเร็งเต้านมที่พบบ่อยสุด |
+
+@@ คลิป [t=2:24:32] เนื้องอกอัณฑะ · seminoma และ yolk sac ==ออกบ่อย== · โจทย์ที่ยก: ชาย 30 ปี fried egg = ==seminoma== · ชาย 45 ปี Reinke crystal = ==Leydig cell tumor==
+@@ [t=2:29:44] พยาธิของเต้านม · Paget disease ==ออกบ่อย==
+
+## 22 | Endometriosis · AUB · PCOS · amenorrhea · เนื้องอกรังไข่
+stars: 3
+kw: endometriosis | Sampson | chocolate cyst | adenomyosis | dysmenorrhea | PGF2α | PALM-COEIN | endometrial hyperplasia | progesterone withdrawal | PCOS | primary amenorrhea | granulosa cell tumor | Call-Exner
+card: ทฤษฎีที่อธิบาย endometriosis :: Sampson (retrograde menstruation)
+card: Chocolate cyst คืออะไร :: Endometrioma ที่รังไข่ (เคยถามลักษณะ)
+card: Adenomyosis :: มดลูกโตทั้งลูก ประจำเดือนมากและปวด
+card: Primary dysmenorrhea กลไกและยา :: ==PGF2α== → NSAIDs, paracetamol, OCP
+card: Endometrial hyperplasia เกิดจากอะไร รักษาอย่างไร :: Unopposed estrogen → ให้ progesterone
+card: PCOS ฮอร์โมน :: ==LH > FSH==
+card: Primary amenorrhea ต้องสืบค้นเมื่อไร :: อายุ 13–14 ไม่มี secondary sex characteristics · 15–16 ถ้ามีแล้ว
+card: Granulosa cell tumor :: ==Call-Exner bodies==
+
+>> เนื้อหากล่องนี้อาจารย์สอนในคลิป ไม่มีในสไลด์
+
+| ภาวะ | Clue |
+|---|---|
+| Endometriosis | Sampson · ปวดประจำเดือน มีบุตรยาก · ==chocolate cyst== |
+| Adenomyosis | มดลูกโต |
+| Primary dysmenorrhea | ==PGF2α== → NSAIDs, paracetamol, OCP |
+| AUB | PALM-COEIN |
+| Endometrial hyperplasia | ==unopposed estrogen== → progesterone |
+| Cervical cancer | HPV · ==post-coital bleeding== |
+| PCOS | ==LH > FSH== · letrozole กระตุ้นไข่ได้ [[10]] |
+| Yolk sac tumor รังไข่ | หญิงอายุน้อย (SAC) |
+| Granulosa cell tumor | ==Call-Exner bodies== |
+
+@@ คลิป [t=2:33:04] endometriosis, adenomyosis, dysmenorrhea, AUB · endometrial cancer ==ไม่ออก==
+@@ [t=2:37:21] progesterone withdrawal bleeding ==ออกข้อสอบบ่อย== · [t=2:37:58] cervical cancer · [t=2:38:44] PCOS และเกณฑ์ primary amenorrhea · [t=2:39:23] เนื้องอกรังไข่
+@@ [t=2:40:30] อาจารย์สรุปว่าที่ออกพูดครบแล้ว ส่วนที่ข้ามให้ดูคลิปติวปีก่อน สไลด์แทบไม่เปลี่ยน
+
+# PAGE 6 | ข้อสอบที่อาจารย์ยกมา
+
+## 23 | Hit list จากข้อสอบที่อาจารย์ยกมาในสไลด์
 freq: 6/6
 stars: 3
 kw: NLE 2024 | NLE 2025 | Comprehensive 75 | Comprehensive 77 | mock exam
 card: เรื่องที่อาจารย์ยกข้อ NLE มากที่สุด :: Gross anatomy (ต่อมน้ำเหลือง, การพยุงมดลูก, ก้อนถุงอัณฑะ, pudendal) และ DSD/อัณฑะไม่ลงถุง
 
-@@ ในสไลด์อาจารย์ยกข้อสอบจริง NLE 2018–2025 และ Comprehensive 75/77 รวม 47 ข้อ ทุกข้อทำได้ใน Quiz ด้านล่าง (ตามกล่องของมัน) เฉลยเป็นการวิเคราะห์จากหลักในสไลด์ จะเทียบกับที่อาจารย์เฉลยในคลิปอีกครั้ง
+@@ ในสไลด์อาจารย์ยกข้อสอบจริง NLE 2018–2025 และ Comprehensive 75/77 รวม 47 ข้อ ทุกข้อทำได้ใน Quiz (ตามกล่องของมัน) เทียบกับเฉลยในคลิปแล้ว ข้อที่เปลี่ยนคำตอบ: ==Mock/3 → A== [t=21:00] และ ==Mock/30 → B superficial inguinal== [t=45:15] · ข้อที่อาจารย์บอกว่ากำกวม: Mock/2, 3, 37, 42
 @@ ข้อที่อาจารย์ระบุว่าออก ==สองปีติด (NLE 2024 และ 2025)==: rectovaginal fistula ↔ urorectal septum · hypospadias ↔ urethral fold · uterine prolapse support · ก้อนดอกกะหล่ำ HPV · ฮอร์โมนคงครรภ์ไตรมาสแรก · varicocele
 
 #### สรุปข้อที่อาจารย์ยกมา แยกตามหัวข้อ
@@ -732,7 +952,8 @@ card: เรื่องที่อาจารย์ยกข้อ NLE มา
 | Embryology | 46,XX อวัยวะเพศกำกวม | 21-hydroxylase | [[4]] |
 | Anatomy | mediolateral episiotomy | ระวัง external anal sphincter | [[7]] |
 | Anatomy | ก้อนปวดข้างปากช่องคลอด | Bartholin gland | [[7]] |
-| Anatomy | มะเร็ง vulva / shaft of penis | superficial inguinal | [[8]] |
+| Anatomy | มะเร็ง vulva / shaft หรือ glans of penis | superficial inguinal | [[8]] |
+| Anatomy | มะเร็งรังไข่ | para-aortic (ห้ามตอบ external iliac) | [[8]] |
 | Anatomy | มะเร็งเต้านม | axillary | [[10]] |
 | Anatomy | varicocele | left renal vein | [[6]] |
 | Anatomy | ทำหมันชาย | ductus deferens | [[9]] |
@@ -746,3 +967,11 @@ card: เรื่องที่อาจารย์ยกข้อ NLE มา
 | Physiology | BPH | DHT | [[11]] |
 | STI | Gram − diplococci | N. gonorrhoeae · ceftriaxone | [[15]] |
 | STI | ดอกกะหล่ำ | HPV | [[16]] |
+| Embryology | 46,XX กำกวม + electrolyte ผิด | androgen excess · ตรวจ 17-OH progesterone | [[4]] |
+| Physiology | สาเหตุ ED บ่อยสุด | vascular | [[14]] |
+| STI | Gram เห็น PMN ไม่เห็นเชื้อ | Chlamydia | [[15]] |
+| คลิป | TORCH หู + หัวใจ | rubella | [[17]] |
+| คลิป | ปัจจัยเสี่ยง placenta accreta | เคยผ่าตัดคลอด | [[19]] |
+| คลิป | PPH บ่อยสุด | tone | [[20]] |
+| คลิป | fried egg / Reinke crystal | seminoma / Leydig cell tumor | [[21]] |
+| คลิป | progesterone withdrawal bleeding | ออกบ่อย | [[22]] |
