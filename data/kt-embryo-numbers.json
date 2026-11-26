@@ -1,0 +1,215 @@
+{
+ "items": [
+  {
+   "t": "cut",
+   "cat": "Gametogenesis",
+   "name": "Primary oocyte สูงสุด",
+   "v": "~**7 ล้าน** ที่เดือน 5 ของครรภ์",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "Gametogenesis",
+   "name": "Oocyte ตอนแรกเกิด",
+   "v": "~**2 ล้าน**",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "Gametogenesis",
+   "name": "Oocyte ตอน puberty",
+   "v": "~**40,000**",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "Gametogenesis",
+   "name": "ไข่ที่ตกจริงตลอดชีวิต",
+   "v": "~**480** ใบ",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "Gametogenesis",
+   "name": "Spermatogenesis ใช้เวลา",
+   "v": "~**64 วัน**",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "Week 1–2",
+   "name": "Totipotent ถึงระยะ",
+   "v": "**8 เซลล์**",
+   "box": 3
+  },
+  {
+   "t": "cut",
+   "cat": "Week 1–2",
+   "name": "Zona pellucida หายไป",
+   "v": "~วันที่ **4**",
+   "box": 3
+  },
+  {
+   "t": "cut",
+   "cat": "Week 1–2",
+   "name": "ฝังตัว",
+   "v": "~วันที่ **7**",
+   "box": 3
+  },
+  {
+   "t": "cut",
+   "cat": "Week 1–2",
+   "name": "hCG ตรวจพบในเลือด",
+   "v": "วันที่ **8**",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Week 1–2",
+   "name": "hCG ตรวจพบในปัสสาวะ",
+   "v": "วันที่ **10**",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Week 1–2",
+   "name": "Placenta สร้าง progesterone แทน CL",
+   "v": "สัปดาห์ที่ **8**",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Week 1–2",
+   "name": "hCG ใน complete mole",
+   "v": "> **100,000**",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Week 1–2",
+   "name": "Mole กลายเป็น GTN",
+   "v": "~**3–5%**",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Nervous system",
+   "name": "Anterior neuropore ปิด",
+   "v": "~วันที่ **25**",
+   "box": 5,
+   "note": "ไม่ปิดเป็นอะไร"
+  },
+  {
+   "t": "cut",
+   "cat": "Nervous system",
+   "name": "Posterior neuropore ปิด",
+   "v": "~วันที่ **27**",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Nervous system",
+   "name": "Conus medullaris แรกเกิด",
+   "v": "**L3**",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Nervous system",
+   "name": "Conus medullaris ผู้ใหญ่",
+   "v": "**L1–2**",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Nervous system",
+   "name": "Folic acid ป้องกัน NTD",
+   "v": "**0.4 mg/day** ป้องกัน ~75%",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Nervous system",
+   "name": "Spina bifida occulta พบใน",
+   "v": "~**10%** ของคน",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "CVS",
+   "name": "หัวใจเริ่มเต้น",
+   "v": "วันที่ **22**",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "Respiratory",
+   "name": "EA + distal TEF",
+   "v": "**82%** (ชนิดที่พบบ่อยสุด)",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "Respiratory",
+   "name": "Bronchi ขวา",
+   "v": "3 lobar / **10** segmental",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "Respiratory",
+   "name": "Bronchi ซ้าย",
+   "v": "2 lobar / **9** segmental",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "Respiratory",
+   "name": "Terminal sac (เริ่มมี surfactant)",
+   "v": "สัปดาห์ **24**–คลอด",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "Respiratory",
+   "name": "ทารกรอดได้ด้วย NICU",
+   "v": "**25–28** สัปดาห์",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "GI",
+   "name": "Physiological herniation",
+   "v": "สัปดาห์ **6** → กลับ ~สัปดาห์ **11**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "GI",
+   "name": "Midgut rotation",
+   "v": "**270°** ทวนเข็มรอบ SMA",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "GI",
+   "name": "Stomach rotation",
+   "v": "**90°** ตามเข็ม",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Body wall",
+   "name": "Pleuroperitoneal membrane เชื่อมเสร็จ",
+   "v": "สัปดาห์ **6**",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "Body wall",
+   "name": "Diaphragm สัปดาห์ 4 → 8",
+   "v": "**C3–C5** → **L1**",
+   "box": 14
+  }
+ ]
+}

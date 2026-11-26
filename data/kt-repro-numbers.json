@@ -1,0 +1,271 @@
+{
+ "items": [
+  {
+   "t": "cut",
+   "cat": "DSD",
+   "name": "21-hydroxylase ใน CAH",
+   "v": "~**95%**",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "Bartholin gland ตำแหน่ง",
+   "v": "**4 และ 8** นาฬิกา",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "Anatomy",
+   "name": "Epididymitis แบ่งเชื้อตามอายุ",
+   "v": "**35** ปี",
+   "box": 7,
+   "note": "ต่ำกว่า = STI · สูงกว่า = coliform"
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "Invasive ductal carcinoma",
+   "v": "**80%** ของมะเร็งเต้านม",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "คัดกรองมะเร็งเต้านม",
+   "v": "เริ่ม **40** ปี ทุก **1** ปี (BRCA **25** ปี)",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "น้ำเหลืองเต้านมไป axillary",
+   "v": "**75%**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "Breast innervation",
+   "v": "intercostal **T2–T6**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "BI-RADS 3",
+   "v": "มะเร็ง > 0% ถึง ≤ **2%** → ติดตามระยะสั้น",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "BI-RADS 4",
+   "v": "มะเร็ง > 2% ถึง < **95%** → ตัดชิ้นเนื้อ",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "BI-RADS 5",
+   "v": "มะเร็ง ≥ **95%**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "Ki-67 แบ่ง Luminal A/B",
+   "v": "**14%**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Breast",
+   "name": "US อย่างเดียวเมื่ออายุ",
+   "v": "< **30** ปี",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "Cycle",
+   "name": "E2 ที่ทำให้เกิด LH surge",
+   "v": "> **200 pg/mL** นาน **48** ชม.",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Cycle",
+   "name": "Luteal phase",
+   "v": "คงที่ **14** วัน",
+   "box": 12
+  },
+  {
+   "t": "f",
+   "cat": "Cycle",
+   "name": "วันตกไข่",
+   "v": "ความยาวรอบ − **14**",
+   "box": 12
+  },
+  {
+   "t": "f",
+   "cat": "Cycle",
+   "name": "Naegele (EDC)",
+   "v": "LMP **+7 วัน −3 เดือน +1 ปี**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "Luteal–placental shift",
+   "v": "GA **7–9** สัปดาห์",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "Cardiac output",
+   "v": "เพิ่มถึง **50%**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "BP ต่ำสุด",
+   "v": "ไตรมาส **2**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "PaCO2 ในครรภ์",
+   "v": "~**30** mmHg",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "GFR",
+   "v": "เพิ่ม **25–50%**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "Renal plasma flow",
+   "v": "เพิ่ม **80%**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "US เห็น gestational sac",
+   "v": "**4–5** สัปดาห์",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "US เห็น yolk sac",
+   "v": "**5–6** สัปดาห์",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "US เห็นหัวใจเต้น",
+   "v": "**7–8** สัปดาห์",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Pregnancy",
+   "name": "Quiescence",
+   "v": "**95%** ของการตั้งครรภ์",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "Menopause",
+   "name": "อายุ menopause",
+   "v": "~**45–55** ปี",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "Menopause",
+   "name": "Early menopause",
+   "v": "< **45** ปี",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "Menopause",
+   "name": "POI",
+   "v": "< **40** ปี",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "Menopause",
+   "name": "ขาดประจำเดือนเพื่อวินิจฉัย",
+   "v": "≥ **12** เดือน",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "STI",
+   "name": "Amsel criteria",
+   "v": "≥ **3/4** · pH > **4.5**",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "STI",
+   "name": "Candida albicans ใน VVC",
+   "v": "**80–90%**",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "STI",
+   "name": "Candidiasis ซ้ำ",
+   "v": "≥ **4** ครั้ง/ปี",
+   "box": 16
+  },
+  {
+   "t": "cut",
+   "cat": "STI",
+   "name": "BV ซ้ำ",
+   "v": "≥ **3** ครั้ง/ปี",
+   "box": 16
+  },
+  {
+   "t": "cut",
+   "cat": "STI",
+   "name": "Herpes ซ้ำ",
+   "v": "≥ **6** ครั้ง/ปี",
+   "box": 16
+  },
+  {
+   "t": "cut",
+   "cat": "STI",
+   "name": "PID admit ถ้าไข้",
+   "v": "> **38.5°C**",
+   "box": 16
+  },
+  {
+   "t": "cut",
+   "cat": "STI",
+   "name": "PID OPD ยากิน",
+   "v": "**14** วัน",
+   "box": 16
+  },
+  {
+   "t": "cut",
+   "cat": "STI",
+   "name": "Jarisch-Herxheimer",
+   "v": "เริ่ม **1–2** ชม. · สูงสุด **8** ชม. · หาย **48** ชม.",
+   "box": 16
+  }
+ ]
+}

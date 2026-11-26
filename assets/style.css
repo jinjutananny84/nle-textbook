@@ -116,6 +116,11 @@ code{font-size:.9em}
 .card.trap>.lbl{color:var(--trap)}
 .card.note{background:var(--key-soft);border-color:transparent;border-left:4px solid var(--key)}
 .card.note>.lbl{color:var(--key)}
+.card.hint{background:var(--exam-soft);border-color:transparent;border-left:4px solid var(--exam)}
+.card.hint>.lbl{color:var(--exam);font-weight:700}
+.clip-t{display:inline-block;font-size:.85em;font-weight:600;padding:0 6px;margin:0 2px;border-radius:6px;background:var(--exam-soft);color:var(--exam);text-decoration:none;white-space:nowrap}
+.grid-h{margin:26px 0 0}
+.side-grp{margin:14px 0 4px;font-size:.78em;font-weight:700;letter-spacing:.02em;opacity:.7}
 .card.think{background:var(--think-soft);border-color:transparent;border-left:4px solid var(--think)}
 .card.think>.lbl{color:var(--think)}
 .think-q{font-weight:600;margin:2px 0 8px}

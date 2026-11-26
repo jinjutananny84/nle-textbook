@@ -41,6 +41,20 @@
    "title": "B9 ไตและทางเดินปัสสาวะ",
    "desc": "Embryology ถึง Prostate · electrolyte · acid–base · GN · 31 กล่อง · ข้อสอบ MDCU74–79",
    "ready": true
+  },
+  {
+   "id": "kt-embryo",
+   "title": "Embryology · อ.กฤตัชญ์",
+   "desc": "คลิปติว Compre MDCU80 · Gametogenesis · Nervous · CVS · Resp · GI · Body wall · 15 กล่อง · ข้อที่อาจารย์ยกมา + MDCU74–79",
+   "ready": true,
+   "group": "🎬 คลิปติวอาจารย์ผู้ออกข้อสอบ"
+  },
+  {
+   "id": "kt-repro",
+   "title": "Repro · อ.กฤตัชญ์",
+   "desc": "คลิปติว Compre MDCU80 · Embryo/DSD · Anatomy · Physiology · STI/PID · 17 กล่อง · ข้อที่อาจารย์ยกมา 47 ข้อ + MDCU74–79",
+   "ready": true,
+   "group": "🎬 คลิปติวอาจารย์ผู้ออกข้อสอบ"
   }
  ]
 }
