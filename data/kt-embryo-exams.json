@@ -63,7 +63,7 @@
     "E": "Gastroschisis"
    },
    "answer": "A",
-   "why": "Hirschsprung disease เกิดจาก neural crest cell เคลื่อนลงมาไม่ถึงลำไส้ส่วนปลาย (เกี่ยวกับ RET) ทำให้ rectum/sigmoid ไม่มี ganglion cell และบีบตัวค้างไว้ จึงถ่ายขี้เทาช้า ท้องอืด และลำไส้ส่วนต้นโป่ง (megacolon) Omphalocele และ gastroschisis เป็นความผิดปกติของผนังหน้าท้อง Midgut volvulus เกิดจาก malrotation อาเจียนน้ำดีเฉียบพลัน Umbilical hernia ไม่ทำให้อุดตันในลักษณะนี้",
+   "why": "Hirschsprung disease เกิดจาก neural crest cell เคลื่อนลงมาไม่ถึงลำไส้ส่วนปลาย (เกี่ยวกับ RET) ทำให้ rectum/sigmoid ไม่มี ganglion cell และบีบตัวค้างไว้ จึงถ่ายขี้เทาช้า ท้องอืด และลำไส้ส่วนต้นโป่ง (megacolon) Omphalocele และ gastroschisis เป็นความผิดปกติของผนังหน้าท้อง Midgut volvulus เกิดจาก malrotation อาเจียนน้ำดีเฉียบพลัน Umbilical hernia ไม่ทำให้อุดตันในลักษณะนี้ · ▶ อาจารย์อธิบาย [t=1:05:01]",
    "source": "วิเคราะห์ · จากบท B8"
   },
   "75.1/25": {
@@ -77,7 +77,7 @@
     "E": "FGF8"
    },
    "answer": "A",
-   "why": "SHH จำเป็นต่อการแยก prosencephalon เป็นสองซีกและการสร้างใบหน้าส่วนกลาง · ขาดแล้วเกิด holoprosencephaly ร่วม cyclopia/cleft · PAX3 = Waardenburg · HOX = แกนหัว-หาง",
+   "why": "SHH จำเป็นต่อการแยก prosencephalon เป็นสองซีกและการสร้างใบหน้าส่วนกลาง · ขาดแล้วเกิด holoprosencephaly ร่วม cyclopia/cleft · PAX3 = Waardenburg · HOX = แกนหัว-หาง · ▶ อาจารย์อธิบาย [t=1:04:31]",
    "source": "วิเคราะห์ · จากบท B3",
    "options_reconstructed": true
   },
@@ -92,7 +92,7 @@
     "E": "Prader-Willi syndrome"
    },
    "answer": "A",
-   "why": "Patau syndrome (trisomy 13) มีลักษณะเด่นคือ holoprosencephaly, cleft lip/palate, polydactyly, microphthalmia และ cutis aplasia เพราะความผิดปกติของ midline forebrain development (เกี่ยวกับ SHH pathway) Edwards syndrome เด่นที่ clenched fist, rocker-bottom feet ส่วน Down syndrome เด่นที่ upslanting palpebral fissure",
+   "why": "Patau syndrome (trisomy 13) มีลักษณะเด่นคือ holoprosencephaly, cleft lip/palate, polydactyly, microphthalmia และ cutis aplasia เพราะความผิดปกติของ midline forebrain development (เกี่ยวกับ SHH pathway) Edwards syndrome เด่นที่ clenched fist, rocker-bottom feet ส่วน Down syndrome เด่นที่ upslanting palpebral fissure · ▶ อาจารย์อธิบาย [t=1:04:31]",
    "source": "วิเคราะห์ · จากบท B3"
   },
   "77/25": {
@@ -396,7 +396,7 @@
     "E": "Lateral body folds เชื่อมกันไม่สมบูรณ์"
    },
    "answer": "E",
-   "why": "Gastroschisis เกิดจาก lateral body folds ปิดไม่สมบูรณ์ ลำไส้ออกมานอกผนังหน้าท้อง (มักด้านขวาของสะดือ) โดยไม่มีเยื่อหุ้ม ถ้าเป็น omphalocele (มีเยื่อหุ้ม ออกที่สะดือ) จะเกิดจาก midgut ไม่กลับเข้าช่องท้องหลัง physiological herniation (ข้อ B) Vitelline duct ไม่ปิดทำให้ Meckel/fistula ส่วน pleuroperitoneal fold คือ congenital diaphragmatic hernia",
+   "why": "Gastroschisis เกิดจาก lateral body folds ปิดไม่สมบูรณ์ ลำไส้ออกมานอกผนังหน้าท้อง (มักด้านขวาของสะดือ) โดยไม่มีเยื่อหุ้ม ถ้าเป็น omphalocele (มีเยื่อหุ้ม ออกที่สะดือ) จะเกิดจาก midgut ไม่กลับเข้าช่องท้องหลัง physiological herniation (ข้อ B) Vitelline duct ไม่ปิดทำให้ Meckel/fistula ส่วน pleuroperitoneal fold คือ congenital diaphragmatic hernia · ▶ อาจารย์อธิบาย [t=55:09]",
    "source": "เฉลย79 · จากบท B8",
    "needs_image": true,
    "doubt": "⚠ ต้องดูรูปเพื่อแยก gastroschisis กับ omphalocele ใช้คำตอบตามเฉลย (E)"
@@ -412,7 +412,7 @@
    },
    "answer": "D",
    "source": "เฉลย77 · จากบท B9",
-   "why": "Ureteric bud ให้กำเนิดระบบท่อรวม: ureter, pelvis, major/minor calyx, collecting duct · ถ้า bud ไม่เกิด metanephric blastema ไม่ถูกเหนี่ยวนำ → agenesis + oligohydramnios → pulmonary hypoplasia (Potter) · A pronephros เสื่อมไปเองไม่ทำงาน · B mesonephros ให้ mesonephric duct (bud งอกจากที่นี่) แต่ไม่ใช่ส่วนที่สร้าง calyx โดยตรง · C metanephric mesenchyme สร้าง nephron (glomerulus ถึง DCT) ไม่ใช่ collecting system"
+   "why": "Ureteric bud ให้กำเนิดระบบท่อรวม: ureter, pelvis, major/minor calyx, collecting duct · ถ้า bud ไม่เกิด metanephric blastema ไม่ถูกเหนี่ยวนำ → agenesis + oligohydramnios → pulmonary hypoplasia (Potter) · A pronephros เสื่อมไปเองไม่ทำงาน · B mesonephros ให้ mesonephric duct (bud งอกจากที่นี่) แต่ไม่ใช่ส่วนที่สร้าง calyx โดยตรง · C metanephric mesenchyme สร้าง nephron (glomerulus ถึง DCT) ไม่ใช่ collecting system · ▶ อาจารย์อธิบาย [t=1:11:12]"
   },
   "77/20": {
    "box": 15,
@@ -422,7 +422,7 @@
     "B": "3rd pharyngeal pouch"
    },
    "answer": "B",
-   "why": "DiGeorge (22q11.2 deletion) เกิดจาก 3rd และ 4th pharyngeal pouch เจริญผิดปกติ ทำให้ไม่มี thymus (T cell ต่ำ) และ parathyroid (hypocalcemia) ส่วน 2nd pharyngeal cleft ผิดปกติจะเกิด branchial cleft cyst ที่ด้านข้างคอ",
+   "why": "DiGeorge (22q11.2 deletion) เกิดจาก 3rd และ 4th pharyngeal pouch เจริญผิดปกติ ทำให้ไม่มี thymus (T cell ต่ำ) และ parathyroid (hypocalcemia) ส่วน 2nd pharyngeal cleft ผิดปกติจะเกิด branchial cleft cyst ที่ด้านข้างคอ · ▶ อาจารย์อธิบาย [t=1:11:42]",
    "source": "วิเคราะห์ · จากบท B10",
    "options_reconstructed": true
   },
@@ -464,8 +464,8 @@
     "D": "Anaphase"
    },
    "answer": "B",
-   "source": "สไลด์อาจารย์",
-   "why": "Germ cell ชายหยุดนิ่ง (dormant) ไม่แบ่งตัวจนถึง puberty จึงอยู่ใน interphase ส่วน metaphase/anaphase/telophase เป็นระยะที่เซลล์กำลังแบ่งตัว"
+   "source": "อาจารย์เฉลยในคลิป",
+   "why": "Germ cell ชายหยุดนิ่ง (dormant) ไม่แบ่งตัวจนถึง puberty จึงอยู่ใน interphase ส่วน metaphase/anaphase/telophase เป็นระยะที่เซลล์กำลังแบ่งตัว · ▶ อาจารย์อธิบาย [t=1:03:59]"
   },
   "Mock/2": {
    "box": 15,
@@ -478,8 +478,8 @@
     "E": "Endoderm"
    },
    "answer": "A",
-   "source": "สไลด์อาจารย์",
-   "why": "กล้ามเนื้อลายของแขนขามาจาก somite (paraxial mesoderm) ส่วน myotome · lateral plate mesoderm ให้กระดูกและ CT ของแขนขา ไม่ใช่กล้ามเนื้อ · ectoderm/endoderm ไม่ให้กล้ามเนื้อลาย"
+   "source": "อาจารย์เฉลยในคลิป",
+   "why": "กล้ามเนื้อลายของแขนขามาจาก somite (paraxial mesoderm) ส่วน myotome · lateral plate mesoderm ให้กระดูกและ CT ของแขนขา ไม่ใช่กล้ามเนื้อ · ectoderm/endoderm ไม่ให้กล้ามเนื้อลาย · ▶ อาจารย์อธิบาย [t=1:10:41]"
   },
   "Mock/3": {
    "box": 15,
@@ -492,8 +492,8 @@
     "E": "Bone marrow"
    },
    "answer": "A",
-   "source": "สไลด์อาจารย์",
-   "why": "ลำดับการสร้างเม็ดเลือด: yolk sac (สัปดาห์ 3–8) → ตับ (ไตรมาส 2) → ม้าม (เล็กน้อย) → ไขกระดูก (ปลายการตั้งครรภ์และหลังคลอด)"
+   "source": "อาจารย์เฉลยในคลิป",
+   "why": "ลำดับการสร้างเม็ดเลือด: yolk sac (สัปดาห์ 3–8) → ตับ (ไตรมาส 2) → ม้าม (เล็กน้อย) → ไขกระดูก (ปลายการตั้งครรภ์และหลังคลอด) · ▶ อาจารย์อธิบาย [t=1:10:41]"
   }
  }
 }
