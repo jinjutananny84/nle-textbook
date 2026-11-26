@@ -1,0 +1,397 @@
+{
+ "items": [
+  {
+   "t": "cut",
+   "cat": "ข้อ (Joint)",
+   "name": "Morning stiffness ที่ชี้ไปทาง RA",
+   "v": "≥ **1 ชั่วโมง** (OA < 30 นาที)",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "ข้อ (Joint)",
+   "name": "ACR/EULAR 2010 classification RA",
+   "v": "คะแนนรวม ≥ **6/10**",
+   "box": 2,
+   "note": "นับจากข้อ serology ระยะเวลา และ acute phase"
+  },
+  {
+   "t": "cut",
+   "cat": "ข้อ (Joint)",
+   "name": "ระยะเวลาอาการใน RA criteria",
+   "v": "≥ **6 สัปดาห์**",
+   "box": 2
+  },
+  {
+   "t": "cut",
+   "cat": "ข้อ (Joint)",
+   "name": "ARF เกิดหลัง GAS pharyngitis",
+   "v": "**2–4 สัปดาห์**",
+   "box": 3
+  },
+  {
+   "t": "cut",
+   "cat": "ข้อ (Joint)",
+   "name": "Kingella kingae septic arthritis",
+   "v": "เด็กอายุ < **4 ปี**",
+   "box": 3
+  },
+  {
+   "t": "cut",
+   "cat": "ข้อ (Joint)",
+   "name": "Prosthetic joint infection: early vs late",
+   "v": "early < **3 เดือน** · late > **24 เดือน** หลังผ่าตัด",
+   "box": 3
+  },
+  {
+   "t": "cut",
+   "cat": "ข้อ (Joint)",
+   "name": "เป้าหมาย serum urate ใน gout",
+   "v": "< **6 mg/dL** (< 5 ถ้ามี tophus)",
+   "box": 4,
+   "note": "ใช้ติดตามยา urate-lowering"
+  },
+  {
+   "t": "cut",
+   "cat": "ข้อ (Joint)",
+   "name": "Aspirin กับการขับ urate",
+   "v": "ขนาดต่ำ < **2 g/วัน** ↓ขับ · ขนาดสูง > **3 g/วัน** ↑ขับ",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "Synovial fluid",
+   "name": "น้ำไขข้อปกติ",
+   "v": "WBC < **200**/µL · PMN < 25%",
+   "box": 23
+  },
+  {
+   "t": "cut",
+   "cat": "Synovial fluid",
+   "name": "Non-inflammatory (OA, trauma)",
+   "v": "WBC **200–2,000**/µL",
+   "box": 23
+  },
+  {
+   "t": "cut",
+   "cat": "Synovial fluid",
+   "name": "Inflammatory (RA, gout, CPPD)",
+   "v": "WBC **2,000–50,000**/µL · PMN > 50%",
+   "box": 23
+  },
+  {
+   "t": "cut",
+   "cat": "Synovial fluid",
+   "name": "Septic arthritis",
+   "v": "WBC > **50,000**/µL · PMN > 75%",
+   "box": 23,
+   "note": "glucose ในน้ำไขข้อต่ำ"
+  },
+  {
+   "t": "cut",
+   "cat": "Synovial fluid",
+   "name": "น้ำไขข้อข้อเทียมที่ชวนคิดติดเชื้อ",
+   "v": "WBC > **3,000**/µL",
+   "box": 3
+  },
+  {
+   "t": "cut",
+   "cat": "ยาแก้ปวด",
+   "name": "Paracetamol ขนาดที่เป็นพิษ",
+   "v": "> **150 mg/kg** (ผู้ใหญ่ ~7.5–10 g ครั้งเดียว)",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "ยาแก้ปวด",
+   "name": "วัดระดับ paracetamol เพื่อใช้ nomogram",
+   "v": "≥ **4 ชั่วโมง** หลังกิน",
+   "box": 5,
+   "note": "ก่อนเวลานี้ยังดูดซึมไม่หมด"
+  },
+  {
+   "t": "cut",
+   "cat": "ยาแก้ปวด",
+   "name": "NSAID ห้ามในครรภ์",
+   "v": "ตั้งแต่ **20 สัปดาห์** (oligohydramnios) · ไตรมาส 3 = ductus ปิด",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "ยาแก้ปวด",
+   "name": "Steroid ที่ทำให้ HPA axis ถูกกด",
+   "v": "prednisolone ≥ **20 mg/วัน** นาน ≥ **3 สัปดาห์**",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "ยาแก้ปวด",
+   "name": "Steroid ที่ต้องป้องกัน GIOP",
+   "v": "prednisolone ≥ **2.5–7.5 mg/วัน** นาน ≥ **3 เดือน**",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Osteoporosis (T-score)",
+   "v": "T-score ≤ **−2.5**",
+   "box": 6,
+   "note": "เทียบกับหนุ่มสาวเพศเดียวกัน"
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Osteopenia (T-score)",
+   "v": "**−1.0 ถึง −2.5**",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Z-score ที่ \"ต่ำกว่าวัย\"",
+   "v": "≤ **−2.0** (ใช้ใน < 50 ปี/ก่อนหมดประจำเดือน)",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Bisphosphonate: วิธีกิน",
+   "v": "ท้องว่าง น้ำเปล่า ยืน/นั่งตรง **30 นาที**",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Bone remodeling ต่อปีในผู้ใหญ่",
+   "v": "~**10%** ของกระดูก",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Bone matrix organic : inorganic",
+   "v": "~**35 : 65** (organic ~90% เป็น type I collagen)",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Cortical : trabecular bone mass",
+   "v": "~**80 : 20**",
+   "box": 6,
+   "note": "trabecular turnover เร็วกว่า"
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "FHH: urine Ca/Cr clearance ratio",
+   "v": "< **0.01**",
+   "box": 7,
+   "note": "แยกจาก primary HPT"
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Achondroplasia ที่เป็น de novo",
+   "v": "> **80%**",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Achondroplasia: โอกาสพี่น้องเมื่อพ่อแม่ปกติ / ลูกผู้ป่วย",
+   "v": "< **1%** / **50%**",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "DDH: X-ray vs ultrasound",
+   "v": "อายุ < **4–6 เดือน** ใช้ ultrasound",
+   "box": 8,
+   "note": "ossific nucleus ยังไม่ขึ้น"
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Pavlik harness ใน DDH",
+   "v": "อายุ < **6 เดือน**",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Myeloma: clonal plasma cell ในไขกระดูก",
+   "v": "≥ **10%** + CRAB ≥ 1",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "MGUS",
+   "v": "M-protein < **3 g/dL** · plasma cell < **10%** · ไม่มี CRAB",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Myeloma: hyperCa / creatinine ใน CRAB",
+   "v": "Ca > **11 mg/dL** · Cr > **2 mg/dL**",
+   "box": 7
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Osteochondroma กลายเป็น chondrosarcoma",
+   "v": "< **1%** (สงสัยเมื่อ cap หนา > **2 cm**)",
+   "box": 9
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Soft tissue mass ที่ต้องสงสัย sarcoma",
+   "v": "> **5 cm** · ลึกใต้ fascia · โตเร็ว",
+   "box": 9
+  },
+  {
+   "t": "cut",
+   "cat": "กระดูก (Bone)",
+   "name": "Fracture healing: hematoma / soft callus / hard callus",
+   "v": "**0–7 วัน** / **2–3 สัปดาห์** / **3–12 สัปดาห์**",
+   "box": 10
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "ระบบพลังงาน ATP สำรอง / creatine phosphate",
+   "v": "**1–2 วินาที** / ถึง ~**10 วินาที**",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "Rigor mortis เริ่ม / คลาย",
+   "v": "**2–6 ชม.** / ~**36–48 ชม.**",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "Training: ช่วงที่แรงเพิ่มจาก neural adaptation",
+   "v": "**2 สัปดาห์**แรก (hypertrophy ตามมาหลังหลายสัปดาห์)",
+   "box": 11
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "Repetitive nerve stimulation ใน MG",
+   "v": "decrement > **10%** (กระตุ้นช้า 3 Hz)",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "LEMS: increment หลังออกแรง/กระตุ้นถี่",
+   "v": "> **60%** (มัก > 100%)",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "Tetanus toxoid: แผลสกปรก",
+   "v": "ให้ toxoid ถ้าเข็มล่าสุด > **5 ปี** (แผลสะอาด > 10 ปี)",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "Rhabdomyolysis: CK",
+   "v": "> **5 เท่า** ของค่าปกติ (มัก > 1,000)",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "Rhabdomyolysis: เป้าปัสสาวะ",
+   "v": "≥ **1–2 mL/kg/ชม.**",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "PMR: อายุ",
+   "v": "> **50 ปี** (เฉลี่ย ~70)",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "กล้ามเนื้อ & NMJ",
+   "name": "TOF ratio ที่ปลอดภัยก่อนถอดท่อ",
+   "v": "≥ **0.9**",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "Spondylolisthesis Meyerding grade",
+   "v": "I < **25%** · II 25–50% · III 50–75% · IV 75–100%",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "Scoliosis (Cobb angle)",
+   "v": "> **10°** · ผ่าตัดเมื่อ > **45–50°**",
+   "box": 14
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "Shoulder abduction แต่ละช่วง",
+   "v": "**0–15°** supraspinatus · **15–90°** deltoid · **> 90°** trapezius + serratus",
+   "box": 18
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "Anterior shoulder dislocation สัดส่วน",
+   "v": "~**95%** ของ shoulder dislocation",
+   "box": 18
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "Lachman test งอเข่า",
+   "v": "**20–30°**",
+   "box": 22
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "Peripheral nerve regeneration",
+   "v": "~**1 mm/วัน** (~1 นิ้ว/เดือน)",
+   "box": 21
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "McBurney point",
+   "v": "**1/3** ของระยะ ASIS → umbilicus (จาก ASIS)",
+   "box": 20
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "Compartment syndrome: ΔP (diastolic − compartment)",
+   "v": "< **30 mmHg** → fasciotomy",
+   "box": 21
+  },
+  {
+   "t": "cut",
+   "cat": "Spine & limb",
+   "name": "Carpal tunnel: ผ่าตัดเมื่อ",
+   "v": "conservative **3 เดือน**ไม่ดี หรือ thenar atrophy",
+   "box": 16
+  }
+ ]
+}

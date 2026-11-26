@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+<marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker>
+<marker id="tp" viewBox="0 0 4 16" refX="2" refY="8" markerWidth="4" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><rect x="0" y="0" width="4" height="16" fill="#7c3aed"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">Purine degradation, salvage และจุดออกฤทธิ์ของยา gout</text>
+
+<g transform="translate(-12,0)">
+<!-- ===== pathway ===== -->
+<g font-size="14" font-weight="600" fill="#1f2937" text-anchor="middle">
+<rect x="170" y="80" width="200" height="34" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="270" y="96">AMP / GMP</text><text x="270" y="110" font-size="11" font-weight="400" fill="#6b7280">(purine nucleotides)</text>
+<rect x="170" y="150" width="200" height="34" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="270" y="172">Inosine / Guanosine</text>
+<rect x="170" y="220" width="200" height="34" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="270" y="242">Hypoxanthine / Guanine</text>
+<rect x="170" y="300" width="200" height="34" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="270" y="322">Xanthine</text>
+<rect x="170" y="380" width="200" height="38" rx="12" fill="#ea580c" fill-opacity=".2" stroke="#ea580c" stroke-width="2.5"/>
+<text x="270" y="405" font-size="16" font-weight="700">Uric acid</text>
+<rect x="170" y="476" width="200" height="34" rx="12" fill="#ffffff" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="270" y="498" fill="#6b7280">Allantoin (soluble)</text>
+</g>
+<g stroke="#1f2937" stroke-width="2">
+<line x1="270" y1="114" x2="270" y2="148" marker-end="url(#ak)"/>
+<line x1="270" y1="184" x2="270" y2="218" marker-end="url(#ak)"/>
+<line x1="270" y1="254" x2="270" y2="298" marker-end="url(#ak)"/>
+<line x1="270" y1="334" x2="270" y2="378" marker-end="url(#ak)"/>
+<line x1="270" y1="418" x2="270" y2="474" stroke="#6b7280" stroke-dasharray="5 4" marker-end="url(#ak)"/>
+</g>
+<text x="282" y="281" font-size="14" font-style="italic" fill="#1f2937">xanthine oxidase</text>
+<text x="282" y="361" font-size="14" font-style="italic" fill="#1f2937">xanthine oxidase</text>
+<!-- inhibitors -->
+<path d="M430,316 L404,280" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#tp)"/>
+<path d="M430,322 L404,356" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#tp)"/>
+<text x="436" y="314" font-size="13" font-weight="700" fill="#7c3aed">Allopurinol (purine analog)</text>
+<text x="436" y="331" font-size="13" font-weight="700" fill="#7c3aed">Febuxostat (non-purine)</text>
+<text x="420" y="386" font-size="13" fill="#6b7280">6-MP / azathioprine ก็ถูกทำลาย</text>
+<text x="420" y="402" font-size="13" fill="#6b7280">ที่นี่ → ลดขนาด</text>
+<!-- uricase -->
+<text x="258" y="450" font-size="13" font-style="italic" fill="#6b7280" text-anchor="end">uricase — มนุษย์ไม่มี</text>
+<text x="390" y="440" font-size="13" font-weight="700" fill="#7c3aed">Rasburicase / Pegloticase</text>
+<text x="390" y="456" font-size="13" fill="#7c3aed">(recombinant uricase)</text>
+<text x="390" y="472" font-size="13" font-weight="700" fill="#dc2626">— ห้ามใน G6PD</text>
+<path d="M386,448 L280,446" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#ap)"/>
+</g>
+<!-- salvage loop -->
+<path d="M158,237 C114,237 114,97 154,97" stroke="#16a34a" stroke-width="2.5" fill="none" marker-end="url(#ag)"/>
+<text x="24" y="150" font-size="13" font-weight="700" fill="#16a34a">Salvage:</text>
+<text x="24" y="166" font-size="13" font-weight="700" fill="#16a34a">HGPRT + PRPP</text>
+<text x="24" y="196" font-size="13" font-weight="700" fill="#dc2626">ขาด HGPRT =</text>
+<text x="24" y="212" font-size="13" font-weight="700" fill="#dc2626">Lesch–Nyhan</text>
+<!-- PRPP synthetase -->
+<rect x="386" y="62" width="214" height="30" rx="7" fill="#ea580c" fill-opacity=".1" stroke="#ea580c" stroke-width="1.3"/>
+<text x="493" y="82" font-size="13" fill="#1f2937" text-anchor="middle">PRPP synthetase ↑ → สร้างมาก</text>
+<line x1="386" y1="84" x2="362" y2="92" stroke="#ea580c" stroke-width="1.8" marker-end="url(#ao)"/>
+
+<line x1="608" y1="50" x2="608" y2="530" stroke="#6b7280" stroke-width="1" stroke-dasharray="4 4"/>
+
+<!-- ===== proximal tubule ===== -->
+<text x="626" y="70" font-size="16" font-weight="700" fill="#1f2937">Proximal tubule: การดูดกลับ urate</text>
+<text x="626" y="104" font-size="13" font-weight="700" fill="#7c3aed">Probenecid, lesinurad, benzbromarone</text>
+<text x="626" y="121" font-size="13" font-weight="700" fill="#7c3aed">(uricosuric) ⊣ URAT1</text>
+<text x="670" y="176" font-size="13" fill="#0891b2" text-anchor="middle" font-weight="600">lumen</text>
+<text x="670" y="192" font-size="13" fill="#0891b2" text-anchor="middle">(ปัสสาวะ)</text>
+<text x="800" y="192" font-size="13" fill="#db2777" text-anchor="middle" font-weight="600">tubular cell</text>
+<text x="934" y="192" font-size="13" fill="#dc2626" text-anchor="middle" font-weight="600">blood</text>
+<!-- lumen -->
+<rect x="626" y="200" width="88" height="170" fill="#0891b2" fill-opacity=".1"/>
+<!-- cells -->
+<g fill="#db2777" fill-opacity=".14" stroke="#db2777" stroke-width="1.5">
+<rect x="714" y="200" width="168" height="84" rx="4"/>
+<rect x="714" y="286" width="168" height="84" rx="4"/>
+</g>
+<!-- brush border -->
+<path d="M714,204 v80 M714,290 v78" stroke="#db2777" stroke-width="1.5"/>
+<g stroke="#db2777" stroke-width="1.3">
+<path d="M714,210 h-8 M714,222 h-8 M714,234 h-8 M714,276 h-8 M714,296 h-8 M714,308 h-8 M714,320 h-8 M714,332 h-8 M714,344 h-8 M714,356 h-8"/>
+</g>
+<ellipse cx="790" cy="226" rx="18" ry="11" fill="#db2777" fill-opacity=".25"/>
+<ellipse cx="830" cy="328" rx="18" ry="13" fill="#db2777" fill-opacity=".25"/>
+<!-- capillary -->
+<rect x="900" y="200" width="70" height="170" rx="30" fill="#dc2626" fill-opacity=".14" stroke="#dc2626" stroke-width="1.5"/>
+<!-- URAT1 -->
+<rect x="702" y="244" width="24" height="34" rx="8" fill="#2563eb" fill-opacity=".2" stroke="#2563eb" stroke-width="2"/>
+<text x="756" y="273" font-size="13" font-weight="700" fill="#2563eb">URAT1</text>
+<path d="M646,261 L780,261" stroke="#ea580c" stroke-width="2.5" marker-end="url(#ao)"/>
+<text x="634" y="252" font-size="13" font-weight="600" fill="#ea580c">urate</text>
+<path d="M800,261 L896,261" stroke="#ea580c" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#ao)"/>
+<text x="850" y="252" font-size="13" fill="#ea580c" text-anchor="middle">ดูดกลับ</text>
+<!-- drug inhibitor line -->
+<path d="M714,128 L714,238" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#tp)"/>
+<!-- red label -->
+<path d="M714,410 L714,284" stroke="#dc2626" stroke-width="1.8" marker-end="url(#ar)"/>
+<text x="626" y="424" font-size="13" font-weight="700" fill="#dc2626">Pyrazinamide, low-dose aspirin,</text>
+<text x="626" y="441" font-size="13" font-weight="700" fill="#dc2626">lactate, ketone, diuretics</text>
+<text x="626" y="458" font-size="13" font-weight="700" fill="#dc2626">→ ดูดกลับ/ขับน้อย ↑ (urate ↑)</text>
+
+<!-- ===== bottom bar ===== -->
+<rect x="20" y="556" width="472" height="62" rx="10" fill="#ea580c" fill-opacity=".1" stroke="#ea580c" stroke-width="1.5"/>
+<text x="256" y="580" font-size="15" font-weight="700" fill="#ea580c" text-anchor="middle">Overproduction ~10%</text>
+<text x="256" y="602" font-size="13" fill="#1f2937" text-anchor="middle">purine diet, alcohol, fructose, tumor lysis, psoriasis</text>
+<rect x="508" y="556" width="472" height="62" rx="10" fill="#2563eb" fill-opacity=".1" stroke="#2563eb" stroke-width="1.5"/>
+<text x="744" y="580" font-size="15" font-weight="700" fill="#2563eb" text-anchor="middle">Underexcretion ~90%</text>
+<text x="744" y="602" font-size="13" fill="#1f2937" text-anchor="middle">CKD, drugs, organic acids</text>
+</svg>

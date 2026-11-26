@@ -1,0 +1,2072 @@
+{
+ "exams": {
+  "74.2/71": {
+   "stem": "หญิงสูงอายุปวดข้อนิ้วมือ และปวดข้อเท้า/เท้ามากขึ้นเมื่อยืนเดินระหว่างวัน",
+   "options": {
+    "A": "Osteoarthritis",
+    "B": "Gouty arthritis",
+    "C": "Rheumatoid arthritis"
+   },
+   "answer": "A",
+   "why": "ปวดแบบ mechanical (มากขึ้นเมื่อใช้งาน/ลงน้ำหนักระหว่างวัน ดีขึ้นเมื่อพัก) ในผู้สูงอายุ ข้อนิ้ว (DIP/PIP: Heberden/Bouchard) = OA; RA ปวดมากตอนเช้า morning stiffness >1 ชม. และดีขึ้นเมื่อขยับ เป็น MCP/PIP สมมาตร; gout เป็น acute monoarthritis ปวดบวมแดงฉับพลัน",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 1
+  },
+  "76/244": {
+   "stem": "เข่าไม่บวม ไม่แดง มีแต่ crepitation วินิจฉัยอะไร",
+   "options": {
+    "A": "Osteoarthritis",
+    "B": "Ankylosing spondylitis",
+    "C": "Rheumatoid arthritis",
+    "D": "Septic arthritis"
+   },
+   "answer": "A",
+   "why": "OA = degenerative ไม่อักเสบมาก, crepitus จาก cartilage สึก, weight-bearing joint · RA/septic มีบวมแดงร้อน · AS เป็น axial (sacroiliitis)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 1
+  },
+  "77/121": {
+   "stem": "ปวดมือ-เข่า morning stiffness บวมที่ knee, MCP, PIP ไม่เป็น DIP กลไกในข้อคืออะไร",
+   "options": {
+    "A": "Pannus formation + synovial hyperplasia",
+    "B": "Necrosis of articular cartilage",
+    "C": "Degenerative change of articular cartilage + subchondral sclerosis",
+    "D": "Crystal-induced knee inflammation"
+   },
+   "answer": "A",
+   "why": "RA: synovitis → synovial hyperplasia + inflammatory granulation tissue (pannus) กัด cartilage/bone (marginal erosion) · MCP/PIP spare DIP, morning stiffness >1 hr · C = OA (DIP/PIP, stiffness สั้น) · D = gout/CPPD · B = AVN",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 1
+  },
+  "75.1/81": {
+   "stem": "ผู้ป่วย RA รักษาด้วย CTLA4-Ig fusion protein ที่กันไม่ให้ CD28 จับ CD80/86 บน APC แล้ว IL-2 ลดลง อาการดีขึ้น ถามว่ากลไกคืออะไร",
+   "options": {
+    "A": "Sensitization",
+    "B": "Peripheral tolerance",
+    "C": "Complement inhibition",
+    "D": "Clearance of immune complex"
+   },
+   "answer": "B",
+   "why": "abatacept ปิด costimulation signal 2 (CD28–B7) T cell ที่ได้แค่ signal 1 (TCR–MHC) จะเข้าสู่ anergy = กลไกหนึ่งของ peripheral tolerance; ไม่เกี่ยวกับ complement หรือ immune complex clearance",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 2
+  },
+  "76/199": {
+   "stem": "ยาที่จับ CD80/86 กันไม่ให้จับ CD28 ผลคืออะไร",
+   "options": {
+    "A": "Sensitization",
+    "B": "T cell anergy",
+    "C": "Clearance of immune complex",
+    "D": "Complement inhibition",
+    "E": "Negative selection"
+   },
+   "answer": "B",
+   "why": "abatacept (CTLA4-Ig) block costimulation signal 2 → T cell ได้แค่ signal 1 (TCR-MHC) → anergy · ใช้ใน RA · negative selection เกิดใน thymus",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 2
+  },
+  "76/65": {
+   "stem": "monoclonal antibody ต่อ interleukin ใดใช้รักษา rheumatoid arthritis",
+   "options": {
+    "A": "IL-1",
+    "B": "IL-2",
+    "C": "IL-3",
+    "D": "IL-4",
+    "E": "IL-5"
+   },
+   "answer": "A",
+   "why": "ในตัวเลือกมีแค่ IL-1 ที่ใช้ใน RA (anakinra = IL-1R antagonist; canakinumab = anti-IL-1β) · ตัวหลักจริงคือ anti-IL-6R (tocilizumab) และ anti-TNF แต่ไม่มีในตัวเลือก · IL-2 (basiliximab ใช้ transplant), IL-5 (mepolizumab ใช้ asthma)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ตัวเลือกไม่มี IL-6 (tocilizumab) ซึ่งเป็นคำตอบคลาสสิก — อาจจำโจทย์มาผิด เลือก IL-1 เป็นตัวที่ใกล้ที่สุด",
+   "box": 2
+  },
+  "77/124": {
+   "stem": "ผู้ป่วย RA ใช้อะไรรักษา (ตัวเลือกจำได้ IL-1)",
+   "options": {
+    "A": "IL-1 (anti-IL-1/IL-1R antagonist)"
+   },
+   "answer": "A",
+   "why": "ไฟล์จำได้แค่ IL-1 (anakinra = IL-1R antagonist) น่าจะชุดเดียวกับ 76/65 · biologics ใน RA ที่หลัก: anti-TNF (infliximab, adalimumab, etanercept), anti-IL-6R (tocilizumab), CTLA4-Ig (abatacept), anti-CD20 (rituximab), JAK inhibitor",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือกไม่ครบ ถ้ามี IL-6 ให้ตอบ IL-6 (tocilizumab)",
+   "box": 2
+  },
+  "77/44": {
+   "stem": "รักษา RA ด้วย tofacitinib กลไกคืออะไร",
+   "options": {
+    "A": "Inhibit JAK2 & JAK3",
+    "B": "Inhibit IL-1",
+    "C": "Inhibit IL-6",
+    "D": "Inhibit TNF-α"
+   },
+   "answer": "A",
+   "why": "tofacitinib = small-molecule JAK inhibitor (เด่น JAK1/JAK3) → ตัดสัญญาณ cytokine ผ่าน JAK-STAT (targeted synthetic DMARD, กินได้) · ผลข้างเคียง herpes zoster, VTE · IL-1 = anakinra, IL-6R = tocilizumab, TNF = infliximab/adalimumab/etanercept",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 2
+  },
+  "77/62": {
+   "stem": "หญิง 40 ปีเป็น RA ใช้ NSAID: Hb 10, MCV 76, serum iron 30, TIBC 180, ferritin 100 เข้าได้กับภาวะใด",
+   "options": {
+    "A": "Thalassemia",
+    "B": "Iron deficiency anemia",
+    "C": "Anemia of chronic disease",
+    "D": "Myelodysplastic syndrome",
+    "E": "Sideroblastic anemia"
+   },
+   "answer": "C",
+   "why": "inflammation → IL-6 → hepcidin↑ → ferroportin ถูกทำลาย เหล็กติดใน macrophage → serum Fe↓, TIBC↓, ferritin ปกติ/สูง, microcytic/normocytic · IDA จะ TIBC↑ ferritin↓ (แม้ใช้ NSAID เสี่ยง GI blood loss แต่ ferritin 100 ไม่เข้า)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 2
+  },
+  "77/80": {
+   "stem": "methotrexate ทำให้ขาดวิตามินอะไร",
+   "options": {
+    "A": "B12",
+    "B": "Folate"
+   },
+   "answer": "B",
+   "why": "MTX ยับยั้ง dihydrofolate reductase → tetrahydrofolate↓ → megaloblastic anemia, mucositis, hepatotoxicity · ใน RA (low dose ต่อสัปดาห์) ให้ folic acid เสริมลดผลข้างเคียง · overdose แก้ด้วย leucovorin",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 2
+  },
+  "78/100": {
+   "stem": "ผู้ป่วย RA ยาใดทำให้สูญเสียการมองเห็น",
+   "options": {
+    "A": "Methotrexate",
+    "B": "Leflunomide",
+    "C": "Infliximab",
+    "D": "Hydroxychloroquine",
+    "E": "Sulfasalazine"
+   },
+   "answer": "D",
+   "why": "HCQ สะสมใน RPE → bull's-eye maculopathy ต้องตรวจตาเป็นระยะ; MTX: กดไขกระดูก ตับ ปอด; leflunomide: ตับ teratogen; infliximab: TB reactivation; SSZ: oligospermia, G6PD hemolysis",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 2
+  },
+  "78/154": {
+   "stem": "Morning stiffness ดีขึ้นเมื่อขยับ ปวดที่ข้อ PIP และ MCP",
+   "options": {
+    "A": "Rheumatoid arthritis",
+    "B": "Ankylosing spondylitis",
+    "C": "Osteoporosis"
+   },
+   "answer": "A",
+   "why": "RA = inflammatory symmetric polyarthritis ข้อเล็ก MCP/PIP (ไม่เป็น DIP) morning stiffness >1 ชม.; AS เป็นหลัง/sacroiliac คนหนุ่ม; osteoporosis ไม่ปวดข้อจนกว่าหัก",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ AC เขียนว่า 'relief at rest' ซึ่งเป็นลักษณะ OA มากกว่า; น่าจะจำผิด จริง ๆ RA ดีขึ้นเมื่อขยับ",
+   "box": 2
+  },
+  "79/108": {
+   "stem": "หญิง 45 ปีปวดและข้อติดหลายข้อเล็กสมมาตร แย่ตอนเช้า autoantibody ใดจำเพาะที่สุด",
+   "options": {
+    "A": "Anti-Sm",
+    "B": "Anti-SSA",
+    "C": "Anti-CCP",
+    "D": "Anti-dsDNA",
+    "E": "Anti-MDA5"
+   },
+   "answer": "C",
+   "why": "Anti-CCP (ACPA) specificity ~95% สำหรับ RA และพยากรณ์ erosion; RF ไวแต่ไม่จำเพาะ; anti-Sm/anti-dsDNA = SLE; anti-SSA = Sjögren/neonatal lupus; anti-MDA5 = amyopathic dermatomyositis + ILD",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 2
+  },
+  "79/4": {
+   "stem": "หญิง 50 ปีเป็น RA ใช้ยาระยะยาวคู่กับ folic acid แล้วหยุดกิน (folate) ต่อมามีแผลในปาก อ่อนเพลีย ซีด MCV 132 fL ยาใดเป็นสาเหตุ",
+   "options": {
+    "A": "Etanercept",
+    "B": "Hydroxychloroquine",
+    "C": "Methotrexate",
+    "D": "Adalimumab",
+    "E": "Sulfasalazine"
+   },
+   "answer": "C",
+   "why": "MTX ยับยั้ง dihydrofolate reductase → ขาด folate ในเซลล์ → megaloblastic anemia, mucositis/แผลในปาก จึงต้องให้ folic acid คู่; anti-TNF (etanercept/adalimumab) เสี่ยงติดเชื้อ/TB; HCQ ตา; SSZ hemolysis ใน G6PD, oligospermia (อาจ macrocytosis เล็กน้อยแต่ไม่ใช่ยาที่ต้องให้ folate ประจำ)",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 2
+  },
+  "74.1/60": {
+   "stem": "เข่าบวม แดง ร้อน (น่าจะ septic arthritis) เชื้อก่อโรคที่พบบ่อยที่สุด",
+   "options": {
+    "A": "Staphylococcus epidermidis",
+    "B": "Staphylococcus aureus"
+   },
+   "answer": "B",
+   "why": "S. aureus เป็นสาเหตุ septic arthritis ที่พบบ่อยที่สุดในผู้ใหญ่ทั่วไป (ยกเว้นวัยหนุ่มสาว sexually active ที่ N. gonorrhoeae พบบ่อย); S. epidermidis มักเป็น prosthetic joint infection/biofilm บนวัสดุเทียม",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 3
+  },
+  "74.1/73": {
+   "stem": "ผู้ป่วยอาการเข้าได้กับ SLE ถามว่าตรวจ serum antibody จะพบอะไร",
+   "options": {
+    "A": "ANA"
+   },
+   "answer": "A",
+   "why": "ANA ไวที่สุด (>95%) ใช้ screen SLE; anti-dsDNA และ anti-Smith จำเพาะกว่า (anti-dsDNA สัมพันธ์ lupus nephritis); SLE มี arthritis แบบ non-erosive (Jaccoud)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 3
+  },
+  "74.2/16": {
+   "box": 3,
+   "stem": "ผู้ป่วยมีอาการของ rheumatic fever อาการเกิดจากปัจจัยใดของเชื้อ",
+   "options": {
+    "A": "Streptolysin O",
+    "B": "M protein",
+    "C": "Hyaluronic acid capsule",
+    "D": "Streptokinase"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "M protein ของ GAS มี molecular mimicry กับ cardiac myosin/tissue → antibody cross-react; streptolysin O เป็นแค่ marker (ASO) ไม่ใช่กลไกโรค",
+   "options_reconstructed": true
+  },
+  "76/165": {
+   "stem": "หญิงมี arthritis, malar rash, discoid rash ควรตรวจคัดกรองด้วยอะไร",
+   "options": {
+    "A": "Anti-Sm",
+    "B": "Anti-dsDNA",
+    "C": "ANA (ตัวเลือกหลุด สันนิษฐาน)",
+    "D": "Rheumatoid factor"
+   },
+   "answer": "C",
+   "why": "สงสัย SLE → screening ด้วย ANA (sensitivity >95%) · anti-dsDNA/anti-Sm specific ใช้ยืนยัน (anti-dsDNA สัมพันธ์ lupus nephritis/disease activity) · RF ใช้ RA",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือก C ในไฟล์หลุดเป็น 'Anti-...' สันนิษฐานว่าเป็น ANA",
+   "box": 3
+  },
+  "76/203": {
+   "box": 3,
+   "stem": "Pansystolic murmur ที่ apex มีประวัติ subcutaneous nodules ปวดข้อ และเจ็บคอ ควรส่งตรวจใดก่อน",
+   "options": {
+    "A": "ASO titer",
+    "B": "HACEK hemoculture",
+    "C": "Echocardiogram for vegetation",
+    "D": "Rheumatoid factor"
+   },
+   "answer": "A",
+   "source": "วิเคราะห์",
+   "why": "ภาพ acute rheumatic fever (carditis+MR, nodules, arthritis หลัง strep pharyngitis) → ยืนยัน strep infection ด้วย ASO titer; HACEK ใช้ใน culture-negative IE",
+   "options_reconstructed": true
+  },
+  "77/122": {
+   "stem": "3 เดือนหลัง knee arthroplasty เข่าบวมแดง joint fluid WBC 90,000 gram-positive cocci in clusters กลไกก่อโรคสำคัญที่สุด",
+   "options": {
+    "A": "Biofilm formation",
+    "B": "Streptolysin O",
+    "C": "Lipopolysaccharide"
+   },
+   "answer": "A",
+   "why": "prosthetic joint infection (S. epidermidis/CoNS, S. aureus) อาศัย biofilm เกาะวัสดุ → ทนยา/ภูมิคุ้มกัน มักต้องเอา implant ออก · streptolysin O = S. pyogenes (chain) · LPS = gram-negative",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 3
+  },
+  "77/27": {
+   "stem": "ผู้ป่วยมี malar rash (SLE active) ระดับ complement เป็นอย่างไร",
+   "options": {
+    "A": "Low C3, low C4, low CH50",
+    "B": "Low C3, low C4, high CH50",
+    "C": "Low C3, high C4, high CH50",
+    "D": "High C3, low C4, low CH50"
+   },
+   "answer": "A",
+   "why": "SLE active: immune complex กระตุ้น classical pathway → ใช้ C1q/C4/C2/C3 → C3↓ C4↓ CH50↓ (CH50 วัด classical pathway ทั้งเส้น) · ถ้า C3 ต่ำ C4 ปกติ = alternative pathway (เช่น PSGN, C3 glomerulopathy)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 3
+  },
+  "78/153": {
+   "stem": "เข่าบวมแดง อาการเข้า septic arthritis เชื้อที่เป็นสาเหตุ",
+   "options": {
+    "A": "Streptococcus pyogenes",
+    "B": "Staphylococcus aureus"
+   },
+   "answer": "B",
+   "why": "S. aureus เป็นสาเหตุ septic arthritis ที่พบบ่อยที่สุดในผู้ใหญ่; ถ้าวัยรุ่น sexually active + migratory polyarthritis/tenosynovitis/ผื่น นึกถึง N. gonorrhoeae; GAS พบรองลงมา",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 3
+  },
+  "78/170": {
+   "stem": "ชาย 60 ปี DM เข่าบวมแดงแบบ acute X-ray มี joint effusion ไม่มีประวัติบาดเจ็บ เชื้อน่าจะเป็นอะไร",
+   "options": {
+    "A": "Haemophilus spp.",
+    "B": "Kingella kingae",
+    "C": "Staphylococcus aureus",
+    "D": "Streptococcus pyogenes"
+   },
+   "answer": "C",
+   "why": "ผู้ใหญ่/เบาหวาน septic arthritis เชื้อที่พบบ่อยที่สุดคือ S. aureus; Kingella kingae เป็นของเด็ก <4 ปี; H. influenzae ในเด็กที่ไม่ได้วัคซีน; GAS พบน้อยกว่า",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 3
+  },
+  "78/171": {
+   "box": 3,
+   "stem": "สงสัย rheumatic fever (ปวดข้อ หลังเจ็บคอ) — ควรตรวจอะไร",
+   "options": {
+    "A": "Antistreptolysin O (ASO)",
+    "B": "Hemoculture"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "ARF ต้องมีหลักฐานติดเชื้อ GAS นำมา → ASO titer; hemoculture ใช้ใน infective endocarditis ไม่ใช่ RF ซึ่งเป็น immune-mediated"
+  },
+  "79/153": {
+   "box": 3,
+   "stem": "หญิง 20 ปี ไข้ migratory polyarthritis murmur ใหม่ หลังเจ็บคอไม่กี่สัปดาห์ — วินิจฉัยอะไร",
+   "options": {
+    "A": "Infective endocarditis",
+    "B": "Acute rheumatic fever",
+    "C": "Viral myocarditis",
+    "D": "Acute pericarditis",
+    "E": "Kawasaki disease"
+   },
+   "answer": "B",
+   "source": "วิเคราะห์",
+   "why": "หลัง GAS pharyngitis 2–4 สัปดาห์ + migratory polyarthritis + carditis (murmur ใหม่) = Jones criteria ของ ARF; IE ไม่มี latency หลังเจ็บคอแบบนี้ และ Kawasaki เป็นในเด็กเล็ก"
+  },
+  "79/40": {
+   "box": 3,
+   "stem": "เด็กเป็น acute rheumatic fever (carditis) แล้วได้ penicillin V ต่อเนื่องอีก 10 ปี — การใช้ยาแบบนี้เรียกว่าอะไร",
+   "options": {
+    "A": "Switch therapy",
+    "B": "Primary prophylaxis",
+    "C": "Secondary prophylaxis",
+    "D": "Pre-exposure prophylaxis",
+    "E": "Post-exposure prophylaxis"
+   },
+   "answer": "C",
+   "source": "วิเคราะห์",
+   "why": "ให้ยาต่อเนื่องหลังเคยเป็น ARF เพื่อป้องกันการติด GAS ซ้ำและ RHD = secondary prophylaxis; primary คือรักษา strep pharyngitis เพื่อกันไม่ให้เกิด ARF ครั้งแรก"
+  },
+  "75.2/111": {
+   "stem": "ชายมี acute gout attack ระหว่างรักษา TB ด้วย regimen มาตรฐาน ยาตัวใดเป็นสาเหตุ",
+   "options": {
+    "A": "Isoniazid",
+    "B": "Rifampicin",
+    "C": "Ethambutol",
+    "D": "Pyrazinamide",
+    "E": "Streptomycin"
+   },
+   "answer": "D",
+   "why": "pyrazinamide → hyperuricemia จากลดการขับ urate ที่ proximal tubule → gout; ข้ออื่นไม่ใช่สาเหตุเด่น (streptomycin → ototoxic/nephrotoxic)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 4
+  },
+  "75.2/68": {
+   "stem": "ยาต้านวัณโรคตัวใดทำให้ปวดข้อ",
+   "options": {
+    "A": "Isoniazid",
+    "B": "Rifampicin",
+    "C": "Pyrazinamide",
+    "D": "Ethambutol",
+    "E": "Streptomycin"
+   },
+   "answer": "C",
+   "why": "pyrazinamide (metabolite pyrazinoic acid) ยับยั้งการขับ uric acid ที่ไต → hyperuricemia, arthralgia, acute gout (ethambutol ก็เพิ่ม urate ได้แต่น้อยกว่า); INH → peripheral neuropathy, hepatitis, drug-induced lupus; rifampicin → orange secretions, CYP induction; ethambutol → optic neuritis",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 4
+  },
+  "75.2/87": {
+   "stem": "ยาต้าน TB ตัวใดทำให้เกิด gout",
+   "options": {
+    "A": "Isoniazid",
+    "B": "Pyrazinamide",
+    "C": "Rifampicin",
+    "D": "Ethambutol"
+   },
+   "answer": "B",
+   "why": "pyrazinamide ลดการขับ urate (กระตุ้น URAT1 reabsorption) → hyperuricemia/acute gout; ethambutol ก็ทำได้แต่พบน้อยกว่าและ adverse effect หลักคือ optic neuritis",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 4
+  },
+  "77/3": {
+   "stem": "ผู้ป่วยอาการเข้าได้กับ gout ได้ colchicine กลไกยาคืออะไร",
+   "options": {
+    "A": "Inhibit xanthine oxidase",
+    "B": "Inhibit uric acid reabsorption",
+    "C": "Inhibit microtubule polymerization"
+   },
+   "answer": "C",
+   "why": "colchicine จับ tubulin → ยับยั้ง microtubule polymerization → neutrophil chemotaxis/degranulation และ NLRP3 inflammasome ลดลง ใช้ acute gout · xanthine oxidase inhibitor = allopurinol/febuxostat · ยับยั้ง URAT1 reabsorption = probenecid",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 4
+  },
+  "78/111": {
+   "stem": "ผู้ป่วย gout ที่ 1st MTP สองข้าง ยาใดห้ามใช้ถ้ามี HLA-B*58:01",
+   "options": {
+    "A": "Allopurinol",
+    "B": "Colchicine",
+    "C": "Indomethacin",
+    "D": "Abacavir"
+   },
+   "answer": "A",
+   "why": "HLA-B*58:01 สัมพันธ์กับ SJS/TEN/DRESS จาก allopurinol (พบบ่อยในคนไทย/เอเชีย ตรวจก่อนให้ยา); abacavir คู่กับ HLA-B*57:01 (ไม่ใช่ยา gout); colchicine/indomethacin ไม่เกี่ยว HLA นี้",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 4
+  },
+  "78/142": {
+   "stem": "ให้รูป crystal จากน้ำไขข้อ ถามว่าเป็น crystal อะไร",
+   "options": {
+    "A": "Calcium pyrophosphate dihydrate crystals",
+    "B": "Monosodium urate crystals"
+   },
+   "answer": "A",
+   "why": "เฉลยตอบ CPPD → ภาพน่าจะเป็นผลึกสั้น rhomboid, weakly positively birefringent (ฟ้าเมื่อขนานแกน); MSU จะเป็นรูปเข็ม negatively birefringent (เหลืองเมื่อขนาน)",
+   "source": "เฉลย78",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "box": 4
+  },
+  "79/10": {
+   "stem": "ผู้ป่วยวัณโรคได้ยาสูตรมาตรฐานไม่กี่สัปดาห์ มีปวดข้อและ uric acid สูง ยาใดเป็นสาเหตุ",
+   "options": {
+    "A": "Isoniazid",
+    "B": "Rifampicin",
+    "C": "Pyrazinamide",
+    "D": "Ethambutol",
+    "E": "Streptomycin"
+   },
+   "answer": "C",
+   "why": "Pyrazinamide (metabolite pyrazinoic acid) ลดการขับ urate ที่ท่อไต → hyperuricemia/gout (ethambutol ก็ทำได้แต่น้อยกว่า และเด่นเรื่อง optic neuritis); INH: peripheral neuropathy/hepatitis; rifampicin: ปัสสาวะส้ม, enzyme inducer; streptomycin: ototoxic/nephrotoxic",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 4
+  },
+  "79/104": {
+   "stem": "ผู้ป่วย gout เกิด SJS/TEN หลังเริ่ม allopurinol การจัดการระยะยาวที่เหมาะสม",
+   "options": {
+    "A": "ตรวจ HLA-B*58:01 ถ้าลบให้ยาต่อ",
+    "B": "เริ่มใหม่ขนาดต่ำ",
+    "C": "หยุดถาวรและหลีกเลี่ยง allopurinol",
+    "D": "ให้ต่อพร้อม steroid ป้องกัน",
+    "E": "เปลี่ยนเป็น xanthine oxidase inhibitor ตัวอื่นทันที"
+   },
+   "answer": "C",
+   "why": "Severe cutaneous adverse reaction (SJS/TEN/DRESS) = ห้าม rechallenge ตลอดชีวิต บันทึกแพ้ยา; การตรวจ HLA ใช้ก่อนเริ่มยาไม่ใช่หลังเกิดแล้ว; febuxostat ต้องระวังและเริ่มโดยผู้เชี่ยวชาญ ไม่ใช่เปลี่ยนทันที (อาจใช้ uricosuric เช่น probenecid แทน)",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 4
+  },
+  "74.2/51": {
+   "stem": "celecoxib เพิ่มความเสี่ยง MI ผ่านกลไกใด",
+   "options": {
+    "A": "PGE2 เพิ่ม",
+    "B": "PGD2 เพิ่ม",
+    "C": "PGI2 ลด",
+    "D": "PGF2 ลด",
+    "E": "TXA2 ลด"
+   },
+   "answer": "C",
+   "why": "COX-2 selective inhibitor ยับยั้งการสร้าง prostacyclin (PGI2; vasodilate + ยับยั้ง platelet) จาก endothelium แต่ไม่ยับยั้ง COX-1 ใน platelet ที่สร้าง TXA2 → สมดุลเอียงไปทาง prothrombotic; TXA2 ไม่ได้ลด (E ผิด)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 5
+  },
+  "76/208": {
+   "stem": "steroid ยับยั้งเอนไซม์อะไร",
+   "options": {
+    "A": "Inhibit phospholipase A2",
+    "B": "(enzyme เปลี่ยน AA → ... จำไม่ครบ)",
+    "C": "(enzyme ที่สร้าง AA จำไม่ครบ)"
+   },
+   "answer": "A",
+   "why": "glucocorticoid เพิ่ม annexin-1 (lipocortin) → ยับยั้ง phospholipase A2 → ไม่มี arachidonic acid → ลดทั้ง PG และ LT (ต่างจาก NSAID ที่ยับยั้ง COX อย่างเดียว) + ลด COX-2 transcription",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 5
+  },
+  "77/46": {
+   "stem": "NSAID ตัวใดทำให้เกิด neurological symptoms",
+   "options": {
+    "A": "Aspirin",
+    "B": "Ibuprofen",
+    "C": "Indomethacin",
+    "D": "Celecoxib"
+   },
+   "answer": "C",
+   "why": "indomethacin มี CNS side effect เด่น: frontal headache, dizziness, confusion, psychosis (โครงสร้างคล้าย serotonin) · aspirin เด่น tinnitus/GI/Reye · celecoxib เด่น CV risk",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 5
+  },
+  "77/48": {
+   "stem": "ผู้ป่วยซึมเศร้ากิน aspirin เกินขนาด ระดับ salicylate สูง ข้อใดเกิดน้อยที่สุด",
+   "options": {
+    "A": "Respiratory alkalosis",
+    "B": "Higher risk of peptic ulcer",
+    "C": "Metabolic acidosis",
+    "D": "Platelet dysfunction",
+    "E": "Hyperprothrombinemia"
+   },
+   "answer": "E",
+   "why": "salicylate ขนาดสูงกระตุ้น respiratory center → resp. alkalosis ก่อน ตามด้วย AG metabolic acidosis (uncoupling, lactate, salicylic acid) · irreversible COX-1 → platelet dysfunction, ulcer · ขนาดสูงยับยั้ง vit K-dependent factor → hypoprothrombinemia ไม่ใช่ hyper",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 5
+  },
+  "78/3": {
+   "stem": "กลไกของ paracetamol ที่ลด set point ของอุณหภูมิกายโดยเฉพาะคืออะไร",
+   "options": {
+    "A": "กระตุ้นกลไกระบายความร้อนที่ผิวหนัง",
+    "B": "ยับยั้ง COX ที่ peripheral tissue",
+    "C": "ยับยั้งการสร้าง prostaglandin ที่ hypothalamus",
+    "D": "เพิ่ม peripheral blood flow",
+    "E": "ยับยั้ง interleukin"
+   },
+   "answer": "C",
+   "why": "Paracetamol ยับยั้ง COX ใน CNS เป็นหลัก → ลด PGE2 ที่ hypothalamus → set point ลดลง; ฤทธิ์ peripheral COX อ่อนมาก (จึงไม่ anti-inflammatory) ข้ออื่นเป็นผลตามหลังหรือไม่ใช่กลไกหลัก",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 5
+  },
+  "78/63": {
+   "stem": "ผู้ป่วย CKD stage 2 + osteoarthritis ใช้ NSAID อยู่ Cr คงที่ ควรทำอย่างไร",
+   "options": {
+    "A": "เปลี่ยนเป็น COX-2 inhibitor",
+    "B": "ดูแลให้ได้ fluid เพียงพอ",
+    "C": "ให้ ACEi",
+    "D": "ให้ยาขับปัสสาวะ"
+   },
+   "answer": "B",
+   "why": "NSAID ลด PG ที่คุม afferent arteriole dilation → ไตพึ่ง PG มากขึ้นเมื่อ volume ต่ำ; Cr คงที่ยังใช้ได้แต่ต้องกัน prerenal ด้วยน้ำพอ; COX-2 inhibitor ก็ nephrotoxic เท่ากัน; ACEi/diuretic + NSAID = 'triple whammy' เสี่ยง AKI",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 5
+  },
+  "79/186": {
+   "stem": "หญิง 67 ปีเป็น OA ทาน ibuprofen ประจำหลายเดือน มีปวดลิ้นปี่และถ่ายดำ กลไกที่ทำลายเยื่อบุกระเพาะ",
+   "options": {
+    "A": "ยับยั้ง COX-1 แบบจำเพาะ",
+    "B": "ยับยั้ง COX-2 แบบจำเพาะ",
+    "C": "ยับยั้งทั้ง COX-1/COX-2 ทำให้ PG ที่ปกป้องเยื่อบุลดลง",
+    "D": "ยับยั้งทั้งสองและการยับยั้งเกล็ดเลือดเป็นกลไกหลัก",
+    "E": "กระตุ้นการหลั่งกรดโดยตรง"
+   },
+   "answer": "C",
+   "why": "Ibuprofen เป็น non-selective NSAID → ลด PGE2/PGI2 จาก COX-1 ที่คุม mucus/HCO3- และ mucosal blood flow → peptic ulcer; ฤทธิ์ต้านเกล็ดเลือดทำให้เลือดออกมากขึ้นแต่ไม่ใช่กลไกหลักของแผล; ป้องกันด้วย PPI/misoprostol หรือใช้ COX-2 selective",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 5
+  },
+  "74.2/75": {
+   "stem": "เซลล์ต้นกำเนิดของ connective tissue cells ส่วนใหญ่คืออะไร",
+   "options": {
+    "A": "Fibroblast",
+    "B": "Mesenchyme"
+   },
+   "answer": "B",
+   "why": "mesenchymal cells (ส่วนใหญ่จาก mesoderm) เป็น precursor ของ fibroblast, chondroblast, osteoblast, adipocyte, smooth muscle ฯลฯ; fibroblast เป็นเซลล์ที่ differentiate แล้ว",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 6
+  },
+  "76/258": {
+   "stem": "กระดูกหักพบ osteopenia ยาใดเป็นสาเหตุ",
+   "options": {
+    "A": "Diclofenac",
+    "B": "Prednisolone"
+   },
+   "answer": "B",
+   "why": "glucocorticoid ยับยั้ง osteoblast (เพิ่ม apoptosis), เพิ่ม RANKL/ลด OPG → resorption↑, ลด Ca absorption ลำไส้ + เพิ่ม Ca ขับทางไต → osteoporosis (เด่น trabecular: vertebra) · NSAID ไม่ทำ osteopenia",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 6
+  },
+  "78/44": {
+   "stem": "ผลข้างเคียงของ steroid คือข้อใด",
+   "options": {
+    "A": "Hyperglycemia",
+    "B": "Hyperkalemia",
+    "C": "ไขมันเพิ่มที่แขนขา",
+    "D": "Hyponatremia"
+   },
+   "answer": "A",
+   "why": "Glucocorticoid เพิ่ม gluconeogenesis + insulin resistance → hyperglycemia; ฤทธิ์ mineralocorticoid ทำให้ hypokalemia/Na retention (ไม่ใช่ hyperK/hypoNa); ไขมันกระจายแบบ central (moon face, buffalo hump) แขนขาลีบ",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 6
+  },
+  "78/85": {
+   "stem": "ยาใดเป็นยากระตุ้นการสร้างกระดูกสำหรับ postmenopausal osteoporosis",
+   "options": {
+    "A": "Teriparatide",
+    "B": "Alendronate",
+    "C": "Raloxifene",
+    "D": "Calcitonin"
+   },
+   "answer": "A",
+   "why": "Teriparatide (PTH 1-34) ฉีดเป็นช่วง ๆ กระตุ้น osteoblast = anabolic; alendronate/raloxifene/calcitonin เป็น antiresorptive (ยับยั้ง osteoclast)",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 6
+  },
+  "78/92": {
+   "stem": "กลไกของ PTH แบบให้เป็นช่วง ๆ (intermittent) ในการรักษา osteoporosis",
+   "options": {
+    "A": "ยับยั้ง osteoclast",
+    "B": "กระตุ้น osteoblast",
+    "C": "เพิ่ม OPG",
+    "D": "ยับยั้ง RANKL"
+   },
+   "answer": "B",
+   "why": "Intermittent PTH → กระตุ้น osteoblast (ลด sclerostin, ลด osteoblast apoptosis) → bone formation มากกว่า resorption; ถ้า PTH สูงต่อเนื่องจะเพิ่ม RANKL/ลด OPG → resorption; ข้อ A, C, D เป็นกลไกยา antiresorptive (เช่น denosumab = anti-RANKL)",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 6
+  },
+  "79/111": {
+   "stem": "หญิง osteoporosis มี bone resorption เพิ่ม สารใดที่ osteoblast สร้างแล้วกระตุ้นการ differentiate/activate osteoclast",
+   "options": {
+    "A": "Osteoprotegerin",
+    "B": "Calcitonin",
+    "C": "Osteocalcin",
+    "D": "RANK",
+    "E": "RANKL"
+   },
+   "answer": "E",
+   "why": "Osteoblast (และ stromal cell) แสดง RANKL ร่วมกับ M-CSF → จับ RANK บน osteoclast precursor → osteoclastogenesis; OPG เป็น decoy receptor ยับยั้ง RANKL; RANK เป็นตัวรับอยู่บน osteoclast; calcitonin มาจาก C cell ไทรอยด์ ยับยั้ง osteoclast; osteocalcin เป็น marker ของ bone formation",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 6
+  },
+  "79/35": {
+   "stem": "เด็ก 13 ปีโตเร็วในปีที่ผ่านมา เซลล์ใดรับผิดชอบการเพิ่มความยาวของกระดูกยาว",
+   "options": {
+    "A": "Fibroblast ของ endosteum",
+    "B": "Osteoblast ของ periosteum",
+    "C": "Osteoclast ของ periosteum",
+    "D": "Chondrocyte ของ growth plate",
+    "E": "Mesenchymal cell ใน bone marrow"
+   },
+   "answer": "D",
+   "why": "ความยาวเพิ่มจาก endochondral ossification ที่ epiphyseal plate: chondrocyte แบ่งตัว (proliferative zone) → hypertrophy → calcify → ถูกแทนด้วยกระดูก; periosteal osteoblast เพิ่มความกว้าง (appositional growth); osteoclast remodel",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 6
+  },
+  "74.1/27": {
+   "stem": "ให้รูปเด็กขาโก่ง (bowed legs) ถามว่าขาดวิตามินอะไร",
+   "options": {
+    "A": "Vitamin A",
+    "B": "Vitamin D"
+   },
+   "answer": "B",
+   "why": "เด็กขาโก่ง = rickets จากขาด vitamin D → mineralization ของ osteoid และ growth plate บกพร่อง พบ genu varum, rachitic rosary, craniotabes, Harrison groove; vit A ไม่ทำให้กระดูกโก่ง (ขาด A → night blindness, xerophthalmia)",
+   "source": "วิเคราะห์",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "box": 7
+  },
+  "75.1/83": {
+   "stem": "เด็กหญิง 2 ขวบ failure to thrive เดินผิดปกติ ขาโก่ง ข้อมือหนา ฟันผุ กินนมแม่เป็นหลัก อยู่แต่ในบ้าน (มีรูป) ควรเสริมอะไร",
+   "options": {
+    "A": "Iodine",
+    "B": "Calcium",
+    "C": "Vitamin D",
+    "D": "Phosphate",
+    "E": "PTH"
+   },
+   "answer": "C",
+   "why": "นมแม่มี vit D ต่ำ + ไม่โดนแดด → nutritional rickets (bowed legs, widened wrist จาก metaphyseal flaring/cupping, rachitic rosary, delayed dentition/caries) แก้ด้วย vitamin D (ร่วมกับ Ca เพียงพอ); calcium อย่างเดียวไม่แก้สาเหตุ phosphate ใช้ใน X-linked hypophosphatemic rickets, PTH ไม่ใช่การรักษา",
+   "source": "วิเคราะห์",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "box": 7
+  },
+  "76/119": {
+   "stem": "หลัง thyroidectomy มีชาและ tetany รักษาเริ่มต้นด้วยอะไร",
+   "options": {
+    "A": "Parathyroid hormone",
+    "B": "Calcitonin",
+    "C": "Bisphosphonate",
+    "D": "Denosumab",
+    "E": "Calcium"
+   },
+   "answer": "E",
+   "why": "parathyroid ถูกตัด/ขาดเลือด → hypocalcemia → neuromuscular excitability (Chvostek/Trousseau, tetany) → ให้ IV calcium gluconate ก่อน · calcitonin/bisphosphonate/denosumab ลด Ca ยิ่งแย่ · PTH ไม่ใช่ initial",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 7
+  },
+  "76/175": {
+   "stem": "lab phosphate ต่ำ แต่ electrolyte อื่นและ Ca ปกติ สาเหตุคืออะไร",
+   "options": {
+    "A": "Hyperparathyroidism",
+    "B": "Impaired sodium phosphate cotransporter",
+    "C": "Lab error"
+   },
+   "answer": "B",
+   "why": "phosphate ต่ำเดี่ยว Ca ปกติ = renal phosphate wasting จาก NaPi-IIa/IIc บกพร่อง (เช่น X-linked hypophosphatemic rickets จาก FGF23↑ ลด NaPi) → rickets/osteomalacia · hyperPTH จะมี Ca สูงร่วมด้วย",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ตัวเลือกจำมาไม่ครบ",
+   "box": 7
+  },
+  "76/186": {
+   "stem": "blood smear พบ Rouleaux formation จะพบ lab ใดผิดปกติ",
+   "options": {
+    "A": "Increased AST",
+    "B": "Increased ALT",
+    "C": "Increased ALP",
+    "D": "Increased indirect bilirubin",
+    "E": "Globulin (เพิ่ม)"
+   },
+   "answer": "E",
+   "why": "Rouleaux เกิดจาก protein ในพลาสมาสูง (M protein/immunoglobulin) เช่น multiple myeloma → globulin สูง, A/G ratio กลับ · ใน myeloma ALP มักปกติเพราะ lytic lesion ไม่กระตุ้น osteoblast",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 7
+  },
+  "77/182": {
+   "stem": "หลังตัด ileum ผลข้อใดเกิดน้อยที่สุด",
+   "options": {
+    "A": "Tetany",
+    "B": "Depression of vertebral disk (codfish vertebra)",
+    "C": "Polyneuropathy",
+    "D": "Macrocytosis",
+    "E": "Glossitis"
+   },
+   "answer": "B",
+   "why": "ileal resection → B12 ดูดซึมไม่ได้ (polyneuropathy, macrocytosis, glossitis) + bile acid loss → fat malabsorption → vit D↓ + Ca จับ fatty acid → hypocalcemia (tetany) · osteomalacia กระดูกสันหลังยุบเป็นผลระยะยาวมาก จึงน่าจะเป็น least likely",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ทุกตัวเลือกเกิดได้ทางทฤษฎี วิเคราะห์ว่า vertebral change ช้าสุด แต่ไม่มั่นใจ",
+   "box": 7
+  },
+  "77/223": {
+   "stem": "ผลของ PTH ต่อการดูดกลับที่ไตคืออะไร",
+   "options": {
+    "A": "Calcium ↑, phosphate ↓ (ตามที่จำมา: Ca higher, PO4 lower, Na lower)"
+   },
+   "answer": "A",
+   "why": "PTH: เพิ่ม Ca reabsorption ที่ DCT, ลด phosphate reabsorption ที่ PCT (ยับยั้ง NaPi-IIa) → phosphaturia, กระตุ้น 1α-hydroxylase → calcitriol · ลด HCO3 reabsorption ที่ PCT ด้วย",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 7
+  },
+  "77/225": {
+   "stem": "CKD stage 4 ปวดเวลาเคี้ยว X-ray พบ lytic lesion ที่ mandible Ca ปกติ PTH 1180 สาเหตุคือ",
+   "options": {
+    "A": "Primary hyperparathyroidism",
+    "B": "Secondary hyperparathyroidism",
+    "C": "Tertiary hyperparathyroidism"
+   },
+   "answer": "C",
+   "why": "CKD นาน ต่อมพาราไทรอยด์ถูกกระตุ้นจนโตและหลั่ง PTH เองโดยไม่ฟัง Ca (autonomous) → PTH สูงลิบ (1180) ทั้งที่ Ca ปกติ/สูง = tertiary hyperparathyroidism → osteitis fibrosa cystica/brown tumor (lytic lesion ที่ mandible) · secondary = Ca ต่ำแล้ว PTH ตอบสนอง · primary = adenoma ไม่เกี่ยว CKD",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 7,
+   "doubt": "⚠ ไฟล์วิเคราะห์เดิมตอบ secondary · เฉลย77 ตอบ tertiary (PTH สูงมากแม้ Ca ปกติ)"
+  },
+  "78/128": {
+   "stem": "มาด้วยกระดูกหัก เลือดพบ rouleaux formation X-ray พบ punched-out lesion ที่กะโหลก",
+   "options": {
+    "A": "Hyperparathyroidism",
+    "B": "Multiple myeloma",
+    "C": "Cancer metastasis",
+    "D": "MGUS"
+   },
+   "answer": "B",
+   "why": "Plasma cell neoplasm หลั่ง M-protein → rouleaux; หลั่ง RANKL/IL-6 → lytic punched-out lesion, pathologic fracture, hyperCa (CRAB); MGUS ไม่มี end-organ damage; hyperPTH ให้ salt-and-pepper skull; metastasis ไม่ทำ rouleaux",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 7
+  },
+  "78/9": {
+   "stem": "ผู้ป่วย CKD กระดูกหักง่าย ขาด enzyme ใด",
+   "options": {
+    "A": "1-alpha hydroxylase",
+    "B": "20-alpha hydroxylase",
+    "C": "23-alpha hydroxylase",
+    "D": "24-alpha hydroxylase",
+    "E": "25-alpha hydroxylase"
+   },
+   "answer": "A",
+   "why": "ไตที่เสื่อมสร้าง 1α-hydroxylase (proximal tubule) ไม่ได้ → 1,25(OH)2D ต่ำ → ดูด Ca ลดลง + secondary hyperPTH → renal osteodystrophy; 25-hydroxylase อยู่ที่ตับ, 24-hydroxylase เป็นตัวทำลาย vit D, ตัวอื่นไม่เกี่ยว",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 7
+  },
+  "78/94": {
+   "stem": "ทำไม secondary hyperparathyroidism (จากไตวาย) ถึงมี Ca ต่ำ",
+   "options": {
+    "A": "Ca จับกับ anion (phosphate) เป็น complex",
+    "B": "25-hydroxycholecalciferol ลดลง"
+   },
+   "answer": "A",
+   "why": "CKD ขับ phosphate ไม่ได้ → PO4 สูงจับ Ca ionized → Ca ต่ำ ร่วมกับ 1,25(OH)2D ลด; ข้อ B ผิดเพราะที่ลดคือ 1,25-(OH)2 ไม่ใช่ 25-OH (สร้างที่ตับ)",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 7
+  },
+  "79/263": {
+   "box": 7,
+   "stem": "ชาย 25 ปี Ca สูงเล็กน้อยคงที่ ขับ Ca ทางปัสสาวะต่ำมาก PTH สูงเล็กน้อยหรือปกติไม่สมควร พบ inactivating mutation ของ CaSR อธิบายได้อย่างไร",
+   "options": {
+    "A": "PTH ลดลงเพราะ CaSR ไวขึ้น",
+    "B": "PTH เพิ่มขึ้นเพราะ CaSR ไวลดลง",
+    "C": "PTH เพิ่มเพราะ osteoblast ไวต่อ PTH",
+    "D": "PTH ลดเพราะไตดูด Ca กลับบกพร่อง",
+    "E": "PTH เพิ่มเพราะขับ Ca ทางไตเพิ่ม"
+   },
+   "answer": "B",
+   "why": "Familial hypocalciuric hypercalcemia: CaSR ที่ parathyroid ไวลดลง ต้องใช้ Ca สูงขึ้นจึงจะกด PTH ส่วน CaSR ที่ไตก็ไวลดลงจึงดูด Ca กลับมาก ปัสสาวะมี Ca ต่ำ. Activating mutation ต่างหากที่ทำให้ CaSR ไวขึ้นและ PTH ต่ำ ส่วนการขับ Ca ทางไตในโรคนี้ลดลงไม่ใช่เพิ่ม",
+   "source": "เฉลย79"
+  },
+  "79/47": {
+   "stem": "ผู้ป่วย 70 ปีปวดหลังเรื้อรัง albumin 3.0, Cr 2.0, Ca 13 mg/dL ผลแล็บใดน่าจะพบ",
+   "options": {
+    "A": "Monoclonal free light chain เพิ่มขึ้น",
+    "B": "การสร้าง immunoglobulin ในซีรัมลดลง",
+    "C": "ALP เพิ่มขึ้น",
+    "D": "Erythropoietin เพิ่มขึ้น",
+    "E": "Bone resorption ลดลง"
+   },
+   "answer": "A",
+   "why": "CRAB (hyperCa, renal, anemia, bone) ในผู้สูงอายุ = multiple myeloma → serum free light chain (κ/λ) ผิดปกติ, M-spike, Bence Jones; ALP มักปกติเพราะ osteoblast ถูกกด (lytic ล้วน); EPO ไม่เพิ่ม (ไตเสีย); bone resorption เพิ่มจาก RANKL/IL-6",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ข้อ B ก็จริงบางส่วน (polyclonal Ig ลดลง = immunoparesis) แต่ total Ig มักสูงจาก M-protein ข้อ A จึงเฉพาะกว่า",
+   "box": 7
+  },
+  "74.1/66": {
+   "stem": "ผู้ป่วยมีอาการ scurvy (เลือดออกเหงือก perifollicular hemorrhage) ถามว่าความผิดปกติเกิดที่สารใด",
+   "options": {
+    "A": "Hydroxylysine",
+    "B": "Hydroxyproline"
+   },
+   "answer": "B",
+   "why": "vitamin C เป็น cofactor ของ prolyl และ lysyl hydroxylase ในการสร้าง collagen; hydroxyproline สำคัญที่สุดต่อการเกิด H-bond ทำให้ triple helix เสถียร คำตอบคลาสสิกจึงเป็น hydroxyproline (hydroxylysine ก็ลดแต่มีบทบาทใน glycosylation/cross-link) ผลต่อกระดูก: subperiosteal hemorrhage, osteoid สร้างไม่ได้",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ทั้งสองตัวเลือกเกี่ยวกับ vit C ได้ ตอบ hydroxyproline ตามแนวข้อสอบทั่วไป",
+   "box": 8
+  },
+  "76/124": {
+   "stem": "ทารก OI เสียชีวิต พ่อแม่ปกติ ควรตรวจอะไร (ประเมินโอกาสเกิดซ้ำ)",
+   "options": {
+    "A": "The father's WBC",
+    "B": "The father's sperm",
+    "C": "The baby's sperm",
+    "D": "The mother's WBC",
+    "E": "The mother's egg"
+   },
+   "answer": "B",
+   "why": "OI (COL1A1/COL1A2) เป็น AD ส่วนใหญ่ de novo; พ่อแม่ปกติแต่มีลูกเป็นซ้ำได้จาก gonadal (germline) mosaicism → ตรวจเซลล์สืบพันธุ์ที่เข้าถึงได้คือ sperm พ่อ (de novo mutation สัมพันธ์ paternal age) · WBC พ่อแม่ไม่สะท้อน gonad · ไข่แม่เข้าถึงไม่ได้ · ทารกเสียแล้ว",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ วิเคราะห์จาก concept gonadal mosaicism ไม่มีเฉลยจริง",
+   "box": 8
+  },
+  "76/225": {
+   "stem": "พ่อแม่ปกติ ลูกชายเป็น achondroplasia โอกาสลูกคนถัดไปเป็น และโอกาสลูกของลูกชายเป็น",
+   "options": {
+    "A": "25%, 50%",
+    "B": "<1%, 50%",
+    "C": "<1%, 100%",
+    "D": "50%, 50%",
+    "E": "50%, <1%"
+   },
+   "answer": "B",
+   "why": "achondroplasia AD (FGFR3 gain-of-function) ~80% de novo (advanced paternal age) → พ่อแม่ปกติ โอกาสซ้ำต่ำ (<1% จาก gonadal mosaicism) · ลูกชาย heterozygote แต่งกับคนปกติ → ลูก 50%",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 8
+  },
+  "76/33": {
+   "stem": "ยาใดทำให้เกิด phocomelia",
+   "options": {
+    "A": "Phenytoin",
+    "B": "Carbamazepine",
+    "C": "Tetracycline",
+    "D": "Diethylstilbestrol",
+    "E": "Thalidomide"
+   },
+   "answer": "E",
+   "why": "Thalidomide รบกวน limb bud (สัปดาห์ 4–8) → phocomelia (แขนขาสั้น มือเท้าติดลำตัว) · phenytoin = fetal hydantoin syndrome, carbamazepine/valproate = NTD, tetracycline = ฟันเหลือง/กระดูก, DES = clear cell adenocarcinoma ช่องคลอด",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 8
+  },
+  "77/24": {
+   "stem": "ลูกเป็น achondroplasia พ่อแม่ไม่เป็น (โรคมี complete penetrance) อธิบายด้วยกลไกอะไร",
+   "options": {
+    "A": "Anticipation",
+    "B": "Gonadal mosaicism",
+    "C": "Incomplete penetrance"
+   },
+   "answer": "B",
+   "why": "achondroplasia (FGFR3 G380R) penetrance สมบูรณ์ ถ้าพ่อแม่ปกติแปลว่าเป็น de novo / gonadal mosaicism ในพ่อ (paternal age) · ตัด incomplete penetrance เพราะโจทย์บอก complete · anticipation เป็นของ trinucleotide repeat",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ โจทย์จำมาไม่ชัด อาจถามโอกาสเกิดซ้ำในลูกคนถัดไป แต่ concept คำตอบเหมือนกัน",
+   "box": 8
+  },
+  "77/8": {
+   "stem": "เด็กหญิง 10 ปีกระดูกหักจากล้มจักรยาน มีประวัติ long bone fracture ซ้ำ PE ตามรูป (น่าจะ blue sclera) collagen ชนิดใดผิดปกติ",
+   "options": {
+    "A": "Type I",
+    "B": "Type II",
+    "C": "Type III",
+    "D": "Type IV",
+    "E": "Type V"
+   },
+   "answer": "A",
+   "why": "OI = COL1A1/COL1A2 → type I collagen (bone, sclera, dentin, tendon) ผิดปกติ → กระดูกเปราะ, blue sclera, dentinogenesis imperfecta, hearing loss · type II = cartilage/vitreous, III = reticular/vessel (vascular EDS), IV = basement membrane (Alport), V = classic EDS",
+   "source": "เฉลย77",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "box": 8
+  },
+  "78/126": {
+   "stem": "ฟกช้ำง่าย ผิวยืดได้มาก ข้อหลวม (hypermobile joint) เกิดจากความผิดปกติใดของ collagen",
+   "options": {
+    "A": "COL1 gene mutation",
+    "B": "Hydroxylation ของ proline และ lysine",
+    "C": "Collagen crosslink"
+   },
+   "answer": "C",
+   "why": "Ehlers–Danlos = ความผิดปกติของการสร้าง/ประกอบ fibrillar collagen ทำให้ fibril ไม่แข็งแรง (ตามเฉลยคิดเป็น defect ช่วง crosslink/processing); COL1 mutation นึกถึง osteogenesis imperfecta (กระดูกหัก blue sclera); hydroxylation proline/lysine บกพร่อง = scurvy (vit C)",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ เฉลยเขียน 'C > A' ไม่มั่นใจ: classic EDS เกิดจาก COL5A1/2, vascular type COL3A1, kyphoscoliotic type ขาด lysyl hydroxylase (= ปัญหา hydroxylation), ส่วน crosslink defect ตรงกับ Menkes (lysyl oxidase) มากกว่า; ถ้าช้อยส์จริงต่างไปให้ดูตาม First Aid",
+   "box": 8
+  },
+  "78/174": {
+   "stem": "เด็กหญิง 6 เดือน ขาขวาสั้นกว่า มีเสียง clunk เมื่อ abduct สะโพกที่งออยู่ คลอดทางช่องคลอด สาเหตุ/ปัจจัยคืออะไร",
+   "options": {
+    "A": "Breech (ก้นออกก่อน)",
+    "B": "Anterior hip capsule ถูกยืดมากเกิน",
+    "C": "Pelvis พัฒนาไม่ดี"
+   },
+   "answer": "A",
+   "why": "Developmental dysplasia of the hip: risk = breech, female, first-born, family history, oligohydramnios (ท่าในครรภ์ทำให้ hip flex+adduct) ตรวจด้วย Ortolani/Barlow; ที่ถูกยืดคือ posterior capsule ไม่ใช่ anterior; ความผิดปกติไม่ได้เกิดจาก pelvis ทั้งหมด",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 8
+  },
+  "78/191": {
+   "box": 8,
+   "stem": "โรค autosomal dominant แบบ complete penetrance (เช่น achondroplasia) pedigree ของผู้ป่วยที่พ่อแม่ปกติจะเป็นแบบใด",
+   "options": {
+    "A": "No previous family history (new mutation)"
+   },
+   "answer": "A",
+   "source": "เฉลย78",
+   "why": "Achondroplasia > 80% เป็น de novo mutation (สัมพันธ์อายุพ่อมาก) จึงมักไม่มีประวัติครอบครัว · ถ้า complete penetrance แล้วพ่อแม่ปกติ แปลว่าพ่อแม่ไม่มี mutation → เป็น new mutation (ยกเว้น gonadal mosaicism)",
+   "options_reconstructed": true
+  },
+  "74.2/37": {
+   "stem": "ผู้ป่วย high-grade sarcoma ถามว่าข้อใดใช้ใน tumor staging",
+   "options": {
+    "A": "Tumor size",
+    "B": "Tumor grading",
+    "C": "Mitotic feature"
+   },
+   "answer": "A",
+   "why": "staging = ขอบเขตการกระจายของโรค (TNM: ขนาด/ความลึกของก้อน T, ต่อมน้ำเหลือง N, metastasis M) ส่วน grading = ความ differentiated/mitotic count/necrosis ดูจาก histology; tumor size จึงเป็นองค์ประกอบของ staging; mitotic feature เป็นเกณฑ์ของ grade",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ AJCC staging ของ soft tissue sarcoma นำ grade มารวมด้วย แต่โจทย์บอกแล้วว่า high grade และแนวตอบทั่วไป staging = size",
+   "box": 9
+  },
+  "75.2/117": {
+   "stem": "ก้อนที่หลัง 2 cm well-encapsulated ผิวตัดเหลือง มาจากเซลล์อะไร",
+   "options": {
+    "A": "Fibroblast",
+    "B": "Adipocyte",
+    "C": "Endothelial",
+    "D": "Skeletal muscle cell",
+    "E": "Smooth muscle cell"
+   },
+   "answer": "B",
+   "why": "ผิวตัดเหลือง encapsulated = lipoma จาก mature adipocyte; ถ้าโตเร็ว ลึก ใหญ่ >5 cm ในต้นขา/retroperitoneum ต้องนึกถึง liposarcoma (lipoblast, MDM2 amplification)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 9
+  },
+  "75.2/136": {
+   "stem": "ผู้ป่วย 70 ปี ปวดต้นขา X-ray มีรอยโรค ให้รูป gross specimen เป็นก้อนสีขาวหลายก้อนอัดแน่นใน marrow cavity ยังไม่ทะลุ cortex",
+   "options": {
+    "A": "Osteosarcoma",
+    "B": "Chondrosarcoma"
+   },
+   "answer": "B",
+   "why": "chondrosarcoma พบในผู้ใหญ่อายุ 40–70 ปี ที่ pelvis, proximal femur, humerus gross เป็นก้อน lobulated สีขาวเทา-ฟ้า glistening (hyaline cartilage) อยู่ใน medullary cavity ทำ endosteal scalloping; X-ray มี ring-and-arc (popcorn) calcification; osteosarcoma พบวัยรุ่นรอบเข่า (metaphysis) ก้อนแข็งเป็นกระดูก ทะลุ cortex ยก periosteum (Codman triangle, sunburst)",
+   "source": "วิเคราะห์",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "doubt": "⚠ ก้อนขาวหลายก้อนใน marrow ในผู้สูงอายุอาจเป็น metastasis/myeloma ได้ แต่ตัวเลือกมีเพียง 2 ข้อ",
+   "box": 9
+  },
+  "75.2/34": {
+   "stem": "ชาย 40 ปี ก้อนที่ท้ายทอย/หลังคอ ไม่ติด dermis ตัดออกได้ก้อน 2 cm ขอบเขตชัด ผิวหน้าตัดสีเหลือง ถามว่ามาจากเซลล์อะไร",
+   "options": {
+    "A": "Adipocyte",
+    "B": "Endothelial cell",
+    "C": "Skeletal muscle",
+    "D": "Smooth muscle",
+    "E": "Fibroblast"
+   },
+   "answer": "A",
+   "why": "ก้อนนุ่ม well-circumscribed/encapsulated ผิวตัดเหลืองมัน = lipoma (benign soft tissue tumor ที่พบบ่อยสุด จาก mature adipocyte) พบบ่อยที่หลัง คอ ไหล่; endothelial → hemangioma (แดง), smooth muscle → leiomyoma (ขาว whorled), fibroblast → fibroma (ขาวแข็ง)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 9
+  },
+  "76/273": {
+   "stem": "เด็ก ~5 ขวบ ก้อนที่ขากรรไกร ผ่าออกมาดูภาพ ถามวินิจฉัย",
+   "options": {
+    "A": "Osteosarcoma",
+    "B": "Rhabdomyoma",
+    "C": "Fibrosarcoma",
+    "D": "Leiomyosarcoma"
+   },
+   "answer": "A",
+   "why": "ต้องดูรูป: ถ้าเห็น malignant cell สร้าง osteoid (lace-like) = osteosarcoma · ถ้าเห็น small round blue cell/strap cell, desmin/myogenin+ = rhabdomyosarcoma (soft tissue sarcoma เด็กที่พบบ่อยสุด บริเวณ head & neck) · rhabdomyoma เป็นก้อนหัวใจใน tuberous sclerosis",
+   "source": "วิเคราะห์",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "doubt": "⚠ ไม่มีรูป เดาจากตัวเลือก; ถ้าตัวเลือก B จริง ๆ คือ rhabdomyosarcoma อาจเป็นคำตอบแทน",
+   "box": 9
+  },
+  "77/117": {
+   "stem": "ให้ภาพ (X-ray/patho) ถามวินิจฉัยเนื้องอกกระดูก",
+   "options": {
+    "A": "Ewing sarcoma",
+    "B": "Chondroblastoma",
+    "C": "Osteosarcoma",
+    "D": "Osteoblastoma",
+    "E": "Giant cell tumor"
+   },
+   "answer": "E",
+   "why": "เฉลย77 = Giant cell tumor · แนวแยกจากรูป: GCT = epiphysis ผู้ใหญ่ 20–40 ปี soap-bubble lytic, multinucleated osteoclast-like giant cell · osteosarcoma = metaphysis วัยรุ่น Codman/sunburst · Ewing = diaphysis onion skin · chondroblastoma = epiphysis วัยรุ่นก่อน plate ปิด",
+   "source": "เฉลย77",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "doubt": "⚠ ไม่เห็นรูป — ตอบตามเฉลย77",
+   "box": 9
+  },
+  "78/103": {
+   "stem": "ก้อนที่ distal femur พยาธิพบ cartilage cap เป็น hyaline cartilage และ medullary cavity ต่อเนื่องกับกระดูก femur",
+   "options": {
+    "A": "Enchondroma",
+    "B": "Osteoblastoma",
+    "C": "Osteochondroma",
+    "D": "Osteosarcoma",
+    "E": "Chondrosarcoma"
+   },
+   "answer": "C",
+   "why": "Osteochondroma (exostosis) = bony outgrowth มี cartilage cap และ cortex/medulla ต่อเนื่องกับกระดูกเดิม พบบ่อยสุดที่ metaphysis รอบเข่า; enchondroma อยู่ใน medulla (มือ/เท้า); chondrosarcoma เป็น malignant cartilage คนสูงอายุ; osteosarcoma มี malignant osteoid",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 9
+  },
+  "79/107": {
+   "stem": "ผู้ป่วย 40 ปีมีก้อนกระดูกงอกจาก medullary bone ภาพถ่ายเป็นก้อน osteocartilaginous ยื่นออกนอกกระดูก",
+   "options": {
+    "A": "Osteochondroma",
+    "B": "Osteosarcoma",
+    "C": "Chondrosarcoma",
+    "D": "Ewing sarcoma",
+    "E": "Enchondroma"
+   },
+   "answer": "A",
+   "why": "Osteochondroma = exostosis มี cartilage cap และ medulla ต่อเนื่องกับกระดูกเดิม ยื่นออกนอก (มักห่างจากข้อ) เป็น benign bone tumor ที่พบบ่อยสุด (multiple = EXT1/EXT2); enchondroma อยู่ใน medulla; chondrosarcoma ร้าย (อาจเกิดจาก osteochondroma ที่ cap หนา >2 cm)",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 9
+  },
+  "77/110": {
+   "stem": "แผลถลอกฟกช้ำ ต่อมามี hemorrhagic bleb สีม่วง กลิ่นอับ crepitus ย้อม gram-positive bacilli ไม่เห็น spore virulence factor สำคัญที่สุด",
+   "options": {
+    "A": "Lecithinase",
+    "B": "Teichoic acid",
+    "C": "Lipopolysaccharide"
+   },
+   "answer": "A",
+   "why": "C. perfringens myonecrosis: α-toxin = lecithinase (phospholipase C) ทำลาย membrane กล้ามเนื้อ/RBC → necrosis, hemolysis; gas → crepitus · ในเนื้อเยื่อมักไม่เห็น spore · LPS เป็นของ gram-negative",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 10
+  },
+  "77/123": {
+   "stem": "femoral neck fracture ภาวะแทรกซ้อนสำคัญคืออะไร",
+   "options": {
+    "A": "Avascular necrosis"
+   },
+   "answer": "A",
+   "why": "intracapsular femoral neck fracture ตัด retinacular branches ของ medial circumflex femoral a. (เลือดหลักของ femoral head) → avascular necrosis และ nonunion",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 10
+  },
+  "74.1/40": {
+   "stem": "กล้ามเนื้อชนิดใดมีนิวเคลียสอยู่ตรงกลางเซลล์ (central nuclei)",
+   "options": {
+    "A": "Cardiac muscle",
+    "B": "Tensor tympani"
+   },
+   "answer": "A",
+   "why": "cardiac muscle มี 1–2 nuclei อยู่กลางเซลล์ มี intercalated disc และแตกแขนง; smooth muscle ก็มี central nucleus รูปกระสวย; skeletal muscle (เช่น tensor tympani) เป็น multinucleated syncytium nuclei ชิดขอบ (peripheral) — central nuclei ใน skeletal muscle บ่งถึง regeneration หรือ centronuclear myopathy",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 11
+  },
+  "74.1/41": {
+   "stem": "ให้รูป histology กล้ามเนื้อหัวใจ (น่าจะเป็นเซลล์ใหญ่ซีด) ถามว่าตัวอย่างมาจากส่วนใด",
+   "options": {
+    "A": "Bundle of His",
+    "B": "Papillary muscle"
+   },
+   "answer": "A",
+   "why": "ถ้ารูปเป็นเซลล์ขนาดใหญ่ cytoplasm ซีด (glycogen มาก) myofibril น้อยอยู่ชายขอบ nucleus กลาง = Purkinje/conducting fibers ซึ่งอยู่ใน bundle of His และแขนงใต้ endocardium; ถ้าเป็น cardiac myocyte ทั่วไปมี striation ชัด intercalated disc = working myocardium เช่น papillary muscle",
+   "source": "วิเคราะห์",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "doubt": "⚠ ขึ้นกับรูป: เซลล์ใหญ่ซีด = Purkinje (A), myocyte ปกติ = papillary muscle (B)",
+   "box": 11
+  },
+  "74.2/41": {
+   "stem": "หลังออกกำลังกายหนัก 2 ชั่วโมง ข้อใดถูกเกี่ยวกับอาการปวดกล้ามเนื้อ",
+   "options": {
+    "A": "ปวดมากที่สุดวันรุ่งขึ้น",
+    "B": "ปวด ... 6 ชั่วโมงหลังออกกำลังกาย",
+    "C": "ปวดปานกลางแต่คงที่หลัง 5 วัน"
+   },
+   "answer": "A",
+   "why": "DOMS เกิดจาก microtrauma ของ muscle fiber (โดยเฉพาะ eccentric contraction) + inflammation เริ่มปวด 12–24 ชม. peak ราว 24–72 ชม. แล้วหายใน 5–7 วัน; ไม่ได้เกิดจาก lactic acid คั่ง (lactate ถูกกำจัดภายในไม่กี่ชั่วโมง) ปวดคงที่หลัง 5 วันต้องนึกถึง injury อื่น",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 11
+  },
+  "74.2/83": {
+   "stem": "ช่วงแรกสุดของการเริ่มวิ่ง กล้ามเนื้อใช้พลังงานจากสารใด",
+   "options": {
+    "A": "ATP"
+   },
+   "answer": "A",
+   "why": "วินาทีแรกใช้ ATP ที่สะสมในกล้ามเนื้อ (~2–3 วินาที) ต่อด้วย phosphocreatine (creatine kinase, ~10 วินาที) แล้ว anaerobic glycolysis และ oxidative phosphorylation ตามลำดับ",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 11
+  },
+  "76/138": {
+   "stem": "วิ่ง marathon ใช้ muscle fiber ชนิดใดเป็นหลัก",
+   "options": {
+    "A": "Type I",
+    "B": "Type IIa",
+    "C": "Type I & IIa",
+    "D": "Type IIx",
+    "E": "Type I & IIa & IIx"
+   },
+   "answer": "A",
+   "why": "endurance ใช้ type I (slow oxidative, red, mitochondria + myoglobin มาก, fatigue-resistant) เป็นหลัก · IIa fast oxidative-glycolytic ช่วยเสริม · IIx fast glycolytic ใช้ sprint",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ถ้าโจทย์เน้นว่า recruit ทั้งหมด อาจตอบ C (Type I & IIa) — คำว่า 'primarily' จึงเลือก Type I",
+   "box": 11
+  },
+  "76/248": {
+   "stem": "ผลของการฝึกกล้ามเนื้อใน 2 สัปดาห์แรกคืออะไร",
+   "options": {
+    "A": "Neuromuscular adaptation",
+    "B": "Muscular hypertrophy",
+    "C": "Intracellular cytoplasm synthesis",
+    "D": "Extracellular matrix synthesis",
+    "E": "More myofibril recruitment",
+    "F": "More mitochondria per muscle fibril"
+   },
+   "answer": "A",
+   "why": "แรงที่เพิ่มช่วงแรก (2–4 สัปดาห์) มาจาก neural adaptation: recruit motor unit มากขึ้น, firing rate/synchronization ดีขึ้น · hypertrophy (เพิ่ม myofibril/protein) ใช้เวลา >6–8 สัปดาห์ · mitochondria เพิ่มเป็น endurance adaptation",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ไฟล์ระบุว่าไม่แน่ใจว่าตัวเลือกไหนเกินมา",
+   "box": 11
+  },
+  "76/35": {
+   "stem": "quadriceps muscle fiber เจริญมาจากโครงสร้างใด",
+   "options": {
+    "A": "Paraxial mesoderm",
+    "B": "Lateral plate mesoderm",
+    "C": "Neuroectoderm",
+    "D": "Lateral endoderm",
+    "E": "Endoderm"
+   },
+   "answer": "A",
+   "why": "กล้ามเนื้อลาย limb มาจาก myotome ของ somite (paraxial mesoderm) ที่ migrate เข้า limb bud · lateral plate (somatic) mesoderm ให้กระดูก/cartilage/CT/เอ็นของ limb ไม่ใช่ muscle fiber",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 11
+  },
+  "76/39": {
+   "stem": "พลังงานหลักที่ใช้วิ่ง 100 m คืออะไร",
+   "options": {
+    "A": "ATP",
+    "B": "Glycolysis",
+    "C": "Phosphocreatine",
+    "D": "Oxidative phosphorylation",
+    "E": "Krebs cycle"
+   },
+   "answer": "C",
+   "why": "กิจกรรมสั้น ~10 วินาทีใช้ phosphagen system: phosphocreatine + ADP → ATP (creatine kinase) · ATP สะสมพอแค่ 2–3 วินาที · glycolysis เด่นช่วง 30 s–2 min · oxidative ใช้ในงานนาน",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 11
+  },
+  "77/127": {
+   "stem": "มี taut band ในกล้ามเนื้อและปัญหาที่ Achilles tendon ข้อใดอธิบาย actin–myosin overlap และแรง",
+   "options": {
+    "A": "Lack of overlap, increased force",
+    "B": "Lack of overlap, decreased force",
+    "C": "Excessive overlap, increased force",
+    "D": "Excessive overlap, decreased force",
+    "E": "Optimal overlap ..."
+   },
+   "answer": "D",
+   "why": "taut band/trigger point (myofascial pain) = sarcomere หดค้าง (contraction knot) สั้นเกิน → actin ซ้อนกันเกิน ขัด cross-bridge → แรงลดลง (length–tension: แรงสูงสุดที่ optimal overlap, ลดลงทั้งยืดเกินและสั้นเกิน)",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ถ้าโจทย์จริงคือกล้ามเนื้อถูกยืดค้าง (Achilles tendon ตึง/ยาว) อาจตอบ B — โจทย์จำมาไม่ครบ",
+   "box": 11
+  },
+  "78/163": {
+   "stem": "วิ่ง 5 กม. 3 ครั้ง/สัปดาห์ นาน 6 เดือน กล้ามเนื้อเปลี่ยนอย่างไร",
+   "options": {
+    "A": "Type I เพิ่ม, IIa ลด, IIx ลด",
+    "B": "Type I เพิ่ม, IIa ลด, IIx เพิ่ม",
+    "C": "Type I ลด, IIa เพิ่ม, IIx เพิ่ม",
+    "D": "Type I ลด, IIa เพิ่ม, IIx ลด"
+   },
+   "answer": "A",
+   "why": "Endurance (aerobic) training เพิ่ม oxidative/slow-twitch type I และ mitochondria, fast glycolytic IIx ลดลง; resistance training ต่างหากที่เพิ่ม hypertrophy ของ type II",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ตามหลักสรีรวิทยา endurance training ทำให้ IIx เปลี่ยนเป็น IIa (IIa อาจเพิ่มได้) แต่ในช้อยส์ที่ให้มา A ใกล้เคียงสุด",
+   "box": 11
+  },
+  "78/60": {
+   "stem": "ศพตายนาน มีกล้ามเนื้อหดค้างขยับแขนขาไม่ได้ กลไกคืออะไร",
+   "options": {
+    "A": "Ca release จาก sarcoplasmic reticulum",
+    "B": "ขาด ATP",
+    "C": "ไม่ release ADP+Pi"
+   },
+   "answer": "B",
+   "why": "Rigor mortis: ไม่มี ATP มาจับ myosin head → cross-bridge ไม่หลุดจาก actin จึงแข็งค้าง; Ca รั่วจาก SR เป็นตัวเริ่มการจับแต่ไม่ใช่เหตุที่ค้าง; การปล่อย ADP+Pi เป็น power stroke ซึ่งเกิดได้ ปัญหาคือขั้นหลุด (ต้องใช้ ATP)",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ เฉลยเขียน 'B ?' และโจทย์ว่า 7 วันหลังตาย ซึ่งปกติ rigor mortis คลายไปแล้ว (~36–72 ชม.) อาจจำตัวเลขผิด แต่กลไกตอบ ATP depletion ได้",
+   "box": 11
+  },
+  "79/43": {
+   "box": 11,
+   "stem": "ออกกำลังกายหนัก กล้ามเนื้อส่ง metabolite ไปที่ตับ ตับแปลงเป็นสารใดส่งกลับ",
+   "options": {
+    "A": "Glucose",
+    "B": "Lactate",
+    "C": "Alanine",
+    "D": "Pyruvate",
+    "E": "Glycogen"
+   },
+   "answer": "A",
+   "source": "เฉลย79",
+   "why": "Cori cycle: กล้ามเนื้อทำ anaerobic glycolysis ได้ lactate → ส่งไปตับ → gluconeogenesis เป็น glucose → กลับไปกล้ามเนื้อ · lactate เป็นตัวที่ส่งไป ไม่ใช่ผลผลิตของตับ · alanine = glucose–alanine cycle",
+   "options_reconstructed": true,
+   "doubt": "⚠ ตัวเลือกเดาคืนจากชีท (ชีทระบุคำตอบ Glucose)"
+  },
+  "75.2/130": {
+   "stem": "ทารกกล้ามเนื้ออ่อนแรงมาก (floppy baby) หลังได้กินน้ำผึ้ง ถามว่าอะไรเป็นสาเหตุของอาการ",
+   "options": {
+    "A": "Toxin from spores (สปอร์งอกในลำไส้แล้วสร้าง toxin)",
+    "B": "Exotoxin A"
+   },
+   "answer": "A",
+   "why": "infant botulism: กิน spore ของ Clostridium botulinum ในน้ำผึ้ง → spore งอกและ colonize ลำไส้ทารก (flora ยังไม่สมบูรณ์) → สร้าง botulinum toxin in vivo ซึ่งตัด SNARE (SNAP-25/synaptobrevin) ยับยั้งการหลั่ง ACh ที่ NMJ → descending flaccid paralysis, constipation, poor feeding; ต่างจาก foodborne botulism ในผู้ใหญ่ที่กิน preformed toxin; exotoxin A เป็นของ Pseudomonas/Strep pyogenes",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 12
+  },
+  "76/267": {
+   "stem": "ทารกกินน้ำผึ้ง กล้ามเนื้ออ่อนแรง flaccid paralysis toxin ใด",
+   "options": {
+    "A": "Tetanus toxin",
+    "B": "Botulinum toxin"
+   },
+   "answer": "B",
+   "why": "infant botulism: กิน spore (น้ำผึ้ง) → เจริญในลำไส้ทารกสร้าง toxin → floppy baby, constipation, weak suck · tetanus = spastic",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 12
+  },
+  "76/97": {
+   "stem": "กินหน่อไม้ปี๊บแล้วกล้ามเนื้ออ่อนแรง toxin ใด",
+   "options": {
+    "A": "Botulinum toxin",
+    "B": "Tetanus toxin",
+    "C": "Shiga toxin",
+    "D": "Cholera toxin",
+    "E": "Tetrodotoxin"
+   },
+   "answer": "A",
+   "why": "หน่อไม้ปี๊บ (อาหารกระป๋องทำเอง anaerobic) = C. botulinum → toxin ตัด SNARE (SNAP-25/synaptobrevin) ที่ presynaptic NMJ → ไม่ปล่อย ACh → descending flaccid paralysis · tetanus ยับยั้ง GABA/glycine → spastic · tetrodotoxin = ปลาปักเป้า (block Na channel)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 12
+  },
+  "77/35": {
+   "stem": "เด็กกินอาหาร (sweet potato) แล้ว drooling ร้องไห้ hypotonia เกิดจาก toxin ใด",
+   "options": {
+    "A": "Botulinum toxin",
+    "B": "Tetanus toxin"
+   },
+   "answer": "A",
+   "why": "botulinum ตัด SNARE ที่ presynaptic NMJ/cholinergic → floppy baby, bulbar palsy (ดูดกลืนไม่ดี น้ำลายไหล), descending flaccid paralysis · tetanus → spasm/rigidity (trismus, opisthotonus)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 12
+  },
+  "78/161": {
+   "stem": "ก้อนที่คอ/ทรวงอก ร่วมกับหนังตาตก เห็นภาพซ้อน แย่ลงเมื่อมองค้าง และ proximal muscle weakness",
+   "options": {
+    "A": "Thymoma",
+    "B": "Thymic carcinoma",
+    "C": "Thyroiditis",
+    "D": "Small cell lung cancer"
+   },
+   "answer": "A",
+   "why": "Fatigable ptosis/diplopia = myasthenia gravis (anti-AChR ที่ postsynaptic NMJ) สัมพันธ์กับ thymoma (~10–15%) และ thymic hyperplasia; SCLC สัมพันธ์กับ Lambert–Eaton (anti-VGCC, อ่อนแรงดีขึ้นเมื่อใช้ซ้ำ)",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 12
+  },
+  "79/66": {
+   "stem": "อ่อนแรงต้นแขนขา (เป่าผม ขึ้นบันไดลำบาก) มีหนังตาตกเป็นพัก ๆ DTR ลดลง (+1) แต่ดีขึ้น (+2) หลังเกร็งกล้ามเนื้อนาน ๆ สัมพันธ์กับภาวะใดมากที่สุด",
+   "options": {
+    "A": "Thymoma",
+    "B": "Small-cell lung carcinoma",
+    "C": "Papillary thyroid carcinoma",
+    "D": "Colon adenocarcinoma",
+    "E": "Renal cell carcinoma"
+   },
+   "answer": "B",
+   "why": "Reflex/กำลังดีขึ้นหลังออกแรง (post-exercise facilitation) = Lambert–Eaton: anti-presynaptic P/Q-type VGCC → ปล่อย ACh ลดลง; เป็น paraneoplastic ของ SCLC; thymoma คู่กับ myasthenia gravis (แย่ลงเมื่อใช้ซ้ำ reflex ปกติ)",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 12
+  },
+  "74.1/8": {
+   "stem": "เด็กชายเป็น Duchenne muscular dystrophy ถามว่ายีน/โปรตีนใดผิดปกติ",
+   "options": {
+    "A": "Dystrophin"
+   },
+   "answer": "A",
+   "why": "DMD เกิดจาก frameshift/deletion ของยีน DMD (X-linked recessive, Xp21) ทำให้ไม่มี dystrophin ซึ่งเชื่อม actin กับ dystroglycan complex บน sarcolemma → เยื่อหุ้มกล้ามเนื้อเปราะ ฉีกขาด CK สูง; Becker เป็น in-frame ได้ dystrophin สั้นลงบางส่วน",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 13
+  },
+  "74.2/2": {
+   "stem": "เด็กชาย 3 ขวบ อ่อนแรง calf enlargement (pseudohypertrophy) muscle biopsy พบ fat แทรกแทนที่กล้ามเนื้อ ถามว่าโปรตีนใดผิดปกติ",
+   "options": {
+    "A": "Actin",
+    "B": "Myosin",
+    "C": "Troponin",
+    "D": "Dystrophin"
+   },
+   "answer": "D",
+   "why": "อ่อนแรง proximal + calf pseudohypertrophy (fibrofatty replacement) ในเด็กชาย = DMD จากขาด dystrophin (X-linked recessive); actin/myosin/troponin เป็นโปรตีน contractile ไม่ใช่สาเหตุ muscular dystrophy นี้",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 13
+  },
+  "75.1/7": {
+   "stem": "พี่น้องชาย 2 คนเป็น Duchenne ทั้งคู่ แม่ตั้งครรภ์คนถัดไปและรู้แล้วว่าเป็นเพศชาย ถามโอกาสที่ลูกคนนี้จะเป็น DMD",
+   "options": {
+    "A": "1/2",
+    "B": "1/3",
+    "C": "1/4",
+    "D": "1/6",
+    "E": "< 1/10"
+   },
+   "answer": "A",
+   "why": "มีลูกชายเป็นโรค 2 คน (ไม่ใช่ sporadic เดี่ยว) แม่ถือว่าเป็น obligate carrier (X^D X^d) ลูกชายรับ X จากแม่ → โอกาสได้ X ที่กลายพันธุ์ = 1/2; 1/4 คือโอกาสเมื่อยังไม่รู้เพศ (1/2 ชาย × 1/2) ส่วน 1/3, 1/6 ใช้กับกรณีลูกชายเป็นโรคคนเดียวที่แม่อาจเป็น new mutation",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 13
+  },
+  "77/23": {
+   "stem": "พ่อเป็น Becker MD (XR) ข้อใดถูก",
+   "options": {
+    "A": "ลูกสาวทุกคนเป็น carrier",
+    "B": "ลูกชายทุกคนเป็นโรค",
+    "C": "ลูกสาวทุกคนเป็นโรค",
+    "D": "ลูกชายมีโอกาสเป็นโรค 50%",
+    "E": "ลูกชายไม่เป็นเลย ลูกสาวมีโอกาสเป็น 50%"
+   },
+   "answer": "A",
+   "why": "พ่อ XR ส่ง X ให้ลูกสาวทุกคน → carrier ทั้งหมด (แม่ปกติ) · ส่ง Y ให้ลูกชาย → ลูกชายไม่เป็น (ไม่มี male-to-male transmission) · Becker = in-frame deletion dystrophin ต่างจาก Duchenne ที่ frameshift",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 13
+  },
+  "79/71": {
+   "box": 13,
+   "stem": "ผู้ป่วยมีกล้ามเนื้อขาลีบลงเรื่อย ๆ และ reflex ที่แขนไวเกิน ถามการวินิจฉัย",
+   "options": {
+    "A": "Myasthenia gravis",
+    "B": "Guillain-Barré syndrome",
+    "C": "Amyotrophic lateral sclerosis",
+    "D": "Lambert-Eaton",
+    "E": "Multiple sclerosis"
+   },
+   "answer": "C",
+   "why": "ALS มีการเสื่อมของทั้ง upper motor neuron (hyperreflexia, spasticity, Babinski) และ lower motor neuron (atrophy, fasciculation) พร้อมกันในหลายส่วน โดยไม่มี sensory loss. การมี UMN และ LMN sign ปนกันเป็นกุญแจ. MG และ LEMS เป็นโรค NMJ ไม่มี UMN sign. GBS ทำให้ areflexia. MS เป็น CNS demyelination ไม่ทำให้กล้ามเนื้อลีบแบบ LMN",
+   "source": "วิเคราะห์"
+  },
+  "79/99": {
+   "stem": "หญิง 42 ปีอ่อนแรงต้นขาสองข้าง ลุกจากเก้าอี้ลำบาก ร่วมกับอาการทางผิวหนัง อาการใดเป็น pathognomonic sign",
+   "options": {
+    "A": "Alopecia",
+    "B": "Nail dystrophy",
+    "C": "Heliotrope rash",
+    "D": "Vasculitis",
+    "E": "Photosensitivity"
+   },
+   "answer": "C",
+   "why": "Dermatomyositis = proximal myopathy + skin; pathognomonic คือ heliotrope rash (ผื่นม่วงรอบตา) และ Gottron papules; perifascicular atrophy, anti-Mi-2/anti-MDA5, สัมพันธ์มะเร็ง; photosensitivity/alopecia พบได้แต่ไม่จำเพาะ (นึกถึง SLE)",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 13
+  },
+  "76/128": {
+   "stem": "ปวดหลังร้าวลงขาซ้ายทันทีหลังยกของหนัก วินิจฉัยอะไร",
+   "options": {
+    "A": "Lumbar scoliosis",
+    "B": "Lumbar spondylolisthesis",
+    "C": "Lumbar disc herniation",
+    "D": "Spinal canal stenosis",
+    "E": "Lumbar strain"
+   },
+   "answer": "C",
+   "why": "acute + ยกของหนัก + radicular pain ร้าวลงขา = nucleus pulposus เคลื่อนกดรากประสาท (L4-5/L5-S1 posterolateral) · strain ปวดเฉพาะที่ไม่ร้าวลงขา · stenosis เป็น chronic neurogenic claudication ผู้สูงอายุ",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 14
+  },
+  "77/118": {
+   "stem": "brachioradialis reflex สะท้อน root ใดเป็นหลัก",
+   "options": {
+    "A": "C5",
+    "B": "C6",
+    "C": "C7",
+    "D": "C8",
+    "E": "T1"
+   },
+   "answer": "B",
+   "why": "brachioradialis reflex = C6 (radial n.) · biceps = C5(–C6) · triceps = C7 · finger flexor = C8",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 14
+  },
+  "77/119": {
+   "stem": "โจรกระชากแขนแย่งกระเป๋า reflex ใดช่วยป้องกัน muscle injury",
+   "options": {
+    "A": "Stretch reflex",
+    "B": "Tendon reflex",
+    "C": "Mass reflex",
+    "D": "Withdrawal reflex",
+    "E": "Autonomic reflex"
+   },
+   "answer": "A",
+   "why": "เฉลย77 ตอบ stretch reflex (deep tendon reflex) ที่หดตัวต้านการยืดฉับพลัน",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ตามหลักสรีรวิทยา กลไกที่ป้องกันกล้ามเนื้อ/เอ็นฉีกจากแรงตึงสูงคือ Golgi tendon organ (inverse stretch reflex, Ib → autogenic inhibition) — เช็กกับอาจารย์",
+   "box": 14
+  },
+  "77/120": {
+   "stem": "ยกของหนักปวดร้าวหลังลงขา ชาหลังเท้าและฝ่าเท้า hip abduction อ่อน dorsiflex ไม่ได้ วินิจฉัย",
+   "options": {
+    "A": "Lumbar sprain",
+    "B": "Spondylosis",
+    "C": "Disc herniation L3-L4",
+    "D": "Disc herniation L4-L5",
+    "E": "Disc herniation L5-S1"
+   },
+   "answer": "D",
+   "why": "posterolateral herniation กดรากที่ออกระดับล่าง: L4-L5 → L5 root: dorsiflexion/big toe extension, hip abduction (gluteus medius), ชาหลังเท้า · L5-S1 → S1: plantarflexion, ankle reflex↓, ชาฝ่าเท้า/lateral foot · L3-L4 → L4: knee reflex, ชา medial leg",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ฝ่าเท้าชาเป็น S1 แต่ motor เด่น L5 (dorsiflex + hip abduction) จึงเลือก L4-L5",
+   "box": 14
+  },
+  "75.2/119": {
+   "stem": "ยาที่ให้ผู้ป่วยเพื่อช่วยใส่ท่อช่วยหายใจ ออกฤทธิ์ผ่านกลไกใด",
+   "options": {
+    "A": "Nicotinic antagonist",
+    "B": "Muscarinic agonist"
+   },
+   "answer": "A",
+   "why": "neuromuscular blocker ออกฤทธิ์ที่ nicotinic (Nm) receptor ที่ motor end plate: non-depolarizing (rocuronium, vecuronium) เป็น competitive antagonist; succinylcholine เป็น agonist ที่ทำให้ persistent depolarization (phase I block) แต่ผลสุทธิคือ block nicotinic transmission; muscarinic agonist ไม่ทำให้กล้ามเนื้อลาย relax",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ถ้าโจทย์จริงหมายถึง succinylcholine เคร่ง ๆ คือ nicotinic agonist (depolarizing) แต่ตัวเลือกที่มีให้ nicotinic antagonist ใกล้สุด",
+   "box": 15
+  },
+  "75.2/63": {
+   "stem": "ยาที่ใช้ระหว่างการดมยาสลบเพื่อให้ใส่ endotracheal tube ได้ง่ายขึ้นในผู้ป่วยที่ไม่ให้ความร่วมมือ",
+   "options": {
+    "A": "Succinylcholine",
+    "B": "Neostigmine",
+    "C": "Dantrolene",
+    "D": "Atropine",
+    "E": "Baclofen"
+   },
+   "answer": "A",
+   "why": "ใส่ท่อช่วยหายใจต้องการกล้ามเนื้อคลาย (jaw/vocal cord relaxation) → neuromuscular blocker; succinylcholine เป็น depolarizing NMB ที่ onset เร็ว (~1 นาที) ออกฤทธิ์สั้น ใช้ใน rapid sequence intubation (ทางเลือก rocuronium high dose); neostigmine ใช้ reverse NMB, dantrolene รักษา malignant hyperthermia, baclofen เป็น central muscle relaxant ไม่ใช้ช่วยใส่ท่อ",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "doubt": "⚠ โจทย์เดิมไม่มีตัวเลือก อาจถามเป็น mechanism (nicotinic antagonist) ดู 75.2/119",
+   "box": 15
+  },
+  "79/75": {
+   "stem": "เกษตรกรสัมผัสยาฆ่าแมลง มี miosis น้ำลายมาก เหงื่อ เสมหะในหลอดลม และกล้ามเนื้อกระตุก (fasciculation) กลไกคืออะไร",
+   "options": {
+    "A": "ยับยั้ง acetylcholinesterase",
+    "B": "กระตุ้น acetylcholinesterase",
+    "C": "Block muscarinic receptor",
+    "D": "Block nicotinic receptor",
+    "E": "ยับยั้ง COMT"
+   },
+   "answer": "A",
+   "why": "Organophosphate ยับยั้ง AChE แบบ irreversible → ACh คั่ง: muscarinic (SLUDGE, miosis, bronchorrhea) + nicotinic ที่ NMJ (fasciculation → อ่อนแรง/อัมพาต); รักษาด้วย atropine + pralidoxime; block receptor จะได้อาการตรงข้าม",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 15
+  },
+  "74.1/32": {
+   "stem": "รอยโรคที่ spiral (radial) groove ของ humerus (เช่น midshaft fracture) จะพบอาการใด",
+   "options": {
+    "A": "Hypothenar atrophy",
+    "B": "Unopposed thumb (ape hand)",
+    "C": "Extended and pronated ... (จำมาไม่ครบ)"
+   },
+   "answer": "C",
+   "why": "spiral groove มี radial nerve + profunda brachii วิ่งผ่าน บาดเจ็บ → wrist drop (อ่อนแรง wrist/finger extensors, brachioradialis, supinator) triceps มักรอดเพราะแขนงออกก่อน; A hypothenar atrophy = ulnar nerve, B ape hand/ไม่สามารถ oppose thumb = median nerve; ข้อ C เป็นตัวเลือกเดียวที่พูดถึงท่ามือ/แขนจาก extensor-supinator อ่อนแรง (มือห้อย แขนอยู่ท่า pronated)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ตัวเลือก C ไม่ครบ คำตอบหลักวิชาคือ wrist drop (wrist flexed, forearm pronated จาก supinator อ่อนแรง) จึงเลือก C โดยตัดข้อ A/B ที่เป็นของ ulnar/median",
+   "box": 16
+  },
+  "76/159": {
+   "stem": "claw hand ร่วมกับกล้ามเนื้อเคลื่อนไหวผิดปกติ การเคลื่อนไหวใดเสีย",
+   "options": {
+    "A": "Thumb abduction",
+    "B": "Thumb flexion",
+    "C": "Thumb extension",
+    "D": "Finger adduction",
+    "E": "Wrist extension"
+   },
+   "answer": "D",
+   "why": "claw hand = ulnar n. injury (interossei + medial lumbricals อ่อน) → finger adduction (palmar interossei) และ abduction เสีย, thumb adduction เสีย (Froment sign) · thumb abduction = median (APB) · thumb/wrist extension = radial",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 16
+  },
+  "76/230": {
+   "stem": "X-ray lunate dislocation ไปด้านหน้า การเคลื่อนไหวใดทำไม่ได้",
+   "options": {
+    "A": "Thumb abduction",
+    "B": "Thumb adduction",
+    "C": "Finger abduction",
+    "D": "Finger adduction",
+    "E": "Thumb dorsal sensory"
+   },
+   "answer": "A",
+   "why": "lunate เคลื่อนไป volar เข้า carpal tunnel กด median n. → thenar (APB) อ่อน thumb abduction/opposition เสีย · thumb adduction, finger abd/add = ulnar (deep br.) · dorsum thumb sensory = superficial radial",
+   "source": "วิเคราะห์",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "box": 16
+  },
+  "77/115": {
+   "stem": "เด็กตกต้นไม้ supracondylar humerus fracture กล้ามเนื้อใดได้รับผลกระทบ",
+   "options": {
+    "A": "Deltoid",
+    "B": "Brachialis",
+    "C": "Flexor pollicis longus",
+    "D": "Extensor pollicis longus",
+    "E": "Interossei"
+   },
+   "answer": "C",
+   "why": "extension-type supracondylar fracture ทำให้ anterior interosseous n. (แขนง median) บาดเจ็บบ่อยสุด → FPL + FDP index อ่อน (OK sign ไม่ได้) + brachial a. บาดเจ็บ → Volkmann ischemic contracture · deltoid = axillary (surgical neck), EPL = radial (PIN), interossei = ulnar (medial epicondyle)",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 16
+  },
+  "79/106": {
+   "stem": "ดื่มเหล้าแล้วหลับโดยพาดแขนบนพนักเก้าอี้ ชาที่ด้านหลังแขนท่อนล่างและหลังมือ หน้าที่ใดเสีย",
+   "options": {
+    "A": "Thumb opposition",
+    "B": "Finger flexion",
+    "C": "Finger extension",
+    "D": "Wrist flexion",
+    "E": "Elbow flexion"
+   },
+   "answer": "C",
+   "why": "Radial n. ถูกกดที่ต้นแขน (spiral groove/axilla) → wrist drop + เหยียดนิ้วไม่ได้ ชาหลังมือ (first dorsal web space) และ posterior forearm; opposition/finger & wrist flexion = median/ulnar; elbow flexion หลักคือ musculocutaneous (biceps)",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 16
+  },
+  "79/109": {
+   "stem": "เด็กล้มเอามือยันพื้นแขนเหยียด X-ray พบ supracondylar fracture ของ humerus ขวา อาจพบความผิดปกติทางประสาทใด",
+   "options": {
+    "A": "Wrist drop",
+    "B": "Loss of thumb opposition",
+    "C": "Ulnar claw hand",
+    "D": "Loss of finger abduction",
+    "E": "Inability to extend fingers"
+   },
+   "answer": "B",
+   "why": "Supracondylar fracture (extension type) บาดเจ็บ median n./AIN บ่อยที่สุด และ brachial a. (เสี่ยง Volkmann ischemic contracture) → median เสีย: thumb opposition, ape hand/OK sign; wrist drop/เหยียดนิ้วไม่ได้ = radial; claw/abduction = ulnar (medial epicondyle fracture)",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ AIN palsy (พบบ่อยสุด) ไม่เสีย opposition (thenar มาจาก recurrent branch) แต่ในช้อยส์ B เป็นตัวแทน median เพียงข้อเดียว; ถ้าเรียงตามตำรา radial ก็บาดเจ็บได้ (อันดับ 2)",
+   "box": 16
+  },
+  "74.2/53": {
+   "stem": "แขน adduct + medial rotate, forearm extend + pronate (waiter's tip) ถามว่ารอยโรคที่ระดับรากประสาทใด",
+   "options": {
+    "A": "C4-5",
+    "B": "C5-6",
+    "C": "C6-7"
+   },
+   "answer": "B",
+   "why": "waiter's tip = Erb–Duchenne palsy, upper trunk (C5–C6) บาดเจ็บจากการดึงคอ-ไหล่แยกจากกัน (คลอดติดไหล่, ตกจากรถ); เสีย deltoid/supraspinatus (abduct), infraspinatus (lateral rotate), biceps (flex + supinate) → ท่า adduct, medial rotate, extend, pronate; C8–T1 = Klumpke (claw hand)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 17
+  },
+  "75.2/72": {
+   "stem": "infraspinatus ฝ่อ เส้นประสาทใดบาดเจ็บ",
+   "options": {
+    "A": "Radial",
+    "B": "Axillary",
+    "C": "Accessory",
+    "D": "Suprascapular",
+    "E": "Dorsal scapular"
+   },
+   "answer": "D",
+   "why": "suprascapular n. (C5–6, จาก upper trunk) เลี้ยง supraspinatus + infraspinatus ถ้าถูกกดที่ spinoglenoid notch จะฝ่อเฉพาะ infraspinatus (เสีย external rotation); axillary → deltoid + teres minor, accessory → trapezius, dorsal scapular → rhomboid/levator scapulae",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 18
+  },
+  "76/27": {
+   "stem": "ผู้ป่วยไหล่อ่อนแรง วินิจฉัย quadrangular space syndrome ถามว่า nerve ใดถูกกด",
+   "options": {
+    "A": "Suprascapular n.",
+    "B": "Subscapular n.",
+    "C": "Radial n.",
+    "D": "Ulnar n.",
+    "E": "Axillary n."
+   },
+   "answer": "E",
+   "why": "Quadrangular space (teres minor/teres major/long head triceps/surgical neck humerus) มี axillary n. + posterior circumflex humeral a. ผ่าน → deltoid, teres minor อ่อนแรง · suprascapular ผ่าน suprascapular notch · radial ผ่าน triangular interval",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 18
+  },
+  "78/134": {
+   "stem": "ให้ภาพ X-ray แล้วถามว่า lesion ทำให้ nerve ใดบาดเจ็บ",
+   "options": {
+    "A": "Radial",
+    "B": "Ulnar",
+    "C": "Median",
+    "D": "Axillary",
+    "E": "Musculocutaneous"
+   },
+   "answer": "D",
+   "why": "เฉลยตอบ axillary → ภาพน่าจะเป็น fracture surgical neck of humerus หรือ anterior shoulder dislocation (axillary n. + posterior circumflex humeral a. วิ่งรอบ surgical neck → deltoid/teres minor อ่อน ชาที่ regimental badge); ถ้าภาพเป็น midshaft humerus → radial, supracondylar → median, medial epicondyle → ulnar",
+   "source": "เฉลย78",
+   "needs_image": true,
+   "options_reconstructed": false,
+   "box": 18
+  },
+  "78/172": {
+   "stem": "กาง (abduct) และหมุนไหล่ออก (lateral rotation) ไม่ได้ โดย supraspinatus และ infraspinatus เสียทั้งคู่ ตำแหน่งรอยโรคอยู่ที่ใด",
+   "options": {
+    "A": "Axillary n. ที่ quadrangular space",
+    "B": "Suprascapular n. ที่ suprascapular notch",
+    "C": "Suprascapular n. ที่ spinoglenoid notch",
+    "D": "Subscapular n.",
+    "E": "Long thoracic n."
+   },
+   "answer": "B",
+   "why": "Suprascapular n. ผ่าน suprascapular notch (ใต้ transverse scapular lig.) เลี้ยง supraspinatus ก่อน แล้วอ้อม spinoglenoid notch ไปเลี้ยง infraspinatus → รอยโรคที่ notch บนเสียทั้งคู่; ที่ spinoglenoid notch เสียแค่ infraspinatus; axillary = deltoid/teres minor; long thoracic = serratus anterior (winged scapula)",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 18
+  },
+  "79/114": {
+   "stem": "เด็ก 4 ปีศีรษะเอียงไปขวาค้าง คางชี้ไปทางซาย กล้ามเนื้อใดผิดปกติ",
+   "options": {
+    "A": "Trapezius",
+    "B": "Splenius capitis",
+    "C": "Anterior scalene",
+    "D": "Sternocleidomastoid",
+    "E": "Levator scapulae"
+   },
+   "answer": "D",
+   "why": "SCM หดข้างเดียว → เอียงศีรษะไปข้างเดียวกัน + หมุนหน้า/คางไปฝั่งตรงข้าม → ครั้งนี้ right SCM สั้น/fibrosis (congenital muscular torticollis มักสัมพันธ์กับ breech/คลอดยาก และ DDH); trapezius/levator scapulae ยกไหล่; splenius capitis หมุนศีรษะไปข้างเดียวกัน",
+   "source": "เฉลย79",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 18
+  },
+  "75.2/54": {
+   "stem": "ชาย 45 ปี ตกจักรยาน tibia+fibula หักขวา มี foot drop แต่ eversion ปกติ เส้นประสาทใดบาดเจ็บ",
+   "options": {
+    "A": "Tibial",
+    "B": "Saphenous",
+    "C": "Common peroneal",
+    "D": "Deep peroneal",
+    "E": "Superficial peroneal"
+   },
+   "answer": "D",
+   "why": "deep peroneal (fibular) n. เลี้ยง anterior compartment (tibialis anterior, EHL, EDL) → dorsiflexion อ่อน = foot drop + ชาบริเวณ first web space; eversion ยังดีแปลว่า superficial peroneal (peroneus longus/brevis) ปกติ จึงไม่ใช่ common peroneal (จะเสียทั้ง dorsiflexion+eversion); tibial เสีย plantarflexion/inversion",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 21
+  },
+  "75.2/71": {
+   "stem": "foot drop แต่ยัง evert เท้าได้ เส้นประสาทใดบาดเจ็บ",
+   "options": {
+    "A": "Common peroneal",
+    "B": "Deep peroneal",
+    "C": "Superficial peroneal",
+    "D": "Tibial",
+    "E": "Saphenous"
+   },
+   "answer": "B",
+   "why": "dorsiflexion เสีย (anterior compartment) แต่ eversion (lateral compartment, superficial peroneal) ปกติ → deep peroneal; common peroneal (บาดเจ็บที่ fibular neck) จะเสียทั้ง dorsiflexion และ eversion + ชาหลังเท้า",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 21
+  },
+  "76/195": {
+   "stem": "ปวดหลังร้าวมาเหนือ symphysis pubis เกี่ยวกับ nerve ใด",
+   "options": {
+    "A": "Ilioinguinal n.",
+    "B": "Obturator n.",
+    "C": "Femoral n.",
+    "D": "Lateral femoral cutaneous n.",
+    "E": "Subcostal n."
+   },
+   "answer": "A",
+   "why": "ผิวหนังเหนือหัวหน่าว/mons pubis = L1 (iliohypogastric anterior cutaneous br. + ilioinguinal) · ในตัวเลือกมีแค่ ilioinguinal ที่เป็น L1 · obturator = medial thigh, femoral = anterior thigh, LFCN = lateral thigh, subcostal = T12 ลงมาไม่ถึงหัวหน่าว",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ คำตอบตามตำราคือ iliohypogastric ซึ่งไม่อยู่ในตัวเลือก เลือก ilioinguinal เป็นตัวใกล้สุด (บางคนอาจตอบ subcostal)",
+   "box": 21
+  },
+  "76/246": {
+   "stem": "ผ่าตัด inguinal hernia แล้วชาที่ upper scrotum/base of penis แต่ cremasteric reflex ปกติ nerve ใดบาดเจ็บ",
+   "options": {
+    "A": "Ilioinguinal n.",
+    "B": "Obturator n.",
+    "C": "Genitofemoral n.",
+    "D": "Iliohypogastric n.",
+    "E": "Lateral femoral cutaneous n."
+   },
+   "answer": "A",
+   "why": "ilioinguinal (L1) ผ่าน inguinal canal เลี้ยงผิว root of penis/anterior scrotum/upper medial thigh → เสียระหว่างผ่าตัด hernia บ่อย · cremasteric reflex อาศัย genital br. ของ genitofemoral (motor ต่อ cremaster) จึงยังปกติ · ถ้า genitofemoral เสีย reflex จะหาย · iliohypogastric เลี้ยงผิวเหนือหัวหน่าว",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 21
+  },
+  "76/31": {
+   "stem": "radial nerve injury ถามว่าเซลล์ใดสำคัญต่อการซ่อม nerve",
+   "options": {
+    "A": "Astrocyte",
+    "B": "Ependymal cell",
+    "C": "Schwann cell",
+    "D": "Microglia",
+    "E": "Oligodendrocyte"
+   },
+   "answer": "C",
+   "why": "PNS ซ่อมได้เพราะ Schwann cell สร้าง band of Büngner นำทาง axon งอกใหม่ (~1 mm/day) · ตัวเลือกอื่นเป็น glia ของ CNS",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 21
+  },
+  "77/116": {
+   "stem": "โดนกระแทกข้างเข่า กระดูก head of fibula หัก dorsiflex และ evert ไม่ได้ nerve ใดเสีย",
+   "options": {
+    "A": "Superficial peroneal n.",
+    "B": "Common peroneal n.",
+    "C": "Deep peroneal n.",
+    "D": "Sciatic n."
+   },
+   "answer": "B",
+   "why": "common peroneal พันรอบ neck of fibula → เสียทั้ง deep (dorsiflexion → foot drop) และ superficial (eversion) + ชาหลังเท้า/lateral leg · deep อย่างเดียวเสีย dorsiflex + ชาง่ามนิ้ว 1-2 · superficial อย่างเดียวเสีย eversion · sciatic จะเสีย hamstring + tibial ด้วย",
+   "source": "เฉลย77",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 21
+  },
+  "77/125": {
+   "stem": "ก้อนที่ internal acoustic meatus วินิจฉัยอะไร",
+   "options": {
+    "A": "Schwannoma"
+   },
+   "answer": "A",
+   "why": "ก้อนที่ internal acoustic meatus/cerebellopontine angle = vestibular schwannoma (CN VIII, S-100+, Antoni A/B, Verocay body) · bilateral → NF2",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 21
+  },
+  "77/126": {
+   "stem": "neuron ที่ corpus callosum เสียหาย เซลล์ใดช่วยซ่อม (myelin)",
+   "options": {
+    "A": "Schwann cell",
+    "B": "Oligodendrocyte"
+   },
+   "answer": "B",
+   "why": "corpus callosum เป็น CNS white matter → myelin จาก oligodendrocyte (1 เซลล์หุ้มหลาย axon) · Schwann cell อยู่ PNS เท่านั้น (เทียบ 76/31)",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": true,
+   "box": 21
+  },
+  "78/125": {
+   "stem": "Quadriceps อ่อนแรง เกิดจาก nerve ใด",
+   "options": {
+    "A": "Obturator",
+    "B": "Femoral",
+    "C": "Sciatic",
+    "D": "Tibial",
+    "E": "Peroneal"
+   },
+   "answer": "B",
+   "why": "Femoral n. (L2–L4) เลี้ยง quadriceps (เหยียดเข่า, knee jerk) และ iliacus/sartorius; obturator = adductor ต้นขา; sciatic/tibial/peroneal = hamstring และขาส่วนล่าง",
+   "source": "เฉลย78",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 21
+  },
+  "79/112": {
+   "stem": "ชาย 22 ปีถูกกระแทกด้านข้างเข่าขณะเตะบอล ชาหลังเท้า กระดกข้อเท้าขึ้นอ่อนแรง พบความผิดปกติใด",
+   "options": {
+    "A": "Foot drop",
+    "B": "Plantarflex ไม่ได้",
+    "C": "Abduct สะโพกไม่ได้",
+    "D": "เหยียดเข่าไม่ได้",
+    "E": "งอนิ้วเท้าไม่ได้"
+   },
+   "answer": "A",
+   "why": "Common peroneal n. พันรอบ fibular neck (เสี่ยงถูกกระแทก/ถูกกด) → deep peroneal: dorsiflexion อ่อน = foot drop/steppage gait, ชา first web space; superficial: eversion อ่อน ชาหลังเท้า; plantarflexion/งอนิ้ว = tibial; hip abduction = superior gluteal; เหยียดเข่า = femoral",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 21
+  },
+  "74.1/37": {
+   "stem": "lateral ankle sprain ควรเน้นการฟื้นฟูแบบใด",
+   "options": {
+    "A": "Flexibility",
+    "B": "Strength",
+    "C": "Mobility",
+    "D": "Range of motion"
+   },
+   "answer": "D",
+   "why": "lateral ankle sprain (ATFL บาดเจ็บบ่อยสุด จาก inversion + plantarflexion) หลังพ้นระยะ acute (PRICE) ขั้นแรกของ rehab คือฟื้น range of motion (โดยเฉพาะ dorsiflexion) จากนั้น strengthening (peroneal) แล้วจึง proprioception/neuromuscular training และ functional training; ปี 75 ออกโจทย์เดียวกันแบบชัดเจนว่าถาม 'step แรกของ rehab'",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ปี 74 จำโจทย์มาไม่ครบ ถ้าถามว่าเน้นอะไรเพื่อป้องกันเป็นซ้ำ ควรเป็น strength/proprioception แทน ROM",
+   "box": 22
+  },
+  "74.2/42": {
+   "stem": "กล้ามเนื้อใดเกาะที่ ischial tuberosity",
+   "options": {
+    "A": "Iliopsoas",
+    "B": "Gluteus medius",
+    "C": "Sartorius",
+    "D": "Hamstring"
+   },
+   "answer": "D",
+   "why": "hamstrings (semitendinosus, semimembranosus, long head biceps femoris) + adductor magnus (hamstring part) เกาะ ischial tuberosity; iliopsoas → lesser trochanter, gluteus medius → greater trochanter, sartorius → ASIS",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 22
+  },
+  "74.2/70": {
+   "stem": "นักฟุตบอลมี avulsion fracture ที่ ischial tuberosity กล้ามเนื้อใดเป็นตัวดึง",
+   "options": {
+    "A": "Sartorius",
+    "B": "Hamstring",
+    "C": "Iliopsoas",
+    "D": "Obturator internus",
+    "E": "Gluteus maximus"
+   },
+   "answer": "B",
+   "why": "hamstring origin อยู่ที่ ischial tuberosity การหดตัวแรงตอน hip flex + knee extend (เตะ/วิ่ง sprint) ในวัยรุ่นที่ apophysis ยังไม่ปิดทำให้ avulsion; sartorius → ASIS avulsion, rectus femoris → AIIS, iliopsoas → lesser trochanter",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "box": 22
+  },
+  "75.2/137": {
+   "stem": "ผู้ป่วย lateral ankle sprain ขั้นแรกของการ rehabilitation คืออะไร",
+   "options": {
+    "A": "Restore range of motion",
+    "B": "Strength training",
+    "C": "Neuromuscular control and proprioception",
+    "D": "Flexibility, stretching"
+   },
+   "answer": "A",
+   "why": "หลังระยะ acute (PRICE ลดบวม) ลำดับ rehab คือ 1) ฟื้น ROM (โดยเฉพาะ dorsiflexion) → 2) strengthening (peroneal) → 3) proprioception/neuromuscular training (ป้องกันเป็นซ้ำ) → 4) functional/sport-specific; proprioception สำคัญที่สุดในการป้องกัน chronic instability แต่ไม่ใช่ขั้นแรก",
+   "source": "วิเคราะห์",
+   "needs_image": false,
+   "options_reconstructed": false,
+   "doubt": "⚠ ถ้าโจทย์ถามว่าเน้นอะไรเพื่อป้องกันเป็นซ้ำ คำตอบจะเป็น proprioception (C)",
+   "box": 22
+  }
+ }
+}

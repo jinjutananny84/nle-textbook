@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">Pedigree: de novo vs gonadal mosaicism vs ส่งต่อ AD</text>
+<rect x="15" y="44" width="930" height="30" rx="6" fill="#6b7280" fill-opacity=".08"/>
+<rect x="32.0" y="51.0" width="16" height="16" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="56" y="64" font-size="13" fill="#1f2937">ชาย</text>
+<circle cx="123" cy="59" r="8.0" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="139" y="64" font-size="13" fill="#1f2937">หญิง</text>
+<rect x="207.0" y="51.0" width="16" height="16" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+<text x="231" y="64" font-size="13" fill="#1f2937">เป็นโรค</text>
+<rect x="326" y="51" width="16" height="16" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/><circle cx="334" cy="59" r="3.5" fill="#dc2626"/>
+<text x="350" y="64" font-size="13" fill="#1f2937">mosaic / มี mutation บางเซลล์</text>
+<rect x="15" y="86" width="300" height="320" rx="10" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+<rect x="15" y="86" width="300" height="34" rx="10" fill="#2563eb" fill-opacity=".12"/>
+<text x="165" y="109" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">A. De novo</text>
+<text x="29" y="165" font-size="13" font-weight="700" fill="#6b7280">I</text>
+<text x="29" y="255" font-size="13" font-weight="700" fill="#6b7280">II</text>
+<line x1="120" y1="160" x2="210" y2="160" stroke="#1f2937" stroke-width="2"/>
+<line x1="165" y1="160" x2="165" y2="210" stroke="#1f2937" stroke-width="2"/>
+<line x1="103.0" y1="210" x2="227.0" y2="210" stroke="#1f2937" stroke-width="2"/>
+<line x1="103.0" y1="210" x2="103.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<circle cx="103.0" cy="250" r="15.0" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<line x1="165.0" y1="210" x2="165.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<rect x="150.0" y="235.0" width="30" height="30" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+<line x1="227.0" y1="210" x2="227.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<circle cx="227.0" cy="250" r="15.0" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<rect x="105.0" y="145.0" width="30" height="30" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<circle cx="210" cy="160" r="15.0" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="165" y="310" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">พ่อแม่ปกติ</text>
+<text x="165" y="332" font-size="14" fill="#1f2937" text-anchor="middle">ลูกคนถัดไปเสี่ยง &lt;1%</text>
+<rect x="330" y="86" width="300" height="320" rx="10" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+<rect x="330" y="86" width="300" height="34" rx="10" fill="#7c3aed" fill-opacity=".12"/>
+<text x="480" y="109" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">B. Gonadal mosaicism ในพ่อ</text>
+<line x1="470" y1="160" x2="560" y2="160" stroke="#1f2937" stroke-width="2"/>
+<line x1="515" y1="160" x2="515" y2="210" stroke="#1f2937" stroke-width="2"/>
+<line x1="453.0" y1="210" x2="577.0" y2="210" stroke="#1f2937" stroke-width="2"/>
+<line x1="453.0" y1="210" x2="453.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<rect x="438.0" y="235.0" width="30" height="30" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+<line x1="515.0" y1="210" x2="515.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<circle cx="515.0" cy="250" r="15.0" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<line x1="577.0" y1="210" x2="577.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<circle cx="577.0" cy="250" r="15.0" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+<rect x="455.0" y="145.0" width="30" height="30" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<circle cx="470" cy="160" r="5" fill="#dc2626"/>
+<circle cx="560" cy="160" r="15.0" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="448" y="152" font-size="13" fill="#7c3aed" font-weight="600" text-anchor="end">sperm บางส่วน</text>
+<text x="448" y="168" font-size="13" fill="#7c3aed" font-weight="600" text-anchor="end">มี mutation</text>
+<text x="480" y="310" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">พ่อแม่ปกติ ตรวจเลือดไม่เจอ</text>
+<text x="480" y="332" font-size="14" fill="#1f2937" text-anchor="middle">แต่ลูกเป็นซ้ำได้</text>
+<text x="480" y="354" font-size="14" fill="#1f2937" text-anchor="middle">→ ตรวจ sperm ของพ่อ</text>
+<rect x="645" y="86" width="300" height="320" rx="10" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+<rect x="645" y="86" width="300" height="34" rx="10" fill="#dc2626" fill-opacity=".12"/>
+<text x="795" y="109" font-size="15" font-weight="700" fill="#1f2937" text-anchor="middle">C. ผู้ป่วยมีลูก</text>
+<line x1="750" y1="160" x2="840" y2="160" stroke="#1f2937" stroke-width="2"/>
+<line x1="795" y1="160" x2="795" y2="210" stroke="#1f2937" stroke-width="2"/>
+<line x1="702.0" y1="210" x2="888.0" y2="210" stroke="#1f2937" stroke-width="2"/>
+<line x1="702.0" y1="210" x2="702.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<rect x="687.0" y="235.0" width="30" height="30" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+<line x1="764.0" y1="210" x2="764.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<circle cx="764.0" cy="250" r="15.0" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<line x1="826.0" y1="210" x2="826.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<circle cx="826.0" cy="250" r="15.0" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+<line x1="888.0" y1="210" x2="888.0" y2="235.0" stroke="#1f2937" stroke-width="2"/>
+<rect x="873.0" y="235.0" width="30" height="30" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<rect x="735.0" y="145.0" width="30" height="30" fill="#dc2626" stroke="#1f2937" stroke-width="2"/>
+<circle cx="840" cy="160" r="15.0" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<text x="750" y="194" font-size="13" fill="#dc2626" font-weight="600" text-anchor="middle">achondroplasia</text>
+<text x="795" y="310" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">AD: ลูกเป็นโรค 50%</text>
+<text x="795" y="332" font-size="14" fill="#1f2937" text-anchor="middle">(ทุกครรภ์)</text>
+<rect x="15" y="422" width="460" height="82" rx="8" fill="#ea580c" fill-opacity=".1" stroke="#ea580c"/>
+<text x="30" y="448" font-size="14" font-weight="700" fill="#ea580c">Incomplete penetrance</text>
+<text x="30" y="470" font-size="14" fill="#1f2937">= พ่อ/แม่มี mutation ทุกเซลล์</text>
+<text x="30" y="492" font-size="14" fill="#1f2937">แต่ไม่มีอาการ</text>
+<rect x="485" y="422" width="460" height="82" rx="8" fill="#0891b2" fill-opacity=".1" stroke="#0891b2"/>
+<text x="500" y="448" font-size="14" font-weight="700" fill="#0891b2">Anticipation</text>
+<text x="500" y="470" font-size="14" fill="#1f2937">= trinucleotide repeat ยาวขึ้น</text>
+<text x="500" y="492" font-size="14" fill="#1f2937">อาการรุนแรงขึ้นในรุ่นหลัง</text>
+</svg>

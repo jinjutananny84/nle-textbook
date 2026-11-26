@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs><marker id="k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+<clipPath id="cl"><circle cx="255" cy="345" r="165"/></clipPath>
+<clipPath id="cr"><circle cx="745" cy="345" r="165"/></clipPath>
+</defs><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" fill="#1f2937" text-anchor="start" font-weight="700" >ผลึกใต้กล้อง compensated polarized light: MSU vs CPPD</text>
+<line x1="452" y1="128" x2="512" y2="68" stroke="#1f2937" stroke-width="2.5" marker-start="url(#k1)" marker-end="url(#k1)"/>
+<text x="524" y="96" font-size="14" fill="#1f2937" text-anchor="start" font-weight="700" >slow axis of compensator (γ)</text>
+<text x="524" y="114" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400" >ขนาน = วางแนวเดียวกับลูกศรนี้</text>
+<text x="255" y="162" font-size="17" fill="#1f2937" text-anchor="middle" font-weight="700" >Gout — MSU</text>
+<text x="745" y="162" font-size="17" fill="#1f2937" text-anchor="middle" font-weight="700" >Pseudogout — CPPD</text>
+<circle cx="255" cy="345" r="165" fill="#B04A7A"/>
+<g clip-path="url(#cl)">
+<circle cx="295" cy="395" r="38" fill="#ffffff" fill-opacity=".2" stroke="#ffffff" stroke-opacity=".55" stroke-width="1.5"/>
+<ellipse cx="281" cy="387" rx="9" ry="7" fill="#1f2937" fill-opacity=".35"/>
+<ellipse cx="295" cy="401" rx="9" ry="7" fill="#1f2937" fill-opacity=".35"/>
+<ellipse cx="309" cy="389" rx="8" ry="7" fill="#1f2937" fill-opacity=".35"/>
+<path d="M143.2,306.8 L176.6,276.6 L206.8,243.2 L173.4,273.4 Z" fill="#F2C94C" fill-opacity="1" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M204.8,281.2 L236.5,256.7 L265.2,228.8 L233.5,253.3 Z" fill="#F2C94C" fill-opacity="1" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M284.9,254.9 L313.4,286.6 L345.1,315.1 L316.6,283.4 Z" fill="#4AA3DF" fill-opacity="1" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M138.2,352.5 L163.6,376.7 L191.8,397.5 L166.4,373.3 Z" fill="#4AA3DF" fill-opacity="1" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M193.2,370.3 L226.7,336.5 L256.8,299.7 L223.3,333.5 Z" fill="#F2C94C" fill-opacity="1" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M319.0,378.4 L346.5,356.7 L371.0,331.6 L343.5,353.3 Z" fill="#F2C94C" fill-opacity="1" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M190.4,416.7 L213.3,446.5 L239.6,473.3 L216.7,443.5 Z" fill="#4AA3DF" fill-opacity="1" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+<path d="M275.1,420.9 L298.6,400.6 L318.9,377.1 L295.4,397.4 Z" fill="#F2C94C" fill-opacity="1" stroke="#ffffff" stroke-opacity=".7" stroke-width="1"/>
+</g>
+<circle cx="255" cy="345" r="165" fill="none" stroke="#1f2937" stroke-width="7"/>
+<line x1="315" y1="429" x2="335" y2="517" stroke="#6b7280" stroke-width="1"/>
+<text x="325" y="531" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400" >neutrophil กลืนผลึก</text>
+<circle cx="745" cy="345" r="165" fill="#B04A7A"/>
+<g clip-path="url(#cr)">
+<path d="M650.5,291.7 L664.3,277.9 L679.5,278.3 L665.7,292.1 Z" fill="#4AA3DF" fill-opacity="0.75" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M729.3,242.3 L741.3,254.2 L740.7,267.7 L728.7,255.8 Z" fill="#F2C94C" fill-opacity="0.7" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M788.8,300.4 L805.0,287.3 L821.2,289.6 L805.0,302.7 Z" fill="#4AA3DF" fill-opacity="0.75" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M639.2,353.4 L651.0,363.6 L650.8,376.6 L639.0,366.4 Z" fill="#F2C94C" fill-opacity="0.7" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M711.3,343.2 L723.6,328.0 L738.7,326.8 L726.4,342.0 Z" fill="#4AA3DF" fill-opacity="0.75" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M809.3,362.3 L821.3,374.2 L820.7,387.7 L808.7,375.8 Z" fill="#F2C94C" fill-opacity="0.7" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M680.0,425.9 L696.5,418.2 L710.0,424.1 L693.5,431.8 Z" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M763.0,449.9 L774.0,438.9 L787.0,440.1 L776.0,451.1 Z" fill="#4AA3DF" fill-opacity="0.75" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+<path d="M837.8,344.5 L841.5,330.6 L852.2,325.5 L848.5,339.4 Z" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-opacity=".6" stroke-width="1"/>
+</g>
+<circle cx="745" cy="345" r="165" fill="none" stroke="#1f2937" stroke-width="7"/>
+<line x1="695" y1="433" x2="675" y2="517" stroke="#6b7280" stroke-width="1"/>
+<text x="685" y="531" font-size="13" fill="#6b7280" text-anchor="end" font-weight="400" >บางอันแทบไม่มีสี (หักเหแสงอ่อน)</text>
+<text x="255" y="555" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="400" >needle-shaped · strongly <tspan font-weight='700' fill='#dc2626'>NEGATIVE</tspan> birefringent</text>
+<text x="255" y="574" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="700" >yellow when parallel</text>
+<text x="745" y="555" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="400" >rhomboid · weakly <tspan font-weight='700' fill='#2563eb'>POSITIVE</tspan> birefringent</text>
+<text x="745" y="574" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="700" >blue when parallel</text>
+<rect x="20" y="596" width="790" height="78" rx="10" fill="#2563eb" fill-opacity=".08" stroke="#2563eb" stroke-width="1.5"/>
+<text x="415" y="627" font-size="17" fill="#1f2937" text-anchor="middle" font-weight="700" >ขนานแกน: Urate → <tspan fill='#F2C94C' stroke='#1f2937' stroke-width='.9'>Yellow</tspan> · CPPD → <tspan fill='#2563eb'>Blue</tspan></text>
+<text x="415" y="656" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="400" >Hydroxyapatite: ไม่หักเหแสง ย้อม alizarin red · Ca oxalate: bipyramidal (CKD)</text>
+<path d="M866,582 L866,614 Q866,628 882,628 L918,628 Q934,628 934,614 L934,582" fill="#E8DCC0" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M864,660 L864,640 Q864,636 870,636 L930,636 Q936,636 936,640 L936,660" fill="#E8DCC0" stroke="#1f2937" stroke-width="1.8"/>
+<path d="M862,635 L862,625 L882,635 Z M938,635 L938,625 L918,635 Z" fill="#CFE3EA" stroke="#1f2937" stroke-width="1.2"/>
+<path d="M864,632 L876,634 M936,632 L924,634" stroke="#1f2937" stroke-width="1.8"/>
+<text x="900" y="574" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >chondrocalcinosis</text>
+</svg>

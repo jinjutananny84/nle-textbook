@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+  <defs>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" markerUnits="userSpaceOnUse"><circle cx="5" cy="5" r="5" fill="#1f2937"/></marker>
+    <marker id="ay" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ca8a04"/></marker>
+    <marker id="mp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">ไหล่ขวา: rotator cuff และช่องผ่านของเส้นประสาท</text>
+  <text x="20" y="56" font-size="15" font-weight="700" fill="#6b7280">มุมมองด้านหลัง (posterior)</text>
+  <text x="660" y="56" font-size="15" font-weight="700" fill="#6b7280">มุมมองด้านหน้า (anterior)</text>
+  <line x1="648" y1="44" x2="648" y2="625" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- ================= POSTERIOR VIEW ================= -->
+  <!-- scapula -->
+  <path d="M120,140 L244,150 Q255,168 266,150 L300,150 Q318,158 330,175 L332,238 Q300,300 165,452 Q140,300 120,140 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+  <!-- humerus -->
+  <path d="M352,200 Q350,172 378,170 Q400,168 414,182 Q426,196 418,226 Q412,250 412,280 L414,600 L392,600 L392,280 Q390,250 376,236 Q356,228 352,200 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+  <!-- humeral head + anatomical neck line -->
+  <path d="M368,174 Q350,200 368,232" fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- supraspinatus -->
+  <path d="M124,146 L244,152 Q255,170 266,152 L300,152 Q316,158 322,170 L306,178 L130,200 Z" fill="#ea580c" fill-opacity=".3" stroke="#ea580c" stroke-width="1.5"/>
+  <path d="M306,168 Q360,160 404,184" fill="none" stroke="#ea580c" stroke-width="10" stroke-opacity=".55" stroke-linecap="round"/>
+  <!-- infraspinatus -->
+  <path d="M132,218 L308,188 L326,200 L326,240 Q300,268 268,286 L150,322 Z" fill="#16a34a" fill-opacity=".25" stroke="#16a34a" stroke-width="1.5"/>
+  <path d="M318,214 Q370,206 412,204" fill="none" stroke="#16a34a" stroke-width="10" stroke-opacity=".55" stroke-linecap="round"/>
+  <!-- teres major -->
+  <path d="M168,446 L200,396 L388,312 L392,346 L228,446 Z" fill="#6b7280" fill-opacity=".3" stroke="#6b7280" stroke-width="1.5"/>
+  <!-- spine of scapula + acromion -->
+  <path d="M124,198 L300,168 L398,140 Q410,146 404,158 L316,188 L128,214 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+  <!-- long head triceps -->
+  <path d="M330,240 L356,240 L360,600 L330,600 Z" fill="#db2777" fill-opacity=".18" stroke="#db2777" stroke-width="1.5"/>
+  <!-- teres minor -->
+  <path d="M268,290 L326,250 L412,222 L414,238 L332,272 L282,304 Z" fill="#0891b2" fill-opacity=".3" stroke="#0891b2" stroke-width="1.5"/>
+  <!-- deltoid ghost -->
+  <path d="M398,140 Q450,150 448,220 Q446,330 432,420 Q420,350 416,250" fill="#6b7280" fill-opacity=".07" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- suprascapular a. (over ligament) + n. (under) -->
+  <path d="M232,72 Q240,120 250,140 Q262,132 274,142 Q290,152 300,160" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <line x1="243" y1="149" x2="267" y2="149" stroke="#1f2937" stroke-width="3.5"/>
+  <path d="M262,72 Q258,120 255,158 Q260,168 290,172 Q318,176 322,194 Q318,214 292,232" fill="none" stroke="#eab308" stroke-width="4" marker-end="url(#ay)"/>
+
+  <!-- quadrangular space: axillary n. + PCHA -->
+  <ellipse cx="374" cy="284" rx="15" ry="13" fill="#ffffff" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="3 2"/>
+  <path d="M374,288 Q396,300 424,272 Q440,258 444,240" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <path d="M370,282 Q392,290 422,262 Q436,248 440,226" fill="none" stroke="#eab308" stroke-width="4" marker-end="url(#ay)"/>
+  <!-- triangular space: circumflex scapular a. -->
+  <ellipse cx="312" cy="326" rx="12" ry="11" fill="#ffffff" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="3 2"/>
+  <path d="M314,326 Q280,318 250,300" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#ar)"/>
+  <!-- triangular interval: radial n. + profunda -->
+  <ellipse cx="375" cy="376" rx="14" ry="13" fill="#ffffff" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="3 2"/>
+  <path d="M378,374 Q392,410 418,452" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+  <path d="M372,374 Q384,414 410,462" fill="none" stroke="#eab308" stroke-width="4" marker-end="url(#ay)"/>
+
+  <!-- muscle labels -->
+  <g font-size="13" font-weight="700">
+    <text x="140" y="184" fill="#ea580c">Supraspinatus</text>
+    <text x="175" y="275" fill="#16a34a">Infraspinatus</text>
+    <text x="0" y="0" fill="#0891b2" transform="translate(300,288) rotate(-28)">Teres minor</text>
+    <text x="0" y="0" fill="#1f2937" transform="translate(236,422) rotate(-25)">Teres major</text>
+    <text x="0" y="0" fill="#db2777" transform="translate(349,590) rotate(-90)">Long head triceps</text>
+  </g>
+
+  <!-- other labels with leaders -->
+  <g font-size="13" fill="#1f2937">
+    <text x="22" y="112">Suprascapular notch</text>
+    <text x="22" y="128">(+ ligament ขวาง)</text>
+    <text x="282" y="94" fill="#dc2626">artery — over</text>
+    <text x="282" y="114" fill="#a16207">suprascapular n. — under</text>
+    <text x="40" y="244">Spinoglenoid notch</text>
+    <text x="462" y="150">Anatomical neck</text>
+    <text x="462" y="196" font-weight="700">Greater tubercle</text>
+    <text x="462" y="252">Surgical neck</text>
+    <text x="462" y="286" font-weight="700">Quadrangular space:</text>
+    <text x="462" y="302">axillary n. + posterior</text>
+    <text x="462" y="318">circumflex humeral a.</text>
+    <text x="462" y="352" fill="#6b7280">Deltoid (เงาโปร่ง)</text>
+    <text x="462" y="384" font-weight="700">Triangular interval:</text>
+    <text x="462" y="400">radial n. + profunda brachii a.</text>
+    <text x="150" y="500" font-weight="700">Triangular space:</text>
+    <text x="150" y="516">circumflex scapular a.</text>
+  </g>
+  <g stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)">
+    <path d="M150,116 L250,156"/>
+    <path d="M168,240 L320,196"/>
+    <path d="M458,146 L362,190"/>
+    <path d="M458,192 L412,198"/>
+    <path d="M458,248 L414,250"/>
+    <path d="M458,282 L388,284"/>
+    <path d="M458,348 L440,340"/>
+    <path d="M458,380 L389,378"/>
+    <path d="M250,488 L310,338"/>
+  </g>
+
+  <!-- ================= ANTERIOR VIEW ================= -->
+  <!-- scapula costal surface -->
+  <path d="M760,150 L930,140 Q955,300 900,460 Q840,330 752,240 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+  <!-- coracoid + acromion -->
+  <path d="M770,150 Q760,120 740,118 Q728,124 736,134 Q752,138 756,160 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+  <path d="M744,150 L700,140 Q688,146 696,156 L752,170 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+  <!-- humerus -->
+  <path d="M752,206 Q752,176 726,172 Q700,170 688,186 Q676,204 684,232 Q690,256 690,286 L688,560 L712,560 L712,286 Q714,256 730,240 Q752,232 752,206 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+  <!-- lesser tubercle -->
+  <ellipse cx="722" cy="228" rx="8" ry="10" fill="#E8DCC0" stroke="#1f2937" stroke-width="1.5"/>
+  <!-- subscapularis -->
+  <path d="M772,170 L920,156 Q940,290 898,440 Q840,330 770,232 Z" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.5"/>
+  <path d="M790,206 Q760,214 728,226" fill="none" stroke="#7c3aed" stroke-width="12" stroke-opacity=".5" stroke-linecap="round"/>
+  <text x="855" y="292" font-size="13" font-weight="700" fill="#7c3aed" text-anchor="middle">Subscapularis</text>
+  <!-- medial rotation arrow -->
+  <path d="M666,318 Q698,342 730,318" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#mp)"/>
+  <g font-size="13" fill="#1f2937">
+    <text x="662" y="98" >Coracoid</text>
+    <text x="742" y="98" font-weight="700">Lesser tubercle</text>
+    <text x="740" y="398" font-weight="700" fill="#7c3aed">Subscapularis —</text>
+    <text x="740" y="414" font-weight="700" fill="#7c3aed">medial rotation</text>
+    <text x="722" y="352" fill="#7c3aed" font-size="13">หมุนเข้า</text>
+  </g>
+  <g stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)">
+    <path d="M700,104 L742,124"/>
+    <path d="M790,104 L724,224"/>
+  </g>
+
+  <!-- SITS box -->
+  <rect x="660" y="572" width="325" height="56" rx="8" fill="#2563eb" fill-opacity=".1" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="822" y="595" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">SITS: S-I-T → greater tubercle</text>
+  <text x="822" y="616" font-size="14" font-weight="700" fill="#7c3aed" text-anchor="middle">Subscapularis → lesser tubercle</text>
+</svg>

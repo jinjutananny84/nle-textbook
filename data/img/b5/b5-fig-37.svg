@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" markerUnits="userSpaceOnUse"><circle cx="5" cy="5" r="5" fill="#1f2937"/></marker>
+<marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+<clipPath id="headc"><circle cx="555" cy="250" r="82"/></clipPath>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">หัว femur: blood supply, fracture, AVN และ SCFE</text>
+<line x1="438" y1="44" x2="438" y2="568" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 4"/>
+<line x1="688" y1="44" x2="688" y2="568" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="20" y="54" font-size="14" font-weight="700" fill="#1f2937">1 · ปลายบน femur ขวา (มองด้านหลัง)</text>
+<text x="563" y="54" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2 · AVN หัว femur</text>
+<text x="840" y="54" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">3 · SCFE: Klein line</text>
+
+<path d="M150,132 L268,160 Q284,112 316,118 Q338,128 334,170 L330,260 L322,440 L262,440 L260,340 Q248,344 232,338 Q220,326 232,314 L246,304 Q228,256 160,212 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<circle cx="120" cy="172" r="46" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<path d="M140,134 Q150,172 144,208" fill="none" stroke="#E8DCC0" stroke-width="6"/>
+<circle cx="80" cy="180" r="5" fill="#6b7280"/>
+<path d="M314,124 Q290,220 240,314" fill="none" stroke="#6b7280" stroke-width="1.2" stroke-opacity=".7"/>
+<text x="318" y="108" font-size="13" fill="#6b7280" text-anchor="middle">GT</text>
+<text x="214" y="352" font-size="13" fill="#6b7280" text-anchor="end">LT</text>
+<path d="M60,128 Q110,94 186,118 L266,150 Q284,204 262,268 L200,252 Q140,240 82,228 Q48,182 60,128 Z" fill="none" stroke="#6b7280" stroke-width="2" stroke-dasharray="7 4"/>
+<path d="M410,300 Q350,272 300,258" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-opacity=".35" stroke-dasharray="6 4"/>
+<path d="M20,300 Q120,304 180,316 Q230,320 246,296 Q260,270 258,246" fill="none" stroke="#dc2626" stroke-width="4"/>
+<g stroke="#dc2626" stroke-width="2" fill="none"><path d="M256,250 Q220,210 168,170"/><path d="M256,256 Q214,226 164,196"/><path d="M252,244 Q226,180 176,146"/><path d="M252,260 Q210,240 166,214"/></g>
+<path d="M20,192 Q50,186 76,182" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+<path d="M162,128 L168,150 L160,170 L172,192 L166,214" fill="none" stroke="#dc2626" stroke-width="3.5"/>
+<path d="M330,162 L310,196 L296,206 L276,246 L250,300" fill="none" stroke="#dc2626" stroke-width="3.5"/>
+<g font-size="13" fill="#1f2937">
+<text x="20" y="80" fill="#6b7280">capsule (เส้นประ)</text>
+<text x="190" y="72" font-weight="700" fill="#dc2626">Retinacular arteries</text>
+<text x="190" y="88">(main supply — วิ่งขึ้นตามคอ)</text>
+<text x="20" y="236" fill="#dc2626">A. of lig. teres</text>
+<text x="20" y="252" fill="#6b7280">(minor ในผู้ใหญ่)</text>
+<text x="20" y="284" font-weight="700" fill="#dc2626">Medial circumflex femoral a.</text>
+<text x="346" y="320" fill="#dc2626" fill-opacity=".75">Lateral</text>
+<text x="346" y="336" fill="#dc2626" fill-opacity=".75">circumflex</text>
+<text x="346" y="352" fill="#dc2626" fill-opacity=".75">femoral a.</text>
+<text x="346" y="368" fill="#6b7280">(ด้านหน้า)</text>
+<text x="20" y="476" font-weight="700" fill="#dc2626">Intracapsular (subcapital)</text>
+<text x="20" y="492">→ AVN, nonunion</text>
+<text x="20" y="528" font-weight="700" fill="#dc2626">Extracapsular (intertrochanteric)</text>
+<text x="20" y="544">→ เลือดยังดี</text>
+</g>
+<g stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)">
+<path d="M60,84 L66,120"/>
+<path d="M240,94 L212,190"/>
+<path d="M40,224 L46,190"/>
+<path d="M120,290 L120,302"/>
+<path d="M194,470 L164,196"/>
+<path d="M262,520 L290,212"/>
+</g>
+
+<circle cx="555" cy="250" r="82" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<g clip-path="url(#headc)">
+<path d="M500,175 Q555,150 610,175 L572,270 L540,270 Z" fill="#eab308" fill-opacity=".35" stroke="#ca8a04" stroke-width="1.5"/>
+<g stroke="#6b7280" stroke-opacity=".35" stroke-width="1.5"><path d="M480,300 L630,220 M490,330 L640,250 M500,350 L640,290 M470,260 L600,200"/></g>
+</g>
+<path d="M473,250 A82,82 0 0 1 637,250" fill="none" stroke="#0891b2" stroke-width="6" stroke-opacity=".7"/>
+<g font-size="13" fill="#1f2937">
+<text x="452" y="140" fill="#0891b2">กระดูกอ่อนผิวข้อ (ยังอยู่)</text>
+<text x="452" y="372" font-weight="700" fill="#a16207">Wedge-shaped</text>
+<text x="452" y="388" font-weight="700" fill="#a16207">subchondral infarct</text>
+</g>
+<path d="M500,360 L548,240" stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)"/>
+<path d="M520,146 L530,172" stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)"/>
+<circle cx="610" cy="452" r="44" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+<g fill="#E8DCC0" stroke="#6b7280" stroke-width="1.2"><path d="M578,430 Q610,420 640,436" fill="none"/><path d="M574,470 Q610,476 646,462" fill="none"/></g>
+<g fill="#ffffff" stroke="#1f2937" stroke-width="1.2"><ellipse cx="590" cy="446" rx="5" ry="3"/><ellipse cx="612" cy="440" rx="5" ry="3"/><ellipse cx="630" cy="452" rx="5" ry="3"/><ellipse cx="600" cy="460" rx="5" ry="3"/><ellipse cx="624" cy="468" rx="5" ry="3"/></g>
+<path d="M584,330 L600,408" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="610" y="512" font-size="13" font-weight="700" fill="#1f2937" text-anchor="middle">empty lacunae</text>
+<text x="452" y="430" font-size="13" fill="#1f2937">→ collapse</text>
+<text x="452" y="446" font-size="13" fill="#1f2937">→ secondary OA</text>
+
+<text x="700" y="82" font-size="14" font-weight="700" fill="#16a34a">ปกติ</text>
+<rect x="700" y="92" width="284" height="200" rx="8" fill="#1f2937" fill-opacity=".06" stroke="#6b7280"/>
+<path d="M712,126 Q760,104 812,132" fill="none" stroke="#6b7280" stroke-width="3"/>
+<path d="M790,142 Q840,152 880,162 Q904,166 904,190 L896,284 L856,284 L852,240 Q824,210 800,198 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<path d="M790,142 Q762,104 750,150 Q746,180 800,198 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<line x1="790" y1="142" x2="800" y2="198" stroke="#1f2937" stroke-width="1.5" stroke-dasharray="3 2"/>
+<line x1="890" y1="164" x2="730" y2="128" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="7 4"/>
+<text x="930" y="154" font-size="13" font-weight="700" fill="#16a34a" text-anchor="middle">Klein line</text>
+<text x="700" y="322" font-size="14" font-weight="700" fill="#dc2626">SCFE</text>
+<rect x="700" y="332" width="284" height="200" rx="8" fill="#1f2937" fill-opacity=".06" stroke="#6b7280"/>
+<path d="M712,366 Q760,344 812,372" fill="none" stroke="#6b7280" stroke-width="3"/>
+<path d="M790,382 Q840,392 880,402 Q904,406 904,430 L896,524 L856,524 L852,480 Q824,450 800,438 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<path d="M782,414 Q754,376 742,422 Q738,452 792,470 Z" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+<line x1="790" y1="382" x2="800" y2="438" stroke="#1f2937" stroke-width="1.5" stroke-dasharray="3 2"/>
+<line x1="890" y1="404" x2="730" y2="368" stroke="#16a34a" stroke-width="2.5" stroke-dasharray="7 4"/>
+<text x="930" y="394" font-size="13" font-weight="700" fill="#16a34a" text-anchor="middle">Klein line</text>
+<g font-size="13" fill="#1f2937">
+<text x="712" y="270" fill="#16a34a">เส้นตัดผ่าน epiphysis</text>
+<text x="712" y="508" font-weight="700" fill="#dc2626">Klein line ไม่ตัด epiphysis</text>
+<text x="712" y="524">(ไอศกรีมเลื่อนจากโคน)</text>
+<text x="712" y="550" fill="#6b7280">epiphysis เลื่อนลง-หลัง</text>
+</g>
+</svg>

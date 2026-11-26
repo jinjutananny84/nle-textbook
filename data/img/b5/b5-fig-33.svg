@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+  <defs>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" markerUnits="userSpaceOnUse"><circle cx="5" cy="5" r="5" fill="#1f2937"/></marker>
+    <marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">C1–C2 fractures และ congenital torticollis</text>
+  <line x1="335" y1="44" x2="335" y2="508" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 4"/>
+  <line x1="665" y1="44" x2="665" y2="508" stroke="#6b7280" stroke-width="1" stroke-dasharray="3 4"/>
+  <text x="172" y="60" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">1 · Atlas (C1) มองจากด้านบน</text>
+  <text x="500" y="60" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">2 · Axis (C2) มองด้านข้าง</text>
+  <text x="828" y="60" font-size="14" font-weight="700" fill="#1f2937" text-anchor="middle">3 · Congenital torticollis</text>
+
+  <!-- ===== PANEL 1: atlas ===== -->
+  <text x="172" y="88" font-size="13" fill="#6b7280" text-anchor="middle">anterior</text>
+  <text x="172" y="376" font-size="13" fill="#6b7280" text-anchor="middle">posterior</text>
+  <path fill-rule="evenodd" fill="#E8DCC0" stroke="#6b7280" stroke-width="2"
+        d="M172,100 Q262,100 290,180 Q306,240 280,300 Q240,360 172,360 Q104,360 64,300 Q38,240 54,180 Q82,100 172,100 Z
+           M172,124 Q232,124 244,176 Q258,214 246,272 Q226,330 172,334 Q118,330 98,272 Q86,214 100,176 Q112,124 172,124 Z"/>
+  <!-- lateral masses thickening -->
+  <path d="M60,190 Q90,190 100,210 L98,262 Q88,282 62,286 Q48,240 60,190 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="1.5"/>
+  <path d="M284,190 Q254,190 244,210 L246,262 Q256,282 282,286 Q296,240 284,190 Z" fill="#E8DCC0" stroke="#6b7280" stroke-width="1.5"/>
+  <!-- dens -->
+  <circle cx="172" cy="152" r="24" fill="#ea580c" fill-opacity=".35" stroke="#ea580c" stroke-width="2"/>
+  <!-- transverse ligament -->
+  <path d="M98,214 Q172,212 246,214" fill="none" stroke="#7c3aed" stroke-width="8" stroke-opacity=".8"/>
+  <!-- spinal cord -->
+  <circle cx="172" cy="272" r="42" fill="#eab308" fill-opacity=".5" stroke="#ca8a04" stroke-width="2"/>
+  <!-- fracture lines -->
+  <g stroke="#dc2626" stroke-width="3" fill="none">
+    <path d="M128,104 L136,114 L128,120 L134,128"/>
+    <path d="M216,104 L208,114 L216,120 L210,128"/>
+    <path d="M130,332 L138,342 L130,348 L136,358"/>
+    <path d="M214,332 L206,342 L214,348 L208,358"/>
+  </g>
+  <line x1="46" y1="238" x2="16" y2="238" stroke="#dc2626" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="298" y1="238" x2="328" y2="238" stroke="#dc2626" stroke-width="3" marker-end="url(#ar)"/>
+  <g font-size="13" fill="#1f2937">
+    <text x="210" y="160" font-weight="700" fill="#ea580c">Dens (C2)</text>
+    <text x="110" y="200" font-weight="700" fill="#7c3aed">Transverse lig.</text>
+    <text x="172" y="275" font-weight="700" text-anchor="middle">Spinal cord</text>
+  </g>
+  <text x="172" y="404" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">Jefferson fracture</text>
+  <text x="172" y="422" font-size="13" fill="#dc2626" text-anchor="middle">ชิ้นแตกออกนอก (burst, axial load)</text>
+  <text x="172" y="446" font-size="13" fill="#6b7280" text-anchor="middle">แตกหลายจุดบนวงแหวน</text>
+
+  <!-- ===== PANEL 2: axis lateral ===== -->
+  <text x="352" y="88" font-size="13" fill="#6b7280">anterior</text>
+  <text x="648" y="88" font-size="13" fill="#6b7280" text-anchor="end">posterior</text>
+  <path d="M446,360 L446,272 Q446,262 456,262 L458,262 L458,168 Q458,140 478,140 Q498,140 498,168 L498,262 L512,262
+           Q522,262 528,272 L560,280 Q590,286 612,306 L640,336 Q646,348 634,350 L600,336 Q580,326 560,324 L536,320 L528,350 Q526,360 516,360 Z"
+        fill="#E8DCC0" stroke="#6b7280" stroke-width="2"/>
+  <text x="484" y="320" font-size="13" fill="#6b7280" text-anchor="middle">body</text>
+  <text x="604" y="372" font-size="13" fill="#6b7280" text-anchor="middle">spinous</text>
+  <!-- type lines -->
+  <g stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" fill="none">
+    <path d="M462,160 L494,150"/>
+    <path d="M452,258 L506,258"/>
+    <path d="M446,290 L486,282 L528,290"/>
+  </g>
+  <!-- hangman: pars -->
+  <path d="M538,276 L546,292 L540,300 L548,322" fill="none" stroke="#dc2626" stroke-width="4"/>
+  <g font-size="13" fill="#1f2937">
+    <text x="508" y="150" font-weight="700" fill="#dc2626">Type I <tspan font-weight="400" fill="#1f2937">(ปลาย)</tspan></text>
+    <text x="514" y="216" font-weight="700" fill="#dc2626">Type II <tspan font-weight="400" fill="#1f2937">(ฐาน —</tspan></text>
+    <text x="514" y="232">บ่อยสุด, nonunion)</text>
+    <text x="352" y="296" font-weight="700" fill="#dc2626">Type III</text>
+    <text x="352" y="312">(ลงไปใน</text>
+    <text x="352" y="328">body)</text>
+  </g>
+  <g stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)">
+    <path d="M510,226 L502,256"/>
+    <path d="M412,292 L448,288"/>
+  </g>
+  <text x="510" y="404" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">Hangman fracture</text>
+  <text x="510" y="422" font-size="13" fill="#1f2937" text-anchor="middle">(bilateral pars, hyperextension)</text>
+  <path d="M530,390 L542,326" stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)"/>
+
+  <!-- ===== PANEL 3: torticollis ===== -->
+  <!-- shoulders/chest -->
+  <path d="M700,400 Q706,340 760,330 L896,330 Q950,340 956,400 Z" fill="#6b7280" fill-opacity=".12" stroke="#6b7280" stroke-width="2"/>
+  <path d="M762,336 Q796,346 818,346 M838,346 Q860,346 894,336" fill="none" stroke="#6b7280" stroke-width="2"/>
+  <rect x="820" y="340" width="16" height="50" rx="4" fill="#6b7280" fill-opacity=".2" stroke="#6b7280" stroke-width="1.5"/>
+  <!-- neck -->
+  <path d="M792,330 L790,262 M846,330 L844,262" fill="none" stroke="#6b7280" stroke-width="2"/>
+  <!-- head tilted to child's right (viewer's left), face turned to child's left (viewer's right) -->
+  <g transform="rotate(-18 820 270)">
+    <ellipse cx="820" cy="190" rx="58" ry="66" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <ellipse cx="820" cy="190" rx="58" ry="66" fill="#6b7280" fill-opacity=".08"/>
+    <ellipse cx="764" cy="196" rx="8" ry="14" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+    <circle cx="820" cy="178" r="4" fill="#6b7280"/>
+    <circle cx="852" cy="178" r="4" fill="#6b7280"/>
+    <path d="M846,196 L852,212 L842,212" fill="none" stroke="#6b7280" stroke-width="2"/>
+    <path d="M832,228 Q844,234 856,226" fill="none" stroke="#6b7280" stroke-width="2"/>
+  </g>
+  <!-- chin direction arrow -->
+  <path d="M856,244 L906,254" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+  <text x="910" y="246" font-size="13" fill="#1f2937">คางชี้ซ้าย</text>
+  <!-- right SCM (child's right = viewer's left) short thick -->
+  <path d="M818,346 Q800,300 774,236" fill="none" stroke="#dc2626" stroke-width="14" stroke-opacity=".75" stroke-linecap="round"/>
+  <path d="M800,340 Q790,300 772,240" fill="none" stroke="#dc2626" stroke-width="6" stroke-opacity=".6" stroke-linecap="round"/>
+  <!-- left SCM normal -->
+  <path d="M838,346 Q856,300 852,236" fill="none" stroke="#6b7280" stroke-width="6" stroke-opacity=".5" stroke-linecap="round"/>
+  <text x="690" y="96" font-size="13" fill="#6b7280">ขวาของเด็ก</text>
+  <text x="972" y="96" font-size="13" fill="#6b7280" text-anchor="end">ซ้ายของเด็ก</text>
+  <text x="828" y="420" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">Right SCM สั้น</text>
+  <text x="828" y="438" font-size="13" fill="#1f2937" text-anchor="middle">→ เอียงขวา + คางชี้ซ้าย</text>
+  <path d="M760,410 L784,300" stroke="#1f2937" stroke-width="1" fill="none" marker-end="url(#dot)"/>
+  <text x="828" y="470" font-size="13" fill="#6b7280" text-anchor="middle">ตรวจสะโพก (DDH) ด้วย</text>
+</svg>

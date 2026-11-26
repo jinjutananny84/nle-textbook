@@ -320,6 +320,51 @@
    "allopurinol|abacavir|carbamazepine|erlotinib|gefitinib|cetuximab",
    "Others",
    "ยาที่ก่อผื่น / HLA"
+  ],
+  [
+   "abatacept|anakinra|canakinumab|rituximab|tocilizumab|sarilumab|tofacitinib|baricitinib|upadacitinib|leflunomide|sulfasalazine",
+   "Others",
+   "Immunomodulator (DMARD)"
+  ],
+  [
+   "colchicine|febuxostat|probenecid|lesinurad|benzbromarone|pegloticase|rasburicase",
+   "Others",
+   "Gout / urate-lowering"
+  ],
+  [
+   "paracetamol|acetaminophen|ketorolac|mefenamic|naproxen|piroxicam",
+   "Others",
+   "NSAID / COX-2"
+  ],
+  [
+   "baclofen|tizanidine|cyclobenzaprine|methocarbamol|orphenadrine|chlorzoxazone",
+   "Neuro / Psych",
+   "Muscle relaxant / spasmolytic"
+  ],
+  [
+   "edrophonium|physostigmine|pyridostigmine",
+   "Autonomic / eye",
+   "Cholinergic · antimuscarinic · adrenergic · glaucoma"
+  ],
+  [
+   "antitoxin|ivig|plasma exchange",
+   "Others",
+   "Immunoglobulin / antitoxin"
+  ],
+  [
+   "asfotase|burosumab|vosoritide|estrogen",
+   "Endocrine",
+   "Bone / calcium"
+  ],
+  [
+   "glucocorticoid",
+   "Endocrine",
+   "Adrenal / corticosteroid"
+  ],
+  [
+   "imatinib|thalidomide|lenalidomide",
+   "Others",
+   "Chemotherapy"
   ]
  ],
  "bug": [
@@ -522,6 +567,16 @@
    "scarlet fever|syphilis",
    "Clinical syndrome",
    "Syndrome (ไม่ใช่ชื่อเชื้อ)"
+  ],
+  [
+   "Brucella|Eikenella|Kingella",
+   "Bacteria",
+   "Gram − rods"
+  ],
+  [
+   "Cutibacterium|Propionibacterium",
+   "Bacteria",
+   "Gram + rods"
   ]
  ]
 }

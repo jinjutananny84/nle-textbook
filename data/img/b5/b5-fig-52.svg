@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs><marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker><marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#ea580c"/></marker><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker><marker id="tp" viewBox="0 0 4 16" refX="2" refY="8" markerWidth="4" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><rect width="4" height="16" fill="#7c3aed"/></marker><pattern id="trab" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#E8DCC0"/><path d="M0,8 Q8,3 16,8 M8,0 Q12,8 8,16" stroke="#6b7280" stroke-opacity=".35" stroke-width=".8" fill="none"/></pattern></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20.0" y="28.0" font-size="18" fill="#1f2937" text-anchor="start" font-weight="700" >กลไก multiple myeloma และ CRAB</text>
+<rect x="340" y="150" width="320" height="232" rx="18" fill="url(#trab)" stroke="#1f2937" stroke-width="2"/>
+<rect x="356" y="166" width="288" height="200" rx="12" fill="#F3E3A0"/>
+<text x="500.0" y="190.0" font-size="15" fill="#7c3aed" text-anchor="middle" font-weight="700" >Clonal plasma cells ≥10%</text>
+<text x="500.0" y="358.0" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400" >bone marrow</text>
+<g transform="translate(400,230) rotate(10)"><ellipse cx="0" cy="0" rx="26" ry="18" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.8"/><ellipse cx="-2" cy="0" rx="9" ry="11" fill="#ffffff" fill-opacity=".75"/><circle cx="-12" cy="0" r="10" fill="#7c3aed" fill-opacity=".75"/><circle cx="-15" cy="-4" r="1.8" fill="#ffffff"/><circle cx="-10" cy="4" r="1.8" fill="#ffffff"/><circle cx="-16" cy="5" r="1.6" fill="#ffffff"/><circle cx="-9" cy="-5" r="1.6" fill="#ffffff"/></g>
+<g transform="translate(470,222) rotate(-15)"><ellipse cx="0" cy="0" rx="26" ry="18" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.8"/><ellipse cx="-2" cy="0" rx="9" ry="11" fill="#ffffff" fill-opacity=".75"/><circle cx="-12" cy="0" r="10" fill="#7c3aed" fill-opacity=".75"/><circle cx="-15" cy="-4" r="1.8" fill="#ffffff"/><circle cx="-10" cy="4" r="1.8" fill="#ffffff"/><circle cx="-16" cy="5" r="1.6" fill="#ffffff"/><circle cx="-9" cy="-5" r="1.6" fill="#ffffff"/></g>
+<g transform="translate(545,232) rotate(5)"><ellipse cx="0" cy="0" rx="26" ry="18" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.8"/><ellipse cx="-2" cy="0" rx="9" ry="11" fill="#ffffff" fill-opacity=".75"/><circle cx="-12" cy="0" r="10" fill="#7c3aed" fill-opacity=".75"/><circle cx="-15" cy="-4" r="1.8" fill="#ffffff"/><circle cx="-10" cy="4" r="1.8" fill="#ffffff"/><circle cx="-16" cy="5" r="1.6" fill="#ffffff"/><circle cx="-9" cy="-5" r="1.6" fill="#ffffff"/></g>
+<g transform="translate(610,228) rotate(-10)"><ellipse cx="0" cy="0" rx="26" ry="18" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.8"/><ellipse cx="-2" cy="0" rx="9" ry="11" fill="#ffffff" fill-opacity=".75"/><circle cx="-12" cy="0" r="10" fill="#7c3aed" fill-opacity=".75"/><circle cx="-15" cy="-4" r="1.8" fill="#ffffff"/><circle cx="-10" cy="4" r="1.8" fill="#ffffff"/><circle cx="-16" cy="5" r="1.6" fill="#ffffff"/><circle cx="-9" cy="-5" r="1.6" fill="#ffffff"/></g>
+<g transform="translate(420,300) rotate(-5)"><ellipse cx="0" cy="0" rx="26" ry="18" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.8"/><ellipse cx="-2" cy="0" rx="9" ry="11" fill="#ffffff" fill-opacity=".75"/><circle cx="-12" cy="0" r="10" fill="#7c3aed" fill-opacity=".75"/><circle cx="-15" cy="-4" r="1.8" fill="#ffffff"/><circle cx="-10" cy="4" r="1.8" fill="#ffffff"/><circle cx="-16" cy="5" r="1.6" fill="#ffffff"/><circle cx="-9" cy="-5" r="1.6" fill="#ffffff"/></g>
+<g transform="translate(495,290) rotate(20)"><ellipse cx="0" cy="0" rx="26" ry="18" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.8"/><ellipse cx="-2" cy="0" rx="9" ry="11" fill="#ffffff" fill-opacity=".75"/><circle cx="-12" cy="0" r="10" fill="#7c3aed" fill-opacity=".75"/><circle cx="-15" cy="-4" r="1.8" fill="#ffffff"/><circle cx="-10" cy="4" r="1.8" fill="#ffffff"/><circle cx="-16" cy="5" r="1.6" fill="#ffffff"/><circle cx="-9" cy="-5" r="1.6" fill="#ffffff"/></g>
+<g transform="translate(570,305) rotate(-8)"><ellipse cx="0" cy="0" rx="26" ry="18" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.8"/><ellipse cx="-2" cy="0" rx="9" ry="11" fill="#ffffff" fill-opacity=".75"/><circle cx="-12" cy="0" r="10" fill="#7c3aed" fill-opacity=".75"/><circle cx="-15" cy="-4" r="1.8" fill="#ffffff"/><circle cx="-10" cy="4" r="1.8" fill="#ffffff"/><circle cx="-16" cy="5" r="1.6" fill="#ffffff"/><circle cx="-9" cy="-5" r="1.6" fill="#ffffff"/></g>
+<g transform="translate(620,300) rotate(12)"><ellipse cx="0" cy="0" rx="26" ry="18" fill="#7c3aed" fill-opacity=".25" stroke="#7c3aed" stroke-width="1.8"/><ellipse cx="-2" cy="0" rx="9" ry="11" fill="#ffffff" fill-opacity=".75"/><circle cx="-12" cy="0" r="10" fill="#7c3aed" fill-opacity=".75"/><circle cx="-15" cy="-4" r="1.8" fill="#ffffff"/><circle cx="-10" cy="4" r="1.8" fill="#ffffff"/><circle cx="-16" cy="5" r="1.6" fill="#ffffff"/><circle cx="-9" cy="-5" r="1.6" fill="#ffffff"/></g>
+<text x="20.0" y="58.0" font-size="14" fill="#7c3aed" text-anchor="start" font-weight="700" >M protein (monoclonal Ig) / free light chains</text>
+<path d="M60,96 L60,82 M60,82 L52,72 M60,82 L68,72" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M94,96 L94,82 M94,82 L86,72 M94,82 L102,72" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M128,96 L128,82 M128,82 L120,72 M128,82 L136,72" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M162,96 L162,82 M162,82 L154,72 M162,82 L170,72" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M196,96 L196,82 M196,82 L188,72 M196,82 L204,72" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M230,96 L230,82 M230,82 L222,72 M230,82 L238,72" stroke="#7c3aed" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M372,170 C320,130 300,100 268,90" stroke="#7c3aed" stroke-width="2" fill="none" marker-end="url(#ap)"/>
+<path d="M140,104 L140,124 M40,124 L40,450 M40,124 L240,124" stroke="#7c3aed" stroke-width="1.5" fill="none"/>
+<path d="M40,160 L58,160" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#ap)"/>
+<path d="M40,262 L58,262" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#ap)"/>
+<path d="M40,392 L58,392" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#ap)"/>
+<path d="M40,392 L40,450" stroke="#ffffff" stroke-width="3"/>
+<ellipse cx="74" cy="168" rx="13" ry="7" fill="#dc2626" fill-opacity=".55" stroke="#dc2626" stroke-width="1.2"/>
+<ellipse cx="85" cy="163" rx="13" ry="7" fill="#dc2626" fill-opacity=".55" stroke="#dc2626" stroke-width="1.2"/>
+<ellipse cx="96" cy="158" rx="13" ry="7" fill="#dc2626" fill-opacity=".55" stroke="#dc2626" stroke-width="1.2"/>
+<ellipse cx="107" cy="153" rx="13" ry="7" fill="#dc2626" fill-opacity=".55" stroke="#dc2626" stroke-width="1.2"/>
+<ellipse cx="118" cy="148" rx="13" ry="7" fill="#dc2626" fill-opacity=".55" stroke="#dc2626" stroke-width="1.2"/>
+<ellipse cx="129" cy="143" rx="13" ry="7" fill="#dc2626" fill-opacity=".55" stroke="#dc2626" stroke-width="1.2"/>
+<ellipse cx="140" cy="138" rx="13" ry="7" fill="#dc2626" fill-opacity=".55" stroke="#dc2626" stroke-width="1.2"/>
+<text x="160.0" y="150.0" font-size="14" fill="#1f2937" text-anchor="start" font-weight="700" >Rouleaux → ESR ↑↑</text>
+<text x="160.0" y="168.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="400" >globulin ↑, A/G reversed</text>
+<path d="M66,310 L246,310 M66,310 L66,230" stroke="#1f2937" stroke-width="1.5"/>
+<path d="M70,310 C82,310 84,240 94,240 C104,240 106,304 118,304 C126,304 128,292 136,292 C144,292 146,304 158,304 C166,304 168,294 176,294 C184,294 188,304 200,304 L206,302 L212,244 L218,302 L240,307" stroke="#7c3aed" stroke-width="2" fill="#7c3aed" fill-opacity=".1"/>
+<text x="94.0" y="326.0" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400" >albumin</text>
+<text x="212.0" y="326.0" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400" >γ</text>
+<text x="226.0" y="250.0" font-size="13" fill="#7c3aed" text-anchor="start" font-weight="700" >M spike (gamma)</text>
+<path d="M70,352 C116,336 142,372 126,394 C114,404 114,412 126,422 C136,444 96,456 70,434 C50,414 50,372 70,352 Z" fill="#dc2626" fill-opacity=".16" stroke="#dc2626" stroke-width="1.8"/>
+<path d="M72,378 Q90,372 108,386 M72,402 Q90,396 108,408" stroke="#dc2626" stroke-width="5" fill="none" stroke-opacity=".5"/>
+<rect x="84" y="375" width="12" height="7" rx="2" fill="#7c3aed" transform="rotate(-8 90 378)"/><rect x="86" y="397" width="12" height="7" rx="2" fill="#7c3aed"/>
+<text x="160.0" y="386.0" font-size="14" fill="#1f2937" text-anchor="start" font-weight="700" >Bence Jones → cast</text>
+<text x="160.0" y="404.0" font-size="14" fill="#1f2937" text-anchor="start" font-weight="700" >nephropathy <tspan fill='#0891b2' font-weight='700'>(R)</tspan></text>
+<line x1="158" y1="396" x2="100" y2="386" stroke="#6b7280" stroke-width="1"/>
+<text x="690.0" y="64.0" font-size="14" fill="#1f2937" text-anchor="start" font-weight="700" >Normal polyclonal Ig ↓ → infections</text>
+<path d="M700,99.2 L700,88 M700,88 L693.6,80.0 M700,88 L706.4,80.0" stroke="#2563eb" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M724,99.2 L724,88 M724,88 L717.6,80.0 M724,88 L730.4,80.0" stroke="#0891b2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M748,99.2 L748,88 M748,88 L741.6,80.0 M748,88 L754.4,80.0" stroke="#16a34a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<text x="780.0" y="98.0" font-size="18" fill="#dc2626" text-anchor="start" font-weight="700" >↓</text>
+<circle cx="830" cy="92" r="9" fill="#16a34a" fill-opacity=".3" stroke="#16a34a" stroke-width="1.5"/>
+<line x1="839.0" y1="92.0" x2="843.0" y2="92.0" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="834.5" y1="99.8" x2="836.5" y2="103.3" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="825.5" y1="99.8" x2="823.5" y2="103.3" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="821.0" y1="92.0" x2="817.0" y2="92.0" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="825.5" y1="84.2" x2="823.5" y2="80.7" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="834.5" y1="84.2" x2="836.5" y2="80.7" stroke="#16a34a" stroke-width="1.3"/>
+<circle cx="860" cy="84" r="9" fill="#16a34a" fill-opacity=".3" stroke="#16a34a" stroke-width="1.5"/>
+<line x1="869.0" y1="84.0" x2="873.0" y2="84.0" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="864.5" y1="91.8" x2="866.5" y2="95.3" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="855.5" y1="91.8" x2="853.5" y2="95.3" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="851.0" y1="84.0" x2="847.0" y2="84.0" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="855.5" y1="76.2" x2="853.5" y2="72.7" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="864.5" y1="76.2" x2="866.5" y2="72.7" stroke="#16a34a" stroke-width="1.3"/>
+<circle cx="886" cy="96" r="9" fill="#16a34a" fill-opacity=".3" stroke="#16a34a" stroke-width="1.5"/>
+<line x1="895.0" y1="96.0" x2="899.0" y2="96.0" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="890.5" y1="103.8" x2="892.5" y2="107.3" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="881.5" y1="103.8" x2="879.5" y2="107.3" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="877.0" y1="96.0" x2="873.0" y2="96.0" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="881.5" y1="88.2" x2="879.5" y2="84.7" stroke="#16a34a" stroke-width="1.3"/>
+<line x1="890.5" y1="88.2" x2="892.5" y2="84.7" stroke="#16a34a" stroke-width="1.3"/>
+<path d="M620,170 C650,130 680,120 696,112" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3" fill="none" marker-end="url(#ap)"/>
+<path d="M662,260 L722,260" stroke="#dc2626" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M748,236 C740,250 730,262 730,272 C730,284 738,292 748,292 C758,292 766,284 766,272 C766,262 756,250 748,236 Z" fill="#dc2626" fill-opacity=".18" stroke="#dc2626" stroke-width="1.8"/>
+<text x="780.0" y="258.0" font-size="14" fill="#1f2937" text-anchor="start" font-weight="700" >Anemia <tspan fill='#dc2626'>(A)</tspan></text>
+<text x="780.0" y="276.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="400" >marrow crowding + hepcidin</text>
+<rect x="300" y="600" width="530" height="44" fill="url(#trab)"/>
+<path d="M404,600 A26,20.8 0 0 0 456,600 Z" fill="#ffffff"/>
+<path d="M488,600 A24,19.200000000000003 0 0 0 536,600 Z" fill="#ffffff"/>
+<path d="M300,600 L404,600 A26,20.8 0 0 0 456,600 L488,600 A24,19.200000000000003 0 0 0 536,600 L830,600" stroke="#1f2937" stroke-width="2" fill="none"/>
+<text x="565.0" y="668.0" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="700" >punched-out lytic lesions <tspan fill='#7c3aed'>(B)</tspan></text>
+<ellipse cx="430" cy="588" rx="32" ry="13" fill="#ea580c" fill-opacity=".25" stroke="#ea580c" stroke-width="1.8"/>
+<circle cx="415" cy="588" r="3" fill="#ea580c"/>
+<circle cx="425" cy="588" r="3" fill="#ea580c"/>
+<circle cx="435" cy="588" r="3" fill="#ea580c"/>
+<circle cx="445" cy="588" r="3" fill="#ea580c"/>
+<ellipse cx="512" cy="588" rx="32" ry="13" fill="#ea580c" fill-opacity=".25" stroke="#ea580c" stroke-width="1.8"/>
+<circle cx="497" cy="588" r="3" fill="#ea580c"/>
+<circle cx="507" cy="588" r="3" fill="#ea580c"/>
+<circle cx="517" cy="588" r="3" fill="#ea580c"/>
+<circle cx="527" cy="588" r="3" fill="#ea580c"/>
+<text x="471.0" y="560.0" font-size="13" fill="#ea580c" text-anchor="middle" font-weight="700" >osteoclast</text>
+<path d="M380,470 Q420,450 470,468 Q430,486 380,470 Z" fill="#6b7280" fill-opacity=".25" stroke="#6b7280" stroke-width="1.6"/><ellipse cx="425" cy="469" rx="10" ry="5" fill="#6b7280" fill-opacity=".5"/>
+<text x="425.0" y="498.0" font-size="13" fill="#6b7280" text-anchor="middle" font-weight="400" >stromal cell</text>
+<path d="M420,382 L422,452" stroke="#2563eb" stroke-width="2.2" marker-end="url(#ab)"/>
+<text x="410.0" y="422.0" font-size="13" fill="#2563eb" text-anchor="end" font-weight="700" >IL-6, MIP-1α</text>
+<text x="480.0" y="462.0" font-size="14" fill="#ea580c" text-anchor="start" font-weight="700" >RANKL ↑ OPG ↓</text>
+<path d="M440,506 L452,570" stroke="#ea580c" stroke-width="2" marker-end="url(#ao)"/>
+<path d="M538,598 C556,560 572,540 590,516" stroke="#ea580c" stroke-width="2" fill="none" marker-end="url(#ao)"/>
+<path d="M602,476 C596,488 588,496 588,504 C588,513 594,518 602,518 C610,518 616,513 616,504 C616,496 608,488 602,476 Z" fill="#ea580c" fill-opacity=".2" stroke="#ea580c" stroke-width="1.6"/>
+<text x="602.0" y="509.0" font-size="11" fill="#1f2937" text-anchor="middle" font-weight="700" >Ca</text>
+<text x="626.0" y="504.0" font-size="14" fill="#1f2937" text-anchor="start" font-weight="700" >Ca²⁺ ↑ <tspan fill='#ea580c'>(C)</tspan></text>
+<rect x="678" y="574" width="44" height="24" rx="10" fill="#16a34a" fill-opacity=".25" stroke="#16a34a" stroke-width="1.8"/><circle cx="706" cy="586" r="5" fill="#16a34a"/>
+<rect x="748" y="574" width="44" height="24" rx="10" fill="#16a34a" fill-opacity=".25" stroke="#16a34a" stroke-width="1.8"/><circle cx="776" cy="586" r="5" fill="#16a34a"/>
+<text x="735.0" y="630.0" font-size="13" fill="#16a34a" text-anchor="middle" font-weight="700" >osteoblast</text>
+<path d="M640,382 L722,566" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#tp)"/>
+<text x="742.0" y="452.0" font-size="13" fill="#7c3aed" text-anchor="start" font-weight="700" >DKK1, sclerostin</text>
+<text x="742.0" y="469.0" font-size="13" fill="#7c3aed" text-anchor="start" font-weight="700" >⊣ osteoblast</text>
+<text x="742.0" y="486.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="400" >→ ALP normal,</text>
+<text x="742.0" y="503.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="400" >bone scan negative</text>
+<path d="M855,630 Q849,560 915,554 Q975,554 977,610 Q977,634 959,640 L945,652 L895,650 Q865,650 855,630 Z" fill="url(#trab)" stroke="#1f2937" stroke-width="2"/>
+<circle cx="885" cy="586" r="6" fill="#ffffff" stroke="#1f2937" stroke-width="1.4"/>
+<circle cx="909" cy="572" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.4"/>
+<circle cx="933" cy="590" r="7" fill="#ffffff" stroke="#1f2937" stroke-width="1.4"/>
+<circle cx="901" cy="610" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.4"/>
+<circle cx="949" cy="574" r="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.4"/>
+<circle cx="923" cy="614" r="4" fill="#ffffff" stroke="#1f2937" stroke-width="1.4"/>
+<circle cx="955" cy="604" r="5" fill="#ffffff" stroke="#1f2937" stroke-width="1.4"/>
+<text x="915.0" y="674.0" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="700" >punched-out skull</text>
+<rect x="20" y="478" width="260" height="196" rx="10" fill="#ffffff" stroke="#1f2937" stroke-width="1.5"/>
+<text x="44.0" y="528.0" font-size="34" fill="#ea580c" text-anchor="middle" font-weight="800" >C</text>
+<text x="74.0" y="520.0" font-size="15" fill="#1f2937" text-anchor="start" font-weight="700" >Calcium ↑</text>
+<text x="44.0" y="572.0" font-size="34" fill="#0891b2" text-anchor="middle" font-weight="800" >R</text>
+<text x="74.0" y="564.0" font-size="15" fill="#1f2937" text-anchor="start" font-weight="700" >Renal failure</text>
+<text x="44.0" y="616.0" font-size="34" fill="#dc2626" text-anchor="middle" font-weight="800" >A</text>
+<text x="74.0" y="608.0" font-size="15" fill="#1f2937" text-anchor="start" font-weight="700" >Anemia</text>
+<text x="44.0" y="660.0" font-size="34" fill="#7c3aed" text-anchor="middle" font-weight="800" >B</text>
+<text x="74.0" y="652.0" font-size="15" fill="#1f2937" text-anchor="start" font-weight="700" >Bone lytic lesions</text>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 690" width="1000" height="690" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs><clipPath id="bc"><path d="M375,60 L375,330 Q370,420 318,462 Q300,490 305,540 Q312,600 370,602 Q410,602 420,578 Q430,562 440,578 Q450,602 490,602 Q548,600 555,540 Q560,490 542,462 Q490,420 485,330 L485,60 Z"/></clipPath><marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><pattern id="trab" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#E8DCC0"/><path d="M0,8 Q8,3 16,8 M8,0 Q12,8 8,16" stroke="#6b7280" stroke-opacity=".35" stroke-width=".8" fill="none"/></pattern></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20.0" y="28.0" font-size="18" fill="#1f2937" text-anchor="start" font-weight="700" >แผนที่ตำแหน่งเนื้องอกบนกระดูกยาว (distal femur)</text>
+<path d="M540,452 Q560,420 586,392 Q594,380 604,388 Q608,398 598,406 Q574,430 556,470 Z" fill="#E8DCC0" stroke="#1f2937" stroke-width="2"/>
+<path d="M548,460 Q566,428 590,402 L594,406 Q572,432 556,466 Z" fill="#F3E3A0"/>
+<path d="M584,392 Q594,374 610,384 Q614,398 600,408 Z" fill="#0891b2" fill-opacity=".3" stroke="#0891b2" stroke-width="1.5"/>
+<path d="M375,60 L375,330 Q370,420 318,462 Q300,490 305,540 Q312,600 370,602 Q410,602 420,578 Q430,562 440,578 Q450,602 490,602 Q548,600 555,540 Q560,490 542,462 Q490,420 485,330 L485,60 Z" fill="url(#trab)" stroke="#1f2937" stroke-width="2.2"/>
+<path d="M393,60 L393,330 Q390,404 340,452 L520,452 Q470,404 467,330 L467,60 Z" fill="#F3E3A0"/>
+<g clip-path="url(#bc)">
+<rect x="290" y="60" width="280" height="280" fill="#16a34a" fill-opacity=".1"/>
+<rect x="290" y="340" width="280" height="126" fill="#ea580c" fill-opacity=".12"/>
+<rect x="290" y="466" width="280" height="12" fill="#CFE3EA"/>
+<rect x="290" y="478" width="280" height="130" fill="#7c3aed" fill-opacity=".12"/>
+</g>
+<line x1="300" y1="466" x2="562" y2="466" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="6 4"/><line x1="300" y1="478" x2="562" y2="478" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M375,60 L375,330 Q370,420 318,462 Q300,490 305,540 Q312,600 370,602 Q410,602 420,578 Q430,562 440,578 Q450,602 490,602 Q548,600 555,540 Q560,490 542,462 Q490,420 485,330 L485,60 Z" fill="none" stroke="#1f2937" stroke-width="2.2"/>
+<line x1="190.0" y1="340.0" x2="560.0" y2="340.0" stroke="#6b7280" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="290.0" y="200.0" font-size="15" fill="#16a34a" text-anchor="end" font-weight="700" >DIAPHYSIS</text>
+<text x="290.0" y="405.0" font-size="15" fill="#ea580c" text-anchor="end" font-weight="700" >METAPHYSIS</text>
+<text x="290.0" y="470.0" font-size="15" fill="#0891b2" text-anchor="end" font-weight="700" >PHYSIS</text>
+<text x="290.0" y="487.0" font-size="13" fill="#0891b2" text-anchor="end" font-weight="400" >(เส้นประ = ปิดแล้วในผู้ใหญ่)</text>
+<text x="290.0" y="550.0" font-size="15" fill="#7c3aed" text-anchor="end" font-weight="700" >EPIPHYSIS</text>
+<text x="290.0" y="110.0" font-size="15" fill="#1f2937" text-anchor="end" font-weight="700" >MEDULLA</text>
+<path d="M296,106 L424,106" stroke="#1f2937" stroke-width="1.5" marker-end="url(#ak)"/>
+<path d="M489,110 Q498,150 489,190" stroke="#2563eb" stroke-width="1.6" fill="none"/>
+<path d="M494,107 Q504,150 494,193" stroke="#2563eb" stroke-width="1.6" fill="none"/>
+<path d="M499,104 Q510,150 499,196" stroke="#2563eb" stroke-width="1.6" fill="none"/>
+<path d="M504,101 Q516,150 504,199" stroke="#2563eb" stroke-width="1.6" fill="none"/>
+<circle cx="479" cy="250" r="8" fill="#ffffff" stroke="#16a34a" stroke-width="3.5"/><circle cx="479" cy="250" r="3" fill="#16a34a"/>
+<ellipse cx="420" cy="190" rx="20" ry="30" fill="#6b7280" fill-opacity=".25" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="3 2"/>
+<path d="M430,228 q10,-8 18,0 q8,6 2,16 q-4,10 -14,8 q-12,-2 -10,-12 q-2,-8 4,-12 z" fill="#0891b2" fill-opacity=".2" stroke="#16a34a" stroke-width="1.5"/>
+<circle cx="436" cy="234" r="1.5" fill="#1f2937"/>
+<circle cx="444" cy="240" r="1.5" fill="#1f2937"/>
+<circle cx="434" cy="244" r="1.5" fill="#1f2937"/>
+<circle cx="442" cy="248" r="1.5" fill="#1f2937"/>
+<circle cx="404" cy="290" r="7" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+<circle cx="452" cy="300" r="7" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+<circle cx="426" cy="312" r="7" fill="#ffffff" stroke="#dc2626" stroke-width="1.5"/>
+<ellipse cx="452" cy="364" rx="16" ry="20" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+<path d="M372,390 Q386,372 404,380 Q420,384 418,404 Q426,424 404,432 Q382,440 370,424 Q356,408 372,390 Z" fill="#dc2626" fill-opacity=".35" stroke="#dc2626" stroke-width="1.8"/>
+<line x1="360.5" y1="412.4" x2="344.9" y2="421.0" stroke="#dc2626" stroke-width="1.3"/>
+<line x1="360.2" y1="411.5" x2="343.1" y2="416.8" stroke="#dc2626" stroke-width="1.3"/>
+<line x1="360.0" y1="410.5" x2="342.1" y2="412.3" stroke="#dc2626" stroke-width="1.3"/>
+<line x1="360.0" y1="409.5" x2="342.1" y2="407.7" stroke="#dc2626" stroke-width="1.3"/>
+<line x1="360.2" y1="408.5" x2="343.1" y2="403.2" stroke="#dc2626" stroke-width="1.3"/>
+<line x1="360.5" y1="407.6" x2="344.9" y2="399.0" stroke="#dc2626" stroke-width="1.3"/>
+<path d="M470,510 Q500,498 528,512 Q548,536 538,570 Q522,592 494,590 Q466,584 462,556 Q458,526 470,510 Z" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+<path d="M480,512 Q492,540 476,586 M500,504 Q512,544 500,590 M520,512 Q520,548 530,580 M464,540 Q500,548 540,536 M466,566 Q500,560 534,566" stroke="#ea580c" stroke-width="1" fill="none"/>
+<circle cx="372" cy="548" r="15" fill="#ffffff" stroke="#16a34a" stroke-width="2"/>
+<circle cx="368" cy="544" r="1.5" fill="#1f2937"/>
+<circle cx="376" cy="550" r="1.5" fill="#1f2937"/>
+<circle cx="370" cy="554" r="1.5" fill="#1f2937"/>
+<text x="620.0" y="66.0" font-size="13" fill="#6b7280" text-anchor="start" font-weight="400" >ป้ายสี:</text>
+<text x="666.0" y="66.0" font-size="13" fill="#16a34a" text-anchor="start" font-weight="700" >benign</text>
+<text x="720.0" y="66.0" font-size="13" fill="#ea580c" text-anchor="start" font-weight="700" >intermediate</text>
+<text x="810.0" y="66.0" font-size="13" fill="#dc2626" text-anchor="start" font-weight="700" >malignant</text>
+<text x="620.0" y="96.0" font-size="13" fill="#16a34a" text-anchor="start" font-weight="700" >— Diaphysis —</text>
+<text x="620" y="118" font-size="13"><tspan fill='#dc2626' font-weight='700'>Ewing sarcoma</tspan><tspan fill='#6b7280' font-weight='400' dx='5'>[5–20 y]</tspan><tspan fill='#1f2937' font-weight='400' dx='5'>onion skin</tspan></text>
+<line x1="616.0" y1="114.0" x2="505.0" y2="140.0" stroke="#6b7280" stroke-width="1" />
+<text x="620" y="166" font-size="13"><tspan fill='#16a34a' font-weight='700'>Osteoid osteoma</tspan><tspan fill='#1f2937' font-weight='400' dx='5'>(cortex) night pain → NSAID</tspan></text>
+<line x1="616.0" y1="162.0" x2="487.0" y2="246.0" stroke="#6b7280" stroke-width="1" />
+<text x="620" y="142" font-size="13"><tspan fill='#16a34a' font-weight='700'>Fibrous dysplasia, LCH</tspan></text>
+<line x1="616.0" y1="138.0" x2="440.0" y2="186.0" stroke="#6b7280" stroke-width="1" />
+<text x="620.0" y="200.0" font-size="13" fill="#1f2937" text-anchor="start" font-weight="700" >— Medulla —</text>
+<text x="620" y="222" font-size="13"><tspan fill='#16a34a' font-weight='700'>Enchondroma</tspan><tspan fill='#1f2937' font-weight='400' dx='5'>(hands)</tspan></text>
+<line x1="616.0" y1="218.0" x2="452.0" y2="236.0" stroke="#6b7280" stroke-width="1" />
+<text x="620" y="246" font-size="13"><tspan fill='#dc2626' font-weight='700'>Chondrosarcoma</tspan><tspan fill='#6b7280' font-weight='400' dx='5'>[40–70 y]</tspan><tspan fill='#1f2937' font-weight='400' dx='5'>(pelvis, proximal femur)</tspan></text>
+<line x1="616.0" y1="242.0" x2="462.0" y2="270.0" stroke="#6b7280" stroke-width="1" />
+<text x="620" y="270" font-size="13"><tspan fill='#dc2626' font-weight='700'>Myeloma, metastasis</tspan><tspan fill='#1f2937' font-weight='400' dx='5'>(adult)</tspan></text>
+<line x1="616.0" y1="266.0" x2="459.0" y2="300.0" stroke="#6b7280" stroke-width="1" />
+<text x="620.0" y="322.0" font-size="13" fill="#ea580c" text-anchor="start" font-weight="700" >— Metaphysis —</text>
+<text x="620" y="346" font-size="13"><tspan fill='#16a34a' font-weight='700'>Simple bone cyst / ABC / NOF</tspan></text>
+<line x1="616.0" y1="342.0" x2="468.0" y2="362.0" stroke="#6b7280" stroke-width="1" />
+<text x="620" y="372" font-size="13"><tspan fill='#16a34a' font-weight='700'>Osteochondroma</tspan><tspan fill='#6b7280' font-weight='400' dx='5'>[10–30 y]</tspan><tspan fill='#1f2937' font-weight='400' dx='5'>grows away from joint</tspan></text>
+<line x1="616.0" y1="368.0" x2="608.0" y2="390.0" stroke="#6b7280" stroke-width="1" />
+<text x="620" y="420" font-size="13"><tspan fill='#dc2626' font-weight='700'>Osteosarcoma</tspan><tspan fill='#6b7280' font-weight='400' dx='5'>[10–20 y]</tspan><tspan fill='#1f2937' font-weight='400' dx='5'>Codman, sunburst</tspan></text>
+<line x1="616.0" y1="416.0" x2="418.0" y2="412.0" stroke="#6b7280" stroke-width="1" />
+<text x="620.0" y="494.0" font-size="13" fill="#7c3aed" text-anchor="start" font-weight="700" >— Epiphysis —</text>
+<text x="620" y="520" font-size="13"><tspan fill='#ea580c' font-weight='700'>Giant cell tumor</tspan><tspan fill='#6b7280' font-weight='400' dx='5'>[20–40 y]</tspan><tspan fill='#1f2937' font-weight='400' dx='5'>soap bubble</tspan></text>
+<line x1="616.0" y1="516.0" x2="540.0" y2="540.0" stroke="#6b7280" stroke-width="1" />
+<text x="620" y="570" font-size="13"><tspan fill='#16a34a' font-weight='700'>Chondroblastoma</tspan><tspan fill='#6b7280' font-weight='400' dx='5'>[10–20 y]</tspan></text>
+<line x1="616.0" y1="566.0" x2="387.0" y2="552.0" stroke="#6b7280" stroke-width="1" />
+<text x="620.0" y="398.0" font-size="13" fill="#0891b2" text-anchor="start" font-weight="400" >cartilage cap</text>
+<rect x="20" y="626" width="400" height="44" rx="8" fill="#dc2626" fill-opacity=".08" stroke="#dc2626" stroke-width="1.5"/>
+<text x="220.0" y="653.0" font-size="15" fill="#1f2937" text-anchor="middle" font-weight="700" >ผู้ใหญ่ lytic หลายจุด → metastasis / myeloma ก่อน</text>
+</svg>

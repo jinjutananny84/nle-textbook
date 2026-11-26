@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 780" width="960" height="780" font-family="'Sarabun','Noto Sans Thai',system-ui,sans-serif">
+<defs>
+<marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+<marker id="tp" viewBox="0 0 4 18" refX="2" refY="9" markerWidth="4" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto"><rect width="4" height="18" fill="#7c3aed"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20" y="28" font-size="18" font-weight="700" fill="#1f2937">วงจร secondary hyperparathyroidism ใน CKD</text>
+<rect x="380.0" y="48.0" width="200" height="44" rx="8" fill="#1f2937" fill-opacity="0.15" stroke="#1f2937" stroke-width="1.8"/>
+<text x="480" y="75" font-size="16" fill="#1f2937" font-weight="700" text-anchor="middle">CKD (GFR ↓)</text>
+<polyline points="430,92 430,108 250,108 250,128" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<polyline points="530,92 530,108 690,108 690,128" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="140.0" y="130.0" width="220" height="40" rx="8" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="1.8"/>
+<text x="250" y="155" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">1α-hydroxylase ↓</text>
+<polyline points="250,170 250,198" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="140.0" y="200.0" width="220" height="40" rx="8" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="1.8"/>
+<text x="250" y="225" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">Calcitriol ↓</text>
+<polyline points="250,240 250,268" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="140.0" y="270.0" width="220" height="40" rx="8" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="1.8"/>
+<text x="250" y="295" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">ดูด Ca จากลำไส้ ↓</text>
+<rect x="580.0" y="130.0" width="220" height="40" rx="8" fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="1.8"/>
+<text x="690" y="155" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">ขับ PO4 ไม่ได้</text>
+<polyline points="690,170 690,198" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="580.0" y="200.0" width="220" height="40" rx="8" fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="1.8"/>
+<text x="690" y="225" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">PO4 ↑</text>
+<polyline points="690,240 690,266" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="540.0" y="268.0" width="300" height="48" rx="8" fill="#ea580c" fill-opacity="0.12" stroke="#ea580c" stroke-width="1.8"/>
+<text x="690" y="288" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">PO4 จับ Ca</text>
+<text x="690" y="306" font-size="13" fill="#1f2937" font-weight="400" text-anchor="middle">(Ca-phosphate ตกผลึกใน soft tissue)</text>
+<rect x="405.0" y="195.0" width="130" height="40" rx="8" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="470" y="220" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">FGF23 ↑</text>
+<polyline points="580,220 537,217" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<polyline points="420,195 362,160" fill="none" stroke="#7c3aed" stroke-width="2.4" marker-end="url(#tp)"/>
+<polyline points="250,310 250,350 400,368" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<polyline points="690,316 690,350 560,368" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="400.0" y="358.0" width="160" height="44" rx="8" fill="#2563eb" fill-opacity="0.18" stroke="#2563eb" stroke-width="1.8"/>
+<text x="480" y="385" font-size="16" fill="#1f2937" font-weight="700" text-anchor="middle">ionized Ca ↓</text>
+<polyline points="480,402 480,432" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="330" y="434" width="300" height="74" rx="8" fill="#db2777" fill-opacity=".1" stroke="#db2777" stroke-width="1.8"/>
+<ellipse cx="352" cy="452" rx="11" ry="13" fill="#db2777" fill-opacity=".45" stroke="#db2777"/>
+<ellipse cx="380" cy="452" rx="11" ry="13" fill="#db2777" fill-opacity=".45" stroke="#db2777"/>
+<ellipse cx="352" cy="488" rx="11" ry="13" fill="#db2777" fill-opacity=".45" stroke="#db2777"/>
+<ellipse cx="380" cy="488" rx="11" ry="13" fill="#db2777" fill-opacity=".45" stroke="#db2777"/>
+<text x="400" y="465" font-size="16" fill="#1f2937" font-weight="700" text-anchor="start">PTH ↑↑</text>
+<text x="400" y="490" font-size="14" fill="#1f2937" font-weight="600" text-anchor="start">→ parathyroid hyperplasia</text>
+<polyline points="480,508 480,542" fill="none" stroke="#1f2937" stroke-width="2" marker-end="url(#ak)"/>
+<rect x="40" y="452" width="140" height="40" rx="8" fill="#6b7280" fill-opacity=".12" stroke="#6b7280" stroke-width="1.5"/>
+<text x="110" y="477" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">ไต (GFR ต่ำ)</text>
+<polyline points="328,472 184,472" fill="none" stroke="#6b7280" stroke-width="2" marker-end="url(#ak)" stroke-dasharray="6 4"/>
+<path d="M248,463 L264,481 M264,463 L248,481" stroke="#dc2626" stroke-width="3"/>
+<text x="40" y="520" font-size="13" fill="#6b7280" font-weight="600" text-anchor="start">PTH พยายามขับ PO4</text>
+<text x="40" y="537" font-size="13" fill="#6b7280" font-weight="600" text-anchor="start">แต่ GFR ต่ำ — ไม่ได้ผล</text>
+<rect x="330.0" y="543.0" width="300" height="46" rx="8" fill="#ea580c" fill-opacity="0.14" stroke="#ea580c" stroke-width="1.8"/>
+<text x="480" y="562" font-size="14" fill="#1f2937" font-weight="700" text-anchor="middle">Osteoclast สลายกระดูก</text>
+<text x="480" y="580" font-size="13" fill="#1f2937" font-weight="400" text-anchor="middle">→ ปล่อย Ca + PO4</text>
+<text x="40" y="566" font-size="13" fill="#ea580c" font-weight="700" text-anchor="start">Renal osteodystrophy:</text>
+<text x="40" y="584" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">osteitis fibrosa cystica,</text>
+<text x="40" y="601" font-size="13" fill="#1f2937" font-weight="400" text-anchor="start">brown tumor</text>
+<line x1="214" y1="574" x2="326" y2="568" stroke="#ea580c" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M632,566 L880,566 Q900,566 900,546 L900,240 Q900,220 880,220 L806,220" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#ar)"/>
+<text transform="translate(888,395) rotate(-90)" font-size="14" font-weight="700" fill="#dc2626" text-anchor="middle">ปล่อย PO4 → วนซ้ำ (vicious cycle)</text>
+<polyline points="480,589 480,628" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#ak)" stroke-dasharray="5 4"/>
+<text x="492" y="614" font-size="13" fill="#7c3aed" font-weight="600" text-anchor="start">เป็นนาน</text>
+<rect x="270.0" y="631.0" width="420" height="42" rx="8" fill="#7c3aed" fill-opacity="0.14" stroke="#7c3aed" stroke-width="1.8"/>
+<text x="480" y="657" font-size="15" fill="#1f2937" font-weight="700" text-anchor="middle">Tertiary: ต่อมหลั่งอัตโนมัติ → Ca ↑</text>
+<rect x="40" y="696" width="880" height="64" rx="10" fill="#16a34a" fill-opacity=".1" stroke="#16a34a" stroke-width="1.5"/>
+<text x="60" y="722" font-size="15" fill="#16a34a" font-weight="700" text-anchor="start">รักษา</text>
+<text x="60" y="746" font-size="14" fill="#1f2937" font-weight="600" text-anchor="start">PO4 binder  ·  active vit D (calcitriol)  ·  cinacalcet (calcimimetic)  ·  parathyroidectomy</text>
+</svg>
