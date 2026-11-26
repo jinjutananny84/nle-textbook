@@ -32,6 +32,7 @@ card: Urogenital sinus → ชาย/หญิง :: Prostate, Cowper gland, pen
 
 @@ อาจารย์ยกข้อ Comprehensive 75 ข้อ 35: epididymis มาจาก ==mesonephric duct== (Mock/15)
 @@ คลิป [t=4:34] ligament ของรังไข่ ==ไม่ออกข้อสอบ== · [t=5:07] ตารางท่อยังไม่เคยออก รู้ไว้พอ · [t=19:21] เฉลย Mock/1 = urorectal septum
+@@ จากคลิป Embryo (1:09:38): ท่อ Müllerian/Wolffian และไตมาจาก ==intermediate mesoderm== ดู [[kt-embryo:1]]
 
 {X} Embryology ไตและ urorectal septum อยู่ใน [[b9:1]] · ภาพรวม germ layer ดู [[kt-embryo:1]]
 
@@ -166,6 +167,7 @@ Androgen เกินในทารก 46,XX: fetal (==21- หรือ 11-hydr
 @@ [t=17:51] Turner: ==horseshoe kidney, coarctation of aorta== · Klinefelter: อัณฑะเล็กแข็ง hypogonadism · อาจารย์บอก Genetic ไม่ออก
 
 !! AIS ไม่มีทั้งมดลูกและท่อ Wolffian · 5α-reductase มีท่อ Wolffian (เพราะ T ทำงานได้) แต่ภายนอกไม่เป็นชาย (ขาด DHT)
+@@ จากคลิป Embryo (38:42): ย้ำ ==Turner ↔ coarctation of aorta + horseshoe kidney== (ตัวเลือก 13, 18, 21, Turner, Klinefelter) ดู [[kt-embryo:10]]
 
 {X} ข้อที่ออกจริง: 75.1/24 CAH และ 76/197 5α-reductase ใน [[b10:19]]
 
@@ -603,6 +605,7 @@ card: 3 Ps ของการคลอด :: Power, Passenger, Passage (gynecoid
 @@ อาจารย์ยก Comprehensive: hCG สร้างจาก ==syncytiotrophoblast== (Mock/33)
 @@ คลิป [t=1:01:39] progesterone จาก corpus luteum คงครรภ์ · [t=1:02:53] dilutional anemia, เสี่ยง VTE/PE, ทุกอย่างที่มี 'V' เพิ่ม · hPL สูงช่วง 24–28 สัปดาห์ จึงคัดกรอง GDM ด้วย 50 g ช่วงนั้น · [t=1:06:03] positive signs, Chadwick, Montgomery, linea nigra · [t=1:07:09] ระยะคลอด 0–3
 @@ [t=1:14:05] Mock/31 ยืนยัน ==progesterone== · Mock/32 = hCG · [t=1:14:38] Mock/33 = syncytiotrophoblast
+@@ จากคลิป Embryo (1:38): ==แม่อายุ ≥ 35 → nondisjunction (trisomy 21)== · พ่ออายุมาก → new mutation โรค AD · (19:41) folic acid ปกติ ==0.4 mg== ถ้าเสี่ยง NTD ==4 mg== · (47:31) TEF/กลืนไม่ได้ → ==polyhydramnios== ดู [[kt-embryo:11]]
 
 {X} Week 2, hCG และ molar pregnancy ดู [[kt-embryo:4]]
 
@@ -768,6 +771,7 @@ card: แม่ HBsAg บวก ทารกต้องได้อะไร ::
 | HBV | เน้นการติดต่อ และ ==vaccine + HBIG== ในทารก |
 
 @@ คลิป [t=1:40:49] TORCH ทั้งชุด · [t=1:49:32] โจทย์ที่อาจารย์ยก: ทารกมีปัญหาหูและหัวใจ = ==rubella== · [t=1:50:37] ophthalmia neonatorum และ toxoplasma
+@@ จากคลิป Embryo (36:39): rubella ส่วน "ใจ" = ==PDA== (และ VSD) ดู [[kt-embryo:10]]
 
 {X} ophthalmia neonatorum (78/35) ใน [[b4:34]]
 
@@ -864,6 +868,7 @@ Preterm labor: ตัดที่ 24 สัปดาห์ (terminal sac) · ป
 
 @@ คลิป [t=2:15:51] ติดเชื้อ septic abortion, chorioamnionitis, breast abscess · [t=2:17:56] preterm และ PROM · [t=2:20:06] PIH ทั้งชุด
 @@ [t=2:23:58] PPH สาเหตุบ่อยสุด = ==tone== (4T) · [t=2:39:53] ยาที่ให้จำ: แยก ==nifedipine กับ atosiban==
+@@ จากคลิป Embryo (37:11): ==indomethacin== ยับยั้งการคลอดผ่าน prostaglandin ถ้าใช้ > 48 ชม. ทำ ==ductus arteriosus ตีบ== ต้อง US ดู · (48:02) ==24 สัปดาห์ = terminal sac== จึงเป็นเกณฑ์ · คลอดก่อนกำหนดให้ ==betamethasone/dexamethasone== กระตุ้น surfactant ดู [[kt-embryo:11]]
 
 ## 21 | เนื้องอกอัณฑะ · พยาธิของเต้านม
 stars: 3

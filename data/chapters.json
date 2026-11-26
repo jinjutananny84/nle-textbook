@@ -58,7 +58,21 @@
   {
    "id": "kt-repro",
    "title": "Repro · อ.กฤตัชญ์",
-   "desc": "คลิปติว Compre MDCU80 · Embryo/DSD · Anatomy · Physiology · STI/PID · 17 กล่อง · ข้อที่อาจารย์ยกมา 47 ข้อ + MDCU74–79",
+   "desc": "คลิปติว Compre MDCU80 · Embryo/DSD · Anatomy · Physiology · STI · ครรภ์/TORCH · เนื้องอก · Gyne · 23 กล่อง · ข้อที่อาจารย์ยกมา + MDCU74–79",
+   "ready": true,
+   "group": "🎬 คลิปติวอาจารย์ผู้ออกข้อสอบ"
+  },
+  {
+   "id": "kt-msk",
+   "title": "MSK (Ortho) · อ.ณภัทรพงศ์",
+   "desc": "คลิปติว Compre MDCU80 · nerve injury แขน/ขา · supracondylar · bone tumor · disc herniation · OI · torticollis · ยา osteoporosis · 9 กล่อง · ข้อที่อาจารย์เฉลย 23 ข้อ",
+   "ready": true,
+   "group": "🎬 คลิปติวอาจารย์ผู้ออกข้อสอบ"
+  },
+  {
+   "id": "kt-parasit",
+   "title": "Parasitology · รศ.ดร.วิวรพรรณ",
+   "desc": "คลิปติว Compre MDCU80 · nematode · trematode · cestode · protozoa ลำไส้ · coccidia ใน HIV · malaria · toxo · free-living amoeba · filaria · เหา โลน หิด · 14 กล่อง · โจทย์ในสไลด์ 42 ข้อ",
    "ready": true,
    "group": "🎬 คลิปติวอาจารย์ผู้ออกข้อสอบ"
   }

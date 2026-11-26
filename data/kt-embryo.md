@@ -1,6 +1,6 @@
 ---
-source: คลิปติว Embryology อ.นพ.กฤตัชญ์ (Compre MDCU80 · 25 พ.ย. 2026) · เนื้อหาจากสไลด์ 40 หน้า (อ้างอิง BRS Embryology 6th ed.) · ข้อสอบที่อาจารย์ยกมา + ข้อ MDCU74–79 ที่ตรงกัน · กล่อง 🎯 จากคลิปจะเติมเมื่อได้ transcript
-clip:
+source: คลิปติว Embryology อ.นพ.กฤตัชญ์ (Compre MDCU80 · 25 พ.ย. 2026) · เนื้อหาจากสไลด์ 40 หน้า (อ้างอิง BRS Embryology 6th ed.) · ข้อสอบที่อาจารย์ยกมา + ข้อ MDCU74–79 ที่ตรงกัน · ▶ เวลาในกล่อง 🎯 กดแล้วเปิดคลิปตรงจุด (คลิปยาว 1:14 ชม. · Genetics อาจารย์ตัดเพราะแทบไม่ออก)
+clip: https://drive.google.com/file/d/1PBnxlW2B5GHcCd-78Zp_gUiDkZVbvZag/view
 ---
 # PAGE 1 | ภาพรวม · Gametogenesis · Week 1–2
 
@@ -31,6 +31,8 @@ card: Hemangioma (หลอดเลือด) มาจาก germ layer ใด
 
 !! เยื่อหุ้มสมอง 3 ชั้นมาจากคนละที่: dura = mesoderm แต่ pia + arachnoid = neural crest
 !! Hemangioma ที่หน้า = mesoderm อย่างเดียว ไม่ใช่ ectoderm (ข้อ 79/29 ดู [[b4:2]])
+@@ คลิป [t=0:34] รหัสสี 3 germ layer · [t=1:06:03] ==ทุก germ layer มาจาก epiblast== (hypoblast สลายไป epiblast เข้าแทน) · [t=1:08:03] endoderm = epithelium ของ GI, RS, bladder (จาก allantois) และ pharyngeal pouch (thyroid, parathyroid, tonsil, thymus)
+@@ [t=1:08:35] mesoderm 3 กลุ่ม: ==paraxial== = กล้ามเนื้อลายทั้งหมด + axial skeleton · ==intermediate== = ไต ท่อไต และท่อสืบพันธุ์ · ==lateral== = limb skeleton, dermis, เลือด หัวใจ mesentery · ระวัง: ==dermis = mesoderm== epidermis = ectoderm melanocyte = neural crest
 
 ## 2 | Meiosis และ gametogenesis
 freq: 2/6
@@ -71,6 +73,8 @@ card: Spermatogenesis ใช้เวลาประมาณเท่าไร 
 @@ ข้อ Comprehensive 75 ที่อาจารย์ยกมา: primordial germ cell ชายก่อน puberty อยู่ใน ==interphase== (ข้อ Mock/1)
 
 ?? ถ้าโจทย์ถาม "oocyte arrest ระยะไหน" โดยไม่บอกว่าก่อนหรือหลังตกไข่ ควรตอบอะไร :: ดูบริบท ถ้าพูดถึง oocyte ในรังไข่ก่อน puberty หรือ "until hormonal signal" = prophase I · ถ้าพูดถึงไข่ที่ตกแล้วรอปฏิสนธิ = metaphase II
+@@ คลิป [t=0:06] Genetics ตัดไปเพราะแทบไม่ออก · [t=1:38] แม่อายุมาก → ==nondisjunction== (trisomy 21) · พ่ออายุมาก → ==new mutation โรค AD== (achondroplasia, Marfan) · [t=2:10] oocyte หยุด 2 ครั้ง: prophase I และ metaphase II · sperm ไม่หยุด
+@@ [t=1:03:59] Mock/1 อาจารย์เฉลย ==interphase== (ยังไม่เข้า M phase)
 
 ## 3 | Week 1: ปฏิสนธิ → blastocyst ฝังตัว
 freq: 1/6
@@ -95,6 +99,7 @@ card: Mitochondrial DNA ของลูกมาจากใคร :: แม่�
 `Zygote (วันที่ 1) → cleavage (mitosis ไม่โต) → morula 16–32 เซลล์ → blastocyst (zona หาย ~วันที่ 4) → ฝังตัว ~วันที่ 7`
 
 @@ Exam pearl ในสไลด์: blastomere เป็น ==totipotent จนถึงระยะ 8 เซลล์== · inner cell mass เป็น pluripotent
+@@ คลิป [t=2:45] ปฏิสนธิที่ ==ampulla== · phase 2 (zona pellucida): ==acrosome reaction และ cortical reaction กัน polyspermy== ต้องจำว่าอยู่ phase ไหน
 
 ## 4 | Week 2 "week of twos" · hCG · GTD
 freq: 3/6
@@ -139,6 +144,7 @@ card: RU-486 คืออะไร :: Mifepristone = progesterone receptor block
 >> คลิป Repro ต่อยอดเรื่องนี้: hCG กับการคงครรภ์ไตรมาสแรก ดู [[kt-repro:13]]
 
 !! โจทย์ "hCG สร้างจากเซลล์ใด" ตอบ syncytiotrophoblast ไม่ใช่ cytotrophoblast
+@@ คลิป [t=3:53] bilaminar disc epiblast/hypoblast · [t=5:01] syncytiotrophoblast รุกเข้าไปเจาะ spiral artery ของแม่ → เกิด lacunae
 
 # PAGE 2 | Nervous system
 
@@ -176,6 +182,8 @@ card: Myelencephalon กลายเป็นอะไร :: Medulla
 @@ Exam pearl ในสไลด์: ==retina และ optic nerve มาจาก diencephalon==
 
 ?? ทำไม anencephaly ทำให้ AFP ในเลือดแม่สูง :: neural tube เปิด → AFP จากทารกรั่วเข้าน้ำคร่ำและเลือดแม่ (ข้อ 79/236)
+@@ คลิป [t=6:04] notochord กระตุ้น ectoderm เป็น neural plate → fold → tube · [t=8:56] 3 → 5 vesicles: prosencephalon → telencephalon + ==diencephalon (thalamus)== · rhombencephalon → metencephalon (pons, cerebellum) + myelencephalon (medulla)
+@@ [t=10:05] neuropore ปิด ==วัน 24 (บน) และ 26 (ล่าง)== จำว่า "ล้อมวันคริสต์มาส" · [t=11:07] notochord → ==nucleus pulposus==
 
 ## 6 | Neural crest และ neurocristopathies
 freq: 5/6
@@ -216,6 +224,8 @@ card: Pheochromocytoma, neuroblastoma มาจาก :: Neural crest (adrenal m
 
 !! Dura = mesoderm แต่ pia & arachnoid = neural crest
 !! Microglia ไม่ใช่ neural crest แต่เป็น monocyte (mesoderm)
+@@ คลิป [t=11:37] neural crest ไปอยู่ที่ "แปลก ๆ": ==C cell ของ thyroid==, sensory ganglia ของ CN 5 7 9 10, odontoblast, aorticopulmonary septum, ==adrenal medulla==, sympathetic ganglia, Meissner/Auerbach, melanocyte, Schwann cell, ==pia และ arachnoid==
+@@ [t=13:44] neurocristopathy: ==Hirschsprung, D-TGA, TOF, DiGeorge, pheochromocytoma, neuroblastoma== · [t=1:05:01] ทารก 5 วันท้องอืด neuron migrate ผิด = Hirschsprung อาจารย์บอก ==ออกง่าย==
 
 ## 7 | Spinal cord · pituitary · NTD · brain malformations
 freq: 4/6
@@ -270,6 +280,9 @@ card: Folic acid เท่าไรป้องกัน NTD ได้กี่ 
 
 @@ Exam pearl ในสไลด์: NTD → ==AFP สูง== · folic acid ==0.4 mg/day== ป้องกันได้ ~75%
 @@ อาจารย์ยกข้อ Comprehensive 75: ทารกเสียชีวิต 30 สัปดาห์ ใบหน้าผิดรูปรุนแรง + holoprosencephaly → ยีน ==Sonic hedgehog== (ข้อ 75.1/25)
+@@ คลิป [t=15:19] spina bifida: เห็น ==กระจุกขน (hair tuft) ตอบ occulta เลย== · meningocele = meninges + CSF · meningomyelocele = + spinal cord ระวังอย่ารีบตอบ
+@@ [t=17:00] anencephaly: โจทย์ไม่บอกตรง ๆ จะบอกว่า US ไม่เห็นกะโหลก (acrania) · [t=18:04] Arnold-Chiari มักมาคู่ spina bifida · [t=19:41] holoprosencephaly = สมองซีกเดียว · folic acid ปกติ ==0.4 mg== เสี่ยงสูง ==4 mg== ระวังหน่วย mcg
+@@ [t=14:49] Rathke pouch → anterior pituitary · posterior pituitary = hypothalamus ยื่นลงมา · [t=1:04:31] holoprosencephaly = ==Sonic hedgehog== (WNT7, FGF, FBN เป็นยีนแขนขา ไม่เกี่ยว)
 
 {X} ข้อที่ออกจริง: [[b3:10]] (75.1/25 SHH, 76/9 Patau, 77/25 folate, 79/236 AFP) · pituitary จาก oral ectoderm 78/215 ใน [[b10:2]]
 
@@ -315,6 +328,8 @@ card: AP septum มาจากอะไร :: Neural crest (หมุนเก�
 - Muscular IV septum งอกจากพื้นขึ้นมา
 - ==Membranous septum== = R + L bulbar ridge + AV cushion → ==membranous VSD พบบ่อยที่สุด==
 - ==AP septum (neural crest)== หมุนเป็นเกลียว → แบ่ง aorta กับ pulmonary trunk
+@@ คลิป [t=20:47] heart tube สัปดาห์ 3 → ==D-looping== · [t=23:58] truncus arteriosus → aorta/pulmonary trunk · bulbus cordis → outflow · primitive ventricle · primitive atrium + sinus venosus
+@@ [t=25:07] septum primum ลงมา → septum secundum ซ้อน → foramen ovale · ในครรภ์ RA > LA · หลังคลอดความดันกลับ flap ปิด → ==fossa ovalis== · [t=28:42] endocardial cushion ปิด AV · [t=30:13] AP septum บิดเป็น ==บันไดเวียน (neural crest)== หลอดเลือดออกต้องไขว้กัน
 
 {X} ข้อที่ออกจริง: septum primum + endocardial cushion ไม่เชื่อม (75.2/33, 75.2/76, 79/7) ใน [[b7:3]]
 
@@ -374,6 +389,8 @@ card: Venous anomaly ส่วนใหญ่เกิดจากอะไร :
 | Postductal coarctation | BP แขนสูง ชีพจร femoral เบา · Turner |
 | Double aortic arch | vascular ring → stridor, กลืนลำบาก |
 | Aberrant R subclavian | วิ่งหลังหลอดอาหาร → dysphagia lusoria |
+@@ คลิป [t=32:23] aortic arch ==ไม่ออก== · [t=32:58] vein 3 ระบบ: umbilical (ductus venosus → lig. venosum) · vitelline (portal, SMV) · cardinal (IVC, SVC)
+@@ [t=33:28] umbilical vein เดิมมี 2 เส้น ==เหลือซ้าย== → ligamentum teres · [t=34:01] umbilical artery → ==medial umbilical lig.== · median = urachus · lateral = inferior epigastric · [t=35:36] PPHN: ทารกเครียด/sepsis ความดันปอดกลับสูงเหมือนในครรภ์
 
 {X} ข้อที่ออกจริง: PDA (75.2/94, 75.2/98, 78/165, 79/8) และ coarctation ↔ arch 4 (76/117) ใน [[b7:3]] [[b7:4]] · recurrent laryngeal (75.2/124) ใน [[b7:1]]
 
@@ -409,6 +426,9 @@ card: Membranous VSD นำไปสู่อะไรในระยะยา�
 | ==Tetralogy of Fallot== | เบี้ยว → ==PROVE==: PS, RVH, Overriding aorta, VSD |
 
 ?? ทำไมโรคกลุ่ม conotruncal มักพบร่วม DiGeorge :: AP septum มาจาก neural crest เหมือนเนื้อเยื่อ pharyngeal arch ที่ผิดปกติใน 22q11
+@@ คลิป [t=36:39] PDA: ==rubella (หู ตา ใจ)== · ==indomethacin== ที่ใช้ยับยั้งการคลอด ทำ ductus ตีบ/ปิดถ้าใช้ > 48 ชม. · [t=38:11] coarctation ตีบที่ isthmus ใกล้ left subclavian สัมพันธ์ ==Turner==
+@@ [t=39:50] persistent truncus arteriosus = AP septum ไม่เกิด มัก VSD ร่วม · [t=40:56] TGA ข้อสอบออกแค่ ==D-TGA== · [t=41:26] TOF 4 อย่าง: VSD, RVH, pulmonary stenosis, overriding aorta
+@@ [t=43:52] ==truncus arteriosus ↔ DiGeorge (22q11.2)== เพราะเป็นเรื่อง neural crest ทั้งหมด · [t=45:30] ==trisomy 21 ↔ AVSD== (endocardial cushion) · Turner ↔ coarctation
 
 {X} ข้อที่ออกจริง: TOF (74.2/12, 74.2/92, 78/141) · TGA (75.2/30, 79/30 ให้ PGE1) ใน [[b7:5]]
 
@@ -463,6 +483,8 @@ Clue: ==polyhydramnios== · น้ำลายไหล สำลัก เข�
 - **RDS/hyaline membrane disease**: surfactant น้อย · คลอดก่อนกำหนด, แม่เป็นเบาหวาน · ป้องกันด้วย antenatal betamethasone · CXR reticulogranular
 - Pulmonary hypoplasia: CDH, bilateral renal agenesis (Potter, oligohydramnios)
 - Agenesis = ไม่มีปอด · aplasia = มีแค่ bronchus
+@@ คลิป [t=46:00] lung bud แยกจาก foregut · [t=47:01] แบ่งไม่สมบูรณ์ = TEF · [t=47:31] สิ่งแปลกปลอมชอบตก ==right main bronchus== · TEF → ทารกกลืนน้ำคร่ำไม่ได้ → ==polyhydramnios==
+@@ [t=48:02] ระยะ pseudoglandular 16 · canalicular/terminal sac ==24== · alveolar 32 สัปดาห์ (24 สัปดาห์ = เกณฑ์ abort) · [t=48:33] type II pneumocyte สร้าง surfactant · RDS เห็น reticulogranular · ให้ ==betamethasone หรือ dexamethasone== · แม่เบาหวานก็เสี่ยง RDS
 
 {X} ข้อที่ออกจริง: RDS (74.2/24), TEF (76/213), CDH (77/142), CPAM (79/124) ใน [[b6:6]]
 
@@ -505,6 +527,8 @@ card: Biliary atresia :: ตัวเหลืองเพิ่มขึ้น 
 | Pancreas divisum | ท่อไม่เชื่อม → pancreatitis |
 | Biliary atresia | ตัวเหลืองเพิ่มขึ้น อุจจาระสีซีด |
 | Esophageal atresia | polyhydramnios · VACTERL |
+@@ คลิป [t=49:35] foregut/midgut/hindgut แบ่งตาม celiac/SMA/IMA · รอยต่อ foregut/midgut ที่ ampulla of Vater · [t=51:05] recanalization ล้มเหลว → atresia · duodenal atresia = ==double bubble + Down syndrome==
+@@ [t=52:38] กระเพาะหมุน 90° → ==left vagus อยู่หน้า right vagus อยู่หลัง== · [t=53:39] hepatic diverticulum → ตับ · dorsal + ventral pancreatic bud หมุนมาเชื่อม (ventral → uncinate process, main duct)
 
 ## 13 | GI: midgut · hindgut
 freq: 5/6
@@ -557,6 +581,8 @@ card: Anorectal malformation ที่พบบ่อยสุด :: Anorectal a
 | Imperforate anus | anal membrane ไม่ทะลุ |
 
 @@ อาจารย์ยกข้อ Comprehensive 75: ทารก 2 วันมี meconium ในปัสสาวะ → ==urorectal septum== (ข้อ 75.1/55)
+@@ คลิป [t=51:36] physiologic herniation ==สัปดาห์ 6–10 (จำ "7-11")== กลับเข้าพร้อมหมุน 270° · [t=57:14] หมุนผิด → malrotation/volvulus
+@@ [t=57:45] urorectal septum แบ่ง cloaca ถ้าผิด → fistula · [t=58:16] ==pectinate line = anal membrane เดิม== · [t=58:46] imperforate anus ↔ ==VACTERL (association ไม่ใช่ syndrome)==
 
 {X} ข้อที่ออกจริง: urorectal septum (75.1/55, 75.2/7), vitelline duct (76/174, 79/168), gastroschisis (79/6), jejunal atresia (79/165) ใน [[b8:6]] [[b8:7]] · ไตและ urorectal ใน [[b9:1]]
 
@@ -605,6 +631,8 @@ card: Pleuropericardial membrane กลายเป็นอะไร :: Fibrous
 | Esophageal hiatal hernia | hiatus กว้างเกิน → กระเพาะเลื่อนขึ้นอก · reflux อาเจียนพุ่งเมื่อนอนราบหลังกินนม |
 
 @@ Exam pearl ในสไลด์: ==ปวดกระบังลมร้าวไหล่ (C3–C5)== และ phrenic nerve ยาวเพราะกระบังลม "เลื่อนลง" จากระดับคอ (สัปดาห์ 4 อยู่ C3–5 → สัปดาห์ 8 อยู่ L1)
+@@ คลิป [t=55:09] ==omphalocele มีถุง peritoneum== (ไส้ไม่กลับ + lateral fold ล้มเหลว) · ==gastroschisis ไม่มีถุง== (ปัญหาหลอดเลือด) · เห็นรูปมีถุงตอบ omphalocele
+@@ [t=59:47] lateral folding + craniocaudal folding · septum transversum → diaphragm · [t=1:01:45] pleuroperitoneal membrane ด้านหลังซ้ายไม่ปิด → ==CDH ซ้ายบ่อย== ไส้ดันปอด → pulmonary hypoplasia · [t=1:02:54] hiatal hernia ทำให้อาเจียน
 
 # PAGE 5 | ข้อสอบที่อาจารย์ยกมา
 
@@ -647,3 +675,5 @@ card: DiGeorge ผิดที่ pouch ใด :: 3rd pharyngeal pouch (inferior
 | Meckel | vitelline duct | [[13]] |
 | Gastroschisis | lateral body fold | [[14]] |
 | CDH | pleuroperitoneal membrane | [[14]] |
+@@ คลิป [t=1:03:28] อาจารย์ไล่ข้อ Comprehensive: interphase [t=1:03:59] · SHH [t=1:04:31] · Hirschsprung [t=1:05:01] · ทุก germ layer มาจาก epiblast [t=1:06:03] · quadriceps = paraxial, เม็ดเลือดไตรมาสแรก = ==yolk sac → ตับ → ไขกระดูก== [t=1:10:41] · renal agenesis = ureteric bud [t=1:11:12] · DiGeorge [t=1:11:42]
+@@ [t=1:12:12] pharyngeal pouch: 1 auditory tube · 2 tonsil · 3 ==thymus + inferior parathyroid== · 4 superior parathyroid · arch และ groove ==ไม่มีใครออก==
