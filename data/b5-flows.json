@@ -1,0 +1,236 @@
+{
+ "flows": [
+  {
+   "id": "sle",
+   "box": 3,
+   "cat": "Autoimmune",
+   "title": "สงสัย SLE: ANA ก่อน",
+   "root": {
+    "t": "หญิงวัยเจริญพันธุ์ · ผื่น ข้อ หลายระบบ",
+    "k": "start",
+    "c": [
+     {
+      "t": "**ANA**",
+      "s": "screening · sensitivity > 95%",
+      "c": [
+       {
+        "e": "ลบ",
+        "t": "แทบตัด SLE ได้",
+        "k": "out"
+       },
+       {
+        "e": "บวก (ไม่จำเพาะ)",
+        "t": "Ab จำเพาะ",
+        "c": [
+         {
+          "e": "ติดตามโรค",
+          "t": "Anti-dsDNA",
+          "k": "dx",
+          "s": "ขึ้นลงตาม activity · lupus nephritis"
+         },
+         {
+          "e": "จำเพาะสุด",
+          "t": "Anti-Sm",
+          "k": "dx",
+          "s": "จำเพาะที่สุด ไวต่ำ"
+         },
+         {
+          "e": "จากยา",
+          "t": "Anti-histone",
+          "k": "dx",
+          "s": "hydralazine · procainamide · INH"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "septic",
+   "box": 3,
+   "cat": "Joint",
+   "title": "ข้อเดียวบวมแดงร้อน + ไข้",
+   "root": {
+    "t": "Acute monoarthritis + ไข้",
+    "k": "start",
+    "s": "คิด septic ไว้ก่อน",
+    "c": [
+     {
+      "t": "**เจาะข้อก่อนให้ antibiotic**",
+      "s": "cell count · Gram · culture · crystal",
+      "c": [
+       {
+        "e": "WBC > 50,000 · PMN > 90%",
+        "t": "Septic arthritis",
+        "s": "ระบายหนอง + antibiotic",
+        "c": [
+         {
+          "e": "หนุ่มสาว sexually active",
+          "t": "Gonococcal",
+          "k": "dx",
+          "s": "migratory polyarthralgia + tenosynovitis + ผื่น · ceftriaxone + doxycycline"
+         },
+         {
+          "e": "อื่น ๆ",
+          "t": "Bacterial ทั่วไป",
+          "k": "dx",
+          "s": "ข้อเสียเดิม (RA) · DM · ผู้สูงอายุ"
+         }
+        ]
+       },
+       {
+        "e": "เจอผลึก",
+        "t": "Crystal",
+        "k": "dx",
+        "s": "แต่พบ crystal ไม่ได้ตัด septic"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "jointpain",
+   "box": 23,
+   "cat": "Joint",
+   "title": "ปวดข้อ: ถาม 3 ข้อก่อน",
+   "root": {
+    "t": "ปวดข้อ",
+    "k": "start",
+    "c": [
+     {
+      "t": "① อักเสบไหม",
+      "s": "morning stiffness ≥ 30–60 นาที · ดีขึ้นเมื่อขยับ",
+      "c": [
+       {
+        "e": "ไม่อักเสบ",
+        "t": "Mechanical",
+        "k": "dx",
+        "s": "OA · บาดเจ็บ · ปวดเมื่อใช้งาน"
+       },
+       {
+        "e": "อักเสบ",
+        "t": "② กี่ข้อ ③ ข้อไหน",
+        "c": [
+         {
+          "e": "ข้อเดียวเฉียบพลัน",
+          "t": "Septic · gout · CPPD",
+          "k": "dx",
+          "s": "ต้องเจาะข้อทุกราย"
+         },
+         {
+          "e": "2–4 ข้อ ไม่สมมาตร ข้อใหญ่ขา",
+          "t": "Seronegative SpA · gonococcal",
+          "k": "dx"
+         },
+         {
+          "e": "หลายข้อสมมาตร ข้อเล็ก",
+          "t": "RA · SLE · viral",
+          "k": "dx",
+          "s": "parvovirus B19 · chikungunya"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "synovial",
+   "box": 23,
+   "cat": "Joint",
+   "title": "แปลผลน้ำไขข้อ",
+   "root": {
+    "t": "เจาะน้ำไขข้อ",
+    "k": "start",
+    "c": [
+     {
+      "t": "**WBC / %PMN**",
+      "c": [
+       {
+        "e": "200–2,000",
+        "t": "Non-inflammatory",
+        "k": "dx",
+        "s": "OA · บาดเจ็บ · AVN"
+       },
+       {
+        "e": "2,000–50,000 · PMN > 50%",
+        "t": "Inflammatory",
+        "s": "RA · SpA · SLE",
+        "c": [
+         {
+          "t": "ดู crystal ใต้ polarized light",
+          "c": [
+           {
+            "e": "เข็ม · negative",
+            "t": "Gout",
+            "k": "dx",
+            "s": "MSU"
+           },
+           {
+            "e": "rhomboid · positive อ่อน",
+            "t": "CPPD",
+            "k": "dx",
+            "s": "pseudogout"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "e": "> 50,000 · PMN > 75–90%",
+        "t": "Septic",
+        "k": "dx",
+        "s": "ขุ่นข้น glucose ต่ำ"
+       },
+       {
+        "e": "เลือด",
+        "t": "Hemarthrosis",
+        "k": "dx",
+        "s": "hemophilia · ACL ขาด · PVNS"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "disc",
+   "box": 14,
+   "cat": "Spine",
+   "title": "หมอนรองกระดูกปลิ้น: รากไหน",
+   "root": {
+    "t": "ปวดหลังร้าวลงขา",
+    "k": "start",
+    "c": [
+     {
+      "t": "ระดับที่ปลิ้น → รากที่ถูกกด",
+      "c": [
+       {
+        "e": "L3–L4",
+        "t": "L4",
+        "k": "dx",
+        "s": "quadriceps · knee jerk ↓ · ชา medial leg"
+       },
+       {
+        "e": "L4–L5",
+        "t": "L5",
+        "k": "dx",
+        "s": "EHL · dorsiflexion · ไม่มี reflex · ชาหลังเท้า"
+       },
+       {
+        "e": "L5–S1",
+        "t": "S1",
+        "k": "dx",
+        "s": "plantarflexion · ankle jerk ↓ · ชา lateral foot"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

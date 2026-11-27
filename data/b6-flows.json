@@ -1,0 +1,293 @@
+{
+ "flows": [
+  {
+   "id": "hypoxemia",
+   "box": 10,
+   "cat": "Gas exchange",
+   "title": "Hypoxemia: ใช้ A–a gradient แยกสาเหตุ",
+   "root": {
+    "t": "PaO2 ต่ำ",
+    "k": "start",
+    "c": [
+     {
+      "t": "**A–a gradient**",
+      "s": "PAO2 ≈ 150 − 1.25 × PaCO2 · ปกติ < 10–15",
+      "c": [
+       {
+        "e": "ปกติ",
+        "t": "PaCO2",
+        "c": [
+         {
+          "e": "สูง",
+          "t": "Hypoventilation",
+          "k": "dx",
+          "s": "opioid · NM disease · phrenic"
+         },
+         {
+          "e": "ปกติ/ต่ำ",
+          "t": "Low FiO2",
+          "k": "dx",
+          "s": "ที่สูง"
+         }
+        ]
+       },
+       {
+        "e": "กว้าง",
+        "t": "ให้ **O2**",
+        "c": [
+         {
+          "e": "ดีขึ้น",
+          "t": "V/Q mismatch · diffusion",
+          "k": "dx",
+          "s": "COPD · pneumonia · fibrosis"
+         },
+         {
+          "e": "ไม่ดีขึ้น",
+          "t": "Shunt",
+          "k": "dx",
+          "s": "ถุงลมเต็มน้ำ/หนอง/แฟบ"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "chestexam",
+   "box": 12,
+   "cat": "Clinical",
+   "title": "ตรวจร่างกายปอด: บอกตำแหน่งโรค",
+   "root": {
+    "t": "ฟังปอด",
+    "k": "start",
+    "c": [
+     {
+      "t": "ได้ยินอะไร",
+      "c": [
+       {
+        "e": "Wheeze",
+        "t": "ท่อแคบ",
+        "k": "dx",
+        "s": "asthma · COPD"
+       },
+       {
+        "e": "Crepitation",
+        "t": "Consolidation sign?",
+        "c": [
+         {
+          "e": "มี",
+          "t": "Pneumonia",
+          "k": "dx"
+         },
+         {
+          "e": "ไม่มี",
+          "t": "Fibrosis / pulmonary edema",
+          "k": "dx"
+         }
+        ]
+       },
+       {
+        "e": "ไม่มีทั้งคู่",
+        "t": "**เคาะ** + ดู trachea",
+        "c": [
+         {
+          "e": "โปร่ง",
+          "t": "Pneumothorax",
+          "k": "dx",
+          "s": "BP ตก + shift ออก = tension → needle"
+         },
+         {
+          "e": "ทึบ · shift ออก",
+          "t": "Effusion / hemothorax",
+          "k": "dx"
+         },
+         {
+          "e": "ทึบ · shift เข้าหา",
+          "t": "Atelectasis",
+          "k": "dx"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "pft",
+   "box": 13,
+   "cat": "PFT",
+   "title": "อ่าน spirometry",
+   "root": {
+    "t": "Spirometry",
+    "k": "start",
+    "c": [
+     {
+      "t": "**FEV1/FVC**",
+      "c": [
+       {
+        "e": "< 0.70",
+        "t": "Obstructive",
+        "c": [
+         {
+          "t": "ให้ **bronchodilator**",
+          "c": [
+           {
+            "e": "FEV1 ↑ ≥ 12% และ ≥ 200 mL",
+            "t": "Asthma",
+            "k": "dx",
+            "s": "reversible"
+           },
+           {
+            "e": "ไม่ตอบ",
+            "t": "**DLCO**",
+            "c": [
+             {
+              "e": "↓",
+              "t": "Emphysema",
+              "k": "dx"
+             },
+             {
+              "e": "ปกติ",
+              "t": "Chronic bronchitis",
+              "k": "dx"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "e": "ปกติ/สูง + FVC ↓",
+        "t": "Restrictive",
+        "k": "dx",
+        "s": "fibrosis · ผนังอก · อ้วน · NM · FEV1 และ FVC ลดพอกัน"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "abg",
+   "box": 14,
+   "cat": "ABG",
+   "title": "อ่าน ABG 4 ขั้น",
+   "root": {
+    "t": "ABG",
+    "k": "start",
+    "c": [
+     {
+      "t": "① **Oxygenation**",
+      "s": "PaO2 80–100 · คิด A–a gradient",
+      "c": [
+       {
+        "t": "② **pH**",
+        "s": "ต่ำ = acidemia · สูง = alkalemia",
+        "c": [
+         {
+          "t": "③ Primary",
+          "s": "PaCO2 หรือ HCO3 ตัวไหนไปทางเดียวกับ pH",
+          "c": [
+           {
+            "t": "④ Compensation",
+            "s": "Winter: 1.5×HCO3 + 8 ± 2 · resp +1/+4 · −2/−5",
+            "c": [
+             {
+              "e": "สมกับที่คาด",
+              "t": "โรคเดียว",
+              "k": "dx"
+             },
+             {
+              "e": "ไม่สม",
+              "t": "มีโรคซ้อน",
+              "k": "dx",
+              "s": "AG สูง → ดู ΔAG หา NAGMA/alkalosis ซ้อน"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "effusion",
+   "box": 21,
+   "cat": "Pleura",
+   "title": "Pleural effusion: transudate หรือ exudate",
+   "root": {
+    "t": "น้ำในช่องเยื่อหุ้มปอด",
+    "k": "start",
+    "c": [
+     {
+      "t": "ดูลักษณะน้ำ + **Light's criteria**",
+      "s": "exudate ถ้ามีข้อใดข้อหนึ่ง: protein ratio > 0.5 · LDH ratio > 0.6 · LDH > 2/3 ULN",
+      "c": [
+       {
+        "e": "ไม่ผ่านเกณฑ์ใดเลย",
+        "t": "Transudate",
+        "k": "dx",
+        "s": "CHF · แรงดันผิดสมดุล"
+       },
+       {
+        "e": "ผ่านอย่างน้อย 1 ข้อ",
+        "t": "Exudate",
+        "k": "dx",
+        "s": "อักเสบ · มะเร็ง · TB"
+       },
+       {
+        "e": "เลือด หลังอุบัติเหตุ",
+        "t": "Hemothorax",
+        "k": "dx"
+       },
+       {
+        "e": "ขาวขุ่น",
+        "t": "Chylothorax",
+        "k": "dx",
+        "s": "TG สูง · thoracic duct ฉีก, lymphoma"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "tb",
+   "box": 28,
+   "cat": "TB",
+   "title": "สงสัยวัณโรคปอด: ตรวจอะไร",
+   "root": {
+    "t": "ไอเรื้อรัง ไข้ต่ำ ๆ เหงื่อกลางคืน",
+    "k": "start",
+    "s": "reactivation ที่ apex",
+    "c": [
+     {
+      "t": "**Xpert MTB/RIF**",
+      "s": "initial test · AFB smear ลบไม่ตัด TB",
+      "c": [
+       {
+        "e": "พบเชื้อ",
+        "t": "Active TB",
+        "k": "dx",
+        "s": "ดูการดื้อ rifampicin (rpoB) ได้พร้อมกัน"
+       },
+       {
+        "e": "ไม่พบแต่ยังสงสัย",
+        "t": "**Culture**",
+        "s": "gold standard แต่หลายสัปดาห์"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

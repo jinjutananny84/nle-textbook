@@ -1,0 +1,547 @@
+{
+ "flows": [
+  {
+   "id": "cord",
+   "box": 7,
+   "cat": "Spinal cord",
+   "title": "Spinal cord syndrome: อะไรเสียข้างไหน",
+   "root": {
+    "t": "รอยโรคไขสันหลัง",
+    "k": "start",
+    "c": [
+     {
+      "t": "รูปแบบที่เสีย",
+      "c": [
+       {
+        "e": "ข้างเดียวกัน UMN + DC · ตรงข้าม pain/temp",
+        "t": "Brown-Séquard",
+        "k": "dx",
+        "s": "ถูกแทง · trauma"
+       },
+       {
+        "e": "pain/temp รูปผ้าคลุมไหล่ · แขน > ขา",
+        "t": "Central cord",
+        "k": "dx",
+        "s": "syringomyelia · hyperextension คอคนแก่"
+       },
+       {
+        "e": "motor + pain/temp 2 ข้าง · DC รอด",
+        "t": "Anterior cord (ASA)",
+        "k": "dx",
+        "s": "aortic surgery · hypotension"
+       },
+       {
+        "e": "vibration/proprio · Romberg +",
+        "t": "Posterior column",
+        "k": "dx",
+        "s": "B12 (SCD) · tabes dorsalis"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "visual",
+   "box": 16,
+   "cat": "Eye",
+   "title": "Visual field defect: บอกตำแหน่งรอยโรค",
+   "root": {
+    "t": "ลานสายตาเสีย",
+    "k": "start",
+    "c": [
+     {
+      "t": "รูปแบบ",
+      "c": [
+       {
+        "e": "ตาข้างเดียวบอด",
+        "t": "Optic nerve",
+        "k": "dx"
+       },
+       {
+        "e": "bitemporal",
+        "t": "Chiasm",
+        "k": "dx",
+        "s": "pituitary adenoma · craniopharyngioma"
+       },
+       {
+        "e": "homonymous hemianopia",
+        "t": "Macular sparing?",
+        "c": [
+         {
+          "e": "มี",
+          "t": "Occipital (PCA)",
+          "k": "dx"
+         },
+         {
+          "e": "ไม่มี",
+          "t": "Optic tract",
+          "k": "dx"
+         }
+        ]
+       },
+       {
+        "e": "quadrantanopia",
+        "t": "ครึ่งบนหรือล่าง",
+        "c": [
+         {
+          "e": "บน",
+          "t": "Meyer loop (temporal)",
+          "k": "dx",
+          "s": "\"pie in the sky\""
+         },
+         {
+          "e": "ล่าง",
+          "t": "Parietal radiation",
+          "k": "dx",
+          "s": "\"pie on the floor\""
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hearing",
+   "box": 17,
+   "cat": "Ear",
+   "title": "หูตึงข้างเดียว: Weber + Rinne",
+   "root": {
+    "t": "หูตึงข้างเดียว",
+    "k": "start",
+    "c": [
+     {
+      "t": "**Weber** ไปข้างไหน",
+      "c": [
+       {
+        "e": "ข้างเสีย",
+        "t": "**Rinne** ข้างเสีย",
+        "c": [
+         {
+          "e": "BC > AC",
+          "t": "Conductive",
+          "k": "dx",
+          "s": "ขี้หู · OM · otosclerosis · แก้วหูทะลุ"
+         }
+        ]
+       },
+       {
+        "e": "ข้างดี",
+        "t": "**Rinne** ข้างเสีย",
+        "c": [
+         {
+          "e": "AC > BC",
+          "t": "Sensorineural",
+          "k": "dx",
+          "s": "cochlea / CN VIII · หา vestibular schwannoma"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "aphasia",
+   "box": 18,
+   "cat": "Cortex",
+   "title": "Aphasia: fluency → comprehension → repetition",
+   "root": {
+    "t": "พูดผิดปกติ",
+    "k": "start",
+    "s": "รู้ตัวดี (ไม่ใช่ delirium)",
+    "c": [
+     {
+      "t": "**Fluency**",
+      "c": [
+       {
+        "e": "ไม่คล่อง",
+        "t": "**Comprehension**",
+        "c": [
+         {
+          "e": "ดี",
+          "t": "**Repetition**",
+          "c": [
+           {
+            "e": "เสีย",
+            "t": "Broca",
+            "k": "dx",
+            "s": "inferior frontal gyrus"
+           },
+           {
+            "e": "ดี",
+            "t": "Transcortical motor",
+            "k": "dx",
+            "s": "watershed"
+           }
+          ]
+         },
+         {
+          "e": "เสีย",
+          "t": "Global",
+          "k": "dx",
+          "s": "MCA ทั้งเส้น"
+         }
+        ]
+       },
+       {
+        "e": "คล่อง",
+        "t": "**Comprehension**",
+        "c": [
+         {
+          "e": "เสีย",
+          "t": "**Repetition**",
+          "c": [
+           {
+            "e": "เสีย",
+            "t": "Wernicke",
+            "k": "dx",
+            "s": "posterior superior temporal"
+           },
+           {
+            "e": "ดี",
+            "t": "Transcortical sensory",
+            "k": "dx",
+            "s": "watershed"
+           }
+          ]
+         },
+         {
+          "e": "ดี",
+          "t": "Conduction",
+          "k": "dx",
+          "s": "arcuate fasciculus · repetition เสีย"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "stroke",
+   "box": 23,
+   "cat": "Stroke",
+   "title": "Acute stroke: CT ก่อน แล้วเปิดหลอดเลือด",
+   "root": {
+    "t": "อ่อนแรงครึ่งซีกเฉียบพลัน",
+    "k": "start",
+    "c": [
+     {
+      "t": "**CT ไม่ฉีดสี**",
+      "c": [
+       {
+        "e": "มีเลือด",
+        "t": "Hemorrhagic stroke",
+        "k": "dx"
+       },
+       {
+        "e": "ไม่มีเลือด",
+        "t": "เวลาตั้งแต่เริ่มอาการ",
+        "c": [
+         {
+          "e": "≤ 4.5 ชม.",
+          "t": "Alteplase / tenecteplase",
+          "k": "tx",
+          "s": "BP ต้อง < 185/110",
+          "c": [
+           {
+            "e": "มี LVO",
+            "t": "Thrombectomy",
+            "k": "tx",
+            "s": "ภายใน 24 ชม."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "csf",
+   "box": 26,
+   "cat": "Infection",
+   "title": "อ่าน CSF: glucose ก่อน แล้วดูเซลล์",
+   "root": {
+    "t": "ไข้ ปวดหัว คอแข็ง",
+    "k": "start",
+    "c": [
+     {
+      "t": "**CSF glucose**",
+      "c": [
+       {
+        "e": "ต่ำ",
+        "t": "ดูเซลล์",
+        "c": [
+         {
+          "e": "PMN ↑↑",
+          "t": "Bacteria",
+          "k": "dx",
+          "s": "protein ↑↑ · Gram/culture"
+         },
+         {
+          "e": "lymph",
+          "t": "Lymph ↑",
+          "c": [
+           {
+            "e": "protein สูงมาก",
+            "t": "TB",
+            "k": "dx",
+            "s": "protein ↑↑ · TB PCR"
+           },
+           {
+            "e": "AIDS",
+            "t": "Cryptococcus",
+            "k": "dx",
+            "s": "AIDS · India ink · CrAg · OP สูงมาก"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "e": "ปกติ",
+        "t": "ดูเซลล์",
+        "c": [
+         {
+          "e": "lymph ↑",
+          "t": "Virus",
+          "k": "dx",
+          "s": "PCR"
+         },
+         {
+          "e": "eos > 10%",
+          "t": "Eosinophilic",
+          "k": "dx",
+          "s": "Angiostrongylus · Gnathostoma → steroid"
+         },
+         {
+          "e": "เซลล์ปกติ protein ↑",
+          "t": "GBS",
+          "k": "dx",
+          "s": "albuminocytologic dissociation"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "toxidrome",
+   "box": 33,
+   "cat": "Toxicology",
+   "title": "Toxidrome: ดูม่านตาก่อน",
+   "root": {
+    "t": "ซึม / กระสับกระส่าย จากสาร",
+    "k": "start",
+    "c": [
+     {
+      "t": "**ม่านตา**",
+      "c": [
+       {
+        "e": "เล็ก",
+        "t": "กดหายใจ หรือ น้ำลายน้ำตามาก",
+        "c": [
+         {
+          "e": "กดหายใจ",
+          "t": "Opioid",
+          "k": "dx",
+          "s": "antidote naloxone"
+         },
+         {
+          "e": "secretion มาก",
+          "t": "Cholinergic",
+          "k": "dx",
+          "s": "DUMBELS · organophosphate มี fasciculation"
+         }
+        ]
+       },
+       {
+        "e": "ขยาย",
+        "t": "ผิวแห้งหรือเหงื่อแตก",
+        "c": [
+         {
+          "e": "แห้ง",
+          "t": "Anticholinergic",
+          "k": "dx",
+          "s": "hot dry red blind mad · ปัสสาวะไม่ออก"
+         },
+         {
+          "e": "เหงื่อ",
+          "t": "Cocaine / amphetamine",
+          "k": "dx",
+          "s": "HR/BP ↑ ไข้ ชัก → BZD"
+         }
+        ]
+       },
+       {
+        "e": "ตาแดง",
+        "t": "Cannabis",
+        "k": "dx",
+        "s": "ปากแห้ง หิว HR ↑"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "status",
+   "box": 34,
+   "cat": "Seizure",
+   "title": "Status epilepticus: ทำตามนาฬิกา",
+   "root": {
+    "t": "ชักไม่หยุด",
+    "k": "start",
+    "c": [
+     {
+      "t": "0–5 นาที: ABC + glucose/thiamine",
+      "k": "tx",
+      "c": [
+       {
+        "t": "5–20 นาที: BZD",
+        "k": "tx",
+        "s": "lorazepam/diazepam IV · midazolam IM · ไม่เกิน 2 dose",
+        "c": [
+         {
+          "t": "20–40 นาที: IV phenytoin / valproate / levetiracetam",
+          "k": "tx",
+          "s": "(phenobarbital)",
+          "c": [
+           {
+            "t": "> 40 นาที: refractory",
+            "k": "tx",
+            "s": "midazolam / propofol / thiopental infusion"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "localize",
+   "box": 40,
+   "cat": "Localize",
+   "title": "อ่อนแรง: localize ทีละคำถาม",
+   "root": {
+    "t": "อ่อนแรง",
+    "k": "start",
+    "c": [
+     {
+      "t": "**Reflex**",
+      "c": [
+       {
+        "e": "↑ (UMN)",
+        "t": "Sensory เสียแบบไหน",
+        "c": [
+         {
+          "e": "hemiparesis + hemisensory",
+          "t": "Cortex / capsule",
+          "k": "dx",
+          "s": "MCA, ACA, lacunar"
+         },
+         {
+          "e": "crossed: CN + ตัวตรงข้าม",
+          "t": "Brainstem",
+          "k": "dx",
+          "s": "Weber, Wallenberg"
+         },
+         {
+          "e": "sensory level + ปัสสาวะ",
+          "t": "Spinal cord",
+          "k": "dx",
+          "s": "Brown-Séquard, ASA"
+         }
+        ]
+       },
+       {
+        "e": "↓ / ปกติ",
+        "t": "Sensory เสียไหม",
+        "c": [
+         {
+          "e": "ไม่เสีย · ลีบ fasciculation",
+          "t": "Anterior horn",
+          "k": "dx",
+          "s": "ALS, SMA, polio"
+         },
+         {
+          "e": "ตาม dermatome / เส้น",
+          "t": "Root / nerve",
+          "k": "dx",
+          "s": "disc · radial · peroneal · GBS"
+         },
+         {
+          "e": "ไม่เสีย · ล้าง่าย ตา/bulbar",
+          "t": "NMJ",
+          "k": "dx",
+          "s": "MG, LEMS, botulism"
+         },
+         {
+          "e": "ไม่เสีย · proximal CK ↑",
+          "t": "Muscle",
+          "k": "dx",
+          "s": "dermatomyositis"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "nmj",
+   "box": 40,
+   "cat": "Localize",
+   "title": "NMJ และ GBS: แยก 4 โรค",
+   "root": {
+    "t": "อ่อนแรงทั่วตัว ไม่มี sensory level",
+    "k": "start",
+    "c": [
+     {
+      "t": "ลำดับอาการ + reflex",
+      "c": [
+       {
+        "e": "ascending · areflexia",
+        "t": "GBS",
+        "k": "dx",
+        "s": "LP albuminocytologic dissociation · ตามหลัง C. jejuni"
+       },
+       {
+        "e": "descending",
+        "t": "Botulism",
+        "k": "dx",
+        "s": "ม่านตาขยาย · อาหารกระป๋อง/น้ำผึ้ง"
+       },
+       {
+        "e": "ขา proximal · reflex ↓ ดีขึ้นหลังออกแรง",
+        "t": "LEMS",
+        "k": "dx",
+        "s": "presynaptic VGCC · หา SCLC"
+       },
+       {
+        "e": "ตา → bulbar · reflex ปกติ",
+        "t": "Myasthenia gravis",
+        "k": "dx",
+        "s": "AChR Ab · decrement · CT chest (thymoma)"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

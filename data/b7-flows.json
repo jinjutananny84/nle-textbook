@@ -1,0 +1,494 @@
+{
+ "flows": [
+  {
+   "id": "avb",
+   "box": 12,
+   "cat": "Arrhythmia",
+   "title": "Bradycardia: AV block แบบไหน",
+   "root": {
+    "t": "ชีพจรช้า",
+    "k": "start",
+    "s": "ดู ECG: P กับ QRS สัมพันธ์กันไหม",
+    "c": [
+     {
+      "t": "P ทุกตัวตามด้วย QRS?",
+      "c": [
+       {
+        "e": "ทุกตัว แต่ PR ยาว",
+        "t": "1° AV block",
+        "k": "dx",
+        "s": "PR > 200 ms · ไม่ต้องรักษา"
+       },
+       {
+        "e": "บางตัว drop",
+        "t": "ดู **PR** ก่อน beat ที่ drop",
+        "c": [
+         {
+          "e": "PR ยาวขึ้นเรื่อย ๆ",
+          "t": "Mobitz I (Wenckebach)",
+          "k": "dx",
+          "s": "AV node · benign · atropine ได้ผล"
+         },
+         {
+          "e": "PR คงที่",
+          "t": "Mobitz II",
+          "k": "dx",
+          "s": "infranodal · เสี่ยง 3° → pacemaker"
+         }
+        ]
+       },
+       {
+        "e": "ไม่สัมพันธ์เลย",
+        "t": "3° complete",
+        "k": "dx",
+        "s": "PP คงที่ RR คงที่ · syncope → pacemaker"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "tachy",
+   "box": 13,
+   "cat": "Arrhythmia",
+   "title": "Tachycardia: ดู QRS ก่อน",
+   "root": {
+    "t": "ชีพจรเร็ว",
+    "k": "start",
+    "c": [
+     {
+      "t": "**QRS** กว้างไหม",
+      "c": [
+       {
+        "e": "แคบ < 120 ms",
+        "t": "Supraventricular",
+        "c": [
+         {
+          "e": "irregularly irregular",
+          "t": "AF",
+          "k": "dx",
+          "s": "ไม่มี P · rate control + anticoagulant"
+         },
+         {
+          "e": "sawtooth F wave",
+          "t": "Atrial flutter",
+          "k": "dx",
+          "s": "macro-reentry · 2:1 → ~150"
+         },
+         {
+          "e": "regular ไม่เห็น P",
+          "t": "ให้ **adenosine**",
+          "c": [
+           {
+            "e": "หยุด",
+            "t": "AVNRT / AVRT",
+            "k": "dx",
+            "s": "AV node อยู่ในวงจร"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "e": "กว้าง",
+        "t": "Ventricular",
+        "c": [
+         {
+          "e": "สม่ำเสมอ",
+          "t": "VT",
+          "k": "dx",
+          "s": "หรือ SVT + aberrancy"
+         },
+         {
+          "e": "บิดเกลียว",
+          "t": "Torsades de pointes",
+          "k": "dx",
+          "s": "QT ยาว · K/Mg ต่ำ · Tx IV MgSO₄"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "arrest",
+   "box": 13,
+   "cat": "Arrhythmia",
+   "title": "Cardiac arrest: shock หรือไม่ shock",
+   "root": {
+    "t": "หมดสติ",
+    "k": "start",
+    "c": [
+     {
+      "t": "คลำชีพจร",
+      "c": [
+       {
+        "e": "ไม่มีชีพจร",
+        "t": "ดู **rhythm**",
+        "c": [
+         {
+          "e": "VF / pulseless VT",
+          "t": "Defibrillation ทันที + CPR",
+          "k": "tx",
+          "s": "→ epinephrine, amiodarone"
+         },
+         {
+          "e": "PEA / asystole",
+          "t": "CPR + epinephrine",
+          "k": "tx",
+          "s": "หาเหตุ 5H5T · ห้าม shock"
+         }
+        ]
+       },
+       {
+        "e": "มีชีพจรแต่ unstable",
+        "t": "Synchronized cardioversion",
+        "k": "tx"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "acs",
+   "box": 18,
+   "cat": "Ischemic heart",
+   "title": "เจ็บอก: แยก ACS ด้วย ECG แล้ว troponin",
+   "root": {
+    "t": "เจ็บอกตอนพัก",
+    "k": "start",
+    "s": "คิด ACS · อย่าลืม dissection, PE, pericarditis",
+    "c": [
+     {
+      "t": "**ECG**",
+      "c": [
+       {
+        "e": "ST↑",
+        "t": "STEMI",
+        "k": "dx",
+        "s": "อุดสนิท · primary PCI / fibrinolysis"
+       },
+       {
+        "e": "ไม่มี ST↑",
+        "t": "**Troponin**",
+        "c": [
+         {
+          "e": "↑",
+          "t": "NSTEMI",
+          "k": "dx",
+          "s": "anticoagulant + antiplatelet · ไม่ให้ fibrinolysis"
+         },
+         {
+          "e": "ปกติ",
+          "t": "Unstable angina",
+          "k": "dx",
+          "s": "กล้ามเนื้อไม่ตาย"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "stelev",
+   "box": 23,
+   "cat": "Pericardium",
+   "title": "ST↑: STEMI หรือ pericarditis",
+   "root": {
+    "t": "ST elevation",
+    "k": "start",
+    "c": [
+     {
+      "t": "รูปแบบ ST↑",
+      "c": [
+       {
+        "e": "เฉพาะบาง lead",
+        "t": "STEMI",
+        "k": "dx",
+        "s": "ตาม territory หลอดเลือด · มี reciprocal ST↓"
+       },
+       {
+        "e": "ทุก lead แบบเว้า + PR↓",
+        "t": "Pericarditis",
+        "k": "dx",
+        "s": "เจ็บแหลม ดีขึ้นเมื่อโน้มตัว · NSAID + colchicine"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "tamponade",
+   "box": 23,
+   "cat": "Pericardium",
+   "title": "Cardiac tamponade",
+   "root": {
+    "t": "BP ต่ำ + JVD + เสียงหัวใจเบา",
+    "k": "start",
+    "s": "Beck triad",
+    "c": [
+     {
+      "t": "Pulsus paradoxus · electrical alternans",
+      "c": [
+       {
+        "t": "**Echo**",
+        "s": "RA/RV collapse",
+        "c": [
+         {
+          "t": "Pericardiocentesis",
+          "k": "tx",
+          "s": "obstructive shock"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "murmur",
+   "box": 24,
+   "cat": "Valve",
+   "title": "Murmur: systolic หรือ diastolic",
+   "root": {
+    "t": "ได้ยิน murmur",
+    "k": "start",
+    "c": [
+     {
+      "t": "**จังหวะ**",
+      "c": [
+       {
+        "e": "Systolic",
+        "t": "ตำแหน่ง + ลักษณะ",
+        "c": [
+         {
+          "e": "ejection",
+          "t": "AS",
+          "k": "dx",
+          "s": "R 2nd ICS → carotid · crescendo-decrescendo"
+         },
+         {
+          "e": "holosystolic",
+          "t": "MR",
+          "k": "dx",
+          "s": "apex → axilla"
+         },
+         {
+          "e": "holosystolic ขวา",
+          "t": "TR",
+          "k": "dx",
+          "s": "LLSB ดังขึ้นตอนหายใจเข้า"
+         },
+         {
+          "e": "click",
+          "t": "MVP",
+          "k": "dx",
+          "s": "mid-systolic click"
+         }
+        ]
+       },
+       {
+        "e": "Diastolic",
+        "t": "ตำแหน่ง + ลักษณะ",
+        "c": [
+         {
+          "e": "early blowing",
+          "t": "AR",
+          "k": "dx",
+          "s": "LSB · wide pulse pressure"
+         },
+         {
+          "e": "rumble",
+          "t": "MS",
+          "k": "dx",
+          "s": "apex · opening snap · rheumatic"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "sechtn",
+   "box": 27,
+   "cat": "Hypertension",
+   "title": "Secondary hypertension: ดู clue",
+   "root": {
+    "t": "HT อายุ < 30 / resistant HT",
+    "k": "start",
+    "c": [
+     {
+      "t": "Clue",
+      "c": [
+       {
+        "e": "K ต่ำ + alkalosis",
+        "t": "**ARR**",
+        "c": [
+         {
+          "t": "Confirm salt loading → CT + AVS",
+          "k": "tx",
+          "c": [
+           {
+            "t": "Conn",
+            "k": "dx",
+            "s": "unilateral → adrenalectomy · bilateral → spironolactone"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "e": "bruit",
+        "t": "Renal artery stenosis",
+        "k": "dx",
+        "s": "bruit · Cr พุ่งหลัง ACEI · string of beads (FMD)"
+       },
+       {
+        "e": "HT เป็นพัก + เหงื่อ ใจสั่น",
+        "t": "Pheochromocytoma",
+        "k": "dx",
+        "s": "plasma metanephrines"
+       },
+       {
+        "e": "BP แขน > ขา",
+        "t": "Coarctation",
+        "k": "dx",
+        "s": "ชีพจรขาเบา"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "dvt",
+   "box": 30,
+   "cat": "VTE",
+   "title": "DVT: Wells score ก่อน",
+   "root": {
+    "t": "น่องบวมแดงปวดข้างเดียว",
+    "k": "start",
+    "c": [
+     {
+      "t": "**Wells score**",
+      "c": [
+       {
+        "e": "ต่ำ",
+        "t": "**D-dimer**",
+        "c": [
+         {
+          "e": "ลบ",
+          "t": "ตัด DVT ออก",
+          "k": "out"
+         },
+         {
+          "e": "บวก",
+          "t": "Compression ultrasound"
+         }
+        ]
+       },
+       {
+        "e": "สูง",
+        "t": "Compression ultrasound",
+        "c": [
+         {
+          "e": "พบลิ่มเลือด",
+          "t": "เจาะ CBC, PT/aPTT, Cr ก่อน",
+          "k": "tx",
+          "s": "แล้วให้ LMWH / DOAC / warfarin"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "pe",
+   "box": 30,
+   "cat": "VTE",
+   "title": "สงสัย PE",
+   "root": {
+    "t": "หอบเฉียบพลัน เจ็บอก pleuritic",
+    "k": "start",
+    "s": "หลังนั่งเครื่องบินนาน / ผ่าตัด",
+    "c": [
+     {
+      "t": "**CT pulmonary angiography**",
+      "s": "definitive · V/Q scan ถ้าห้าม contrast",
+      "c": [
+       {
+        "e": "massive PE (shock)",
+        "t": "Thrombolysis",
+        "k": "tx"
+       },
+       {
+        "e": "stable",
+        "t": "Anticoagulant",
+        "k": "tx"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "shock",
+   "box": 31,
+   "cat": "Shock",
+   "title": "Shock 4 แบบ: CO · SVR · CVP",
+   "root": {
+    "t": "Shock",
+    "k": "start",
+    "c": [
+     {
+      "t": "**SVR / CO**",
+      "c": [
+       {
+        "e": "SVR ↓ CO ↑",
+        "t": "Distributive",
+        "k": "dx",
+        "s": "septic · anaphylaxis · neurogenic"
+       },
+       {
+        "e": "CO ↓ SVR ↑",
+        "t": "**CVP / PCWP**",
+        "c": [
+         {
+          "e": "↓",
+          "t": "Hypovolemic",
+          "k": "dx",
+          "s": "เลือดออก · burn · diarrhea"
+         },
+         {
+          "e": "↑ ทั้งคู่",
+          "t": "Cardiogenic",
+          "k": "dx",
+          "s": "MI · arrhythmia"
+         },
+         {
+          "e": "CVP ↑",
+          "t": "Obstructive",
+          "k": "dx",
+          "s": "tamponade · tension PTX · massive PE"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

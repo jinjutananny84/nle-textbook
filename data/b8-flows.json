@@ -1,0 +1,577 @@
+{
+ "flows": [
+  {
+   "id": "dysphagia",
+   "box": 8,
+   "cat": "Esophagus",
+   "title": "Dysphagia: ติดตรงไหน ติดอะไร",
+   "root": {
+    "t": "กลืนลำบาก",
+    "k": "start",
+    "c": [
+     {
+      "t": "เริ่มกลืนไม่ได้ หรือติดกลางอก",
+      "c": [
+       {
+        "e": "เริ่มกลืนไม่ได้",
+        "t": "Oropharyngeal",
+        "k": "dx",
+        "s": "สำลักขึ้นจมูก เสียงแหบ · stroke, MG, myositis"
+       },
+       {
+        "e": "ติดกลางอก",
+        "t": "ติดของแข็ง หรือทั้งแข็งและน้ำ",
+        "c": [
+         {
+          "e": "ของแข็งอย่างเดียว",
+          "t": "อุดเชิงโครงสร้าง",
+          "c": [
+           {
+            "e": "ค่อย ๆ แย่ลง",
+            "t": "Cancer / stricture",
+            "k": "dx",
+            "s": "สูงอายุ น้ำหนักลด สูบบุหรี่"
+           },
+           {
+            "e": "เป็น ๆ หาย ๆ",
+            "t": "Schatzki ring",
+            "k": "dx"
+           }
+          ]
+         },
+         {
+          "e": "แข็ง + น้ำ",
+          "t": "ปัญหาการบีบตัว",
+          "c": [
+           {
+            "e": "ค่อย ๆ แย่ลง",
+            "t": "Achalasia",
+            "k": "dx",
+            "s": "regurgitation · bird's beak · ไม่มี heartburn"
+           },
+           {
+            "e": "+ heartburn",
+            "t": "Scleroderma",
+            "k": "dx",
+            "s": "LES เปิดค้าง · Raynaud"
+           },
+           {
+            "e": "เป็นพัก + เจ็บอก",
+            "t": "Esophageal spasm",
+            "k": "dx",
+            "s": "corkscrew"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hpylori",
+   "box": 12,
+   "cat": "Stomach",
+   "title": "H. pylori: ตรวจอะไร แล้วรักษาอย่างไร",
+   "root": {
+    "t": "สงสัย H. pylori",
+    "k": "start",
+    "s": "แผล antrum · DU",
+    "c": [
+     {
+      "t": "ส่องกล้องไหม",
+      "c": [
+       {
+        "e": "ส่องกล้อง",
+        "t": "Rapid urease (CLO)",
+        "k": "dx",
+        "s": "histology/culture ดูดื้อยา"
+       },
+       {
+        "e": "ไม่ส่องกล้อง",
+        "t": "UBT / stool antigen",
+        "k": "dx",
+        "s": "งด PPI 2 สัปดาห์ · serology บอกแค่เคยติด"
+       }
+      ],
+      "then": {
+       "t": "ผลบวก → รักษา",
+       "c": [
+        {
+         "t": "PPI + clarithromycin + amoxicillin 14 วัน",
+         "k": "tx",
+         "s": "แพ้ amoxicillin → metronidazole",
+         "c": [
+          {
+           "t": "Follow-up ด้วย UBT / stool Ag",
+           "k": "tx",
+           "c": [
+            {
+             "e": "ไม่หาย",
+             "t": "Bismuth quadruple",
+             "k": "tx",
+             "s": "PPI + bismuth + tetracycline + metronidazole"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "gib",
+   "box": 16,
+   "cat": "GI bleeding",
+   "title": "GI bleeding: สีเลือดบอกตำแหน่ง",
+   "root": {
+    "t": "เลือดออกทางเดินอาหาร",
+    "k": "start",
+    "c": [
+     {
+      "t": "ดูสีและลักษณะเลือด",
+      "c": [
+       {
+        "e": "อาเจียนเลือด / coffee ground",
+        "t": "Upper 100%",
+        "k": "dx",
+        "s": "PUD > varices > Mallory-Weiss"
+       },
+       {
+        "e": "Melena",
+        "t": "Upper",
+        "k": "dx",
+        "s": "หรือ right colon / small bowel ที่ออกช้า"
+       },
+       {
+        "e": "Hematochezia",
+        "t": "Lower",
+        "k": "dx",
+        "s": "diverticular · CA · colitis (หรือ upper ออกเร็ว)"
+       },
+       {
+        "e": "แดงเคลือบอุจจาระ",
+        "t": "Anorectal",
+        "k": "dx",
+        "s": "hemorrhoid · fissure"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "varix",
+   "box": 16,
+   "cat": "GI bleeding",
+   "title": "Variceal bleeding: ลำดับรักษา",
+   "root": {
+    "t": "เลือดออกจาก varices",
+    "k": "start",
+    "s": "มี stigmata cirrhosis",
+    "c": [
+     {
+      "t": "Resuscitate",
+      "k": "tx",
+      "s": "อย่าให้น้ำเกิน",
+      "c": [
+       {
+        "t": "Octreotide / terlipressin",
+        "k": "tx",
+        "s": "ลด splanchnic flow",
+        "c": [
+         {
+          "t": "Endoscopic band ligation",
+          "k": "tx",
+          "s": "+ ceftriaxone ป้องกัน SBP",
+          "c": [
+           {
+            "t": "ป้องกันซ้ำ: non-selective β-blocker",
+            "k": "tx",
+            "s": "propranolol, carvedilol · ไม่ได้ผล → TIPS"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "diarrhea",
+   "box": 17,
+   "cat": "Diarrhea",
+   "title": "ท้องเสีย: แยกกลไก",
+   "root": {
+    "t": "ท้องเสีย",
+    "k": "start",
+    "c": [
+     {
+      "t": "ไข้ มูกเลือด tenesmus?",
+      "c": [
+       {
+        "e": "มี",
+        "t": "Inflammatory",
+        "k": "dx",
+        "s": "Shigella, Salmonella, Campylobacter, EHEC, amoeba, C. diff, IBD"
+       },
+       {
+        "e": "ไม่มี",
+        "t": "**อดอาหารแล้วหยุดไหม** + stool osmotic gap",
+        "c": [
+         {
+          "e": "หยุด · gap > 125",
+          "t": "Osmotic",
+          "k": "dx",
+          "s": "lactose · lactulose · Mg · sorbitol"
+         },
+         {
+          "e": "ไม่หยุด · gap < 50",
+          "t": "Secretory",
+          "k": "dx",
+          "s": "cholera · ETEC · VIPoma · carcinoid"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "foodpoison",
+   "box": 18,
+   "cat": "Diarrhea",
+   "title": "Food poisoning: ดูเวลาฟักตัว",
+   "root": {
+    "t": "อาการหลังกินอาหาร",
+    "k": "start",
+    "c": [
+     {
+      "t": "**ระยะฟักตัว**",
+      "c": [
+       {
+        "e": "1–6 ชม.",
+        "t": "S. aureus · B. cereus (emetic)",
+        "k": "dx",
+        "s": "preformed heat-stable · อาเจียนเด่น · ข้าวผัดค้าง"
+       },
+       {
+        "e": "8–16 ชม.",
+        "t": "C. perfringens · B. cereus (diarrheal)",
+        "k": "dx",
+        "s": "สร้าง toxin ในลำไส้ · เนื้อ/ซุปอุ่นซ้ำ"
+       },
+       {
+        "e": "> 16 ชม.",
+        "t": "ETEC, cholera · Salmonella, Shigella, EHEC",
+        "k": "dx",
+        "s": "watery หรือไข้ ± มูกเลือด"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "pancreatitis",
+   "box": 15,
+   "cat": "Pancreas",
+   "title": "Acute pancreatitis: วินิจฉัย → รักษา",
+   "root": {
+    "t": "ปวดลิ้นปี่ร้าวหลัง",
+    "k": "start",
+    "s": "ดีขึ้นเมื่อโน้มตัวไปหน้า",
+    "c": [
+     {
+      "t": "**2 ใน 3**",
+      "s": "อาการ · amylase/lipase > 3× ULN · CT",
+      "c": [
+       {
+        "t": "ประเมินความรุนแรง",
+        "s": "BISAP · Ca ต่ำ · Hct สูง",
+        "c": [
+         {
+          "t": "IV fluid (LR) ก่อน",
+          "k": "tx",
+          "s": "analgesia · ไม่ให้ antibiotic เว้น infected necrosis",
+          "c": [
+           {
+            "t": "หาสาเหตุ",
+            "c": [
+             {
+              "e": "นิ่ว",
+              "t": "ERCP / cholecystectomy",
+              "k": "tx"
+             },
+             {
+              "e": "alcohol",
+              "t": "หยุดเหล้า",
+              "k": "tx"
+             },
+             {
+              "e": "TG > 1,000",
+              "t": "Fibrate",
+              "k": "tx"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "jaundice",
+   "box": 25,
+   "cat": "Liver",
+   "title": "ดีซ่าน: ติดก่อนหรือหลัง conjugate",
+   "root": {
+    "t": "ตัวเหลือง",
+    "k": "start",
+    "c": [
+     {
+      "t": "**Direct หรือ indirect**",
+      "c": [
+       {
+        "e": "Indirect เด่น",
+        "t": "Pre-hepatic",
+        "s": "urine bilirubin − · urobilinogen ↑",
+        "c": [
+         {
+          "e": "ซีด",
+          "t": "Hemolysis",
+          "k": "dx",
+          "s": "LDH ↑ haptoglobin ↓ retic ↑"
+         },
+         {
+          "e": "LFT ปกติ",
+          "t": "Gilbert · Crigler-Najjar",
+          "k": "dx",
+          "s": "LFT ปกติ · เหลืองตอนเครียด/อดอาหาร"
+         }
+        ]
+       },
+       {
+        "e": "Direct / ทั้งคู่",
+        "t": "ดู **AST/ALT vs ALP/GGT**",
+        "s": "urine bilirubin +",
+        "c": [
+         {
+          "e": "AST/ALT เด่น",
+          "t": "Hepatocellular",
+          "k": "dx",
+          "s": "viral · drug · ischemic · Wilson"
+         },
+         {
+          "e": "ALP/GGT เด่น",
+          "t": "Obstructive",
+          "k": "dx",
+          "s": "นิ่ว CBD · CA หัวตับอ่อน · อุจจาระซีด"
+         },
+         {
+          "e": "LFT ปกติ",
+          "t": "Dubin-Johnson · Rotor",
+          "k": "dx",
+          "s": "MRP2 · ตับดำ (DJ)"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "lft",
+   "box": 27,
+   "cat": "Liver",
+   "title": "อ่าน LFT pattern",
+   "root": {
+    "t": "LFT ผิดปกติ",
+    "k": "start",
+    "c": [
+     {
+      "t": "รูปแบบเอนไซม์",
+      "c": [
+       {
+        "e": "> 1,000 เฉียบพลัน",
+        "t": "Ischemic · paracetamol · acute viral",
+        "k": "dx",
+        "s": "zone 3 necrosis"
+       },
+       {
+        "e": "AST:ALT > 2",
+        "t": "Alcohol",
+        "k": "dx",
+        "s": "หรือ muscle injury"
+       },
+       {
+        "e": "ขึ้นน้อยเรื้อรัง",
+        "t": "Chronic HBV/HCV · NAFLD",
+        "k": "dx",
+        "s": "autoimmune · Wilson · hemochromatosis"
+       },
+       {
+        "e": "ALP เด่น",
+        "t": "ยืนยันด้วย **GGT**",
+        "c": [
+         {
+          "e": "GGT ↑",
+          "t": "Cholestasis",
+          "k": "dx"
+         },
+         {
+          "e": "GGT ปกติ",
+          "t": "กระดูก · รก",
+          "k": "dx"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hbv",
+   "box": 28,
+   "cat": "Liver",
+   "title": "อ่าน HBV serology",
+   "root": {
+    "t": "ผล HBV",
+    "k": "start",
+    "c": [
+     {
+      "t": "**HBsAg**",
+      "c": [
+       {
+        "e": "+ (มีเชื้อ)",
+        "t": "**anti-HBc**",
+        "c": [
+         {
+          "e": "IgM +",
+          "t": "Acute",
+          "k": "dx",
+          "s": "HBeAg +"
+         },
+         {
+          "e": "> 6 เดือน",
+          "t": "Chronic",
+          "c": [
+           {
+            "e": "HBeAg +",
+            "t": "Immune tolerant / clearance",
+            "k": "dx",
+            "s": "ALT ปกติ / ↑"
+           },
+           {
+            "e": "HBeAg −",
+            "t": "Inactive carrier",
+            "k": "dx",
+            "s": "DNA < 2,000 · reactivation ถ้า DNA, ALT ↑"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "e": "−",
+        "t": "**anti-HBs**",
+        "c": [
+         {
+          "e": "+",
+          "t": "anti-HBc",
+          "c": [
+           {
+            "e": "+",
+            "t": "หายแล้ว",
+            "k": "dx",
+            "s": "natural immunity"
+           },
+           {
+            "e": "−",
+            "t": "วัคซีน",
+            "k": "dx"
+           }
+          ]
+         },
+         {
+          "e": "−",
+          "t": "anti-HBc",
+          "c": [
+           {
+            "e": "IgM +",
+            "t": "Window period",
+            "k": "dx"
+           },
+           {
+            "e": "total +",
+            "t": "Isolated anti-HBc",
+            "k": "dx",
+            "s": "occult · resolved · false +"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "saag",
+   "box": 29,
+   "cat": "Liver",
+   "title": "Ascites: SAAG แล้วดู protein",
+   "root": {
+    "t": "Ascites",
+    "k": "start",
+    "c": [
+     {
+      "t": "**SAAG**",
+      "s": "serum albumin − ascitic albumin",
+      "c": [
+       {
+        "e": "≥ 1.1 (portal HT)",
+        "t": "Ascitic **protein**",
+        "c": [
+         {
+          "e": "< 2.5",
+          "t": "Cirrhosis",
+          "k": "dx",
+          "s": "liver mets"
+         },
+         {
+          "e": "≥ 2.5",
+          "t": "Cardiac ascites",
+          "k": "dx",
+          "s": "HF · Budd-Chiari · constrictive"
+         }
+        ]
+       },
+       {
+        "e": "< 1.1",
+        "t": "Peritoneal carcinomatosis",
+        "k": "dx",
+        "s": "TB peritonitis · pancreatitis"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

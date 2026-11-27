@@ -1,0 +1,287 @@
+{
+ "flows": [
+  {
+   "id": "blister",
+   "box": 3,
+   "cat": "Blistering",
+   "title": "ตุ่มน้ำพอง: PV หรือ BP",
+   "root": {
+    "t": "ตุ่มน้ำพองทั่วตัว",
+    "k": "start",
+    "c": [
+     {
+      "t": "ลักษณะตุ่ม + เยื่อบุ",
+      "c": [
+       {
+        "e": "flaccid แตกง่าย · Nikolsky+ · เหงือกนำ",
+        "t": "Pemphigus vulgaris",
+        "k": "dx",
+        "s": "suprabasal acantholysis · DIF fishnet · anti-Dsg3"
+       },
+       {
+        "e": "tense · คันนำ · อายุ > 60",
+        "t": "Bullous pemphigoid",
+        "k": "dx",
+        "s": "subepidermal + eosinophil · DIF linear IgG/C3 · BP180/230"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hypopig",
+   "box": 14,
+   "cat": "Pigment",
+   "title": "ผื่นสีจาง: แยกด้วย clue เดียว",
+   "root": {
+    "t": "ผื่นสีจาง/ขาว",
+    "k": "start",
+    "c": [
+     {
+      "t": "Clue",
+      "c": [
+       {
+        "e": "ชา",
+        "t": "Leprosy (TT/BT)",
+        "k": "dx",
+        "s": "เส้นประสาทโต"
+       },
+       {
+        "e": "ขุยละเอียด ไม่ชา",
+        "t": "Tinea versicolor",
+        "k": "dx",
+        "s": "Malassezia · azelaic acid · KOH short hyphae + yeast"
+       },
+       {
+        "e": "ขาวสนิทขอบชัด",
+        "t": "Vitiligo",
+        "k": "dx",
+        "s": "melanocyte หายไป · Wood lamp ขาวสว่าง"
+       },
+       {
+        "e": "ขาวทั้งตัวตั้งแต่เกิด",
+        "t": "Albinism",
+        "k": "dx",
+        "s": "melanocyte ปกติ · tyrosinase เสีย"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "drugrash",
+   "box": 19,
+   "cat": "Drug eruption",
+   "title": "ผื่นแพ้ยา: ดูเวลาและเยื่อบุ",
+   "root": {
+    "t": "ผื่นหลังได้ยา",
+    "k": "start",
+    "c": [
+     {
+      "t": "เวลา + ลักษณะ",
+      "c": [
+       {
+        "e": "ไข้นำ + เยื่อบุ ≥ 2 ที่ · Nikolsky+",
+        "t": "SJS / TEN",
+        "s": "CD8 T · full-thickness · allopurinol, CBZ",
+        "c": [
+         {
+          "e": "< 10% BSA",
+          "t": "SJS",
+          "k": "dx"
+         },
+         {
+          "e": "10–30%",
+          "t": "Overlap",
+          "k": "dx"
+         },
+         {
+          "e": "> 30%",
+          "t": "TEN",
+          "k": "dx"
+         }
+        ]
+       },
+       {
+        "e": "2–8 สัปดาห์ · หน้าบวม",
+        "t": "DRESS",
+        "k": "dx",
+        "s": "eosinophilia · atypical lymph · ตับอักเสบ"
+       },
+       {
+        "e": "ที่เดิมทุกครั้ง",
+        "t": "Fixed drug eruption",
+        "k": "dx",
+        "s": "sulfa · NSAID · tetracycline"
+       },
+       {
+        "e": "1–2 วัน · ตุ่มหนองหลายร้อย",
+        "t": "AGEP",
+        "k": "dx",
+        "s": "β-lactam"
+       },
+       {
+        "e": "target 3 วง",
+        "t": "Erythema multiforme",
+        "k": "dx",
+        "s": "ตามหลัง HSV · หายเอง"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "syphilis",
+   "box": 24,
+   "cat": "Infection",
+   "title": "Syphilis: ตรวจอะไรเมื่อไร",
+   "root": {
+    "t": "สงสัย syphilis",
+    "k": "start",
+    "s": "แผลไม่เจ็บ · ผื่นฝ่ามือฝ่าเท้า",
+    "c": [
+     {
+      "t": "โจทย์ถามอะไร",
+      "c": [
+       {
+        "e": "ตรวจหาเชื้อโดยตรง",
+        "t": "Dark-field microscopy",
+        "k": "dx",
+        "s": "primary / secondary"
+       },
+       {
+        "e": "คัดกรองแบบเดิม",
+        "t": "**RPR / VDRL**",
+        "c": [
+         {
+          "e": "reactive",
+          "t": "**TPHA / FTA-ABS**",
+          "s": "ยืนยัน · บวกตลอดชีวิต",
+          "c": [
+           {
+            "e": "บวก",
+            "t": "Syphilis",
+            "k": "dx",
+            "s": "ติดตามด้วย RPR titer ลด 4 เท่า"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "e": "Reverse algorithm",
+        "t": "**CMIA** (treponemal)",
+        "c": [
+         {
+          "e": "reactive",
+          "t": "**RPR**",
+          "c": [
+           {
+            "e": "บวก",
+            "t": "Syphilis",
+            "k": "dx"
+           },
+           {
+            "e": "ลบ",
+            "t": "TPPA ตัดสิน"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "rashfever",
+   "box": 29,
+   "cat": "Infection",
+   "title": "ไข้ออกผื่นในเด็ก: จุดเด่น 1 อย่าง",
+   "root": {
+    "t": "ไข้ + ผื่น",
+    "k": "start",
+    "c": [
+     {
+      "t": "จุดเด่น",
+      "c": [
+       {
+        "e": "3C + Koplik",
+        "t": "Measles",
+        "k": "dx",
+        "s": "ผื่นจากหน้าลงล่าง"
+       },
+       {
+        "e": "ไข้สูง 3 วัน ไข้ลดแล้วผื่นขึ้น",
+        "t": "Roseola (HHV-6)",
+        "k": "dx"
+       },
+       {
+        "e": "slapped cheek",
+        "t": "Parvovirus B19",
+        "k": "dx",
+        "s": "ตั้งครรภ์ → hydrops"
+       },
+       {
+        "e": "แผลในปาก + ฝ่ามือฝ่าเท้า",
+        "t": "HFMD",
+        "k": "dx",
+        "s": "coxsackie A16 · EV71"
+       },
+       {
+        "e": "sandpaper + strawberry tongue",
+        "t": "Scarlet fever",
+        "k": "dx",
+        "s": "GAS"
+       },
+       {
+        "e": "LN หลังหู",
+        "t": "Rubella",
+        "k": "dx",
+        "s": "congenital: PDA + cataract + deafness"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "koh",
+   "box": 32,
+   "cat": "Lab",
+   "title": "ขูดผิวทำ KOH: เห็นอะไร",
+   "root": {
+    "t": "KOH preparation",
+    "k": "start",
+    "c": [
+     {
+      "t": "รูปร่างเชื้อ",
+      "c": [
+       {
+        "e": "septate hyphae",
+        "t": "Dermatophyte",
+        "k": "dx",
+        "s": "ทายา ~4 สัปดาห์"
+       },
+       {
+        "e": "short hyphae + yeast",
+        "t": "Malassezia",
+        "k": "dx",
+        "s": "เกลื้อน"
+       },
+       {
+        "e": "pseudohyphae + budding",
+        "t": "Candida",
+        "k": "dx"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
