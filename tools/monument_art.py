@@ -477,6 +477,46 @@ AI_SHRINE = uri("""
 </svg>
 """)
 
+# ท้องฟ้าดาว + จันทร์เสี้ยวบาง ๆ สำหรับพื้นหลังหน้าเว็บ Dark Mode (ไม่กวนสายตาตอนอ่านเนื้อหา)
+SKY_D = uri("""
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMin slice">
+  <defs>
+    <radialGradient id="skm" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe799" stop-opacity=".28"/>
+      <stop offset="55%" stop-color="#ffe799" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#ffe799" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="skn" cx="50%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#6e4176" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#0e1424" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#skn)"/>
+  <!-- Glowing crescent moon upper-right -->
+  <circle cx="1040" cy="118" r="64" fill="url(#skm)"/>
+  <path d="M1044 92a22 22 0 1 0 25 30 17.5 17.5 0 1 1-25-30z" fill="#ffe89c" opacity=".78"/>
+  <!-- Peaceful scattered night stars -->
+  <g fill="#e6edff">
+    <circle cx="72" cy="64" r="1.2" opacity=".55"/><circle cx="164" cy="128" r=".9" opacity=".45"/><circle cx="248" cy="48" r="1.3" opacity=".6"/>
+    <circle cx="332" cy="162" r=".8" opacity=".4"/><circle cx="426" cy="76" r="1.1" opacity=".52"/><circle cx="518" cy="144" r=".9" opacity=".42"/>
+    <circle cx="614" cy="54" r="1.2" opacity=".55"/><circle cx="712" cy="118" r=".85" opacity=".45"/><circle cx="808" cy="68" r="1.3" opacity=".58"/>
+    <circle cx="896" cy="152" r=".9" opacity=".45"/><circle cx="964" cy="56" r="1.1" opacity=".52"/><circle cx="1136" cy="84" r="1.2" opacity=".55"/>
+    <circle cx="112" cy="264" r=".9" opacity=".38"/><circle cx="288" cy="312" r="1.1" opacity=".42"/><circle cx="468" cy="248" r=".8" opacity=".36"/>
+    <circle cx="662" cy="284" r="1" opacity=".4"/><circle cx="842" cy="262" r=".9" opacity=".4"/><circle cx="1012" cy="296" r="1.1" opacity=".44"/>
+    <circle cx="1148" cy="232" r=".85" opacity=".38"/><circle cx="186" cy="442" r="1" opacity=".34"/><circle cx="384" cy="498" r=".85" opacity=".32"/>
+    <circle cx="584" cy="436" r="1.1" opacity=".35"/><circle cx="776" cy="472" r=".9" opacity=".34"/><circle cx="948" cy="428" r="1" opacity=".36"/>
+    <circle cx="1104" cy="512" r=".9" opacity=".34"/><circle cx="94" cy="612" r="1.1" opacity=".3"/><circle cx="512" cy="624" r=".9" opacity=".28"/>
+    <circle cx="888" cy="618" r="1" opacity=".3"/>
+  </g>
+  <!-- Subtle 4-point star sparkles -->
+  <g fill="#ffe89c" opacity=".62">
+    <path d="M248 42l1.2 4.8L254 48l-4.8 1.2L248 54l-1.2-4.8L242 48l4.8-1.2z"/>
+    <path d="M808 62l1.1 4.4L813.5 68l-4.4 1.1L808 73.5l-1.1-4.4L802.5 68l4.4-1.1z"/>
+    <path d="M964 50l1 4L969 55l-4 1-1 4-1-4-4-1 4-1z"/>
+  </g>
+</svg>
+""")
+
 css = pathlib.Path(__file__).with_name('monument_theme.css').read_text(encoding='utf-8')
 tokens = dict(
     MV_TRAVELER=TRAVELER,
@@ -489,6 +529,7 @@ tokens = dict(
     MV_AI_L=AI_BG_L,
     MV_AI_TRAVELER=AI_TRAVELER,
     MV_AI_SHRINE=AI_SHRINE,
+    MV_SKY_D=SKY_D,
 )
 for k, v in tokens.items():
     css = css.replace('{{' + k + '}}', v)
