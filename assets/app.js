@@ -284,7 +284,7 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '67';
+  const APP_VER = '68';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
   function refreshIcons() {
     const u = uiStyle();
@@ -1352,11 +1352,11 @@
     const moonC = dark ? '#ffea99' : '#fff6cc';
     const cloudC = dark ? '#2a3356' : '#ffffff';
     return `<div class="mv-break-strip" id="mvBreakWrap" style="--mv-g-c:${th.trail};--mv-g-g:${th.gem}">
-      <svg class="mv-break-svg" id="mvBreakSvg" viewBox="0 0 920 164" preserveAspectRatio="xMidYMid meet" aria-label="แถบกราฟิกปราสาท Monument Valley คั่นเนื้อหากับข้อสอบ">
+      <svg class="mv-break-svg" id="mvBreakSvg" viewBox="0 0 1200 164" preserveAspectRatio="xMidYMid slice" aria-label="แถบกราฟิกปราสาท Monument Valley คั่นเนื้อหากับข้อสอบ">
         <defs>
           <linearGradient id="mvbsSk" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="${bgFade}" stop-opacity="0"/>
-            <stop offset="18%" stop-color="${sky1}" stop-opacity=".85"/>
+            <stop offset="16%" stop-color="${sky1}" stop-opacity=".86"/>
             <stop offset="68%" stop-color="${sky2}" stop-opacity=".92"/>
             <stop offset="92%" stop-color="${sky3}" stop-opacity=".5"/>
             <stop offset="100%" stop-color="${bgFade}" stop-opacity="0"/>
@@ -1379,109 +1379,118 @@
             <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
         </defs>
-        <!-- Soft frameless atmospheric sky fade -->
-        <rect width="920" height="164" rx="12" fill="url(#mvbsSk)"/>
-        <!-- Twinkling stars -->
-        <g fill="#eef2ff" opacity="${dark ? '.78' : '.52'}">
-          <circle cx="42" cy="24" r="1.1"/><circle cx="132" cy="18" r=".8"/><circle cx="242" cy="30" r="1.2"/>
-          <circle cx="388" cy="22" r="1"/><circle cx="518" cy="16" r="1.1"/><circle cx="628" cy="30" r=".9"/>
-          <circle cx="776" cy="20" r="1.2"/><circle cx="868" cy="32" r="1"/>
+        <!-- Soft frameless atmospheric sky fade full-bleed -->
+        <rect width="1200" height="164" fill="url(#mvbsSk)"/>
+        <!-- Twinkling stars across full 1200px width -->
+        <g fill="#eef2ff" opacity="${dark ? '.8' : '.52'}">
+          <circle cx="46" cy="24" r="1.1"/><circle cx="142" cy="18" r=".8"/><circle cx="242" cy="30" r="1.2"/>
+          <circle cx="388" cy="22" r="1"/><circle cx="518" cy="16" r="1.1"/><circle cx="668" cy="28" r=".9"/>
+          <circle cx="798" cy="18" r="1.2"/><circle cx="924" cy="26" r="1"/><circle cx="1048" cy="20" r="1.2"/><circle cx="1152" cy="34" r=".9"/>
         </g>
-        <!-- Glowing golden crescent moon tucked in misty clouds (signature from reference image!) -->
-        <circle cx="94" cy="38" r="28" fill="url(#mvbsMn)"/>
-        <path d="M96 24a13 13 0 1 0 14.5 17.5 10.2 10.2 0 1 1-14.5-17.5z" fill="${moonC}"/>
-        <ellipse cx="110" cy="48" rx="22" ry="5.5" fill="${cloudC}" opacity="${dark ? '.55' : '.68'}"/>
-        <ellipse cx="78" cy="52" rx="16" ry="4.5" fill="${cloudC}" opacity="${dark ? '.48' : '.62'}"/>
+        <!-- Glowing golden crescent moon tucked in misty clouds -->
+        <circle cx="164" cy="38" r="28" fill="url(#mvbsMn)"/>
+        <path d="M166 24a13 13 0 1 0 14.5 17.5 10.2 10.2 0 1 1-14.5-17.5z" fill="${moonC}"/>
+        <ellipse cx="180" cy="48" rx="22" ry="5.5" fill="${cloudC}" opacity="${dark ? '.55' : '.68'}"/>
+        <ellipse cx="148" cy="52" rx="16" ry="4.5" fill="${cloudC}" opacity="${dark ? '.48' : '.62'}"/>
 
-        <!-- Distant misty onion-dome silhouettes -->
+        <!-- Distant misty onion-dome silhouettes across full width -->
         <g fill="${dark ? '#232c4e' : '#a7d2d2'}" opacity="${dark ? '.5' : '.58'}">
-          <path d="M142 128V76q0-11 11-19 11 8 11 19v52z"/>
-          <path d="M558 128V68q0-12 12-21 12 9 12 21v60z"/>
-          <path d="M812 128V74q0-11 11-19 11 8 11 19v54z"/>
+          <path d="M58 128V78q0-11 11-19 11 8 11 19v50z"/>
+          <path d="M236 128V76q0-11 11-19 11 8 11 19v52z"/>
+          <path d="M688 128V68q0-12 12-21 12 9 12 21v60z"/>
+          <path d="M962 128V74q0-11 11-19 11 8 11 19v54z"/>
+          <path d="M1108 128V78q0-11 11-19 11 8 11 19v50z"/>
+        </g>
+
+        <!-- === FULL-WIDTH ARCHED BRIDGE FOUNDATION (0..1200) === -->
+        <g>
+          <polygon points="0,122 1200,122 1200,152 0,152" fill="${wr}" opacity=".88"/>
+          <path d="M44 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
+          <path d="M148 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
+          <path d="M268 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
+          <path d="M394 154v-24a24 24 0 0 1 48 0v24z" fill="${archC}"/>
+          <path d="M658 154v-24a24 24 0 0 1 48 0v24z" fill="${archC}"/>
+          <path d="M778 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
+          <path d="M936 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
+          <path d="M1066 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
         </g>
 
         <!-- === LEFT NEON SPIRE TOWER + FLUTTERING CORAL RIBBON + CYAN-EDGED STAIRCASE === -->
         <g>
-          <!-- Tall spire tower -->
-          <polygon points="318,34 334,26 350,34 350,124 318,124" fill="${wr}"/>
-          <polygon points="318,34 334,42 334,124 318,124" fill="${wl}"/>
-          <!-- Pointed coral-red spire roof -->
-          <polygon points="314,35 334,8 354,35 334,43" fill="${roofC}"/>
-          <polygon points="334,8 354,35 334,43" fill="#8f3646" opacity=".5"/>
-          <!-- Fluttering glowing coral-pink ribbon streamer -->
-          <path class="mv-ribbon mv-neon-glow" d="M334 10 C316 14 300 26 276 26 C262 26 250 32 238 34" fill="none" stroke="#ff7c88" stroke-width="2.6" stroke-linecap="round" filter="url(#mvbsGl)"/>
-          <!-- Glowing magenta arched doorway -->
-          <circle cx="330" cy="60" r="14" fill="url(#mvbsPk)"/>
-          <path d="M324 70V56a6 6 0 0 1 12 0v14z" fill="${archC}" stroke="${neonP}" stroke-width="1.6" class="mv-neon-glow"/>
-          <!-- Isometric stepped staircase descending left with neon cyan glowing trim -->
-          <polygon points="318,68 214,116 214,132 318,124" fill="${wl}"/>
-          <path d="M312 71 L322 76 M300 76 L310 81 M288 82 L298 87 M276 87 L286 92 M264 93 L274 98 M252 98 L262 103 M240 104 L250 109 M228 109 L238 114" stroke="${topC}" stroke-width="2.2" opacity=".9"/>
-          <line x1="316" y1="69" x2="214" y2="117" stroke="${neonC}" stroke-width="2.5" stroke-linecap="round" filter="url(#mvbsGl)" class="mv-neon-glow"/>
-          <!-- Glowing cyan square pad at foot of stairs -->
-          <polygon points="196,116 216,108 236,116 216,124" fill="${topC}"/>
-          <polygon points="207,116 216,112 225,116 216,120" fill="${neonC}" opacity=".85" class="mv-neon-glow"/>
+          <polygon points="448,34 464,26 480,34 480,124 448,124" fill="${wr}"/>
+          <polygon points="448,34 464,42 464,124 448,124" fill="${wl}"/>
+          <polygon points="444,35 464,8 484,35 464,43" fill="${roofC}"/>
+          <polygon points="464,8 484,35 464,43" fill="#8f3646" opacity=".5"/>
+          <path class="mv-ribbon mv-neon-glow" d="M464 10 C446 14 430 26 406 26 C392 26 380 32 368 34" fill="none" stroke="#ff7c88" stroke-width="2.6" stroke-linecap="round" filter="url(#mvbsGl)"/>
+          <circle cx="460" cy="60" r="14" fill="url(#mvbsPk)"/>
+          <path d="M454 70V56a6 6 0 0 1 12 0v14z" fill="${archC}" stroke="${neonP}" stroke-width="1.6" class="mv-neon-glow"/>
+          <polygon points="448,68 344,116 344,132 448,124" fill="${wl}"/>
+          <path d="M442 71 L452 76 M430 76 L440 81 M418 82 L428 87 M406 87 L416 92 M394 93 L404 98 M382 98 L392 103 M370 104 L380 109 M358 109 L368 114" stroke="${topC}" stroke-width="2.2" opacity=".9"/>
+          <line x1="446" y1="69" x2="344" y2="117" stroke="${neonC}" stroke-width="2.5" stroke-linecap="round" filter="url(#mvbsGl)" class="mv-neon-glow"/>
+          <polygon points="326,116 346,108 366,116 346,124" fill="${topC}"/>
+          <polygon points="337,116 346,112 355,116 346,120" fill="${neonC}" opacity=".85" class="mv-neon-glow"/>
         </g>
 
-        <!-- === CENTER ARCHED BRIDGE + FLOATING NEON PINK CUBES BELOW === -->
+        <!-- === CENTER FLOATING NEON PINK CUBES + FULL-WIDTH BRIDGE DECK === -->
         <g>
-          <!-- Arched piers descending beneath bridge -->
-          <polygon points="186,122 738,122 738,150 186,150" fill="${wr}" opacity=".88"/>
-          <path d="M254 152v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
-          <path d="M356 152v-24a24 24 0 0 1 48 0v24z" fill="${archC}"/>
-          <path d="M518 152v-24a24 24 0 0 1 48 0v24z" fill="${archC}"/>
-          <path d="M624 152v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
-          <!-- 4 Glowing Neon Pink Floating Cubes arranged in a cross underneath center bridge! -->
           <g class="mv-cubes mv-neon-glow">
-            <circle cx="460" cy="140" r="24" fill="url(#mvbsPk)"/>
-            <rect x="444" y="137" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
-            <rect x="469" y="137" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
-            <rect x="456.5" y="128" width="7" height="7" rx="1.2" fill="#ff8ec7" filter="url(#mvbsGl)"/>
-            <rect x="456.5" y="146" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
-            <line x1="451" y1="140.5" x2="469" y2="140.5" stroke="${neonC}" stroke-width="1.2" opacity=".75"/>
-            <line x1="460" y1="135" x2="460" y2="146" stroke="${neonC}" stroke-width="1.2" opacity=".75"/>
+            <circle cx="596" cy="140" r="24" fill="url(#mvbsPk)"/>
+            <rect x="580" y="137" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
+            <rect x="605" y="137" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
+            <rect x="592.5" y="128" width="7" height="7" rx="1.2" fill="#ff8ec7" filter="url(#mvbsGl)"/>
+            <rect x="592.5" y="146" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
+            <line x1="587" y1="140.5" x2="605" y2="140.5" stroke="${neonC}" stroke-width="1.2" opacity=".75"/>
+            <line x1="596" y1="135" x2="596" y2="146" stroke="${neonC}" stroke-width="1.2" opacity=".75"/>
           </g>
-          <!-- Isometric main bridge walkway deck (where Ida hops & walks!) -->
-          <polygon points="172,114 748,114 736,123 184,123" fill="${topC}"/>
-          <line x1="172" y1="114" x2="748" y2="114" stroke="${neonC}" stroke-width="2.2" filter="url(#mvbsGl)" class="mv-neon-glow"/>
+          <!-- Full-bleed neon cyan walkway deck (0..1200) -->
+          <polygon points="0,114 1200,114 1200,123 0,123" fill="${topC}"/>
+          <line x1="0" y1="114" x2="1200" y2="114" stroke="${neonC}" stroke-width="2.2" filter="url(#mvbsGl)" class="mv-neon-glow"/>
           <!-- Clickable glowing pink floor switch on bridge -->
           <g class="mv-sw-btn" id="mvToySw" title="แตะเพื่อเปิด/ปิดไฟปราสาท">
-            <circle cx="626" cy="116" r="14" fill="url(#mvbsPk)"/>
-            <polygon points="614,118 626,112 638,118 626,124" fill="${neonP}" stroke="#ffd2ea" stroke-width="1"/>
+            <circle cx="762" cy="116" r="14" fill="url(#mvbsPk)"/>
+            <polygon points="750,118 762,112 774,118 762,124" fill="${neonP}" stroke="#ffd2ea" stroke-width="1"/>
           </g>
         </g>
 
-        <!-- === RIGHT NEON WATCHTOWER + SLENDER PINK-LIT ARCHES === -->
+        <!-- === RIGHT NEON WATCHTOWER + SIDE PAVILIONS === -->
         <g>
-          <!-- Slender glowing twin arches supporting right tower -->
-          <polygon points="694,46 714,36 734,46 734,148 694,148" fill="${wr}"/>
-          <polygon points="694,46 714,56 714,148 694,148" fill="${wl}"/>
-          <polygon points="690,47 714,22 738,47 714,57" fill="${dark ? '#4d3b6b' : '#b885c4'}"/>
-          <!-- Misty dark cloud drifting past right turret -->
-          <ellipse cx="678" cy="40" rx="28" ry="7" fill="${cloudC}" opacity="${dark ? '.65' : '.72'}"/>
-          <!-- Glowing neon pink slit windows -->
-          <rect x="702" y="64" width="4.5" height="12" rx="2" fill="${neonP}" filter="url(#mvbsGl)" class="mv-neon-glow"/>
-          <rect x="718" y="68" width="4.5" height="11" rx="2" fill="${neonP}" filter="url(#mvbsGl)" class="mv-neon-glow"/>
-          <path d="M703 148v-28a10 10 0 0 1 20 0v28z" fill="${archC}" stroke="${neonP}" stroke-opacity=".75" stroke-width="1.2"/>
+          <polygon points="834,46 854,36 874,46 874,148 834,148" fill="${wr}"/>
+          <polygon points="834,46 854,56 854,148 834,148" fill="${wl}"/>
+          <polygon points="830,47 854,22 878,47 854,57" fill="${dark ? '#4d3b6b' : '#b885c4'}"/>
+          <ellipse cx="818" cy="40" rx="28" ry="7" fill="${cloudC}" opacity="${dark ? '.65' : '.72'}"/>
+          <rect x="842" y="64" width="4.5" height="12" rx="2" fill="${neonP}" filter="url(#mvbsGl)" class="mv-neon-glow"/>
+          <rect x="858" y="68" width="4.5" height="11" rx="2" fill="${neonP}" filter="url(#mvbsGl)" class="mv-neon-glow"/>
+          <path d="M843 148v-28a10 10 0 0 1 20 0v28z" fill="${archC}" stroke="${neonP}" stroke-opacity=".75" stroke-width="1.2"/>
+          <!-- Far left & far right subtle side lantern pillars for ultra-wide screens -->
+          <polygon points="104,76 116,70 128,76 128,122 104,122" fill="${wr}" opacity=".85"/>
+          <polygon points="104,76 116,82 116,122 104,122" fill="${wl}" opacity=".85"/>
+          <rect x="114" y="88" width="3.5" height="9" rx="1.7" fill="${neonP}" opacity=".85"/>
+          <polygon points="1028,74 1040,68 1052,74 1052,122 1028,122" fill="${wr}" opacity=".85"/>
+          <polygon points="1028,74 1040,80 1040,122 1028,122" fill="${wl}" opacity=".85"/>
+          <rect x="1038" y="86" width="3.5" height="9" rx="1.7" fill="${neonC}" opacity=".85"/>
         </g>
 
         <!-- === CLICKABLE CROW-PEOPLE PERCHED AROUND THE CASTLE === -->
-        <g class="mv-crow-btn" transform="translate(274,87) scale(.86)" title="แตะเพื่อสะกิดอีกา">
+        <g class="mv-crow-btn" transform="translate(404,87) scale(.86)" title="แตะเพื่อสะกิดอีกา">
           <g class="mv-crow-in">${mvCrowSVG(1)}</g>
         </g>
-        <g class="mv-crow-btn" transform="translate(242,102) scale(.86)" title="แตะเพื่อสะกิดอีกา">
+        <g class="mv-crow-btn" transform="translate(372,102) scale(.86)" title="แตะเพื่อสะกิดอีกา">
           <g class="mv-crow-in">${mvCrowSVG(1)}</g>
         </g>
-        <g class="mv-crow-btn" transform="translate(674,114) scale(.95)" title="แตะเพื่อสะกิดอีกา">
+        <g class="mv-crow-btn" transform="translate(814,114) scale(.95)" title="แตะเพื่อสะกิดอีกา">
           <g class="mv-crow-in">${mvCrowSVG(-1)}</g>
         </g>
 
-        <!-- === PLAYABLE LUMINOUS WHITE IDA (TAP ANYWHERE TO HOP & WALK!) === -->
-        <g class="mv-toy-ida" id="mvToyIda" style="transform:translate(420px,114px)">
-          <ellipse class="mv-hop-ring" id="mvHopRing" cx="0" cy="0" rx="18" ry="6" fill="none" stroke="${neonC}" stroke-width="1.8"/>
-          <g class="mv-ida-body">
+        <!-- === MOVING GAME ENTITIES LAYER (CROWS & CRYSTALS WHEN PLAYING) === -->
+        <g id="mvToyObs"></g>
+
+        <!-- === PLAYABLE LUMINOUS WHITE IDA (REAL SVG JUMP PHYSICS) === -->
+        <g class="mv-toy-ida" id="mvToyIda" transform="translate(260,114)">
+          <ellipse id="mvHopRing" cx="0" cy="0" rx="18" ry="6" fill="none" stroke="${neonC}" stroke-width="1.8" opacity="0"/>
+          <g id="mvIdaBody">
             <circle cx="0" cy="-14" r="20" fill="url(#mvbsCy)"/>
-            <line x1="-2" y1="-6" x2="-2.6" y2="0" stroke="#e4eeff" stroke-width="1.6" stroke-linecap="round"/>
-            <line x1="2" y1="-6" x2="2.6" y2="0" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/>
+            <line id="mvLegL" x1="-2" y1="-6" x2="-3" y2="0" stroke="#e4eeff" stroke-width="1.8" stroke-linecap="round"/>
+            <line id="mvLegR" x1="2" y1="-6" x2="3" y2="0" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
             <polygon points="0,-17.5 6,-4.5 -6,-4.5" fill="#ffffff"/>
             <polygon points="0,-17.5 6,-4.5 0,-4.5" fill="${neonC}" opacity=".28"/>
             <circle cx="0" cy="-19.2" r="2.3" fill="#1b2442"/>
@@ -1489,10 +1498,10 @@
           </g>
         </g>
       </svg>
-      <div class="mv-toy-ctrl" aria-label="ควบคุมตัวละครเล่นพักสายตา">
-        <button type="button" id="mvToyL" title="เดินซ้าย">‹</button>
-        <button type="button" class="mv-toy-jump" id="mvToyJ" title="กระโดดเล่น">↑ โดด</button>
-        <button type="button" id="mvToyR" title="เดินขวา">›</button>
+      <div class="mv-toy-ctrl" aria-label="ควบคุมตัวละคร">
+        <span class="mv-toy-pts" id="mvToyPts" hidden>✦ 0</span>
+        <button type="button" class="mv-toy-play" id="mvToyPlay" title="เล่น / หยุด">▶ Play</button>
+        <button type="button" class="mv-toy-jump" id="mvToyJ" title="กระโดด (กดซ้ำกลางอากาศได้)">↑ โดด</button>
       </div>
     </div>`;
   }
@@ -1502,26 +1511,153 @@
     const wrap = $('#mvBreakWrap');
     const svg = $('#mvBreakSvg');
     const ida = $('#mvToyIda');
+    const obsLayer = $('#mvToyObs');
     const ringEl = $('#mvHopRing');
-    if (!wrap || !svg || !ida) return;
+    const legL = $('#mvLegL');
+    const legR = $('#mvLegR');
+    const bPlay = $('#mvToyPlay');
+    const bJ = $('#mvToyJ');
+    const ptsEl = $('#mvToyPts');
+    if (!wrap || !svg || !ida || !obsLayer) return;
 
-    let x = 420;
-    const MIN_X = 200, MAX_X = 656;
+    const NS = 'http://www.w3.org/2000/svg';
+    const GROUND_Y = 114;
+    const IDA_X = 260;
 
-    const triggerHop = () => {
-      ida.classList.remove('hop');
-      void ida.getBoundingClientRect();
-      ida.classList.add('hop');
-      if (ringEl) {
-        ringEl.classList.remove('pop');
-        void ringEl.getBoundingClientRect();
-        ringEl.classList.add('pop');
+    let playing = false;
+    let rafId = 0, lastTs = 0;
+    let iy = GROUND_Y, vy = 0, jumps = 2, runT = 0;
+    let ringT = 0, pts = 0, spawnT = 0.8, orbT = 1.4;
+    let items = []; // { type: 'crow'|'orb', x, y, el, hit }
+
+    const makeEl = (tag, attrs) => {
+      const el = document.createElementNS(NS, tag);
+      for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+      return el;
+    };
+
+    const spawnCrow = () => {
+      const g = makeEl('g', { transform: `translate(1220,${GROUND_Y})` });
+      g.innerHTML = mvCrowSVG(-1);
+      obsLayer.appendChild(g);
+      items.push({ type: 'crow', x: 1220, y: GROUND_Y, el: g, hit: false });
+    };
+
+    const spawnOrb = () => {
+      const y = GROUND_Y - (42 + Math.round(Math.random() * 34));
+      const g = makeEl('g', { transform: `translate(1220,${y})` });
+      g.innerHTML = `<polygon points="0,-9 6.5,0 0,9 -6.5,0" fill="#fff6c8" stroke="#5eead4" stroke-width="1"/><polygon points="0,-9 6.5,0 0,9" fill="#5eead4" opacity=".65"/>`;
+      obsLayer.appendChild(g);
+      items.push({ type: 'orb', x: 1220, y, el: g, hit: false });
+    };
+
+    const clearItems = () => {
+      for (const it of items) it.el.remove();
+      items = [];
+    };
+
+    const updatePts = () => {
+      if (!ptsEl) return;
+      ptsEl.hidden = !playing && pts === 0;
+      ptsEl.textContent = `✦ ${pts}`;
+    };
+
+    const ensureLoop = () => {
+      if (!rafId) {
+        lastTs = performance.now();
+        rafId = requestAnimationFrame(tick);
       }
     };
-    const moveTo = (nx) => {
-      x = Math.max(MIN_X, Math.min(MAX_X, Math.round(nx)));
-      ida.style.transform = `translate(${x}px,114px)`;
-      triggerHop();
+
+    const doJump = () => {
+      if (jumps > 0) {
+        vy = jumps === 2 ? -450 : -390;
+        jumps--;
+        ringT = 0.42;
+        ensureLoop();
+      }
+    };
+
+    const togglePlay = () => {
+      playing = !playing;
+      if (bPlay) {
+        bPlay.textContent = playing ? '⏸ หยุด' : '▶ Play';
+        bPlay.classList.toggle('on', playing);
+      }
+      if (playing) {
+        pts = 0; spawnT = 0.6; orbT = 1.1;
+        clearItems();
+        updatePts();
+        ensureLoop();
+      } else {
+        clearItems();
+      }
+    };
+
+    const tick = (ts) => {
+      if (!svg.isConnected) { stopExamBreakGame(); return; }
+      const dt = Math.min(0.05, Math.max(0.001, (ts - lastTs) / 1000));
+      lastTs = ts;
+
+      // ฟิสิกส์กระโดดจริงด้วย SVG transform (การันตีโดดได้ลื่นทุกเบราว์เซอร์)
+      if (iy < GROUND_Y || vy < 0) {
+        vy += 1280 * dt;
+        iy += vy * dt;
+        if (iy >= GROUND_Y) {
+          iy = GROUND_Y; vy = 0; jumps = 2;
+        }
+      }
+      ida.setAttribute('transform', `translate(${IDA_X},${iy.toFixed(1)})`);
+
+      // แอนิเมชันขาวิ่งเวลาเปิด Play
+      if (playing || iy < GROUND_Y) {
+        runT += dt * 13;
+        const sw = iy < GROUND_Y ? 3.5 : Math.sin(runT) * 4;
+        if (legL) legL.setAttribute('x2', (-2 - sw).toFixed(1));
+        if (legR) legR.setAttribute('x2', (2 + sw).toFixed(1));
+      }
+
+      // วงแสงไซอันตอนกระโดด
+      if (ringT > 0 && ringEl) {
+        ringT = Math.max(0, ringT - dt);
+        const f = 1 - ringT / 0.42;
+        ringEl.setAttribute('opacity', (1 - f).toFixed(2));
+        ringEl.setAttribute('rx', (10 + f * 24).toFixed(1));
+        ringEl.setAttribute('ry', (3.5 + f * 8).toFixed(1));
+      } else if (ringEl) {
+        ringEl.setAttribute('opacity', '0');
+      }
+
+      if (playing) {
+        spawnT -= dt;
+        if (spawnT <= 0) { spawnCrow(); spawnT = 1.45 + Math.random() * 1.1; }
+        orbT -= dt;
+        if (orbT <= 0) { spawnOrb(); orbT = 1.7 + Math.random() * 1.2; }
+        const spd = 270;
+        for (let i = items.length - 1; i >= 0; i--) {
+          const it = items[i];
+          it.x -= spd * dt;
+          if (it.x < -40) { it.el.remove(); items.splice(i, 1); continue; }
+          it.el.setAttribute('transform', `translate(${it.x.toFixed(1)},${it.y})`);
+          if (it.type === 'orb' && !it.hit && Math.hypot(IDA_X - it.x, (iy - 14) - it.y) < 22) {
+            it.hit = true; it.el.remove(); items.splice(i, 1);
+            pts += 10; updatePts();
+            ringT = 0.42;
+          } else if (it.type === 'crow' && !it.hit && Math.abs(IDA_X - it.x) < 12 && iy > GROUND_Y - 15) {
+            it.hit = true;
+            // ชนเบา ๆ ไม่ต้องเด้งกล่อง Game Over แค่เด้งตัวขึ้นนิดเดียวแล้วเล่นต่อชิล ๆ
+            vy = -260; jumps = 1;
+            pts = Math.max(0, pts - 5); updatePts();
+          } else if (it.type === 'crow' && !it.hit && it.x < IDA_X - 16) {
+            it.hit = true;
+            pts += 1; updatePts();
+          }
+        }
+      }
+
+      const active = playing || iy < GROUND_Y || vy !== 0 || ringT > 0;
+      if (active) rafId = requestAnimationFrame(tick);
+      else rafId = 0;
     };
 
     const onSvgClick = (e) => {
@@ -1534,23 +1670,31 @@
       }
       if (e.target.closest('#mvToySw')) {
         wrap.classList.toggle('lit');
-        triggerHop();
+        doJump();
         return;
       }
-      const rect = svg.getBoundingClientRect();
-      if (!rect.width) return;
-      const sx = ((e.clientX - rect.left) / rect.width) * 920;
-      moveTo(sx);
+      doJump();
+    };
+    const onKey = (e) => {
+      if (!playing) return;
+      if (e.code !== 'Space' && e.code !== 'ArrowUp') return;
+      const ae = document.activeElement;
+      if (ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA' || ae.tagName === 'SELECT' || ae.isContentEditable)) return;
+      e.preventDefault();
+      doJump();
     };
 
     svg.addEventListener('click', onSvgClick);
-    const bL = $('#mvToyL'), bJ = $('#mvToyJ'), bR = $('#mvToyR');
-    if (bL) bL.onclick = (e) => { e.stopPropagation(); moveTo(x - 68); };
-    if (bR) bR.onclick = (e) => { e.stopPropagation(); moveTo(x + 68); };
-    if (bJ) bJ.onclick = (e) => { e.stopPropagation(); triggerHop(); };
+    window.addEventListener('keydown', onKey);
+    if (bPlay) bPlay.onclick = (e) => { e.stopPropagation(); togglePlay(); };
+    if (bJ) bJ.onclick = (e) => { e.stopPropagation(); doJump(); };
 
     mvGameCleanup = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = 0;
+      clearItems();
       svg.removeEventListener('click', onSvgClick);
+      window.removeEventListener('keydown', onKey);
     };
   }
 
@@ -2695,7 +2839,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v67</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v68</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
