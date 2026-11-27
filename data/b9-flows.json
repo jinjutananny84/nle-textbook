@@ -1,0 +1,621 @@
+{
+ "flows": [
+  {
+   "id": "hypona",
+   "box": 9,
+   "cat": "น้ำ–Na",
+   "title": "Hyponatremia 3 ขั้น: Posm → Uosm → volume",
+   "root": {
+    "t": "Na ต่ำ",
+    "k": "start",
+    "c": [
+     {
+      "t": "① **Posm**",
+      "c": [
+       {
+        "e": "ปกติ",
+        "t": "Pseudo",
+        "k": "dx",
+        "s": "TG ↑ · paraprotein"
+       },
+       {
+        "e": "สูง",
+        "t": "Translocational",
+        "k": "dx",
+        "s": "glucose ↑ · mannitol"
+       },
+       {
+        "e": "ต่ำ = true hypoNa",
+        "t": "② **Uosm**",
+        "c": [
+         {
+          "e": "< 100",
+          "t": "Primary polydipsia",
+          "k": "dx",
+          "s": "beer potomania · ADH ถูกกด"
+         },
+         {
+          "e": "> 100 (มี ADH)",
+          "t": "③ **Volume** + UNa",
+          "c": [
+           {
+            "e": "ขาดน้ำ",
+            "t": "Hypovolemic",
+            "k": "dx",
+            "s": "UNa < 20 = เสียนอกไต (D/V, burn) · > 20 = diuretic, CSW"
+           },
+           {
+            "e": "euvolemic",
+            "t": "SIAD",
+            "k": "dx",
+            "s": "hypothyroid · adrenal insufficiency"
+           },
+           {
+            "e": "บวม",
+            "t": "Hypervolemic",
+            "k": "dx",
+            "s": "UNa ต่ำ = HF, cirrhosis, nephrotic · สูง = AKI/CKD"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "wdt",
+   "box": 9,
+   "cat": "น้ำ–Na",
+   "title": "ปัสสาวะมาก: Water deprivation test",
+   "root": {
+    "t": "Polyuria > 3 L/วัน · Uosm ต่ำ",
+    "k": "start",
+    "c": [
+     {
+      "t": "**งดน้ำ**",
+      "c": [
+       {
+        "e": "Uosm ขึ้นเอง",
+        "t": "Primary polydipsia",
+        "k": "dx",
+        "s": "Na/Sosm ต่ำ"
+       },
+       {
+        "e": "Uosm ไม่ขึ้น",
+        "t": "ให้ **desmopressin**",
+        "c": [
+         {
+          "e": "ขึ้น",
+          "t": "Central DI",
+          "k": "dx",
+          "s": "head injury · หลังผ่าตัดสมอง"
+         },
+         {
+          "e": "ไม่ขึ้น",
+          "t": "Nephrogenic DI",
+          "k": "dx",
+          "s": "lithium · Ca ↑ · K ↓"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hyperk-tx",
+   "box": 10,
+   "cat": "Potassium",
+   "title": "K สูง: รักษาฉุกเฉิน",
+   "root": {
+    "t": "Hyperkalemia",
+    "k": "start",
+    "c": [
+     {
+      "t": "ดู **ECG**",
+      "s": "peaked T → PR ยาว → QRS กว้าง → sine wave",
+      "c": [
+       {
+        "e": "ECG เปลี่ยน",
+        "t": "① **Ca gluconate** IV",
+        "k": "tx",
+        "s": "กันหัวใจก่อน ไม่ได้ลด K",
+        "c": [
+         {
+          "t": "② Shift K เข้าเซลล์",
+          "k": "tx",
+          "s": "insulin + glucose (เร็วสุด) · β2-agonist · NaHCO3 ถ้า acidosis",
+          "c": [
+           {
+            "t": "③ เอา K ออก",
+            "k": "tx",
+            "s": "furosemide · resin (ช้า) · dialysis"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hyperk-ap",
+   "box": 10,
+   "cat": "Potassium",
+   "title": "K สูง: approach 5 ขั้น",
+   "root": {
+    "t": "K สูง",
+    "k": "start",
+    "c": [
+     {
+      "t": "① Pseudo?",
+      "s": "hemolysis: เข็มเล็กดูดแรง · tourniquet นาน · PLT/WBC สูงมาก",
+      "c": [
+       {
+        "e": "ไม่ใช่",
+        "t": "② Shift ออกนอกเซลล์",
+        "s": "acidosis · DKA · hyperosm · β-blocker · digoxin",
+        "c": [
+         {
+          "e": "ไม่ใช่",
+          "t": "③ ไตขับไม่ได้",
+          "s": "GFR < 20 · hypoaldo · ACEI/ARB · spironolactone · TMP · NSAID",
+          "c": [
+           {
+            "e": "ไม่ใช่",
+            "t": "④ Cell breakdown",
+            "s": "rhabdo · TLS · hemolysis",
+            "c": [
+             {
+              "e": "ไม่ใช่",
+              "t": "⑤ กินมาก",
+              "k": "dx",
+              "s": "ทุเรียน กล้วย ส้ม ในผู้ป่วยฟอกไต"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hypok",
+   "box": 11,
+   "cat": "Potassium",
+   "title": "K ต่ำ + met. alkalosis: ดู BP ก่อน",
+   "root": {
+    "t": "K ต่ำ + metabolic alkalosis",
+    "k": "start",
+    "c": [
+     {
+      "t": "**BP**",
+      "c": [
+       {
+        "e": "สูง",
+        "t": "**Renin / aldosterone**",
+        "c": [
+         {
+          "e": "renin ↓ aldo ↑",
+          "t": "Conn",
+          "k": "dx",
+          "s": "renin ↓ aldo ↑ · คัดกรอง ARR"
+         },
+         {
+          "e": "renin ↑ aldo ↑",
+          "t": "Renal artery stenosis",
+          "k": "dx",
+          "s": "renin-secreting tumor"
+         },
+         {
+          "e": "renin ↓ aldo ↓",
+          "t": "Cushing · licorice · Liddle",
+          "k": "dx"
+         }
+        ]
+       },
+       {
+        "e": "ปกติ/ต่ำ",
+        "t": "**Urine Cl**",
+        "s": "renin ↑ aldo ↑",
+        "c": [
+         {
+          "e": "< 20",
+          "t": "อาเจียน",
+          "k": "dx",
+          "s": "เสีย HCl · ให้ NSS"
+         },
+         {
+          "e": "สูง",
+          "t": "Diuretic · Bartter · Gitelman",
+          "k": "dx"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "abg",
+   "box": 12,
+   "cat": "Acid–base",
+   "title": "อ่าน ABG 5 ขั้น",
+   "root": {
+    "t": "① **pH**",
+    "k": "start",
+    "s": "< 7.35 acidemia · > 7.45 alkalemia",
+    "c": [
+     {
+      "t": "② Primary",
+      "s": "HCO3 หรือ pCO2 ตัวไหนเปลี่ยนไปทาง pH",
+      "c": [
+       {
+        "t": "③ Compensation",
+        "s": "Winter: pCO2 = 1.5×HCO3 + 8 ± 2 · alk 0.7 · resp 1:4 / 2:5",
+        "c": [
+         {
+          "t": "④ **Anion gap**",
+          "s": "Na − (Cl + HCO3) · ปกติ ≈ 12",
+          "c": [
+           {
+            "e": "AG สูง (HAGMA)",
+            "t": "**Δratio**",
+            "s": "(AG − 12) ÷ (24 − HCO3)",
+            "c": [
+             {
+              "e": "< 1",
+              "t": "+ NAGMA ร่วม",
+              "k": "dx"
+             },
+             {
+              "e": "1–2",
+              "t": "HAGMA ล้วน",
+              "k": "dx"
+             },
+             {
+              "e": "> 2",
+              "t": "+ met. alkalosis",
+              "k": "dx"
+             }
+            ]
+           },
+           {
+            "e": "AG ปกติ (NAGMA)",
+            "t": "**Urine AG**",
+            "s": "UNa + UK − UCl",
+            "c": [
+             {
+              "e": "ลบ",
+              "t": "เสีย HCO3 ทาง GI",
+              "k": "dx",
+              "s": "diarrhea"
+             },
+             {
+              "e": "บวก",
+              "t": "RTA",
+              "k": "dx"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hagma",
+   "box": 13,
+   "cat": "Acid–base",
+   "title": "HAGMA: หาสาเหตุ",
+   "root": {
+    "t": "HAGMA",
+    "k": "start",
+    "c": [
+     {
+      "t": "**Osmolar gap**",
+      "s": "วัดจริง − (2Na + glu/18 + BUN/2.8)",
+      "c": [
+       {
+        "e": "> 10",
+        "t": "Toxic alcohol",
+        "c": [
+         {
+          "e": "ตามัว",
+          "t": "Methanol",
+          "k": "dx",
+          "s": "เหล้าเถื่อน · ตาบอด"
+         },
+         {
+          "e": "crystal",
+          "t": "Ethylene glycol",
+          "k": "dx",
+          "s": "Ca oxalate crystal · AKI"
+         }
+        ]
+       },
+       {
+        "e": "ปกติ",
+        "t": "ดูประวัติ + lab",
+        "c": [
+         {
+          "e": "ketone",
+          "t": "Ketoacidosis",
+          "k": "dx",
+          "s": "DKA · alcohol · อดอาหาร"
+         },
+         {
+          "e": "lactate",
+          "t": "Lactic",
+          "k": "dx",
+          "s": "shock · metformin · liver failure"
+         },
+         {
+          "e": "BUN/Cr สูง",
+          "t": "Uremia",
+          "k": "dx",
+          "s": "GFR < 20"
+         },
+         {
+          "e": "tinnitus",
+          "t": "Salicylate",
+          "k": "dx",
+          "s": "resp. alk + HAGMA · tinnitus"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "rta",
+   "box": 14,
+   "cat": "Acid–base",
+   "title": "NAGMA จากไต: RTA type ไหน",
+   "root": {
+    "t": "NAGMA + urine AG บวก",
+    "k": "start",
+    "c": [
+     {
+      "t": "**K**",
+      "c": [
+       {
+        "e": "K สูง",
+        "t": "Type 4",
+        "k": "dx",
+        "s": "aldosterone ขาด/ดื้อ · DM · ACEI/ARB · spironolactone"
+       },
+       {
+        "e": "K ต่ำ",
+        "t": "**Urine pH**",
+        "c": [
+         {
+          "e": "> 5.5 เสมอ",
+          "t": "Type 1 (distal)",
+          "k": "dx",
+          "s": "Sjögren · amphotericin · นิ่ว Ca phosphate"
+         },
+         {
+          "e": "< 5.5 ได้",
+          "t": "Type 2 (proximal)",
+          "k": "dx",
+          "s": "Fanconi: glucosuria + PO4 ↓ · acetazolamide · myeloma"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "gn",
+   "box": 16,
+   "cat": "Glomerulus",
+   "title": "โรค glomerulus: แยก syndrome ก่อน",
+   "root": {
+    "t": "Hematuria / proteinuria",
+    "k": "start",
+    "c": [
+     {
+      "t": "ดู UA + BP + protein",
+      "c": [
+       {
+        "e": "เลือดรั่ว",
+        "t": "Nephritic",
+        "s": "RBC cast · dysmorphic RBC · HT · protein < 3.5",
+        "c": [
+         {
+          "t": "**Complement**",
+          "c": [
+           {
+            "e": "C3 ↓ C4 ↓",
+            "t": "Lupus nephritis",
+            "k": "dx",
+            "s": "classical pathway"
+           },
+           {
+            "e": "C3 ↓ เดี่ยว",
+            "t": "PSGN · endocarditis · MPGN",
+            "k": "dx"
+           },
+           {
+            "e": "ปกติ",
+            "t": "IgA · anti-GBM · ANCA",
+            "k": "dx"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "e": "protein > 3.5 g",
+        "t": "Nephrotic",
+        "k": "dx",
+        "s": "albumin ↓ · lipid ↑ · oval fat body · ไม่ต้องส่ง complement"
+       },
+       {
+        "e": "check-up เจอเล็กน้อย",
+        "t": "Asymptomatic",
+        "k": "dx",
+        "s": "IgA · Alport · thin BM"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "rpgn",
+   "box": 17,
+   "cat": "Glomerulus",
+   "title": "RPGN: แยกด้วย immunofluorescence",
+   "root": {
+    "t": "RPGN",
+    "k": "start",
+    "s": "crescent · Cr ขึ้นใน 7 วัน–3 เดือน",
+    "c": [
+     {
+      "t": "**IF**",
+      "c": [
+       {
+        "e": "Linear IgG",
+        "t": "Type I anti-GBM",
+        "k": "dx",
+        "s": "Goodpasture + เลือดออกปอด"
+       },
+       {
+        "e": "Granular",
+        "t": "Type II immune complex",
+        "k": "dx",
+        "s": "lupus · PSGN · IgA/HSP"
+       },
+       {
+        "e": "ไม่ติด",
+        "t": "Type III pauci-immune",
+        "k": "dx",
+        "s": "ANCA: GPA (c-ANCA) · MPA (p-ANCA) · EGPA"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "aki",
+   "box": 20,
+   "cat": "AKI",
+   "title": "AKI: ก่อนไต · ในไต · หลังไต",
+   "root": {
+    "t": "AKI",
+    "k": "start",
+    "c": [
+     {
+      "t": "**Ultrasound**",
+      "c": [
+       {
+        "e": "hydronephrosis",
+        "t": "Postrenal",
+        "k": "dx",
+        "s": "stone · BPH · tumor"
+       },
+       {
+        "e": "ไม่อุดตัน",
+        "t": "BUN/Cr · **FENa** · sediment",
+        "c": [
+         {
+          "e": "BUN/Cr > 20 · FENa < 1%",
+          "t": "Prerenal",
+          "k": "dx",
+          "s": "Uosm > 500 · hyaline cast · ให้น้ำแล้วกลับ"
+         },
+         {
+          "e": "BUN/Cr < 20 · FENa > 1–2%",
+          "t": "ATN",
+          "k": "dx",
+          "s": "SG 1.010 · muddy brown cast"
+         },
+         {
+          "e": "WBC cast + ยา",
+          "t": "AIN",
+          "k": "dx",
+          "s": "ไข้ ผื่น eosinophiluria · 1–2 สัปดาห์หลังยา"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "redurine",
+   "box": 21,
+   "cat": "Urinalysis",
+   "title": "ปัสสาวะแดง: เลือด หรือ pigment",
+   "root": {
+    "t": "ปัสสาวะแดง",
+    "k": "start",
+    "c": [
+     {
+      "t": "**ปั่น**",
+      "c": [
+       {
+        "e": "ตะกอนแดง",
+        "t": "Hematuria",
+        "k": "dx",
+        "s": "RBC"
+       },
+       {
+        "e": "น้ำใสยังแดง",
+        "t": "Dipstick **heme**",
+        "c": [
+         {
+          "e": "ลบ",
+          "t": "Beet · rifampicin · porphyria",
+          "k": "dx"
+         },
+         {
+          "e": "บวก ไม่มี RBC",
+          "t": "ปั่นเลือด ดู plasma",
+          "c": [
+           {
+            "e": "plasma ใส",
+            "t": "Myoglobin",
+            "k": "dx",
+            "s": "rhabdo · CK สูง"
+           },
+           {
+            "e": "plasma ชมพู",
+            "t": "Hemoglobin",
+            "k": "dx",
+            "s": "intravascular hemolysis"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
