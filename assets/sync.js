@@ -4,7 +4,7 @@
   'use strict';
 
   const FB_VER = '11.6.0';
-  const CACHE_NAME = 'nle-tb-v56';
+  const CACHE_NAME = 'nle-tb-v57';
   const CLIENT_ID = Math.random().toString(36).slice(2) + Date.now().toString(36);
   const MAX_IMG_CHARS = 760000; // เผื่อให้เล็กกว่าลิมิต 1MB ของ Firestore document เสมอ
 
@@ -188,6 +188,7 @@
     out.figw = Object.assign({}, older.figw || {}, newer.figw || {});
     out.lastByCh = Object.assign({}, older.lastByCh || {}, newer.lastByCh || {});
     out.drillWrong = Object.assign({}, older.drillWrong || {}, newer.drillWrong || {});
+    out.ans = Object.assign({}, older.ans || {}, newer.ans || {});
 
     // stats: เก็บจำนวนที่ทำมากสุดของแต่ละข้อ
     const stats = Object.assign({}, older.stats || {});

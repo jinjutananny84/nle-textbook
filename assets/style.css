@@ -894,6 +894,12 @@ table.dt tr.open td{background:var(--surface2)}
   .pill{top:0;right:1px;font-size:8.5px;padding:1px 4px}
   .sync-dot{top:2px;right:2px;width:7px;height:7px}
 }
+/* กรอง Keyword แยกตามบท + ปุ่มทำข้อสอบใหม่ */
+.kw-chs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.exam-sec-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.exam-sec-h h2{margin-bottom:0}
+.mcq .res{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.mcq .mcq-redo{padding:2px 9px;font-size:12px;font-weight:600;box-shadow:none}
 .ai-err{margin-top:6px;padding:8px 10px;border-radius:8px;background:var(--bad-soft);color:var(--bad);font-size:13px}
 .ai-card{border-left:4px solid var(--think)}
 .ai-card-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}

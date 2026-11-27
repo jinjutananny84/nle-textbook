@@ -12,7 +12,7 @@
   function ensureS() {
     S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {};
     S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {};
-    S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; S.figw = S.figw || {};
+    S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; S.figw = S.figw || {}; S.ans = S.ans || {};
   }
   ensureS();
   if (S.focus) document.body.classList.add('focus');
@@ -291,16 +291,32 @@
   }
 
   /* ---------- MCQ ---------- */
+  function mcqExplainHTML(chId, qid, q, letter, extraNote = '', canRedo = false) {
+    const ok = letter === q.answer;
+    const redoBtn = canRedo ? '<button class="btn small mcq-redo" type="button" data-redo="1" title="ล้างคำตอบเพื่อทำข้อนี้ใหม่">↺ ทำใหม่</button>' : '';
+    return `<div class="res ${ok ? 'ok' : 'no'}"><span>${ok ? `✓ ตอบ ${esc(letter)} ถูกแล้ว` : `✗ ตอบ ${esc(letter)} · เฉลย ${esc(q.answer)}`}</span>${redoBtn}</div><div class="why" data-hlk="${esc(qKey(chId, qid, 'why'))}">${whyHTML(q, letter)}</div>${q.doubt ? `<div class="warn">⚠ ${esc(q.doubt.replace(/^\s*⚠\s*/, ''))}</div>` : ''}${extraNote}`;
+  }
   function mcqHTML(chId, qid, q, opts = {}) {
     const letters = Object.keys(q.options || {});
     const src = q.source ? `<span class="src">${esc(q.source)}</span>` : '';
-    const wasWrong = S.wrong[`${chId}|${qid}`] ? '<span class="src">· เคยตอบผิด</span>' : '';
-    return `<div class="mcq" data-ch="${chId}" data-q="${esc(qid)}">
+    const k = `${chId}|${qid}`;
+    const wasWrong = S.wrong[k] ? '<span class="src">· เคยตอบผิด</span>' : '';
+    const saved = opts.showSaved ? S.ans[k] : '';
+    const optHtml = letters.map(l => {
+      let cls = 'opt';
+      if (saved) {
+        cls += ' off';
+        if (l === q.answer) cls += ' right';
+        else if (l === saved) cls += ' wrong';
+      }
+      return `<div class="${cls}" role="button"${saved ? '' : ' tabindex="0"'} data-l="${l}"><span class="l">${l}</span><span class="ot" data-hlk="${esc(qKey(chId, qid, l))}">${inline(esc(q.options[l]))}</span><button class="strike" type="button" aria-label="ตัดชอยส์นี้" title="ตัดชอยส์ (ยังไม่ใช่การตอบ)">✕</button></div>`;
+    }).join('');
+    return `<div class="mcq" data-ch="${chId}" data-q="${esc(qid)}"${saved ? ' data-done="1"' : ''}${opts.showSaved ? ' data-saved-mode="1"' : ''}>
       <div class="qid">ข้อ ${esc(qid)} ${src} ${wasWrong} ${opts.showBox ? `<a class="src" href="#/${chId}/${q.box}">กล่อง ${q.box}</a>` : ''}</div>
       <div class="stem" data-hlk="${esc(qKey(chId, qid, 'stem'))}">${inline(esc(q.stem))}</div>
       ${q.needs_image ? '<div class="warn">ข้อนี้ข้อสอบจริงมีรูปประกอบ</div>' : ''}
-      <div class="opts">${letters.map(l => `<div class="opt" role="button" tabindex="0" data-l="${l}"><span class="l">${l}</span><span class="ot" data-hlk="${esc(qKey(chId, qid, l))}">${inline(esc(q.options[l]))}</span><button class="strike" type="button" aria-label="ตัดชอยส์นี้" title="ตัดชอยส์ (ยังไม่ใช่การตอบ)">✕</button></div>`).join('')}</div>
-      <div class="explain" hidden></div>
+      <div class="opts">${optHtml}</div>
+      <div class="explain"${saved ? '' : ' hidden'}>${saved ? mcqExplainHTML(chId, qid, q, saved, '', true) : ''}</div>
     </div>`;
   }
   /* เฉลย: 1 บรรทัด = 1 ประโยค/ช้อยส์ (ดู FORMAT.md)
@@ -336,6 +352,7 @@
       else if (b.dataset.l === letter) b.classList.add('wrong');
     });
     const k = `${chId}|${qid}`;
+    S.ans[k] = letter;
     S.stats[k] = S.stats[k] || { r: 0, w: 0 };
     let note = '';
     if (ok) { S.stats[k].r++; if (S.wrong[k]) { delete S.wrong[k]; note = '<div class="warn">เอาออกจากกองข้อผิดแล้ว</div>'; } }
@@ -343,12 +360,31 @@
     save();
     const ex = box.querySelector('.explain');
     ex.hidden = false;
-    ex.innerHTML = `<div class="res ${ok ? 'ok' : 'no'}">${ok ? '✓ Correct' : `✗ ยังไม่ใช่ ตอบ ${q.answer}`}</div><div class="why" data-hlk="${esc(qKey(chId, qid, 'why'))}">${whyHTML(q, letter)}</div>${q.doubt ? `<div class="warn">⚠ ${esc(q.doubt.replace(/^\s*⚠\s*/, ''))}</div>` : ''}${note}`;
+    ex.innerHTML = mcqExplainHTML(chId, qid, q, letter, note, box.dataset.savedMode === '1');
+    const rdAllBtn = $('#redoBoxExams'); if (rdAllBtn && box.dataset.savedMode === '1') rdAllBtn.hidden = false;
     applyAllHL(ex);
     if (onDone) onDone(ok);
     if (/^#\/[^/]+\/\d+/.test(location.hash)) { const m = location.hash.match(/^#\/([^/]+)\/(\d+)/); const y = sidebar.scrollTop; renderSidebar(m[1], +m[2]); sidebar.scrollTop = y; }
   }
+  function resetMCQ(box) {
+    const chId = box.dataset.ch, qid = box.dataset.q;
+    delete S.ans[`${chId}|${qid}`];
+    delete box.dataset.done;
+    box.querySelectorAll('.opt').forEach(b => { b.classList.remove('off', 'right', 'wrong', 'struck'); b.setAttribute('tabindex', '0'); });
+    const ex = box.querySelector('.explain');
+    if (ex) { ex.hidden = true; ex.innerHTML = ''; }
+    save();
+  }
   view.addEventListener('click', e => {
+    const rd = e.target.closest('[data-redo]');
+    if (rd) { const box = rd.closest('.mcq'); if (box) resetMCQ(box); return; }
+    const rdAll = e.target.closest('#redoBoxExams');
+    if (rdAll) {
+      view.querySelectorAll('.exam-sec .mcq[data-done]').forEach(b => resetMCQ(b));
+      rdAll.hidden = true;
+      toast('ล้างคำตอบในกล่องนี้แล้ว ทำใหม่ได้เลย');
+      return;
+    }
     const stk = e.target.closest('.strike');
     if (stk) { const o = stk.closest('.opt'); if (!o.classList.contains('off')) o.classList.toggle('struck'); return; }
     const opt = e.target.closest('.opt');
@@ -1163,7 +1199,7 @@
   /* ---------- views ---------- */
   /* ---------- Backup: ไฮไลต์ โน้ต keyword รูป อยู่ในเบราว์เซอร์เครื่องเดียว → สำรองเป็นไฟล์ ---------- */
   const b2u = b => new Promise(ok => { const r = new FileReader(); r.onload = () => ok(r.result); r.readAsDataURL(b); });
-  const hasData = (o = S) => !!(o && (Object.keys(o.hl || {}).length || (o.kw || []).length || Object.keys(o.lvl || {}).length || Object.keys(o.notes || {}).length || Object.keys(o.wrong || {}).length || Object.keys(o.known || {}).length || Object.keys(o.stats || {}).length || Object.keys(o.srs || {}).length || Object.keys(o.read || {}).length || o.plan));
+  const hasData = (o = S) => !!(o && (Object.keys(o.hl || {}).length || (o.kw || []).length || Object.keys(o.lvl || {}).length || Object.keys(o.notes || {}).length || Object.keys(o.wrong || {}).length || Object.keys(o.known || {}).length || Object.keys(o.stats || {}).length || Object.keys(o.srs || {}).length || Object.keys(o.read || {}).length || Object.keys(o.ans || {}).length || o.plan));
   const backupDue = () => !(window.NLE_SYNC && window.NLE_SYNC.getState().user) && hasData() && (!S.lastBackup || Date.now() - S.lastBackup > 7 * 864e5);
   async function vBackup() {
     renderSidebar();
@@ -1248,7 +1284,7 @@
 
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v56</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v57</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🔐 Google Cloud Sync</h3>${cloudHtml}
         <div class="today-chips" style="margin-top:12px"><span>ไฮไลต์/โน้ต <b>${nHl}</b></span><span>Keywords <b>${S.kw.length}</b></span><span>ประเมินแล้ว <b>${Object.keys(S.lvl).length}</b></span><span>รูป <b>${imgKeys.length}</b></span></div>
       </div>
@@ -1466,8 +1502,9 @@
       <textarea id="noteIn" rows="4" placeholder="จดสิ่งที่อยากจำของกล่องนี้ (บันทึกอัตโนมัติ)">${esc(S.notes[k] || '')}</textarea>
       <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี เปลี่ยนสีตัวอักษร (A) เขียนโน้ต ★ หรือ sticky note 🗒️ ต่อจากข้อความนั้น ตัวหนา (B) ขีดเส้นใต้ (U) และไฮไลต์ข้อความในโน้ตได้ด้วย (เหลือง เขียว ฟ้า ชมพู แดงอ่อน) · แตะโน้ตที่บันทึกแล้วเพื่อแก้ · แตะรูปเพื่อปรับขนาดหรือครอป · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
     if (s.examIds.length) {
-      h += `<section class="exam-sec"><h2>📝 Past exam questions</h2><p class="bar-label">กดเลือกคำตอบ ข้อที่ตอบผิดจะเข้ากองข้อผิดให้อัตโนมัติ</p>`;
-      for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid]);
+      const doneCnt = s.examIds.filter(qid => S.ans[`${id}|${qid}`]).length;
+      h += `<section class="exam-sec"><div class="exam-sec-h"><h2>📝 Past exam questions</h2><button class="btn small" id="redoBoxExams"${doneCnt ? '' : ' hidden'}>↺ ล้างคำตอบกล่องนี้</button></div><p class="bar-label">กดเลือกคำตอบแล้วระบบจะจำคำตอบไว้ให้อัตโนมัติ (ข้อที่ตอบผิดเข้ากองข้อผิดด้วย · กด ↺ ทำใหม่ ได้ทุกเมื่อ)</p>`;
+      for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid], { showSaved: true });
       h += '</section>';
     }
     h += `<div class="lvpick"><div class="lvq">How well do you understand this box? (tap again to clear)</div>${[4, 3, 2, 1].map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
@@ -1741,27 +1778,43 @@
     }; });
     view.querySelectorAll('[data-kwt]').forEach(a => a.onclick = () => { kwFlash = a.dataset.kwt; });
   }
-  /* หน้า Keyword: เรียงตามบทและกล่อง ติ๊กว่าทวนแล้วได้ */
+  /* หน้า Keyword: เรียงตามบทและกล่อง กรองตามบทได้ ติ๊กว่าทวนแล้วได้ */
   let kwFlash = '';
   async function vKeywords() {
     await loadAll(); renderSidebar();
     const left = S.kw.filter(x => !x.ok).length;
     let h = `<div class="hero"><h1>🔑 My keywords</h1><p>ลากเลือกคำเพื่อไฮไลต์/เปลี่ยนสีได้ · ↗ กลับไปอ่านตรงจุดนั้น · ติ๊กช่องเมื่อทวนแล้ว · ✎ แก้คำหรือคำที่เน้น · ยังไม่ได้ทวน ${left} จาก ${S.kw.length} คำ</p></div>`;
     if (!S.kw.length) { view.innerHTML = h + '<p class="empty">ยังไม่มี keyword ลองเลือกข้อความในเนื้อหาหรือข้อสอบแล้วกด 🔑</p>'; return; }
-    h += `<div class="choice kw-filter"><label><input type="checkbox" id="kwHide" ${S.kwHide ? 'checked' : ''}> Hide reviewed</label><button class="btn small" id="kwShuffle">Random review</button></div>`;
+    // นับจำนวน keyword แยกตามบท แล้วสร้างปุ่มกรองตามบท
+    const chCounts = {};
+    for (const x of S.kw) { const c = x.ch || '_'; chCounts[c] = (chCounts[c] || 0) + 1; }
+    const chList = Object.keys(chCounts).sort((a, b) => chNum(a) - chNum(b) || (a < b ? -1 : 1));
+    if (S.kwCh && !chCounts[S.kwCh]) S.kwCh = '';
+    const activeCh = S.kwCh || '';
+    const pills = `<div class="kw-chs"><button class="btn small${!activeCh ? ' primary' : ''}" data-ch="">ทั้งหมด (${S.kw.length})</button>`
+      + chList.map(c => `<button class="btn small${activeCh === c ? ' primary' : ''}" data-ch="${esc(c)}">${esc(CH[c] ? CH[c].title : (c === '_' ? 'อื่นๆ' : c))} (${chCounts[c]})</button>`).join('') + '</div>';
+    h += pills;
+    h += `<div class="choice kw-filter"><label><input type="checkbox" id="kwHide" ${S.kwHide ? 'checked' : ''}> Hide reviewed</label><button class="btn small" id="kwShuffle">Random review${activeCh && CH[activeCh] ? ` (${esc(CH[activeCh].title)})` : ''}</button></div>`;
     h += '<div class="kw-cols">';
     const groups = {};
-    S.kw.forEach((x, i) => { const g = `${x.ch}|${x.box}`; (groups[g] = groups[g] || []).push(i); });
+    S.kw.forEach((x, i) => {
+      const c = x.ch || '_';
+      if (activeCh && c !== activeCh) return;
+      const g = `${x.ch}|${x.box}`; (groups[g] = groups[g] || []).push(i);
+    });
     const keys = Object.keys(groups).sort((a, b) => { const [ca, ba] = a.split('|'), [cb, bb] = b.split('|'); return ca === cb ? ba - bb : chNum(ca) - chNum(cb) || (ca < cb ? -1 : 1); });
+    let shown = 0;
     for (const g of keys) {
       const [c, box] = g.split('|'); const ch = CH[c]; const sec = ch && ch.sections.find(x => x.no === +box);
       const items = groups[g].filter(i => !(S.kwHide && S.kw[i].ok)); if (!items.length) continue;
+      shown += items.length;
       h += `<div class="kw-group"><h3><a href="#/${c}/${box}"><b>${box}</b> ${sec ? esc(sec.title) : ''}</a><small>${ch ? esc(ch.title) : ''}</small></h3><ul class="kw-list">`
         + items.map(i => { const x = S.kw[i]; return `<li class="kwi${x.ok ? ' ok' : ''}"><button class="kw-ok" data-i="${i}" title="ทวนแล้ว">${x.ok ? '✓' : ''}</button><span class="kwt" data-hlk="kw:${x.at}">${kwHTML(x.d || x.t)}</span><a class="kw-go" href="#/${c}/${box}" data-kwt="${esc(x.t)}" title="ไปอ่านตรงจุดนั้น">↗</a>${x.q ? `<small>ข้อ ${esc(x.q)}</small>` : ''}<button class="kw-ed" data-i="${i}" title="แก้ไข">✎</button><button class="kw-del" data-i="${i}" title="ลบ">✕</button></li>`; }).join('')
         + '</ul></div>';
     }
-    view.innerHTML = h + '</div>';
+    view.innerHTML = h + '</div>' + (!shown ? '<p class="empty">ไม่มี keyword ที่ยังไม่ทวนในบทนี้แล้ว 🎉</p>' : '');
     applyAllHL(view);
+    view.querySelectorAll('.kw-chs button').forEach(b => b.onclick = () => { S.kwCh = b.dataset.ch; save(); vKeywords(); });
     view.querySelectorAll('.kw-ed').forEach(b => b.onclick = () => {
       const i = +b.dataset.i, x = S.kw[i], li = b.closest('li');
       li.innerHTML = `<div class="kw-edit"><textarea rows="2">${esc(x.d || x.t)}</textarea><div class="note-act"><button class="btn small" data-a="mk">Emphasize</button><button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div></div>`;
@@ -1777,7 +1830,8 @@
     view.querySelectorAll('[data-kwt]').forEach(a => a.onclick = () => { kwFlash = a.dataset.kwt; });
     $('#kwHide').onchange = e => { S.kwHide = e.target.checked; save(); vKeywords(); };
     $('#kwShuffle').onclick = () => {
-      const pool = S.kw.filter(x => !x.ok); if (!pool.length) return toast('All keywords reviewed');
+      const pool = S.kw.filter(x => !x.ok && (!activeCh || (x.ch || '_') === activeCh));
+      if (!pool.length) return toast('All keywords reviewed');
       const x = pool[Math.floor(Math.random() * pool.length)]; kwFlash = x.t; location.hash = `#/${x.ch}/${x.box}`;
     };
   }
