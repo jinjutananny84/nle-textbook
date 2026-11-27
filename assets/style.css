@@ -631,6 +631,14 @@ figure.uimg .crop img{border:0;border-radius:0}
 .crop-sel i[data-h="nw"]{left:-2px;top:-2px;cursor:nwse-resize}.crop-sel i[data-h="ne"]{right:-2px;top:-2px;cursor:nesw-resize}
 .crop-sel i[data-h="sw"]{left:-2px;bottom:-2px;cursor:nesw-resize}.crop-sel i[data-h="se"]{right:-2px;bottom:-2px;cursor:nwse-resize}
 .hl-pop .row:first-child .sw[data-c="n"]{margin-left:auto}
+/* ไฮไลต์สีม่วง (c-v) · ตัวอักษรสีม่วง (c-tv) */
+:root{--u-v:#e2d4ff;--t-v:#7b3fd6}
+:root[data-theme="dark"]{--u-v:#43306e;--t-v:#c9a8ff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--u-v:#43306e;--t-v:#c9a8ff}}
+mark.user-hl.c-v{--c:var(--u-v);background:linear-gradient(transparent 22%,var(--c) 22%,var(--c) 84%,transparent 84%)}
+.hl-pop .sw.c-v{background:var(--u-v)}
+mark.user-hl.c-tv{--c:transparent;background:none;color:var(--t-v);font-weight:inherit}
+.hl-pop .sw.tc.c-tv{color:var(--t-v)}
 /* ตารางรวมยาต่อบท */
 .db-bar select{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--fg);font:inherit;font-size:14px;max-width:100%}
 .dt-gs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
