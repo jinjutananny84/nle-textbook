@@ -1672,7 +1672,7 @@
     "C": "Staphylococcus epidermidis"
    },
    "answer": "B",
-   "why": "ผิวแดงลอกเป็นแผ่นรอบปากรอบตาคือ staphylococcal scalded skin syndrome จาก exfoliative toxin (ETA/ETB) ของ S. aureus ซึ่งตัด desmoglein-1 ในชั้น stratum granulosum แหล่งเชื้อคือฝีที่ผิวหนัง S. pyogenes ทำให้ scarlet fever หรือ cellulitis ไม่ทำให้ผิวลอกแบบนี้ S. epidermidis ไม่สร้าง exfoliative toxin",
+   "why": "ผิวแดงลอกเป็นแผ่นรอบปากรอบตา หลังมีฝี = SSSS: exfoliative toxin (ETA/ETB) ตัด desmoglein-1 ใน stratum granulosum\n✗ A: S. pyogenes → scarlet fever / cellulitis ไม่ทำให้ผิวลอกแบบนี้\n✓ B: Staphylococcus aureus\n✗ C: S. epidermidis ไม่สร้าง exfoliative toxin",
    "source": "เฉลย78"
   },
   "78/129": {
@@ -1686,7 +1686,7 @@
     "E": "Neutrophil"
    },
    "answer": "A",
-   "why": "Specific granule ของ eosinophil มีแกนผลึก (crystalloid core) ที่เป็น major basic protein ล้อมด้วย matrix ที่มี eosinophil peroxidase, ECP เห็นชัดใน EM Basophil และ mast cell มี granule ใหญ่ติดสีเข้มที่มี histamine แต่ไม่มีแกนผลึก Neutrophil และ monocyte มี lysosomal granule ธรรมดา",
+   "why": "Specific granule มี crystalloid core (major basic protein) + matrix ที่มี eosinophil peroxidase, ECP\n✓ A: Eosinophil\n✗ B: Basophil: granule ใหญ่ติดสีเข้ม มี histamine ไม่มีแกนผลึก\n✗ C: Monocyte: lysosomal granule ธรรมดา\n✗ D: Mast cell: granule ใหญ่ มี histamine ไม่มีแกนผลึก\n✗ E: Neutrophil: lysosomal granule ธรรมดา",
    "source": "เฉลย78"
   },
   "78/130": {
@@ -1700,7 +1700,7 @@
     "E": "ADCC"
    },
    "answer": "A",
-   "why": "Allergic contact dermatitis จากนิกเกิลเป็น type IV (delayed) hypersensitivity นิกเกิลเป็นโมเลกุลเล็ก ต้องจับกับโปรตีนในผิว (hapten) ให้ Langerhans cell นำเสนอแก่ T cell เมื่อสัมผัสซ้ำ T cell หลั่ง cytokine เกิดผื่นใน 48–72 ชม. Mast cell degranulation เป็น type I (ลมพิษ เกิดเร็ว) ADCC เป็นกลไก type II ส่วน innate/ILC2 ไม่ใช่กลไกหลักของ ACD",
+   "why": "Allergic contact dermatitis จากนิกเกิล = type IV; นิกเกิลโมเลกุลเล็กต้องจับโปรตีนผิวก่อน (hapten)\n✓ A: Haptenization → Langerhans cell เสนอ T cell → ผื่น 48–72 ชม. เมื่อสัมผัสซ้ำ\n✗ B: Innate hypersensitivity ไม่ใช่กลไกหลักของ ACD\n✗ C: ILC2 ไม่ใช่กลไกหลักของ ACD\n✗ D: Mast cell degranulation = type I (ลมพิษ เกิดเร็ว)\n✗ E: ADCC = type II",
    "source": "เฉลย78"
   },
   "78/136": {
@@ -1712,7 +1712,7 @@
     "C": "Verruca plana"
    },
    "answer": "A",
-   "why": "Seborrheic keratosis เป็นเนื้องอกไม่ร้ายของ keratinocyte ในผู้สูงอายุ ลักษณะ stuck-on ผิวขรุขระ histo มี horn cyst/pseudohorn cyst Arsenical keratosis เป็นตุ่มแข็งที่ฝ่ามือฝ่าเท้าจากสารหนู ร่วมกับ raindrop pigmentation Verruca plana เป็นหูดแบนจาก HPV พบในเด็ก/วัยรุ่น ไม่มี horn cyst",
+   "why": "✓ A: Seborrheic keratosis: stuck-on ผิวขรุขระในผู้สูงอายุ + horn/pseudohorn cyst\n✗ B: Arsenical keratosis: ตุ่มแข็งที่ฝ่ามือฝ่าเท้า + raindrop pigmentation\n✗ C: Verruca plana: หูดแบนจาก HPV ในเด็ก/วัยรุ่น ไม่มี horn cyst",
    "source": "เฉลย78"
   },
   "78/166": {
@@ -1724,7 +1724,7 @@
     "C": "Cloxacillin"
    },
    "answer": "C",
-   "why": "Impetigo เกิดจาก S. aureus และ S. pyogenes ยาที่ครอบคลุมทั้งคู่และเหมาะกับเด็กคือ anti-staphylococcal penicillin เช่น cloxacillin/dicloxacillin (หรือ cephalexin) Ceftriaxone เป็นยาฉีดกว้างเกินจำเป็น ไม่ใช่ยาแรกสำหรับ S. aureus ที่ผิวหนัง Doxycycline ห้ามใช้ในเด็กเล็กเพราะทำให้ฟันเปลี่ยนสีและกระทบกระดูก",
+   "why": "Impetigo = S. aureus + S. pyogenes\n✗ A: Ceftriaxone เป็นยาฉีด กว้างเกินจำเป็น\n✗ B: Doxycycline ห้ามในเด็กเล็ก (ฟันเปลี่ยนสี กระทบกระดูก)\n✓ C: Cloxacillin/dicloxacillin (หรือ cephalexin) ครอบคลุมทั้งคู่",
    "source": "เฉลย78",
    "doubt": "⚠ ไม่เห็นรูป — เฉลยระบุ impetigo",
    "needs_image": true
@@ -1738,7 +1738,7 @@
     "C": "Staphylococcal scalded skin syndrome"
    },
    "answer": "B",
-   "why": "Leukocytoclastic vasculitis (เช่น HSP, hypersensitivity vasculitis) เกิดจาก immune complex ไปเกาะผนังหลอดเลือดเล็ก กระตุ้น complement ดึง neutrophil มาทำลายจนนิวเคลียสแตก (type III hypersensitivity) ซึ่งเป็นกลไกเดียวกับ SLE Atopic dermatitis เป็น type I/Th2 ร่วมกับ barrier defect ส่วน SSSS เกิดจาก exfoliative toxin ตัด desmoglein-1 ไม่ใช่ immune complex",
+   "why": "Leukocytoclastic vasculitis = immune complex เกาะผนังหลอดเลือดเล็ก → complement → neutrophil ทำลายจนนิวเคลียสแตก (type III)\n✗ A: Atopic dermatitis = type I/Th2 + barrier defect\n✓ B: SLE (type III เหมือนกัน)\n✗ C: SSSS = exfoliative toxin ตัด desmoglein-1 ไม่ใช่ immune complex",
    "source": "เฉลย78",
    "needs_image": true
   },
@@ -1750,7 +1750,7 @@
     "B": "Scarlet fever"
    },
    "answer": "A",
-   "why": "Kawasaki disease: ไข้ ≥5 วันไม่ตอบสนองยาลดไข้ ร่วมกับ conjunctivitis ไม่มีขี้ตา, ปากแดงแตก strawberry tongue, มือเท้าบวมแดงแล้วลอก, ผื่น และต่อมน้ำเหลืองคอโต เป็น medium-vessel vasculitis เสี่ยง coronary aneurysm Scarlet fever มี strawberry tongue ได้แต่ผื่นสากแบบกระดาษทราย เจ็บคอ และไม่มีมือเท้าบวม ตอบสนองต่อ penicillin",
+   "why": "✓ A: Kawasaki: ไข้ ≥ 5 วันไม่ตอบสนองยาลดไข้ + strawberry tongue + มือเท้าบวมแดงแล้วลอก (เสี่ยง coronary aneurysm)\n✗ B: Scarlet fever มี strawberry tongue ได้ แต่ผื่นสากกระดาษทราย เจ็บคอ ไม่มีมือเท้าบวม",
    "source": "เฉลย78"
   },
   "78/221": {
@@ -1762,7 +1762,7 @@
     "C": "Serotonin"
    },
    "answer": "A",
-   "why": "พิษมดคันไฟ (Solenopsis) ส่วนใหญ่เป็น piperidine alkaloid (solenopsin) ทำลายเซลล์ ทำให้เกิดตุ่มหนองปลอดเชื้อ (sterile pustule) ส่วนโปรตีนจำนวนน้อยทำให้แพ้แบบ anaphylaxis Melittin เป็นองค์ประกอบหลักของพิษผึ้ง Serotonin พบในพิษต่อ/แตนบางชนิดและพืชกลุ่มตำแย",
+   "why": "✓ A: Piperidine alkaloid (solenopsin) ทำลายเซลล์ → sterile pustule\n✗ B: Melittin เป็นองค์ประกอบหลักของพิษผึ้ง\n✗ C: Serotonin พบในพิษต่อ/แตนบางชนิดและตำแย",
    "source": "เฉลย78"
   },
   "78/X12": {
@@ -1776,7 +1776,7 @@
     "E": "Regulatory T cell ทำงานมากเกิน"
    },
    "answer": "A",
-   "why": "Psoriasis: dendritic cell หลั่ง IL-23 กระตุ้น Th17 ให้หลั่ง IL-17 และ IL-22 ทำให้ keratinocyte แบ่งตัวเร็ว (turnover ราว 3–4 วัน) เกิด plaque ขุยเงิน จึงใช้ยา anti-IL-17 และ anti-IL-23 รักษา Th2/IgE เป็นกลไกของ atopic dermatitis และลมพิษ Autoantibody ต่อ desmoglein คือ pemphigus ส่วน Treg ที่ทำงานมากจะลดการอักเสบ ไม่ทำให้เกิดโรค",
+   "why": "Psoriasis: DC หลั่ง IL-23 → Th17 → IL-17, IL-22 → keratinocyte แบ่งตัวเร็ว (turnover 3–4 วัน)\n✓ A: Th17 (IL-23/IL-17 axis) จึงใช้ anti-IL-17, anti-IL-23 รักษา\n✗ B: Th2 = atopic dermatitis\n✗ C: IgE/mast cell = ลมพิษ\n✗ D: Anti-desmoglein = pemphigus\n✗ E: Treg ทำงานมากจะลดการอักเสบ",
    "source": "วิเคราะห์",
    "doubt": "⚠ ข้อไม่มีเลขท้ายไฟล์ ไม่มีในเฉลย78 และไฟล์มีแค่ตัวเลือก Th17 จึงสร้างตัวเลือกอื่นเอง",
    "options_reconstructed": true
@@ -1792,7 +1792,7 @@
     "E": "Lipoprotein(a) สูง"
    },
    "answer": "A",
-   "why": "Plasma ขุ่นขาว (lipemic/creamy) หลังปั่นบ่งชี้ chylomicron และ triglyceride สูงมาก ซึ่งทำให้เกิด eruptive xanthoma (ตุ่มเหลืองที่ศอก ก้น) และเสี่ยง pancreatitis LDL สูงทำให้ tendon xanthoma และ xanthelasma แต่ plasma ใส HDL สูงไม่ก่อ xanthoma Lp(a) สัมพันธ์กับหลอดเลือดแข็ง VLDL สูงอย่างเดียวทำให้ขุ่นเล็กน้อย แต่ตัวเลือกที่ตรงที่สุดคือ TG สูง",
+   "why": "Plasma ขุ่นขาวหลังปั่น = chylomicron/TG สูงมาก → eruptive xanthoma (ศอก ก้น) + เสี่ยง pancreatitis\n✓ A: Triglyceride สูง\n✗ B: LDL สูง → tendon xanthoma, xanthelasma แต่ plasma ใส\n✗ C: HDL สูงไม่ก่อ xanthoma\n✗ D: VLDL สูงอย่างเดียว ขุ่นเล็กน้อย\n✗ E: Lp(a) สัมพันธ์กับหลอดเลือดแข็ง",
    "source": "เฉลย79"
   },
   "79/29": {
@@ -1806,7 +1806,7 @@
     "E": "Neural crest อย่างเดียว"
    },
    "answer": "B",
-   "why": "Hemangioma เป็นเนื้องอกของ endothelial cell หลอดเลือด ซึ่งมาจาก mesoderm (angioblast) Ectoderm ให้ epidermis ขน เล็บ ต่อมผิวหนัง Neural crest ให้ melanocyte และ Schwann cell Endoderm ให้เยื่อบุทางเดินอาหารและหายใจ ไม่เกี่ยวกับหลอดเลือด",
+   "why": "Hemangioma = เนื้องอกของ endothelial cell (มาจาก angioblast ของ mesoderm)\n✗ A: Ectoderm → epidermis ขน เล็บ ต่อมผิวหนัง\n✓ B: Mesoderm อย่างเดียว\n✗ C: ไม่มีส่วนจาก ectoderm\n✗ D: Endoderm → เยื่อบุทางเดินอาหาร/หายใจ\n✗ E: Neural crest → melanocyte, Schwann cell",
    "source": "เฉลย79"
   },
   "79/37": {
@@ -1820,7 +1820,7 @@
     "E": "Insensible fluid loss ผ่าน stratum corneum"
    },
    "answer": "B",
-   "why": "Eccrine gland ซึ่งกระจายทั่วตัวเป็นต่อมหลักสำหรับระบายความร้อน รับใยประสาท sympathetic แต่ใช้ acetylcholine ที่ muscarinic (M3) receptor (sympathetic cholinergic) Apocrine gland อยู่รักแร้/ขาหนีบ ตอบสนองต่อ adrenergic/อารมณ์ ไม่ได้ช่วยระบายความร้อน Sebaceous gland หลั่ง sebum เมื่อร้อนหลอดเลือดผิวจะขยาย ไม่ใช่หด และ insensible loss มีปริมาณน้อยคงที่",
+   "why": "Eccrine (ทั่วตัว) = ต่อมหลักระบายความร้อน: sympathetic แต่ใช้ ACh → M3\n✗ A: Apocrine (รักแร้/ขาหนีบ) ตอบสนองต่ออารมณ์ ไม่ช่วยระบายความร้อน\n✓ B: Cholinergic กระตุ้น eccrine gland\n✗ C: Sebaceous หลั่ง sebum\n✗ D: ตอนร้อนหลอดเลือดผิวขยาย ไม่ใช่หด\n✗ E: Insensible loss ปริมาณน้อยคงที่",
    "source": "เฉลย79"
   },
   "79/78": {
@@ -1834,7 +1834,7 @@
     "E": "Herpes simplex virus"
    },
    "answer": "A",
-   "why": "Congenital CMV เป็นสาเหตุติดเชื้อแต่กำเนิดที่พบบ่อยที่สุด มี periventricular calcification, microcephaly, SNHL (พบบ่อยที่สุด) และ blueberry muffin rash จาก extramedullary hematopoiesis Rubella ก็มี blueberry muffin แต่เด่น triad cataract, PDA, deafness Toxoplasma ให้ diffuse (scattered) calcification + hydrocephalus + chorioretinitis Congenital syphilis ให้ snuffles, rash ฝ่ามือฝ่าเท้า HSV ทารกมักมีตุ่มน้ำ",
+   "why": "Congenital CMV พบบ่อยสุด: periventricular calcification + microcephaly + SNHL + blueberry muffin\n✓ A: Cytomegalovirus\n✗ B: Rubella มี blueberry muffin ได้ แต่เด่น cataract + PDA + deafness\n✗ C: Toxoplasma: diffuse calcification + hydrocephalus + chorioretinitis\n✗ D: Congenital syphilis: snuffles, rash ฝ่ามือฝ่าเท้า\n✗ E: HSV: ทารกมักมีตุ่มน้ำ",
    "source": "เฉลย79"
   },
   "79/88": {
@@ -1848,7 +1848,7 @@
     "E": "Guanylyl cyclase ถูกกระตุ้น"
    },
    "answer": "A",
-   "why": "แสงเปลี่ยน 11-cis retinal ใน rhodopsin เป็น all-trans retinal ทำให้ rhodopsin ถูกกระตุ้น (metarhodopsin II) เป็นขั้นแรก จากนั้นกระตุ้น transducin และ PDE6 ซึ่งสลาย cGMP ทำให้ cGMP-gated Na⁺ channel ปิด (ไม่ใช่เปิด) เซลล์ hyperpolarize และหลั่ง glutamate ลดลง การกระตุ้น guanylyl cyclase สร้าง cGMP ใหม่เกิดภายหลังในช่วง recovery",
+   "why": "แสง → 11-cis เป็น all-trans retinal → rhodopsin ถูกกระตุ้น (ขั้นแรก) → transducin → PDE6 สลาย cGMP\n✓ A: Rhodopsin ถูกกระตุ้น\n✗ B: PDE สลาย cGMP ไม่ใช่สร้าง\n✗ C: cGMP ลด → Na⁺ channel ปิด (ไม่ใช่เปิด)\n✗ D: Glutamate หลั่งลดลง\n✗ E: Guanylyl cyclase ทำงานช่วง recovery",
    "source": "วิเคราะห์"
   },
   "79/95": {
@@ -1862,7 +1862,7 @@
     "E": "Keratinocyte สร้าง melanin เองหลังโดน UV"
    },
    "answer": "D",
-   "why": "UV กระตุ้น keratinocyte หลั่ง α-MSH ไปกระตุ้น MC1R บน melanocyte ให้สร้าง melanin มากขึ้นใน melanosome แล้วส่งผ่าน dendrite ให้ keratinocyte ข้างเคียง (cytocrine transfer) ไปคลุมเหนือนิวเคลียส จำนวน melanocyte ไม่ได้เปลี่ยนมาก และ melanocyte ไม่ได้เคลื่อนเข้า keratinocyte Keratinocyte สร้าง melanin เองไม่ได้ ส่วน tyrosinase เปลี่ยน tyrosine เป็น DOPA ไม่ได้แปลง eumelanin เป็น pheomelanin",
+   "why": "UV → keratinocyte หลั่ง α-MSH → MC1R บน melanocyte → สร้าง melanin ใน melanosome มากขึ้น\n✗ A: Tyrosinase เปลี่ยน tyrosine เป็น DOPA ไม่ได้แปลง eumelanin เป็น pheomelanin\n✗ B: Melanocyte อยู่ใน basal layer อยู่แล้ว จำนวนไม่ได้เปลี่ยนมาก\n✗ C: Melanocyte ไม่ได้เคลื่อนเข้า keratinocyte\n✓ D: ส่ง melanosome ผ่าน dendrite ให้ keratinocyte (cytocrine transfer) คลุมเหนือนิวเคลียส\n✗ E: Keratinocyte สร้าง melanin เองไม่ได้",
    "source": "เฉลย79"
   },
   "79/96": {
@@ -1876,7 +1876,7 @@
     "E": "Griseofulvin"
    },
    "answer": "D",
-   "why": "ตามเฉลยเป็นการติดเชื้อ dermatophyte ที่ต้องใช้ยากิน (น่าจะเป็นเชื้อราที่เล็บหรือผิวหนังกว้าง) terbinafine ยับยั้ง squalene epoxidase ฆ่าเชื้อ (fungicidal) สะสมใน keratin ได้ดี จึงเป็นยาแรก ยาทาไม่ซึมถึงเล็บ Oral ketoconazole ไม่ใช้แล้วเพราะพิษต่อตับ Itraconazole เป็นทางเลือกรอง Griseofulvin ใช้ใน tinea capitis เด็กแต่ต้องใช้นานและได้ผลด้อยกว่าในเล็บ",
+   "why": "ตามเฉลย: dermatophyte ที่ต้องใช้ยากิน (น่าจะเล็บหรือผิวหนังกว้าง)\n✗ A: ยาทาไม่ซึมถึงเล็บ\n✗ B: Oral ketoconazole ไม่ใช้แล้ว (พิษต่อตับ)\n✗ C: Itraconazole เป็นทางเลือกรอง\n✓ D: Terbinafine ยับยั้ง squalene epoxidase, fungicidal สะสมใน keratin ดี\n✗ E: Griseofulvin ใช้ใน tinea capitis เด็ก ต้องใช้นาน ได้ผลด้อยกว่าในเล็บ",
    "source": "เฉลย79",
    "doubt": "⚠ ไม่เห็นรูป — ถ้ารูปเป็น tinea capitis ในเด็กก็ใช้ griseofulvin ได้ แต่ยึดตามเฉลย79",
    "needs_image": true
@@ -1892,7 +1892,7 @@
     "E": "Nocardia asteroides"
    },
    "answer": "B",
-   "why": "ปื้นสีจางชา (hypopigmented anesthetic patch) ร่วมกับ AFB จำนวนน้อย คือ leprosy ชนิด paucibacillary (tuberculoid) จาก M. leprae ซึ่งชอบอุณหภูมิต่ำ เข้า Schwann cell M. tuberculosis ที่ผิวหนัง (lupus vulgaris) ไม่ทำให้ชา MAC พบในผู้ติดเชื้อ HIV ระยะท้าย C. diphtheriae ไม่ติดสี acid-fast Nocardia ติดสี acid-fast บางส่วน เป็นเส้นสายแตกแขนง ทำให้ฝีหรือ mycetoma",
+   "why": "ปื้นสีจางชา + AFB น้อย = paucibacillary (tuberculoid) leprosy; M. leprae ชอบอุณหภูมิต่ำ เข้า Schwann cell\n✗ A: M. tuberculosis ที่ผิว (lupus vulgaris) ไม่ชา\n✓ B: Mycobacterium leprae\n✗ C: MAC พบใน HIV ระยะท้าย\n✗ D: C. diphtheriae ไม่ติดสี acid-fast\n✗ E: Nocardia weakly acid-fast แตกแขนง → ฝี/mycetoma",
    "source": "เฉลย79"
   },
   "79/98": {
@@ -1906,7 +1906,7 @@
     "E": "TGF-β ทำงานลดลง"
    },
    "answer": "A",
-   "why": "รอยโรคน่าจะเป็น keloid (แผลเป็นนูนเกินขอบแผลเดิม) ซึ่งเกิดจาก fibroblast ตอบสนองต่อ TGF-β มากเกิน สร้าง collagen (type I และ III) มากกว่าการสลาย จึงสะสมเป็นมัด collagen หนา ตัวเลือกอื่นเป็นทิศตรงข้าม: fibroblast ลดลง, MMP สลายมาก, ECM ไม่สร้าง หรือ TGF-β ลดลง จะทำให้แผลหายช้าหรือแผลแยก ไม่ใช่แผลนูน",
+   "why": "น่าจะเป็น keloid: fibroblast ตอบสนองต่อ TGF-β มากเกิน → สร้าง collagen (I, III) มากกว่าสลาย\n✓ A: Fibroblast สร้างและสะสม collagen มากเกิน\n✗ B: Fibroblast ลดลง → แผลหายช้า ไม่ใช่แผลนูน\n✗ C: MMP สลายมาก → แผลแยก ไม่ใช่แผลนูน\n✗ D: ECM ไม่ถูกสร้าง → แผลไม่หาย\n✗ E: TGF-β ลดลง → แผลหายช้า (ทิศตรงข้าม)",
    "source": "เฉลย79",
    "doubt": "⚠ ไม่เห็นรูป — สันนิษฐานว่าเป็น keloid",
    "needs_image": true
@@ -1922,7 +1922,7 @@
     "E": "Photosensitivity"
    },
    "answer": "C",
-   "why": "Proximal weakness ร่วมผื่นผิวหนังคือ dermatomyositis ซึ่งมีผื่นจำเพาะคือ heliotrope rash (ผื่นม่วงแดงที่เปลือกตาบน) และ Gottron papule ที่ข้อนิ้ว Photosensitivity และ alopecia พบใน SLE และ dermatomyositis ได้ จึงไม่จำเพาะ Nail dystrophy พบใน psoriasis/เชื้อรา (DM มี periungual telangiectasia แต่ไม่ pathognomonic) Vasculitis เป็นลักษณะกว้างๆ ไม่ใช่ sign จำเพาะ",
+   "why": "Proximal weakness + ผื่นผิวหนัง = dermatomyositis\n✗ A: Alopecia พบใน SLE และ DM ได้ ไม่จำเพาะ\n✗ B: Nail dystrophy พบใน psoriasis/เชื้อรา\n✓ C: Heliotrope rash (ผื่นม่วงแดงที่เปลือกตาบน) + Gottron papule\n✗ D: Vasculitis เป็นลักษณะกว้าง ๆ\n✗ E: Photosensitivity พบใน SLE และ DM ได้ ไม่จำเพาะ",
    "source": "เฉลย79"
   },
   "79/100": {
@@ -1936,7 +1936,7 @@
     "E": "ไวรัสอยู่เรื้อรังเพิ่มจำนวนต่ำใน epithelial cell ริมฝีปาก แล้วเพิ่มจำนวนเป็นระยะ"
    },
    "answer": "D",
-   "why": "HSV-1 หลังติดเชื้อครั้งแรกจะเดินทางย้อนตามแอกซอนไปแฝงใน trigeminal ganglion (latency; มีแค่ LAT transcript ไม่สร้างไวรัส) เมื่อเครียด UV ไข้ หรือภูมิตก ไวรัส reactivate ลงมาตามเส้นประสาทเกิดแผลที่ตำแหน่งเดิม ไม่ได้เกิดจาก viremia ไม่ใช่การติดเชื้อใหม่ และไม่ได้แฝงใน epithelial cell (ซึ่งเป็นที่เพิ่มจำนวนแบบ lytic เท่านั้น)",
+   "why": "HSV-1 ย้อนตาม axon ไปแฝงใน trigeminal ganglion (มีแค่ LAT) → เครียด UV ไข้ → reactivate ลงมาที่เดิม\n✗ A: ไม่ได้เกิดจาก viremia\n✗ B: ไม่ใช่การติดเชื้อใหม่\n✗ C: การติดเชื้อแรกหายแล้ว\n✓ D: แฝงแบบไม่เพิ่มจำนวนใน sensory ganglion แล้ว reactivate เป็นระยะ\n✗ E: Epithelial cell เป็นที่เพิ่มจำนวนแบบ lytic เท่านั้น ไม่ใช่ที่แฝง",
    "source": "เฉลย79"
   },
   "79/101": {
@@ -1950,7 +1950,7 @@
     "E": "Autoreactive B cells"
    },
    "answer": "C",
-   "why": "Plaque ขุยเงินร่วม Auspitz sign คือ psoriasis ซึ่งขับเคลื่อนด้วยแกน IL-23/Th17: IL-17 และ IL-22 กระตุ้น keratinocyte แบ่งตัวมากและดึง neutrophil (Munro microabscess) Th1 มีบทบาทรองแต่ไม่ใช่หลัก Th2 เป็นของ atopic dermatitis Treg ลดการอักเสบ ส่วน autoreactive B cell เด่นใน pemphigus/SLE",
+   "why": "Plaque ขุยเงิน + Auspitz sign = psoriasis (แกน IL-23/Th17: IL-17, IL-22 → keratinocyte แบ่งตัว + ดึง neutrophil)\n✗ A: Th1 มีบทบาทรอง ไม่ใช่หลัก\n✗ B: Th2 = atopic dermatitis\n✓ C: Th17 cells\n✗ D: Treg ลดการอักเสบ\n✗ E: Autoreactive B cell เด่นใน pemphigus/SLE",
    "source": "เฉลย79"
   },
   "79/102": {
@@ -1964,7 +1964,7 @@
     "E": "Hyperthyroidism"
    },
    "answer": "A",
-   "why": "ผิวดำหนาแบบกำมะหยี่ที่ข้อพับคือ acanthosis nigricans ซึ่งสัมพันธ์กับ insulin resistance: insulin สูงกระตุ้น IGF-1 receptor บน keratinocyte และ fibroblast เมื่อร่วมกับน้ำตาลและไขมันสูงจึงเข้ากับ metabolic syndrome Cushing อาจมี insulin resistance ได้แต่จะเด่นที่ striae ม่วง หน้ากลม Addison ผิวคล้ำทั่วไปรวมถึงเยื่อบุ ไม่ใช่กำมะหยี่ที่ข้อพับ SIADH และ hyperthyroidism ไม่เกี่ยว",
+   "why": "Acanthosis nigricans = insulin resistance: insulin สูงกระตุ้น IGF-1 receptor บน keratinocyte/fibroblast\n✓ A: Metabolic syndrome\n✗ B: Cushing มี insulin resistance ได้ แต่เด่นที่ striae ม่วง หน้ากลม\n✗ C: SIADH ไม่เกี่ยว\n✗ D: Addison: ผิวคล้ำทั่วไปรวมเยื่อบุ ไม่ใช่กำมะหยี่ที่ข้อพับ\n✗ E: Hyperthyroidism ไม่เกี่ยว",
    "source": "เฉลย79"
   },
   "79/103": {
@@ -1978,7 +1978,7 @@
     "E": "Cutibacterium acnes ลดลง"
    },
    "answer": "B",
-   "why": "สิวมี 4 กลไก: follicular hyperkeratinization/hyperproliferation (อุดตันเป็น comedone ซึ่งเป็นรอยโรคแรก), sebum เพิ่มจาก androgen, C. acnes เพิ่มขึ้น และการอักเสบ ในสิว linoleic acid ใน sebum จะลดลง (ไม่ใช่เพิ่ม) C. acnes เพิ่มขึ้นไม่ใช่ลดลง Malassezia ทำให้ seb derm/pityrosporum folliculitis ส่วนต่อมไขมันขยายใหญ่ทำงานมากขึ้น แต่คำว่า sebaceous hyperplasia หมายถึงอีกโรคหนึ่ง",
+   "why": "สิว 4 กลไก: follicular hyperkeratinization (comedone = รอยโรคแรก) + sebum เพิ่ม + C. acnes เพิ่ม + อักเสบ\n✗ A: Linoleic acid ใน sebum ลดลง ไม่ใช่เพิ่ม\n✓ B: Follicular hyperproliferation\n✗ C: \"Sebaceous hyperplasia\" หมายถึงอีกโรคหนึ่ง\n✗ D: Malassezia → seb derm / pityrosporum folliculitis\n✗ E: C. acnes เพิ่มขึ้น ไม่ใช่ลดลง",
    "source": "เฉลย79",
    "doubt": "⚠ การหลั่ง sebum มากเป็นหนึ่งใน 4 กลไก จึงอาจมีคนเลือก C — ยึดตามเฉลย"
   },
@@ -1993,7 +1993,7 @@
     "E": "เปลี่ยนเป็น xanthine oxidase inhibitor ตัวอื่นทันที"
    },
    "answer": "C",
-   "why": "SJS/TEN เป็น severe cutaneous adverse reaction (T cell–mediated) ห้าม rechallenge ยาตัวเดิมตลอดชีวิตไม่ว่า HLA เป็นอย่างไร เพราะเป็นซ้ำได้รุนแรงและเสียชีวิต การตรวจ HLA มีประโยชน์ก่อนเริ่มยาเท่านั้น การลดขนาดหรือให้ steroid ไม่ป้องกัน การเปลี่ยนเป็น xanthine oxidase inhibitor อื่นทันทีในระยะเฉียบพลันไม่เหมาะ ควรรอหายและพิจารณาอย่างระวัง (เช่น febuxostat หรือ uricosuric)",
+   "why": "SJS/TEN = SCAR (T cell-mediated) ห้าม rechallenge ยาตัวเดิมตลอดชีวิต\n✗ A: ตรวจ HLA มีประโยชน์ก่อนเริ่มยาเท่านั้น\n✗ B: ลดขนาดไม่ป้องกัน\n✓ C: หยุดและห้ามใช้ allopurinol ถาวร\n✗ D: Steroid ไม่ป้องกัน\n✗ E: ไม่ควรเปลี่ยนทันทีในระยะเฉียบพลัน ควรรอหายแล้วพิจารณาอย่างระวัง",
    "source": "เฉลย79"
   },
   "79/105": {
@@ -2007,7 +2007,7 @@
     "E": "Psoriasis"
    },
    "answer": "B",
-   "why": "ผื่นเฉพาะตำแหน่งที่สัมผัสและดีขึ้นเมื่อหยุดสัมผัส (หยุดงาน) เข้ากับ contact dermatitis ตามเฉลยเลือก allergic contact dermatitis (type IV) ซึ่งมักคันเด่น (เช่น แพ้ถุงมือยาง หรือส่วนผสมอาหาร) Atopic dermatitis เป็นเรื้อรังตามข้อพับไม่ขึ้นกับงาน Seborrheic dermatitis อยู่บริเวณต่อมไขมันมาก (หน้า หนังศีรษะ) Psoriasis เป็น plaque ขุยเงินที่ศอก เข่า",
+   "why": "ผื่นเฉพาะตำแหน่งที่สัมผัส ดีขึ้นเมื่อหยุดงาน = contact dermatitis\n✗ A: Irritant ก็เป็นไปได้ แต่เฉลยเลือก allergic (คันเด่น)\n✓ B: Allergic contact dermatitis (type IV) เช่น แพ้ถุงมือยาง/ส่วนผสมอาหาร\n✗ C: Atopic เรื้อรังตามข้อพับ ไม่ขึ้นกับงาน\n✗ D: Seborrheic อยู่บริเวณต่อมไขมันมาก (หน้า หนังศีรษะ)\n✗ E: Psoriasis: plaque ขุยเงินที่ศอก เข่า",
    "source": "เฉลย79",
    "doubt": "⚠ ICD จากการล้างมือ/น้ำยาบ่อยในแม่ครัวพบบ่อยกว่าและเข้ากับโจทย์ได้เช่นกัน — ยึดตามเฉลย79"
   },
@@ -2022,7 +2022,7 @@
     "E": "Glomerulosclerosis"
    },
    "answer": "A",
-   "why": "Wire-loop lesion คือ subendothelial immune complex deposit หนาทำให้ผนัง capillary หนาเหมือนลวด เป็นลักษณะเด่นของ diffuse proliferative lupus nephritis (class IV) ซึ่งพบบ่อยและรุนแรงที่สุด Crescent พบใน RPGN หลายสาเหตุ ไม่จำเพาะ Cryoglobulin เด่นใน HCV Exudative lesion และ glomerulosclerosis พบใน diabetic nephropathy และโรคไตระยะท้ายทั่วไป",
+   "why": "✓ A: Wire-loop = subendothelial immune complex หนา → class IV lupus nephritis (พบบ่อยและรุนแรงสุด)\n✗ B: Cryoglobulin เด่นใน HCV\n✗ C: Crescent พบใน RPGN หลายสาเหตุ ไม่จำเพาะ\n✗ D: Exudative lesion พบใน diabetic nephropathy\n✗ E: Glomerulosclerosis พบในโรคไตระยะท้ายทั่วไป",
    "source": "เฉลย79"
   },
   "79/238": {
@@ -2036,7 +2036,7 @@
     "E": "Aqueous penicillin G IV 14 วัน"
    },
    "answer": "B",
-   "why": "ไม่มีอาการและไม่ทราบระยะเวลาติดเชื้อ ให้ถือเป็น late latent syphilis (หรือ latent of unknown duration) รักษาด้วย benzathine penicillin G 2.4 MU IM ทุกสัปดาห์ รวม 3 ครั้ง การฉีดครั้งเดียวใช้กับ primary, secondary, early latent (<1 ปี) Doxycycline เป็นทางเลือกเมื่อแพ้ penicillin แต่ต้องกิน 28 วัน titer ต่ำก็ยังต้องรักษา IV penicillin 10–14 วันใช้กับ neurosyphilis",
+   "why": "ไม่มีอาการ + ไม่ทราบระยะเวลาติดเชื้อ = late latent (unknown duration)\n✗ A: ครั้งเดียวใช้กับ primary, secondary, early latent (< 1 ปี)\n✓ B: Benzathine penicillin G 2.4 MU IM สัปดาห์ละครั้ง × 3\n✗ C: Doxycycline เป็นทางเลือกเมื่อแพ้ penicillin แต่ต้องกิน 28 วัน\n✗ D: Titer ต่ำก็ยังต้องรักษา\n✗ E: IV penicillin 10–14 วัน ใช้กับ neurosyphilis",
    "source": "เฉลย79"
   },
   "79/240": {
@@ -2050,7 +2050,7 @@
     "E": "Congenital microcephaly"
    },
    "answer": "E",
-   "why": "Congenital Zika syndrome เด่นที่ severe microcephaly (กะโหลกยุบ มีหนังศีรษะย่น), subcortical calcification, ความผิดปกติของตา (macular scarring) และ arthrogryposis ตัวเลือก SNHL + cataract เป็นของ rubella, periventricular calcification เป็นของ CMV, blueberry muffin + HSM เป็นของ CMV/rubella, chorioretinitis + diffuse calcification ชวนนึกถึง toxoplasma",
+   "why": "Congenital Zika syndrome: severe microcephaly (กะโหลกยุบ หนังศีรษะย่น) + subcortical calcification + macular scarring + arthrogryposis\n✗ A: Chorioretinitis + diffuse calcification = toxoplasma\n✗ B: SNHL + cataract = rubella\n✗ C: Periventricular calcification = CMV\n✗ D: Blueberry muffin + HSM = CMV/rubella\n✓ E: Congenital microcephaly",
    "source": "เฉลย79",
    "doubt": "⚠ ตัวเลือก E ซ้ำกับสิ่งที่โจทย์บอกอยู่แล้ว และ Zika ก็มี calcification/รอยโรคตาได้ (ตัวเลือก A) — ยึดตามเฉลย79"
   },
@@ -2065,7 +2065,7 @@
     "E": "Renin สูง"
    },
    "answer": "E",
-   "why": "Primary AI (Addison) ทำลายทุกชั้นของ adrenal cortex รวม zona glomerulosa จึงขาด aldosterone ทำให้เสีย Na คั่ง K volume ลด และ renin สูงชดเชย ซึ่งแยกจาก secondary AI ที่ aldosterone ปกติ DHEA ต่ำพบได้ทั้ง primary และ secondary จึงไม่จำเพาะ ขาด aldosterone ทำให้ urine Na สูงไม่ใช่ต่ำ 17-OHP และ DOC สูงพบใน CAH (21- และ 11β-hydroxylase deficiency)",
+   "why": "Primary AI ทำลายทุกชั้นรวม zona glomerulosa → ขาด aldosterone → เสีย Na, K คั่ง, volume ลด → renin สูง\n✗ A: DHEA ต่ำพบทั้ง primary และ secondary ไม่จำเพาะ\n✗ B: ขาด aldosterone → urine Na สูง ไม่ใช่ต่ำ\n✗ C: 17-OHP สูงใน CAH (21-hydroxylase)\n✗ D: DOC สูงใน CAH (11β-hydroxylase)\n✓ E: Renin สูง (แยกจาก secondary AI ที่ aldosterone ปกติ)",
    "source": "เฉลย79"
   },
   "79/249": {
@@ -2079,7 +2079,7 @@
     "E": "Set point สูงขึ้นจาก bacterial endotoxin"
    },
    "answer": "C",
-   "why": "Exertional heat stroke คือ hyperthermia ที่ set point ปกติ แต่การสร้างความร้อน (ออกกำลังกาย) และความร้อนจากสิ่งแวดล้อมเกินความสามารถระบายความร้อน (อากาศชื้นทำให้เหงื่อระเหยไม่ได้) อุณหภูมิจึงสูงจนสมองทำงานผิดปกติ ต่างจากไข้ที่ set point สูงจาก PGE2/IL-1/endotoxin ซึ่งตัวเลือก A B E บรรยายถึง จึงไม่ควรให้ยาลดไข้ แต่ต้องทำให้เย็นลงเร็ว การเพิ่ม TRH ไม่ใช่กลไกของภาวะนี้",
+   "why": "Exertional heat stroke = hyperthermia ที่ set point ปกติ; ความร้อนเกินความสามารถระบาย (อากาศชื้น เหงื่อระเหยไม่ได้)\n✗ A: PGE2 ยก set point = ไข้\n✗ B: IL-1 = กลไกของไข้\n✓ C: ระบายความร้อนไม่ทัน (ไม่ให้ยาลดไข้ ต้องทำให้เย็นเร็ว)\n✗ D: TRH ไม่ใช่กลไกของภาวะนี้\n✗ E: Endotoxin ยก set point = ไข้",
    "source": "วิเคราะห์"
   },
   "79/250": {
@@ -2093,7 +2093,7 @@
     "E": "Endotoxin กระตุ้น brown adipose tissue โดยตรง"
    },
    "answer": "B",
-   "why": "Pyrogen จากเชื้อ (เช่น LPS) กระตุ้นการหลั่ง IL-1, IL-6, TNF-α ซึ่งกระตุ้น COX-2 ที่ OVLT/preoptic hypothalamus ให้สร้าง PGE2 ยก set point ขึ้น ร่างกายจึงรู้สึกหนาวและสั่นเพื่อสร้างความร้อนจนอุณหภูมิถึง set point ใหม่ การสร้างความร้อนโดย set point ไม่เปลี่ยนหรือการควบคุมล้มเหลวคือ hyperthermia/heat stroke ไม่ใช่ไข้ Toxin ไม่ได้กระตุ้นต่อมเหงื่อหรือ brown fat โดยตรง",
+   "why": "Pyrogen (LPS) → IL-1, IL-6, TNF-α → COX-2 ที่ OVLT/preoptic → PGE2 ยก set point → หนาวสั่นจนถึง set point ใหม่\n✗ A: Toxin ไม่ได้กระตุ้นต่อมเหงื่อโดยตรง\n✓ B: PGE2 เพิ่ม → set point สูงขึ้น\n✗ C: ควบคุมล้มเหลว = hyperthermia\n✗ D: สร้างความร้อนโดย set point ไม่เปลี่ยน = hyperthermia\n✗ E: Endotoxin ไม่ได้กระตุ้น brown fat โดยตรง",
    "source": "วิเคราะห์"
   }
  }
