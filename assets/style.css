@@ -867,8 +867,33 @@ table.dt tr.open td{background:var(--surface2)}
 .ai-body ul{margin:4px 0 6px;padding-left:1.25em} .ai-body li{margin:2px 0}
 .ai-src{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;margin-top:6px;font-size:12px;color:var(--muted)}
 .ai-src a{padding:1px 7px;border-radius:999px;background:var(--accent-soft);color:var(--accent);text-decoration:none;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.ai-foot{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;margin-top:8px}
+.ai-foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px;justify-content:flex-end;margin-top:8px}
 .ai-foot .btn{padding:4px 10px;font-size:13px}
+.ai-tip{margin-right:auto;font-size:12px;color:var(--muted)}
+.ai-selbar{margin-top:8px;padding:8px 10px;border-radius:10px;background:var(--stk,#fff8c5);color:var(--stk-fg,#2b2400);border:1.5px solid var(--key);display:flex;flex-direction:column;gap:6px}
+.ai-selbar[hidden]{display:none}
+.ai-sel-prev{font-size:12.5px;line-height:1.4;opacity:.9}
+.ai-sel-acts{display:flex;flex-wrap:wrap;gap:6px}
+.ai-sel-acts .btn{padding:4px 10px;font-size:13px}
+.ai-run{margin-top:8px;padding:10px 12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface2);transition:opacity .35s ease}
+.ai-run.fade{opacity:0}
+.ai-run-txt{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:600;color:var(--fg);margin-bottom:26px}
+.ai-track{position:relative;height:10px;border-radius:99px;background:var(--surface);border:1.5px solid var(--line)}
+.ai-track i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .25s ease}
+/* แถบด้านบนบนจอ Mac/Desktop: ย่อไอคอน + วางชื่อใต้ไอคอนให้พอดีจอทุกปุ่มโดยไม่ต้องเลื่อน */
+@media (min-width: 961px){
+  .topbar{gap:6px;padding:5px 10px}
+  .brand{max-width:130px;white-space:normal;line-height:1.25}
+  .search{flex:0 1 175px;min-width:95px;max-width:210px}
+  .search input{padding:5px 10px;font-size:13.5px}
+  .tools{gap:1px;overflow:visible}
+  .tool{flex-direction:column;justify-content:center;gap:1px;padding:3px 5px;font-size:13px;line-height:1.1;border-radius:6px}
+  .tool .ic{width:16px;height:16px}
+  .auth-ava{width:16px;height:16px}
+  .tool span,.tool[href="#/"] span,#backBtn span,.tool[href="#/stats"] span,.tool[href="#/cards"] span{display:block!important;font-size:9.5px;white-space:nowrap;line-height:1.15;opacity:.85}
+  .pill{top:0;right:1px;font-size:8.5px;padding:1px 4px}
+  .sync-dot{top:2px;right:2px;width:7px;height:7px}
+}
 .ai-err{margin-top:6px;padding:8px 10px;border-radius:8px;background:var(--bad-soft);color:var(--bad);font-size:13px}
 .ai-card{border-left:4px solid var(--think)}
 .ai-card-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}

@@ -116,3 +116,26 @@ figure.fig,.tbl-wrap{border-radius:4px}
 .sync-badge{border-radius:2px;border:1.5px solid var(--ink)}
 .ai-key-row input{border-radius:0;border:2px solid var(--ink)}
 .ai-body{border-radius:4px}
+.ai-selbar{border-radius:0;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink-sh)}
+
+/* แถบน้องหมอวิ่งบนสนามหญ้าระหว่างรอ Gemini ตอบ */
+.ai-run{position:relative;overflow:hidden;border-radius:0;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink-sh);padding:8px 14px 18px;
+  background:{{HILLS_L}} repeat-x left bottom/260px 28px,{{CLOUD}} no-repeat right 22% top 6px/34px 14px,linear-gradient(var(--sky1),var(--sky2))}
+.ai-run-txt{position:relative;z-index:1;color:#2b2b3a;margin-bottom:28px;font-size:12.5px}
+.ai-run-txt b{font-family:var(--px);font-size:10px}
+.ai-track{position:relative;z-index:1;height:10px;border-radius:0;border:2px solid var(--ink);background:var(--surface);overflow:visible;margin-right:12px}
+.ai-track i{position:relative;border-radius:0;height:100%;background:repeating-linear-gradient(90deg,var(--accent) 0 6px,color-mix(in srgb,var(--accent) 75%,#000) 6px 8px)}
+.ai-track i::after{content:"";position:absolute;right:-12px;bottom:calc(100% + 1px);width:22px;height:30px;background:{{DOC_SHEET}} 0 0/44px 30px no-repeat;image-rendering:pixelated;animation:px-walk-ai .4s steps(2) infinite}
+.ai-track::after{content:"";position:absolute;right:-12px;bottom:100%;width:13px;height:24px;background:{{FLAG}} no-repeat left bottom/13px 24px;image-rendering:pixelated}
+.ai-run.done .ai-track i::after{animation:none}
+@keyframes px-walk-ai{to{background-position:-44px 0}}
+:root[data-theme="dark"] .ai-run{background:{{HILLS_D}} repeat-x left bottom/260px 28px,{{CLOUD_N}} no-repeat right 22% top 6px/34px 14px,radial-gradient(circle at 18% 28%,#fff 1px,transparent 1.5px) 0 0/56px 36px,linear-gradient(var(--sky1),var(--sky2))}
+:root[data-theme="dark"] .ai-run-txt{color:var(--gold)}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .ai-run{background:{{HILLS_D}} repeat-x left bottom/260px 28px,{{CLOUD_N}} no-repeat right 22% top 6px/34px 14px,radial-gradient(circle at 18% 28%,#fff 1px,transparent 1.5px) 0 0/56px 36px,linear-gradient(var(--sky1),var(--sky2))}
+  :root:not([data-theme="light"]) .ai-run-txt{color:var(--gold)}
+}
+@media (min-width: 961px){
+  .brand{font-size:8.5px;line-height:1.35}
+  .tools{overflow-x:auto}
+}

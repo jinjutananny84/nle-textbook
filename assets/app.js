@@ -661,14 +661,15 @@
   async function askGemini(query, ctx = '', onChunk = null, opts = {}) {
     const key = (S.geminiKey || '').trim();
     if (!key) throw new Error('NO_KEY');
-    const cacheKey = `${ctx}||${query}`;
+    const cleanQ = (query || '').trim();
+    const cacheKey = `${ctx}||${cleanQ}`;
     if (!opts.noCache && _gemCache.has(cacheKey)) {
       const hit = _gemCache.get(cacheKey);
       if (onChunk) onChunk(hit.text);
       return hit;
     }
-    const sys = 'คุณคืออาจารย์แพทย์ผู้ช่วยติวสอบ NLE Step 1 ตอบเป็นภาษาไทยอย่างละเอียด ครบถ้วน อ่านง่าย ใช้ศัพท์แพทย์ภาษาอังกฤษตามมาตรฐาน จัดหัวข้อด้วย **ตัวหนา** และ bullet ชัดเจน ครอบคลุม: นิยาม, กลไก/Pathophysiology, อาการและผล Lab สำคัญ, การวินิจฉัยแยกโรค (DDx), หลักการรักษา/ยา, และจุดที่ชอบออกสอบ NLE Step 1 ไม่ต้องเกริ่นนำและไม่ต้องลงท้าย';
-    const prompt = ctx ? `บริบทที่กำลังอ่าน: ${ctx}\nหัวข้อ/คำถาม: ${query}` : query;
+    const sys = 'คุณคืออาจารย์แพทย์ผู้ช่วยติวสอบ NLE Step 1 ตอบคำถามของผู้ใช้เป็นภาษาไทยอย่างละเอียด ครบถ้วน อ่านง่าย ใช้ศัพท์แพทย์ภาษาอังกฤษตามมาตรฐาน จัดหัวข้อด้วย **ตัวหนา** และ bullet ชัดเจน ครอบคลุม: นิยาม, กลไก/Pathophysiology, อาการและผล Lab สำคัญ, การวินิจฉัยแยกโรค (DDx), หลักการรักษา/ยา, และจุดที่ชอบออกสอบ NLE Step 1 ตอบตรงตามคำถามที่ผู้ใช้พิมพ์เป็นหลัก ไม่ต้องเกริ่นนำและไม่ต้องลงท้าย';
+    const prompt = ctx ? `คำถามที่ต้องตอบ: ${cleanQ}\n(บริบทหน้าที่เปิดอยู่: ${ctx} — เชื่อมโยงเฉพาะถ้าเกี่ยวข้องกับคำถาม ถ้าเป็นคนละเรื่องให้ตอบตามคำถามตรงๆ)` : cleanQ;
 
     const streamCall = async model => {
       const ac = new AbortController();
@@ -774,7 +775,41 @@
     if (inUl) out += '</ul>';
     return out;
   }
-  // ช่องค้นหาในแอปด้วย Gemini Streaming (~1 วินาทีขึ้นคำแรก + ตอบละเอียดเต็มๆ ตัด/เซฟเป็นโน้ตเองได้)
+  /* แถบน้องหมอวิ่งบนสนามหญ้าระหว่างรอ Gemini ตอบ */
+  function startAiRun(wrap) {
+    wrap.innerHTML = `<div class="ai-run"><div class="ai-run-txt"><span>✨ น้องหมอกำลังวิ่งไปหาคำตอบ…</span><b>10%</b></div><div class="ai-track"><i style="width:10%"></i></div></div>`;
+    const bar = wrap.querySelector('.ai-track i');
+    const lbl = wrap.querySelector('.ai-run-txt span');
+    const pctEl = wrap.querySelector('.ai-run-txt b');
+    let pct = 10, phase = 'wait';
+    const set = (v, msg) => {
+      pct = Math.max(pct, Math.min(100, Math.round(v)));
+      if (bar) bar.style.width = pct + '%';
+      if (pctEl) pctEl.textContent = pct + '%';
+      if (msg && lbl) lbl.textContent = msg;
+    };
+    const iv = setInterval(() => {
+      if (!wrap.isConnected) { clearInterval(iv); return; }
+      if (phase === 'wait' && pct < 52) set(pct + (54 - pct) * 0.18);
+      else if (phase === 'stream' && pct < 92) set(pct + 1.5);
+    }, 220);
+    return {
+      stream(len) {
+        phase = 'stream';
+        set(Math.min(92, 55 + Math.round(len / 80)), '✨ กำลังพิมพ์คำตอบ…');
+      },
+      done() {
+        clearInterval(iv);
+        set(100, '🎉 ได้คำตอบครบแล้ว!');
+        const box = wrap.querySelector('.ai-run');
+        if (box) box.classList.add('done');
+        setTimeout(() => { if (box && box.isConnected) box.classList.add('fade'); }, 900);
+        setTimeout(() => { if (box && box.isConnected) box.remove(); }, 1350);
+      },
+      stop() { clearInterval(iv); wrap.innerHTML = ''; }
+    };
+  }
+  // ช่องค้นหาในแอปด้วย Gemini Streaming: แก้คำถามให้เสร็จแล้วค่อยกดถาม + ลากคลุมบางส่วนของคำตอบเซฟเป็น Sticky ได้ทันที
   function openSearch(onNote) {
     pop.dataset.mode = 'note'; pop.classList.add('writing', 'ai-pop');
     const w = Math.min(540, document.documentElement.clientWidth - 16);
@@ -783,58 +818,92 @@
     const hasKey = !!(S.geminiKey && S.geminiKey.trim());
     const initQ = kwNorm(popText);
     const ctx = currentBoxCtx();
-    pop.innerHTML = `<div class="note-kind">✨ ถาม Gemini แบบละเอียด · ไม่ต้องสลับแอป</div>
-      <textarea class="note-in" rows="2" placeholder="พิมพ์คำศัพท์หรือคำถาม…">${esc(initQ)}</textarea>
+    pop.innerHTML = `<div class="note-kind">✨ ถาม Gemini · พิมพ์/แก้คำถามให้เสร็จแล้วกด <b>ถาม Gemini</b> (หรือ Enter)</div>
+      <textarea class="note-in" rows="2" placeholder="พิมพ์คำศัพท์หรือคำถามที่ต้องการ…">${esc(initQ)}</textarea>
       <div class="ai-chips"><button class="btn small" data-q="อธิบายละเอียด ครบกลไก อาการ Lab DDx ยา จุดออกสอบ">ละเอียดเต็มๆ</button><button class="btn small" data-q="อธิบายกลไกทีละขั้น">กลไก</button><button class="btn small" data-q="จุดที่ชอบออกสอบ NLE และกับดักข้อสอบ">ออกสอบตรงไหน</button><button class="btn small" data-q="ตารางเปรียบเทียบ DDx">เทียบ DDx</button></div>
       <div class="note-act"><button class="btn small" data-a="g">Google ↗</button><button class="btn small" data-a="x">ปิด</button><button class="btn small primary" data-a="ai">✨ ถาม Gemini</button></div>
       <div class="ai-ans" id="aiPopAns">${hasKey ? '' : '<p class="muted" style="margin:6px 0 0;font-size:13px">⚙️ ยังไม่ได้ใส่ Gemini API Key (ฟรี) → <a href="#/sync" id="aiGoSync">ไปตั้งค่าที่หน้า Sync</a> หรือกด <b>Google ↗</b> ได้เลย</p>'}</div>`;
     const ta = pop.querySelector('textarea'); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
     const ansEl = pop.querySelector('#aiPopAns');
     const goSync = pop.querySelector('#aiGoSync'); if (goSync) goSync.onclick = () => hidePop();
-    let reqId = 0;
+    let reqId = 0, activeRun = null, pickedSnippet = '';
+
+    // จับข้อความที่ผู้ใช้ลากคลุมเฉพาะบางส่วนในคำตอบของ Gemini เพื่อให้กดเซฟเป็น Sticky ได้เลยไม่ต้องตัดเอง
+    function bindSelectionBar(bodyEl, fullText) {
+      const selBar = document.createElement('div');
+      selBar.className = 'ai-selbar';
+      selBar.hidden = true;
+      selBar.innerHTML = `<div class="ai-sel-prev"></div><div class="ai-sel-acts">${onNote ? '<button class="btn small primary" data-s="sticky">🗒️ วงเป็น Sticky ท่อนนี้เลย</button><button class="btn small" data-s="star">★ Star ท่อนนี้</button>' : ''}<button class="btn small" data-s="cp">📋 คัดลอกท่อนนี้</button></div>`;
+      bodyEl.after(selBar);
+      const prevEl = selBar.querySelector('.ai-sel-prev');
+      const syncSel = () => {
+        if (!bodyEl.isConnected || pop.hidden) return;
+        const sel = getSelection();
+        if (sel && !sel.isCollapsed && bodyEl.contains(sel.anchorNode) && bodyEl.contains(sel.focusNode)) {
+          const s = sel.toString().replace(/\s+\n/g, '\n').trim();
+          if (s.length >= 2) {
+            pickedSnippet = s;
+            prevEl.textContent = `ที่คลุมไว้ (${s.length} ตัวอักษร): “${s.length > 70 ? s.slice(0, 70) + '…' : s}”`;
+            selBar.hidden = false;
+            return;
+          }
+        }
+      };
+      bodyEl.addEventListener('mouseup', () => setTimeout(syncSel, 20));
+      bodyEl.addEventListener('touchend', () => setTimeout(syncSel, 80));
+      bodyEl.addEventListener('keyup', syncSel);
+      // กันไม่ให้คลิกปุ่มไปล้าง selection ก่อนอ่านค่า
+      selBar.addEventListener('mousedown', e => { if (e.target.closest('button')) e.preventDefault(); });
+      selBar.querySelectorAll('button').forEach(b => b.onclick = () => {
+        const txt = pickedSnippet; if (!txt) return;
+        if (b.dataset.s === 'sticky' && onNote) { onNote(txt, true); hidePop(); toast('🗒️ บันทึกท่อนที่คลุมเป็น Sticky note แล้ว'); }
+        else if (b.dataset.s === 'star' && onNote) { onNote(txt, false); hidePop(); toast('★ บันทึกท่อนที่คลุมเป็น Star note แล้ว'); }
+        else if (b.dataset.s === 'cp') { navigator.clipboard && navigator.clipboard.writeText(txt).then(() => toast('คัดลอกท่อนที่คลุมแล้ว')).catch(() => {}); }
+      });
+
+      const foot = document.createElement('div');
+      foot.className = 'ai-foot';
+      foot.innerHTML = `${onNote ? '<span class="ai-tip">💡 ลากคลุมท่อนที่ชอบในคำตอบเพื่อเซฟเป็น Sticky ได้ทันที</span><button class="btn small" data-f="edit">✏️ เปิดกล่องแก้/เซฟทั้งหมด</button>' : ''}<button class="btn small" data-f="cp">📋 คัดลอกทั้งหมด</button><button class="btn small" data-f="g">Google ↗</button>`;
+      selBar.after(foot);
+      const bEdit = foot.querySelector('[data-f="edit"]');
+      if (bEdit && onNote) bEdit.onclick = () => { pop.classList.remove('ai-pop'); openNote(onNote, pickedSnippet || fullText.replace(/\*\*/g, ''), true); };
+      const bCp = foot.querySelector('[data-f="cp"]');
+      if (bCp) bCp.onclick = () => { navigator.clipboard && navigator.clipboard.writeText(fullText.replace(/\*\*/g, '')).then(() => toast('คัดลอกทั้งหมดแล้ว')).catch(() => {}); };
+      const bG = foot.querySelector('[data-f="g"]');
+      if (bG) bG.onclick = () => searchOut(ta.value);
+    }
+
     async function runAI(extra) {
-      const base = ta.value.trim(); if (!base) return;
+      const base = ta.value.trim(); if (!base) { ta.focus(); return; }
       const q = extra ? `${base} (${extra})` : base;
       if (!(S.geminiKey && S.geminiKey.trim())) { toast('กรุณาใส่ Gemini API Key ในหน้า Sync ก่อนครับ'); return; }
       const my = ++reqId;
-      ansEl.innerHTML = '<div class="ai-load">✨ กำลังดึงคำตอบ…</div><div class="ai-body" hidden></div>';
-      const loadEl = ansEl.querySelector('.ai-load');
+      pickedSnippet = '';
+      if (activeRun) activeRun.stop();
+      ansEl.innerHTML = '<div class="ai-run-slot"></div><div class="ai-body" hidden></div>';
+      const runSlot = ansEl.querySelector('.ai-run-slot');
       const bodyEl = ansEl.querySelector('.ai-body');
+      activeRun = startAiRun(runSlot);
       let lastPaint = 0;
       const paint = txt => {
         if (my !== reqId || pop.hidden) return;
-        loadEl.hidden = true; bodyEl.hidden = false;
+        bodyEl.hidden = false;
         bodyEl.innerHTML = aiFormat(txt);
       };
       try {
         const res = await askGemini(q, ctx, txt => {
+          if (my !== reqId || pop.hidden) return;
+          activeRun.stream(txt.length);
           const now = Date.now();
           if (now - lastPaint > 70) { lastPaint = now; paint(txt); }
         });
         if (my !== reqId || pop.hidden) return;
+        activeRun.done();
         paint(res.text);
-        const foot = document.createElement('div');
-        foot.className = 'ai-foot';
-        foot.innerHTML = `${onNote ? '<button class="btn small primary" data-f="sticky">📌 ตัด/แก้แล้วเซฟเป็น Sticky</button><button class="btn small" data-f="star">★ เซฟเป็น Star note</button>' : ''}<button class="btn small" data-f="cp">📋 คัดลอก</button><button class="btn small" data-f="g">Google ↗</button>`;
-        ansEl.appendChild(foot);
-        const pickText = () => {
-          const sel = getSelection();
-          if (sel && !sel.isCollapsed && bodyEl.contains(sel.anchorNode)) {
-            const s = sel.toString().trim();
-            if (s) return s;
-          }
-          return res.text.replace(/\*\*/g, '');
-        };
-        const bSticky = foot.querySelector('[data-f="sticky"]');
-        if (bSticky && onNote) bSticky.onclick = () => { pop.classList.remove('ai-pop'); openNote(onNote, pickText(), true); };
-        const bStar = foot.querySelector('[data-f="star"]');
-        if (bStar && onNote) bStar.onclick = () => { pop.classList.remove('ai-pop'); openNote(onNote, pickText(), false); };
-        const bCp = foot.querySelector('[data-f="cp"]');
-        if (bCp) bCp.onclick = () => { navigator.clipboard && navigator.clipboard.writeText(pickText()).then(() => toast('คัดลอกแล้ว')).catch(() => {}); };
-        const bG = foot.querySelector('[data-f="g"]');
-        if (bG) bG.onclick = () => searchOut(ta.value);
+        bindSelectionBar(bodyEl, res.text);
       } catch (e) {
         if (my !== reqId || pop.hidden) return;
+        activeRun.stop();
         ansEl.innerHTML = `<div class="ai-err">⚠️ ${esc(e.message === 'NO_KEY' ? 'ยังไม่ได้ใส่ Gemini API Key' : e.message)} <a href="#/sync" id="aiErrSync">เช็ก API Key</a></div>`;
         const lk = ansEl.querySelector('#aiErrSync'); if (lk) lk.onclick = () => hidePop();
       }
@@ -844,9 +913,9 @@
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => {
       if (b.dataset.a === 'ai') return runAI();
       if (b.dataset.a === 'g') { searchOut(ta.value); hidePop(); return; }
+      if (activeRun) activeRun.stop();
       hidePop();
     });
-    if (hasKey && initQ) runAI();
   }
   function showPalette(rect, onColor, onErase, onNote, curNote) {
     pop.classList.remove('writing', 'ai-pop');
@@ -1156,7 +1225,7 @@
 
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v54</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v55</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🔐 Google Cloud Sync</h3>${cloudHtml}
         <div class="today-chips" style="margin-top:12px"><span>ไฮไลต์/โน้ต <b>${nHl}</b></span><span>Keywords <b>${S.kw.length}</b></span><span>ประเมินแล้ว <b>${Object.keys(S.lvl).length}</b></span><span>รูป <b>${imgKeys.length}</b></span></div>
       </div>
@@ -2096,25 +2165,37 @@
     }
     const hl = t => esc(t).replace(new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), m => `<mark>${m}</mark>`);
     const hasKey = !!(S.geminiKey && S.geminiKey.trim());
-    const aiCard = `<div class="panel ai-card"><div class="ai-card-h"><b>✨ Gemini สรุปจาก Google</b><button class="btn small" id="srGoogle">Google ↗</button></div><div id="srAiBody">${hasKey ? '<div class="ai-load">✨ กำลังค้นหาและสรุปคำตอบ…</div>' : '<p class="muted" style="margin:4px 0 0;font-size:14px">ยังไม่ได้ใส่ Gemini API Key (ฟรี) · <a href="#/sync">ตั้งค่าที่หน้า ☁️ Sync</a> เพื่อให้ขึ้นคำตอบจาก Gemini ตรงนี้ทันทีทุกครั้งที่ค้นหา</p>'}</div></div>`;
+    const aiCard = `<div class="panel ai-card"><div class="ai-card-h"><b>✨ Gemini สรุปคำตอบ</b><button class="btn small" id="srGoogle">Google ↗</button></div><div id="srAiBody">${hasKey ? '<div class="ai-run-slot"></div><div class="ai-body" hidden></div>' : '<p class="muted" style="margin:4px 0 0;font-size:14px">ยังไม่ได้ใส่ Gemini API Key (ฟรี) · <a href="#/sync">ตั้งค่าที่หน้า ☁️ Sync</a> เพื่อให้ขึ้นคำตอบจาก Gemini ตรงนี้ทันทีทุกครั้งที่ค้นหา</p>'}</div></div>`;
     view.innerHTML = `<div class="hero"><h1>ค้นหา “${esc(q)}”</h1><p>เจอในตำรา ${hits.length} ที่</p></div>${aiCard}` + hits.filter(x => x.s).map(x => `<a class="search-hit" href="#/${x.ch.id}/${x.s.no}"><b>${x.s.no}. ${esc(x.s.title)}</b> · ${esc(x.ch.title)}<small>…${hl(x.snip)}…</small></a>`).join('');
     const bG = $('#srGoogle'); if (bG) bG.onclick = () => searchOut(q);
     if (hasKey) {
       const box = $('#srAiBody');
+      const runSlot = box.querySelector('.ai-run-slot');
+      const bodyEl = box.querySelector('.ai-body');
+      const run = startAiRun(runSlot);
       let lastPaint = 0;
       const paint = txt => {
         if (!box || !box.isConnected) return;
-        box.innerHTML = `<div class="ai-body">${aiFormat(txt)}</div>`;
+        bodyEl.hidden = false;
+        bodyEl.innerHTML = aiFormat(txt);
       };
       askGemini(q, '', txt => {
+        if (!box || !box.isConnected) return;
+        run.stream(txt.length);
         const now = Date.now();
         if (now - lastPaint > 70) { lastPaint = now; paint(txt); }
       }).then(res => {
         if (!box || !box.isConnected) return;
-        box.innerHTML = `<div class="ai-body">${aiFormat(res.text)}</div><div class="ai-foot"><button class="btn small" id="srCp">📋 คัดลอกคำตอบ</button></div>`;
+        run.done();
+        paint(res.text);
+        const foot = document.createElement('div');
+        foot.className = 'ai-foot';
+        foot.innerHTML = '<button class="btn small" id="srCp">📋 คัดลอกคำตอบ</button>';
+        box.appendChild(foot);
         const bCp = $('#srCp'); if (bCp) bCp.onclick = () => { navigator.clipboard && navigator.clipboard.writeText(res.text.replace(/\*\*/g, '')).then(() => toast('คัดลอกคำตอบแล้ว')).catch(() => {}); };
       }).catch(e => {
         if (!box || !box.isConnected) return;
+        run.stop();
         box.innerHTML = `<div class="ai-err">⚠️ ${esc(e.message)} · <a href="#/sync">เช็ก API Key</a></div>`;
       });
     }
