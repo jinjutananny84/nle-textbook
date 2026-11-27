@@ -284,7 +284,7 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '64';
+  const APP_VER = '65';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
   function refreshIcons() {
     const u = uiStyle();
@@ -889,6 +889,434 @@
     </div>`;
   }
 
+  /* ---------- โลโก้ปราสาทประจำแต่ละบท + ตัว Monument เดินบนแถบด้านข้าง ---------- */
+  function mvCastleLogoSVG(chId, size = 26) {
+    const th = mvThemeOf(chId);
+    const id = String(chId || '').toLowerCase();
+    const dark = isDark();
+    // องค์ประกอบสถาปัตยกรรมตามรูปทรงของบท (zigzag / twin / spiral / forest)
+    let arch = '';
+    if (th.shape === 'twin') {
+      arch = `
+        <polygon points="7,12 11,10 15,12 15,28 7,28" fill="${th.wr}"/>
+        <polygon points="7,12 11,14 11,28 7,28" fill="${th.wl}"/>
+        <path d="M8 12q0-4.5 3-7 3 2.5 3 7z" fill="${th.gem}"/>
+        <polygon points="17,13 21,11 25,13 25,28 17,28" fill="${th.wr}"/>
+        <polygon points="17,13 21,15 21,28 17,28" fill="${th.wl}"/>
+        <path d="M18 13q0-4.5 3-7 3 2.5 3 7z" fill="${th.trail}"/>
+        <polygon points="11,18 21,18 21,23 11,23" fill="${th.top}"/>
+        <path d="M13.5 28v-5a2.5 2.5 0 0 1 5 0v5z" fill="${th.arch}"/>
+        <rect x="9.8" y="16" width="1.6" height="3.2" rx=".8" fill="${th.win}"/>
+        <rect x="20.6" y="17" width="1.6" height="3.2" rx=".8" fill="${th.win}"/>`;
+    } else if (th.shape === 'spiral') {
+      arch = `
+        <polygon points="16,5 21,8 21,28 11,28 11,8" fill="${th.wr}"/>
+        <polygon points="11,8 16,11 16,28 11,28" fill="${th.wl}"/>
+        <polygon points="16,5 21,8 16,11 11,8" fill="${th.top}"/>
+        <polygon points="6,19 16,14 26,19 26,28 6,28" fill="${th.wl}"/>
+        <polygon points="16,14 26,19 26,28 16,28" fill="${th.wr}"/>
+        <polyline points="8,24 16,19 24,24" fill="none" stroke="${th.trail}" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M13.5 28v-5.5a2.5 2.5 0 0 1 5 0V28z" fill="${th.arch}"/>
+        <polygon points="16,1.5 18.2,4.2 16,6.8 13.8,4.2" fill="${th.gem}"/>`;
+    } else if (th.shape === 'forest') {
+      arch = `
+        <polygon points="13,9 16,7.5 19,9 19,28 13,28" fill="${th.wr}"/>
+        <polygon points="13,9 16,10.5 16,28 13,28" fill="${th.wl}"/>
+        <path d="M13.3 9q0-4.2 2.7-6.5 2.7 2.3 2.7 6.5z" fill="${th.top}"/>
+        <polygon points="7,16 10,14.5 13,16 13,28 7,28" fill="${th.wl}"/>
+        <path d="M7.5 16q0-3 2.5-4.8 2.5 1.8 2.5 4.8z" fill="${th.trail}"/>
+        <polygon points="19,16 22,14.5 25,16 25,28 19,28" fill="${th.wr}"/>
+        <path d="M19.5 16q0-3 2.5-4.8 2.5 1.8 2.5 4.8z" fill="${th.gem}"/>
+        <path d="M14 28v-5a2 2 0 0 1 4 0v5z" fill="${th.arch}"/>
+        <rect x="15.2" y="13.5" width="1.6" height="3.6" rx=".8" fill="${th.win}"/>`;
+    } else {
+      // zigzag citadel
+      arch = `
+        <polygon points="12,8 16,6 20,8 20,28 12,28" fill="${th.wr}"/>
+        <polygon points="12,8 16,10 16,28 12,28" fill="${th.wl}"/>
+        <path d="M13 8q0-4 3-6.2 3 2.2 3 6.2z" fill="${th.gem}"/>
+        <polygon points="6,17 18,12 18,17 6,22" fill="${th.top}"/>
+        <polygon points="6,22 25,16 25,28 6,28" fill="${th.wl}"/>
+        <polygon points="16,19 25,16 25,28 16,28" fill="${th.wr}"/>
+        <polyline points="7,21 17,16.5 24,20" fill="none" stroke="${th.trail}" stroke-width="1.35" stroke-linecap="round"/>
+        <path d="M13.6 28v-4.8a2.4 2.4 0 0 1 4.8 0V28z" fill="${th.arch}"/>
+        <rect x="15.2" y="11" width="1.6" height="3" rx=".8" fill="${th.win}"/>`;
+    }
+    // สัญลักษณ์พิเศษขนาดจิ๋วประจำแต่ละบท (ให้โลโก้ไม่ซ้ำกัน)
+    let badge = '';
+    if (id === 'b3') badge = `<path d="M6.5 4.5a3 3 0 1 0 3.4 3.8 2.3 2.3 0 1 1-3.4-3.8z" fill="#ffe89c"/>`;
+    else if (id === 'b4') badge = `<circle cx="16" cy="5.5" r="1.5" fill="${th.win}"/>`;
+    else if (id === 'b5') badge = `<circle cx="7" cy="7" r="1.1" fill="${th.trail}"/><circle cx="25" cy="7" r="1.1" fill="${th.gem}"/>`;
+    else if (id === 'b6') badge = `<path d="M4 9.5q4-2 8 0M20 9.5q4-2 8 0" fill="none" stroke="${th.top}" stroke-width=".9" opacity=".75"/>`;
+    else if (id === 'b7') badge = `<circle cx="16" cy="14" r="1.8" fill="${th.win}" opacity=".95"/>`;
+    else if (id === 'b8') badge = `<circle cx="16" cy="5" r="2.2" fill="#ffe28a" opacity=".9"/>`;
+    else if (id === 'b9') badge = `<path d="M5 27.5q5.5-2 11 0t11 0" fill="none" stroke="${th.trail}" stroke-width="1.2"/>`;
+    else if (id === 'b10') badge = `<circle cx="25" cy="6.5" r="2.3" fill="#ffe28a" opacity=".92"/>`;
+    else if (id === 'kt-embryo') badge = `<circle cx="11" cy="3.5" r="1.2" fill="#fff5b8"/><circle cx="21" cy="4.2" r="1.2" fill="#7dd3fc"/>`;
+    else if (id === 'kt-repro') badge = `<polygon points="24,4 25.5,6.5 24,9 22.5,6.5" fill="${th.trail}"/>`;
+    else if (id === 'kt-msk') badge = `<rect x="14.6" y="13" width="2.8" height="2.8" transform="rotate(45 16 14.4)" fill="${th.trail}"/>`;
+    else if (id === 'kt-parasit') badge = `<circle cx="6.5" cy="8.5" r="1.3" fill="#4ade80"/><circle cx="25.5" cy="8.5" r="1.3" fill="#f472b6"/>`;
+    else if (id === 'kt-rs') badge = `<path d="M5 7q11-5 22 0" fill="none" stroke="${th.trail}" stroke-width="1.1" opacity=".8"/>`;
+    return `<svg class="mv-ch-logo" viewBox="0 0 32 32" width="${size}" height="${size}" aria-hidden="true">
+      <rect x="1" y="1" width="30" height="30" rx="8" fill="${th.sky[1]}" stroke="${th.trail}" stroke-opacity="${dark ? '.55' : '.42'}" stroke-width="1.1"/>
+      <rect x="1.5" y="16" width="29" height="14.5" rx="6" fill="${th.sky[2]}" opacity=".55"/>
+      ${badge}${arch}
+    </svg>`;
+  }
+
+  // ตัวละครอีกา Monument Valley (Crow-person เงาดำตาขาวกลมแบบในเกม)
+  function mvCrowSVG(dir = 1) {
+    const flip = dir < 0 ? ' transform="scale(-1,1)"' : '';
+    return `<g${flip}>
+      <line x1="-1.4" y1="-5" x2="-2.2" y2="0" stroke="#141828" stroke-width="1.3" stroke-linecap="round"/>
+      <line x1="1.3" y1="-5" x2="2.2" y2="0" stroke="#141828" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M-4,-5 C-4.2,-11 -2.8,-15 0,-15.5 C2.8,-15 4,-11 4.2,-5 Z" fill="#181d30"/>
+      <polygon points="1,-15.4 7.8,-13.8 1.5,-11.5" fill="#181d30"/>
+      <circle cx=".8" cy="-13.4" r="1.9" fill="#ffffff"/>
+      <circle cx="1.2" cy="-13.4" r=".9" fill="#141828"/>
+    </g>`;
+  }
+
+  // ตัว Monument เดินบนแถบ progress ด้านข้าง
+  function mvSideWalkerSVG(th, idx, active) {
+    const aura = active ? `<ellipse cx="9" cy="17" rx="7.5" ry="4" fill="${th.trail}" opacity=".42"/>` : '';
+    const cloakShade = idx % 3 === 1 ? th.gem : th.trail;
+    return `<svg class="mv-walk-svg" viewBox="0 0 18 24" width="17" height="23" aria-hidden="true">
+      ${aura}
+      <line class="mv-leg-l" x1="7.8" y1="17.5" x2="6.6" y2="22.8" stroke="#dce8ff" stroke-width="1.35" stroke-linecap="round"/>
+      <line class="mv-leg-r" x1="10.2" y1="17.5" x2="11.6" y2="22.8" stroke="#ffffff" stroke-width="1.35" stroke-linecap="round"/>
+      <polygon points="9,9.2 13.6,18.6 4.4,18.6" fill="#ffffff"/>
+      <polygon points="9,9.2 13.6,18.6 9,18.6" fill="${cloakShade}" opacity=".42"/>
+      <circle cx="9" cy="8.2" r="1.8" fill="#1d2642"/>
+      <polygon points="9,1.2 12.6,8.2 5.4,8.2" fill="#ffffff"/>
+      <polygon points="9,1.2 12.6,8.2 9,8.2" fill="${cloakShade}" opacity=".32"/>
+    </svg>`;
+  }
+
+  function mvSideBarHTML(p, chId, idx = 0) {
+    if (uiStyle() !== 'monument') return `<div class="side-bar">${lvBar(p)}</div>`;
+    const th = mvThemeOf(chId);
+    const pct = p.n ? (p.d * 100 / p.n) : 0;
+    const walkPos = Math.max(4, Math.min(93, pct));
+    const doneAny = p.d > 0;
+    const doneAll = p.n > 0 && p.d >= p.n;
+    const goalSvg = `<svg class="mv-sb-beacon" viewBox="0 0 12 18" width="11" height="17" aria-hidden="true">
+      <polygon points="6,1 10,6.5 6,12 2,6.5" fill="${doneAll ? '#ffe28a' : '#eefdfa'}" stroke="${doneAll ? '#fbbf24' : th.trail}" stroke-width=".8"/>
+      <polygon points="6,1 10,6.5 6,12" fill="${doneAll ? '#f59e0b' : th.trail}" opacity=".65"/>
+      <polygon points="3,13.5 9,13.5 8,17.5 4,17.5" fill="${th.wl}" opacity=".85"/>
+    </svg>`;
+    return `<div class="side-bar mv-sb-walk${doneAny ? ' is-moving' : ''}${doneAll ? ' is-done' : ''}" style="--mv-walk-col:${th.trail};--mv-walk-gem:${th.gem}">
+      <span class="mv-sb-walker" style="left:${walkPos.toFixed(1)}%" title="ความคืบหน้า ${Math.round(pct)}%">${mvSideWalkerSVG(th, idx, doneAny)}</span>
+      <span class="mv-sb-goal" aria-hidden="true">${goalSvg}</span>
+      ${lvBar(p)}
+    </div>`;
+  }
+
+  /* ---------- ปราสาทขั้นบันไดทางเดินสำหรับหน้ารวม สรุปบท A3 และ คลิปติวอาจารย์ ---------- */
+  function mvCastleCrownSVG(isClip, dark) {
+    const p = isClip
+      ? (dark ? { s1: '#141536', s2: '#2d235c', s3: '#4c3075', m: '#29295e', w1: '#8e6ab8', w2: '#563c82', top: '#e2c8f5', d1: '#5eead4', d2: '#f472b6', st: '#c4b5fd', ar: '#181438', sw: '#ffd97d' }
+              : { s1: '#d2def4', s2: '#e9e2f5', s3: '#f7e5ef', m: '#b9c6e2', w1: '#d7a8de', w2: '#b381be', top: '#fff6fc', d1: '#72b8d8', d2: '#e485ab', st: '#c8a8ea', ar: '#d5d8ef', sw: '#f0a652' })
+      : (dark ? { s1: '#0e1630', s2: '#1f2856', s3: '#463368', m: '#24315c', w1: '#c87e9e', w2: '#7a4b72', top: '#f5d2df', d1: '#67d8e8', d2: '#f284b6', st: '#5eead4', ar: '#161b3a', sw: '#ffe28a' }
+              : { s1: '#c2e5e3', s2: '#dcefeb', s3: '#eef4ef', m: '#b1d3d6', w1: '#f5aeb9', w2: '#db8c9d', top: '#fff5e4', d1: '#7bb5d6', d2: '#eb8ba8', st: '#8ce3bc', ar: '#cbe5e4', sw: '#f0947a' });
+    return `<svg class="mv-realm-crown-svg" viewBox="0 0 920 176" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="mvcSk${isClip ? 1 : 0}" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${p.s1}"/><stop offset="60%" stop-color="${p.s2}"/><stop offset="100%" stop-color="${p.s3}" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <rect width="920" height="176" fill="url(#mvcSk${isClip ? 1 : 0})"/>
+      <!-- Distant misty onion domes floating in clouds -->
+      <g fill="${p.m}" opacity="${dark ? '.55' : '.62'}">
+        <path d="M52 176v-64q0-14 14-24 14 10 14 24v64z"/>
+        <path d="M188 176v-78q0-16 16-28 16 12 16 28v78z"/>
+        <path d="M708 176v-72q0-15 15-26 15 11 15 26v72z"/>
+        <path d="M812 176v-56q0-14 14-24 14 10 14 24v56z"/>
+      </g>
+      <!-- Left Twin Slender Onion-Dome Towers (signature from reference image!) -->
+      <g>
+        <!-- Left blue/cyan dome tower -->
+        <path d="M98 62q0-18 14-30 14 12 14 30z" fill="${p.d1}"/>
+        <path d="M112 32q14 12 14 30h-14z" fill="${p.w2}" opacity=".32"/>
+        <rect x="100" y="62" width="3.2" height="72" fill="${p.w1}"/>
+        <rect x="110.5" y="62" width="3" height="72" fill="${p.w2}"/>
+        <rect x="121" y="62" width="3.2" height="72" fill="${p.w1}"/>
+        <polygon points="96,134 126,118 146,128 116,144" fill="${p.top}"/>
+        <polygon points="96,134 116,144 116,176 96,176" fill="${p.w1}"/>
+        <!-- Right rose/pink dome tower -->
+        <path d="M138 66q0-18 14-30 14 12 14 30z" fill="${p.d2}"/>
+        <path d="M152 36q14 12 14 30h-14z" fill="${p.w2}" opacity=".35"/>
+        <rect x="140" y="66" width="3.2" height="76" fill="${p.w1}"/>
+        <rect x="150.5" y="66" width="3" height="76" fill="${p.w2}"/>
+        <rect x="161" y="66" width="3.2" height="76" fill="${p.w1}"/>
+        <polygon points="136,142 166,126 166,176 136,176" fill="${p.w2}"/>
+        <polygon points="136,142 152,150 152,176 136,176" fill="${p.w1}"/>
+        <!-- Connecting upper crenellated walkway to center -->
+        <polygon points="152,134 268,176 238,176 138,140" fill="${p.top}"/>
+        <polygon points="152,144 238,176 152,176" fill="${p.w2}"/>
+        <g transform="translate(114,132) scale(.85)">${mvCrowSVG(1)}</g>
+      </g>
+      <!-- Right Tall Patterned Obelisk + Arched Doorway Tower & Stepped Staircase -->
+      <g>
+        <!-- Tall slender lavender/indigo obelisk -->
+        <polygon points="642,8 662,0 682,8 682,176 642,176" fill="${p.w2}"/>
+        <polygon points="642,8 662,16 662,176 642,176" fill="${p.w1}" opacity=".85"/>
+        <!-- Perched crow on cantilever ledge -->
+        <polygon points="662,56 694,42 706,48 674,62" fill="${p.top}"/>
+        <g transform="translate(684,48) scale(.85)">${mvCrowSVG(-1)}</g>
+        <!-- Tall rose doorway spire -->
+        <polygon points="738,10 762,0 786,10 786,176 738,176" fill="${p.w2}"/>
+        <polygon points="738,10 762,20 762,176 738,176" fill="${p.w1}"/>
+        <path d="M744 82V58a9 9 0 0 1 18 0v24z" fill="${p.ar}"/>
+        <rect x="769" y="34" width="4" height="10" rx="2" fill="${p.sw}"/>
+        <!-- Descending diagonal isometric staircase from doorway toward center spine -->
+        <polygon points="742,82 762,92 678,134 658,124" fill="${p.top}"/>
+        <polygon points="658,124 678,134 678,150 658,140" fill="${p.w2}"/>
+        <path d="M736 85 L752 93 M724 91 L740 99 M712 97 L728 105 M700 103 L716 111 M688 109 L704 117 M676 115 L692 123" stroke="${p.w2}" stroke-width="1.3" opacity=".55" fill="none"/>
+        <polygon points="658,124 720,154 700,164 638,134" fill="${p.top}"/>
+        <polygon points="638,134 700,164 700,176 638,146" fill="${p.w1}"/>
+        <g transform="translate(700,136) scale(.9)">${mvCrowSVG(-1)}</g>
+      </g>
+      <!-- Center Castle Crown Arch descending into the Staircase Spine -->
+      <g>
+        <circle cx="460" cy="48" r="34" fill="none" stroke="${p.st}" stroke-opacity=".28" stroke-width="1"/>
+        <circle cx="460" cy="48" r="48" fill="none" stroke="${p.st}" stroke-opacity=".16" stroke-width="1" stroke-dasharray="3 4"/>
+        <polygon points="434,116 460,103 486,116 486,176 434,176" fill="${p.w2}"/>
+        <polygon points="434,116 460,129 460,176 434,176" fill="${p.w1}"/>
+        <path d="M440 116q0-18 20-30 20 12 20 30z" fill="${p.d1}" opacity=".85"/>
+        <path d="M460 86q20 12 20 30h-20z" fill="${p.w2}" opacity=".35"/>
+        <path d="M450 176v-26a10 10 0 0 1 20 0v26z" fill="${p.ar}"/>
+        <polygon points="460,134 488,148 460,162 432,148" fill="${p.top}" opacity=".9"/>
+        <!-- White Ida standing at the top portal -->
+        <g class="mv-traveler" transform="translate(460,145) scale(.95)">
+          <polygon points="0,-12 4,-1 -4,-1" fill="#ffffff"/>
+          <circle cx="0" cy="-13.4" r="1.7" fill="#1e2745"/>
+          <polygon points="0,-20 3.2,-13.2 -3.2,-13.2" fill="#ffffff"/>
+        </g>
+      </g>
+    </svg>`;
+  }
+
+  function mvStairSpineSVG(idx, total, th, dark, isCur, doneAny) {
+    const isL = idx % 2 === 0; // card on left if even, right if odd
+    const hasNext = idx < total - 1;
+    // จุดเชื่อมบน (มาจากชั้นก่อนหน้า) -> ชานพักกลาง (ชี้ไปหาการ์ดฝั่งซ้ายหรือขวา) -> บันไดลงชั้นถัดไป
+    const topX = idx === 0 ? 90 : (isL ? 128 : 52);
+    const midX = isL ? 54 : 126;
+    const botX = isL ? 128 : 52;
+    const walkFill = dark ? th.wl : th.top;
+    const stepCol = doneAny ? th.trail : (dark ? '#5f70a8' : th.wr);
+    const wallL = th.wl, wallR = th.wr;
+    // วาดขั้นบันไดจาก (x0,y0) ไป (x1,y1) ให้เชื่อมรอยต่อระหว่างชั้นสนิท
+    const drawSteps = (x0, y0, x1, y1, n = 7) => {
+      let s = '';
+      for (let k = 0; k < n; k++) {
+        const t0 = k / n, t1 = (k + 1) / n;
+        const ax = x0 + (x1 - x0) * t0, ay = y0 + (y1 - y0) * t0;
+        const bx = x0 + (x1 - x0) * t1, by = y0 + (y1 - y0) * t1;
+        s += `<polygon points="${ax - 16},${ay} ${ax + 16},${ay} ${bx + 16},${by} ${bx - 16},${by}" fill="${k % 2 ? walkFill : th.top}" opacity=".95"/>
+              <polygon points="${bx - 16},${by} ${bx + 16},${by} ${bx + 16},${by + 8} ${bx - 16},${by + 8}" fill="${wallR}"/>`;
+      }
+      return s;
+    };
+    // ปุ่มสวิตช์หินสี่เหลี่ยมบนชานพักสไตล์ Monument Valley
+    const swX = isL ? 54 : 126, swY = 108;
+    const bridgePts = isL
+      ? `-12,96 66,96 86,108 66,120 -12,120`
+      : `192,96 114,96 94,108 114,120 192,120`;
+    const bridgeSide = isL
+      ? `-12,120 66,120 66,138 -12,138`
+      : `114,120 192,120 192,138 114,138`;
+    const charX = isL ? 84 : 96, charY = 108;
+    const heroChar = isCur
+      ? `<g class="mv-traveler" transform="translate(${charX},${charY})">
+          <circle cx="0" cy="-9" r="13" fill="${th.trail}" opacity=".32" class="mv-pulse"/>
+          <polygon points="0,-13 4.4,-1 -4.4,-1" fill="#ffffff"/>
+          <circle cx="0" cy="-14.6" r="1.8" fill="#1e2745"/>
+          <polygon points="0,-22 3.5,-14.4 -3.5,-14.4" fill="#ffffff"/>
+        </g>`
+      : (idx % 2 === 0
+          ? `<g transform="translate(${charX},${charY})">${mvCrowSVG(isL ? -1 : 1)}</g>`
+          : `<g transform="translate(${charX},${charY})">${mvCharSVG(idx + 1, th.trail, th.gem, false)}</g>`);
+    return `<svg class="mv-spine-svg" viewBox="0 0 180 216" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <!-- Vertical castle core shaft behind stairs (overscan top/bottom for seamless join) -->
+      <polygon points="74,-24 90,-16 106,-24 106,240 74,240" fill="${wallR}" opacity=".8"/>
+      <polygon points="74,-24 90,-16 90,240 74,240" fill="${wallL}" opacity=".8"/>
+      <rect x="${isL ? 94 : 80}" y="24" width="4" height="10" rx="2" fill="${th.win}" opacity=".9"/>
+      <rect x="${isL ? 80 : 94}" y="172" width="4" height="10" rx="2" fill="${th.win}" opacity=".85"/>
+      <!-- Upper staircase arriving seamlessly from previous terrace -->
+      <polygon points="${topX - 16},-16 ${topX + 16},-16 ${midX + 16},96 ${midX - 16},96" fill="${wallL}" opacity=".68"/>
+      ${drawSteps(topX, -14, midX, 92, 7)}
+      <!-- Arched viaduct support under terrace -->
+      <polygon points="${bridgeSide}" fill="${wallR}"/>
+      <path d="M${isL ? 18 : 134} 138v-11a10 10 0 0 1 20 0v11z" fill="${th.arch}"/>
+      <!-- Horizontal patterned terrace walkway joining the chapter card -->
+      <polygon points="${bridgePts}" fill="${th.top}"/>
+      <polyline points="${isL ? '-12,108 64,108' : '116,108 192,108'}" stroke="${stepCol}" stroke-width="2.4" stroke-dasharray="4 4" opacity=".85"/>
+      <!-- Isometric central landing platform -->
+      <polygon points="90,86 132,108 90,130 48,108" fill="${th.top}"/>
+      <polygon points="48,108 90,130 90,148 48,126" fill="${wallL}"/>
+      <polygon points="132,108 90,130 90,148 132,126" fill="${wallR}"/>
+      <!-- Glowing path highlight on landing -->
+      <polygon points="90,92 120,108 90,124 60,108" fill="none" stroke="${stepCol}" stroke-width="1.3" opacity=".8"/>
+      <!-- Monument Valley square floor switch -->
+      <polygon points="${swX},${swY - 7} ${swX + 11},${swY} ${swX},${swY + 7} ${swX - 11},${swY}" fill="${doneAny ? th.trail : th.wl}" stroke="${th.top}" stroke-width="1"/>
+      <polygon points="${swX},${swY - 3.5} ${swX + 5.5},${swY} ${swX},${swY + 3.5} ${swX - 5.5},${swY}" fill="${doneAny ? '#ffffff' : th.gem}" opacity=".9"/>
+      <!-- Lower staircase descending seamlessly toward next chapter -->
+      ${hasNext ? `<polygon points="${midX - 16},128 ${midX + 16},128 ${botX + 16},232 ${botX - 16},232" fill="${wallL}" opacity=".65"/>${drawSteps(midX, 128, botX, 230, 7)}`
+                : `<polygon points="74,130 106,130 106,240 74,240" fill="${wallR}"/><polygon points="74,130 90,138 90,240 74,240" fill="${wallL}"/><path d="M82 232v-34a8 8 0 0 1 16 0v34z" fill="${th.arch}"/>`}
+      <!-- Monument Valley character standing on the stairs/landing -->
+      ${heroChar}
+    </svg>`;
+  }
+
+  function mvWingDecorSVG(idx, th, dark, p, pct, c) {
+    const motif = idx % 4;
+    let sc = '';
+    if (motif === 0) {
+      // Twin slender domed columns + ladder (echoing left side of reference image)
+      sc = `
+        <path d="M48 48q0-12 10-20 10 8 10 20z" fill="${th.trail}" opacity=".85"/>
+        <rect x="50" y="48" width="2.5" height="58" fill="${th.wl}"/><rect x="63.5" y="48" width="2.5" height="58" fill="${th.wr}"/>
+        <path d="M74 52q0-12 10-20 10 8 10 20z" fill="${th.gem}" opacity=".85"/>
+        <rect x="76" y="52" width="2.5" height="54" fill="${th.wl}"/><rect x="89.5" y="52" width="2.5" height="54" fill="${th.wr}"/>
+        <polygon points="44,106 98,92 120,102 66,116" fill="${th.top}"/>
+        <polygon points="44,106 66,116 66,136 44,126" fill="${th.wl}"/>
+        <polygon points="66,116 120,102 120,122 66,136" fill="${th.wr}"/>
+        <g transform="translate(82,102) scale(.85)">${mvCrowSVG(-1)}</g>`;
+    } else if (motif === 1) {
+      // Patterned square Escher archway window (like the mint/green square arch in reference image)
+      sc = `
+        <polygon points="56,42 114,26 114,112 56,128" fill="${th.trail}" opacity="${dark ? '.45' : '.65'}"/>
+        <polygon points="68,54 102,44 102,98 68,108" fill="${th.arch}"/>
+        <polygon points="44,48 56,42 56,128 44,122" fill="${th.wl}"/>
+        <polygon points="56,42 114,26 102,20 44,36" fill="${th.top}"/>
+        <g transform="translate(86,98) scale(.85)">${mvCrowSVG(1)}</g>
+        <rect x="49" y="64" width="3" height="8" rx="1.5" fill="${th.win}"/>`;
+    } else if (motif === 2) {
+      // Cantilevered arched viaduct bridge + floating crescent
+      sc = `
+        <path d="M126 26a10 10 0 1 0 11 13 8 8 0 1 1-11-13z" fill="${th.win}" opacity=".85"/>
+        <polygon points="36,86 122,52 138,60 52,94" fill="${th.top}"/>
+        <polygon points="52,94 138,60 138,118 52,134" fill="${th.wr}"/>
+        <path d="M68 130v-26a11 11 0 0 1 22 0v26z" fill="${th.arch}"/>
+        <path d="M102 124v-28a11 11 0 0 1 22 0v28z" fill="${th.arch}"/>
+        <polyline points="36,86 122,52" stroke="${th.trail}" stroke-width="2" opacity=".85"/>
+        <g transform="translate(94,68) scale(.85)">${mvCharSVG(idx, th.trail, th.gem, false)}</g>`;
+    } else {
+      // Floating misty onion-dome sanctuary + glowing diamond beacon
+      sc = `
+        <circle cx="88" cy="40" r="22" fill="none" stroke="${th.trail}" stroke-opacity=".28" stroke-width="1"/>
+        <polygon points="88,24 94,34 88,44 82,34" fill="${th.gem}" opacity=".88"/>
+        <polygon points="68,66 88,56 108,66 108,128 68,128" fill="${th.wr}"/>
+        <polygon points="68,66 88,76 88,128 68,128" fill="${th.wl}"/>
+        <path d="M72 66q0-14 16-22 16 8 16 22z" fill="${th.top}"/>
+        <path d="M80 128v-20a8 8 0 0 1 16 0v20z" fill="${th.arch}"/>
+        <rect x="75" y="84" width="3.5" height="9" rx="1.7" fill="${th.win}"/>`;
+    }
+    return `<a class="mv-wing" href="#/${c.id}" title="เปิด ${esc(c.title)} · ${esc(th.name)}">
+      <svg class="mv-wing-svg" viewBox="0 0 176 142" aria-hidden="true">
+        <path d="M18 142V92q0-12 12-20 12 8 12 20v50z" fill="${th.spire}" opacity=".35"/>
+        <path d="M132 142V84q0-14 14-24 14 10 14 24v58z" fill="${th.spire}" opacity=".35"/>
+        ${sc}
+      </svg>
+      <span class="mv-wing-tag" style="--mv-step-c:${th.trail}">✦ ${esc(th.name)} · <b>${pct}%</b></span>
+    </a>`;
+  }
+
+  function mvMobStairSVG(th, idx, isCur) {
+    return `<div class="mv-mob-stair" aria-hidden="true"><svg viewBox="0 0 260 44" width="260" height="44">
+      <polygon points="24,18 106,18 154,32 236,32 236,38 150,38 102,24 24,24" fill="${th.wl}" opacity=".85"/>
+      <polyline points="30,18 106,18 154,32 230,32" fill="none" stroke="${th.trail}" stroke-width="2.2" stroke-linecap="round"/>
+      <polygon points="130,18 140,24 130,30 120,24" fill="${th.top}" stroke="${th.trail}" stroke-width="1"/>
+      <g transform="translate(130,22) scale(.78)">${isCur ? `<polygon points="0,-12 4,-1 -4,-1" fill="#ffffff"/><polygon points="0,-19 3,-12 -3,-12" fill="#ffffff"/>` : (idx % 2 === 0 ? mvCrowSVG(1) : mvCharSVG(idx, th.trail, th.gem, false))}</g>
+    </svg></div>`;
+  }
+
+  function mvCastleBaseSVG(isClip, dark) {
+    const p = isClip
+      ? (dark ? { w1: '#654994', w2: '#3f2c66', top: '#d6bcf5', ar: '#141230', tr: '#c4b5fd', fog: '#0e1424' }
+              : { w1: '#d3a5dc', w2: '#b07ebb', top: '#fff5fb', ar: '#d5d8ef', tr: '#9c78d4', fog: '#eef4f5' })
+      : (dark ? { w1: '#7e527c', w2: '#46325e', top: '#e8c4d8', ar: '#11162e', tr: '#5eead4', fog: '#0e1424' }
+              : { w1: '#f0a5b2', w2: '#d48296', top: '#fff4e4', ar: '#c8e4e3', tr: '#6fd8b2', fog: '#eef4f5' });
+    return `<svg class="mv-realm-base-svg" viewBox="0 0 920 118" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="mvbF${isClip ? 1 : 0}" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${p.fog}" stop-opacity="0"/><stop offset="100%" stop-color="${p.fog}" stop-opacity=".98"/>
+        </linearGradient>
+      </defs>
+      <!-- Grand arched castle foundation -->
+      <polygon points="110,44 460,8 810,44 810,118 110,118" fill="${p.w2}" opacity=".82"/>
+      <polygon points="110,44 460,8 460,118 110,118" fill="${p.w1}" opacity=".85"/>
+      <polyline points="110,44 460,8 810,44" fill="none" stroke="${p.top}" stroke-width="4" opacity=".9"/>
+      <polyline points="110,44 460,8 810,44" fill="none" stroke="${p.tr}" stroke-width="1.5" opacity=".75"/>
+      <!-- Sweeping viaduct arches -->
+      <path d="M185 118V70a28 28 0 0 1 56 0v48z" fill="${p.ar}"/>
+      <path d="M295 118V60a32 32 0 0 1 64 0v58z" fill="${p.ar}"/>
+      <path d="M560 118V60a32 32 0 0 1 64 0v58z" fill="${p.ar}"/>
+      <path d="M675 118V70a28 28 0 0 1 56 0v48z" fill="${p.ar}"/>
+      <!-- Center teal/violet framed courtyard arch with peeking Crow-person (like bottom of reference image!) -->
+      <rect x="418" y="26" width="84" height="84" rx="4" fill="${p.tr}" opacity="${dark ? '.38' : '.62'}"/>
+      <rect x="432" y="40" width="56" height="68" rx="3" fill="${p.ar}"/>
+      <g transform="translate(446,96) scale(1.05)">${mvCrowSVG(1)}</g>
+      <rect y="74" width="920" height="44" fill="url(#mvbF${isClip ? 1 : 0})"/>
+    </svg>`;
+  }
+
+  function mvCastleGroupHTML(groupTitle, chList, isClip) {
+    const dark = isDark();
+    const lastCh = (S.lastRead && S.lastRead.h && S.lastRead.h.match(/^#\/([^/]+)/)) ? S.lastRead.h.match(/^#\/([^/]+)/)[1] : '';
+    let totD = 0, totN = 0;
+    const rows = chList.map((c, idx) => {
+      const ch = CH[c.id];
+      const th = mvThemeOf(c.id);
+      const isL = idx % 2 === 0;
+      const isCur = c.id === lastCh;
+      if (!c.ready || !ch) {
+        return `<div class="mv-stair-row ${isL ? 'mv-row-l' : 'mv-row-r'}">
+          <div class="tile soon mv-step-card ${grpCls(c)}" style="--mv-step-c:${th.trail};--mv-step-g:${th.gem}">
+            <div class="mv-step-top"><span class="mv-step-no">STEP ${String(idx + 1).padStart(2, '0')}</span><span class="mv-step-realm">${esc(th.name)}</span>${mvCastleLogoSVG(c.id, 24)}</div>
+            <h3>${esc(c.title)}</h3><p>${esc(c.desc || 'เร็ว ๆ นี้')}</p>
+          </div>
+          <div class="mv-stair-spine">${mvStairSpineSVG(idx, chList.length, th, dark, false, false)}</div>
+          <div class="mv-stair-wing"></div>
+        </div>`;
+      }
+      const p = chProgress(ch);
+      totD += p.d; totN += p.n;
+      const pct = p.n ? Math.round(p.d * 100 / p.n) : 0;
+      const rt = readToday(c.id);
+      const lh = lastOf(c.id); const lm = lh && lh.match(/\/(\d+)$/);
+      const todayLine = `<div class="today-line"><b>Today</b> ${rt.done} boxes read · ${Math.round(rt.done * 100 / p.n)}% of chapter${rt.seen > rt.done ? ` · ${rt.seen - rt.done} in progress` : ''}<i style="width:${Math.round(rt.done * 100 / p.n)}%"></i></div>`;
+      const card = `<div class="tile mv-step-card ${grpCls(c)}${rt.done ? ' read-today' : ''}${isCur ? ' is-cur' : ''}" style="--mv-step-c:${th.trail};--mv-step-g:${th.gem};--mv-step-top:${th.top}">
+        <div class="mv-step-top">
+          <span class="mv-step-no">STEP ${String(idx + 1).padStart(2, '0')}</span>
+          <span class="mv-step-realm">✦ ${esc(th.name)}</span>
+          ${mvCastleLogoSVG(c.id, 26)}
+        </div>
+        <a class="tile-main" href="#/${c.id}">${ring(p)}<div class="tile-txt"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p></div></a>
+        <div class="tile-acts"><a class="btn small primary" href="${lh || '#/' + c.id + '/' + (ch.sections[0] ? ch.sections[0].no : 1)}">${lm ? `📖 อ่านต่อ กล่อง ${lm[1]}` : '📖 เริ่มอ่าน'}</a><a class="btn small" href="#/quiz?ch=${c.id}">📝 Quiz</a>${rt.done ? `<span class="tile-today">วันนี้ ${rt.done} กล่อง</span>` : ''}</div>
+        <details class="tile-more"><summary>สถิติ</summary>${todayLine}${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</details>
+      </div>`;
+      const spine = `<div class="mv-stair-spine">${mvStairSpineSVG(idx, chList.length, th, dark, isCur, p.d > 0)}</div>`;
+      const wing = `<div class="mv-stair-wing">${mvWingDecorSVG(idx, th, dark, p, pct, c)}</div>`;
+      const mobConn = idx < chList.length - 1 ? mvMobStairSVG(th, idx, isCur) : '';
+      return `<div class="mv-stair-row ${isL ? 'mv-row-l' : 'mv-row-r'}">${card}${spine}${wing}</div>${mobConn}`;
+    }).join('');
+    const grpPct = totN ? Math.round(totD * 100 / totN) : 0;
+    return `<section class="mv-castle-realm ${isClip ? 'g-clip' : 'g-main'}">
+      <div class="mv-realm-head">
+        <div class="mv-realm-title">
+          <h2>${esc(groupTitle)}</h2>
+          <small>${chList.length} บทบนขั้นบันไดปราสาท · พิชิตแล้ว <b>${totD}/${totN}</b> กล่อง (<b>${grpPct}%</b>)</small>
+        </div>
+      </div>
+      <div class="mv-realm-crown">${mvCastleCrownSVG(isClip, dark)}</div>
+      <div class="mv-castle-stairs">${rows}</div>
+      <div class="mv-realm-base">${mvCastleBaseSVG(isClip, dark)}</div>
+    </section>`;
+  }
+
   /* ---------- sidebar ---------- */
   const MV_MINI_HERO = `<svg class="mv-mini-hero" viewBox="0 0 14 20" aria-hidden="true"><polygon points="7,8 10.6,18 3.4,18" fill="#ffffff"/><circle cx="7" cy="6.8" r="1.5" fill="#1b2442"/><polygon points="7,1 9.8,6.8 4.2,6.8" fill="#ffffff"/></svg>`;
   function renderSidebar(curCh, curNo) {
@@ -901,8 +1329,9 @@
       const p = ch ? chProgress(ch) : null;
       const doneAny = !!(p && p.d > 0);
       const stepCls = isMv && !expanded ? (idx % 2 ? ' mz-r' : ' mz-l') : '';
-      let out = `<div class="side-ch ${grpCls(c)}${expanded ? ' side-cur' : ' side-ch-mz' + stepCls}${doneAny ? ' mz-lit' : ''}"><a href="#/${c.id}">${!expanded && isMv ? '<i class="mz-gem" aria-hidden="true"></i>' : ''}<span class="sc-t">${esc(c.title)}</span>${!expanded && p ? `<small class="sc-p">${p.n ? Math.round(p.d * 100 / p.n) : 0}%</small>` : ''}</a>`;
-      if (p) out += `<div class="side-bar">${lvBar(p)}</div>`;
+      const logo = isMv ? mvCastleLogoSVG(c.id, expanded ? 28 : 26) : '';
+      let out = `<div class="side-ch ${grpCls(c)}${expanded ? ' side-cur' : ' side-ch-mz' + stepCls}${doneAny ? ' mz-lit' : ''}"><a href="#/${c.id}">${logo}<span class="sc-t">${esc(c.title)}</span>${!expanded && p ? `<small class="sc-p">${p.n ? Math.round(p.d * 100 / p.n) : 0}%</small>` : ''}</a>`;
+      if (p) out += mvSideBarHTML(p, c.id, idx);
       if (expanded && ch) {
         out += mvTowerHTML(ch, curNo);
         const curPos = curNo ? ch.sections.findIndex(x => x.no === curNo) : -1;
@@ -2029,7 +2458,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v64</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v65</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -2204,7 +2633,11 @@
     };
     // บทหลักก่อน แล้วตามด้วยกลุ่มพิเศษ (chapters.json → group) เช่น คลิปติวอาจารย์
     const groups = [...new Set(INDEX.map(c => c.group || ''))];
-    const tiles = groups.map(g => `<h2 class="grid-h ${g ? 'g-clip' : 'g-main'}">${esc(g || '📘 สรุปบท A3')}</h2><div class="grid">${INDEX.filter(c => (c.group || '') === g).map(tile).join('')}</div>`).join('');
+    const tiles = groups.map(g => {
+      const list = INDEX.filter(c => (c.group || '') === g);
+      if (uiStyle() === 'monument') return mvCastleGroupHTML(g || '📘 สรุปบท A3', list, !!g);
+      return `<h2 class="grid-h ${g ? 'g-clip' : 'g-main'}">${esc(g || '📘 สรุปบท A3')}</h2><div class="grid">${list.map(tile).join('')}</div>`;
+    }).join('');
     const lr = S.lastRead && S.lastRead.h.match(/^#\/([^/]+)\/(\d+)$/);
     const lrSec = lr && CH[lr[1]] && CH[lr[1]].sections.find(x => x.no === +lr[2]);
     const rtAll = readToday(); const rvDone = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
