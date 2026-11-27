@@ -8,7 +8,7 @@
     "C": "Rheumatoid arthritis"
    },
    "answer": "A",
-   "why": "ปวดแบบ mechanical (มากขึ้นเมื่อใช้งาน/ลงน้ำหนักระหว่างวัน ดีขึ้นเมื่อพัก) ในผู้สูงอายุ ข้อนิ้ว (DIP/PIP: Heberden/Bouchard) = OA; RA ปวดมากตอนเช้า morning stiffness >1 ชม. และดีขึ้นเมื่อขยับ เป็น MCP/PIP สมมาตร; gout เป็น acute monoarthritis ปวดบวมแดงฉับพลัน",
+   "why": "ปวดแบบ mechanical (มากขึ้นเมื่อลงน้ำหนักระหว่างวัน ดีขึ้นเมื่อพัก) ในผู้สูงอายุ\n✓ A: OA: ข้อนิ้ว DIP/PIP (Heberden/Bouchard)\n✗ B: Gout = acute monoarthritis ปวดบวมแดงฉับพลัน\n✗ C: RA: morning stiffness > 1 ชม. ดีขึ้นเมื่อขยับ MCP/PIP สมมาตร",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -23,7 +23,7 @@
     "D": "Septic arthritis"
    },
    "answer": "A",
-   "why": "OA = degenerative ไม่อักเสบมาก, crepitus จาก cartilage สึก, weight-bearing joint · RA/septic มีบวมแดงร้อน · AS เป็น axial (sacroiliitis)",
+   "why": "✓ A: OA: degenerative ไม่อักเสบมาก crepitus จาก cartilage สึก\n✗ B: AS เป็น axial (sacroiliitis)\n✗ C: RA มีบวมแดงร้อน\n✗ D: Septic arthritis มีบวมแดงร้อน",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -38,7 +38,7 @@
     "D": "Crystal-induced knee inflammation"
    },
    "answer": "A",
-   "why": "RA: synovitis → synovial hyperplasia + inflammatory granulation tissue (pannus) กัด cartilage/bone (marginal erosion) · MCP/PIP spare DIP, morning stiffness >1 hr · C = OA (DIP/PIP, stiffness สั้น) · D = gout/CPPD · B = AVN",
+   "why": "MCP/PIP spare DIP + morning stiffness = RA\n✓ A: Synovitis → synovial hyperplasia + pannus กัด cartilage/bone (marginal erosion)\n✗ B: Necrosis of cartilage = AVN\n✗ C: Degenerative + subchondral sclerosis = OA (DIP/PIP, stiffness สั้น)\n✗ D: Crystal = gout/CPPD",
    "source": "เฉลย77",
    "needs_image": false,
    "options_reconstructed": false,
@@ -53,7 +53,7 @@
     "D": "Clearance of immune complex"
    },
    "answer": "B",
-   "why": "abatacept ปิด costimulation signal 2 (CD28–B7) T cell ที่ได้แค่ signal 1 (TCR–MHC) จะเข้าสู่ anergy = กลไกหนึ่งของ peripheral tolerance; ไม่เกี่ยวกับ complement หรือ immune complex clearance",
+   "why": "Abatacept ปิด costimulation signal 2 (CD28–B7) → T cell ได้แค่ signal 1 → anergy\n✗ A: Sensitization เป็นทิศตรงข้าม\n✓ B: Peripheral tolerance\n✗ C: ไม่เกี่ยวกับ complement\n✗ D: ไม่เกี่ยวกับ immune complex clearance",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -69,7 +69,7 @@
     "E": "Negative selection"
    },
    "answer": "B",
-   "why": "abatacept (CTLA4-Ig) block costimulation signal 2 → T cell ได้แค่ signal 1 (TCR-MHC) → anergy · ใช้ใน RA · negative selection เกิดใน thymus",
+   "why": "Abatacept (CTLA4-Ig) block signal 2 → T cell ได้แค่ signal 1 (TCR-MHC)\n✗ A: Sensitization เป็นทิศตรงข้าม\n✓ B: T cell anergy\n✗ C: ไม่เกี่ยวกับ immune complex clearance\n✗ D: ไม่เกี่ยวกับ complement\n✗ E: Negative selection เกิดใน thymus",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -85,7 +85,7 @@
     "E": "IL-5"
    },
    "answer": "A",
-   "why": "ในตัวเลือกมีแค่ IL-1 ที่ใช้ใน RA (anakinra = IL-1R antagonist; canakinumab = anti-IL-1β) · ตัวหลักจริงคือ anti-IL-6R (tocilizumab) และ anti-TNF แต่ไม่มีในตัวเลือก · IL-2 (basiliximab ใช้ transplant), IL-5 (mepolizumab ใช้ asthma)",
+   "why": "ตัวหลักจริงใน RA คือ anti-TNF และ anti-IL-6R (tocilizumab) แต่ไม่มีในตัวเลือก\n✓ A: IL-1 (anakinra = IL-1R antagonist, canakinumab = anti-IL-1β)\n✗ B: IL-2 (basiliximab) ใช้ใน transplant\n✗ C: IL-3 ไม่มียาใช้ใน RA\n✗ D: IL-4 ไม่มียาใช้ใน RA (dupilumab ใช้ atopic dermatitis)\n✗ E: IL-5 (mepolizumab) ใช้ใน asthma",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -98,7 +98,7 @@
     "A": "IL-1 (anti-IL-1/IL-1R antagonist)"
    },
    "answer": "A",
-   "why": "ไฟล์จำได้แค่ IL-1 (anakinra = IL-1R antagonist) น่าจะชุดเดียวกับ 76/65 · biologics ใน RA ที่หลัก: anti-TNF (infliximab, adalimumab, etanercept), anti-IL-6R (tocilizumab), CTLA4-Ig (abatacept), anti-CD20 (rituximab), JAK inhibitor",
+   "why": "ไฟล์จำตัวเลือกได้แค่ IL-1 (น่าจะชุดเดียวกับ 76/65)\n✓ A: IL-1 (anakinra)\n  Biologics หลักใน RA: anti-TNF, anti-IL-6R, CTLA4-Ig, anti-CD20, JAK inhibitor",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": true,
@@ -114,7 +114,7 @@
     "D": "Inhibit TNF-α"
    },
    "answer": "A",
-   "why": "tofacitinib = small-molecule JAK inhibitor (เด่น JAK1/JAK3) → ตัดสัญญาณ cytokine ผ่าน JAK-STAT (targeted synthetic DMARD, กินได้) · ผลข้างเคียง herpes zoster, VTE · IL-1 = anakinra, IL-6R = tocilizumab, TNF = infliximab/adalimumab/etanercept",
+   "why": "✓ A: Tofacitinib = JAK inhibitor (เด่น JAK1/3) ตัดสัญญาณ JAK-STAT; SE: herpes zoster, VTE\n✗ B: IL-1 = anakinra\n✗ C: IL-6R = tocilizumab\n✗ D: TNF-α = infliximab/adalimumab/etanercept",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -130,7 +130,7 @@
     "E": "Sideroblastic anemia"
    },
    "answer": "C",
-   "why": "inflammation → IL-6 → hepcidin↑ → ferroportin ถูกทำลาย เหล็กติดใน macrophage → serum Fe↓, TIBC↓, ferritin ปกติ/สูง, microcytic/normocytic · IDA จะ TIBC↑ ferritin↓ (แม้ใช้ NSAID เสี่ยง GI blood loss แต่ ferritin 100 ไม่เข้า)",
+   "why": "Inflammation → IL-6 → hepcidin เพิ่ม → ferroportin ถูกทำลาย → เหล็กติดใน macrophage\n✗ A: Thalassemia: iron studies ปกติ MCV ต่ำมากเทียบกับ Hb\n✗ B: IDA: TIBC สูง ferritin ต่ำ (ferritin 100 ไม่เข้า)\n✓ C: ACD: Fe ต่ำ TIBC ต่ำ ferritin ปกติ/สูง\n✗ D: MDS มักเป็น macrocytic\n✗ E: Sideroblastic: Fe สูง ferritin สูง",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -143,7 +143,7 @@
     "B": "Folate"
    },
    "answer": "B",
-   "why": "MTX ยับยั้ง dihydrofolate reductase → tetrahydrofolate↓ → megaloblastic anemia, mucositis, hepatotoxicity · ใน RA (low dose ต่อสัปดาห์) ให้ folic acid เสริมลดผลข้างเคียง · overdose แก้ด้วย leucovorin",
+   "why": "✗ A: MTX ไม่ได้ทำให้ขาด B12\n✓ B: Folate: MTX ยับยั้ง DHFR → THF ลด → megaloblastic anemia, mucositis (ให้ folic acid เสริม; overdose แก้ด้วย leucovorin)",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": true,
@@ -159,7 +159,7 @@
     "E": "Sulfasalazine"
    },
    "answer": "D",
-   "why": "HCQ สะสมใน RPE → bull's-eye maculopathy ต้องตรวจตาเป็นระยะ; MTX: กดไขกระดูก ตับ ปอด; leflunomide: ตับ teratogen; infliximab: TB reactivation; SSZ: oligospermia, G6PD hemolysis",
+   "why": "✗ A: MTX: กดไขกระดูก ตับ ปอด\n✗ B: Leflunomide: ตับ teratogen\n✗ C: Infliximab: TB reactivation\n✓ D: HCQ สะสมใน RPE → bull's-eye maculopathy\n✗ E: SSZ: oligospermia, G6PD hemolysis",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -173,7 +173,7 @@
     "C": "Osteoporosis"
    },
    "answer": "A",
-   "why": "RA = inflammatory symmetric polyarthritis ข้อเล็ก MCP/PIP (ไม่เป็น DIP) morning stiffness >1 ชม.; AS เป็นหลัง/sacroiliac คนหนุ่ม; osteoporosis ไม่ปวดข้อจนกว่าหัก",
+   "why": "✓ A: RA: symmetric polyarthritis ข้อเล็ก MCP/PIP morning stiffness > 1 ชม.\n✗ B: AS เป็นหลัง/sacroiliac ในคนหนุ่ม\n✗ C: Osteoporosis ไม่ปวดข้อจนกว่าหัก",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -190,7 +190,7 @@
     "E": "Anti-MDA5"
    },
    "answer": "C",
-   "why": "Anti-CCP (ACPA) specificity ~95% สำหรับ RA และพยากรณ์ erosion; RF ไวแต่ไม่จำเพาะ; anti-Sm/anti-dsDNA = SLE; anti-SSA = Sjögren/neonatal lupus; anti-MDA5 = amyopathic dermatomyositis + ILD",
+   "why": "✗ A: Anti-Sm = SLE\n✗ B: Anti-SSA = Sjögren / neonatal lupus\n✓ C: Anti-CCP (ACPA) specificity ~95% สำหรับ RA พยากรณ์ erosion\n✗ D: Anti-dsDNA = SLE\n✗ E: Anti-MDA5 = amyopathic dermatomyositis + ILD",
    "source": "เฉลย79",
    "needs_image": false,
    "options_reconstructed": false,
@@ -206,7 +206,7 @@
     "E": "Sulfasalazine"
    },
    "answer": "C",
-   "why": "MTX ยับยั้ง dihydrofolate reductase → ขาด folate ในเซลล์ → megaloblastic anemia, mucositis/แผลในปาก จึงต้องให้ folic acid คู่; anti-TNF (etanercept/adalimumab) เสี่ยงติดเชื้อ/TB; HCQ ตา; SSZ hemolysis ใน G6PD, oligospermia (อาจ macrocytosis เล็กน้อยแต่ไม่ใช่ยาที่ต้องให้ folate ประจำ)",
+   "why": "MTX ยับยั้ง DHFR → ขาด folate ในเซลล์ → megaloblastic anemia + แผลในปาก (จึงต้องให้ folic acid คู่)\n✗ A: Etanercept: เสี่ยงติดเชื้อ/TB\n✗ B: HCQ: พิษต่อตา\n✓ C: Methotrexate\n✗ D: Adalimumab: เสี่ยงติดเชื้อ/TB\n✗ E: SSZ: hemolysis ใน G6PD, oligospermia (macrocytosis เล็กน้อย ไม่ใช่ยาที่ต้องให้ folate ประจำ)",
    "source": "เฉลย79",
    "needs_image": false,
    "options_reconstructed": false,
@@ -219,7 +219,7 @@
     "B": "Staphylococcus aureus"
    },
    "answer": "B",
-   "why": "S. aureus เป็นสาเหตุ septic arthritis ที่พบบ่อยที่สุดในผู้ใหญ่ทั่วไป (ยกเว้นวัยหนุ่มสาว sexually active ที่ N. gonorrhoeae พบบ่อย); S. epidermidis มักเป็น prosthetic joint infection/biofilm บนวัสดุเทียม",
+   "why": "✗ A: S. epidermidis มักเป็น prosthetic joint infection (biofilm)\n✓ B: S. aureus พบบ่อยสุดในผู้ใหญ่ (ยกเว้นวัยหนุ่มสาว sexually active → N. gonorrhoeae)",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -231,7 +231,7 @@
     "A": "ANA"
    },
    "answer": "A",
-   "why": "ANA ไวที่สุด (>95%) ใช้ screen SLE; anti-dsDNA และ anti-Smith จำเพาะกว่า (anti-dsDNA สัมพันธ์ lupus nephritis); SLE มี arthritis แบบ non-erosive (Jaccoud)",
+   "why": "✓ A: ANA ไวที่สุด (> 95%) ใช้ screen SLE\n  Anti-dsDNA และ anti-Sm จำเพาะกว่า (anti-dsDNA สัมพันธ์ lupus nephritis)",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -248,7 +248,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "M protein ของ GAS มี molecular mimicry กับ cardiac myosin/tissue → antibody cross-react; streptolysin O เป็นแค่ marker (ASO) ไม่ใช่กลไกโรค",
+   "why": "✗ A: Streptolysin O เป็นแค่ marker (ASO) ไม่ใช่กลไกโรค\n✓ B: M protein: molecular mimicry กับ cardiac myosin → antibody cross-react\n✗ C: Hyaluronic capsule ต้าน phagocytosis ไม่ใช่กลไก RF\n✗ D: Streptokinase สลาย fibrin ไม่ใช่กลไก RF",
    "options_reconstructed": true
   },
   "76/165": {
@@ -260,7 +260,7 @@
     "D": "Rheumatoid factor"
    },
    "answer": "C",
-   "why": "สงสัย SLE → screening ด้วย ANA (sensitivity >95%) · anti-dsDNA/anti-Sm specific ใช้ยืนยัน (anti-dsDNA สัมพันธ์ lupus nephritis/disease activity) · RF ใช้ RA",
+   "why": "สงสัย SLE → screening ด้วย ANA (sensitivity > 95%)\n✗ A: Anti-Sm จำเพาะ ใช้ยืนยัน\n✗ B: Anti-dsDNA จำเพาะ ใช้ยืนยัน (สัมพันธ์ lupus nephritis)\n✓ C: ANA (ตัวเลือกหลุด สันนิษฐาน)\n✗ D: RF ใช้ใน RA",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": true,
@@ -278,7 +278,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "ภาพ acute rheumatic fever (carditis+MR, nodules, arthritis หลัง strep pharyngitis) → ยืนยัน strep infection ด้วย ASO titer; HACEK ใช้ใน culture-negative IE",
+   "why": "ภาพ ARF: carditis + MR + nodules + arthritis หลัง strep pharyngitis\n✓ A: ASO titer ยืนยันการติด strep\n✗ B: HACEK ใช้ใน culture-negative IE\n✗ C: Echo หา vegetation ใช้ใน IE\n✗ D: RF ใช้ใน RA",
    "options_reconstructed": true
   },
   "77/122": {
@@ -289,7 +289,7 @@
     "C": "Lipopolysaccharide"
    },
    "answer": "A",
-   "why": "prosthetic joint infection (S. epidermidis/CoNS, S. aureus) อาศัย biofilm เกาะวัสดุ → ทนยา/ภูมิคุ้มกัน มักต้องเอา implant ออก · streptolysin O = S. pyogenes (chain) · LPS = gram-negative",
+   "why": "Prosthetic joint infection (CoNS, S. aureus) อาศัย biofilm เกาะวัสดุ → ทนยา/ภูมิคุ้มกัน มักต้องเอา implant ออก\n✓ A: Biofilm formation\n✗ B: Streptolysin O = S. pyogenes (chain)\n✗ C: LPS = gram-negative",
    "source": "เฉลย77",
    "needs_image": false,
    "options_reconstructed": false,
@@ -304,7 +304,7 @@
     "D": "High C3, low C4, low CH50"
    },
    "answer": "A",
-   "why": "SLE active: immune complex กระตุ้น classical pathway → ใช้ C1q/C4/C2/C3 → C3↓ C4↓ CH50↓ (CH50 วัด classical pathway ทั้งเส้น) · ถ้า C3 ต่ำ C4 ปกติ = alternative pathway (เช่น PSGN, C3 glomerulopathy)",
+   "why": "SLE active: immune complex → classical pathway → ใช้ C1q/C4/C2/C3\n✓ A: C3 ต่ำ C4 ต่ำ CH50 ต่ำ\n✗ B: CH50 ต้องต่ำตาม (วัด classical pathway ทั้งเส้น)\n✗ C: C3 ต่ำ C4 ปกติ/สูง = alternative pathway (PSGN, C3 glomerulopathy)\n✗ D: C3 สูงไม่เข้ากับการใช้ complement",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -317,7 +317,7 @@
     "B": "Staphylococcus aureus"
    },
    "answer": "B",
-   "why": "S. aureus เป็นสาเหตุ septic arthritis ที่พบบ่อยที่สุดในผู้ใหญ่; ถ้าวัยรุ่น sexually active + migratory polyarthritis/tenosynovitis/ผื่น นึกถึง N. gonorrhoeae; GAS พบรองลงมา",
+   "why": "✗ A: GAS พบรองลงมา\n✓ B: S. aureus พบบ่อยสุดในผู้ใหญ่ (วัยรุ่น sexually active + migratory/tenosynovitis/ผื่น → N. gonorrhoeae)",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -332,7 +332,7 @@
     "D": "Streptococcus pyogenes"
    },
    "answer": "C",
-   "why": "ผู้ใหญ่/เบาหวาน septic arthritis เชื้อที่พบบ่อยที่สุดคือ S. aureus; Kingella kingae เป็นของเด็ก <4 ปี; H. influenzae ในเด็กที่ไม่ได้วัคซีน; GAS พบน้อยกว่า",
+   "why": "ผู้ใหญ่/เบาหวาน septic arthritis → S. aureus พบบ่อยสุด\n✗ A: H. influenzae ในเด็กที่ไม่ได้วัคซีน\n✗ B: Kingella kingae ในเด็ก < 4 ปี\n✓ C: Staphylococcus aureus\n✗ D: GAS พบน้อยกว่า",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -347,7 +347,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "ARF ต้องมีหลักฐานติดเชื้อ GAS นำมา → ASO titer; hemoculture ใช้ใน infective endocarditis ไม่ใช่ RF ซึ่งเป็น immune-mediated"
+   "why": "ARF เป็น immune-mediated ต้องมีหลักฐานติด GAS นำมา\n✓ A: ASO titer\n✗ B: Hemoculture ใช้ใน infective endocarditis"
   },
   "79/153": {
    "box": 3,
@@ -361,7 +361,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "หลัง GAS pharyngitis 2–4 สัปดาห์ + migratory polyarthritis + carditis (murmur ใหม่) = Jones criteria ของ ARF; IE ไม่มี latency หลังเจ็บคอแบบนี้ และ Kawasaki เป็นในเด็กเล็ก"
+   "why": "หลัง GAS pharyngitis 2–4 สัปดาห์ + migratory polyarthritis + carditis = Jones criteria\n✗ A: IE ไม่มี latency หลังเจ็บคอแบบนี้\n✓ B: Acute rheumatic fever\n✗ C: Viral myocarditis ไม่มี migratory polyarthritis\n✗ D: Pericarditis ไม่อธิบาย murmur ใหม่ + polyarthritis\n✗ E: Kawasaki เป็นในเด็กเล็ก"
   },
   "79/40": {
    "box": 3,
@@ -375,7 +375,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "ให้ยาต่อเนื่องหลังเคยเป็น ARF เพื่อป้องกันการติด GAS ซ้ำและ RHD = secondary prophylaxis; primary คือรักษา strep pharyngitis เพื่อกันไม่ให้เกิด ARF ครั้งแรก"
+   "why": "✗ A: Switch therapy = เปลี่ยนยาฉีดเป็นยากิน\n✗ B: Primary = รักษา strep pharyngitis กันไม่ให้เกิด ARF ครั้งแรก\n✓ C: Secondary prophylaxis: ให้ต่อเนื่องหลังเป็น ARF กันติด GAS ซ้ำและ RHD\n✗ D: PrEP ใช้กับ HIV\n✗ E: PEP = ให้หลังสัมผัสเชื้อครั้งเดียว"
   },
   "75.2/111": {
    "stem": "ชายมี acute gout attack ระหว่างรักษา TB ด้วย regimen มาตรฐาน ยาตัวใดเป็นสาเหตุ",
@@ -387,7 +387,7 @@
     "E": "Streptomycin"
    },
    "answer": "D",
-   "why": "pyrazinamide → hyperuricemia จากลดการขับ urate ที่ proximal tubule → gout; ข้ออื่นไม่ใช่สาเหตุเด่น (streptomycin → ototoxic/nephrotoxic)",
+   "why": "✗ A: INH → neuropathy, hepatitis\n✗ B: Rifampicin → orange secretion, CYP induction\n✗ C: Ethambutol → optic neuritis (เพิ่ม urate ได้แต่น้อยกว่า)\n✓ D: Pyrazinamide ลดการขับ urate ที่ proximal tubule → gout\n✗ E: Streptomycin → ototoxic/nephrotoxic",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -403,7 +403,7 @@
     "E": "Streptomycin"
    },
    "answer": "C",
-   "why": "pyrazinamide (metabolite pyrazinoic acid) ยับยั้งการขับ uric acid ที่ไต → hyperuricemia, arthralgia, acute gout (ethambutol ก็เพิ่ม urate ได้แต่น้อยกว่า); INH → peripheral neuropathy, hepatitis, drug-induced lupus; rifampicin → orange secretions, CYP induction; ethambutol → optic neuritis",
+   "why": "✗ A: INH → neuropathy, hepatitis, drug-induced lupus\n✗ B: Rifampicin → orange secretion, CYP induction\n✓ C: Pyrazinamide (pyrazinoic acid) ยับยั้งการขับ uric acid → arthralgia, gout\n✗ D: Ethambutol → optic neuritis (เพิ่ม urate ได้แต่น้อยกว่า)\n✗ E: Streptomycin → ototoxic/nephrotoxic",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": true,
@@ -418,7 +418,7 @@
     "D": "Ethambutol"
    },
    "answer": "B",
-   "why": "pyrazinamide ลดการขับ urate (กระตุ้น URAT1 reabsorption) → hyperuricemia/acute gout; ethambutol ก็ทำได้แต่พบน้อยกว่าและ adverse effect หลักคือ optic neuritis",
+   "why": "✗ A: INH → neuropathy, hepatitis\n✓ B: Pyrazinamide กระตุ้น URAT1 reabsorption → hyperuricemia/gout\n✗ C: Rifampicin → orange secretion\n✗ D: Ethambutol ทำได้แต่พบน้อย SE หลักคือ optic neuritis",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -432,7 +432,7 @@
     "C": "Inhibit microtubule polymerization"
    },
    "answer": "C",
-   "why": "colchicine จับ tubulin → ยับยั้ง microtubule polymerization → neutrophil chemotaxis/degranulation และ NLRP3 inflammasome ลดลง ใช้ acute gout · xanthine oxidase inhibitor = allopurinol/febuxostat · ยับยั้ง URAT1 reabsorption = probenecid",
+   "why": "✗ A: Xanthine oxidase inhibitor = allopurinol/febuxostat\n✗ B: ยับยั้ง URAT1 reabsorption = probenecid\n✓ C: Colchicine จับ tubulin → ยับยั้ง microtubule → neutrophil chemotaxis/degranulation + NLRP3 ลดลง",
    "source": "เฉลย77",
    "needs_image": false,
    "options_reconstructed": false,
@@ -447,7 +447,7 @@
     "D": "Abacavir"
    },
    "answer": "A",
-   "why": "HLA-B*58:01 สัมพันธ์กับ SJS/TEN/DRESS จาก allopurinol (พบบ่อยในคนไทย/เอเชีย ตรวจก่อนให้ยา); abacavir คู่กับ HLA-B*57:01 (ไม่ใช่ยา gout); colchicine/indomethacin ไม่เกี่ยว HLA นี้",
+   "why": "HLA-B*58:01 สัมพันธ์กับ SJS/TEN/DRESS จาก allopurinol (พบบ่อยในคนไทย/เอเชีย ตรวจก่อนให้ยา)\n✓ A: Allopurinol\n✗ B: Colchicine ไม่เกี่ยวกับ HLA นี้\n✗ C: Indomethacin ไม่เกี่ยวกับ HLA นี้\n✗ D: Abacavir คู่กับ HLA-B*57:01 และไม่ใช่ยา gout",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -460,7 +460,7 @@
     "B": "Monosodium urate crystals"
    },
    "answer": "A",
-   "why": "เฉลยตอบ CPPD → ภาพน่าจะเป็นผลึกสั้น rhomboid, weakly positively birefringent (ฟ้าเมื่อขนานแกน); MSU จะเป็นรูปเข็ม negatively birefringent (เหลืองเมื่อขนาน)",
+   "why": "✓ A: CPPD: ผลึกสั้น rhomboid, weakly positive birefringent (ฟ้าเมื่อขนานแกน)\n✗ B: MSU: รูปเข็ม negative birefringent (เหลืองเมื่อขนาน)",
    "source": "เฉลย78",
    "needs_image": true,
    "options_reconstructed": false,
@@ -476,7 +476,7 @@
     "E": "Streptomycin"
    },
    "answer": "C",
-   "why": "Pyrazinamide (metabolite pyrazinoic acid) ลดการขับ urate ที่ท่อไต → hyperuricemia/gout (ethambutol ก็ทำได้แต่น้อยกว่า และเด่นเรื่อง optic neuritis); INH: peripheral neuropathy/hepatitis; rifampicin: ปัสสาวะส้ม, enzyme inducer; streptomycin: ototoxic/nephrotoxic",
+   "why": "✗ A: INH → peripheral neuropathy, hepatitis\n✗ B: Rifampicin → ปัสสาวะส้ม, enzyme inducer\n✓ C: Pyrazinamide (pyrazinoic acid) ลดการขับ urate → hyperuricemia/gout\n✗ D: Ethambutol ทำได้แต่น้อยกว่า เด่นเรื่อง optic neuritis\n✗ E: Streptomycin → ototoxic/nephrotoxic",
    "source": "เฉลย79",
    "needs_image": false,
    "options_reconstructed": false,
@@ -492,7 +492,7 @@
     "E": "เปลี่ยนเป็น xanthine oxidase inhibitor ตัวอื่นทันที"
    },
    "answer": "C",
-   "why": "Severe cutaneous adverse reaction (SJS/TEN/DRESS) = ห้าม rechallenge ตลอดชีวิต บันทึกแพ้ยา; การตรวจ HLA ใช้ก่อนเริ่มยาไม่ใช่หลังเกิดแล้ว; febuxostat ต้องระวังและเริ่มโดยผู้เชี่ยวชาญ ไม่ใช่เปลี่ยนทันที (อาจใช้ uricosuric เช่น probenecid แทน)",
+   "why": "SJS/TEN/DRESS = ห้าม rechallenge ตลอดชีวิต บันทึกแพ้ยา\n✗ A: ตรวจ HLA ใช้ก่อนเริ่มยา ไม่ใช่หลังเกิดแล้ว\n✗ B: ลดขนาดไม่ป้องกัน\n✓ C: หยุดถาวรและหลีกเลี่ยง allopurinol\n✗ D: Steroid ไม่ป้องกัน\n✗ E: Febuxostat ต้องระวัง เริ่มโดยผู้เชี่ยวชาญ ไม่ใช่เปลี่ยนทันที (อาจใช้ probenecid แทน)",
    "source": "เฉลย79",
    "needs_image": false,
    "options_reconstructed": false,
@@ -508,7 +508,7 @@
     "E": "TXA2 ลด"
    },
    "answer": "C",
-   "why": "COX-2 selective inhibitor ยับยั้งการสร้าง prostacyclin (PGI2; vasodilate + ยับยั้ง platelet) จาก endothelium แต่ไม่ยับยั้ง COX-1 ใน platelet ที่สร้าง TXA2 → สมดุลเอียงไปทาง prothrombotic; TXA2 ไม่ได้ลด (E ผิด)",
+   "why": "COX-2 selective ยับยั้ง PGI2 จาก endothelium แต่ไม่ยับยั้ง COX-1 ใน platelet (TXA2 ยังอยู่) → เอียงไปทาง prothrombotic\n✗ A: PGE2 ไม่ได้เพิ่ม\n✗ B: PGD2 ไม่ได้เพิ่ม\n✓ C: PGI2 ลด (เสีย vasodilation + การยับยั้ง platelet)\n✗ D: PGF2 ไม่ใช่กลไกของ MI\n✗ E: TXA2 ไม่ได้ลด",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -522,7 +522,7 @@
     "C": "(enzyme ที่สร้าง AA จำไม่ครบ)"
    },
    "answer": "A",
-   "why": "glucocorticoid เพิ่ม annexin-1 (lipocortin) → ยับยั้ง phospholipase A2 → ไม่มี arachidonic acid → ลดทั้ง PG และ LT (ต่างจาก NSAID ที่ยับยั้ง COX อย่างเดียว) + ลด COX-2 transcription",
+   "why": "Glucocorticoid เพิ่ม annexin-1 (lipocortin) → ยับยั้ง PLA2 → ไม่มี AA → ลดทั้ง PG และ LT (+ ลด COX-2 transcription)\n✓ A: Phospholipase A2\n✗ B: ตัวเลือกจำไม่ครบ (NSAID ยับยั้ง COX ซึ่งอยู่ปลายทาง)\n✗ C: ตัวเลือกจำไม่ครบ",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": true,
@@ -537,7 +537,7 @@
     "D": "Celecoxib"
    },
    "answer": "C",
-   "why": "indomethacin มี CNS side effect เด่น: frontal headache, dizziness, confusion, psychosis (โครงสร้างคล้าย serotonin) · aspirin เด่น tinnitus/GI/Reye · celecoxib เด่น CV risk",
+   "why": "✗ A: Aspirin เด่น tinnitus / GI / Reye\n✗ B: Ibuprofen ไม่เด่น CNS\n✓ C: Indomethacin: frontal headache, dizziness, confusion, psychosis (โครงสร้างคล้าย serotonin)\n✗ D: Celecoxib เด่น CV risk",
    "source": "เฉลย77",
    "needs_image": false,
    "options_reconstructed": false,
@@ -553,7 +553,7 @@
     "E": "Hyperprothrombinemia"
    },
    "answer": "E",
-   "why": "salicylate ขนาดสูงกระตุ้น respiratory center → resp. alkalosis ก่อน ตามด้วย AG metabolic acidosis (uncoupling, lactate, salicylic acid) · irreversible COX-1 → platelet dysfunction, ulcer · ขนาดสูงยับยั้ง vit K-dependent factor → hypoprothrombinemia ไม่ใช่ hyper",
+   "why": "Salicylate ขนาดสูง\n✗ A: Respiratory alkalosis เกิดก่อน (กระตุ้น respiratory center)\n✗ B: Peptic ulcer เกิดได้ (ยับยั้ง COX-1)\n✗ C: AG metabolic acidosis ตามมา (uncoupling, lactate, salicylic acid)\n✗ D: Platelet dysfunction เกิดได้ (irreversible COX-1)\n✓ E: ขนาดสูงยับยั้ง vit K-dependent factor → hypoprothrombinemia ไม่ใช่ hyper",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -569,7 +569,7 @@
     "E": "ยับยั้ง interleukin"
    },
    "answer": "C",
-   "why": "Paracetamol ยับยั้ง COX ใน CNS เป็นหลัก → ลด PGE2 ที่ hypothalamus → set point ลดลง; ฤทธิ์ peripheral COX อ่อนมาก (จึงไม่ anti-inflammatory) ข้ออื่นเป็นผลตามหลังหรือไม่ใช่กลไกหลัก",
+   "why": "Paracetamol ยับยั้ง COX ใน CNS เป็นหลัก → PGE2 ที่ hypothalamus ลด → set point ลด\n✗ A: ระบายความร้อนเป็นผลตามหลัง\n✗ B: ฤทธิ์ peripheral COX อ่อนมาก (จึงไม่ต้านอักเสบ)\n✓ C: ยับยั้งการสร้าง PG ที่ hypothalamus\n✗ D: เลือดไปผิวเพิ่มเป็นผลตามหลัง\n✗ E: ไม่ได้ยับยั้ง interleukin โดยตรง",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -584,7 +584,7 @@
     "D": "ให้ยาขับปัสสาวะ"
    },
    "answer": "B",
-   "why": "NSAID ลด PG ที่คุม afferent arteriole dilation → ไตพึ่ง PG มากขึ้นเมื่อ volume ต่ำ; Cr คงที่ยังใช้ได้แต่ต้องกัน prerenal ด้วยน้ำพอ; COX-2 inhibitor ก็ nephrotoxic เท่ากัน; ACEi/diuretic + NSAID = 'triple whammy' เสี่ยง AKI",
+   "why": "NSAID ลด PG ที่ขยาย afferent arteriole → ไตพึ่ง PG มากขึ้นเมื่อ volume ต่ำ; Cr คงที่ยังใช้ได้แต่ต้องกัน prerenal\n✗ A: COX-2 inhibitor ก็ nephrotoxic เท่ากัน\n✓ B: ดูแลให้ได้ fluid เพียงพอ\n✗ C: ACEi + NSAID (+ diuretic) = triple whammy เสี่ยง AKI\n✗ D: Diuretic + NSAID เสี่ยง AKI",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -600,7 +600,7 @@
     "E": "กระตุ้นการหลั่งกรดโดยตรง"
    },
    "answer": "C",
-   "why": "Ibuprofen เป็น non-selective NSAID → ลด PGE2/PGI2 จาก COX-1 ที่คุม mucus/HCO3- และ mucosal blood flow → peptic ulcer; ฤทธิ์ต้านเกล็ดเลือดทำให้เลือดออกมากขึ้นแต่ไม่ใช่กลไกหลักของแผล; ป้องกันด้วย PPI/misoprostol หรือใช้ COX-2 selective",
+   "why": "Ibuprofen เป็น non-selective NSAID\n✗ A: ไม่ได้จำเพาะ COX-1\n✗ B: ไม่ได้จำเพาะ COX-2 (COX-2 selective ทำแผลน้อยกว่า)\n✓ C: ยับยั้งทั้งคู่ → PGE2/PGI2 ที่คุม mucus, HCO3⁻, mucosal blood flow ลด → peptic ulcer\n✗ D: ต้านเกล็ดเลือดทำให้เลือดออกมากขึ้น แต่ไม่ใช่กลไกหลักของแผล\n✗ E: ไม่ได้กระตุ้นการหลั่งกรดโดยตรง",
    "source": "เฉลย79",
    "needs_image": false,
    "options_reconstructed": false,
@@ -613,7 +613,7 @@
     "B": "Mesenchyme"
    },
    "answer": "B",
-   "why": "mesenchymal cells (ส่วนใหญ่จาก mesoderm) เป็น precursor ของ fibroblast, chondroblast, osteoblast, adipocyte, smooth muscle ฯลฯ; fibroblast เป็นเซลล์ที่ differentiate แล้ว",
+   "why": "✗ A: Fibroblast เป็นเซลล์ที่ differentiate แล้ว\n✓ B: Mesenchyme (ส่วนใหญ่จาก mesoderm) → fibroblast, chondroblast, osteoblast, adipocyte, smooth muscle",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -626,7 +626,7 @@
     "B": "Prednisolone"
    },
    "answer": "B",
-   "why": "glucocorticoid ยับยั้ง osteoblast (เพิ่ม apoptosis), เพิ่ม RANKL/ลด OPG → resorption↑, ลด Ca absorption ลำไส้ + เพิ่ม Ca ขับทางไต → osteoporosis (เด่น trabecular: vertebra) · NSAID ไม่ทำ osteopenia",
+   "why": "✗ A: NSAID ไม่ทำ osteopenia\n✓ B: Prednisolone: ยับยั้ง osteoblast, RANKL เพิ่ม/OPG ลด, ดูด Ca ลด + ขับ Ca เพิ่ม → osteoporosis (เด่น trabecular: vertebra)",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": true,
@@ -641,7 +641,7 @@
     "D": "Hyponatremia"
    },
    "answer": "A",
-   "why": "Glucocorticoid เพิ่ม gluconeogenesis + insulin resistance → hyperglycemia; ฤทธิ์ mineralocorticoid ทำให้ hypokalemia/Na retention (ไม่ใช่ hyperK/hypoNa); ไขมันกระจายแบบ central (moon face, buffalo hump) แขนขาลีบ",
+   "why": "✓ A: Hyperglycemia: เพิ่ม gluconeogenesis + insulin resistance\n✗ B: ฤทธิ์ mineralocorticoid ทำให้ hypokalemia ไม่ใช่ hyper\n✗ C: ไขมันกระจายแบบ central (moon face, buffalo hump) แขนขาลีบ\n✗ D: Na retention ไม่ใช่ hyponatremia",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -656,7 +656,7 @@
     "D": "Calcitonin"
    },
    "answer": "A",
-   "why": "Teriparatide (PTH 1-34) ฉีดเป็นช่วง ๆ กระตุ้น osteoblast = anabolic; alendronate/raloxifene/calcitonin เป็น antiresorptive (ยับยั้ง osteoclast)",
+   "why": "✓ A: Teriparatide (PTH 1-34) ฉีดเป็นช่วง ๆ กระตุ้น osteoblast = anabolic\n✗ B: Alendronate = antiresorptive\n✗ C: Raloxifene = antiresorptive\n✗ D: Calcitonin = antiresorptive",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -671,7 +671,7 @@
     "D": "ยับยั้ง RANKL"
    },
    "answer": "B",
-   "why": "Intermittent PTH → กระตุ้น osteoblast (ลด sclerostin, ลด osteoblast apoptosis) → bone formation มากกว่า resorption; ถ้า PTH สูงต่อเนื่องจะเพิ่ม RANKL/ลด OPG → resorption; ข้อ A, C, D เป็นกลไกยา antiresorptive (เช่น denosumab = anti-RANKL)",
+   "why": "Intermittent PTH → กระตุ้น osteoblast (ลด sclerostin + ลด osteoblast apoptosis) → formation > resorption\n✗ A: ยับยั้ง osteoclast = กลไก antiresorptive\n✓ B: กระตุ้น osteoblast\n✗ C: เพิ่ม OPG = กลไก antiresorptive (PTH ต่อเนื่องจะลด OPG)\n✗ D: ยับยั้ง RANKL = denosumab",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -687,7 +687,7 @@
     "E": "RANKL"
    },
    "answer": "E",
-   "why": "Osteoblast (และ stromal cell) แสดง RANKL ร่วมกับ M-CSF → จับ RANK บน osteoclast precursor → osteoclastogenesis; OPG เป็น decoy receptor ยับยั้ง RANKL; RANK เป็นตัวรับอยู่บน osteoclast; calcitonin มาจาก C cell ไทรอยด์ ยับยั้ง osteoclast; osteocalcin เป็น marker ของ bone formation",
+   "why": "Osteoblast/stromal cell แสดง RANKL + M-CSF → จับ RANK บน precursor → osteoclastogenesis\n✗ A: OPG = decoy receptor ยับยั้ง RANKL\n✗ B: Calcitonin (C cell ไทรอยด์) ยับยั้ง osteoclast\n✗ C: Osteocalcin = marker ของ bone formation\n✗ D: RANK เป็นตัวรับอยู่บน osteoclast ไม่ได้สร้างจาก osteoblast\n✓ E: RANKL",
    "source": "เฉลย79",
    "needs_image": false,
    "options_reconstructed": false,
@@ -703,7 +703,7 @@
     "E": "Mesenchymal cell ใน bone marrow"
    },
    "answer": "D",
-   "why": "ความยาวเพิ่มจาก endochondral ossification ที่ epiphyseal plate: chondrocyte แบ่งตัว (proliferative zone) → hypertrophy → calcify → ถูกแทนด้วยกระดูก; periosteal osteoblast เพิ่มความกว้าง (appositional growth); osteoclast remodel",
+   "why": "ความยาวเพิ่มจาก endochondral ossification ที่ epiphyseal plate\n✗ A: Endosteum ไม่ได้เพิ่มความยาว\n✗ B: Periosteal osteoblast เพิ่มความกว้าง (appositional growth)\n✗ C: Osteoclast ทำหน้าที่ remodel\n✓ D: Chondrocyte ของ growth plate แบ่งตัว → hypertrophy → calcify → แทนด้วยกระดูก\n✗ E: Mesenchymal cell ใน marrow ไม่ได้เพิ่มความยาวโดยตรง",
    "source": "เฉลย79",
    "needs_image": false,
    "options_reconstructed": false,
@@ -716,7 +716,7 @@
     "B": "Vitamin D"
    },
    "answer": "B",
-   "why": "เด็กขาโก่ง = rickets จากขาด vitamin D → mineralization ของ osteoid และ growth plate บกพร่อง พบ genu varum, rachitic rosary, craniotabes, Harrison groove; vit A ไม่ทำให้กระดูกโก่ง (ขาด A → night blindness, xerophthalmia)",
+   "why": "✗ A: ขาด vit A → night blindness, xerophthalmia ไม่ทำกระดูกโก่ง\n✓ B: Vitamin D: rickets → mineralization ของ osteoid/growth plate บกพร่อง (genu varum, rachitic rosary, craniotabes)",
    "source": "วิเคราะห์",
    "needs_image": true,
    "options_reconstructed": false,
@@ -732,7 +732,7 @@
     "E": "PTH"
    },
    "answer": "C",
-   "why": "นมแม่มี vit D ต่ำ + ไม่โดนแดด → nutritional rickets (bowed legs, widened wrist จาก metaphyseal flaring/cupping, rachitic rosary, delayed dentition/caries) แก้ด้วย vitamin D (ร่วมกับ Ca เพียงพอ); calcium อย่างเดียวไม่แก้สาเหตุ phosphate ใช้ใน X-linked hypophosphatemic rickets, PTH ไม่ใช่การรักษา",
+   "why": "นมแม่มี vit D ต่ำ + ไม่โดนแดด = nutritional rickets (ขาโก่ง ข้อมือหนา rachitic rosary ฟันช้า/ผุ)\n✗ A: Iodine ไม่เกี่ยว\n✗ B: Calcium อย่างเดียวไม่แก้สาเหตุ\n✓ C: Vitamin D (ร่วมกับ Ca เพียงพอ)\n✗ D: Phosphate ใช้ใน X-linked hypophosphatemic rickets\n✗ E: PTH ไม่ใช่การรักษา",
    "source": "วิเคราะห์",
    "needs_image": true,
    "options_reconstructed": false,
@@ -748,7 +748,7 @@
     "E": "Calcium"
    },
    "answer": "E",
-   "why": "parathyroid ถูกตัด/ขาดเลือด → hypocalcemia → neuromuscular excitability (Chvostek/Trousseau, tetany) → ให้ IV calcium gluconate ก่อน · calcitonin/bisphosphonate/denosumab ลด Ca ยิ่งแย่ · PTH ไม่ใช่ initial",
+   "why": "Parathyroid ถูกตัด/ขาดเลือด → hypocalcemia → tetany (Chvostek/Trousseau)\n✗ A: PTH ไม่ใช่ initial treatment\n✗ B: Calcitonin ลด Ca ยิ่งแย่\n✗ C: Bisphosphonate ลด Ca ยิ่งแย่\n✗ D: Denosumab ลด Ca ยิ่งแย่\n✓ E: IV calcium gluconate",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -762,7 +762,7 @@
     "C": "Lab error"
    },
    "answer": "B",
-   "why": "phosphate ต่ำเดี่ยว Ca ปกติ = renal phosphate wasting จาก NaPi-IIa/IIc บกพร่อง (เช่น X-linked hypophosphatemic rickets จาก FGF23↑ ลด NaPi) → rickets/osteomalacia · hyperPTH จะมี Ca สูงร่วมด้วย",
+   "why": "Phosphate ต่ำเดี่ยว Ca ปกติ = renal phosphate wasting\n✗ A: HyperPTH จะมี Ca สูงร่วมด้วย\n✓ B: NaPi-IIa/IIc บกพร่อง (เช่น XLH: FGF23 สูง ลด NaPi) → rickets/osteomalacia\n✗ C: Lab error ไม่ใช่คำตอบเมื่อมีกลไกที่อธิบายได้",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -779,7 +779,7 @@
     "E": "Globulin (เพิ่ม)"
    },
    "answer": "E",
-   "why": "Rouleaux เกิดจาก protein ในพลาสมาสูง (M protein/immunoglobulin) เช่น multiple myeloma → globulin สูง, A/G ratio กลับ · ใน myeloma ALP มักปกติเพราะ lytic lesion ไม่กระตุ้น osteoblast",
+   "why": "Rouleaux = protein ในพลาสมาสูง (M protein) เช่น multiple myeloma\n✗ A: AST ไม่เกี่ยว\n✗ B: ALT ไม่เกี่ยว\n✗ C: ALP มักปกติใน myeloma (lytic ล้วน ไม่กระตุ้น osteoblast)\n✗ D: Indirect bilirubin ไม่เกี่ยว\n✓ E: Globulin เพิ่ม (A/G ratio กลับ)",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -795,7 +795,7 @@
     "E": "Glossitis"
    },
    "answer": "B",
-   "why": "ileal resection → B12 ดูดซึมไม่ได้ (polyneuropathy, macrocytosis, glossitis) + bile acid loss → fat malabsorption → vit D↓ + Ca จับ fatty acid → hypocalcemia (tetany) · osteomalacia กระดูกสันหลังยุบเป็นผลระยะยาวมาก จึงน่าจะเป็น least likely",
+   "why": "Ileal resection → B12 ดูดซึมไม่ได้ + bile acid loss → fat malabsorption → vit D ลด + Ca จับ fatty acid\n✗ A: Tetany เกิดได้ (hypocalcemia)\n✓ B: กระดูกสันหลังยุบ (codfish) เป็นผลระยะยาวมาก จึงเกิดน้อยที่สุด\n✗ C: Polyneuropathy เกิดได้ (ขาด B12)\n✗ D: Macrocytosis เกิดได้ (ขาด B12)\n✗ E: Glossitis เกิดได้ (ขาด B12)",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
@@ -808,7 +808,7 @@
     "A": "Calcium ↑, phosphate ↓ (ตามที่จำมา: Ca higher, PO4 lower, Na lower)"
    },
    "answer": "A",
-   "why": "PTH: เพิ่ม Ca reabsorption ที่ DCT, ลด phosphate reabsorption ที่ PCT (ยับยั้ง NaPi-IIa) → phosphaturia, กระตุ้น 1α-hydroxylase → calcitriol · ลด HCO3 reabsorption ที่ PCT ด้วย",
+   "why": "✓ A: PTH เพิ่ม Ca reabsorption ที่ DCT, ลด phosphate reabsorption ที่ PCT (ยับยั้ง NaPi-IIa) → phosphaturia\n  กระตุ้น 1α-hydroxylase → calcitriol และลด HCO₃⁻ reabsorption ที่ PCT",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": true,
@@ -822,7 +822,7 @@
     "C": "Tertiary hyperparathyroidism"
    },
    "answer": "C",
-   "why": "CKD นาน ต่อมพาราไทรอยด์ถูกกระตุ้นจนโตและหลั่ง PTH เองโดยไม่ฟัง Ca (autonomous) → PTH สูงลิบ (1180) ทั้งที่ Ca ปกติ/สูง = tertiary hyperparathyroidism → osteitis fibrosa cystica/brown tumor (lytic lesion ที่ mandible) · secondary = Ca ต่ำแล้ว PTH ตอบสนอง · primary = adenoma ไม่เกี่ยว CKD",
+   "why": "CKD นาน → parathyroid ถูกกระตุ้นจนหลั่งเองโดยไม่ฟัง Ca (autonomous)\n✗ A: Primary = adenoma ไม่เกี่ยวกับ CKD\n✗ B: Secondary = Ca ต่ำแล้ว PTH ตอบสนอง\n✓ C: Tertiary: PTH สูงลิบ (1180) ทั้งที่ Ca ปกติ → brown tumor ที่ mandible",
    "source": "เฉลย77",
    "needs_image": false,
    "options_reconstructed": false,
@@ -838,7 +838,7 @@
     "D": "MGUS"
    },
    "answer": "B",
-   "why": "Plasma cell neoplasm หลั่ง M-protein → rouleaux; หลั่ง RANKL/IL-6 → lytic punched-out lesion, pathologic fracture, hyperCa (CRAB); MGUS ไม่มี end-organ damage; hyperPTH ให้ salt-and-pepper skull; metastasis ไม่ทำ rouleaux",
+   "why": "Plasma cell neoplasm: M-protein → rouleaux; RANKL/IL-6 → punched-out lesion, pathologic fracture (CRAB)\n✗ A: HyperPTH → salt-and-pepper skull\n✓ B: Multiple myeloma\n✗ C: Metastasis ไม่ทำ rouleaux\n✗ D: MGUS ไม่มี end-organ damage",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -854,7 +854,7 @@
     "E": "25-alpha hydroxylase"
    },
    "answer": "A",
-   "why": "ไตที่เสื่อมสร้าง 1α-hydroxylase (proximal tubule) ไม่ได้ → 1,25(OH)2D ต่ำ → ดูด Ca ลดลง + secondary hyperPTH → renal osteodystrophy; 25-hydroxylase อยู่ที่ตับ, 24-hydroxylase เป็นตัวทำลาย vit D, ตัวอื่นไม่เกี่ยว",
+   "why": "ไตเสื่อมสร้าง 1α-hydroxylase (proximal tubule) ไม่ได้ → 1,25(OH)2D ต่ำ → renal osteodystrophy\n✓ A: 1α-hydroxylase\n✗ B: 20-hydroxylase ไม่เกี่ยวกับ vit D\n✗ C: 23-hydroxylase ไม่เกี่ยวกับ vit D\n✗ D: 24-hydroxylase เป็นตัวทำลาย vit D\n✗ E: 25-hydroxylase อยู่ที่ตับ",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -867,7 +867,7 @@
     "B": "25-hydroxycholecalciferol ลดลง"
    },
    "answer": "A",
-   "why": "CKD ขับ phosphate ไม่ได้ → PO4 สูงจับ Ca ionized → Ca ต่ำ ร่วมกับ 1,25(OH)2D ลด; ข้อ B ผิดเพราะที่ลดคือ 1,25-(OH)2 ไม่ใช่ 25-OH (สร้างที่ตับ)",
+   "why": "✓ A: CKD ขับ phosphate ไม่ได้ → PO4 สูงจับ Ca ionized → Ca ต่ำ (ร่วมกับ 1,25(OH)2D ลด)\n✗ B: ที่ลดคือ 1,25(OH)2D ไม่ใช่ 25-OH (สร้างที่ตับ)",
    "source": "เฉลย78",
    "needs_image": false,
    "options_reconstructed": false,
@@ -884,7 +884,7 @@
     "E": "PTH เพิ่มเพราะขับ Ca ทางไตเพิ่ม"
    },
    "answer": "B",
-   "why": "Familial hypocalciuric hypercalcemia: CaSR ที่ parathyroid ไวลดลง ต้องใช้ Ca สูงขึ้นจึงจะกด PTH ส่วน CaSR ที่ไตก็ไวลดลงจึงดูด Ca กลับมาก ปัสสาวะมี Ca ต่ำ. Activating mutation ต่างหากที่ทำให้ CaSR ไวขึ้นและ PTH ต่ำ ส่วนการขับ Ca ทางไตในโรคนี้ลดลงไม่ใช่เพิ่ม",
+   "why": "FHH: CaSR ที่ parathyroid ไวลดลง → ต้องใช้ Ca สูงขึ้นจึงกด PTH ได้; CaSR ที่ไตไวลดลง → ดูด Ca กลับมาก\n✗ A: CaSR ไวขึ้น = activating mutation → PTH ต่ำ\n✓ B: PTH เพิ่มเพราะ CaSR ไวลดลง\n✗ C: Osteoblast ไม่ได้ไวต่อ PTH มากขึ้น\n✗ D: ไตดูด Ca กลับมากขึ้น ไม่ใช่บกพร่อง\n✗ E: การขับ Ca ทางไตลดลง ไม่ใช่เพิ่ม",
    "source": "เฉลย79"
   },
   "79/47": {
@@ -897,7 +897,7 @@
     "E": "Bone resorption ลดลง"
    },
    "answer": "A",
-   "why": "CRAB (hyperCa, renal, anemia, bone) ในผู้สูงอายุ = multiple myeloma → serum free light chain (κ/λ) ผิดปกติ, M-spike, Bence Jones; ALP มักปกติเพราะ osteoblast ถูกกด (lytic ล้วน); EPO ไม่เพิ่ม (ไตเสีย); bone resorption เพิ่มจาก RANKL/IL-6",
+   "why": "CRAB (hyperCa, renal, anemia, bone) ในผู้สูงอายุ = multiple myeloma\n✓ A: Monoclonal free light chain เพิ่ม (M-spike, Bence Jones)\n✗ B: Ig รวมเพิ่ม (monoclonal) ไม่ใช่ลด\n✗ C: ALP มักปกติ (osteoblast ถูกกด lytic ล้วน)\n✗ D: EPO ไม่เพิ่ม (ไตเสีย)\n✗ E: Bone resorption เพิ่ม (RANKL/IL-6)",
    "source": "เฉลย79",
    "needs_image": false,
    "options_reconstructed": false,
@@ -911,7 +911,7 @@
     "B": "Hydroxyproline"
    },
    "answer": "B",
-   "why": "vitamin C เป็น cofactor ของ prolyl และ lysyl hydroxylase ในการสร้าง collagen; hydroxyproline สำคัญที่สุดต่อการเกิด H-bond ทำให้ triple helix เสถียร คำตอบคลาสสิกจึงเป็น hydroxyproline (hydroxylysine ก็ลดแต่มีบทบาทใน glycosylation/cross-link) ผลต่อกระดูก: subperiosteal hemorrhage, osteoid สร้างไม่ได้",
+   "why": "Vit C เป็น cofactor ของ prolyl + lysyl hydroxylase\n✗ A: Hydroxylysine ลดด้วย แต่มีบทบาทใน glycosylation/cross-link ไม่ใช่คำตอบคลาสสิก\n✓ B: Hydroxyproline สร้าง H-bond ทำให้ triple helix เสถียร",
    "source": "วิเคราะห์",
    "needs_image": false,
    "options_reconstructed": false,
