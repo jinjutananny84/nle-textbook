@@ -311,6 +311,13 @@ body.has-readbar .toc{top:90px}
 .mv-ch-maze .side-ch-mz .sc-p{font-family:var(--mv-disp);font-size:10.5px;color:var(--muted);flex:none}
 .mv-ch-maze .side-ch-mz .side-bar{margin:0 10px 3px}
 
+/* กราฟิกปราสาทจาง ๆ เฉพาะของแต่ละบทในแถบด้านข้าง */
+.side-ch{position:relative}
+.mv-ch-maze .side-ch-mz{overflow:hidden}
+.mv-sb-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.62}
+.side-cur>.mv-sb-bg{height:68px;opacity:.48}
+.side-ch>a,.side-ch>.side-bar{position:relative;z-index:1}
+
 /* โลโก้ปราสาทประจำบทข้างชื่อบทในแถบด้านข้าง */
 .side-ch>a{display:flex;align-items:center;gap:8px}
 .mv-ch-logo{flex:none;border-radius:7px;box-shadow:0 2px 8px rgba(4,8,20,.22);transition:transform .16s ease,filter .16s ease}
@@ -342,13 +349,21 @@ body.has-readbar .toc{top:90px}
     background:{{MV_SKY_D}} center top/cover no-repeat,linear-gradient(180deg,color-mix(in srgb,var(--mv-sky1) 72%,var(--surface)) 0%,color-mix(in srgb,var(--mv-sky2) 55%,var(--surface)) 52%,color-mix(in srgb,var(--mv-sky3) 34%,var(--surface)) 100%)}
 }
 .mv-castle-realm.g-clip{
-  background:linear-gradient(180deg,color-mix(in srgb,var(--mv-violet) 22%,var(--surface)) 0%,color-mix(in srgb,var(--mv-sky2) 52%,var(--surface)) 52%,color-mix(in srgb,var(--mv-rose) 20%,var(--surface)) 100%)}
+  --g:#52e39a;--gs:rgba(82,227,154,.16);
+  background:linear-gradient(180deg,#b7e8d8 0%,#d8f5eb 52%,#eef8f1 100%);
+  border-color:color-mix(in srgb,#46ad78 38%,var(--line))}
 :root[data-theme="dark"] .mv-castle-realm.g-clip{
-  background:{{MV_SKY_D}} center top/cover no-repeat,linear-gradient(180deg,color-mix(in srgb,var(--mv-violet) 22%,var(--surface)) 0%,color-mix(in srgb,var(--mv-sky2) 52%,var(--surface)) 52%,color-mix(in srgb,var(--mv-rose) 20%,var(--surface)) 100%)}
+  --g:#7bf29f;--gs:rgba(123,242,159,.14);
+  background:linear-gradient(180deg,#030d11 0%,#072429 48%,#0a3a3a 100%);
+  border-color:#154f4c}
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]) .mv-castle-realm.g-clip{
-    background:{{MV_SKY_D}} center top/cover no-repeat,linear-gradient(180deg,color-mix(in srgb,var(--mv-violet) 22%,var(--surface)) 0%,color-mix(in srgb,var(--mv-sky2) 52%,var(--surface)) 52%,color-mix(in srgb,var(--mv-rose) 20%,var(--surface)) 100%)}
+    --g:#7bf29f;--gs:rgba(123,242,159,.14);
+    background:linear-gradient(180deg,#030d11 0%,#072429 48%,#0a3a3a 100%);
+    border-color:#154f4c}
 }
+.mv-castle-realm.g-clip .mv-realm-head{background:color-mix(in srgb,#04161a 78%,transparent);border-bottom-color:#154f4c}
+:root[data-theme="light"] .mv-castle-realm.g-clip .mv-realm-head{background:color-mix(in srgb,#eefbf5 84%,transparent);border-bottom-color:#b2dfcd}
 .mv-realm-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:12px 20px;border-bottom:1px solid color-mix(in srgb,var(--line) 85%,transparent);background:color-mix(in srgb,var(--surface) 84%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);position:relative;z-index:2}
 .mv-realm-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
 .mv-realm-title h2{margin:0;font-size:16px;color:var(--g);display:flex;align-items:center;gap:7px;letter-spacing:.02em}
@@ -410,8 +425,8 @@ body.has-readbar .toc{top:90px}
 .main>.mv-break-strip{max-width:none!important;width:calc(100% + 56px);margin:26px -28px 10px!important}
 @media (max-width: 960px){.main>.mv-break-strip{width:calc(100% + 32px);margin:22px -16px 8px!important}}
 .mv-break-strip{position:relative;line-height:0;user-select:none;-webkit-user-select:none;touch-action:manipulation;overflow:hidden}
-.mv-break-svg{display:block;width:100%;height:158px;cursor:pointer;overflow:visible}
-@media (max-width: 680px){.mv-break-svg{height:132px}}
+.mv-break-canvas{display:block;width:100%;height:158px;cursor:pointer;outline:none}
+@media (max-width: 680px){.mv-break-canvas{height:132px}}
 .mv-break-svg .mv-ribbon{transform-box:fill-box;transform-origin:right center;animation:mv-rib 3.4s ease-in-out infinite}
 .mv-break-svg .mv-cubes{animation:mv-glide 3s ease-in-out infinite}
 .mv-break-svg .mv-toy-ida{transition:transform .34s cubic-bezier(.22,1,.36,1);cursor:pointer}

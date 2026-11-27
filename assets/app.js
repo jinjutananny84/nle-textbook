@@ -284,7 +284,7 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '68';
+  const APP_VER = '69';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
   function refreshIcons() {
     const u = uiStyle();
@@ -1014,41 +1014,112 @@
 
   /* ---------- ปราสาทขั้นบันไดทางเดินสำหรับหน้ารวม สรุปบท A3 และ คลิปติวอาจารย์ ---------- */
   function mvCastleCrownSVG(isClip, dark) {
-    const p = isClip
-      ? (dark ? { s1: '#141536', s2: '#2d235c', s3: '#4c3075', m: '#29295e', w1: '#8e6ab8', w2: '#563c82', top: '#e2c8f5', d1: '#5eead4', d2: '#f472b6', st: '#c4b5fd', ar: '#181438', sw: '#ffd97d' }
-              : { s1: '#d2def4', s2: '#e9e2f5', s3: '#f7e5ef', m: '#b9c6e2', w1: '#d7a8de', w2: '#b381be', top: '#fff6fc', d1: '#72b8d8', d2: '#e485ab', st: '#c8a8ea', ar: '#d5d8ef', sw: '#f0a652' })
-      : (dark ? { s1: '#0e1630', s2: '#1f2856', s3: '#463368', m: '#24315c', w1: '#c87e9e', w2: '#7a4b72', top: '#f5d2df', d1: '#67d8e8', d2: '#f284b6', st: '#5eead4', ar: '#161b3a', sw: '#ffe28a' }
-              : { s1: '#c2e5e3', s2: '#dcefeb', s3: '#eef4ef', m: '#b1d3d6', w1: '#f5aeb9', w2: '#db8c9d', top: '#fff5e4', d1: '#7bb5d6', d2: '#eb8ba8', st: '#8ce3bc', ar: '#cbe5e4', sw: '#f0947a' });
+    if (isClip) {
+      // ธีม Nocturnal Emerald Forest (เขียวดำมืด + หอคอยเขียวมะนาว-มรกตเรืองแสง ตามภาพเรฟ!)
+      const p = dark
+        ? { s1: '#030d11', s2: '#072429', s3: '#0b3c3c', glow: '#299c8f', t1: '#02080b', t2: '#05151a', w1: '#8ef58a', w2: '#399e6c', top: '#d8ffb8', dome: '#d8f6ff', ar: '#051418', sw: '#f472b6', moon: '#7dd3fc' }
+        : { s1: '#bfe9dd', s2: '#d9f4eb', s3: '#eef8f2', glow: '#6cd4b8', t1: '#1a4a47', t2: '#2d6b63', w1: '#7ce391', w2: '#46ad78', top: '#f0ffdc', dome: '#ffffff', ar: '#1d4d48', sw: '#e65c8c', moon: '#ffffff' };
+      return `<svg class="mv-realm-crown-svg" viewBox="0 0 920 176" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="mvcSk1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${p.s1}"/><stop offset="62%" stop-color="${p.s2}"/><stop offset="100%" stop-color="${p.s3}" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="mvcEmG" cx="50%" cy="48%" r="42%">
+            <stop offset="0%" stop-color="${p.glow}" stop-opacity="${dark ? '.55' : '.42'}"/>
+            <stop offset="100%" stop-color="${p.s1}" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="920" height="176" fill="url(#mvcSk1)"/>
+        <ellipse cx="460" cy="76" rx="280" ry="84" fill="url(#mvcEmG)"/>
+        <!-- Subtle night stars -->
+        <g fill="#d8fff0" opacity="${dark ? '.65' : '.45'}">
+          <circle cx="268" cy="24" r="1"/><circle cx="332" cy="14" r=".9"/><circle cx="588" cy="18" r="1"/>
+          <circle cx="642" cy="36" r=".8"/><circle cx="384" cy="42" r=".7"/><circle cx="534" cy="40" r=".8"/>
+        </g>
+        <!-- Slender teal crescent moon cradling the central emerald spire -->
+        <path d="M460 6a16 16 0 1 1-14 23 13 13 0 1 0 14-23z" fill="${p.moon}" opacity=".9"/>
+        <!-- Nocturnal Giant Forest Tree Silhouettes framing left & right -->
+        <g fill="${p.t2}" opacity=".85">
+          <rect x="64" y="0" width="46" height="176"/><rect x="138" y="0" width="32" height="176"/>
+          <rect x="752" y="0" width="34" height="176"/><rect x="812" y="0" width="48" height="176"/>
+          <path d="M108 32 L204 82 L196 92 L108 48 Z M168 106 L254 146 L246 156 L168 120 Z"/>
+          <path d="M754 38 L664 86 L672 96 L754 54 Z M754 108 L674 148 L682 158 L754 122 Z"/>
+        </g>
+        <g fill="${p.t1}">
+          <rect x="0" y="0" width="68" height="176"/><rect x="852" y="0" width="68" height="176"/>
+          <path d="M64 16 L184 74 L176 86 L64 34 Z M64 96 L154 142 L146 154 L64 114 Z"/>
+          <path d="M856 22 L736 78 L744 90 L856 40 Z M856 102 L764 146 L772 158 L856 120 Z"/>
+          <!-- Leaf silhouettes -->
+          <ellipse cx="186" cy="76" rx="10" ry="4" transform="rotate(-24 186 76)"/>
+          <ellipse cx="206" cy="86" rx="9" ry="3.5" transform="rotate(18 206 86)"/>
+          <ellipse cx="734" cy="80" rx="10" ry="4" transform="rotate(24 734 80)"/>
+          <ellipse cx="668" cy="88" rx="9" ry="3.5" transform="rotate(-18 668 88)"/>
+        </g>
+        <!-- Central Luminous Lime-Emerald 3-Spire Forest Citadel -->
+        <g>
+          <!-- Left emerald spire -->
+          <polygon points="368,66 382,58 396,66 396,176 368,176" fill="${p.w2}"/>
+          <polygon points="368,66 382,74 382,176 368,176" fill="${p.w1}"/>
+          <path d="M370 66q0-14 12-22 12 8 12 22z" fill="${p.dome}"/>
+          <line x1="382" y1="44" x2="382" y2="35" stroke="${p.dome}" stroke-width="1.2"/>
+          <path d="M376 92v-12a6 6 0 0 1 12 0v12z" fill="${p.ar}"/>
+          <!-- Right emerald spire -->
+          <polygon points="524,72 538,64 552,72 552,176 524,176" fill="${p.w2}"/>
+          <polygon points="524,72 538,80 538,176 524,176" fill="${p.w1}"/>
+          <path d="M526 72q0-14 12-22 12 8 12 22z" fill="${p.dome}"/>
+          <line x1="538" y1="50" x2="538" y2="41" stroke="${p.dome}" stroke-width="1.2"/>
+          <path d="M532 98v-12a6 6 0 0 1 12 0v12z" fill="${p.ar}"/>
+          <!-- Tall Center Emerald Crown Spire -->
+          <polygon points="436,52 460,40 484,52 484,176 436,176" fill="${p.w2}"/>
+          <polygon points="436,52 460,64 460,176 436,176" fill="${p.w1}"/>
+          <path d="M442 52q0-18 18-28 18 10 18 28z" fill="${p.dome}"/>
+          <line x1="460" y1="24" x2="460" y2="14" stroke="${p.dome}" stroke-width="1.4"/>
+          <path d="M452 94v-16a8 8 0 0 1 16 0v16z" fill="${p.ar}"/>
+          <!-- Stepped emerald bridges connecting spires -->
+          <polygon points="382,118 460,82 538,118 460,154" fill="${p.top}" opacity=".95"/>
+          <polygon points="382,118 460,154 460,176 382,140" fill="${p.w1}"/>
+          <polygon points="538,118 460,154 460,176 538,140" fill="${p.w2}"/>
+          <path d="M448 176v-26a12 12 0 0 1 24 0v26z" fill="${p.ar}"/>
+          <!-- Pink switch crystal -->
+          <polygon points="460,104 468,108 460,112 452,108" fill="${p.sw}"/>
+          <!-- Tiny white Ida at the forest citadel portal -->
+          <g class="mv-traveler" transform="translate(460,144) scale(.92)">
+            <polygon points="0,-12 4,-1 -4,-1" fill="#ffffff"/>
+            <circle cx="0" cy="-13.4" r="1.7" fill="#1e2745"/>
+            <polygon points="0,-20 3.2,-13.2 -3.2,-13.2" fill="#ffffff"/>
+          </g>
+        </g>
+      </svg>`;
+    }
+    const p = dark
+      ? { s1: '#0e1630', s2: '#1f2856', s3: '#463368', m: '#24315c', w1: '#c87e9e', w2: '#7a4b72', top: '#f5d2df', d1: '#67d8e8', d2: '#f284b6', st: '#5eead4', ar: '#161b3a', sw: '#ffe28a' }
+      : { s1: '#c2e5e3', s2: '#dcefeb', s3: '#eef4ef', m: '#b1d3d6', w1: '#f5aeb9', w2: '#db8c9d', top: '#fff5e4', d1: '#7bb5d6', d2: '#eb8ba8', st: '#8ce3bc', ar: '#cbe5e4', sw: '#f0947a' };
     return `<svg class="mv-realm-crown-svg" viewBox="0 0 920 176" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
       <defs>
-        <linearGradient id="mvcSk${isClip ? 1 : 0}" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id="mvcSk0" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="${p.s1}"/><stop offset="60%" stop-color="${p.s2}"/><stop offset="100%" stop-color="${p.s3}" stop-opacity="0"/>
         </linearGradient>
-        <radialGradient id="mvcMn${isClip ? 1 : 0}" cx="50%" cy="50%" r="50%">
+        <radialGradient id="mvcMn0" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stop-color="#ffe799" stop-opacity="${dark ? '.55' : '.45'}"/>
           <stop offset="100%" stop-color="#ffe799" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <rect width="920" height="176" fill="url(#mvcSk${isClip ? 1 : 0})"/>
-      <!-- Starry sky & Glowing Crescent Moon (like the top bar!) -->
+      <rect width="920" height="176" fill="url(#mvcSk0)"/>
       <g fill="#eef2ff" opacity="${dark ? '.82' : '.48'}">
         <circle cx="44" cy="24" r="1.1"/><circle cx="92" cy="14" r=".9"/><circle cx="212" cy="28" r="1.2"/>
         <circle cx="276" cy="48" r=".8"/><circle cx="338" cy="20" r="1.1"/><circle cx="394" cy="42" r=".9"/>
         <circle cx="534" cy="22" r="1.2"/><circle cx="596" cy="46" r=".85"/><circle cx="696" cy="18" r="1"/>
         <circle cx="826" cy="26" r="1.1"/><circle cx="878" cy="48" r=".9"/>
       </g>
-      <circle cx="298" cy="42" r="28" fill="url(#mvcMn${isClip ? 1 : 0})"/>
+      <circle cx="298" cy="42" r="28" fill="url(#mvcMn0)"/>
       <path d="M299 27a13 13 0 1 0 14.5 17.5 10.2 10.2 0 1 1-14.5-17.5z" fill="${dark ? '#ffea9f' : '#fff7cf'}"/>
-      <!-- Distant misty onion domes floating in clouds -->
       <g fill="${p.m}" opacity="${dark ? '.55' : '.62'}">
         <path d="M52 176v-64q0-14 14-24 14 10 14 24v64z"/>
         <path d="M188 176v-78q0-16 16-28 16 12 16 28v78z"/>
         <path d="M708 176v-72q0-15 15-26 15 11 15 26v72z"/>
         <path d="M812 176v-56q0-14 14-24 14 10 14 24v56z"/>
       </g>
-      <!-- Left Twin Slender Onion-Dome Towers (signature from reference image!) -->
       <g>
-        <!-- Left blue/cyan dome tower -->
         <path d="M98 62q0-18 14-30 14 12 14 30z" fill="${p.d1}"/>
         <path d="M112 32q14 12 14 30h-14z" fill="${p.w2}" opacity=".32"/>
         <rect x="100" y="62" width="3.2" height="72" fill="${p.w1}"/>
@@ -1056,7 +1127,6 @@
         <rect x="121" y="62" width="3.2" height="72" fill="${p.w1}"/>
         <polygon points="96,134 126,118 146,128 116,144" fill="${p.top}"/>
         <polygon points="96,134 116,144 116,176 96,176" fill="${p.w1}"/>
-        <!-- Right rose/pink dome tower -->
         <path d="M138 66q0-18 14-30 14 12 14 30z" fill="${p.d2}"/>
         <path d="M152 36q14 12 14 30h-14z" fill="${p.w2}" opacity=".35"/>
         <rect x="140" y="66" width="3.2" height="76" fill="${p.w1}"/>
@@ -1064,25 +1134,19 @@
         <rect x="161" y="66" width="3.2" height="76" fill="${p.w1}"/>
         <polygon points="136,142 166,126 166,176 136,176" fill="${p.w2}"/>
         <polygon points="136,142 152,150 152,176 136,176" fill="${p.w1}"/>
-        <!-- Connecting upper crenellated walkway to center -->
         <polygon points="152,134 268,176 238,176 138,140" fill="${p.top}"/>
         <polygon points="152,144 238,176 152,176" fill="${p.w2}"/>
         <g transform="translate(114,132) scale(.85)">${mvCrowSVG(1)}</g>
       </g>
-      <!-- Right Tall Patterned Obelisk + Arched Doorway Tower & Stepped Staircase -->
       <g>
-        <!-- Tall slender lavender/indigo obelisk -->
         <polygon points="642,8 662,0 682,8 682,176 642,176" fill="${p.w2}"/>
         <polygon points="642,8 662,16 662,176 642,176" fill="${p.w1}" opacity=".85"/>
-        <!-- Perched crow on cantilever ledge -->
         <polygon points="662,56 694,42 706,48 674,62" fill="${p.top}"/>
         <g transform="translate(684,48) scale(.85)">${mvCrowSVG(-1)}</g>
-        <!-- Tall rose doorway spire -->
         <polygon points="738,10 762,0 786,10 786,176 738,176" fill="${p.w2}"/>
         <polygon points="738,10 762,20 762,176 738,176" fill="${p.w1}"/>
         <path d="M744 82V58a9 9 0 0 1 18 0v24z" fill="${p.ar}"/>
         <rect x="769" y="34" width="4" height="10" rx="2" fill="${p.sw}"/>
-        <!-- Descending diagonal isometric staircase from doorway toward center spine -->
         <polygon points="742,82 762,92 678,134 658,124" fill="${p.top}"/>
         <polygon points="658,124 678,134 678,150 658,140" fill="${p.w2}"/>
         <path d="M736 85 L752 93 M724 91 L740 99 M712 97 L728 105 M700 103 L716 111 M688 109 L704 117 M676 115 L692 123" stroke="${p.w2}" stroke-width="1.3" opacity=".55" fill="none"/>
@@ -1090,7 +1154,6 @@
         <polygon points="638,134 700,164 700,176 638,146" fill="${p.w1}"/>
         <g transform="translate(700,136) scale(.9)">${mvCrowSVG(-1)}</g>
       </g>
-      <!-- Center Castle Crown Arch descending into the Staircase Spine -->
       <g>
         <circle cx="460" cy="48" r="34" fill="none" stroke="${p.st}" stroke-opacity=".28" stroke-width="1"/>
         <circle cx="460" cy="48" r="48" fill="none" stroke="${p.st}" stroke-opacity=".16" stroke-width="1" stroke-dasharray="3 4"/>
@@ -1100,7 +1163,6 @@
         <path d="M460 86q20 12 20 30h-20z" fill="${p.w2}" opacity=".35"/>
         <path d="M450 176v-26a10 10 0 0 1 20 0v26z" fill="${p.ar}"/>
         <polygon points="460,134 488,148 460,162 432,148" fill="${p.top}" opacity=".9"/>
-        <!-- White Ida standing at the top portal -->
         <g class="mv-traveler" transform="translate(460,145) scale(.95)">
           <polygon points="0,-12 4,-1 -4,-1" fill="#ffffff"/>
           <circle cx="0" cy="-13.4" r="1.7" fill="#1e2745"/>
@@ -1248,8 +1310,8 @@
 
   function mvCastleBaseSVG(isClip, dark) {
     const p = isClip
-      ? (dark ? { w1: '#654994', w2: '#3f2c66', top: '#d6bcf5', ar: '#141230', tr: '#c4b5fd', fog: '#0e1424' }
-              : { w1: '#d3a5dc', w2: '#b07ebb', top: '#fff5fb', ar: '#d5d8ef', tr: '#9c78d4', fog: '#eef4f5' })
+      ? (dark ? { w1: '#49b879', w2: '#236e50', top: '#d2ffb4', ar: '#041418', tr: '#6ee7b7', fog: '#0e1424' }
+              : { w1: '#7ce092', w2: '#46a875', top: '#f0ffdc', ar: '#c3e8dc', tr: '#288f6c', fog: '#eef4f5' })
       : (dark ? { w1: '#7e527c', w2: '#46325e', top: '#e8c4d8', ar: '#11162e', tr: '#5eead4', fog: '#0e1424' }
               : { w1: '#f0a5b2', w2: '#d48296', top: '#fff4e4', ar: '#c8e4e3', tr: '#6fd8b2', fog: '#eef4f5' });
     return `<svg class="mv-realm-base-svg" viewBox="0 0 920 118" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
@@ -1258,17 +1320,14 @@
           <stop offset="0%" stop-color="${p.fog}" stop-opacity="0"/><stop offset="100%" stop-color="${p.fog}" stop-opacity=".98"/>
         </linearGradient>
       </defs>
-      <!-- Grand arched castle foundation -->
       <polygon points="110,44 460,8 810,44 810,118 110,118" fill="${p.w2}" opacity=".82"/>
       <polygon points="110,44 460,8 460,118 110,118" fill="${p.w1}" opacity=".85"/>
       <polyline points="110,44 460,8 810,44" fill="none" stroke="${p.top}" stroke-width="4" opacity=".9"/>
       <polyline points="110,44 460,8 810,44" fill="none" stroke="${p.tr}" stroke-width="1.5" opacity=".75"/>
-      <!-- Sweeping viaduct arches -->
       <path d="M185 118V70a28 28 0 0 1 56 0v48z" fill="${p.ar}"/>
       <path d="M295 118V60a32 32 0 0 1 64 0v58z" fill="${p.ar}"/>
       <path d="M560 118V60a32 32 0 0 1 64 0v58z" fill="${p.ar}"/>
       <path d="M675 118V70a28 28 0 0 1 56 0v48z" fill="${p.ar}"/>
-      <!-- Center teal/violet framed courtyard arch with peeking Crow-person (like bottom of reference image!) -->
       <rect x="418" y="26" width="84" height="84" rx="4" fill="${p.tr}" opacity="${dark ? '.38' : '.62'}"/>
       <rect x="432" y="40" width="56" height="68" rx="3" fill="${p.ar}"/>
       <g transform="translate(446,96) scale(1.05)">${mvCrowSVG(1)}</g>
@@ -1330,236 +1389,64 @@
     </section>`;
   }
 
-  /* ---------- แถบกราฟิกปราสาทนีออนคั่นเนื้อหากับข้อสอบ (ไร้กรอบกล่อง + กดเดิน/กระโดดเล่นเบา ๆ) ---------- */
+  /* ---------- แถบกราฟิกปราสาทนีออนคั่นเนื้อหากับข้อสอบ + เกมส์กระโดดแบบ Chrome Dino Runner (ไร้กรอบ + ปุ่ม Play & โดด) ---------- */
   let mvGameCleanup = null;
   function stopExamBreakGame() {
     if (mvGameCleanup) { try { mvGameCleanup(); } catch (e) {} mvGameCleanup = null; }
   }
   function mvExamBreakHTML(chId) {
     const th = mvThemeOf(chId);
-    const dark = isDark();
-    const bgFade = dark ? '#0e1424' : '#eef4f5';
-    const sky1 = dark ? '#12182b' : '#bfe3e3';
-    const sky2 = dark ? '#1e2442' : '#e3eff2';
-    const sky3 = dark ? '#2a2448' : '#f7e0ce';
-    const wl = dark ? '#384164' : '#e6a8b6';
-    const wr = dark ? '#222844' : '#c78395';
-    const topC = dark ? '#7682ab' : '#fff4e3';
-    const archC = dark ? '#101528' : '#bce0de';
-    const roofC = dark ? '#b84f5c' : '#df6c77';
-    const neonC = dark ? '#5eead4' : '#2b7a78';
-    const neonP = dark ? '#ff5ea8' : '#df6295';
-    const moonC = dark ? '#ffea99' : '#fff6cc';
-    const cloudC = dark ? '#2a3356' : '#ffffff';
     return `<div class="mv-break-strip" id="mvBreakWrap" style="--mv-g-c:${th.trail};--mv-g-g:${th.gem}">
-      <svg class="mv-break-svg" id="mvBreakSvg" viewBox="0 0 1200 164" preserveAspectRatio="xMidYMid slice" aria-label="แถบกราฟิกปราสาท Monument Valley คั่นเนื้อหากับข้อสอบ">
-        <defs>
-          <linearGradient id="mvbsSk" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="${bgFade}" stop-opacity="0"/>
-            <stop offset="16%" stop-color="${sky1}" stop-opacity=".86"/>
-            <stop offset="68%" stop-color="${sky2}" stop-opacity=".92"/>
-            <stop offset="92%" stop-color="${sky3}" stop-opacity=".5"/>
-            <stop offset="100%" stop-color="${bgFade}" stop-opacity="0"/>
-          </linearGradient>
-          <radialGradient id="mvbsMn" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="${moonC}" stop-opacity="${dark ? '.55' : '.65'}"/>
-            <stop offset="100%" stop-color="${moonC}" stop-opacity="0"/>
-          </radialGradient>
-          <radialGradient id="mvbsPk" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="${neonP}" stop-opacity="${dark ? '.65' : '.38'}"/>
-            <stop offset="100%" stop-color="${neonP}" stop-opacity="0"/>
-          </radialGradient>
-          <radialGradient id="mvbsCy" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity=".55"/>
-            <stop offset="55%" stop-color="${neonC}" stop-opacity=".28"/>
-            <stop offset="100%" stop-color="${neonC}" stop-opacity="0"/>
-          </radialGradient>
-          <filter id="mvbsGl" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="2.6" result="b"/>
-            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-        <!-- Soft frameless atmospheric sky fade full-bleed -->
-        <rect width="1200" height="164" fill="url(#mvbsSk)"/>
-        <!-- Twinkling stars across full 1200px width -->
-        <g fill="#eef2ff" opacity="${dark ? '.8' : '.52'}">
-          <circle cx="46" cy="24" r="1.1"/><circle cx="142" cy="18" r=".8"/><circle cx="242" cy="30" r="1.2"/>
-          <circle cx="388" cy="22" r="1"/><circle cx="518" cy="16" r="1.1"/><circle cx="668" cy="28" r=".9"/>
-          <circle cx="798" cy="18" r="1.2"/><circle cx="924" cy="26" r="1"/><circle cx="1048" cy="20" r="1.2"/><circle cx="1152" cy="34" r=".9"/>
-        </g>
-        <!-- Glowing golden crescent moon tucked in misty clouds -->
-        <circle cx="164" cy="38" r="28" fill="url(#mvbsMn)"/>
-        <path d="M166 24a13 13 0 1 0 14.5 17.5 10.2 10.2 0 1 1-14.5-17.5z" fill="${moonC}"/>
-        <ellipse cx="180" cy="48" rx="22" ry="5.5" fill="${cloudC}" opacity="${dark ? '.55' : '.68'}"/>
-        <ellipse cx="148" cy="52" rx="16" ry="4.5" fill="${cloudC}" opacity="${dark ? '.48' : '.62'}"/>
-
-        <!-- Distant misty onion-dome silhouettes across full width -->
-        <g fill="${dark ? '#232c4e' : '#a7d2d2'}" opacity="${dark ? '.5' : '.58'}">
-          <path d="M58 128V78q0-11 11-19 11 8 11 19v50z"/>
-          <path d="M236 128V76q0-11 11-19 11 8 11 19v52z"/>
-          <path d="M688 128V68q0-12 12-21 12 9 12 21v60z"/>
-          <path d="M962 128V74q0-11 11-19 11 8 11 19v54z"/>
-          <path d="M1108 128V78q0-11 11-19 11 8 11 19v50z"/>
-        </g>
-
-        <!-- === FULL-WIDTH ARCHED BRIDGE FOUNDATION (0..1200) === -->
-        <g>
-          <polygon points="0,122 1200,122 1200,152 0,152" fill="${wr}" opacity=".88"/>
-          <path d="M44 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
-          <path d="M148 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
-          <path d="M268 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
-          <path d="M394 154v-24a24 24 0 0 1 48 0v24z" fill="${archC}"/>
-          <path d="M658 154v-24a24 24 0 0 1 48 0v24z" fill="${archC}"/>
-          <path d="M778 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
-          <path d="M936 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
-          <path d="M1066 154v-22a20 20 0 0 1 40 0v22z" fill="${archC}"/>
-        </g>
-
-        <!-- === LEFT NEON SPIRE TOWER + FLUTTERING CORAL RIBBON + CYAN-EDGED STAIRCASE === -->
-        <g>
-          <polygon points="448,34 464,26 480,34 480,124 448,124" fill="${wr}"/>
-          <polygon points="448,34 464,42 464,124 448,124" fill="${wl}"/>
-          <polygon points="444,35 464,8 484,35 464,43" fill="${roofC}"/>
-          <polygon points="464,8 484,35 464,43" fill="#8f3646" opacity=".5"/>
-          <path class="mv-ribbon mv-neon-glow" d="M464 10 C446 14 430 26 406 26 C392 26 380 32 368 34" fill="none" stroke="#ff7c88" stroke-width="2.6" stroke-linecap="round" filter="url(#mvbsGl)"/>
-          <circle cx="460" cy="60" r="14" fill="url(#mvbsPk)"/>
-          <path d="M454 70V56a6 6 0 0 1 12 0v14z" fill="${archC}" stroke="${neonP}" stroke-width="1.6" class="mv-neon-glow"/>
-          <polygon points="448,68 344,116 344,132 448,124" fill="${wl}"/>
-          <path d="M442 71 L452 76 M430 76 L440 81 M418 82 L428 87 M406 87 L416 92 M394 93 L404 98 M382 98 L392 103 M370 104 L380 109 M358 109 L368 114" stroke="${topC}" stroke-width="2.2" opacity=".9"/>
-          <line x1="446" y1="69" x2="344" y2="117" stroke="${neonC}" stroke-width="2.5" stroke-linecap="round" filter="url(#mvbsGl)" class="mv-neon-glow"/>
-          <polygon points="326,116 346,108 366,116 346,124" fill="${topC}"/>
-          <polygon points="337,116 346,112 355,116 346,120" fill="${neonC}" opacity=".85" class="mv-neon-glow"/>
-        </g>
-
-        <!-- === CENTER FLOATING NEON PINK CUBES + FULL-WIDTH BRIDGE DECK === -->
-        <g>
-          <g class="mv-cubes mv-neon-glow">
-            <circle cx="596" cy="140" r="24" fill="url(#mvbsPk)"/>
-            <rect x="580" y="137" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
-            <rect x="605" y="137" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
-            <rect x="592.5" y="128" width="7" height="7" rx="1.2" fill="#ff8ec7" filter="url(#mvbsGl)"/>
-            <rect x="592.5" y="146" width="7" height="7" rx="1.2" fill="${neonP}" filter="url(#mvbsGl)"/>
-            <line x1="587" y1="140.5" x2="605" y2="140.5" stroke="${neonC}" stroke-width="1.2" opacity=".75"/>
-            <line x1="596" y1="135" x2="596" y2="146" stroke="${neonC}" stroke-width="1.2" opacity=".75"/>
-          </g>
-          <!-- Full-bleed neon cyan walkway deck (0..1200) -->
-          <polygon points="0,114 1200,114 1200,123 0,123" fill="${topC}"/>
-          <line x1="0" y1="114" x2="1200" y2="114" stroke="${neonC}" stroke-width="2.2" filter="url(#mvbsGl)" class="mv-neon-glow"/>
-          <!-- Clickable glowing pink floor switch on bridge -->
-          <g class="mv-sw-btn" id="mvToySw" title="แตะเพื่อเปิด/ปิดไฟปราสาท">
-            <circle cx="762" cy="116" r="14" fill="url(#mvbsPk)"/>
-            <polygon points="750,118 762,112 774,118 762,124" fill="${neonP}" stroke="#ffd2ea" stroke-width="1"/>
-          </g>
-        </g>
-
-        <!-- === RIGHT NEON WATCHTOWER + SIDE PAVILIONS === -->
-        <g>
-          <polygon points="834,46 854,36 874,46 874,148 834,148" fill="${wr}"/>
-          <polygon points="834,46 854,56 854,148 834,148" fill="${wl}"/>
-          <polygon points="830,47 854,22 878,47 854,57" fill="${dark ? '#4d3b6b' : '#b885c4'}"/>
-          <ellipse cx="818" cy="40" rx="28" ry="7" fill="${cloudC}" opacity="${dark ? '.65' : '.72'}"/>
-          <rect x="842" y="64" width="4.5" height="12" rx="2" fill="${neonP}" filter="url(#mvbsGl)" class="mv-neon-glow"/>
-          <rect x="858" y="68" width="4.5" height="11" rx="2" fill="${neonP}" filter="url(#mvbsGl)" class="mv-neon-glow"/>
-          <path d="M843 148v-28a10 10 0 0 1 20 0v28z" fill="${archC}" stroke="${neonP}" stroke-opacity=".75" stroke-width="1.2"/>
-          <!-- Far left & far right subtle side lantern pillars for ultra-wide screens -->
-          <polygon points="104,76 116,70 128,76 128,122 104,122" fill="${wr}" opacity=".85"/>
-          <polygon points="104,76 116,82 116,122 104,122" fill="${wl}" opacity=".85"/>
-          <rect x="114" y="88" width="3.5" height="9" rx="1.7" fill="${neonP}" opacity=".85"/>
-          <polygon points="1028,74 1040,68 1052,74 1052,122 1028,122" fill="${wr}" opacity=".85"/>
-          <polygon points="1028,74 1040,80 1040,122 1028,122" fill="${wl}" opacity=".85"/>
-          <rect x="1038" y="86" width="3.5" height="9" rx="1.7" fill="${neonC}" opacity=".85"/>
-        </g>
-
-        <!-- === CLICKABLE CROW-PEOPLE PERCHED AROUND THE CASTLE === -->
-        <g class="mv-crow-btn" transform="translate(404,87) scale(.86)" title="แตะเพื่อสะกิดอีกา">
-          <g class="mv-crow-in">${mvCrowSVG(1)}</g>
-        </g>
-        <g class="mv-crow-btn" transform="translate(372,102) scale(.86)" title="แตะเพื่อสะกิดอีกา">
-          <g class="mv-crow-in">${mvCrowSVG(1)}</g>
-        </g>
-        <g class="mv-crow-btn" transform="translate(814,114) scale(.95)" title="แตะเพื่อสะกิดอีกา">
-          <g class="mv-crow-in">${mvCrowSVG(-1)}</g>
-        </g>
-
-        <!-- === MOVING GAME ENTITIES LAYER (CROWS & CRYSTALS WHEN PLAYING) === -->
-        <g id="mvToyObs"></g>
-
-        <!-- === PLAYABLE LUMINOUS WHITE IDA (REAL SVG JUMP PHYSICS) === -->
-        <g class="mv-toy-ida" id="mvToyIda" transform="translate(260,114)">
-          <ellipse id="mvHopRing" cx="0" cy="0" rx="18" ry="6" fill="none" stroke="${neonC}" stroke-width="1.8" opacity="0"/>
-          <g id="mvIdaBody">
-            <circle cx="0" cy="-14" r="20" fill="url(#mvbsCy)"/>
-            <line id="mvLegL" x1="-2" y1="-6" x2="-3" y2="0" stroke="#e4eeff" stroke-width="1.8" stroke-linecap="round"/>
-            <line id="mvLegR" x1="2" y1="-6" x2="3" y2="0" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"/>
-            <polygon points="0,-17.5 6,-4.5 -6,-4.5" fill="#ffffff"/>
-            <polygon points="0,-17.5 6,-4.5 0,-4.5" fill="${neonC}" opacity=".28"/>
-            <circle cx="0" cy="-19.2" r="2.3" fill="#1b2442"/>
-            <polygon points="0,-29 4.5,-19.2 -4.5,-19.2" fill="#ffffff"/>
-          </g>
-        </g>
-      </svg>
+      <canvas id="mvBreakCanvas" class="mv-break-canvas" tabindex="0" aria-label="แถบปราสาท Monument Valley กระโดดคั่นข้อสอบ"></canvas>
       <div class="mv-toy-ctrl" aria-label="ควบคุมตัวละคร">
-        <span class="mv-toy-pts" id="mvToyPts" hidden>✦ 0</span>
-        <button type="button" class="mv-toy-play" id="mvToyPlay" title="เล่น / หยุด">▶ Play</button>
+        <span class="mv-toy-pts" id="mvToyPts" hidden>000</span>
+        <button type="button" class="mv-toy-play" id="mvToyPlay" title="เริ่มวิ่ง / หยุด">▶ Play</button>
         <button type="button" class="mv-toy-jump" id="mvToyJ" title="กระโดด (กดซ้ำกลางอากาศได้)">↑ โดด</button>
       </div>
     </div>`;
   }
 
-  function initExamBreakGame() {
+  function initExamBreakGame(chId) {
     stopExamBreakGame();
     const wrap = $('#mvBreakWrap');
-    const svg = $('#mvBreakSvg');
-    const ida = $('#mvToyIda');
-    const obsLayer = $('#mvToyObs');
-    const ringEl = $('#mvHopRing');
-    const legL = $('#mvLegL');
-    const legR = $('#mvLegR');
+    const canvas = $('#mvBreakCanvas');
     const bPlay = $('#mvToyPlay');
     const bJ = $('#mvToyJ');
     const ptsEl = $('#mvToyPts');
-    if (!wrap || !svg || !ida || !obsLayer) return;
+    if (!wrap || !canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
 
-    const NS = 'http://www.w3.org/2000/svg';
+    const th = mvThemeOf(chId);
+    const H = 158;
     const GROUND_Y = 114;
-    const IDA_X = 260;
+    let W = 900, dpr = 1;
 
-    let playing = false;
-    let rafId = 0, lastTs = 0;
+    const resize = () => {
+      const rect = wrap.getBoundingClientRect();
+      W = Math.max(300, Math.round(rect.width || 900));
+      dpr = Math.min(2, window.devicePixelRatio || 1);
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      canvas.style.width = W + 'px';
+      canvas.style.height = H + 'px';
+      draw();
+    };
+
+    let playing = false, crashed = false;
+    let rafId = 0, lastTs = 0, animT = 0;
+    let scroll = 0, speed = 285, score = 0, bonus = 0;
     let iy = GROUND_Y, vy = 0, jumps = 2, runT = 0;
-    let ringT = 0, pts = 0, spawnT = 0.8, orbT = 1.4;
-    let items = []; // { type: 'crow'|'orb', x, y, el, hit }
+    let spawnT = 0.7, orbT = 1.2;
+    let obs = [], orbs = [], rings = [], parts = [], floats = [];
 
-    const makeEl = (tag, attrs) => {
-      const el = document.createElementNS(NS, tag);
-      for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
-      return el;
-    };
-
-    const spawnCrow = () => {
-      const g = makeEl('g', { transform: `translate(1220,${GROUND_Y})` });
-      g.innerHTML = mvCrowSVG(-1);
-      obsLayer.appendChild(g);
-      items.push({ type: 'crow', x: 1220, y: GROUND_Y, el: g, hit: false });
-    };
-
-    const spawnOrb = () => {
-      const y = GROUND_Y - (42 + Math.round(Math.random() * 34));
-      const g = makeEl('g', { transform: `translate(1220,${y})` });
-      g.innerHTML = `<polygon points="0,-9 6.5,0 0,9 -6.5,0" fill="#fff6c8" stroke="#5eead4" stroke-width="1"/><polygon points="0,-9 6.5,0 0,9" fill="#5eead4" opacity=".65"/>`;
-      obsLayer.appendChild(g);
-      items.push({ type: 'orb', x: 1220, y, el: g, hit: false });
-    };
-
-    const clearItems = () => {
-      for (const it of items) it.el.remove();
-      items = [];
-    };
+    const playerX = () => Math.min(180, Math.max(76, W * 0.16));
 
     const updatePts = () => {
       if (!ptsEl) return;
-      ptsEl.hidden = !playing && pts === 0;
-      ptsEl.textContent = `✦ ${pts}`;
+      const tot = Math.floor(score + bonus);
+      ptsEl.hidden = !playing && tot === 0;
+      ptsEl.textContent = crashed ? `✦ ${tot} · ชนแล้ว!` : `✦ ${String(tot).padStart(3, '0')}`;
     };
 
     const ensureLoop = () => {
@@ -1569,137 +1456,452 @@
       }
     };
 
+    const burst = (x, y, col, n = 10) => {
+      for (let i = 0; i < n; i++) {
+        const a = (Math.PI * 2 * i / n) + Math.random() * 0.4;
+        const sp = 50 + Math.random() * 110;
+        parts.push({ x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 30, life: 0.42 + Math.random() * 0.2, max: 0.62, r: 1.7 + Math.random() * 1.8, col });
+      }
+    };
+
+    const startRun = () => {
+      playing = true; crashed = false;
+      score = 0; bonus = 0; speed = 290;
+      iy = GROUND_Y; vy = 0; jumps = 2;
+      obs = []; orbs = []; rings = []; parts = []; floats = [];
+      spawnT = 0.65; orbT = 1.1;
+      if (bPlay) { bPlay.textContent = '⏸ หยุด'; bPlay.classList.add('on'); }
+      updatePts();
+      ensureLoop();
+    };
+
+    const stopRun = () => {
+      playing = false; crashed = false;
+      obs = []; orbs = [];
+      if (bPlay) { bPlay.textContent = '▶ Play'; bPlay.classList.remove('on'); }
+      updatePts();
+      draw();
+    };
+
     const doJump = () => {
+      if (crashed) {
+        startRun();
+        vy = -490; jumps = 1;
+        rings.push({ x: playerX(), y: GROUND_Y, r: 4, maxR: 24, life: 0.36, col: '#5eead4' });
+        return;
+      }
       if (jumps > 0) {
-        vy = jumps === 2 ? -450 : -390;
+        const dbl = jumps === 1;
+        vy = dbl ? -440 : -505;
         jumps--;
-        ringT = 0.42;
+        rings.push({ x: playerX(), y: iy, r: 4, maxR: dbl ? 30 : 22, life: 0.38, col: dbl ? '#ff5ea8' : '#5eead4' });
+        if (dbl) burst(playerX(), iy - 4, '#5eead4', 7);
         ensureLoop();
       }
     };
 
     const togglePlay = () => {
-      playing = !playing;
-      if (bPlay) {
-        bPlay.textContent = playing ? '⏸ หยุด' : '▶ Play';
-        bPlay.classList.toggle('on', playing);
-      }
-      if (playing) {
-        pts = 0; spawnT = 0.6; orbT = 1.1;
-        clearItems();
-        updatePts();
-        ensureLoop();
-      } else {
-        clearItems();
-      }
+      if (playing) stopRun();
+      else startRun();
+    };
+
+    const spawnOb = () => {
+      const r = Math.random();
+      if (r < 0.48) obs.push({ type: 'crow', x: W + 30, w: 18, h: 22, ph: Math.random() * 6 });
+      else if (r < 0.78) obs.push({ type: 'pillar', x: W + 30, w: 18, h: 28 + Math.round(Math.random() * 14), ph: 0 });
+      else obs.push({ type: 'crow2', x: W + 30, w: 34, h: 22, ph: Math.random() * 6 });
+    };
+
+    const spawnOrb = () => {
+      orbs.push({ x: W + 30, y: GROUND_Y - (42 + Math.random() * 38), ph: Math.random() * 6 });
     };
 
     const tick = (ts) => {
-      if (!svg.isConnected) { stopExamBreakGame(); return; }
+      if (!canvas.isConnected) { stopExamBreakGame(); return; }
       const dt = Math.min(0.05, Math.max(0.001, (ts - lastTs) / 1000));
       lastTs = ts;
+      animT += dt;
 
-      // ฟิสิกส์กระโดดจริงด้วย SVG transform (การันตีโดดได้ลื่นทุกเบราว์เซอร์)
+      // ฟิสิกส์การกระโดด (ทำงานตลอดทั้งตอน idle และตอน Play)
       if (iy < GROUND_Y || vy < 0) {
-        vy += 1280 * dt;
+        vy += 1480 * dt;
         iy += vy * dt;
         if (iy >= GROUND_Y) {
           iy = GROUND_Y; vy = 0; jumps = 2;
         }
       }
-      ida.setAttribute('transform', `translate(${IDA_X},${iy.toFixed(1)})`);
 
-      // แอนิเมชันขาวิ่งเวลาเปิด Play
-      if (playing || iy < GROUND_Y) {
-        runT += dt * 13;
-        const sw = iy < GROUND_Y ? 3.5 : Math.sin(runT) * 4;
-        if (legL) legL.setAttribute('x2', (-2 - sw).toFixed(1));
-        if (legR) legR.setAttribute('x2', (2 + sw).toFixed(1));
-      }
+      if (playing && !crashed) {
+        speed = Math.min(480, speed + dt * 7);
+        scroll += speed * dt;
+        score += dt * 12;
+        if (iy >= GROUND_Y - 0.5) runT += dt * (speed / 24);
+        updatePts();
 
-      // วงแสงไซอันตอนกระโดด
-      if (ringT > 0 && ringEl) {
-        ringT = Math.max(0, ringT - dt);
-        const f = 1 - ringT / 0.42;
-        ringEl.setAttribute('opacity', (1 - f).toFixed(2));
-        ringEl.setAttribute('rx', (10 + f * 24).toFixed(1));
-        ringEl.setAttribute('ry', (3.5 + f * 8).toFixed(1));
-      } else if (ringEl) {
-        ringEl.setAttribute('opacity', '0');
-      }
-
-      if (playing) {
         spawnT -= dt;
-        if (spawnT <= 0) { spawnCrow(); spawnT = 1.45 + Math.random() * 1.1; }
+        if (spawnT <= 0) {
+          spawnOb();
+          const minGap = Math.max(0.68, 1.32 - (speed - 280) / 380);
+          spawnT = minGap + Math.random() * 0.62;
+        }
         orbT -= dt;
-        if (orbT <= 0) { spawnOrb(); orbT = 1.7 + Math.random() * 1.2; }
-        const spd = 270;
-        for (let i = items.length - 1; i >= 0; i--) {
-          const it = items[i];
-          it.x -= spd * dt;
-          if (it.x < -40) { it.el.remove(); items.splice(i, 1); continue; }
-          it.el.setAttribute('transform', `translate(${it.x.toFixed(1)},${it.y})`);
-          if (it.type === 'orb' && !it.hit && Math.hypot(IDA_X - it.x, (iy - 14) - it.y) < 22) {
-            it.hit = true; it.el.remove(); items.splice(i, 1);
-            pts += 10; updatePts();
-            ringT = 0.42;
-          } else if (it.type === 'crow' && !it.hit && Math.abs(IDA_X - it.x) < 12 && iy > GROUND_Y - 15) {
-            it.hit = true;
-            // ชนเบา ๆ ไม่ต้องเด้งกล่อง Game Over แค่เด้งตัวขึ้นนิดเดียวแล้วเล่นต่อชิล ๆ
-            vy = -260; jumps = 1;
-            pts = Math.max(0, pts - 5); updatePts();
-          } else if (it.type === 'crow' && !it.hit && it.x < IDA_X - 16) {
-            it.hit = true;
-            pts += 1; updatePts();
+        if (orbT <= 0) {
+          spawnOrb();
+          orbT = 1.45 + Math.random() * 1.15;
+        }
+
+        const px = playerX();
+        const px1 = px - 5.5, px2 = px + 5.5, py1 = iy - 25, py2 = iy - 2;
+        for (let i = obs.length - 1; i >= 0; i--) {
+          const ob = obs[i];
+          ob.x -= speed * dt;
+          ob.ph += dt * 7.5;
+          if (ob.x < -50) { obs.splice(i, 1); continue; }
+          const ox1 = ob.x - ob.w * 0.4, ox2 = ob.x + ob.w * 0.4;
+          const oy1 = GROUND_Y - ob.h + 5, oy2 = GROUND_Y;
+          if (px2 > ox1 && px1 < ox2 && py2 > oy1 && py1 < oy2) {
+            crashed = true;
+            burst(px, iy - 12, '#ff5ea8', 14);
+            burst(px, iy - 12, '#5eead4', 10);
+            if (bPlay) { bPlay.textContent = '↻ Play'; bPlay.classList.remove('on'); }
+            updatePts();
+            break;
+          }
+        }
+        for (let i = orbs.length - 1; i >= 0; i--) {
+          const o = orbs[i];
+          o.x -= speed * dt;
+          o.ph += dt * 4.5;
+          if (o.x < -30) { orbs.splice(i, 1); continue; }
+          const oy = o.y + Math.sin(o.ph) * 4;
+          if (Math.hypot(px - o.x, (iy - 13) - oy) < 20) {
+            bonus += 10;
+            burst(o.x, oy, '#ffe28a', 9);
+            floats.push({ x: o.x, y: oy - 8, txt: '+10', life: 0.7, col: '#5eead4' });
+            updatePts();
+            orbs.splice(i, 1);
           }
         }
       }
 
-      const active = playing || iy < GROUND_Y || vy !== 0 || ringT > 0;
+      for (let i = rings.length - 1; i >= 0; i--) {
+        const rg = rings[i];
+        rg.r += (rg.maxR - rg.r) * Math.min(1, dt * 11);
+        rg.life -= dt;
+        if (rg.life <= 0) rings.splice(i, 1);
+      }
+      for (let i = parts.length - 1; i >= 0; i--) {
+        const p = parts[i];
+        p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 240 * dt; p.life -= dt;
+        if (p.life <= 0) parts.splice(i, 1);
+      }
+      for (let i = floats.length - 1; i >= 0; i--) {
+        const f = floats[i];
+        f.y -= 26 * dt; f.life -= dt;
+        if (f.life <= 0) floats.splice(i, 1);
+      }
+
+      draw();
+      const active = (playing && !crashed) || iy < GROUND_Y || vy !== 0 || rings.length || parts.length || floats.length;
       if (active) rafId = requestAnimationFrame(tick);
       else rafId = 0;
     };
 
-    const onSvgClick = (e) => {
-      const crow = e.target.closest('.mv-crow-btn');
-      if (crow) {
-        crow.classList.remove('hop');
-        void crow.getBoundingClientRect();
-        crow.classList.add('hop');
-        return;
+    const drawCrow = (cx, cy, ph, scale = 1) => {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.scale(scale, scale);
+      const bob = Math.sin(ph) * 1.4;
+      ctx.strokeStyle = '#0d101d'; ctx.lineWidth = 1.6;
+      ctx.beginPath(); ctx.moveTo(-2, -6); ctx.lineTo(-3 - bob * 0.7, 0); ctx.moveTo(2, -6); ctx.lineTo(3 + bob * 0.7, 0); ctx.stroke();
+      ctx.fillStyle = '#14192a';
+      ctx.beginPath(); ctx.moveTo(-5.8, -5); ctx.quadraticCurveTo(-5.8, -17.5, 0, -20.5); ctx.quadraticCurveTo(5.8, -17.5, 5.8, -5); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(-2, -20); ctx.lineTo(-12, -17.5); ctx.lineTo(-3, -14.5); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#ffffff'; ctx.beginPath(); ctx.arc(-2.1, -17.2, 2.5, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#121626'; ctx.beginPath(); ctx.arc(-2.6, -17.2, 1.1, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+    };
+
+    const drawIda = (ix, iyPos) => {
+      const air = iyPos < GROUND_Y - 1;
+      // เงาที่พื้นหดลงตามความสูง
+      const hRatio = Math.max(0.25, 1 - (GROUND_Y - iyPos) / 110);
+      ctx.fillStyle = 'rgba(10,16,32,0.45)';
+      ctx.beginPath(); ctx.ellipse(ix, GROUND_Y + 1, 9 * hRatio, 2.6 * hRatio, 0, 0, Math.PI * 2); ctx.fill();
+
+      ctx.save();
+      ctx.translate(ix, iyPos);
+      if (air) ctx.rotate(Math.max(-0.2, Math.min(0.2, vy * 0.00042)));
+      const ag = ctx.createRadialGradient(0, -14, 2, 0, -14, 22);
+      ag.addColorStop(0, 'rgba(255,255,255,0.42)');
+      ag.addColorStop(0.55, 'rgba(94,234,212,0.22)');
+      ag.addColorStop(1, 'rgba(94,234,212,0)');
+      ctx.fillStyle = ag;
+      ctx.beginPath(); ctx.arc(0, -14, 22, 0, Math.PI * 2); ctx.fill();
+
+      const step = air ? 4 : (playing && !crashed ? Math.sin(runT) * 4.5 : 0.8);
+      ctx.strokeStyle = '#e8f1ff'; ctx.lineWidth = 1.8; ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(-2, -6); ctx.lineTo(-2 - step, 0); ctx.moveTo(2, -6); ctx.lineTo(2 + step, 0); ctx.stroke();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath(); ctx.moveTo(0, -18.5); ctx.lineTo(6.2, -5); ctx.lineTo(-6.2, -5); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = th.trail; ctx.globalAlpha = 0.24;
+      ctx.beginPath(); ctx.moveTo(0, -18.5); ctx.lineTo(6.2, -5); ctx.lineTo(0, -5); ctx.closePath(); ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.fillStyle = '#1b2442'; ctx.beginPath(); ctx.arc(0, -20.2, 2.5, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#ffffff'; ctx.beginPath(); ctx.moveTo(0, -30); ctx.lineTo(4.8, -20.2); ctx.lineTo(-4.8, -20.2); ctx.closePath(); ctx.fill();
+      ctx.restore();
+    };
+
+    const drawCastleModule = (ox, dark) => {
+      const wl = dark ? '#363f63' : '#e6a8b5', wr = dark ? '#212744' : '#c98597';
+      const topC = dark ? '#707ca6' : '#fff3e2', archC = dark ? '#101528' : '#bce0de';
+      const roofC = dark ? '#b8505a' : '#df6c77', neonC = dark ? '#5eead4' : '#2b7a78', neonP = '#ff5ea8';
+
+      // หอคอยสูง + ธงริบบิ้นสีชมพู-ส้ม
+      const tx = ox + 110, ty = GROUND_Y - 82;
+      ctx.fillStyle = wr; ctx.fillRect(tx, ty, 24, 82);
+      ctx.fillStyle = wl; ctx.fillRect(tx - 12, ty + 4, 12, 78);
+      ctx.fillStyle = roofC;
+      ctx.beginPath(); ctx.moveTo(tx - 15, ty + 4); ctx.lineTo(tx + 6, ty - 22); ctx.lineTo(tx + 27, ty); ctx.closePath(); ctx.fill();
+      ctx.save();
+      ctx.strokeStyle = '#ff7b89'; ctx.shadowColor = neonP; ctx.shadowBlur = dark ? 8 : 2; ctx.lineWidth = 2.2;
+      ctx.beginPath(); ctx.moveTo(tx + 6, ty - 21);
+      const wv = Math.sin(animT * 4 + ox * 0.02) * 3;
+      ctx.bezierCurveTo(tx - 12, ty - 16 + wv, tx - 24, ty - 8 - wv, tx - 42, ty - 6 + wv);
+      ctx.stroke(); ctx.restore();
+      // ประตูซุ้มนีออนชมพู
+      ctx.save();
+      ctx.fillStyle = archC; ctx.beginPath(); ctx.arc(tx + 10, ty + 22, 5.5, Math.PI, 0); ctx.lineTo(tx + 15.5, ty + 34); ctx.lineTo(tx + 4.5, ty + 34); ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = neonP; ctx.shadowColor = neonP; ctx.shadowBlur = dark ? 10 : 2; ctx.lineWidth = 1.6; ctx.stroke(); ctx.restore();
+
+      // บันไดเฉียงขอบนีออนไซอัน
+      const sx0 = tx - 12, sy0 = ty + 32, sx1 = tx - 72, sy1 = GROUND_Y - 4;
+      ctx.fillStyle = wl;
+      ctx.beginPath(); ctx.moveTo(sx0, sy0); ctx.lineTo(sx1, sy1); ctx.lineTo(sx1, GROUND_Y); ctx.lineTo(sx0, GROUND_Y); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = topC;
+      for (let k = 0; k < 8; k++) {
+        const t = k / 8;
+        const x0 = sx0 + (sx1 - sx0) * t, y0 = sy0 + (sy1 - sy0) * t;
+        ctx.fillRect(x0 - 6, y0, 10, 2.5);
       }
-      if (e.target.closest('#mvToySw')) {
-        wrap.classList.toggle('lit');
-        doJump();
-        return;
+      ctx.save(); ctx.strokeStyle = neonC; ctx.shadowColor = neonC; ctx.shadowBlur = dark ? 8 : 2; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(sx0 + 2, sy0); ctx.lineTo(sx1 + 2, sy1); ctx.stroke(); ctx.restore();
+
+      // หอคอยฝั่งขวา + หน้าต่างชมพู
+      const rx = ox + 266, ry = GROUND_Y - 68;
+      ctx.fillStyle = wr; ctx.fillRect(rx, ry, 26, 68);
+      ctx.fillStyle = wl; ctx.fillRect(rx - 12, ry + 5, 12, 63);
+      ctx.fillStyle = dark ? '#4c3b6b' : '#b885c4';
+      ctx.beginPath(); ctx.moveTo(rx - 14, ry + 5); ctx.lineTo(rx + 6, ry - 18); ctx.lineTo(rx + 28, ry); ctx.closePath(); ctx.fill();
+      ctx.save(); ctx.fillStyle = neonP; ctx.shadowColor = neonP; ctx.shadowBlur = dark ? 8 : 2;
+      ctx.fillRect(rx + 5, ry + 16, 4, 10); ctx.fillRect(rx + 15, ry + 18, 4, 9);
+      ctx.restore();
+    };
+
+    const draw = () => {
+      const dark = isDark();
+      ctx.save();
+      ctx.scale(dpr, dpr);
+      ctx.clearRect(0, 0, W, H);
+
+      // 1. ท้องฟ้ากลืนไร้ขอบบน-ล่าง
+      const bgFade = dark ? '#0e1424' : '#eef4f5';
+      const sky = ctx.createLinearGradient(0, 0, 0, H);
+      sky.addColorStop(0, bgFade);
+      sky.addColorStop(0.18, dark ? '#131a30' : '#c0e4e3');
+      sky.addColorStop(0.7, dark ? '#1f2544' : '#e4eff2');
+      sky.addColorStop(1, bgFade);
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, W, H);
+
+      // ดาวพารัลแลกซ์
+      ctx.fillStyle = dark ? 'rgba(238,242,255,0.72)' : 'rgba(255,255,255,0.75)';
+      for (let i = 0; i < 20; i++) {
+        const sx = ((i * 83 + 22) - scroll * 0.05) % (W + 40);
+        const fx = sx < -10 ? sx + W + 40 : sx;
+        const sy = 16 + (i * 29) % 52;
+        ctx.beginPath(); ctx.arc(fx, sy, i % 3 ? 0.9 : 1.3, 0, Math.PI * 2); ctx.fill();
       }
+
+      // จันทร์เสี้ยวในหมอก
+      const mx = Math.min(118, W * 0.12), my = 36;
+      const mg = ctx.createRadialGradient(mx, my, 2, mx, my, 30);
+      mg.addColorStop(0, dark ? 'rgba(255,234,153,0.48)' : 'rgba(255,246,204,0.68)');
+      mg.addColorStop(1, 'rgba(255,234,153,0)');
+      ctx.fillStyle = mg; ctx.beginPath(); ctx.arc(mx, my, 30, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = dark ? '#ffea99' : '#fff6cc';
+      ctx.beginPath(); ctx.arc(mx, my, 10, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = dark ? '#161c34' : '#cbe8e8';
+      ctx.beginPath(); ctx.arc(mx + 4.3, my - 1.5, 8.2, 0, Math.PI * 2); ctx.fill();
+
+      // 2. ปราสาท Parallax เลื่อนตามเวลาวิ่ง (เหมือนฉากหลัง Dino Runner!)
+      const modW = 380;
+      const farOff = -(scroll * 0.35) % modW;
+      for (let x = farOff - modW; x < W + modW; x += modW) {
+        drawCastleModule(x, dark);
+      }
+
+      // 3. ซุ้มสะพานด้านล่าง + ก้อนลูกบาศก์นีออนชมพู 4 ก้อนเลื่อนตามพื้น
+      ctx.fillStyle = dark ? '#1a213b' : '#b7cfd4';
+      ctx.fillRect(0, GROUND_Y, W, 32);
+      const midW = 240;
+      const midOff = -(scroll * 0.72) % midW;
+      for (let x = midOff - midW; x < W + midW; x += midW) {
+        ctx.fillStyle = dark ? '#101528' : '#d5e9ea';
+        ctx.beginPath(); ctx.arc(x + 68, GROUND_Y + 32, 20, Math.PI, 0); ctx.fill();
+        ctx.beginPath(); ctx.arc(x + 178, GROUND_Y + 32, 16, Math.PI, 0); ctx.fill();
+        const cx = x + 124, cy = GROUND_Y + 15 + Math.sin(animT * 2.5 + x) * 1.4;
+        ctx.save(); ctx.fillStyle = '#ff5ea8'; ctx.shadowColor = '#ff5ea8'; ctx.shadowBlur = dark ? 8 : 2;
+        ctx.fillRect(cx - 7, cy - 2, 4, 4); ctx.fillRect(cx + 3, cy - 2, 4, 4);
+        ctx.fillRect(cx - 2, cy - 7, 4, 4); ctx.fillRect(cx - 2, cy + 3, 4, 4);
+        ctx.restore();
+      }
+      // จางขอบล่างให้กลืนกับพื้นหลังเว็บ
+      const botFade = ctx.createLinearGradient(0, GROUND_Y + 18, 0, H);
+      botFade.addColorStop(0, 'rgba(14,20,36,0)');
+      botFade.addColorStop(1, bgFade);
+      ctx.fillStyle = botFade; ctx.fillRect(0, GROUND_Y + 18, W, H - (GROUND_Y + 18));
+
+      // 4. พื้นสะพานวิ่งเร็ว 1:1 + เส้นไฟนีออนไซอัน
+      ctx.fillStyle = dark ? '#6e7aa3' : '#fff3e2';
+      ctx.fillRect(0, GROUND_Y - 2, W, 5);
+      const tileOff = -(scroll % 34);
+      ctx.strokeStyle = dark ? 'rgba(20,26,48,0.45)' : 'rgba(180,130,140,0.3)';
+      ctx.lineWidth = 1.2;
+      for (let x = tileOff; x < W; x += 34) {
+        ctx.beginPath(); ctx.moveTo(x, GROUND_Y - 2); ctx.lineTo(x - 5, GROUND_Y + 3); ctx.stroke();
+      }
+      ctx.save();
+      ctx.strokeStyle = dark ? '#5eead4' : '#2b7a78';
+      ctx.shadowColor = '#5eead4'; ctx.shadowBlur = dark ? 9 : 2; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(0, GROUND_Y - 2); ctx.lineTo(W, GROUND_Y - 2); ctx.stroke();
+      ctx.restore();
+
+      // 5. คริสตัล + อุปสรรค (อีกา / เสาหิน)
+      for (const o of orbs) {
+        const oy = o.y + Math.sin(o.ph) * 4;
+        ctx.save(); ctx.translate(o.x, oy);
+        ctx.fillStyle = '#fff6c8';
+        ctx.beginPath(); ctx.moveTo(0, -8); ctx.lineTo(5.5, 0); ctx.lineTo(0, 8); ctx.lineTo(-5.5, 0); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = '#5eead4'; ctx.globalAlpha = 0.7;
+        ctx.beginPath(); ctx.moveTo(0, -8); ctx.lineTo(5.5, 0); ctx.lineTo(0, 8); ctx.closePath(); ctx.fill();
+        ctx.restore();
+      }
+      if (!playing) {
+        drawCrow(W * 0.56, GROUND_Y, 0, 0.96);
+        drawCrow(W * 0.72, GROUND_Y, 1.8, 0.9);
+      } else {
+        for (const ob of obs) {
+          if (ob.type === 'crow') drawCrow(ob.x, GROUND_Y, ob.ph, 1);
+          else if (ob.type === 'crow2') { drawCrow(ob.x - 8, GROUND_Y, ob.ph, 0.92); drawCrow(ob.x + 8, GROUND_Y, ob.ph + 2, 0.9); }
+          else {
+            const bx = ob.x - ob.w / 2, by = GROUND_Y - ob.h;
+            ctx.fillStyle = dark ? '#3a4268' : '#d695a6'; ctx.fillRect(bx, by, ob.w * 0.55, ob.h);
+            ctx.fillStyle = dark ? '#242a48' : '#b77487'; ctx.fillRect(bx + ob.w * 0.55, by, ob.w * 0.45, ob.h);
+            ctx.fillStyle = '#ff5ea8'; ctx.fillRect(ob.x - 1.5, by + 7, 3, 9);
+          }
+        }
+      }
+
+      // 6. วงแหวนกระโดด + ตัว Ida + อนุภาค
+      for (const rg of rings) {
+        ctx.save(); ctx.strokeStyle = rg.col; ctx.globalAlpha = Math.max(0, rg.life / 0.38); ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.ellipse(rg.x, rg.y, rg.r, rg.r * 0.4, 0, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
+      }
+      drawIda(playerX(), iy);
+
+      for (const p of parts) {
+        ctx.save(); ctx.fillStyle = p.col; ctx.globalAlpha = Math.max(0, p.life / p.max);
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+      }
+      ctx.font = '700 12px "Josefin Sans","IBM Plex Sans Thai",sans-serif';
+      ctx.textAlign = 'center';
+      for (const f of floats) {
+        ctx.save(); ctx.fillStyle = f.col; ctx.globalAlpha = Math.max(0, f.life / 0.7);
+        ctx.fillText(f.txt, f.x, f.y); ctx.restore();
+      }
+      ctx.restore();
+    };
+
+    const onPointer = (e) => {
+      e.preventDefault();
+      canvas.focus({ preventScroll: true });
       doJump();
     };
     const onKey = (e) => {
-      if (!playing) return;
       if (e.code !== 'Space' && e.code !== 'ArrowUp') return;
       const ae = document.activeElement;
       if (ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA' || ae.tagName === 'SELECT' || ae.isContentEditable)) return;
-      e.preventDefault();
-      doJump();
+      if (playing || ae === canvas || (ae && wrap.contains(ae))) {
+        e.preventDefault();
+        doJump();
+      }
     };
 
-    svg.addEventListener('click', onSvgClick);
+    canvas.addEventListener('pointerdown', onPointer);
     window.addEventListener('keydown', onKey);
-    if (bPlay) bPlay.onclick = (e) => { e.stopPropagation(); togglePlay(); };
-    if (bJ) bJ.onclick = (e) => { e.stopPropagation(); doJump(); };
+    window.addEventListener('resize', resize);
+    if (bPlay) bPlay.onclick = (e) => { e.stopPropagation(); canvas.focus({ preventScroll: true }); togglePlay(); };
+    if (bJ) bJ.onclick = (e) => { e.stopPropagation(); canvas.focus({ preventScroll: true }); doJump(); };
+
+    resize();
 
     mvGameCleanup = () => {
       if (rafId) cancelAnimationFrame(rafId);
       rafId = 0;
-      clearItems();
-      svg.removeEventListener('click', onSvgClick);
+      canvas.removeEventListener('pointerdown', onPointer);
       window.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', resize);
     };
   }
 
   /* ---------- sidebar ---------- */
   const MV_MINI_HERO = `<svg class="mv-mini-hero" viewBox="0 0 14 20" aria-hidden="true"><polygon points="7,8 10.6,18 3.4,18" fill="#ffffff"/><circle cx="7" cy="6.8" r="1.5" fill="#1b2442"/><polygon points="7,1 9.8,6.8 4.2,6.8" fill="#ffffff"/></svg>`;
+  // กราฟิกปราสาทจาง ๆ เฉพาะของแต่ละบทสำหรับพื้นหลังแถบด้านข้าง
+  function mvSideCardBG(chId) {
+    const th = mvThemeOf(chId);
+    const id = String(chId || '').toLowerCase();
+    let silhouette = '';
+    if (th.shape === 'twin') {
+      silhouette = `
+        <path d="M168 64V22q0-5 5-9 5 4 5 9v42zM198 64V16q0-5 5-9 5 4 5 9v48z" fill="${th.wl}" opacity=".55"/>
+        <polygon points="150,46 218,46 218,64 150,64" fill="${th.wr}" opacity=".5"/>
+        <path d="M178 64v-12a6 6 0 0 1 12 0v12z" fill="${th.arch}" opacity=".6"/>
+        <rect x="201" y="26" width="2.5" height="6" rx="1.2" fill="${th.win}" opacity=".8"/>`;
+    } else if (th.shape === 'spiral') {
+      silhouette = `
+        <polygon points="164,64 186,14 212,64" fill="${th.wr}" opacity=".5"/>
+        <polygon points="146,50 186,32 224,50 224,64 146,64" fill="${th.wl}" opacity=".5"/>
+        <polyline points="154,48 186,33 216,48" fill="none" stroke="${th.trail}" stroke-width="1.5" opacity=".75"/>
+        <path d="M180 64v-13a6 6 0 0 1 12 0v13z" fill="${th.arch}" opacity=".6"/>`;
+    } else if (th.shape === 'forest') {
+      silhouette = `
+        <rect x="224" y="0" width="12" height="64" fill="${th.spire}" opacity=".45"/>
+        <path d="M160 64V34q0-6 6-10 6 4 6 10v30zM186 64V18q0-7 7-12 7 5 7 12v46zM210 64V36q0-6 6-10 6 4 6 10v28z" fill="${th.wl}" opacity=".55"/>
+        <rect x="191.5" y="26" width="2.5" height="6" rx="1.2" fill="${th.win}" opacity=".85"/>`;
+    } else {
+      silhouette = `
+        <polygon points="178,64 178,18 190,12 202,18 202,64" fill="${th.wr}" opacity=".55"/>
+        <polygon points="148,50 198,28 214,36 164,58" fill="${th.top}" opacity=".4"/>
+        <polyline points="152,50 198,29" fill="none" stroke="${th.trail}" stroke-width="1.4" opacity=".75"/>
+        <path d="M184 64v-12a6 6 0 0 1 12 0v12z" fill="${th.arch}" opacity=".6"/>`;
+    }
+    const extra = id.startsWith('kt-')
+      ? `<circle cx="152" cy="18" r="7" fill="none" stroke="${th.trail}" stroke-opacity=".35" stroke-width=".9"/>`
+      : `<circle cx="152" cy="18" r="1" fill="${th.win}" opacity=".75"/><circle cx="222" cy="14" r=".9" fill="${th.trail}" opacity=".7"/>`;
+    return `<svg class="mv-sb-bg" viewBox="0 0 240 64" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="sb${id.replace(/[^a-z0-9]/gi, '')}" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="${th.sky[1]}" stop-opacity="0"/>
+          <stop offset="48%" stop-color="${th.sky[1]}" stop-opacity=".42"/>
+          <stop offset="100%" stop-color="${th.sky[2]}" stop-opacity=".75"/>
+        </linearGradient>
+      </defs>
+      <rect width="240" height="64" fill="url(#sb${id.replace(/[^a-z0-9]/gi, '')})"/>
+      ${extra}${silhouette}
+    </svg>`;
+  }
   function renderSidebar(curCh, curNo) {
     applyChAccent(curCh);
     const ready = INDEX.filter(c => c.ready);
@@ -1711,7 +1913,8 @@
       const doneAny = !!(p && p.d > 0);
       const stepCls = isMv && !expanded ? (idx % 2 ? ' mz-r' : ' mz-l') : '';
       const logo = isMv ? mvCastleLogoSVG(c.id, expanded ? 28 : 26) : '';
-      let out = `<div class="side-ch ${grpCls(c)}${expanded ? ' side-cur' : ' side-ch-mz' + stepCls}${doneAny ? ' mz-lit' : ''}"><a href="#/${c.id}">${logo}<span class="sc-t">${esc(c.title)}</span>${!expanded && p ? `<small class="sc-p">${p.n ? Math.round(p.d * 100 / p.n) : 0}%</small>` : ''}</a>`;
+      const sbBg = isMv ? mvSideCardBG(c.id) : '';
+      let out = `<div class="side-ch ${grpCls(c)}${expanded ? ' side-cur' : ' side-ch-mz' + stepCls}${doneAny ? ' mz-lit' : ''}">${sbBg}<a href="#/${c.id}">${logo}<span class="sc-t">${esc(c.title)}</span>${!expanded && p ? `<small class="sc-p">${p.n ? Math.round(p.d * 100 / p.n) : 0}%</small>` : ''}</a>`;
       if (p) out += mvSideBarHTML(p, c.id, idx);
       if (expanded && ch) {
         out += mvTowerHTML(ch, curNo);
@@ -2839,7 +3042,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v68</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v69</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
