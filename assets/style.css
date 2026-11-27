@@ -639,20 +639,49 @@ mark.user-hl.c-v{--c:var(--u-v);background:linear-gradient(transparent 22%,var(-
 .hl-pop .sw.c-v{background:var(--u-v)}
 mark.user-hl.c-tv{--c:transparent;background:none;color:var(--t-v);font-weight:inherit}
 .hl-pop .sw.tc.c-tv{color:var(--t-v)}
-/* ตารางรวมยาต่อบท */
-.db-bar select{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--fg);font:inherit;font-size:14px;max-width:100%}
-.dt-gs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
-.dt-gs a{padding:2px 9px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:12.5px;text-decoration:none;color:var(--fg)}
-.dt-wrap{max-height:none}
-table.dt{min-width:760px}
-table.dt th{position:sticky;top:0;z-index:2}
-table.dt td{font-size:13.5px}
-table.dt td>div+div{margin-top:4px;padding-top:4px;border-top:1px dashed var(--line)}
-table.dt td.dt-n{min-width:120px}
-table.dt td.dt-n b{display:block}
-table.dt tr.dt-g td{background:var(--accent-soft);font-weight:700;color:var(--accent);border-top:2px solid var(--accent)}
-table.dt tr.dt-g small{font-weight:400;opacity:.75}
-.dt-ex{display:inline-block;margin-top:3px;font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:0 7px}
+/* ตารางรวมยารายบท (ในหน้า Drug & Bug) */
+.db-views{display:flex;gap:6px;margin:0 0 12px;flex-wrap:wrap}
+.db-views a{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);text-decoration:none;font-size:14px;font-weight:600}
+.db-views a.on{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.dt-chs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.dt-chs a{padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);text-decoration:none;font-size:13px}
+.dt-chs a small{color:var(--muted)}
+.dt-chs a.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:700}
+.db-cv select{padding:5px 8px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--fg);font:inherit;font-size:13px}
+.dt-gs{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 8px}
+.dt-gs a{padding:2px 9px;border-radius:999px;background:var(--surface2);font-size:12px;text-decoration:none;color:var(--fg)}
+.dt-meta{font-size:12.5px;color:var(--muted);margin:0 0 6px}
+table.dt{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:14px;line-height:1.55;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table.dt col.c-n{width:19%} table.dt col.c-u{width:20%} table.dt col.c-b{width:64px}
+table.dt thead th{position:sticky;top:56px;z-index:3;background:var(--surface2);text-align:left;padding:8px 10px;font-size:12.5px;font-weight:700;color:var(--muted);border-bottom:1px solid var(--line)}
+table.dt tr.dt-g th{background:var(--accent-soft);color:var(--accent);text-align:left;padding:9px 12px;font-size:14px;border-top:1px solid var(--line)}
+table.dt tr.dt-g small{font-weight:400;opacity:.75;margin-left:4px}
+table.dt td{padding:9px 10px;vertical-align:top;border-top:1px solid var(--line);word-break:break-word}
+table.dt tr.dt-r{cursor:pointer}
+table.dt tr.dt-r:hover td{background:var(--surface2)}
+table.dt td.dt-n b{display:block;font-size:15px;line-height:1.35}
+table.dt .dt-c{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+table.dt .dt-c>div+div::before{content:" · ";color:var(--muted)}
+table.dt .dt-c>div{display:inline}
+table.dt tr.open .dt-c,table.dt.dt-open .dt-c{display:block;-webkit-line-clamp:unset}
+table.dt tr.open .dt-c>div,table.dt.dt-open .dt-c>div{display:block}
+table.dt tr.open .dt-c>div+div,table.dt.dt-open .dt-c>div+div{margin-top:4px;padding-top:4px;border-top:1px dashed var(--line)}
+table.dt tr.open .dt-c>div+div::before,table.dt.dt-open .dt-c>div+div::before{content:none}
+table.dt tr.open td{background:var(--surface2)}
+.dt-ex{display:inline-block;margin-top:4px;font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:0 7px}
 .dt-k{color:var(--muted);font-size:11.5px}
 .dt-na{color:var(--muted)}
-.dt-b a{display:inline-block;min-width:22px;text-align:center;font-size:12px;padding:0 4px;border:1px solid var(--line);border-radius:6px;text-decoration:none;margin:1px}
+.dt-b a{display:inline-block;min-width:24px;text-align:center;font-size:12px;padding:0 4px;border:1px solid var(--line);border-radius:6px;text-decoration:none;margin:1px}
+@media (max-width:720px){
+  table.dt,table.dt tbody,table.dt tr,table.dt td{display:block;width:auto}
+  table.dt colgroup,table.dt thead{display:none}
+  table.dt{border:0;background:none;border-radius:0}
+  table.dt tr.dt-g{display:block;margin:14px 0 6px} table.dt tr.dt-g th{display:block;border-radius:10px;border:0}
+  table.dt tr.dt-r{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin:0 0 8px;padding:6px 10px}
+  table.dt tr.dt-r td{border:0;padding:3px 0}
+  table.dt tr.dt-r td[data-l]::before{content:attr(data-l);display:block;font-size:11px;color:var(--muted);font-weight:600}
+  table.dt td.dt-b[data-l]::before{display:inline;margin-right:6px}
+  table.dt .dt-c{-webkit-line-clamp:2}
+  table.dt td.dt-e{display:none}
+  table.dt tr.dt-r:hover td,table.dt tr.open td{background:none}
+}
