@@ -12,7 +12,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "Hemangioma เป็นเนื้องอกของ endothelial cell หลอดเลือดซึ่งมาจาก mesoderm; ไม่ใช่เซลล์จาก ectoderm/endoderm/neural crest"
+   "why": "Hemangioma = เนื้องอกของ endothelial cell หลอดเลือด\nหลอดเลือดมาจาก mesoderm\n✗ A: Ectoderm ให้ผิวหนังชั้น epidermis และระบบประสาท ไม่ใช่หลอดเลือด\n✓ B: Endothelium ของหลอดเลือดมาจาก mesoderm (angioblast)\n✗ C: ไม่มีส่วนของ ectoderm ร่วมด้วย\n✗ D: Endoderm ให้เยื่อบุทางเดินอาหารและหายใจ\n✗ E: Neural crest ให้ melanocyte, PNS, adrenal medulla ไม่ใช่ endothelium"
   },
   "77/22": {
    "box": 6,
@@ -24,7 +24,7 @@
     "D": "Zona reticularis"
    },
    "answer": "A",
-   "why": "Adrenal medulla (chromaffin cell ที่หลั่ง epinephrine/norepinephrine) มาจาก neural crest ส่วน adrenal cortex ทั้ง 3 zone (glomerulosa, fasciculata, reticularis) มาจาก intermediate/coelomic mesoderm จึงไม่ได้รับผลกระทบ",
+   "why": "Neural crest ไม่ migrate → อวัยวะที่มาจาก neural crest หายไป\nAdrenal medulla (chromaffin cell) มาจาก neural crest ส่วน cortex มาจาก mesoderm\n✓ A: Chromaffin cell ของ adrenal medulla มาจาก neural crest\n  หลั่ง epinephrine/norepinephrine\n✗ B: Zona glomerulosa เป็น adrenal cortex มาจาก mesoderm (coelomic epithelium)\n✗ C: Zona fasciculata เป็น adrenal cortex มาจาก mesoderm\n✗ D: Zona reticularis เป็น adrenal cortex มาจาก mesoderm",
    "source": "วิเคราะห์ · จากบท B3"
   },
   "76/96": {
@@ -38,7 +38,7 @@
     "E": "Microglia"
    },
    "answer": "A",
-   "why": "Neural crest ให้กำเนิด sensory neuron ใน dorsal root ganglion, autonomic ganglia, Schwann cell, melanocyte, adrenal medulla ฯลฯ ส่วน pyramidal cell, Purkinje cell และ anterior horn motor neuron มาจาก neural tube (neuroectoderm) และ microglia มาจาก mesoderm (yolk sac macrophage)",
+   "why": "Neural crest ให้ sensory neuron ใน dorsal root ganglion, autonomic ganglia, Schwann cell, melanocyte, adrenal medulla\n✓ A: Sensory neuron ใน dorsal root ganglion มาจาก neural crest\n✗ B: Pyramidal cell ใน cerebrum มาจาก neural tube (neuroectoderm)\n✗ C: Purkinje cell ใน cerebellum มาจาก neural tube\n✗ D: Anterior horn motor neuron มาจาก basal plate ของ neural tube\n✗ E: Microglia มาจาก mesoderm (yolk sac macrophage)",
    "source": "วิเคราะห์ · จากบท B3"
   },
   "76/227": {
@@ -49,7 +49,7 @@
     "B": "Visceral mesoderm"
    },
    "answer": "A",
-   "why": "Hirschsprung disease เกิดจาก neural crest cell migrate ลงมาไม่ถึงส่วนปลายของลำไส้ ทำให้ไม่มี ganglion cell ใน Meissner และ Auerbach plexus ส่วนที่ aganglionic จะหดเกร็งและส่วนต้นโป่งขยาย (megacolon) visceral mesoderm ให้กำเนิดกล้ามเนื้อเรียบของลำไส้ซึ่งปกติ",
+   "why": "ไม่ถ่าย meconium + colon ส่วนต้นโป่ง = Hirschsprung disease\n✓ A: Neural crest cell migrate ลงมาไม่ถึงลำไส้ส่วนปลาย\n  ไม่มี ganglion cell ใน Meissner และ Auerbach plexus\n  ส่วนที่ aganglionic หดเกร็ง ส่วนต้นจึงโป่ง (megacolon)\n✗ B: Visceral mesoderm ให้กล้ามเนื้อเรียบของลำไส้ ซึ่งในโรคนี้ปกติ",
    "source": "วิเคราะห์ · จากบท B3"
   },
   "75.1/82": {
@@ -63,7 +63,7 @@
     "E": "Gastroschisis"
    },
    "answer": "A",
-   "why": "Hirschsprung disease เกิดจาก neural crest cell เคลื่อนลงมาไม่ถึงลำไส้ส่วนปลาย (เกี่ยวกับ RET) ทำให้ rectum/sigmoid ไม่มี ganglion cell และบีบตัวค้างไว้ จึงถ่ายขี้เทาช้า ท้องอืด และลำไส้ส่วนต้นโป่ง (megacolon) Omphalocele และ gastroschisis เป็นความผิดปกติของผนังหน้าท้อง Midgut volvulus เกิดจาก malrotation อาเจียนน้ำดีเฉียบพลัน Umbilical hernia ไม่ทำให้อุดตันในลักษณะนี้ · ▶ อาจารย์อธิบาย [t=1:05:01]",
+   "why": "ทารกถ่ายขี้เทาช้า + ท้องอืด + neuron migrate ไม่สมบูรณ์ = Hirschsprung disease\n✓ A: Colonic aganglionosis = neural crest เคลื่อนไม่ถึงลำไส้ส่วนปลาย (เกี่ยวกับ RET)\n  rectum/sigmoid ไม่มี ganglion cell บีบตัวค้าง ลำไส้ส่วนต้นโป่ง\n✗ B: Omphalocele เป็นความผิดปกติของผนังหน้าท้อง (ลำไส้ไม่กลับเข้าท้อง)\n✗ C: Umbilical hernia ไม่ทำให้ลำไส้อุดตันแบบนี้\n✗ D: Midgut volvulus เกิดจาก malrotation อาเจียนน้ำดีเฉียบพลัน\n✗ E: Gastroschisis เป็นผนังหน้าท้องปิดไม่สนิท ลำไส้อยู่นอกตัว\n▶ อาจารย์อธิบาย [t=1:05:01]",
    "source": "วิเคราะห์ · จากบท B8"
   },
   "75.1/25": {
@@ -77,7 +77,7 @@
     "E": "FGF8"
    },
    "answer": "A",
-   "why": "SHH จำเป็นต่อการแยก prosencephalon เป็นสองซีกและการสร้างใบหน้าส่วนกลาง · ขาดแล้วเกิด holoprosencephaly ร่วม cyclopia/cleft · PAX3 = Waardenburg · HOX = แกนหัว-หาง · ▶ อาจารย์อธิบาย [t=1:04:31]",
+   "why": "Holoprosencephaly + ใบหน้ากึ่งกลางผิดรูป = SHH บกพร่อง\n✓ A: SHH จำเป็นต่อการแยก prosencephalon เป็นสองซีกและการสร้างใบหน้าส่วนกลาง\n  ขาดแล้วเกิด holoprosencephaly ร่วม cyclopia/cleft\n✗ B: PAX3 ผิดปกติ = Waardenburg syndrome (ผมขาวหย่อมหน้าผาก หูหนวก)\n✗ C: HOX กำหนดแกนหัว-หาง ผิดปกติแล้วอวัยวะผิดตำแหน่ง\n✗ D: WNT7 กำหนดแกน dorsal-ventral ของแขนขา\n✗ E: FGF8 (apical ectodermal ridge) ควบคุมการยืดยาวของแขนขา\n▶ อาจารย์อธิบาย [t=1:04:31]",
    "source": "วิเคราะห์ · จากบท B3",
    "options_reconstructed": true
   },
@@ -92,7 +92,7 @@
     "E": "Prader-Willi syndrome"
    },
    "answer": "A",
-   "why": "Patau syndrome (trisomy 13) มีลักษณะเด่นคือ holoprosencephaly, cleft lip/palate, polydactyly, microphthalmia และ cutis aplasia เพราะความผิดปกติของ midline forebrain development (เกี่ยวกับ SHH pathway) Edwards syndrome เด่นที่ clenched fist, rocker-bottom feet ส่วน Down syndrome เด่นที่ upslanting palpebral fissure · ▶ อาจารย์อธิบาย [t=1:04:31]",
+   "why": "Holoprosencephaly + cleft lip/palate = Patau (trisomy 13)\n✓ A: Patau เด่นที่ holoprosencephaly, cleft lip/palate, polydactyly, microphthalmia, cutis aplasia\n✗ B: Edwards (trisomy 18) เด่นที่ clenched fist, rocker-bottom feet, micrognathia\n✗ C: Down (trisomy 21) เด่นที่ upslanting palpebral fissure, simian crease\n✗ D: Cri-du-chat (5p−) เด่นที่เสียงร้องเหมือนแมว microcephaly\n✗ E: Prader-Willi (paternal 15q deletion) เด่นที่กินไม่หยุด อ้วน hypotonia\n▶ อาจารย์อธิบาย [t=1:04:31]",
    "source": "วิเคราะห์ · จากบท B3"
   },
   "77/25": {
@@ -106,7 +106,7 @@
     "E": "Hirschsprung disease"
    },
    "answer": "A",
-   "why": "Folate จำเป็นต่อการสังเคราะห์ nucleotide และ methylation ช่วงที่ neural tube ปิด (สัปดาห์ที่ 3-4 หลังปฏิสนธิ) การเสริม folic acid ตั้งแต่ก่อนตั้งครรภ์จึงลดความเสี่ยง neural tube defect (anencephaly, spina bifida) ได้มาก ไม่ป้องกัน chromosomal abnormality อย่าง Down syndrome",
+   "why": "Folate จำเป็นต่อการสร้าง nucleotide ช่วงที่ neural tube ปิด (สัปดาห์ 3–4 หลังปฏิสนธิ)\n✓ A: เสริม folic acid ก่อนตั้งครรภ์ ลด neural tube defect (anencephaly, spina bifida) ได้มาก\n✗ B: Cleft lip เกิดจาก facial prominence เชื่อมไม่สมบูรณ์ folate ไม่ได้ป้องกันเป็นหลัก\n✗ C: Congenital heart disease ไม่ใช่เป้าหลักของการเสริม folate\n✗ D: Down syndrome เป็น chromosomal nondisjunction folate ป้องกันไม่ได้\n✗ E: Hirschsprung เกิดจาก neural crest migrate ไม่ถึง (RET) ไม่เกี่ยวกับ folate",
    "source": "วิเคราะห์ · จากบท B3",
    "options_reconstructed": true
   },
@@ -121,7 +121,7 @@
     "E": "Estriol"
    },
    "answer": "C",
-   "why": "AFP สร้างจาก fetal yolk sac และตับ ใน open NTD (เช่น myelomeningocele, anencephaly) AFP รั่วจากท่อประสาทที่เปิดเข้าสู่ amniotic fluid และเข้ากระแสเลือดแม่ จึงสูงทั้งใน maternal serum และ amniotic fluid (ร่วมกับ acetylcholinesterase). Inhibin A และ beta-hCG สูงใน Down syndrome. Estriol ต่ำใน trisomy. Sphingomyelin ใช้ใน L/S ratio ดู lung maturity",
+   "why": "Open NTD → AFP รั่วจากท่อประสาทที่เปิดเข้า amniotic fluid และเลือดแม่\n✗ A: Inhibin A สูงใน Down syndrome\n✗ B: Sphingomyelin ใช้ใน L/S ratio ดู lung maturity\n✓ C: AFP (สร้างจาก yolk sac และตับทารก) สูงทั้งใน maternal serum และ amniotic fluid\n  ยืนยันด้วย acetylcholinesterase ใน amniotic fluid\n✗ D: β-hCG สูงใน Down syndrome\n✗ E: Estriol ต่ำใน trisomy",
    "source": "วิเคราะห์ · จากบท B3"
   },
   "78/215": {
@@ -135,7 +135,7 @@
     "E": "Lateral mesoderm"
    },
    "answer": "A",
-   "why": "Anterior pituitary (adenohypophysis) มาจาก Rathke pouch ซึ่งเป็น oral (surface) ectoderm. Posterior pituitary มาจาก neuroectoderm (diencephalon) ส่วน neural crest และ mesoderm ไม่ใช่ต้นกำเนิดของต่อมใต้สมอง",
+   "why": "Anterior pituitary (adenohypophysis) มาจาก Rathke pouch = oral ectoderm\n✓ A: Rathke pouch เป็น oral (surface) ectoderm งอกขึ้นจากหลังคาปาก\n✗ B: Neuroectoderm (diencephalon) ให้ posterior pituitary\n✗ C: Neural crest ไม่ใช่ต้นกำเนิดของต่อมใต้สมอง\n✗ D: Paraxial mesoderm ให้ somite (กล้ามเนื้อลาย กระดูกสันหลัง)\n✗ E: Lateral mesoderm ให้ผนังตัวและอวัยวะภายใน ไม่ใช่ต่อมใต้สมอง",
    "source": "เฉลย78 · จากบท B10"
   },
   "75.2/33": {
@@ -149,7 +149,7 @@
    },
    "answer": "D",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "Septum primum ไม่เชื่อมกับ endocardial cushion → ostium primum ไม่ปิด = ostium primum ASD (partial AV septal/endocardial cushion defect); secundum ASD เกิดจาก septum primum resorb มากเกิน/septum secundum ไม่พอ",
+   "why": "Septum primum ไม่เชื่อมกับ endocardial cushion → ostium primum ไม่ปิด\n✗ A: Common ASD (common atrium) คือไม่มี atrial septum เลย\n✗ B: Ostium secundum ASD เกิดจาก septum primum resorb มากเกิน หรือ septum secundum สร้างไม่พอ\n✗ C: ถูกเพียงครึ่งเดียว เพราะไม่ได้บอกว่าต้นเหตุคือ endocardial cushion\n✓ D: Ostium primum ASD ร่วมกับ endocardial cushion defect (partial AV septal defect)\n  ตรงกับกลไก \"septum primum ไม่เชื่อมกับ cushion\" ครบที่สุด",
    "doubt": "⚠ ตัวเลือก C และ D ใกล้กันมาก (recall) — D ตรงกับถ้อยคำในชุด 75.2/76"
   },
   "79/7": {
@@ -164,7 +164,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "Ostium primum ASD เกิดจาก septum primum ไม่เชื่อมกับ endocardial cushion (พบใน Down); secundum ASD เกี่ยวกับ septum secundum/foramen ovale ส่วน truncus/bulbus เกี่ยวกับ outflow tract"
+   "why": "Ostium primum ASD = septum primum ไม่เชื่อมกับ endocardial cushion (พบใน Down)\n✓ A: Septum primum + endocardial cushion คือ 2 โครงสร้างที่ต้องเชื่อมกันเพื่อปิด ostium primum\n✗ B: Truncus arteriosus เกี่ยวกับ outflow tract ไม่ใช่ ASD\n✗ C: Septum primum + secundum ผิดปกติ = secundum ASD ไม่เกี่ยวกับ cushion\n✗ D: Bulbus cordis + truncus = outflow tract (ToF, TGA)\n✗ E: Sinus venosus ASD อยู่ใกล้รูเปิด SVC ไม่ใช่ cushion defect"
   },
   "76/117": {
    "box": 9,
@@ -178,7 +178,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "Arch of aorta ส่วนระหว่าง L common carotid ถึง L subclavian มาจาก left 4th arch artery (ตำแหน่ง CoA ใกล้ ductus); 3rd = carotid, 6th = pulmonary/ductus, 2nd = stapedial"
+   "why": "Arch of aorta ส่วนระหว่าง L common carotid ถึง L subclavian มาจาก left 4th arch artery\nCoA อยู่ใกล้ ductus ถ้าตีบก่อน L subclavian แขนซ้ายจะความดันต่ำกว่าแขนขวา\n✗ A: 2nd arch → stapedial artery\n✗ B: 3rd arch → common carotid + proximal internal carotid\n✓ C: 4th arch ซ้าย → arch of aorta (ส่วนที่เกิด coarctation)\n  4th arch ขวา → proximal R subclavian\n✗ D: 6th arch → pulmonary artery + ductus arteriosus\n✗ E: Truncus arteriosus → ascending aorta + pulmonary trunk ไม่ใช่ arch"
   },
   "75.2/94": {
    "box": 9,
@@ -192,7 +192,7 @@
    },
    "answer": "D",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "PDA ให้ continuous machine murmur ที่ left infraclavicular/2nd ICS, L→R shunt → LA/LV volume overload และ aortic arch โป่ง; VSD murmur อยู่ LLSB",
+   "why": "Murmur ที่ 2nd ICS ซ้าย + aortic arch โป่ง + LVH = PDA\n✗ A: ToF เขียว มี RVH หัวใจรูป boot ไม่ใช่ LVH\n✗ B: Pulmonary stenosis ทำ RVH และ SEM ไม่ทำ aortic arch โป่ง\n✗ C: VSD murmur อยู่ที่ LLSB (pansystolic)\n✓ D: PDA ให้ continuous machine murmur ที่ left infraclavicular/2nd ICS\n  L→R shunt → LA/LV volume overload และ aortic arch โป่ง\n✗ E: Coarctation ความดันแขนสูงกว่าขา มี rib notching",
    "doubt": "⚠ recall เขียน 'pansystolic' แต่ชุดซ้ำ 75.2/98 ระบุ continuous murmur"
   },
   "78/165": {
@@ -206,7 +206,7 @@
    },
    "answer": "A",
    "source": "เฉลย78 · จากบท B7",
-   "why": "Continuous machinery murmur = PDA (aorta→PA ตลอด cycle); VSD ให้ pansystolic, ASD (fossa ovalis) ให้ SEM + fixed split S2, ductus venosus ไม่ทำให้มี murmur"
+   "why": "Continuous machinery murmur = PDA (เลือดไหล aorta → PA ตลอด cycle)\n✓ A: Ductus arteriosus ไม่ปิด = PDA\n✗ B: Ductus venosus ไม่ทำให้มี murmur\n✗ C: VSD ให้ pansystolic murmur\n✗ D: ASD (fossa ovalis) ให้ SEM + fixed split S2"
   },
   "79/8": {
    "box": 9,
@@ -220,7 +220,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "Machinery murmur = PDA (ductus arteriosus ไม่ปิด) เลือดไหล aorta→PA ตลอด cycle; PFO ไม่ค่อยมี murmur, ductus venosus/umbilical vein ไม่ทำให้มี murmur"
+   "why": "Machinery murmur = PDA\n✗ A: Ductus venosus ค้างไม่ทำให้มี murmur\n✓ B: Ductus arteriosus ไม่ปิด เลือดไหล aorta → PA ตลอดทั้ง systole และ diastole\n✗ C: Sinus venosus เป็นโครงสร้างที่รวมเข้ากับ RA ไม่ใช่ fetal shunt ที่เปิดค้าง\n✗ D: PFO มักไม่มี murmur\n✗ E: Umbilical vein ค้างไม่ทำให้มี murmur"
   },
   "74.2/12": {
    "box": 10,
@@ -234,7 +234,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "ToF = VSD + overriding aorta + RV outflow (pulmonary) stenosis + RVH; ASD ไม่ใช่องค์ประกอบ (ถ้ามีเรียก pentalogy)"
+   "why": "ToF = VSD + overriding aorta + pulmonary (RVOT) stenosis + RVH\n✓ A: ASD ไม่ใช่องค์ประกอบของ ToF (ถ้ามีเพิ่มเรียก pentalogy of Fallot)\n✗ B: VSD เป็นองค์ประกอบของ ToF\n✗ C: Overriding aorta เป็นองค์ประกอบของ ToF\n✗ D: Pulmonary stenosis เป็นองค์ประกอบของ ToF (ตัวกำหนดความเขียว)\n✗ E: RVH เป็นองค์ประกอบของ ToF"
   },
   "78/141": {
    "box": 10,
@@ -248,7 +248,7 @@
    },
    "answer": "A",
    "source": "เฉลย78 · จากบท B7",
-   "why": "VSD + RVOT obstruction (PS) → R→L shunt + SEM ที่ LUSB จาก PS = ToF; truncus มี single trunk, TGA เป็น 2 วงจรขนาน, tricuspid atresia/TAPVR ไม่มี RVOT stenosis เป็นหลัก"
+   "why": "VSD + RVOT stenosis → R→L shunt + SEM ที่ LUSB = ToF\n✓ A: ToF มี VSD + pulmonary stenosis ทำให้ R→L shunt และ SEM ที่ LUSB\n✗ B: Truncus arteriosus มีหลอดเลือดออกจากหัวใจเส้นเดียว ไม่มี RVOT stenosis\n✗ C: Tricuspid atresia ไม่มีลิ้น tricuspid ต้องมี ASD + VSD\n✗ D: TGA เป็น 2 วงจรขนาน ไม่ได้เด่นที่ RVOT stenosis\n✗ E: TAPVR pulmonary vein เข้าฝั่งขวา ไม่ใช่ RVOT stenosis"
   },
   "75.2/30": {
    "box": 10,
@@ -262,7 +262,7 @@
    },
    "answer": "E",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "Egg-on-a-string + เขียวตั้งแต่แรกเกิด = TGA (สาเหตุเขียวในทารกแรกเกิดที่พบบ่อย); ToF ให้ boot-shaped heart, PDA ไม่เขียว",
+   "why": "Egg-on-a-string + เขียวตั้งแต่แรกเกิด = TGA\n✗ A: ToF ให้ boot-shaped heart\n✗ B: PDA เป็น L→R shunt ไม่เขียว\n✗ C: Pulmonary stenosis เดี่ยว ๆ ไม่ได้ให้ภาพ egg-on-a-string\n✗ D: Truncus arteriosus ไม่ใช่ภาพ egg-on-a-string\n✓ E: TGA: aorta อยู่หน้า PA ทำให้ mediastinum แคบ หัวใจรูปไข่ = egg-on-a-string",
    "needs_image": true,
    "options_reconstructed": true,
    "doubt": "⚠ ไม่เห็นรูป — ถ้ารูปเป็น boot-shaped ตอบ ToF"
@@ -279,7 +279,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · จากบท B7",
-   "why": "TGA เป็น 2 วงจรขนาน ต้องมีทางผสมเลือด → PGE1 (alprostadil) คง ductus เปิด แล้วค่อย balloon atrial septostomy; indomethacin หรือการปิด ductus ทำให้แย่ลง"
+   "why": "TGA เป็น 2 วงจรขนาน ต้องมีทางผสมเลือดจึงจะรอด\n✓ A: PGE1 (alprostadil) คง ductus เปิดไว้ให้เลือดผสม\n  แล้วค่อยทำ balloon atrial septostomy และผ่าตัด\n✗ B: Indomethacin ปิด ductus ทำให้เขียวมากขึ้น\n✗ C: ปิด ductus ทำให้ทางผสมเลือดหายไป แย่ลง\n✗ D: Furosemide ไม่ได้แก้ปัญหาเลือดไม่ผสม\n✗ E: Misoprostol เป็น PGE1 analog ชนิดกิน ใช้ทางสูติ ไม่ใช่ยาคง ductus ในทารก"
   },
   "74.2/24": {
    "box": 11,
@@ -293,7 +293,7 @@
    },
    "answer": "A",
    "options_reconstructed": true,
-   "why": "NRDS เกิดจาก type II pneumocyte สร้าง surfactant ไม่พอ ทำให้ surface tension สูง alveoli แฟบ compliance ลด; type I pneumocyte ทำหน้าที่แลกเปลี่ยนก๊าซไม่ได้สร้าง surfactant",
+   "why": "NRDS = type II pneumocyte สร้าง surfactant ไม่พอ\n✓ A: ขาด surfactant → surface tension สูง alveoli แฟบ compliance ลด\n✗ B: Type I pneumocyte ทำหน้าที่แลกเปลี่ยนก๊าซ ไม่ได้สร้าง surfactant\n✗ C: Meconium aspiration พบในทารกครบ/เกินกำหนด ไม่ใช่ hyaline membrane disease\n✗ D: CDH เป็นลำไส้ขึ้นไปในอก ไม่ใช่ขาด surfactant\n✗ E: NRDS ทำให้ compliance ลดลง ไม่ใช่เพิ่ม",
    "source": "วิเคราะห์ · จากบท B6"
   },
   "76/213": {
@@ -305,7 +305,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · จากบท B6",
-   "why": "Esophageal atresia ร่วมกับ distal TEF ทำให้กลืนน้ำลายไม่ได้ สำลักเข้าปอด และอากาศผ่าน fistula เข้ากระเพาะจนท้องอืด; pyloric stenosis มาด้วย projectile non-bilious vomiting อายุ 2–6 สัปดาห์"
+   "why": "น้ำลายล้น + สำลัก + ท้องอืด = esophageal atresia ร่วมกับ distal TEF\n✓ A: กลืนน้ำลายไม่ได้จึงล้นและสำลักเข้าปอด\n  อากาศผ่าน fistula เข้ากระเพาะจนท้องอืด\n✗ B: Pyloric stenosis มาด้วย projectile non-bilious vomiting อายุ 2–6 สัปดาห์"
   },
   "77/142": {
    "box": 11,
@@ -316,7 +316,7 @@
    },
    "answer": "A",
    "source": "เฉลย77 · จากบท B6",
-   "why": "CDH (มักเป็น Bochdalek ด้านซ้าย) ลำไส้เคลื่อนขึ้นไปในทรวงอก ท้องแฟบ ไม่มีลมในช่องท้องและเห็นเงาลำไส้ในอก; RDS มี ground-glass + air bronchogram โดยลมในช่องท้องปกติ",
+   "why": "หายใจลำบาก + ไม่มีลมในช่องท้อง = ลำไส้ขึ้นไปอยู่ในอก (CDH)\n✓ A: CDH (มักเป็น Bochdalek ด้านซ้าย) ลำไส้เคลื่อนขึ้นไปในทรวงอก\n  ท้องแฟบ ไม่มีลมในช่องท้อง เห็นเงาลำไส้ในอก\n✗ B: RDS มี ground-glass + air bronchogram แต่ลมในช่องท้องปกติ",
    "needs_image": true
   },
   "79/124": {
@@ -331,7 +331,7 @@
    },
    "answer": "C",
    "source": "เฉลย79 · จากบท B6",
-   "why": "Multicystic lesion ในปอดและท้องไม่แฟบ = CPAM จากการแตกแขนง bronchial tree ผิดปกติ CDH (pleuroperitoneal membrane) ก็มี cystic-looking bowel ในอกแต่ท้องจะแฟบ (scaphoid), TE septum ผิดปกติให้ TEF"
+   "why": "Multicystic lesion ในปอด + ท้องไม่แฟบ = CPAM (ไม่ใช่ CDH)\n✗ A: Pleuroperitoneal membrane ไม่เชื่อม = CDH ซึ่งท้องจะแฟบ (scaphoid)\n✗ B: Tracheoesophageal septum ผิดปกติ = TEF\n✓ C: CPAM เกิดจากการแตกแขนง bronchial tree ผิดปกติ เป็นถุงน้ำหลายถุงในปอด\n✗ D: Midgut rotation ผิดปกติ = malrotation/volvulus\n✗ E: Lateral body fold เชื่อมไม่สมบูรณ์ = gastroschisis"
   },
   "79/165": {
    "box": 12,
@@ -344,7 +344,7 @@
     "E": "Duodenal atresia"
    },
    "answer": "B",
-   "why": "Triple bubble (กระเพาะ + duodenum + jejunum ส่วนต้นโป่ง) คือ jejunal atresia จาก vascular accident ในครรภ์ Duodenal atresia ให้ double bubble Pyloric stenosis อาเจียนพุ่งไม่มีน้ำดีอายุ 2–6 สัปดาห์ Hirschsprung และ meconium ileus อุดตันส่วนปลาย ทำให้ลำไส้โป่งหลายห่วงทั่วท้องมากกว่า",
+   "why": "Triple bubble = กระเพาะ + duodenum + jejunum ส่วนต้นโป่ง = jejunal atresia\n✗ A: Hirschsprung อุดตันส่วนปลาย ลำไส้โป่งหลายห่วงทั่วท้อง\n✓ B: Jejunal atresia จาก vascular accident ในครรภ์ ให้ triple bubble\n✗ C: Pyloric stenosis อาเจียนพุ่งไม่มีน้ำดี อายุ 2–6 สัปดาห์\n✗ D: Meconium ileus (CF) อุดตันที่ ileum ส่วนปลาย\n✗ E: Duodenal atresia ให้ double bubble",
    "source": "เฉลย79 · จากบท B8"
   },
   "75.1/55": {
@@ -356,7 +356,7 @@
     "C": "Urorectal septum"
    },
    "answer": "C",
-   "why": "Urorectal septum แบ่ง cloaca ออกเป็น urogenital sinus ด้านหน้าและ anorectal canal ด้านหลัง ถ้าแบ่งไม่สมบูรณ์จะเกิด rectourethral/rectovesical fistula ขี้เทาจึงออกทางปัสสาวะ (มักพบร่วมกับ imperforate anus) Ureteric bud สร้างท่อไตและ collecting system Urogenital diaphragm เป็นกล้ามเนื้อของ perineum ไม่ได้ทำหน้าที่แบ่งลำไส้ออกจากทางเดินปัสสาวะ",
+   "why": "ขี้เทาออกทางปัสสาวะ = มีรูเชื่อมระหว่างลำไส้ตรงกับทางเดินปัสสาวะ\n✗ A: Ureteric bud สร้างท่อไตและ collecting system\n✗ B: Urogenital diaphragm เป็นกล้ามเนื้อของ perineum ไม่ได้แบ่งลำไส้จากทางเดินปัสสาวะ\n✓ C: Urorectal septum แบ่ง cloaca เป็น urogenital sinus (หน้า) และ anorectal canal (หลัง)\n  แบ่งไม่สมบูรณ์ → rectourethral/rectovesical fistula (มักร่วมกับ imperforate anus)",
    "source": "วิเคราะห์ · จากบท B8"
   },
   "76/174": {
@@ -368,7 +368,7 @@
     "C": "Vitelline duct"
    },
    "answer": "C",
-   "why": "Vitelline (omphalomesenteric) duct เชื่อม midgut กับ yolk sac ถ้าค้างจะเกิด umbilical polyp/fistula ที่มี intestinal mucosa หรือ Meckel diverticulum Urachus ที่ค้างมาจาก allantois ทำให้ปัสสาวะออกทางสะดือ (เยื่อบุ transitional) ส่วน umbilical cord เป็นแค่ทางผ่านของหลอดเลือด ไม่ได้สร้างเยื่อบุลำไส้",
+   "why": "เยื่อบุลำไส้ที่สะดือ = vitelline duct ค้าง\n✗ A: Urachus ค้าง (จาก allantois) ปัสสาวะออกทางสะดือ เยื่อบุเป็น transitional\n✗ B: Umbilical cord เป็นแค่ทางผ่านหลอดเลือด ไม่ได้สร้างเยื่อบุลำไส้\n✓ C: Vitelline (omphalomesenteric) duct เชื่อม midgut กับ yolk sac\n  ค้างแล้วเกิด umbilical polyp/fistula ที่มี intestinal mucosa หรือ Meckel diverticulum",
    "source": "วิเคราะห์ · จากบท B8"
   },
   "79/168": {
@@ -382,7 +382,7 @@
     "E": "Allantois"
    },
    "answer": "A",
-   "why": "Meckel diverticulum คือ vitelline (omphalomesenteric) duct ที่ปิดไม่สมบูรณ์ เป็น true diverticulum ที่ ileum มักมี ectopic gastric mucosa หลั่งกรดทำให้แผลเลือดออกไม่เจ็บ (กฎ 2s) Urachus/allantois ค้างทำให้ปัสสาวะออกสะดือ Septum transversum เกี่ยวกับกะบังลม/ตับ ส่วน dorsal mesentery ไม่ได้ทำให้เกิด diverticulum",
+   "why": "ถ่ายเป็นเลือดไม่เจ็บ + gastric mucosa ผิดที่ใน ileum = Meckel diverticulum\n✓ A: Meckel = vitelline duct ปิดไม่สมบูรณ์ เป็น true diverticulum ที่ ileum\n  มี ectopic gastric mucosa หลั่งกรดจนเป็นแผลเลือดออก (กฎ 2s)\n✗ B: Urachus ค้าง → ปัสสาวะออกสะดือ\n✗ C: Dorsal mesentery ไม่ได้ทำให้เกิด diverticulum\n✗ D: Septum transversum เกี่ยวกับกะบังลมและตับ\n✗ E: Allantois ค้าง → urachal anomaly",
    "source": "เฉลย79 · จากบท B8"
   },
   "79/6": {
@@ -396,7 +396,7 @@
     "E": "Lateral body folds เชื่อมกันไม่สมบูรณ์"
    },
    "answer": "E",
-   "why": "Gastroschisis เกิดจาก lateral body folds ปิดไม่สมบูรณ์ ลำไส้ออกมานอกผนังหน้าท้อง (มักด้านขวาของสะดือ) โดยไม่มีเยื่อหุ้ม ถ้าเป็น omphalocele (มีเยื่อหุ้ม ออกที่สะดือ) จะเกิดจาก midgut ไม่กลับเข้าช่องท้องหลัง physiological herniation (ข้อ B) Vitelline duct ไม่ปิดทำให้ Meckel/fistula ส่วน pleuroperitoneal fold คือ congenital diaphragmatic hernia · ▶ อาจารย์อธิบาย [t=55:09]",
+   "why": "ลำไส้ออกนอกผนังหน้าท้องโดยไม่มีเยื่อหุ้ม (มักด้านขวาสะดือ) = gastroschisis\n✗ A: Vitelline duct ไม่ปิด → Meckel diverticulum/fistula\n✗ B: Midgut ไม่กลับเข้าช่องท้อง = omphalocele (มีเยื่อหุ้ม ออกที่สะดือ)\n✗ C: Physiological herniation เป็นเรื่องปกติ ไม่เกิดก็ไม่ได้ทำให้ผนังหน้าท้องเปิด\n✗ D: Pleuroperitoneal fold ไม่เชื่อม = congenital diaphragmatic hernia\n✓ E: Lateral body folds ปิดไม่สมบูรณ์ ลำไส้จึงออกมานอกผนังหน้าท้อง = gastroschisis\n▶ อาจารย์อธิบาย [t=55:09]",
    "source": "เฉลย79 · จากบท B8",
    "needs_image": true,
    "doubt": "⚠ ต้องดูรูปเพื่อแยก gastroschisis กับ omphalocele ใช้คำตอบตามเฉลย (E)"
@@ -412,7 +412,7 @@
    },
    "answer": "D",
    "source": "เฉลย77 · จากบท B9",
-   "why": "Ureteric bud ให้กำเนิดระบบท่อรวม: ureter, pelvis, major/minor calyx, collecting duct · ถ้า bud ไม่เกิด metanephric blastema ไม่ถูกเหนี่ยวนำ → agenesis + oligohydramnios → pulmonary hypoplasia (Potter) · A pronephros เสื่อมไปเองไม่ทำงาน · B mesonephros ให้ mesonephric duct (bud งอกจากที่นี่) แต่ไม่ใช่ส่วนที่สร้าง calyx โดยตรง · C metanephric mesenchyme สร้าง nephron (glomerulus ถึง DCT) ไม่ใช่ collecting system · ▶ อาจารย์อธิบาย [t=1:11:12]"
+   "why": "ไม่มี calyx, pelvis, collecting tubule = ระบบท่อรวมไม่เกิด = ureteric bud ผิดปกติ\nAgenesis → oligohydramnios → pulmonary hypoplasia (Potter sequence)\n✗ A: Pronephros เสื่อมไปเองโดยไม่ทำงาน\n✗ B: Mesonephros ให้ mesonephric duct (ที่ bud งอกออกมา) แต่ไม่ได้สร้าง calyx โดยตรง\n✗ C: Metanephric mesenchyme สร้าง nephron (glomerulus ถึง DCT) ไม่ใช่ collecting system\n✓ D: Ureteric bud สร้าง ureter, pelvis, major/minor calyx, collecting duct\n  ถ้า bud ไม่เกิด metanephric blastema จะไม่ถูกเหนี่ยวนำ → renal agenesis\n▶ อาจารย์อธิบาย [t=1:11:12]"
   },
   "77/20": {
    "box": 15,
@@ -422,7 +422,7 @@
     "B": "3rd pharyngeal pouch"
    },
    "answer": "B",
-   "why": "DiGeorge (22q11.2 deletion) เกิดจาก 3rd และ 4th pharyngeal pouch เจริญผิดปกติ ทำให้ไม่มี thymus (T cell ต่ำ) และ parathyroid (hypocalcemia) ส่วน 2nd pharyngeal cleft ผิดปกติจะเกิด branchial cleft cyst ที่ด้านข้างคอ · ▶ อาจารย์อธิบาย [t=1:11:42]",
+   "why": "DiGeorge (22q11.2 deletion) = 3rd และ 4th pharyngeal pouch เจริญผิดปกติ\n✗ A: 2nd pharyngeal cleft ค้าง = branchial cleft cyst ด้านข้างคอ\n✓ B: 3rd pouch ให้ thymus + inferior parathyroid\n  ผิดปกติ → T cell ต่ำ + hypocalcemia\n▶ อาจารย์อธิบาย [t=1:11:42]",
    "source": "วิเคราะห์ · จากบท B10",
    "options_reconstructed": true
   },
@@ -437,7 +437,7 @@
     "E": "Follicular T cell"
    },
    "answer": "D",
-   "why": "DiGeorge เกิดจาก pharyngeal pouch 3–4 เจริญผิดปกติ ทำให้ thymus (T cell บกพร่อง), parathyroid (hypocalcemia) และหัวใจ (conotruncal) ผิดปกติ. B cell สร้างจากไขกระดูกจึงไม่มี defect โดยตรง แม้การสร้าง antibody อาจลดจากขาด T helper",
+   "why": "DiGeorge = pouch 3–4 ผิดปกติ → thymus, parathyroid, หัวใจ (conotruncal) ผิดปกติ\n✗ A: หัวใจผิดปกติ (conotruncal เช่น ToF, truncus) เป็นส่วนหนึ่งของโรค\n✗ B: Chief cell ของ parathyroid หายไป → hypocalcemia\n✗ C: Thymus ไม่เจริญ → T cell บกพร่อง\n✓ D: B cell สร้างจากไขกระดูก จึงไม่มี defect โดยตรง\n  (antibody อาจลดได้จากขาด T helper แต่ตัว B cell ปกติ)\n✗ E: T cell บกพร่องเพราะไม่มี thymus",
    "source": "เฉลย78 · จากบท B10"
   },
   "79/31": {
@@ -452,7 +452,7 @@
    },
    "answer": "B",
    "source": "เฉลย79 · จากบท B9",
-   "why": "Metanephric blastema (mesenchyme) ถูก ureteric bud เหนี่ยวนำ → glomerulus, PCT, loop, DCT = nephron (B) · D: ureteric bud ให้ collecting duct, calyces, pelvis, ureter (ไม่ใช่ nephron) · A: mesonephric duct ให้ ureteric bud/ductus deferens ในชาย · C: paramesonephric → มดลูก ท่อนำไข่ · E: pronephros ฝ่อไปไม่ทำงาน"
+   "why": "Nephron ของไตถาวรมาจาก metanephric blastema\n✗ A: Mesonephric duct ให้ ureteric bud และ ductus deferens ในชาย\n✓ B: Metanephric blastema ถูก ureteric bud เหนี่ยวนำ → glomerulus, PCT, loop, DCT = nephron\n✗ C: Paramesonephric duct → มดลูก ท่อนำไข่\n✗ D: Ureteric bud ให้ collecting duct, calyces, pelvis, ureter ไม่ใช่ nephron\n✗ E: Pronephros ฝ่อไปโดยไม่ทำงาน"
   },
   "Mock/1": {
    "box": 2,
@@ -465,7 +465,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Germ cell ชายหยุดนิ่ง (dormant) ไม่แบ่งตัวจนถึง puberty จึงอยู่ใน interphase ส่วน metaphase/anaphase/telophase เป็นระยะที่เซลล์กำลังแบ่งตัว · ▶ อาจารย์อธิบาย [t=1:03:59]"
+   "why": "Germ cell ชายหยุดนิ่ง ไม่แบ่งตัวจนถึง puberty = อยู่ใน interphase\n✗ A: Metaphase เป็นระยะที่เซลล์กำลังแบ่งตัว\n✓ B: Germ cell ชายก่อนวัยรุ่น dormant จึงอยู่ใน interphase\n✗ C: Telophase เป็นระยะที่เซลล์กำลังแบ่งตัว\n✗ D: Anaphase เป็นระยะที่เซลล์กำลังแบ่งตัว\n  (ต่างจาก oocyte ที่หยุดอยู่ใน prophase I)\n▶ อาจารย์อธิบาย [t=1:03:59]"
   },
   "Mock/2": {
    "box": 15,
@@ -479,7 +479,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "กล้ามเนื้อลายของแขนขามาจาก somite (paraxial mesoderm) ส่วน myotome · lateral plate mesoderm ให้กระดูกและ CT ของแขนขา ไม่ใช่กล้ามเนื้อ · ectoderm/endoderm ไม่ให้กล้ามเนื้อลาย · ▶ อาจารย์อธิบาย [t=1:10:41]"
+   "why": "กล้ามเนื้อลายของแขนขามาจาก somite (paraxial mesoderm) ส่วน myotome\n✓ A: Paraxial mesoderm → somite → myotome → กล้ามเนื้อลายแขนขา\n✗ B: Lateral plate mesoderm ให้กระดูกและ CT ของแขนขา ไม่ใช่กล้ามเนื้อ\n✗ C: Neuroectoderm ให้ระบบประสาท\n✗ D: ไม่มีกล้ามเนื้อลายมาจาก endoderm\n✗ E: Endoderm ให้เยื่อบุทางเดินอาหาร/หายใจ\n▶ อาจารย์อธิบาย [t=1:10:41]"
   },
   "Mock/3": {
    "box": 15,
@@ -493,7 +493,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "ลำดับการสร้างเม็ดเลือด: yolk sac (สัปดาห์ 3–8) → ตับ (ไตรมาส 2) → ม้าม (เล็กน้อย) → ไขกระดูก (ปลายการตั้งครรภ์และหลังคลอด) · ▶ อาจารย์อธิบาย [t=1:10:41]"
+   "why": "ลำดับการสร้างเม็ดเลือด: yolk sac → ตับ → ม้าม → ไขกระดูก\n✓ A: Yolk sac สร้างเม็ดเลือดช่วงสัปดาห์ 3–8 (ไตรมาสแรก)\n✗ B: ตับเป็นแหล่งหลักในไตรมาส 2\n✗ C: ม้ามสร้างเพียงเล็กน้อยช่วงไตรมาส 2\n✗ D: Lymph node ไม่ใช่แหล่งสร้างเม็ดเลือดหลักในครรภ์\n✗ E: ไขกระดูกเป็นแหล่งหลักปลายการตั้งครรภ์และหลังคลอด\n▶ อาจารย์อธิบาย [t=1:10:41]"
   }
  }
 }
