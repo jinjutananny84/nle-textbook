@@ -303,6 +303,28 @@
       <div class="explain" hidden></div>
     </div>`;
   }
+  /* เฉลย: 1 บรรทัด = 1 ประโยค/ช้อยส์ (ดู FORMAT.md)
+     "✓ A: เหตุผล" / "✗ B: เหตุผล" = แถวช้อยส์ (โชว์ข้อความช้อยส์ให้เอง) · บรรทัดขึ้นต้นด้วยช่องว่าง = ประโยคต่อของแถวก่อนหน้า
+     เฉลยเก่าที่ยังเป็นก้อนเดียว จะถูกตัดที่ " · " และ "; " ให้ขึ้นบรรทัดใหม่ */
+  function whyHTML(q, picked) {
+    let w = String(q.why || '').replace(/\r/g, '');
+    if (!w.includes('\n')) w = w.split(/\s+·\s+|;\s+/).join('\n');
+    const blocks = [];
+    for (const raw of w.split('\n')) {
+      if (!raw.trim()) continue;
+      const m = raw.match(/^\s*([✓✗])\s*([A-H])\s*[:：.)\-–—]?\s*(.*)$/);
+      if (m) { blocks.push({ k: m[1] === '✓' ? 'ok' : 'no', l: m[2], lines: m[3] ? [m[3]] : [] }); continue; }
+      const prev = blocks[blocks.length - 1];
+      if (/^\s/.test(raw) && prev) prev.lines.push(raw.trim());
+      else blocks.push({ k: 'p', lines: [raw.trim()] });
+    }
+    return blocks.map(b => {
+      const body = b.lines.map(t => `<div class="wl">${inline(esc(t))}</div>`).join('');
+      if (b.k === 'p') return `<div class="wp">${body}</div>`;
+      const ot = q.options && q.options[b.l] ? `<div class="wo">${inline(esc(q.options[b.l]))}</div>` : '';
+      return `<div class="wc ${b.k}${b.l === picked && b.k === 'no' ? ' picked' : ''}"><span class="wb">${b.k === 'ok' ? '✓' : '✗'} ${b.l}</span><div class="wx">${ot}${body}</div></div>`;
+    }).join('');
+  }
   function answerMCQ(box, letter, onDone) {
     const chId = box.dataset.ch, qid = box.dataset.q, q = CH[chId].exams[qid];
     if (box.dataset.done) return;
@@ -321,7 +343,7 @@
     save();
     const ex = box.querySelector('.explain');
     ex.hidden = false;
-    ex.innerHTML = `<div class="res ${ok ? 'ok' : 'no'}">${ok ? '✓ Correct' : `✗ ยังไม่ใช่ ตอบ ${q.answer}`}</div><div data-hlk="${esc(qKey(chId, qid, 'why'))}">${inline(esc(q.why || ''))}</div>${q.doubt ? `<div class="warn">⚠ ${esc(q.doubt)}</div>` : ''}${note}`;
+    ex.innerHTML = `<div class="res ${ok ? 'ok' : 'no'}">${ok ? '✓ Correct' : `✗ ยังไม่ใช่ ตอบ ${q.answer}`}</div><div class="why" data-hlk="${esc(qKey(chId, qid, 'why'))}">${whyHTML(q, letter)}</div>${q.doubt ? `<div class="warn">⚠ ${esc(q.doubt.replace(/^\s*⚠\s*/, ''))}</div>` : ''}${note}`;
     applyAllHL(ex);
     if (onDone) onDone(ok);
     if (/^#\/[^/]+\/\d+/.test(location.hash)) { const m = location.hash.match(/^#\/([^/]+)\/(\d+)/); const y = sidebar.scrollTop; renderSidebar(m[1], +m[2]); sidebar.scrollTop = y; }

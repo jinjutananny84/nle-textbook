@@ -42,6 +42,15 @@ for cid in ids:
         for q, v in ex.items():
             if int(v.get('box', 0)) not in bs: E(f'{cid}-exams {q}: box {v.get("box")} ไม่มีจริง')
             if v.get('answer') and v['answer'] not in v.get('options', {}): E(f'{cid}-exams {q}: answer {v["answer"]} ไม่อยู่ใน options')
+        # เฉลยต้องอธิบายทีละช้อยส์ และขึ้นบรรทัดใหม่ทุกประโยค (ดู FORMAT.md)
+        flat = []
+        for q, v in ex.items():
+            w = v.get('why', '')
+            marks = re.findall(r'^\s*([✓✗])\s*([A-H])\s*[:：]', w, re.M)
+            if '\n' not in w or not marks: flat.append(q); continue
+            if sorted(l for _, l in marks) != sorted(v.get('options', {})): E(f'{cid}-exams {q}: เฉลยอธิบายช้อยส์ไม่ครบ/ซ้ำ {[l for _, l in marks]}')
+            if [l for s, l in marks if s == '✓'] != [v.get('answer')]: E(f'{cid}-exams {q}: ✓ ในเฉลยไม่ตรงกับ answer {v.get("answer")}')
+        if flat: W(f'{cid}-exams: {len(flat)} ข้อยังไม่อธิบายทีละช้อยส์ เช่น {flat[:3]}')
         covered = {int(v['box']) for v in ex.values() if v.get('box')}
         if bs - covered: W(f'{cid}: กล่องที่ไม่มีข้อสอบ {sorted(bs - covered)}')
     nu = load(f'{cid}-numbers.json')

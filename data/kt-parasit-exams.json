@@ -12,7 +12,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "eosinophil 13% + ปอดอักเสบชั่วคราว ตรวจเสมหะ/อุจจาระไม่เจอ (ระยะ larva ผ่านปอด ยังไม่มีไข่) = ==Loeffler syndrome== · ไม่ใช่ disseminated strongyloidiasis (ต้องมีภูมิต่ำ ติดเชื้อแบคทีเรียร่วม) · ▶ [t=40:45]"
+   "why": "Eosinophil 13% + ปอดอักเสบชั่วคราว + ตรวจเสมหะ/อุจจาระไม่เจอ = ระยะ larva ผ่านปอด ยังไม่มีไข่\n✗ A: Bacterial CAP ต้องมี neutrophil สูง และ gram stain/culture มักเจอเชื้อ\n✗ B: Capillariasis เป็นโรคลำไส้ (ท้องเสียเรื้อรัง PLE) ไม่ใช่ปอดอักเสบ\n✗ C: Disseminated strongyloidiasis ต้องมีภูมิต่ำ และมักติดเชื้อแบคทีเรียร่วม\n✗ D: Hookworm pneumonitis ก็ทำให้ Loeffler ได้ แต่คำตอบที่ครอบคลุมกลุ่มอาการนี้คือ Loeffler syndrome\n✓ E: ==Loeffler syndrome== = larva ของ nematode ไชผ่านปอด → infiltrate ชั่วคราว + eosinophilia\n▶ [t=40:45]"
   },
   "Par/2": {
    "box": 2,
@@ -26,7 +26,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "กินปลาน้ำจืด + ไข่ flat bipolar plug (peanut) = ==Capillaria== → ท้องเสียเรื้อรัง ==malnutrition + protein-losing enteropathy== · rectal prolapse = Trichuris · ▶ [t=41:09]"
+   "why": "กินปลาน้ำจืดดิบ + ไข่เปลือกบาง flat bipolar plug (peanut) = ==Capillaria philippinensis==\n✗ A: ซีดเด่นใน hookworm (ดูดเลือด)\n✗ B: Hyperinfection อุดตันลำไส้ ไม่ใช่ภาวะแทรกซ้อนหลักของ Capillaria\n✗ C: Liver abscess เป็นของ E. histolytica\n✓ D: Capillaria แบ่งตัวซ้ำในลำไส้ → ท้องเสียเรื้อรัง ==malnutrition + protein-losing enteropathy==\n✗ E: Rectal prolapse เป็นของ Trichuris\n▶ [t=41:09]"
   },
   "Par/3": {
    "box": 4,
@@ -40,7 +40,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "เดินเท้าเปล่า + ปอดอักเสบไม่ตอบยา + eosinophil = Strongyloides · อุจจาระเจอ ==rhabditiform larva ที่ genital primordium ใหญ่== (hookworm เจอไข่เปลือกบาง) · ▶ [t=20:42]"
+   "why": "เดินเท้าเปล่า + ปอดอักเสบไม่ตอบยา + eosinophil สูง = Strongyloides\n✗ A: ไข่เปลือกบางใส = hookworm (Strongyloides ฟักในลำไส้ จึงไม่ค่อยเจอไข่ในอุจจาระ)\n✗ B: ไข่มี polar plug = Trichuris/Capillaria\n✓ C: อุจจาระเจอ ==rhabditiform larva ที่ genital primordium ใหญ่== = Strongyloides\n✗ D: Larva หางมีรอยหยัก (notched tail) = filariform larva ของ Strongyloides ซึ่งปกติไม่ออกมาในอุจจาระ\n✗ E: Gravid proglottid = Taenia (tapeworm)\n▶ [t=20:42]"
   },
   "Par/4": {
    "box": 4,
@@ -54,7 +54,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "กิน steroid ขนาดสูง + gram-negative bacteremia (แบคทีเรียติดตัว larva ออกจากลำไส้) + ปอดและลำไส้ = ==disseminated strongyloidiasis== · ▶ [t=27:56]"
+   "why": "Steroid ขนาดสูง + gram-negative bacteremia + ปอดและลำไส้ = disseminated strongyloidiasis\nLarva ไชออกจากลำไส้พาแบคทีเรียติดไปด้วย\n✗ A: Cryptosporidiosis ท้องเสียน้ำ แต่ไม่ทำ GNR bacteremia + eosinophilia\n✗ B: Cystoisosporiasis ย้อม modified trichrome/acid-fast เจอ ไม่ทำ GNR bacteremia\n✗ C: CMV pneumonitis ไม่ทำ eosinophilia และ GNR bacteremia\n✓ D: ==Disseminated strongyloidiasis== ในผู้ได้ steroid larva กระจายทั่วตัวพร้อมแบคทีเรีย\n✗ E: Disseminated aspergillosis เป็นเชื้อรา ไม่ทำ GNR bacteremia/eosinophilia\n▶ [t=27:56]"
   },
   "Par/5": {
    "box": 5,
@@ -68,7 +68,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "เด็ก ถ่ายมูกเลือด ซีด ==rectal prolapse== = ==Trichuris trichiura== · ▶ [t=44:12]"
+   "why": "เด็ก + ถ่ายมูกเลือด + ซีด + ==rectal prolapse== = Trichuris\n✗ A: Balantidium coli ทำ dysentery แต่สัมพันธ์กับหมู ไม่เด่น rectal prolapse\n✗ B: E. histolytica ทำ dysentery แต่ไม่เด่น rectal prolapse\n✗ C: Enterobius ทำคันก้นกลางคืน ไม่ถ่ายเป็นเลือด\n✗ D: Necator (hookworm) ทำซีดจากดูดเลือดในลำไส้เล็ก ไม่ทำ rectal prolapse\n✓ E: ==Trichuris trichiura== ฝังหัวในลำไส้ใหญ่ ติดหนักแล้วลำไส้ตรงปลิ้น\n▶ [t=44:12]"
   },
   "Par/6": {
    "box": 5,
@@ -82,7 +82,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "คันก้นกลางคืน ตรวจอุจจาระไม่เจอ (ตัวเมียออกมาไข่รอบทวาร) = Enterobius → ==scotch/cellophane tape test== ตอนเช้า · ▶ [t=34:43]"
+   "why": "คันก้นกลางคืน + ตรวจอุจจาระไม่เจอ = Enterobius (ตัวเมียออกมาวางไข่รอบทวาร)\n✗ A: FECT เป็นการตรวจอุจจาระ ซึ่งมักไม่เจอไข่ Enterobius\n✗ B: Kato-Katz ก็เป็นการตรวจอุจจาระ\n✓ C: ==Scotch/cellophane tape test== แปะรอบทวารตอนเช้าก่อนอาบน้ำ เจอไข่รูปตัว D\n✗ D: Agar plate culture ใช้หา Strongyloides\n✗ E: Baermann technique ใช้แยก larva ของ Strongyloides\n▶ [t=34:43]"
   },
   "Par/7": {
    "box": 6,
@@ -96,7 +96,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "อีสาน + ปลาน้ำจืดดิบ + ไข่เล็กมี operculum = ==Opisthorchis viverrini== · Clonorchis อยู่จีน/ญี่ปุ่น · ▶ [t=47:02]"
+   "why": "อีสาน + ปลาน้ำจืดดิบ + ไข่เล็กมี operculum = Opisthorchis viverrini\n✗ A: Clonorchis sinensis ไข่คล้ายกัน แต่อยู่จีน/ญี่ปุ่น/เกาหลี\n✗ B: Fasciola ติดจากพืชน้ำ ไข่ใหญ่\n✓ C: ==Opisthorchis viverrini== พยาธิใบไม้ตับที่พบในอีสาน\n✗ D: Paragonimus ติดจากกินปู อยู่ในปอด ไอเป็นเลือด\n✗ E: Heterophyes อยู่ในลำไส้ ไม่ทำตับโต\n▶ [t=47:02]"
   },
   "Par/8": {
    "box": 6,
@@ -110,7 +110,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "trematode ติดคนด้วย ==metacercaria== (ใน IH ตัวที่ 2 = ปลา) · cercaria ไชผิวเฉพาะ Schistosoma · ▶ [t=45:26]"
+   "why": "Trematode ติดคนด้วย ==metacercaria== ที่อยู่ใน intermediate host ตัวที่ 2 (ปลา)\n✗ A: Miracidium ฟักจากไข่ ไชเข้าหอย (IH ตัวแรก)\n✗ B: Sporocyst เป็นระยะในหอย\n✗ C: Redia เป็นระยะในหอย\n✗ D: Cercaria ออกจากหอยไปหาปลา (ไชผิวคนโดยตรงเฉพาะ Schistosoma)\n✓ E: Metacercaria ใน cyst ในเนื้อปลา คนกินปลาดิบจึงติด\n▶ [t=45:26]"
   },
   "Par/9": {
    "box": 6,
@@ -124,7 +124,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "OV เรื้อรัง → ==cholangiocarcinoma== (ไม่ใช่ HCC) · ▶ [t=50:46]"
+   "why": "OV เรื้อรัง ทำให้ท่อน้ำดีอักเสบเรื้อรัง → cholangiocarcinoma\n✗ A: HCC สัมพันธ์กับ HBV, HCV, aflatoxin, cirrhosis\n✗ B: Pancreatic adenocarcinoma ไม่สัมพันธ์กับ OV\n✓ C: ==Cholangiocarcinoma== เป็นมะเร็งที่สัมพันธ์กับ OV มากที่สุด (อีสาน)\n✗ D: Gastric adenocarcinoma สัมพันธ์กับ H. pylori\n✗ E: Colorectal adenocarcinoma ไม่สัมพันธ์กับ OV\n▶ [t=50:46]"
   },
   "Par/10": {
    "box": 6,
@@ -138,7 +138,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "trematode (ยกเว้น Fasciola) ใช้ ==praziquantel== · OV 25 mg/kg tid × 2 วัน (หรือ 40 mg/kg ครั้งเดียว) · albendazole ใช้กับ nematode · ▶ [t=45:26]"
+   "why": "Trematode (ยกเว้น Fasciola) ใช้ ==praziquantel==\n✗ A: Albendazole ใช้กับ nematode\n✗ B: Ivermectin ใช้กับ Strongyloides, filaria, เหา/หิด\n✓ C: Praziquantel 25 mg/kg วันละ 3 ครั้ง × 2 วัน (หรือ 40 mg/kg ครั้งเดียว)\n✗ D: Mebendazole ใช้กับ nematode ในลำไส้\n✗ E: DEC ใช้กับ filariasis\n▶ [t=45:26]"
   },
   "Par/11": {
    "box": 7,
@@ -152,7 +152,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "กินเนื้อวัวดิบ + proglottid แขนง ==18 ข้าง (>13)== = ==T. saginata== · solium แขนงน้อย 7–13 · ▶ [t=57:03]"
+   "why": "กินเนื้อวัวดิบ + proglottid แขนงมดลูก ==18 ข้าง (> 13)== = T. saginata\n✗ A: T. solium (หมู) แขนงมดลูกน้อย 7–13 ข้าง\n✓ B: ==T. saginata== (วัว) แขนงมดลูก 15–20 ข้าง proglottid เคลื่อนไหวออกมาเองได้\n✗ C: Hymenolepis nana ตัวเล็ก ติดคนสู่คน ไม่ใช่จากเนื้อวัว\n✗ D: Dibothriocephalus latus ติดจากปลา proglottid กว้างกว่ายาว มดลูกรูปดอกกุหลาบ\n✗ E: Echinococcus ในคนเป็น hydatid cyst ไม่ได้ปล่อย proglottid\n▶ [t=57:03]"
   },
   "Par/12": {
    "box": 7,
@@ -166,7 +166,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "taeniasis ในลำไส้ ใช้ ==praziquantel 5–10 mg/kg ครั้งเดียว== (หรือ niclosamide) · ▶ [t=56:25]"
+   "why": "Taeniasis ในลำไส้ ใช้ praziquantel ขนาดต่ำครั้งเดียว (หรือ niclosamide)\n✓ A: ==Praziquantel 5–10 mg/kg ครั้งเดียว== เป็นยามาตรฐานของ taeniasis\n✗ B: Albendazole 3 วันไม่ใช่ยาหลักของ taeniasis ในลำไส้\n✗ C: Ivermectin ใช้กับ Strongyloides/filaria\n✗ D: DEC ใช้กับ filariasis\n✗ E: Metronidazole ใช้กับ protozoa (amoeba, Giardia, Trichomonas)\n▶ [t=56:25]"
   },
   "Par/13": {
    "box": 7,
@@ -180,7 +180,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "neurocysticercosis (hole-with-dot) = คนเป็น IH โดยบังเอิญ ติดจาก ==กินไข่ T. solium (fecal–oral)== ไม่ใช่กินหมูดิบ (กินหมูดิบ = taeniasis ในลำไส้) · ▶ [t=58:03]"
+   "why": "Neurocysticercosis (hole-with-dot) = คนเป็น intermediate host โดยบังเอิญ\n✗ A: กินหมูดิบที่มี cysticercus → ได้ตัวเต็มวัยในลำไส้ (taeniasis) ไม่ใช่ cyst ในสมอง\n✓ B: ==กินไข่ T. solium (fecal–oral)== ไข่ฟักเป็น larva ไปฝังที่สมอง\n✗ C: Cercaria ไชผิว = Schistosoma\n✗ D: Metacercaria ในปลา = Opisthorchis/Clonorchis\n✗ E: Hydatid cyst เป็นของ Echinococcus และคนติดจากไข่ ไม่ใช่กิน cyst\n▶ [t=58:03]"
   },
   "Par/14": {
    "box": 7,
@@ -194,7 +194,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "viable cyst หลายก้อน ให้ ==albendazole + steroid + ยากันชัก== · ▶ [t=59:33]"
+   "why": "Viable parenchymal cyst หลายก้อน → ฆ่าพยาธิ + ลดการอักเสบ + คุมชัก\n✗ A: ให้ albendazole เดี่ยวโดยไม่มี steroid เสี่ยงสมองบวมจากการอักเสบเมื่อ cyst ตาย\n✗ B: ขาดยากันชักและ steroid\n✓ C: ==Albendazole + steroid + ยากันชัก== เป็นมาตรฐานสำหรับ viable cyst 1–2 ก้อน\n✗ D: Ivermectin + DEC ใช้กับ filariasis\n✗ E: ผ่าตัดใช้เฉพาะ cyst ในโพรงสมอง/อุดตัน ไม่ใช่ทุกก้อน\n▶ [t=59:33]"
   },
   "Par/15": {
    "box": 8,
@@ -208,7 +208,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "camping แล้วท้องเสียมันเหม็น cyst รูปไข่ผนังบาง = Giardia ติดจาก ==ดื่มน้ำปนเปื้อน cyst== · ▶ [t=1:06:02]"
+   "why": "Camping + ท้องเสียมันเหม็น + cyst รูปไข่ผนังบาง = Giardia\n✓ A: Giardia ติดจาก==ดื่มน้ำ (ลำธาร) ที่ปนเปื้อน cyst==\n✗ B: ผักดิบเป็นช่องทางรอง ไม่เข้ากับประวัติ camping\n✗ C: แมลงกัด = malaria, leishmania, filaria\n✗ D: Person-to-person พบได้ในสถานเลี้ยงเด็ก แต่ไม่ใช่เรื่องที่โจทย์บอก\n✗ E: Larva ไชผิว = hookworm, Strongyloides\n▶ [t=1:06:02]"
   },
   "Par/16": {
    "box": 8,
@@ -222,7 +222,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "protozoa ในลำไส้ (Blastocystis/amoeba) culture ด้วย ==LES (Boeck & Drbohlav Locke-egg-serum)== · agar plate / Harada-Mori ใช้กับ nematode larva · ▶ [t=1:09:50]"
+   "why": "Protozoa ในลำไส้ (Blastocystis/amoeba) เพาะเลี้ยงด้วย LES medium\n✗ A: Agar plate culture ใช้หา Strongyloides larva\n✓ B: ==Boeck & Drbohlav Locke-egg-serum (LES)== ใช้เพาะ protozoa ในลำไส้\n✗ C: Harada-Mori ใช้เพาะ larva ของ hookworm/Strongyloides\n✗ D: MacConkey ใช้เพาะแบคทีเรีย gram-negative\n✗ E: YPD ใช้เพาะยีสต์/เชื้อรา\n▶ [t=1:09:50]"
   },
   "Par/17": {
    "box": 8,
@@ -236,7 +236,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "falling leaf motility + steatorrhea = Giardia · infective stage = ==mature cyst (4 nuclei)== · ▶ [t=1:07:28]"
+   "why": "Falling leaf motility + steatorrhea = Giardia\n✗ A: Embryonated egg = ระยะติดของ Ascaris, Trichuris, Enterobius\n✗ B: Filariform larva = ระยะติดของ hookworm, Strongyloides\n✗ C: Trophozoite มี flagella เป็นระยะก่อโรคในลำไส้ ตายง่ายนอกตัว\n✓ D: ==Mature cyst (4 nuclei)== เป็นระยะติดต่อของ Giardia\n✗ E: Oocyst = ระยะติดของ Cryptosporidium, Toxoplasma, Cyclospora\n▶ [t=1:07:28]"
   },
   "Par/18": {
    "box": 8,
@@ -250,7 +250,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "pseudopod ยื่นแบบนิ้ว + ==กิน RBC== = ==E. histolytica== · ▶ [t=1:01:18]"
+   "why": "Pseudopod รูปนิ้ว + ==กิน RBC== = E. histolytica\n✗ A: Blastocystis ไม่มี pseudopod ไม่กิน RBC\n✗ B: Entamoeba coli เป็น commensal ไม่กิน RBC\n✗ C: Giardia มี flagella ไม่ใช่ pseudopod\n✗ D: Dientamoeba fragilis ไม่กิน RBC\n✓ E: ==E. histolytica== trophozoite กิน RBC เป็นลักษณะบ่งชี้ว่าเป็นตัวก่อโรค\n▶ [t=1:01:18]"
   },
   "Par/19": {
    "box": 8,
@@ -264,7 +264,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "amoeba เคลื่อนด้วย pseudopod + มูกเลือด = ==E. histolytica== · Balantidium เป็น ciliate · ▶ [t=1:01:18]"
+   "why": "Amoeba เคลื่อนด้วย pseudopod + ถ่ายมูกเลือด = E. histolytica\n✗ A: Balantidium เป็น ciliate เคลื่อนด้วย cilia\n✗ B: Giardia เคลื่อนด้วย flagella (falling leaf)\n✗ C: Chilomastix เป็น flagellate ไม่ก่อโรค\n✓ D: ==E. histolytica== เคลื่อนด้วย pseudopod และทำ amoebic dysentery\n✗ E: Cryptosporidium ไม่เคลื่อนที่ด้วย pseudopod ทำท้องเสียน้ำ\n▶ [t=1:01:18]"
   },
   "Par/20": {
    "box": 8,
@@ -278,7 +278,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "E. histolytica ก่อแผล ==flask-shaped ulcer ที่ลำไส้ใหญ่== (cecum, ascending colon) แพร่ต่อไปตับได้ · ▶ [t=1:01:38]"
+   "why": "E. histolytica ก่อแผล ==flask-shaped ulcer ที่ลำไส้ใหญ่== (cecum, ascending colon)\n✗ A: ไม่ได้ก่อโรคที่กระเพาะ\n✗ B: Duodenum เป็นที่อยู่ของ Giardia\n✗ C: ลำไส้เล็กเป็นที่อยู่ของ Giardia, Cryptosporidium\n✗ D: ท่อน้ำดีเป็นที่อยู่ของ liver fluke (OV) ส่วน amoeba ไปตับแบบ abscess\n✓ E: ลำไส้ใหญ่เป็นตำแหน่งหลัก แล้วอาจแพร่ทาง portal vein ไปตับ\n▶ [t=1:01:38]"
   },
   "Par/21": {
    "box": 9,
@@ -292,7 +292,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "AIDS + ใต้ UV เรืองแสงฟ้า (autofluorescence) ขนาด ==8–10 µm== = ==Cyclospora== · Crypto เล็กกว่า 4–6 µm · ▶ [t=1:16:25]"
+   "why": "AIDS + เรืองแสงฟ้าใต้ UV (autofluorescence) + ขนาด ==8–10 µm== = Cyclospora\n✓ A: ==Cyclospora== oocyst 8–10 µm เรืองแสงเองใต้ UV\n✗ B: Cryptosporidium เล็กกว่า 4–6 µm\n✗ C: Enterocytozoon (microsporidia) spore เล็กแค่ 1–2 µm\n✗ D: E. histolytica ไม่เรืองแสงใต้ UV\n✗ E: Isospora oocyst ใหญ่และรี 20–30 µm\n▶ [t=1:16:25]"
   },
   "Par/22": {
    "box": 9,
@@ -306,7 +306,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "spore 1–2 µm ==belt-like== ย้อม modified trichrome/gram-chromotrope = ==microsporidia== (Enterocytozoon) · ▶ [t=1:21:30]"
+   "why": "Spore 1–2 µm แถบคาด ==belt-like== ย้อม gram-chromotrope = microsporidia\n✓ A: ==Microsporidia== (Enterocytozoon) spore เล็กมาก มีแถบคาดกลางตัว\n✗ B: Isospora oocyst ใหญ่ 20–30 µm\n✗ C: Giardia เป็น trophozoite/cyst 10–15 µm\n✗ D: Cryptosporidium 4–6 µm ย้อม modified acid-fast\n✗ E: Cyclospora 8–10 µm เรืองแสงใต้ UV\n▶ [t=1:21:30]"
   },
   "Par/23": {
    "box": 9,
@@ -320,7 +320,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "modified acid-fast ติดแดง ==4–6 µm มี 4 sporozoites== = ==Cryptosporidium== · Isospora ใหญ่กว่า (oocyst รี 2 sporocyst) · ▶ [t=1:16:25]"
+   "why": "Modified acid-fast ติดแดง + ==4–6 µm มี 4 sporozoites== = Cryptosporidium\n✗ A: Giardia ไม่ติด acid-fast\n✗ B: Isospora ติด acid-fast แต่ oocyst ใหญ่ รี มี 2 sporocyst\n✗ C: Amoeba ไม่ติด acid-fast\n✗ D: Microsporidia spore 1–2 µm ย้อม modified trichrome\n✓ E: ==Cryptosporidium== oocyst กลม ~5 µm มี 4 sporozoites\n▶ [t=1:16:25]"
   },
   "Par/24": {
    "box": 6,
@@ -334,7 +334,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "==เสมหะสีสนิม== + ไข่มี operculum ~50×90 µm = ==Paragonimus== (ติดจากกินปู/กุ้งน้ำจืดดิบ) · ▶ [t=1:24:33]"
+   "why": "==เสมหะสีสนิม== + ไข่มี operculum ~50×90 µm = Paragonimus\n✗ A: Fasciolopsis อยู่ในลำไส้ ไข่ใหญ่มาก\n✗ B: Necator เป็น hookworm ไข่ไม่มี operculum\n✗ C: OV อยู่ท่อน้ำดี ไข่เล็ก ~30 µm\n✓ D: ==Paragonimus westermani== อยู่ในปอด ติดจากกินปู/กุ้งน้ำจืดดิบ\n✗ E: S. haematobium อยู่หลอดเลือดกระเพาะปัสสาวะ ไข่มีหนามปลาย\n▶ [t=1:24:33]"
   },
   "Par/25": {
    "box": 11,
@@ -348,7 +348,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "==jerky movement== ในตกขาว = Trichomonas vaginalis → ==pear-shaped + undulating membrane== (ยาวไม่ถึงครึ่งตัว) · A = Giardia · ▶ [t=1:31:45]"
+   "why": "==Jerky movement== ในตกขาว = Trichomonas vaginalis\n✗ A: Pear-shaped + sucking disc = Giardia\n✓ B: ==Pear-shaped + undulating membrane== (ยาวไม่ถึงครึ่งตัว) = T. vaginalis\n✗ C: Spindle-shaped + anterior flagellum = promastigote (Leishmania)\n✗ D: ไม่ใช่ลักษณะของ T. vaginalis\n✗ E: Trophozoite ยาว 2 nuclei มี chromatin 3–8 เม็ด = Dientamoeba fragilis\n▶ [t=1:31:45]"
   },
   "Par/26": {
    "box": 11,
@@ -362,7 +362,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "ocular toxo จาก reactivation: bradyzoite ใน tissue cyst กลับเป็น ==tachyzoite== ที่แบ่งตัวเร็วทำลายเนื้อเยื่อ · ▶ [t=1:37:04]"
+   "why": "Ocular toxo reactivation: bradyzoite ใน tissue cyst กลับเป็น tachyzoite ที่แบ่งตัวเร็ว\n✗ A: Sporozoite อยู่ใน oocyst (จากอุจจาระแมว) เป็นระยะติดต่อ\n✗ B: Bradyzoite แบ่งตัวช้า อยู่นิ่งใน tissue cyst (ระยะแฝง)\n✓ C: ==Tachyzoite== แบ่งตัวเร็วและทำลายเนื้อเยื่อ retina\n✗ D: Merozoite เกิดในลำไส้แมว (definitive host)\n✗ E: Microgamete เป็นระยะสืบพันธุ์ในลำไส้แมว\n▶ [t=1:37:04]"
   },
   "Par/27": {
    "box": 11,
@@ -376,7 +376,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "IgM บวก IgG ลบในหญิงตั้งครรภ์ ยังสรุปไม่ได้ (IgM false positive บ่อย) → ==ยืนยันผลและตรวจ IgG ซ้ำดู seroconversion== · ▶ [t=1:38:27] · [t=1:43:35]"
+   "why": "IgM บวก IgG ลบ ในหญิงตั้งครรภ์ ยังสรุปไม่ได้ เพราะ IgM false positive บ่อย\n✗ A: Sabin–Feldman dye test วัด IgG ไม่ใช่ IgM\n✗ B: ยังสรุปว่า acute infection หรือทารกติดเชื้อไม่ได้\n✗ C: ต้องตรวจต่อ เพราะถ้าติดจริงช่วงตั้งครรภ์ส่งผลต่อทารก\n✗ D: รอหลังคลอดช้าเกินไป เสียโอกาสรักษา\n✓ E: ==ยืนยันผล และตรวจ IgG ซ้ำดู seroconversion== (IgG เปลี่ยนเป็นบวก = ติดเชื้อใหม่จริง)\n▶ [t=1:38:27] · [t=1:43:35]"
   },
   "Par/28": {
    "box": 10,
@@ -390,7 +390,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "ไข้หนาวสั่น ==ทุก 48 ชม.== กลับจากป่า + RBC โต = ==P. vivax== · ▶ [t=2:05:33]"
+   "why": "ไข้หนาวสั่น ==ทุก 48 ชม.== + กลับจากป่า + RBC โต = P. vivax\n✗ A: P. falciparum ไข้ไม่เป็นรอบชัด RBC ขนาดปกติ เห็น ring/banana gametocyte\n✓ B: ==P. vivax== ไข้ทุก 48 ชม. RBC โต มี Schüffner dots\n✗ C: P. malariae ไข้ทุก 72 ชม. band form\n✗ D: P. ovale ไข้ทุก 48 ชม. แต่ RBC รูปไข่ขอบหยัก พบน้อยในไทย\n✗ E: P. knowlesi ไข้ทุก 24 ชม.\n▶ [t=2:05:33]"
   },
   "Par/29": {
    "box": 12,
@@ -404,7 +404,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "คนพม่า microfilaria ใน thin smear มีปลอกหุ้ม หัวไม่มี nucleus ถึงปลายหาง = ==W. bancrofti== (B. malayi ทางใต้ มี nucleus ปลายหาง 2 อัน) · ▶ [t=1:50:41]"
+   "why": "Microfilaria มีปลอก หาง==ไม่มี nucleus ถึงปลาย== + คนพม่า = W. bancrofti\n✗ A: Loa loa อยู่แอฟริกา\n✗ B: B. malayi (ภาคใต้) มี nucleus ที่ปลายหาง 2 อัน\n✗ C: Dirofilaria เป็นพยาธิหนอนหัวใจสุนัข\n✗ D: Onchocerca อยู่ในผิวหนัง ไม่พบในเลือด\n✓ E: ==W. bancrofti== พบในแรงงานพม่า microfilaria มีปลอก หางไม่มี nucleus\n▶ [t=1:50:41]"
   },
   "Par/30": {
    "box": 10,
@@ -418,7 +418,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "vivax/ovale กลับเป็นซ้ำจาก ==hypnozoite ในตับ (relapse)== · ▶ [t=2:05:33]"
+   "why": "Vivax/ovale กลับเป็นซ้ำหลังรักษาจาก ==hypnozoite ในตับ (relapse)==\n✗ A: Gametocyte ไม่ทำให้มีไข้กลับมา เป็นระยะติดต่อสู่ยุง\n✗ B: Reinfection เป็นไปได้ แต่ไม่ใช่กลไกเฉพาะของ vivax ที่โจทย์ถาม\n✓ C: Hypnozoite ในตับตื่นขึ้นมาใหม่ = relapse ต้องให้ primaquine กำจัด\n✗ D: Merozoite ไม่ได้หลบอยู่ในม้าม\n✗ E: Antigenic variation (PfEMP1) เป็นของ P. falciparum\n▶ [t=2:05:33]"
   },
   "Par/31": {
    "box": 10,
@@ -432,7 +432,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "ไข้ทุก ==72 ชม.== + band form + rosette 6–12 merozoite = ==P. malariae== · ▶ [t=2:09:32]"
+   "why": "ไข้ทุก ==72 ชม.== + band form + rosette 6–12 merozoites = P. malariae\n✗ A: P. falciparum ไข้ไม่เป็นรอบชัด\n✗ B: P. vivax ไข้ทุก 48 ชม. merozoite 12–24\n✗ C: P. ovale ไข้ทุก 48 ชม.\n✓ D: ==P. malariae== ไข้ทุก 72 ชม. (quartan) band form + rosette schizont\n✗ E: P. knowlesi ไข้ทุก 24 ชม.\n▶ [t=2:09:32]"
   },
   "Par/32": {
    "box": 10,
@@ -446,7 +446,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "ก่อน primaquine/tafenoquine ต้องตรวจ ==G6PD== (เสี่ยง hemolysis) · ▶ [t=1:48:45]"
+   "why": "ก่อนให้ primaquine/tafenoquine ต้องตรวจ G6PD\n✗ A: Hb electrophoresis ใช้ตรวจ thalassemia/hemoglobinopathy\n✓ B: ==G6PD deficiency== ได้ primaquine แล้วเกิด hemolysis รุนแรง\n✗ C: Direct Coombs ใช้ตรวจ immune hemolysis\n✗ D: IgE ไม่เกี่ยวกับการให้ primaquine\n✗ E: Eosinophil count ไม่เกี่ยวกับการให้ primaquine\n▶ [t=1:48:45]"
   },
   "Par/33": {
    "box": 10,
@@ -460,7 +460,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "bone marrow ใน macrophage มี nucleus + kinetoplast = ==amastigote== อย่าตอบ promastigote (ระยะในริ้นฝอยทราย) · ▶ [t=2:04:18]"
+   "why": "ใน macrophage + มี nucleus + kinetoplast ไม่มี flagellum ยื่น = amastigote\n✗ A: Promastigote อยู่ในริ้นฝอยทราย มี flagellum\n✓ B: ==Amastigote== อยู่ใน macrophage ของคน (bone marrow, ม้าม, ตับ)\n✗ C: Epimastigote อยู่ในแมลงพาหะของ Trypanosoma\n✗ D: Trypomastigote อยู่ในเลือด (Trypanosoma)\n✗ E: Sporozoite เป็นระยะของ Plasmodium จากยุง\n▶ [t=2:04:18]"
   },
   "Par/34": {
    "box": 11,
@@ -474,7 +474,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "contact lens + ล้างน้ำประปา + ==ring infiltrate== = ==Acanthamoeba keratitis== · ▶ [t=2:18:54]"
+   "why": "Contact lens + ล้างด้วยน้ำประปา + ==ring infiltrate== = Acanthamoeba keratitis\n✗ A: Bacterial keratitis (Pseudomonas) ก็สัมพันธ์กับ contact lens แต่ไม่ใช่ ring infiltrate + น้ำประปา\n✗ B: HSV keratitis เป็น dendritic ulcer\n✓ C: ==Acanthamoeba keratitis== ปวดมากเกินรอยโรค ring infiltrate สัมพันธ์กับน้ำประปา\n✗ D: Fungal keratitis มักเกิดหลังโดนพืชขีด รอยโรคขอบฟู มี satellite lesion\n✗ E: Microsporidial keratoconjunctivitis เป็นจุดเล็ก ๆ กระจาย\n▶ [t=2:18:54]"
   },
   "Par/35": {
    "box": 11,
@@ -488,7 +488,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "cyst Acanthamoeba = ==double wall (ectocyst + endocyst)== · E = E. histolytica cyst · ▶ [t=2:18:54]"
+   "why": "Cyst ของ Acanthamoeba = ==double wall (ectocyst + endocyst)==\n✗ A: Kinetoplast เป็นของ Leishmania/Trypanosoma\n✓ B: ผนัง 2 ชั้น ectocyst ย่น + endocyst เหลี่ยม เป็นลักษณะ cyst ของ Acanthamoeba\n✗ C: รูปเสี้ยวในเซลล์ = Toxoplasma tachyzoite\n✗ D: Flagellate + undulating membrane = Trichomonas\n✗ E: Cyst ผนังบาง 4 nuclei = E. histolytica\n▶ [t=2:18:54]"
   },
   "Par/36": {
    "box": 11,
@@ -502,7 +502,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "ว่ายน้ำจืดอุ่น + meningitis ลุกลามเร็ว 4–5 วันในคนปกติ = ==Naegleria fowleri (PAM)== · ▶ [t=2:14:43]"
+   "why": "ว่ายน้ำจืดอุ่น + meningitis ลุกลามเร็ว 4–5 วันในคนปกติ = Naegleria fowleri (PAM)\n✗ A: Acanthamoeba ทำ GAE แบบช้า ในคนภูมิต่ำ\n✗ B: Balamuthia ทำ GAE แบบช้า\n✓ C: ==Naegleria fowleri== ไชผ่าน cribriform plate → primary amoebic meningoencephalitis\n✗ D: E. histolytica ไม่ทำ meningitis หลังว่ายน้ำ\n✗ E: Sappinia พบน้อยมาก ไม่ใช่ภาพนี้\n▶ [t=2:14:43]"
   },
   "Par/37": {
    "box": 12,
@@ -516,7 +516,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "==migratory subcutaneous swelling== + กินปลาดิบ + eosinophil = ==Gnathostoma== · ▶ [t=2:21:36]"
+   "why": "==Migratory subcutaneous swelling== + กินปลาดิบ + eosinophil สูง = Gnathostoma\n✗ A: Angiostrongylus ทำ eosinophilic meningitis (กินหอยโข่ง)\n✓ B: ==Gnathostoma spinigerum== larva ไชไปมาใต้ผิวหนัง บวมแดงย้ายที่\n✗ C: Paragonimus อยู่ปอด ไอเลือด\n✗ D: Spirometra ทำ sparganosis ก้อนใต้ผิวหนังที่ย้ายช้า ติดจากกบ/งู\n✗ E: Trichinella ทำปวดกล้ามเนื้อ หนังตาบวม ติดจากหมูดิบ\n▶ [t=2:21:36]"
   },
   "Par/38": {
    "box": 12,
@@ -530,7 +530,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "กินหมูป่าดิบ + ปวดกล้ามเนื้อ หนังตาบวม CPK สูง = ==Trichinella spiralis== · ▶ [t=2:25:46]"
+   "why": "กินหมูป่าดิบ + ปวดกล้ามเนื้อ + หนังตาบวม + CPK สูง = Trichinella\n✗ A: Gnathostoma ทำก้อนบวมย้ายที่ใต้ผิวหนัง\n✗ B: Trichuris อยู่ลำไส้ใหญ่ rectal prolapse\n✓ C: ==Trichinella spiralis== larva ฝังในกล้ามเนื้อลาย → myositis, CPK สูง\n✗ D: Strongyloides ติดทางผิวหนัง ไม่ทำ myositis\n✗ E: Ancylostoma ทำซีด ไม่ทำ myositis\n▶ [t=2:25:46]"
   },
   "Par/39": {
    "box": 13,
@@ -544,7 +544,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "ไข่ (nit) ==firmly attached== ที่เส้นผม หลังหู ท้ายทอย = ==pediculosis capitis== · ▶ [t=2:31:00]"
+   "why": "ไข่ (nit) ==ติดแน่นที่เส้นผม== หลังหู ท้ายทอย = เหา\n✗ A: Seborrheic dermatitis เป็นขุยลอกออกได้ง่าย\n✓ B: ==Pediculosis capitis== nit ติดแน่นกับเส้นผม แปรงไม่ออก\n✗ C: Tinea capitis ผมร่วงเป็นหย่อม มีขุย\n✗ D: Scabies คันกลางคืน burrow ที่ง่ามนิ้ว ไม่ใช่หนังศีรษะ\n✗ E: Allergic contact dermatitis ไม่มีไข่ติดเส้นผม\n▶ [t=2:31:00]"
   },
   "Par/40": {
    "box": 13,
@@ -558,7 +558,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคลิป",
-   "why": "คันหัวหน่าว + ==maculae ceruleae== (ปื้นเทาฟ้า) = ==Pthirus pubis== · ▶ [t=2:32:01]"
+   "why": "คันหัวหน่าว + ==maculae ceruleae== (ปื้นเทาฟ้า) = โลน\n✗ A: เหาหัวอยู่ที่หนังศีรษะ\n✗ B: เหาตัวอยู่ในตะเข็บเสื้อผ้า\n✓ C: ==Pthirus pubis== (โลน) อยู่ขนหัวหน่าว ทำให้เกิด maculae ceruleae\n✗ D: Sarcoptes scabiei ทำ burrow ที่ง่ามนิ้ว ข้อมือ\n✗ E: Cimex (ตัวเรือด) กัดเป็นแถวแล้วไปซ่อน ไม่เกาะขน\n▶ [t=2:32:01]"
   },
   "Par/41": {
    "box": 13,
@@ -572,7 +572,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "โลนติดต่อทาง ==sexual/close contact== · ▶ [t=2:28:17]"
+   "why": "โลนติดต่อทางเพศสัมพันธ์/สัมผัสใกล้ชิด\n✗ A: ไข่โลนติดขน ไม่ฟุ้งในอากาศ\n✗ B: Larva ไชผิวหนัง = hookworm/Strongyloides\n✓ C: ==Sexual/close contact== เป็นทางติดต่อหลักของโลน\n✗ D: ไม่ติดต่อทางอาหาร\n✗ E: ยุงไม่ได้เป็นพาหะของโลน\n▶ [t=2:28:17]"
   },
   "Par/42": {
    "box": 13,
@@ -586,7 +586,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · ▶ = ช่วงที่อาจารย์สอนเรื่องนี้",
-   "why": "คันกลางคืน + burrow ที่ง่ามนิ้ว ข้อมือ เอว + คนใกล้ชิดเป็น = ==Sarcoptes scabiei== · ▶ [t=2:28:17]"
+   "why": "คันกลางคืน + burrow ที่ง่ามนิ้ว ข้อมือ เอว + คนใกล้ชิดเป็นด้วย = หิด\n✗ A: เหาตัวอยู่ตะเข็บเสื้อ ไม่ทำ burrow\n✓ B: ==Sarcoptes scabiei== ขุดอุโมงค์ (burrow) ใต้ผิวหนัง คันกลางคืน ติดคนใกล้ชิด\n✗ C: Demodex อยู่ในรูขุมขนใบหน้า\n✗ D: Pthirus pubis อยู่ขนหัวหน่าว\n✗ E: Cimex (ตัวเรือด) กัดเป็นแถว ไม่ทำ burrow\n▶ [t=2:28:17]"
   }
  }
 }

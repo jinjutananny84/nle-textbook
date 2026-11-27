@@ -12,7 +12,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Sphenoid sinus อยู่ด้านหลังติด pituitary gland (sella turcica) → ผ่าตัด ==transsphenoidal== · sinus อื่นอยู่ไกลจาก pituitary"
+   "why": "Sphenoid sinus อยู่ติดด้านล่างของ sella turcica (pituitary) → ผ่าตัด ==transsphenoidal==\n✗ A: Frontal sinus อยู่หน้าผาก ไกลจาก pituitary\n✗ B: Middle ethmoidal อยู่ระหว่างตา ไม่ติด sella\n✗ C: Posterior ethmoidal อยู่ใกล้ แต่ไม่ได้อยู่ใต้ sella โดยตรง\n✓ D: Sphenoidal sinus อยู่ใต้ pituitary พอดี เป็นทางเข้าผ่าตัดมาตรฐาน\n✗ E: Maxillary sinus อยู่ในแก้ม ไกลจาก pituitary"
   },
   "RS/2": {
    "box": 1,
@@ -26,7 +26,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Superior meatus = ที่เปิดของ ==posterior ethmoidal sinus== · frontal/maxillary/anterior ethmoidal เปิดที่ hiatus semilunaris (middle meatus) · middle ethmoidal เปิดที่ ethmoidal bulla"
+   "why": "Superior meatus = ที่เปิดของ posterior ethmoidal sinus\n✗ A: Frontal sinus เปิดที่ hiatus semilunaris (middle meatus)\n✗ B: Maxillary sinus เปิดที่ hiatus semilunaris (middle meatus)\n✗ C: Anterior ethmoidal เปิดที่ hiatus semilunaris (middle meatus)\n✗ D: Middle ethmoidal เปิดที่ ethmoidal bulla (middle meatus)\n✓ E: ==Posterior ethmoidal sinus== เปิดที่ superior meatus\n  (sphenoid เปิดที่ sphenoethmoidal recess)"
   },
   "RS/3": {
    "box": 1,
@@ -40,7 +40,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Inferior meatus เป็นที่เปิดของ ==nasolacrimal duct== อย่างเดียว ไม่มี sinus เปิดที่นี่ → ก้อนอุดทำให้น้ำตาไหล (epiphora)"
+   "why": "Inferior meatus เป็นที่เปิดของ ==nasolacrimal duct== อย่างเดียว ไม่มี sinus เปิดที่นี่\n✗ A: Frontal sinus เปิดที่ middle meatus\n✗ B: Ethmoidal sinus เปิดที่ middle/superior meatus\n✗ C: Maxillary sinus เปิดที่ middle meatus\n✗ D: Sphenoid sinus เปิดที่ sphenoethmoidal recess\n✓ E: Nasolacrimal duct ถูกอุด → น้ำตาไหล (epiphora)"
   },
   "RS/4": {
    "box": 1,
@@ -54,7 +54,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "เลือดไหลลง nasopharynx = ==posterior epistaxis== มาจาก ==sphenopalatine a.== (รุนแรง ต้องผูก) · anterior epistaxis มาจาก Kiesselbach plexus"
+   "why": "เลือดไหลลง nasopharynx = ==posterior epistaxis== มาจาก sphenopalatine a.\n(เด็กชาย + ก้อนใน nasopharynx เลือดออก = นึกถึง juvenile nasopharyngeal angiofibroma)\n✗ A: Anterior ethmoidal a. เลี้ยงส่วนบนหน้าของโพรงจมูก\n✗ B: Posterior ethmoidal a. เลี้ยงส่วนบนหลัง เลือดออกน้อยกว่า\n✗ C: Lesser palatine a. เลี้ยงเพดานอ่อน\n✗ D: Greater palatine a. ร่วมเป็น Kiesselbach plexus (ด้านหน้า)\n✓ E: Sphenopalatine a. เป็นแหล่งหลักของ posterior epistaxis ต้องผูกเมื่อเลือดออกซ้ำ"
   },
   "RS/5": {
    "box": 1,
@@ -68,7 +68,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Common site = ==anterior nasal septum== (Kiesselbach's plexus/Little's area) · พบบ่อยและไม่รุนแรง"
+   "why": "เลือดกำเดาพบบ่อยที่สุดที่ ==anterior nasal septum== (Kiesselbach's plexus/Little's area)\n✗ A: Nasal floor ไม่ใช่ตำแหน่งที่พบบ่อย\n✓ B: Anterior septum มีหลอดเลือดหลายเส้นมาประสานกัน เปราะ แคะง่าย\n✗ C: Posterior septum เป็น posterior epistaxis พบน้อยกว่าแต่รุนแรงกว่า\n✗ D: Lateral wall ด้านหน้าไม่ใช่ตำแหน่งที่พบบ่อย\n✗ E: Lateral wall ด้านหลัง (sphenopalatine) พบน้อยกว่า"
   },
   "RS/6": {
    "box": 2,
@@ -82,7 +82,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Posterior cricoarytenoid== = กล้ามเนื้อมัดเดียวที่ abduct vocal cord · cricothyroid = tense (เสียงสูง) · thyroarytenoid/vocalis = relax (เสียงต่ำ) · transverse arytenoid = ปิด"
+   "why": "Posterior cricoarytenoid = กล้ามเนื้อมัดเดียวที่ abduct (แยก) vocal cord\n✓ A: Posterior cricoarytenoid เปิด glottis ตอนหายใจเข้า\n✗ B: Cricothyroid ทำให้ vocal cord ตึง (เสียงสูง)\n✗ C: Thyroarytenoid ทำให้ vocal cord หย่อน (เสียงต่ำ)\n✗ D: Transverse arytenoid ปิด glottis (adduct)\n✗ E: Vocalis ปรับความตึงของ vocal cord"
   },
   "RS/7": {
    "box": 2,
@@ -96,7 +96,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Recurrent laryngeal n.== วิ่งใกล้ thyroid เลี้ยงกล้ามเนื้อ larynx ทุกมัดยกเว้น cricothyroid → เสียงแหบ (ออกบ่อย) · external laryngeal เสีย = เสียงสูงไม่ได้"
+   "why": "Recurrent laryngeal n. วิ่งใกล้ thyroid เลี้ยงกล้ามเนื้อ larynx ทุกมัดยกเว้น cricothyroid\n✗ A: External laryngeal n. เลี้ยง cricothyroid เสียแล้วทำเสียงสูงไม่ได้\n✗ B: Internal laryngeal n. รับความรู้สึกเหนือ vocal cord\n✓ C: Recurrent laryngeal n. บาดเจ็บหลัง thyroidectomy → เสียงแหบ (ออกบ่อย)\n✗ D: Glossopharyngeal n. ไม่ได้อยู่ในบริเวณผ่าตัด thyroid\n✗ E: Vagus n. อยู่ใน carotid sheath ไม่ใช่ตำแหน่งบาดเจ็บที่พบบ่อย"
   },
   "RS/8": {
    "box": 3,
@@ -110,7 +110,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "บุหรี่ทำลาย ==cilia== → mucociliary clearance เสีย เสมหะพัดออกไม่ได้ ไอไม่มีประสิทธิภาพ · goblet cell hyperplasia ทำให้เสมหะมาก แต่ไม่ใช่เหตุที่ไอไม่ออก"
+   "why": "บุหรี่ทำลาย ==cilia== → mucociliary clearance เสีย เสมหะพัดออกไม่ได้ ไอไม่มีประสิทธิภาพ\n✓ A: Cilia เสีย จึงไอไม่ออก\n✗ B: Clara (club) cell หลั่งสารปกป้อง bronchiole และ detoxify ไม่ได้ทำหน้าที่ขับเสมหะ\n✗ C: Goblet cell hyperplasia ทำให้เสมหะมาก แต่ไม่ใช่เหตุที่ไอไม่ออก\n✗ D: Seromucous gland โตทำให้เสมหะมาก (Reid index สูง) ไม่ใช่ตัวพัดเสมหะ\n✗ E: Type II pneumocyte สร้าง surfactant"
   },
   "RS/9": {
    "box": 4,
@@ -124,7 +124,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "RUL ด้านหน้าอยู่ตั้งแต่ apex ถึง ICS 3 → ฟังที่ ==2nd ICS== · ICS 4–5 = middle lobe · lower lobe ต้องฟังด้านหลัง"
+   "why": "RUL ด้านหน้าอยู่ตั้งแต่ apex ถึง ICS 3 → ฟังที่ ==2nd ICS==\n✓ A: 2nd ICS อยู่ในเขต upper lobe\n✗ B: 4th ICS ด้านหน้าขวาเป็น middle lobe\n✗ C: 6th ICS ด้านหน้าเป็น middle/lower lobe\n✗ D: 7th ICS ใกล้ขอบล่างของปอด\n✗ E: 8th ICS ด้านหน้าอยู่ใต้ขอบปอด"
   },
   "RS/10": {
    "box": 4,
@@ -138,7 +138,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Superior lobe ซ้ายรวม lingula ลงมาถึง ==anterior 5th ICS== (ขวาด้านหน้าถึงแค่ ICS 3) · ด้านหลัง upper lobe ถึง ~ICS 5–6 แต่ตัวเลือกด้านหน้าต่ำกว่า"
+   "why": "Superior lobe ซ้ายรวม lingula ลงมาถึง ==anterior 5th ICS== (ขวาด้านหน้าถึงแค่ ICS 3)\n✗ A: Anterior 4th ICS ยังไม่ใช่จุดต่ำสุด\n✓ B: Anterior 5th ICS คือขอบล่างสุดของ lingula\n✗ C: Anterior 6th ICS เป็น lower lobe\n✗ D: ด้านหลังขอบ upper lobe อยู่ที่ระดับ T3–4 (spine of scapula) ต่ำได้ไม่ถึงตัวเลือกด้านหน้า\n✗ E: ด้านหลังระดับนี้เป็น lower lobe แล้ว"
   },
   "RS/11": {
    "box": 4,
@@ -152,7 +152,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "อาจารย์: ด้านหน้า lower lobe ฟังได้ถึงประมาณ ==ICS 6 (midclavicular)== ต่ำกว่านั้นไม่มีเนื้อปอดแล้ว · ICS 8, 10 ที่ midclavicular อยู่ใต้ขอบปอด",
+   "why": "ด้านหน้า lower lobe ฟังได้ถึงประมาณ ICS 6 (midclavicular) ต่ำกว่านั้นไม่มีเนื้อปอดแล้ว\n✓ A: 6th ICS midclavicular เป็นขอบล่างของปอดด้านหน้า\n✗ B: 8th ICS midclavicular อยู่ใต้ขอบปอด\n✗ C: 8th ICS parasternal อยู่ใต้ขอบปอด\n✗ D: 10th ICS midclavicular อยู่ใต้ขอบปอด (ช่องท้อง)\n✗ E: 10th ICS scapular line อยู่ใต้ขอบปอดด้านหลังเล็กน้อย/เป็น pleura ไม่ใช่เนื้อปอด",
    "doubt": "Lower lobe ฟังด้านหลังเป็นหลัก และขอบล่างด้านหลังอยู่ราว T10 ตัวเลือก 10th ICS scapular line จึงอยู่ที่ขอบล่างสุดพอดี อาจารย์เลือกข้อ 6th ICS midclavicular"
   },
   "RS/12": {
@@ -166,7 +166,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ส่วนใหญ่ติดที่ ==bronchus== (โดยเฉพาะ right main bronchus ที่ชันกว่า) · ถ้าติด larynx/trachea จะหายใจไม่ได้เลย"
+   "why": "สิ่งแปลกปลอมส่วนใหญ่ติดที่ ==bronchus== (โดยเฉพาะ right main bronchus)\n✗ A: ติด larynx จะหายใจไม่ได้ เสียงหาย เขียวทันที\n✗ B: ติด trachea จะอุดทางเดินหายใจทั้งหมด\n✓ C: Bronchus พบบ่อยที่สุด ไอ หายใจลำบาก ฟังเสียงลดข้างเดียว\n✗ D: Bronchiole เล็กเกินกว่าถั่วจะลงไปถึง"
   },
   "RS/13": {
    "box": 4,
@@ -180,7 +180,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Right main bronchus สั้น กว้าง ชันกว่า + ท่ายืนตกตามแรงโน้มถ่วง → ==right lower lobe (basal segment)== · ท่านอนหงาย = superior segment ของ lower lobe/posterior segment ของ upper lobe"
+   "why": "Right main bronchus สั้น กว้าง ชันกว่า + ท่ายืนตกตามแรงโน้มถ่วง → right lower lobe\n✗ A: Right upper lobe แขนงแยกออกเกือบตั้งฉาก ไม่ใช่ทางตรง\n✗ B: Right middle lobe แยกออกไปด้านหน้า\n✓ C: Right lower lobe (basal segment) เป็นทางตรงเมื่อยืน\n✗ D: ฝั่งซ้าย bronchus เอียงมากกว่า\n✗ E: ฝั่งซ้าย bronchus เอียงมากกว่า\n  (ท่านอนหงาย → superior segment ของ lower lobe/posterior segment ของ upper lobe)"
   },
   "RS/14": {
    "box": 4,
@@ -194,7 +194,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ทุก lobe ระบายไป ==hilar (bronchopulmonary) node== ก่อน แล้วจึงไป carinal และ paratracheal · Virchow = GI cancer (supraclavicular ซ้าย)"
+   "why": "ทุก lobe ระบายไป ==hilar (bronchopulmonary) node== ก่อน → carinal → paratracheal\n✗ A: Sternal (parasternal) node รับจากเต้านมด้านใน\n✗ B: Axillary node รับจากเต้านมและแขน\n✓ C: Hilar node เป็นด่านแรกของมะเร็งปอด\n✗ D: Virchow node (supraclavicular ซ้าย) เป็นของ GI cancer\n✗ E: Pectoral node เป็นกลุ่มหนึ่งของ axillary node"
   },
   "RS/15": {
    "box": 5,
@@ -208,7 +208,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Neonatal RDS = ขาด surfactant ซึ่งสร้างจาก ==type II pneumocyte== · type I ทำหน้าที่แลกก๊าซ"
+   "why": "Neonatal RDS = ขาด surfactant ซึ่งสร้างจาก type II pneumocyte\n✗ A: Type I ทำหน้าที่แลกเปลี่ยนก๊าซ ไม่ได้สร้าง surfactant\n✓ B: Type II pneumocyte ยังไม่เจริญเต็มที่ในทารกคลอดก่อนกำหนด\n✗ C: Respiratory epithelium บุทางเดินหายใจ ไม่ได้สร้าง surfactant\n✗ D: Olfactory epithelium เป็นเยื่อรับกลิ่น\n✗ E: Interstitium ไม่ใช่ปัญหาหลักของ RDS"
   },
   "RS/16": {
    "box": 5,
@@ -222,7 +222,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "GA 28 wk ปอดอยู่ระยะ ==saccular== (เริ่มสร้าง surfactant) ยังไม่สมบูรณ์ → ==poorly developed saccular alveoli== · patho RDS = hyaline membrane"
+   "why": "GA 28 wk ปอดอยู่ระยะ ==saccular== (เริ่มสร้าง surfactant) ยังไม่สมบูรณ์\n✗ A: Diffuse alveolar hemorrhage ไม่ใช่ภาพหลักของ RDS\n✗ B: Lymphocytic infiltration เป็นภาพของ interstitial pneumonitis\n✗ C: Neutrophilic exudate เป็นภาพของ pneumonia\n✗ D: Fibrosis + dilated airspace เป็นภาพของ BPD ระยะหลัง\n✓ E: Poorly developed saccular alveoli ร่วมกับ hyaline membrane"
   },
   "RS/17": {
    "box": 5,
@@ -236,7 +236,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Surfactant หลัก = ==dipalmitoylphosphatidylcholine (DPPC, lecithin)== · L/S ratio (lecithin/sphingomyelin) ใช้ประเมิน lung maturity"
+   "why": "Surfactant หลัก = ==dipalmitoylphosphatidylcholine (DPPC, lecithin)==\n✓ A: Phosphatidylcholine (lecithin) เป็นส่วนประกอบหลักของ surfactant\n✗ B: Phosphatidylserine อยู่ผิวในของเยื่อหุ้มเซลล์ ไม่ใช่ surfactant หลัก\n✗ C: Phosphatidylinositol มีน้อยใน surfactant\n✗ D: Phosphatidylethanolamine ไม่ใช่ surfactant หลัก\n✗ E: Sphingomyelin ใช้เป็นตัวหารใน L/S ratio (คงที่) ไม่ใช่ตัวที่ขาด"
   },
   "RS/18": {
    "box": 5,
@@ -250,7 +250,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ให้ ==steroid (dexamethasone)== แก่แม่ก่อนคลอดเร่ง surfactant/lung maturation · surfactant ให้ทารกหลังคลอดทางท่อ ไม่ได้ให้แม่ · terbutaline/indomethacin = tocolytic"
+   "why": "ให้ steroid แก่แม่ก่อนคลอดเพื่อเร่ง surfactant/lung maturation\n✗ A: Thiamine ไม่เกี่ยวกับปอดทารก\n✗ B: Surfactant ให้ทารกหลังคลอดทางท่อช่วยหายใจ ไม่ได้ให้แม่\n✗ C: Terbutaline เป็น tocolytic (ยับยั้งการหดตัวมดลูก)\n✗ D: Indomethacin เป็น tocolytic\n✓ E: Dexamethasone (หรือ betamethasone) ให้แม่ GA 24–34 wk ลด RDS"
   },
   "RS/19": {
    "box": 5,
@@ -264,7 +264,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Scaphoid abdomen== (ไส้ขึ้นไปในอก) + cystic-like lesion (bowel loop) ในอกซ้าย + mediastinal shift ไปขวา = ==congenital diaphragmatic hernia== (ส่วนใหญ่ซ้าย posterolateral)",
+   "why": "Scaphoid abdomen + cystic lesion (ลำไส้) ในอก + mediastinum เบี่ยงขวา = CDH\n✓ A: Congenital diaphragmatic hernia (ส่วนใหญ่ซ้าย Bochdalek) ลำไส้ขึ้นไปในอก ท้องแฟบ\n✗ B: CPAM มี cystic lesion ในปอดได้ แต่ท้องไม่แฟบ\n✗ C: TEF มาด้วยน้ำลายล้น สำลัก\n✗ D: Tension pneumothorax ไม่มี cystic lesion ในอก\n✗ E: Neonatal RDS เป็น ground-glass ทั้งสองข้าง",
    "options_reconstructed": true
   },
   "RS/20": {
@@ -279,7 +279,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "MV = TV × RR → 4000 = 400 × RR → RR 10 · AV = (TV − DS) × RR = (400 − 100) × 10 = ==3,000 ml/min=="
+   "why": "MV = TV × RR → 4000 = 400 × RR → RR = 10\nAV = (TV − dead space) × RR = (400 − 100) × 10 = 3,000 ml/min\n✗ A: 2,000 คำนวณผิด\n✗ B: 2,500 คำนวณผิด\n✓ C: 3,000 ml/min\n✗ D: 3,500 คำนวณผิด\n✗ E: 4,000 คือ minute ventilation ลืมหัก dead space"
   },
   "RS/21": {
    "box": 6,
@@ -293,7 +293,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "PaCO2 ∝ 1/alveolar ventilation = (TV − ==dead space==) × RR · RR และ TV เท่ากัน ตัวที่ต่างได้คือ dead space"
+   "why": "PaCO2 ∝ 1/alveolar ventilation = (TV − dead space) × RR\nRR และ TV เท่ากัน ตัวที่ต่างได้คือ dead space\n✗ A: Vital capacity ไม่ได้กำหนด ventilation ขณะหายใจปกติ\n✗ B: Cardiac output ไม่ใช่ตัวกำหนดหลักของ PaCO2\n✗ C: Compliance มีผลต่อแรงที่ใช้ แต่ถ้า TV เท่ากัน ventilation เท่ากัน\n✓ D: Dead space ต่างกัน → alveolar ventilation ต่างกัน → PaCO2 ต่างกัน\n✗ E: Airway resistance มีผลต่อแรง ไม่ใช่ ventilation ถ้า TV เท่ากัน"
   },
   "RS/22": {
    "box": 6,
@@ -307,7 +307,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Forced inspiration ใช้ accessory muscle: ==scalene==, SCM, alae nasi · external intercostal ใช้ใน inspiration ปกติ · subcostal/innermost intercostal ช่วย expiration"
+   "why": "Forced inspiration ใช้ accessory muscle: scalene, SCM, alae nasi\n✓ A: Anterior scalene ยกซี่โครงที่ 1 ช่วยหายใจเข้าแรง\n✗ B: Subcostal ช่วย expiration\n✗ C: External intercostal ใช้ใน inspiration ปกติ (ไม่ใช่ accessory)\n✗ D: Serratus anterior เป็นกล้ามเนื้อของสะบัก ช่วยหายใจได้น้อยเมื่อยึดแขน ไม่ใช่คำตอบหลัก\n✗ E: Innermost intercostal ช่วย expiration"
   },
   "RS/23": {
    "box": 6,
@@ -321,7 +321,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==SCM== = accessory muscle ของ forced inspiration · internal intercostal, rectus abdominis, external oblique, transversus thoracis = forced expiration"
+   "why": "SCM = accessory muscle ของ forced inspiration\n✓ A: SCM ยก sternum ขึ้น ช่วยหายใจเข้าแรง\n✗ B: Internal intercostal ใช้ใน forced expiration\n✗ C: Transversus thoracis ใช้ใน forced expiration\n✗ D: External oblique ใช้ใน forced expiration\n✗ E: Rectus abdominis ใช้ใน forced expiration"
   },
   "RS/24": {
    "box": 6,
@@ -335,7 +335,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Ascites ดัน diaphragm ขึ้น หดลงไม่ได้ → ==vertical diameter ลด== (diaphragm เพิ่ม vertical · external intercostal แบบ bucket handle เพิ่ม AP/transverse)"
+   "why": "Ascites ดัน diaphragm ขึ้น หดลงไม่ได้ → vertical diameter ลด\n✓ A: Diaphragm เป็นตัวเพิ่ม vertical diameter เมื่อหดตัว\n✗ B: AP diameter เพิ่มด้วย external intercostal (pump handle) ไม่ได้ถูกกระทบหลัก\n✗ C: Anatomical dead space ไม่เปลี่ยน\n✗ D: Physiological dead space ไม่ใช่ผลหลัก\n✗ E: Pulmonary blood flow ไม่ใช่ผลหลัก"
   },
   "RS/25": {
    "box": 7,
@@ -347,7 +347,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Bronchial smooth muscle มี ==β2 receptor== → ==epinephrine== (β2 ดี) ทำให้ relax · ACh (muscarinic) ทำให้หด · NE ออกฤทธิ์ β2 น้อย"
+   "why": "Bronchial smooth muscle มี β2 receptor → epinephrine ทำให้ relax\n✗ A: ACh (muscarinic M3) ทำให้หลอดลมหด\n✓ B: Epinephrine กระตุ้น β2 ได้ดี → bronchodilation\n✗ C: Norepinephrine ออกฤทธิ์ β2 น้อย"
   },
   "RS/26": {
    "box": 8,
@@ -361,7 +361,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Fick: Vgas ∝ solubility × ==surface area== × ΔP / (MW × thickness) · surfactant เกี่ยวกับการขยายปอด ไม่ใช่ diffusion · O2 ปกติเป็น perfusion-limited แต่คำถามถาม diffusion"
+   "why": "Fick: Vgas ∝ solubility × surface area × ΔP / (MW × thickness)\n✓ A: Alveolar surface area เป็นตัวกำหนด diffusion โดยตรง\n✗ B: Surfactant เกี่ยวกับการขยายปอด ไม่ใช่ diffusion\n✗ C: Blood flow เกี่ยวกับ perfusion-limited ไม่ใช่ตัว diffusion\n✗ D: Airway resistance เกี่ยวกับ ventilation\n✗ E: CO2 diffusion ไม่ได้กำหนด O2 diffusion"
   },
   "RS/27": {
    "box": 8,
@@ -375,7 +375,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Exercise → CO2, H+, temperature เพิ่ม → ==right shift== · ==hyperthermia== ก็ right shift · alkalosis, hyperventilation, CO, 2,3-BPG ลด = left shift"
+   "why": "Exercise → CO2, H+, อุณหภูมิเพิ่ม → right shift\n✓ A: Hyperthermia ทำให้ right shift เหมือนออกกำลังกาย\n✗ B: Metabolic alkalosis → left shift\n✗ C: Hyperventilation → PCO2 ลด → left shift\n✗ D: CO poisoning → left shift\n✗ E: 2,3-BPG ลด → left shift"
   },
   "RS/28": {
    "box": 8,
@@ -389,7 +389,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Hyperventilation → PCO2 ลด → alkalosis → ==left shift = Hb-O2 affinity เพิ่ม== (iCa ลด → carpopedal spasm) · PCO2, HCO3, CO2 content ลด",
+   "why": "Hyperventilation → PCO2 ลด → alkalosis → left shift (Hb-O2 affinity เพิ่ม)\nAlkalosis ทำให้ iCa ลด → carpopedal spasm\n✗ A: PaO2 อาจเพิ่มเล็กน้อย แต่ไม่ใช่คำตอบหลัก\n✗ B: PCO2 ลดลง\n✓ C: Hb-O2 affinity เพิ่ม (left shift)\n✗ D: HCO3− ลดลง (ชดเชย)\n✗ E: CO2 content ลดลง",
    "doubt": "PaO2 อาจเพิ่มเล็กน้อยได้ตาม alveolar gas equation แต่คำตอบที่อาจารย์และข้อสอบต้องการคือ affinity"
   },
   "RS/29": {
@@ -404,7 +404,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "CO2 สูง + acidosis → ==right shift → Hb-O2 affinity ลด== · PVR เพิ่ม (hypoxia, ปอดแฟบ) · HCO3 เพิ่มเล็กน้อย · chemoreceptor ถูกกระตุ้นมากขึ้น"
+   "why": "CO2 สูง + acidosis → right shift → Hb-O2 affinity ลด\n✓ A: Hb-O2 affinity ลดลง\n✗ B: PVR เพิ่ม (hypoxic vasoconstriction, ปอดแฟบ)\n✗ C: HCO3− เพิ่มเล็กน้อยจาก CO2 สูง\n✗ D: 2,3-BPG ไม่ลด (ถ้า hypoxia นานจะเพิ่ม)\n✗ E: Chemoreceptor ถูกกระตุ้นมากขึ้น"
   },
   "RS/30": {
    "box": 8,
@@ -418,7 +418,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "2,3-DPG จับ deoxyHb → ==right shift → ปล่อย O2 ให้ tissue ง่ายขึ้น (O2 dissociation เพิ่ม)== · erythropoiesis เพิ่มจาก EPO ไม่ใช่จาก 2,3-DPG"
+   "why": "2,3-DPG จับ deoxyHb → right shift → ปล่อย O2 ให้ tissue ง่ายขึ้น\n✗ A: การสร้าง Hb เพิ่มจาก EPO ไม่ใช่จาก 2,3-DPG\n✗ B: Erythropoiesis เพิ่มจาก EPO ไม่ใช่จาก 2,3-DPG\n✗ C: Blood flow ไม่ได้เพิ่มจาก 2,3-DPG\n✗ D: O2 saturation ลดลงเล็กน้อยเพราะ affinity ลด\n✓ E: O2 dissociation (unloading) เพิ่มขึ้น"
   },
   "RS/31": {
    "box": 8,
@@ -430,7 +430,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Chronic hypoxia ที่สูง== → EPO → polycythemia และ 2,3-BPG เพิ่ม → right shift · exercise ไม่ทำให้ RBC เพิ่ม",
+   "why": "Chronic hypoxia ที่ที่สูง → EPO → polycythemia และ 2,3-BPG เพิ่ม\n✗ A: Sleep apnea ทำ polycythemia ได้ แต่ไม่ใช่คำตอบที่ตรงที่สุด\n✗ B: Exercise ไม่ทำให้ RBC เพิ่ม\n✓ C: High altitude เพิ่มทั้ง RBC และ 2,3-BPG",
    "doubt": "Sleep apnea รุนแรงก็ทำให้ polycythemia ได้ แต่ตัวอย่างคลาสสิกที่ข้อสอบต้องการคือ high altitude"
   },
   "RS/32": {
@@ -445,7 +445,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ไอเสียรถในที่ปิด = ==CO poisoning → carboxyhemoglobin== · SpO2 ปกติหลอก (COHb สีคล้าย HbO2) ต้องตรวจ co-oximeter · MetHb ทำ SpO2 ค้าง ~85% · carbamino = CO2 จับ Hb"
+   "why": "ไอเสียรถในที่ปิด = CO poisoning → carboxyhemoglobin\nSpO2 ปกติหลอก (COHb สีคล้าย HbO2) ต้องตรวจ co-oximeter\n✗ A: Sulfhemoglobin เกิดจากยาบางชนิด พบน้อย\n✓ B: Carboxyhemoglobin สูง ปวดหัว เวียนหัว SpO2 ดูปกติ\n✗ C: Deoxyhemoglobin สูงจะเขียว SpO2 ต่ำ\n✗ D: Carbaminohemoglobin = CO2 จับ Hb (ปกติ)\n✗ E: Methemoglobin ทำ SpO2 ค้าง ~85% เลือดสีน้ำตาล"
   },
   "RS/33": {
    "box": 8,
@@ -459,7 +459,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "CO2 > 90% ขนส่งเป็น ==HCO3− ที่เกิดจาก carbonic anhydrase ใน RBC== (แล้วแลก Cl−) · dissolved ~5% · carbamino ~3%"
+   "why": "CO2 > 90% ขนส่งเป็น HCO3− ที่เกิดจาก carbonic anhydrase ใน RBC (แล้วแลก Cl−)\n✗ A: Carbaminohemoglobin ~3–5%\n✗ B: Carbamino compounds ~3–5%\n✓ C: Carbonic anhydrase ใน RBC เปลี่ยน CO2 เป็น H2CO3 → HCO3− เป็นทางหลัก\n✗ D: ไม่มีเอนไซม์ปฏิกิริยาเกิดช้ามาก\n✗ E: ละลายใน plasma ~5%"
   },
   "RS/34": {
    "box": 9,
@@ -473,7 +473,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "เลือดจาก bronchial a. และ Thebesian veins (~2% CO) ไม่ผ่านการแลกก๊าซแล้วไหลกลับมาผสม = ==anatomical shunt== → PaO2 97 < PAO2 103 (A-a gradient ปกติ)"
+   "why": "เลือดจาก bronchial a. และ Thebesian veins (~2% CO) ไม่ผ่านการแลกก๊าซ แล้วไหลกลับมาผสม = anatomical shunt\n✗ A: Physiologic dead space เป็นลมที่ไม่ได้แลกก๊าซ ไม่ได้ทำให้ PaO2 ต่ำกว่า PAO2\n✓ B: Anatomical shunt ทำให้ PaO2 ~97 < PAO2 ~103 (A-a gradient ปกติ)\n✗ C: V/Q mismatch มีส่วนบ้าง แต่คำตอบมาตรฐานในคนปกติคือ anatomical shunt\n✗ D: Stroke volume ไม่เกี่ยว\n✗ E: Tidal volume ไม่เกี่ยว"
   },
   "RS/35": {
    "box": 9,
@@ -487,7 +487,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "PE = ส่วนที่ถูกอุดมีลมแต่ไม่มีเลือด → ==dead space เพิ่ม== (V/Q สูง) · ตัวเลือกไม่มี dead space เพิ่ม จึงตอบ ==V/Q mismatch== · เลือดที่ถูกเบี่ยงไปปอดส่วนอื่นทำให้ส่วนนั้น V/Q ต่ำ → hypoxemia",
+   "why": "PE: ส่วนที่ถูกอุดมีลมแต่ไม่มีเลือด → dead space เพิ่ม (V/Q สูง)\nเลือดถูกเบี่ยงไปปอดส่วนอื่น ทำให้ส่วนนั้น V/Q ต่ำ → hypoxemia\n✗ A: Dead space เพิ่มขึ้น ไม่ใช่ลดลง\n✓ B: ตัวเลือกไม่มี \"dead space เพิ่ม\" จึงตอบ V/Q mismatch (low V/Q ในส่วนที่เลือดถูกเบี่ยงไป)\n✗ C: Shunt ไม่ได้ลดลง\n✗ D: Diffusion ไม่ได้เพิ่ม\n✗ E: PE มักหายใจเร็ว (hyperventilation) ไม่ใช่ hypoventilation",
    "doubt": "อาจารย์ย้ำว่าคอนเซปต์คือ increased dead space ตัวเลือกที่ใกล้สุดคือ V/Q mismatch (low V/Q ในส่วนที่ไม่อุด) ข้ออื่นผิดชัด"
   },
   "RS/36": {
@@ -502,7 +502,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ตัวกระตุ้น ventilation หลักคือ ==PaCO2== ผ่าน central chemoreceptor (H+ ใน CSF) → กลั้นหายใจจนตายไม่ได้"
+   "why": "ตัวกระตุ้น ventilation หลักคือ PaCO2 ผ่าน central chemoreceptor (H+ ใน CSF)\n✗ A: PaO2 กระตุ้นเมื่อต่ำกว่า ~60 mmHg เป็นตัวรอง\n✓ B: PaCO2 ที่สูงขึ้นบังคับให้หายใจ จึงกลั้นหายใจจนตายไม่ได้\n✗ C: Acidemia กระตุ้นได้ แต่ในกรณีนี้มาจาก CO2 เป็นหลัก\n✗ D: Alkalemia กดการหายใจ\n✗ E: 2,3-BPG ไม่ได้กระตุ้นการหายใจ"
   },
   "RS/37": {
    "box": 10,
@@ -514,7 +514,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "COPD CO2 คั่งเรื้อรัง → CSF ปรับตัว central chemoreceptor ชินกับ CO2 → หายใจด้วย ==hypoxic drive ที่ peripheral chemoreceptor== · ให้ O2 สูงไปเสี่ยง CO2 narcosis",
+   "why": "COPD CO2 คั่งเรื้อรัง → CSF ปรับตัว central chemoreceptor ชินกับ CO2\nหายใจด้วย hypoxic drive ที่ peripheral chemoreceptor แทน\n✓ A: Hypoxia (O2 ต่ำ) กระตุ้น peripheral chemoreceptor (ตัวเลือกเขียนว่า increased O2 แต่หมายถึง hypoxic drive)\n  ให้ O2 สูงเกินไปเสี่ยง CO2 narcosis\n✗ B: Central chemoreceptor ชินกับ CO2 แล้ว\n✗ C: Peripheral chemoreceptor ตอบสนองต่อ CO2 น้อย ตัวหลักคือ O2 ต่ำ",
    "doubt": "ตัวเลือก A ในสไลด์เขียนว่า Increased O2 ความหมายที่ถูกคือ O2 ต่ำ (hypoxemia) กระตุ้น peripheral chemoreceptor"
   },
   "RS/38": {
@@ -526,7 +526,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==J (juxtacapillary) receptor== ที่ผนัง alveoli ติด capillary ถูกกระตุ้นจาก pulmonary edema/congestion → ==rapid shallow breathing=="
+   "why": "J (juxtacapillary) receptor ที่ผนัง alveoli ติด capillary ถูกกระตุ้นจาก pulmonary edema/congestion\n✗ A: Peripheral chemoreceptor ตอบสนองต่อ O2 ต่ำ ไม่ได้ทำ rapid shallow breathing จำเพาะ\n✓ B: J receptor → rapid shallow breathing"
   },
   "RS/39": {
    "box": 10,
@@ -538,7 +538,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "GBS กล้ามเนื้อหายใจอ่อนแรง = ==hypoventilation== (CO2 คั่ง A-a ปกติ) → เครื่องช่วยหายใจแก้ด้วยการ ==เพิ่ม ventilation=="
+   "why": "GBS กล้ามเนื้อหายใจอ่อนแรง = hypoventilation (CO2 คั่ง A-a gradient ปกติ)\n✓ A: เครื่องช่วยหายใจแก้ด้วยการเพิ่ม ventilation\n✗ B: Perfusion ไม่ได้บกพร่อง\n✗ C: Diffusion ไม่ได้บกพร่อง"
   },
   "RS/40": {
    "box": 10,
@@ -552,7 +552,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ออกกำลังกาย ==CO2 production เพิ่ม== กระตุ้น ventilation เป็นหลัก (คนปกติ PaCO2 ไม่ขึ้นเพราะ ventilation ตามทัน) · ออกหนักมากจึงมี lactate (metabolic acidosis) เสริม"
+   "why": "ออกกำลังกาย CO2 production เพิ่ม กระตุ้น ventilation เป็นหลัก\n✗ A: Tissue hypoxia ไม่ใช่ตัวกระตุ้นหลัก (PaO2 ปกติ)\n✗ B: Metabolic acidosis (lactate) เสริมเมื่อออกหนักมากเท่านั้น\n✗ C: Respiratory acidosis ไม่เกิดเพราะ ventilation ตามทัน\n✓ D: CO2 production เพิ่มคือตัวขับหลัก\n✗ E: Pulmonary blood flow ไม่ได้กระตุ้นการหายใจ"
   },
   "RS/41": {
    "box": 11,
@@ -566,7 +566,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Crep + ==sign of consolidation== (bronchial breath sound, tactile fremitus ↑, dull) = ==lobar pneumonia== · effusion/pneumothorax fremitus ลด"
+   "why": "Crackles + sign of consolidation (bronchial breath sound, tactile fremitus เพิ่ม, dull) = lobar pneumonia\n✗ A: Pneumothorax: hyperresonance, fremitus ลด\n✗ B: Pleural effusion: dull แต่ fremitus ลด breath sound ลด\n✗ C: Acute bronchitis ไม่มี sign of consolidation\n✓ D: Lobar pneumonia มีครบทุก sign ของ consolidation\n✗ E: Emphysema: hyperresonance, fremitus ลด"
   },
   "RS/42": {
    "box": 11,
@@ -580,7 +580,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Dullness + breath sound ลด + trachea ==shift ออกจาก lesion== (ซ้าย → ขวา) = ==pleural effusion== · atelectasis shift เข้าหา · pneumothorax hyperresonance"
+   "why": "Dullness + breath sound ลด + trachea เบี่ยงออกจาก lesion (ซ้าย → ขวา) = pleural effusion\n✗ A: Atelectasis trachea เบี่ยงเข้าหา lesion\n✗ B: Pneumothorax เคาะ hyperresonance\n✓ C: Pleural effusion ดัน trachea ออก เคาะทึบ เสียงหายใจลด\n✗ D: Lobar pneumonia trachea ไม่เบี่ยง มี bronchial breath sound\n✗ E: Interstitial pneumonitis ไม่ทำให้ trachea เบี่ยง"
   },
   "RS/43": {
    "box": 11,
@@ -594,7 +594,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Crepitation = น้ำ/หนองใน ==alveoli== · wheeze/rhonchi = airway"
+   "why": "Fine crepitation = มีน้ำ/หนองใน alveoli (เปิดตัวตอนหายใจเข้า)\n✓ A: Alveoli อักเสบ (pneumonia) ทำให้ได้ยิน fine crepitation\n✗ B: Trachea อักเสบให้ stridor/rhonchi ไม่ใช่ crepitation\n✗ C: Main bronchus อักเสบให้ rhonchi/wheeze\n✗ D: Lobar bronchus อักเสบให้ rhonchi/wheeze\n✗ E: Segmental bronchus อักเสบให้ rhonchi/wheeze"
   },
   "RS/44": {
    "box": 11,
@@ -608,7 +608,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Asthma/COPD ตีบที่ ==bronchiole== (ไม่มี cartilage มีแต่ smooth muscle) · bronchus มี cartilage หดได้ไม่มาก"
+   "why": "Asthma ตีบที่ bronchiole (ไม่มี cartilage มีแต่ smooth muscle)\n✗ A: Trachea มี cartilage รูป C หดตัวตีบได้น้อย\n✗ B: Bronchus มี cartilage หดได้ไม่มาก\n✓ C: Bronchiole ไม่มี cartilage smooth muscle หดตัวได้มาก → wheeze\n✗ D: Alveolar duct ไม่ใช่จุดตีบหลัก\n✗ E: Alveoli เป็นที่แลกก๊าซ ไม่ใช่ทางเดินหายใจที่ตีบ"
   },
   "RS/45": {
    "box": 12,
@@ -621,7 +621,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Obstruction ที่ ==bronchodilator response== (FEV1/FVC ↑ ≥ 12% และ 200 mL) = reversible = ==asthma== · COPD ไม่ตอบสนอง",
+   "why": "Obstruction ที่ตอบสนองต่อ bronchodilator (FEV1 เพิ่ม ≥ 12% และ 200 mL) = reversible = asthma\n✓ A: Asthma เป็น obstruction ที่ reversible\n✗ B: Small airway obstruction กว้างเกินไป ไม่บอกว่า reversible\n✗ C: COPD ไม่ตอบสนองต่อ bronchodilator (persistent)\n✗ D: Lung fibrosis เป็น restrictive",
    "needs_image": true
   },
   "RS/46": {
@@ -635,7 +635,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Persistent airflow limitation (==no BD response==) = ==COPD== (หรือ bronchiectasis) · asthma reversible · IPF restrictive",
+   "why": "Persistent airflow limitation (ไม่ตอบสนอง bronchodilator) = COPD\n✓ A: COPD ตีบแบบไม่กลับคืน\n✗ B: Asthma ตอบสนองต่อ bronchodilator\n✗ C: IPF เป็น restrictive (FEV1/FVC ปกติหรือสูง)\n✗ D: Small airway disease เป็นส่วนหนึ่งของ COPD แต่ไม่ใช่ชื่อโรคที่ตอบ",
    "options_reconstructed": true
   },
   "RS/47": {
@@ -650,7 +650,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Scoop pattern = obstructive · ในตัวเลือกมีแค่ ==bronchiectasis== ที่เป็น obstructive · kyphoscoliosis, pneumoconiosis = restrictive",
+   "why": "Scoop pattern = obstructive · ในตัวเลือกมีแค่ bronchiectasis ที่เป็น obstructive\n✗ A: Kyphoscoliosis เป็น restrictive (ผนังอก)\n✓ B: Bronchiectasis หลอดลมพองถาวร ทำ obstructive ไม่ตอบ bronchodilator\n✗ C: Pneumoconiosis เป็น restrictive (ILD)\n✗ D: Pulmonary edema ทำ restrictive\n✗ E: Pulmonary TB ทั่วไปไม่ใช่ obstructive pattern แบบนี้",
    "needs_image": true
   },
   "RS/48": {
@@ -665,7 +665,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Emphysema = obstructive → ==FEV1 ลด== (FEV1/FVC ลด) · airway resistance เพิ่ม · ==compliance เพิ่ม== (elastic tissue ถูกทำลาย) · FRC เพิ่ม (air trapping)"
+   "why": "Emphysema = obstructive → FEV1 ลด\n✗ A: Airway resistance เพิ่ม ไม่ใช่ลด\n✗ B: Compliance เพิ่ม เพราะ elastic tissue ถูกทำลาย\n✗ C: Intrapleural pressure ลบน้อยลง (elastic recoil ลด)\n✗ D: FRC เพิ่มจาก air trapping\n✓ E: FEV1 ลด (และ FEV1/FVC ลด)"
   },
   "RS/49": {
    "box": 12,
@@ -679,7 +679,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Hyperpnea = หายใจลึกขึ้น → ==tidal volume เพิ่ม== (ใช้ IRV ไปส่วนหนึ่ง IRV จึงลด) · VC, FRC ไม่เปลี่ยน"
+   "why": "Hyperpnea = หายใจลึกขึ้น → tidal volume เพิ่ม\n✗ A: FEV1/FVC ไม่เปลี่ยน (ปอดปกติ)\n✓ B: Tidal volume เพิ่ม\n✗ C: Vital capacity ไม่เปลี่ยน\n✗ D: IRV ลดลง เพราะ TV ใช้ IRV ไปส่วนหนึ่ง\n✗ E: FRC ไม่เปลี่ยน"
   },
   "RS/50": {
    "box": 12,
@@ -693,7 +693,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "COPD = ==airway resistance เพิ่ม== (mucus, เสีย radial traction) · compliance เพิ่ม elasticity ลด FEV1/FVC ลด",
+   "why": "COPD = airway resistance เพิ่ม (mucus, หลอดลมตีบ, เสีย radial traction)\n✗ A: Compliance เพิ่ม (emphysema) ไม่ใช่ลด\n✗ B: FEV1/FVC ลด ไม่ใช่เพิ่ม\n✗ C: Elasticity ลด ไม่ใช่เพิ่ม\n✓ D: Airway resistance เพิ่ม เป็นพยาธิสรีรวิทยาหลัก\n✗ E: Diffusion ลดได้ใน emphysema แต่ไม่ใช่การเปลี่ยนแปลงหลักที่ทำให้เหนื่อย",
    "doubt": "Emphysema ก็มี DLCO ลดได้ แต่กลไกหลักที่ข้อสอบต้องการคือ obstruction/airway resistance"
   },
   "RS/51": {
@@ -708,7 +708,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Acute asthma → ==air trapping → RV เพิ่ม → FRC เพิ่ม== (FRC = ERV + RV) · FEV1/FVC ลด · IC ลด · TLC ปกติหรือเพิ่ม"
+   "why": "Acute asthma → air trapping → RV เพิ่ม → FRC เพิ่ม (FRC = ERV + RV)\n✗ A: FEV1/FVC ลด\n✓ B: FRC เพิ่มจาก air trapping\n✗ C: IC ลด เพราะปอดพองค้าง\n✗ D: TLC ปกติหรือเพิ่ม\n✗ E: RV เพิ่ม ไม่ใช่ลด"
   },
   "RS/52": {
    "box": 12,
@@ -722,7 +722,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Barrel chest = emphysema/air trapping → ==RV และ FRC (residual capacity) เพิ่ม== · lung compliance เพิ่ม · IRV, ERV ลด"
+   "why": "Barrel chest = emphysema/air trapping → RV และ FRC เพิ่ม\n✗ A: Lung compliance เพิ่ม ไม่ใช่ลด\n✗ B: Chest wall compliance ไม่ใช่การเปลี่ยนแปลงหลัก\n✗ C: IRV ลด\n✗ D: ERV ลด\n✓ E: Residual volume/capacity เพิ่ม"
   },
   "RS/53": {
    "box": 13,
@@ -736,7 +736,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "pH ต่ำ + HCO3 ต่ำ = metabolic acidosis · Winter: expected PCO2 = 1.5 × 12 + 8 = ==26 ± 2== · PCO2 จริง 20 ต่ำกว่าที่คาด = มี ==respiratory alkalosis ร่วม== · aspirin (salicylate) คลาสสิกเป็น mixed",
+   "why": "pH ต่ำ + HCO3 ต่ำ = metabolic acidosis\nWinter: expected PCO2 = 1.5 × 12 + 8 = 26 ± 2\nPCO2 จริง 20 ต่ำกว่าที่คาด = มี respiratory alkalosis ร่วม (aspirin คลาสสิก)\n✗ A: ขาดส่วน respiratory alkalosis ที่ซ้อนอยู่\n✗ B: pH ต่ำ จึงไม่ใช่ alkalosis เดี่ยว\n✗ C: pH ต่ำ จึงไม่ใช่ alkalosis เดี่ยว\n✓ D: Metabolic acidosis + respiratory alkalosis = salicylate toxicity\n✗ E: PCO2 ต่ำกว่าคาด ไม่ใช่สูงกว่า จึงไม่ใช่ respiratory acidosis",
    "doubt": "ในคาบอาจารย์ตอบ metabolic acidosis (มองว่า CO2 ต่ำคือการชดเชย) ถ้าคิดด้วย Winter's formula จะได้ mixed (D) ซึ่งตรงกับพิษ salicylate"
   },
   "RS/54": {
@@ -751,7 +751,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Opioid กดศูนย์หายใจ RR 8 → hypoventilation → ==acute respiratory acidosis== (pH ต่ำ PCO2 สูง) · acute: PCO2 ↑ 20 → HCO3 ↑ ~2 = 26",
+   "why": "Opioid กดศูนย์หายใจ RR 8 → hypoventilation → acute respiratory acidosis\nAcute: PCO2 เพิ่ม 20 → HCO3 เพิ่ม ~2 = 26\n✓ A: pH 7.25 PCO2 60 HCO3 26 = acute respiratory acidosis\n✗ B: Metabolic acidosis + compensation\n✗ C: Respiratory alkalosis\n✗ D: ค่าปกติ\n✗ E: Metabolic alkalosis",
    "options_reconstructed": true
   },
   "RS/55": {
@@ -766,7 +766,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "อาจารย์มองว่าอาเจียนเสียกรด HCl + volume contraction → ==metabolic alkalosis (pH สูง HCO3 เพิ่ม)== → เลือกข้อ D",
+   "why": "อาเจียนเสียกรด HCl + volume contraction → metabolic alkalosis (pH สูง HCO3 เพิ่ม)\n✗ A: Metabolic acidosis\n✗ B: pH ต่ำ PCO2 สูง = respiratory acidosis\n✗ C: ค่าปกติ\n✓ D: pH 7.45 HCO3 26 = แนว metabolic alkalosis (อาจารย์เลือกข้อนี้)\n✗ E: PCO2 30 = respiratory alkalosis",
    "doubt": "Bilious vomiting ตามตำราบ่งชี้ obstruction ใต้ pylorus ซึ่งไม่ได้เสียกรดมากเท่า gastric outlet obstruction แต่ข้อสอบถามเรื่อง acid-base อาจารย์เลือก D"
   },
   "RS/56": {
@@ -781,7 +781,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "COPD hypoxemia เรื้อรัง → ==hypoxic pulmonary vasoconstriction → PVR เพิ่ม== (→ pulmonary HT, cor pulmonale) · emphysema compliance เพิ่ม elastic recoil และ radial traction ลด FEV1/FVC ลด"
+   "why": "COPD hypoxemia เรื้อรัง → hypoxic pulmonary vasoconstriction → PVR เพิ่ม → cor pulmonale\n✗ A: Emphysema compliance เพิ่ม ไม่ใช่ลด\n✗ B: FEV1/FVC ลด\n✗ C: Radial traction ลด\n✗ D: Elastic recoil ลด\n✓ E: PVR เพิ่มจาก hypoxic vasoconstriction"
   },
   "RS/57": {
    "box": 13,
@@ -795,7 +795,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Hypoxemia (PO2 60) → ==hypoxic pulmonary vasoconstriction → PVR เพิ่ม== · FEV1/FVC ลด · respiratory alkalosis → HCO3 ลด, ไตขับกรดลด · air trapping ทำ ERV ลด"
+   "why": "Hypoxemia (PO2 60) → hypoxic pulmonary vasoconstriction → PVR เพิ่ม\n✗ A: FEV1/FVC ลดใน asthma\n✗ B: Respiratory alkalosis → ไตขับ HCO3 → HCO3 ลด\n✗ C: Alkalosis → ไตขับกรดลด\n✗ D: Air trapping ทำให้ ERV ลด\n✓ E: PVR เพิ่ม"
   },
   "RS/58": {
    "box": 13,
@@ -809,7 +809,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Pneumonia + ให้ O2 แล้ว ==ดีขึ้น== = ==V/Q mismatch== · shunt ให้ O2 แก้ไม่ได้ · hypoventilation เป็นไปได้ถ้าหมดแรงหายใจ แต่ไม่ใช่กลไกหลัก"
+   "why": "Pneumonia + ให้ O2 แล้วดีขึ้น = V/Q mismatch\n✓ A: V/Q mismatch ตอบสนองต่อ O2\n✗ B: L→R shunt ไม่ทำให้ hypoxemia\n✗ C: R→L shunt ให้ O2 แล้วไม่ดีขึ้น\n✗ D: Dead space ทำให้ CO2 คั่งเป็นหลัก\n✗ E: Hypoventilation เป็นไปได้ถ้าหมดแรงหายใจ แต่ไม่ใช่กลไกหลักของ pneumonia"
   },
   "RS/59": {
    "box": 13,
@@ -823,7 +823,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "PCO2 64 สูง = ==hypoventilation== (ฤทธิ์ยาสลบ/ปวดแผล) · A-a = (150 − 64/0.8) − 62 = 70 − 62 = ==8 (ปกติ)== → pure hypoventilation"
+   "why": "PCO2 64 สูง + A-a gradient ปกติ = pure hypoventilation (ฤทธิ์ยาสลบ/ปวดแผล)\nA-a = (150 − 64/0.8) − 62 = 70 − 62 = 8 (ปกติ)\n✗ A: V/Q mismatch ทำให้ A-a gradient กว้าง\n✓ B: Hypoventilation: CO2 สูง A-a ปกติ\n✗ C: L→R shunt ไม่ทำให้ hypoxemia\n✗ D: Dead space ทำให้ A-a กว้าง\n✗ E: Diffusion defect ทำให้ A-a กว้าง CO2 ไม่สูง"
   },
   "RS/60": {
    "box": 13,
@@ -837,7 +837,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ก้อนในสมองกดศูนย์หายใจ → ==alveolar hypoventilation== (PCO2 55) · A-a = (150 − 55/0.8) − 70 ≈ 11 ใกล้ปกติ · ปอดไม่มีพยาธิ"
+   "why": "ก้อนในสมองกดศูนย์หายใจ → alveolar hypoventilation (PCO2 55)\nA-a = (150 − 55/0.8) − 70 ≈ 11 ใกล้ปกติ → ปอดไม่มีพยาธิ\n✗ A: V/Q mismatch ทำให้ A-a กว้าง\n✗ B: Intrapulmonary shunt ทำให้ A-a กว้าง\n✗ C: Extrapulmonary shunt ทำให้ A-a กว้าง\n✗ D: Diffusion defect ทำให้ A-a กว้าง\n✓ E: Alveolar hypoventilation จากศูนย์หายใจถูกกด"
   },
   "RS/61": {
    "box": 13,
@@ -850,7 +850,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Hypoxemia ที่ ==ให้ O2 แล้วไม่ดีขึ้น== = ==shunt== (เลือดไม่ผ่าน alveoli ที่ได้ O2) · diffusion defect และ V/Q mismatch ให้ O2 ดีขึ้น · hypoventilation CO2 ต้องสูง"
+   "why": "Hypoxemia ที่ให้ O2 แล้วไม่ดีขึ้น = shunt\n✓ A: Shunt: เลือดไม่ผ่าน alveoli ที่ได้ O2 เพิ่ม O2 ก็ไม่ช่วย\n✗ B: Diffusion defect ให้ O2 แล้วดีขึ้น\n✗ C: Hypoventilation ต้องมี CO2 สูง\n✗ D: V/Q mismatch ให้ O2 แล้วดีขึ้น"
   },
   "RS/62": {
    "box": 14,
@@ -864,7 +864,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Allergic rhinitis = type I hypersensitivity: allergen → Th2 → IgE จับ mast cell → ==mast cell degranulation== หลั่ง histamine"
+   "why": "Allergic rhinitis = type I hypersensitivity: IgE บน mast cell → degranulation หลั่ง histamine\n✓ A: Mast cell degranulation\n✗ B: Neutrophil infiltration เป็นภาพของ bacterial infection\n✗ C: Antibody-mediated cytotoxicity = type II\n✗ D: Immune complex = type III\n✗ E: Complement-activated inflammation = type II/III"
   },
   "RS/63": {
    "box": 14,
@@ -878,7 +878,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Asthma = chronic inflammation + intermittent obstruction + ==airway hyperresponsiveness== · smooth muscle hypertrophy ได้แต่ไม่ proliferate · inflammation เป็น eosinophilic"
+   "why": "Asthma = chronic inflammation + intermittent obstruction + airway hyperresponsiveness\n✓ A: Hyperresponsiveness หลอดลมไวต่อสิ่งกระตุ้น หดตัวง่าย\n✗ B: Smooth muscle hypertrophy ได้ แต่ไม่ใช่ proliferation ที่เป็นแก่นของโรค\n✗ C: Goblet cell hyperplasia พบได้ แต่ไม่ใช่ตัวอธิบายอาการเป็นพัก ๆ ที่ตอบยาขยาย\n✗ D: Inflammation ใน asthma เป็น eosinophilic ไม่ใช่ neutrophilic\n✗ E: Submucosal fibrosis เป็น remodeling ระยะยาว"
   },
   "RS/64": {
    "box": 14,
@@ -892,7 +892,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Aspirin==/NSAIDs ยับยั้ง COX → arachidonic acid ไปทาง leukotriene มากขึ้น → bronchospasm · ==Samter's triad== = asthma + nasal polyp + aspirin intolerance"
+   "why": "Aspirin/NSAIDs ยับยั้ง COX → arachidonic acid ไปทาง leukotriene มากขึ้น → bronchospasm\n✓ A: Aspirin (Samter's triad = asthma + nasal polyp + aspirin intolerance)\n✗ B: Codeine กดการไอ ไม่ทำ bronchospasm แบบนี้\n✗ C: Tramadol ไม่ทำ bronchospasm แบบนี้\n✗ D: Ergotamine ทำหลอดเลือดหด ไม่ใช่ bronchospasm\n✗ E: Acetaminophen ปลอดภัยในคนที่แพ้ aspirin ส่วนใหญ่"
   },
   "RS/65": {
    "box": 15,
@@ -905,7 +905,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "บุหรี่ดึง neutrophil/macrophage หลั่ง ==elastase== ทำลาย elastin + ยับยั้ง α1-antitrypsin → protease–antiprotease imbalance",
+   "why": "บุหรี่ดึง neutrophil/macrophage หลั่ง elastase ทำลาย elastin + ยับยั้ง α1-antitrypsin\n✓ A: Elastase เพิ่ม = protease–antiprotease imbalance\n✗ B: Hyaluronidase ไม่ใช่กลไกหลักของ emphysema\n✗ C: Peroxidase ไม่ใช่กลไกหลัก\n✗ D: Metalloproteinase มีส่วนร่วมได้ แต่คำตอบมาตรฐานคือ elastase",
    "doubt": "Matrix metalloproteinase (MMP-12) จาก macrophage ก็เพิ่มใน emphysema แต่คำตอบคลาสสิกที่อาจารย์ให้คือ elastase"
   },
   "RS/66": {
@@ -920,7 +920,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Air trapping → ==hyperinflation, lucency เพิ่ม, flattened diaphragm== · dilated airway (tram-track) = bronchiectasis · bat-wing = pulmonary edema",
+   "why": "COPD: air trapping → hyperinflation, lucency เพิ่ม, flattened diaphragm\n✗ A: Diffuse bronchoalveolar infiltrate = pneumonia/ARDS\n✗ B: Dilated airway (tram-track) = bronchiectasis\n✓ C: Hyperinflation + flattened diaphragm\n✗ D: Reticular opacity ที่ lower lobe = IPF/asbestosis\n✗ E: Bat-wing perihilar = pulmonary edema",
    "options_reconstructed": true
   },
   "RS/67": {
@@ -935,7 +935,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ยังไม่คิดจะเลิกเลย = ==precontemplation== · contemplation = เริ่มคิดอยากเลิกแต่ยังไม่ทำ"
+   "why": "ยังไม่คิดจะเลิกเลย = precontemplation\n✗ A: Action = กำลังเลิกอยู่ (< 6 เดือน)\n✗ B: Preparation = วางแผนจะเลิกเร็ว ๆ นี้ (ภายใน 1 เดือน)\n✗ C: Contemplation = เริ่มคิดอยากเลิกแต่ยังไม่ทำ\n✗ D: Maintenance = เลิกได้ > 6 เดือน\n✓ E: Precontemplation = ปฏิเสธ ไม่คิดจะเปลี่ยน"
   },
   "RS/68": {
    "box": 16,
@@ -949,7 +949,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Silicosis/pneumoconiosis = ILD ฝุ่นสะสมใน ==alveoli/interstitium== → fibrosis (restrictive, diffusion defect)"
+   "why": "Silicosis/pneumoconiosis = ฝุ่นสะสมใน alveoli/interstitium → fibrosis\n✗ A: Nose กรองฝุ่นใหญ่ ไม่ใช่ที่เกิดโรค\n✗ B: Nasopharynx ไม่ใช่ที่เกิดโรค\n✗ C: Trachea ไม่ใช่ที่เกิดโรค\n✗ D: Bronchus ไม่ใช่ที่เกิดโรคหลัก\n✓ E: Alveoli/interstitium เป็นที่ฝุ่นเล็ก (< 5 µm) ไปสะสม"
   },
   "RS/69": {
    "box": 16,
@@ -963,7 +963,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "โม่หิน/ตัดหิน + ==upper lobe nodule== = ==silicosis== (eggshell calcification ของ hilar node, เสี่ยง TB) · asbestosis เด่น lower lung + pleural plaque"
+   "why": "โม่หิน + upper lobe nodule = silicosis\n✓ A: Silicosis: upper lobe nodule, eggshell calcification ของ hilar node, เสี่ยง TB\n✗ B: Asbestosis เด่น lower lung + pleural plaque\n✗ C: Anthracosis (ถ่านหิน) อาชีพไม่ตรง\n✗ D: Lung cancer ไม่ใช่ fine nodular ทั้งสองข้าง\n✗ E: Mesothelioma เป็นก้อนที่ pleura"
   },
   "RS/70": {
    "box": 16,
@@ -977,7 +977,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==ผ้าเบรก + calcified pleural plaque + lower lung interstitial== = ==asbestosis=="
+   "why": "ผ้าเบรก + calcified pleural plaque + lower lung interstitial = asbestosis\n✗ A: Aspergilloma เป็นลูกเชื้อราในโพรงเดิม\n✓ B: Asbestosis\n✗ C: Bronchogenic carcinoma เป็นก้อน ไม่ใช่ diffuse + plaque\n✗ D: TB เด่น upper lobe มี cavity\n✗ E: Silicosis เด่น upper lobe ไม่มี pleural plaque"
   },
   "RS/71": {
    "box": 16,
@@ -991,7 +991,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Pleural plaque + restrictive = asbestosis → อาชีพ ==ก่อสร้าง== ผ้าเบรก ต่อเรือ ฉนวน · farmer/bird feeder = hypersensitivity pneumonitis"
+   "why": "Pleural plaque + restrictive = asbestosis\n✗ A: Farmer = hypersensitivity pneumonitis (farmer's lung)\n✗ B: Goldsmith ไม่ใช่อาชีพ asbestos\n✗ C: Hairdresser ไม่ใช่อาชีพ asbestos\n✗ D: Bird feeder = hypersensitivity pneumonitis\n✓ E: Construction laborer (ฉนวน กระเบื้องหลังคา) เสี่ยง asbestos"
   },
   "RS/72": {
    "box": 16,
@@ -1005,7 +1005,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Asbestos exposure → complication ที่จำเพาะคือ ==mesothelioma== (มะเร็ง pleura) · อาจารย์: ถามถึง complication ของ asbestos ตอบ mesothelioma",
+   "why": "Asbestos exposure → complication ที่จำเพาะคือ mesothelioma (มะเร็ง pleura)\n✗ A: Aspergilloma เกิดในโพรงจาก TB เดิม\n✓ B: Mesothelioma (อาจารย์: ถามถึง complication ของ asbestos ตอบ mesothelioma)\n✗ C: Bronchogenic cyst เป็นความผิดปกติแต่กำเนิด\n✗ D: PE ไม่สัมพันธ์กับ asbestos\n✗ E: Mixed infection เป็นภาพของ aspiration/lung abscess",
    "needs_image": true
   },
   "RS/73": {
@@ -1019,7 +1019,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Black pigment + upper lobe== = ==anthracosis (coal worker pneumoconiosis)== · glass factory = silicosis"
+   "why": "Black pigment ใน macrophage + upper lobe = anthracosis (coal worker pneumoconiosis)\n✓ A: Coal miner\n✗ B: Plastic factory ไม่ทำ black pigment\n✗ C: Glass factory = silicosis\n✗ D: Grass factory ไม่ใช่ pneumoconiosis"
   },
   "RS/74": {
    "box": 16,
@@ -1033,7 +1033,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Lipid-laden macrophage== = ==EVALI== (e-cigarette or vaping product use-associated lung injury): ใช้ภายใน 90 วัน + infiltrate + ไม่มีสาเหตุอื่น"
+   "why": "Lipid-laden macrophage = EVALI (e-cigarette or vaping product use-associated lung injury)\n✗ A: Asbestos → asbestosis, ferruginous body\n✗ B: Beryllium → noncaseating granuloma (คล้าย sarcoid)\n✗ C: PM 2.5 ไม่ให้ lipid-laden macrophage จำเพาะ\n✗ D: Covid → diffuse alveolar damage\n✓ E: E-cigarette: ใช้ภายใน 90 วัน + infiltrate + lipid-laden macrophage"
   },
   "RS/75": {
    "box": 17,
@@ -1047,7 +1047,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Sepsis → inflammation → permeability เพิ่ม → ==non-cardiogenic pulmonary edema = ARDS== (bilateral alveolar infiltrate)"
+   "why": "Sepsis → inflammation → permeability เพิ่ม → non-cardiogenic pulmonary edema = ARDS\n✗ A: Pulmonary infarction เป็นรูปลิ่มเฉพาะที่\n✗ B: Total atelectasis ไม่เป็น bilateral alveolar infiltrate\n✗ C: Necrotizing pneumonia มี cavity เฉพาะที่\n✗ D: PE ปอดมักใส (ไม่มี infiltrate)\n✓ E: ARDS = bilateral alveolar infiltrate หลัง sepsis"
   },
   "RS/76": {
    "box": 17,
@@ -1061,7 +1061,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Choking + wheeze ข้างเดียว + ==hyperlucent== (one-way valve air trapping) ข้างขวา = ==retained foreign body== → bronchoscopy"
+   "why": "Choking + wheeze ข้างเดียว + hyperlucent (one-way valve air trapping) = retained foreign body\n✗ A: Viral bronchitis มีไข้ เป็นสองข้าง\n✗ B: Pneumonia มีไข้ มี consolidation (ทึบ)\n✗ C: Congenital lobar emphysema ไม่มีประวัติสำลัก\n✗ D: Pneumothorax ไม่มี lung marking ไม่ใช่แค่ hyperlucent พร้อม wheeze\n✓ E: Retained foreign body → ทำ bronchoscopy"
   },
   "RS/77": {
    "box": 17,
@@ -1075,7 +1075,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Light's: protein 1.5/7 = ==0.21== (< 0.5) · LDH 15/150 = ==0.1== (< 0.6) → ==transudate== → ==CHF== · ที่เหลือเป็น exudate (inflammation/มะเร็ง)"
+   "why": "Light's criteria: protein 1.5/7 = 0.21 (< 0.5) และ LDH 15/150 = 0.1 (< 0.6) → transudate\n✗ A: SLE = exudate\n✗ B: TB = exudate (lymphocyte เด่น)\n✗ C: Metastatic cancer = exudate\n✗ D: RA = exudate (glucose ต่ำมาก)\n✓ E: CHF = transudate จาก hydrostatic pressure สูง"
   },
   "RS/78": {
    "box": 17,
@@ -1089,7 +1089,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Parapneumonic effusion = inflammation → ==vascular permeability เพิ่ม== → exudate · hydrostatic ↑ / oncotic ↓ ให้ transudate"
+   "why": "Parapneumonic effusion = inflammation → vascular permeability เพิ่ม → exudate\n✓ A: Permeability เพิ่มทำให้โปรตีนรั่วออกมา = exudate\n✗ B: Plasma oncotic pressure เพิ่มจะดึงน้ำกลับ ไม่ทำ effusion\n✗ C: Hydrostatic pressure เพิ่ม → transudate\n✗ D: Oncotic pressure ลด → transudate\n✗ E: Lymphatic drainage ลดไม่ใช่กลไกหลักของ parapneumonic effusion"
   },
   "RS/79": {
    "box": 17,
@@ -1103,7 +1103,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "แผลเปิดข้างซ้าย → ความดัน pleural ซ้ายเท่าบรรยากาศ (vacuum หาย ปอดแฟบ) · ข้างที่ยังเป็นลบคือ ==right intrapleural== · intrapulmonary ปกติเป็น 0 ตอนพัก"
+   "why": "แผลเปิดข้างซ้าย → ความดัน pleural ซ้ายเท่าบรรยากาศ ปอดซ้ายแฟบ\n✗ A: Intra-abdominal pressure เป็นบวก\n✓ B: Right intrapleural ยังเป็นลบ (ฝั่งขวาไม่มีแผล)\n✗ C: Intrapulmonary pressure ตอนพักเป็น 0 (เท่าบรรยากาศ)\n✗ D: Left intrapleural เท่าบรรยากาศแล้ว เพราะมีแผลเปิด\n✗ E: Intrapulmonary pressure ตอนพักเป็น 0"
   },
   "RS/80": {
    "box": 17,
@@ -1117,7 +1117,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "อากาศเข้า pleural space → ==loss of intrapleural negative pressure== → transpulmonary pressure หาย ปอดแฟบและขยายไม่ได้"
+   "why": "อากาศเข้า pleural space → สูญเสียแรงดูดลบ → ปอดแฟบและขยายไม่ได้\n✗ A: Pulmonary compliance ไม่ได้เปลี่ยน\n✗ B: Chest wall compliance ไม่ได้เปลี่ยน\n✗ C: Airway resistance ไม่ได้เพิ่ม\n✓ D: Loss of intrapleural negative pressure → transpulmonary pressure หาย\n✗ E: Intra-alveolar pressure ตอนพักเป็น 0 อยู่แล้ว"
   },
   "RS/81": {
    "box": 17,
@@ -1131,7 +1131,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Cervical pleura (cupula)== โผล่เหนือกระดูก clavicle ใกล้ subclavian vein → แทงทะลุ = pneumothorax (ฝังเข็มบริเวณนี้ก็เกิดได้)"
+   "why": "Cervical pleura (cupula) โผล่เหนือ clavicle ใกล้ subclavian vein\n✗ A: Trachea อยู่กลาง ไม่ใช่สาเหตุ pneumothorax\n✗ B: Esophagus อยู่หลัง trachea\n✓ C: Cervical pleura ถูกแทงทะลุ → pneumothorax\n✗ D: SVC ถูกแทงจะเลือดออก ไม่ใช่ pneumothorax\n✗ E: Superior mediastinum ไม่ใช่ช่อง pleura"
   },
   "RS/82": {
    "box": 18,
@@ -1145,7 +1145,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Intercellular bridge (desmosome) = ==squamous cell carcinoma== → ==keratin production (keratin pearl)== · mucin = adenocarcinoma · neurosecretory granule = small cell/carcinoid"
+   "why": "Intercellular bridge (desmosome) = squamous cell carcinoma → keratin pearl\n✗ A: Mucin = adenocarcinoma\n✗ B: Dense collagen ไม่จำเพาะกับมะเร็งชนิดใด\n✓ C: Keratin production = squamous cell carcinoma (สัมพันธ์บุหรี่ อยู่ central)\n✗ D: Neurosecretory granule = small cell/carcinoid\n✗ E: Caseous granuloma = TB"
   },
   "RS/83": {
    "box": 18,
@@ -1159,7 +1159,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "หน้าบวม แขนบวม ==ขาไม่บวม== + ก้อน RUL = ==SVC obstruction== · right heart failure ขาบวมด้วย"
+   "why": "หน้าบวม แขนบวม คอโป่ง ขาไม่บวม + ก้อน RUL = SVC obstruction\n✗ A: Emphysema ไม่ทำหน้า/แขนบวม\n✗ B: Right heart failure ขาบวมด้วย\n✗ C: Tamponade ไม่ทำแขนบวมแต่ขาปกติ\n✗ D: Pulmonary HT ทำ right heart failure ขาบวม\n✓ E: SVC obstruction จากก้อนมะเร็งปอดกด"
   },
   "RS/84": {
    "box": 18,
@@ -1173,7 +1173,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Cushing + hypokalemia จาก ==ectopic ACTH== ของ ==small cell carcinoma== = paraneoplastic (ectopic hormone synthesis) · antibody synthesis = Lambert-Eaton"
+   "why": "Cushing + hypokalemia + ก้อนปอด = ectopic ACTH ของ small cell carcinoma (paraneoplastic)\n✗ A: Distant metastasis ไม่อธิบาย Cushing\n✗ B: Antibody synthesis = Lambert-Eaton (anti-VGCC)\n✗ C: Cytokine release ไม่ทำ Cushing\n✓ D: Ectopic hormone synthesis (ACTH)\n✗ E: SVC obstruction ทำหน้าบวม ไม่ใช่ moon face + K ต่ำ"
   },
   "RS/85": {
    "box": 18,
@@ -1187,7 +1187,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Hypercalcemia (Ca 14 → polyuria) จาก ==PTHrP== = ==squamous cell carcinoma== ('ตัว C') · glucose ปกติตัด DM"
+   "why": "Hypercalcemia (Ca 14 → ปัสสาวะบ่อย) + ก้อนปอด = PTHrP จาก squamous cell carcinoma\nGlucose ปกติ ตัดเบาหวานออก\n✗ A: Carcinoid ทำ carcinoid syndrome (flushing, ท้องเสีย)\n✗ B: Adenocarcinoma ไม่สัมพันธ์กับ PTHrP เด่นเท่า SCC\n✗ C: Small cell ทำ SIADH, ectopic ACTH, Lambert-Eaton\n✓ D: Squamous cell carcinoma หลั่ง PTHrP (\"ตัว C\" = calcium)\n✗ E: Undifferentiated carcinoma ไม่ใช่ภาพจำเพาะนี้"
   },
   "RS/86": {
    "box": 18,
@@ -1201,7 +1201,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "หน้าบวม + ==เส้นเลือดผิวอกโป่ง== (collateral) = ==SVC obstruction syndrome=="
+   "why": "หน้าบวม + เส้นเลือดผิวอกโป่ง (collateral) + JVP โป่ง = SVC obstruction\n✗ A: Pleural effusion ไม่ทำหน้าบวมและเส้นเลือดผิวอกโป่ง\n✗ B: Pericardial effusion ไม่มีเส้นเลือดผิวอกโป่ง\n✗ C: Right heart failure ขาบวม ตับโต ไม่มี collateral ที่ผนังอก\n✗ D: Constrictive pericarditis ไม่ทำ collateral ที่ผนังอก\n✓ E: SVC obstruction เลือดจากหัวและแขนไหลกลับไม่ได้ ต้องไปทาง collateral"
   },
   "RS/87": {
    "box": 18,
@@ -1215,7 +1215,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Pancoast tumor: Horner (ptosis, miosis) จาก sympathetic/stellate ganglion · ==เสียงแหบจาก recurrent laryngeal n.== · ตัวเลือก C, D อธิบาย Horner ไม่ใช่เสียงแหบ"
+   "why": "Pancoast tumor: Horner (ptosis, miosis) จาก sympathetic/stellate ganglion\nเสียงแหบมาจาก recurrent laryngeal n.\n✗ A: Vagus ถูกกดได้ แต่แขนงที่ทำให้แหบคือ recurrent laryngeal\n✓ B: Recurrent laryngeal n. ขวาอ้อม subclavian a. ใกล้ apex ปอด ถูกก้อนกดได้\n✗ C: Sympathetic trunk อธิบาย Horner ไม่ใช่เสียงแหบ\n✗ D: Stellate ganglion อธิบาย Horner ไม่ใช่เสียงแหบ\n✗ E: ก้อนไม่ได้ไปกด vocal cord โดยตรง"
   },
   "RS/88": {
    "box": 18,
@@ -1229,7 +1229,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ปกติ bronchus = pseudostratified ciliated columnar + goblet · บุหรี่ → ==squamous metaplasia = stratified squamous== (อาจพัฒนาเป็น SCC)"
+   "why": "Bronchus ปกติ = pseudostratified ciliated columnar + goblet cell\nบุหรี่ → squamous metaplasia = stratified squamous (อาจพัฒนาเป็น SCC)\n✗ A: Simple squamous บุ alveoli (type I) ไม่ใช่ผลจากบุหรี่\n✗ B: Simple cuboidal พบใน bronchiole ส่วนปลาย\n✗ C: Simple columnar ไม่ใช่ผลจากบุหรี่\n✗ D: Stratified columnar พบน้อย ไม่ใช่ metaplasia จากบุหรี่\n✓ E: Stratified squamous ทนการระคายเคืองได้ดีกว่า แต่เสีย cilia"
   },
   "RS/89": {
    "box": 19,
@@ -1242,7 +1242,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Common cold + ==conjunctivitis== (pharyngoconjunctival fever) = ==adenovirus=="
+   "why": "ไข้ + น้ำมูก + ตาแดง + ต่อมน้ำเหลืองโต = pharyngoconjunctival fever\n✓ A: Adenovirus เป็นเหตุของ pharyngoconjunctival fever\n✗ B: HSV ทำตุ่มน้ำที่ปาก/ตา ไม่ใช่ภาพหวัด + ตาแดง\n✗ C: Chlamydia trachomatis ทำ inclusion conjunctivitis ไม่มีไข้หวัด\n✗ D: RSV ทำ bronchiolitis ไม่เด่นตาแดง"
   },
   "RS/90": {
    "box": 19,
@@ -1254,7 +1254,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Pseudomembrane สีเทา = ==C. diphtheriae== · ตรวจ toxin ด้วย ==Elek test== (immunodiffusion) · CAMP = GBS/Listeria"
+   "why": "Pseudomembrane สีเทาที่คอ = C. diphtheriae → ตรวจ toxin ด้วย Elek test\n✓ A: Elek test (immunodiffusion) ตรวจการสร้าง diphtheria toxin\n✗ B: CAMP test ใช้แยก GBS/Listeria\n✗ C: Catalase test แยก Staph จาก Strep ไม่ได้ตรวจ toxin"
   },
   "RS/91": {
    "box": 19,
@@ -1268,7 +1268,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Croup (laryngotracheobronchitis) จาก parainfluenza · ตำแหน่งที่ involve มากที่สุดคือ ==larynx (subglottic)== → เสียงแหบ barking cough stridor"
+   "why": "Croup (laryngotracheobronchitis) จาก parainfluenza\nตำแหน่งหลักคือ larynx (subglottic) → เสียงแหบ barking cough stridor\n✗ A: Pharynx อักเสบเจ็บคอ ไม่ทำ stridor\n✓ B: Larynx/subglottic บวม → inspiratory stridor + เสียงแหบ\n✗ C: Trachea ร่วมด้วยได้ แต่ไม่ใช่ตัวทำเสียงแหบ\n✗ D: Bronchus อักเสบให้ wheeze ไม่ใช่ stridor\n✗ E: Bronchiole = bronchiolitis (RSV) ให้ wheeze"
   },
   "RS/92": {
    "box": 19,
@@ -1282,7 +1282,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Croup = ==subglottic edema/narrowing== → steeple (pencil) sign บน AP neck film · epiglottitis = thumb sign · bronchiolitis = air trapping",
+   "why": "Croup = subglottic edema/narrowing → steeple (pencil) sign บน AP neck film\n✓ A: Subglottic edema\n✗ B: Epiglottis บวมแดง = epiglottitis (thumb sign)\n✗ C: Bronchiolar inflammation + air trapping = bronchiolitis\n✗ D: Retropharyngeal abscess คอแข็ง กลืนเจ็บ\n✗ E: Foreign body มีประวัติสำลัก อาการเฉียบพลัน",
    "options_reconstructed": true
   },
   "RS/93": {
@@ -1296,7 +1296,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Oseltamivir = ==neuraminidase inhibitor== · neuraminidase ตัด sialic acid ให้ virion หลุดจากเซลล์ → ยา ==ยับยั้ง viral release== · attachment ใช้ hemagglutinin"
+   "why": "Oseltamivir = neuraminidase inhibitor\nNeuraminidase ตัด sialic acid ให้ virion หลุดจากเซลล์\n✗ A: ยับยั้ง translation ไม่ใช่กลไกยา influenza\n✗ B: Reverse transcription เป็นเป้าของยา HIV\n✓ C: ยับยั้ง viral release จากเซลล์\n✗ D: Attachment ใช้ hemagglutinin ไม่ใช่เป้าของ oseltamivir"
   },
   "RS/94": {
    "box": 20,
@@ -1310,7 +1310,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Multinucleated giant cell = ==syncytia ของ RSV== (F protein) · CMV = owl's eye inclusion"
+   "why": "Multinucleated giant cell = syncytia ของ RSV (F protein)\n✗ A: Rhinovirus ไม่ทำ syncytia\n✗ B: MERS-CoV ไม่ใช่ภาพในเด็ก 1 ขวบแบบนี้\n✗ C: CMV = owl's eye inclusion\n✗ D: EBV = atypical lymphocyte\n✓ E: RSV ทำ syncytia ทำ bronchiolitis/pneumonia รุนแรงในเด็กเล็ก"
   },
   "RS/95": {
    "box": 21,
@@ -1324,7 +1324,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "GPC ==lancet-shaped เป็นคู่== = ==S. pneumoniae== · S. pyogenes เป็นสายและไม่ค่อยทำ pneumonia · Staph เป็นพวง · H. influenzae = GN coccobacilli",
+   "why": "GPC lancet-shaped เป็นคู่ = S. pneumoniae\n✗ A: H. influenzae = gram-negative coccobacilli\n✗ B: S. aureus = GPC เป็นพวง\n✗ C: S. epidermidis = GPC เป็นพวง ไม่ทำ pneumonia\n✗ D: S. pyogenes = GPC เป็นสาย ไม่ค่อยทำ pneumonia\n✓ E: S. pneumoniae = lancet-shaped diplococci",
    "needs_image": true
   },
   "RS/96": {
@@ -1338,7 +1338,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Alcoholic + consolidation== (มักเป็น aspiration กลีบบน, currant jelly sputum) = ==Klebsiella pneumoniae==",
+   "why": "Alcoholic + consolidation (aspiration, currant jelly sputum) = Klebsiella\n✗ A: S. pneumoniae เป็นสาเหตุ CAP บ่อยสุดทั่วไป แต่ alcoholic ชี้ไป Klebsiella\n✓ B: Klebsiella pneumoniae สัมพันธ์กับ alcoholic, เบาหวาน, aspiration\n✗ C: Mycoplasma เป็น atypical ในคนหนุ่มสาว\n✗ D: S. aureus มักตามหลัง influenza",
    "doubt": "S. pneumoniae ยังเป็นสาเหตุที่พบบ่อยที่สุดของ CAP แม้ในคนดื่มเหล้า แต่ keyword alcoholic ที่ข้อสอบต้องการคือ Klebsiella"
   },
   "RS/97": {
@@ -1351,7 +1351,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Fried egg colony + PPLO agar== = ==Mycoplasma pneumoniae== (ไม่มี cell wall)"
+   "why": "Fried egg colony + PPLO agar = Mycoplasma pneumoniae (ไม่มี cell wall)\n✗ A: Klebsiella เป็น colony เมือก (mucoid) บน MacConkey\n✓ B: Mycoplasma โตบน PPLO (Eaton) agar เป็น fried egg colony\n✗ C: S. pneumoniae โตบน blood agar ให้ α-hemolysis"
   },
   "RS/98": {
    "box": 21,
@@ -1365,7 +1365,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Cold agglutinin + ไม่เห็นเชื้อ = Mycoplasma (ไม่มี cell wall) → ==macrolide (azithromycin)== หรือ FQ · β-lactam ไม่ได้ผล"
+   "why": "Cold agglutinin + ไม่เห็นเชื้อ = Mycoplasma (ไม่มี cell wall)\n✓ A: Azithromycin (macrolide) ยับยั้ง ribosome ได้ผลกับ Mycoplasma\n✗ B: Amoxicillin เป็น β-lactam ไม่ได้ผลเพราะไม่มี cell wall\n✗ C: Ceftriaxone เป็น β-lactam ไม่ได้ผล\n✗ D: Metronidazole ใช้กับ anaerobe/protozoa\n✗ E: Clindamycin ใช้กับ anaerobe/gram-positive"
   },
   "RS/99": {
    "box": 21,
@@ -1379,7 +1379,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Mycoplasma → IgM ==cold agglutinin== · bullous myringitis = extrapulmonary manifestation · heterophile = EBV · Weil-Felix = rickettsia"
+   "why": "Mycoplasma → IgM cold agglutinin · bullous myringitis เป็นอาการนอกปอด\n✗ A: Weil-Felix = rickettsia\n✗ B: Gram stain ไม่เห็น Mycoplasma (ไม่มี cell wall)\n✓ C: Cold agglutination ช่วยวินิจฉัย Mycoplasma\n✗ D: Heterophile antibody (monospot) = EBV\n✗ E: Gel agglutination ใช้ตรวจหมู่เลือด"
   },
   "RS/100": {
    "box": 21,
@@ -1393,7 +1393,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ท่านอนหงาย (bedridden) สำลักไป ==superior segment ของ lower lobe== (หรือ posterior segment ของ upper lobe) · ท่ายืน = basal segment"
+   "why": "ท่านอนหงาย (bedridden) สำลักไป superior segment ของ lower lobe\n✓ A: Superior segment อยู่ด้านหลังสุดเมื่อนอนหงาย\n✗ B: Anterior basal เป็นตำแหน่งเมื่อสำลักท่ายืน\n✗ C: Lateral basal เป็นตำแหน่งเมื่อสำลักท่ายืน/ตะแคง\n✗ D: Medial basal เป็นตำแหน่งเมื่อสำลักท่ายืน\n✗ E: Posterior basal เป็นตำแหน่งเมื่อสำลักท่ายืน"
   },
   "RS/101": {
    "box": 21,
@@ -1407,7 +1407,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Aspiration = ==mixed oral flora (aerobe + anaerobe)== = gram positive cocci + gram negative bacilli · รักษาด้วย ceftriaxone + clindamycin / amox-clav"
+   "why": "Aspiration = mixed oral flora (aerobe + anaerobe)\n✗ A: Gram-negative เดี่ยว ไม่ใช่ภาพ aspiration\n✗ B: Gram-positive diplococci = S. pneumoniae\n✗ C: Gram-negative coccobacilli = H. influenzae\n✗ D: ขาดส่วน gram-negative bacilli\n✓ E: Mixed GPC + GNB = เชื้อในช่องปาก รักษาด้วย amox-clav หรือ ceftriaxone + clindamycin"
   },
   "RS/102": {
    "box": 21,
@@ -1421,7 +1421,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "เสี่ยงสำลัก + ฟันไม่ดี + เสมหะเหม็น + ==cavity with air-fluid level== = ==lung abscess== (anaerobe)"
+   "why": "เสี่ยงสำลัก + ฟันไม่ดี + เสมหะเหม็น + cavity มี air-fluid level = lung abscess\n✓ A: Lung abscess จาก anaerobe\n✗ B: Bronchiectasis เสมหะมาก แต่เป็นหลอดลมพอง ไม่ใช่ cavity + air-fluid level\n✗ C: Pulmonary infarction เป็นรูปลิ่ม ไม่มีเสมหะเหม็น\n✗ D: TB cavity มักผนังบาง ไม่มี air-fluid level ไม่มีเสมหะเหม็น\n✗ E: Carcinoma ที่ cavitate ผนังหนา ขรุขระ"
   },
   "RS/103": {
    "box": 22,
@@ -1435,7 +1435,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Apex nodule + ==caseating granuloma== (amorphous necrosis + epithelioid histiocyte + giant cell) = ==pulmonary TB=="
+   "why": "Apex nodule + caseating granuloma (amorphous necrosis + epithelioid + giant cell) = TB\n✓ A: Pulmonary TB\n✗ B: Lung abscess เป็นหนอง (neutrophil) ไม่ใช่ granuloma\n✗ C: Large cell carcinoma เป็นเซลล์มะเร็ง ไม่ใช่ granuloma\n✗ D: PCP เป็น foamy exudate ใน alveoli\n✗ E: CMV ให้ owl's eye inclusion"
   },
   "RS/104": {
    "box": 22,
@@ -1447,7 +1447,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "TB → granuloma = ==aggregation of epithelioid histiocytes== + Langhans giant cell + caseous necrosis · fibrinoid necrosis = vasculitis"
+   "why": "TB → granuloma = epithelioid histiocyte รวมกลุ่ม + Langhans giant cell + caseous necrosis\n✗ A: Fibrinoid necrosis = vasculitis\n✓ B: Aggregation of epithelioid cells คือ granuloma\n✗ C: Granulation tissue เป็นการซ่อมแผล ไม่จำเพาะ TB"
   },
   "RS/105": {
    "box": 22,
@@ -1461,7 +1461,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Cavity ที่ ==upper lobe== ในผู้ใหญ่ = ==reactivation (secondary) TB== · primary = lower/middle lobe + Ghon complex"
+   "why": "Cavity ที่ upper lobe ในผู้ใหญ่ = reactivation (secondary) TB\n✗ A: Primary TB อยู่ lower/middle lobe + Ghon complex\n✓ B: Reactivation ชอบ apex (O2 สูง) ทำ cavity\n✗ C: Lymph node spread ไม่ใช่กลไกของ cavity ที่ apex\n✗ D: Hematogenous spread = miliary TB (จุดเล็กทั่วปอด)\n✗ E: Direct inoculation = TB ที่ผิวหนัง"
   },
   "RS/106": {
    "box": 22,
@@ -1472,7 +1472,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "อาจารย์: cytokine ที่เกี่ยวข้องคือ ==IFN-γ== (จาก Th1 กระตุ้น macrophage เป็น epithelioid ก่อ granuloma · IGRA วัดตัวนี้)",
+   "why": "IFN-γ จาก Th1 กระตุ้น macrophage เป็น epithelioid ก่อและคง granuloma\n✗ A: TNF-α ช่วยคง granuloma ด้วย (anti-TNF ทำ TB กำเริบ) แต่อาจารย์เฉลย IFN-γ\n✓ B: IFN-γ (IGRA วัดตัวนี้)",
    "doubt": "TNF-α สำคัญต่อการคง granuloma เช่นกัน (anti-TNF ทำให้ TB reactivate) ถ้าโจทย์เน้นคำว่า maintain อาจต้องการ TNF-α"
   },
   "RS/107": {
@@ -1486,7 +1486,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "เด็ก ==อายุ < 5 ปี== ที่สัมผัสใกล้ชิดผู้ป่วย TB ปอด มีข้อบ่งชี้ให้ preventive therapy (หลังตัด active TB) โดยไม่ต้องรอผล TST",
+   "why": "เด็กอายุ < 5 ปีที่สัมผัสใกล้ชิดผู้ป่วย TB ปอด ให้ preventive therapy ได้เลย (หลังตัด active TB)\n✗ A: CXR ของพ่อไม่ได้เป็นเกณฑ์ตัดสินในเด็ก\n✗ B: เด็กเล็กไม่ต้องรอผล TST\n✗ C: ระดับเชื้อในเสมหะพ่อไม่ใช่เกณฑ์\n✓ D: อายุ < 5 ปี เป็นข้อบ่งชี้เพราะเสี่ยง TB รุนแรง (miliary, meningitis)",
    "doubt": "ในคาบอาจารย์พูดหลักว่า treat latent TB ตามกลุ่มเสี่ยงและเด็กที่เป็น contact มักมีข้อบ่งชี้ ไม่ได้ระบุตัวเลือกชัด คำตอบนี้อิงแนวทาง WHO"
   },
   "RS/108": {
@@ -1501,7 +1501,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "HIV ==CD4 < 200== + desaturation มากแต่ฟังปอดปกติ + ==bilateral ground glass== = ==PCP== · ย้อม GMS · TMP-SMX + steroid"
+   "why": "HIV CD4 < 200 + desaturation มากแต่ฟังปอดปกติ + bilateral ground glass = PCP\n✓ A: Pneumocystis jirovecii ย้อม GMS รักษา TMP-SMX + steroid\n✗ B: Cryptococcus เด่นที่ meningitis\n✗ C: TB เด่นเป็น cavity/infiltrate กลีบบน\n✗ D: S. pneumoniae เป็น lobar consolidation\n✗ E: N. meningitidis ทำ meningitis"
   },
   "RS/109": {
    "box": 23,
@@ -1515,7 +1515,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Immunocompromised + GPB branching ==modified AFB+== = ==Nocardia== (aerobe) · Actinomyces = anaerobe, AFB− · รักษา TMP-SMX"
+   "why": "Immunocompromised + gram-positive branching + modified AFB บวก = Nocardia\n✓ A: Nocardia เป็น aerobe ติด modified AFB รักษา TMP-SMX\n✗ B: Actinomyces เป็น anaerobe ไม่ติด AFB มี sulfur granule\n✗ C: Streptomyces ไม่ก่อโรคปอดแบบนี้\n✗ D: Eubacterium เป็น anaerobe ในลำไส้\n✗ E: Fusobacterium เป็น gram-negative anaerobe"
   },
   "RS/110": {
    "box": 23,
@@ -1529,7 +1529,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Spherical mass ใน cavity = ==aspergilloma (fungal ball)== · wheeze + eosinophilia ชวน ABPA · Aspergillus = ==septate hyphae แตกแขนงมุมแหลม (dichotomous)== · broad-based budding = Blastomyces"
+   "why": "Spherical mass ใน cavity = aspergilloma (fungal ball) · wheeze + eosinophilia ชวน ABPA\n✓ A: Aspergillus = septate hyphae แตกแขนงมุมแหลม (dichotomous 45°)\n✗ B: Blastoconidia ใน mucoid background = Cryptococcus\n✗ C: Broad-based budding yeast ผนังหนา = Blastomyces\n✗ D: Necrotizing granuloma + fibrinoid necrosis = GPA\n✗ E: Yeast ไม่ใช่รูปแบบของ Aspergillus"
   },
   "RS/111": {
    "box": 23,
@@ -1543,7 +1543,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Neutropenia → ==invasive aspergillosis== → เชื้อ invade หลอดเลือด (angioinvasion) → ==thrombosis== → lung infarct, hemoptysis · hypersensitivity = ABPA"
+   "why": "Neutropenia → invasive aspergillosis → เชื้อ invade หลอดเลือด (angioinvasion)\n✗ A: Hypersensitivity = ABPA\n✓ B: Thrombosis → lung infarct, hemoptysis\n✗ C: Obliterative endarteritis = syphilis\n✗ D: Granuloma ไม่ใช่กลไกใน invasive aspergillosis\n✗ E: Toxin production ไม่ใช่กลไกหลัก"
   },
   "RS/112": {
    "box": 24,
@@ -1557,7 +1557,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ง่วง + ปากแห้ง (antimuscarinic) = ==antihistamine gen 1 (chlorpheniramine)== → ต้องเลี่ยงในคนขับรถ ใช้ gen 2 แทน"
+   "why": "ง่วง + ปากแห้ง (antimuscarinic) = antihistamine gen 1 → เลี่ยงในคนขับรถ\n✗ A: Cetirizine เป็น gen 2 ง่วงน้อย\n✗ B: Beclomethasone เป็น steroid พ่นจมูก ไม่ทำให้ง่วง\n✗ C: Pseudoephedrine เป็น decongestant ทำให้ใจสั่น นอนไม่หลับ\n✗ D: Dextromethorphan เป็นยากดไอ\n✓ E: Chlorpheniramine (gen 1) ผ่าน BBB ทำให้ง่วง + antimuscarinic"
   },
   "RS/113": {
    "box": 24,
@@ -1571,7 +1571,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Gen 2 ที่ข้อมูลปลอดภัยในครรภ์ (category B) = ==cetirizine== (loratadine ก็ได้) · ข้ออื่นเป็น gen 1"
+   "why": "คนตั้งครรภ์ใช้ gen 2 ที่ข้อมูลปลอดภัย = cetirizine (หรือ loratadine)\n✓ A: Cetirizine (category B) gen 2\n✗ B: Hydroxyzine เป็น gen 1 เลี่ยงช่วงต้นครรภ์\n✗ C: Chlorpheniramine เป็น gen 1\n✗ D: Diphenhydramine เป็น gen 1\n✗ E: Brompheniramine เป็น gen 1"
   },
   "RS/114": {
    "box": 24,
@@ -1585,7 +1585,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ท้องผูก → เลี่ยง gen 1 (antimuscarinic) · HT → เลี่ยง decongestant · เลือก gen 2 ==fexofenadine== · ranitidine = H2 blocker"
+   "why": "ท้องผูก → เลี่ยง gen 1 (antimuscarinic) · HT → เลี่ยง decongestant · เลือก gen 2\n✗ A: Diphenhydramine เป็น gen 1 ทำให้ท้องผูกมากขึ้น\n✗ B: Dimenhydrinate เป็น gen 1 (ยาแก้เมารถ)\n✗ C: Promethazine เป็น gen 1\n✓ D: Fexofenadine เป็น gen 2 ไม่มี antimuscarinic\n✗ E: Ranitidine เป็น H2 blocker ไม่ใช่ยาแก้แพ้จมูก"
   },
   "RS/115": {
    "box": 24,
@@ -1599,7 +1599,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "α-agonist พ่นจมูกนานเกิน 3–5 วัน → ==rebound congestion (rhinitis medicamentosa)== + tachyphylaxis"
+   "why": "α-agonist พ่นจมูกนานเกิน 3–5 วัน → rebound congestion (rhinitis medicamentosa)\n✗ A: Anosmia ไม่ใช่ผลข้างเคียงหลัก\n✗ B: Epistaxis เกิดได้แต่ไม่ใช่ผลหลัก\n✓ C: Rebound congestion + tachyphylaxis\n✗ D: Septum perforation สัมพันธ์กับ cocaine/steroid มากกว่า\n✗ E: Mucosal atrophy ไม่ใช่ผลหลัก"
   },
   "RS/116": {
    "box": 24,
@@ -1613,7 +1613,7 @@
    },
    "answer": "D",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ไอแห้งรบกวนการนอน → ==ยากดไอ (codeine)== หรือ dextromethorphan · NAC, ambroxol, bromhexine = mucolytic · guaifenesin = expectorant (ใช้ตอนมีเสมหะ)"
+   "why": "ไอแห้งรบกวนการนอน → ยากดไอ\n✗ A: Acetylcysteine เป็น mucolytic (ใช้เมื่อมีเสมหะเหนียว)\n✗ B: Ambroxol เป็น mucolytic\n✗ C: Bromhexine เป็น mucolytic\n✓ D: Codeine กดศูนย์ไอ เหมาะกับไอแห้ง\n✗ E: Guaifenesin เป็น expectorant ใช้ตอนมีเสมหะ"
   },
   "RS/117": {
    "box": 25,
@@ -1627,7 +1627,7 @@
    },
    "answer": "C",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Acute asthma → reliever = ==SABA (inhaled salbutamol)== onset เร็ว · montelukast/cromolyn = controller · steroid IV ให้ร่วมได้แต่ไม่ใช่ยาบรรเทาอาการทันที"
+   "why": "Acute asthma → reliever = SABA onset เร็ว\n✗ A: Montelukast เป็น controller ไม่ได้ผลทันที\n✗ B: Cromolyn เป็น controller ใช้ป้องกัน\n✓ C: Inhaled salbutamol ขยายหลอดลมใน 5 นาที\n✗ D: Ipratropium ใช้เสริมใน severe attack ไม่ใช่ตัวแรก\n✗ E: IV dexamethasone ให้ร่วมได้ แต่ออกฤทธิ์ช้า ไม่ใช่ยาบรรเทาทันที"
   },
   "RS/118": {
    "box": 25,
@@ -1641,7 +1641,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "β2 agonist ที่ไม่ selective พอจะกระตุ้น β1 → ==palpitation==, tremor, hypokalemia → ==salbutamol=="
+   "why": "β2 agonist กระตุ้น β1 ได้บ้าง → palpitation, tremor, hypokalemia\n✓ A: Salbutamol ทำให้ใจสั่น\n✗ B: Bromhexine เป็น mucolytic ไม่ทำใจสั่น\n✗ C: Montelukast ไม่ทำใจสั่น (เด่นที่ neuropsychiatric)\n✗ D: Chlorpheniramine ทำให้ง่วง ปากแห้ง\n✗ E: Dextromethorphan กดไอ ไม่ทำใจสั่น"
   },
   "RS/119": {
    "box": 25,
@@ -1653,7 +1653,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ยาพ่นก่อนออกกำลัง = SABA → β2 → adenylyl cyclase → ==cAMP เพิ่ม== · inhibit PDE = theophylline · inhibit muscarinic = ipratropium/tiotropium (COPD)"
+   "why": "ยาพ่นก่อนออกกำลัง = SABA → β2 → adenylyl cyclase → cAMP เพิ่ม\n✓ A: cAMP เพิ่ม → กล้ามเนื้อเรียบหลอดลมคลาย\n✗ B: ยับยั้ง phosphodiesterase = theophylline\n✗ C: ยับยั้ง muscarinic receptor = ipratropium/tiotropium"
   },
   "RS/120": {
    "box": 25,
@@ -1667,7 +1667,7 @@
    },
    "answer": "E",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Montelukast = ==leukotriene (CysLT1) receptor antagonist== · mast cell stabilizer = cromolyn · PLA2 ถูกยับยั้งโดย steroid"
+   "why": "Montelukast = leukotriene (CysLT1) receptor antagonist\n✗ A: Mast cell stabilizer = cromolyn\n✗ B: Muscarinic antagonist = ipratropium, tiotropium\n✗ C: β-agonist = salbutamol, formoterol\n✗ D: Phospholipase A2 ถูกยับยั้งโดย steroid\n✓ E: Leukotriene receptor antagonist"
   },
   "RS/121": {
    "box": 25,
@@ -1681,7 +1681,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "ICS → ==oral candidiasis (thrush)== และเสียงแหบ → แนะนำบ้วนปากหลังพ่น · peptic ulcer, HT, hyperglycemia = systemic steroid"
+   "why": "ICS → oral candidiasis และเสียงแหบ → แนะนำบ้วนปากหลังพ่น\n✗ A: Peptic ulcer เป็นผลของ systemic steroid\n✓ B: Oral thrush เป็นผลข้างเคียงเฉพาะที่ของ ICS\n✗ C: Nasal polyp ไม่ใช่ผลข้างเคียงของ ICS\n✗ D: Hypertension เป็นผลของ systemic steroid\n✗ E: Hyperglycemia เป็นผลของ systemic steroid"
   },
   "RS/122": {
    "box": 25,
@@ -1695,7 +1695,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "IL-5 = cytokine หลักของการเจริญและทำงานของ ==eosinophil== · anti-IgE (omalizumab) ยับยั้ง IgE"
+   "why": "IL-5 = cytokine หลักของการเจริญและทำงานของ eosinophil\n✗ A: IgE ถูกยับยั้งโดย anti-IgE (omalizumab)\n✓ B: Anti-IL-5 (mepolizumab) ลด eosinophil\n✗ C: Th2 cell ไม่ได้ถูกยับยั้งโดยตรง\n✗ D: Mast cell degranulation ถูกยับยั้งโดย cromolyn/anti-IgE\n✗ E: Neutrophil ไม่ได้ขึ้นกับ IL-5"
   },
   "RS/123": {
    "box": 26,
@@ -1709,7 +1709,7 @@
    },
    "answer": "B",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "==Isoniazid== ทำให้ขาด vitamin B6 → ==peripheral neuropathy== → ต้องให้ pyridoxine · ethambutol = optic neuropathy"
+   "why": "Isoniazid ทำให้ขาด vitamin B6 → peripheral neuropathy\n✗ A: Rifampicin ทำ hepatitis, ปัสสาวะสีส้ม, drug interaction\n✓ B: Isoniazid ทำชาปลายเท้า ต้องให้ pyridoxine\n✗ C: Ethambutol ทำ optic neuropathy (ตาบอดสีแดง-เขียว)\n✗ D: Pyrazinamide ทำ hyperuricemia, hepatitis\n✗ E: Streptomycin ทำ ototoxicity, nephrotoxicity"
   },
   "RS/124": {
    "box": 26,
@@ -1723,7 +1723,7 @@
    },
    "answer": "A",
    "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
-   "why": "Isoniazid → ต้องให้ ==pyridoxine (vitamin B6)== ป้องกัน peripheral neuropathy",
+   "why": "Isoniazid → ต้องให้ pyridoxine (vitamin B6) ป้องกัน peripheral neuropathy\n✓ A: Pyridoxine\n✗ B: Folic acid ไม่ได้ขาดจากยา TB\n✗ C: Vitamin B12 ไม่เกี่ยวกับยา TB\n✗ D: Vitamin C ไม่เกี่ยว\n✗ E: Vitamin D ไม่เกี่ยว",
    "options_reconstructed": true
   }
  }
