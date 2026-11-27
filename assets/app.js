@@ -284,7 +284,7 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '61';
+  const APP_VER = '62';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
   function applyUiStyle() {
     const u = uiStyle();
@@ -303,15 +303,184 @@
     toast(S.uiStyle === 'pixel' ? 'สลับกลับเป็นธีม Pixel Classic แล้ว' : 'เปิดใช้ธีม Monument Valley แล้ว');
   }
 
-  /* ---------- หอคอยโปรเกรสไอโซเมตริก Monument Valley สำหรับแถบด้านซ้าย ---------- */
+  /* ---------- ธีมเฉพาะของแต่ละบท (สี + รูปทรงหอคอย Monument Valley) ---------- */
+  const MV_THEMES = {
+    'b3':         { name: 'วิหารแห่งดวงดาว',        shape: 'zigzag', d: { sky: ['#0c122a','#212257','#5a3678'], wl: '#454e88', wr: '#252b58', top: '#9eb6eb', arch: '#111735', spire: '#2a2e63', win: '#ffe48c', trail: '#5eead4', gem: '#c084fc' }, l: { sky: ['#c9dcf5','#e3e8fb','#f2e0f7'], wl: '#a6a8db', wr: '#7f83bd', top: '#f8f6ff', arch: '#cad8f2', spire: '#9fb0d8', win: '#45396b', trail: '#2b7a78', gem: '#7c5cbf' } },
+    'b4':         { name: 'หอคอยปะการัง',           shape: 'twin',   d: { sky: ['#1f1428','#4a2442','#8c475f'], wl: '#7c4864', wr: '#4a2940', top: '#f0b6c6', arch: '#241427', spire: '#522947', win: '#ffe194', trail: '#fda4af', gem: '#fbbf77' }, l: { sky: ['#d8efe8','#f6e6e8','#fde1d1'], wl: '#f0a6b3', wr: '#d27e90', top: '#fff5e6', arch: '#cbe4df', spire: '#c7a4ae', win: '#5a3444', trail: '#d9607c', gem: '#e59a4a' } },
+    'b5':         { name: 'ปราการศิลาขาว',          shape: 'spiral', d: { sky: ['#0a0d14','#1b2130','#353f54'], wl: '#66718a', wr: '#394156', top: '#dce4f2', arch: '#0f131d', spire: '#272f42', win: '#ffe699', trail: '#fde68a', gem: '#7dd3fc' }, l: { sky: ['#dce4ec','#edf1f5','#f5ede0'], wl: '#b3becb', wr: '#8a97a8', top: '#ffffff', arch: '#d2dce6', spire: '#9eabb9', win: '#3d4758', trail: '#49688a', gem: '#d4943a' } },
+    'b6':         { name: 'วิหารสายลมในหมอก',       shape: 'forest', d: { sky: ['#091c2b','#153a54','#2b6782'], wl: '#3f7696', wr: '#214863', top: '#b8e4f5', arch: '#0c2132', spire: '#1b4766', win: '#fff1a8', trail: '#67e8f9', gem: '#a5f3fc' }, l: { sky: ['#bce5ee','#dff2f6','#eef7fa'], wl: '#89c2d4', wr: '#5e9bb0', top: '#f7fdff', arch: '#bce0ea', spire: '#86b5c7', win: '#254a5c', trail: '#0e87a3', gem: '#38bdf8' } },
+    'b7':         { name: 'ป้อมสนธยาทับทิม',        shape: 'twin',   d: { sky: ['#1d0e1c','#461830','#8a2f4b'], wl: '#7c3350', wr: '#4a1c32', top: '#f3a4bc', arch: '#210f1f', spire: '#541e38', win: '#ffe082', trail: '#fb7185', gem: '#ffd97d' }, l: { sky: ['#f3d6de','#fae6e8','#fde8d7'], wl: '#e58e9f', wr: '#c26579', top: '#fff5f7', arch: '#ebd0d8', spire: '#c98899', win: '#5c2335', trail: '#d13d5c', gem: '#e59a38' } },
+    'b8':         { name: 'หอคอยโคมอำพัน',          shape: 'forest', d: { sky: ['#18120c','#3d2914','#7a4b1e'], wl: '#875c34', wr: '#52351b', top: '#f2d3a2', arch: '#1f150c', spire: '#4c3218', win: '#fff099', trail: '#fbbf24', gem: '#fb923c' }, l: { sky: ['#f4e4c7','#fbf0dc','#f8e2c4'], wl: '#e2b278', wr: '#be8a4f', top: '#fffaf0', arch: '#e8d7bc', spire: '#c9a67d', win: '#523415', trail: '#c77d19', gem: '#e06d3b' } },
+    'b9':         { name: 'วิหารกลางมหาสมุทร',      shape: 'spiral', d: { sky: ['#071826','#0d384c','#186578'], wl: '#2e7d8c', wr: '#184b59', top: '#a6e9e8', arch: '#092030', spire: '#124659', win: '#ffe899', trail: '#2dd4bf', gem: '#38bdf8' }, l: { sky: ['#b6e6e4','#daf4f2','#e8f7f2'], wl: '#6ec2be', wr: '#479996', top: '#f2fffd', arch: '#b2e0dd', spire: '#78b5b2', win: '#1d4d4c', trail: '#17857f', gem: '#2c9cb0' } },
+    'b10':        { name: 'ปราสาทแสงตะวัน',         shape: 'zigzag', d: { sky: ['#1a1638','#4b2c68','#b05a84'], wl: '#6e4c8a', wr: '#3e2959', top: '#f0c4dc', arch: '#1e173a', spire: '#492d66', win: '#ffe484', trail: '#f5d06e', gem: '#f472b6' }, l: { sky: ['#d5d4f4','#f2dce8','#fee3c3'], wl: '#d9a4c9', wr: '#b079a6', top: '#fff7ee', arch: '#d9cfe8', spire: '#b29cc7', win: '#4a2d5e', trail: '#b86e2d', gem: '#d65a96' } },
+    'kt-embryo':  { name: 'หอคอยกำเนิดดารา',        shape: 'twin',   d: { sky: ['#111b36','#283e70','#5764a6'], wl: '#6972b3', wr: '#3d457d', top: '#d6d4fb', arch: '#162140', spire: '#304378', win: '#fff0a6', trail: '#c4b5fd', gem: '#7dd3fc' }, l: { sky: ['#cde0f7','#e6ecfb','#f2e6fa'], wl: '#b3b2e6', wr: '#8687c4', top: '#fafaff', arch: '#cfdcf2', spire: '#9aa8d4', win: '#3a3b6e', trail: '#6c5ce7', gem: '#38a3b8' } },
+    'kt-repro':   { name: 'ปราสาทกล้วยไม้ราตรี',     shape: 'zigzag', d: { sky: ['#1b102c','#451e54','#853a7a'], wl: '#7c4685', wr: '#4a2657', top: '#f0c0ec', arch: '#1f1230', spire: '#4d225c', win: '#ffe494', trail: '#f472b6', gem: '#c084fc' }, l: { sky: ['#e5d6f5','#f5e4f3','#fde4ec'], wl: '#dca2d8', wr: '#b574b4', top: '#fff7fc', arch: '#e4d2ec', spire: '#be95c9', win: '#4f2454', trail: '#c24292', gem: '#8d5fd3' } },
+    'kt-msk':     { name: 'หอคอยหยกโบราณ',          shape: 'spiral', d: { sky: ['#09171c','#17363b','#2b5c5c'], wl: '#4c857d', wr: '#2a524f', top: '#b8e3d8', arch: '#0c1f24', spire: '#1c4245', win: '#ffe38a', trail: '#6ee7b7', gem: '#fbbf24' }, l: { sky: ['#c8e8e0','#e2f3ee','#f2efe0'], wl: '#89c4b5', wr: '#5c998b', top: '#f7fffc', arch: '#c3e2da', spire: '#8ab3a8', win: '#234a42', trail: '#277d6b', gem: '#d69738' } },
+    'kt-parasit': { name: 'วิหารป่ามรกต',           shape: 'forest', d: { sky: ['#061a21','#0c3842','#176158'], wl: '#4da876', wr: '#266b4e', top: '#c4f5a8', arch: '#082228', spire: '#0d3038', win: '#ff70a6', trail: '#4ade80', gem: '#f472b6' }, l: { sky: ['#bce8da','#dcf4e6','#eef8df'], wl: '#7cc994', wr: '#4d9c69', top: '#f5ffea', arch: '#b9e3d2', spire: '#6ea894', win: '#b82e67', trail: '#238a52', gem: '#d63f80' } },
+    'kt-rs':      { name: 'หอคอยหมอกออโรรา',        shape: 'forest', d: { sky: ['#081426','#142e52','#1c5f6e'], wl: '#40749c', wr: '#214566', top: '#bce8f5', arch: '#0b1a30', spire: '#16395c', win: '#ffe596', trail: '#5eead4', gem: '#818cf8' }, l: { sky: ['#c4e4f4','#dff1fa','#e6f7f4'], wl: '#8ab8dc', wr: '#5e8db8', top: '#f6fcff', arch: '#c2dff0', spire: '#89adc9', win: '#254261', trail: '#1c8c8a', gem: '#5c6bc0' } }
+  };
+  const MV_FALLBACK_KEYS = Object.keys(MV_THEMES);
+  function mvThemeOf(chId) {
+    let base = MV_THEMES[chId];
+    if (!base) {
+      let h = 0; for (const c of String(chId || 'x')) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+      base = MV_THEMES[MV_FALLBACK_KEYS[h % MV_FALLBACK_KEYS.length]];
+    }
+    const pal = isDark() ? base.d : base.l;
+    return { name: base.name, shape: base.shape, ...pal };
+  }
+  function applyChAccent(chId) {
+    const r = document.documentElement.style;
+    if (uiStyle() === 'monument' && chId) {
+      const th = mvThemeOf(chId);
+      r.setProperty('--mv-ch-trail', th.trail);
+      r.setProperty('--mv-ch-gem', th.gem);
+    } else {
+      r.removeProperty('--mv-ch-trail');
+      r.removeProperty('--mv-ch-gem');
+    }
+  }
+
+  /* ---------- หอคอยโปรเกรสไอโซเมตริก Monument Valley สำหรับแถบด้านซ้าย (เฉพาะธีมของแต่ละบท) ---------- */
+  const MV_SHAPES = {
+    zigzag: {
+      wp: [[42, 194], [192, 144], [68, 102], [178, 64], [130, 38]],
+      beacon: [130, 21],
+      arch: (th) => `
+        <g fill="${th.spire}" opacity=".65">
+          <path d="M18 226V138q0-10 9-17 9 7 9 17v88z"/>
+          <path d="M222 226V124q0-10 10-18 10 8 10 18v102z"/>
+        </g>
+        <polygon points="116,42 130,35 144,42 144,96 116,96" fill="${th.wr}"/>
+        <polygon points="116,42 130,49 130,96 116,96" fill="${th.wl}"/>
+        <polygon points="178,64 130,38 130,68 178,94" fill="${th.wr}"/>
+        <polygon points="68,102 178,64 178,96 68,134" fill="${th.wl}"/>
+        <path d="M108 120v-18a8 8 0 0 1 16 0v18z" fill="${th.arch}"/>
+        <path d="M142 108v-17a7 7 0 0 1 14 0v17z" fill="${th.arch}"/>
+        <polygon points="54,104 68,97 82,104 82,168 54,168" fill="${th.wr}"/>
+        <polygon points="54,104 68,111 68,168 54,168" fill="${th.wl}"/>
+        <rect x="61" y="118" width="3.2" height="7" rx="1.6" fill="${th.win}"/>
+        <polygon points="68,102 192,144 192,178 68,136" fill="${th.wr}"/>
+        <path d="M102 154v-18a8 8 0 0 1 16 0v18z" fill="${th.arch}"/>
+        <path d="M138 166v-18a8 8 0 0 1 16 0v18z" fill="${th.arch}"/>
+        <polygon points="180,146 194,139 208,146 208,226 180,226" fill="${th.wr}"/>
+        <polygon points="180,146 194,153 194,226 180,226" fill="${th.wl}"/>
+        <rect x="199" y="160" width="3.5" height="8" rx="1.7" fill="${th.win}"/>
+        <rect x="186" y="176" width="3.2" height="7" rx="1.6" fill="${th.gem}" opacity=".85"/>
+        <polygon points="42,194 192,144 192,226 42,226" fill="${th.wl}"/>
+        <path d="M76 226v-26a11 11 0 0 1 22 0v26z" fill="${th.arch}"/>
+        <path d="M122 226v-32a11 11 0 0 1 22 0v32z" fill="${th.arch}"/>
+        <polygon points="28,196 42,189 56,196 56,226 28,226" fill="${th.wr}"/>
+        <polygon points="28,196 42,203 42,226 28,226" fill="${th.wl}"/>`
+    },
+    spiral: {
+      wp: [[130, 202], [204, 160], [130, 122], [56, 86], [130, 40]],
+      beacon: [130, 21],
+      arch: (th) => `
+        <!-- Sacred geometric platform & Escher diamond citadel -->
+        <polygon points="130,174 230,214 130,248 30,214" fill="${th.spire}" opacity=".55"/>
+        <polygon points="130,182 218,214 130,240 42,214" fill="none" stroke="${th.trail}" stroke-opacity=".28" stroke-width="1"/>
+        <!-- Central inner core pillar -->
+        <polygon points="116,42 130,35 144,42 144,200 116,200" fill="${th.wr}"/>
+        <polygon points="116,42 130,49 130,200 116,200" fill="${th.wl}"/>
+        <!-- Upper diamond arches -->
+        <polygon points="56,86 130,40 130,74 56,120" fill="${th.wl}"/>
+        <path d="M84 102v-16a7 7 0 0 1 14 0v16z" fill="${th.arch}"/>
+        <polygon points="56,86 130,122 130,158 56,122" fill="${th.wr}"/>
+        <rect x="64" y="102" width="3.5" height="8" rx="1.6" fill="${th.win}"/>
+        <circle cx="88" cy="116" r="2.2" fill="${th.gem}"/>
+        <!-- Left & Right cantilevered Escher pillars -->
+        <polygon points="44,88 56,82 68,88 68,202 44,202" fill="${th.wr}"/>
+        <polygon points="44,88 56,94 56,202 44,202" fill="${th.wl}"/>
+        <polygon points="192,162 204,156 216,162 216,226 192,226" fill="${th.wr}"/>
+        <polygon points="192,162 204,168 204,226 192,226" fill="${th.wl}"/>
+        <rect x="208" y="176" width="3.2" height="8" rx="1.5" fill="${th.win}"/>
+        <!-- Lower grand stepped pyramid pedestal -->
+        <polygon points="130,122 204,160 204,192 130,154" fill="${th.wr}"/>
+        <path d="M156 172v-16a7 7 0 0 1 14 0v16z" fill="${th.arch}"/>
+        <polygon points="130,202 204,160 204,226 130,226" fill="${th.wl}"/>
+        <path d="M154 226v-26a10 10 0 0 1 20 0v26z" fill="${th.arch}"/>
+        <polygon points="110,202 130,192 150,202 150,226 110,226" fill="${th.wr}"/>
+        <polygon points="110,202 130,212 130,226 110,226" fill="${th.wl}"/>
+        <circle cx="130" cy="166" r="2.8" fill="${th.gem}"/>`
+    },
+    twin: {
+      wp: [[44, 196], [108, 160], [198, 140], [156, 94], [64, 76], [130, 38]],
+      beacon: [130, 20],
+      arch: (th) => `
+        <!-- Twin gothic watchtowers + sweeping sky-bridges -->
+        <g fill="${th.spire}" opacity=".6">
+          <path d="M14 226V146l8-14 8 14v80z"/>
+          <path d="M228 226V138l9-16 9 16v88z"/>
+        </g>
+        <!-- Left tall spire tower -->
+        <polygon points="48,54 64,45 80,54 80,226 48,226" fill="${th.wr}"/>
+        <polygon points="48,54 64,63 64,226 48,226" fill="${th.wl}"/>
+        <path d="M52 54q0-14 12-22 12 8 12 22z" fill="${th.gem}" opacity=".85"/>
+        <rect x="68" y="64" width="3.2" height="8" rx="1.6" fill="${th.win}"/>
+        <rect x="55" y="96" width="3.2" height="8" rx="1.6" fill="${th.win}"/>
+        <!-- Right tall spire tower -->
+        <polygon points="184,78 200,69 216,78 216,226 184,226" fill="${th.wr}"/>
+        <polygon points="184,78 200,87 200,226 184,226" fill="${th.wl}"/>
+        <path d="M188 78q0-14 12-22 12 8 12 22z" fill="${th.gem}" opacity=".85"/>
+        <rect x="204" y="92" width="3.2" height="8" rx="1.6" fill="${th.win}"/>
+        <rect x="191" y="156" width="3.2" height="8" rx="1.6" fill="${th.win}"/>
+        <!-- Center crown pavilion -->
+        <polygon points="116,42 130,35 144,42 144,98 116,98" fill="${th.wr}"/>
+        <polygon points="116,42 130,49 130,98 116,98" fill="${th.wl}"/>
+        <path d="M126 70v-9a4 4 0 0 1 8 0v9z" fill="${th.win}"/>
+        <!-- High arched sky-bridge -->
+        <polygon points="64,76 156,94 156,126 64,108" fill="${th.wl}"/>
+        <path d="M96 122v-18a12 12 0 0 1 24 0v18z" fill="${th.arch}"/>
+        <!-- Lower sweeping viaduct -->
+        <polygon points="44,196 108,160 198,140 198,226 44,226" fill="${th.wl}"/>
+        <path d="M84 226v-32a13 13 0 0 1 26 0v32z" fill="${th.arch}"/>
+        <path d="M136 226v-38a14 14 0 0 1 28 0v38z" fill="${th.arch}"/>`
+    },
+    forest: {
+      wp: [[78, 200], [180, 166], [84, 126], [174, 84], [130, 38]],
+      beacon: [130, 20],
+      arch: (th) => `
+        <!-- Nocturnal forest silhouettes framing the luminous slender spire -->
+        <g fill="${th.arch}" opacity=".85">
+          <rect x="0" y="0" width="24" height="226"/>
+          <rect x="236" y="0" width="24" height="226"/>
+          <path d="M22 40l26 24-6 8-20-16zM22 110l30 22-5 7-25-14zM238 54l-28 24 6 8 22-16zM238 134l-26 20 5 7 21-12z"/>
+        </g>
+        <g fill="${th.spire}" opacity=".65">
+          <rect x="24" y="0" width="12" height="226"/><rect x="224" y="0" width="12" height="226"/>
+        </g>
+        <!-- Slender Monument Valley forest citadel -->
+        <polygon points="116,42 130,35 144,42 144,226 116,226" fill="${th.wr}"/>
+        <polygon points="116,42 130,49 130,226 116,226" fill="${th.wl}"/>
+        <!-- Side mini onion-dome turrets -->
+        <polygon points="72,100 84,94 96,100 96,226 72,226" fill="${th.wr}"/>
+        <polygon points="72,100 84,106 84,226 72,226" fill="${th.wl}"/>
+        <path d="M75 100q0-12 9-18 9 6 9 18z" fill="${th.top}"/>
+        <polygon points="164,84 176,78 188,84 188,226 164,226" fill="${th.wr}"/>
+        <polygon points="164,84 176,90 176,226 164,226" fill="${th.wl}"/>
+        <path d="M167 84q0-12 9-18 9 6 9 18z" fill="${th.top}"/>
+        <!-- Cantilevered bridges & arches -->
+        <polygon points="84,126 174,84 174,112 84,154" fill="${th.wl}"/>
+        <path d="M116 142v-16a8 8 0 0 1 16 0v16z" fill="${th.arch}"/>
+        <polygon points="78,200 180,166 180,226 78,226" fill="${th.wl}"/>
+        <path d="M114 226v-26a12 12 0 0 1 24 0v26z" fill="${th.arch}"/>
+        <!-- Glowing switches & warm windows -->
+        <rect x="125" y="64" width="4" height="10" rx="2" fill="${th.win}"/>
+        <ellipse cx="84" cy="126" rx="5" ry="2.8" fill="${th.gem}"/>
+        <ellipse cx="174" cy="84" rx="5" ry="2.8" fill="${th.gem}"/>`
+    }
+  };
+
   function mvTowerHTML(ch, curNo) {
     if (uiStyle() !== 'monument' || !ch || !ch.sections || !ch.sections.length) return '';
     const secs = ch.sections, n = secs.length;
     const p = chProgress(ch);
     const pct = Math.round(p.d * 100 / Math.max(1, p.n));
     const hide = !!S.mvMapHide;
-    // เส้นทางไอโซเมตริกซิกแซก 4 ช่วง จากฐานล่างซ้ายขึ้นสู่ยอดวิหารกลางบน
-    const WP = [[42, 194], [192, 144], [68, 102], [178, 64], [130, 38]];
+    const th = mvThemeOf(ch.id);
+    const sh = MV_SHAPES[th.shape] || MV_SHAPES.zigzag;
+    const WP = sh.wp, [bx, by] = sh.beacon;
     const segs = []; let totalLen = 0;
     for (let i = 0; i < WP.length - 1; i++) {
       const dx = WP[i + 1][0] - WP[i][0], dy = WP[i + 1][1] - WP[i][1];
@@ -334,14 +503,12 @@
       const [x, y] = atDist(d);
       return { s, i, x: +x.toFixed(1), y: +y.toFixed(1), d, lv: lvOf(ch.id, s.no) };
     });
-    // ตำแหน่งตัวละคร: กล่องที่กำลังอ่าน หรือกล่องท้ายสุดที่เคยประเมินแล้ว
     let actIdx = curNo ? pts.findIndex(q => q.s.no === curNo) : -1;
     if (actIdx < 0) {
       for (let i = pts.length - 1; i >= 0; i--) if (pts[i].lv) { actIdx = i; break; }
       if (actIdx < 0) actIdx = 0;
     }
     const act = pts[actIdx];
-    // เส้นเรืองแสงสีฟ้าอมเขียวตามทางที่เดินผ่านแล้ว
     const trailPts = [];
     for (const sg of segs) {
       if (act.d >= sg.s0) {
@@ -353,85 +520,47 @@
     const lvCol = { 4: '#5eead4', 3: '#ffd97d', 2: '#fb923c', 5: '#f472b6', 1: '#a78bfa' };
     const r = n > 28 ? 3.2 : n > 16 ? 4 : 4.8;
     const nodes = pts.map(q => {
-      const fill = q.lv ? lvCol[q.lv] : 'var(--mv-node)';
+      const fill = q.lv ? lvCol[q.lv] : (isDark() ? '#3c4a75' : '#cdd8df');
       const isOn = q.i === actIdx;
       return `<a class="mv-node" href="#/${ch.id}/${q.s.no}"><title>กล่อง ${q.s.no}: ${esc(q.s.title)}</title>
-        ${isOn ? `<circle cx="${q.x}" cy="${q.y}" r="${r + 4}" fill="none" stroke="#5eead4" stroke-width="1.2" opacity=".85" class="mv-pulse"/>` : ''}
+        ${isOn ? `<circle cx="${q.x}" cy="${q.y}" r="${r + 4}" fill="none" stroke="${th.trail}" stroke-width="1.2" opacity=".88" class="mv-pulse"/>` : ''}
         <polygon class="mv-tile" points="${q.x},${(q.y - r * 0.72).toFixed(1)} ${(q.x + r * 1.25).toFixed(1)},${q.y} ${q.x},${(q.y + r * 0.72).toFixed(1)} ${(q.x - r * 1.25).toFixed(1)},${q.y}" fill="${fill}" stroke="${isOn ? '#ffffff' : 'rgba(15,20,40,.45)'}" stroke-width="${isOn ? 1.1 : 0.6}"/></a>`;
     }).join('');
     const gid = 'mvg-' + ch.id.replace(/[^a-z0-9]/gi, '');
     const doneAll = p.n > 0 && p.d >= p.n;
+    const wpStr = WP.map(p => p.join(',')).join(' ');
     const svg = `<svg class="mv-tower-svg" viewBox="0 0 260 226" aria-label="แผนที่โปรเกรสของบท">
       <defs>
         <linearGradient id="${gid}s" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="var(--mv-sky1)"/>
-          <stop offset="56%" stop-color="var(--mv-sky2)"/>
-          <stop offset="100%" stop-color="var(--mv-sky3)"/>
+          <stop offset="0%" stop-color="${th.sky[0]}"/>
+          <stop offset="56%" stop-color="${th.sky[1]}"/>
+          <stop offset="100%" stop-color="${th.sky[2]}"/>
         </linearGradient>
         <radialGradient id="${gid}b" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="${doneAll ? '#ffe28a' : '#5eead4'}" stop-opacity="${doneAll ? '.85' : '.48'}"/>
-          <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+          <stop offset="0%" stop-color="${doneAll ? '#ffe28a' : th.trail}" stop-opacity="${doneAll ? '.88' : '.5'}"/>
+          <stop offset="100%" stop-color="${th.trail}" stop-opacity="0"/>
         </radialGradient>
         <radialGradient id="${gid}t" cx="50%" cy="65%" r="50%">
-          <stop offset="0%" stop-color="#67e8f9" stop-opacity=".6"/>
-          <stop offset="100%" stop-color="#67e8f9" stop-opacity="0"/>
+          <stop offset="0%" stop-color="${th.trail}" stop-opacity=".65"/>
+          <stop offset="100%" stop-color="${th.trail}" stop-opacity="0"/>
         </radialGradient>
       </defs>
       <rect width="260" height="226" fill="url(#${gid}s)"/>
-      <!-- Stars & Crescent Moon -->
-      <g fill="#eef2ff" opacity=".68">
+      <g fill="#eef2ff" opacity="${isDark() ? '.7' : '.45'}">
         <circle cx="22" cy="18" r=".8"/><circle cx="72" cy="14" r=".9"/><circle cx="198" cy="18" r=".9"/>
         <circle cx="234" cy="30" r=".8"/><circle cx="218" cy="54" r=".7"/><circle cx="28" cy="64" r=".7"/>
       </g>
-      <path d="M34 20a8.5 8.5 0 1 0 9.6 11.4 6.8 6.8 0 1 1-9.6-11.4z" fill="var(--mv-moon)" opacity=".92"/>
-      <!-- Distant misty spires -->
-      <g fill="var(--mv-spire)" opacity=".65">
-        <path d="M18 226V138q0-10 9-17 9 7 9 17v88z"/>
-        <path d="M222 226V124q0-10 10-18 10 8 10 18v102z"/>
-      </g>
-      <!-- Sacred geometry rings behind Summit Beacon -->
-      <circle cx="130" cy="22" r="${doneAll ? 22 : 16}" fill="url(#${gid}b)" class="mv-pulse"/>
-      <circle cx="130" cy="22" r="14" fill="none" stroke="var(--mv-gold)" stroke-opacity=".35" stroke-width=".8"/>
-      <circle cx="130" cy="22" r="21" fill="none" stroke="#5eead4" stroke-opacity=".22" stroke-width=".7" stroke-dasharray="2 3"/>
-      <!-- Isometric Monument Architecture (back to front) -->
-      <!-- Summit tower & Tier 3 skyway -->
-      <polygon points="116,42 130,35 144,42 144,96 116,96" fill="var(--mv-wall-r)"/>
-      <polygon points="116,42 130,49 130,96 116,96" fill="var(--mv-wall-l)"/>
-      <polygon points="178,64 130,38 130,68 178,94" fill="var(--mv-wall-r)"/>
-      <polygon points="68,102 178,64 178,96 68,134" fill="var(--mv-wall-l)"/>
-      <path d="M108 120v-18a8 8 0 0 1 16 0v18z" fill="var(--mv-arch)"/>
-      <path d="M142 108v-17a7 7 0 0 1 14 0v17z" fill="var(--mv-arch)"/>
-      <!-- Left upper turret -->
-      <polygon points="54,104 68,97 82,104 82,168 54,168" fill="var(--mv-wall-r)"/>
-      <polygon points="54,104 68,111 68,168 54,168" fill="var(--mv-wall-l)"/>
-      <rect x="61" y="118" width="3.2" height="7" rx="1.6" fill="var(--mv-win)"/>
-      <!-- Tier 2 central bridge (right-to-left) -->
-      <polygon points="68,102 192,144 192,178 68,136" fill="var(--mv-wall-r)"/>
-      <path d="M102 154v-18a8 8 0 0 1 16 0v18z" fill="var(--mv-arch)"/>
-      <path d="M138 166v-18a8 8 0 0 1 16 0v18z" fill="var(--mv-arch)"/>
-      <!-- Right corner tower -->
-      <polygon points="180,146 194,139 208,146 208,226 180,226" fill="var(--mv-wall-r)"/>
-      <polygon points="180,146 194,153 194,226 180,226" fill="var(--mv-wall-l)"/>
-      <rect x="199" y="160" width="3.5" height="8" rx="1.7" fill="var(--mv-win)"/>
-      <rect x="186" y="176" width="3.2" height="7" rx="1.6" fill="#f284b6" opacity=".85"/>
-      <!-- Tier 1 lower viaduct (left-to-right) -->
-      <polygon points="42,194 192,144 192,226 42,226" fill="var(--mv-wall-l)"/>
-      <path d="M76 226v-26a11 11 0 0 1 22 0v26z" fill="var(--mv-arch)"/>
-      <path d="M122 226v-32a11 11 0 0 1 22 0v32z" fill="var(--mv-arch)"/>
-      <!-- Entry plinth bottom-left -->
-      <polygon points="28,196 42,189 56,196 56,226 28,226" fill="var(--mv-wall-r)"/>
-      <polygon points="28,196 42,203 42,226 28,226" fill="var(--mv-wall-l)"/>
-      <!-- Illuminated Isometric Walkway Decks -->
-      <polyline points="42,194 192,144 68,102 178,64 130,38" fill="none" stroke="var(--mv-top)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" opacity=".92"/>
-      <!-- Glowing cyan-teal energy trail up to current position -->
-      ${trailPts.length > 1 ? `<polyline points="${trailPts.join(' ')}" fill="none" stroke="#5eead4" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity=".28"/>
-      <polyline points="${trailPts.join(' ')}" fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>` : ''}
-      <!-- Summit Crystal Beacon -->
-      <polygon points="130,11 136,21 130,31 124,21" fill="${doneAll ? '#fff5c2' : '#e0fdfa'}"/>
-      <polygon points="130,11 136,21 130,31" fill="${doneAll ? '#ffd97d' : '#5eead4'}" opacity=".75"/>
-      <!-- Clickable box waypoints -->
+      <path d="M34 20a8.5 8.5 0 1 0 9.6 11.4 6.8 6.8 0 1 1-9.6-11.4z" fill="${isDark() ? '#ffe799' : '#fff8d6'}" opacity=".92"/>
+      <circle cx="${bx}" cy="${by}" r="${doneAll ? 22 : 16}" fill="url(#${gid}b)" class="mv-pulse"/>
+      <circle cx="${bx}" cy="${by}" r="14" fill="none" stroke="${th.gem}" stroke-opacity=".4" stroke-width=".8"/>
+      <circle cx="${bx}" cy="${by}" r="21" fill="none" stroke="${th.trail}" stroke-opacity=".28" stroke-width=".7" stroke-dasharray="2 3"/>
+      ${sh.arch(th)}
+      <polyline points="${wpStr}" fill="none" stroke="${th.top}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" opacity=".92"/>
+      ${trailPts.length > 1 ? `<polyline points="${trailPts.join(' ')}" fill="none" stroke="${th.trail}" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity=".32"/>
+      <polyline points="${trailPts.join(' ')}" fill="none" stroke="${th.trail}" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>` : ''}
+      <polygon points="${bx},${by - 10} ${bx + 6},${by} ${bx},${by + 10} ${bx - 6},${by}" fill="${doneAll ? '#fff5c2' : '#eefdfa'}"/>
+      <polygon points="${bx},${by - 10} ${bx + 6},${by} ${bx},${by + 10}" fill="${doneAll ? '#ffd97d' : th.trail}" opacity=".78"/>
       ${nodes}
-      <!-- Luminous white geometric traveler on active box -->
       <g class="mv-traveler" transform="translate(${act.x},${act.y - 2})" style="pointer-events:none">
         <circle cx="0" cy="-6" r="11" fill="url(#${gid}t)"/>
         <polygon points="0,-13 4.2,-1.5 -4.2,-1.5" fill="#ffffff"/>
@@ -439,15 +568,317 @@
         <polygon points="0,-21 3.3,-14 -3.3,-14" fill="#ffffff"/>
       </g>
     </svg>`;
-    return `<div class="mv-tower-card">
-      <div class="mv-tower-head"><b>Monument Progress</b><span>${curNo ? `กล่อง ${curNo}/${n}` : `${p.d}/${n} กล่อง`} <button type="button" id="mvMapToggle" style="border:0;background:none;padding:0 2px;font-size:11px;color:var(--muted)" title="${hide ? 'แสดงแผนที่' : 'ย่อแผนที่'}">${hide ? '▾' : '▴'}</button></span></div>
+    return `<div class="mv-tower-card" style="--mv-ch-trail:${th.trail}">
+      <div class="mv-tower-head"><b title="${esc(th.name)}">✦ ${esc(th.name)}</b><span>${curNo ? `กล่อง ${curNo}/${n}` : `${p.d}/${n}`} <button type="button" id="mvMapToggle" style="border:0;background:none;padding:0 2px;font-size:11px;color:var(--muted)" title="${hide ? 'แสดงแผนที่' : 'ย่อแผนที่'}">${hide ? '▾' : '▴'}</button></span></div>
       ${hide ? '' : svg}
-      <div class="mv-tower-foot"><span>ประเมิน <b>${p.d}/${p.n}</b> · มั่นใจ <b>${p.c[4]}</b></span><span class="mv-pct">${pct}%</span></div>
+      <div class="mv-tower-foot"><span>ประเมิน <b>${p.d}/${p.n}</b> · มั่นใจ <b>${p.c[4]}</b></span><span class="mv-pct" style="color:${th.trail}">${pct}%</span></div>
+    </div>`;
+  }
+
+  /* ---------- ปราสาทใหญ่หน้าแรกสไตล์ Monument Valley Trilogy + วงแหวนหิน Progress รายบท + ตัวละครประจำบท ---------- */
+  function mvShortLbl(c) {
+    const id = c.id.toLowerCase();
+    if (/^b\d+$/.test(id)) return id.toUpperCase();
+    const map = { 'kt-embryo': 'EMB', 'kt-repro': 'REP', 'kt-msk': 'MSK', 'kt-parasit': 'PAR', 'kt-rs': 'RS' };
+    return map[id] || c.id.replace(/^kt-/i, '').slice(0, 4).toUpperCase();
+  }
+  function mvCharSVG(idx, cloak, accent, isCur) {
+    // 4 ทรงตัวละครสไตล์ Monument Valley (หมวกกรวยขาว / ผ้าคลุมแดง-คอรัล / หมวกทรงสูงสีม่วง / หมวกแหลมนักเดินทาง)
+    const kind = idx % 4;
+    const aura = isCur ? `<circle cx="0" cy="-9" r="12" fill="#5eead4" opacity=".32" class="mv-pulse"/>` : '';
+    if (kind === 0) {
+      // Cone-hat traveler (Ida style)
+      return `${aura}<polygon points="0,-13 4.2,-1.5 -4.2,-1.5" fill="#ffffff"/>
+        <polygon points="0,-13 4.2,-1.5 0,-1.5" fill="${cloak}" opacity=".4"/>
+        <circle cx="0" cy="-14.4" r="1.7" fill="#1e2745"/>
+        <polygon points="0,-21.5 3.4,-14.2 -3.4,-14.2" fill="#ffffff"/>`;
+    }
+    if (kind === 1) {
+      // Coral/colored cloak traveler (Ro style)
+      return `${aura}<polygon points="0,-13 4.4,-1.5 -4.4,-1.5" fill="${cloak}"/>
+        <circle cx="0" cy="-14.6" r="2.1" fill="#fff3e6"/>
+        <path d="M-2.2 -15.5a2.3 2.3 0 0 1 4.4 0l1.4-2.5h-7.2z" fill="${accent}"/>`;
+    }
+    if (kind === 2) {
+      // Tall angled headdress sage (MV3 purple-hat style)
+      return `${aura}<polygon points="0,-13.5 4.3,-1.5 -4.3,-1.5" fill="${cloak}"/>
+        <circle cx="0" cy="-14.8" r="1.7" fill="#fff5ee"/>
+        <polygon points="-1.2,-16 2,-16 4.2,-24 -0.4,-24.6" fill="${accent}"/>`;
+    }
+    // Pointed apprentice traveler (orange/gold hat style)
+    return `${aura}<polygon points="0,-12.5 3.9,-1.5 -3.9,-1.5" fill="${cloak}"/>
+      <circle cx="0" cy="-14.1" r="1.8" fill="#fff4e4"/>
+      <polygon points="-2.6,-15.2 2.6,-15.2 -0.6,-21.6" fill="${accent}"/>`;
+  }
+  function mvGrandCitadelHTML(bkWarn) {
+    const ready = INDEX.filter(c => c.ready && CH[c.id]).slice().sort((a, b) => {
+      const ga = a.group ? 1 : 0, gb = b.group ? 1 : 0;
+      if (ga !== gb) return ga - gb;
+      return chNum(a.id) - chNum(b.id) || (a.id < b.id ? -1 : 1);
+    });
+    let totD = 0, totN = 0, tot4 = 0;
+    const items = ready.map(c => {
+      const p = chProgress(CH[c.id]);
+      totD += p.d; totN += p.n; tot4 += p.c[4];
+      return { c, p, lbl: mvShortLbl(c), pct: p.n ? Math.round(p.d * 100 / p.n) : 0, th: mvThemeOf(c.id) };
+    });
+    const allPct = totN ? Math.round(totD * 100 / totN) : 0;
+    const dark = isDark();
+    // วงแหวนหินทางเดินโอบรอบปราสาทใหญ่ (กระจายตามความยาวส่วนโค้งเท่ากันทุกก้อน)
+    const cx = 470, cy = 216, rx = 408, ry = 126;
+    const a0 = 204 * Math.PI / 180, a1 = -24 * Math.PI / 180;
+    const NSTEP = 240, arcPts = []; let arcTot = 0;
+    for (let i = 0; i <= NSTEP; i++) {
+      const a = a0 + (a1 - a0) * (i / NSTEP);
+      const x = cx + rx * Math.cos(a), y = cy + ry * Math.sin(a);
+      if (i > 0) arcTot += Math.hypot(x - arcPts[i - 1].x, y - arcPts[i - 1].y);
+      arcPts.push({ x, y, s: arcTot });
+    }
+    const sampleArc = t => {
+      const target = Math.max(0, Math.min(arcTot, t * arcTot));
+      for (let i = 1; i < arcPts.length; i++) {
+        if (arcPts[i].s >= target) {
+          const p0 = arcPts[i - 1], p1 = arcPts[i], f = (target - p0.s) / Math.max(1e-6, p1.s - p0.s);
+          return [+(p0.x + (p1.x - p0.x) * f).toFixed(1), +(p0.y + (p1.y - p0.y) * f).toFixed(1)];
+        }
+      }
+      return [arcPts[arcPts.length - 1].x, arcPts[arcPts.length - 1].y];
+    };
+    const pathD = arcPts.map((p, i) => `${i ? 'L' : 'M'}${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join('');
+    const lastCh = (S.lastRead && S.lastRead.h && S.lastRead.h.match(/^#\/([^/]+)/)) ? S.lastRead.h.match(/^#\/([^/]+)/)[1] : '';
+    const lvCss = { 4: 'var(--lv4)', 3: 'var(--lv3)', 2: 'var(--lv2)', 1: dark ? '#8b93b8' : 'var(--lv1)', 5: 'var(--lv5)' };
+    const domCol = p => {
+      if (!p.d) return dark ? '#2a355e' : '#dbe6ea';
+      let best = 4, bv = -1;
+      for (const l of LV_ORD) if (p.c[l] > bv) { bv = p.c[l]; best = l; }
+      return lvCss[best];
+    };
+    const R = 19.5, CIRC = 2 * Math.PI * R;
+    const stones = items.map((it, idx) => {
+      const t = items.length === 1 ? 0.5 : idx / (items.length - 1);
+      const [x, y] = sampleArc(t);
+      const isCur = it.c.id === lastCh;
+      let off = 0, arcs = '';
+      for (const l of LV_ORD) {
+        const cnt = it.p.c[l] || 0;
+        if (!cnt || !it.p.n) continue;
+        const len = (cnt / it.p.n) * CIRC;
+        arcs += `<circle cx="${x}" cy="${y}" r="${R}" fill="none" stroke="${lvCss[l]}" stroke-width="4.4" stroke-dasharray="${len.toFixed(2)} ${(CIRC - len).toFixed(2)}" stroke-dashoffset="${(-off).toFixed(2)}" transform="rotate(-90 ${x} ${y})"/>`;
+        off += len;
+      }
+      const tint = domCol(it.p);
+      const stFill = dark ? '#16203a' : '#fcfdfe';
+      const baseW = dark ? '#263058' : '#c6d6dc';
+      const baseR = dark ? '#192040' : '#a9bec7';
+      return `<a class="mv-stone" href="#/${it.c.id}"><title>${esc(it.c.title)} (${esc(it.th.name)}) · ประเมินแล้ว ${it.p.d}/${it.p.n} กล่อง (${it.pct}%) · มั่นใจ ${it.p.c[4]}</title>
+        <g class="mv-st-g">
+          <!-- Isometric carved stone plinth -->
+          <polygon points="${x},${y - 16} ${x + 28},${y - 2} ${x},${y + 12} ${x - 28},${y - 2}" fill="${tint}" opacity="${it.p.d ? '.4' : '.22'}"/>
+          <polygon points="${x - 26},${y + 4} ${x},${y + 18} ${x},${y + 27} ${x - 26},${y + 13}" fill="${baseW}"/>
+          <polygon points="${x + 26},${y + 4} ${x},${y + 18} ${x},${y + 27} ${x + 26},${y + 13}" fill="${baseR}"/>
+          <!-- Medallion + 5-color progress ring -->
+          <circle cx="${x}" cy="${y}" r="${R + 2.4}" fill="${stFill}" stroke="${isCur ? '#5eead4' : (dark ? '#344575' : '#cbd9df')}" stroke-width="${isCur ? 1.8 : 1}"/>
+          <circle cx="${x}" cy="${y}" r="${R}" fill="none" stroke="${dark ? '#253258' : '#e4eef0'}" stroke-width="4.4"/>
+          ${arcs}
+          <text x="${x}" y="${y - 0.5}" text-anchor="middle" font-family="Josefin Sans,sans-serif" font-weight="700" font-size="11.5" fill="${dark ? '#f0f4ff' : '#1b2736'}">${esc(it.lbl)}</text>
+          <text x="${x}" y="${y + 10.5}" text-anchor="middle" font-family="Josefin Sans,sans-serif" font-weight="600" font-size="8.5" fill="${it.pct ? it.th.trail : (dark ? '#8b99bf' : '#6c7e90')}">${it.pct}%</text>
+          <!-- Unique Monument Valley character standing on each chapter stone -->
+          <g class="${isCur ? 'mv-traveler' : ''}" transform="translate(${x},${y - 19})">
+            ${mvCharSVG(idx, it.th.trail, it.th.gem, isCur)}
+          </g>
+        </g></a>`;
+    }).join('');
+    const chevrons = items.slice(0, -1).map((_, idx) => {
+      const t = (idx + 0.5) / Math.max(1, items.length - 1);
+      const [x, y] = sampleArc(t);
+      return `<circle cx="${x}" cy="${y}" r="2.2" fill="${dark ? '#5eead4' : '#2b7a78'}" opacity=".65"/>`;
+    }).join('');
+    // ฉากปราสาท 3 โลกสไตล์ Monument Valley: The Trilogy (ซ้ายม่วงตะวันแดง · กลางคราม-ฟ้ามิ้นต์ใต้จันทร์เสี้ยวยักษ์ · ขวาหอระฆังทอง-ปะการัง)
+    const skyTop = dark ? '#121b4a' : '#8fd8d6';
+    const skyMid = dark ? '#1e2763' : '#d2f0ed';
+    const leftGrad1 = dark ? '#eb758b' : '#f7a5b4', leftGrad2 = dark ? '#4c2c70' : '#d2a2d4', leftGrad3 = dark ? '#1d1438' : '#b7c7e2';
+    const rightGrad1 = dark ? '#785a9e' : '#d8f4ea', rightGrad2 = dark ? '#2a2252' : '#c2ece8';
+    const svg = `<svg class="mv-citadel-svg" viewBox="0 0 940 378" aria-label="ปราสาท Monument Valley แสดงความคืบหน้าทุกบท">
+      <defs>
+        <linearGradient id="mvts" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${skyTop}"/>
+          <stop offset="58%" stop-color="${skyMid}"/>
+          <stop offset="100%" stop-color="${dark ? '#171535' : '#e6f3f2'}"/>
+        </linearGradient>
+        <linearGradient id="mvtl" x1="0" y1="0" x2=".3" y2="1">
+          <stop offset="0%" stop-color="${leftGrad1}" stop-opacity="${dark ? '.88' : '.75'}"/>
+          <stop offset="52%" stop-color="${leftGrad2}" stop-opacity="${dark ? '.92' : '.7'}"/>
+          <stop offset="100%" stop-color="${leftGrad3}"/>
+        </linearGradient>
+        <linearGradient id="mvtr" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="${rightGrad1}" stop-opacity="${dark ? '.45' : '.85'}"/>
+          <stop offset="100%" stop-color="${rightGrad2}" stop-opacity="${dark ? '.9' : '.95'}"/>
+        </linearGradient>
+        <radialGradient id="mvtg" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#5eead4" stop-opacity="${dark ? '.45' : '.35'}"/>
+          <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="mvtsun" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ff8da1" stop-opacity=".95"/>
+          <stop offset="100%" stop-color="#f26b8a" stop-opacity=".6"/>
+        </radialGradient>
+        <linearGradient id="mvtfog" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="${dark ? '#171838' : '#e6f4f2'}" stop-opacity="0"/>
+          <stop offset="100%" stop-color="${dark ? '#131830' : '#eef5f5'}" stop-opacity=".96"/>
+        </linearGradient>
+        <filter id="mvblur" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="14"/>
+        </filter>
+        <filter id="mvblur2" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="8"/>
+        </filter>
+      </defs>
+      <rect width="940" height="378" fill="url(#mvts)"/>
+      <!-- Trilogy diagonal atmospheric planes -->
+      <polygon points="0,92 470,224 470,378 0,378" fill="url(#mvtl)"/>
+      <polygon points="940,108 470,224 470,378 940,378" fill="url(#mvtr)"/>
+      <!-- Giant Coral Sunset Orb (left) -->
+      <circle cx="332" cy="146" r="56" fill="url(#mvtsun)" opacity="${dark ? '.82' : '.65'}"/>
+      <!-- Stars -->
+      <g fill="#eef2ff" opacity="${dark ? '.8' : '.45'}">
+        <circle cx="95" cy="30" r="1"/><circle cx="185" cy="48" r=".9"/><circle cx="268" cy="24" r="1.1"/>
+        <circle cx="628" cy="34" r="1"/><circle cx="725" cy="52" r=".9"/><circle cx="835" cy="32" r="1.1"/>
+        <circle cx="350" cy="40" r=".8"/><circle cx="780" cy="82" r=".8"/>
+      </g>
+      <!-- Distant mysterious onion-dome towers peeking out of the misty cloud sea -->
+      <g opacity="${dark ? '.42' : '.52'}">
+        <path d="M58 290V176q0-14 14-26 14 12 14 26v114z" fill="${dark ? '#2d4470' : '#8ec7cb'}"/>
+        <path d="M126 300V148q0-18 18-32 18 14 18 32v152z" fill="${dark ? '#40346e' : '#96c9ba'}"/>
+        <path d="M196 290V182q0-12 12-22 12 10 12 22v108z" fill="${dark ? '#5a366b' : '#b2b2da'}"/>
+        <path d="M242 290V152q0-15 15-26 15 11 15 26v138z" fill="${dark ? '#2b3d69' : '#85bfd0'}"/>
+        <path d="M674 290V146q0-16 16-28 16 12 16 28v144z" fill="${dark ? '#2f4570' : '#8cc8c2'}"/>
+        <path d="M744 300V168q0-14 14-25 14 11 14 25v132z" fill="${dark ? '#4d3870' : '#d2a8cc'}"/>
+        <path d="M812 290V142q0-17 17-30 17 13 17 30v148z" fill="${dark ? '#2d4f6e' : '#92c9b8'}"/>
+        <path d="M876 290V178q0-12 12-22 12 10 12 22v112z" fill="${dark ? '#3c3b73' : '#9ac2db'}"/>
+      </g>
+      <!-- Back billowing dreamy mist clouds -->
+      <g filter="url(#mvblur)" opacity="${dark ? '.46' : '.72'}">
+        <ellipse cx="110" cy="184" rx="130" ry="34" fill="${dark ? '#4f5d96' : '#ffffff'}"/>
+        <ellipse cx="260" cy="212" rx="145" ry="38" fill="${dark ? '#6e4c85' : '#ffffff'}"/>
+        <ellipse cx="690" cy="196" rx="150" ry="36" fill="${dark ? '#44638c' : '#ffffff'}"/>
+        <ellipse cx="845" cy="176" rx="125" ry="32" fill="${dark ? '#4e598c' : '#ffffff'}"/>
+      </g>
+      <!-- Giant Glowing Crescent Moon cradling Central Spire (Trilogy signature!) -->
+      <circle cx="486" cy="84" r="76" fill="url(#mvtg)"/>
+      <path d="M472 16a64 64 0 0 1 28 118 56 56 0 0 0-28-118z" fill="#fff8e0"/>
+      <path d="M474 17a62 62 0 0 1 25 114 57 57 0 0 0-25-114z" fill="#ffffff" opacity=".85"/>
+
+      <!-- === TRILOGY GRAND CASTLE (3-World Split Architecture) === -->
+      <!-- RIGHT WING: Coral-Pink & Sunlit Gold Pagoda Bell Tower -->
+      <g>
+        <!-- Golden arched bridge connecting right pagoda to center -->
+        <polygon points="518,144 584,174 584,218 518,188" fill="${dark ? '#f7b779' : '#ffe399'}"/>
+        <path d="M538 214v-24a12 12 0 0 1 24 0v24z" fill="${dark ? '#2b2454' : '#c6ece8'}"/>
+        <!-- Upper pagoda tower -->
+        <polygon points="564,116 594,102 624,116 624,256 564,256" fill="${dark ? '#f0869e' : '#f5a5b0'}"/>
+        <polygon points="564,116 594,130 594,256 564,256" fill="${dark ? '#f7b999' : '#ffd8a8'}"/>
+        <!-- Coral pagoda roof -->
+        <polygon points="558,118 594,88 630,118 594,132" fill="${dark ? '#8d4c7a' : '#e66c65'}"/>
+        <polygon points="594,88 630,118 594,132" fill="${dark ? '#5f325a' : '#c95452'}"/>
+        <line x1="594" y1="88" x2="594" y2="75" stroke="#ffd97d" stroke-width="1.6"/>
+        <!-- Glowing golden bell inside pagoda arch -->
+        <path d="M585 154v-14a9 9 0 0 1 18 0v14z" fill="${dark ? '#382147' : '#8a3e54'}"/>
+        <path d="M590 150c0-5 2-8 4-8s4 3 4 8z" fill="#ffe27a"/>
+        <!-- Lower warm yellow sunlit pavilion -->
+        <polygon points="578,192 612,176 646,192 646,264 578,264" fill="${dark ? '#f6d479' : '#fff0a6'}"/>
+        <polygon points="578,192 612,208 612,264 578,264" fill="${dark ? '#fce89e' : '#fff7c4'}"/>
+        <polygon points="572,193 612,168 652,193 612,210" fill="${dark ? '#7c5385' : '#e87668'}"/>
+        <rect x="622" y="214" width="5" height="11" rx="2.5" fill="${dark ? '#52294a' : '#c95f6a'}"/>
+      </g>
+
+      <!-- CENTER CROWN: Luminous Turquoise-Cyan & Emerald-Mint Citadel Spire -->
+      <g>
+        <!-- Tall central shaft (left shadowed indigo / right sunlit lavender-rose) -->
+        <polygon points="434,116 476,96 518,116 518,266 434,266" fill="${dark ? '#7e63a8' : '#d4a6e3'}"/>
+        <polygon points="434,116 476,136 476,266 434,266" fill="${dark ? '#45488a' : '#9c92d4'}"/>
+        <polygon points="476,136 518,116 518,266 476,266" fill="${dark ? '#c993c8' : '#f2bdd4'}"/>
+        <!-- Luminous Cyan-Mint upper temple & stairs -->
+        <polygon points="444,54 466,44 488,54 488,128 444,128" fill="#3ab7cf"/>
+        <polygon points="444,54 466,64 466,128 444,128" fill="#67e8f9"/>
+        <!-- Belfry cupola dome -->
+        <path d="M448 54q0-16 18-26 18 10 18 26z" fill="#6d64b8"/>
+        <path d="M466 28q18 10 18 26h-18z" fill="#473f8f"/>
+        <circle cx="466" cy="24" r="2.2" fill="#fff4b8"/>
+        <path d="M459 84v-13a7 7 0 0 1 14 0v13z" fill="${dark ? '#172354' : '#2a6f82'}"/>
+        <!-- Glowing Mint-Cyan Stepped Bridge Terrace across Center -->
+        <polygon points="424,132 528,84 542,92 438,140" fill="#86f5c8"/>
+        <polygon points="438,140 542,92 542,102 438,150" fill="#3cc9b4"/>
+        <!-- Central white staircase & arches -->
+        <polygon points="462,150 496,134 510,142 476,158" fill="#e8edff"/>
+        <path d="M460 266v-44a16 16 0 0 1 32 0v44z" fill="${dark ? '#251e4f' : '#9bc2d4'}"/>
+        <path d="M468 266v-30a8 8 0 0 1 16 0v30z" fill="#ffe28a" opacity=".88"/>
+        <!-- Tiny white Ida-style guardian atop the cyan moon bridge -->
+        <g class="mv-traveler" transform="translate(520,86)">
+          <polygon points="0,-10 3.2,-1 -3.2,-1" fill="#ffffff"/>
+          <polygon points="0,-16.5 2.5,-10 -2.5,-10" fill="#ffffff"/>
+        </g>
+      </g>
+
+      <!-- LEFT WING: Deep Dusk Violet Viaduct & Onion Dome with Flowing Ribbon -->
+      <g>
+        <!-- Violet onion dome tower -->
+        <polygon points="366,118 396,104 426,118 426,256 366,256" fill="${dark ? '#5a3a82' : '#9974b8'}"/>
+        <polygon points="366,118 396,132 396,256 366,256" fill="${dark ? '#734b9c' : '#b28cd1'}"/>
+        <circle cx="396" cy="100" r="19" fill="${dark ? '#52256b' : '#854c9e'}"/>
+        <!-- Flowing dark ribbon banner over the coral sun -->
+        <path d="M396 81c-14 8-30 14-56 17 20 1 38-3 56-12z" fill="${dark ? '#381e59' : '#63377d'}"/>
+        <!-- Sweeping Violet Arched Viaduct descending left -->
+        <polygon points="300,180 416,124 446,138 330,194" fill="${dark ? '#6a4796' : '#a985c7'}"/>
+        <polygon points="300,180 330,194 330,264 300,264" fill="${dark ? '#4b3175' : '#8966ab'}"/>
+        <polygon points="330,194 446,138 446,264 330,264" fill="${dark ? '#3c2663' : '#79579c'}"/>
+        <path d="M342 264v-46a14 14 0 0 1 28 0v46z" fill="${dark ? '#231642' : '#b395cc'}"/>
+        <path d="M382 264v-54a16 16 0 0 1 32 0v54z" fill="${dark ? '#231642' : '#b395cc'}"/>
+        <!-- Glowing pink-gold viaduct rim -->
+        <polyline points="300,180 416,124 446,138" fill="none" stroke="#f284b6" stroke-width="1.6" stroke-opacity=".8"/>
+      </g>
+
+      <!-- Soft Ethereal Billowing Mist Clouds weaving across the Castle Base -->
+      <g filter="url(#mvblur2)" opacity="${dark ? '.5' : '.78'}">
+        <ellipse cx="165" cy="252" rx="135" ry="26" fill="${dark ? '#5b528c' : '#ffffff'}"/>
+        <ellipse cx="365" cy="242" rx="115" ry="22" fill="${dark ? '#694e87' : '#ffffff'}"/>
+        <ellipse cx="575" cy="246" rx="125" ry="24" fill="${dark ? '#4c658f' : '#ffffff'}"/>
+        <ellipse cx="780" cy="250" rx="140" ry="26" fill="${dark ? '#49588a' : '#ffffff'}"/>
+        <ellipse cx="470" cy="268" rx="190" ry="28" fill="${dark ? '#465285' : '#ffffff'}"/>
+      </g>
+      <rect y="246" width="940" height="132" fill="url(#mvtfog)"/>
+
+      <!-- ORBITAL STEPPING-STONE RING (B3 › B4 › B5 › ... + Character per Chapter!) -->
+      <path d="${pathD}" fill="none" stroke="${dark ? '#b8c5ef' : '#ffffff'}" stroke-width="14" stroke-linecap="round" opacity="${dark ? '.2' : '.62'}"/>
+      <path d="${pathD}" fill="none" stroke="${dark ? '#5eead4' : '#2b7a78'}" stroke-width="2.2" stroke-dasharray="4 6" opacity=".68"/>
+      ${chevrons}
+      ${stones}
+    </svg>`;
+    return `<div class="hero home-hero mv-citadel-hero">
+      <div class="mv-citadel-top">
+        <h1>nannie compre website</h1>
+        <div class="mv-citadel-stat">
+          <span>พิชิตแล้ว <b>${totD}/${totN}</b> กล่อง (<b>${allPct}%</b>)</span>
+          <span>· มั่นใจ <b>${tot4}</b></span>
+          ${bkWarn || ''}
+        </div>
+      </div>
+      ${svg}
+      <div class="mv-citadel-leg">
+        <span>แตะตัวละครหรือก้อนหินแต่ละบทเพื่อเริ่มเดินทาง (วงแหวน = สัดส่วนระดับความเข้าใจ)</span>
+        <div class="mv-citadel-dots">
+          <span><i style="background:var(--lv4)"></i>มั่นใจ</span>
+          <span><i style="background:var(--lv3)"></i>พอได้</span>
+          <span><i style="background:var(--lv2)"></i>ยังไม่แม่น</span>
+          <span><i style="background:var(--lv5)"></i>จำเยอะ</span>
+          <span><i style="background:${dark ? '#8b93b8' : 'var(--lv1)'}"></i>ทวนใหม่</span>
+        </div>
+      </div>
     </div>`;
   }
 
   /* ---------- sidebar ---------- */
   function renderSidebar(curCh, curNo) {
+    applyChAccent(curCh);
     const ready = INDEX.filter(c => c.ready);
     const curMeta = curCh ? ready.find(c => c.id === curCh && CH[c.id]) : null;
     const chItem = (c, expanded) => {
@@ -1015,9 +1446,10 @@
     if (inUl) out += '</ul>';
     return out;
   }
-  /* แถบน้องหมอวิ่งบนสนามหญ้าระหว่างรอ Gemini ตอบ */
+  /* แถบตัวละครวิ่งระหว่างรอ Gemini ตอบ (ค้างไว้ที่ 100% หลังตอบเสร็จไม่หายไป) */
   function startAiRun(wrap) {
-    wrap.innerHTML = `<div class="ai-run"><div class="ai-run-txt"><span>✨ น้องหมอกำลังวิ่งไปหาคำตอบ…</span><b>10%</b></div><div class="ai-track"><i style="width:10%"></i></div></div>`;
+    const mv = uiStyle() === 'monument';
+    wrap.innerHTML = `<div class="ai-run"><div class="ai-run-txt"><span>${mv ? '✦ กำลังเดินทางไปหาคำตอบ…' : '✨ น้องหมอกำลังวิ่งไปหาคำตอบ…'}</span><b>10%</b></div><div class="ai-track"><i style="width:10%"></i></div></div>`;
     const bar = wrap.querySelector('.ai-track i');
     const lbl = wrap.querySelector('.ai-run-txt span');
     const pctEl = wrap.querySelector('.ai-run-txt b');
@@ -1040,11 +1472,9 @@
       },
       done() {
         clearInterval(iv);
-        set(100, '🎉 ได้คำตอบครบแล้ว!');
+        set(100, mv ? '✦ ถึงหอคอยคำตอบแล้ว!' : '🎉 ได้คำตอบครบแล้ว!');
         const box = wrap.querySelector('.ai-run');
         if (box) box.classList.add('done');
-        setTimeout(() => { if (box && box.isConnected) box.classList.add('fade'); }, 900);
-        setTimeout(() => { if (box && box.isConnected) box.remove(); }, 1350);
       },
       stop() { clearInterval(iv); wrap.innerHTML = ''; }
     };
@@ -1489,7 +1919,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v61</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v62</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -1677,7 +2107,9 @@
       nWrong ? act('#/wrong', '📕', `ข้อผิด ${nWrong} ข้อ`, 'ทำซ้ำให้ถูกเพื่อเคลียร์กอง', 'wrong') : ''
     ].join('');
     const chips = `<div class="today-chips"><span>📖 อ่านวันนี้ <b>${rtAll.done}</b> กล่อง</span><span>📅 ทวนแล้ว <b>${rvDone}</b></span><span>🔥 ต่อเนื่อง <b>${streak()}</b> วัน</span></div>`;
-    view.innerHTML = `<div class="hero home-hero"><h1>nannie compre website</h1>${backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : ''}</div>
+    const bkWarn = backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : '';
+    const heroHtml = uiStyle() === 'monument' ? mvGrandCitadelHTML(bkWarn) : `<div class="hero home-hero"><h1>nannie compre website</h1>${bkWarn}</div>`;
+    view.innerHTML = `${heroHtml}
     <section class="dash"><div class="dash-h"><h2>วันนี้ควรทำอะไร</h2>${chips}</div>${planHTML()}<div class="dash-grid">${acts}</div></section>
     <p class="split-hint">เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p>${tiles}
     <details class="panel legend-panel"><summary>สัญลักษณ์ในเนื้อหา</summary><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><div class="card hint" style="margin:8px 0"><div class="lbl">🎯 อาจารย์บอกข้อสอบ</div>ข้อที่อาจารย์ผู้ออกข้อสอบยกมาหรือบอกว่าออก กด ▶ เวลา เพื่อเปิดคลิปตรงจุดนั้น</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-v">6</mark> <mark class="user-hl c-r">สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></details>`;
@@ -2618,7 +3050,7 @@
   const themeBtn = $('#themeBtn');
   const isDark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
   const syncTheme = () => { themeBtn.textContent = isDark() ? '☀️' : '🌙'; };
-  themeBtn.onclick = () => { S.theme = isDark() ? 'light' : 'dark'; document.documentElement.dataset.theme = S.theme; save(); syncTheme(); };
+  themeBtn.onclick = () => { S.theme = isDark() ? 'light' : 'dark'; document.documentElement.dataset.theme = S.theme; save(); syncTheme(); if (uiStyle() === 'monument') rerender(); };
   syncTheme(); applyUiStyle();
   $('#fontBtn').onclick = () => { const sizes = [15, 17, 19, 21]; const cur = S.font || 17; S.font = sizes[(sizes.indexOf(cur) + 1) % sizes.length]; document.documentElement.style.setProperty('--fs', S.font + 'px'); save(); };
   updateWrongCount();

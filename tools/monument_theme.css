@@ -100,9 +100,23 @@ body{background-image:radial-gradient(ellipse 80% 45% at 50% 0%,color-mix(in srg
 .plan .cd{border-radius:14px;background:linear-gradient(145deg,var(--accent),var(--mv-violet));color:var(--accent-fg);box-shadow:0 4px 16px var(--mv-glow)}
 .plan .cd b{font-family:var(--mv-disp);font-weight:700}
 
-/* ฉากหน้าแรก Monument Valley Citadel */
+/* ฉากหน้าแรก Monument Valley Grand Citadel */
 .home-hero{position:relative;overflow:hidden;min-height:164px;padding:22px 24px 44px;margin-bottom:14px;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);
   background:var(--mv-hero) no-repeat right center/cover}
+.home-hero.mv-citadel-hero{padding:0;min-height:0;background:var(--surface)}
+.mv-citadel-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;padding:14px 20px 10px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,transparent)}
+.mv-citadel-top h1{max-width:none;font-size:clamp(16px,2.4vw,22px);margin:0}
+.mv-citadel-stat{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.mv-citadel-stat b{color:var(--accent);font-family:var(--mv-disp);font-size:14px}
+.mv-citadel-svg{display:block;width:100%;height:auto}
+.mv-citadel-svg a.mv-stone{cursor:pointer;outline:none}
+.mv-citadel-svg a.mv-stone .mv-st-g{transition:transform .18s ease,filter .18s ease;transform-box:fill-box;transform-origin:center}
+.mv-citadel-svg a.mv-stone:hover .mv-st-g{transform:translateY(-4px);filter:brightness(1.18) drop-shadow(0 0 10px rgba(94,234,212,.55))}
+.mv-citadel-svg .mv-traveler{animation:mv-glide 2.2s ease-in-out infinite}
+.mv-citadel-svg .mv-pulse{animation:mv-pulse 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.mv-citadel-leg{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;padding:8px 18px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);background:color-mix(in srgb,var(--surface) 92%,transparent)}
+.mv-citadel-dots{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.mv-citadel-dots i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:-1px}
 .home-hero h1{font-family:var(--mv-disp);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:clamp(18px,3.2vw,28px);line-height:1.35;color:#1e2b3c;margin:0;max-width:65%;position:relative;z-index:1}
 .home-hero p{position:relative;z-index:1;max-width:62%}
 .home-hero .bk-warn{position:relative;z-index:1}
@@ -134,7 +148,7 @@ body{background-image:radial-gradient(ellipse 80% 45% at 50% 0%,color-mix(in srg
   background:var(--mv-bar) no-repeat center bottom/cover;box-shadow:0 4px 16px rgba(6,10,24,.28)}
 .readbar-wrap[hidden]{display:none}
 .readbar-wrap::after{content:"";position:absolute;right:6px;bottom:3px;width:20px;height:28px;background:{{MV_BEACON}} no-repeat center bottom/contain}
-.readbar{position:absolute;left:0;bottom:0;top:auto;height:3.5px;width:0;background:linear-gradient(90deg,#5eead4,#f284b6,#ffd97d);box-shadow:0 0 10px rgba(94,234,212,.75);transition:width .12s linear}
+.readbar{position:absolute;left:0;bottom:0;top:auto;height:3.5px;width:0;background:linear-gradient(90deg,var(--mv-ch-trail,#5eead4),var(--mv-ch-gem,#f284b6),#ffd97d);box-shadow:0 0 10px color-mix(in srgb,var(--mv-ch-trail,#5eead4) 75%,transparent);transition:width .12s linear}
 .readbar::after{content:"";position:absolute;right:-10px;bottom:3px;top:auto;width:20px;height:27px;background:{{MV_TRAVELER}} no-repeat center bottom/contain;animation:mv-glide 1.7s ease-in-out infinite}
 body.has-readbar .main{padding-top:50px}
 body.has-readbar .toc{top:90px}
@@ -154,7 +168,7 @@ body.has-readbar .toc{top:90px}
 /* ===== หอคอยโปรเกรสไอโซเมตริก Monument Valley ในแถบด้านซ้าย ===== */
 .mv-tower-card{margin:4px 10px 10px;border-radius:14px;border:1px solid var(--line);overflow:hidden;background:var(--surface2);box-shadow:var(--shadow)}
 .mv-tower-head{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:7px 11px;font-size:12px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--surface) 80%,transparent)}
-.mv-tower-head b{font-family:var(--mv-disp);letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--accent)}
+.mv-tower-head b{font-family:var(--mv-disp);letter-spacing:.06em;font-size:11.5px;color:var(--mv-ch-trail,var(--accent));overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mv-tower-head span{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11.5px}
 .mv-tower-svg{display:block;width:100%;height:auto}
 .mv-tower-svg a.mv-node{cursor:pointer;outline:none}

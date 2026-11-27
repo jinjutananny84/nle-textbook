@@ -101,9 +101,23 @@ body{background-image:radial-gradient(ellipse 80% 45% at 50% 0%,color-mix(in srg
 .plan .cd{border-radius:14px;background:linear-gradient(145deg,var(--accent),var(--mv-violet));color:var(--accent-fg);box-shadow:0 4px 16px var(--mv-glow)}
 .plan .cd b{font-family:var(--mv-disp);font-weight:700}
 
-/* ฉากหน้าแรก Monument Valley Citadel */
+/* ฉากหน้าแรก Monument Valley Grand Citadel */
 .home-hero{position:relative;overflow:hidden;min-height:164px;padding:22px 24px 44px;margin-bottom:14px;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);
   background:var(--mv-hero) no-repeat right center/cover}
+.home-hero.mv-citadel-hero{padding:0;min-height:0;background:var(--surface)}
+.mv-citadel-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 14px;padding:14px 20px 10px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,transparent)}
+.mv-citadel-top h1{max-width:none;font-size:clamp(16px,2.4vw,22px);margin:0}
+.mv-citadel-stat{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+.mv-citadel-stat b{color:var(--accent);font-family:var(--mv-disp);font-size:14px}
+.mv-citadel-svg{display:block;width:100%;height:auto}
+.mv-citadel-svg a.mv-stone{cursor:pointer;outline:none}
+.mv-citadel-svg a.mv-stone .mv-st-g{transition:transform .18s ease,filter .18s ease;transform-box:fill-box;transform-origin:center}
+.mv-citadel-svg a.mv-stone:hover .mv-st-g{transform:translateY(-4px);filter:brightness(1.18) drop-shadow(0 0 10px rgba(94,234,212,.55))}
+.mv-citadel-svg .mv-traveler{animation:mv-glide 2.2s ease-in-out infinite}
+.mv-citadel-svg .mv-pulse{animation:mv-pulse 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.mv-citadel-leg{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;padding:8px 18px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);background:color-mix(in srgb,var(--surface) 92%,transparent)}
+.mv-citadel-dots{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.mv-citadel-dots i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:-1px}
 .home-hero h1{font-family:var(--mv-disp);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:clamp(18px,3.2vw,28px);line-height:1.35;color:#1e2b3c;margin:0;max-width:65%;position:relative;z-index:1}
 .home-hero p{position:relative;z-index:1;max-width:62%}
 .home-hero .bk-warn{position:relative;z-index:1}
@@ -135,7 +149,7 @@ body{background-image:radial-gradient(ellipse 80% 45% at 50% 0%,color-mix(in srg
   background:var(--mv-bar) no-repeat center bottom/cover;box-shadow:0 4px 16px rgba(6,10,24,.28)}
 .readbar-wrap[hidden]{display:none}
 .readbar-wrap::after{content:"";position:absolute;right:6px;bottom:3px;width:20px;height:28px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 22 30%22%3E %3Cdefs%3E %3CradialGradient id=%22g%22 cx=%2250%25%22 cy=%2235%25%22 r=%2248%25%22%3E %3Cstop offset=%220%25%22 stop-color=%22%23ffe28a%22 stop-opacity=%22.85%22/%3E %3Cstop offset=%2255%25%22 stop-color=%22%235eead4%22 stop-opacity=%22.35%22/%3E %3Cstop offset=%22100%25%22 stop-color=%22%235eead4%22 stop-opacity=%220%22/%3E %3C/radialGradient%3E %3C/defs%3E %3Ccircle cx=%2211%22 cy=%2210%22 r=%229.5%22 fill=%22url%28%23g%29%22/%3E %3Ccircle cx=%2211%22 cy=%2210%22 r=%226.8%22 fill=%22none%22 stroke=%22%23ffd97d%22 stroke-opacity=%22.5%22 stroke-width=%22.7%22/%3E %3Cpolygon points=%2211,3.5 15,10 11,16.5 7,10%22 fill=%22%23fff7d6%22/%3E %3Cpolygon points=%2211,3.5 15,10 11,16.5%22 fill=%22%235eead4%22 opacity=%22.6%22/%3E %3Cpolygon points=%2211,18.5 16,21 11,23.5 6,21%22 fill=%22%238ea4d2%22/%3E %3Cpolygon points=%226,21 11,23.5 11,29 6,26.5%22 fill=%22%23465585%22/%3E %3Cpolygon points=%2216,21 11,23.5 11,29 16,26.5%22 fill=%22%232d375c%22/%3E %3C/svg%3E") no-repeat center bottom/contain}
-.readbar{position:absolute;left:0;bottom:0;top:auto;height:3.5px;width:0;background:linear-gradient(90deg,#5eead4,#f284b6,#ffd97d);box-shadow:0 0 10px rgba(94,234,212,.75);transition:width .12s linear}
+.readbar{position:absolute;left:0;bottom:0;top:auto;height:3.5px;width:0;background:linear-gradient(90deg,var(--mv-ch-trail,#5eead4),var(--mv-ch-gem,#f284b6),#ffd97d);box-shadow:0 0 10px color-mix(in srgb,var(--mv-ch-trail,#5eead4) 75%,transparent);transition:width .12s linear}
 .readbar::after{content:"";position:absolute;right:-10px;bottom:3px;top:auto;width:20px;height:27px;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 22 30%22%3E %3Cdefs%3E %3CradialGradient id=%22a%22 cx=%2250%25%22 cy=%2262%25%22 r=%2248%25%22%3E %3Cstop offset=%220%25%22 stop-color=%22%2367e8f9%22 stop-opacity=%22.55%22/%3E %3Cstop offset=%22100%25%22 stop-color=%22%2367e8f9%22 stop-opacity=%220%22/%3E %3C/radialGradient%3E %3C/defs%3E %3Cellipse cx=%2211%22 cy=%2224%22 rx=%229%22 ry=%225%22 fill=%22url%28%23a%29%22/%3E %3Cline x1=%229.6%22 y1=%2222%22 x2=%229.2%22 y2=%2227.2%22 stroke=%22%23dce7ff%22 stroke-width=%221.3%22 stroke-linecap=%22round%22/%3E %3Cline x1=%2212.4%22 y1=%2222%22 x2=%2213.2%22 y2=%2227.2%22 stroke=%22%23eef4ff%22 stroke-width=%221.3%22 stroke-linecap=%22round%22/%3E %3Cpolygon points=%2211,11.5 16.2,23.2 5.8,23.2%22 fill=%22%23ffffff%22/%3E %3Cpolygon points=%2211,11.5 16.2,23.2 11,23.2%22 fill=%22%23dbe8ff%22 opacity=%22.45%22/%3E %3Ccircle cx=%2211%22 cy=%2210.2%22 r=%222.2%22 fill=%22%23232c48%22/%3E %3Cpolygon points=%2211,2 15.2,10.2 6.8,10.2%22 fill=%22%23ffffff%22/%3E %3Cpolygon points=%2211,2 15.2,10.2 11,10.2%22 fill=%22%23cfdfff%22 opacity=%22.4%22/%3E %3C/svg%3E") no-repeat center bottom/contain;animation:mv-glide 1.7s ease-in-out infinite}
 body.has-readbar .main{padding-top:50px}
 body.has-readbar .toc{top:90px}
@@ -155,7 +169,7 @@ body.has-readbar .toc{top:90px}
 /* ===== หอคอยโปรเกรสไอโซเมตริก Monument Valley ในแถบด้านซ้าย ===== */
 .mv-tower-card{margin:4px 10px 10px;border-radius:14px;border:1px solid var(--line);overflow:hidden;background:var(--surface2);box-shadow:var(--shadow)}
 .mv-tower-head{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:7px 11px;font-size:12px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--surface) 80%,transparent)}
-.mv-tower-head b{font-family:var(--mv-disp);letter-spacing:.08em;text-transform:uppercase;font-size:11px;color:var(--accent)}
+.mv-tower-head b{font-family:var(--mv-disp);letter-spacing:.06em;font-size:11.5px;color:var(--mv-ch-trail,var(--accent));overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mv-tower-head span{color:var(--muted);font-variant-numeric:tabular-nums;font-size:11.5px}
 .mv-tower-svg{display:block;width:100%;height:auto}
 .mv-tower-svg a.mv-node{cursor:pointer;outline:none}
