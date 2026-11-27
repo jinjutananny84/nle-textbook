@@ -262,6 +262,221 @@ HERO_L = uri("""
 </svg>
 """)
 
+# ฉากแถบโหลด Gemini (Dark Mode: วิหารซุ้มโค้งสีแดงไวน์-พลัม โดมทองเรืองแสง + ลูกบาศก์พีชลอยกลางห้วงดาว)
+AI_BG_D = uri("""
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 86" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="aid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#190612"/>
+      <stop offset="55%" stop-color="#351024"/>
+      <stop offset="100%" stop-color="#4e1932"/>
+    </linearGradient>
+    <radialGradient id="aig" cx="50%" cy="54%" r="36%">
+      <stop offset="0%" stop-color="#ff8d85" stop-opacity=".42"/>
+      <stop offset="55%" stop-color="#b8385c" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#2a0a1b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gd" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fff4a8" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="86" fill="url(#aid)"/>
+  <ellipse cx="320" cy="48" rx="190" ry="44" fill="url(#aig)"/>
+  <!-- Warm golden cosmic stars -->
+  <g fill="#ffe194" opacity=".82">
+    <circle cx="38" cy="14" r=".9"/><circle cx="88" cy="22" r=".7"/><circle cx="152" cy="11" r="1"/>
+    <circle cx="242" cy="16" r=".8"/><circle cx="294" cy="26" r=".9"/><circle cx="356" cy="14" r=".8"/>
+    <circle cx="418" cy="22" r="1"/><circle cx="504" cy="12" r=".9"/><circle cx="584" cy="19" r=".8"/>
+    <circle cx="275" cy="58" r=".7"/><circle cx="364" cy="52" r=".8"/><circle cx="332" cy="64" r=".6"/>
+  </g>
+  <!-- Left Crimson Ruined Arch & Golden-Dome Spires -->
+  <g>
+    <!-- Far left watchtower -->
+    <polygon points="24,86 24,36 36,30 48,36 48,86" fill="#4f1a33"/>
+    <polygon points="24,86 24,36 36,42 36,86" fill="#7a2c4a"/>
+    <circle cx="36" cy="30" r="12" fill="url(#gd)"/>
+    <path d="M27 36q0-7 9-12 9 5 9 12z" fill="#ffe169"/>
+    <line x1="36" y1="24" x2="36" y2="17" stroke="#fff2a6" stroke-width="1.1"/>
+    <!-- Mid-left tall ruined arch bridge -->
+    <polygon points="78,86 78,24 94,16 110,24 110,86" fill="#46162e"/>
+    <polygon points="78,86 78,24 94,32 94,86" fill="#772b49"/>
+    <circle cx="94" cy="17" r="14" fill="url(#gd)"/>
+    <path d="M84 24q0-8 10-13 10 5 10 13z" fill="#ffe370"/>
+    <line x1="94" y1="11" x2="94" y2="5" stroke="#fff3ad" stroke-width="1.2"/>
+    <rect x="98" y="34" width="3" height="8" rx="1.5" fill="#1e0814"/>
+    <!-- Sweeping stepped arch from left tower -->
+    <path d="M110 34 L182 22 L198 30 L198 86 L176 86 V54 a24 24 0 0 0-48 0 V86 L110 86 Z" fill="#5e213d"/>
+    <polygon points="110,34 182,22 198,30 126,42" fill="#d9607a"/>
+    <polygon points="182,22 198,30 198,86 182,86" fill="#3f142a"/>
+    <!-- Second golden dome peak -->
+    <circle cx="190" cy="20" r="12" fill="url(#gd)"/>
+    <path d="M182 25q0-7 8-11 8 4 8 11z" fill="#ffe066"/>
+  </g>
+  <!-- Right Crimson Cathedral Arch & Tall Golden-Dome Spire -->
+  <g>
+    <path d="M438 86 V32 L456 22 L532 38 L532 86 L512 86 V56 a22 22 0 0 0-44 0 V86 Z" fill="#5b203b"/>
+    <polygon points="438,32 456,22 532,38 514,48" fill="#d45c76"/>
+    <!-- Tall spire on right arch -->
+    <polygon points="482,86 482,16 498,8 514,16 514,86" fill="#481730"/>
+    <polygon points="482,86 482,16 498,24 498,86" fill="#7b2d4b"/>
+    <circle cx="498" cy="10" r="15" fill="url(#gd)"/>
+    <path d="M487 16q0-8 11-13 11 5 11 13z" fill="#ffe574"/>
+    <line x1="498" y1="3" x2="498" y2="0" stroke="#fff4b5" stroke-width="1.2"/>
+    <rect x="488" y="29" width="3.5" height="9" rx="1.7" fill="#1b0713"/>
+    <!-- Far right ruined bastion -->
+    <polygon points="566,86 566,34 584,26 602,34 602,86" fill="#4c1832"/>
+    <polygon points="566,86 566,34 584,42 584,86" fill="#772b48"/>
+    <circle cx="584" cy="27" r="12" fill="url(#gd)"/>
+    <path d="M575 34q0-7 9-12 9 5 9 12z" fill="#ffe066"/>
+  </g>
+  <!-- Floating Luminous Coral-Peach Isometric Cubes in Center Cosmic Archway -->
+  <g>
+    <!-- Cube 1 (large left-center) -->
+    <g transform="translate(274,34) rotate(-8)">
+      <polygon points="0,-11 11,-5 0,1 -11,-5" fill="#ffd2be"/>
+      <polygon points="-11,-5 0,1 0,12 -11,6" fill="#ff9684"/>
+      <polygon points="11,-5 0,1 0,12 11,6" fill="#df646d"/>
+    </g>
+    <!-- Cube 2 (large right-center) -->
+    <g transform="translate(342,46) rotate(9)">
+      <polygon points="0,-10 10,-4.5 0,1 -10,-4.5" fill="#ffdac7"/>
+      <polygon points="-10,-4.5 0,1 0,11 -10,5.5" fill="#ff9e8b"/>
+      <polygon points="10,-4.5 0,1 0,11 10,5.5" fill="#de606b"/>
+    </g>
+    <!-- Cube 3 (top center) -->
+    <g transform="translate(324,22) rotate(12)">
+      <polygon points="0,-7.5 7.5,-3.5 0,0.5 -7.5,-3.5" fill="#ffd9c4"/>
+      <polygon points="-7.5,-3.5 0,0.5 0,8 -7.5,4" fill="#ff9988"/>
+      <polygon points="7.5,-3.5 0,0.5 0,8 7.5,4" fill="#d95c68"/>
+    </g>
+    <!-- Cube 4 (lower-left) -->
+    <g transform="translate(302,55) rotate(-14)">
+      <polygon points="0,-7 7,-3.2 0,0.6 -7,-3.2" fill="#ffd6c2"/>
+      <polygon points="-7,-3.2 0,0.6 0,7.5 -7,3.8" fill="#ff9484"/>
+      <polygon points="7,-3.2 0,0.6 0,7.5 7,3.8" fill="#d45664"/>
+    </g>
+    <!-- Small floating cube shards -->
+    <g transform="translate(248,49) rotate(16)">
+      <polygon points="0,-4.5 4.5,-2 0,0.5 -4.5,-2" fill="#ffdac7"/>
+      <polygon points="-4.5,-2 0,0.5 0,5 -4.5,2.5" fill="#ff8f80"/>
+      <polygon points="4.5,-2 0,0.5 0,5 4.5,2.5" fill="#cf5464"/>
+    </g>
+    <g transform="translate(382,31) rotate(-10)">
+      <polygon points="0,-4.8 4.8,-2.2 0,0.5 -4.8,-2.2" fill="#ffdac7"/>
+      <polygon points="-4.8,-2.2 0,0.5 0,5.2 -4.8,2.6" fill="#ff9684"/>
+      <polygon points="4.8,-2.2 0,0.5 0,5.2 4.8,2.6" fill="#d45866"/>
+    </g>
+  </g>
+  <!-- Foreground glowing crimson-rose walkway rim -->
+  <rect y="74" width="640" height="12" fill="#3a1226" opacity=".88"/>
+  <path d="M0 74h640" stroke="#f0718a" stroke-opacity=".55" stroke-width="1.2"/>
+</svg>
+""")
+
+# ฉากแถบโหลด Gemini (Light Mode: วิหารสีโรส-ไวน์พาสเทล โดมทองอุ่น + ลูกบาศก์พีชลอย)
+AI_BG_L = uri("""
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 86" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7dce4"/>
+      <stop offset="55%" stop-color="#efcad8"/>
+      <stop offset="100%" stop-color="#e2afc3"/>
+    </linearGradient>
+    <radialGradient id="aigl" cx="50%" cy="54%" r="36%">
+      <stop offset="0%" stop-color="#fff0d4" stop-opacity=".75"/>
+      <stop offset="100%" stop-color="#f2c4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="86" fill="url(#ail)"/>
+  <ellipse cx="320" cy="48" rx="185" ry="42" fill="url(#aigl)"/>
+  <!-- Left & Right Rose-Mauve Ruined Arches with Golden Domes -->
+  <g>
+    <polygon points="24,86 24,36 36,30 48,36 48,86" fill="#b46b84"/>
+    <polygon points="24,86 24,36 36,42 36,86" fill="#d48ba3"/>
+    <path d="M27 36q0-7 9-12 9 5 9 12z" fill="#f7c852"/>
+    <polygon points="78,86 78,24 94,16 110,24 110,86" fill="#ad637c"/>
+    <polygon points="78,86 78,24 94,32 94,86" fill="#cf849d"/>
+    <path d="M84 24q0-8 10-13 10 5 10 13z" fill="#f8ce5a"/>
+    <path d="M110 34 L182 22 L198 30 L198 86 L176 86 V54 a24 24 0 0 0-48 0 V86 L110 86 Z" fill="#c27891"/>
+    <polygon points="110,34 182,22 198,30 126,42" fill="#ffe7da"/>
+    <path d="M182 25q0-7 8-11 8 4 8 11z" fill="#f5c44e"/>
+    <path d="M438 86 V32 L456 22 L532 38 L532 86 L512 86 V56 a22 22 0 0 0-44 0 V86 Z" fill="#bf748d"/>
+    <polygon points="438,32 456,22 532,38 514,48" fill="#ffe7da"/>
+    <polygon points="482,86 482,16 498,8 514,16 514,86" fill="#a85e78"/>
+    <polygon points="482,86 482,16 498,24 498,86" fill="#ce829b"/>
+    <path d="M487 16q0-8 11-13 11 5 11 13z" fill="#f8ce5a"/>
+  </g>
+  <!-- Floating Peach-Coral Cubes -->
+  <g>
+    <g transform="translate(274,34) rotate(-8)">
+      <polygon points="0,-11 11,-5 0,1 -11,-5" fill="#fff1e2"/>
+      <polygon points="-11,-5 0,1 0,12 -11,6" fill="#f59a8e"/>
+      <polygon points="11,-5 0,1 0,12 11,6" fill="#d46874"/>
+    </g>
+    <g transform="translate(342,46) rotate(9)">
+      <polygon points="0,-10 10,-4.5 0,1 -10,-4.5" fill="#fff1e2"/>
+      <polygon points="-10,-4.5 0,1 0,11 -10,5.5" fill="#f6a092"/>
+      <polygon points="10,-4.5 0,1 0,11 10,5.5" fill="#d16472"/>
+    </g>
+    <g transform="translate(324,22) rotate(12)">
+      <polygon points="0,-7.5 7.5,-3.5 0,0.5 -7.5,-3.5" fill="#fff0e0"/>
+      <polygon points="-7.5,-3.5 0,0.5 0,8 -7.5,4" fill="#f4978a"/>
+      <polygon points="7.5,-3.5 0,0.5 0,8 7.5,4" fill="#cc606e"/>
+    </g>
+    <g transform="translate(302,55) rotate(-14)">
+      <polygon points="0,-7 7,-3.2 0,0.6 -7,-3.2" fill="#fff0e0"/>
+      <polygon points="-7,-3.2 0,0.6 0,7.5 -7,3.8" fill="#f49286"/>
+      <polygon points="7,-3.2 0,0.6 0,7.5 7,3.8" fill="#c75968"/>
+    </g>
+  </g>
+  <rect y="74" width="640" height="12" fill="#b46a82" opacity=".45"/>
+</svg>
+""")
+
+# ตัวละครนักเดินทางผ้าคลุมส้ม-ทอง (สไตล์ Ro จากภาพอ้างอิง Monument Valley 2 สำหรับแถบ Gemini)
+AI_TRAVELER = uri("""
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 30">
+  <defs>
+    <radialGradient id="ra" cx="50%" cy="55%" r="48%">
+      <stop offset="0%" stop-color="#ffb87a" stop-opacity=".65"/>
+      <stop offset="100%" stop-color="#ffb87a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="11" cy="21" rx="9" ry="6" fill="url(#ra)"/>
+  <line x1="9.6" y1="22" x2="9" y2="27.5" stroke="#2d2648" stroke-width="1.35" stroke-linecap="round"/>
+  <line x1="12.4" y1="22" x2="13.2" y2="27.5" stroke="#3b3159" stroke-width="1.35" stroke-linecap="round"/>
+  <!-- Fluttering warm coral-gold cape -->
+  <polygon points="11,11 17.5,21.5 12,23 5,22" fill="#ff8e72"/>
+  <polygon points="11,11 15.8,22.8 6.8,22.8" fill="#ffd17a"/>
+  <polygon points="11,11 15.8,22.8 11,22.8" fill="#ff786b" opacity=".55"/>
+  <!-- Dark indigo hood + bright luminous white face -->
+  <circle cx="11" cy="8.8" r="3.4" fill="#232c4d"/>
+  <circle cx="11.8" cy="8.8" r="2.2" fill="#ffffff"/>
+</svg>
+""")
+
+# แท่นโดมทองคำปลายทางสำหรับแถบ Gemini (แทนโคมคริสตัลฟ้า)
+AI_SHRINE = uri("""
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 30">
+  <defs>
+    <radialGradient id="sg" cx="50%" cy="38%" r="50%">
+      <stop offset="0%" stop-color="#fff2a6" stop-opacity=".95"/>
+      <stop offset="55%" stop-color="#ff997a" stop-opacity=".4"/>
+      <stop offset="100%" stop-color="#ff997a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="11" cy="11" r="10" fill="url(#sg)"/>
+  <line x1="11" y1="2.5" x2="11" y2="6.5" stroke="#fff6bf" stroke-width="1.2"/>
+  <circle cx="11" cy="2.2" r="1.3" fill="#fff7c4"/>
+  <path d="M5.5 14q0-6 5.5-9.5 5.5 3.5 5.5 9.5z" fill="#ffe26a"/>
+  <path d="M11 4.5q5.5 3.5 5.5 9.5h-5.5z" fill="#f5a63b" opacity=".55"/>
+  <rect x="6" y="14" width="10" height="14" fill="#6b2542"/>
+  <rect x="6" y="14" width="5" height="14" fill="#8f3658"/>
+  <path d="M8.8 28v-6.5a2.2 2.2 0 0 1 4.4 0V28z" fill="#ffe899"/>
+</svg>
+""")
+
 css = pathlib.Path(__file__).with_name('monument_theme.css').read_text(encoding='utf-8')
 tokens = dict(
     MV_TRAVELER=TRAVELER,
@@ -270,6 +485,10 @@ tokens = dict(
     MV_BAR_L=BAR_L,
     MV_HERO_D=HERO_D,
     MV_HERO_L=HERO_L,
+    MV_AI_D=AI_BG_D,
+    MV_AI_L=AI_BG_L,
+    MV_AI_TRAVELER=AI_TRAVELER,
+    MV_AI_SHRINE=AI_SHRINE,
 )
 for k, v in tokens.items():
     css = css.replace('{{' + k + '}}', v)

@@ -284,7 +284,7 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '65';
+  const APP_VER = '66';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
   function refreshIcons() {
     const u = uiStyle();
@@ -1315,6 +1315,664 @@
       <div class="mv-castle-stairs">${rows}</div>
       <div class="mv-realm-base">${mvCastleBaseSVG(isClip, dark)}</div>
     </section>`;
+  }
+
+  /* ---------- ปราสาทนีออนคั่นเนื้อหาและข้อสอบ + มินิเกมกระโดดพักสมอง (Monument Valley Castle Jump) ---------- */
+  let mvGameCleanup = null;
+  function stopExamBreakGame() {
+    if (mvGameCleanup) { try { mvGameCleanup(); } catch (e) {} mvGameCleanup = null; }
+  }
+  function mvExamBreakHTML(chId, examCount) {
+    const th = mvThemeOf(chId);
+    const hi = String(S.mvHi || 0).padStart(3, '0');
+    return `<section class="mv-break-wrap" id="mvBreakWrap" style="--mv-g-c:${th.trail};--mv-g-g:${th.gem}">
+      <div class="mv-break-head">
+        <div class="mv-break-title">${mvCastleLogoSVG(chId, 22)}<b>Castle Jump</b><small>พักสมองก่อนลุยข้อสอบ</small></div>
+        <div class="mv-break-stats">
+          <span class="mv-score-pill">SCORE <b id="mvGScore">000</b></span>
+          <span class="mv-score-pill best">BEST <b id="mvGBest">${hi}</b></span>
+          <button type="button" class="mv-snd-btn" id="mvGSnd" title="เปิด/ปิดเสียงเอฟเฟกต์" aria-label="เปิดปิดเสียง">${S.mvMute ? '🔇' : '🔊'}</button>
+        </div>
+      </div>
+      <div class="mv-break-stage">
+        <canvas id="mvGameCanvas" class="mv-break-canvas" tabindex="0" aria-label="มินิเกมกระโดดปราสาท Monument Valley"></canvas>
+        <div class="mv-break-ov" id="mvGameOv">
+          <div class="mv-ov-card">
+            <div class="mv-ov-kicker">✦ MONUMENT CASTLE BREAK ✦</div>
+            <div class="mv-ov-msg" id="mvGameMsg">พักสายตาสักนิดก่อนลุยข้อสอบ ${examCount} ข้อ</div>
+            <div class="mv-ov-sub" id="mvGameSub">กระโดดข้ามอีกา &amp; เก็บคริสตัล (+15) · กดซ้ำกลางอากาศเพื่อ Double Jump</div>
+            <button type="button" class="btn small primary mv-play-btn" id="mvGameBtn">▶ เริ่มกระโดด</button>
+          </div>
+        </div>
+      </div>
+      <div class="mv-break-foot">
+        <span>แตะที่ปราสาท หรือกด <kbd>Space</kbd> / <kbd>↑</kbd> เพื่อกระโดด (Double Jump ได้!)</span>
+        <button type="button" class="mv-skip-exam" id="mvSkipExam">↓ ไปทำข้อสอบ (${examCount} ข้อ)</button>
+      </div>
+    </section>`;
+  }
+
+  function initExamBreakGame(chId, examCount) {
+    stopExamBreakGame();
+    const wrap = $('#mvBreakWrap');
+    const canvas = $('#mvGameCanvas');
+    if (!wrap || !canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const scoreEl = $('#mvGScore');
+    const bestEl = $('#mvGBest');
+    const ovEl = $('#mvGameOv');
+    const msgEl = $('#mvGameMsg');
+    const subEl = $('#mvGameSub');
+    const playBtn = $('#mvGameBtn');
+    const sndBtn = $('#mvGSnd');
+    const skipBtn = $('#mvSkipExam');
+    const th = mvThemeOf(chId);
+
+    // Web Audio เสียงคาลิมบานุ่ม ๆ สไตล์ Monument Valley (เปิดเฉพาะเมื่อผู้เล่นกด)
+    let actx = null;
+    const tone = (freq, dur = 0.12, type = 'sine', vol = 0.08, slide = 0) => {
+      if (S.mvMute) return;
+      try {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return;
+        if (!actx) actx = new AC();
+        if (actx.state === 'suspended') actx.resume();
+        const o = actx.createOscillator(), g = actx.createGain();
+        o.type = type; o.frequency.setValueAtTime(freq, actx.currentTime);
+        if (slide) o.frequency.exponentialRampToValueAtTime(slide, actx.currentTime + dur);
+        g.gain.setValueAtTime(vol, actx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.0008, actx.currentTime + dur);
+        o.connect(g); g.connect(actx.destination);
+        o.start(); o.stop(actx.currentTime + dur + 0.02);
+      } catch (e) {}
+    };
+
+    const H = 188;
+    const GROUND_OFF = 32;
+    let W = 680, dpr = 1;
+    const resize = () => {
+      const rect = canvas.parentElement ? canvas.parentElement.getBoundingClientRect() : { width: 680 };
+      W = Math.max(280, Math.round(rect.width || 680));
+      dpr = Math.min(2, window.devicePixelRatio || 1);
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      canvas.style.width = W + 'px';
+      canvas.style.height = H + 'px';
+      if (state !== 'playing') draw(0);
+    };
+
+    let state = 'idle'; // idle | playing | over
+    let rafId = 0, lastTs = 0, animTime = 0, overTimer = 0;
+    let score = 0, bonus = 0, best = S.mvHi || 0, nextMile = 100;
+    let speed = 250, scroll = 0, spawnIn = 0.9, orbIn = 1.6, shake = 0;
+    const player = { x: 82, y: 0, vy: 0, jumps: 2, runT: 0, glow: 0 };
+    let obstacles = [], orbs = [], parts = [], rings = [], floats = [];
+
+    const groundY = () => H - GROUND_OFF;
+
+    const addBurst = (x, y, col, n = 10) => {
+      for (let i = 0; i < n; i++) {
+        const a = (Math.PI * 2 * i / n) + Math.random() * 0.4;
+        const sp = 55 + Math.random() * 115;
+        parts.push({ x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 35, life: 0.45 + Math.random() * 0.25, max: 0.7, r: 1.8 + Math.random() * 2, col });
+      }
+    };
+
+    const resetRun = () => {
+      state = 'playing';
+      score = 0; bonus = 0; nextMile = 100; speed = 255; scroll = 0; shake = 0; overTimer = 0;
+      player.x = Math.min(92, Math.max(58, W * 0.14));
+      player.y = groundY(); player.vy = 0; player.jumps = 2; player.runT = 0; player.glow = 1;
+      obstacles = []; orbs = []; parts = []; rings = []; floats = [];
+      spawnIn = 0.85; orbIn = 1.35;
+      if (scoreEl) scoreEl.textContent = '000';
+      if (ovEl) ovEl.hidden = true;
+      lastTs = performance.now();
+      if (!rafId) rafId = requestAnimationFrame(loop);
+    };
+
+    const doJump = () => {
+      if (state === 'idle' || state === 'over') {
+        resetRun();
+        // กระโดดเปิดเกมทันทีให้รู้สึกตอบสนองไว
+        player.vy = -485;
+        player.jumps = 1;
+        rings.push({ x: player.x, y: groundY() - 2, r: 4, maxR: 24, life: 0.35, col: '#5eead4' });
+        tone(440, 0.11, 'triangle', 0.08, 660);
+        return;
+      }
+      if (player.jumps > 0) {
+        const isDouble = player.jumps === 1;
+        player.vy = isDouble ? -455 : -515;
+        player.jumps--;
+        player.glow = 1;
+        rings.push({ x: player.x, y: player.y - 4, r: 4, maxR: isDouble ? 30 : 22, life: 0.38, col: isDouble ? '#f472b6' : '#5eead4' });
+        if (isDouble) addBurst(player.x, player.y - 4, '#5eead4', 8);
+        tone(isDouble ? 587 : 440, 0.12, 'triangle', 0.08, isDouble ? 880 : 660);
+      }
+    };
+
+    const finishRun = () => {
+      state = 'over';
+      overTimer = 0.65;
+      shake = 7;
+      addBurst(player.x, player.y - 12, '#f472b6', 14);
+      addBurst(player.x, player.y - 12, '#5eead4', 10);
+      tone(240, 0.22, 'sine', 0.09, 110);
+      const finalScore = Math.floor(score + bonus);
+      let isNewBest = false;
+      if (finalScore > best) {
+        best = finalScore;
+        S.mvHi = best;
+        save();
+        isNewBest = true;
+        if (bestEl) bestEl.textContent = String(best).padStart(3, '0');
+      }
+      if (msgEl) msgEl.textContent = isNewBest ? `✦ สถิติใหม่ ${finalScore} คะแนน!` : `ได้ ${finalScore} คะแนน · พักพอหอมปากหอมคอแล้ว!`;
+      if (subEl) subEl.textContent = `สถิติสูงสุด ${best} · พร้อมลุยข้อสอบ ${examCount} ข้อข้างล่าง หรือโดดต่ออีกสักรอบได้เลย`;
+      if (playBtn) playBtn.textContent = '↻ เล่นอีกรอบ';
+      if (ovEl) ovEl.hidden = false;
+    };
+
+    const spawnObstacle = () => {
+      const r = Math.random();
+      const gy = groundY();
+      if (r < 0.45) {
+        obstacles.push({ type: 'crow', x: W + 24, y: gy, w: 18, h: 24, phase: Math.random() * 6 });
+      } else if (r < 0.75) {
+        obstacles.push({ type: 'pillar', x: W + 24, y: gy, w: 20, h: 36 + Math.round(Math.random() * 14), phase: 0 });
+      } else {
+        obstacles.push({ type: 'crow2', x: W + 24, y: gy, w: 36, h: 23, phase: Math.random() * 6 });
+      }
+    };
+
+    const spawnOrb = () => {
+      const gy = groundY();
+      orbs.push({ x: W + 30, y: gy - (46 + Math.random() * 44), r: 8, phase: Math.random() * 6 });
+    };
+
+    const update = (dt) => {
+      animTime += dt;
+      if (shake > 0) shake = Math.max(0, shake - dt * 26);
+      if (state === 'playing') {
+        speed = Math.min(440, speed + dt * 6.5);
+        scroll += speed * dt;
+        score += dt * 11;
+        const tot = Math.floor(score + bonus);
+        if (scoreEl) scoreEl.textContent = String(tot).padStart(3, '0');
+        if (tot >= nextMile) {
+          nextMile += 100;
+          floats.push({ x: player.x + 12, y: player.y - 36, txt: `✦ ${tot}!`, life: 0.9, col: '#ffe28a' });
+          tone(659, 0.1, 'sine', 0.08, 987);
+        }
+        // ฟิสิกส์การกระโดด
+        player.vy += 1500 * dt;
+        player.y += player.vy * dt;
+        const gy = groundY();
+        if (player.y >= gy) {
+          player.y = gy; player.vy = 0; player.jumps = 2;
+          player.runT += dt * (speed / 24);
+        }
+        player.glow = Math.max(0, player.glow - dt * 2.2);
+
+        spawnIn -= dt;
+        if (spawnIn <= 0) {
+          spawnObstacle();
+          const minGap = Math.max(0.72, 1.38 - (speed - 250) / 360);
+          spawnIn = minGap + Math.random() * 0.65;
+        }
+        orbIn -= dt;
+        if (orbIn <= 0) {
+          spawnOrb();
+          orbIn = 1.6 + Math.random() * 1.3;
+        }
+
+        // กล่องชนของ Ida (ย่อเข้าด้านในเล็กน้อยเพื่อให้รู้สึกแฟร์เวลาเฉียด)
+        const px1 = player.x - 6, px2 = player.x + 6, py1 = player.y - 25, py2 = player.y - 2;
+        for (let i = obstacles.length - 1; i >= 0; i--) {
+          const ob = obstacles[i];
+          ob.x -= speed * dt;
+          ob.phase += dt * 7;
+          if (ob.x < -50) { obstacles.splice(i, 1); continue; }
+          const ox1 = ob.x - ob.w * 0.42, ox2 = ob.x + ob.w * 0.42;
+          const oy1 = ob.y - ob.h + 5, oy2 = ob.y;
+          if (px2 > ox1 && px1 < ox2 && py2 > oy1 && py1 < oy2) {
+            finishRun();
+            break;
+          }
+        }
+        for (let i = orbs.length - 1; i >= 0; i--) {
+          const o = orbs[i];
+          o.x -= speed * dt;
+          o.phase += dt * 4;
+          if (o.x < -30) { orbs.splice(i, 1); continue; }
+          const oy = o.y + Math.sin(o.phase) * 4;
+          if (Math.hypot(player.x - o.x, (player.y - 14) - oy) < 20) {
+            bonus += 15;
+            addBurst(o.x, oy, '#ffe28a', 10);
+            floats.push({ x: o.x, y: oy - 10, txt: '+15', life: 0.75, col: '#5eead4' });
+            tone(784, 0.14, 'sine', 0.08, 1175);
+            orbs.splice(i, 1);
+          }
+        }
+      } else if (state === 'over' && overTimer > 0) {
+        overTimer -= dt;
+      }
+
+      for (let i = parts.length - 1; i >= 0; i--) {
+        const p = parts[i];
+        p.x += p.vx * dt; p.y += p.vy * dt; p.vy += 260 * dt; p.life -= dt;
+        if (p.life <= 0) parts.splice(i, 1);
+      }
+      for (let i = rings.length - 1; i >= 0; i--) {
+        const rg = rings[i];
+        rg.r += (rg.maxR - rg.r) * Math.min(1, dt * 11);
+        rg.life -= dt;
+        if (rg.life <= 0) rings.splice(i, 1);
+      }
+      for (let i = floats.length - 1; i >= 0; i--) {
+        const fl = floats[i];
+        fl.y -= 28 * dt; fl.life -= dt;
+        if (fl.life <= 0) floats.splice(i, 1);
+      }
+    };
+
+    const drawCrow = (cx, cy, ph, scale = 1) => {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.scale(scale, scale);
+      const bob = Math.sin(ph) * 1.4;
+      // ขา
+      ctx.strokeStyle = '#0d101d';
+      ctx.lineWidth = 1.6;
+      ctx.beginPath();
+      ctx.moveTo(-2, -6); ctx.lineTo(-3 - bob * 0.7, 0);
+      ctx.moveTo(2, -6); ctx.lineTo(3 + bob * 0.7, 0);
+      ctx.stroke();
+      // ตัวอีกาดำ
+      ctx.fillStyle = '#15192a';
+      ctx.beginPath();
+      ctx.moveTo(-6, -5);
+      ctx.quadraticCurveTo(-6, -18, 0, -21);
+      ctx.quadraticCurveTo(6, -18, 6, -5);
+      ctx.closePath();
+      ctx.fill();
+      // จะงอยปากหันซ้าย (เข้าหา Ida)
+      ctx.beginPath();
+      ctx.moveTo(-2, -20.5); ctx.lineTo(-12.5, -18); ctx.lineTo(-3, -15);
+      ctx.closePath();
+      ctx.fill();
+      // ตากลมขาวเรืองแสง (ซิกเนเจอร์ในภาพอ้างอิง)
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath(); ctx.arc(-2.2, -17.6, 2.7, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#121626';
+      ctx.beginPath(); ctx.arc(-2.7, -17.6, 1.2, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+    };
+
+    const drawIda = (ix, iy, runT, vy) => {
+      const air = iy < groundY() - 1;
+      ctx.save();
+      ctx.translate(ix, iy);
+      if (air) ctx.rotate(Math.max(-0.22, Math.min(0.22, vy * 0.00045)));
+      // รัศมีแสงขาว-ฟ้าเรืองรอบตัว
+      const ag = ctx.createRadialGradient(0, -14, 2, 0, -14, 22 + player.glow * 8);
+      ag.addColorStop(0, 'rgba(255,255,255,0.45)');
+      ag.addColorStop(0.5, 'rgba(94,234,212,0.22)');
+      ag.addColorStop(1, 'rgba(94,234,212,0)');
+      ctx.fillStyle = ag;
+      ctx.beginPath(); ctx.arc(0, -14, 26, 0, Math.PI * 2); ctx.fill();
+
+      // ขาวิ่งสลับ
+      const step = air ? 4 : Math.sin(runT) * 4.5;
+      ctx.strokeStyle = '#e8f1ff';
+      ctx.lineWidth = 1.8;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(-2, -6); ctx.lineTo(-2 - step, 0);
+      ctx.moveTo(2, -6); ctx.lineTo(2 + step, 0);
+      ctx.stroke();
+
+      // ผ้าคลุมพลิ้วด้านหลังตอนกระโดด
+      if (air || state === 'playing') {
+        ctx.fillStyle = 'rgba(255,255,255,0.75)';
+        ctx.beginPath();
+        ctx.moveTo(-2, -18);
+        ctx.quadraticCurveTo(-11, -17 + Math.sin(animTime * 12) * 2, -15, -13);
+        ctx.lineTo(-5, -13);
+        ctx.closePath();
+        ctx.fill();
+      }
+      // ชุดกรวยสีขาว
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath(); ctx.moveTo(0, -18.5); ctx.lineTo(6.5, -5); ctx.lineTo(-6.5, -5); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = th.trail;
+      ctx.globalAlpha = 0.25;
+      ctx.beginPath(); ctx.moveTo(0, -18.5); ctx.lineTo(6.5, -5); ctx.lineTo(0, -5); ctx.closePath(); ctx.fill();
+      ctx.globalAlpha = 1;
+      // ศีรษะ
+      ctx.fillStyle = '#1b2442';
+      ctx.beginPath(); ctx.arc(0, -20.2, 2.6, 0, Math.PI * 2); ctx.fill();
+      // หมวกกรวยขาว
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath(); ctx.moveTo(0, -30.5); ctx.lineTo(5, -20.2); ctx.lineTo(-5, -20.2); ctx.closePath(); ctx.fill();
+      ctx.restore();
+    };
+
+    const drawNeonCastleModule = (ox, gy, dark) => {
+      const wallL = dark ? '#353d5c' : '#e6a8b5';
+      const wallR = dark ? '#222842' : '#c98597';
+      const topC = dark ? '#6e779c' : '#fff3e2';
+      const archC = dark ? '#121629' : '#bce0de';
+      const neonC = '#5eead4';
+      const neonP = '#ff5ea8';
+      const roofC = dark ? '#b8505a' : '#df6c77';
+
+      // หอคอยสูงพร้อมธงริบบิ้นสีส้ม-ชมพูเรืองแสงปลิวไสว (แบบยอดปราสาทในภาพอ้างอิง!)
+      const tx = ox + 72, ty = gy - 118;
+      ctx.fillStyle = wallR; ctx.fillRect(tx, ty, 24, 118);
+      ctx.fillStyle = wallL; ctx.fillRect(tx - 12, ty + 4, 12, 114);
+      // หลังคากรวยแดงอิฐ
+      ctx.fillStyle = roofC;
+      ctx.beginPath(); ctx.moveTo(tx - 15, ty + 4); ctx.lineTo(tx + 6, ty - 24); ctx.lineTo(tx + 27, ty); ctx.closePath(); ctx.fill();
+      // ธงริบบิ้นเรืองแสงส้ม-ชมพูพริ้ว
+      ctx.save();
+      ctx.strokeStyle = '#ff7b89';
+      ctx.shadowColor = '#ff5ea8';
+      ctx.shadowBlur = dark ? 10 : 3;
+      ctx.lineWidth = 2.4;
+      ctx.beginPath();
+      ctx.moveTo(tx + 6, ty - 23);
+      const wv = Math.sin(animTime * 4.5 + ox * 0.02) * 3.5;
+      ctx.bezierCurveTo(tx - 14, ty - 18 + wv, tx - 26, ty - 8 - wv, tx - 44, ty - 6 + wv);
+      ctx.stroke();
+      ctx.restore();
+
+      // ประตูซุ้มโค้งนีออนชมพูบนหอคอย
+      ctx.save();
+      ctx.fillStyle = archC;
+      ctx.beginPath(); ctx.arc(tx + 10, ty + 24, 6, Math.PI, 0); ctx.lineTo(tx + 16, ty + 38); ctx.lineTo(tx + 4, ty + 38); ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = neonP;
+      ctx.shadowColor = neonP;
+      ctx.shadowBlur = dark ? 12 : 4;
+      ctx.lineWidth = 1.8;
+      ctx.stroke();
+      ctx.restore();
+
+      // บันไดไอโซเมตริกเฉียงลงพร้อมขอบไฟนีออนสีฟ้าไซอัน (ซิกเนเจอร์ในภาพอ้างอิง!)
+      const sx0 = tx - 12, sy0 = ty + 38, sx1 = tx - 68, sy1 = gy - 22;
+      ctx.fillStyle = wallL;
+      ctx.beginPath(); ctx.moveTo(sx0, sy0); ctx.lineTo(sx1, sy1); ctx.lineTo(sx1, gy); ctx.lineTo(sx0, gy); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = topC;
+      for (let k = 0; k < 10; k++) {
+        const t0 = k / 10, t1 = (k + 1) / 10;
+        const x0 = sx0 + (sx1 - sx0) * t0, y0 = sy0 + (sy1 - sy0) * t0;
+        const x1 = sx0 + (sx1 - sx0) * t1, y1 = sy0 + (sy1 - sy0) * t1;
+        ctx.fillRect(x1 - 2, y1, (x0 - x1) + 12, 3.5);
+      }
+      // ขอบบันไดเรืองแสงนีออนไซอัน
+      ctx.save();
+      ctx.strokeStyle = neonC;
+      ctx.shadowColor = neonC;
+      ctx.shadowBlur = dark ? 11 : 4;
+      ctx.lineWidth = 2.2;
+      ctx.beginPath(); ctx.moveTo(sx0 + 6, sy0); ctx.lineTo(sx1 + 6, sy1); ctx.stroke();
+      ctx.restore();
+
+      // หอคอยฝั่งขวา + ซุ้มโค้งคู่เรืองแสงชมพู + สวิตช์สี่เหลี่ยมเรืองแสง
+      const rx = ox + 214, ry = gy - 92;
+      ctx.fillStyle = wallR; ctx.fillRect(rx, ry, 28, 92);
+      ctx.fillStyle = wallL; ctx.fillRect(rx - 14, ry + 5, 14, 87);
+      // หน้าต่างนีออนชมพู 2 ช่อง
+      ctx.save();
+      ctx.fillStyle = neonP;
+      ctx.shadowColor = neonP;
+      ctx.shadowBlur = dark ? 10 : 3;
+      ctx.fillRect(rx + 6, ry + 18, 4, 11);
+      ctx.fillRect(rx + 16, ry + 20, 4, 10);
+      // สวิตช์สี่เหลี่ยมนีออนชมพูบนชานพัก
+      ctx.fillStyle = '#ff8ec7';
+      ctx.beginPath(); ctx.moveTo(rx - 32, gy - 44); ctx.lineTo(rx - 22, gy - 39); ctx.lineTo(rx - 32, gy - 34); ctx.lineTo(rx - 42, gy - 39); ctx.closePath(); ctx.fill();
+      ctx.restore();
+      // สะพานโค้งเชื่อมกลาง
+      ctx.fillStyle = wallL;
+      ctx.beginPath(); ctx.moveTo(tx + 24, gy - 54); ctx.lineTo(rx - 14, gy - 38); ctx.lineTo(rx - 14, gy); ctx.lineTo(tx + 24, gy); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = archC;
+      ctx.beginPath(); ctx.arc(tx + 54, gy - 8, 16, Math.PI, 0); ctx.lineTo(tx + 70, gy); ctx.lineTo(tx + 38, gy); ctx.closePath(); ctx.fill();
+      ctx.beginPath(); ctx.arc(tx + 96, gy - 8, 14, Math.PI, 0); ctx.lineTo(tx + 110, gy); ctx.lineTo(tx + 82, gy); ctx.closePath(); ctx.fill();
+    };
+
+    const draw = () => {
+      const dark = isDark();
+      const gy = groundY();
+      ctx.save();
+      ctx.scale(dpr, dpr);
+      if (shake > 0.2) ctx.translate((Math.random() - 0.5) * shake, (Math.random() - 0.5) * shake);
+
+      // 1. ท้องฟ้ายามค่ำสไตล์ Monument Valley (ภาพอ้างอิง 2) หรือพาสเทลใน Light mode
+      const sky = ctx.createLinearGradient(0, 0, 0, H);
+      if (dark) {
+        sky.addColorStop(0, '#13192b');
+        sky.addColorStop(0.62, '#202642');
+        sky.addColorStop(1, '#2b284a');
+      } else {
+        sky.addColorStop(0, '#c0e4e3');
+        sky.addColorStop(0.58, '#e4eff2');
+        sky.addColorStop(1, '#f8e0ce');
+      }
+      ctx.fillStyle = sky;
+      ctx.fillRect(0, 0, W, H);
+
+      // ดวงดาวระยิบระยับ
+      ctx.fillStyle = dark ? 'rgba(232,240,255,0.65)' : 'rgba(255,255,255,0.75)';
+      for (let i = 0; i < 18; i++) {
+        const sx = ((i * 73 + 29) - scroll * 0.04) % (W + 40);
+        const fx = sx < -10 ? sx + W + 40 : sx;
+        const sy = 10 + (i * 37) % 68;
+        const r = (i % 3 === 0) ? 1.3 : 0.85;
+        ctx.beginPath(); ctx.arc(fx, sy, r, 0, Math.PI * 2); ctx.fill();
+      }
+
+      // 2. จันทร์เสี้ยวเรืองแสงทองในหมอกเมฆ (เหมือนมุมซ้ายบนของภาพอ้างอิง!)
+      const mx = Math.min(92, W * 0.14), my = 34;
+      const mg = ctx.createRadialGradient(mx, my, 3, mx, my, 34);
+      mg.addColorStop(0, dark ? 'rgba(255,233,140,0.45)' : 'rgba(255,244,195,0.65)');
+      mg.addColorStop(1, 'rgba(255,233,140,0)');
+      ctx.fillStyle = mg;
+      ctx.beginPath(); ctx.arc(mx, my, 34, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = dark ? '#ffeb99' : '#fff7cf';
+      ctx.beginPath(); ctx.arc(mx, my, 10.5, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = dark ? '#181e34' : '#cde9e8';
+      ctx.beginPath(); ctx.arc(mx + 4.5, my - 1.5, 8.6, 0, Math.PI * 2); ctx.fill();
+      // เมฆหมอกบางคลอจันทร์เสี้ยว
+      ctx.fillStyle = dark ? 'rgba(42,50,82,0.58)' : 'rgba(255,255,255,0.55)';
+      ctx.beginPath(); ctx.ellipse(mx + 14, my + 8, 22, 5.5, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(mx - 12, my + 12, 18, 4.5, 0, 0, Math.PI * 2); ctx.fill();
+
+      // 3. ฉากปราสาทนีออน Parallax ด้านหลัง
+      const modW = 340;
+      const farOff = -(scroll * 0.24) % modW;
+      for (let x = farOff - modW; x < W + modW; x += modW) {
+        drawNeonCastleModule(x, gy, dark);
+      }
+
+      // 4. เสาใต้สะพาน + ลูกบาศก์นีออนชมพู 4 ก้อนลอยเรืองแสงใต้สะพาน (กิมมิกจากด้านล่างของภาพอ้างอิง!)
+      ctx.fillStyle = dark ? '#192038' : '#b7cfd4';
+      ctx.fillRect(0, gy, W, H - gy);
+      const midW = 240;
+      const midOff = -(scroll * 0.55) % midW;
+      for (let x = midOff - midW; x < W + midW; x += midW) {
+        // ซุ้มโค้งใต้สะพาน
+        ctx.fillStyle = dark ? '#12172b' : '#d5e9ea';
+        ctx.beginPath(); ctx.arc(x + 70, H, 22, Math.PI, 0); ctx.fill();
+        ctx.beginPath(); ctx.arc(x + 170, H, 18, Math.PI, 0); ctx.fill();
+        // กลุ่มก้อนคริสตัลนีออนสีชมพูเรืองแสงลอยเป็นกากบาท
+        const cx = x + 122, cy = gy + 18 + Math.sin(animTime * 2.5 + x) * 1.6;
+        ctx.save();
+        ctx.fillStyle = dark ? '#ff5ea8' : '#e46c98';
+        ctx.shadowColor = '#ff5ea8';
+        ctx.shadowBlur = dark ? 9 : 2;
+        ctx.fillRect(cx - 8, cy - 2, 4, 4);
+        ctx.fillRect(cx + 4, cy - 2, 4, 4);
+        ctx.fillRect(cx - 2, cy - 7, 4, 4);
+        ctx.fillRect(cx - 2, cy + 3, 4, 4);
+        ctx.restore();
+      }
+
+      // 5. พื้นสะพานทางเดินปราสาท + เส้นไฟนีออนไซอันวิ่งตามพื้น
+      ctx.fillStyle = dark ? '#2d3556' : '#f4e8dc';
+      ctx.fillRect(0, gy - 3, W, 6);
+      // ขีดรอยต่อแผ่นหินวิ่งตามความเร็ว
+      const tileOff = -(scroll % 32);
+      ctx.strokeStyle = dark ? 'rgba(130,152,210,0.28)' : 'rgba(160,120,130,0.25)';
+      ctx.lineWidth = 1;
+      for (let x = tileOff; x < W; x += 32) {
+        ctx.beginPath(); ctx.moveTo(x, gy - 3); ctx.lineTo(x - 6, gy + 3); ctx.stroke();
+      }
+      ctx.save();
+      ctx.strokeStyle = dark ? '#5eead4' : '#2b7a78';
+      ctx.shadowColor = '#5eead4';
+      ctx.shadowBlur = dark ? 10 : 2;
+      ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(0, gy - 3); ctx.lineTo(W, gy - 3); ctx.stroke();
+      ctx.restore();
+
+      // 6. คริสตัลเก็บแต้ม (+15)
+      for (const o of orbs) {
+        const oy = o.y + Math.sin(o.phase) * 4;
+        ctx.save();
+        ctx.translate(o.x, oy);
+        const og = ctx.createRadialGradient(0, 0, 1, 0, 0, 15);
+        og.addColorStop(0, 'rgba(255,230,138,0.85)');
+        og.addColorStop(0.5, 'rgba(94,234,212,0.35)');
+        og.addColorStop(1, 'rgba(94,234,212,0)');
+        ctx.fillStyle = og;
+        ctx.beginPath(); ctx.arc(0, 0, 15, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = '#fff6c8';
+        ctx.beginPath(); ctx.moveTo(0, -8.5); ctx.lineTo(6, 0); ctx.lineTo(0, 8.5); ctx.lineTo(-6, 0); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = '#5eead4';
+        ctx.globalAlpha = 0.7;
+        ctx.beginPath(); ctx.moveTo(0, -8.5); ctx.lineTo(6, 0); ctx.lineTo(0, 8.5); ctx.closePath(); ctx.fill();
+        ctx.restore();
+      }
+
+      // 7. อุปสรรค (อีกาดำตาขาว / เสาหินนีออน)
+      if (state === 'idle') {
+        // ตอนยังไม่เริ่ม แสดงอีกายืนบนสะพานเป็นฉากสวย ๆ รอให้กระโดด
+        drawCrow(W * 0.72, gy - 2, 0, 1);
+        drawCrow(W * 0.84, gy - 2, 1.8, 0.92);
+      } else {
+        for (const ob of obstacles) {
+          if (ob.type === 'crow') {
+            drawCrow(ob.x, ob.y - 2, ob.phase, 1.05);
+          } else if (ob.type === 'crow2') {
+            drawCrow(ob.x - 9, ob.y - 2, ob.phase, 0.96);
+            drawCrow(ob.x + 9, ob.y - 2, ob.phase + 2.2, 0.92);
+          } else {
+            // เสาหินปราสาทนีออน
+            const bx = ob.x - ob.w / 2, by = ob.y - ob.h;
+            ctx.fillStyle = dark ? '#3a4268' : '#d695a6';
+            ctx.fillRect(bx, by, ob.w * 0.55, ob.h);
+            ctx.fillStyle = dark ? '#242a48' : '#b77487';
+            ctx.fillRect(bx + ob.w * 0.55, by, ob.w * 0.45, ob.h);
+            ctx.save();
+            ctx.fillStyle = '#ff5ea8';
+            ctx.shadowColor = '#ff5ea8';
+            ctx.shadowBlur = dark ? 9 : 2;
+            ctx.fillRect(ob.x - 2, by + 10, 4, 11);
+            ctx.fillStyle = '#5eead4';
+            ctx.shadowColor = '#5eead4';
+            ctx.beginPath(); ctx.moveTo(ob.x, by - 7); ctx.lineTo(ob.x + 5, by); ctx.lineTo(ob.x, by + 4); ctx.lineTo(ob.x - 5, by); ctx.closePath(); ctx.fill();
+            ctx.restore();
+          }
+        }
+      }
+
+      // 8. วงแหวน Double Jump + อนุภาค + ข้อความลอย + ตัวละคร Ida
+      for (const rg of rings) {
+        ctx.save();
+        ctx.strokeStyle = rg.col;
+        ctx.globalAlpha = Math.max(0, rg.life / 0.38);
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.ellipse(rg.x, rg.y, rg.r, rg.r * 0.42, 0, 0, Math.PI * 2); ctx.stroke();
+        ctx.restore();
+      }
+      drawIda(player.x, state === 'idle' ? gy - 2 : player.y - 2, player.runT, player.vy);
+
+      for (const p of parts) {
+        ctx.save();
+        ctx.fillStyle = p.col;
+        ctx.globalAlpha = Math.max(0, p.life / p.max);
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+      }
+      ctx.font = '700 12px "Josefin Sans","IBM Plex Sans Thai",sans-serif';
+      ctx.textAlign = 'center';
+      for (const fl of floats) {
+        ctx.save();
+        ctx.fillStyle = fl.col;
+        ctx.globalAlpha = Math.max(0, fl.life / 0.85);
+        ctx.fillText(fl.txt, fl.x, fl.y);
+        ctx.restore();
+      }
+      ctx.restore();
+    };
+
+    const loop = (ts) => {
+      if (!canvas.isConnected) { stopExamBreakGame(); return; }
+      const dt = Math.min(0.05, Math.max(0.001, (ts - lastTs) / 1000));
+      lastTs = ts;
+      update(dt);
+      draw();
+      if (state === 'playing' || (state === 'over' && overTimer > 0) || parts.length || rings.length) {
+        rafId = requestAnimationFrame(loop);
+      } else {
+        rafId = 0;
+      }
+    };
+
+    const onPointer = (e) => {
+      e.preventDefault();
+      canvas.focus({ preventScroll: true });
+      doJump();
+    };
+    const onKey = (e) => {
+      if (e.code !== 'Space' && e.code !== 'ArrowUp') return;
+      const ae = document.activeElement;
+      if (ae && (ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA' || ae.tagName === 'SELECT' || ae.isContentEditable)) return;
+      if (state === 'playing' || ae === canvas || (ae && wrap.contains(ae))) {
+        e.preventDefault();
+        doJump();
+      }
+    };
+
+    canvas.addEventListener('pointerdown', onPointer);
+    if (playBtn) playBtn.onclick = (e) => { e.stopPropagation(); canvas.focus({ preventScroll: true }); doJump(); };
+    if (sndBtn) sndBtn.onclick = () => {
+      S.mvMute = !S.mvMute; save();
+      sndBtn.textContent = S.mvMute ? '🔇' : '🔊';
+      if (!S.mvMute) tone(523, 0.1, 'sine', 0.07, 784);
+    };
+    if (skipBtn) skipBtn.onclick = () => {
+      const ex = $('.exam-sec', view);
+      if (ex) ex.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    window.addEventListener('keydown', onKey);
+    window.addEventListener('resize', resize);
+
+    player.y = groundY();
+    resize();
+    draw();
+
+    mvGameCleanup = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = 0;
+      canvas.removeEventListener('pointerdown', onPointer);
+      window.removeEventListener('keydown', onKey);
+      window.removeEventListener('resize', resize);
+    };
   }
 
   /* ---------- sidebar ---------- */
@@ -2458,7 +3116,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v65</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v66</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -2693,6 +3351,7 @@
       <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี เปลี่ยนสีตัวอักษร (A) เขียนโน้ต ★ หรือ sticky note 🗒️ ต่อจากข้อความนั้น ตัวหนา (B) ขีดเส้นใต้ (U) และไฮไลต์ข้อความในโน้ตได้ด้วย (เหลือง เขียว ฟ้า ชมพู แดงอ่อน) · แตะโน้ตที่บันทึกแล้วเพื่อแก้ · แตะรูปเพื่อปรับขนาดหรือครอป · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
     if (s.examIds.length) {
       const doneCnt = s.examIds.filter(qid => S.ans[`${id}|${qid}`]).length;
+      h += mvExamBreakHTML(id, s.examIds.length);
       h += `<section class="exam-sec"><div class="exam-sec-h"><h2>📝 Past exam questions</h2><button class="btn small" id="redoBoxExams"${doneCnt ? '' : ' hidden'}>↺ ล้างคำตอบกล่องนี้</button></div><p class="bar-label">กดเลือกคำตอบแล้วระบบจะจำคำตอบไว้ให้อัตโนมัติ (ข้อที่ตอบผิดเข้ากองข้อผิดด้วย · กด ↺ ทำใหม่ ได้ทุกเมื่อ)</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid], { showSaved: true });
       h += '</section>';
@@ -2706,6 +3365,7 @@
     expandAbbr($('article.content', view), ch.abbr);
     initFigs($('article.content', view), k);
     buildToc(); setTimeout(trackRead, 300); coverTools(view); flowHints(view);
+    if (s.examIds.length) initExamBreakGame(id, s.examIds.length);
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
@@ -3509,6 +4169,7 @@
 
   /* ---------- router ---------- */
   async function route() {
+    stopExamBreakGame();
     closeNav();
     const raw = location.hash.replace(/^#\/?/, '');
     const [path, qs] = raw.split('?');
