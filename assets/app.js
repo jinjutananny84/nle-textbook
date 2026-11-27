@@ -828,8 +828,10 @@
     const goSync = pop.querySelector('#aiGoSync'); if (goSync) goSync.onclick = () => hidePop();
     let reqId = 0, activeRun = null, pickedSnippet = '';
 
-    // จับข้อความที่ผู้ใช้ลากคลุมเฉพาะบางส่วนในคำตอบของ Gemini เพื่อให้กดเซฟเป็น Sticky ได้เลยไม่ต้องตัดเอง
+    // จับข้อความที่ผู้ใช้ลากคลุมเฉพาะบางส่วนในคำตอบของ Gemini (จับผ่าน document selectionchange + mouseup เพื่อไม่พลาดแม้ลากเลยขอบกล่อง)
+    let cleanupSel = null;
     function bindSelectionBar(bodyEl, fullText) {
+      if (cleanupSel) { cleanupSel(); cleanupSel = null; }
       const selBar = document.createElement('div');
       selBar.className = 'ai-selbar';
       selBar.hidden = true;
@@ -837,25 +839,39 @@
       bodyEl.after(selBar);
       const prevEl = selBar.querySelector('.ai-sel-prev');
       const syncSel = () => {
-        if (!bodyEl.isConnected || pop.hidden) return;
+        if (!bodyEl.isConnected || pop.hidden) { if (cleanupSel) { cleanupSel(); cleanupSel = null; } return; }
         const sel = getSelection();
-        if (sel && !sel.isCollapsed && bodyEl.contains(sel.anchorNode) && bodyEl.contains(sel.focusNode)) {
-          const s = sel.toString().replace(/\s+\n/g, '\n').trim();
-          if (s.length >= 2) {
-            pickedSnippet = s;
-            prevEl.textContent = `ที่คลุมไว้ (${s.length} ตัวอักษร): “${s.length > 70 ? s.slice(0, 70) + '…' : s}”`;
-            selBar.hidden = false;
-            return;
+        if (sel && sel.rangeCount && !sel.isCollapsed) {
+          const r = sel.getRangeAt(0);
+          const inBody = bodyEl.contains(r.commonAncestorContainer) || bodyEl.contains(sel.anchorNode) || bodyEl.contains(sel.focusNode);
+          if (inBody) {
+            const s = r.toString().replace(/\s+\n/g, '\n').trim();
+            if (s.length >= 2) {
+              pickedSnippet = s;
+              prevEl.textContent = `ที่คลุมไว้ (${s.length} ตัวอักษร): “${s.length > 75 ? s.slice(0, 75) + '…' : s}”`;
+              selBar.hidden = false;
+              return;
+            }
           }
         }
       };
-      bodyEl.addEventListener('mouseup', () => setTimeout(syncSel, 20));
-      bodyEl.addEventListener('touchend', () => setTimeout(syncSel, 80));
-      bodyEl.addEventListener('keyup', syncSel);
+      const onDown = () => { pop.dataset.dragging = '1'; };
+      const onUp = () => { setTimeout(() => { delete pop.dataset.dragging; syncSel(); }, 30); };
+      bodyEl.addEventListener('mousedown', onDown);
+      bodyEl.addEventListener('touchstart', onDown, { passive: true });
+      document.addEventListener('mouseup', onUp);
+      document.addEventListener('touchend', onUp);
+      document.addEventListener('selectionchange', syncSel);
+      cleanupSel = () => {
+        document.removeEventListener('mouseup', onUp);
+        document.removeEventListener('touchend', onUp);
+        document.removeEventListener('selectionchange', syncSel);
+      };
       // กันไม่ให้คลิกปุ่มไปล้าง selection ก่อนอ่านค่า
       selBar.addEventListener('mousedown', e => { if (e.target.closest('button')) e.preventDefault(); });
       selBar.querySelectorAll('button').forEach(b => b.onclick = () => {
         const txt = pickedSnippet; if (!txt) return;
+        if (cleanupSel) { cleanupSel(); cleanupSel = null; }
         if (b.dataset.s === 'sticky' && onNote) { onNote(txt, true); hidePop(); toast('🗒️ บันทึกท่อนที่คลุมเป็น Sticky note แล้ว'); }
         else if (b.dataset.s === 'star' && onNote) { onNote(txt, false); hidePop(); toast('★ บันทึกท่อนที่คลุมเป็น Star note แล้ว'); }
         else if (b.dataset.s === 'cp') { navigator.clipboard && navigator.clipboard.writeText(txt).then(() => toast('คัดลอกท่อนที่คลุมแล้ว')).catch(() => {}); }
@@ -863,10 +879,10 @@
 
       const foot = document.createElement('div');
       foot.className = 'ai-foot';
-      foot.innerHTML = `${onNote ? '<span class="ai-tip">💡 ลากคลุมท่อนที่ชอบในคำตอบเพื่อเซฟเป็น Sticky ได้ทันที</span><button class="btn small" data-f="edit">✏️ เปิดกล่องแก้/เซฟทั้งหมด</button>' : ''}<button class="btn small" data-f="cp">📋 คัดลอกทั้งหมด</button><button class="btn small" data-f="g">Google ↗</button>`;
+      foot.innerHTML = `${onNote ? '<span class="ai-tip">💡 ลากคลุมท่อนที่ชอบในคำตอบแล้วแถบ Sticky สีเหลืองจะเด้งขึ้นทันที</span><button class="btn small" data-f="edit">✏️ เปิดกล่องแก้/เซฟทั้งหมด</button>' : ''}<button class="btn small" data-f="cp">📋 คัดลอกทั้งหมด</button><button class="btn small" data-f="g">Google ↗</button>`;
       selBar.after(foot);
       const bEdit = foot.querySelector('[data-f="edit"]');
-      if (bEdit && onNote) bEdit.onclick = () => { pop.classList.remove('ai-pop'); openNote(onNote, pickedSnippet || fullText.replace(/\*\*/g, ''), true); };
+      if (bEdit && onNote) bEdit.onclick = () => { if (cleanupSel) { cleanupSel(); cleanupSel = null; } pop.classList.remove('ai-pop'); openNote(onNote, pickedSnippet || fullText.replace(/\*\*/g, ''), true); };
       const bCp = foot.querySelector('[data-f="cp"]');
       if (bCp) bCp.onclick = () => { navigator.clipboard && navigator.clipboard.writeText(fullText.replace(/\*\*/g, '')).then(() => toast('คัดลอกทั้งหมดแล้ว')).catch(() => {}); };
       const bG = foot.querySelector('[data-f="g"]');
@@ -1126,8 +1142,15 @@
     pop.style.top = (r.bottom + scrollY + 8) + 'px'; pop.style.left = Math.max(8, Math.min(r.left + scrollX, document.documentElement.clientWidth - w - 8)) + 'px';
     pop.hidden = false; openNote(noteSaver(k, idx, z), h.n, !!h.ns);
   }, true);
-  // ปิดแถบสีเมื่อแตะที่อื่น (การเลื่อนหน้าไม่ปิด)
-  document.addEventListener('click', e => { if (!pop.hidden && (pop.dataset.mode === 'edit' || pop.dataset.mode === 'note') && e.target.isConnected && !pop.contains(e.target) && !e.target.closest('mark.user-hl')) hidePop(); });
+  // ปิดแถบสีเมื่อแตะที่อื่น (การเลื่อนหน้า หรือลากคลุมข้อความในกล่อง Gemini ไม่ปิด)
+  document.addEventListener('click', e => {
+    if (pop.dataset.dragging === '1') return;
+    if (!pop.hidden && (pop.dataset.mode === 'edit' || pop.dataset.mode === 'note') && e.target.isConnected && !pop.contains(e.target) && !e.target.closest('mark.user-hl')) {
+      const sel = getSelection();
+      if (pop.classList.contains('ai-pop') && sel && !sel.isCollapsed) return;
+      hidePop();
+    }
+  });
   // ปุ่มเลิกทำ (มุมขวาล่าง) ใช้ได้ทั้งเนื้อหาและข้อสอบในหน้านั้น
   document.addEventListener('click', e => {
     if (!e.target.closest('#undoBtn')) return;
@@ -1225,7 +1248,7 @@
 
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v55</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v56</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🔐 Google Cloud Sync</h3>${cloudHtml}
         <div class="today-chips" style="margin-top:12px"><span>ไฮไลต์/โน้ต <b>${nHl}</b></span><span>Keywords <b>${S.kw.length}</b></span><span>ประเมินแล้ว <b>${Object.keys(S.lvl).length}</b></span><span>รูป <b>${imgKeys.length}</b></span></div>
       </div>
@@ -1486,18 +1509,33 @@
     tocHs = hs; tocNav = nav;
   }
   let tocHs = [], tocNav = null;
-  // แถบความคืบหน้าการอ่านใต้แถบบน + หัวข้อที่กำลังอ่าน
-  const rbar = document.createElement('div'); rbar.className = 'readbar'; document.body.appendChild(rbar);
-  addEventListener('scroll', () => {
+  // แถบความคืบหน้าการอ่านใต้แถบบน (ฉากท้องฟ้า + สนามหญ้า + น้องหมอวิ่งตามตำแหน่งที่อ่าน)
+  const rwrap = document.createElement('div'); rwrap.className = 'readbar-wrap'; rwrap.hidden = true;
+  const rbar = document.createElement('div'); rbar.className = 'readbar'; rwrap.appendChild(rbar);
+  document.body.appendChild(rwrap);
+  const topbarEl = document.querySelector('.topbar');
+  function syncReadbar() {
     const onSec = /^#\/[^/]+\/\d+$/.test(location.hash);
+    rwrap.hidden = !onSec;
+    document.body.classList.toggle('has-readbar', onSec);
+    if (!onSec) { rbar.style.width = '0%'; return; }
+    if (topbarEl) rwrap.style.top = topbarEl.offsetHeight + 'px';
     const h = document.documentElement.scrollHeight - innerHeight;
-    rbar.style.width = onSec && h > 0 ? Math.min(100, scrollY * 100 / h) + '%' : '0';
+    const pct = h > 0 ? Math.min(100, Math.max(0, scrollY * 100 / h)) : 0;
+    rbar.style.width = Math.max(2, pct) + '%';
+  }
+  addEventListener('resize', syncReadbar, { passive: true });
+  addEventListener('hashchange', () => setTimeout(syncReadbar, 40));
+  addEventListener('scroll', () => {
+    syncReadbar();
+    const onSec = /^#\/[^/]+\/\d+$/.test(location.hash);
     if (onSec) trackRead();
     if (onSec && tocNav && document.contains(tocNav)) {
       let cur = -1; tocHs.forEach((x, i) => { if (x.getBoundingClientRect().top < 120) cur = i; });
       tocNav.querySelectorAll('button[data-i]').forEach(b => b.classList.toggle('on', +b.dataset.i === cur));
     }
   }, { passive: true });
+  setTimeout(syncReadbar, 80);
 
   /* quiz */
   function pool(chIds, filter) {

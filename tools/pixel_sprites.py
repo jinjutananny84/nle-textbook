@@ -58,7 +58,7 @@ doc_sheet=svg(24,16,rects(DOC1)+rects(DOC2,12))
 doc_still=svg(12,16,rects(DOC1))
 flag=svg(8,14,rects(FLAG))
 cloud=svg(12,5,rects(CLOUD))
-cloudN=svg(12,5,rects(CLOUD,pal={'W':'#3a4a80'}))
+cloudN=svg(12,5,rects(CLOUD,pal={'W':'#6d5b7b'}))
 def hills(c1,c2,dirt,dirt2):
     import math
     W=200;H=22;b=[]

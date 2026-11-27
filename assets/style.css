@@ -870,7 +870,7 @@ table.dt tr.open td{background:var(--surface2)}
 .ai-foot{display:flex;flex-wrap:wrap;align-items:center;gap:6px;justify-content:flex-end;margin-top:8px}
 .ai-foot .btn{padding:4px 10px;font-size:13px}
 .ai-tip{margin-right:auto;font-size:12px;color:var(--muted)}
-.ai-selbar{margin-top:8px;padding:8px 10px;border-radius:10px;background:var(--stk,#fff8c5);color:var(--stk-fg,#2b2400);border:1.5px solid var(--key);display:flex;flex-direction:column;gap:6px}
+.ai-selbar{position:sticky;bottom:0;z-index:4;margin-top:8px;padding:8px 10px;border-radius:10px;background:var(--stk,#fff8c5);color:var(--stk-fg,#2b2400);border:1.5px solid var(--key);display:flex;flex-direction:column;gap:6px}
 .ai-selbar[hidden]{display:none}
 .ai-sel-prev{font-size:12.5px;line-height:1.4;opacity:.9}
 .ai-sel-acts{display:flex;flex-wrap:wrap;gap:6px}
