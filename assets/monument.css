@@ -318,6 +318,9 @@ body.has-readbar .toc{top:90px}
 .mv-sb-bg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.62}
 .side-cur>.mv-sb-bg{height:68px;opacity:.48}
 .side-ch>a,.side-ch>.side-bar{position:relative;z-index:1}
+.hero.mv-ch-hero{position:relative;overflow:hidden}
+.hero.mv-ch-hero>.mv-sb-bg{opacity:.72}
+.hero.mv-ch-hero>h1,.hero.mv-ch-hero>p{position:relative;z-index:1}
 
 /* โลโก้ปราสาทประจำบทข้างชื่อบทในแถบด้านข้าง */
 .side-ch>a{display:flex;align-items:center;gap:8px}

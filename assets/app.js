@@ -284,7 +284,7 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '69';
+  const APP_VER = '70';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
   function refreshIcons() {
     const u = uiStyle();
@@ -1421,17 +1421,7 @@
     const H = 158;
     const GROUND_Y = 114;
     let W = 900, dpr = 1;
-
-    const resize = () => {
-      const rect = wrap.getBoundingClientRect();
-      W = Math.max(300, Math.round(rect.width || 900));
-      dpr = Math.min(2, window.devicePixelRatio || 1);
-      canvas.width = Math.round(W * dpr);
-      canvas.height = Math.round(H * dpr);
-      canvas.style.width = W + 'px';
-      canvas.style.height = H + 'px';
-      draw();
-    };
+    let resize = () => {};
 
     let playing = false, crashed = false;
     let rafId = 0, lastTs = 0, animT = 0;
@@ -1839,9 +1829,22 @@
       }
     };
 
+    resize = () => {
+      const rect = wrap.getBoundingClientRect();
+      W = Math.max(300, Math.round(rect.width || 900));
+      dpr = Math.min(2, window.devicePixelRatio || 1);
+      canvas.width = Math.round(W * dpr);
+      canvas.height = Math.round(H * dpr);
+      canvas.style.width = W + 'px';
+      canvas.style.height = H + 'px';
+      draw();
+    };
+
     canvas.addEventListener('pointerdown', onPointer);
     window.addEventListener('keydown', onKey);
     window.addEventListener('resize', resize);
+    const ro = window.ResizeObserver ? new ResizeObserver(() => resize()) : null;
+    if (ro) ro.observe(wrap);
     if (bPlay) bPlay.onclick = (e) => { e.stopPropagation(); canvas.focus({ preventScroll: true }); togglePlay(); };
     if (bJ) bJ.onclick = (e) => { e.stopPropagation(); canvas.focus({ preventScroll: true }); doJump(); };
 
@@ -1850,6 +1853,7 @@
     mvGameCleanup = () => {
       if (rafId) cancelAnimationFrame(rafId);
       rafId = 0;
+      if (ro) ro.disconnect();
       canvas.removeEventListener('pointerdown', onPointer);
       window.removeEventListener('keydown', onKey);
       window.removeEventListener('resize', resize);
@@ -1858,48 +1862,106 @@
 
   /* ---------- sidebar ---------- */
   const MV_MINI_HERO = `<svg class="mv-mini-hero" viewBox="0 0 14 20" aria-hidden="true"><polygon points="7,8 10.6,18 3.4,18" fill="#ffffff"/><circle cx="7" cy="6.8" r="1.5" fill="#1b2442"/><polygon points="7,1 9.8,6.8 4.2,6.8" fill="#ffffff"/></svg>`;
-  // กราฟิกปราสาทจาง ๆ เฉพาะของแต่ละบทสำหรับพื้นหลังแถบด้านข้าง
+  // กราฟิกปราสาทจาง ๆ เฉพาะของแต่ละบท (13 บท 13 แบบไม่ซ้ำกันเลย)
   function mvSideCardBG(chId) {
     const th = mvThemeOf(chId);
     const id = String(chId || '').toLowerCase();
-    let silhouette = '';
-    if (th.shape === 'twin') {
-      silhouette = `
-        <path d="M168 64V22q0-5 5-9 5 4 5 9v42zM198 64V16q0-5 5-9 5 4 5 9v48z" fill="${th.wl}" opacity=".55"/>
-        <polygon points="150,46 218,46 218,64 150,64" fill="${th.wr}" opacity=".5"/>
-        <path d="M178 64v-12a6 6 0 0 1 12 0v12z" fill="${th.arch}" opacity=".6"/>
-        <rect x="201" y="26" width="2.5" height="6" rx="1.2" fill="${th.win}" opacity=".8"/>`;
-    } else if (th.shape === 'spiral') {
-      silhouette = `
-        <polygon points="164,64 186,14 212,64" fill="${th.wr}" opacity=".5"/>
-        <polygon points="146,50 186,32 224,50 224,64 146,64" fill="${th.wl}" opacity=".5"/>
-        <polyline points="154,48 186,33 216,48" fill="none" stroke="${th.trail}" stroke-width="1.5" opacity=".75"/>
-        <path d="M180 64v-13a6 6 0 0 1 12 0v13z" fill="${th.arch}" opacity=".6"/>`;
-    } else if (th.shape === 'forest') {
-      silhouette = `
-        <rect x="224" y="0" width="12" height="64" fill="${th.spire}" opacity=".45"/>
-        <path d="M160 64V34q0-6 6-10 6 4 6 10v30zM186 64V18q0-7 7-12 7 5 7 12v46zM210 64V36q0-6 6-10 6 4 6 10v28z" fill="${th.wl}" opacity=".55"/>
-        <rect x="191.5" y="26" width="2.5" height="6" rx="1.2" fill="${th.win}" opacity=".85"/>`;
+    let art = '';
+    if (id === 'b3') {
+      // วิหารแห่งดวงดาว: บันไดซิกแซกใต้จันทร์เสี้ยว
+      art = `<path d="M138 14a5 5 0 1 0 5.6 6.8 4 4 0 1 1-5.6-6.8z" fill="#ffe89c" opacity=".85"/>
+        <polygon points="184,64 184,16 196,10 208,16 208,64" fill="${th.wr}" opacity=".62"/>
+        <polygon points="146,52 198,28 214,36 162,60" fill="${th.top}" opacity=".45"/>
+        <polyline points="148,51 198,28" fill="none" stroke="${th.trail}" stroke-width="1.6" opacity=".85"/>
+        <path d="M190 64v-12a6 6 0 0 1 12 0v12z" fill="${th.arch}" opacity=".7"/>`;
+    } else if (id === 'b4') {
+      // หอคอยปะการัง: หอคอยคู่โดมชมพู-ฟ้า + ริบบิ้น
+      art = `<path d="M164 64V24q0-6 6-10 6 4 6 10v40zM198 64V18q0-6 6-10 6 4 6 10v46z" fill="${th.wl}" opacity=".55"/>
+        <path d="M164 24q0-6 6-10 6 4 6 10z" fill="${th.trail}" opacity=".85"/>
+        <path d="M198 18q0-6 6-10 6 4 6 10z" fill="${th.gem}" opacity=".85"/>
+        <path d="M204 8c-10 4-18 8-30 9" fill="none" stroke="${th.trail}" stroke-width="1.3" opacity=".75"/>
+        <polygon points="154,48 218,48 218,64 154,64" fill="${th.wr}" opacity=".52"/>`;
+    } else if (id === 'b5') {
+      // ปราการศิลาขาว: ซุ้มกรอบ Escher + กงล้อหมุน 4 แฉก
+      art = `<polygon points="156,14 196,14 196,58 156,58" fill="none" stroke="${th.top}" stroke-width="6" opacity=".45"/>
+        <polygon points="168,14 198,3 206,7 176,18" fill="${th.wl}" opacity=".6"/>
+        <g transform="translate(206,36)" stroke="${th.trail}" stroke-width="2" opacity=".82">
+          <line x1="-9" y1="0" x2="9" y2="0"/><line x1="0" y1="-9" x2="0" y2="9"/>
+          <circle cx="0" cy="0" r="3" fill="${th.wr}"/>
+        </g>`;
+    } else if (id === 'b6') {
+      // วิหารสายลมในหมอก: หอสูงกลางหมอก + สะพานโค้ง 2 ชั้น
+      art = `<ellipse cx="176" cy="48" rx="46" ry="12" fill="${th.top}" opacity=".2"/>
+        <polygon points="184,64 184,12 196,6 208,12 208,64" fill="${th.wl}" opacity=".55"/>
+        <path d="M186 12q0-6 10-9 10 3 10 9z" fill="${th.trail}" opacity=".75"/>
+        <path d="M144 64V40h54v24h-10v-12a7 7 0 0 0-14 0v12h-10v-12a7 7 0 0 0-14 0v12z" fill="${th.wr}" opacity=".58"/>`;
+    } else if (id === 'b7') {
+      // ป้อมสนธยาทับทิม: ป้อมปราการยอดแหลมคู่ + หน้าต่างไฟทอง
+      art = `<polygon points="160,22 172,12 184,22 184,64 160,64" fill="${th.wl}" opacity=".58"/>
+        <polygon points="196,16 208,6 220,16 220,64 196,64" fill="${th.wr}" opacity=".58"/>
+        <polygon points="152,38 228,38 228,46 152,46" fill="${th.top}" opacity=".45"/>
+        <rect x="170" y="25" width="3" height="7" rx="1.5" fill="${th.win}" opacity=".9"/>
+        <rect x="206" y="20" width="3" height="7" rx="1.5" fill="${th.win}" opacity=".9"/>`;
+    } else if (id === 'b8') {
+      // หอคอยโคมอำพัน: ปราสาทน้ำตกเทอร์ควอยซ์ 3 ชั้น
+      art = `<polygon points="152,24 218,24 218,64 152,64" fill="${th.wl}" opacity=".42"/>
+        <polygon points="168,14 186,6 204,14 204,34 168,34" fill="${th.wr}" opacity=".58"/>
+        <path d="M156 30h34v28h-7V36h-27z" fill="#5eead4" opacity=".48"/>
+        <circle cx="176" cy="20" r="2.2" fill="${th.win}" opacity=".9"/>`;
+    } else if (id === 'b9') {
+      // วิหารกลางมหาสมุทร: วงแหวนลอย + ดอกบัว + คลื่นน้ำ
+      art = `<circle cx="188" cy="28" r="14" fill="none" stroke="${th.top}" stroke-width="5" opacity=".45"/>
+        <circle cx="188" cy="28" r="14" fill="none" stroke="${th.trail}" stroke-width="1.3" opacity=".8"/>
+        <path d="M142 56q14-6 28 0t28 0 28 0" fill="none" stroke="${th.trail}" stroke-width="1.6" opacity=".65"/>
+        <path d="M158 46q6-12 12 0q-6 4-12 0z" fill="${th.gem}" opacity=".65"/>`;
+    } else if (id === 'b10') {
+      // ปราสาทแสงตะวัน: ปราสาทม่วงเข้ม + บันไดส้มทองเรืองแสง
+      art = `<polygon points="178,64 178,12 196,4 214,12 214,64" fill="${th.wr}" opacity=".62"/>
+        <polygon points="146,60 192,18 202,24 156,64" fill="#fbbf24" opacity=".65"/>
+        <polygon points="194,10 202,14 194,18 186,14" fill="#ffe28a" opacity=".9"/>`;
+    } else if (id === 'kt-embryo') {
+      // หอคอยกำเนิดดารา: วงแหวนดาวเคราะห์แฝด + หอคู่คริสตัล
+      art = `<circle cx="188" cy="24" r="16" fill="none" stroke="${th.trail}" stroke-dasharray="2 3" stroke-width="1" opacity=".65"/>
+        <polygon points="168,64 168,26 178,18 188,26 188,64" fill="${th.wl}" opacity=".55"/>
+        <polygon points="194,64 194,20 204,12 214,20 214,64" fill="${th.wr}" opacity=".55"/>
+        <circle cx="178" cy="12" r="2.2" fill="#fff4b8" opacity=".9"/>
+        <circle cx="204" cy="7" r="2.2" fill="#7dd3fc" opacity=".9"/>`;
+    } else if (id === 'kt-repro') {
+      // ปราสาทกล้วยไม้ราตรี: ซุ้มประตูโค้งนีออนชมพู + ลูกบาศก์ลอย
+      art = `<polygon points="160,64 160,18 214,18 214,64" fill="${th.wr}" opacity=".5"/>
+        <path d="M174 64V34a13 13 0 0 1 26 0v30z" fill="${th.arch}" stroke="${th.trail}" stroke-width="1.4" opacity=".85"/>
+        <rect x="182" y="38" width="5" height="5" fill="${th.trail}" opacity=".85"/>
+        <rect x="190" y="45" width="4" height="4" fill="${th.gem}" opacity=".85"/>`;
+    } else if (id === 'kt-msk') {
+      // หอคอยหยกโบราณ: เจดีย์ขั้นบันไดหยก 3 ชั้น
+      art = `<polygon points="158,64 158,48 218,48 218,64" fill="${th.wr}" opacity=".55"/>
+        <polygon points="168,48 168,32 208,32 208,48" fill="${th.wl}" opacity=".58"/>
+        <polygon points="178,32 178,16 198,16 198,32" fill="${th.top}" opacity=".45"/>
+        <polygon points="188,6 194,12 188,18 182,12" fill="${th.trail}" opacity=".9"/>`;
+    } else if (id === 'kt-parasit') {
+      // วิหารป่ามรกต: ต้นไม้ป่ามืดซ้ายขวา + หอคอยมรกต
+      art = `<rect x="148" y="0" width="8" height="64" fill="#041518" opacity=".65"/>
+        <rect x="220" y="0" width="10" height="64" fill="#041518" opacity=".65"/>
+        <path d="M156 16l22 14-4 5-18-11z" fill="#041518" opacity=".6"/>
+        <polygon points="178,64 178,20 190,12 202,20 202,64" fill="${th.wl}" opacity=".62"/>
+        <path d="M181 20q0-8 9-12 9 4 9 12z" fill="${th.top}" opacity=".75"/>`;
     } else {
-      silhouette = `
-        <polygon points="178,64 178,18 190,12 202,18 202,64" fill="${th.wr}" opacity=".55"/>
-        <polygon points="148,50 198,28 214,36 164,58" fill="${th.top}" opacity=".4"/>
-        <polyline points="152,50 198,29" fill="none" stroke="${th.trail}" stroke-width="1.4" opacity=".75"/>
-        <path d="M184 64v-12a6 6 0 0 1 12 0v12z" fill="${th.arch}" opacity=".6"/>`;
+      // kt-rs หอคอยหมอกออโรรา: แสงเหนือพาดผ่าน 3 ยอดโดม
+      art = `<path d="M138 22q36-16 86 2" fill="none" stroke="${th.trail}" stroke-width="5" opacity=".32" stroke-linecap="round"/>
+        <path d="M164 64V34q0-6 6-10 6 4 6 10v30zM186 64V20q0-7 7-12 7 5 7 12v44zM208 64V36q0-6 6-10 6 4 6 10v28z" fill="${th.wl}" opacity=".58"/>
+        <rect x="191.5" y="28" width="2.5" height="6" rx="1.2" fill="${th.win}" opacity=".9"/>`;
     }
-    const extra = id.startsWith('kt-')
-      ? `<circle cx="152" cy="18" r="7" fill="none" stroke="${th.trail}" stroke-opacity=".35" stroke-width=".9"/>`
-      : `<circle cx="152" cy="18" r="1" fill="${th.win}" opacity=".75"/><circle cx="222" cy="14" r=".9" fill="${th.trail}" opacity=".7"/>`;
+    const sid = 'sb' + id.replace(/[^a-z0-9]/gi, '');
     return `<svg class="mv-sb-bg" viewBox="0 0 240 64" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
       <defs>
-        <linearGradient id="sb${id.replace(/[^a-z0-9]/gi, '')}" x1="0" y1="0" x2="1" y2="0">
+        <linearGradient id="${sid}" x1="0" y1="0" x2="1" y2="0">
           <stop offset="0%" stop-color="${th.sky[1]}" stop-opacity="0"/>
-          <stop offset="48%" stop-color="${th.sky[1]}" stop-opacity=".42"/>
-          <stop offset="100%" stop-color="${th.sky[2]}" stop-opacity=".75"/>
+          <stop offset="44%" stop-color="${th.sky[1]}" stop-opacity=".46"/>
+          <stop offset="100%" stop-color="${th.sky[2]}" stop-opacity=".82"/>
         </linearGradient>
       </defs>
-      <rect width="240" height="64" fill="url(#sb${id.replace(/[^a-z0-9]/gi, '')})"/>
-      ${extra}${silhouette}
+      <rect width="240" height="64" fill="url(#${sid})"/>
+      ${art}
     </svg>`;
   }
   function renderSidebar(curCh, curNo) {
@@ -3042,7 +3104,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v69</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v70</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3246,7 +3308,7 @@
     await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
     renderSidebar(id);
     const p = chProgress(ch);
-    let h = `<div class="crumb"><a href="#/">หน้าแรก</a></div><div class="hero"><h1>${esc(ch.title)}</h1><p>${esc(ch.source || '')}</p></div>
+    let h = `<div class="crumb"><a href="#/">หน้าแรก</a></div><div class="hero mv-ch-hero">${uiStyle() === 'monument' ? mvSideCardBG(id) : ''}<h1>${esc(ch.title)}</h1><p>${esc(ch.source || '')}</p></div>
       ${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ</div>${lvLegend(p)}
       <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 Quiz this chapter</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcards</a><a class="btn" href="#/map/${id}">🗺️ Chapter map</a><a class="btn" href="#/db?view=table&ch=${id}">💊 Drug table</a><a class="btn" href="#/flows?ch=${id}">🩺 Flowchart</a></div>`;
     for (const pg of ch.pages) {
