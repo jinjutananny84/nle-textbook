@@ -108,3 +108,10 @@ figure.fig,.tbl-wrap{border-radius:4px}
   .main:has(> .sec-list)>*{max-width:none;margin-left:0;margin-right:0}
 }
 @media (max-width:620px){.sec-list li a{flex-wrap:wrap}.sec-list .f{white-space:normal}}
+
+/* Google Login + PWA sync */
+.g-btn{border-radius:0;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink-sh);transition:transform .05s,box-shadow .05s}
+.g-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink-sh)}
+.auth-ava,.sync-user img{border-radius:0;border:2px solid var(--ink)}
+.sync-dot{border-radius:0}
+.sync-badge{border-radius:2px;border:1.5px solid var(--ink)}

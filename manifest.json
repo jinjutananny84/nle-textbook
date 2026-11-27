@@ -1,0 +1,26 @@
+{
+  "name": "nannie compre website",
+  "short_name": "NLE Study",
+  "description": "ตำราอธิบายละเอียดคู่กับชีท A3 สรุป NLE Step 1 พร้อมโจทย์ ข้อสอบเก่า และ flashcard",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f8f4e8",
+  "theme_color": "#2b2b3a",
+  "lang": "th",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

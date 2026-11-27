@@ -9,9 +9,20 @@
   /* ---------- storage ---------- */
   let S = {};
   try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { S = {}; }
-  S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {}; S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {}; S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; S.figw = S.figw || {}; if (S.focus) document.body.classList.add('focus');
+  function ensureS() {
+    S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {};
+    S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {};
+    S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; S.figw = S.figw || {};
+  }
+  ensureS();
+  if (S.focus) document.body.classList.add('focus');
   if (S.hlOff) document.documentElement.classList.add('no-hl');
-  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} updateWrongCount(); }
+  function saveLocalOnly() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} updateWrongCount(); }
+  function save() {
+    S._updatedAt = Date.now(); S._dirty = true;
+    saveLocalOnly();
+    if (window.NLE_SYNC) window.NLE_SYNC.schedulePush();
+  }
 
   /* ---------- data ---------- */
   let INDEX = null;
@@ -274,7 +285,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/flows${curCh ? '?ch=' + curCh : ''}">🩺 Diagnosis flowchart</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/db?view=table&ch=${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/flows${curCh ? '?ch=' + curCh : ''}">🩺 Diagnosis flowchart</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/db?view=table&ch=${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/sync">☁️ Sync & App</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -414,9 +425,10 @@
     pill: '<rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-45 12 12)"/><path d="M9.5 9.5l5 5"/>',
     brain: '<path d="M9 4a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 10a3 3 0 0 0 1 2.2A3 3 0 0 0 6 17a3 3 0 0 0 3 3 3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/><path d="M15 4a3 3 0 0 1 3 3v.2A3 3 0 0 1 20 10a3 3 0 0 1-1 2.2A3 3 0 0 1 18 17a3 3 0 0 1-3 3 3 3 0 0 1-3-3"/>',
     flow: '<rect x="8" y="3" width="8" height="5" rx="1.5"/><rect x="2" y="16" width="8" height="5" rx="1.5"/><rect x="14" y="16" width="8" height="5" rx="1.5"/><path d="M12 8v4M6 16v-4h12v4"/>',
-    img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>'
+    img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>',
+    cloud: '<path d="M6.5 19h11a4 4 0 0 0 .9-7.9A5.5 5.5 0 0 0 7.7 9.3 4 4 0 0 0 6.5 19z"/>'
   };
-  const EMO = { '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
+  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => `<svg class="ic ic-${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
   // แปลง emoji ในข้อความของหน้าเว็บเป็นไอคอน (ไม่แตะเนื้อหาที่ไฮไลต์ได้ และช่องพิมพ์)
@@ -542,6 +554,7 @@
     try {
       toast('กำลังใส่รูป…'); const b = await shrink(f); const id = 'img' + Date.now().toString(36);
       await IDB.put(id, b);
+      if (window.NLE_SYNC) window.NLE_SYNC.syncImagePut(id, b);
       const z = zoneEl(ctx.k); const arr = (S.hl[ctx.k] || []).slice();
       if (ctx.idx != null) { arr[ctx.idx] = Object.assign({}, arr[ctx.idx], { img: id, w: 60, al: 'c' }); }
       else arr.push({ s: ctx.s, t: ctx.t, c: 'i', img: id, w: 60, al: 'c' });
@@ -828,8 +841,8 @@
   /* ---------- views ---------- */
   /* ---------- Backup: ไฮไลต์ โน้ต keyword รูป อยู่ในเบราว์เซอร์เครื่องเดียว → สำรองเป็นไฟล์ ---------- */
   const b2u = b => new Promise(ok => { const r = new FileReader(); r.onload = () => ok(r.result); r.readAsDataURL(b); });
-  const hasData = () => Object.keys(S.hl).length || S.kw.length || Object.keys(S.lvl).length || Object.keys(S.notes).length;
-  const backupDue = () => hasData() && (!S.lastBackup || Date.now() - S.lastBackup > 7 * 864e5);
+  const hasData = (o = S) => !!(o && (Object.keys(o.hl || {}).length || (o.kw || []).length || Object.keys(o.lvl || {}).length || Object.keys(o.notes || {}).length || Object.keys(o.wrong || {}).length || Object.keys(o.known || {}).length || Object.keys(o.stats || {}).length || Object.keys(o.srs || {}).length || Object.keys(o.read || {}).length || o.plan));
+  const backupDue = () => !(window.NLE_SYNC && window.NLE_SYNC.getState().user) && hasData() && (!S.lastBackup || Date.now() - S.lastBackup > 7 * 864e5);
   async function vBackup() {
     renderSidebar();
     const nHl = Object.values(S.hl).reduce((a, x) => a + x.length, 0);
@@ -858,7 +871,94 @@
       const b = $('#bkIn'); if (!data) return;
       if (!b.dataset.sure) { b.dataset.sure = 1; b.textContent = 'กดอีกครั้งเพื่อยืนยันแทนที่'; b.classList.add('primary'); return; }
       for (const [k, u] of Object.entries(data.img || {})) await IDB.put(k, await (await fetch(u)).blob());
+      data.S._updatedAt = Date.now(); data.S._dirty = true;
       localStorage.setItem(KEY, JSON.stringify(data.S)); toast('กู้คืนแล้ว กำลังโหลดใหม่'); setTimeout(() => { location.hash = '#/'; location.reload(); }, 600);
+    };
+  }
+  const G_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.7-2.4 3.6v3h3.8c2.2-2 3.6-5 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-2.9l-3.8-3c-1.1.7-2.5 1.2-4.2 1.2-3.2 0-5.9-2.2-6.9-5.1H1.2v3.1C3.2 21.3 7.3 24 12 24z"/><path fill="#FBBC05" d="M5.1 14.2c-.2-.7-.4-1.4-.4-2.2s.1-1.5.4-2.2V6.7H1.2C.4 8.3 0 10.1 0 12s.4 3.7 1.2 5.3l3.9-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4C18 1.2 15.2 0 12 0 7.3 0 3.2 2.7 1.2 6.7l3.9 3.1c1-2.9 3.7-5 6.9-5z"/></svg>';
+  async function vSync() {
+    await loadIndex();
+    renderSidebar();
+    const st = window.NLE_SYNC ? window.NLE_SYNC.getState() : { configured: false, offline: !navigator.onLine };
+    const nHl = Object.values(S.hl).reduce((a, x) => a + x.length, 0);
+    const imgKeys = await IDB.keys().catch(() => []);
+    const badgeMap = {
+      synced: ['ok', `✓ ซิงค์ล่าสุด ${st.lastSyncedAt ? new Date(st.lastSyncedAt).toLocaleString('th-TH') : 'เมื่อสักครู่'}`],
+      syncing: ['busy', '↻ กำลังซิงค์ข้อมูล…'],
+      connecting: ['busy', '↻ กำลังเชื่อมต่อ…'],
+      offline: ['', '📡 ออฟไลน์อยู่ (จะซิงค์ให้อัตโนมัติเมื่อต่อเน็ต)'],
+      error: ['err', `⚠️ ${st.error || 'เกิดข้อผิดพลาด'}`]
+    };
+    const [bCls, bTxt] = badgeMap[st.status] || ['', 'ยังไม่ได้เชื่อมต่อบัญชี'];
+
+    let cloudHtml = '';
+    if (st.user) {
+      cloudHtml = `<div class="sync-user">${st.user.photoURL ? `<img src="${esc(st.user.photoURL)}" alt="" referrerpolicy="no-referrer">` : ''}<div class="sync-user-meta"><b>${esc(st.user.displayName)}</b><small>${esc(st.user.email)}</small></div></div>
+        <div class="sync-badge ${bCls}">${esc(bTxt)}</div>
+        <p class="muted">ไฮไลต์ โน้ต คีย์เวิร์ด ดาวประเมิน ข้อที่พลาด Flashcard แผนอ่าน และรูปที่แทรก จะซิงค์ข้ามทุกเครื่องอัตโนมัติทันทีที่แก้ไข</p>
+        <div class="choice"><button class="btn primary" id="syNow">↻ Sync ตอนนี้</button><button class="btn" id="syOut">ออกจากระบบ</button></div>`;
+    } else if (st.configured) {
+      cloudHtml = `${st.error ? `<div class="sync-badge err">⚠️ ${esc(st.error)}</div>` : ''}
+        <p>ล็อกอินด้วยบัญชี Google เพื่อเซฟไฮไลต์ โน้ต ดาวประเมิน ข้อที่พลาด Flashcard และรูปที่แทรกไว้บนคลาวด์ เปิดอ่านต่อบน iPad มือถือ หรือคอมเครื่องอื่นได้ทันที</p>
+        <p class="muted">ข้อมูลที่มีอยู่ในเครื่องนี้ตอนนี้จะถูกอัปโหลดขึ้นบัญชีให้อัตโนมัติ ไม่หายครับ</p>
+        <div class="choice"><button class="g-btn" id="syIn">${G_SVG}<span>เข้าสู่ระบบด้วย Google</span></button></div>`;
+    } else {
+      cloudHtml = `<div class="sync-badge busy">⚙️ เหลือขั้นตอนตั้งค่า Firebase (ทำครั้งเดียว ฟรี 100%)</div>
+        <p>ระบบ Google Login + Cloud Sync พร้อมทำงานแล้ว เหลือแค่นำค่า <code>firebaseConfig</code> จาก Firebase Console มาใส่ในไฟล์ <code>assets/firebase-config.js</code> ตามคู่มือ <code>FIREBASE_SETUP.md</code></p>
+        <ol class="pwa-steps">
+          <li>สร้างโปรเจกต์ฟรีที่ <b>console.firebase.google.com</b> (แผน Spark ฟรี ไม่ต้องใส่บัตร)</li>
+          <li>เปิด <b>Authentication → Google</b> และเพิ่มโดเมน <code>jinjutananny84.github.io</code></li>
+          <li>สร้าง <b>Firestore Database</b> แล้วตั้ง Security Rules ให้แต่ละคนเข้าถึงได้เฉพาะ <code>users/{uid}</code></li>
+          <li>นำ <code>firebaseConfig</code> มาวางใน <code>assets/firebase-config.js</code> แล้ว push ขึ้น GitHub</li>
+        </ol>`;
+    }
+
+    let pwaHtml = '';
+    if (st.isStandalone) {
+      pwaHtml = `<div class="sync-badge ok">✓ กำลังเปิดใช้งานในโหมดแอป (PWA) อยู่แล้ว</div>`;
+    } else if (st.canInstall) {
+      pwaHtml = `<p>ติดตั้งเว็บนี้เป็นแอปลงหน้าจอโฮม เพื่อเปิดเต็มจอและอ่านได้เร็วขึ้น</p><div class="choice"><button class="btn primary" id="pwaInst">📲 ติดตั้งเป็นแอป (Install App)</button></div>`;
+    } else if (st.isIOS) {
+      pwaHtml = `<p>ติดตั้งเป็นแอปบน iPad / iPhone ด้วย Safari:</p><ol class="pwa-steps"><li>แตะปุ่ม <b>แชร์ (Share)</b> รูปกล่องมีลูกศรชี้ขึ้น</li><li>เลื่อนลงแล้วเลือก <b>เพิ่มไปยังหน้าจอโฮม (Add to Home Screen)</b></li><li>กด <b>เพิ่ม (Add)</b> — จะได้ไอคอนน้องหมอบนหน้าจอโฮม เปิดเต็มจอได้เลย!</li></ol>`;
+    } else {
+      pwaHtml = `<p>สามารถติดตั้งเป็นแอปได้จากเมนูเบราว์เซอร์ (Chrome / Edge กดไอคอน <b>Install</b> ที่แถบ URL หรือเมนู <b>⋮ → Install app</b> · Safari บน Mac กด <b>File → Add to Dock</b>)</p>`;
+    }
+
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App</h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+      <div class="panel"><h3>🔐 Google Cloud Sync</h3>${cloudHtml}
+        <div class="today-chips" style="margin-top:12px"><span>ไฮไลต์/โน้ต <b>${nHl}</b></span><span>Keywords <b>${S.kw.length}</b></span><span>ประเมินแล้ว <b>${Object.keys(S.lvl).length}</b></span><span>รูป <b>${imgKeys.length}</b></span></div>
+      </div>
+      <div class="panel"><h3>📲 แอป &amp; อ่านแบบออฟไลน์ (PWA)</h3>${pwaHtml}
+        <hr style="border:0;border-top:1px solid var(--line);margin:14px 0">
+        <p class="muted">ดาวน์โหลดเนื้อหาและข้อสอบทุกบทเก็บไว้ในเครื่อง เพื่อให้เปิดอ่านและทำโจทย์ได้แม้ไม่มีอินเทอร์เน็ต</p>
+        <div class="choice"><button class="btn" id="pwaCache">📥 โหลดทุกบทไว้ใช้ออฟไลน์</button></div>
+        <div class="offline-prog" id="pwaProg" hidden><div class="bar"><i id="pwaBar" style="width:0%"></i></div><small class="muted" id="pwaTxt"></small></div>
+      </div>
+      <div class="panel"><h3>💾 สำรองข้อมูลเป็นไฟล์ (เผื่อไว้)</h3><p class="muted">ต้องการเก็บไฟล์ <code>.json</code> สำรองไว้ในเครื่องด้วยตนเอง กดไปที่หน้า Backup ได้ตลอด</p><div class="choice"><a class="btn" href="#/backup">เปิดหน้า Backup</a></div></div>`;
+
+    const bIn = $('#syIn'); if (bIn) bIn.onclick = () => window.NLE_SYNC.signInGoogle();
+    const bOut = $('#syOut'); if (bOut) bOut.onclick = () => window.NLE_SYNC.signOut();
+    const bNow = $('#syNow'); if (bNow) bNow.onclick = () => window.NLE_SYNC.syncNow();
+    const bInst = $('#pwaInst'); if (bInst) bInst.onclick = () => window.NLE_SYNC.installPWA();
+    const bCache = $('#pwaCache');
+    if (bCache) bCache.onclick = async () => {
+      bCache.disabled = true; bCache.textContent = 'กำลังโหลดทุกบท…';
+      const pr = $('#pwaProg'), bar = $('#pwaBar'), txt = $('#pwaTxt');
+      pr.hidden = false;
+      try {
+        const res = await window.NLE_SYNC.cacheAllOffline((d, tot) => {
+          const pct = tot ? Math.round(d * 100 / tot) : 0;
+          bar.style.width = pct + '%';
+          txt.textContent = `กำลังบันทึกไฟล์ ${d}/${tot} (${pct}%)`;
+        });
+        bar.style.width = '100%';
+        txt.textContent = `✓ บันทึกครบแล้ว ${res.chapters} บท (${res.cached} ไฟล์) พร้อมใช้งานออฟไลน์!`;
+        toast('โหลดทุกบทไว้ใช้ออฟไลน์เรียบร้อย');
+      } catch (e) {
+        txt.textContent = 'โหลดไม่สำเร็จ: ' + e.message;
+      } finally {
+        bCache.disabled = false; bCache.textContent = '📥 โหลดทุกบทไว้ใช้ออฟไลน์';
+      }
     };
   }
   // กลุ่มสีประจำบท: บทสรุป B (เขียว) / คลิปติว (ม่วง)
@@ -1751,6 +1851,7 @@
       if (parts[0] === 'numbers') return vNumbers(params);
       if (parts[0] === 'flows') return vFlows(params);
       if (parts[0] === 'drugs') return vDrugs(parts[1], params);
+      if (parts[0] === 'sync') return vSync();
       if (parts[0] === 'backup') return vBackup();
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
@@ -1808,5 +1909,46 @@
   syncTheme();
   $('#fontBtn').onclick = () => { const sizes = [15, 17, 19, 21]; const cur = S.font || 17; S.font = sizes[(sizes.indexOf(cur) + 1) % sizes.length]; document.documentElement.style.setProperty('--fs', S.font + 'px'); save(); };
   updateWrongCount();
+  function updateAuthBtn(st) {
+    const b = $('#authBtn'); if (!b) return;
+    if (st && st.user) {
+      const dotCls = st.status === 'synced' ? 'ok' : (st.status === 'syncing' || st.status === 'connecting') ? 'busy' : st.status === 'error' ? 'err' : '';
+      const lbl = st.status === 'syncing' ? 'Syncing' : st.status === 'offline' ? 'Offline' : 'Synced';
+      b.innerHTML = `${st.user.photoURL ? `<img class="auth-ava" src="${esc(st.user.photoURL)}" alt="" referrerpolicy="no-referrer">` : '👤'}<span>${lbl}</span><i class="sync-dot ${dotCls}"></i>`;
+      b.title = `${st.user.displayName} (${st.user.email}) · ${lbl}`;
+    } else {
+      b.innerHTML = `☁️<span>${st && st.configured ? 'Login' : 'Sync'}</span>`;
+      b.title = 'Google Sync & App';
+    }
+  }
+  if (window.NLE_SYNC) {
+    window.NLE_SYNC.init({
+      getS: () => S,
+      saveLocalOnly,
+      replaceS: newS => {
+        for (const k of Object.keys(S)) delete S[k];
+        Object.assign(S, newS);
+        ensureS();
+        saveLocalOnly();
+        if (S.theme) document.documentElement.dataset.theme = S.theme;
+        if (S.font) document.documentElement.style.setProperty('--fs', S.font + 'px');
+        document.documentElement.classList.toggle('no-hl', !!S.hlOff);
+        document.body.classList.toggle('focus', !!S.focus);
+        syncTheme();
+        route();
+      },
+      hasData,
+      idb: IDB,
+      toast,
+      onImagesPulled: () => {
+        // วาดรูปใหม่ถ้าหน้าปัจจุบันมีรูปที่เคยขึ้น missing
+        if (view.querySelector('.uimg.missing')) route();
+      },
+      onChange: st => {
+        updateAuthBtn(st);
+        if (INDEX && location.hash.replace(/^#\/?/, '').split('?')[0] === 'sync') vSync();
+      }
+    });
+  }
   route();
 })();
