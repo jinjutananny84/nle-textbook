@@ -623,70 +623,67 @@
     const s = CH[m[1]].sections.find(x => x.no === +m[2]);
     return s ? `${CH[m[1]].title} · กล่อง ${s.no} ${s.title}` : CH[m[1]].title;
   }
-  let _gemCfg = null;
+  let _gemModel = null;
+  const GEM_DEFAULT = ['gemini-3.5-flash-lite', 'gemini-flash-lite-latest', 'gemini-3-flash-preview', 'gemini-3.1-flash-lite-preview', 'gemini-flash-latest'];
   async function listGeminiModels(key) {
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(key)}`);
-    if (!r.ok) return ['gemini-3.8-flash', 'gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-2.5-flash-lite'];
+    const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models', { headers: { 'x-goog-api-key': key } });
+    if (!r.ok) return GEM_DEFAULT;
     const d = await r.json().catch(() => ({}));
     const all = (d.models || [])
       .filter(m => (m.supportedGenerationMethods || []).includes('generateContent'))
       .map(m => (m.name || '').replace(/^models\//, ''))
-      .filter(n => !/image|audio|tts|embed|aqa|vision|robotics|computer-use/i.test(n));
-    const flashes = all.filter(n => /^gemini-.*flash/i.test(n) && !/exp|thinking/i.test(n));
-    flashes.sort((a, b) => {
-      const la = /lite/i.test(a) ? 1 : 0, lb = /lite/i.test(b) ? 1 : 0;
-      if (la !== lb) return la - lb;
-      return b.localeCompare(a, undefined, { numeric: true });
-    });
-    const gemmas = all.filter(n => /^gemma-3/i.test(n)).sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
-    return [...new Set([...flashes, ...gemmas])].slice(0, 8);
+      .filter(n => /^gemini-.*flash/i.test(n) && !/image|audio|tts|embed|aqa|vision|robotics|computer-use|transcribe|2\.0|2\.5/i.test(n));
+    return [...new Set([...GEM_DEFAULT, ...all])].slice(0, 8);
   }
   async function askGemini(query, ctx = '') {
     const key = (S.geminiKey || '').trim();
     if (!key) throw new Error('NO_KEY');
     const sys = 'คุณคือผู้ช่วยติวสอบแพทย์ NLE Step 1 ตอบเป็นภาษาไทยกระชับ ชัดเจน เข้าใจง่าย ใช้ศัพท์แพทย์ภาษาอังกฤษตามมาตรฐาน เน้นนิยาม กลไก จุดแยกโรค และจุดที่ออกสอบบ่อย ความยาว 3–7 บรรทัด (ใช้ bullet ได้) ไม่อารัมภบท';
     const prompt = ctx ? `บริบทที่กำลังอ่าน: ${ctx}\nคำถาม/คำที่ต้องการค้นหา: ${query}` : query;
-    const call = async (model, useSearch) => {
-      const isGemma = /^gemma/i.test(model);
-      const body = {
-        contents: [{ role: 'user', parts: [{ text: isGemma ? `${sys}\n\n${prompt}` : prompt }] }],
-        generationConfig: { temperature: 0.3, maxOutputTokens: 700 }
-      };
-      if (!isGemma) body.systemInstruction = { parts: [{ text: sys }] };
-      if (useSearch && !isGemma) body.tools = [{ google_search: {} }];
-      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)
-      });
-      const d = await r.json().catch(() => ({}));
-      if (!r.ok) { const e = new Error((d.error && d.error.message) || `HTTP ${r.status}`); e.status = r.status; throw e; }
-      return d;
+    const call = async model => {
+      const ac = new AbortController();
+      const tm = setTimeout(() => ac.abort(), 14000);
+      try {
+        const body = {
+          systemInstruction: { parts: [{ text: sys }] },
+          contents: [{ role: 'user', parts: [{ text: prompt }] }],
+          generationConfig: { temperature: 0.3, maxOutputTokens: 700 }
+        };
+        const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
+          body: JSON.stringify(body),
+          signal: ac.signal
+        });
+        const d = await r.json().catch(() => ({}));
+        if (!r.ok) { const e = new Error((d.error && d.error.message) || `HTTP ${r.status}`); e.status = r.status; throw e; }
+        return d;
+      } finally { clearTimeout(tm); }
     };
 
-    const tries = _gemCfg ? [_gemCfg] : [{ model: 'gemini-3.8-flash', useSearch: true }, { model: 'gemini-3.8-flash', useSearch: false }];
+    const firstList = _gemModel ? [_gemModel, ...GEM_DEFAULT.filter(m => m !== _gemModel)] : GEM_DEFAULT;
     let d = null, lastErr = null, used = null;
-    for (const t of tries) {
-      try { d = await call(t.model, t.useSearch); used = t; break; }
+    for (const m of firstList) {
+      try { d = await call(m); used = m; break; }
       catch (e) { lastErr = e; if (e.status === 401 || /API key not valid/i.test(e.message)) throw e; }
     }
     if (!d) {
-      // ถ้าโควตา Google Search หรือรุ่นหลักเต็ม/ติด limit 0 → วนหาโมเดล Flash / Flash-Lite / Gemma ที่ใช้ฟรีได้ให้อัตโนมัติ
-      _gemCfg = null;
-      const models = await listGeminiModels(key);
-      for (const m of models) {
-        if (m === 'gemini-3.8-flash' && !tries.some(x => x.model !== m)) continue;
-        try { d = await call(m, false); used = { model: m, useSearch: false }; break; }
+      _gemModel = null;
+      const more = (await listGeminiModels(key)).filter(m => !firstList.includes(m));
+      for (const m of more) {
+        try { d = await call(m); used = m; break; }
         catch (e) { lastErr = e; if (e.status === 401 || /API key not valid/i.test(e.message)) throw e; }
       }
     }
     if (!d) throw lastErr || new Error('เชื่อมต่อ Gemini ไม่สำเร็จ');
-    _gemCfg = used;
+    _gemModel = used;
     const cand = (d.candidates || [])[0] || {};
     const text = ((cand.content && cand.content.parts) || []).map(p => p.text || '').join('').trim();
     if (!text) throw new Error('Gemini ไม่ได้ส่งข้อความกลับมา');
     const chunks = ((cand.groundingMetadata && cand.groundingMetadata.groundingChunks) || []).map(c => c.web).filter(w => w && w.uri);
     const seen = new Set(), sources = [];
     for (const w of chunks) { if (!seen.has(w.uri)) { seen.add(w.uri); sources.push({ title: w.title || new URL(w.uri).hostname, uri: w.uri }); } }
-    return { text, sources: sources.slice(0, 4), model: used.model, grounded: used.useSearch };
+    return { text, sources: sources.slice(0, 4), model: used, grounded: false };
   }
   function aiFormat(md) {
     const lines = esc(md).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<code>$1</code>').split('\n');
@@ -1061,7 +1058,7 @@
       <div class="panel"><h3>✨ Gemini AI Search (ตอบในแอป ไม่ต้องสลับหน้า)</h3>
         ${gKey ? `<div class="sync-badge ok">✓ พร้อมใช้งานแล้ว (${esc(gMask)}) · ซิงค์เข้าบัญชี Google ให้อัตโนมัติ</div>` : '<div class="sync-badge">ยังไม่ได้ใส่ Gemini API Key</div>'}
         <p class="muted">ลากคลุมคำแล้วกด <b>🔍</b> หรือค้นหาจากแถบด้านบน → Gemini จะค้นข้อมูล Google แล้วสรุปคำตอบให้ทันทีในหน้าเดิม (ใช้คีย์ฟรีจาก <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio ↗</a> ไม่ต้องผูกบัตร)</p>
-        <div class="ai-key-row"><input type="password" id="gKeyIn" placeholder="วาง Gemini API Key (AIzaSy…)" value="${esc(gKey)}" autocomplete="off"><button class="btn small" id="gKeyEye" title="แสดง/ซ่อน">👁</button></div>
+        <div class="ai-key-row"><input type="password" id="gKeyIn" placeholder="วาง Gemini API Key (AQ.… หรือ AIzaSy…)" value="${esc(gKey)}" autocomplete="off"><button class="btn small" id="gKeyEye" title="แสดง/ซ่อน">👁</button></div>
         <div class="choice" style="margin-top:8px"><button class="btn primary" id="gKeySave">บันทึก Key</button>${gKey ? '<button class="btn" id="gKeyTest">ทดสอบ</button><button class="btn" id="gKeyDel">ลบ Key</button>' : ''}</div>
         <div id="gKeyMsg" class="muted" style="margin-top:6px;font-size:13.5px"></div>
       </div>
@@ -1079,16 +1076,16 @@
     const gIn = $('#gKeyIn'), gEye = $('#gKeyEye'), gSave = $('#gKeySave'), gTest = $('#gKeyTest'), gDel = $('#gKeyDel'), gMsg = $('#gKeyMsg');
     if (gEye && gIn) gEye.onclick = () => { gIn.type = gIn.type === 'password' ? 'text' : 'password'; };
     if (gSave && gIn) gSave.onclick = () => {
-      _gemCfg = null;
+      _gemModel = null;
       const v = gIn.value.trim();
       if (!v) { delete S.geminiKey; save(); toast('ลบ Gemini Key แล้ว'); return vSync(); }
       S.geminiKey = v; save(); toast('บันทึก Gemini Key แล้ว (ซิงค์ข้ามเครื่องอัตโนมัติ)'); vSync();
     };
-    if (gDel) gDel.onclick = () => { _gemCfg = null; delete S.geminiKey; save(); toast('ลบ Gemini Key แล้ว'); vSync(); };
+    if (gDel) gDel.onclick = () => { _gemModel = null; delete S.geminiKey; save(); toast('ลบ Gemini Key แล้ว'); vSync(); };
     if (gTest) gTest.onclick = async () => {
-      _gemCfg = null;
+      _gemModel = null;
       gTest.disabled = true; gMsg.textContent = '✨ กำลังทดสอบเชื่อมต่อ Gemini…';
-      try { const r = await askGemini('DKA triad คืออะไร สรุป 1 บรรทัด'); gMsg.innerHTML = `<span style="color:var(--ok)">✓ เชื่อมต่อสำเร็จ (${esc(r.model)}${r.grounded ? ' + Google Search' : ''})!</span> ตัวอย่างคำตอบ: ${esc(r.text.slice(0, 140))}`; }
+      try { const r = await askGemini('DKA triad คืออะไร สรุป 1 บรรทัด'); gMsg.innerHTML = `<span style="color:var(--ok)">✓ เชื่อมต่อสำเร็จ (${esc(r.model)})!</span> ตัวอย่างคำตอบ: ${esc(r.text.slice(0, 140))}`; }
       catch (e) { gMsg.innerHTML = `<span style="color:var(--bad)">✗ ไม่สำเร็จ: ${esc(e.message)}</span>`; }
       finally { gTest.disabled = false; }
     };
