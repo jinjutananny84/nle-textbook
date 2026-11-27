@@ -266,28 +266,66 @@
   const ivText = id => { const r = S.srs[id]; return r ? `ทวนแล้ว ${r.n} ครั้ง · รอบถัดไปอีก ${r.iv} วัน` : 'ยังไม่เคยทวน'; };
   function closeNav() { document.body.classList.remove('nav-open'); }
 
+  /* ---------- ปุ่มเลือกทั้งหมด / ไม่เลือกเลย (ใช้ร่วมกันทุกหน้าคัดกรอง) ---------- */
+  const selActs = (id, allLbl = 'เลือกทั้งหมด', noneLbl = 'ไม่เลือกเลย') =>
+    `<span class="sel-acts" data-sel-for="${id}"><button type="button" class="btn small" data-sel="all">${allLbl}</button><button type="button" class="btn small" data-sel="none">${noneLbl}</button></span>`;
+  function bindSelActs(root, onAfter) {
+    root.querySelectorAll('.sel-acts[data-sel-for]').forEach(bar => {
+      const target = root.querySelector('#' + bar.dataset.selFor);
+      if (!target) return;
+      bar.querySelectorAll('button[data-sel]').forEach(btn => {
+        btn.onclick = () => {
+          const val = btn.dataset.sel === 'all';
+          target.querySelectorAll('input[type="checkbox"]').forEach(cb => { cb.checked = val; });
+          if (onAfter) onAfter(bar.dataset.selFor, val);
+        };
+      });
+    });
+  }
+
   /* ---------- sidebar ---------- */
   function renderSidebar(curCh, curNo) {
-    let h = '', grp = '';
-    for (const c of INDEX) {
+    const ready = INDEX.filter(c => c.ready);
+    const curMeta = curCh ? ready.find(c => c.id === curCh && CH[c.id]) : null;
+    const chItem = (c, expanded) => {
       const ch = CH[c.id];
-      if (!c.ready) continue;
-      if ((c.group || '') !== grp) { grp = c.group || ''; if (grp) h += `<div class="side-grp">${esc(grp)}</div>`; }
       const p = ch ? chProgress(ch) : null;
-      h += `<div class="side-ch ${grpCls(c)}"><a href="#/${c.id}">${esc(c.title)}</a>`;
-      if (p) h += `<div class="side-bar">${lvBar(p)}</div>`;
-      if (ch && c.id === curCh) {
+      let out = `<div class="side-ch ${grpCls(c)}${expanded ? ' side-cur' : ''}"><a href="#/${c.id}">${esc(c.title)}</a>`;
+      if (p) out += `<div class="side-bar">${lvBar(p)}</div>`;
+      if (expanded && ch) {
         for (const pg of ch.pages) {
-          h += `<div class="side-pg">หน้า ${pg.no} · ${esc(pg.title)}</div>`;
+          out += `<div class="side-pg">หน้า ${pg.no} · ${esc(pg.title)}</div>`;
           for (const s of ch.sections.filter(x => x.page === pg.no)) {
             const l = lvOf(ch.id, s.no);
-            h += `<a class="side-sec${s.no === curNo ? ' on' : ''}${l ? ' lv' + l : ''}" href="#/${ch.id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${boxScore(ch.id, s)}${l ? `<span class="ck">${LV[l].s}</span>` : ''}</a>`;
+            out += `<a class="side-sec${s.no === curNo ? ' on' : ''}${l ? ' lv' + l : ''}" href="#/${ch.id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${boxScore(ch.id, s)}${l ? `<span class="ck">${LV[l].s}</span>` : ''}</a>`;
           }
         }
       }
-      h += '</div>';
+      return out + '</div>';
+    };
+    const linksHtml = `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/flows${curCh ? '?ch=' + curCh : ''}">🩺 Diagnosis flowchart</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/db?view=table&ch=${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/sync">☁️ Sync & App</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
+    let h = '';
+    if (curMeta) {
+      // ตอนอ่านบทใดบทหนึ่ง: โชว์เฉพาะหัวข้อย่อยของบทที่เลือก ส่วนบทอื่นย่อไว้เป็นแถบ กดถึงจะเปิดดู
+      h += chItem(curMeta, true);
+      const others = ready.filter(c => c.id !== curMeta.id);
+      if (others.length) {
+        let oh = '', grp = '';
+        for (const c of others) {
+          if ((c.group || '') !== grp) { grp = c.group || ''; if (grp) oh += `<div class="side-grp">${esc(grp)}</div>`; }
+          oh += chItem(c, false);
+        }
+        h += `<details class="side-others"><summary><span class="so-l">📚 บทอื่น ๆ</span><small>${others.length} บท</small></summary><div class="side-others-body">${oh}</div></details>`;
+      }
+      h += `<details class="side-others"><summary><span class="so-l">🧰 เมนู &amp; เครื่องมือ</span></summary><div class="side-others-body">${linksHtml}</div></details>`;
+    } else {
+      let grp = '';
+      for (const c of ready) {
+        if ((c.group || '') !== grp) { grp = c.group || ''; if (grp) h += `<div class="side-grp">${esc(grp)}</div>`; }
+        h += chItem(c, false);
+      }
+      h += linksHtml;
     }
-    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/flows${curCh ? '?ch=' + curCh : ''}">🩺 Diagnosis flowchart</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/db?view=table&ch=${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/sync">☁️ Sync & App</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -1286,7 +1324,7 @@
 
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v59</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v60</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🔐 Google Cloud Sync</h3>${cloudHtml}
         <div class="today-chips" style="margin-top:12px"><span>ไฮไลต์/โน้ต <b>${nHl}</b></span><span>Keywords <b>${S.kw.length}</b></span><span>ประเมินแล้ว <b>${Object.keys(S.lvl).length}</b></span><span>รูป <b>${imgKeys.length}</b></span></div>
       </div>
@@ -1411,7 +1449,8 @@
     const form = `<details class="plan-set"${pi ? '' : ' open'}><summary>${pi ? '⚙️ ตั้งค่าแผน' : '🗓️ ตั้งวันสอบเพื่อให้เว็บแบ่งกล่องอ่านต่อวัน'}</summary>
       <div class="plan-form"><label>วันสอบ <input type="date" id="plDate" value="${S.plan && S.plan.date || ''}"></label>
       <label>เผื่อวันทวนก่อนสอบ <input type="number" id="plBuf" min="0" max="60" value="${S.plan && S.plan.buf != null ? S.plan.buf : 7}"> วัน</label>
-      <div class="plan-chs">${chList.map(c => `<label class="${grpCls(c)}"><input type="checkbox" value="${c.id}"${sel.has(c.id) ? ' checked' : ''}>${esc(c.title.split(' · ')[0])}</label>`).join('')}</div>
+      <div class="sel-bar"><small class="bar-label">บทที่รวมในแผน</small>${selActs('plChs')}</div>
+      <div class="plan-chs" id="plChs">${chList.map(c => `<label class="${grpCls(c)}"><input type="checkbox" value="${c.id}"${sel.has(c.id) ? ' checked' : ''}>${esc(c.title.split(' · ')[0])}</label>`).join('')}</div>
       <div class="plan-btns"><button class="btn small primary" id="plSave">บันทึกแผน</button>${pi ? '<button class="btn small" id="plClear">ลบแผน</button>' : ''}</div></div></details>`;
     if (!pi) return `<div class="plan empty-plan">${form}</div>`;
     if (pi.left < 0) return `<div class="plan">${form.replace('<details class="plan-set"', '<details class="plan-set" open')}<p class="bar-label">วันสอบที่ตั้งไว้ผ่านไปแล้ว ตั้งวันใหม่ได้เลย</p></div>`;
@@ -1425,6 +1464,7 @@
       <small class="bar-label">อ่านแล้วทั้งหมด ${readAll}/${pi.total} กล่อง · เหลือ ${pi.remaining} กล่อง ใน ${pi.studyDays} วันอ่าน${pi.buf ? ` + ${pi.buf} วันทวน` : ''}</small></div></div>${list}${form}</div>`;
   }
   function bindPlan() {
+    bindSelActs(view);
     const sv = $('#plSave'); if (!sv) return;
     sv.onclick = () => {
       const date = $('#plDate').value; if (!date) { toast('เลือกวันสอบก่อนนะ'); return; }
@@ -1587,7 +1627,7 @@
     const ready = INDEX.filter(c => c.ready);
     const pre = params.get('ch');
     view.innerHTML = `<div class="hero"><h1>📝 Quiz</h1><p>เลือกบทแล้วสุ่มข้อ ข้อที่ผิดจะเก็บเข้ากองข้อผิด</p></div>
-    <div class="panel"><h3>บท</h3><div class="choice" id="qCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
+    <div class="panel"><div class="sel-bar"><h3>บท</h3>${selActs('qCh')}</div><div class="choice" id="qCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
     <h3>ขอบเขต</h3><div class="choice" id="qScope"><label><input type="radio" name="sc" value="all" checked>ทุกหัวข้อ</label><label><input type="radio" name="sc" value="weak">เฉพาะหัวข้อที่ยังไม่แม่น (★–★★)</label><label><input type="radio" name="sc" value="mem">เฉพาะสีชมพู (ใช้ความจำเยอะ)</label><label><input type="radio" name="sc" value="done">เฉพาะหัวข้อที่ประเมินแล้ว</label><label><input type="radio" name="sc" value="hot">เฉพาะหัวข้อออกบ่อย (★★★)</label><label><input type="radio" name="sc" value="new">ข้อที่ยังไม่เคยทำ</label></div>
     <h3>จำนวนข้อ</h3><div class="choice" id="qN">${[10, 20, 40].map((n, i) => `<label><input type="radio" name="qn" value="${n}" ${i === 0 ? 'checked' : ''}>${n} ข้อ</label>`).join('')}<label><input type="radio" name="qn" value="999">ทั้งหมด</label></div>
     <button class="btn primary" id="qGo">Start</button> <span class="bar-label" id="qInfo"></span></div>`;
@@ -1606,7 +1646,8 @@
       return { items: shuffle(pool(chs, f)).slice(0, n) };
     };
     const info = () => { const r = go(); $('#qInfo').textContent = `จะได้ ${r.items.length} ข้อ`; };
-    view.querySelectorAll('input').forEach(x => x.addEventListener('change', info)); info();
+    view.querySelectorAll('input').forEach(x => x.addEventListener('change', info));
+    bindSelActs(view, info); info();
     $('#qGo').onclick = () => { const r = go(); if (!r.items.length) { $('#qInfo').textContent = 'ไม่มีข้อในขอบเขตนี้'; return; } runQuiz(r.items, 'ผลการทำข้อสอบ'); };
   }
   function runQuiz(items, title) {
@@ -1640,7 +1681,7 @@
     const pre = params.get('ch');
     const ready = INDEX.filter(c => c.ready);
     view.innerHTML = `<div class="hero"><h1>🃏 Flashcards</h1><p>ทำจาก keyword ท้ายกล่อง แตะการ์ดเพื่อพลิก</p></div>
-      <div class="panel"><div class="choice" id="fCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
+      <div class="panel"><div class="sel-bar"><h3>บท</h3>${selActs('fCh')}</div><div class="choice" id="fCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
       <div class="choice" id="fSc"><label><input type="radio" name="fs" value="todo" checked>เฉพาะที่ยังจำไม่ได้</label><label><input type="radio" name="fs" value="all">ทั้งหมด</label></div>
       <button class="btn primary" id="fGo">Start</button> <span class="bar-label" id="fInfo"></span></div><div id="fArea"></div>`;
     const build = () => {
@@ -1651,7 +1692,8 @@
       return cards;
     };
     const info = () => { $('#fInfo').textContent = `${build().length} ใบ`; };
-    view.querySelectorAll('input').forEach(x => x.addEventListener('change', info)); info();
+    view.querySelectorAll('input').forEach(x => x.addEventListener('change', info));
+    bindSelActs(view, info); info();
     $('#fGo').onclick = () => {
       const cards = shuffle(build()); let i = 0, flipped = false;
       const area = $('#fArea');
@@ -1912,10 +1954,11 @@
         <label class="dp"><input type="radio" name="dsc" value="db" checked><b>ยา & เชื้อ</b><small>${db.length} ตาราง</small></label>
         <label class="dp"><input type="radio" name="dsc" value="all"><b>ทุกตาราง</b><small>${all.length} ตาราง</small></label>
         <label class="dp"><input type="radio" name="dsc" value="weak" ${Object.keys(weak).length ? '' : 'disabled'}><b>ข้อที่เคยพลาด</b><small>${Object.keys(weak).length} ข้อ</small></label>
-      </div><div class="drill-tables">${all.map((t, i) => `<label><input type="checkbox" value="${i}" ${DRUGBUG.test(t.head.join(' ')) ? 'checked' : ''}> <b>${t.box}</b> ${esc(t.head.join(' · '))}</label>`).join('')}</div>
+      </div><div class="sel-bar"><small class="bar-label">เลือกทีละตาราง</small>${selActs('dTables')}</div><div class="drill-tables" id="dTables">${all.map((t, i) => `<label><input type="checkbox" value="${i}" ${DRUGBUG.test(t.head.join(' ')) ? 'checked' : ''}> <b>${t.box}</b> ${esc(t.head.join(' · '))}</label>`).join('')}</div>
       <div class="choice"><label><input type="radio" name="dn" value="10" checked>10 ข้อ</label><label><input type="radio" name="dn" value="20">20 ข้อ</label><label><input type="radio" name="dn" value="40">40 ข้อ</label></div>
       <button class="btn primary" id="dGo">Start drill</button></div>`;
     view.innerHTML = h;
+    bindSelActs(view);
     const boxes = [...view.querySelectorAll('.drill-tables input')];
     view.querySelectorAll('[name=dsc]').forEach(r => r.onchange = () => { boxes.forEach((b, i) => b.checked = r.value === 'all' ? true : r.value === 'db' ? DRUGBUG.test(all[+b.value].head.join(' ')) : false); });
     $('#dGo').onclick = () => {
@@ -1978,7 +2021,7 @@
         <input id="dbq" type="search" placeholder="ค้นชื่อ กลไก อาการ…" value="${esc(params.get('q') || '')}">
         <label class="db-cv"><input type="checkbox" id="dbCover" ${f.cover ? 'checked' : ''}> Cover mode</label>
         <a class="btn small" href="#/drill">🧠 Drill</a></div>
-      ${chs.length > 1 ? `<div class="db-chs">${chs.map(c => `<label><input type="checkbox" value="${c}" checked> ${c.toUpperCase()}</label>`).join('')}</div>` : ''}
+      ${chs.length > 1 ? `<div class="db-chs-wrap"><div class="sel-bar"><small class="bar-label">กรองตามบท</small>${selActs('dbChs')}</div><div class="db-chs" id="dbChs">${chs.map(c => `<label><input type="checkbox" value="${c}" checked> ${c.toUpperCase()}</label>`).join('')}</div></div>` : ''}
       <details class="db-cats" id="dbCats"${f.cat.length ? ' open' : ''}><summary>🗂️ กรองตามหมวด <small id="dbCatN"></small></summary><div id="dbCatBody"></div></details>
       <div class="db-az" id="dbAz"></div><div class="db-grid" id="dbGrid"></div>`;
     const grid = $('#dbGrid'), az = $('#dbAz'), catBody = $('#dbCatBody');
@@ -1986,12 +2029,13 @@
     const ck = (kind, s) => kind + '|' + s;
     const drawCats = () => {
       const okCh = chOn(), kinds = f.k === 'all' ? ['drug', 'bug'] : [f.k], cat = new Set(f.cat);
-      catBody.innerHTML = kinds.map(kind => `<div class="cat-kind"><div class="cat-kh">${kind === 'drug' ? '💊 Drugs' : '🦠 Bugs'}</div>${tree[kind].map(({ g, subs }) => {
+      catBody.innerHTML = `<div class="cat-top-acts"><button type="button" class="btn small" id="dbCatAll">เลือกทุกหมวด</button><button type="button" class="btn small" id="dbCatClr">ไม่เลือกเลย (แสดงทั้งหมด)</button></div>`
+        + kinds.map(kind => `<div class="cat-kind"><div class="cat-kh">${kind === 'drug' ? '💊 Drugs' : '🦠 Bugs'}</div>${tree[kind].map(({ g, subs }) => {
         const cnt = s => all.filter(e => e.kind === kind && e.sub === s && okCh(e)).length;
         const vis = subs.filter(s => cnt(s)); if (!vis.length) return '';
         const n = vis.filter(s => cat.has(ck(kind, s))).length;
         return `<div class="cat-g"><label class="cat-gl"><input type="checkbox" data-g="${esc(kind + '|' + g)}" ${n === vis.length ? 'checked' : ''} ${n && n < vis.length ? 'data-ind="1"' : ''}><b>${esc(g)}</b></label><div class="cat-subs">${vis.map(s => `<label><input type="checkbox" data-s="${esc(ck(kind, s))}" ${cat.has(ck(kind, s)) ? 'checked' : ''}> ${esc(s)} <small>${cnt(s)}</small></label>`).join('')}</div></div>`;
-      }).join('')}</div>`).join('') + `<button class="btn small" id="dbCatClr">ล้างหมวด (แสดงทั้งหมด)</button>`;
+      }).join('')}</div>`).join('');
       catBody.querySelectorAll('[data-ind]').forEach(x => x.indeterminate = true);
       $('#dbCatN').textContent = f.cat.length ? `· เลือก ${f.cat.length} หมวด` : '· ยังไม่เลือก = แสดงทุกหมวด';
     };
@@ -2001,9 +2045,13 @@
       else if (x.dataset.g) { x.closest('.cat-g').querySelectorAll('[data-s]').forEach(s => x.checked ? set.add(s.dataset.s) : set.delete(s.dataset.s)); }
       f.cat = [...set]; save(); drawCats(); draw();
     });
-    catBody.addEventListener('click', e => { if (e.target.id === 'dbCatClr') { f.cat = []; save(); drawCats(); draw(); } });
+    catBody.addEventListener('click', e => {
+      if (e.target.id === 'dbCatClr') { f.cat = []; save(); drawCats(); draw(); }
+      else if (e.target.id === 'dbCatAll') { f.cat = [...catBody.querySelectorAll('[data-s]')].map(s => s.dataset.s); save(); drawCats(); draw(); }
+    });
     const draw = () => {
       const q = $('#dbq').value.trim().toLowerCase(), okCh = chOn(), cat = new Set(f.cat);
+      const anyCh = !view.querySelector('.db-chs') || view.querySelectorAll('.db-chs input:checked').length > 0;
       const list = all.filter(e => (f.k === 'all' || e.kind === f.k) && okCh(e)
         && (!cat.size || cat.has(ck(e.kind, e.sub)))
         && (!q || (e.name + ' ' + e.facts.map(x => x.v.replace(/<[^>]+>/g, '')).join(' ')).toLowerCase().includes(q)));
@@ -2014,7 +2062,7 @@
         return `<div class="db-card ${e.kind}"${anc}><div class="db-h"><span class="db-k">${e.kind === 'drug' ? 'Drug' : 'Bug'}</span><b>${esc(e.name)}</b><span class="db-cat">${esc(e.g)} › ${esc(e.sub)}</span></div>
           ${e.facts.map(x => `<div class="db-f"><span>${esc(x.k)}</span><div class="db-v">${x.v}</div></div>`).join('')}
           <div class="db-src">${e.src.map(x => `<a href="#/${x.h}">${x.ch.toUpperCase()} · กล่อง ${x.no} ↗</a>`).join('')}${e.ex.length ? `<span class="db-ex">ออกสอบ ${e.ex.length} ข้อ</span>` : ''}</div></div>`;
-      }).join('') || '<p class="empty">ไม่เจอชื่อที่ค้น</p>';
+      }).join('') || `<p class="empty">${anyCh ? 'ไม่เจอชื่อที่ค้น' : 'ยังไม่ได้เลือกบท — ติ๊กเลือกบทที่ต้องการด้านบน'}</p>`;
       az.innerHTML = letters.map(L => `<a href="#" data-l="${L}">${L}</a>`).join('');
       grid.classList.toggle('covering', !!f.cover);
     };
@@ -2022,6 +2070,7 @@
     $('#dbq').oninput = draw;
     $('#dbCover').onchange = e => { f.cover = e.target.checked ? 1 : 0; save(); grid.querySelectorAll('.db-v.shown').forEach(x => x.classList.remove('shown')); draw(); };
     view.querySelectorAll('.db-chs input').forEach(x => x.onchange = () => { drawCats(); draw(); });
+    bindSelActs(view, () => { drawCats(); draw(); });
     az.onclick = e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); const t = document.getElementById('db-' + a.dataset.l); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 70, behavior: 'smooth' }); };
     grid.addEventListener('click', e => { if (!f.cover) return; const v = e.target.closest('.db-v'); if (v && !e.target.closest('a')) v.classList.toggle('shown'); });
     drawCats(); draw();
@@ -2152,32 +2201,40 @@
     const sel = params.get('ch') && chs.some(c => c.id === params.get('ch')) ? params.get('ch') : '';
     const total = chs.reduce((a, c) => a + c.flows.length, 0);
     view.innerHTML = `<div class="hero"><h1>🩺 Diagnosis flowchart</h1><p>ขั้นตอนวินิจฉัยของทุกบทเป็นภาพ ${total} แผนภาพ · เปิด Cover แล้วแตะกล่องผลเพื่อท่องทีละขั้น · กดเลขกล่องเพื่อกลับไปอ่านเนื้อหา</p></div>
-      <div class="db-bar"><select id="flCh"><option value="">ทุกบท</option>${chs.map(c => `<option value="${c.id}" ${c.id === sel ? 'selected' : ''}>${esc(c.title)} (${c.flows.length})</option>`).join('')}</select>
-        <input id="flq" type="search" placeholder="ค้น เช่น cortisol, Cushing, Ca…">
+      <div class="db-bar"><input id="flq" type="search" placeholder="ค้น เช่น cortisol, Cushing, Ca…">
         <label class="db-cv"><input type="checkbox" id="flCover" ${f.cover ? 'checked' : ''}> Cover ผลวินิจฉัย</label></div>
+      ${chs.length > 1 ? `<div class="db-chs-wrap"><div class="sel-bar"><small class="bar-label">กรองตามบท</small>${selActs('flChs')}</div><div class="db-chs" id="flChs">${chs.map(c => `<label><input type="checkbox" value="${c.id}" ${!sel || sel === c.id ? 'checked' : ''}> ${esc(c.id.toUpperCase())} <small>(${c.flows.length})</small></label>`).join('')}</div></div>` : ''}
       <div class="dt-gs" id="flGs"></div><div id="flBody"></div>`;
     const body = $('#flBody'), gs = $('#flGs');
     const draw = () => {
-      const q = $('#flq').value.trim().toLowerCase(), c = $('#flCh').value;
+      const q = $('#flq').value.trim().toLowerCase();
+      const on = new Set([...view.querySelectorAll('#flChs input:checked')].map(x => x.value));
+      const anyCh = !view.querySelector('#flChs') || on.size > 0;
+      const single = on.size === 1;
       const txt = n => [n.t, n.s, n.e, ...(n.c || []).map(txt), n.then ? txt(n.then) : ''].filter(Boolean).join(' ');
       let html = '';
       for (const ch of chs) {
-        if (c && ch.id !== c) continue;
+        if (view.querySelector('#flChs') && !on.has(ch.id)) continue;
         const fs = ch.flows.filter(x => !q || (x.title + ' ' + (x.cat || '') + ' ' + txt(x.root)).toLowerCase().includes(q)); if (!fs.length) continue;
         html += `<h2 class="fl-ch">${esc(ch.title)}</h2>`;
         let cat = null;
         for (const x of fs) {
-          if (x.cat && x.cat !== cat) { cat = x.cat; html += `<h3 class="fl-cat" id="flc-${esc(ch.id)}-${esc(cat).replace(/[^\w\u0E00-\u0E7F]+/g, '')}" data-n="${esc(c ? cat : ch.id.toUpperCase() + ' · ' + cat)}">${esc(cat)}</h3>`; }
+          if (x.cat && x.cat !== cat) { cat = x.cat; html += `<h3 class="fl-cat" id="flc-${esc(ch.id)}-${esc(cat).replace(/[^\w\u0E00-\u0E7F]+/g, '')}" data-n="${esc(single ? cat : ch.id.toUpperCase() + ' · ' + cat)}">${esc(cat)}</h3>`; }
           html += flowHTML(x, '', `<a class="fl-box" href="#/${ch.id}/${x.box}" title="ไปที่กล่อง ${x.box}">${ch.id.toUpperCase()}·${x.box}</a>`);
         }
       }
-      body.innerHTML = html || '<p class="empty">ไม่เจอที่ค้น</p>';
+      body.innerHTML = html || `<p class="empty">${anyCh ? 'ไม่เจอที่ค้น' : 'ยังไม่ได้เลือกบท — ติ๊กเลือกบทที่ต้องการด้านบน'}</p>`;
       body.classList.toggle('fl-covering', !!f.cover);
       flowHints(body);
       gs.innerHTML = [...body.querySelectorAll('.fl-cat')].map(x => `<a href="#" data-g="${x.id}">${esc(x.dataset.n)}</a>`).join('');
     };
+    const syncFlUrl = () => {
+      const on = [...view.querySelectorAll('#flChs input:checked')].map(x => x.value);
+      history.replaceState(null, '', on.length === 1 ? `#/flows?ch=${on[0]}` : '#/flows');
+    };
     $('#flq').oninput = draw;
-    $('#flCh').onchange = e => { history.replaceState(null, '', e.target.value ? `#/flows?ch=${e.target.value}` : '#/flows'); draw(); };
+    view.querySelectorAll('#flChs input').forEach(x => x.onchange = () => { syncFlUrl(); draw(); });
+    bindSelActs(view, () => { syncFlUrl(); draw(); });
     $('#flCover').onchange = e => { f.cover = e.target.checked ? 1 : 0; save(); draw(); };
     gs.onclick = e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); const t = document.getElementById(a.dataset.g); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 110, behavior: 'smooth' }); };
     body.addEventListener('click', e => { const n = e.target.closest('.fl-covering .fn.k-dx, .fl-covering .fn.k-out'); if (n) n.classList.toggle('shown'); });
@@ -2188,23 +2245,29 @@
     await loadAll(); renderSidebar();
     const all = loadedCH().flatMap(ch => (ch.numbers || []).map(x => Object.assign({ ch: ch.id }, x)));
     const f = S.nuf || (S.nuf = { k: 'all', cover: 0 });
+    const chs = [...new Set(all.map(x => x.ch))];
     const n = k => all.filter(x => k === 'all' || x.t === k).length;
     view.innerHTML = `<div class="hero"><h1>🔢 Numbers</h1><p>ตัวเลข cutpoint ค่าปกติ และสูตรคำนวณของทุกบทในหน้าเดียว · เปิด Cover mode แล้วแตะทีละช่องเพื่อท่อง · เพิ่มบทใหม่แล้วหน้านี้อัปเดตเอง</p></div>
       <div class="db-bar"><div class="seg">${[['all', 'All'], ['cut', 'Cutpoints'], ['f', 'Formulas']].map(([k, l]) => `<button class="${f.k === k ? 'on' : ''}" data-k="${k}">${l} <small>${n(k)}</small></button>`).join('')}</div>
         <input id="nuq" type="search" placeholder="ค้น เช่น PaO2, Light, FEV1…">
         <label class="db-cv"><input type="checkbox" id="nuCover" ${f.cover ? 'checked' : ''}> Cover mode</label></div>
+      ${chs.length > 1 ? `<div class="db-chs-wrap"><div class="sel-bar"><small class="bar-label">กรองตามบท</small>${selActs('nuChs')}</div><div class="db-chs" id="nuChs">${chs.map(c => `<label><input type="checkbox" value="${c}" checked> ${c.toUpperCase()}</label>`).join('')}</div></div>` : ''}
       <div class="nu-grid" id="nuGrid"></div>`;
     const grid = $('#nuGrid');
     const draw = () => {
       const q = $('#nuq').value.trim().toLowerCase();
-      const list = all.filter(x => (f.k === 'all' || x.t === f.k) && (!q || (x.cat + ' ' + x.name + ' ' + x.v + ' ' + (x.note || '')).toLowerCase().includes(q)));
+      const on = new Set([...view.querySelectorAll('#nuChs input:checked')].map(x => x.value));
+      const anyCh = !view.querySelector('#nuChs') || on.size > 0;
+      const list = all.filter(x => (f.k === 'all' || x.t === f.k) && (!view.querySelector('#nuChs') || on.has(x.ch)) && (!q || (x.cat + ' ' + x.name + ' ' + x.v + ' ' + (x.note || '')).toLowerCase().includes(q)));
       const groups = {}; list.forEach(x => (groups[(x.t === 'f' ? 'สูตร · ' : '') + x.cat] = groups[(x.t === 'f' ? 'สูตร · ' : '') + x.cat] || []).push(x));
-      grid.innerHTML = Object.entries(groups).map(([g, xs]) => `<section class="nu-card ${xs[0].t === 'f' ? 'f' : ''}"><h3>${esc(g)}</h3>${xs.map(x => `<div class="nu-row"><div class="nu-n">${esc(x.name)} <a href="#/${x.ch}/${x.box}" title="ไปที่กล่อง ${x.box}">${x.ch.toUpperCase()}·${x.box}</a></div><div class="nu-v${x.t === 'f' ? ' flow' : ''}">${inline(esc(x.v))}</div>${x.note ? `<div class="nu-note">${inline(esc(x.note))}</div>` : ''}</div>`).join('')}</section>`).join('') || '<p class="empty">ไม่เจอที่ค้น</p>';
+      grid.innerHTML = Object.entries(groups).map(([g, xs]) => `<section class="nu-card ${xs[0].t === 'f' ? 'f' : ''}"><h3>${esc(g)}</h3>${xs.map(x => `<div class="nu-row"><div class="nu-n">${esc(x.name)} <a href="#/${x.ch}/${x.box}" title="ไปที่กล่อง ${x.box}">${x.ch.toUpperCase()}·${x.box}</a></div><div class="nu-v${x.t === 'f' ? ' flow' : ''}">${inline(esc(x.v))}</div>${x.note ? `<div class="nu-note">${inline(esc(x.note))}</div>` : ''}</div>`).join('')}</section>`).join('') || `<p class="empty">${anyCh ? 'ไม่เจอที่ค้น' : 'ยังไม่ได้เลือกบท — ติ๊กเลือกบทที่ต้องการด้านบน'}</p>`;
       grid.classList.toggle('covering', !!f.cover);
     };
     view.querySelectorAll('.seg button').forEach(b => b.onclick = () => { f.k = b.dataset.k; save(); view.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b)); draw(); });
     $('#nuq').oninput = draw;
     $('#nuCover').onchange = e => { f.cover = e.target.checked ? 1 : 0; save(); draw(); };
+    view.querySelectorAll('#nuChs input').forEach(x => x.onchange = draw);
+    bindSelActs(view, draw);
     grid.addEventListener('click', e => { if (!f.cover) return; const v = e.target.closest('.nu-v'); if (v) v.classList.toggle('shown'); });
     draw();
   }
