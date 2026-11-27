@@ -263,7 +263,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/drugs/${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -876,7 +876,7 @@
     const p = chProgress(ch);
     let h = `<div class="crumb"><a href="#/">หน้าแรก</a></div><div class="hero"><h1>${esc(ch.title)}</h1><p>${esc(ch.source || '')}</p></div>
       ${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ</div>${lvLegend(p)}
-      <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 Quiz this chapter</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcards</a><a class="btn" href="#/map/${id}">🗺️ Chapter map</a></div>`;
+      <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 Quiz this chapter</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcards</a><a class="btn" href="#/map/${id}">🗺️ Chapter map</a><a class="btn" href="#/drugs/${id}">💊 Drug table</a></div>`;
     for (const pg of ch.pages) {
       h += `<h2 style="margin-top:22px">หน้า ${pg.no} · ${esc(pg.title)}</h2><ul class="sec-list">`;
       for (const s of ch.sections.filter(x => x.page === pg.no)) {
@@ -1391,6 +1391,95 @@
     grid.addEventListener('click', e => { if (!f.cover) return; const v = e.target.closest('.db-v'); if (v && !e.target.closest('a')) v.classList.toggle('shown'); });
     drawCats(); draw();
   }
+  /* ---------- Drug table: ตารางรวมยาต่อบท (#/drugs/<id>) ----------
+     ถ้ามี data/<id>-drugs.json (ไฟล์คัดเอง) ใช้ไฟล์นั้น · ไม่มีก็ดึงจากตารางยาในบทเอง แล้วจัดคอลัมน์ให้เป็นแบบเดียวกัน */
+  const DCOL = [['moa', 'กลไก / กลุ่ม'], ['use', 'ใช้เมื่อ'], ['se', 'SE / จุดออกสอบ']];
+  const SE_H = /^se\b|se\s*\/|ผลข้างเคียง|พิษ|ระวัง|ข้อห้าม|จุดสอบ|toxic|ข้อควร|ดื้อ|clue/i, MOA_H = /กลไก|mechanism|moa|class|ตำแหน่ง|ออกฤทธิ์|receptor/i, USE_H = /ใช้|indication|regimen|รักษา|จุดเด่น|ตัวอย่าง|เลือก/i, GRP_H = /^(กลุ่ม|class)$/i;
+  let TXC = null;
+  async function drugTx() {
+    if (!TXC) { const TX = await fetch('data/taxonomy.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({})); TXC = (TX.drug || []).map(([p, g, s]) => { try { return [new RegExp(p, 'i'), g, s]; } catch (e) { return null; } }).filter(Boolean); }
+    return TXC;
+  }
+  function autoDrugRows(ch) {
+    const map = new Map();
+    for (const s of ch.sections) {
+      if (!/<table/.test(s.html)) continue;
+      const d = document.createElement('div'); d.innerHTML = s.html; d.querySelectorAll('.abx').forEach(x => x.remove());
+      d.querySelectorAll('table').forEach(t => {
+        if (!t.tHead || !t.tBodies[0]) return;
+        const head = [...t.tHead.rows[0].cells].map(c => clean(c.textContent));
+        const ei = head.findIndex(h => DRUG_H.test(h)); if (ei < 0) return;
+        const gi = head.findIndex((h, j) => j !== ei && GRP_H.test(h));
+        const hdr = /^(ยา|drug|ชื่อยา)$/i.test(head[ei]) ? '' : head[ei];
+        [...t.tBodies[0].rows].forEach(r => {
+          const cells = [...r.cells]; if (cells.length !== head.length) return;
+          const name = clean(cells[ei].textContent); if (!name || name === '–' || name === '-') return;
+          const key = name.toLowerCase().replace(/\s*\(.*$/, '').replace(/[.\s]+/g, ' ').trim();
+          let e = map.get(key); if (!e) map.set(key, e = { name, nameH: cells[ei].innerHTML.trim(), moa: [], use: [], se: [], ex: 0, boxes: [], grp: '' });
+          if (!e.boxes.includes(s.no)) e.boxes.push(s.no);
+          // หัวคอลัมน์ยาที่บอกบริบท เช่น "ยา (ตำแหน่ง)" / "ยาเลิกบุหรี่" ติดไปด้วย
+          if (hdr) { const k = `<small class="dt-k">${esc(hdr)}</small>`; if (!e.moa.includes(k)) e.moa.push(k); }
+          cells.forEach((c, j) => {
+            if (j === ei) return; const v = clean(c.textContent); if (!v || v === '–' || v === '-') return;
+            const h = head[j];
+            if (/^ข้อ$/.test(h)) { e.ex += v.split(/\s*[·,]\s*/).filter(Boolean).length; return; }
+            if (SKIP_H.test(h)) return;
+            if (j === gi) { if (!e.grp) e.grp = v; const x = c.innerHTML.trim(); if (!e.moa.includes(x)) e.moa.unshift(x); return; }
+            const col = SE_H.test(h) ? 'se' : MOA_H.test(h) ? 'moa' : USE_H.test(h) ? 'use' : 'se';
+            const plain = (col === 'se' && /^(se|ผลข้างเคียง|se \/ จุดสอบ|จุดสอบ)$/i.test(h)) || (col === 'use' && /^ใช้/.test(h)) || (col === 'moa' && /^กลไก$/.test(h));
+            const html = (plain ? '' : `<small class="dt-k">${esc(h)}</small> `) + c.innerHTML.trim(); if (!e[col].includes(html)) e[col].push(html);
+          });
+        });
+      });
+    }
+    return [...map.values()];
+  }
+  async function vDrugs(id, params) {
+    await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
+    renderSidebar(id);
+    const cur = await fetch(`data/${id}-drugs.json`, { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null);
+    const tx = await drugTx();
+    const curated = !!(cur && cur.rows && cur.rows.length);
+    const rows = curated
+      ? cur.rows.map(r => ({ name: r.drug, nameH: inline(esc(r.drug)), g: r.g || 'อื่น ๆ', moa: r.moa ? [inline(esc(r.moa))] : [], use: r.use ? [inline(esc(r.use))] : [], se: [r.se, r.kw ? '🎯 ' + r.kw : ''].filter(Boolean).map(x => inline(esc(x))), ex: r.ex || 0, boxes: [].concat(r.box || []) }))
+      : autoDrugRows(ch).map(e => { const m = tx.find(([re]) => re.test(e.name)); e.g = m ? `${m[1]} › ${m[2]}` : (e.grp || 'อื่น ๆ'); return e; });
+    // กลุ่มเรียงตามลำดับที่เจอในบท (ตามลำดับกล่อง) · ในกลุ่มเรียงตามกล่อง
+    const byBox = (a, b) => (a.boxes[0] || 0) - (b.boxes[0] || 0);
+    const order = curated ? [...new Set(rows.map(r => r.g))] : [...new Set(rows.slice().sort(byBox).map(r => r.g))];
+    const f = S.dtf || (S.dtf = { cv: '' });
+    const chs = INDEX.filter(c => c.ready);
+    view.innerHTML = `<div class="crumb"><a href="#/">หน้าแรก</a> › <a href="#/${id}">${esc(ch.title)}</a></div>
+      <div class="hero"><h1>💊 ตารางรวมยา · ${esc(ch.title)}</h1><p>${rows.length} ยา · ${curated ? 'ตารางคัดเองทั้งบท' : 'รวมจากตารางยาในทุกกล่องของบทนี้'} · เลือก Cover แล้วแตะช่องเพื่อท่องทีละช่อง · กดเลขกล่องเพื่อกลับไปอ่าน</p></div>
+      <div class="db-bar"><select id="dtCh">${chs.map(c => `<option value="${c.id}" ${c.id === id ? 'selected' : ''}>${esc(c.title)}</option>`).join('')}</select>
+        <input id="dtq" type="search" placeholder="ค้นชื่อยา กลไก SE…" value="${esc(params.get('q') || '')}">
+        <label class="db-cv">Cover <select id="dtCv"><option value="">ไม่ปิด</option><option value="name">ชื่อยา</option>${DCOL.map(([k, l]) => `<option value="${k}">${l}</option>`).join('')}<option value="all">ทุกช่องยกเว้นชื่อ</option></select></label>
+        <a class="btn small" href="#/db">💊 Drug & Bug</a></div>
+      <div class="dt-gs" id="dtGs"></div><div id="dtBody"></div>`;
+    $('#dtCv').value = f.cv || '';
+    const body = $('#dtBody'), gs = $('#dtGs');
+    const cvOn = k => f.cv === k || (f.cv === 'all' && k !== 'name');
+    const draw = () => {
+      const q = $('#dtq').value.trim().toLowerCase();
+      const hit = r => !q || (r.name + ' ' + r.g + ' ' + [...r.moa, ...r.use, ...r.se].join(' ').replace(/<[^>]+>/g, '')).toLowerCase().includes(q);
+      let gi = 0;
+      const html = order.map(g => {
+        const rs = rows.filter(r => r.g === g && hit(r)); if (!curated) rs.sort(byBox); if (!rs.length) return '';
+        gi++;
+        return `<tr class="dt-g" id="dtg-${gi}" data-n="${esc(g)}"><td colspan="5">${esc(g)} <small>${rs.length}</small></td></tr>` + rs.map(r => `<tr>
+          <td class="dt-n${cvOn('name') ? ' cv' : ''}"><b>${r.nameH}</b>${r.ex ? `<span class="dt-ex">ออก ${r.ex} ข้อ</span>` : ''}</td>
+          ${DCOL.map(([k]) => `<td class="${cvOn(k) && r[k].length ? 'cv' : ''}">${r[k].map(x => `<div>${x}</div>`).join('') || '<span class="dt-na">–</span>'}</td>`).join('')}
+          <td class="dt-b">${r.boxes.map(b => `<a href="#/${id}/${b}">${b}</a>`).join(' ')}</td></tr>`).join('');
+      }).join('');
+      body.innerHTML = html ? `<div class="tbl-wrap dt-wrap"><table class="t dt${f.cv ? ' covering' : ''}"><thead><tr><th>ยา</th>${DCOL.map(([, l]) => `<th>${l}</th>`).join('')}<th>กล่อง</th></tr></thead><tbody>${html}</tbody></table></div>` : `<p class="empty">${rows.length ? 'ไม่เจอที่ค้น' : 'บทนี้ยังไม่มีตารางยา'}</p>`;
+      gs.innerHTML = [...body.querySelectorAll('.dt-g')].map(x => `<a href="#" data-g="${x.id}">${esc(x.dataset.n)}</a>`).join('');
+    };
+    $('#dtq').oninput = draw;
+    $('#dtCv').onchange = e => { f.cv = e.target.value; save(); draw(); };
+    $('#dtCh').onchange = e => { location.hash = `#/drugs/${e.target.value}`; };
+    gs.onclick = e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); const t = document.getElementById(a.dataset.g); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 110, behavior: 'smooth' }); };
+    body.addEventListener('click', e => { const c = e.target.closest('td.cv'); if (c && !e.target.closest('a')) c.classList.toggle('shown'); });
+    draw();
+  }
   /* ---------- Numbers: cutpoint · ค่าปกติ · สูตร ของทุกบท (data/<id>-numbers.json) ---------- */
   async function vNumbers(params) {
     await loadAll(); renderSidebar();
@@ -1491,6 +1580,7 @@
       if (parts[0] === 'drill') return vDrill(params);
       if (parts[0] === 'db') return vDB(params);
       if (parts[0] === 'numbers') return vNumbers(params);
+      if (parts[0] === 'drugs' && parts[1]) return vDrugs(parts[1], params);
       if (parts[0] === 'backup') return vBackup();
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
