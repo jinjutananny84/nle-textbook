@@ -1414,7 +1414,7 @@
     "E": "Enters via nicotinic acetylcholine receptor then retrograde transport to cell body"
    },
    "answer": "E",
-   "why": "Rabies virus เพิ่มจำนวนในกล้ามเนื้อบริเวณแผล แล้ว glycoprotein G จับ nicotinic ACh receptor ที่ NMJ เข้าสู่ motor nerve terminal และเดินทางแบบ retrograde fast axonal transport (dynein) ไปยัง cell body ใน CNS ไม่แพร่ทางเลือดหรือ lymphatic ข้อ C/D ไม่ระบุ receptor ที่เป็นจุดเด่น",
+   "why": "Rabies เพิ่มจำนวนในกล้ามเนื้อที่แผล แล้ว glycoprotein G จับ nicotinic AChR ที่ NMJ\nจากนั้นเข้า motor nerve terminal และเดินทางแบบ retrograde (dynein) ไปยัง CNS\n✗ A: ไม่แพร่ทาง lymphatic\n✗ B: ไม่แพร่ทางเลือด\n✗ C: เดินทาง retrograde จริง แต่ไม่ระบุ receptor ที่เป็นจุดเด่น\n✗ D: ถูกบางส่วน แต่ไม่ระบุว่าเข้าผ่าน nicotinic AChR\n✓ E: เข้าทาง nicotinic AChR แล้ว retrograde transport ไปยัง cell body ครบที่สุด",
    "source": "วิเคราะห์"
   },
   "76/128": {
@@ -1428,7 +1428,7 @@
     "E": "Lumbar strain"
    },
    "answer": "C",
-   "why": "อาการปวดหลังเฉียบพลันหลังยกของหนักร่วมกับปวดร้าวลงขา (radicular pain/sciatica) เข้ากับ nucleus pulposus เคลื่อนออกมากด nerve root ส่วน lumbar strain ปวดเฉพาะที่ไม่ร้าวตาม dermatome, spinal stenosis มักเป็นผู้สูงอายุมี neurogenic claudication และ spondylolisthesis/scoliosis เป็นภาวะเรื้อรัง",
+   "why": "ปวดหลังเฉียบพลันหลังยกของ + ร้าวลงขา (radicular pain) = disc herniation\n✗ A: Lumbar scoliosis เป็นภาวะเรื้อรัง\n✗ B: Spondylolisthesis เป็นภาวะเรื้อรัง\n✓ C: Nucleus pulposus เคลื่อนออกกด nerve root\n✗ D: Spinal stenosis มักผู้สูงอายุ มี neurogenic claudication\n✗ E: Lumbar strain ปวดเฉพาะที่ ไม่ร้าวตาม dermatome",
    "source": "วิเคราะห์"
   },
   "76/133": {
@@ -1442,7 +1442,7 @@
     "E": "Test tissue cyst in placenta"
    },
    "answer": "D",
-   "why": "Sabin-Feldman dye test ตรวจ antibody ต่อ Toxoplasma gondii ผลบวกบอกว่าเคยติดเชื้อ แต่ในหญิงตั้งครรภ์ต้องยืนยันว่าทารกติดเชื้อหรือไม่โดยตรวจ tachyzoite/PCR ในน้ำคร่ำ ไม่จำเป็นต้อง biopsy สมองหรือ retina ส่วน pyrimethamine ใช้หลังยืนยัน fetal infection และห้ามใช้ในไตรมาสแรก",
+   "why": "Sabin-Feldman dye test บวก = เคยติด Toxoplasma ในหญิงตั้งครรภ์ต้องยืนยันว่าทารกติดหรือไม่\n✗ A: ไม่จำเป็นต้อง biopsy retina\n✗ B: ไม่จำเป็นต้อง biopsy สมอง\n✗ C: Pyrimethamine ใช้หลังยืนยัน fetal infection และห้ามในไตรมาสแรก\n✓ D: ตรวจ tachyzoite/PCR ในน้ำคร่ำเพื่อยืนยัน fetal infection\n✗ E: ตรวจรกทำได้หลังคลอดเท่านั้น",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตัวเลือกในไฟล์จำมาไม่ชัด บริบทหญิงตั้งครรภ์ไม่ได้ระบุไว้ในโจทย์ที่จดมา"
   },
@@ -1457,7 +1457,7 @@
     "E": "Darifenacin"
    },
    "answer": "B",
-   "why": "Ketoconazole ยับยั้ง CYP3A4 ทำให้ระดับยา antimuscarinic ที่ถูก metabolize ผ่าน CYP3A4 (oxybutynin, tolterodine, solifenacin, darifenacin) สูงขึ้นจนผลข้างเคียงแบบปากแห้งเด่น trospium เป็น quaternary amine ที่ไม่ผ่าน CYP450 (ขับทางไตเป็นหลัก) และไม่ผ่าน BBB จึงไม่มี interaction นี้",
+   "why": "Ketoconazole ยับยั้ง CYP3A4 → antimuscarinic ที่ผ่าน CYP3A4 ระดับสูงขึ้น → ปากแห้งมาก\n✗ A: Oxybutynin ผ่าน CYP3A4\n✓ B: Trospium เป็น quaternary amine ขับทางไต ไม่ผ่าน CYP450 และไม่ผ่าน BBB\n✗ C: Tolterodine ผ่าน CYP2D6/3A4\n✗ D: Solifenacin ผ่าน CYP3A4\n✗ E: Darifenacin ผ่าน CYP3A4/2D6",
    "source": "วิเคราะห์"
   },
   "76/141": {
@@ -1471,7 +1471,7 @@
     "E": "Pons"
    },
    "answer": "A",
-   "why": "ตาซ้ายเสีย medial rectus, superior/inferior rectus, inferior oblique และ pupil ซ้ายไม่หดทั้ง direct และ consensual (efferent defect) แสดงว่า left CN III เสียทั้ง somatic motor และ parasympathetic fiber ส่วน afferent (CN II) ปกติเพราะส่องตาซ้ายแล้วตาขวายังหด abducens เสียจะ abduct ไม่ได้ และ MLF lesion ทำให้ INO โดย pupil ปกติ",
+   "why": "ตาซ้าย adduct/elevate/depress ไม่ได้ + pupil ซ้ายไม่หดทั้ง direct และ consensual = left CN III เสีย\nส่องตาซ้ายแล้วตาขวายังหด = afferent (CN II) ปกติ\n✓ A: Oculomotor nerve เสียทั้ง somatic motor และ parasympathetic fiber\n✗ B: Abducens เสีย → abduct ไม่ได้\n✗ C: MLF lesion → INO โดย pupil ปกติ และ elevate/depress ได้\n✗ D: Superior colliculus → Parinaud (มองขึ้นไม่ได้ทั้งสองตา)\n✗ E: Pons ไม่มี CN III",
    "source": "วิเคราะห์"
   },
   "76/151": {
@@ -1485,7 +1485,7 @@
     "E": "Amphetamine"
    },
    "answer": "A",
-   "why": "Cannabis (THC จับ CB1 receptor) ทำให้ conjunctival injection, ปากแห้ง, tachycardia, หิว และ euphoria ร่วมกับ time distortion amphetamine ทำให้ tachycardia แต่จะมี mydriasis และไม่เด่นเรื่องตาแดง heroin/morphine ทำให้ miosis, respiratory depression และ alcohol ไม่ทำให้ปากแห้งตาแดงเด่นแบบนี้",
+   "why": "ตาแดง (conjunctival injection) + ปากแห้ง + ใจสั่น = cannabis\n✓ A: Cannabis (THC จับ CB1) ตาแดง ปากแห้ง หัวใจเต้นเร็ว หิว\n✗ B: Heroin ม่านตาเล็ก หายใจช้า\n✗ C: Alcohol ไม่เด่นปากแห้งตาแดง\n✗ D: Morphine ม่านตาเล็ก หายใจช้า\n✗ E: Amphetamine ใจสั่นแต่ม่านตาขยาย ไม่เด่นตาแดง",
    "source": "วิเคราะห์"
   },
   "76/152": {
@@ -1499,7 +1499,7 @@
     "E": "Serotonin"
    },
    "answer": "C",
-   "why": "ระบบ ascending arousal ใช้ ACh (pedunculopontine/basal forebrain), NE (locus coeruleus), serotonin (raphe), histamine (tuberomammillary) และ orexin/hypocretin (lateral hypothalamus) GABA จาก ventrolateral preoptic nucleus (VLPO) ยับยั้งศูนย์เหล่านี้จึงส่งเสริมการนอน ไม่ใช่การตื่น",
+   "why": "ระบบปลุกตื่น (ascending arousal) ใช้ ACh, NE, 5-HT, histamine, orexin\n✗ A: ACh จาก pedunculopontine/basal forebrain ทำให้ตื่น\n✗ B: NE จาก locus coeruleus ทำให้ตื่น\n✓ C: GABA จาก VLPO ยับยั้งศูนย์ตื่น → ส่งเสริมการนอน\n✗ D: Orexin จาก lateral hypothalamus ทำให้ตื่น\n✗ E: Serotonin จาก raphe nucleus ทำให้ตื่น",
    "source": "วิเคราะห์"
   },
   "76/159": {
@@ -1513,7 +1513,7 @@
     "E": "Wrist extension"
    },
    "answer": "D",
-   "why": "Claw hand (ulnar claw) เกิดจาก ulnar nerve เสียทำให้ interossei และ medial lumbricals อ่อนแรง palmar interossei ทำหน้าที่ finger adduction (PAD) จึงเสีย ส่วน thumb abduction/flexion เป็นของ median nerve และ thumb/wrist extension เป็นของ radial nerve",
+   "why": "Claw hand = ulnar n. เสีย → interossei + medial lumbricals อ่อน\n✗ A: Thumb abduction = median n.\n✗ B: Thumb flexion = median n.\n✗ C: Thumb extension = radial n.\n✓ D: Finger adduction = palmar interossei (ulnar n.) → เสีย\n✗ E: Wrist extension = radial n.",
    "source": "วิเคราะห์"
   },
   "76/161": {
@@ -1526,7 +1526,7 @@
     "D": "Do you lose your memory about stressful experiences?"
    },
    "answer": "A",
-   "why": "การถามฤดู/วัน/เดือน/สถานที่เป็นการประเมิน orientation ซึ่งเป็นส่วนหนึ่งของ MMSE/MoCA สำหรับ cognitive impairment ข้อ B ถาม auditory hallucination (psychosis) ข้อ C ถามความวิตกกังวล และข้อ D เกี่ยวกับ dissociative amnesia ซึ่งไม่ใช่การประเมิน cognition",
+   "why": "ถามฤดู/วัน/เดือน/สถานที่ = ประเมิน orientation (ส่วนหนึ่งของ MMSE/MoCA)\n✓ A: \"What is this season?\" ประเมิน cognition (orientation to time)\n✗ B: ถามหูแว่ว = ประเมิน psychosis\n✗ C: ถามความกังวล = ประเมิน anxiety\n✗ D: ลืมเหตุการณ์ตึงเครียด = dissociative amnesia",
    "source": "วิเคราะห์"
   },
   "76/176": {
@@ -1538,7 +1538,7 @@
     "C": "Nonshivering thermogenesis"
    },
    "answer": "A",
-   "why": "ไข้เกิดจาก pyrogen (IL-1, IL-6, TNF) กระตุ้น PGE2 ที่ hypothalamus (OVLT/preoptic area) ทำให้ set point สูงขึ้น ส่วนการออกกำลังกายเป็น hyperthermia ที่ set point ปกติแต่สร้างความร้อนเกินกว่าระบายได้ sweating พบได้ทั้งสองภาวะ (ไข้จะเหงื่อออกตอนไข้ลง)",
+   "why": "ไข้ = pyrogen → PGE2 ที่ hypothalamus → set point สูงขึ้น\nExercise = สร้างความร้อนเกินระบายได้ โดย set point ปกติ\n✓ A: Set point สูงขึ้นพบเฉพาะไข้\n✗ B: เหงื่อออกพบได้ทั้งสองภาวะ (ไข้จะออกตอนไข้ลด)\n✗ C: Nonshivering thermogenesis ไม่ใช่ตัวแยก",
    "source": "วิเคราะห์"
   },
   "76/178": {
@@ -1550,7 +1550,7 @@
     "C": "Orexin"
    },
    "answer": "A",
-   "why": "อาการ excessive daytime sleepiness ร่วมกับอาการกำเริบเมื่อมีอารมณ์รุนแรง (cataplexy-like) เข้ากับ narcolepsy ซึ่งเกิดจากขาด orexin neuron ใน lateral hypothalamus ยาหลักคือ modafinil (wake-promoting agent) ส่วน methamphetamine ติดง่าย ไม่ใช้เป็นยาแรก และ orexin ยังไม่มีในรูปยารักษา",
+   "why": "ง่วงทั้งวันแม้นอนพอ + หลับทันทีเมื่อตกใจ (cataplexy-like) = narcolepsy (ขาด orexin)\n✓ A: Modafinil เป็นยาหลักเพิ่มความตื่นตัว\n✗ B: Methamphetamine ติดง่าย ไม่ใช้เป็นยาแรก\n✗ C: Orexin ยังไม่มีในรูปยารักษา",
    "source": "วิเคราะห์"
   },
   "76/179": {
@@ -1562,7 +1562,7 @@
     "C": "Myasthenia gravis"
    },
    "answer": "A",
-   "why": "อ่อนแรงทั้งหน้าผากและใบหน้าส่วนล่างข้างเดียวคือ LMN facial palsy (รอยโรคที่ facial nucleus หรือ nerve) ซึ่งเข้ากับ Bell's palsy ที่มักนำด้วยปวดหลังหู ส่วน stroke (UMN) จะ spare หน้าผากเพราะ upper face ได้ bilateral cortical input และ MG มักเป็นทั้งสองข้าง fluctuating ร่วมกับ ptosis",
+   "why": "ปวดหลังหู + อ่อนแรงทั้งหน้าผากและใบหน้าล่างข้างเดียว = LMN facial palsy\n✓ A: Bell's palsy มักนำด้วยปวดหลังหู\n✗ B: Stroke (UMN) จะเว้นหน้าผากเพราะได้ bilateral cortical input\n✗ C: MG มักเป็นสองข้าง อาการขึ้นลง มีหนังตาตก",
    "source": "วิเคราะห์"
   },
   "76/183": {
@@ -1576,7 +1576,7 @@
     "E": "Prefrontal gyrus"
    },
    "answer": "D",
-   "why": "Fluent aphasia ที่ comprehension และ repetition เสียคือ Wernicke aphasia รอยโรคที่ posterior superior temporal gyrus (Wernicke area) ของ dominant hemisphere arcuate fasciculus เสียทำให้ conduction aphasia (เข้าใจดีแต่ทวนไม่ได้) watershed lesion ทำให้ transcortical aphasia (repetition ปกติ) และ inferior frontal gyrus ทำให้ Broca aphasia",
+   "why": "พูดคล่อง + ไม่เข้าใจ + ทวนไม่ได้ = Wernicke aphasia\n✗ A: Arcuate fasciculus → conduction aphasia (เข้าใจดีแต่ทวนไม่ได้)\n✗ B: Watershed → transcortical aphasia (ทวนได้)\n✗ C: Inferior frontal gyrus → Broca aphasia\n✓ D: Posterior superior temporal gyrus (Wernicke area) ของ dominant hemisphere\n✗ E: Prefrontal → บุคลิก/executive function",
    "source": "วิเคราะห์"
   },
   "76/184": {
@@ -1590,7 +1590,7 @@
     "E": "Prefrontal gyrus"
    },
    "answer": "C",
-   "why": "Non-fluent aphasia ที่ comprehension ดีและผู้ป่วยรู้ตัวจนหงุดหงิดคือ Broca aphasia รอยโรคที่ posterior inferior frontal gyrus (pars opercularis/triangularis) ของ dominant hemisphere ส่วน superior temporal gyrus ทำให้ Wernicke aphasia ที่ผู้ป่วยมักไม่รู้ตัว",
+   "why": "พูดไม่คล่อง + เข้าใจดี + รู้ตัวจนหงุดหงิด = Broca aphasia\n✗ A: Arcuate fasciculus → conduction aphasia\n✗ B: Watershed → transcortical aphasia\n✓ C: Posterior inferior frontal gyrus (Broca area) ของ dominant hemisphere\n✗ D: Superior temporal gyrus → Wernicke (มักไม่รู้ตัว)\n✗ E: Prefrontal → บุคลิก/executive function",
    "source": "วิเคราะห์"
   },
   "76/185": {
@@ -1603,7 +1603,7 @@
     "D": "สารอื่น from arachidonic acid"
    },
    "answer": "B",
-   "why": "Aspirin acetylate COX-1 แบบ irreversible ในเกล็ดเลือด ทำให้เปลี่ยน arachidonic acid เป็น thromboxane A2 ไม่ได้ เกล็ดเลือดไม่มี nucleus จึงสร้าง COX ใหม่ไม่ได้ ผลอยู่ตลอดอายุเกล็ดเลือด 7-10 วัน การสร้าง leukotriene ผ่าน lipoxygenase ไม่ถูกยับยั้ง (จึงอาจทำให้ aspirin-exacerbated asthma)",
+   "why": "Aspirin acetylate COX-1 แบบ irreversible ในเกล็ดเลือด → สร้าง TXA2 ไม่ได้ตลอดอายุเกล็ดเลือด 7–10 วัน\n✗ A: Arachidonic acid มาจาก membrane phospholipid (PLA2) ไม่ใช่จาก oleic acid\n✓ B: ยับยั้งการเปลี่ยน arachidonic acid → thromboxane\n✗ C: Leukotriene ผ่าน lipoxygenase ไม่ถูกยับยั้ง (จึงทำ aspirin-exacerbated asthma ได้)\n✗ D: ไม่ระบุเป้าหมายที่ชัดเจน",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -1618,7 +1618,7 @@
     "E": "Subcostal nerve"
    },
    "answer": "A",
-   "why": "ผิวหนังเหนือ pubic symphysis และ inguinal region เลี้ยงโดยแขนงจาก L1 (iliohypogastric และ ilioinguinal) ซึ่งในตัวเลือกมีเพียง ilioinguinal nerve obturator nerve เลี้ยงต้นขาด้านใน femoral nerve เลี้ยงต้นขาด้านหน้า lateral femoral cutaneous เลี้ยงต้นขาด้านข้าง ส่วน subcostal (T12) อยู่สูงกว่า",
+   "why": "ผิวหนังเหนือ pubic symphysis และขาหนีบเลี้ยงโดยแขนงของ L1 (iliohypogastric, ilioinguinal)\n✓ A: Ilioinguinal n. (L1) เป็นตัวเดียวในตัวเลือกที่เลี้ยงบริเวณนี้\n✗ B: Obturator n. เลี้ยงต้นขาด้านใน\n✗ C: Femoral n. เลี้ยงต้นขาด้านหน้า\n✗ D: Lateral femoral cutaneous เลี้ยงต้นขาด้านข้าง\n✗ E: Subcostal (T12) อยู่สูงกว่า",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตามตำราผิวหนังเหนือ pubis เลี้ยงโดย iliohypogastric nerve เป็นหลัก แต่ไม่มีในตัวเลือก จึงเลือก ilioinguinal (L1 เหมือนกัน)"
   },
@@ -1633,7 +1633,7 @@
     "E": "Anti-GAD"
    },
    "answer": "A",
-   "why": "Longitudinally extensive transverse myelitis (≥3 segment) ร่วมกับ recurrent optic neuritis เป็นลักษณะของ NMOSD ที่เกิดจาก anti-aquaporin-4 IgG ทำลาย astrocyte anti-GQ1b พบใน Miller Fisher syndrome anti-GM1 พบใน AMAN และ anti-GAD พบใน stiff-person syndrome",
+   "why": "LETM (≥ 3 segment) + optic neuritis ซ้ำ ๆ = NMOSD\n✓ A: Anti-AQP4 IgG ทำลาย astrocyte\n✗ B: Anti-GQ1b = Miller Fisher syndrome\n✗ C: Anti-GM1 = AMAN (GBS แบบ axonal)\n✗ D: Anti-GBM = Goodpasture\n✗ E: Anti-GAD = stiff-person syndrome",
    "source": "วิเคราะห์"
   },
   "76/222": {
@@ -1646,7 +1646,7 @@
     "D": "PCO2 14"
    },
    "answer": "A",
-   "why": "Opioid กด respiratory center ที่ medulla (ลดการตอบสนองต่อ CO2) ทำให้ hypoventilation เกิด acute respiratory acidosis คือ PCO2 สูง pH ต่ำ HCO3 เพิ่มเล็กน้อย (ราว 1 ต่อ PCO2 ที่เพิ่ม 10) ซึ่งตรงกับข้อ A ข้อ B มี HCO3 ต่ำจึงมี metabolic acidosis ร่วม ข้อที่ PCO2 ต่ำเป็นการหายใจเร็ว",
+   "why": "Opioid กดศูนย์หายใจ → hypoventilation → acute respiratory acidosis\nAcute: HCO3 เพิ่ม ~1 ต่อ PCO2 ที่เพิ่ม 10\n✓ A: pH ต่ำ PCO2 60 HCO3 26 = acute respiratory acidosis ตรงตามคาด\n✗ B: HCO3 ต่ำ = มี metabolic acidosis ซ้อน\n✗ C: PCO2 ต่ำ = หายใจเร็ว\n✗ D: PCO2 ต่ำมาก = หายใจเร็ว",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -1658,7 +1658,7 @@
     "B": "Visceral mesoderm"
    },
    "answer": "A",
-   "why": "Hirschsprung disease เกิดจาก neural crest cell migrate ลงมาไม่ถึงส่วนปลายของลำไส้ ทำให้ไม่มี ganglion cell ใน Meissner และ Auerbach plexus ส่วนที่ aganglionic จะหดเกร็งและส่วนต้นโป่งขยาย (megacolon) visceral mesoderm ให้กำเนิดกล้ามเนื้อเรียบของลำไส้ซึ่งปกติ",
+   "why": "ไม่ถ่ายขี้เทา + distal colon โป่ง = Hirschsprung\n✓ A: Neural crest migrate ไม่ถึงลำไส้ส่วนปลาย → ไม่มี ganglion cell\n✗ B: Visceral mesoderm ให้กล้ามเนื้อเรียบของลำไส้ ซึ่งปกติ",
    "source": "วิเคราะห์"
   },
   "76/230": {
@@ -1672,7 +1672,7 @@
     "E": "Thumb dorsal sensory"
    },
    "answer": "A",
-   "why": "Lunate ที่หลุดไปด้านหน้าจะกดเบียดใน carpal tunnel ทำให้ median nerve ถูกกด (acute carpal tunnel syndrome) เสีย thenar muscle โดยเฉพาะ abductor pollicis brevis จึง abduct นิ้วโป้งไม่ได้ ส่วน thumb adduction และ finger abduction/adduction เป็นของ ulnar nerve และ dorsal thumb sensation เป็นของ superficial radial nerve",
+   "why": "Lunate หลุดไปด้านหน้าเข้า carpal tunnel → กด median n.\n✓ A: Thumb abduction (abductor pollicis brevis) เสีย\n✗ B: Thumb adduction = ulnar n. (adductor pollicis)\n✗ C: Finger abduction = ulnar n. (dorsal interossei)\n✗ D: Finger adduction = ulnar n. (palmar interossei)\n✗ E: ผิวหนังหลังนิ้วโป้ง = superficial radial n.",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -1686,7 +1686,7 @@
     "D": "Herniation"
    },
    "answer": "C",
-   "why": "เลือดใน subarachnoid space (basal cistern, sulci, fissure) ซึ่งปกติมี CSF คือ subarachnoid hemorrhage ที่มักเกิดจาก ruptured berry aneurysm ผู้ป่วยมาด้วย thunderclap headache abscess จะเป็นก้อนมีขอบ ring enhancement ส่วน herniation เป็นการเคลื่อนของเนื้อสมอง",
+   "why": "เลือดอยู่ในช่องที่ปกติมี CSF (cistern, sulci, fissure) = SAH\n✗ A: Abscess เป็นก้อนมีขอบ ring enhancement\n✗ B: Cortical necrosis ไม่ใช่เลือดใน CSF space\n✓ C: Subarachnoid hemorrhage มักจาก ruptured berry aneurysm (thunderclap headache)\n✗ D: Herniation เป็นการเคลื่อนของเนื้อสมอง",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -1701,7 +1701,7 @@
     "E": "Lateral femoral cutaneous nerve"
    },
    "answer": "A",
-   "why": "Ilioinguinal nerve (L1) วิ่งใน inguinal canal และเลี้ยงผิวหนัง anterior scrotum กับโคนองคชาต จึงบาดเจ็บบ่อยในการผ่าตัดไส้เลื่อน ส่วน cremasteric reflex มี efferent คือ genital branch ของ genitofemoral nerve ซึ่งยังปกติ จึงตัด genitofemoral ออก iliohypogastric เลี้ยงผิวหนังเหนือ pubis ไม่ใช่ scrotum",
+   "why": "ชา scrotum ส่วนบน + โคนองคชาต + cremasteric reflex ปกติ = ilioinguinal n.\n✓ A: Ilioinguinal n. (L1) วิ่งใน inguinal canal บาดเจ็บบ่อยตอนผ่าตัดไส้เลื่อน\n✗ B: Obturator n. เลี้ยงต้นขาด้านใน\n✗ C: Genitofemoral (genital branch) เป็น efferent ของ cremasteric reflex ซึ่งยังปกติ\n✗ D: Iliohypogastric เลี้ยงผิวหนังเหนือ pubis ไม่ใช่ scrotum\n✗ E: Lateral femoral cutaneous เลี้ยงต้นขาด้านข้าง",
    "source": "วิเคราะห์"
   },
   "76/249": {
@@ -1714,7 +1714,7 @@
     "D": "Obturator nerve"
    },
    "answer": "B",
-   "why": "บริเวณ perineum ด้านหน้าและ vulva ส่วนหลังเลี้ยงโดย perineal nerve ซึ่งเป็นแขนงของ pudendal nerve ที่วิ่งผ่าน pudendal canal บนผนังด้านข้างของ ischioanal fossa anterior labial nerve มาจาก ilioinguinal เลี้ยงเฉพาะ mons/labia ส่วนหน้า ส่วน obturator และ lateral femoral cutaneous เลี้ยงต้นขา",
+   "why": "Perineum ด้านหน้าและ vulva ส่วนหลังเลี้ยงโดย perineal n. (แขนงของ pudendal)\n✗ A: Anterior labial n. (จาก ilioinguinal) เลี้ยงเฉพาะ mons/labia ส่วนหน้า\n✓ B: Perineal n. วิ่งผ่าน pudendal canal บนผนังข้างของ ischioanal fossa\n✗ C: Lateral femoral cutaneous เลี้ยงต้นขาด้านข้าง\n✗ D: Obturator เลี้ยงต้นขาด้านใน",
    "source": "วิเคราะห์"
   },
   "76/250": {
@@ -1725,7 +1725,7 @@
     "B": "Motor neuron disease"
    },
    "answer": "A",
-   "why": "Ascending flaccid paralysis ร่วม areflexia แบบเฉียบพลันเป็นลักษณะของ Guillain-Barré syndrome (AIDP) จาก autoimmune ต่อ myelin ของ peripheral nerve หลังติดเชื้อ ส่วน motor neuron disease (ALS) เป็นแบบค่อยเป็นค่อยไปและมีทั้ง UMN sign (hyperreflexia) และ LMN sign",
+   "why": "Ascending flaccid paralysis + areflexia เฉียบพลัน = GBS (AIDP)\n✓ A: AIDP = autoimmune ต่อ myelin ของ peripheral nerve หลังติดเชื้อ\n✗ B: Motor neuron disease ค่อยเป็นค่อยไป มีทั้ง UMN (reflex ไว) และ LMN sign",
    "source": "วิเคราะห์"
   },
   "76/254": {
@@ -1736,7 +1736,7 @@
     "B": "18S rRNA PCR"
    },
    "answer": "A",
-   "why": "Purpura ร่วม meningitis ชี้ไปที่ Neisseria meningitidis ซึ่งเป็นแบคทีเรีย จึงควรใช้ PCR ที่จำเพาะต่อยีนของเชื้อ (เช่น ctrA) หรือ 16S rRNA ส่วน 18S rRNA เป็นยีนของ eukaryote (เชื้อรา/ปรสิต) จึงไม่เหมาะกับแบคทีเรีย",
+   "why": "Purpura + meningitis = N. meningitidis (แบคทีเรีย)\n✓ A: PCR จำเพาะยีนของเชื้อ (เช่น ctrA) เหมาะกับแบคทีเรีย\n✗ B: 18S rRNA เป็นยีนของ eukaryote (เชื้อรา ปรสิต) ไม่ใช่แบคทีเรีย (แบคทีเรียใช้ 16S)",
    "source": "วิเคราะห์",
    "options_reconstructed": true,
    "doubt": "⚠ ตัวเลือกในไฟล์ไม่ครบ (ข้อ A เขียนแค่ gen) ตีความว่าเป็น gene-specific PCR"
@@ -1751,7 +1751,7 @@
     "D": "Amyloid aggregation becomes toxic"
    },
    "answer": "B",
-   "why": "ใน Alzheimer's disease tau ซึ่งเป็น microtubule-associated protein ถูก hyperphosphorylate จึงหลุดจาก microtubule และรวมตัวเป็น paired helical filament กลายเป็น intracellular neurofibrillary tangle ซึ่งสัมพันธ์กับความรุนแรงของ dementia ข้อ amyloid aggregation (D) ก็มีส่วนจริง (Aβ oligomer เป็นพิษ) แต่ข้อ B เป็นข้อความที่ถูกต้องตรงตามตำราที่สุด",
+   "why": "Tau ถูก hyperphosphorylate → หลุดจาก microtubule → neurofibrillary tangle\n✗ A: Tau ไม่ได้สะสมเพราะ covalent bond\n✓ B: Tau hyperphosphorylation → NFT (สัมพันธ์กับความรุนแรงของ dementia) ตรงตำราที่สุด\n✗ C: Amyloid ไม่ได้ผิดปกติเพราะ disulfide bond\n✗ D: Aβ oligomer เป็นพิษจริงบางส่วน แต่ข้อ B ตรงตำรากว่า",
    "source": "วิเคราะห์",
    "doubt": "⚠ ข้อ D ก็เป็นข้อความที่ถูกตามสมมติฐาน amyloid ไม่มีเฉลย จึงเลือก B ซึ่งชัดเจนที่สุด"
   },
@@ -1763,7 +1763,7 @@
     "B": "Botulinum toxin"
    },
    "answer": "B",
-   "why": "Infant botulism เกิดจากทารกกิน spore ของ C. botulinum (เช่นในน้ำผึ้ง) ซึ่งงอกในลำไส้ที่ flora ยังไม่สมบูรณ์และสร้าง toxin ยับยั้งการหลั่ง ACh ที่ NMJ ทำให้ floppy baby ส่วน tetanus toxin ยับยั้งการหลั่ง GABA/glycine จาก inhibitory interneuron ทำให้เกร็ง ไม่ใช่ปวกเปียก",
+   "why": "ทารก + น้ำผึ้ง + floppy = infant botulism\n✗ A: Tetanus toxin ยับยั้ง GABA/glycine → เกร็ง ไม่ใช่ปวกเปียก\n✓ B: Botulinum toxin ยับยั้งการหลั่ง ACh ที่ NMJ → flaccid paralysis",
    "source": "วิเคราะห์"
   },
   "76/274": {
@@ -1777,7 +1777,7 @@
     "E": "Midpons"
    },
    "answer": "D",
-   "why": "Pre-Bötzinger complex ใน ventrolateral medulla มี pacemaker neuron ที่สร้าง rhythm ของการหายใจเข้า (inspiratory rhythm generator) ส่วน dorsal respiratory group รับ sensory input และส่งสัญญาณ inspiration Bötzinger complex เป็น expiratory neuron และ pons (pneumotaxic/apneustic) ปรับจังหวะเท่านั้น",
+   "why": "Pre-Bötzinger complex = inspiratory rhythm generator ใน ventrolateral medulla\n✗ A: Nucleus ambiguus เลี้ยงกล้ามเนื้อคอหอยกล่องเสียง\n✗ B: Dorsal respiratory group รับ sensory input ส่งสัญญาณ inspiration\n✗ C: Bötzinger complex เป็น expiratory neuron\n✓ D: Pre-Bötzinger complex มี pacemaker neuron สร้างจังหวะหายใจ\n✗ E: Pons (pneumotaxic/apneustic) ปรับจังหวะเท่านั้น",
    "source": "วิเคราะห์"
   },
   "76/275": {
@@ -1791,7 +1791,7 @@
     "E": "Cryptococcal meningitis"
    },
    "answer": "A",
-   "why": "ต้องแปลตามตาราง CSF: bacterial มี PMN สูงมาก protein สูง glucose ต่ำมาก, TB มี lymphocyte protein สูงมาก glucose ต่ำ, viral มี lymphocyte protein ปกติหรือสูงเล็กน้อย glucose ปกติ, cryptococcus มี lymphocyte glucose ต่ำ opening pressure สูงมาก India ink บวก คำตอบในที่นี้เป็นการเดาเพราะไม่มีค่า lab",
+   "why": "ไฟล์ไม่ได้บันทึกค่า CSF จึงเป็นการเดาคำตอบ ให้จำตาราง CSF แทน\n✓ A: Bacterial: PMN สูงมาก protein สูง glucose ต่ำมาก\n✗ B: TB: lymphocyte protein สูงมาก glucose ต่ำ\n✗ C: Viral: lymphocyte protein ปกติ/สูงเล็กน้อย glucose ปกติ\n✗ D: Autoimmune: lymphocyte เล็กน้อย glucose ปกติ\n✗ E: Cryptococcus: lymphocyte glucose ต่ำ opening pressure สูงมาก India ink บวก",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์ข้อสอบไม่ได้ให้ค่า CSF ไว้ คำตอบ A เป็นการเดา ให้ใช้ข้อนี้เพื่อฝึกแปลตาราง CSF เท่านั้น"
   },
@@ -1806,7 +1806,7 @@
     "E": "1/400"
    },
    "answer": "C",
-   "why": "ชาย A ปกติและมีพี่น้องเป็นโรค (พ่อแม่เป็น carrier) โอกาสเป็น carrier = 2/3 ส่วนหญิง B จาก prevalence 1/14400 ได้ q = 1/120 โอกาส carrier ประมาณ 2q = 1/60 และโอกาสลูกเป็นโรคเมื่อทั้งคู่เป็น carrier = 1/4 ดังนั้น 2/3 x 1/60 x 1/4 = 1/360 SMA เกิดจาก SMN1 deletion ทำให้ anterior horn cell เสื่อม",
+   "why": "ชาย A ปกติ มีพี่ชายเป็นโรค → พ่อแม่เป็น carrier → A เป็น carrier = 2/3\nหญิง B: q² = 1/14400 → q = 1/120 → carrier ≈ 2q = 1/60\nลูกเป็นโรค = 2/3 × 1/60 × 1/4 = 1/360\n✗ A: 1/480 ลืมคิด 2/3 (ใช้ 1/2)\n✗ B: 1/300 คำนวณผิด\n✓ C: 1/360\n✗ D: 1/200 คำนวณผิด\n✗ E: 1/400 คำนวณผิด",
    "source": "วิเคราะห์"
   },
   "77/21": {
@@ -1820,7 +1820,7 @@
     "E": "Lymphoid follicle"
    },
    "answer": "A",
-   "why": "Hirschsprung disease เกิดจาก neural crest ไม่ migrate ลงมาถึงส่วนปลายของลำไส้ rectal suction biopsy จะไม่พบ ganglion cell ใน submucosal และ myenteric plexus (มักร่วมกับ hypertrophied nerve fiber และ acetylcholinesterase staining เพิ่ม) ส่วนที่ aganglionic จึงหดเกร็งตีบแคบและลำไส้ส่วนต้นโป่ง",
+   "why": "ไม่ถ่ายขี้เทา + megacolon + rectum ตีบ = Hirschsprung\n✓ A: Rectal biopsy ไม่พบ ganglion cell ใน submucosal และ myenteric plexus\n  (ร่วมกับ nerve fiber หนาตัว และ AChE staining เพิ่ม)\n✗ B: Smooth muscle ยังปกติ\n✗ C: Interstitial cell of Cajal ไม่ใช่สิ่งที่หายไปในโรคนี้\n✗ D: Mucosal crypt ปกติ\n✗ E: Lymphoid follicle ปกติ",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -1834,7 +1834,7 @@
     "D": "Zona reticularis"
    },
    "answer": "A",
-   "why": "Adrenal medulla (chromaffin cell ที่หลั่ง epinephrine/norepinephrine) มาจาก neural crest ส่วน adrenal cortex ทั้ง 3 zone (glomerulosa, fasciculata, reticularis) มาจาก intermediate/coelomic mesoderm จึงไม่ได้รับผลกระทบ",
+   "why": "Adrenal medulla (chromaffin cell) มาจาก neural crest · adrenal cortex มาจาก mesoderm\n✓ A: Chromaffin cell หายไปถ้า neural crest ไม่ migrate\n✗ B: Zona glomerulosa มาจาก mesoderm\n✗ C: Zona fasciculata มาจาก mesoderm\n✗ D: Zona reticularis มาจาก mesoderm",
    "source": "วิเคราะห์"
   },
   "77/25": {
@@ -1848,7 +1848,7 @@
     "E": "Hirschsprung disease"
    },
    "answer": "A",
-   "why": "Folate จำเป็นต่อการสังเคราะห์ nucleotide และ methylation ช่วงที่ neural tube ปิด (สัปดาห์ที่ 3-4 หลังปฏิสนธิ) การเสริม folic acid ตั้งแต่ก่อนตั้งครรภ์จึงลดความเสี่ยง neural tube defect (anencephaly, spina bifida) ได้มาก ไม่ป้องกัน chromosomal abnormality อย่าง Down syndrome",
+   "why": "Folate จำเป็นช่วงที่ neural tube ปิด (สัปดาห์ 3–4 หลังปฏิสนธิ)\n✓ A: เสริม folic acid ก่อนตั้งครรภ์ลด NTD (anencephaly, spina bifida)\n✗ B: Cleft lip ไม่ใช่เป้าหลักของการเสริม folate\n✗ C: CHD ไม่ใช่เป้าหลักของการเสริม folate\n✗ D: Down syndrome เป็น chromosomal ป้องกันด้วย folate ไม่ได้\n✗ E: Hirschsprung เกิดจาก neural crest/RET",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -1863,7 +1863,7 @@
     "E": "Opening pressure สูง, protein สูง, glucose สูง"
    },
    "answer": "A",
-   "why": "Gram-positive diplococci คือ Streptococcus pneumoniae ซึ่งเป็น bacterial meningitis จะมี opening pressure สูง, PMN สูง, protein สูง และ glucose ต่ำ (bacteria และ neutrophil ใช้ glucose) ในตัวเลือกไม่มี glucose ต่ำ จึงเลือกข้อที่ใกล้เคียงที่สุดคือ OP และ protein สูง ข้อที่ glucose สูงผิดแน่นอน",
+   "why": "Gram-positive diplococci = S. pneumoniae → bacterial meningitis\nCSF: opening pressure สูง PMN สูง protein สูง glucose ต่ำ\n✓ A: OP สูง protein สูง ใกล้เคียงที่สุด (ตัวเลือกไม่มี glucose ต่ำ)\n✗ B: Glucose สูงผิดแน่นอน\n✗ C: ค่าปกติทั้งหมดไม่ใช่ bacterial meningitis\n✗ D: Bacterial meningitis OP สูง ไม่ใช่ปกติ\n✗ E: Glucose สูงผิดแน่นอน",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตัวเลือกที่จดมาไม่มี glucose ต่ำซึ่งเป็นคำตอบที่ถูกจริง ข้อ B กับ E ซ้ำกัน ตัวเลือกจริงอาจต่างจากนี้"
   },
@@ -1876,7 +1876,7 @@
     "C": "Mucosal immunity ดีกว่า"
    },
    "answer": "A",
-   "why": "IPV (Salk) เป็นเชื้อตายจึงไม่มีโอกาส revert เป็นเชื้อก่อโรค ไม่เกิด VAPP หรือ cVDPV ต่างจาก OPV (Sabin) ที่เป็น live attenuated ส่วน OPV สร้าง mucosal IgA ในลำไส้ได้ดีกว่าและหยุดการแพร่เชื้อในชุมชนได้ดีกว่า ข้อ B และ C จึงเป็นข้อดีของ OPV",
+   "why": "IPV (Salk) เป็นเชื้อตาย ไม่มีโอกาสกลายพันธุ์กลับเป็นเชื้อก่อโรค\n✓ A: ไม่เกิด VAPP/cVDPV เป็นข้อดีของ IPV\n✗ B: หยุดการแพร่เชื้อในชุมชนได้ดีกว่าเป็นข้อดีของ OPV\n✗ C: Mucosal IgA ในลำไส้ดีกว่าเป็นข้อดีของ OPV",
    "source": "วิเคราะห์"
   },
   "77/35": {
@@ -1887,7 +1887,7 @@
     "B": "Tetanus toxin"
    },
    "answer": "A",
-   "why": "อาการน้ำลายยืด ร้องเสียงเบา ดูดกลืนไม่ดี และกล้ามเนื้ออ่อนปวกเปียกในเด็กเล็กคือ infant botulism จากการกิน spore ของ C. botulinum (มักพบในดินที่ติดผักราก เช่นมันหวาน หรือน้ำผึ้ง) toxin ยับยั้งการหลั่ง ACh ที่ NMJ ส่วน tetanus toxin ทำให้ spastic paralysis ไม่ใช่ hypotonia",
+   "why": "น้ำลายไหล + ร้องเบา + ดูดกลืนไม่ดี + ปวกเปียก ในเด็กเล็ก = infant botulism\n(spore จากดินที่ติดผักราก เช่น มันหวาน หรือน้ำผึ้ง)\n✓ A: Botulinum toxin ยับยั้งการหลั่ง ACh ที่ NMJ → hypotonia\n✗ B: Tetanus toxin ทำให้เกร็ง (spastic) ไม่ใช่ hypotonia",
    "source": "วิเคราะห์"
   },
   "77/40": {
@@ -1901,7 +1901,7 @@
     "E": "CYP2C19 *17/*17"
    },
    "answer": "D",
-   "why": "Clopidogrel เป็น prodrug ต้องถูก CYP2C19 เปลี่ยนเป็น active metabolite ที่ block P2Y12 receptor แบบ irreversible ผู้ที่มี loss-of-function allele สองตัว (*2 หรือ *3) เป็น poor metabolizer ได้ฤทธิ์ต้านเกล็ดเลือดน้อยจึงเกิด stroke ซ้ำ *1 เป็น normal และ *17 เป็น gain-of-function (ultrarapid) ส่วน CYP2D6 ไม่เกี่ยวกับ clopidogrel",
+   "why": "Clopidogrel = prodrug ต้องถูก CYP2C19 เปลี่ยนเป็น active metabolite\n✗ A: CYP2D6 ไม่เกี่ยวกับ clopidogrel\n✗ B: CYP2D6 ไม่เกี่ยวกับ clopidogrel\n✗ C: CYP2C19 *1/*1 = normal metabolizer\n✓ D: CYP2C19 *3/*3 = poor metabolizer ได้ฤทธิ์ต้านเกล็ดเลือดน้อย → stroke ซ้ำ\n✗ E: CYP2C19 *17/*17 = ultrarapid (ได้ฤทธิ์มากขึ้น เสี่ยงเลือดออก)",
    "source": "วิเคราะห์"
   },
   "77/46": {
@@ -1914,7 +1914,7 @@
     "D": "Celecoxib"
    },
    "answer": "C",
-   "why": "Indomethacin เป็น NSAID ที่ผ่าน BBB ได้ดีและมีผลข้างเคียงทาง CNS สูงที่สุดในกลุ่ม ได้แก่ frontal headache, dizziness, confusion, depression และอาจทำให้ psychosis ส่วน aspirin ขนาดสูงทำให้ tinnitus (salicylism) ibuprofen และ celecoxib มี CNS side effect ต่ำกว่า",
+   "why": "Indomethacin ผ่าน BBB ได้ดี มีผลข้างเคียงทาง CNS สูงที่สุดในกลุ่ม NSAID\n✗ A: Aspirin ขนาดสูงทำ tinnitus (salicylism)\n✗ B: Ibuprofen มี CNS side effect ต่ำ\n✓ C: Indomethacin: frontal headache, dizziness, confusion, อาจ psychosis\n✗ D: Celecoxib มี CNS side effect ต่ำ",
    "source": "วิเคราะห์"
   },
   "77/79": {
@@ -1925,7 +1925,7 @@
     "B": "Folate"
    },
    "answer": "A",
-   "why": "ทั้ง B12 และ folate ทำให้ megaloblastic anemia แต่เฉพาะ B12 ที่ทำให้มีอาการทางระบบประสาท เพราะ B12 เป็น cofactor ของ methylmalonyl-CoA mutase การขาดทำให้ methylmalonic acid สะสมและสร้าง myelin ผิดปกติ เกิด polyneuropathy และ subacute combined degeneration",
+   "why": "Megaloblastic anemia + neuropathy = ขาด B12 (folate ไม่ทำอาการทางระบบประสาท)\n✓ A: B12 เป็น cofactor ของ methylmalonyl-CoA mutase · ขาดแล้ว MMA สะสม myelin ผิดปกติ\n✗ B: Folate ขาดทำ megaloblastic anemia แต่ไม่ทำ neuropathy",
    "source": "วิเคราะห์"
   },
   "77/82": {
@@ -1939,7 +1939,7 @@
     "E": "Interstitial nucleus of Cajal"
    },
    "answer": "D",
-   "why": "Pupil ขยายเมื่อย้ายไฟไปที่ตาขวาคือ relative afferent pupillary defect ของตาขวา (optic nerve ขวาเสีย) ทาง afferent ของ pupillary light reflex วิ่งจาก optic nerve ไป pretectal nucleus แล้วส่งต่อไป Edinger-Westphal nucleus ทั้งสองข้าง ไม่ผ่าน LGN (LGN เป็นทางของการมองเห็น) ส่วน CN III ปกติเพราะ EOM และ near response ปกติ",
+   "why": "Swinging flashlight ไปตาขวาแล้ว pupil ขยาย = RAPD ของตาขวา (afferent ขวาเสีย)\nทาง afferent: optic nerve → pretectal nucleus → Edinger-Westphal ทั้งสองข้าง\n✗ A: LGN เป็นทางของการมองเห็น ไม่ใช่ pupillary reflex\n✗ B: Medial geniculate เป็นทางการได้ยิน\n✗ C: CN III ปกติ เพราะกลอกตาและ near response ปกติ\n✓ D: สัญญาณแสงจากตาขวาไปไม่ถึง Edinger-Westphal nucleus\n✗ E: Interstitial nucleus of Cajal ควบคุม vertical/torsional gaze",
    "source": "วิเคราะห์",
    "doubt": "⚠ โจทย์ไม่ชัด รอยโรคจริงคือ afferent (optic nerve) ซึ่งส่งข้อมูลไม่ถึง pretectal/EW nucleus จึงเลือก EW เป็นข้อใกล้เคียงที่สุด"
   },
@@ -1954,7 +1954,7 @@
     "E": "Paranoid"
    },
    "answer": "A",
-   "why": "Narcissistic personality disorder (cluster B) มี grandiosity, ต้องการคำชม, entitlement, ใช้ประโยชน์ผู้อื่น และขาด empathy histrionic เน้นเรียกร้องความสนใจด้วยอารมณ์ที่เกินจริงและ seductive antisocial เน้นละเมิดสิทธิผู้อื่นและกฎหมาย ส่วน paranoid ระแวงไม่ไว้ใจผู้อื่น",
+   "why": "Grandiosity + ต้องการคำชม + entitlement + ขาด empathy = narcissistic (cluster B)\n✓ A: Narcissistic personality disorder\n✗ B: Histrionic เรียกร้องความสนใจด้วยอารมณ์เกินจริง ยั่วยวน\n✗ C: Dependent พึ่งพาผู้อื่น ตัดสินใจเองไม่ได้\n✗ D: Antisocial ละเมิดสิทธิผู้อื่นและกฎหมาย\n✗ E: Paranoid ระแวง ไม่ไว้ใจผู้อื่น",
    "source": "วิเคราะห์"
   },
   "77/84": {
@@ -1967,7 +1967,7 @@
     "D": "Dopamine"
    },
    "answer": "B",
-   "why": "MAOI ยับยั้งการสลาย serotonin ส่วน SSRI ยับยั้งการ reuptake เมื่อใช้ร่วมกันทำให้ serotonin ล้นเกิด serotonin syndrome (autonomic instability, altered mental status, neuromuscular hyperactivity เช่น clonus, tremor, hyperreflexia) รักษาด้วยการหยุดยาและให้ cyproheptadine ต่างจาก NMS ที่เกิดจาก dopamine blockade มี rigidity แบบ lead-pipe และเกิดช้ากว่า",
+   "why": "MAOI + SSRI → serotonin ล้น → serotonin syndrome\n(autonomic instability + สับสน + clonus/tremor/hyperreflexia)\n✗ A: Histamine ไม่ใช่ตัวก่ออาการ\n✓ B: Serotonin รักษาด้วยหยุดยาและให้ cyproheptadine\n✗ C: Orexin เกี่ยวกับการตื่น\n✗ D: Dopamine blockade ทำ NMS (rigidity แบบ lead-pipe เกิดช้ากว่า)",
    "source": "วิเคราะห์"
   },
   "77/85": {
@@ -1981,7 +1981,7 @@
     "E": "Cerebral amyloid angiopathy"
    },
    "answer": "E",
-   "why": "Lobar (cortical-subcortical) hemorrhage ในผู้สูงอายุสัมพันธ์มากที่สุดกับ cerebral amyloid angiopathy ที่ Aβ สะสมในผนังหลอดเลือดเล็กของ cortex ทำให้เปราะ ส่วน hypertensive ICH มักอยู่ลึก (basal ganglia, thalamus, pons, cerebellum) จาก Charcot-Bouchard microaneurysm และ berry aneurysm ทำให้ SAH",
+   "why": "Lobar hemorrhage ในผู้สูงอายุ = cerebral amyloid angiopathy\n✗ A: Contusion ต้องมีประวัติบาดเจ็บศีรษะ\n✗ B: Hypertensive ICH มักอยู่ลึก (basal ganglia, thalamus, pons, cerebellum)\n✗ C: Berry aneurysm ทำ SAH\n✗ D: Hemorrhagic infarction เกิดตามหลัง ischemic stroke\n✓ E: Cerebral amyloid angiopathy: Aβ สะสมในผนังหลอดเลือดเล็กของ cortex ทำให้เปราะ",
    "source": "วิเคราะห์",
    "doubt": "⚠ โจทย์ที่จดมาไม่ระบุอายุ ถ้าผู้ป่วยอายุน้อยและมี hypertension ชัดเจนอาจตอบ hypertension"
   },
@@ -1996,7 +1996,7 @@
     "E": "PICA"
    },
    "answer": "E",
-   "why": "Lateral medullary (Wallenberg) syndrome จาก PICA หรือ vertebral artery: spinal trigeminal nucleus เสียทำให้ปวดหน้าข้างเดียวกัน spinothalamic เสียทำให้ปวดลำตัวข้างตรงข้าม descending sympathetic ทำให้ Horner และ nucleus ambiguus (IX, X) ทำให้ gag หาย กลืนลำบาก เสียงแหบ AICA (lateral pons) จะมี facial palsy และหูหนวกแทนอาการของ nucleus ambiguus",
+   "why": "ปวดหน้า/ลำตัวคนละข้าง + Horner + gag หาย = lateral medullary (Wallenberg)\n✗ A: ACA → ขาอ่อนแรง\n✗ B: MCA → แขน/หน้าอ่อนแรง + aphasia/neglect\n✗ C: PCA → hemianopia\n✗ D: AICA (lateral pons) → facial palsy + หูหนวก ไม่ใช่อาการของ nucleus ambiguus\n✓ E: PICA: spinal trigeminal + spinothalamic + sympathetic + nucleus ambiguus",
    "source": "วิเคราะห์"
   },
   "77/87": {
@@ -2010,7 +2010,7 @@
     "E": "INO"
    },
    "answer": "B",
-   "why": "Right hemiparesis ร่วม aphasia บอกว่ารอยโรคอยู่ที่ left cerebral hemisphere (MCA territory) ซึ่งเสีย frontal eye field ซ้าย ทำให้ FEF ขวาที่ยังทำงานผลักตาไปทางซ้าย ผู้ป่วยจึงมองไปทางรอยโรค (look toward lesion, away from hemiparesis) ถ้าเป็นรอยโรคที่ pons ตาจะเบนไปทางด้านอ่อนแรง ส่วน downward deviation พบใน thalamic/Parinaud",
+   "why": "Right hemiparesis + aphasia = รอยโรค left hemisphere (MCA)\nFEF ซ้ายเสีย → FEF ขวาผลักตาไปซ้าย → มองไปทางรอยโรค\n✗ A: มองขวา (ทางด้านอ่อนแรง) พบในรอยโรคที่ pons\n✓ B: ตาเบนไปซ้าย = มองหารอยโรค\n✗ C: Upward deviation ไม่ใช่ภาพนี้\n✗ D: Downward deviation พบใน thalamic hemorrhage/Parinaud\n✗ E: INO เป็นรอยโรค MLF",
    "source": "วิเคราะห์"
   },
   "77/88": {
@@ -2022,7 +2022,7 @@
     "C": "Superior temporal gyrus"
    },
    "answer": "C",
-   "why": "Fluent แต่ไร้ความหมาย ร่วมกับเสียทั้ง comprehension และ repetition คือ Wernicke aphasia จากรอยโรค posterior superior temporal gyrus (inferior division ของ MCA) arcuate fasciculus ทำให้ conduction aphasia ซึ่งยังเข้าใจและทำตามคำสั่งได้ inferior frontal gyrus ทำให้ Broca aphasia ที่พูดไม่คล่อง",
+   "why": "พูดคล่องแต่ไร้ความหมาย + ไม่เข้าใจ + ทวนไม่ได้ = Wernicke aphasia\n✗ A: Arcuate fasciculus → conduction aphasia ยังเข้าใจและทำตามคำสั่งได้\n✗ B: Inferior frontal gyrus → Broca aphasia พูดไม่คล่อง\n✓ C: Superior temporal gyrus (inferior division ของ MCA)",
    "source": "วิเคราะห์"
   },
   "77/89": {
@@ -2036,7 +2036,7 @@
     "E": "Parietal lobe"
    },
    "answer": "C",
-   "why": "Executive dysfunction ที่นำมาก่อน ตามด้วย behavioral disinhibition และพฤติกรรมไม่เหมาะสมทางสังคม เข้ากับ behavioral variant frontotemporal dementia ซึ่งฝ่อที่ frontal lobe (และ anterior temporal) ส่วน medial temporal lobe เสียก่อนใน Alzheimer's disease ซึ่งนำด้วย episodic memory loss",
+   "why": "Executive function เสียก่อน + disinhibition + พฤติกรรมไม่เหมาะสม = bvFTD\n✗ A: Lateral temporal → semantic dementia\n✗ B: Medial temporal เสียก่อนใน Alzheimer (นำด้วยความจำ)\n✓ C: Frontal lobe ฝ่อ (ร่วม anterior temporal)\n✗ D: Occipital → การมองเห็น\n✗ E: Parietal → visuospatial, apraxia",
    "source": "วิเคราะห์",
    "doubt": "⚠ มีอาจารย์บางท่านเฉลยข้อคล้ายกันเป็น medial temporal แต่ภาพทางคลินิกเข้ากับ frontal lobe มากกว่า"
   },
@@ -2049,7 +2049,7 @@
     "C": "Brown-Séquard syndrome"
    },
    "answer": "C",
-   "why": "Hemisection ของ spinal cord ด้านขวาทำให้เสีย dorsal column (vibration/proprioception) และ corticospinal tract (UMN sign) ข้างเดียวกันกับรอยโรค ส่วน spinothalamic tract ไขว้ข้ามที่ระดับ 1-2 segment เหนือจุดเข้า จึงเสีย pain/temperature ด้านตรงข้าม ASA occlusion จะ spare dorsal column และ posterolateral (SCD) ไม่เสีย pain",
+   "why": "Vibration เสีย + hyperreflexia ขาขวา + pain เสียด้านซ้าย = hemisection ไขสันหลังซีกขวา\n✗ A: Posterolateral (SCD) ไม่เสีย pain/temperature\n✗ B: ASA occlusion เว้น dorsal column (vibration ปกติ) และเป็นทั้งสองข้าง\n✓ C: Brown-Séquard: dorsal column + corticospinal ข้างเดียวกัน · spinothalamic ข้างตรงข้าม",
    "source": "วิเคราะห์"
   },
   "77/91": {
@@ -2062,7 +2062,7 @@
     "D": "Potassium channel"
    },
    "answer": "A",
-   "why": "สมมติฐานหลักของ ALS คือ glutamate excitotoxicity โดย glutamate กระตุ้น AMPA/NMDA receptor มากเกินไปทำให้ Ca2+ ไหลเข้า motor neuron มากจนเซลล์ตาย (Ca2+-permeable AMPA receptor ใน motor neuron) จึงตอบ calcium channel ส่วนยา riluzole ลด glutamate release ผ่านการ block Na+ channel ซึ่งเป็นการรักษา ไม่ใช่ defect หลัก",
+   "why": "ALS: glutamate excitotoxicity → Ca²⁺ ไหลเข้า motor neuron มากจนเซลล์ตาย\n✓ A: Calcium (ผ่าน Ca²⁺-permeable AMPA receptor)\n✗ B: Na⁺ channel เป็นเป้าของ riluzole (การรักษา) ไม่ใช่ defect หลัก\n✗ C: Cl⁻ channel ไม่ใช่กลไกหลัก\n✗ D: K⁺ channel ไม่ใช่กลไกหลัก",
    "source": "วิเคราะห์",
    "doubt": "⚠ โจทย์และตัวเลือกจำมาไม่ชัด อาจตีความเป็น Na+ channel (กลไกของ riluzole) ได้"
   },
@@ -2076,7 +2076,7 @@
     "D": "Vaccine 4-5 เข็ม + RIG ทุกแผล"
    },
    "answer": "D",
-   "why": "แผลที่มีเลือดออก (รวมถึงแผลถลอกที่เลือดซึม) จัดเป็น WHO category III ในผู้ที่ไม่เคยได้รับวัคซีนต้องให้วัคซีนครบชุด (4-5 เข็ม) ร่วมกับ rabies immunoglobulin ฉีดรอบทุกแผลให้มากที่สุด เพื่อ neutralize เชื้อเฉพาะที่ก่อนเข้าเส้นประสาท วัคซีน 2 เข็มใช้เฉพาะผู้ที่เคยได้รับวัคซีนครบมาก่อนและไม่ต้องให้ RIG",
+   "why": "แผลมีเลือดออก (รวมแผลถลอกที่เลือดซึม) = WHO category III\nไม่เคยได้วัคซีน → วัคซีนครบชุด + RIG ฉีดรอบทุกแผล\n✗ A: 2 เข็มไม่ให้ RIG ใช้กับคนที่เคยได้วัคซีนครบแล้ว\n✗ B: 2 เข็มใช้กับคนที่เคยได้วัคซีนครบ และ RIG ต้องฉีดทุกแผล\n✗ C: RIG ต้องครอบคลุมทุกแผล ไม่ใช่แผลเดียว\n✓ D: วัคซีน 4–5 เข็ม + RIG ทุกแผล",
    "source": "วิเคราะห์"
   },
   "77/93": {
@@ -2088,7 +2088,7 @@
     "C": "Muscarinic antagonist"
    },
    "answer": "A",
-   "why": "น้ำตาไหลน้ำลายไหลเป็นอาการ muscarinic excess (SLUDGE/DUMBELS) เกิดจากสารยับยั้ง acetylcholinesterase เช่น organophosphate/carbamate ในยาฆ่าแมลงที่ใช้ในสวน ทำให้ ACh สะสม muscarinic antagonist (เช่น atropine-like จากพืช Datura) ทำให้ตรงข้ามคือปากแห้งตาแห้ง ส่วน nicotinic antagonist ทำให้อ่อนแรง",
+   "why": "น้ำตาไหลน้ำลายไหล = muscarinic excess (SLUDGE) จากสารยับยั้ง AChE (ยาฆ่าแมลง)\n✓ A: Anticholinesterase (organophosphate/carbamate) → ACh สะสม\n✗ B: Nicotinic antagonist ทำให้อ่อนแรง\n✗ C: Muscarinic antagonist (เช่น Datura) ทำปากแห้งตาแห้ง ตรงข้าม",
    "source": "วิเคราะห์"
   },
   "77/94": {
@@ -2101,7 +2101,7 @@
     "D": "Classical conditioning"
    },
    "answer": "A",
-   "why": "ใน operant conditioning การให้สิ่งที่พึงพอใจหลังพฤติกรรมเพื่อเพิ่มพฤติกรรมนั้นคือ positive reinforcement ส่วน negative reinforcement คือการเอาสิ่งไม่พึงพอใจออกเพื่อเพิ่มพฤติกรรม punishment มุ่งลดพฤติกรรม และ classical conditioning เป็นการจับคู่ stimulus โดยไม่ขึ้นกับผลของพฤติกรรม",
+   "why": "Operant conditioning: ให้สิ่งที่พอใจหลังพฤติกรรม เพื่อเพิ่มพฤติกรรมนั้น\n✓ A: Positive reinforcement\n✗ B: Negative reinforcement = เอาสิ่งไม่พอใจออก เพื่อเพิ่มพฤติกรรม\n✗ C: Punishment มุ่งลดพฤติกรรม\n✗ D: Classical conditioning = จับคู่ stimulus ไม่ขึ้นกับผลของพฤติกรรม",
    "source": "วิเคราะห์"
   },
   "77/95": {
@@ -2114,7 +2114,7 @@
     "D": "Paranoid"
    },
    "answer": "A",
-   "why": "ความคิดที่ผุดขึ้นซ้ำ ๆ ไม่ต้องการ (obsession เรื่องดูหมิ่นสิ่งศักดิ์สิทธิ์) ทำให้วิตกกังวล และต้องทำพฤติกรรมซ้ำ (compulsion คือการขอขมา) เพื่อลดความกังวล เป็นลักษณะของ obsessive-compulsive disorder ซึ่งรักษาด้วย SSRI ขนาดสูงร่วมกับ exposure and response prevention GAD เป็นความกังวลหลายเรื่องโดยไม่มี compulsion",
+   "why": "ความคิดผุดซ้ำไม่ต้องการ (obsession) + ต้องทำซ้ำเพื่อลดกังวล (compulsion) = OCD\n✓ A: OCD รักษา SSRI ขนาดสูง + exposure and response prevention\n✗ B: Anxiety กว้างเกินไป\n✗ C: GAD กังวลหลายเรื่อง ไม่มี compulsion\n✗ D: Paranoid ระแวงผู้อื่น",
    "source": "วิเคราะห์"
   },
   "77/96": {
@@ -2127,7 +2127,7 @@
     "D": "CAMP test negative"
    },
    "answer": "B",
-   "why": "Gram-positive bacilli ที่ทำให้ neonatal meningitis คือ Listeria monocytogenes ซึ่งมี tumbling motility ที่ 25°C และใน semisolid agar จะเกิดรูปแบบ umbrella shape เชื้อเป็น narrow beta-hemolysis (ไม่ใช่ gamma) และ CAMP test positive กับ S. aureus จึงตัดข้อ C, D ออก",
+   "why": "Gram-positive bacilli ใน neonatal meningitis = Listeria\n✗ A: Umbilicated colony ไม่ใช่ลักษณะของ Listeria\n✓ B: Umbrella shape ใน semisolid agar (tumbling motility ที่ 25°C)\n✗ C: Listeria เป็น narrow β-hemolysis ไม่ใช่ γ\n✗ D: Listeria CAMP test บวก",
    "source": "วิเคราะห์"
   },
   "77/97": {
@@ -2141,7 +2141,7 @@
     "E": "Tympanic membrane"
    },
    "answer": "B",
-   "why": "ภาพเข้ากับ presbycusis ซึ่งเป็น bilateral symmetric sensorineural hearing loss (Rinne positive, Weber กลาง) เริ่มที่ความถี่สูงเพราะ hair cell และ stereocilia ที่ฐานของ cochlea (รับเสียงความถี่สูง) เสื่อมก่อน ossicle และ tympanic membrane เป็น conductive loss (BC > AC) ส่วน cochlear nerve lesion มักเป็นข้างเดียว และ semicircular canal เกี่ยวกับการทรงตัว",
+   "why": "Presbycusis = SNHL สองข้างสมมาตร เริ่มที่ความถี่สูง (Rinne บวก, Weber กลาง)\n✗ A: Ossicle เสีย = conductive loss (BC > AC)\n✓ B: Hair cell/stereocilia ที่ฐาน cochlea (รับความถี่สูง) เสื่อมก่อน\n✗ C: Cochlear nerve lesion มักเป็นข้างเดียว\n✗ D: Semicircular canal เกี่ยวกับการทรงตัว\n✗ E: Tympanic membrane เสีย = conductive loss",
    "source": "วิเคราะห์"
   },
   "77/98": {
@@ -2154,7 +2154,7 @@
     "D": "Lateral spinothalamic tract"
    },
    "answer": "A",
-   "why": "Vibration และ proprioception วิ่งใน dorsal column-medial lemniscus โดยใยจากขาและลำตัวส่วนล่าง (ต่ำกว่า T6) อยู่ใน fasciculus gracilis ด้าน medial ส่วนใยจากแขนอยู่ใน fasciculus cuneatus ด้าน lateral spinothalamic tract นำ pain/temperature (lateral) และ crude touch (anterior)",
+   "why": "Vibration/proprioception วิ่งใน dorsal column\nใยจากขา (ต่ำกว่า T6) อยู่ใน fasciculus gracilis ด้าน medial\n✓ A: Fasciculus gracilis\n✗ B: Fasciculus cuneatus นำจากแขน\n✗ C: Anterior spinothalamic นำ crude touch\n✗ D: Lateral spinothalamic นำ pain/temperature",
    "source": "วิเคราะห์"
   },
   "77/99": {
@@ -2167,7 +2167,7 @@
     "D": "IV diazepam third dose"
    },
    "answer": "C",
-   "why": "Status epilepticus ที่ไม่ตอบสนองต่อ benzodiazepine 2 dose (established SE) ให้ second-line antiseizure drug ทาง IV เช่น phenytoin/fosphenytoin, valproate หรือ levetiracetam benzodiazepine dose ที่ 3 เพิ่มความเสี่ยงกดการหายใจโดยไม่ได้ผลเพิ่ม propofol ใช้ใน refractory SE หลัง second-line ล้มเหลว ส่วนยากินออกฤทธิ์ช้าเกินไป",
+   "why": "ชักไม่หยุดหลัง BZD 2 ครั้ง = established SE → ให้ second-line IV\n✗ A: ยากินออกฤทธิ์ช้าเกินไป\n✗ B: Propofol ใช้ใน refractory SE หลัง second-line ล้มเหลว\n✓ C: IV phenytoin/fosphenytoin (หรือ valproate, levetiracetam)\n✗ D: BZD dose ที่ 3 เพิ่มความเสี่ยงกดการหายใจโดยไม่ได้ผลเพิ่ม",
    "source": "วิเคราะห์"
   },
   "77/100": {
@@ -2178,7 +2178,7 @@
     "B": "Carbamazepine"
    },
    "answer": "A",
-   "why": "อาการเข้ากับ major depressive disorder ยาแรกคือ SSRI เช่น fluoxetine ซึ่งปลอดภัยเมื่อกินเกินขนาดมากกว่า TCA (สำคัญในผู้ที่มีความคิดฆ่าตัวตาย) แต่ต้องติดตามใกล้ชิดเพราะในวัยรุ่นและผู้ใหญ่ตอนต้นอาจเพิ่ม suicidality ช่วงแรก carbamazepine เป็น anticonvulsant/mood stabilizer ใช้ใน bipolar ไม่ใช่ยาแรกของ depression",
+   "why": "อ่อนเพลีย + anhedonia + ความคิดฆ่าตัวตาย = MDD\n✓ A: Fluoxetine (SSRI) เป็นยาแรก ปลอดภัยเมื่อกินเกินขนาดกว่า TCA\n  ติดตามใกล้ชิดช่วงแรกเพราะ suicidality อาจเพิ่มในคนอายุน้อย\n✗ B: Carbamazepine เป็น mood stabilizer ใช้ใน bipolar",
    "source": "วิเคราะห์"
   },
   "77/101": {
@@ -2189,7 +2189,7 @@
     "B": "Binasal hemianopia"
    },
    "answer": "A",
-   "why": "Pituitary adenoma โตขึ้นด้านบนกด optic chiasm ตรงกลาง ซึ่งเป็นใยประสาทที่มาจาก nasal retina ของสองตาและรับภาพ temporal field จึงเกิด bitemporal hemianopia (มักเริ่มที่ superior quadrant) ส่วน binasal hemianopia ต้องกดด้านข้างของ chiasm ทั้งสองฝั่ง เช่นจาก ICA calcification ซึ่งพบน้อย",
+   "why": "Pituitary adenoma โตขึ้นด้านบนกดกลาง optic chiasm (ใยจาก nasal retina = temporal field)\n✓ A: Bitemporal hemianopia (มักเริ่ม superior quadrant)\n✗ B: Binasal ต้องกดด้านข้าง chiasm ทั้งสองฝั่ง (เช่น ICA calcification) พบน้อย",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -2203,7 +2203,7 @@
     "D": "Muscarinic agonist"
    },
    "answer": "A",
-   "why": "ยาตัวแรกของ trigeminal neuralgia คือ carbamazepine (หรือ oxcarbazepine) ซึ่งเป็น anticonvulsant ที่ block voltage-gated Na+ channel ลด ectopic discharge ของ trigeminal nerve ที่ถูกหลอดเลือดกด (มัก superior cerebellar artery) beta blocker ใช้ป้องกัน migraine ไม่ใช่ trigeminal neuralgia",
+   "why": "Trigeminal neuralgia ยาแรกคือ carbamazepine/oxcarbazepine (block Na⁺ channel)\n✓ A: Anticonvulsant\n✗ B: β-blocker ใช้ป้องกัน migraine\n✗ C: Nicotinic agonist ไม่ใช้รักษา\n✗ D: Muscarinic agonist ไม่ใช้รักษา",
    "source": "วิเคราะห์"
   },
   "77/113": {
