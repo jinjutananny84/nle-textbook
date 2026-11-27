@@ -3411,7 +3411,7 @@
     "E": "Triazolam"
    },
    "answer": "C",
-   "why": "Diazepam เป็น long-acting BZD ที่ละลายในไขมันสูงและมี active metabolite (desmethyldiazepam) ที่ half-life ยาวมาก จึงเกิด hangover effect ง่วงมึนวันรุ่งขึ้น โดยเฉพาะในผู้สูงอายุ. Triazolam และ midazolam เป็น short-acting ไม่ค่อยมีผลค้างแต่เกิด rebound insomnia ได้. Alprazolam และ lorazepam เป็น intermediate-acting",
+   "why": "ผลค้างวันรุ่งขึ้น (hangover) = BZD ออกฤทธิ์ยาว + มี active metabolite\n✗ A: Alprazolam เป็น intermediate-acting\n✗ B: Lorazepam เป็น intermediate-acting ไม่มี active metabolite\n✓ C: Diazepam long-acting ละลายในไขมันสูง มี desmethyldiazepam half-life ยาวมาก\n✗ D: Midazolam short-acting ไม่ค่อยมีผลค้าง\n✗ E: Triazolam short-acting ไม่ค่อยมีผลค้าง แต่เกิด rebound insomnia ได้",
    "source": "วิเคราะห์"
   },
   "79/93": {
@@ -3425,7 +3425,7 @@
     "E": "ให้ disulfiram"
    },
    "answer": "B",
-   "why": "หลักการจัดการผู้ป่วย agitation คือเริ่มด้วยวิธีที่รุกล้ำน้อยที่สุด ได้แก่ verbal de-escalation ลดสิ่งกระตุ้น และใช้ physical restraint เฉพาะเมื่อจำเป็นต่อความปลอดภัย. ใน alcohol intoxication การให้ยากดประสาทอาจเสริมฤทธิ์กดการหายใจจึงไม่ควรเป็นอันดับแรก. Disulfiram ใช้ป้องกันการกลับไปดื่มในระยะยาว. การใส่ท่อช่วยหายใจไม่มีข้อบ่งชี้",
+   "why": "จัดการ agitation: เริ่มจากวิธีที่รุกล้ำน้อยที่สุด\nAlcohol intoxication + ยากดประสาท → เสริมฤทธิ์กดการหายใจ\n✗ A: Haloperidol ทันที ไม่ควรเป็นอันดับแรก\n✓ B: Verbal de-escalation + ลดสิ่งกระตุ้น ผูกมัดเฉพาะเมื่อจำเป็นต่อความปลอดภัย\n✗ C: Carbamazepine ไม่ใช้จัดการ agitation เฉียบพลัน\n✗ D: ใส่ท่อช่วยหายใจไม่มีข้อบ่งชี้\n✗ E: Disulfiram ใช้ป้องกันการกลับไปดื่มในระยะยาว",
    "source": "วิเคราะห์"
   },
   "79/94": {
@@ -3439,7 +3439,7 @@
     "E": "ANP"
    },
    "answer": "B",
-   "why": "ADH (vasopressin) สร้างจาก supraoptic และ paraventricular nucleus ของ hypothalamus แล้วส่งไปเก็บที่ posterior pituitary ทำหน้าที่จับ V2 receptor ที่ collecting duct ใส่ aquaporin-2 เพื่อดูดน้ำกลับ. การบาดเจ็บที่ hypothalamus จึงทำให้เกิด central DI ได้. Aldosterone กักเก็บ Na เป็นหลัก (น้ำตามไป) และสร้างจาก adrenal. Renin มาจากไต. ANP ขับ Na และน้ำ",
+   "why": "ADH สร้างที่ supraoptic + paraventricular nucleus → เก็บที่ posterior pituitary\nจับ V2 ที่ collecting duct → ใส่ aquaporin-2 ดูดน้ำกลับ; hypothalamus เสีย → central DI\n✗ A: Cortisol ไม่ได้คุมการดูดน้ำโดยตรง\n✓ B: Antidiuretic hormone\n✗ C: Renin มาจากไต\n✗ D: Aldosterone (adrenal) กักเก็บ Na เป็นหลัก น้ำตามไป\n✗ E: ANP ขับ Na และน้ำ",
    "source": "วิเคราะห์"
   },
   "79/97": {
@@ -3453,7 +3453,7 @@
     "E": "Nocardia asteroides"
    },
    "answer": "B",
-   "why": "Hypopigmented anesthetic patch และพบ AFB น้อย (paucibacillary) คือ tuberculoid leprosy จาก Mycobacterium leprae ซึ่งชอบอุณหภูมิต่ำ (ผิวหนัง เส้นประสาทส่วนปลาย) และเข้า Schwann cell ทำให้ชา. ภูมิแบบ Th1 ที่ดีทำให้เชื้อน้อย ส่วน lepromatous (Th2) มีเชื้อมาก. M. tuberculosis ไม่ทำให้ผื่นชา. Nocardia เป็น weakly acid-fast แต่ทำให้ปอดหรือสมองติดเชื้อ",
+   "why": "ผื่นด่างขาว + ชา + AFB น้อย (paucibacillary) = tuberculoid leprosy (Th1 ดี)\nM. leprae ชอบอุณหภูมิต่ำ เข้า Schwann cell → ชา\n✗ A: M. tuberculosis ไม่ทำให้ผื่นชา\n✓ B: Mycobacterium leprae\n✗ C: MAC ติดเชื้อในคนภูมิต่ำ (HIV) ไม่ทำผื่นชา\n✗ D: C. diphtheriae ไม่ใช่ acid-fast\n✗ E: Nocardia weakly acid-fast แต่ติดเชื้อปอด/สมอง",
    "source": "วิเคราะห์"
   },
   "79/100": {
@@ -3467,7 +3467,7 @@
     "E": "ไวรัสอยู่แบบเรื้อรังใน epithelial cell ที่ริมฝีปาก"
    },
    "answer": "D",
-   "why": "HSV-1 หลังติดเชื้อครั้งแรกจะเดินทางแบบ retrograde axonal transport ไปแฝงที่ trigeminal ganglion ในรูป episome (latency, มี LAT transcript) ไม่สร้างไวรัส. เมื่อมีสิ่งกระตุ้นเช่นความเครียด แสง UV ไข้ ไวรัสจะ reactivate และเดินทาง anterograde กลับมาที่ผิวเดิมทำให้เกิดแผลซ้ำ. ไม่ใช่การติดเชื้อใหม่หรือ viremia เรื้อรัง และไวรัสไม่ได้แฝงใน epithelial cell",
+   "why": "HSV-1 → retrograde axonal transport ไปแฝงที่ trigeminal ganglion (episome, LAT) ไม่สร้างไวรัส\nสิ่งกระตุ้น (เครียด UV ไข้) → reactivate → anterograde กลับมาผิวเดิม → แผลซ้ำ\n✗ A: ไม่ใช่ viremia เรื้อรังจาก humoral บกพร่อง\n✗ B: ไม่ใช่ติดเชื้อสายพันธุ์ใหม่\n✗ C: การติดเชื้อครั้งแรกหายแล้ว แผลใหม่มาจาก reactivation\n✓ D: แฝงใน sensory ganglion แล้ว reactivate เป็นระยะ\n✗ E: ไวรัสไม่ได้แฝงใน epithelial cell",
    "source": "วิเคราะห์"
   },
   "79/106": {
@@ -3481,7 +3481,7 @@
     "E": "Elbow flexion"
    },
    "answer": "C",
-   "why": "การกดทับ radial nerve ที่ spiral groove ของ humerus (Saturday night palsy) ทำให้กล้ามเนื้อ extensor ของข้อมือและนิ้วอ่อนแรง (wrist drop, เหยียดนิ้วที่ MCP ไม่ได้) และชาหลังมือ. Triceps มักไม่เสียเพราะแขนงแยกออกก่อน spiral groove. Thumb opposition และ wrist/finger flexion เป็นของ median (และ ulnar). Elbow flexion เป็นของ musculocutaneous",
+   "why": "Saturday night palsy = radial n. ถูกกดที่ spiral groove\n→ wrist drop + เหยียดนิ้วที่ MCP ไม่ได้ + ชาหลังมือ (triceps มักรอด)\n✗ A: Thumb opposition = median n.\n✗ B: Finger flexion = median + ulnar\n✓ C: Finger extension (radial n.)\n✗ D: Wrist flexion = median + ulnar\n✗ E: Elbow flexion = musculocutaneous n.",
    "source": "วิเคราะห์"
   },
   "79/109": {
@@ -3495,7 +3495,7 @@
     "E": "Inability to extend the fingers"
    },
    "answer": "B",
-   "why": "Supracondylar fracture แบบ extension type ทำให้ปลายกระดูกส่วนต้นเคลื่อนไปด้านหน้ากด median nerve (โดยเฉพาะ anterior interosseous) และ brachial artery ทำให้เสีย thumb opposition และ flexion ของนิ้วโป้งนิ้วชี้ (OK sign ไม่ได้). Radial nerve บาดเจ็บได้แต่พบน้อยกว่า (wrist drop). Ulnar claw และ finger abduction เป็นของ ulnar nerve ซึ่งบาดเจ็บจาก medial epicondyle fracture",
+   "why": "Supracondylar fracture (extension type) → ปลายกระดูกส่วนต้นเคลื่อนไปหน้า กด median n. (โดยเฉพาะ AIN) + brachial artery\n✗ A: Wrist drop = radial n. บาดเจ็บได้แต่พบน้อยกว่า\n✓ B: Loss of thumb opposition (median n.)\n✗ C: Ulnar claw = ulnar n. (medial epicondyle fracture)\n✗ D: Finger abduction = ulnar n. (interossei)\n✗ E: เหยียดนิ้วไม่ได้ = radial n.",
    "source": "วิเคราะห์"
   },
   "79/112": {
@@ -3509,7 +3509,7 @@
     "E": "งอนิ้วเท้าไม่ได้"
    },
    "answer": "A",
-   "why": "Common peroneal (fibular) nerve วิ่งอ้อมรอบ neck of fibula ใต้ผิวหนังด้านข้างเข่าจึงบาดเจ็บง่าย deep peroneal เลี้ยง tibialis anterior (dorsiflexion) และ superficial peroneal รับความรู้สึกหลังเท้า เมื่อเสียจึงเกิด foot drop (steppage gait). Plantarflexion และงอนิ้วเท้าเป็นของ tibial nerve. กางสะโพกเป็นของ superior gluteal. เหยียดเข่าเป็นของ femoral",
+   "why": "Common peroneal n. อ้อม neck of fibula ใต้ผิวหนังด้านข้างเข่า บาดเจ็บง่าย\nDeep peroneal → tibialis anterior (dorsiflexion); superficial → ความรู้สึกหลังเท้า\n✓ A: Foot drop (steppage gait)\n✗ B: Plantarflexion = tibial n.\n✗ C: กางสะโพก = superior gluteal n.\n✗ D: เหยียดเข่า = femoral n.\n✗ E: งอนิ้วเท้า = tibial n.",
    "source": "วิเคราะห์"
   },
   "79/115": {
@@ -3523,7 +3523,7 @@
     "E": "Greater auricular nerve"
    },
    "answer": "C",
-   "why": "Recurrent laryngeal nerve (แขนงของ CN X) วิ่งขึ้นใน tracheoesophageal groove ใกล้ inferior thyroid artery เลี้ยงกล้ามเนื้อ intrinsic ของ larynx ทั้งหมดยกเว้น cricothyroid ถ้าบาดเจ็บข้างเดียวทำให้เสียงแหบ ถ้าสองข้างอาจทางเดินหายใจอุดกั้น. External branch ของ superior laryngeal nerve (วิ่งคู่ superior thyroid artery) เลี้ยง cricothyroid เสียแล้วเสียงสูงไม่ได้. Hypoglossal และ phrenic ไม่เกี่ยวกับ vocal cord",
+   "why": "Recurrent laryngeal n. (แขนง CN X) วิ่งใน tracheoesophageal groove ใกล้ inferior thyroid artery\nเลี้ยง intrinsic larynx ทั้งหมดยกเว้น cricothyroid → บาดเจ็บข้างเดียวเสียงแหบ สองข้างทางเดินหายใจอุดกั้น\n✗ A: Hypoglossal คุมลิ้น ไม่เกี่ยวกับ vocal cord\n✗ B: Phrenic คุมกะบังลม\n✓ C: Recurrent laryngeal nerve\n✗ D: Glossopharyngeal รับรสโคนลิ้น + stylopharyngeus\n✗ E: Greater auricular รับความรู้สึกใบหู/มุมขากรรไกร",
    "source": "วิเคราะห์"
   },
   "79/166": {
@@ -3537,7 +3537,7 @@
     "E": "Loperamide"
    },
    "answer": "E",
-   "why": "Loperamide เป็น mu-opioid agonist ที่ออกฤทธิ์ที่ลำไส้ ลด peristalsis และเพิ่ม tone ของ anal sphincter โดยผ่าน BBB น้อยมากเพราะเป็น substrate ของ P-glycoprotein จึงไม่มีฤทธิ์ทาง CNS และเสี่ยงติดน้อย. Diphenoxylate ก็เป็น opioid แต่ผ่าน CNS ได้บ้าง จึงผสม atropine กันใช้ผิด. Racecadotril เป็น enkephalinase inhibitor ไม่ใช่ opioid agonist โดยตรง",
+   "why": "ต้องการ peripheral μ-opioid agonist ลด peristalsis\n✗ A: Racecadotril = enkephalinase inhibitor ไม่ใช่ opioid agonist โดยตรง\n✗ B: Diphenoxylate ผ่าน CNS ได้บ้าง จึงผสม atropine กันใช้ผิด\n✗ C: Bismuth subsalicylate ไม่ใช่ opioid\n✗ D: Cholestyramine จับ bile acid ใช้ใน bile acid diarrhea\n✓ E: Loperamide เป็น P-gp substrate ผ่าน BBB น้อยมาก ไม่มีฤทธิ์ CNS",
    "source": "วิเคราะห์"
   },
   "79/216": {
@@ -3551,7 +3551,7 @@
     "E": "Methyldopa"
    },
    "answer": "C",
-   "why": "MgSO4 เป็นยามาตรฐานป้องกันและรักษาการชักใน severe preeclampsia หรือ HELLP กลไกคือบล็อก NMDA receptor และ Ca channel ทำให้ลด neuronal excitability และขยายหลอดเลือดสมองลด vasospasm. ต้องเฝ้าระวัง deep tendon reflex การหายใจ และปัสสาวะ (antidote คือ calcium gluconate). Labetalol, nifedipine, hydralazine และ methyldopa เป็นยาลดความดันที่ไม่ป้องกันการชัก",
+   "why": "MgSO4 = มาตรฐานป้องกัน/รักษาชักใน severe preeclampsia/HELLP\nบล็อก NMDA + Ca channel → ลด neuronal excitability; เฝ้า DTR การหายใจ ปัสสาวะ (antidote: Ca gluconate)\n✗ A: Labetalol ลดความดัน ไม่ป้องกันชัก\n✗ B: Nifedipine ลดความดัน ไม่ป้องกันชัก\n✓ C: Magnesium sulfate\n✗ D: Hydralazine ลดความดัน ไม่ป้องกันชัก\n✗ E: Methyldopa ลดความดัน ไม่ป้องกันชัก",
    "source": "วิเคราะห์"
   },
   "79/236": {
@@ -3565,7 +3565,7 @@
     "E": "Estriol"
    },
    "answer": "C",
-   "why": "AFP สร้างจาก fetal yolk sac และตับ ใน open NTD (เช่น myelomeningocele, anencephaly) AFP รั่วจากท่อประสาทที่เปิดเข้าสู่ amniotic fluid และเข้ากระแสเลือดแม่ จึงสูงทั้งใน maternal serum และ amniotic fluid (ร่วมกับ acetylcholinesterase). Inhibin A และ beta-hCG สูงใน Down syndrome. Estriol ต่ำใน trisomy. Sphingomyelin ใช้ใน L/S ratio ดู lung maturity",
+   "why": "Open NTD → AFP รั่วเข้า amniotic fluid และเลือดแม่ (ร่วมกับ AChE ใน amniotic fluid)\n✗ A: Inhibin A สูงใน Down syndrome\n✗ B: Sphingomyelin ใช้ใน L/S ratio ดู lung maturity\n✓ C: Alpha-fetoprotein\n✗ D: β-hCG สูงใน Down syndrome\n✗ E: Estriol ต่ำใน trisomy",
    "source": "วิเคราะห์"
   },
   "79/239": {
@@ -3579,7 +3579,7 @@
     "E": "Cerebellomedullary cistern"
    },
    "answer": "C",
-   "why": "Cerebellopontine cistern อยู่ในมุมระหว่าง cerebellum, pons และ medulla มี CN VII, VIII (และ AICA) วิ่งผ่านไปยัง internal acoustic meatus ก้อนที่พบบ่อยคือ vestibular schwannoma ทำให้หูดับข้างเดียว tinnitus และ ataxia ข้างเดียวกัน. Cisterna magna และ cerebellomedullary cistern เป็นชื่อเดียวกันอยู่ด้านหลังระหว่าง cerebellum กับ medulla. Interpeduncular cistern มี CN III",
+   "why": "Cerebellopontine cistern มี CN VII, VIII (+ AICA) วิ่งไป internal acoustic meatus\nก้อนที่พบบ่อย = vestibular schwannoma → หูดับข้างเดียว tinnitus ataxia ข้างเดียวกัน\n✗ A: Cisterna magna อยู่หลังระหว่าง cerebellum กับ medulla\n✗ B: Interpeduncular cistern มี CN III\n✓ C: Cerebellopontine cistern\n✗ D: Ambient cistern มี CN IV + PCA\n✗ E: Cerebellomedullary cistern = ชื่อเดียวกับ cisterna magna",
    "source": "วิเคราะห์"
   },
   "79/240": {
@@ -3593,7 +3593,7 @@
     "E": "Congenital microcephaly"
    },
    "answer": "E",
-   "why": "Zika (flavivirus) ติดเชื้อ neural progenitor cell ของทารกทำให้เซลล์ตายและสมองไม่เจริญ ภาพลักษณ์เด่นที่สุดของ congenital Zika syndrome คือ severe microcephaly ร่วมกับ subcortical calcification, กะโหลกยุบ และ arthrogryposis. ตัวเลือกอื่นเป็นลักษณะคลาสสิกของเชื้อ TORCH อื่น: chorioretinitis กับ diffuse calcification (toxoplasma), SNHL กับ cataract (rubella), periventricular calcification (CMV), blueberry muffin (rubella หรือ CMV)",
+   "why": "Zika (flavivirus) ติดเชื้อ neural progenitor cell → สมองไม่เจริญ\nลักษณะเด่นสุดของ congenital Zika syndrome = severe microcephaly (+ subcortical calcification, arthrogryposis)\n✗ A: Chorioretinitis + diffuse calcification = toxoplasma\n✗ B: SNHL + cataract = rubella\n✗ C: Periventricular calcification = CMV\n✗ D: Blueberry muffin + ตับม้ามโต = rubella/CMV\n✓ E: Congenital microcephaly",
    "source": "วิเคราะห์"
   },
   "79/241": {
@@ -3607,7 +3607,7 @@
     "E": "Glucagon"
    },
    "answer": "C",
-   "why": "Fight-or-flight เป็นการตอบสนองผ่าน sympathetic nervous system ที่เร็วระดับวินาที preganglionic sympathetic fiber (ปล่อย ACh จับ nicotinic receptor) กระตุ้น chromaffin cell ใน adrenal medulla ให้หลั่ง epinephrine เข้ากระแสเลือดทันที. HPA axis (CRH ไป ACTH ไป cortisol) ต้องผ่านหลายขั้นและสังเคราะห์ใหม่จึงช้ากว่าเป็นนาที. GH และ glucagon ไม่ใช่ hormone ตัวแรกของ acute stress",
+   "why": "Fight-or-flight = sympathetic ระดับวินาที\nPreganglionic (ACh → nicotinic) กระตุ้น chromaffin cell ใน adrenal medulla หลั่ง epinephrine ทันที\n✗ A: ACTH ต้องผ่าน CRH ก่อน ช้ากว่าเป็นนาที\n✗ B: Cortisol ต้องสังเคราะห์ใหม่ ช้ากว่าเป็นนาที\n✓ C: Epinephrine\n✗ D: GH ไม่ใช่ hormone ตัวแรกของ acute stress\n✗ E: Glucagon ไม่ใช่ hormone ตัวแรกของ acute stress",
    "source": "วิเคราะห์"
   },
   "79/242": {
@@ -3621,7 +3621,7 @@
     "E": "Furosemide"
    },
    "answer": "C",
-   "why": "อาการคือ overactive bladder จาก detrusor หดตัวโดยไม่ตั้งใจ ซึ่งควบคุมโดย parasympathetic (ACh จับ M3 receptor). Oxybutynin เป็น antimuscarinic บล็อก M3 ทำให้ detrusor คลาย (SE คือปากแห้ง ท้องผูก สับสนในผู้สูงอายุ) อีกทางเลือกคือ mirabegron (beta-3 agonist). Tamsulosin เป็น alpha-1 blocker สำหรับ BPH. Desmopressin ใช้ใน DI หรือ nocturnal enuresis",
+   "why": "Overactive bladder = detrusor หดตัวโดยไม่ตั้งใจ ควบคุมโดย parasympathetic (ACh → M3)\n✗ A: Phenylephrine (α1 agonist) ไม่ใช้รักษา OAB\n✗ B: Desmopressin ใช้ใน DI หรือ nocturnal enuresis\n✓ C: Oxybutynin (antimuscarinic บล็อก M3) ทางเลือกอื่น: mirabegron (β3 agonist)\n✗ D: Tamsulosin (α1 blocker) ใช้ใน BPH\n✗ E: Furosemide ทำให้ปัสสาวะมากขึ้น",
    "source": "วิเคราะห์"
   },
   "79/249": {
@@ -3635,7 +3635,7 @@
     "E": "bacterial endotoxin ยก set point"
    },
    "answer": "C",
-   "why": "Exertional heat stroke คือ hyperthermia ที่ set point ปกติ แต่ความร้อนที่สร้างจากกล้ามเนื้อและรับจากสิ่งแวดล้อมเกินความสามารถระบาย (อากาศชื้นทำให้เหงื่อระเหยไม่ได้) จึงร้อนเกิน 40 องศาร่วมกับ CNS dysfunction. ต่างจากไข้ที่เกิดจาก pyrogen กระตุ้น PGE2 ยก set point. ยาลดไข้ (paracetamol, NSAIDs) จึงไม่ได้ผลใน heat stroke ต้องทำให้เย็นจากภายนอก",
+   "why": "Exertional heat stroke = hyperthermia ที่ set point ปกติ\nความร้อนเกินความสามารถระบาย (อากาศชื้น เหงื่อระเหยไม่ได้) → > 40°C + CNS dysfunction\n✗ A: PGE2 ยก set point = ไข้ ไม่ใช่ heat stroke\n✗ B: IL-1 เป็น pyrogen ของไข้\n✓ C: การระบายความร้อนล้มเหลว (ยาลดไข้ไม่ได้ผล ต้องทำให้เย็นจากภายนอก)\n✗ D: TRH ไม่ใช่กลไกของ heat stroke\n✗ E: Endotoxin ยก set point = ไข้",
    "source": "วิเคราะห์"
   },
   "79/250": {
@@ -3649,7 +3649,7 @@
     "E": "endotoxin กระตุ้น brown fat โดยตรง"
    },
    "answer": "B",
-   "why": "Pyrogen จากเชื้อ (LPS) กระตุ้น macrophage ปล่อย IL-1, IL-6, TNF-alpha ไปที่ OVLT ทำให้ COX-2 สร้าง PGE2 จับ EP3 receptor ใน preoptic hypothalamus ยก set point. อุณหภูมิจริงจึงต่ำกว่า set point ใหม่ ร่างกายจึงหดหลอดเลือดผิวและหนาวสั่นเพื่อเพิ่มความร้อน. การสร้างความร้อนโดย set point ไม่เปลี่ยนหรือระบายความร้อนล้มเหลวคือ hyperthermia",
+   "why": "LPS → macrophage ปล่อย IL-1, IL-6, TNF-α → OVLT → COX-2 สร้าง PGE2 → EP3 ใน preoptic hypothalamus ยก set point\nอุณหภูมิจริงต่ำกว่า set point ใหม่ → หดหลอดเลือดผิว + หนาวสั่น\n✗ A: Toxin ไม่ได้กระตุ้นต่อมเหงื่อโดยตรง\n✓ B: PGE2 เพิ่ม → set point สูงขึ้น\n✗ C: Hypothalamus ล้มเหลว = hyperthermia ไม่ใช่ไข้\n✗ D: สร้างความร้อนโดย set point ไม่เปลี่ยน = hyperthermia\n✗ E: Endotoxin ไม่ได้กระตุ้น brown fat โดยตรง",
    "source": "วิเคราะห์"
   },
   "79/256": {
@@ -3663,7 +3663,7 @@
     "E": "Angiotensin II"
    },
    "answer": "B",
-   "why": "ADH สร้างที่ supraoptic และ paraventricular nucleus ของ hypothalamus ขนส่งตาม axon ไป posterior pituitary แล้วหลั่งเข้ากระแสเลือด จับ V2 receptor (Gs, cAMP) ที่ principal cell ของ collecting duct ให้ใส่ aquaporin-2 ที่ apical membrane จึงดูดน้ำอิสระกลับ. การบาดเจ็บที่ hypothalamus หรือ pituitary stalk ทำให้เกิด central DI. Aldosterone และ angiotensin II เพิ่มการดูด Na เป็นหลัก",
+   "why": "ADH (supraoptic/paraventricular → posterior pituitary) จับ V2 (Gs, cAMP) ที่ principal cell\n→ ใส่ aquaporin-2 ที่ apical membrane ดูดน้ำอิสระกลับ; บาดเจ็บ hypothalamus/stalk → central DI\n✗ A: Cortisol ไม่ได้ดูดน้ำกลับโดยตรง\n✓ B: ADH\n✗ C: Renin เป็น enzyme จากไต\n✗ D: Aldosterone ดูด Na เป็นหลัก\n✗ E: Angiotensin II ดูด Na เป็นหลัก",
    "source": "วิเคราะห์"
   },
   "79/257": {
@@ -3677,7 +3677,7 @@
     "E": "Neurophysin"
    },
    "answer": "C",
-   "why": "Releasing hormone จาก hypothalamus (GHRH, CRH, TRH, GnRH, somatostatin, dopamine) หลั่งที่ median eminence เข้าสู่ hypophyseal portal vessel ไปควบคุม anterior pituitary. Oxytocin และ ADH (vasopressin) รวมทั้ง neurophysin ซึ่งเป็น carrier protein ถูกขนส่งตาม axon (hypothalamo-hypophyseal tract) ไปเก็บที่ posterior pituitary โดยตรง ไม่ผ่าน portal system",
+   "why": "Releasing hormone (GHRH, CRH, TRH, GnRH, somatostatin, dopamine) หลั่งที่ median eminence → portal vessel → anterior pituitary\n✗ A: Oxytocin ขนส่งตาม axon ไป posterior pituitary\n✗ B: ADH ขนส่งตาม axon ไป posterior pituitary\n✓ C: GHRH\n✗ D: Vasopressin (= ADH) ไม่ผ่าน portal system\n✗ E: Neurophysin เป็น carrier protein ไปกับ ADH/oxytocin ตาม axon",
    "source": "วิเคราะห์"
   },
   "79/262": {
@@ -3691,7 +3691,7 @@
     "E": "TSH-secreting adenoma"
    },
    "answer": "D",
-   "why": "Prolactinoma เป็น pituitary adenoma ที่พบบ่อยที่สุดในตำราคลาสสิก (ประมาณ 30-40% ของ adenoma ที่มีอาการ) ทำให้ galactorrhea และ amenorrhea จาก prolactin ยับยั้ง GnRH รักษาด้วย dopamine agonist (cabergoline, bromocriptine) เป็นอันดับแรก. Nonfunctioning adenoma พบบ่อยรองลงมา มักมาด้วย mass effect เช่น bitemporal hemianopia จากกด optic chiasm. ACTH, GH และ TSH adenoma พบน้อยกว่า",
+   "why": "Prolactinoma พบบ่อยที่สุด (~30–40% ของ adenoma ที่มีอาการ) → galactorrhea + amenorrhea; รักษาด้วย dopamine agonist\n✗ A: ACTH adenoma พบน้อยกว่า\n✗ B: Nonfunctioning พบบ่อยรองลงมา มักมาด้วย mass effect (bitemporal hemianopia)\n✗ C: GH adenoma พบน้อยกว่า\n✓ D: Prolactinoma\n✗ E: TSH adenoma พบน้อยที่สุด",
    "source": "วิเคราะห์",
    "doubt": "⚠ ข้อมูลระบาดวิทยาใหม่ และบริบท incidentaloma ในโจทย์ ทำให้ nonfunctioning adenoma (B) อาจเป็นคำตอบที่ถูกได้ ตอบ D ตามแนวที่ A3 ระบุ"
   }
