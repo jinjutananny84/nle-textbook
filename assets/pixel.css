@@ -81,3 +81,9 @@ figure.fig,.tbl-wrap{border-radius:4px}
 .bar{border-radius:0}
 .bar>i{border-radius:0}
 .lvbar{border-radius:0}
+
+/* หน้าแรกบนจอใหญ่: ยืดเต็มความกว้าง เว้นขอบเท่ากันสองด้าน */
+@media (min-width: 961px){
+  .main:has(> .home-hero)>*{max-width:none;margin-left:0;margin-right:0}
+  .main:has(> .home-hero){padding-left:28px;padding-right:28px}
+}
