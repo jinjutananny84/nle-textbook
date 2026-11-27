@@ -271,14 +271,15 @@ mark.user-hl.c-y{--c:var(--u-y)} mark.user-hl.c-g{--c:var(--u-g)} mark.user-hl.c
 .hl-pop[hidden]{display:none}
 .hl-pop{position:absolute}
 .hl-pop .sw.erase{background:var(--surface);color:var(--fg);font-size:16px;font-weight:700;display:grid;place-items:center;border-style:dashed}
-/* ระดับความเข้าใจ 4 ระดับ */
-:root{--lv4:#2f9e57;--lv4s:#d3f0da;--lv3:#e0b000;--lv3s:#fdf0b8;--lv2:#d13a3a;--lv2s:#f9c9c9;--lv1:#151515;--lv1s:#1f1f1f}
-:root[data-theme="dark"]{--lv4s:#1f4a2c;--lv3s:#4d4110;--lv2s:#5a2222;--lv1:#000;--lv1s:#000}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--lv4s:#1f4a2c;--lv3s:#4d4110;--lv2s:#5a2222;--lv1:#000;--lv1s:#000}}
+/* ระดับความเข้าใจ 4 ระดับ + สีชมพู (ใช้ความจำเยอะ) */
+:root{--lv4:#2f9e57;--lv4s:#d3f0da;--lv3:#e0b000;--lv3s:#fdf0b8;--lv2:#d13a3a;--lv2s:#f9c9c9;--lv1:#151515;--lv1s:#1f1f1f;--lv5:#d63384;--lv5s:#fce0ee}
+:root[data-theme="dark"]{--lv4s:#1f4a2c;--lv3s:#4d4110;--lv2s:#5a2222;--lv1:#000;--lv1s:#000;--lv5:#f472b6;--lv5s:#52203c}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--lv4s:#1f4a2c;--lv3s:#4d4110;--lv2s:#5a2222;--lv1:#000;--lv1s:#000;--lv5:#f472b6;--lv5s:#52203c}}
 .side-sec .n{margin-right:2px}
 .side-sec.lv4,.sec-list a.lv4{background:var(--lv4s);border-left-color:var(--lv4)}
 .side-sec.lv3,.sec-list a.lv3{background:var(--lv3s);border-left-color:var(--lv3)}
 .side-sec.lv2,.sec-list a.lv2{background:var(--lv2s);border-left-color:var(--lv2)}
+.side-sec.lv5,.sec-list a.lv5{background:var(--lv5s);border-left-color:var(--lv5)}
 .side-sec.lv1,.sec-list a.lv1{background:var(--lv1s);border-left-color:var(--lv1);color:#fff}
 .side-sec.lv1 .n,.sec-list a.lv1 .n,.sec-list a.lv1 .f{color:#fff}
 .side-sec.lv1:hover,.sec-list a.lv1:hover{background:#333}
@@ -289,7 +290,7 @@ mark.user-hl.c-y{--c:var(--u-y)} mark.user-hl.c-g{--c:var(--u-g)} mark.user-hl.c
 .lvbar{display:flex;height:8px;border-radius:99px;background:var(--surface2);overflow:hidden}
 .lvbar.big{height:14px;margin:6px 0}
 .lvbar i{display:block;height:100%}
-.lvbar i.lv4,.dot.lv4{background:var(--lv4)} .lvbar i.lv3,.dot.lv3{background:var(--lv3)} .lvbar i.lv2,.dot.lv2{background:var(--lv2)} .lvbar i.lv1,.dot.lv1{background:var(--lv1)}
+.lvbar i.lv4,.dot.lv4{background:var(--lv4)} .lvbar i.lv3,.dot.lv3{background:var(--lv3)} .lvbar i.lv2,.dot.lv2{background:var(--lv2)} .lvbar i.lv1,.dot.lv1{background:var(--lv1)} .lvbar i.lv5,.dot.lv5{background:var(--lv5)}
 :root[data-theme="dark"] .lvbar i.lv1,:root[data-theme="dark"] .dot.lv1{background:#888}
 .side-bar{margin:0 16px 8px}
 .lvlegend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted);margin-top:4px}
@@ -297,13 +298,13 @@ mark.user-hl.c-y{--c:var(--u-y)} mark.user-hl.c-g{--c:var(--u-g)} mark.user-hl.c
 .lvpick{margin:34px 0 10px;display:grid;gap:8px}
 .lvq{font-weight:600;font-size:15px;color:var(--muted)}
 .lvbtn{display:flex;gap:12px;align-items:center;text-align:left;border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:9px 14px;font-size:15px}
-.lvbtn .st{flex:0 0 70px;font-size:15px;letter-spacing:-1px}
-.lvbtn.lv4 .st{color:var(--lv4)} .lvbtn.lv3 .st{color:var(--lv3)} .lvbtn.lv2 .st{color:var(--lv2)}
-.lvbtn.on.lv4{background:var(--lv4s);border-color:var(--lv4)} .lvbtn.on.lv3{background:var(--lv3s);border-color:var(--lv3)} .lvbtn.on.lv2{background:var(--lv2s);border-color:var(--lv2)}
+.lvbtn .st{flex:0 0 82px;font-size:15px;letter-spacing:-1px}
+.lvbtn.lv4 .st{color:var(--lv4)} .lvbtn.lv3 .st{color:var(--lv3)} .lvbtn.lv2 .st{color:var(--lv2)} .lvbtn.lv5 .st{color:var(--lv5);letter-spacing:0;font-size:13.5px;font-weight:700}
+.lvbtn.on.lv4{background:var(--lv4s);border-color:var(--lv4)} .lvbtn.on.lv3{background:var(--lv3s);border-color:var(--lv3)} .lvbtn.on.lv2{background:var(--lv2s);border-color:var(--lv2)} .lvbtn.on.lv5{background:var(--lv5s);border-color:var(--lv5)}
 .lvbtn.on.lv1{background:var(--lv1s);border-color:var(--lv1);color:#fff}
 .home-btn{font-weight:600}
 
-.lvlegend .dot.lv4{background:var(--lv4)}.lvlegend .dot.lv3{background:var(--lv3)}.lvlegend .dot.lv2{background:var(--lv2)}.lvlegend .dot.lv1{background:var(--lv1)}
+.lvlegend .dot.lv4{background:var(--lv4)}.lvlegend .dot.lv3{background:var(--lv3)}.lvlegend .dot.lv2{background:var(--lv2)}.lvlegend .dot.lv1{background:var(--lv1)}.lvlegend .dot.lv5{background:var(--lv5)}
 
 /* โน้ตใต้เนื้อหา: แดงบนพื้นขาว · เหลืองนีออนบนพื้นมืด */
 :root{--inote:#d0021b}
@@ -433,7 +434,7 @@ body.focus .content{line-height:1.85}
 .rv-sec h2{font-size:1.05em;display:flex;align-items:center;gap:8px;margin:0 0 10px}
 .rv-sec h2 small{background:var(--surface2);border-radius:999px;padding:1px 9px;font-size:.8em;color:var(--muted)}
 .rv-card{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 8px;transition:opacity .35s,transform .35s}
-.rv-card.lv1{border-left-color:var(--lv1)} .rv-card.lv2{border-left-color:var(--lv2)} .rv-card.lv3{border-left-color:var(--lv3)} .rv-card.kw{border-left-color:#e8a33d}
+.rv-card.lv1{border-left-color:var(--lv1)} .rv-card.lv2{border-left-color:var(--lv2)} .rv-card.lv3{border-left-color:var(--lv3)} .rv-card.lv5{border-left-color:var(--lv5)} .rv-card.kw{border-left-color:#e8a33d}
 .rv-main{display:flex;flex-direction:column;gap:2px;flex:1;min-width:200px}
 .rv-main a{color:var(--fg);text-decoration:none;font-weight:600}
 .rv-main small{color:var(--muted);font-size:12px} .rv-main small a{font-weight:400;color:var(--accent)}
@@ -468,7 +469,7 @@ body.focus .content{line-height:1.85}
 .mn b{color:var(--c,var(--accent));min-width:18px}
 .mn span{flex:1}
 .mn em{font-style:normal;font-size:11px}
-.mn.lv4{background:var(--lv4s);border-color:var(--lv4)} .mn.lv3{background:var(--lv3s);border-color:var(--lv3)} .mn.lv2{background:var(--lv2s);border-color:var(--lv2)}
+.mn.lv4{background:var(--lv4s);border-color:var(--lv4)} .mn.lv3{background:var(--lv3s);border-color:var(--lv3)} .mn.lv2{background:var(--lv2s);border-color:var(--lv2)} .mn.lv5{background:var(--lv5s);border-color:var(--lv5)}
 .mn.lv1{background:var(--lv1);border-color:var(--lv1);color:#fff} .mn.lv1 b{color:#fff}
 .mn.today{box-shadow:0 0 0 2px #ff9f1c}
 .mn.lv1 .bxs{color:#fff}

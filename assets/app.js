@@ -186,13 +186,15 @@
 
   /* ---------- helpers ---------- */
   const secKey = (ch, no) => `${ch}/${no}`;
-  // ระดับความเข้าใจ 4 ระดับ (4 = มั่นใจ) ที่ผู้ใช้เปลี่ยนได้ตลอด
+  // ระดับความเข้าใจ (4 = มั่นใจ, 5 = สีชมพู ใช้ความจำเยอะ) ที่ผู้ใช้เปลี่ยนได้ตลอด
   const LV = {
     4: { s: '★★★★', t: 'เข้าใจแล้ว มั่นใจมาก' },
     3: { s: '★★★', t: 'เข้าใจปานกลาง ถ้ามีเวลาให้กลับมาทวน' },
     2: { s: '★★', t: 'ไม่ค่อยเข้าใจ กลับมาทวน' },
-    1: { s: '★', t: 'ไม่เข้าใจ ไม่แม่นเลย' }
+    1: { s: '★', t: 'ไม่เข้าใจ ไม่แม่นเลย' },
+    5: { s: '🧠 จำเยอะ', t: 'ใช้ความจำเยอะ ให้กลับมาจำหน่อย' }
   };
+  const LV_ORD = [4, 3, 2, 1, 5];
   const lvOf = (c, no) => S.lvl[secKey(c, no)] || 0;
   // คะแนนข้อสอบของกล่อง (คำตอบล่าสุดแต่ละข้อ) แสดงเมื่อทำครบทุกข้อแล้ว
   function boxScore(c, s) {
@@ -203,18 +205,18 @@
     return `<span class="bxs${ok === ids.length ? ' full' : ''}" title="ข้อสอบในกล่องนี้ ตอบถูก ${ok} จาก ${ids.length} ข้อ (ครั้งล่าสุด)">(${ok}/${ids.length})</span>`;
   }
   function chProgress(ch) {
-    const n = ch.sections.length, c = { 4: 0, 3: 0, 2: 0, 1: 0 };
-    ch.sections.forEach(s => { const l = lvOf(ch.id, s.no); if (l) c[l]++; });
-    const d = c[4] + c[3] + c[2] + c[1];
+    const n = ch.sections.length, c = { 4: 0, 3: 0, 2: 0, 1: 0, 5: 0 };
+    ch.sections.forEach(s => { const l = lvOf(ch.id, s.no); if (l && c[l] != null) c[l]++; });
+    const d = c[4] + c[3] + c[2] + c[1] + c[5];
     return { n, d, c, pct: n ? Math.round(c[4] * 100 / n) : 0 };
   }
   // แถบความคืบหน้าแบ่งสีตามดาว
   function lvBar(p, big) {
     const seg = l => p.c[l] ? `<i class="lv${l}" style="width:${p.c[l] * 100 / p.n}%" title="${LV[l].s} ${p.c[l]} หัวข้อ"></i>` : '';
-    return `<div class="lvbar${big ? ' big' : ''}">${seg(4)}${seg(3)}${seg(2)}${seg(1)}</div>`;
+    return `<div class="lvbar${big ? ' big' : ''}">${LV_ORD.map(seg).join('')}</div>`;
   }
   function lvLegend(p) {
-    return `<div class="lvlegend">${[4, 3, 2, 1].map(l => `<span><b class="dot lv${l}"></b>${LV[l].s} ${p.c[l]}</span>`).join('')}<span><b class="dot"></b>ยังไม่ประเมิน ${p.n - p.d}</span></div>`;
+    return `<div class="lvlegend">${LV_ORD.map(l => `<span><b class="dot lv${l}"></b>${LV[l].s} ${p.c[l]}</span>`).join('')}<span><b class="dot"></b>ยังไม่ประเมิน ${p.n - p.d}</span></div>`;
   }
   const stars = n => n ? '★'.repeat(n) : '';
   function freqBadge(s) {
@@ -228,11 +230,11 @@
      รายการ: กล่อง ★/★★/★★★ · ข้อสอบในกองข้อผิด · keyword ที่ยังไม่ติ๊ก
      S.srs[id] = { due: วันที่ครบกำหนด (นับเป็นวัน), iv: ระยะห่าง (วัน), n: จำนวนครั้งที่ทวน } */
   const today = () => Math.floor((Date.now() - new Date().getTimezoneOffset() * 6e4) / 864e5);
-  const BASE = { 1: 1, 2: 2, 3: 4 };
+  const BASE = { 1: 1, 2: 2, 3: 4, 5: 2 };
   function dueItems() {
     const t = today(), out = [];
     const due = id => { const r = S.srs[id]; return !r || r.due <= t; };
-    for (const k in S.lvl) { const l = S.lvl[k]; if (l >= 1 && l <= 3 && due('b:' + k)) out.push({ type: 'box', id: 'b:' + k, k, l }); }
+    for (const k in S.lvl) { const l = S.lvl[k]; if (((l >= 1 && l <= 3) || l === 5) && due('b:' + k)) out.push({ type: 'box', id: 'b:' + k, k, l }); }
     for (const k in S.wrong) if (due('q:' + k)) out.push({ type: 'exam', id: 'q:' + k, w: S.wrong[k] });
     for (const x of S.kw) if (!x.ok && due('k:' + x.at)) out.push({ type: 'kw', id: 'k:' + x.at, x });
     return out;
@@ -1284,7 +1286,7 @@
 
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v58</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v59</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🔐 Google Cloud Sync</h3>${cloudHtml}
         <div class="today-chips" style="margin-top:12px"><span>ไฮไลต์/โน้ต <b>${nHl}</b></span><span>Keywords <b>${S.kw.length}</b></span><span>ประเมินแล้ว <b>${Object.keys(S.lvl).length}</b></span><span>รูป <b>${imgKeys.length}</b></span></div>
       </div>
@@ -1364,7 +1366,7 @@
   // วงแหวนความคืบหน้า แบ่งสีตามดาว (conic-gradient)
   function ring(p) {
     let a = 0; const st = [];
-    for (const l of [4, 3, 2, 1]) { if (!p.c[l]) continue; const b = a + p.c[l] * 100 / p.n; st.push(`var(--lv${l}) ${a}% ${b}%`); a = b; }
+    for (const l of LV_ORD) { if (!p.c[l]) continue; const b = a + p.c[l] * 100 / p.n; st.push(`var(--lv${l}) ${a}% ${b}%`); a = b; }
     st.push(`var(--surface2) ${a}% 100%`);
     return `<div class="ring" style="background:conic-gradient(${st.join(',')})" title="ประเมินแล้ว ${p.d}/${p.n} หัวข้อ"><span><b>${p.n ? Math.round(p.d * 100 / p.n) : 0}%</b><small>${p.d}/${p.n}</small></span></div>`;
   }
@@ -1507,7 +1509,7 @@
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid], { showSaved: true });
       h += '</section>';
     }
-    h += `<div class="lvpick"><div class="lvq">How well do you understand this box? (tap again to clear)</div>${[4, 3, 2, 1].map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
+    h += `<div class="lvpick"><div class="lvq">How well do you understand this box? (tap again to clear)</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
       <nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
       <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><button id="undoBtn" hidden title="เลิกทำไฮไลต์ล่าสุด" aria-label="เลิกทำ">↶</button><button id="focusBtn" title="โหมดอ่าน: ซ่อนเมนูข้าง" aria-label="โหมดอ่าน">${S.focus ? '⤡' : '⤢'}</button><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
     view.innerHTML = h;
@@ -1586,7 +1588,7 @@
     const pre = params.get('ch');
     view.innerHTML = `<div class="hero"><h1>📝 Quiz</h1><p>เลือกบทแล้วสุ่มข้อ ข้อที่ผิดจะเก็บเข้ากองข้อผิด</p></div>
     <div class="panel"><h3>บท</h3><div class="choice" id="qCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
-    <h3>ขอบเขต</h3><div class="choice" id="qScope"><label><input type="radio" name="sc" value="all" checked>ทุกหัวข้อ</label><label><input type="radio" name="sc" value="weak">เฉพาะหัวข้อที่ยังไม่แม่น (★–★★)</label><label><input type="radio" name="sc" value="done">เฉพาะหัวข้อที่ประเมินแล้ว</label><label><input type="radio" name="sc" value="hot">เฉพาะหัวข้อออกบ่อย (★★★)</label><label><input type="radio" name="sc" value="new">ข้อที่ยังไม่เคยทำ</label></div>
+    <h3>ขอบเขต</h3><div class="choice" id="qScope"><label><input type="radio" name="sc" value="all" checked>ทุกหัวข้อ</label><label><input type="radio" name="sc" value="weak">เฉพาะหัวข้อที่ยังไม่แม่น (★–★★)</label><label><input type="radio" name="sc" value="mem">เฉพาะสีชมพู (ใช้ความจำเยอะ)</label><label><input type="radio" name="sc" value="done">เฉพาะหัวข้อที่ประเมินแล้ว</label><label><input type="radio" name="sc" value="hot">เฉพาะหัวข้อออกบ่อย (★★★)</label><label><input type="radio" name="sc" value="new">ข้อที่ยังไม่เคยทำ</label></div>
     <h3>จำนวนข้อ</h3><div class="choice" id="qN">${[10, 20, 40].map((n, i) => `<label><input type="radio" name="qn" value="${n}" ${i === 0 ? 'checked' : ''}>${n} ข้อ</label>`).join('')}<label><input type="radio" name="qn" value="999">ทั้งหมด</label></div>
     <button class="btn primary" id="qGo">Start</button> <span class="bar-label" id="qInfo"></span></div>`;
     const go = () => {
@@ -1596,6 +1598,7 @@
       const f = (c, qid, q) => {
         if (sc === 'done') return !!lvOf(c, q.box);
         if (sc === 'weak') { const l = lvOf(c, q.box); return l === 1 || l === 2; }
+        if (sc === 'mem') return lvOf(c, q.box) === 5;
         if (sc === 'hot') { const s = CH[c].sections.find(x => x.no === +q.box); return s && s.stars >= 3; }
         if (sc === 'new') return !S.stats[`${c}|${qid}`];
         return true;
@@ -1730,7 +1733,7 @@
     const HUE = [150, 200, 265, 330, 25, 45, 100, 180];
     let h = `<div class="crumb"><a href="#/${id}">${esc(ch.title)}</a> · แผนผัง</div>
       <div class="map-root"><div class="map-core"><b>${esc(ch.title)}</b><small>${p.n} กล่อง · มั่นใจ ${p.c[4]} · ประเมินแล้ว ${p.d}</small>${lvBar(p, true)}</div></div>
-      <div class="map-legend">${[4, 3, 2, 1].map(l => `<span class="mn lv${l}">${LV[l].s}</span>`).join('')}<span class="mn">ยังไม่ประเมิน</span><span class="mn today">อ่านวันนี้</span><span class="mn"><span class="bxs full">(4/4)</span> คะแนนข้อสอบ</span></div>
+      <div class="map-legend">${LV_ORD.map(l => `<span class="mn lv${l}">${LV[l].s}</span>`).join('')}<span class="mn">ยังไม่ประเมิน</span><span class="mn today">อ่านวันนี้</span><span class="mn"><span class="bxs full">(4/4)</span> คะแนนข้อสอบ</span></div>
       <div class="map-grid">`;
     ch.pages.forEach((pg, i) => {
       const secs = ch.sections.filter(x => x.page === pg.no);
