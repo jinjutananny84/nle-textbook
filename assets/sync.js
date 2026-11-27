@@ -4,7 +4,7 @@
   'use strict';
 
   const FB_VER = '11.6.0';
-  const CACHE_NAME = 'nle-tb-v70';
+  const CACHE_NAME = 'nle-tb-v71';
   const CLIENT_ID = Math.random().toString(36).slice(2) + Date.now().toString(36);
   const MAX_IMG_CHARS = 760000; // เผื่อให้เล็กกว่าลิมิต 1MB ของ Firestore document เสมอ
 
@@ -82,7 +82,14 @@
   function registerSW() {
     if (!('serviceWorker' in navigator)) return;
     if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') return;
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
+    let reloaded = false;
+    const hadCtrl = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (hadCtrl && !reloaded) { reloaded = true; location.reload(); }
+    });
+    navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' })
+      .then(reg => { try { reg.update(); } catch (_) {} })
+      .catch(() => {});
   }
 
   /* ดาวน์โหลดทุกบทลง Cache เพื่อให้เปิดอ่านและทำข้อสอบได้ 100% แบบออฟไลน์ */

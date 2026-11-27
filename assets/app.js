@@ -284,7 +284,7 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '70';
+  const APP_VER = '71';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
   function refreshIcons() {
     const u = uiStyle();
@@ -3104,7 +3104,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v70</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v71</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3161,7 +3161,7 @@
         }
         if ('serviceWorker' in navigator) {
           const regs = await navigator.serviceWorker.getRegistrations();
-          await Promise.all(regs.map(r => r.update().catch(() => {})));
+          await Promise.all(regs.map(r => r.unregister().catch(() => {})));
         }
       } catch (_) {}
       location.reload();
