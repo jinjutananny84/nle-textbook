@@ -94,3 +94,17 @@ figure.fig,.tbl-wrap{border-radius:4px}
 .readbar[style*="width: 0px"]::after,.readbar[style*="width: 0%"]::after,.readbar:not([style*="width"])::after{display:none}
 @keyframes px-walk-s{to{background-position:-36px 0}}
 @media (prefers-reduced-motion: reduce){.readbar::after{animation:none}}
+
+/* แถบเมนูบนไม่ล้นจอ: ไอคอนที่เกินเลื่อนดูในแถบได้ ไม่ทำให้ทั้งหน้าเลื่อนซ้ายขวา */
+.topbar{min-width:0;max-width:100vw}
+.brand{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.tools{min-width:0;flex:0 1 auto;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;padding-top:2px}
+.tools::-webkit-scrollbar{display:none}
+.tool{flex:none}
+.pill{top:-1px}
+
+/* หน้าสารบัญบท: ทุกบรรทัดชิดซ้ายแนวเดียวกัน และใช้ความกว้างเต็มบนจอใหญ่ */
+@media (min-width: 961px){
+  .main:has(> .sec-list)>*{max-width:none;margin-left:0;margin-right:0}
+}
+@media (max-width:620px){.sec-list li a{flex-wrap:wrap}.sec-list .f{white-space:normal}}
