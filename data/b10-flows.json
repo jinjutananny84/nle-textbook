@@ -1,0 +1,848 @@
+{
+ "flows": [
+  {
+   "id": "prl",
+   "box": 4,
+   "cat": "Pituitary",
+   "title": "Prolactin สูง: หาสาเหตุ",
+   "root": {
+    "t": "PRL สูง",
+    "k": "start",
+    "s": "galactorrhea · amenorrhea · libido ↓",
+    "c": [
+     {
+      "t": "ตัดสาเหตุง่ายก่อน",
+      "s": "hCG (ตั้งครรภ์) · TSH (primary hypothyroid) · ยา antidopamine",
+      "c": [
+       {
+        "e": "TSH ↑",
+        "t": "Primary hypothyroid",
+        "k": "dx",
+        "s": "TRH ↑ กระตุ้น lactotroph → Tx levothyroxine"
+       },
+       {
+        "e": "ไม่ใช่ทั้งหมด",
+        "t": "ดูระดับ PRL + อาการ",
+        "c": [
+         {
+          "e": "> 200",
+          "t": "Prolactinoma",
+          "k": "dx",
+          "s": "Tx cabergoline ก่อนผ่าตัด"
+         },
+         {
+          "e": "< 150 + LH/FSH, TSH ↓",
+          "t": "Stalk effect",
+          "k": "dx",
+          "s": "ก้อนอื่นกดก้าน dopamine ไปไม่ถึง"
+         },
+         {
+          "e": "สูงแต่ไม่มีอาการ",
+          "t": "Macroprolactin",
+          "k": "dx",
+          "s": "PRL จับ IgG ไม่มีฤทธิ์"
+         },
+         {
+          "e": "ก้อนใหญ่มาก PRL ต่ำแปลก ๆ",
+          "t": "Hook effect",
+          "k": "dx",
+          "s": "เจือจางแล้ววัดซ้ำ"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "acro",
+   "box": 4,
+   "cat": "Pituitary",
+   "title": "Acromegaly: คัดกรอง → ยืนยัน",
+   "root": {
+    "t": "สงสัย acromegaly",
+    "k": "start",
+    "s": "มือเท้าโต คางยื่น ช่องฟันห่าง เหงื่อมาก",
+    "c": [
+     {
+      "t": "**IGF-1**",
+      "s": "คัดกรอง (ระดับคงที่ทั้งวัน)",
+      "c": [
+       {
+        "e": "IGF-1 ↑",
+        "t": "**OGTT** 75 g แล้ววัด GH",
+        "s": "ยืนยัน",
+        "c": [
+         {
+          "e": "GH ไม่ถูกกด",
+          "t": "Acromegaly",
+          "k": "dx",
+          "s": "→ MRI pituitary · Tx transsphenoidal / octreotide / pegvisomant"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "wdt",
+   "box": 6,
+   "cat": "ADH / น้ำ",
+   "title": "ปัสสาวะมาก: DI หรือ polydipsia",
+   "root": {
+    "t": "Polyuria · Uosm ต่ำ",
+    "k": "start",
+    "c": [
+     {
+      "t": "**Water deprivation test**",
+      "s": "งดน้ำ แล้วดู Uosm",
+      "c": [
+       {
+        "e": "Uosm ขึ้น",
+        "t": "Primary polydipsia",
+        "k": "dx",
+        "s": "Na ต่ำ/ปกติต่ำ · Uosm < 100 ก่อนทดสอบ"
+       },
+       {
+        "e": "Uosm ไม่ขึ้น",
+        "t": "ฉีด **desmopressin**",
+        "c": [
+         {
+          "e": "ขึ้น > 50%",
+          "t": "Central DI",
+          "k": "dx",
+          "s": "หลังผ่าตัด/บาดเจ็บศีรษะ · Tx desmopressin"
+         },
+         {
+          "e": "ไม่ขึ้น",
+          "t": "Nephrogenic DI",
+          "k": "dx",
+          "s": "lithium · Ca ↑ · K ↓ · Tx thiazide"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hypona",
+   "box": 6,
+   "cat": "ADH / น้ำ",
+   "title": "Na ต่ำ: SIADH หรือไม่",
+   "root": {
+    "t": "Hyponatremia · Posm ต่ำ",
+    "k": "start",
+    "c": [
+     {
+      "t": "ดู **Uosm**",
+      "c": [
+       {
+        "e": "< 100",
+        "t": "Primary polydipsia",
+        "k": "dx",
+        "s": "ADH ถูกกดเต็มที่ · beer potomania"
+       },
+       {
+        "e": "> 100",
+        "t": "ดู volume + **UNa**",
+        "c": [
+         {
+          "e": "Euvolemia · UNa > 30",
+          "t": "SIADH",
+          "k": "dx",
+          "s": "ตัด hypothyroid, AI, ยาขับปัสสาวะก่อน · SCLC"
+         },
+         {
+          "e": "Hypovolemia · UNa > 30",
+          "t": "Cerebral salt wasting / diuretic",
+          "k": "dx"
+         },
+         {
+          "e": "Hypovolemia · UNa ต่ำ",
+          "t": "เสียน้ำนอกไต",
+          "k": "dx"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "tft",
+   "box": 9,
+   "cat": "Thyroid",
+   "title": "อ่าน TFT: TSH ก่อน แล้วดู FT4",
+   "root": {
+    "t": "**TSH** (คัดกรองแรก)",
+    "k": "start",
+    "c": [
+     {
+      "e": "TSH ↑",
+      "t": "ดู FT4",
+      "c": [
+       {
+        "e": "↓",
+        "t": "Primary hypothyroid",
+        "k": "dx",
+        "s": "Hashimoto (anti-TPO)"
+       },
+       {
+        "e": "ปกติ",
+        "t": "Subclinical hypothyroid",
+        "k": "dx"
+       },
+       {
+        "e": "↑",
+        "t": "TSHoma / resistance",
+        "k": "dx"
+       }
+      ]
+     },
+     {
+      "e": "TSH ↓",
+      "t": "ดู FT4",
+      "c": [
+       {
+        "e": "↑",
+        "t": "Primary hyperthyroid",
+        "k": "dx",
+        "s": "Graves · nodule · thyroiditis"
+       },
+       {
+        "e": "ปกติ",
+        "t": "Subclinical hyperthyroid",
+        "k": "dx",
+        "s": "T3 ↑ = T3-toxicosis"
+       },
+       {
+        "e": "↓",
+        "t": "Central hypothyroid",
+        "k": "dx",
+        "s": "ติดตามด้วย FT4"
+       }
+      ]
+     },
+     {
+      "e": "ป่วยหนัก",
+      "t": "T3 ↓ rT3 ↑",
+      "c": [
+       {
+        "t": "Sick euthyroid",
+        "k": "dx",
+        "s": "ไม่ต้องรักษา"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "toxic",
+   "box": 11,
+   "cat": "Thyroid",
+   "title": "Thyrotoxicosis: แยกด้วย RAIU",
+   "root": {
+    "t": "TSH ↓ FT4 ↑",
+    "k": "start",
+    "c": [
+     {
+      "t": "**RAIU**",
+      "s": "ต่อมกำลังสร้างจะดูด iodine มาก",
+      "c": [
+       {
+        "e": "↑ ทั่วต่อม",
+        "t": "Graves",
+        "k": "dx",
+        "s": "TRAb · ตาโปน · bruit"
+       },
+       {
+        "e": "↑ เฉพาะก้อน",
+        "t": "Toxic MNG / adenoma",
+        "k": "dx",
+        "s": "hot nodule · ผู้สูงอายุ"
+       },
+       {
+        "e": "↓",
+        "t": "วัด serum **thyroglobulin**",
+        "s": "ต่อมแตก หรือกินเข้าไป · ยาต้านไทรอยด์ไม่ช่วย",
+        "c": [
+         {
+          "e": "Tg สูง",
+          "t": "Thyroiditis",
+          "k": "dx",
+          "s": "subacute: ไข้ ปวดคอ ESR ↑ · painless/postpartum: anti-TPO +"
+         },
+         {
+          "e": "Tg ต่ำ",
+          "t": "Exogenous",
+          "k": "dx",
+          "s": "กินยาไทรอยด์เอง (ยาลดน้ำหนัก)"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "nodule",
+   "box": 12,
+   "cat": "Thyroid",
+   "title": "ก้อนไทรอยด์: เริ่มที่ TSH",
+   "root": {
+    "t": "คลำเจอก้อนไทรอยด์",
+    "k": "start",
+    "c": [
+     {
+      "t": "**TSH**",
+      "c": [
+       {
+        "e": "TSH ต่ำ",
+        "t": "Thyroid scan",
+        "c": [
+         {
+          "e": "ก้อนดูดสาร",
+          "t": "Hot nodule",
+          "k": "dx",
+          "s": "มะเร็ง < 1% ไม่ต้องเจาะ"
+         }
+        ]
+       },
+       {
+        "e": "TSH ปกติ/สูง",
+        "t": "**Ultrasound**",
+        "s": "microcalcification · hypoechoic · taller-than-wide",
+        "c": [
+         {
+          "e": "ลักษณะน่าสงสัย",
+          "t": "**FNA**",
+          "k": "dx",
+          "s": "Bethesda I–VI · follicular CA ต้องดู capsular invasion จากชิ้นเนื้อทั้งก้อน"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hyperca",
+   "box": 15,
+   "cat": "Calcium",
+   "title": "Ca สูง: ถาม PTH ก่อน",
+   "root": {
+    "t": "Ca สูงจริง",
+    "k": "start",
+    "s": "ปรับ albumin แล้ว",
+    "c": [
+     {
+      "t": "**PTH**",
+      "c": [
+       {
+        "e": "↑ หรือปกติ (ไม่ถูกกด)",
+        "t": "**Urine Ca**",
+        "c": [
+         {
+          "e": "ปกติ/สูง",
+          "t": "1° hyperparathyroidism",
+          "k": "dx",
+          "s": "adenoma เดี่ยว · OPD · Tx parathyroidectomy"
+         },
+         {
+          "e": "ต่ำมาก (Ca/Cr cl < 0.01)",
+          "t": "FHH",
+          "k": "dx",
+          "s": "CaSR เสีย · ห้ามผ่าตัด"
+         }
+        ]
+       },
+       {
+        "e": "↓ (ถูกกด)",
+        "t": "หาเหตุนอก parathyroid",
+        "c": [
+         {
+          "e": "PTHrP ↑",
+          "t": "มะเร็ง humoral",
+          "k": "dx",
+          "s": "SCC ปอด/หัวคอ, ไต"
+         },
+         {
+          "e": "กระดูกถูกกิน",
+          "t": "Osteolytic",
+          "k": "dx",
+          "s": "myeloma · bone mets"
+         },
+         {
+          "e": "Calcitriol ↑",
+          "t": "Lymphoma / granuloma",
+          "k": "dx",
+          "s": "steroid ได้ผล"
+         },
+         {
+          "e": "ยา",
+          "t": "Thiazide · vit D เกิน",
+          "k": "dx"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hypoca",
+   "box": 15,
+   "cat": "Calcium",
+   "title": "Ca ต่ำ: เช็ก Mg ก่อน",
+   "root": {
+    "t": "Ionized Ca ต่ำจริง",
+    "k": "start",
+    "s": "tetany · Chvostek · Trousseau · QT ยาว",
+    "c": [
+     {
+      "t": "**Mg**",
+      "c": [
+       {
+        "e": "ต่ำ",
+        "t": "แก้ Mg ก่อน",
+        "k": "dx",
+        "s": "ให้ Ca อย่างเดียวไม่หาย"
+       },
+       {
+        "e": "ปกติ",
+        "t": "**PTH**",
+        "c": [
+         {
+          "e": "ต่ำ",
+          "t": "Hypoparathyroid",
+          "k": "dx",
+          "s": "หลังผ่าตัดคอ · DiGeorge"
+         },
+         {
+          "e": "สูง",
+          "t": "ดู PO₄ และไต",
+          "k": "dx",
+          "s": "CKD · pseudohypopara · ขาด vit D"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "pheo",
+   "box": 18,
+   "cat": "Adrenal",
+   "title": "Pheochromocytoma: วินิจฉัย → รักษา",
+   "root": {
+    "t": "ปวดหัว เหงื่อ ใจสั่น + HT เป็นพัก",
+    "k": "start",
+    "c": [
+     {
+      "t": "**Plasma free metanephrines**",
+      "s": "หรือ 24-h urine (ไวกว่า VMA)",
+      "c": [
+       {
+        "e": "สูง",
+        "t": "Localize: CT/MRI · MIBG",
+        "c": [
+         {
+          "t": "**α-blocker ก่อน** 10–14 วัน",
+          "k": "tx",
+          "s": "phenoxybenzamine + น้ำเกลือ",
+          "c": [
+           {
+            "t": "แล้วค่อย β-blocker → ผ่าตัด",
+            "k": "tx",
+            "s": "β ก่อน α = unopposed α → crisis"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "cah",
+   "box": 19,
+   "cat": "Adrenal",
+   "title": "CAH: ดู BP กับ K",
+   "root": {
+    "t": "สงสัย CAH",
+    "k": "start",
+    "s": "ambiguous genitalia · salt-wasting ในทารก",
+    "c": [
+     {
+      "e": "Na ↓ K ↑ BP ต่ำ",
+      "t": "21-hydroxylase",
+      "k": "dx",
+      "s": "~90% · 17-OHP ↑ · XX กำกวม"
+     },
+     {
+      "e": "HT + K ↓ + virilization",
+      "t": "11β-hydroxylase",
+      "k": "dx",
+      "s": "DOC คั่ง"
+     },
+     {
+      "e": "HT + K ↓ + ไม่มี sex steroid",
+      "t": "17α-hydroxylase",
+      "k": "dx",
+      "s": "XY ดูเป็นหญิง"
+     }
+    ]
+   }
+  },
+  {
+   "id": "cushing",
+   "box": 20,
+   "cat": "Adrenal",
+   "title": "Cushing: ยืนยันก่อน แล้วหาสาเหตุ",
+   "root": {
+    "t": "หน้ากลม striae ม่วง buffalo hump",
+    "k": "start",
+    "c": [
+     {
+      "t": "ถามยา steroid ก่อน",
+      "s": "ยาลูกกลอน ยาหม้อ ยาฉีดข้อ",
+      "c": [
+       {
+        "t": "**คัดกรอง ≥ 2 อย่าง**",
+        "s": "1 mg overnight DST · 24-h UFC · late-night saliva (ไม่ใช่ morning)",
+        "c": [
+         {
+          "e": "ยืนยัน hypercortisolism",
+          "t": "**Plasma ACTH**",
+          "c": [
+           {
+            "e": "< 10 (independent)",
+            "t": "CT adrenal",
+            "c": [
+             {
+              "t": "Adrenal adenoma / carcinoma",
+              "k": "dx",
+              "s": "อีกข้างฝ่อ"
+             }
+            ]
+           },
+           {
+            "e": "> 20 (dependent)",
+            "t": "**High-dose DST** / CRH",
+            "c": [
+             {
+              "e": "กดได้",
+              "t": "Cushing disease",
+              "k": "dx",
+              "s": "pituitary · MRI ± IPSS"
+             },
+             {
+              "e": "กดไม่ได้",
+              "t": "Ectopic ACTH",
+              "k": "dx",
+              "s": "SCLC, carcinoid · CT อก"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "pa",
+   "box": 21,
+   "cat": "Adrenal",
+   "title": "Primary aldosteronism: workup",
+   "root": {
+    "t": "ใครควรคัดกรอง",
+    "k": "start",
+    "s": "HT อายุน้อย · HT ดื้อยา · HT + K ต่ำ · HT + incidentaloma",
+    "c": [
+     {
+      "t": "**ARR > 20**",
+      "s": "aldosterone : renin · เจาะท่านั่ง แก้ K ก่อน",
+      "c": [
+       {
+        "e": "บวก",
+        "t": "ยืนยัน",
+        "s": "saline suppression / captopril",
+        "c": [
+         {
+          "t": "**Adrenal CT ± AVS**",
+          "s": "แยกชนิด (CT อาจเจอก้อนไม่ทำงาน)",
+          "c": [
+           {
+            "e": "Adenoma ข้างเดียว",
+            "t": "ผ่าตัด",
+            "k": "dx"
+           },
+           {
+            "e": "Bilateral hyperplasia",
+            "t": "Spironolactone / eplerenone",
+            "k": "dx"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "htk",
+   "box": 21,
+   "cat": "Adrenal",
+   "title": "HT + K ต่ำ: renin กับ aldosterone",
+   "root": {
+    "t": "HT + hypokalemia",
+    "k": "start",
+    "c": [
+     {
+      "t": "วัด **renin** + **aldosterone**",
+      "c": [
+       {
+        "e": "renin ↓ aldo ↑",
+        "t": "Primary hyperaldosteronism (Conn)",
+        "k": "dx"
+       },
+       {
+        "e": "renin ↑ aldo ↑",
+        "t": "Secondary",
+        "k": "dx",
+        "s": "renal artery stenosis · CHF · cirrhosis · diuretic"
+       },
+       {
+        "e": "renin ↓ aldo ↓",
+        "t": "Mineralocorticoid ตัวอื่น",
+        "k": "dx",
+        "s": "Liddle · licorice · CAH 11β/17α · Cushing"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "ai",
+   "box": 22,
+   "cat": "Adrenal",
+   "title": "Adrenal insufficiency: วินิจฉัย",
+   "root": {
+    "t": "สงสัย adrenal insufficiency",
+    "k": "start",
+    "s": "อ่อนเพลีย น้ำหนักลด Na ↓ K ↑ BP ต่ำ",
+    "c": [
+     {
+      "t": "**Morning cortisol** 8–9 น.",
+      "s": "ไม่ต้องงดอาหาร",
+      "c": [
+       {
+        "e": "> 18 µg/dL",
+        "t": "ตัด AI ออก",
+        "k": "out"
+       },
+       {
+        "e": "3.5–18 ก้ำกึ่ง",
+        "t": "**ACTH (cosyntropin) stimulation**",
+        "c": [
+         {
+          "e": "cortisol ขึ้นดี",
+          "t": "ไม่ใช่ AI",
+          "k": "out"
+         },
+         {
+          "e": "cortisol ไม่ขึ้น",
+          "t": "AI",
+          "k": "dx"
+         }
+        ]
+       },
+       {
+        "e": "< 3.5 µg/dL",
+        "t": "AI",
+        "k": "dx"
+       }
+      ],
+      "then": {
+       "e": "ยืนยัน AI แล้ว แยกระดับ",
+       "t": "**Plasma ACTH**",
+       "c": [
+        {
+         "e": "ACTH สูง",
+         "t": "Primary (Addison)",
+         "k": "dx",
+         "s": "ผิวคล้ำ · K ↑ · renin ↑"
+        },
+        {
+         "e": "ACTH ต่ำ",
+         "t": "Secondary / tertiary",
+         "k": "dx",
+         "s": "ไม่คล้ำ · K ปกติ · หยุด steroid กะทันหัน"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "dm",
+   "box": 24,
+   "cat": "Pancreas",
+   "title": "วินิจฉัย DM: 126 · 200 · 6.5",
+   "root": {
+    "t": "สงสัยเบาหวาน",
+    "k": "start",
+    "s": "plasma เลือดดำ ไม่ใช้เลือดปลายนิ้ว",
+    "c": [
+     {
+      "e": "มีอาการชัด",
+      "t": "Random glucose ≥ 200",
+      "c": [
+       {
+        "t": "DM",
+        "k": "dx",
+        "s": "ครั้งเดียวพอ"
+       }
+      ]
+     },
+     {
+      "e": "ไม่มีอาการชัด",
+      "t": "FPG ≥ 126 · 2-h OGTT ≥ 200 · HbA1c ≥ 6.5%",
+      "c": [
+       {
+        "e": "ผิดปกติ 2 test",
+        "t": "DM",
+        "k": "dx",
+        "s": "ตัวเดิมซ้ำ หรือ 2 ชนิดจากเลือดครั้งเดียว"
+       },
+       {
+        "e": "FPG 100–125 · OGTT 140–199 · A1C 5.7–6.4",
+        "t": "Prediabetes",
+        "k": "dx"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "dka",
+   "box": 25,
+   "cat": "Pancreas",
+   "title": "รักษา DKA: น้ำ → K → insulin",
+   "root": {
+    "t": "DKA",
+    "k": "start",
+    "s": "glucose > 250 · pH < 7.3 · ketone สูง",
+    "c": [
+     {
+      "t": "**IV NSS ก่อน**",
+      "k": "tx",
+      "s": "ขาดน้ำ 5–7 L",
+      "c": [
+       {
+        "t": "เช็ก **K** ก่อนให้ insulin",
+        "c": [
+         {
+          "e": "K < 3.3",
+          "t": "ให้ K ก่อน",
+          "k": "tx",
+          "s": "insulin จะดึง K เข้าเซลล์จนต่ำอันตราย"
+         },
+         {
+          "e": "K ≥ 3.3",
+          "t": "**Insulin IV** (regular)",
+          "k": "tx",
+          "s": "เติม K เมื่อ K < 5.3",
+          "c": [
+           {
+            "e": "glucose ~200–250",
+            "t": "เติม dextrose ให้ insulin ต่อ",
+            "k": "tx",
+            "s": "จน anion gap ปิด"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "hypogly",
+   "box": 27,
+   "cat": "Pancreas",
+   "title": "Hypoglycemia: insulin → C-peptide → SU",
+   "root": {
+    "t": "**Whipple triad**",
+    "k": "start",
+    "s": "อาการ + glucose < 55 + ดีขึ้นเมื่อให้ glucose",
+    "c": [
+     {
+      "t": "วัด **insulin** ขณะน้ำตาลต่ำ",
+      "c": [
+       {
+        "e": "insulin ไม่สูง",
+        "t": "ตับวาย · alcohol · sepsis · AI · IGF-2 tumor",
+        "k": "dx"
+       },
+       {
+        "e": "insulin สูง",
+        "t": "**C-peptide**",
+        "c": [
+         {
+          "e": "ต่ำ",
+          "t": "ฉีด insulin เอง",
+          "k": "dx",
+          "s": "insulin สำเร็จรูปไม่มี C-peptide"
+         },
+         {
+          "e": "สูง",
+          "t": "**SU screen**",
+          "c": [
+           {
+            "e": "บวก",
+            "t": "Sulfonylurea",
+            "k": "dx"
+           },
+           {
+            "e": "ลบ",
+            "t": "Insulinoma",
+            "k": "dx",
+            "s": "72-h fast · EUS · คิด MEN1"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
