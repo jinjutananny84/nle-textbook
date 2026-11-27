@@ -241,3 +241,66 @@ body.has-readbar .toc{top:90px}
   .tool span{font-size:9px!important}
 }
 
+/* ===== แถบด้านซ้ายสไตล์เขาวงกตซิกแซก (Option A: Isometric Zig-Zag Labyrinth Path) ===== */
+.side-pg{display:flex;align-items:center;gap:7px;margin:10px 10px 4px;padding:4px 8px;border-radius:8px;background:color-mix(in srgb,var(--surface2) 72%,transparent);border:1px solid var(--line);color:var(--muted);font-weight:700}
+.side-pg::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.mz-gate{flex:none;width:12px;height:12px;border:1.5px solid var(--mv-ch-trail,var(--accent));border-bottom:0;border-radius:6px 6px 0 0;position:relative;opacity:.85}
+.mz-gate::after{content:"";position:absolute;left:50%;bottom:1px;width:3px;height:3px;background:var(--mv-ch-trail,var(--accent));transform:translateX(-50%) rotate(45deg)}
+
+.mv-maze-list{position:relative;padding:2px 8px 6px 0;margin:0}
+.mv-maze-list .side-sec{position:relative;display:flex;align-items:center;gap:6px;padding:5px 9px 5px 8px;margin:4px 0;border-radius:8px;border:1px solid var(--line);border-left:2.5px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,var(--surface2));transition:transform .14s,border-color .14s,box-shadow .14s,background .14s}
+/* เยื้องซ้าย-ขวาเป็นจังหวะเขาวงกตเล็กน้อยโดยไม่ทำให้ชื่อบทอ่านยาก */
+.mv-maze-list .side-sec.mz-l{margin-left:20px;margin-right:10px}
+.mv-maze-list .side-sec.mz-r{margin-left:30px;margin-right:2px}
+/* เส้นทางเขาวงกตหักมุม 90 องศาเชื่อมจากกล่องหนึ่งไปอีกกล่อง */
+.mv-maze-list .side-sec::before{content:"";position:absolute;left:-12px;top:-6px;bottom:-6px;width:2px;background:var(--line);pointer-events:none}
+.mv-maze-list .side-sec.mz-r::before{left:-22px}
+.mv-maze-list .side-sec:first-child::before{top:50%}
+.mv-maze-list .side-sec:last-child::before{bottom:50%}
+.mv-maze-list .side-sec::after{content:"";position:absolute;left:-12px;top:50%;width:12px;height:2px;background:var(--line);transform:translateY(-50%);pointer-events:none}
+.mv-maze-list .side-sec.mz-r::after{left:-22px;width:22px}
+/* ทางที่ผ่านแล้ว/ประเมินแล้วส่องแสงสีธีมของบท */
+.mv-maze-list .side-sec.mz-lit::before,.mv-maze-list .side-sec.mz-lit::after{background:var(--mv-ch-trail,var(--accent));box-shadow:0 0 6px color-mix(in srgb,var(--mv-ch-trail,var(--accent)) 55%,transparent)}
+/* จุดเพชรทางแยกเขาวงกต (เปลี่ยนสีตามดาวประเมิน) + ตัวละครจิ๋วหน้ากล่องที่กำลังอ่าน */
+.mz-node{position:absolute;left:-17px;top:50%;transform:translateY(-50%);width:12px;height:12px;display:grid;place-items:center;z-index:2;pointer-events:none}
+.side-sec.mz-r .mz-node{left:-27px}
+.mz-gem{display:block;width:7px;height:7px;transform:rotate(45deg);border:1.5px solid var(--line);background:var(--surface);transition:transform .15s,background .15s}
+.mz-node.lv4 .mz-gem{background:var(--lv4);border-color:var(--lv4);box-shadow:0 0 6px var(--lv4)}
+.mz-node.lv3 .mz-gem{background:var(--lv3);border-color:var(--lv3);box-shadow:0 0 6px var(--lv3)}
+.mz-node.lv2 .mz-gem{background:var(--lv2);border-color:var(--lv2);box-shadow:0 0 6px var(--lv2)}
+.mz-node.lv5 .mz-gem{background:var(--lv5);border-color:var(--lv5);box-shadow:0 0 6px var(--lv5)}
+.mz-node.lv1 .mz-gem{background:#8b93b8;border-color:#8b93b8}
+.mz-node.on{width:16px;height:22px;left:-19px}
+.side-sec.mz-r .mz-node.on{left:-29px}
+.mv-mini-hero{width:14px;height:20px;filter:drop-shadow(0 0 4px var(--mv-ch-trail,var(--accent)));animation:mv-glide 1.9s ease-in-out infinite}
+/* สีแท่นหินตามระดับความเข้าใจในเขาวงกต */
+.mv-maze-list .side-sec.lv4{border-left-color:var(--lv4);background:color-mix(in srgb,var(--lv4s) 72%,var(--surface))}
+.mv-maze-list .side-sec.lv3{border-left-color:var(--lv3);background:color-mix(in srgb,var(--lv3s) 72%,var(--surface))}
+.mv-maze-list .side-sec.lv2{border-left-color:var(--lv2);background:color-mix(in srgb,var(--lv2s) 72%,var(--surface))}
+.mv-maze-list .side-sec.lv5{border-left-color:var(--lv5);background:color-mix(in srgb,var(--lv5s) 72%,var(--surface))}
+.mv-maze-list .side-sec.lv1{border-left-color:#8b93b8}
+.mv-maze-list .side-sec:hover{border-color:var(--mv-ch-trail,var(--accent));transform:translateX(2px)}
+.mv-maze-list .side-sec.on{border-color:var(--mv-ch-trail,var(--accent));box-shadow:0 0 0 1px var(--mv-ch-trail,var(--accent)),0 4px 14px color-mix(in srgb,var(--mv-ch-trail,var(--accent)) 28%,transparent)}
+.mv-maze-list .side-sec .n{flex:0 0 20px;font-family:var(--mv-disp);font-weight:700;color:var(--mv-ch-trail,var(--accent))}
+.mv-maze-list .side-sec.lv1 .n{color:#fff}
+
+/* ลูกเล่นเขาวงกตสำหรับรายการชื่อบท (หน้าแรก + ในแท็บบทอื่น ๆ) */
+.mv-ch-maze{position:relative;padding:2px 8px 4px 0}
+.mv-ch-maze .side-grp{padding-left:16px}
+.mv-ch-maze .side-ch-mz{position:relative;margin:4px 0 6px;border-radius:10px;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,var(--surface2));padding-bottom:5px;transition:transform .14s,border-color .14s}
+.mv-ch-maze .side-ch-mz.mz-l{margin-left:18px;margin-right:10px}
+.mv-ch-maze .side-ch-mz.mz-r{margin-left:26px;margin-right:2px}
+.mv-ch-maze .side-ch-mz::before{content:"";position:absolute;left:-11px;top:-7px;bottom:-7px;width:2px;background:var(--line);pointer-events:none}
+.mv-ch-maze .side-ch-mz.mz-r::before{left:-19px}
+.mv-ch-maze .side-ch-mz::after{content:"";position:absolute;left:-11px;top:16px;width:11px;height:2px;background:var(--line);pointer-events:none}
+.mv-ch-maze .side-ch-mz.mz-r::after{left:-19px;width:19px}
+.mv-ch-maze .side-ch-mz.mz-lit::before,.mv-ch-maze .side-ch-mz.mz-lit::after{background:var(--accent)}
+.mv-ch-maze .side-ch-mz:hover{border-color:var(--accent);transform:translateX(2px)}
+.mv-ch-maze .side-ch-mz>a{display:flex;align-items:center;gap:6px;padding:6px 10px 4px;border-left:0!important}
+.mv-ch-maze .side-ch-mz .mz-gem{flex:none;width:7px;height:7px}
+.mv-ch-maze .side-ch-mz.mz-lit .mz-gem{background:var(--accent);border-color:var(--accent);box-shadow:0 0 6px var(--mv-glow)}
+.mv-ch-maze .side-ch-mz .sc-t{flex:1;min-width:0;line-height:1.3}
+.mv-ch-maze .side-ch-mz .sc-p{font-family:var(--mv-disp);font-size:10.5px;color:var(--muted);flex:none}
+.mv-ch-maze .side-ch-mz .side-bar{margin:0 10px 2px}
+
+

@@ -284,7 +284,7 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '63';
+  const APP_VER = '64';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
   function refreshIcons() {
     const u = uiStyle();
@@ -890,23 +890,37 @@
   }
 
   /* ---------- sidebar ---------- */
+  const MV_MINI_HERO = `<svg class="mv-mini-hero" viewBox="0 0 14 20" aria-hidden="true"><polygon points="7,8 10.6,18 3.4,18" fill="#ffffff"/><circle cx="7" cy="6.8" r="1.5" fill="#1b2442"/><polygon points="7,1 9.8,6.8 4.2,6.8" fill="#ffffff"/></svg>`;
   function renderSidebar(curCh, curNo) {
     applyChAccent(curCh);
     const ready = INDEX.filter(c => c.ready);
     const curMeta = curCh ? ready.find(c => c.id === curCh && CH[c.id]) : null;
-    const chItem = (c, expanded) => {
+    const isMv = uiStyle() === 'monument';
+    const chItem = (c, expanded, idx = 0) => {
       const ch = CH[c.id];
       const p = ch ? chProgress(ch) : null;
-      let out = `<div class="side-ch ${grpCls(c)}${expanded ? ' side-cur' : ''}"><a href="#/${c.id}">${esc(c.title)}</a>`;
+      const doneAny = !!(p && p.d > 0);
+      const stepCls = isMv && !expanded ? (idx % 2 ? ' mz-r' : ' mz-l') : '';
+      let out = `<div class="side-ch ${grpCls(c)}${expanded ? ' side-cur' : ' side-ch-mz' + stepCls}${doneAny ? ' mz-lit' : ''}"><a href="#/${c.id}">${!expanded && isMv ? '<i class="mz-gem" aria-hidden="true"></i>' : ''}<span class="sc-t">${esc(c.title)}</span>${!expanded && p ? `<small class="sc-p">${p.n ? Math.round(p.d * 100 / p.n) : 0}%</small>` : ''}</a>`;
       if (p) out += `<div class="side-bar">${lvBar(p)}</div>`;
       if (expanded && ch) {
         out += mvTowerHTML(ch, curNo);
+        const curPos = curNo ? ch.sections.findIndex(x => x.no === curNo) : -1;
+        let gIdx = 0;
         for (const pg of ch.pages) {
-          out += `<div class="side-pg">หน้า ${pg.no} · ${esc(pg.title)}</div>`;
-          for (const s of ch.sections.filter(x => x.page === pg.no)) {
+          out += `<div class="side-pg">${isMv ? '<i class="mz-gate" aria-hidden="true"></i>' : ''}<span>หน้า ${pg.no} · ${esc(pg.title)}</span></div>`;
+          const pgSecs = ch.sections.filter(x => x.page === pg.no);
+          if (isMv) out += '<div class="mv-maze-list">';
+          for (const s of pgSecs) {
             const l = lvOf(ch.id, s.no);
-            out += `<a class="side-sec${s.no === curNo ? ' on' : ''}${l ? ' lv' + l : ''}" href="#/${ch.id}/${s.no}"><span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${boxScore(ch.id, s)}${l ? `<span class="ck">${LV[l].s}</span>` : ''}</a>`;
+            const isOn = s.no === curNo;
+            const lit = isOn || !!l || (curPos >= 0 && gIdx <= curPos);
+            const zig = isMv ? (gIdx % 2 ? ' mz-r' : ' mz-l') : '';
+            const node = isMv ? `<span class="mz-node${isOn ? ' on' : ''}${l ? ' lv' + l : ''}" aria-hidden="true">${isOn ? MV_MINI_HERO : '<i class="mz-gem"></i>'}</span>` : '';
+            out += `<a class="side-sec${isOn ? ' on' : ''}${l ? ' lv' + l : ''}${zig}${lit ? ' mz-lit' : ''}" href="#/${ch.id}/${s.no}">${node}<span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${boxScore(ch.id, s)}${l ? `<span class="ck">${LV[l].s}</span>` : ''}</a>`;
+            gIdx++;
           }
+          if (isMv) out += '</div>';
         }
       }
       return out + '</div>';
@@ -915,23 +929,25 @@
     let h = '';
     if (curMeta) {
       // ตอนอ่านบทใดบทหนึ่ง: โชว์เฉพาะหัวข้อย่อยของบทที่เลือก ส่วนบทอื่นย่อไว้เป็นแถบ กดถึงจะเปิดดู
-      h += chItem(curMeta, true);
+      h += chItem(curMeta, true, 0);
       const others = ready.filter(c => c.id !== curMeta.id);
       if (others.length) {
-        let oh = '', grp = '';
+        let oh = '', grp = '', oi = 0;
         for (const c of others) {
           if ((c.group || '') !== grp) { grp = c.group || ''; if (grp) oh += `<div class="side-grp">${esc(grp)}</div>`; }
-          oh += chItem(c, false);
+          oh += chItem(c, false, oi++);
         }
-        h += `<details class="side-others"><summary><span class="so-l">📚 บทอื่น ๆ</span><small>${others.length} บท</small></summary><div class="side-others-body">${oh}</div></details>`;
+        h += `<details class="side-others"><summary><span class="so-l">📚 บทอื่น ๆ</span><small>${others.length} บท</small></summary><div class="side-others-body${isMv ? ' mv-ch-maze' : ''}">${oh}</div></details>`;
       }
       h += `<details class="side-others"><summary><span class="so-l">🧰 เมนู &amp; เครื่องมือ</span></summary><div class="side-others-body">${linksHtml}</div></details>`;
     } else {
-      let grp = '';
+      let grp = '', ci = 0;
+      if (isMv) h += '<div class="mv-ch-maze">';
       for (const c of ready) {
         if ((c.group || '') !== grp) { grp = c.group || ''; if (grp) h += `<div class="side-grp">${esc(grp)}</div>`; }
-        h += chItem(c, false);
+        h += chItem(c, false, ci++);
       }
+      if (isMv) h += '</div>';
       h += linksHtml;
     }
     sidebar.innerHTML = h;
@@ -1132,7 +1148,31 @@
     brain: '<path d="M9 4a3 3 0 0 0-3 3v.2A3 3 0 0 0 4 10a3 3 0 0 0 1 2.2A3 3 0 0 0 6 17a3 3 0 0 0 3 3 3 3 0 0 0 3-3V7a3 3 0 0 0-3-3z"/><path d="M15 4a3 3 0 0 1 3 3v.2A3 3 0 0 1 20 10a3 3 0 0 1-1 2.2A3 3 0 0 1 18 17a3 3 0 0 1-3 3 3 3 0 0 1-3-3"/>',
     flow: '<rect x="8" y="3" width="8" height="5" rx="1.5"/><rect x="2" y="16" width="8" height="5" rx="1.5"/><rect x="14" y="16" width="8" height="5" rx="1.5"/><path d="M12 8v4M6 16v-4h12v4"/>',
     img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>',
-    cloud: '<path d="M6.5 19h11a4 4 0 0 0 .9-7.9A5.5 5.5 0 0 0 7.7 9.3 4 4 0 0 0 6.5 19z"/>'
+    cloud: '<path d="M6.5 19h11a4 4 0 0 0 .9-7.9A5.5 5.5 0 0 0 7.7 9.3 4 4 0 0 0 6.5 19z"/>',
+    spark: '<path d="M12 3l2.2 6.8L21 12l-6.8 2.2L12 21l-2.2-6.8L3 12l6.8-2.2z"/>',
+    clip: '<rect x="3" y="5" width="18" height="14" rx="2"/><polygon points="10,9 16,12 10,15"/>',
+    target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/>',
+    clipb: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 3h6v3H9zM9 11h6M9 15h4"/>',
+    gear: '<circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1L7 17M17 7l2.1-2.1"/>',
+    crop: '<path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/>',
+    palette: '<circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="7.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15.5" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="14.5" r="1.5"/>',
+    phone: '<rect x="6" y="2.5" width="12" height="19" rx="2"/><path d="M12 7v7m-3-3 3 3 3-3"/>',
+    dl: '<path d="M12 3v12m-5-4 5 5 5-5M4 20h16"/>',
+    folder: '<path d="M3 6h6l2 2h10v11H3z"/>',
+    stack: '<path d="M4 19V5h5v14zM10 19V5h5v14zM16 19V6l4-1v14z"/>',
+    tools: '<rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/>',
+    bulb: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3 11.2V16h6v-1.8A6 6 0 0 0 12 3z"/>',
+    edit: '<path d="M14 4l6 6-11 11H3v-6z"/>',
+    radar: '<circle cx="12" cy="14" r="2"/><path d="M8.5 10.5a5 5 0 0 1 7 0M5.5 7.5a9.2 9.2 0 0 1 13 0M12 16v5"/>',
+    temple: '<path d="M3 20h18M5 20V10M10 20V10M14 20V10M19 20V10M3 10l9-6 9 6z"/>',
+    pixel: '<rect x="5" y="7" width="14" height="10"/><path d="M8 7V5M16 7V5M9 11h1M14 11h1M8 17v3M16 17v3"/>',
+    lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+    eye: '<path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="2.5"/>',
+    sync: '<path d="M20 11a8 8 0 0 0-14-4.5L3 9M4 13a8 8 0 0 0 14 4.5L21 15"/><path d="M3 4v5h5M21 20v-5h-5"/>',
+    sched: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+    codex: '<path d="M5 4h13v16H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 4v16"/>',
+    bug: '<circle cx="12" cy="12" r="5"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/>',
+    user: '<circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/>'
   };
   /* ---------- ไอคอนสถาปัตยกรรมเรขาคณิตสไตล์ Monument Valley ---------- */
   const ICON_MV = {
@@ -1162,9 +1202,33 @@
     brain: '<polygon points="12,3 19.5,7.5 19.5,16.5 12,21 4.5,16.5 4.5,7.5" fill="currentColor" fill-opacity=".1"/><polygon points="12,3 19.5,7.5 19.5,16.5 12,21 4.5,16.5 4.5,7.5"/><path d="M12 3v18M4.5 7.5 12 12l7.5-4.5M8.5 14l3.5 2 3.5-2"/>',
     flow: '<polygon points="12,2.5 16.5,5.5 12,8.5 7.5,5.5" fill="currentColor" fill-opacity=".18"/><polygon points="12,2.5 16.5,5.5 12,8.5 7.5,5.5"/><polygon points="6,15 10,18 6,21 2,18"/><polygon points="18,15 22,18 18,21 14,18"/><path d="M12 8.5V12H6v3M12 12h6v3"/>',
     img: '<rect x="3.5" y="4.5" width="17" height="15" fill="currentColor" fill-opacity=".08"/><rect x="3.5" y="4.5" width="17" height="15"/><polyline points="3.5,17 9.5,10.5 14,15 16.5,12.5 20.5,17"/><circle cx="15.5" cy="8.5" r="1.4" fill="currentColor" stroke="none"/>',
-    cloud: '<path d="M5.5 18.5h13l2-3-2-3.5h-2.5L12 7.5 8 12H5.5l-2 3.5Z" fill="currentColor" fill-opacity=".14"/><path d="M5.5 18.5h13l2-3-2-3.5h-2.5L12 7.5 8 12H5.5l-2 3.5Z"/>'
+    cloud: '<path d="M5.5 18.5h13l2-3-2-3.5h-2.5L12 7.5 8 12H5.5l-2 3.5Z" fill="currentColor" fill-opacity=".14"/><path d="M5.5 18.5h13l2-3-2-3.5h-2.5L12 7.5 8 12H5.5l-2 3.5Z"/>',
+    spark: '<polygon points="12,2.5 14.3,9.7 21.5,12 14.3,14.3 12,21.5 9.7,14.3 2.5,12 9.7,9.7" fill="currentColor" fill-opacity=".16"/><polygon points="12,2.5 14.3,9.7 21.5,12 14.3,14.3 12,21.5 9.7,14.3 2.5,12 9.7,9.7"/>',
+    clip: '<path d="M3.5 6.5 12 3.5l8.5 3v11l-8.5 3-8.5-3Z" fill="currentColor" fill-opacity=".1"/><path d="M3.5 6.5 12 3.5l8.5 3v11l-8.5 3-8.5-3Z"/><polygon points="10,9 15.5,12 10,15" fill="currentColor" fill-opacity=".22"/>',
+    target: '<polygon points="12,2.5 21.5,12 12,21.5 2.5,12" fill="currentColor" fill-opacity=".08"/><polygon points="12,2.5 21.5,12 12,21.5 2.5,12"/><polygon points="12,7 17,12 12,17 7,12"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/>',
+    clipb: '<polygon points="5,4.5 19,4.5 19,20.5 5,20.5" fill="currentColor" fill-opacity=".1"/><polygon points="5,4.5 19,4.5 19,20.5 5,20.5"/><path d="M9 2.5h6v3.5H9zM8.5 11h7M8.5 15h4.5"/>',
+    gear: '<polygon points="12,3 18.4,5.6 21,12 18.4,18.4 12,21 5.6,18.4 3,12 5.6,5.6" fill="currentColor" fill-opacity=".1"/><polygon points="12,3 18.4,5.6 21,12 18.4,18.4 12,21 5.6,18.4 3,12 5.6,5.6"/><polygon points="12,8.5 15.5,12 12,15.5 8.5,12"/>',
+    crop: '<path d="M6.5 2.5v15h15"/><path d="M17.5 21.5v-15h-15"/>',
+    palette: '<polygon points="12,2.5 20.5,8.5 17.5,19.5 6.5,19.5 3.5,8.5" fill="currentColor" fill-opacity=".12"/><polygon points="12,2.5 20.5,8.5 17.5,19.5 6.5,19.5 3.5,8.5"/><circle cx="9" cy="10.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="8" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="10.5" r="1.2" fill="currentColor" stroke="none"/><polygon points="12,13 14,15 12,17 10,15"/>',
+    phone: '<polygon points="6.5,2.5 17.5,2.5 17.5,21.5 6.5,21.5" fill="currentColor" fill-opacity=".1"/><polygon points="6.5,2.5 17.5,2.5 17.5,21.5 6.5,21.5"/><path d="M12 7.5v6.5m-2.5-2.5L12 14l2.5-2.5M10 18.5h4"/>',
+    dl: '<path d="M12 3v12m-4.5-4.5L12 15l4.5-4.5"/><polygon points="4,18 12,21 20,18 20,20 12,22.5 4,20" fill="currentColor" fill-opacity=".18"/>',
+    folder: '<polygon points="3,6 9.5,6 11.5,8.5 21,8.5 21,19.5 3,19.5" fill="currentColor" fill-opacity=".12"/><polygon points="3,6 9.5,6 11.5,8.5 21,8.5 21,19.5 3,19.5"/>',
+    stack: '<polygon points="12,3 20.5,7.5 12,12 3.5,7.5" fill="currentColor" fill-opacity=".16"/><polygon points="12,3 20.5,7.5 12,12 3.5,7.5"/><polyline points="3.5,12 12,16.5 20.5,12"/><polyline points="3.5,16.5 12,21 20.5,16.5"/>',
+    tools: '<polygon points="3.5,8 20.5,8 20.5,19.5 3.5,19.5" fill="currentColor" fill-opacity=".1"/><polygon points="3.5,8 20.5,8 20.5,19.5 3.5,19.5"/><path d="M8.5 8V5h7v3M3.5 13h17"/><polygon points="12,11 14,13 12,15 10,13" fill="currentColor" stroke="none"/>',
+    bulb: '<polygon points="12,2.5 17.5,9.5 14.5,15.5 9.5,15.5 6.5,9.5" fill="currentColor" fill-opacity=".16"/><polygon points="12,2.5 17.5,9.5 14.5,15.5 9.5,15.5 6.5,9.5"/><path d="M9.5 18.5h5M10.5 21h3"/>',
+    edit: '<polygon points="15.5,3.5 20.5,8.5 9.5,19.5 4.5,19.5 4.5,14.5" fill="currentColor" fill-opacity=".14"/><polygon points="15.5,3.5 20.5,8.5 9.5,19.5 4.5,19.5 4.5,14.5"/>',
+    radar: '<polygon points="12,11.5 14.5,14 12,16.5 9.5,14" fill="currentColor" fill-opacity=".22"/><polygon points="12,11.5 14.5,14 12,16.5 9.5,14"/><path d="M8 10a5.6 5.6 0 0 1 8 0M4.8 6.8a10 10 0 0 1 14.4 0M12 16.5V21"/>',
+    temple: '<path d="M12 2.5 6 7v14h12V7Z" fill="currentColor" fill-opacity=".12"/><path d="M12 2.5 6 7v14h12V7Z"/><path d="M9.5 21v-5.5a2.5 2.5 0 0 1 5 0V21M3 21h18M6 11h12"/>',
+    pixel: '<polygon points="6,7 18,7 18,17 6,17" fill="currentColor" fill-opacity=".12"/><path d="M6 7h12v10H6zM9 4v3M15 4v3M9.5 11h1M13.5 11h1M8 17v3M16 17v3"/>',
+    lock: '<polygon points="5,10.5 19,10.5 19,20.5 5,20.5" fill="currentColor" fill-opacity=".12"/><polygon points="5,10.5 19,10.5 19,20.5 5,20.5"/><path d="M8.5 10.5V7a3.5 3.5 0 0 1 7 0v3.5"/><polygon points="12,13.5 13.5,15.5 12,17.5 10.5,15.5" fill="currentColor" stroke="none"/>',
+    eye: '<polygon points="2.5,12 12,5.5 21.5,12 12,18.5" fill="currentColor" fill-opacity=".1"/><polygon points="2.5,12 12,5.5 21.5,12 12,18.5"/><polygon points="12,9.2 14.8,12 12,14.8 9.2,12" fill="currentColor" fill-opacity=".28"/>',
+    sync: '<polyline points="4,9 9,4 19,4 19,9"/><polyline points="20,15 15,20 5,20 5,15"/><polyline points="4,5 4,9 8,9"/><polyline points="20,19 20,15 16,15"/>',
+    sched: '<path d="M4 7.5 12 3.5l8 4V20H4Z" fill="currentColor" fill-opacity=".1"/><path d="M4 7.5 12 3.5l8 4V20H4Z"/><path d="M4 10.5h16M9 14.5h6"/>',
+    codex: '<polygon points="5,3.5 19,3.5 19,20.5 5,20.5" fill="currentColor" fill-opacity=".12"/><polygon points="5,3.5 19,3.5 19,20.5 5,20.5"/><path d="M8.5 3.5v17"/><polygon points="13.5,9 15.5,11 13.5,13 11.5,11" fill="currentColor" fill-opacity=".28"/>',
+    bug: '<polygon points="12,6.5 16.5,9.5 16.5,14.5 12,17.5 7.5,14.5 7.5,9.5" fill="currentColor" fill-opacity=".16"/><polygon points="12,6.5 16.5,9.5 16.5,14.5 12,17.5 7.5,14.5 7.5,9.5"/><path d="M12 3v3.5M12 17.5V21M3.5 9.5 7.5 11M16.5 11l4-1.5M3.5 14.5 7.5 13M16.5 13l4 1.5"/>',
+    user: '<polygon points="12,2.5 15,8.5 9,8.5" fill="currentColor" fill-opacity=".22"/><polygon points="12,2.5 15,8.5 9,8.5"/><polygon points="12,10.5 17.5,21 6.5,21" fill="currentColor" fill-opacity=".14"/><polygon points="12,10.5 17.5,21 6.5,21"/>'
   };
-  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
+  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back', '✨': 'spark', '🎬': 'clip', '🎯': 'target', '📋': 'clipb', '⚙': 'gear', '✂': 'crop', '🎨': 'palette', '📲': 'phone', '📥': 'dl', '🗂': 'folder', '📚': 'stack', '🧰': 'tools', '💡': 'bulb', '✏': 'edit', '📡': 'radar', '🏛': 'temple', '👾': 'pixel', '🔐': 'lock', '👁': 'eye', '🔄': 'sync', '🗓': 'sched', '📘': 'codex', '🦠': 'bug', '👤': 'user' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => {
     const mv = uiStyle() === 'monument' && ICON_MV[n];
@@ -1965,7 +2029,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v63</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v64</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3078,19 +3142,20 @@
   $('#menuBtn').onclick = () => document.body.classList.toggle('nav-open');
   $('#scrim').onclick = closeNav;
   sidebar.addEventListener('click', e => {
-    if (e.target.id === 'mvMapToggle') {
+    if (e.target.closest('#mvMapToggle')) {
       e.preventDefault(); S.mvMapHide = !S.mvMapHide; save();
       const m = location.hash.match(/^#\/([^/]+)(?:\/(\d+))?/);
       renderSidebar(m && CH[m[1]] ? m[1] : undefined, m && m[2] ? +m[2] : undefined);
       return;
     }
-    if (e.target.id === 'uiToggle') {
+    if (e.target.closest('#uiToggle')) {
       e.preventDefault(); setUiStyle(uiStyle() === 'pixel' ? 'monument' : 'pixel'); return;
     }
-    if (e.target.id !== 'hlToggle') return;
+    const hl = e.target.closest('#hlToggle');
+    if (!hl) return;
     e.preventDefault(); S.hlOff = !S.hlOff; save();
     document.documentElement.classList.toggle('no-hl', S.hlOff);
-    e.target.textContent = `🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}`;
+    hl.textContent = `🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}`;
   });
   $('#searchForm').onsubmit = e => { e.preventDefault(); location.hash = '#/search?q=' + encodeURIComponent($('#searchInput').value); };
   const themeBtn = $('#themeBtn');
