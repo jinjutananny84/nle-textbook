@@ -1100,7 +1100,7 @@
         return;
       }
       const it = items[i], q = CH[it.ch].exams[it.id];
-      view.innerHTML = `<div class="qhead"><span>ข้อ ${i + 1} / ${items.length}</span><span>ถูก ${score}</span></div><div class="bar"><i style="width:${Math.round(i * 100 / items.length)}%"></i></div>${mcqHTML(it.ch, it.id, q, { showBox: true })}<div class="choice" style="justify-content:flex-end"><button class="btn" id="skip">Skip</button></div>`;
+      view.innerHTML = `<div class="qhead"><span>ข้อ ${i + 1} / ${items.length}</span><span>ถูก ${score}</span></div><div class="bar walk"><i style="width:${Math.round(i * 100 / items.length)}%"></i></div>${mcqHTML(it.ch, it.id, q, { showBox: true })}<div class="choice" style="justify-content:flex-end"><button class="btn" id="skip">Skip</button></div>`;
       const box = $(".mcq", view); applyAllHL(view);
       box._onDone = ok => { if (ok) score++; $('#skip').textContent = i + 1 < items.length ? 'Next →' : 'See result'; $('#skip').classList.add('primary'); };
       $('#skip').onclick = () => { i++; step(); window.scrollTo(0, 0); };
@@ -1685,7 +1685,7 @@
         return;
       }
       const q = qs[i], key = `${q.T.ch}|${q.T.box}|${q.T.ti}|${q.ri}|${q.j}|${q.dir}`;
-      view.innerHTML = `<div class="qhead"><span>Drill ${i + 1} / ${qs.length}</span><span>ถูก ${score}</span></div><div class="bar"><i style="width:${Math.round(i * 100 / qs.length)}%"></i></div>
+      view.innerHTML = `<div class="qhead"><span>Drill ${i + 1} / ${qs.length}</span><span>ถูก ${score}</span></div><div class="bar walk"><i style="width:${Math.round(i * 100 / qs.length)}%"></i></div>
         <div class="mcq drill"><div class="qid">กล่อง ${q.T.box} · ${esc(q.T.title)}</div>
         <div class="dq"><span class="dq-k">${esc(q.dir === 'f' ? q.T.head[0] : q.ask === q.T.head[0] ? q.T.head[q.j] : q.T.head[q.j])}</span><div class="dq-v">${esc(q.q)}</div><div class="dq-ask">${q.dir === 'f' ? 'มี ' : 'คือ '}<b>${esc(q.ask)}</b> อะไร?</div></div>
         <div class="opts">${q.opts.map((o, k) => `<div class="opt" role="button" data-o="${k}"><span class="l">${'ABCD'[k]}</span><span class="ot">${esc(o)}</span></div>`).join('')}</div><div class="explain" hidden></div></div>

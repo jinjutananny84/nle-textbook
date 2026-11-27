@@ -1,0 +1,88 @@
+/* ===== ธีมพิกเซล: กรอบเส้นทึบ เงาแข็ง ฉากฟ้า+เนินหญ้า น้องหมอเดินบนแถบ progress =====
+   โหลดหลัง style.css เพื่อทับเฉพาะหน้าตา ไม่แตะโครงสร้าง/ฟังก์ชัน */
+:root{
+  --px:"Press Start 2P","IBM Plex Sans Thai",monospace;
+  --ink:#2b2b3a; --ink-sh:#2b2b3a;
+  --bg:#f8f4e8; --surface:#fffdf6; --surface2:#f1ecdd; --line:#ddd5c2;
+  --sky1:#cfe8ff; --sky2:#eef7ff; --gold:#f6c945;
+}
+:root[data-theme="dark"]{
+  --ink:#8f96cf; --ink-sh:#070b1f;
+  --bg:#17204a; --surface:#1e2958; --surface2:#283566; --line:#36437a; --fg:#eef0ff; --muted:#aeb3d6;
+  --accent-soft:#22385a;
+  --sky1:#0f1638; --sky2:#26336b; --gold:#f6c945;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#8f96cf; --ink-sh:#070b1f;
+    --bg:#17204a; --surface:#1e2958; --surface2:#283566; --line:#36437a; --fg:#eef0ff; --muted:#aeb3d6;
+    --accent-soft:#22385a;
+    --sky1:#0f1638; --sky2:#26336b; --gold:#f6c945;
+  }
+}
+
+/* top bar */
+.topbar{border-bottom:3px solid var(--ink)}
+.brand{font-family:var(--px);font-size:10px;text-transform:uppercase;letter-spacing:.02em;line-height:1.5}
+.search input{border-radius:0;border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink-sh)}
+.pill{border-radius:0;border:2px solid var(--surface);font-family:var(--px);font-size:9px;padding:3px 4px}
+.sidebar{border-right:3px solid var(--ink)}
+
+/* ปุ่ม: ขอบทึบ + เงาแข็ง กดแล้วยุบลง */
+.btn{border-radius:0;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink-sh);transition:transform .05s,box-shadow .05s}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink-sh)}
+.btn.primary{border-color:var(--ink)}
+.hl-pop .btn{box-shadow:none;border-width:1px}
+
+/* กล่องหลัก */
+.tile,.dash,.panel{border-radius:0;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink-sh)}
+.tile{border-top:7px solid var(--g,var(--ink))}
+.tile.soon{border-top-color:var(--ink);box-shadow:none}
+.card{border-radius:4px}
+figure.fig,.tbl-wrap{border-radius:4px}
+.badge,.tag,.tile-today{border-radius:2px}
+.sec-no{border-radius:0;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink-sh);font-family:var(--px);font-size:18px}
+
+/* แดชบอร์ดหน้าแรก */
+.today-chips span{border-radius:0;border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink-sh)}
+.today-chips b{font-family:var(--px);font-size:.8em}
+.dash-act{border-radius:0;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink-sh)}
+.dash-act:hover{border-color:var(--ink);transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink-sh)}
+.dash-act.main{background:var(--gold);color:#2b2b3a}
+.dash-act.main .da-t small{color:#2b2b3a}
+.plan .cd{border-radius:0;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink-sh)}
+.plan .cd b{font-family:var(--px);font-size:22px;line-height:1.35}
+.plan{border-radius:0}
+.plan-list a{border-radius:0}
+@media (max-width:620px){.plan .cd b{font-size:18px}}
+
+/* ฉากหน้าแรก: ฟ้า ก้อนเมฆ เนินหญ้า และน้องหมอยืนรอ */
+.home-hero{position:relative;overflow:hidden;min-height:150px;padding:18px 18px 46px;margin-bottom:12px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--ink-sh);
+  background:{{HILLS_L}} repeat-x left bottom/400px 44px,{{CLOUD}} no-repeat right 30% top 12px/48px 20px,{{CLOUD}} no-repeat right 4% top 14px/36px 15px,linear-gradient(var(--sky1),var(--sky2))}
+.home-hero h1{font-family:var(--px);text-transform:uppercase;font-size:clamp(15px,3.4vw,22px);line-height:1.6;color:#2b2b3a;margin:0;max-width:70%}
+.home-hero::after{content:"";position:absolute;right:12%;bottom:24px;width:36px;height:48px;background:{{DOC_STILL}} no-repeat center/contain;image-rendering:pixelated}
+.home-hero .bk-warn{position:relative;z-index:1}
+:root[data-theme="dark"] .home-hero{background:{{HILLS_D}} repeat-x left bottom/400px 44px,{{CLOUD_N}} no-repeat right 30% top 12px/48px 20px,radial-gradient(circle at 15% 30%,#fff 1px,transparent 1.5px) 0 0/60px 40px,radial-gradient(circle at 60% 70%,#ffe9a8 1px,transparent 1.5px) 23px 11px/90px 56px,linear-gradient(var(--sky1),var(--sky2))}
+:root[data-theme="dark"] .home-hero h1{color:var(--gold)}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .home-hero{background:{{HILLS_D}} repeat-x left bottom/400px 44px,{{CLOUD_N}} no-repeat right 30% top 12px/48px 20px,radial-gradient(circle at 15% 30%,#fff 1px,transparent 1.5px) 0 0/60px 40px,radial-gradient(circle at 60% 70%,#ffe9a8 1px,transparent 1.5px) 23px 11px/90px 56px,linear-gradient(var(--sky1),var(--sky2))}
+  :root:not([data-theme="light"]) .home-hero h1{color:var(--gold)}
+}
+
+/* แถบ progress แบบก้อนพิกเซล + น้องหมอเดินตามความคืบหน้า + ธงเส้นชัย */
+.plan-bar,.bar.walk{position:relative;height:14px;border-radius:0;border:2px solid var(--ink);background:var(--surface2);overflow:visible;margin:38px 14px 6px 0}
+.plan-bar i,.bar.walk>i{position:relative;border-radius:0;height:100%;background:repeating-linear-gradient(90deg,var(--accent) 0 8px,color-mix(in srgb,var(--accent) 75%,#000) 8px 10px)}
+.plan-bar i::after,.bar.walk>i::after{content:"";position:absolute;right:-12px;bottom:calc(100% + 2px);width:24px;height:32px;background:{{DOC_SHEET}} 0 0/48px 32px no-repeat;image-rendering:pixelated;animation:px-walk .5s steps(2) infinite}
+.plan-bar::after,.bar.walk::after{content:"";position:absolute;right:-12px;bottom:100%;width:14px;height:26px;background:{{FLAG}} no-repeat left bottom/14px 26px;image-rendering:pixelated}
+.bar.walk{margin-top:40px}
+@keyframes px-walk{to{background-position:-48px 0}}
+@media (prefers-reduced-motion: reduce){.plan-bar i::after,.bar.walk>i::after{animation:none}.btn,.dash-act{transition:none}}
+.bar{border-radius:0}
+.bar>i{border-radius:0}
+.lvbar{border-radius:0}
+
+/* หน้าแรกบนจอใหญ่: ยืดเต็มความกว้าง เว้นขอบเท่ากันสองด้าน */
+@media (min-width: 961px){
+  .main:has(> .home-hero)>*{max-width:none;margin-left:0;margin-right:0}
+  .main:has(> .home-hero){padding-left:28px;padding-right:28px}
+}
