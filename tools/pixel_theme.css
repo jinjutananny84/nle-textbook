@@ -86,3 +86,10 @@ figure.fig,.tbl-wrap{border-radius:4px}
   .main:has(> .home-hero)>*{max-width:none;margin-left:0;margin-right:0}
   .main:has(> .home-hero){padding-left:28px;padding-right:28px}
 }
+
+/* แถบอ่านด้านบนระหว่างอ่านกล่อง: ก้อนพิกเซล + น้องหมอเดินตามตำแหน่งที่อ่าน */
+.readbar{height:5px;background:repeating-linear-gradient(90deg,var(--lv4) 0 6px,var(--lv3) 6px 8px);border-bottom:1px solid var(--ink)}
+.readbar::after{content:"";position:absolute;right:-9px;top:5px;width:18px;height:24px;background:{{DOC_SHEET}} 0 0/36px 24px no-repeat;image-rendering:pixelated;animation:px-walk-s .5s steps(2) infinite}
+.readbar[style*="width: 0px"]::after,.readbar[style*="width: 0%"]::after,.readbar:not([style*="width"])::after{display:none}
+@keyframes px-walk-s{to{background-position:-36px 0}}
+@media (prefers-reduced-motion: reduce){.readbar::after{animation:none}}
