@@ -284,8 +284,20 @@
   }
 
   /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
-  const APP_VER = '62';
+  const APP_VER = '63';
   const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
+  function refreshIcons() {
+    const u = uiStyle();
+    document.querySelectorAll('svg.ic[data-ic]').forEach(el => {
+      const n = el.dataset.ic;
+      if (!ICON[n]) return;
+      const mv = u === 'monument' && ICON_MV[n];
+      el.setAttribute('stroke-width', mv ? '1.55' : '1.8');
+      el.setAttribute('stroke-linecap', mv ? 'square' : 'round');
+      el.setAttribute('stroke-linejoin', mv ? 'miter' : 'round');
+      el.innerHTML = mv || ICON[n];
+    });
+  }
   function applyUiStyle() {
     const u = uiStyle();
     document.documentElement.dataset.ui = u;
@@ -296,6 +308,7 @@
     if (logo) logo.src = u === 'pixel' ? 'assets/icon.svg' : 'assets/icon-mv.svg';
     const fav = document.querySelector('link[rel="icon"]');
     if (fav) fav.href = u === 'pixel' ? 'assets/icon.svg' : 'assets/icon-mv.svg';
+    refreshIcons();
   }
   function setUiStyle(u) {
     S.uiStyle = u === 'pixel' ? 'pixel' : 'monument';
@@ -1121,9 +1134,42 @@
     img: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>',
     cloud: '<path d="M6.5 19h11a4 4 0 0 0 .9-7.9A5.5 5.5 0 0 0 7.7 9.3 4 4 0 0 0 6.5 19z"/>'
   };
+  /* ---------- ไอคอนสถาปัตยกรรมเรขาคณิตสไตล์ Monument Valley ---------- */
+  const ICON_MV = {
+    home: '<path d="M12 2.5 5 8.5V21h14V8.5Z" fill="currentColor" fill-opacity=".12"/><path d="M12 2.5 5 8.5V21h14V8.5Z"/><path d="M9.5 21v-5.5a2.5 2.5 0 0 1 5 0V21"/><circle cx="12" cy="7.5" r="1" fill="currentColor" stroke="none"/>',
+    quiz: '<polygon points="12,2.5 20,7 20,17 12,21.5 4,17 4,7" fill="currentColor" fill-opacity=".12"/><polygon points="12,2.5 20,7 20,17 12,21.5 4,17 4,7"/><path d="m8.8 12.2 2.2 2.2 4.4-4.4"/>',
+    wrong: '<polygon points="12,2.5 20.5,12 12,21.5 3.5,12" fill="currentColor" fill-opacity=".12"/><polygon points="12,2.5 20.5,12 12,21.5 3.5,12"/><path d="m9.5 9.5 5 5m0-5-5 5"/>',
+    cards: '<polygon points="12,3 20.5,8 12,13 3.5,8" fill="currentColor" fill-opacity=".15"/><polygon points="12,3 20.5,8 12,13 3.5,8"/><polyline points="3.5,12.5 12,17.5 20.5,12.5"/><polyline points="3.5,16.5 12,21.5 20.5,16.5"/>',
+    stats: '<path d="M3 20.5h18"/><path d="M5.5 20.5V13l2-1.5 2 1.5v7.5" fill="currentColor" fill-opacity=".12"/><path d="M10 20.5V7l2-2 2 2v13.5" fill="currentColor" fill-opacity=".18"/><path d="M14.5 20.5V10.5l2-1.5 2 1.5v10" fill="currentColor" fill-opacity=".12"/>',
+    cal: '<path d="M4 7.5 12 3l8 4.5V20H4Z" fill="currentColor" fill-opacity=".1"/><path d="M4 7.5 12 3l8 4.5V20H4Z"/><path d="M4 10.5h16"/><circle cx="12" cy="15.2" r="2.2"/><circle cx="12" cy="7.2" r=".9" fill="currentColor" stroke="none"/>',
+    note: '<polygon points="6,3 15.5,3 19,6.5 19,21 6,21" fill="currentColor" fill-opacity=".1"/><polygon points="6,3 15.5,3 19,6.5 19,21 6,21"/><path d="M15 3v4h4M9 11.5h6M9 15.5h4"/>',
+    key: '<polygon points="7.5,11.5 12,16 7.5,20.5 3,16" fill="currentColor" fill-opacity=".15"/><polygon points="7.5,11.5 12,16 7.5,20.5 3,16"/><path d="m10.5 13 9.5-9.5M16 7.5l2.8 2.8M13.5 10l2 2"/>',
+    map: '<polygon points="3,6.5 9,3.5 15,6.5 21,3.5 21,17.5 15,20.5 9,17.5 3,20.5" fill="currentColor" fill-opacity=".1"/><polygon points="3,6.5 9,3.5 15,6.5 21,3.5 21,17.5 15,20.5 9,17.5 3,20.5"/><path d="M9 3.5v14M15 6.5v14"/>',
+    hl: '<polygon points="15.5,3.5 20.5,8.5 10,19 5,19 5,14" fill="currentColor" fill-opacity=".14"/><polygon points="15.5,3.5 20.5,8.5 10,19 5,19 5,14"/><path d="M3.5 21h10"/>',
+    search: '<circle cx="10.8" cy="10.8" r="6.8" fill="currentColor" fill-opacity=".1"/><circle cx="10.8" cy="10.8" r="6.8"/><circle cx="10.8" cy="10.8" r="2.2"/><path d="m15.8 15.8 4.7 4.7"/>',
+    book: '<path d="M3 6.5 12 3.5l9 3v13l-9-3-9 3Z" fill="currentColor" fill-opacity=".1"/><path d="M3 6.5 12 3.5l9 3v13l-9-3-9 3Z"/><path d="M12 3.5v13"/>',
+    flame: '<polygon points="12,2.5 17.5,12 12,21 6.5,12" fill="currentColor" fill-opacity=".18"/><polygon points="12,2.5 17.5,12 12,21 6.5,12"/><polygon points="12,8 14.5,12.5 12,16.5 9.5,12.5" fill="currentColor" stroke="none"/>',
+    done: '<polygon points="12,2.5 15,9 21.5,12 15,15 12,21.5 9,15 2.5,12 9,9" fill="currentColor" fill-opacity=".16"/><polygon points="12,2.5 15,9 21.5,12 15,15 12,21.5 9,15 2.5,12 9,9"/>',
+    think: '<polygon points="12,2.5 21,12 12,21.5 3,12" fill="currentColor" fill-opacity=".1"/><polygon points="12,2.5 21,12 12,21.5 3,12"/><path d="M10 9.6a2.2 2.2 0 1 1 3.1 2c-.6.3-1.1.8-1.1 1.6v.5"/><circle cx="12" cy="16.8" r=".9" fill="currentColor" stroke="none"/>',
+    warn: '<polygon points="12,3 21.5,19.5 2.5,19.5" fill="currentColor" fill-opacity=".13"/><polygon points="12,3 21.5,19.5 2.5,19.5"/><path d="M12 9.5v4.5"/><circle cx="12" cy="16.8" r=".9" fill="currentColor" stroke="none"/>',
+    pin: '<polygon points="12,2.5 16,9.5 12,15 8,9.5" fill="currentColor" fill-opacity=".16"/><polygon points="12,2.5 16,9.5 12,15 8,9.5"/><path d="M12 15v6.5"/>',
+    sun: '<circle cx="12" cy="12" r="4.2" fill="currentColor" fill-opacity=".18"/><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/>',
+    moon: '<path d="M19.5 14.2A7.8 7.8 0 1 1 9.8 4.5a6.2 6.2 0 0 0 9.7 9.7z" fill="currentColor" fill-opacity=".18"/><path d="M19.5 14.2A7.8 7.8 0 1 1 9.8 4.5a6.2 6.2 0 0 0 9.7 9.7z"/><polygon points="17.5,4.2 18.4,6 20.2,6.9 18.4,7.8 17.5,9.6 16.6,7.8 14.8,6.9 16.6,6" fill="currentColor" stroke="none"/>',
+    back: '<polyline points="9.5,14 4.5,9 9.5,4"/><path d="M4.5 9h10.5l4.5 4.5V19H12"/>',
+    save: '<path d="M5 4h11l3 3v13H5Z" fill="currentColor" fill-opacity=".1"/><path d="M5 4h11l3 3v13H5Z"/><path d="M8.5 4v5h7V4"/><path d="M9 20v-4.5a3 3 0 0 1 6 0V20"/>',
+    hash: '<polygon points="12,3 21,12 12,21 3,12" fill="currentColor" fill-opacity=".08"/><path d="M6 9.5h12M6 14.5h12M9.5 6v12M14.5 6v12"/>',
+    pill: '<polygon points="14.5,3.5 20.5,9.5 9.5,20.5 3.5,14.5" fill="currentColor" fill-opacity=".14"/><polygon points="14.5,3.5 20.5,9.5 9.5,20.5 3.5,14.5"/><path d="m9 9 6 6"/>',
+    brain: '<polygon points="12,3 19.5,7.5 19.5,16.5 12,21 4.5,16.5 4.5,7.5" fill="currentColor" fill-opacity=".1"/><polygon points="12,3 19.5,7.5 19.5,16.5 12,21 4.5,16.5 4.5,7.5"/><path d="M12 3v18M4.5 7.5 12 12l7.5-4.5M8.5 14l3.5 2 3.5-2"/>',
+    flow: '<polygon points="12,2.5 16.5,5.5 12,8.5 7.5,5.5" fill="currentColor" fill-opacity=".18"/><polygon points="12,2.5 16.5,5.5 12,8.5 7.5,5.5"/><polygon points="6,15 10,18 6,21 2,18"/><polygon points="18,15 22,18 18,21 14,18"/><path d="M12 8.5V12H6v3M12 12h6v3"/>',
+    img: '<rect x="3.5" y="4.5" width="17" height="15" fill="currentColor" fill-opacity=".08"/><rect x="3.5" y="4.5" width="17" height="15"/><polyline points="3.5,17 9.5,10.5 14,15 16.5,12.5 20.5,17"/><circle cx="15.5" cy="8.5" r="1.4" fill="currentColor" stroke="none"/>',
+    cloud: '<path d="M5.5 18.5h13l2-3-2-3.5h-2.5L12 7.5 8 12H5.5l-2 3.5Z" fill="currentColor" fill-opacity=".14"/><path d="M5.5 18.5h13l2-3-2-3.5h-2.5L12 7.5 8 12H5.5l-2 3.5Z"/>'
+  };
   const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
-  const ic = n => `<svg class="ic ic-${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n]}</svg>`;
+  const ic = n => {
+    const mv = uiStyle() === 'monument' && ICON_MV[n];
+    return `<svg class="ic ic-${n}" data-ic="${n}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${mv ? '1.55' : '1.8'}" stroke-linecap="${mv ? 'square' : 'round'}" stroke-linejoin="${mv ? 'miter' : 'round'}" aria-hidden="true">${mv || ICON[n]}</svg>`;
+  };
   // แปลง emoji ในข้อความของหน้าเว็บเป็นไอคอน (ไม่แตะเนื้อหาที่ไฮไลต์ได้ และช่องพิมพ์)
   function iconize(root) {
     if (!root || (root.nodeType !== 3 && !root.querySelectorAll)) return;
@@ -1919,7 +1965,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v62</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v63</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
