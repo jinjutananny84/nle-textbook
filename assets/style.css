@@ -169,6 +169,17 @@ svg text{font-family:inherit}
 .explain{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--surface2);font-size:.95em}
 .explain .res{font-weight:700;margin-bottom:2px}
 .explain .res.ok{color:var(--ok)} .explain .res.no{color:var(--bad)}
+.explain .why{display:grid;gap:8px;margin-top:6px;line-height:1.6}
+.explain .why .wl+.wl{margin-top:4px}
+.explain .wp{padding:2px 0}
+.explain .wc{display:flex;gap:10px;align-items:flex-start;padding:6px 8px;border-radius:8px;border-left:3px solid var(--line);background:var(--surface)}
+.explain .wc.ok{border-left-color:var(--ok);background:var(--ok-soft)}
+.explain .wc.no{border-left-color:var(--bad)}
+.explain .wc.picked{background:var(--bad-soft)}
+.explain .wb{flex:0 0 auto;font-weight:700;min-width:2.4em;white-space:nowrap}
+.explain .wc.ok .wb{color:var(--ok)} .explain .wc.no .wb{color:var(--bad)}
+.explain .wx{flex:1;min-width:0}
+.explain .wo{font-weight:600;color:var(--muted);font-size:.92em;margin-bottom:2px}
 .warn{color:var(--trap);font-size:.9em}
 .mcq .acts{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
 .btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 16px;font-size:15px;font-weight:600;text-decoration:none;color:var(--fg);display:inline-flex;align-items:center;gap:6px}

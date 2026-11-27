@@ -10,7 +10,7 @@
     "E": "Long thoracic n."
    },
    "answer": "B",
-   "why": "Suprascapular n. ผ่าน suprascapular notch (ใต้ transverse scapular lig.) เลี้ยง supraspinatus ก่อน แล้วอ้อม spinoglenoid notch ไปเลี้ยง infraspinatus → รอยโรคที่ notch บนเสียทั้งคู่; ที่ spinoglenoid notch เสียแค่ infraspinatus; axillary = deltoid/teres minor; long thoracic = serratus anterior (winged scapula) · ▶ ฟังอาจารย์เฉลย [t=4:00]",
+   "why": "Suprascapular n. ผ่าน suprascapular notch ไปเลี้ยง supraspinatus ก่อน แล้วอ้อม spinoglenoid notch ไปเลี้ยง infraspinatus\nเสียทั้ง 2 มัด = รอยโรคอยู่ที่จุดบน (suprascapular notch)\n✗ A: Axillary n. ที่ quadrangular space เลี้ยง deltoid + teres minor\n  ไม่ได้เลี้ยง supraspinatus/infraspinatus\n✓ B: กดที่ suprascapular notch (ใต้ transverse scapular lig.) = ก่อนแตกแขนง\n  จึงเสียทั้ง supraspinatus (abduction ช่วงแรก) และ infraspinatus (external rotation)\n✗ C: ที่ spinoglenoid notch แขนงไป supraspinatus แยกออกไปแล้ว\n  จะเสียแค่ infraspinatus อย่างเดียว\n✗ D: Subscapular n. เลี้ยง subscapularis + teres major = internal rotation\n✗ E: Long thoracic n. เลี้ยง serratus anterior\n  เสียแล้วเกิด winged scapula ไม่ใช่ rotator cuff อ่อน\n▶ ฟังอาจารย์เฉลย [t=4:00]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -26,7 +26,7 @@
     "E": "Dorsal scapular"
    },
    "answer": "D",
-   "why": "suprascapular n. (C5–6, จาก upper trunk) เลี้ยง supraspinatus + infraspinatus ถ้าถูกกดที่ spinoglenoid notch จะฝ่อเฉพาะ infraspinatus (เสีย external rotation); axillary → deltoid + teres minor, accessory → trapezius, dorsal scapular → rhomboid/levator scapulae · ▶ ฟังอาจารย์เฉลย [t=4:00]",
+   "why": "Infraspinatus เลี้ยงโดย suprascapular n. (C5–6 จาก upper trunk)\n✗ A: Radial n. เลี้ยง triceps และกล้ามเนื้อเหยียดแขน/ข้อมือ\n  ไม่เกี่ยวกับ scapula\n✗ B: Axillary n. เลี้ยง deltoid + teres minor\n  teres minor ช่วย external rotation ได้ แต่ไม่ใช่ infraspinatus\n✗ C: Accessory n. (CN XI) เลี้ยง trapezius + SCM\n✓ D: Suprascapular n. เลี้ยง supraspinatus + infraspinatus\n  ถ้าถูกกดที่ spinoglenoid notch จะฝ่อเฉพาะ infraspinatus (เสีย external rotation)\n✗ E: Dorsal scapular n. เลี้ยง rhomboid + levator scapulae\n▶ ฟังอาจารย์เฉลย [t=4:00]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -42,7 +42,7 @@
     "E": "Axillary n."
    },
    "answer": "E",
-   "why": "Quadrangular space (teres minor/teres major/long head triceps/surgical neck humerus) มี axillary n. + posterior circumflex humeral a. ผ่าน → deltoid, teres minor อ่อนแรง · suprascapular ผ่าน suprascapular notch · radial ผ่าน triangular interval · ▶ ฟังอาจารย์เฉลย [t=9:28]",
+   "why": "Quadrangular space มี axillary n. + posterior circumflex humeral a. ผ่าน\nขอบ = teres minor / teres major / long head triceps / surgical neck humerus\n✗ A: Suprascapular n. ผ่าน suprascapular notch ไม่ใช่ quadrangular space\n✗ B: Subscapular n. วิ่งบนผิวหน้า subscapularis ไม่ผ่านช่องนี้\n✗ C: Radial n. ผ่าน triangular interval (ใต้ teres major)\n✗ D: Ulnar n. อยู่ medial ของต้นแขน ผ่านหลัง medial epicondyle\n✓ E: Axillary n. ถูกกดใน quadrangular space\n  deltoid + teres minor อ่อน ชาที่ regimental badge\n▶ ฟังอาจารย์เฉลย [t=9:28]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -58,7 +58,7 @@
     "E": "Musculocutaneous"
    },
    "answer": "D",
-   "why": "เฉลยตอบ axillary → ภาพน่าจะเป็น fracture surgical neck of humerus หรือ anterior shoulder dislocation (axillary n. + posterior circumflex humeral a. วิ่งรอบ surgical neck → deltoid/teres minor อ่อน ชาที่ regimental badge); ถ้าภาพเป็น midshaft humerus → radial, supracondylar → median, medial epicondyle → ulnar · ▶ ฟังอาจารย์เฉลย [t=10:13]",
+   "why": "เฉลยตอบ axillary n. ภาพน่าจะเป็น fracture surgical neck of humerus หรือ anterior shoulder dislocation\nAxillary n. + posterior circumflex humeral a. วิ่งอ้อมรอบ surgical neck\n✗ A: Radial n. บาดเจ็บจาก midshaft humerus fracture (spiral groove)\n✗ B: Ulnar n. บาดเจ็บจาก medial epicondyle fracture\n✗ C: Median n. บาดเจ็บจาก supracondylar fracture\n✓ D: Surgical neck fracture/shoulder dislocation กด axillary n.\n  deltoid + teres minor อ่อน ชาที่ regimental badge\n✗ E: Musculocutaneous n. ลอดผ่าน coracobrachialis บาดเจ็บน้อยมากจากกระดูกหัก\n▶ ฟังอาจารย์เฉลย [t=10:13]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": true,
    "options_reconstructed": false,
@@ -74,7 +74,7 @@
     "E": "Elbow flexion"
    },
    "answer": "C",
-   "why": "Radial n. ถูกกดที่ต้นแขน (spiral groove/axilla) → wrist drop + เหยียดนิ้วไม่ได้ ชาหลังมือ (first dorsal web space) และ posterior forearm; opposition/finger & wrist flexion = median/ulnar; elbow flexion หลักคือ musculocutaneous (biceps) · ▶ ฟังอาจารย์เฉลย [t=14:07]",
+   "why": "\"Saturday night palsy\" = radial n. ถูกกดที่ต้นแขน (spiral groove/axilla)\nชาหลังแขนท่อนล่าง + หลังมือ (first dorsal web space) = radial\n✗ A: Thumb opposition = median n. (thenar muscle)\n✗ B: Finger flexion = median + ulnar (FDS, FDP)\n✓ C: Radial n. เลี้ยง extensor ของนิ้วและข้อมือ\n  เสียแล้วเหยียดนิ้วไม่ได้ + wrist drop\n✗ D: Wrist flexion = median + ulnar (FCR, FCU)\n✗ E: Elbow flexion หลักคือ musculocutaneous n. (biceps, brachialis)\n▶ ฟังอาจารย์เฉลย [t=14:07]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -90,7 +90,7 @@
     "E": "Wrist extension"
    },
    "answer": "D",
-   "why": "claw hand = ulnar n. injury (interossei + medial lumbricals อ่อน) → finger adduction (palmar interossei) และ abduction เสีย, thumb adduction เสีย (Froment sign) · thumb abduction = median (APB) · thumb/wrist extension = radial · ▶ ฟังอาจารย์เฉลย [t=21:20]",
+   "why": "Claw hand = ulnar n. injury (interossei + medial lumbricals อ่อน)\n✗ A: Thumb abduction = median n. (abductor pollicis brevis)\n✗ B: Thumb flexion = median n. (FPL, FPB)\n✗ C: Thumb extension = radial n. (EPL, EPB)\n✓ D: Palmar interossei (ulnar n.) ทำหน้าที่ finger adduction\n  ulnar เสีย จึงหุบนิ้วไม่ได้ (และกางนิ้วไม่ได้ด้วย)\n✗ E: Wrist extension = radial n.\n▶ ฟังอาจารย์เฉลย [t=21:20]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -106,7 +106,7 @@
     "E": "Thumb dorsal sensory"
    },
    "answer": "A",
-   "why": "lunate เคลื่อนไป volar เข้า carpal tunnel กด median n. → thenar (APB) อ่อน thumb abduction/opposition เสีย · thumb adduction, finger abd/add = ulnar (deep br.) · dorsum thumb sensory = superficial radial · ▶ ฟังอาจารย์เฉลย [t=26:01]",
+   "why": "Lunate เคลื่อนไปด้านหน้า (volar) เข้า carpal tunnel กด median n.\n✓ A: Median n. เลี้ยง abductor pollicis brevis (thenar)\n  ถูกกดแล้ว thumb abduction/opposition เสีย\n✗ B: Thumb adduction = adductor pollicis (deep branch ulnar n.)\n✗ C: Finger abduction = dorsal interossei (ulnar n.)\n✗ D: Finger adduction = palmar interossei (ulnar n.)\n✗ E: ผิวหนังหลังนิ้วโป้ง = superficial radial n. ไม่ผ่าน carpal tunnel\n▶ ฟังอาจารย์เฉลย [t=26:01]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": true,
    "options_reconstructed": false,
@@ -121,7 +121,7 @@
     "D": "Sciatic n."
    },
    "answer": "B",
-   "why": "common peroneal พันรอบ neck of fibula → เสียทั้ง deep (dorsiflexion → foot drop) และ superficial (eversion) + ชาหลังเท้า/lateral leg · deep อย่างเดียวเสีย dorsiflex + ชาง่ามนิ้ว 1-2 · superficial อย่างเดียวเสีย eversion · sciatic จะเสีย hamstring + tibial ด้วย · ▶ ฟังอาจารย์เฉลย [t=48:39]",
+   "why": "Common peroneal n. พันรอบ neck of fibula\nเสียทั้ง dorsiflexion และ eversion = บาดเจ็บก่อนแตกแขนง\n✗ A: Superficial peroneal n. อย่างเดียว เสียแค่ eversion\n  dorsiflexion ยังปกติ\n✓ B: Common peroneal n. เสียทั้ง deep (dorsiflexion → foot drop) และ superficial (eversion)\n  ชาหลังเท้าและ lateral leg ด้วย\n✗ C: Deep peroneal n. อย่างเดียว เสีย dorsiflexion + ชาง่ามนิ้ว 1–2\n  eversion ยังปกติ\n✗ D: Sciatic n. จะเสีย hamstring + tibial n. ด้วย\n  และไม่ได้บาดเจ็บจาก head of fibula หัก\n▶ ฟังอาจารย์เฉลย [t=48:39]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -137,7 +137,7 @@
     "E": "Superficial peroneal"
    },
    "answer": "D",
-   "why": "deep peroneal (fibular) n. เลี้ยง anterior compartment (tibialis anterior, EHL, EDL) → dorsiflexion อ่อน = foot drop + ชาบริเวณ first web space; eversion ยังดีแปลว่า superficial peroneal (peroneus longus/brevis) ปกติ จึงไม่ใช่ common peroneal (จะเสียทั้ง dorsiflexion+eversion); tibial เสีย plantarflexion/inversion · ▶ ฟังอาจารย์เฉลย [t=50:30]",
+   "why": "Foot drop แต่ eversion ปกติ = เสียเฉพาะ anterior compartment\n✗ A: Tibial n. เสีย plantarflexion/inversion ไม่ใช่ foot drop\n✗ B: Saphenous n. เป็น sensory ล้วน (medial leg) ไม่มีผลต่อการขยับเท้า\n✗ C: Common peroneal n. จะเสียทั้ง dorsiflexion และ eversion\n  โจทย์บอก eversion ปกติ จึงไม่ใช่\n✓ D: Deep peroneal n. เลี้ยง tibialis anterior, EHL, EDL\n  เสียแล้ว dorsiflexion อ่อน = foot drop + ชาง่ามนิ้ว 1–2\n✗ E: Superficial peroneal n. เลี้ยง peroneus longus/brevis = eversion\n  ซึ่งโจทย์บอกว่ายังปกติ\n▶ ฟังอาจารย์เฉลย [t=50:30]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -153,7 +153,7 @@
     "E": "Saphenous"
    },
    "answer": "B",
-   "why": "dorsiflexion เสีย (anterior compartment) แต่ eversion (lateral compartment, superficial peroneal) ปกติ → deep peroneal; common peroneal (บาดเจ็บที่ fibular neck) จะเสียทั้ง dorsiflexion และ eversion + ชาหลังเท้า · ▶ ฟังอาจารย์เฉลย [t=50:30]",
+   "why": "Dorsiflexion เสีย แต่ eversion ปกติ = deep peroneal n.\n✗ A: Common peroneal n. (บาดเจ็บที่ fibular neck) เสียทั้ง dorsiflexion และ eversion\n✓ B: Deep peroneal n. เลี้ยง anterior compartment (dorsiflexion)\n  superficial peroneal ยังดี จึง evert ได้\n✗ C: Superficial peroneal n. เสีย eversion แต่ dorsiflex ได้ปกติ\n✗ D: Tibial n. เสีย plantarflexion/inversion\n✗ E: Saphenous n. เป็น sensory ล้วนที่ medial leg\n▶ ฟังอาจารย์เฉลย [t=50:30]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -169,7 +169,7 @@
     "E": "Inability to extend fingers"
    },
    "answer": "B",
-   "why": "Supracondylar fracture (extension type) บาดเจ็บ median n./AIN บ่อยที่สุด และ brachial a. (เสี่ยง Volkmann ischemic contracture) → median เสีย: thumb opposition, ape hand/OK sign; wrist drop/เหยียดนิ้วไม่ได้ = radial; claw/abduction = ulnar (medial epicondyle fracture) · ▶ ฟังอาจารย์เฉลย [t=46:17]",
+   "why": "Supracondylar fracture (extension type) บาดเจ็บ median n./AIN บ่อยที่สุด\nและเสี่ยง brachial a. บาดเจ็บ → Volkmann ischemic contracture\n✗ A: Wrist drop = radial n. (midshaft humerus fracture)\n✓ B: Median n. บาดเจ็บ → thenar อ่อน thumb opposition เสีย (ape hand)\n✗ C: Ulnar claw hand = ulnar n. (medial epicondyle fracture)\n✗ D: Finger abduction = dorsal interossei (ulnar n.)\n✗ E: เหยียดนิ้วไม่ได้ = radial n./PIN\n▶ ฟังอาจารย์เฉลย [t=46:17]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -186,7 +186,7 @@
     "E": "Interossei"
    },
    "answer": "C",
-   "why": "extension-type supracondylar fracture ทำให้ anterior interosseous n. (แขนง median) บาดเจ็บบ่อยสุด → FPL + FDP index อ่อน (OK sign ไม่ได้) + brachial a. บาดเจ็บ → Volkmann ischemic contracture · deltoid = axillary (surgical neck), EPL = radial (PIN), interossei = ulnar (medial epicondyle) · ▶ ฟังอาจารย์เฉลย [t=47:52]",
+   "why": "Extension-type supracondylar fracture ทำให้ anterior interosseous n. (แขนงของ median) บาดเจ็บบ่อยสุด\nAIN เลี้ยง FPL + FDP นิ้วชี้ + pronator quadratus → ทำ OK sign ไม่ได้\n✗ A: Deltoid = axillary n. (surgical neck fracture)\n✗ B: Brachialis = musculocutaneous n. อยู่เหนือจุดหัก\n✓ C: FPL เลี้ยงโดย AIN ซึ่งบาดเจ็บบ่อยสุดใน supracondylar fracture\n✗ D: EPL = radial n. (PIN)\n✗ E: Interossei = ulnar n. (medial epicondyle fracture)\n▶ ฟังอาจารย์เฉลย [t=47:52]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -200,7 +200,7 @@
     "B": "Chondrosarcoma"
    },
    "answer": "B",
-   "why": "chondrosarcoma พบในผู้ใหญ่อายุ 40–70 ปี ที่ pelvis, proximal femur, humerus gross เป็นก้อน lobulated สีขาวเทา-ฟ้า glistening (hyaline cartilage) อยู่ใน medullary cavity ทำ endosteal scalloping; X-ray มี ring-and-arc (popcorn) calcification; osteosarcoma พบวัยรุ่นรอบเข่า (metaphysis) ก้อนแข็งเป็นกระดูก ทะลุ cortex ยก periosteum (Codman triangle, sunburst) · ▶ ฟังอาจารย์เฉลย [t=1:03:54]",
+   "why": "อายุ 70 ปี + proximal femur + ก้อนสีขาว lobulated ใน marrow ยังไม่ทะลุ cortex = chondrosarcoma\n✗ A: Osteosarcoma พบวัยรุ่นรอบเข่า (metaphysis)\n  ก้อนแข็งเป็นกระดูก ทะลุ cortex ยก periosteum (Codman triangle, sunburst)\n✓ B: Chondrosarcoma พบอายุ 40–70 ปี ที่ pelvis, proximal femur, humerus\n  gross เป็นก้อน lobulated สีขาวเทา-ฟ้า มันวาว (hyaline cartilage) อยู่ใน medullary cavity\n  X-ray มี ring-and-arc (popcorn) calcification\n▶ ฟังอาจารย์เฉลย [t=1:03:54]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": true,
    "options_reconstructed": false,
@@ -217,7 +217,7 @@
     "E": "Chondrosarcoma"
    },
    "answer": "C",
-   "why": "Osteochondroma (exostosis) = bony outgrowth มี cartilage cap และ cortex/medulla ต่อเนื่องกับกระดูกเดิม พบบ่อยสุดที่ metaphysis รอบเข่า; enchondroma อยู่ใน medulla (มือ/เท้า); chondrosarcoma เป็น malignant cartilage คนสูงอายุ; osteosarcoma มี malignant osteoid · ▶ ฟังอาจารย์เฉลย [t=1:03:04]",
+   "why": "Cartilage cap + medullary cavity ต่อเนื่องกับกระดูกเดิม = osteochondroma (exostosis)\n✗ A: Enchondroma อยู่ใน medulla (มือ/เท้า) ไม่ยื่นออกนอกกระดูก\n✗ B: Osteoblastoma เป็นก้อน osteoid ที่ spine ไม่มี cartilage cap\n✓ C: Osteochondroma = bony outgrowth มี hyaline cartilage cap\n  cortex/medulla ต่อเนื่องกับกระดูกเดิม พบบ่อยที่ metaphysis รอบเข่า\n✗ D: Osteosarcoma มี malignant osteoid ทำลาย cortex\n✗ E: Chondrosarcoma เป็น malignant cartilage ในผู้สูงอายุ\n▶ ฟังอาจารย์เฉลย [t=1:03:04]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -233,7 +233,7 @@
     "E": "Enchondroma"
    },
    "answer": "A",
-   "why": "Osteochondroma = exostosis มี cartilage cap และ medulla ต่อเนื่องกับกระดูกเดิม ยื่นออกนอก (มักห่างจากข้อ) เป็น benign bone tumor ที่พบบ่อยสุด (multiple = EXT1/EXT2); enchondroma อยู่ใน medulla; chondrosarcoma ร้าย (อาจเกิดจาก osteochondroma ที่ cap หนา >2 cm) · ▶ ฟังอาจารย์เฉลย [t=1:03:04]",
+   "why": "Osteocartilaginous ยื่นออกนอกกระดูก + medulla ต่อเนื่อง = osteochondroma\n✓ A: Osteochondroma = exostosis มี cartilage cap และ medulla ต่อเนื่องกับกระดูกเดิม\n  benign bone tumor ที่พบบ่อยสุด (multiple = EXT1/EXT2)\n✗ B: Osteosarcoma มี malignant osteoid พบวัยรุ่น ทำลาย cortex\n✗ C: Chondrosarcoma เป็นมะเร็ง อาจเกิดจาก osteochondroma ที่ cap หนา > 2 cm\n✗ D: Ewing sarcoma = small round blue cells ที่ diaphysis เด็ก (onion skin)\n✗ E: Enchondroma อยู่ใน medulla ไม่ยื่นออกนอกกระดูก\n▶ ฟังอาจารย์เฉลย [t=1:03:04]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -249,7 +249,7 @@
     "E": "Lumbar strain"
    },
    "answer": "C",
-   "why": "acute + ยกของหนัก + radicular pain ร้าวลงขา = nucleus pulposus เคลื่อนกดรากประสาท (L4-5/L5-S1 posterolateral) · strain ปวดเฉพาะที่ไม่ร้าวลงขา · stenosis เป็น chronic neurogenic claudication ผู้สูงอายุ · ▶ ฟังอาจารย์เฉลย [t=1:13:01]",
+   "why": "Acute + หลังยกของหนัก + ปวดร้าวลงขา (radicular pain) = disc herniation\n✗ A: Lumbar scoliosis เป็นความผิดรูปเรื้อรัง ไม่ใช่ปวดร้าวเฉียบพลัน\n✗ B: Spondylolisthesis มักปวดเรื้อรัง เด่นตอนแอ่นหลัง\n✓ C: Nucleus pulposus เคลื่อนออกกดรากประสาท (L4–5/L5–S1 posterolateral)\n  จึงปวดร้าวลงขาทันทีหลังยกของ\n✗ D: Spinal stenosis เป็น chronic neurogenic claudication ในผู้สูงอายุ\n✗ E: Lumbar strain ปวดเฉพาะที่หลัง ไม่ร้าวลงขา\n▶ ฟังอาจารย์เฉลย [t=1:13:01]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -265,7 +265,7 @@
     "E": "Disc herniation L5-S1"
    },
    "answer": "D",
-   "why": "posterolateral herniation กดรากที่ออกระดับล่าง: L4-L5 → L5 root: dorsiflexion/big toe extension, hip abduction (gluteus medius), ชาหลังเท้า · L5-S1 → S1: plantarflexion, ankle reflex↓, ชาฝ่าเท้า/lateral foot · L3-L4 → L4: knee reflex, ชา medial leg · ▶ ฟังอาจารย์เฉลย [t=1:13:01]",
+   "why": "Posterolateral herniation กดรากที่ออกระดับล่าง\nDorsiflexion อ่อน + hip abduction อ่อน + ชาหลังเท้า = L5 root → disc L4–L5\n✗ A: Lumbar sprain ไม่มีอาการทางระบบประสาท\n✗ B: Spondylosis เป็นข้อเสื่อมเรื้อรัง ไม่ใช่ปวดร้าวเฉียบพลัน\n✗ C: L3–L4 กด L4 root: knee reflex ลด ชา medial leg\n✓ D: L4–L5 กด L5 root: dorsiflexion/big toe extension อ่อน\n  hip abduction (gluteus medius) อ่อน ชาหลังเท้า\n✗ E: L5–S1 กด S1 root: plantarflexion อ่อน ankle reflex ลด ชาฝ่าเท้า/lateral foot\n▶ ฟังอาจารย์เฉลย [t=1:13:01]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -282,7 +282,7 @@
     "E": "Type V"
    },
    "answer": "A",
-   "why": "OI = COL1A1/COL1A2 → type I collagen (bone, sclera, dentin, tendon) ผิดปกติ → กระดูกเปราะ, blue sclera, dentinogenesis imperfecta, hearing loss · type II = cartilage/vitreous, III = reticular/vessel (vascular EDS), IV = basement membrane (Alport), V = classic EDS · ▶ ฟังอาจารย์เฉลย [t=1:19:19]",
+   "why": "กระดูกหักซ้ำ + blue sclera = osteogenesis imperfecta (COL1A1/COL1A2)\n✓ A: Type I collagen อยู่ใน bone, sclera, dentin, tendon\n  ผิดปกติ → กระดูกเปราะ blue sclera dentinogenesis imperfecta หูตึง\n✗ B: Type II = cartilage, vitreous\n✗ C: Type III = reticular fiber, หลอดเลือด (vascular EDS)\n✗ D: Type IV = basement membrane (Alport)\n✗ E: Type V = classic EDS\n▶ ฟังอาจารย์เฉลย [t=1:19:19]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": true,
    "options_reconstructed": false,
@@ -298,7 +298,7 @@
     "E": "Levator scapulae"
    },
    "answer": "D",
-   "why": "SCM หดข้างเดียว → เอียงศีรษะไปข้างเดียวกัน + หมุนหน้า/คางไปฝั่งตรงข้าม → ครั้งนี้ right SCM สั้น/fibrosis (congenital muscular torticollis มักสัมพันธ์กับ breech/คลอดยาก และ DDH); trapezius/levator scapulae ยกไหล่; splenius capitis หมุนศีรษะไปข้างเดียวกัน · ▶ ฟังอาจารย์เฉลย [t=1:26:41]",
+   "why": "SCM หดข้างเดียว → ศีรษะเอียงไปข้างเดียวกัน + คางหมุนไปฝั่งตรงข้าม\nเอียงขวา คางชี้ซ้าย = right SCM สั้น (congenital muscular torticollis)\n✗ A: Trapezius ยกไหล่และดึงศีรษะไปด้านหลัง\n✗ B: Splenius capitis หมุนศีรษะ/คางไปข้างเดียวกัน\n✗ C: Anterior scalene ยกซี่โครงที่ 1 ไม่ทำให้คางหันไปฝั่งตรงข้ามแบบนี้\n✓ D: Right SCM สั้น/fibrosis ทำให้เอียงขวา คางชี้ซ้าย\n  มักสัมพันธ์กับ breech/คลอดยาก และ DDH\n✗ E: Levator scapulae ยกกระดูกสะบัก\n▶ ฟังอาจารย์เฉลย [t=1:26:41]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -313,7 +313,7 @@
     "D": "Calcitonin"
    },
    "answer": "A",
-   "why": "Teriparatide (PTH 1-34) ฉีดเป็นช่วง ๆ กระตุ้น osteoblast = anabolic; alendronate/raloxifene/calcitonin เป็น antiresorptive (ยับยั้ง osteoclast) · ▶ ฟังอาจารย์เฉลย [t=1:33:29]",
+   "why": "ยา \"สร้างกระดูก\" (anabolic) = teriparatide\n✓ A: Teriparatide (PTH 1–34) ฉีดเป็นช่วง ๆ กระตุ้น osteoblast\n✗ B: Alendronate เป็น bisphosphonate ยับยั้ง osteoclast (antiresorptive)\n✗ C: Raloxifene เป็น SERM ลด bone resorption (antiresorptive)\n✗ D: Calcitonin ยับยั้ง osteoclast (antiresorptive)\n▶ ฟังอาจารย์เฉลย [t=1:33:29]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -328,7 +328,7 @@
     "D": "ยับยั้ง RANKL"
    },
    "answer": "B",
-   "why": "Intermittent PTH → กระตุ้น osteoblast (ลด sclerostin, ลด osteoblast apoptosis) → bone formation มากกว่า resorption; ถ้า PTH สูงต่อเนื่องจะเพิ่ม RANKL/ลด OPG → resorption; ข้อ A, C, D เป็นกลไกยา antiresorptive (เช่น denosumab = anti-RANKL) · ▶ ฟังอาจารย์เฉลย [t=1:32:36]",
+   "why": "PTH แบบเป็นช่วง ๆ = anabolic, PTH สูงต่อเนื่อง = resorption\n✗ A: ยับยั้ง osteoclast เป็นกลไกยา antiresorptive (bisphosphonate)\n✓ B: Intermittent PTH กระตุ้น osteoblast (ลด sclerostin ลด osteoblast apoptosis)\n  bone formation > resorption\n✗ C: เพิ่ม OPG เป็นผลตรงข้าม PTH สูงต่อเนื่องจะลด OPG\n✗ D: ยับยั้ง RANKL เป็นกลไก denosumab\n▶ ฟังอาจารย์เฉลย [t=1:32:36]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": false,
@@ -341,7 +341,7 @@
     "B": "Prednisolone"
    },
    "answer": "B",
-   "why": "glucocorticoid ยับยั้ง osteoblast (เพิ่ม apoptosis), เพิ่ม RANKL/ลด OPG → resorption↑, ลด Ca absorption ลำไส้ + เพิ่ม Ca ขับทางไต → osteoporosis (เด่น trabecular: vertebra) · NSAID ไม่ทำ osteopenia · ▶ ฟังอาจารย์เฉลย [t=1:35:56]",
+   "why": "Glucocorticoid เป็นสาเหตุ secondary osteoporosis จากยาที่พบบ่อยที่สุด\n✗ A: Diclofenac (NSAID) ไม่ทำให้ osteopenia\n✓ B: Prednisolone ยับยั้ง osteoblast เพิ่ม RANKL/ลด OPG\n  ลด Ca absorption ที่ลำไส้ + เพิ่มขับ Ca ทางไต\n  เด่นที่ trabecular bone (vertebra)\n▶ ฟังอาจารย์เฉลย [t=1:35:56]",
    "source": "อาจารย์เฉลยในคลิป · จากบท B5",
    "needs_image": false,
    "options_reconstructed": true,
@@ -359,7 +359,7 @@
    },
    "answer": "E",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "อาการเข้ากับ L5 root · \"กลางกดล่าง ข้างกดบน\": A กด L3 · B, C กด L4 · D กด S1 · E foraminal ที่ L5–S1 กด exiting root ระดับบน = L5 · ▶ [t=1:15:31]"
+   "why": "นิ้วโป้งเท้าอ่อน + ชา dorsal first web space + reflex ปกติ = L5 root\nจำ \"กลางกดล่าง ข้างกดบน\": paracentral กดรากล่าง, foraminal/far lateral กดรากบน (exiting root)\n✗ A: L3–L4 foraminal กด L3 root\n✗ B: L4–L5 foraminal กด L4 root\n✗ C: L4–L5 far lateral กด L4 root\n✗ D: L5–S1 paracentral กด S1 root (ankle reflex ลด)\n✓ E: L5–S1 foraminal กด exiting root ระดับบน = L5\n▶ [t=1:15:31]"
   }
  }
 }
