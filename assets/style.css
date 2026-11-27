@@ -844,3 +844,22 @@ table.dt tr.open td{background:var(--surface2)}
 .offline-prog{margin-top:10px}
 .offline-prog .bar{margin:6px 0 4px}
 .setup-code{background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;overflow-x:auto;margin:8px 0;white-space:pre}
+/* ---------- Gemini AI Search ---------- */
+.hl-pop.ai-pop{width:min(440px,calc(100vw - 16px));max-height:75vh;overflow-y:auto}
+.ai-chips{display:flex;flex-wrap:wrap;gap:5px;margin:2px 0}
+.ai-chips .btn{padding:3px 9px;font-size:12.5px;background:var(--surface2);color:var(--fg)}
+.ai-ans{font-size:14.5px;line-height:1.6}
+.ai-load{padding:8px 10px;border-radius:8px;background:var(--think-soft);color:var(--think);font-size:13.5px;font-weight:600;margin-top:6px}
+.ai-body{margin-top:8px;padding:10px 12px;border-radius:10px;background:var(--surface2);border:1px solid var(--line);max-height:280px;overflow-y:auto}
+.ai-body p{margin:0 0 6px} .ai-body p:last-child{margin-bottom:0}
+.ai-body ul{margin:4px 0 6px;padding-left:1.25em} .ai-body li{margin:2px 0}
+.ai-src{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;margin-top:6px;font-size:12px;color:var(--muted)}
+.ai-src a{padding:1px 7px;border-radius:999px;background:var(--accent-soft);color:var(--accent);text-decoration:none;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ai-foot{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;margin-top:8px}
+.ai-foot .btn{padding:4px 10px;font-size:13px}
+.ai-err{margin-top:6px;padding:8px 10px;border-radius:8px;background:var(--bad-soft);color:var(--bad);font-size:13px}
+.ai-card{border-left:4px solid var(--think)}
+.ai-card-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.ai-card .ai-body{max-height:none;background:transparent;border:0;padding:4px 0 0}
+.ai-key-row{display:flex;gap:6px;align-items:center;margin-top:8px}
+.ai-key-row input{flex:1;min-width:0;font:inherit;font-size:14px;padding:7px 10px;border:1.5px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}

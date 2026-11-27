@@ -1,14 +1,14 @@
 /* Service Worker สำหรับ PWA: เปิดใช้งาน Offline ได้ และอัปเดตอัตโนมัติเมื่อออนไลน์ */
-const CACHE = 'nle-tb-v48';
+const CACHE = 'nle-tb-v49';
 const SHELL = [
   './',
   './index.html',
   './manifest.json',
-  './assets/style.css?v=48',
-  './assets/pixel.css?v=48',
-  './assets/app.js?v=48',
-  './assets/sync.js?v=48',
-  './assets/firebase-config.js?v=48',
+  './assets/style.css?v=49',
+  './assets/pixel.css?v=49',
+  './assets/app.js?v=49',
+  './assets/sync.js?v=49',
+  './assets/firebase-config.js?v=49',
   './assets/icon.svg',
   './assets/icon-192.png',
   './assets/icon-512.png',
@@ -42,6 +42,7 @@ self.addEventListener('fetch', e => {
 
   // ไม่ยุ่งกับ Firebase / Google Auth / Firestore API
   if (
+    url.hostname === 'generativelanguage.googleapis.com' ||
     url.hostname.endsWith('firebaseapp.com') ||
     url.hostname.endsWith('firebaseio.com') ||
     url.hostname.endsWith('identitytoolkit.googleapis.com') ||

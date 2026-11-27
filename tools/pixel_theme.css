@@ -114,3 +114,5 @@ figure.fig,.tbl-wrap{border-radius:4px}
 .auth-ava,.sync-user img{border-radius:0;border:2px solid var(--ink)}
 .sync-dot{border-radius:0}
 .sync-badge{border-radius:2px;border:1.5px solid var(--ink)}
+.ai-key-row input{border-radius:0;border:2px solid var(--ink)}
+.ai-body{border-radius:4px}
