@@ -639,3 +639,20 @@ mark.user-hl.c-v{--c:var(--u-v);background:linear-gradient(transparent 22%,var(-
 .hl-pop .sw.c-v{background:var(--u-v)}
 mark.user-hl.c-tv{--c:transparent;background:none;color:var(--t-v);font-weight:inherit}
 .hl-pop .sw.tc.c-tv{color:var(--t-v)}
+/* ตารางรวมยาต่อบท */
+.db-bar select{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--fg);font:inherit;font-size:14px;max-width:100%}
+.dt-gs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.dt-gs a{padding:2px 9px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:12.5px;text-decoration:none;color:var(--fg)}
+.dt-wrap{max-height:none}
+table.dt{min-width:760px}
+table.dt th{position:sticky;top:0;z-index:2}
+table.dt td{font-size:13.5px}
+table.dt td>div+div{margin-top:4px;padding-top:4px;border-top:1px dashed var(--line)}
+table.dt td.dt-n{min-width:120px}
+table.dt td.dt-n b{display:block}
+table.dt tr.dt-g td{background:var(--accent-soft);font-weight:700;color:var(--accent);border-top:2px solid var(--accent)}
+table.dt tr.dt-g small{font-weight:400;opacity:.75}
+.dt-ex{display:inline-block;margin-top:3px;font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:0 7px}
+.dt-k{color:var(--muted);font-size:11.5px}
+.dt-na{color:var(--muted)}
+.dt-b a{display:inline-block;min-width:22px;text-align:center;font-size:12px;padding:0 4px;border:1px solid var(--line);border-radius:6px;text-decoration:none;margin:1px}
