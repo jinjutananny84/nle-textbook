@@ -1,0 +1,1730 @@
+{
+ "exams": {
+  "RS/1": {
+   "box": 1,
+   "stem": "A woman has pituitary adenoma. Through which of the following sinuses can the tumor be reached surgically?",
+   "options": {
+    "A": "Frontal sinus",
+    "B": "Middle ethmoidal sinus",
+    "C": "Posterior ethmoidal sinus",
+    "D": "Sphenoidal sinus",
+    "E": "Maxillary sinus"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Sphenoid sinus อยู่ด้านหลังติด pituitary gland (sella turcica) → ผ่าตัด ==transsphenoidal== · sinus อื่นอยู่ไกลจาก pituitary"
+  },
+  "RS/2": {
+   "box": 1,
+   "stem": "A 20-year-old male with allergic rhinitis has fever, facial pain, purulent rhinorrhea. Purulent discharge is observed from the superior nasal meatus. Which location is inflamed?",
+   "options": {
+    "A": "Frontal sinus",
+    "B": "Maxillary sinus",
+    "C": "Anterior ethmoidal sinus",
+    "D": "Middle ethmoidal sinus",
+    "E": "Posterior ethmoidal sinus"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Superior meatus = ที่เปิดของ ==posterior ethmoidal sinus== · frontal/maxillary/anterior ethmoidal เปิดที่ hiatus semilunaris (middle meatus) · middle ethmoidal เปิดที่ ethmoidal bulla"
+  },
+  "RS/3": {
+   "box": 1,
+   "stem": "A mass at the left inferior nasal meatus can cause an obstruction to which of the following structures?",
+   "options": {
+    "A": "Frontal sinus",
+    "B": "Ethmoidal sinus",
+    "C": "Maxillary sinus",
+    "D": "Sphenoidal sinus",
+    "E": "Nasolacrimal duct"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Inferior meatus เป็นที่เปิดของ ==nasolacrimal duct== อย่างเดียว ไม่มี sinus เปิดที่นี่ → ก้อนอุดทำให้น้ำตาไหล (epiphora)"
+  },
+  "RS/4": {
+   "box": 1,
+   "stem": "A 15-year-old boy has epistaxis and hemoptysis. Swelling at nasal septum, bleeding is from nasopharynx. Surgery is required to prevent recurrence. Which artery must be ligated?",
+   "options": {
+    "A": "Anterior ethmoidal",
+    "B": "Posterior ethmoidal",
+    "C": "Lesser palatine",
+    "D": "Greater palatine",
+    "E": "Sphenopalatine"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "เลือดไหลลง nasopharynx = ==posterior epistaxis== มาจาก ==sphenopalatine a.== (รุนแรง ต้องผูก) · anterior epistaxis มาจาก Kiesselbach plexus"
+  },
+  "RS/5": {
+   "box": 1,
+   "stem": "Which of the following is the most common site of epistaxis?",
+   "options": {
+    "A": "Nasal floor",
+    "B": "Anterior nasal septum",
+    "C": "Posterior nasal septum",
+    "D": "Anterior lateral wall of nasal cavity",
+    "E": "Posterior lateral wall of nasal cavity"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Common site = ==anterior nasal septum== (Kiesselbach's plexus/Little's area) · พบบ่อยและไม่รุนแรง"
+  },
+  "RS/6": {
+   "box": 2,
+   "stem": "During inspiration, both vocal cords separate to let air pass through the glottis. Which muscle contributes?",
+   "options": {
+    "A": "Posterior cricoarytenoid muscle",
+    "B": "Cricothyroid muscle",
+    "C": "Thyroarytenoid muscle",
+    "D": "Transverse arytenoid muscle",
+    "E": "Vocalis muscle"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Posterior cricoarytenoid== = กล้ามเนื้อมัดเดียวที่ abduct vocal cord · cricothyroid = tense (เสียงสูง) · thyroarytenoid/vocalis = relax (เสียงต่ำ) · transverse arytenoid = ปิด"
+  },
+  "RS/7": {
+   "box": 2,
+   "stem": "A man undergoes thyroidectomy. Later, he presents with hoarseness of voice. Which nerve is most likely damaged?",
+   "options": {
+    "A": "External laryngeal nerve",
+    "B": "Internal laryngeal nerve",
+    "C": "Recurrent laryngeal nerve",
+    "D": "Glossopharyngeal nerve",
+    "E": "Vagus nerve"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Recurrent laryngeal n.== วิ่งใกล้ thyroid เลี้ยงกล้ามเนื้อ larynx ทุกมัดยกเว้น cricothyroid → เสียงแหบ (ออกบ่อย) · external laryngeal เสีย = เสียงสูงไม่ได้"
+  },
+  "RS/8": {
+   "box": 3,
+   "stem": "A 60-year-old heavy smoking man presents with difficult breathing and profound coughing. Dysfunction of which structure is responsible for his ineffective coughing?",
+   "options": {
+    "A": "Cilia",
+    "B": "Clara cell",
+    "C": "Goblet cell",
+    "D": "Seromucous gland",
+    "E": "Type II pneumocyte"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "บุหรี่ทำลาย ==cilia== → mucociliary clearance เสีย เสมหะพัดออกไม่ได้ ไอไม่มีประสิทธิภาพ · goblet cell hyperplasia ทำให้เสมหะมาก แต่ไม่ใช่เหตุที่ไอไม่ออก"
+  },
+  "RS/9": {
+   "box": 4,
+   "stem": "ถ้าต้องการฟังปอดที่ right upper lobe ควรจะฟังที่ตำแหน่งใด",
+   "options": {
+    "A": "2nd intercostal space",
+    "B": "4th intercostal space",
+    "C": "6th intercostal space",
+    "D": "7th intercostal space",
+    "E": "8th intercostal space"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "RUL ด้านหน้าอยู่ตั้งแต่ apex ถึง ICS 3 → ฟังที่ ==2nd ICS== · ICS 4–5 = middle lobe · lower lobe ต้องฟังด้านหลัง"
+  },
+  "RS/10": {
+   "box": 4,
+   "stem": "ในการฟังเสียงปอด หากต้องการฟังเสียงตำแหน่ง superior lobe ตำแหน่งที่ต่ำที่สุดที่ฟังได้คือตำแหน่งใด",
+   "options": {
+    "A": "Anterior 4th intercostal space",
+    "B": "Anterior 5th intercostal space",
+    "C": "Anterior 6th intercostal space",
+    "D": "Posterior 4th intercostal space",
+    "E": "Posterior 5th intercostal space"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Superior lobe ซ้ายรวม lingula ลงมาถึง ==anterior 5th ICS== (ขวาด้านหน้าถึงแค่ ICS 3) · ด้านหลัง upper lobe ถึง ~ICS 5–6 แต่ตัวเลือกด้านหน้าต่ำกว่า"
+  },
+  "RS/11": {
+   "box": 4,
+   "stem": "ผู้ป่วยเป็น lobar pneumonia at Lt lower lobe จะฟังเสียงปอดพบความผิดปกติที่ตำแหน่งใด",
+   "options": {
+    "A": "6th ICS midclavicular line",
+    "B": "8th ICS midclavicular line",
+    "C": "8th ICS parasternal",
+    "D": "10th ICS midclavicular line",
+    "E": "10th ICS scapular line"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "อาจารย์: ด้านหน้า lower lobe ฟังได้ถึงประมาณ ==ICS 6 (midclavicular)== ต่ำกว่านั้นไม่มีเนื้อปอดแล้ว · ICS 8, 10 ที่ midclavicular อยู่ใต้ขอบปอด",
+   "doubt": "Lower lobe ฟังด้านหลังเป็นหลัก และขอบล่างด้านหลังอยู่ราว T10 ตัวเลือก 10th ICS scapular line จึงอยู่ที่ขอบล่างสุดพอดี อาจารย์เลือกข้อ 6th ICS midclavicular"
+  },
+  "RS/12": {
+   "box": 4,
+   "stem": "เด็กกิน peanut ไอรัวๆ + difficult breathing ติดที่ไหน most common สุด",
+   "options": {
+    "A": "Larynx",
+    "B": "Trachea",
+    "C": "Bronchus",
+    "D": "Bronchiole"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ส่วนใหญ่ติดที่ ==bronchus== (โดยเฉพาะ right main bronchus ที่ชันกว่า) · ถ้าติด larynx/trachea จะหายใจไม่ได้เลย"
+  },
+  "RS/13": {
+   "box": 4,
+   "stem": "เด็ก 6 ปี สำลักเมล็ดน้อยหน่าในท่ายืน เมล็ดน้อยหน่าน่าจะตกไปอยู่ที่ส่วนใด",
+   "options": {
+    "A": "Right upper lobe",
+    "B": "Right middle lobe",
+    "C": "Right lower lobe",
+    "D": "Left upper lobe",
+    "E": "Left lower lobe"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Right main bronchus สั้น กว้าง ชันกว่า + ท่ายืนตกตามแรงโน้มถ่วง → ==right lower lobe (basal segment)== · ท่านอนหงาย = superior segment ของ lower lobe/posterior segment ของ upper lobe"
+  },
+  "RS/14": {
+   "box": 4,
+   "stem": "Lung cancer จะ metastasis ไปที่ lymph node ไหนก่อน",
+   "options": {
+    "A": "Sternal node",
+    "B": "Axillary node",
+    "C": "Hilar node",
+    "D": "Virchow node",
+    "E": "Pectoral node"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ทุก lobe ระบายไป ==hilar (bronchopulmonary) node== ก่อน แล้วจึงไป carinal และ paratracheal · Virchow = GI cancer (supraclavicular ซ้าย)"
+  },
+  "RS/15": {
+   "box": 5,
+   "stem": "Preterm GA 24 weeks น้ำหนักแรกเกิด 1200 g ต่อมามีอาการหายใจเหนื่อย ซี่โครงบุ๋ม CXR เจอ diffuse bilateral ground glass opacities เกิดจากความผิดปกติของอะไร",
+   "options": {
+    "A": "Type I alveolar cell",
+    "B": "Type II alveolar cell",
+    "C": "Respiratory epithelial cell",
+    "D": "Olfactory epithelial cell",
+    "E": "Pulmonary interstitium"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Neonatal RDS = ขาด surfactant ซึ่งสร้างจาก ==type II pneumocyte== · type I ทำหน้าที่แลกก๊าซ"
+  },
+  "RS/16": {
+   "box": 5,
+   "stem": "Preterm GA 28 weeks develops respiratory distress. CXR: bilateral ground glass appearance infiltration. What is the most likely feature found in this patient?",
+   "options": {
+    "A": "Diffuse alveolar hemorrhage",
+    "B": "Interstitial lymphocytic infiltration",
+    "C": "Neutrophilic exudate",
+    "D": "Pulmonary fibrosis with dilated airspace",
+    "E": "Poorly developed saccular alveoli"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "GA 28 wk ปอดอยู่ระยะ ==saccular== (เริ่มสร้าง surfactant) ยังไม่สมบูรณ์ → ==poorly developed saccular alveoli== · patho RDS = hyaline membrane"
+  },
+  "RS/17": {
+   "box": 5,
+   "stem": "เด็กเป็น RDS อะไรผิดปกติ",
+   "options": {
+    "A": "Phosphatidylcholine",
+    "B": "Phosphatidylserine",
+    "C": "Phosphatidylinositol",
+    "D": "Phosphatidylethanolamine",
+    "E": "Sphingomyelin"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Surfactant หลัก = ==dipalmitoylphosphatidylcholine (DPPC, lecithin)== · L/S ratio (lecithin/sphingomyelin) ใช้ประเมิน lung maturity"
+  },
+  "RS/18": {
+   "box": 5,
+   "stem": "A 20-year-old primigravida with diabetes has onset of premature labour at 30 weeks of gestation. Which medication administered to her may prevent respiratory distress syndrome of her premature newborn?",
+   "options": {
+    "A": "Thiamine",
+    "B": "Surfactant",
+    "C": "Terbutaline",
+    "D": "Indomethacin",
+    "E": "Dexamethasone"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ให้ ==steroid (dexamethasone)== แก่แม่ก่อนคลอดเร่ง surfactant/lung maturation · surfactant ให้ทารกหลังคลอดทางท่อ ไม่ได้ให้แม่ · terbutaline/indomethacin = tocolytic"
+  },
+  "RS/19": {
+   "box": 5,
+   "stem": "Newborn with scaphoid abdomen, CXR: multiple cystic-like lesions in the chest, mediastinal shift to the right. What is the diagnosis?",
+   "options": {
+    "A": "Diaphragmatic hernia",
+    "B": "Congenital pulmonary airway malformation",
+    "C": "Tracheoesophageal fistula",
+    "D": "Tension pneumothorax",
+    "E": "Neonatal RDS"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Scaphoid abdomen== (ไส้ขึ้นไปในอก) + cystic-like lesion (bowel loop) ในอกซ้าย + mediastinal shift ไปขวา = ==congenital diaphragmatic hernia== (ส่วนใหญ่ซ้าย posterolateral)",
+   "options_reconstructed": true
+  },
+  "RS/20": {
+   "box": 6,
+   "stem": "Given: tidal volume 400 ml, dead space 100 ml, minute ventilation 4,000 ml/min. What is the alveolar ventilation?",
+   "options": {
+    "A": "2,000 ml/min",
+    "B": "2,500 ml/min",
+    "C": "3,000 ml/min",
+    "D": "3,500 ml/min",
+    "E": "4,000 ml/min"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "MV = TV × RR → 4000 = 400 × RR → RR 10 · AV = (TV − DS) × RR = (400 − 100) × 10 = ==3,000 ml/min=="
+  },
+  "RS/21": {
+   "box": 6,
+   "stem": "Mr. A and Mr. B breathe at the same rate and tidal volume. Difference in which parameter can cause a difference in their PaCO2?",
+   "options": {
+    "A": "Vital capacity",
+    "B": "Cardiac output",
+    "C": "Lung compliance",
+    "D": "Alveolar dead space",
+    "E": "Airway resistance"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "PaCO2 ∝ 1/alveolar ventilation = (TV − ==dead space==) × RR · RR และ TV เท่ากัน ตัวที่ต่างได้คือ dead space"
+  },
+  "RS/22": {
+   "box": 6,
+   "stem": "A 20-year-old student just ran a 200-meter sprint with forced inspiration appearance. Which muscle is responsible?",
+   "options": {
+    "A": "Anterior scalene",
+    "B": "Subcostal",
+    "C": "External intercostal",
+    "D": "Serratus anterior",
+    "E": "Innermost intercostal"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Forced inspiration ใช้ accessory muscle: ==scalene==, SCM, alae nasi · external intercostal ใช้ใน inspiration ปกติ · subcostal/innermost intercostal ช่วย expiration"
+  },
+  "RS/23": {
+   "box": 6,
+   "stem": "During exercising, a man inspires forcefully. Which muscle is involved in forced inspiration?",
+   "options": {
+    "A": "Sternocleidomastoid muscle",
+    "B": "Internal intercostal muscle",
+    "C": "Transversus thoracis muscle",
+    "D": "External abdominal oblique muscle",
+    "E": "Rectus abdominis muscle"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==SCM== = accessory muscle ของ forced inspiration · internal intercostal, rectus abdominis, external oblique, transversus thoracis = forced expiration"
+  },
+  "RS/24": {
+   "box": 6,
+   "stem": "50-year-old man with liver cirrhosis has dyspnea, tachypnea, abdominal distention with positive fluid thrill. How does this finding affect respiration?",
+   "options": {
+    "A": "Decrease vertical diameter",
+    "B": "Decrease antero-posterior diameter",
+    "C": "Increase anatomical dead space",
+    "D": "Increase physiological dead space",
+    "E": "Decrease pulmonary blood flow"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Ascites ดัน diaphragm ขึ้น หดลงไม่ได้ → ==vertical diameter ลด== (diaphragm เพิ่ม vertical · external intercostal แบบ bucket handle เพิ่ม AP/transverse)"
+  },
+  "RS/25": {
+   "box": 7,
+   "stem": "Bronchial tree relaxation ใช้ substance mediated ใด",
+   "options": {
+    "A": "Acetylcholine",
+    "B": "Epinephrine",
+    "C": "Norepinephrine"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Bronchial smooth muscle มี ==β2 receptor== → ==epinephrine== (β2 ดี) ทำให้ relax · ACh (muscarinic) ทำให้หด · NE ออกฤทธิ์ β2 น้อย"
+  },
+  "RS/26": {
+   "box": 8,
+   "stem": "Which factor mainly determines oxygen diffusion across the alveolar-capillary membrane?",
+   "options": {
+    "A": "Alveolar surface area",
+    "B": "Pulmonary surfactant",
+    "C": "Pulmonary blood flow",
+    "D": "Airway resistance",
+    "E": "Diffusion of CO2"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Fick: Vgas ∝ solubility × ==surface area== × ΔP / (MW × thickness) · surfactant เกี่ยวกับการขยายปอด ไม่ใช่ diffusion · O2 ปกติเป็น perfusion-limited แต่คำถามถาม diffusion"
+  },
+  "RS/27": {
+   "box": 8,
+   "stem": "Which of the following has Hb-O2 dissociation curve similar to strenuous exercise?",
+   "options": {
+    "A": "Hyperthermia",
+    "B": "Metabolic alkalosis",
+    "C": "Voluntary hyperventilation",
+    "D": "Carbon monoxide poisoning",
+    "E": "Decrease of 2,3-BPG"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Exercise → CO2, H+, temperature เพิ่ม → ==right shift== · ==hyperthermia== ก็ right shift · alkalosis, hyperventilation, CO, 2,3-BPG ลด = left shift"
+  },
+  "RS/28": {
+   "box": 8,
+   "stem": "A patient presents with hyperventilation and carpopedal spasm. Which parameter is increased?",
+   "options": {
+    "A": "Arterial PO2",
+    "B": "Arterial PCO2",
+    "C": "Hb-O2 affinity",
+    "D": "Plasma HCO3- concentration",
+    "E": "Plasma CO2 content"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Hyperventilation → PCO2 ลด → alkalosis → ==left shift = Hb-O2 affinity เพิ่ม== (iCa ลด → carpopedal spasm) · PCO2, HCO3, CO2 content ลด",
+   "doubt": "PaO2 อาจเพิ่มเล็กน้อยได้ตาม alveolar gas equation แต่คำตอบที่อาจารย์และข้อสอบต้องการคือ affinity"
+  },
+  "RS/29": {
+   "box": 8,
+   "stem": "A patient with sudden dyspnea and chest pain is diagnosed with tension pneumothorax of the left lung. ABG reveals hypoxemia and hypercarbia. Which is decreased?",
+   "options": {
+    "A": "Hb-O2 affinity",
+    "B": "Pulmonary vascular resistance",
+    "C": "Plasma HCO3- concentration",
+    "D": "Plasma 2,3-BPG concentration",
+    "E": "Peripheral chemoreceptor stimulation"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "CO2 สูง + acidosis → ==right shift → Hb-O2 affinity ลด== · PVR เพิ่ม (hypoxia, ปอดแฟบ) · HCO3 เพิ่มเล็กน้อย · chemoreceptor ถูกกระตุ้นมากขึ้น"
+  },
+  "RS/30": {
+   "box": 8,
+   "stem": "20-year-old man works at high altitude for 6 months. 2,3-DPG increases. What will increase as a result of increased 2,3-DPG?",
+   "options": {
+    "A": "Increase hemoglobin synthesis",
+    "B": "Increase erythropoiesis",
+    "C": "Increase blood flow",
+    "D": "Increase O2 saturation",
+    "E": "Increase O2 dissociation"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "2,3-DPG จับ deoxyHb → ==right shift → ปล่อย O2 ให้ tissue ง่ายขึ้น (O2 dissociation เพิ่ม)== · erythropoiesis เพิ่มจาก EPO ไม่ใช่จาก 2,3-DPG"
+  },
+  "RS/31": {
+   "box": 8,
+   "stem": "อะไรที่ทำให้ RBC กับ 2,3-BPG เพิ่มขึ้น",
+   "options": {
+    "A": "Sleep apnea",
+    "B": "Exercise",
+    "C": "High altitude"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Chronic hypoxia ที่สูง== → EPO → polycythemia และ 2,3-BPG เพิ่ม → right shift · exercise ไม่ทำให้ RBC เพิ่ม",
+   "doubt": "Sleep apnea รุนแรงก็ทำให้ polycythemia ได้ แต่ตัวอย่างคลาสสิกที่ข้อสอบต้องการคือ high altitude"
+  },
+  "RS/32": {
+   "box": 8,
+   "stem": "Security guard working in an underground garage has headache, dizziness. BP 150/90, RR 18, SpO2 95%. What is abnormally high in his blood?",
+   "options": {
+    "A": "Sulfhemoglobin",
+    "B": "Carboxyhemoglobin",
+    "C": "Deoxyhemoglobin",
+    "D": "Carbaminohemoglobin",
+    "E": "Methemoglobin"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ไอเสียรถในที่ปิด = ==CO poisoning → carboxyhemoglobin== · SpO2 ปกติหลอก (COHb สีคล้าย HbO2) ต้องตรวจ co-oximeter · MetHb ทำ SpO2 ค้าง ~85% · carbamino = CO2 จับ Hb"
+  },
+  "RS/33": {
+   "box": 8,
+   "stem": "What is the most found form of CO2 transportation from tissues to lungs?",
+   "options": {
+    "A": "Carbaminohemoglobin",
+    "B": "Carbamino compounds",
+    "C": "Carbonic acid from carbonic anhydrase in RBC",
+    "D": "Carbonic acid without enzymatic reaction",
+    "E": "Dissolve in plasma"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "CO2 > 90% ขนส่งเป็น ==HCO3− ที่เกิดจาก carbonic anhydrase ใน RBC== (แล้วแลก Cl−) · dissolved ~5% · carbamino ~3%"
+  },
+  "RS/34": {
+   "box": 9,
+   "stem": "Which of the following explains lower oxygen pressure in arterial blood than in bronchiole (alveoli)?",
+   "options": {
+    "A": "Physiologic dead space",
+    "B": "Anatomical pulmonary shunt",
+    "C": "Ventilation-perfusion mismatch",
+    "D": "Variation in stroke volume",
+    "E": "Variation in tidal volume"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "เลือดจาก bronchial a. และ Thebesian veins (~2% CO) ไม่ผ่านการแลกก๊าซแล้วไหลกลับมาผสม = ==anatomical shunt== → PaO2 97 < PAO2 103 (A-a gradient ปกติ)"
+  },
+  "RS/35": {
+   "box": 9,
+   "stem": "A patient with comminuted femoral shaft fracture develops acute pulmonary embolism. What is the resulting respiratory change?",
+   "options": {
+    "A": "Decreased dead space ventilation",
+    "B": "Low V/Q mismatch",
+    "C": "Decreased intrapulmonary shunt",
+    "D": "Increased gas diffusion",
+    "E": "Alveolar hypoventilation"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "PE = ส่วนที่ถูกอุดมีลมแต่ไม่มีเลือด → ==dead space เพิ่ม== (V/Q สูง) · ตัวเลือกไม่มี dead space เพิ่ม จึงตอบ ==V/Q mismatch== · เลือดที่ถูกเบี่ยงไปปอดส่วนอื่นทำให้ส่วนนั้น V/Q ต่ำ → hypoxemia",
+   "doubt": "อาจารย์ย้ำว่าคอนเซปต์คือ increased dead space ตัวเลือกที่ใกล้สุดคือ V/Q mismatch (low V/Q ในส่วนที่ไม่อุด) ข้ออื่นผิดชัด"
+  },
+  "RS/36": {
+   "box": 10,
+   "stem": "A 2-year-old screams, cries and holds his breath for 1 minute and turns blue. He then rebreathes. What is the most important stimulator?",
+   "options": {
+    "A": "Arterial PO2",
+    "B": "Arterial PCO2",
+    "C": "Acidemia",
+    "D": "Alkalemia",
+    "E": "Increased 2,3-BPG level"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ตัวกระตุ้น ventilation หลักคือ ==PaCO2== ผ่าน central chemoreceptor (H+ ใน CSF) → กลั้นหายใจจนตายไม่ได้"
+  },
+  "RS/37": {
+   "box": 10,
+   "stem": "ข้อใดคือเหตุผลที่คนไข้ COPD ยังหายใจ",
+   "options": {
+    "A": "Increased O2 stimulate peripheral chemoreceptor",
+    "B": "Increase CO2 stimulate central chemoreceptor",
+    "C": "Increase CO2 stimulate peripheral chemoreceptor"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "COPD CO2 คั่งเรื้อรัง → CSF ปรับตัว central chemoreceptor ชินกับ CO2 → หายใจด้วย ==hypoxic drive ที่ peripheral chemoreceptor== · ให้ O2 สูงไปเสี่ยง CO2 narcosis",
+   "doubt": "ตัวเลือก A ในสไลด์เขียนว่า Increased O2 ความหมายที่ถูกคือ O2 ต่ำ (hypoxemia) กระตุ้น peripheral chemoreceptor"
+  },
+  "RS/38": {
+   "box": 10,
+   "stem": "Patient has rapid shallow breathing. Which receptor is responsible?",
+   "options": {
+    "A": "Peripheral chemoreceptor",
+    "B": "Juxtacapillary receptor"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==J (juxtacapillary) receptor== ที่ผนัง alveoli ติด capillary ถูกกระตุ้นจาก pulmonary edema/congestion → ==rapid shallow breathing=="
+  },
+  "RS/39": {
+   "box": 10,
+   "stem": "ผู้ป่วย GBS มี diaphragm paralysis การใส่ท่อช่วยหายใจ assist ventilation ช่วยอะไร",
+   "options": {
+    "A": "Increase ventilation",
+    "B": "Increase perfusion",
+    "C": "Increase diffusion"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "GBS กล้ามเนื้อหายใจอ่อนแรง = ==hypoventilation== (CO2 คั่ง A-a ปกติ) → เครื่องช่วยหายใจแก้ด้วยการ ==เพิ่ม ventilation=="
+  },
+  "RS/40": {
+   "box": 10,
+   "stem": "A 20-year-old man has an increase in respiratory rate during running. Which is primarily responsible?",
+   "options": {
+    "A": "Tissue hypoxia",
+    "B": "Metabolic acidosis",
+    "C": "Respiratory acidosis",
+    "D": "Increased CO2 production",
+    "E": "Increased pulmonary blood flow"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ออกกำลังกาย ==CO2 production เพิ่ม== กระตุ้น ventilation เป็นหลัก (คนปกติ PaCO2 ไม่ขึ้นเพราะ ventilation ตามทัน) · ออกหนักมากจึงมี lactate (metabolic acidosis) เสริม"
+  },
+  "RS/41": {
+   "box": 11,
+   "stem": "A 60-year-old male, 40-pack-year smoker, productive cough and dyspnea 10 days. Right lung: bronchial breath sounds, crackles, increased tactile fremitus, dullness. Most probable diagnosis?",
+   "options": {
+    "A": "Pneumothorax",
+    "B": "Pleural effusion",
+    "C": "Acute bronchitis",
+    "D": "Lobar pneumonia",
+    "E": "Pulmonary emphysema"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Crep + ==sign of consolidation== (bronchial breath sound, tactile fremitus ↑, dull) = ==lobar pneumonia== · effusion/pneumothorax fremitus ลด"
+  },
+  "RS/42": {
+   "box": 11,
+   "stem": "A 36-year-old male, fever and dyspnea 4 weeks. Right tracheal shift, dullness on percussion, decreased breath sounds of left lung. Most likely cause of dyspnea?",
+   "options": {
+    "A": "Atelectasis",
+    "B": "Pneumothorax",
+    "C": "Pleural effusion",
+    "D": "Lobar pneumonia",
+    "E": "Interstitial pneumonitis"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Dullness + breath sound ลด + trachea ==shift ออกจาก lesion== (ซ้าย → ขวา) = ==pleural effusion== · atelectasis shift เข้าหา · pneumothorax hyperresonance"
+  },
+  "RS/43": {
+   "box": 11,
+   "stem": "30-year-old male with fever, cough and dyspnea. Fine crepitation at right lower lung zone. Inflammation at which structure correlates?",
+   "options": {
+    "A": "Alveoli",
+    "B": "Trachea",
+    "C": "Main bronchus",
+    "D": "Lobar bronchus",
+    "E": "Segmental bronchus"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Crepitation = น้ำ/หนองใน ==alveoli== · wheeze/rhonchi = airway"
+  },
+  "RS/44": {
+   "box": 11,
+   "stem": "A 30-year-old male has intermittent dyspnea for 10 years. During episodes, wheezing in both lungs. Which segment of airway is responsible for airflow obstruction?",
+   "options": {
+    "A": "Trachea",
+    "B": "Bronchus",
+    "C": "Bronchiole",
+    "D": "Alveolar duct",
+    "E": "Alveoli"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Asthma/COPD ตีบที่ ==bronchiole== (ไม่มี cartilage มีแต่ smooth muscle) · bronchus มี cartilage หดได้ไม่มาก"
+  },
+  "RS/45": {
+   "box": 12,
+   "stem": "ผู้ป่วย wheezing ให้กราฟ flow-volume loop กับ volume-time โดย post-bronchodilator มีการเปลี่ยนแปลงที่ดีขึ้น (มีตาราง FEV1, FVC) ถามว่าเป็นโรคอะไร",
+   "options": {
+    "A": "Asthma",
+    "B": "Small airway obstruction",
+    "C": "COPD",
+    "D": "Lung fibrosis"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Obstruction ที่ ==bronchodilator response== (FEV1/FVC ↑ ≥ 12% และ 200 mL) = reversible = ==asthma== · COPD ไม่ตอบสนอง",
+   "needs_image": true
+  },
+  "RS/46": {
+   "box": 12,
+   "stem": "ผู้ป่วย obstructive pattern บน spirometry ที่ not response to bronchodilator น่าจะเป็นโรคใด",
+   "options": {
+    "A": "COPD",
+    "B": "Asthma",
+    "C": "Idiopathic pulmonary fibrosis",
+    "D": "Small airway disease"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Persistent airflow limitation (==no BD response==) = ==COPD== (หรือ bronchiectasis) · asthma reversible · IPF restrictive",
+   "options_reconstructed": true
+  },
+  "RS/47": {
+   "box": 12,
+   "stem": "จากรูป (flow-volume loop แบบ scoop ไม่ตอบสนอง bronchodilator) ถามว่าผู้ป่วยเป็นโรคอะไร",
+   "options": {
+    "A": "Kyphoscoliosis",
+    "B": "Bronchiectasis",
+    "C": "Pneumoconiosis",
+    "D": "Pulmonary edema",
+    "E": "Pulmonary TB"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Scoop pattern = obstructive · ในตัวเลือกมีแค่ ==bronchiectasis== ที่เป็น obstructive · kyphoscoliosis, pneumoconiosis = restrictive",
+   "needs_image": true
+  },
+  "RS/48": {
+   "box": 12,
+   "stem": "A 70-year-old male, 40-year smoker, chronic cough and dyspnea, diagnosed with emphysema. Which parameter would decrease?",
+   "options": {
+    "A": "Airway resistance",
+    "B": "Lung compliance",
+    "C": "Intrapleural pressure",
+    "D": "FRC",
+    "E": "FEV1"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Emphysema = obstructive → ==FEV1 ลด== (FEV1/FVC ลด) · airway resistance เพิ่ม · ==compliance เพิ่ม== (elastic tissue ถูกทำลาย) · FRC เพิ่ม (air trapping)"
+  },
+  "RS/49": {
+   "box": 12,
+   "stem": "A woman with panic attack has hyperpnea and carpopedal spasm. Which lung parameter is increased?",
+   "options": {
+    "A": "FEV1/FVC",
+    "B": "Tidal volume",
+    "C": "Vital capacity",
+    "D": "Inspiratory reserve volume",
+    "E": "Functional residual capacity"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Hyperpnea = หายใจลึกขึ้น → ==tidal volume เพิ่ม== (ใช้ IRV ไปส่วนหนึ่ง IRV จึงลด) · VC, FRC ไม่เปลี่ยน"
+  },
+  "RS/50": {
+   "box": 12,
+   "stem": "A 65-year-old male smoker of 50 pack-years presents with dyspnea at rest. What is the underlying pathophysiological change?",
+   "options": {
+    "A": "Decrease lung compliance",
+    "B": "Increase FEV1/FVC",
+    "C": "Increase lung elasticity",
+    "D": "Increase airway resistance",
+    "E": "Decrease alveolar diffusion"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "COPD = ==airway resistance เพิ่ม== (mucus, เสีย radial traction) · compliance เพิ่ม elasticity ลด FEV1/FVC ลด",
+   "doubt": "Emphysema ก็มี DLCO ลดได้ แต่กลไกหลักที่ข้อสอบต้องการคือ obstruction/airway resistance"
+  },
+  "RS/51": {
+   "box": 12,
+   "stem": "Which lung parameter change is observed in a child with acute asthmatic attack?",
+   "options": {
+    "A": "Increased FEV1/FVC",
+    "B": "Increased functional residual capacity",
+    "C": "Increased inspiratory capacity",
+    "D": "Decreased total lung capacity",
+    "E": "Decreased residual volume"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Acute asthma → ==air trapping → RV เพิ่ม → FRC เพิ่ม== (FRC = ERV + RV) · FEV1/FVC ลด · IC ลด · TLC ปกติหรือเพิ่ม"
+  },
+  "RS/52": {
+   "box": 12,
+   "stem": "A 50-year-old heavy smoker with chronic dyspnea and barrel-shaped chest. Which parameter will be found?",
+   "options": {
+    "A": "Decrease lung compliance",
+    "B": "Decrease chest wall compliance",
+    "C": "Increase inspiratory reserve volume",
+    "D": "Increase expiratory reserve volume",
+    "E": "Increase residual capacity"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Barrel chest = emphysema/air trapping → ==RV และ FRC (residual capacity) เพิ่ม== · lung compliance เพิ่ม · IRV, ERV ลด"
+  },
+  "RS/53": {
+   "box": 13,
+   "stem": "A child unintentionally ingests a bottle of antipyretics. ABG: pH 7.3, PCO2 20, HCO3- 12. What is his acid-base disturbance?",
+   "options": {
+    "A": "Metabolic acidosis",
+    "B": "Acute respiratory alkalosis",
+    "C": "Chronic respiratory alkalosis",
+    "D": "Metabolic acidosis and respiratory alkalosis",
+    "E": "Metabolic acidosis and respiratory acidosis"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "pH ต่ำ + HCO3 ต่ำ = metabolic acidosis · Winter: expected PCO2 = 1.5 × 12 + 8 = ==26 ± 2== · PCO2 จริง 20 ต่ำกว่าที่คาด = มี ==respiratory alkalosis ร่วม== · aspirin (salicylate) คลาสสิกเป็น mixed",
+   "doubt": "ในคาบอาจารย์ตอบ metabolic acidosis (มองว่า CO2 ต่ำคือการชดเชย) ถ้าคิดด้วย Winter's formula จะได้ mixed (D) ซึ่งตรงกับพิษ salicylate"
+  },
+  "RS/54": {
+   "box": 13,
+   "stem": "ผู้ป่วยชายอายุ 20 ปี มีรอยเข็มฉีดยาจำนวนมากตามแขน BP 100/70 HR 60 RR 8/min diagnosis heroin overdose ผล ABG ในข้อใดสอดคล้องมากที่สุด (pH / PCO2 / HCO3)",
+   "options": {
+    "A": "7.25 / 60 / 26",
+    "B": "7.30 / 30 / 15",
+    "C": "7.50 / 25 / 20",
+    "D": "7.40 / 40 / 24",
+    "E": "7.48 / 45 / 32"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Opioid กดศูนย์หายใจ RR 8 → hypoventilation → ==acute respiratory acidosis== (pH ต่ำ PCO2 สูง) · acute: PCO2 ↑ 20 → HCO3 ↑ ~2 = 26",
+   "options_reconstructed": true
+  },
+  "RS/55": {
+   "box": 13,
+   "stem": "A 6-month-old infant has severe dehydration from recurrent bilious vomiting after breastfeeding. ABG would reveal? (pH / PCO2 / HCO3)",
+   "options": {
+    "A": "7.30 / 30 / 15",
+    "B": "7.35 / 50 / 22",
+    "C": "7.40 / 40 / 24",
+    "D": "7.45 / 40 / 26",
+    "E": "7.50 / 30 / 22"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "อาจารย์มองว่าอาเจียนเสียกรด HCl + volume contraction → ==metabolic alkalosis (pH สูง HCO3 เพิ่ม)== → เลือกข้อ D",
+   "doubt": "Bilious vomiting ตามตำราบ่งชี้ obstruction ใต้ pylorus ซึ่งไม่ได้เสียกรดมากเท่า gastric outlet obstruction แต่ข้อสอบถามเรื่อง acid-base อาจารย์เลือก D"
+  },
+  "RS/56": {
+   "box": 13,
+   "stem": "Elderly male with barrel-shaped chest. ABG: pH 7.30, PO2 50, PCO2 70, HCO3- 38. What is the change in this patient?",
+   "options": {
+    "A": "Decreased lung compliance",
+    "B": "Increased FEV1/FVC",
+    "C": "Increased radial traction",
+    "D": "Increased lung elastic recoil",
+    "E": "Increased pulmonary vascular resistance"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "COPD hypoxemia เรื้อรัง → ==hypoxic pulmonary vasoconstriction → PVR เพิ่ม== (→ pulmonary HT, cor pulmonale) · emphysema compliance เพิ่ม elastic recoil และ radial traction ลด FEV1/FVC ลด"
+  },
+  "RS/57": {
+   "box": 13,
+   "stem": "Acute asthmatic attack with dyspnea, tachypnea, sternal retraction. ABG: pH 7.5, PO2 60, PCO2 30. Which is increased?",
+   "options": {
+    "A": "FEV1/FVC",
+    "B": "Plasma HCO3- concentration",
+    "C": "Net renal acid excretion",
+    "D": "Expiratory reserve volume",
+    "E": "Pulmonary vascular resistance"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Hypoxemia (PO2 60) → ==hypoxic pulmonary vasoconstriction → PVR เพิ่ม== · FEV1/FVC ลด · respiratory alkalosis → HCO3 ลด, ไตขับกรดลด · air trapping ทำ ERV ลด"
+  },
+  "RS/58": {
+   "box": 13,
+   "stem": "Fever, dyspnea, productive cough, diagnosed with pneumonia. After oxygen cannulation, SpO2 increases from 90% to 95%. Cause of hypoxemia?",
+   "options": {
+    "A": "V/Q mismatch",
+    "B": "Left-to-right shunt",
+    "C": "Right-to-left shunt",
+    "D": "Dead space",
+    "E": "Hypoventilation"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Pneumonia + ให้ O2 แล้ว ==ดีขึ้น== = ==V/Q mismatch== · shunt ให้ O2 แก้ไม่ได้ · hypoventilation เป็นไปได้ถ้าหมดแรงหายใจ แต่ไม่ใช่กลไกหลัก"
+  },
+  "RS/59": {
+   "box": 13,
+   "stem": "A man undergoes CABG. Three hours after, ABG: pH 7.26, PO2 62, PCO2 64, HCO3- 28. What is the cause of hypoxemia?",
+   "options": {
+    "A": "V/Q mismatch",
+    "B": "Hypoventilation",
+    "C": "Left-to-right shunt",
+    "D": "Dead space",
+    "E": "Diffusion defect"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "PCO2 64 สูง = ==hypoventilation== (ฤทธิ์ยาสลบ/ปวดแผล) · A-a = (150 − 64/0.8) − 62 = 70 − 62 = ==8 (ปกติ)== → pure hypoventilation"
+  },
+  "RS/60": {
+   "box": 13,
+   "stem": "A 60-year-old man has a mass in midbrain. ABG: pH 7.30, PCO2 55, PO2 70, HCO3- 30. What is the mechanism of his ABG result?",
+   "options": {
+    "A": "V/Q mismatch",
+    "B": "Intrapulmonary shunt",
+    "C": "Extrapulmonary shunt",
+    "D": "Diffusion defect",
+    "E": "Alveolar hypoventilation"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ก้อนในสมองกดศูนย์หายใจ → ==alveolar hypoventilation== (PCO2 55) · A-a = (150 − 55/0.8) − 70 ≈ 11 ใกล้ปกติ · ปอดไม่มีพยาธิ"
+  },
+  "RS/61": {
+   "box": 13,
+   "stem": "ให้ตาราง PO2 ต่ำ PCO2 ไม่สูง ให้ oxygen แล้วไม่ improve น่าจะมีอะไร",
+   "options": {
+    "A": "Shunt",
+    "B": "Diffusion defect",
+    "C": "Hypoventilation",
+    "D": "V/Q mismatch"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Hypoxemia ที่ ==ให้ O2 แล้วไม่ดีขึ้น== = ==shunt== (เลือดไม่ผ่าน alveoli ที่ได้ O2) · diffusion defect และ V/Q mismatch ให้ O2 ดีขึ้น · hypoventilation CO2 ต้องสูง"
+  },
+  "RS/62": {
+   "box": 14,
+   "stem": "เด็ก 12 ปี clear rhinorrhea, inferior nasal turbinate บวม, no injected tonsil, no pharyngitis จาม มีน้ำมูก คัดจมูกตอนเช้ามา 6 เดือน เกิดจากกลไกไหน",
+   "options": {
+    "A": "Mast cell degranulation",
+    "B": "Neutrophil infiltration",
+    "C": "Antibody mediated cytotoxicity",
+    "D": "Immune complex activated immune",
+    "E": "Complement activated inflammation"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Allergic rhinitis = type I hypersensitivity: allergen → Th2 → IgE จับ mast cell → ==mast cell degranulation== หลั่ง histamine"
+  },
+  "RS/63": {
+   "box": 14,
+   "stem": "A 20-year-old female with allergic rhinitis has intermittent dyspnea over 5 years, improved with inhaled bronchodilator. Underlying pathophysiology of the airway?",
+   "options": {
+    "A": "Hyperresponsiveness",
+    "B": "Smooth muscle proliferation",
+    "C": "Hyperplasia of goblet cells",
+    "D": "Neutrophilic inflammation",
+    "E": "Submucosal fibrosis"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Asthma = chronic inflammation + intermittent obstruction + ==airway hyperresponsiveness== · smooth muscle hypertrophy ได้แต่ไม่ proliferate · inflammation เป็น eosinophilic"
+  },
+  "RS/64": {
+   "box": 14,
+   "stem": "A 30-year-old man with asthma has shortness of breath after using medication for headache relief. Which medication is responsible?",
+   "options": {
+    "A": "Aspirin",
+    "B": "Codeine",
+    "C": "Tramadol",
+    "D": "Ergotamine",
+    "E": "Acetaminophen"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Aspirin==/NSAIDs ยับยั้ง COX → arachidonic acid ไปทาง leukotriene มากขึ้น → bronchospasm · ==Samter's triad== = asthma + nasal polyp + aspirin intolerance"
+  },
+  "RS/65": {
+   "box": 15,
+   "stem": "A 60-year-old male with chronic smoking is diagnosed with emphysema. Which enzyme will increase?",
+   "options": {
+    "A": "Elastase",
+    "B": "Hyaluronidase",
+    "C": "Peroxidase",
+    "D": "Metalloproteinase"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "บุหรี่ดึง neutrophil/macrophage หลั่ง ==elastase== ทำลาย elastin + ยับยั้ง α1-antitrypsin → protease–antiprotease imbalance",
+   "doubt": "Matrix metalloproteinase (MMP-12) จาก macrophage ก็เพิ่มใน emphysema แต่คำตอบคลาสสิกที่อาจารย์ให้คือ elastase"
+  },
+  "RS/66": {
+   "box": 15,
+   "stem": "A 70-year-old male with COPD. What would be CXR findings in this patient?",
+   "options": {
+    "A": "Diffuse bronchoalveolar infiltrate",
+    "B": "Dilated airway",
+    "C": "Hyperinflation with flattened diaphragm",
+    "D": "Reticular opacity at lower lobes",
+    "E": "Bilateral perihilar bat-wing opacity"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Air trapping → ==hyperinflation, lucency เพิ่ม, flattened diaphragm== · dilated airway (tram-track) = bronchiectasis · bat-wing = pulmonary edema",
+   "options_reconstructed": true
+  },
+  "RS/67": {
+   "box": 15,
+   "stem": "A doctor advises a COPD patient to quit smoking, but the patient strongly refuses. What is the patient's stage of change?",
+   "options": {
+    "A": "Action",
+    "B": "Preparation",
+    "C": "Contemplation",
+    "D": "Maintenance",
+    "E": "Precontemplation"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ยังไม่คิดจะเลิกเลย = ==precontemplation== · contemplation = เริ่มคิดอยากเลิกแต่ยังไม่ทำ"
+  },
+  "RS/68": {
+   "box": 16,
+   "stem": "ผู้ชาย 50 ปี อาชีพแกะสลักหินอ่อน 5 ปี มีอาการไอหอบเหนื่อย 2 ปี อาการดังกล่าวเกิดจากพยาธิสภาพที่ตำแหน่งใดในปอด",
+   "options": {
+    "A": "Nose",
+    "B": "Nasopharynx",
+    "C": "Trachea",
+    "D": "Bronchus",
+    "E": "Alveoli"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Silicosis/pneumoconiosis = ILD ฝุ่นสะสมใน ==alveoli/interstitium== → fibrosis (restrictive, diffusion defect)"
+  },
+  "RS/69": {
+   "box": 16,
+   "stem": "ผู้ชาย 40 ปี อาชีพโม่หิน 20 ปี ไอหอบเหนื่อยมากขึ้นเรื่อยๆ 2 ปี CXR fine nodular infiltration at both upper lobes sputum AFB negative เกิดจากพยาธิสภาพใด",
+   "options": {
+    "A": "Silicosis",
+    "B": "Asbestosis",
+    "C": "Anthracosis",
+    "D": "Lung cancer",
+    "E": "Mesothelioma"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "โม่หิน/ตัดหิน + ==upper lobe nodule== = ==silicosis== (eggshell calcification ของ hilar node, เสี่ยง TB) · asbestosis เด่น lower lung + pleural plaque"
+  },
+  "RS/70": {
+   "box": 16,
+   "stem": "A 50-year-old man who has worked in an automobile brake pad factory for 10 years. CXR: diffuse interstitial infiltration with calcified pleural plaques. Most likely diagnosis?",
+   "options": {
+    "A": "Aspergilloma",
+    "B": "Asbestosis",
+    "C": "Bronchogenic carcinoma",
+    "D": "Pulmonary tuberculosis",
+    "E": "Silicosis"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==ผ้าเบรก + calcified pleural plaque + lower lung interstitial== = ==asbestosis=="
+  },
+  "RS/71": {
+   "box": 16,
+   "stem": "A 50-year-old man's CXR shows diffuse interstitial infiltration with pleural plaques. Sputum cytology no atypical cell. PFT: normal FEV1/FVC, decreased FVC. What is his occupation?",
+   "options": {
+    "A": "Farmer",
+    "B": "Goldsmith",
+    "C": "Hairdresser",
+    "D": "Bird feeder",
+    "E": "Construction laborer"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Pleural plaque + restrictive = asbestosis → อาชีพ ==ก่อสร้าง== ผ้าเบรก ต่อเรือ ฉนวน · farmer/bird feeder = hypersensitivity pneumonitis"
+  },
+  "RS/72": {
+   "box": 16,
+   "stem": "ชาย 50 ปี ทำงาน automobile brake pad มา 20 ปี มี diffuse interstitial lung disease (มีรูป) ถามภาวะแทรกซ้อน/โรคที่พบ",
+   "options": {
+    "A": "Aspergilloma",
+    "B": "Mesothelioma",
+    "C": "Bronchogenic cyst",
+    "D": "Pulmonary embolism",
+    "E": "Mixed gram positive cocci and gram negative bacilli"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Asbestos exposure → complication ที่จำเพาะคือ ==mesothelioma== (มะเร็ง pleura) · อาจารย์: ถามถึง complication ของ asbestos ตอบ mesothelioma",
+   "needs_image": true
+  },
+  "RS/73": {
+   "box": 16,
+   "stem": "Lesion at upper lobe of lung, black pigment in macrophage. คนไข้ทำงานที่ไหน",
+   "options": {
+    "A": "Coal miner",
+    "B": "Plastic factory",
+    "C": "Glass factory",
+    "D": "Grass factory"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Black pigment + upper lobe== = ==anthracosis (coal worker pneumoconiosis)== · glass factory = silicosis"
+  },
+  "RS/74": {
+   "box": 16,
+   "stem": "A 35-year-old man with chronic progressive dyspnea for 6 months. Lung biopsy showed lipid-laden macrophages. Most likely cause?",
+   "options": {
+    "A": "Asbestos",
+    "B": "Beryllium",
+    "C": "PM 2.5",
+    "D": "Covid infection",
+    "E": "E-cigarette"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Lipid-laden macrophage== = ==EVALI== (e-cigarette or vaping product use-associated lung injury): ใช้ภายใน 90 วัน + infiltrate + ไม่มีสาเหตุอื่น"
+  },
+  "RS/75": {
+   "box": 17,
+   "stem": "A 55-year-old man with necrotizing fasciitis on IV antibiotics and debridement still has high fever and purulent discharge. On POD 3 he has respiratory failure; CXR diffuse alveolar infiltration both lungs. Cause of respiratory failure?",
+   "options": {
+    "A": "Pulmonary infarction",
+    "B": "Total lung atelectasis",
+    "C": "Necrotizing pneumonia",
+    "D": "Acute pulmonary embolism",
+    "E": "Acute respiratory distress syndrome"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Sepsis → inflammation → permeability เพิ่ม → ==non-cardiogenic pulmonary edema = ARDS== (bilateral alveolar infiltrate)"
+  },
+  "RS/76": {
+   "box": 17,
+   "stem": "A 3-year-old boy with history of choking 2 days ago has non-productive cough, no fever. Diminished air entry and wheezing in right lung. CXR: hyperlucency in right lung. Diagnosis?",
+   "options": {
+    "A": "Viral bronchitis",
+    "B": "Acute pneumonia",
+    "C": "Lobar emphysema",
+    "D": "Pneumothorax",
+    "E": "Retained foreign body"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Choking + wheeze ข้างเดียว + ==hyperlucent== (one-way valve air trapping) ข้างขวา = ==retained foreign body== → bronchoscopy"
+  },
+  "RS/77": {
+   "box": 17,
+   "stem": "หญิง 40 ปี pleural effusion เจาะน้ำ: cell 50/mm3 lymphocyte 100% protein 1.5 g/dL LDH 15 U/L (serum protein 7, serum LDH 150) สาเหตุคือข้อใด",
+   "options": {
+    "A": "SLE",
+    "B": "Tuberculosis",
+    "C": "Metastatic cancer",
+    "D": "Rheumatoid arthritis",
+    "E": "Congestive heart failure"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Light's: protein 1.5/7 = ==0.21== (< 0.5) · LDH 15/150 = ==0.1== (< 0.6) → ==transudate== → ==CHF== · ที่เหลือเป็น exudate (inflammation/มะเร็ง)"
+  },
+  "RS/78": {
+   "box": 17,
+   "stem": "A 2-year-old child with left lobar pneumonia. CXR blunting of left costophrenic angle. Thoracocentesis revealed exudative effusion. Cause of this finding?",
+   "options": {
+    "A": "Increase vascular permeability",
+    "B": "Increase plasma oncotic pressure",
+    "C": "Increase plasma hydrostatic pressure",
+    "D": "Decrease plasma oncotic pressure",
+    "E": "Decrease lymphatic drainage of visceral pleura"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Parapneumonic effusion = inflammation → ==vascular permeability เพิ่ม== → exudate · hydrostatic ↑ / oncotic ↓ ให้ transudate"
+  },
+  "RS/79": {
+   "box": 17,
+   "stem": "A 20-year-old man stabbed in the left lung died. Autopsy: open wound 3x1 cm at left lung. Which area had negative pressure?",
+   "options": {
+    "A": "Intra-abdominal pressure",
+    "B": "Right intrapleural pressure",
+    "C": "Right intrapulmonary pressure",
+    "D": "Left intrapleural pressure",
+    "E": "Left intrapulmonary pressure"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "แผลเปิดข้างซ้าย → ความดัน pleural ซ้ายเท่าบรรยากาศ (vacuum หาย ปอดแฟบ) · ข้างที่ยังเป็นลบคือ ==right intrapleural== · intrapulmonary ปกติเป็น 0 ตอนพัก"
+  },
+  "RS/80": {
+   "box": 17,
+   "stem": "35-year-old man with deep laceration on right chest wall from motorcycle accident; right lung collapses and cannot re-expand during inspiration. Which abnormal mechanism?",
+   "options": {
+    "A": "Decreased pulmonary compliance",
+    "B": "Decreased chest wall compliance",
+    "C": "Increased airway resistance",
+    "D": "Loss of intrapleural negative pressure",
+    "E": "Loss of intra-alveolar negative pressure"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "อากาศเข้า pleural space → ==loss of intrapleural negative pressure== → transpulmonary pressure หาย ปอดแฟบและขยายไม่ได้"
+  },
+  "RS/81": {
+   "box": 17,
+   "stem": "หมอสอดเครื่องมือเข้า subclavian vein แล้วผู้ป่วยหายใจลำบาก หอบ จาก pneumothorax เครื่องมือทะลุโดน structure ใด",
+   "options": {
+    "A": "Trachea",
+    "B": "Esophagus",
+    "C": "Cervical pleura",
+    "D": "Superior vena cava",
+    "E": "Superior mediastinum"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Cervical pleura (cupula)== โผล่เหนือกระดูก clavicle ใกล้ subclavian vein → แทงทะลุ = pneumothorax (ฝังเข็มบริเวณนี้ก็เกิดได้)"
+  },
+  "RS/82": {
+   "box": 18,
+   "stem": "ผู้ป่วยชายสูบบุหรี่จัด ไอ 3 เดือน น้ำหนักลด CXR ก้อนที่ปอดขวา biopsy พบ polygonal shape cell with intercellular bridge ถามว่าเจออะไร",
+   "options": {
+    "A": "Abundant mucin secretion",
+    "B": "Dense collagen deposit",
+    "C": "Prominent keratin production",
+    "D": "Neurosecretory granule formation",
+    "E": "Caseous granulomatous inflammation"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Intercellular bridge (desmosome) = ==squamous cell carcinoma== → ==keratin production (keratin pearl)== · mucin = adenocarcinoma · neurosecretory granule = small cell/carcinoid"
+  },
+  "RS/83": {
+   "box": 18,
+   "stem": "70-year-old chronic smoker with progressive dyspnea and orthopnea. Face swelling, jugular vein dilatation, upper limb edema, no lower limb edema. CXR: right upper lung mass. Cause?",
+   "options": {
+    "A": "Emphysema",
+    "B": "Right heart failure",
+    "C": "Cardiac tamponade",
+    "D": "Pulmonary hypertension",
+    "E": "SVC obstruction"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "หน้าบวม แขนบวม ==ขาไม่บวม== + ก้อน RUL = ==SVC obstruction== · right heart failure ขาบวมด้วย"
+  },
+  "RS/84": {
+   "box": 18,
+   "stem": "A 50-year-old chronic smoker has hemoptysis; CXR 3 cm mass in right lung. Proximal muscle weakness, moon face, K 2.5 mEq/L. Underlying cause?",
+   "options": {
+    "A": "Distant metastatic tumor",
+    "B": "Antibody synthesis",
+    "C": "Excessive cytokine release",
+    "D": "Ectopic hormone synthesis",
+    "E": "SVC obstruction syndrome"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Cushing + hypokalemia จาก ==ectopic ACTH== ของ ==small cell carcinoma== = paraneoplastic (ectopic hormone synthesis) · antibody synthesis = Lambert-Eaton"
+  },
+  "RS/85": {
+   "box": 18,
+   "stem": "A 50-year-old man has frequent urination for 1 month. CXR 5 cm mass in right upper lung. Glucose 90, total calcium 14 mg/dL. Probable pathology?",
+   "options": {
+    "A": "Carcinoid tumor",
+    "B": "Adenocarcinoma",
+    "C": "Small cell carcinoma",
+    "D": "Squamous cell carcinoma",
+    "E": "Undifferentiated carcinoma"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Hypercalcemia (Ca 14 → polyuria) จาก ==PTHrP== = ==squamous cell carcinoma== ('ตัว C') · glucose ปกติตัด DM"
+  },
+  "RS/86": {
+   "box": 18,
+   "stem": "A 40-year-old female with progressive dyspnea and facial swelling. Engorged jugular veins, dilated superficial veins at upper chest. Cause?",
+   "options": {
+    "A": "Pleural effusion",
+    "B": "Pericardial effusion",
+    "C": "Right-sided heart failure",
+    "D": "Constrictive pericarditis",
+    "E": "SVC obstruction syndrome"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "หน้าบวม + ==เส้นเลือดผิวอกโป่ง== (collateral) = ==SVC obstruction syndrome=="
+  },
+  "RS/87": {
+   "box": 18,
+   "stem": "A 35-year-old chronic smoker has ptosis and miosis of the right eye with hoarseness. A mass at the apex of right lung. Cause of hoarseness?",
+   "options": {
+    "A": "Compression of vagus nerve",
+    "B": "Compression of recurrent laryngeal nerve",
+    "C": "Compression of thoracic sympathetic trunk",
+    "D": "Compression of stellate ganglion",
+    "E": "Direct compression of vocal cord from metastatic cancer"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Pancoast tumor: Horner (ptosis, miosis) จาก sympathetic/stellate ganglion · ==เสียงแหบจาก recurrent laryngeal n.== · ตัวเลือก C, D อธิบาย Horner ไม่ใช่เสียงแหบ"
+  },
+  "RS/88": {
+   "box": 18,
+   "stem": "ผู้ชาย 55 ปี สูบบุหรี่ 1–2 ซองต่อวันมา 20 ปี มีอาการเหนื่อยง่าย หายใจหอบ จะมีการเปลี่ยนแปลงอย่างไรใน bronchus",
+   "options": {
+    "A": "Simple squamous",
+    "B": "Simple cuboidal",
+    "C": "Simple columnar",
+    "D": "Stratified columnar",
+    "E": "Stratified squamous"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ปกติ bronchus = pseudostratified ciliated columnar + goblet · บุหรี่ → ==squamous metaplasia = stratified squamous== (อาจพัฒนาเป็น SCC)"
+  },
+  "RS/89": {
+   "box": 19,
+   "stem": "เด็กไข้ น้ำมูก ตาแดง ต่อมน้ำเหลืองโต เกิดจากเชื้ออะไร",
+   "options": {
+    "A": "Adenovirus",
+    "B": "HSV",
+    "C": "Chlamydia trachomatis",
+    "D": "RSV"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Common cold + ==conjunctivitis== (pharyngoconjunctival fever) = ==adenovirus=="
+  },
+  "RS/90": {
+   "box": 19,
+   "stem": "A patient has a pseudomembrane at the throat. What is the test for determining the toxin of the most likely causative organism?",
+   "options": {
+    "A": "Elek test",
+    "B": "CAMP test",
+    "C": "Catalase test"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Pseudomembrane สีเทา = ==C. diphtheriae== · ตรวจ toxin ด้วย ==Elek test== (immunodiffusion) · CAMP = GBS/Listeria"
+  },
+  "RS/91": {
+   "box": 19,
+   "stem": "A 3-year-old girl has cough and runny nose 3 days, then barking cough, dyspnea, hoarseness, low-grade fever. Tachypnea, suprasternal retraction, inspiratory stridor. Where is the lesion?",
+   "options": {
+    "A": "Pharynx",
+    "B": "Larynx",
+    "C": "Trachea",
+    "D": "Bronchus",
+    "E": "Bronchiole"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Croup (laryngotracheobronchitis) จาก parainfluenza · ตำแหน่งที่ involve มากที่สุดคือ ==larynx (subglottic)== → เสียงแหบ barking cough stridor"
+  },
+  "RS/92": {
+   "box": 19,
+   "stem": "บรรยายอาการ croup ถาม pathophysiology",
+   "options": {
+    "A": "Edema and subglottic narrowing",
+    "B": "Bulging inflamed epiglottis",
+    "C": "Bronchiolar inflammation with air trapping",
+    "D": "Retropharyngeal abscess",
+    "E": "Foreign body in bronchus"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Croup = ==subglottic edema/narrowing== → steeple (pencil) sign บน AP neck film · epiglottitis = thumb sign · bronchiolitis = air trapping",
+   "options_reconstructed": true
+  },
+  "RS/93": {
+   "box": 20,
+   "stem": "A diagnosis of influenza is made. Patient is treated with oseltamivir. กลไกไหนถูกยับยั้ง",
+   "options": {
+    "A": "Viral translation",
+    "B": "Viral reverse transcription",
+    "C": "Viral release from host cell",
+    "D": "Viral attachment to host cell"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Oseltamivir = ==neuraminidase inhibitor== · neuraminidase ตัด sialic acid ให้ virion หลุดจากเซลล์ → ยา ==ยับยั้ง viral release== · attachment ใช้ hemagglutinin"
+  },
+  "RS/94": {
+   "box": 20,
+   "stem": "A 1-year-old boy has severe pneumonia and respiratory failure. Bronchial secretion found large, multinucleated clump cells. Causative agent?",
+   "options": {
+    "A": "Rhinovirus",
+    "B": "MERS-CoV",
+    "C": "Cytomegalovirus",
+    "D": "Epstein-Barr virus",
+    "E": "Respiratory syncytial virus"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Multinucleated giant cell = ==syncytia ของ RSV== (F protein) · CMV = owl's eye inclusion"
+  },
+  "RS/95": {
+   "box": 21,
+   "stem": "A 10-year-old boy is diagnosed with pneumonia. Sputum gram stain shows gram-positive lancet-shaped diplococci. Causative pathogen?",
+   "options": {
+    "A": "Haemophilus influenzae",
+    "B": "Staphylococcus aureus",
+    "C": "Staphylococcus epidermidis",
+    "D": "Streptococcus pyogenes",
+    "E": "Streptococcus pneumoniae"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "GPC ==lancet-shaped เป็นคู่== = ==S. pneumoniae== · S. pyogenes เป็นสายและไม่ค่อยทำ pneumonia · Staph เป็นพวง · H. influenzae = GN coccobacilli",
+   "needs_image": true
+  },
+  "RS/96": {
+   "box": 21,
+   "stem": "A 50-year-old man with chronic alcoholism has acute dyspnea, cough and fever for 3 days. CXR: consolidation in right lower lobe. Most likely organism?",
+   "options": {
+    "A": "Streptococcus pneumoniae",
+    "B": "Klebsiella pneumoniae",
+    "C": "Mycoplasma pneumoniae",
+    "D": "Staphylococcus aureus"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Alcoholic + consolidation== (มักเป็น aspiration กลีบบน, currant jelly sputum) = ==Klebsiella pneumoniae==",
+   "doubt": "S. pneumoniae ยังเป็นสาเหตุที่พบบ่อยที่สุดของ CAP แม้ในคนดื่มเหล้า แต่ keyword alcoholic ที่ข้อสอบต้องการคือ Klebsiella"
+  },
+  "RS/97": {
+   "box": 21,
+   "stem": "Fried egg appearance colony, grows on PPLO agar. CXR bilateral lung infiltration. Pathogen?",
+   "options": {
+    "A": "Klebsiella pneumoniae",
+    "B": "Mycoplasma pneumoniae",
+    "C": "Streptococcus pneumoniae"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Fried egg colony + PPLO agar== = ==Mycoplasma pneumoniae== (ไม่มี cell wall)"
+  },
+  "RS/98": {
+   "box": 21,
+   "stem": "A 31-year-old man with malaise and chronic cough for one week. Sputum gram stain no organisms; blood test positive for cold agglutinin. Most appropriate antibiotic?",
+   "options": {
+    "A": "Azithromycin",
+    "B": "Amoxicillin",
+    "C": "Ceftriaxone",
+    "D": "Metronidazole",
+    "E": "Clindamycin"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Cold agglutinin + ไม่เห็นเชื้อ = Mycoplasma (ไม่มี cell wall) → ==macrolide (azithromycin)== หรือ FQ · β-lactam ไม่ได้ผล"
+  },
+  "RS/99": {
+   "box": 21,
+   "stem": "A 25-year-old man with acute fever, dyspnea, cough for one week. Myringitis and crepitations in both lungs. Which test aids diagnosis of Mycoplasma pneumoniae?",
+   "options": {
+    "A": "Weil-Felix test",
+    "B": "Sputum gram stain",
+    "C": "Cold agglutination",
+    "D": "Heterophile antibody",
+    "E": "Gel-based agglutination test"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Mycoplasma → IgM ==cold agglutinin== · bullous myringitis = extrapulmonary manifestation · heterophile = EBV · Weil-Felix = rickettsia"
+  },
+  "RS/100": {
+   "box": 21,
+   "stem": "An 80-year-old bed-ridden man with fever and cough for 3 days, diagnosed with aspiration pneumonia. Which segment in the right lower lobe is most likely affected?",
+   "options": {
+    "A": "Superior",
+    "B": "Anterior basal",
+    "C": "Lateral basal",
+    "D": "Medial basal",
+    "E": "Posterior basal"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ท่านอนหงาย (bedridden) สำลักไป ==superior segment ของ lower lobe== (หรือ posterior segment ของ upper lobe) · ท่ายืน = basal segment"
+  },
+  "RS/101": {
+   "box": 21,
+   "stem": "An 80-year-old man has fever, dyspnea and productive cough with thick yellow-green sputum. History of recurrent choking. Most likely causative agent?",
+   "options": {
+    "A": "Gram negative bacteria",
+    "B": "Gram positive diplococci",
+    "C": "Gram negative coccobacilli",
+    "D": "Mixed gram positive cocci in chain and in group",
+    "E": "Mixed gram positive cocci and gram negative bacilli"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Aspiration = ==mixed oral flora (aerobe + anaerobe)== = gram positive cocci + gram negative bacilli · รักษาด้วย ceftriaxone + clindamycin / amox-clav"
+  },
+  "RS/102": {
+   "box": 21,
+   "stem": "A 50-year-old alcoholic man with malnutrition and poor oral hygiene has chest pain and persistent cough with foul-smelling sputum for 3 weeks. CXR: 5 cm cavity with air-fluid level in RUL. Diagnosis?",
+   "options": {
+    "A": "Lung abscess",
+    "B": "Bronchiectasis",
+    "C": "Pulmonary infarction",
+    "D": "Pulmonary tuberculosis",
+    "E": "Bronchogenic carcinoma"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "เสี่ยงสำลัก + ฟันไม่ดี + เสมหะเหม็น + ==cavity with air-fluid level== = ==lung abscess== (anaerobe)"
+  },
+  "RS/103": {
+   "box": 22,
+   "stem": "A 50-year-old male has hemoptysis 2 days. CXR nodules at apex of both lungs. Biopsy: acidophilic amorphous necrotic material surrounded by lymphocytes, histiocytes and multinucleated giant cells. Diagnosis?",
+   "options": {
+    "A": "Pulmonary tuberculosis",
+    "B": "Lung abscess",
+    "C": "Large cell carcinoma of lung",
+    "D": "Pneumocystis pneumonia",
+    "E": "CMV inclusion disease"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Apex nodule + ==caseating granuloma== (amorphous necrosis + epithelioid histiocyte + giant cell) = ==pulmonary TB=="
+  },
+  "RS/104": {
+   "box": 22,
+   "stem": "A 50-year-old male has hemoptysis for 3 months with cervical lymphadenopathy. What pathological finding would likely be observed in the lungs?",
+   "options": {
+    "A": "Fibrinoid necrosis",
+    "B": "Aggregation of epithelioid cells",
+    "C": "Forming granulation tissue"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "TB → granuloma = ==aggregation of epithelioid histiocytes== + Langhans giant cell + caseous necrosis · fibrinoid necrosis = vasculitis"
+  },
+  "RS/105": {
+   "box": 22,
+   "stem": "A 45-year-old patient has low grade fever, night sweats, weight loss and non-productive cough for 3 months. CXR: cavity at RUL. Mechanism of disease?",
+   "options": {
+    "A": "Primary infection",
+    "B": "Reactivation",
+    "C": "Lymph node spreading",
+    "D": "Hematogenous spreading",
+    "E": "Direct inoculation"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Cavity ที่ ==upper lobe== ในผู้ใหญ่ = ==reactivation (secondary) TB== · primary = lower/middle lobe + Ghon complex"
+  },
+  "RS/106": {
+   "box": 22,
+   "stem": "TB granuloma ถาม cytokine ที่ maintain granuloma",
+   "options": {
+    "A": "TNF-alpha",
+    "B": "IFN-gamma"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "อาจารย์: cytokine ที่เกี่ยวข้องคือ ==IFN-γ== (จาก Th1 กระตุ้น macrophage เป็น epithelioid ก่อ granuloma · IGRA วัดตัวนี้)",
+   "doubt": "TNF-α สำคัญต่อการคง granuloma เช่นกัน (anti-TNF ทำให้ TB reactivate) ถ้าโจทย์เน้นคำว่า maintain อาจต้องการ TNF-α"
+  },
+  "RS/107": {
+   "box": 22,
+   "stem": "เด็ก 2 ขวบ มีประวัติ contact กับพ่อที่ตรวจพบว่าเป็น TB indication ใดใช้ประเมินว่าเด็กควรรับ TB preventive treatment",
+   "options": {
+    "A": "CXR of father",
+    "B": "Positive tuberculin skin test of the child",
+    "C": "More than 2+ positive sputum of the father",
+    "D": "Age of the child"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "เด็ก ==อายุ < 5 ปี== ที่สัมผัสใกล้ชิดผู้ป่วย TB ปอด มีข้อบ่งชี้ให้ preventive therapy (หลังตัด active TB) โดยไม่ต้องรอผล TST",
+   "doubt": "ในคาบอาจารย์พูดหลักว่า treat latent TB ตามกลุ่มเสี่ยงและเด็กที่เป็น contact มักมีข้อบ่งชี้ ไม่ได้ระบุตัวเลือกชัด คำตอบนี้อิงแนวทาง WHO"
+  },
+  "RS/108": {
+   "box": 23,
+   "stem": "A 30-year-old male with fever, dry cough and progressive dyspnea over a few days. Breath sounds normal, SpO2 80%. CXR bilateral ground glass infiltrates. Anti-HIV positive, CD4 150. Most likely organism?",
+   "options": {
+    "A": "Pneumocystis jirovecii",
+    "B": "Cryptococcus neoformans",
+    "C": "Mycobacterium tuberculosis",
+    "D": "Streptococcus pneumoniae",
+    "E": "Neisseria meningitidis"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "HIV ==CD4 < 200== + desaturation มากแต่ฟังปอดปกติ + ==bilateral ground glass== = ==PCP== · ย้อม GMS · TMP-SMX + steroid"
+  },
+  "RS/109": {
+   "box": 23,
+   "stem": "A 28-year-old with SLE has fever and dyspnea. CXR infiltrations both lungs; sputum modified acid-fast (mAFB) positive. Organism?",
+   "options": {
+    "A": "Nocardia sp.",
+    "B": "Actinomyces sp.",
+    "C": "Streptomyces sp.",
+    "D": "Eubacterium sp.",
+    "E": "Fusobacterium sp."
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Immunocompromised + GPB branching ==modified AFB+== = ==Nocardia== (aerobe) · Actinomyces = anaerobe, AFB− · รักษา TMP-SMX"
+  },
+  "RS/110": {
+   "box": 23,
+   "stem": "A 50-year-old female has dyspnea and expiratory wheezing. CXR: 4 cm cavitary lesion filled with spherical mass at RUL. Eosinophilia. Pathologic finding?",
+   "options": {
+    "A": "Septate hyphae with dichotomous branching",
+    "B": "Blastoconidia in black mucoid background",
+    "C": "Broad base budding yeast with thick wall",
+    "D": "Necrotizing granulomatous lesion with fibrinoid necrosis",
+    "E": "Yeast"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Spherical mass ใน cavity = ==aspergilloma (fungal ball)== · wheeze + eosinophilia ชวน ABPA · Aspergillus = ==septate hyphae แตกแขนงมุมแหลม (dichotomous)== · broad-based budding = Blastomyces"
+  },
+  "RS/111": {
+   "box": 23,
+   "stem": "A 55-year-old female with advanced breast cancer on chemotherapy develops acute dyspnea and pneumonia and dies. Autopsy: organisms with acute angle branching septate hyphae. Underlying pathogenesis?",
+   "options": {
+    "A": "Hypersensitivity",
+    "B": "Thrombosis formation",
+    "C": "Obliterative endarteritis",
+    "D": "Granuloma tissue",
+    "E": "Toxin production"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Neutropenia → ==invasive aspergillosis== → เชื้อ invade หลอดเลือด (angioinvasion) → ==thrombosis== → lung infarct, hemoptysis · hypersensitivity = ABPA"
+  },
+  "RS/112": {
+   "box": 24,
+   "stem": "A taxi driver has drowsiness and dry mouth after 2 days of an over-the-counter drug for allergic rhinitis. Which medication should be avoided?",
+   "options": {
+    "A": "Cetirizine",
+    "B": "Beclomethasone",
+    "C": "Pseudoephedrine",
+    "D": "Dextromethorphan",
+    "E": "Chlorpheniramine"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ง่วง + ปากแห้ง (antimuscarinic) = ==antihistamine gen 1 (chlorpheniramine)== → ต้องเลี่ยงในคนขับรถ ใช้ gen 2 แทน"
+  },
+  "RS/113": {
+   "box": 24,
+   "stem": "A 25-year-old pregnant woman has runny nose and sneezing, diagnosed with allergic rhinitis. Which antihistamine is recommended?",
+   "options": {
+    "A": "Cetirizine",
+    "B": "Hydroxyzine",
+    "C": "Chlorpheniramine",
+    "D": "Diphenhydramine",
+    "E": "Brompheniramine"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Gen 2 ที่ข้อมูลปลอดภัยในครรภ์ (category B) = ==cetirizine== (loratadine ก็ได้) · ข้ออื่นเป็น gen 1"
+  },
+  "RS/114": {
+   "box": 24,
+   "stem": "A 70-year-old man has acute rhinorrhea and nasal congestion. History of chronic constipation and hypertension. Which medication should be prescribed?",
+   "options": {
+    "A": "Diphenhydramine",
+    "B": "Dimenhydrinate",
+    "C": "Promethazine",
+    "D": "Fexofenadine",
+    "E": "Ranitidine"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ท้องผูก → เลี่ยง gen 1 (antimuscarinic) · HT → เลี่ยง decongestant · เลือก gen 2 ==fexofenadine== · ranitidine = H2 blocker"
+  },
+  "RS/115": {
+   "box": 24,
+   "stem": "A 25-year-old woman with allergic rhinitis has used an intranasal decongestant for over 10 days. Most likely adverse reaction?",
+   "options": {
+    "A": "Anosmia",
+    "B": "Epistaxis",
+    "C": "Rebound congestion",
+    "D": "Nasal septum perforation",
+    "E": "Mucosal membrane atrophy"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "α-agonist พ่นจมูกนานเกิน 3–5 วัน → ==rebound congestion (rhinitis medicamentosa)== + tachyphylaxis"
+  },
+  "RS/116": {
+   "box": 24,
+   "stem": "คนไข้ dry cough interferes sleep ให้ยาอะไร",
+   "options": {
+    "A": "Acetylcysteine",
+    "B": "Ambroxol",
+    "C": "Bromhexine",
+    "D": "Codeine",
+    "E": "Guaifenesin"
+   },
+   "answer": "D",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ไอแห้งรบกวนการนอน → ==ยากดไอ (codeine)== หรือ dextromethorphan · NAC, ambroxol, bromhexine = mucolytic · guaifenesin = expectorant (ใช้ตอนมีเสมหะ)"
+  },
+  "RS/117": {
+   "box": 25,
+   "stem": "A 5-year-old girl has severe dyspnea and cough for an hour. RR 40, PR 110, expiratory wheezing both lungs. Most appropriate symptomatic treatment?",
+   "options": {
+    "A": "Oral montelukast",
+    "B": "Inhaled cromolyn",
+    "C": "Inhaled salbutamol",
+    "D": "Inhaled ipratropium",
+    "E": "Intravenous dexamethasone"
+   },
+   "answer": "C",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Acute asthma → reliever = ==SABA (inhaled salbutamol)== onset เร็ว · montelukast/cromolyn = controller · steroid IV ให้ร่วมได้แต่ไม่ใช่ยาบรรเทาอาการทันที"
+  },
+  "RS/118": {
+   "box": 25,
+   "stem": "คนไข้อายุ 25 ปี เป็น asthma ใช้ ICS มา 5 ปี ต่อมาเป็นหวัด rhinorrhea แพทย์ให้ supportive treatment ต่อมามี palpitation เป็นผลจากยาใด",
+   "options": {
+    "A": "Salbutamol",
+    "B": "Bromhexine",
+    "C": "Montelukast",
+    "D": "Chlorpheniramine",
+    "E": "Dextromethorphan"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "β2 agonist ที่ไม่ selective พอจะกระตุ้น β1 → ==palpitation==, tremor, hypokalemia → ==salbutamol=="
+  },
+  "RS/119": {
+   "box": 25,
+   "stem": "คนไข้เป็น asthma ถามกลไกของยาที่พ่นก่อน exercise",
+   "options": {
+    "A": "Increase cAMP",
+    "B": "Inhibit phosphodiesterase",
+    "C": "Inhibit muscarinic receptor"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ยาพ่นก่อนออกกำลัง = SABA → β2 → adenylyl cyclase → ==cAMP เพิ่ม== · inhibit PDE = theophylline · inhibit muscarinic = ipratropium/tiotropium (COPD)"
+  },
+  "RS/120": {
+   "box": 25,
+   "stem": "A 50-year-old male with asthma on inhaled corticosteroids for 1 month still has daily cough upon waking. The doctor adds montelukast. Mechanism?",
+   "options": {
+    "A": "Mast cell stabilizer",
+    "B": "Muscarinic antagonist",
+    "C": "Beta-adrenergic agonist",
+    "D": "Phospholipase A2 inhibitor",
+    "E": "Leukotriene receptor antagonist"
+   },
+   "answer": "E",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Montelukast = ==leukotriene (CysLT1) receptor antagonist== · mast cell stabilizer = cromolyn · PLA2 ถูกยับยั้งโดย steroid"
+  },
+  "RS/121": {
+   "box": 25,
+   "stem": "60-year-old male uses inhaled budesonide for asthma. What is the side effect?",
+   "options": {
+    "A": "Peptic ulcer",
+    "B": "Oral thrush",
+    "C": "Nasal polyps",
+    "D": "Hypertension",
+    "E": "Hyperglycemia"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "ICS → ==oral candidiasis (thrush)== และเสียงแหบ → แนะนำบ้วนปากหลังพ่น · peptic ulcer, HT, hyperglycemia = systemic steroid"
+  },
+  "RS/122": {
+   "box": 25,
+   "stem": "A patient is treated for severe persistent asthma with anti IL-5. Which is inhibited by this drug?",
+   "options": {
+    "A": "IgE activity",
+    "B": "Eosinophil activity",
+    "C": "Th2 cell",
+    "D": "Mast cell degranulation",
+    "E": "Neutrophil activity"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "IL-5 = cytokine หลักของการเจริญและทำงานของ ==eosinophil== · anti-IgE (omalizumab) ยับยั้ง IgE"
+  },
+  "RS/123": {
+   "box": 26,
+   "stem": "A 45-year-old man on anti-tuberculosis medications complains of numbness and tingling of his feet. Which drug is responsible?",
+   "options": {
+    "A": "Rifampicin",
+    "B": "Isoniazid",
+    "C": "Ethambutol",
+    "D": "Pyrazinamide",
+    "E": "Streptomycin"
+   },
+   "answer": "B",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "==Isoniazid== ทำให้ขาด vitamin B6 → ==peripheral neuropathy== → ต้องให้ pyridoxine · ethambutol = optic neuropathy"
+  },
+  "RS/124": {
+   "box": 26,
+   "stem": "TB infection, drug given. What supplement should be given?",
+   "options": {
+    "A": "Pyridoxine",
+    "B": "Folic acid",
+    "C": "Vitamin B12",
+    "D": "Vitamin C",
+    "E": "Vitamin D"
+   },
+   "answer": "A",
+   "source": "โจทย์ในสไลด์ · อาจารย์เฉลยในคาบ",
+   "why": "Isoniazid → ต้องให้ ==pyridoxine (vitamin B6)== ป้องกัน peripheral neuropathy",
+   "options_reconstructed": true
+  }
+ }
+}

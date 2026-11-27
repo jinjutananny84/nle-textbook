@@ -1,0 +1,286 @@
+{
+ "note": "ตัวเลข cutpoint และสูตรจากคาบติว RS · t = cut หรือ f · box = กล่องที่มา",
+ "items": [
+  {
+   "t": "f",
+   "cat": "Ventilation",
+   "name": "Alveolar ventilation",
+   "v": "**(TV − DS) × RR**",
+   "box": 6,
+   "note": "PaCO2 แปรผกผันกับค่านี้"
+  },
+  {
+   "t": "cut",
+   "cat": "Ventilation",
+   "name": "PO2 ใน dry air",
+   "v": "760 × 0.21 ≈ **160 mmHg**",
+   "box": 6
+  },
+  {
+   "t": "cut",
+   "cat": "Ventilation",
+   "name": "PO2 ใน humidified tracheal air",
+   "v": "(760 − **47**) × 0.21 ≈ **150 mmHg**",
+   "box": 6,
+   "note": "47 = ความดันไอน้ำ"
+  },
+  {
+   "t": "f",
+   "cat": "Ventilation",
+   "name": "Alveolar gas equation",
+   "v": "PAO2 = PIO2 − PaCO2/**0.8**",
+   "box": 6,
+   "note": "ปกติ 150 − 40/0.8 = 100"
+  },
+  {
+   "t": "cut",
+   "cat": "Ventilation",
+   "name": "Conducting vs respiratory zone",
+   "v": "generation ≤ **16** vs ≥ **17**",
+   "box": 1
+  },
+  {
+   "t": "f",
+   "cat": "O2 transport",
+   "name": "O2 content",
+   "v": "(Hb × **1.34** × SaO2) + (PO2 × **0.003**)",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 transport",
+   "name": "จุดบน O2 dissociation curve",
+   "v": "PO2 100 → 100% · **60 → 90%** · **40 → 75%**",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 transport",
+   "name": "P50 ปกติ",
+   "v": "**~27 mmHg**",
+   "box": 8,
+   "note": "อาจารย์พูด 25–27"
+  },
+  {
+   "t": "cut",
+   "cat": "O2 transport",
+   "name": "CO จับ Hb แน่นกว่า O2",
+   "v": "**~250 เท่า**",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 transport",
+   "name": "SpO2 ใน methemoglobinemia",
+   "v": "ค้างที่ **~85%**",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "O2 transport",
+   "name": "สัดส่วน CO2 ในเลือด",
+   "v": "HCO3− **>90%** · dissolved 5% · carbamino 3%",
+   "box": 8
+  },
+  {
+   "t": "cut",
+   "cat": "Perfusion",
+   "name": "V/Q ปกติทั้งปอด",
+   "v": "**0.8–1**",
+   "box": 9
+  },
+  {
+   "t": "cut",
+   "cat": "Perfusion",
+   "name": "Anatomical shunt",
+   "v": "**~2%** ของ cardiac output · PaO2 **97** vs PAO2 **103**",
+   "box": 9
+  },
+  {
+   "t": "cut",
+   "cat": "Embryo",
+   "name": "Alveoli ตอนเกิด → ผู้ใหญ่",
+   "v": "**20–70 ล้าน → 300–400 ล้าน**",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Embryo",
+   "name": "Neonatal RDS เกิดเมื่อ GA",
+   "v": "**< 34 wk** (surfactant เริ่ม ~20 wk mature ~35 wk)",
+   "box": 5
+  },
+  {
+   "t": "cut",
+   "cat": "Pleura",
+   "name": "Intrapleural pressure ปกติ",
+   "v": "**−3 ถึง −5 cmH2O**",
+   "box": 4
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "Obstructive (เกณฑ์อาจารย์)",
+   "v": "FEV1/FVC **< 75%**",
+   "box": 12,
+   "note": "ตำรา GOLD ใช้ 70%"
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "Restrictive",
+   "v": "FVC **< 80%**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "Small airway disease",
+   "v": "FEF25–75 **< 65%**",
+   "box": 12
+  },
+  {
+   "t": "cut",
+   "cat": "PFT",
+   "name": "Bronchodilator response",
+   "v": "FEV1 หรือ FVC ↑ **≥ 12% และ ≥ 200 mL**",
+   "box": 12
+  },
+  {
+   "t": "f",
+   "cat": "PFT",
+   "name": "Corrected FVC",
+   "v": "FVC + (**70** − FEV1/FVC)",
+   "box": 12,
+   "note": "> 80 = pure obstructive · < 80 = mixed"
+  },
+  {
+   "t": "cut",
+   "cat": "ABG",
+   "name": "PaO2 ปกติ",
+   "v": "**80–100 mmHg**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "ABG",
+   "name": "PaCO2 ปกติ",
+   "v": "**35–45 mmHg**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "ABG",
+   "name": "A-a gradient ปกติ",
+   "v": "**0–10 mmHg** · ผู้สูงอายุ < **age/4 + 4**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "ABG",
+   "name": "P/F ratio",
+   "v": "ปกติ > **400** · ALI < **300** · ARDS < **200**",
+   "box": 13
+  },
+  {
+   "t": "f",
+   "cat": "ABG",
+   "name": "Winter's formula",
+   "v": "PCO2 = **1.5 × HCO3 + 8 ± 2**",
+   "box": 13,
+   "note": "metabolic acidosis"
+  },
+  {
+   "t": "f",
+   "cat": "ABG",
+   "name": "Metabolic alkalosis compensation",
+   "v": "PCO2 = **0.7 × HCO3 + 21 ± 2**",
+   "box": 13
+  },
+  {
+   "t": "f",
+   "cat": "ABG",
+   "name": "Respiratory acidosis (PCO2 ทุก 10)",
+   "v": "HCO3 acute **↑1** · chronic **↑4**",
+   "box": 13
+  },
+  {
+   "t": "f",
+   "cat": "ABG",
+   "name": "Respiratory alkalosis (PCO2 ทุก 10)",
+   "v": "HCO3 acute **↓2** · chronic **↓5**",
+   "box": 13
+  },
+  {
+   "t": "cut",
+   "cat": "โรค",
+   "name": "LTOT ใน COPD",
+   "v": "SpO2 RA **≤ 88%** หรือ PaO2 **< 55 mmHg**",
+   "box": 15
+  },
+  {
+   "t": "cut",
+   "cat": "โรค",
+   "name": "EVALI",
+   "v": "ใช้ e-cigarette ภายใน **90 วัน**",
+   "box": 16
+  },
+  {
+   "t": "cut",
+   "cat": "Light's criteria",
+   "name": "Protein ratio (exudate)",
+   "v": "pleural/serum protein **> 0.5**",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Light's criteria",
+   "name": "LDH ratio (exudate)",
+   "v": "pleural/serum LDH **> 0.6**",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Light's criteria",
+   "name": "Pleural LDH (exudate)",
+   "v": "**> 2/3** ของ upper limit ของ serum LDH",
+   "box": 17
+  },
+  {
+   "t": "cut",
+   "cat": "Infection",
+   "name": "Bacterial rhinosinusitis",
+   "v": "อาการแย่ลงหลัง **5 วัน** หรือนานเกิน **10 วัน**",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "Infection",
+   "name": "PCP prophylaxis ใน HIV",
+   "v": "CD4 **< 200 cells/mm³**",
+   "box": 23
+  },
+  {
+   "t": "cut",
+   "cat": "Infection",
+   "name": "Atypical lymphocyte ใน IM",
+   "v": "**> 10–15%**",
+   "box": 19
+  },
+  {
+   "t": "cut",
+   "cat": "ยา",
+   "name": "Decongestant พ่นจมูกไม่ควรเกิน",
+   "v": "**3–5 วัน**",
+   "box": 24,
+   "note": "อาจารย์พูด 5 วัน สไลด์ 4–6 วัน"
+  },
+  {
+   "t": "cut",
+   "cat": "ยา",
+   "name": "สูตรยา TB",
+   "v": "**2HRZE/4HR**",
+   "box": 26
+  }
+ ]
+}
