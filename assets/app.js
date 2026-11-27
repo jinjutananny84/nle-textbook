@@ -623,6 +623,20 @@
     const s = CH[m[1]].sections.find(x => x.no === +m[2]);
     return s ? `${CH[m[1]].title} · กล่อง ${s.no} ${s.title}` : CH[m[1]].title;
   }
+  let _gemModel = null;
+  async function pickGeminiModel(key) {
+    if (_gemModel) return _gemModel;
+    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(key)}`);
+    if (!r.ok) return 'gemini-3.8-flash';
+    const d = await r.json().catch(() => ({}));
+    const list = (d.models || [])
+      .filter(m => (m.supportedGenerationMethods || []).includes('generateContent'))
+      .map(m => (m.name || '').replace(/^models\//, ''))
+      .filter(n => /^gemini-.*flash/i.test(n) && !/lite|exp|preview|image|audio|tts|thinking/i.test(n));
+    list.sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
+    _gemModel = list[0] || 'gemini-3.8-flash';
+    return _gemModel;
+  }
   async function askGemini(query, ctx = '') {
     const key = (S.geminiKey || '').trim();
     if (!key) throw new Error('NO_KEY');
@@ -642,16 +656,19 @@
       if (!r.ok) { const e = new Error((d.error && d.error.message) || `HTTP ${r.status}`); e.status = r.status; throw e; }
       return d;
     };
+    let model = _gemModel || 'gemini-3.8-flash';
     let d;
-    try { d = await call('gemini-2.5-flash', true); }
+    try { d = await call(model, true); }
     catch (e1) {
-      if (e1.status === 400 || e1.status === 403 || /search|tool|grounding/i.test(e1.message)) {
-        try { d = await call('gemini-2.5-flash', false); }
-        catch (e2) { d = await call('gemini-2.0-flash', false); }
-      } else if (e1.status === 404) {
-        d = await call('gemini-2.0-flash', true).catch(() => call('gemini-2.0-flash', false));
+      if (e1.status === 404 || /no longer available|not found|deprecated/i.test(e1.message)) {
+        _gemModel = null;
+        model = await pickGeminiModel(key);
+        try { d = await call(model, true); } catch (_) { d = await call(model, false); }
+      } else if (e1.status === 400 || e1.status === 403 || /search|tool|grounding/i.test(e1.message)) {
+        d = await call(model, false);
       } else throw e1;
     }
+    _gemModel = model;
     const cand = (d.candidates || [])[0] || {};
     const text = ((cand.content && cand.content.parts) || []).map(p => p.text || '').join('').trim();
     if (!text) throw new Error('Gemini ไม่ได้ส่งข้อความกลับมา');
@@ -1040,7 +1057,7 @@
       <div class="panel"><h3>📲 แอป &amp; อ่านแบบออฟไลน์ (PWA)</h3>${pwaHtml}
         <hr style="border:0;border-top:1px solid var(--line);margin:14px 0">
         <p class="muted">ดาวน์โหลดเนื้อหาและข้อสอบทุกบทเก็บไว้ในเครื่อง เพื่อให้เปิดอ่านและทำโจทย์ได้แม้ไม่มีอินเทอร์เน็ต</p>
-        <div class="choice"><button class="btn" id="pwaCache">📥 โหลดทุกบทไว้ใช้ออฟไลน์</button></div>
+        <div class="choice"><button class="btn" id="pwaCache">📥 โหลดทุกบทไว้ใช้ออฟไลน์</button><button class="btn" id="pwaReload">🔄 รีเฟรช / อัปเดตแอป</button></div>
         <div class="offline-prog" id="pwaProg" hidden><div class="bar"><i id="pwaBar" style="width:0%"></i></div><small class="muted" id="pwaTxt"></small></div>
       </div>
       <div class="panel"><h3>💾 สำรองข้อมูลเป็นไฟล์ (เผื่อไว้)</h3><p class="muted">ต้องการเก็บไฟล์ <code>.json</code> สำรองไว้ในเครื่องด้วยตนเอง กดไปที่หน้า Backup ได้ตลอด</p><div class="choice"><a class="btn" href="#/backup">เปิดหน้า Backup</a></div></div>`;
@@ -1063,6 +1080,17 @@
       finally { gTest.disabled = false; }
     };
     const bInst = $('#pwaInst'); if (bInst) bInst.onclick = () => window.NLE_SYNC.installPWA();
+    const bRel = $('#pwaReload');
+    if (bRel) bRel.onclick = async () => {
+      bRel.disabled = true; bRel.textContent = 'กำลังอัปเดต…';
+      try {
+        if ('serviceWorker' in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map(r => r.update().catch(() => {})));
+        }
+      } catch (_) {}
+      location.reload();
+    };
     const bCache = $('#pwaCache');
     if (bCache) bCache.onclick = async () => {
       bCache.disabled = true; bCache.textContent = 'กำลังโหลดทุกบท…';
