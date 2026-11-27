@@ -31,13 +31,23 @@
     const meta = INDEX.find(c => c.id === id);
     if (!meta || !meta.ready) return null;
     const j = u => fetch(u, { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
-    const [md, ex, ga, ca, nu] = await Promise.all([
+    const [md, ex, ga, ca, nu, fl] = await Promise.all([
       fetch(`data/${id}.md`, { cache: 'no-cache' }).then(r => r.text()),
-      j(`data/${id}-exams.json`), j('data/abbr.json'), j(`data/${id}-abbr.json`), j(`data/${id}-numbers.json`)
+      j(`data/${id}-exams.json`), j('data/abbr.json'), j(`data/${id}-abbr.json`), j(`data/${id}-numbers.json`), j(`data/${id}-flows.json`)
     ]);
     const ch = parseChapter(md, meta);
     ch.abbr = Object.assign({}, ga, ca);
     ch.numbers = nu.items || [];
+    ch.flows = fl.flows || [];
+    // flowchart ในกล่อง: วางตรง "::: flow <id>" ถ้าไม่มีจุดวางก็ต่อท้ายกล่อง
+    for (const s of ch.sections) {
+      for (const f of ch.flows.filter(x => +x.box === s.no)) {
+        const html = flowHTML(f, `${id}/${s.no}|flow:${f.id}`, `<a class="fl-all" href="#/flows?ch=${id}">ดูทุก flowchart ›</a>`);
+        const slot = `<div class="flow-slot" data-f="${f.id}"></div>`;
+        s.html = s.html.includes(slot) ? s.html.replace(slot, html) : s.html + html;
+      }
+      s.html = s.html.replace(/<div class="flow-slot" data-f="[^"]*"><\/div>/g, '');
+    }
     ch.exams = ex.exams || ex;
     for (const s of ch.sections) s.examIds = [];
     for (const [qid, q] of Object.entries(ch.exams)) {
@@ -148,6 +158,7 @@
         out += `<div class="tbl-wrap"><table class="t"><thead><tr>${h.map(c => `<th>${inline(c)}</th>`).join('')}</tr></thead><tbody>${rest.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
         continue;
       }
+      if (L.startsWith('::: flow ')) { flushP(); out += `<div class="flow-slot" data-f="${esc(L.slice(9).trim())}"></div>`; i++; continue; }
       if (L.startsWith('::: fig')) {
         flushP(); const cap = L.slice(7).trim(); const svg = []; i++;
         while (i < lines.length && lines[i] !== ':::') { svg.push(lines[i]); i++; }
@@ -263,7 +274,7 @@
       }
       h += '</div>';
     }
-    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/db?view=table&ch=${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
+    h += `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/flows${curCh ? '?ch=' + curCh : ''}">🩺 Diagnosis flowchart</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/db?view=table&ch=${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
     sidebar.innerHTML = h;
     const on = $('.side-sec.on', sidebar); if (on) on.scrollIntoView({ block: 'nearest' });
   }
@@ -324,7 +335,7 @@
     if (!keys.length) return;
     const re = new RegExp(`(^|[^A-Za-z0-9])(${keys.map(esRe).join('|')})(?![A-Za-z0-9])`, 'g');
     const seen = new Set(), low = '';
-    for (const n of textNodes(root)) if (!n.parentNode.closest('svg,code')) expandAbbrNode(n, re, seen, dict, low);
+    for (const n of textNodes(root)) if (!n.parentNode.closest('svg,code,.flow')) expandAbbrNode(n, re, seen, dict, low);
   }
   function expandAbbrNode(n, re, seen, dict, low) {
     while (n) {
@@ -964,7 +975,7 @@
     const p = chProgress(ch);
     let h = `<div class="crumb"><a href="#/">หน้าแรก</a></div><div class="hero"><h1>${esc(ch.title)}</h1><p>${esc(ch.source || '')}</p></div>
       ${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ</div>${lvLegend(p)}
-      <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 Quiz this chapter</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcards</a><a class="btn" href="#/map/${id}">🗺️ Chapter map</a><a class="btn" href="#/db?view=table&ch=${id}">💊 Drug table</a></div>`;
+      <div class="choice" style="margin-top:14px"><a class="btn primary" href="#/quiz?ch=${id}">📝 Quiz this chapter</a><a class="btn" href="#/cards?ch=${id}">🃏 Flashcards</a><a class="btn" href="#/map/${id}">🗺️ Chapter map</a><a class="btn" href="#/db?view=table&ch=${id}">💊 Drug table</a><a class="btn" href="#/flows?ch=${id}">🩺 Flowchart</a></div>`;
     for (const pg of ch.pages) {
       h += `<h2 style="margin-top:22px">หน้า ${pg.no} · ${esc(pg.title)}</h2><ul class="sec-list">`;
       for (const s of ch.sections.filter(x => x.page === pg.no)) {
@@ -1004,7 +1015,7 @@
     pop.hidden = true; pop.dataset.mode = '';
     expandAbbr($('article.content', view), ch.abbr);
     initFigs($('article.content', view), k);
-    buildToc(); setTimeout(trackRead, 300); coverTools(view);
+    buildToc(); setTimeout(trackRead, 300); coverTools(view); flowHints(view);
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
@@ -1585,6 +1596,58 @@
     });
     draw();
   }
+  /* ---------- Diagnosis flowchart (data/<id>-flows.json) ----------
+     node = { t: ข้อความ, k: start|step|dx|out|tx, s: บรรทัดเล็ก, e: ป้ายบนเส้นจากกล่องแม่, c: [ลูก], then: กล่องถัดไปหลังทุกแขนงมาบรรจบ } */
+  function flowNode(n) {
+    const k = n.k || 'step';
+    let h = `<div class="fn k-${k}"><span class="fn-t">${inline(esc(n.t || ''))}</span>${n.s ? `<small>${inline(esc(n.s))}</small>` : ''}</div>`;
+    if (n.c && n.c.length) h += `<ul>${n.c.map(x => `<li>${x.e ? `<span class="fe">${inline(esc(x.e))}</span>` : ''}${flowNode(x)}</li>`).join('')}</ul>`;
+    if (n.then) h += `<div class="fl-then">${n.then.e ? `<span class="fe">${inline(esc(n.then.e))}</span>` : ''}${flowNode(n.then)}</div>`;
+    return `<div class="ft">${h}</div>`;
+  }
+  function flowHTML(f, hlk, extra) {
+    return `<div class="flow" id="fl-${esc(f.id)}"${hlk ? ` data-hlk="${esc(hlk)}"` : ''}><div class="fl-h">🩺 <b>${inline(esc(f.title))}</b>${extra || ''}</div><div class="fl-scroll"><div class="fl-tree">${flowNode(f.root)}</div></div></div>`;
+  }
+  // แผนภาพที่กว้างกว่าจอ (มือถือ) ขึ้นป้ายบอกให้เลื่อนด้านข้าง
+  function flowHints(root) { root.querySelectorAll('.flow').forEach(x => { const sc = x.querySelector('.fl-scroll'); x.classList.toggle('fl-wide', sc.scrollWidth > sc.clientWidth + 2); }); }
+  async function vFlows(params) {
+    await loadAll(); renderSidebar(params.get('ch') || undefined);
+    const chs = loadedCH().filter(c => c.flows && c.flows.length);
+    const f = S.flf || (S.flf = { cover: 0 });
+    const sel = params.get('ch') && chs.some(c => c.id === params.get('ch')) ? params.get('ch') : '';
+    const total = chs.reduce((a, c) => a + c.flows.length, 0);
+    view.innerHTML = `<div class="hero"><h1>🩺 Diagnosis flowchart</h1><p>ขั้นตอนวินิจฉัยของทุกบทเป็นภาพ ${total} แผนภาพ · เปิด Cover แล้วแตะกล่องผลเพื่อท่องทีละขั้น · กดเลขกล่องเพื่อกลับไปอ่านเนื้อหา</p></div>
+      <div class="db-bar"><select id="flCh"><option value="">ทุกบท</option>${chs.map(c => `<option value="${c.id}" ${c.id === sel ? 'selected' : ''}>${esc(c.title)} (${c.flows.length})</option>`).join('')}</select>
+        <input id="flq" type="search" placeholder="ค้น เช่น cortisol, Cushing, Ca…">
+        <label class="db-cv"><input type="checkbox" id="flCover" ${f.cover ? 'checked' : ''}> Cover ผลวินิจฉัย</label></div>
+      <div class="dt-gs" id="flGs"></div><div id="flBody"></div>`;
+    const body = $('#flBody'), gs = $('#flGs');
+    const draw = () => {
+      const q = $('#flq').value.trim().toLowerCase(), c = $('#flCh').value;
+      const txt = n => [n.t, n.s, n.e, ...(n.c || []).map(txt), n.then ? txt(n.then) : ''].filter(Boolean).join(' ');
+      let html = '';
+      for (const ch of chs) {
+        if (c && ch.id !== c) continue;
+        const fs = ch.flows.filter(x => !q || (x.title + ' ' + (x.cat || '') + ' ' + txt(x.root)).toLowerCase().includes(q)); if (!fs.length) continue;
+        html += `<h2 class="fl-ch">${esc(ch.title)}</h2>`;
+        let cat = null;
+        for (const x of fs) {
+          if (x.cat && x.cat !== cat) { cat = x.cat; html += `<h3 class="fl-cat" id="flc-${esc(ch.id)}-${esc(cat).replace(/[^\w\u0E00-\u0E7F]+/g, '')}" data-n="${esc(c ? cat : ch.id.toUpperCase() + ' · ' + cat)}">${esc(cat)}</h3>`; }
+          html += flowHTML(x, '', `<a class="fl-box" href="#/${ch.id}/${x.box}" title="ไปที่กล่อง ${x.box}">${ch.id.toUpperCase()}·${x.box}</a>`);
+        }
+      }
+      body.innerHTML = html || '<p class="empty">ไม่เจอที่ค้น</p>';
+      body.classList.toggle('fl-covering', !!f.cover);
+      flowHints(body);
+      gs.innerHTML = [...body.querySelectorAll('.fl-cat')].map(x => `<a href="#" data-g="${x.id}">${esc(x.dataset.n)}</a>`).join('');
+    };
+    $('#flq').oninput = draw;
+    $('#flCh').onchange = e => { history.replaceState(null, '', e.target.value ? `#/flows?ch=${e.target.value}` : '#/flows'); draw(); };
+    $('#flCover').onchange = e => { f.cover = e.target.checked ? 1 : 0; save(); draw(); };
+    gs.onclick = e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); const t = document.getElementById(a.dataset.g); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 110, behavior: 'smooth' }); };
+    body.addEventListener('click', e => { const n = e.target.closest('.fl-covering .fn.k-dx, .fl-covering .fn.k-out'); if (n) n.classList.toggle('shown'); });
+    draw();
+  }
   /* ---------- Numbers: cutpoint · ค่าปกติ · สูตร ของทุกบท (data/<id>-numbers.json) ---------- */
   async function vNumbers(params) {
     await loadAll(); renderSidebar();
@@ -1685,6 +1748,7 @@
       if (parts[0] === 'drill') return vDrill(params);
       if (parts[0] === 'db') { const v = params.get('view') || S.dbView || 'cards'; S.dbView = v; save(); return v === 'table' ? vDrugs(params.get('ch'), params) : vDB(params); }
       if (parts[0] === 'numbers') return vNumbers(params);
+      if (parts[0] === 'flows') return vFlows(params);
       if (parts[0] === 'drugs') return vDrugs(parts[1], params);
       if (parts[0] === 'backup') return vBackup();
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
