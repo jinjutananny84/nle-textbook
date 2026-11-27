@@ -49,6 +49,11 @@ def main():
         e = validate(qid, data['exams'][qid], why)
         if e: print(qid, '·', ' / '.join(e)); bad += 1; continue
         data['exams'][qid]['why'] = why
+        # ข้อซ้ำ (โจทย์ ช้อยส์ คำตอบเหมือนกันทุกตัว แต่คนละเลขข้อ) ใช้เฉลยเดียวกัน
+        q0 = data['exams'][qid]
+        for k, q in data['exams'].items():
+            if k not in new and (q['stem'], q.get('options'), q['answer']) == (q0['stem'], q0.get('options'), q0['answer']) and not validate(k, q, why):
+                q['why'] = why
     if bad: print(f'ผิด {bad} ข้อ ยังไม่บันทึก'); sys.exit(1)
     json.dump(data, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     left = [k for k, q in data['exams'].items() if '\n' not in q.get('why', '') or validate(k, q, q['why'])]
