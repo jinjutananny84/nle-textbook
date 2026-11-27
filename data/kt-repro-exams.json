@@ -10,7 +10,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์ · จากบท B9",
-   "why": "Urorectal septum แบ่ง cloaca เป็น urogenital sinus (ด้านหน้า) กับ anorectal canal (ด้านหลัง) ถ้าแบ่งไม่สมบูรณ์ → rectovesical/rectourethral fistula มี meconium ในปัสสาวะ · A ureteric bud ผิด → agenesis/duplex ureter · B urogenital diaphragm เป็นกล้ามเนื้อ perineum ไม่เกี่ยว"
+   "why": "Meconium ในปัสสาวะ = มีรูเชื่อมลำไส้ตรงกับทางเดินปัสสาวะ\n✗ A: Ureteric bud ผิดปกติ → renal agenesis/duplex ureter\n✗ B: Urogenital diaphragm เป็นกล้ามเนื้อ perineum ไม่ได้แบ่งลำไส้จากทางเดินปัสสาวะ\n✓ C: Urorectal septum แบ่ง cloaca เป็น urogenital sinus (หน้า) กับ anorectal canal (หลัง)\n  แบ่งไม่สมบูรณ์ → rectovesical/rectourethral fistula"
   },
   "77/18": {
    "box": 2,
@@ -22,7 +22,7 @@
    },
    "answer": "A",
    "source": "เฉลย77 · จากบท B9",
-   "why": "มดลูกเกิดจาก paramesonephric (Müllerian) duct 2 ข้างมาเชื่อมกันส่วนล่าง ถ้าเชื่อมไม่สมบูรณ์ → bicornuate uterus · B mesonephric (Wolffian) duct ในเพศหญิงเสื่อมไป ให้ ureteric bud และท่อในชาย ไม่เกี่ยวกับมดลูก · C ถ้า paramesonephric เสื่อมจะไม่มีมดลูก (agenesis/MRKH) ไม่ใช่ bicornuate (ส่วน septum ที่ไม่สลาย = septate uterus)"
+   "why": "มดลูกเกิดจาก paramesonephric (Müllerian) duct 2 ข้างเชื่อมกันส่วนล่าง\n✓ A: เชื่อมไม่สมบูรณ์ → มดลูก 2 เขา (bicornuate uterus) แท้งบ่อย\n✗ B: Mesonephric (Wolffian) duct ในหญิงเสื่อมไป ไม่ได้สร้างมดลูก\n✗ C: Paramesonephric เสื่อมไปทั้งหมด → ไม่มีมดลูก (MRKH) ไม่ใช่ bicornuate\n  (ถ้า septum กลางไม่สลาย = septate uterus)"
   },
   "78/42": {
    "box": 3,
@@ -35,7 +35,7 @@
    },
    "answer": "B",
    "source": "เฉลย78 · จากบท B9",
-   "why": "Hypospadias = urethral meatus เปิดด้าน ventral จาก urethral folds เชื่อมไม่สมบูรณ์ (B) · A: epispadias เปิดด้าน dorsal (สัมพันธ์ bladder exstrophy, genital tubercle วางผิดตำแหน่ง) · C: อัณฑะไม่ลง · D: หนังหุ้มปลายตีบ"
+   "why": "Urethral folds เชื่อมไม่สมบูรณ์ → meatus เปิดด้าน ventral\n✗ A: Epispadias เปิดด้าน dorsal (genital tubercle ผิดตำแหน่ง ร่วม bladder exstrophy)\n✓ B: Hypospadias = urethral meatus เปิดด้าน ventral\n✗ C: Cryptorchidism = อัณฑะไม่ลงถุง\n✗ D: Phimosis = หนังหุ้มปลายตีบ รูดไม่ได้"
   },
   "79/226": {
    "box": 3,
@@ -49,7 +49,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · จากบท B9",
-   "why": "Urethral folds เชื่อมไม่สมบูรณ์ → meatus เปิดด้าน ventral = hypospadias (B) · A: epispadias เปิดด้าน dorsal (genital tubercle ผิดตำแหน่ง ร่วม bladder exstrophy) · C: หนังหุ้มปลายรูดไม่ได้ · D: หนังหุ้มรูดแล้วคืนไม่ได้ รัด glans · E: glans อักเสบ",
+   "why": "Urethral folds เชื่อมไม่สมบูรณ์ → meatus เปิดด้าน ventral = hypospadias\n✗ A: Epispadias เปิดด้าน dorsal ร่วม bladder exstrophy\n✓ B: Hypospadias เปิดด้าน ventral แทนที่ปลาย glans\n✗ C: Phimosis = หนังหุ้มปลายรูดไม่ได้\n✗ D: Paraphimosis = หนังหุ้มรูดแล้วคืนไม่ได้ รัด glans\n✗ E: Balanitis = glans อักเสบ",
    "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
   },
   "75.1/24": {
@@ -63,7 +63,7 @@
     "E": "Androgen insensitivity syndrome"
    },
    "answer": "C",
-   "why": "46,XX ที่มีมดลูกรังไข่ปกติแต่อวัยวะเพศภายนอกถูก virilize สาเหตุที่พบบ่อยสุดคือ CAH จาก 21-hydroxylase deficiency ที่ทำให้ adrenal androgen สูง aromatase deficiency ก็ทำได้แต่พบน้อยมาก SRY loss และ AIS เป็นภาวะของ 46,XY ส่วน Turner ไม่ทำให้ virilization",
+   "why": "46,XX + มดลูก/รังไข่ปกติ + อวัยวะเพศภายนอกถูก virilize + ไม่มี gonad ที่ขาหนีบ\n✗ A: Aromatase deficiency ทำได้ แต่พบน้อยมาก\n✗ B: Turner ไม่ทำให้ virilization\n✓ C: CAH จาก 21-hydroxylase deficiency = adrenal androgen สูง\n  เป็นสาเหตุ 46,XX DSD ที่พบบ่อยที่สุด\n✗ D: SRY loss-of-function เป็นภาวะของ 46,XY\n✗ E: Androgen insensitivity เป็นภาวะของ 46,XY",
    "source": "วิเคราะห์ · จากบท B10"
   },
   "76/197": {
@@ -77,7 +77,7 @@
     "E": "Aromatase deficiency"
    },
    "answer": "C",
-   "why": "5α-reductase deficiency ทำให้เปลี่ยน testosterone เป็น DHT ไม่ได้ อวัยวะภายนอก (ต้องใช้ DHT) จึงเป็นแบบหญิง แต่ Wolffian duct ใช้ testosterone จึงยังเจริญเป็นแบบชาย ส่วน complete AIS ไม่มี Wolffian structure, 17α-OHase มีความดันสูง K ต่ำ และ 21-OHase ทำให้ 46,XX virilization",
+   "why": "46,XY + ภายนอกเป็นหญิง + ภายในเป็นชาย = ขาด DHT แต่ testosterone ยังทำงาน\n✗ A: 21-OHase deficiency ทำให้ 46,XX virilization\n✗ B: 17α-OHase deficiency มีความดันสูง K ต่ำ และ 46,XY ขาด androgen ทั้งหมด\n✓ C: 5α-reductase deficiency เปลี่ยน testosterone เป็น DHT ไม่ได้\n  อวัยวะภายนอก (ใช้ DHT) เป็นแบบหญิง\n  Wolffian duct (ใช้ testosterone) ยังเจริญเป็นแบบชาย\n✗ D: Complete AIS ไม่มี Wolffian structure เพราะ receptor ใช้ไม่ได้เลย\n✗ E: Aromatase deficiency ทำให้ 46,XX virilization",
    "source": "วิเคราะห์ · จากบท B10"
   },
   "77/207": {
@@ -92,7 +92,7 @@
    },
    "answer": "A",
    "source": "เฉลย77 · จากบท B9",
-   "why": "Left testicular vein เทเข้า left renal vein เป็นมุมฉาก ยาวกว่า และอาจถูกบีบระหว่าง aorta–SMA (nutcracker) → ความดันสูง → varicocele ข้างซ้ายบ่อย · B เป็น artery และไม่เทเข้า IVC · C, D ไม่ใช่ทางระบายของ testicular vein · E เป็นทางของ right testicular vein ไม่ใช่ซ้าย"
+   "why": "Varicocele ข้างซ้ายพบบ่อย เพราะ left testicular vein เทเข้า left renal vein\n✓ A: เทเป็นมุมฉาก ยาวกว่า และ left renal vein อาจถูกบีบระหว่าง aorta–SMA (nutcracker)\n  ความดันสูง → bag of worms\n✗ B: เป็น artery และไม่ได้เทเข้า IVC\n✗ C: Common iliac vein ไม่ใช่ทางระบายของ testicular vein\n✗ D: Internal iliac vein ไม่ใช่ทางระบายของ testicular vein\n✗ E: IVC เป็นทางของ right testicular vein ไม่ใช่ซ้าย"
   },
   "75.1/49": {
    "box": 9,
@@ -106,7 +106,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · จากบท B9",
-   "why": "Ureter ลอดใต้ uterine artery (water under the bridge) ห่างจาก cervix ~2 cm → เสี่ยงถูกหนีบ/ผูกขณะ ligate uterine a. ใน hysterectomy/myomectomy · B obturator nerve อยู่ lateral pelvic wall · C internal iliac vein ลึกกว่า · D pudendal nerve อยู่ใน pudendal canal · E urethra อยู่ต่ำใต้ bladder ไม่อยู่ใน field",
+   "why": "Ureter ลอดใต้ uterine artery (water under the bridge) ห่าง cervix ~2 cm\n✓ A: Ureter เสี่ยงถูกหนีบ/ผูกตอน ligate uterine a.\n✗ B: Obturator nerve อยู่ที่ lateral pelvic wall\n✗ C: Internal iliac vein อยู่ลึกกว่า\n✗ D: Pudendal nerve อยู่ใน pudendal canal\n✗ E: Urethra อยู่ต่ำใต้ bladder ไม่อยู่ใน field",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
   },
@@ -121,7 +121,7 @@
    },
    "answer": "A",
    "source": "เฉลย78 · จากบท B9",
-   "why": "Ureter ลอดใต้ uterine artery (water under the bridge) ข้าง cervix ผูก uterine a. ตอน hysterectomy จึงเสี่ยงตัด/ผูก ureter (A) · B: bladder อยู่ด้านหน้า เสี่ยงน้อยกว่าในจุดนี้ · C: ไตอยู่สูงไกล · D: urethra อยู่ต่ำใต้ bladder"
+   "why": "Ureter ลอดใต้ uterine artery ข้าง cervix (water under the bridge)\n✓ A: ผูก uterine a. ตอน hysterectomy จึงเสี่ยงตัด/ผูก ureter\n✗ B: Bladder อยู่ด้านหน้า เสี่ยงน้อยกว่าในจุดนี้\n✗ C: ไตอยู่สูงไกลจาก field\n✗ D: Urethra อยู่ต่ำใต้ bladder"
   },
   "77/199": {
    "box": 9,
@@ -134,7 +134,7 @@
    },
    "answer": "B",
    "source": "เฉลย77 · จากบท B9",
-   "why": "ประมาณ 70% ของ adenocarcinoma เกิดที่ peripheral zone (ด้านหลัง) จึงคลำได้จาก DRE และไม่ค่อยทำให้ปัสสาวะขัดระยะแรก · A, D periurethral/transition zone เป็นแหล่งของ BPH · C central zone เกิดมะเร็งน้อยที่สุด"
+   "why": "~70% ของ prostate adenocarcinoma เกิดที่ peripheral zone (ด้านหลัง)\n✗ A: Periurethral เป็นแหล่งของ BPH\n✓ B: Peripheral zone คลำได้จาก DRE ระยะแรกไม่ค่อยทำให้ปัสสาวะขัด\n✗ C: Central zone เกิดมะเร็งน้อยที่สุด\n✗ D: Transitional zone เป็นแหล่งของ BPH"
   },
   "74.2/97": {
    "box": 11,
@@ -148,7 +148,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · จากบท B9",
-   "why": "α1A receptor อยู่ที่ smooth muscle ของ prostate stroma, capsule และ bladder neck → ยา (tamsulosin, doxazosin) คลาย dynamic obstruction ปัสสาวะออกดีขึ้นเร็ว · B, D เป็นกลไก 5α-reductase inhibitor (finasteride) ซึ่งลดขนาดต่อมช้า · C เป็นผลของ bethanechol · E เป็นกลไกยา OAB (oxybutynin) ซึ่งอาจทำ retention ใน BPH",
+   "why": "α1A receptor อยู่ที่ smooth muscle ของ prostate stroma, capsule และ bladder neck\n✓ A: Tamsulosin/doxazosin คลาย smooth muscle → แก้ dynamic obstruction ได้เร็ว\n✗ B: ลดขนาดต่อมเป็นกลไก 5α-reductase inhibitor (finasteride) ออกฤทธิ์ช้า\n✗ C: เพิ่มการหดตัวของ detrusor เป็นผลของ bethanechol\n✗ D: ลดการสร้าง DHT เป็นกลไก finasteride\n✗ E: Anti-muscarinic (oxybutynin) เป็นยา OAB อาจทำ urinary retention ใน BPH",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
   },
@@ -163,7 +163,7 @@
     "E": "Increased prostate specific antigen"
    },
    "answer": "A",
-   "why": "เนื้อเยื่อไขมันมี aromatase เปลี่ยน testosterone เป็น estradiol ที่สูงขึ้นจะ negative feedback กด GnRH/LH ทำให้ testosterone ต่ำ จึงพบ estradiol สูง ข้อ B ขัดกับ hypogonadism inhibin B มักลดลง cortisol และ PSA ไม่เกี่ยวข้อง",
+   "why": "ไขมันมี aromatase เปลี่ยน testosterone → estradiol\nEstradiol สูงไป negative feedback กด GnRH/LH → testosterone ต่ำ\n✓ A: Estradiol สูงในชายอ้วนที่มี hypogonadism\n✗ B: Free testosterone สูงขัดกับ hypogonadism\n✗ C: Inhibin B มักลดลง (spermatogenesis ลด)\n✗ D: Cortisol ไม่เกี่ยวข้อง\n✗ E: PSA ไม่เกี่ยวข้อง",
    "source": "วิเคราะห์ · จากบท B10"
   },
   "77/216": {
@@ -175,7 +175,7 @@
     "C": "Chronic fatigue syndrome"
    },
    "answer": "B",
-   "why": "ความอ้วนทำให้ aromatase ในไขมันเปลี่ยน testosterone เป็น estradiol มากขึ้น ร่วมกับ leptin/insulin resistance ไปกด GnRH ได้ LH ต่ำและ testosterone ต่ำ คือ functional hypogonadotropic hypogonadism ส่วน andropause (primary testicular aging) LH ควรสูงขึ้น และ chronic fatigue syndrome ไม่อธิบาย LH ต่ำ",
+   "why": "อ้วน + LH ต่ำ + testosterone ต่ำ = functional hypogonadotropic hypogonadism\n✗ A: Andropause (อัณฑะเสื่อมตามวัย) LH ควรสูงขึ้น\n✓ B: Aromatase ในไขมันเพิ่ม estradiol + leptin/insulin resistance กด GnRH → LH ต่ำ\n✗ C: Chronic fatigue syndrome ไม่อธิบาย LH ต่ำ",
    "source": "วิเคราะห์ · จากบท B10"
   },
   "76/82": {
@@ -189,7 +189,7 @@
     "E": "PSA"
    },
    "answer": "C",
-   "why": "การวินิจฉัย male hypogonadism ต้องยืนยันด้วย morning total testosterone ต่ำ (ร่วมกับอาการ) ส่วน estradiol อาจสูงในคนอ้วนจาก aromatase แต่ไม่ใช่ตัวยืนยัน leptin ไม่ใช้วินิจฉัย inhibin B ใช้ประเมิน spermatogenesis และ PSA ใช้ตรวจต่อมลูกหมาก",
+   "why": "วินิจฉัย male hypogonadism ต้องยืนยันด้วย morning total testosterone ต่ำ ร่วมกับอาการ\n✗ A: Estradiol อาจสูงในคนอ้วน แต่ไม่ใช่ตัวยืนยัน\n✗ B: Leptin ไม่ใช้วินิจฉัย\n✓ C: Testosterone (ตอนเช้า) ต่ำเป็นตัวยืนยัน hypogonadism\n✗ D: Inhibin B ใช้ประเมิน spermatogenesis\n✗ E: PSA ใช้ตรวจต่อมลูกหมาก",
    "source": "วิเคราะห์ · จากบท B10"
   },
   "79/214": {
@@ -203,7 +203,7 @@
     "E": "FSH เพิ่มขึ้น"
    },
    "answer": "C",
-   "why": "การดูดนมกระตุ้น prolactin ซึ่งกดการหลั่ง GnRH แบบ pulsatile ทำให้ LH/FSH ต่ำจึงไม่ตกไข่ (lactational amenorrhea). LH/FSH จึงลดลงไม่ใช่เพิ่ม ส่วน oxytocin ทำหน้าที่ขับน้ำนมไม่ได้กระตุ้นการตกไข่",
+   "why": "ดูดนม → prolactin สูง → กด GnRH แบบ pulsatile → LH/FSH ต่ำ → ไม่ตกไข่ (lactational amenorrhea)\n✗ A: Corpus luteum ไม่ได้ทำงานหลังคลอด\n✗ B: Oxytocin ทำหน้าที่ขับน้ำนม ไม่ได้กระตุ้นการตกไข่\n✓ C: Prolactin ยับยั้งการหลั่ง GnRH\n✗ D: LH ลดลง ไม่ใช่เพิ่ม\n✗ E: FSH ลดลง ไม่ใช่เพิ่ม",
    "source": "วิเคราะห์ · จากบท B10"
   },
   "76/93": {
@@ -217,7 +217,7 @@
     "E": "Aldosterone"
    },
    "answer": "E",
-   "why": "Sheehan syndrome คือ pituitary infarction หลัง PPH ทำให้ฮอร์โมนจาก anterior pituitary ลด (PRL → ให้นมไม่ได้, ACTH → cortisol ต่ำ, TSH → thyroid ต่ำ) และอาจกระทบ ADH ส่วน aldosterone คุมโดย RAAS และ K เป็นหลัก จึงยังปกติ",
+   "why": "PPH → Sheehan syndrome (pituitary infarction) → anterior pituitary hormone ลด\n✗ A: ADH อาจได้รับผลกระทบ (ปัสสาวะมาก = DI)\n✗ B: Cortisol ต่ำจาก ACTH ลด\n✗ C: Thyroid ต่ำจาก TSH ลด\n✗ D: Prolactin ลด จึงให้นมไม่ได้\n✓ E: Aldosterone คุมด้วย RAAS และ K เป็นหลัก จึงยังปกติ",
    "source": "วิเคราะห์ · จากบท B10"
   },
   "76/6": {
@@ -232,7 +232,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · จากบท B9",
-   "why": "Gram stain ไม่เห็นเชื้อ = non-gonococcal urethritis (NGU) เชื้อหลักคือ Chlamydia trachomatis, Ureaplasma, Mycoplasma genitalium · Ureaplasma ไม่มี cell wall จึงย้อม Gram ไม่ติด → ตอบ B · A C. psittaci ก่อ psittacosis (ปอด จากนก) ไม่ใช่ STI · C N. gonorrhoeae จะเห็น Gram-negative intracellular diplococci ใน PMN · D Proteus = UTI/นิ่ว struvite ย้อมเห็น Gram-negative rod · E H. ducreyi ทำ chancroid (แผลเจ็บ) ไม่ใช่ urethritis",
+   "why": "Gram stain ไม่เห็นเชื้อ = non-gonococcal urethritis (Chlamydia, Ureaplasma, Mycoplasma)\n✗ A: C. psittaci ก่อ psittacosis (ปอด จากนก) ไม่ใช่ STI\n✓ B: Ureaplasma ไม่มี cell wall จึงย้อม Gram ไม่ติด เป็นเชื้อ NGU\n✗ C: N. gonorrhoeae จะเห็น gram-negative intracellular diplococci ใน PMN\n✗ D: Proteus ทำ UTI/นิ่ว struvite ย้อมเห็น gram-negative rod\n✗ E: H. ducreyi ทำ chancroid (แผลเจ็บ) ไม่ใช่ urethritis",
    "doubt": "⚠ ตัวเลือกไม่มี Chlamydia trachomatis ซึ่งเป็นเชื้อ NGU ที่พบบ่อยที่สุด จึงเลือก Ureaplasma"
   },
   "78/X1": {
@@ -246,7 +246,7 @@
    },
    "answer": "A",
    "source": "เฉลย78 · จากบท B9",
-   "why": "Non-gonococcal urethritis ที่ gram stain พบ PMN แต่ไม่เห็นเชื้อ = Chlamydia (obligate intracellular ไม่มี peptidoglycan ชัด ย้อม gram ไม่ติด) (A) · B: gonorrhea เห็น gram-negative diplococci ใน PMN · C: syphilis ให้ painless chancre ไม่ใช่ urethritis · D: Candida เห็น yeast/pseudohyphae",
+   "why": "NGU: gram stain เห็น PMN แต่ไม่เห็นเชื้อ\n✓ A: Chlamydia เป็น obligate intracellular ไม่มี peptidoglycan ชัด ย้อม gram ไม่ติด\n✗ B: Gonorrhea เห็น gram-negative diplococci ใน PMN\n✗ C: Syphilis ให้ painless chancre ไม่ใช่ urethritis\n✗ D: Candida เห็น yeast/pseudohyphae",
    "options_reconstructed": true
   },
   "78/35": {
@@ -258,7 +258,7 @@
     "C": "Neisseria gonorrhoeae"
    },
    "answer": "C",
-   "why": "Ophthalmia neonatorum คือเยื่อบุตาอักเสบในทารกอายุไม่เกิน 4 สัปดาห์ ติดจากช่องคลอดมารดา N. gonorrhoeae ทำให้ตาแดงหนองมากใน 2–5 วัน และอาจทะลุกระจกตา (Chlamydia เป็นอีกสาเหตุที่มักเกิดช้ากว่า 5–14 วัน) T. pallidum ทำให้ congenital syphilis ไม่ใช่ conjunctivitis เป็นหลัก H. ducreyi ทำให้ chancroid ในผู้ใหญ่",
+   "why": "Ophthalmia neonatorum = เยื่อบุตาอักเสบในทารก ≤ 4 สัปดาห์ ติดจากช่องคลอดแม่\n✗ A: T. pallidum ทำ congenital syphilis ไม่ใช่ conjunctivitis เป็นหลัก\n✗ B: H. ducreyi ทำ chancroid ในผู้ใหญ่\n✓ C: N. gonorrhoeae ตาแดงหนองมากใน 2–5 วัน อาจทะลุกระจกตา\n  (Chlamydia เป็นอีกสาเหตุ แต่มักเกิดช้ากว่า 5–14 วัน)",
    "source": "เฉลย78 · จากบท B4"
   },
   "75.2/23": {
@@ -272,7 +272,7 @@
     "E": "Gram stain"
    },
    "answer": "A",
-   "why": "แผลริมแข็ง (chancre) ไม่เจ็บ เป็นระยะ primary ซึ่ง serology อาจยังลบ จึงตรวจหาเชื้อโดยตรงจาก serous exudate ด้วย dark-field microscopy เห็น spirochete เคลื่อนที่ VDRL/FTA-ABS/TPHA เป็น serology Treponema ย้อม Gram ไม่ติด",
+   "why": "Chancre ระยะ primary serology อาจยังลบ จึงต้องหาเชื้อโดยตรงจากแผล\n✓ A: Dark-field microscopy จาก serous exudate เห็น spirochete เคลื่อนที่\n✗ B: VDRL เป็น serology อาจยังลบในระยะแรก\n✗ C: FTA-ABS เป็น serology\n✗ D: TPHA เป็น serology\n✗ E: Treponema ย้อม Gram ไม่ติด",
    "source": "วิเคราะห์ · จากบท B4",
    "options_reconstructed": true
   },
@@ -286,7 +286,7 @@
     "D": "Chlamydia trachomatis"
    },
    "answer": "A",
-   "why": "แผลริมแข็ง (chancre) ขอบแข็ง ก้นสะอาด ไม่เจ็บ คือ primary syphilis จาก T. pallidum H. ducreyi ทำให้ chancroid ซึ่งเป็นแผลเจ็บ ขอบไม่เรียบ ก้นมีหนอง N. gonorrhoeae ทำให้ urethritis มีหนอง ไม่เป็นแผล ส่วน C. trachomatis serovar L1–L3 (LGV) อาจมีแผลเล็กไม่เจ็บแต่หายเร็วและเด่นที่ต่อมน้ำเหลืองขาหนีบโต",
+   "why": "แผลขอบแข็ง ก้นสะอาด ไม่เจ็บ = chancre ของ primary syphilis\n✓ A: T. pallidum ทำแผลริมแข็งไม่เจ็บ\n✗ B: H. ducreyi ทำ chancroid แผลเจ็บ ขอบไม่เรียบ ก้นมีหนอง\n✗ C: N. gonorrhoeae ทำ urethritis มีหนอง ไม่เป็นแผล\n✗ D: C. trachomatis (LGV) แผลเล็กไม่เจ็บแต่หายเร็ว เด่นที่ต่อมน้ำเหลืองขาหนีบโต",
    "source": "เฉลย78 · จากบท B4",
    "needs_image": true
   },
@@ -301,7 +301,7 @@
     "E": "Aqueous penicillin G IV 14 วัน"
    },
    "answer": "B",
-   "why": "ไม่มีอาการและไม่ทราบระยะเวลาติดเชื้อ ให้ถือเป็น late latent syphilis (หรือ latent of unknown duration) รักษาด้วย benzathine penicillin G 2.4 MU IM ทุกสัปดาห์ รวม 3 ครั้ง การฉีดครั้งเดียวใช้กับ primary, secondary, early latent (<1 ปี) Doxycycline เป็นทางเลือกเมื่อแพ้ penicillin แต่ต้องกิน 28 วัน titer ต่ำก็ยังต้องรักษา IV penicillin 10–14 วันใช้กับ neurosyphilis",
+   "why": "ไม่มีอาการ + ไม่ทราบระยะเวลาติดเชื้อ = ถือเป็น late latent syphilis\n✗ A: ฉีดครั้งเดียวใช้กับ primary, secondary, early latent (< 1 ปี)\n✓ B: Late latent รักษาด้วย benzathine penicillin G 2.4 MU IM สัปดาห์ละครั้ง × 3\n✗ C: Doxycycline ใช้เมื่อแพ้ penicillin และต้องกิน 28 วัน ไม่ใช่ 3 วัน\n✗ D: Titer ต่ำก็ยังต้องรักษา\n✗ E: IV aqueous penicillin 10–14 วัน ใช้กับ neurosyphilis",
    "source": "เฉลย79 · จากบท B4"
   },
   "77/114": {
@@ -314,7 +314,7 @@
     "D": "Herpes simplex virus"
    },
    "answer": "A",
-   "why": "Koilocyte คือ keratinocyte ที่มีนิวเคลียสหยักเข้มและ halo รอบนิวเคลียส เป็นลักษณะจำเพาะของ HPV ที่เท้าคือ plantar wart (HPV 1) EBV ทำให้ oral hairy leukoplakia HBV ไม่ก่อรอยโรคนี้ HSV ให้ multinucleated giant cell กับ intranuclear inclusion",
+   "why": "Koilocyte = keratinocyte นิวเคลียสหยักเข้ม มี halo รอบนิวเคลียส = HPV\n✓ A: HPV ที่เท้า = plantar wart (HPV 1)\n✗ B: EBV ทำ oral hairy leukoplakia\n✗ C: HBV ไม่ก่อรอยโรคผิวหนังแบบนี้\n✗ D: HSV ให้ multinucleated giant cell + intranuclear inclusion",
    "source": "วิเคราะห์ · จากบท B4",
    "needs_image": true
   },
@@ -329,7 +329,7 @@
     "E": "HSV"
    },
    "answer": "E",
-   "why": "Tzanck smear จากก้นตุ่มน้ำพบ multinucleated giant cell (นิวเคลียสซ้อน ขอบ chromatin ชัด) เป็นลักษณะเด่นของ HSV และ VZV HPV ให้ koilocyte ไม่ใช่ giant cell CMV ให้ owl's eye intranuclear inclusion ในเซลล์ขนาดใหญ่ EBV ให้ atypical lymphocyte ส่วน HBV ให้ ground-glass hepatocyte",
+   "why": "Multinucleated giant cell จาก Tzanck smear = HSV/VZV\n✗ A: EBV ให้ atypical lymphocyte\n✗ B: HPV ให้ koilocyte\n✗ C: HBV ให้ ground-glass hepatocyte\n✗ D: CMV ให้ owl's eye intranuclear inclusion ในเซลล์ขนาดใหญ่\n✓ E: HSV ให้ multinucleated giant cell (นิวเคลียสซ้อน molding, margination)",
    "source": "เฉลย78 · จากบท B4"
   },
   "Mock/1": {
@@ -344,7 +344,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Urorectal septum แบ่ง cloaca เป็น rectum (หลัง) กับ urogenital sinus (หน้า) ถ้าผิดปกติจะเกิด fistula ระหว่าง rectum กับช่องคลอด/bladder · ข้อ B คือชื่อภาวะ ไม่ใช่สาเหตุ · ▶ ฟังอาจารย์เฉลย [t=19:21]"
+   "why": "Urorectal septum แบ่ง cloaca เป็น rectum (หลัง) กับ urogenital sinus (หน้า)\n✓ A: Urorectal septum ผิดปกติเป็นสาเหตุแต่กำเนิดของ fistula ระหว่าง rectum กับช่องคลอด\n✗ B: Rectovaginal fistula เป็นชื่อภาวะ ไม่ใช่สาเหตุ\n✗ C: Vesicovaginal fistula เชื่อม bladder กับช่องคลอด ไม่ใช่ rectum\n✗ D: Endometriosis ไม่ใช่ความผิดปกติแต่กำเนิด\n✗ E: Rectal prolapse ไม่ได้ทำให้มีรูเชื่อมกับช่องคลอด\n▶ ฟังอาจารย์เฉลย [t=19:21]"
   },
   "Mock/2": {
    "box": 3,
@@ -358,7 +358,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Hypospadias = urethral fold เชื่อมกันไม่สมบูรณ์ทางด้าน ventral · genital tubercle อยู่ผิดที่ทำให้เกิด epispadias · gubernaculum เกี่ยวกับการลงถุงของอัณฑะ · ▶ ฟังอาจารย์เฉลย [t=20:25]",
+   "why": "Hypospadias = urethral fold เชื่อมกันไม่สมบูรณ์ทางด้าน ventral\n✓ A: Urethral fold เชื่อมไม่สมบูรณ์ → meatus เปิดด้าน ventral\n✗ B: Gubernaculum เกี่ยวกับการลงถุงของอัณฑะ\n✗ C: Genital tubercle อยู่ผิดที่ → epispadias\n✗ D: Urogenital fold บางตำราใช้เรียกโครงสร้างเดียวกัน แต่เฉลยใช้คำว่า urethral fold ซึ่งจำเพาะกว่า\n✗ E: Wolffian duct ให้ท่อภายใน (epididymis, vas deferens)\n▶ ฟังอาจารย์เฉลย [t=20:25]",
    "doubt": "อาจารย์ให้ทั้ง A และ D ถูก (urethral fold = urogenital fold)"
   },
   "Mock/3": {
@@ -373,7 +373,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "อาจารย์เฉลย A: อัณฑะค้างในช่องขาหนีบ อุณหภูมิสูง → ==สร้างอสุจิลดลง== จึงมีบุตรยาก · ▶ ฟังอาจารย์เฉลย [t=21:00]",
+   "why": "อาจารย์เฉลย A: อัณฑะค้างในช่องขาหนีบ อุณหภูมิสูงกว่าในถุง → ==สร้างอสุจิลดลง== จึงมีบุตรยาก\n✓ A: Sperm production ลดลงคือกลไกที่ทำให้มีบุตรยากโดยตรง\n✗ B: Vas deferens อุดตันไม่เกี่ยวกับอัณฑะค้างในขาหนีบ\n✗ C: Cryptorchidism คือชื่อภาวะที่คลำพบ ไม่ใช่กลไกที่อธิบายว่าทำไมมีบุตรยาก\n✗ D: Varicocele คลำได้เป็น bag of worms ในถุงอัณฑะ ไม่ใช่อัณฑะอยู่ในขาหนีบ\n✗ E: Retrograde ejaculation เกิดจาก bladder neck ปิดไม่สนิท (เบาหวาน ผ่าตัดต่อมลูกหมาก)\n▶ ฟังอาจารย์เฉลย [t=21:00]",
    "doubt": "อาจารย์บอกเองว่าโจทย์กำกวม ควรถามเป็น ectopic testis และถ้าตอบ C cryptorchidism ก็พอเถียงได้"
   },
   "Mock/4": {
@@ -388,7 +388,7 @@
    },
    "answer": "E",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Cryptorchidism เพิ่มความเสี่ยง testicular germ cell tumor และมีบุตรยาก แม้ผ่าตัดเอาลงแล้วความเสี่ยงยังสูงกว่าคนทั่วไป · ▶ ฟังอาจารย์เฉลย [t=21:30]"
+   "why": "Cryptorchidism เพิ่มความเสี่ยง testicular germ cell tumor และมีบุตรยาก\nแม้ผ่าตัดเอาลงแล้ว ความเสี่ยงยังสูงกว่าคนทั่วไป\n✗ A: Epididymitis สัมพันธ์กับ STI/UTI ไม่ใช่ cryptorchidism\n✗ B: Torsion เสี่ยงขึ้นได้ แต่ไม่ใช่ภาวะแทรกซ้อนระยะยาวหลักที่ถาม\n✗ C: Hydrocele สัมพันธ์กับ processus vaginalis ไม่ปิด\n✗ D: Varicocele เกิดจาก pampiniform plexus โป่ง\n✓ E: Testicular cancer (seminoma) เป็นความเสี่ยงระยะยาวที่สำคัญที่สุด\n▶ ฟังอาจารย์เฉลย [t=21:30]"
   },
   "Mock/5": {
    "box": 2,
@@ -402,7 +402,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Didelphys = Müllerian (paramesonephric) duct ไม่เชื่อมกันเลย ได้มดลูกและ cervix 2 อัน · septum ไม่ถูกดูดกลับ = septate uterus · ข้อ C ถูกแต่กว้างเกิน ข้อ B เจาะจงกว่า · ▶ ฟังอาจารย์เฉลย [t=23:02]"
+   "why": "Didelphys = Müllerian (paramesonephric) duct ไม่เชื่อมกันเลย ได้มดลูกและ cervix 2 อัน\n✗ A: Urogenital sinus ให้ช่องคลอดส่วนล่าง ไม่ใช่สาเหตุมดลูก 2 อัน\n✓ B: Paramesonephric ducts ไม่เชื่อมกันเลย = uterus didelphys (เจาะจงที่สุด)\n✗ C: ถูกแต่กว้างเกินไป ข้อ B เจาะจงกว่า\n✗ D: Septum ไม่ถูกดูดกลับ = septate uterus\n✗ E: ฮอร์โมนในครรภ์ไม่ใช่สาเหตุของ didelphys\n▶ ฟังอาจารย์เฉลย [t=23:02]"
   },
   "Mock/6": {
    "box": 3,
@@ -416,7 +416,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "ก้อนที่ขาหนีบซ้ายน่าจะเป็นอัณฑะที่ลงไม่ถึงถุง ซึ่งเกิดจาก gubernaculum ทำงานผิดปกติ (สไลด์อาจารย์ใส่ขั้นตอนการลงของอัณฑะไว้ใต้ข้อนี้) · ▶ ฟังอาจารย์เฉลย [t=23:33]",
+   "why": "ก้อนที่ขาหนีบซ้ายน่าจะเป็นอัณฑะที่ลงไม่ถึงถุง (undescended testis)\n✓ A: Gubernaculum ทำหน้าที่นำอัณฑะลงถุง ทำงานผิดปกติ → อัณฑะค้างในขาหนีบ\n✗ B: Fundiform ligament ยึด penis ไม่เกี่ยวกับการลงของอัณฑะ\n✗ C: Inguinal ligament เป็นขอบล่างของ inguinal canal ไม่ได้ดึงอัณฑะ\n✗ D: Deep inguinal ring เป็นแค่ทางผ่าน\n✗ E: Spermatic cord เป็นสิ่งที่ตามอัณฑะลงมา ไม่ได้ดึงอัณฑะ\n▶ ฟังอาจารย์เฉลย [t=23:33]",
    "doubt": "⚠ โจทย์กำกวม ถ้ามองว่าเป็น hernia/hydrocele จาก processus vaginalis เปิด อาจเลือก deep inguinal ring ให้ฟังเฉลยในคลิป"
   },
   "Mock/7": {
@@ -431,7 +431,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "AIS: androgen receptor เสีย (XLR) ภายนอกเป็นหญิง อัณฑะค้างในขาหนีบหรือช่องท้องเป็นก้อน · 5α-reductase deficiency ภายนอกกำกวมและเป็นชายมากขึ้นตอน puberty · ▶ ฟังอาจารย์เฉลย [t=24:03]",
+   "why": "46,XY + ภายนอกเป็นหญิง + ก้อนที่ขาหนีบ (อัณฑะ) = androgen insensitivity\n✓ A: AIS: androgen receptor เสีย (X-linked recessive) ภายนอกเป็นหญิง อัณฑะค้างในขาหนีบ/ช่องท้อง\n✗ B: Aromatase deficiency ทำให้ 46,XX virilization\n✗ C: 5α-reductase deficiency ภายนอกกำกวม และเป็นชายมากขึ้นตอน puberty\n✗ D: LH receptor mutation (Leydig cell hypoplasia) พบน้อยมาก\n✗ E: FSH receptor mutation ไม่ทำให้ภายนอกเป็นหญิง\n▶ ฟังอาจารย์เฉลย [t=24:03]",
    "doubt": "เสียงในคลิปช่วงนี้ไม่ชัดว่าอาจารย์เลือกข้อไหน อาจารย์ให้คิดถึง complete AIS หรือ 5α-reductase deficiency ฟังเองที่ 24:03"
   },
   "Mock/8": {
@@ -446,7 +446,7 @@
    },
    "answer": "E",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "ตัดแบบ mediolateral เพื่อเบนแนวฉีกออกจาก perineal body และ external anal sphincter (ถ้าฉีกถึงเป็น 3rd/4th degree tear) · bulbocavernosus = bulbospongiosus ถูกตัดได้ในแผล episiotomy ปกติ · ▶ ฟังเนื้อหาส่วนนี้ [t=29:35]"
+   "why": "ตัดแบบ mediolateral เพื่อเบนแนวฉีกออกจาก perineal body และ external anal sphincter\n✗ A: Ischiocavernosus อยู่ด้านข้าง ไม่ใช่โครงสร้างที่ต้องเลี่ยงหลัก\n✗ B: Superficial transverse perineal ถูกตัดได้ในแผล episiotomy ปกติ\n✗ C: Deep transverse perineal อยู่ลึก ไม่ใช่เป้าหมายที่ต้องเลี่ยงหลัก\n✗ D: Bulbocavernosus (bulbospongiosus) ถูกตัดได้ในแผล episiotomy ปกติ\n✓ E: External anal sphincter ถ้าฉีกถึงจะเป็น 3rd/4th degree tear (กลั้นอุจจาระไม่ได้)\n▶ ฟังเนื้อหาส่วนนี้ [t=29:35]"
   },
   "Mock/9": {
    "box": 7,
@@ -460,7 +460,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Bartholin gland อยู่ที่ 4 และ 8 นาฬิกาของปากช่องคลอด ท่ออุดตันเป็น cyst ติดเชื้อเป็น abscess · Skene's อยู่ข้างรูเปิดท่อปัสสาวะ · ▶ ฟังเนื้อหาส่วนนี้ [t=29:04]"
+   "why": "ก้อนบวมเจ็บที่ปากช่องคลอด (4 และ 8 นาฬิกา) = Bartholin gland\n✗ A: Skene's gland อยู่ข้างรูเปิดท่อปัสสาวะ\n✓ B: Bartholin gland ท่ออุดตันเป็น cyst ติดเชื้อเป็น abscess ปวดเวลานั่ง/เดิน\n✗ C: Cowper's gland เป็นต่อมในเพศชาย (เทียบเท่า Bartholin)\n✗ D: Sebaceous gland cyst ไม่อยู่ตำแหน่งจำเพาะแบบนี้\n✗ E: Prostate เป็นต่อมในเพศชาย\n▶ ฟังเนื้อหาส่วนนี้ [t=29:04]"
   },
   "Mock/10": {
    "box": 4,
@@ -474,7 +474,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "ในตัวเลือก มีแค่ AIS ที่เป็น 46,XY และภายนอกเป็นหญิง · Turner = 45,X · Klinefelter = 47,XXY · Müllerian agenesis = 46,XX · ▶ ฟังอาจารย์เฉลย [t=24:33]",
+   "why": "46,XY + ภายนอกเป็นหญิง = ในตัวเลือกมีแค่ AIS\n✗ A: Turner = 45,X\n✓ B: AIS เป็น 46,XY ภายนอกเป็นหญิง ไม่มีมดลูก ไม่มีประจำเดือน\n✗ C: Klinefelter = 47,XXY ภายนอกเป็นชาย\n✗ D: CAH ใน 46,XY ไม่ทำให้ภายนอกเป็นหญิงสมบูรณ์ (ยกเว้นบางชนิดที่พบน้อย)\n✗ E: Müllerian agenesis = 46,XX\n▶ ฟังอาจารย์เฉลย [t=24:33]",
    "doubt": "⚠ AIS แบบ complete มักมีเต้านม (T → E2) ภาพ 'ไม่มี secondary sex เลย' เข้ากับ Swyer syndrome มากกว่า แต่ไม่มีในตัวเลือก"
   },
   "Mock/11": {
@@ -489,7 +489,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Vulva และช่องคลอดส่วนล่าง 1/3 ระบายไป superficial inguinal ก่อน แล้วจึงไป deep inguinal · ▶ ฟังเนื้อหาส่วนนี้ [t=32:18]"
+   "why": "Vulva และช่องคลอดส่วนล่าง 1/3 ระบายไป superficial inguinal node ก่อน\n✓ A: Superficial inguinal node เป็นด่านแรก\n✗ B: Deep inguinal node เป็นด่านถัดไป\n✗ C: Internal iliac รับจาก cervix/ช่องคลอดส่วนบน\n✗ D: External iliac รับจาก cervix/มดลูกส่วนล่าง\n✗ E: Periumbilical ไม่ใช่ทางระบายของ vulva\n▶ ฟังเนื้อหาส่วนนี้ [t=32:18]"
   },
   "Mock/12": {
    "box": 6,
@@ -503,7 +503,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Pampiniform plexus → left testicular vein → left renal vein (เข้าเป็นมุมฉาก ความดันสูง จึงเป็น varicocele ซ้ายบ่อย) · ข้างขวาเข้า IVC · ▶ ฟังเนื้อหาส่วนนี้ [t=31:46]",
+   "why": "Pampiniform plexus → left testicular vein → left renal vein (เข้าเป็นมุมฉาก ความดันสูง)\n✓ A: Left renal vein จึงเป็น varicocele ซ้ายบ่อย\n✗ B: Common iliac vein ไม่ใช่ทางระบายของ testicular vein\n✗ C: External iliac vein ไม่ใช่ทางระบายของ testicular vein\n✗ D: Internal iliac vein ไม่ใช่ทางระบายของ testicular vein\n✗ E: IVC รับจาก right testicular vein ไม่ใช่ซ้าย\n▶ ฟังเนื้อหาส่วนนี้ [t=31:46]",
    "doubt": "⚠ ถ้าตีความ 'directly' ตรงตัว plexus ระบายสู่ testicular vein ก่อน แต่ไม่มีในตัวเลือก"
   },
   "Mock/13": {
@@ -518,7 +518,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "MRKH: Müllerian duct ไม่เกิด รังไข่ปกติจึงมีเต้านมและขนปกติ · AIS ก็ไม่มีมดลูกแต่ขนรักแร้/หัวหน่าวน้อยและเป็น 46,XY · โจทย์ไม่ได้บอก karyotype ให้ยึดลักษณะที่พบบ่อยกว่า · ▶ ฟังเนื้อหาส่วนนี้ [t=11:19]"
+   "why": "เต้านมปกติ + ไม่มีมดลูกและช่องคลอดส่วนบน = MRKH (Müllerian agenesis)\n✗ A: Turner รังไข่ฝ่อ เต้านมไม่เจริญ\n✗ B: Kallmann ขาด GnRH เต้านมไม่เจริญ ดมกลิ่นไม่ได้\n✓ C: MRKH: Müllerian duct ไม่เกิด แต่รังไข่ปกติ จึงมีเต้านมและขนปกติ\n✗ D: AIS ก็ไม่มีมดลูก แต่ขนรักแร้/หัวหน่าวน้อยและเป็น 46,XY\n  โจทย์ไม่ได้บอก karyotype ให้ยึดลักษณะที่พบบ่อยกว่า\n✗ E: Imperforate hymen มีมดลูกปกติ เลือดประจำเดือนคั่ง\n▶ ฟังเนื้อหาส่วนนี้ [t=11:19]"
   },
   "Mock/14": {
    "box": 4,
@@ -532,7 +532,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "CAH จาก 21-hydroxylase deficiency เป็นสาเหตุ ~95% ของ 46,XX DSD · 11β พบน้อยกว่า · 17α ทำให้ androgen ต่ำ · AIS เป็น 46,XY · ▶ ฟังเนื้อหาส่วนนี้ [t=11:51]"
+   "why": "46,XX DSD ~95% เกิดจาก CAH ชนิด 21-hydroxylase deficiency\n✗ A: Aromatase deficiency ทำได้แต่พบน้อยมาก\n✗ B: 17α-hydroxylase deficiency ทำให้ androgen ต่ำ ไม่ virilize\n✓ C: 21-hydroxylase deficiency → adrenal androgen สูง → 46,XX virilization\n✗ D: 11β-hydroxylase deficiency ก็ virilize ได้ แต่พบน้อยกว่า (มีความดันสูง)\n✗ E: AIS เป็น 46,XY\n▶ ฟังเนื้อหาส่วนนี้ [t=11:51]"
   },
   "Mock/15": {
    "box": 1,
@@ -546,7 +546,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Mesonephric (Wolffian) duct → epididymis, vas deferens, seminal vesicle, ejaculatory duct · Müllerian = paramesonephric (ข้อ A กับ C คือโครงสร้างเดียวกัน) · ▶ ฟังเนื้อหาส่วนนี้ [t=5:07]"
+   "why": "Mesonephric (Wolffian) duct → epididymis, vas deferens, seminal vesicle, ejaculatory duct\n✗ A: Müllerian duct = paramesonephric ให้มดลูก ท่อนำไข่\n✓ B: Mesonephric duct ให้ epididymis\n✗ C: Paramesonephric duct (= Müllerian) ให้มดลูก ท่อนำไข่ ช่องคลอดส่วนบน\n✗ D: Urogenital sinus ให้ bladder, urethra, prostate\n✗ E: Genital tubercle ให้ glans penis/clitoris\n▶ ฟังเนื้อหาส่วนนี้ [t=5:07]"
   },
   "Mock/16": {
    "box": 3,
@@ -560,7 +560,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Gubernaculum ยึดอัณฑะกับ labioscrotal swelling และนำอัณฑะลงมา · processus vaginalis เป็นถุงเยื่อบุช่องท้องที่ยื่นนำหน้า · ▶ ฟังเนื้อหาส่วนนี้ [t=23:33]"
+   "why": "Gubernaculum ยึดอัณฑะกับ labioscrotal swelling และนำอัณฑะลงถุง\n✗ A: Processus vaginalis เป็นถุงเยื่อบุช่องท้องที่ยื่นนำหน้า ไม่ได้ดึง\n✓ B: Gubernaculum ดึงนำอัณฑะลงถุง\n✗ C: Tunica albuginea เป็นเยื่อหุ้มอัณฑะ\n✗ D: Mesonephros เป็นไตชั่วคราว\n✗ E: Dartos fascia เป็นชั้นกล้ามเนื้อในถุงอัณฑะ\n▶ ฟังเนื้อหาส่วนนี้ [t=23:33]"
   },
   "Mock/17": {
    "box": 9,
@@ -573,7 +573,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Vasectomy = ผูกตัด ductus (vas) deferens ส่วนใน scrotum · ตัดทั้ง spermatic cord จะเสียหลอดเลือดอัณฑะ · ▶ ฟังเนื้อหาส่วนนี้ [t=37:20]"
+   "why": "Vasectomy = ผูกตัด ductus (vas) deferens ส่วนใน scrotum\n✗ A: Rete testis อยู่ในอัณฑะ ตัดไม่ได้\n✗ B: ตัดทั้ง spermatic cord จะเสียหลอดเลือดที่ไปเลี้ยงอัณฑะ\n✓ C: Ductus deferens ผูกตัดแล้วอสุจิออกมาไม่ได้\n✗ D: Efferent ductules อยู่ระหว่างอัณฑะกับ epididymis เข้าถึงไม่ได้\n▶ ฟังเนื้อหาส่วนนี้ [t=37:20]"
   },
   "Mock/18": {
    "box": 6,
@@ -587,7 +587,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Bag of worms ซ้าย = pampiniform plexus โป่ง · hydrocele ส่องไฟผ่าน ก้อนเรียบ · torsion ปวดเฉียบพลัน · ▶ ฟังเนื้อหาส่วนนี้ [t=26:12]"
+   "why": "Bag of worms ด้านซ้าย = pampiniform plexus โป่ง\n✓ A: Varicocele คลำได้เป็น bag of worms ไม่ปวด ไม่แดง\n✗ B: Hydrocele ก้อนเรียบ ส่องไฟผ่าน\n✗ C: Torsion ปวดเฉียบพลัน\n✗ D: Epididymitis ปวด แดง มีไข้\n✗ E: Orchitis ปวด บวม (เช่น mumps)\n▶ ฟังเนื้อหาส่วนนี้ [t=26:12]"
   },
   "Mock/19": {
    "box": 9,
@@ -601,7 +601,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Transverse cervical (cardinal) ligament เป็นตัวหลักของ level I support · uterosacral ช่วยด้วยแต่รอง · round/broad เป็น secondary support · ▶ ฟังอาจารย์เฉลย [t=36:46] (อาจารย์ถามอาจารย์ภาควิชามาแล้ว ยืนยัน transverse cervical ligament)"
+   "why": "Transverse cervical (cardinal) ligament เป็นตัวหลักของ level I support\n✓ A: Cardinal ligament พยุง cervix และช่องคลอดส่วนบน ป้องกันมดลูกหย่อน\n✗ B: Round ligament เป็น secondary support\n✗ C: Broad ligament เป็น secondary support\n✗ D: Uterosacral ช่วยพยุงด้วย แต่เป็นตัวรอง\n✗ E: Pubocervical fascia พยุงผนังหน้าช่องคลอด/bladder\n▶ ฟังอาจารย์เฉลย [t=36:46] (อาจารย์ถามอาจารย์ภาควิชามาแล้ว ยืนยัน transverse cervical ligament)"
   },
   "Mock/20": {
    "box": 9,
@@ -615,7 +615,7 @@
    },
    "answer": "C",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Cardinal ligament พยุง cervix และช่องคลอดส่วนบน (level I) ถ้าหย่อนจะเกิด uterine prolapse · ▶ ฟังอาจารย์เฉลย [t=38:55]"
+   "why": "Cardinal ligament พยุง cervix และช่องคลอดส่วนบน (level I) หย่อนแล้วเกิด uterine prolapse\n✗ A: Round ligament ดึงมดลูกให้ anteverted ไม่ใช่ตัวพยุงหลัก\n✗ B: Suspensory ligament (infundibulopelvic) มีหลอดเลือดรังไข่ ไม่พยุงมดลูก\n✓ C: Cardinal ligament เป็นตัวพยุงหลัก\n✗ D: Broad ligament เป็น secondary support\n✗ E: Mesovarium ยึดรังไข่\n▶ ฟังอาจารย์เฉลย [t=38:55]"
   },
   "Mock/21": {
    "box": 9,
@@ -629,7 +629,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Posterior fornix อยู่ติด rectouterine pouch ซึ่งเป็นจุดต่ำสุดของช่องท้องเมื่อยืน เลือดจึงไปรวม (culdocentesis) · ▶ ฟังอาจารย์เฉลย [t=39:29]"
+   "why": "Posterior fornix อยู่ติด rectouterine pouch จุดต่ำสุดของช่องท้องเมื่อยืน\n✓ A: เลือดไปรวมที่ Douglas pouch เจาะผ่าน posterior fornix ได้ (culdocentesis)\n✗ B: Round ligament ไม่ได้อยู่ติด posterior fornix\n✗ C: Uterosacral ligament อยู่ข้าง pouch แต่ไม่ใช่ช่องที่เลือดรวม\n✗ D: Broad ligament อยู่ด้านข้างมดลูก\n✗ E: Ovarian ligament ยึดรังไข่กับมดลูก\n▶ ฟังอาจารย์เฉลย [t=39:29]"
   },
   "Mock/22": {
    "box": 9,
@@ -643,7 +643,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Levator ani เป็นส่วนหลักของ pelvic diaphragm · obturator internus และ piriformis เป็นกล้ามเนื้อผนังข้างเชิงกราน · ▶ ฟังอาจารย์เฉลย [t=40:32]"
+   "why": "Levator ani เป็นส่วนหลักของ pelvic diaphragm\n✓ A: Levator ani พยุงอวัยวะในเชิงกรานทั้งหมด\n✗ B: Obturator internus เป็นกล้ามเนื้อผนังข้างเชิงกราน\n✗ C: Piriformis เป็นกล้ามเนื้อผนังหลังเชิงกราน\n✗ D: Coccygeus เป็นส่วนเล็กของ pelvic diaphragm\n✗ E: Transversus perineus เป็นกล้ามเนื้อ perineum ไม่ใช่ตัวพยุงหลัก\n▶ ฟังอาจารย์เฉลย [t=40:32]"
   },
   "Mock/24": {
    "box": 5,
@@ -657,7 +657,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "External urethral sphincter เป็นกล้ามเนื้อลายใน deep perineal pouch เลี้ยงโดย pudendal nerve (S2–4) · ▶ ฟังอาจารย์เฉลย [t=41:02]"
+   "why": "External urethral sphincter = กล้ามเนื้อลายใน deep perineal pouch เลี้ยงโดย pudendal n. (S2–4)\n✗ A: Detrusor เป็นกล้ามเนื้อเรียบของ bladder ไม่ใช่ sphincter ที่บีบได้\n✓ B: Pudendal nerve ถูกตัด → บีบ external sphincter ไม่ได้ กลั้นปัสสาวะไม่อยู่\n✗ C: Prostate อักเสบไม่ทำให้บีบ sphincter ไม่ได้\n✗ D: Detrusor overactivity เป็น urge incontinence\n✗ E: ความจุ bladder ลด ไม่ได้ทำให้บีบ sphincter ไม่ได้\n▶ ฟังอาจารย์เฉลย [t=41:02]"
   },
   "Mock/25": {
    "box": 10,
@@ -671,7 +671,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Pudendal nerve (S2–4) รับความรู้สึก perineum ส่วนใหญ่ บล็อกที่ ischial spine · ▶ ฟังอาจารย์เฉลย [t=42:03]"
+   "why": "Pudendal nerve (S2–4) รับความรู้สึก perineum ส่วนใหญ่ บล็อกที่ ischial spine\n✓ A: Pudendal nerve block ใช้ตอนทำ episiotomy\n✗ B: Femoral nerve เลี้ยงต้นขาด้านหน้า\n✗ C: Sciatic nerve เลี้ยงขาด้านหลัง\n✗ D: Obturator nerve เลี้ยงต้นขาด้านใน\n✗ E: Ilioinguinal nerve เลี้ยงหัวหน่าวด้านหน้า/labia majora ส่วนหน้า\n▶ ฟังอาจารย์เฉลย [t=42:03]"
   },
   "Mock/26": {
    "box": 6,
@@ -685,7 +685,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "ก้อนส่องไฟผ่านในถุงอัณฑะ = hydrocele (น้ำใน tunica vaginalis ซึ่งอยู่ด้านหน้าอัณฑะ) ตามตารางของอาจารย์ · ▶ ฟังอาจารย์เฉลย [t=43:36] (อาจารย์ยืนยัน hydrocele เพราะส่องไฟผ่าน)"
+   "why": "ก้อนในถุงอัณฑะที่ส่องไฟผ่าน = มีน้ำใน tunica vaginalis\n✓ A: Hydrocele น้ำใน tunica vaginalis (อยู่หน้าอัณฑะ) ส่องไฟผ่าน\n✗ B: Hematocele เป็นเลือด ส่องไฟไม่ผ่าน\n✗ C: Inguinal hernia ส่องไฟไม่ผ่าน คลำขอบบนไม่ได้\n✗ D: Spermatocele อยู่ที่หัว epididymis (เหนือ/หลังอัณฑะ)\n✗ E: Varicocele คลำเป็น bag of worms ส่องไฟไม่ผ่าน\n▶ ฟังอาจารย์เฉลย [t=43:36] (อาจารย์ยืนยัน hydrocele เพราะส่องไฟผ่าน)"
   },
   "Mock/27": {
    "box": 8,
@@ -699,7 +699,7 @@
    },
    "answer": "E",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "ผิวหนังของ penile shaft และ scrotum ระบายไป superficial inguinal ก่อน · ▶ ฟังอาจารย์เฉลย [t=44:41]"
+   "why": "ผิวหนังของ penile shaft และ scrotum ระบายไป superficial inguinal node ก่อน\n✗ A: Para-aortic รับจากอัณฑะ ไม่ใช่ผิวหนัง penis\n✗ B: Internal iliac รับจาก prostate/urethra ส่วนลึก\n✗ C: External iliac ไม่ใช่ด่านแรก\n✗ D: Deep inguinal รับจาก glans\n✓ E: Superficial inguinal node เป็นด่านแรกของผิวหนัง penile shaft\n▶ ฟังอาจารย์เฉลย [t=44:41]"
   },
   "Mock/28": {
    "box": 10,
@@ -713,7 +713,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "น้ำเหลืองเต้านม ~75% ไปทางด้านข้างบนสู่ axillary node ที่เหลือไป parasternal · ▶ ฟังอาจารย์เฉลย [t=45:15]"
+   "why": "น้ำเหลืองเต้านม ~75% ไปทางด้านข้างบนสู่ axillary node\n✓ A: Axillary node เป็นด่านแรกที่พบบ่อยที่สุด\n✗ B: Parasternal รับส่วนที่เหลือ (ด้านใน)\n✗ C: Supraclavicular เป็นด่านหลัง\n✗ D: Cervical ไม่ใช่ด่านแรก\n✗ E: Inguinal ไม่ใช่ทางระบายของเต้านม\n▶ ฟังอาจารย์เฉลย [t=45:15]"
   },
   "Mock/29": {
    "box": 10,
@@ -727,7 +727,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Pudendal nerve อ้อมหลัง ischial spine/sacrospinous ligament คลำผ่านช่องคลอดได้ · ▶ ฟังอาจารย์เฉลย [t=42:03]"
+   "why": "Pudendal nerve อ้อมหลัง ischial spine/sacrospinous ligament คลำผ่านช่องคลอดได้\n✗ A: Coccyx อยู่ไกลจากแนวเส้นประสาท\n✓ B: Ischial spine เป็น landmark ของ transvaginal pudendal block\n✗ C: Lateral fornix ใช้คลำ adnexa\n✗ D: Obturator foramen เป็นทางของ obturator nerve\n✗ E: Arcus tendineus เป็นจุดเกาะของ levator ani ไม่ใช่ landmark นี้\n▶ ฟังอาจารย์เฉลย [t=42:03]"
   },
   "Mock/30": {
    "box": 8,
@@ -740,7 +740,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "อาจารย์เฉลย ==superficial inguinal== และบอกว่าข้อนี้ถามบ่อย มะเร็ง penis (ทั้ง glans และ shaft) ไปต่อมน้ำเหลืองขาหนีบชั้นตื้นก่อน · D deep inguinal เป็นทางระบายตามตารางกายวิภาคของ glans แต่ข้อสอบตอบ superficial · ▶ ฟังอาจารย์เฉลย [t=45:15]"
+   "why": "อาจารย์เฉลย ==superficial inguinal== และบอกว่าข้อนี้ถามบ่อย\nมะเร็ง penis (ทั้ง glans และ shaft) ไปต่อมน้ำเหลืองขาหนีบชั้นตื้นก่อน\n✗ A: Para-aortic รับจากอัณฑะ ไม่ใช่ penis\n✓ B: Superficial inguinal node เป็นด่านแรกของมะเร็ง penis\n✗ C: Pelvic node เป็นด่านหลัง\n✗ D: Deep inguinal เป็นทางระบายของ glans ตามตารางกายวิภาค แต่ข้อสอบตอบ superficial\n▶ ฟังอาจารย์เฉลย [t=45:15]"
   },
   "Mock/31": {
    "box": 13,
@@ -754,7 +754,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Progesterone ทำให้ endometrium เป็น secretory/decidua และมดลูกไม่บีบ จึงคงครรภ์ · hCG มีหน้าที่เลี้ยง corpus luteum ให้สร้าง progesterone · ▶ ฟังอาจารย์เฉลย [t=1:14:05]"
+   "why": "Progesterone ทำให้ endometrium เป็น decidua และมดลูกไม่บีบ = คงครรภ์\n✗ A: hCG เลี้ยง corpus luteum ให้สร้าง progesterone (บทบาททางอ้อม)\n✓ B: Progesterone คือฮอร์โมนหลักที่คงครรภ์\n✗ C: Estrogen กระตุ้นการเจริญของมดลูก แต่ไม่ใช่ตัวคงครรภ์หลัก\n✗ D: LH ถูกกดระหว่างตั้งครรภ์\n✗ E: Prolactin เตรียมเต้านม ไม่ได้คงครรภ์\n▶ ฟังอาจารย์เฉลย [t=1:14:05]"
   },
   "Mock/32": {
    "box": 13,
@@ -768,7 +768,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "hCG สูงสุดราว 8–10 สัปดาห์ ตรงกับช่วงแพ้ท้องหนัก และพบแพ้ท้องมากใน molar/ครรภ์แฝดที่ hCG สูง · ▶ ฟังอาจารย์เฉลย [t=1:14:05]"
+   "why": "hCG สูงสุดราว 8–10 สัปดาห์ ตรงกับช่วงแพ้ท้องหนัก\n✓ A: hCG สูง สัมพันธ์กับแพ้ท้อง (ยิ่งมากใน molar/ครรภ์แฝดที่ hCG สูงกว่าปกติ)\n✗ B: Progesterone เพิ่มขึ้นระหว่างตั้งครรภ์ ไม่ได้ลดลง\n✗ C: Estrogen เพิ่มขึ้นจริง แต่ไม่ใช่สาเหตุหลักที่ตรงกับช่วงเวลา\n✗ D: Hyperthyroidism อาจเกิดตามหลัง hCG สูง แต่ไม่ใช่สาเหตุหลัก\n✗ E: Anemia ไม่ทำให้อาเจียน\n▶ ฟังอาจารย์เฉลย [t=1:14:05]"
   },
   "Mock/33": {
    "box": 13,
@@ -782,7 +782,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Syncytiotrophoblast สร้าง hCG · cytotrophoblast เป็นเซลล์ต้นกำเนิดที่สร้าง villi · ▶ ฟังอาจารย์เฉลย [t=1:14:38]"
+   "why": "hCG สร้างจาก syncytiotrophoblast\n✓ A: Syncytiotrophoblast สร้าง hCG, hPL, progesterone (หลังไตรมาสแรก)\n✗ B: Cytotrophoblast เป็นเซลล์ต้นกำเนิดที่สร้าง villi\n✗ C: Decidual cell เป็นเยื่อบุมดลูกของแม่ สร้าง prolactin ได้\n✗ D: Luteal cell สร้าง progesterone ไม่ใช่ hCG\n✗ E: Granulosa cell สร้าง estrogen, inhibin\n▶ ฟังอาจารย์เฉลย [t=1:14:38]"
   },
   "Mock/34": {
    "box": 14,
@@ -796,7 +796,7 @@
    },
    "answer": "D",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "รังไข่ล้มเหลวตามวัย → ไม่มี inhibin/E2 กด → FSH สูงชัดเจน · PCOS มี LH:FSH สูง · ▶ ฟังอาจารย์เฉลย [t=1:14:38]",
+   "why": "รังไข่ล้มเหลวตามวัย → ไม่มี inhibin/E2 กด → FSH สูงชัดเจน\n✗ A: PCOS มี LH:FSH สูง (LH เด่น) FSH ปกติ/ต่ำ\n✗ B: Turner ก็ FSH สูงได้ (รังไข่ฝ่อ) แต่โจทย์ถามภาวะที่บ่งชี้โดยทั่วไป\n✗ C: Klinefelter FSH สูงในชาย แต่ไม่ใช่คำตอบหลัก\n✓ D: Menopause = FSH สูงจากรังไข่หมดสภาพ\n✗ E: Ovarian cancer ไม่ได้ทำให้ FSH สูง\n▶ ฟังอาจารย์เฉลย [t=1:14:38]",
    "doubt": "⚠ Turner และ Klinefelter ก็มี FSH สูง (primary hypogonadism) ข้อนี้มีหลายคำตอบที่ถูก ให้ฟังเฉลยในคลิป"
   },
   "Mock/35": {
@@ -811,7 +811,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "15 มิ.ย. + 7 วัน = 22 มิ.ย. → − 3 เดือน = 22 มี.ค. (ปีถัดไป) · ▶ ฟังเนื้อหาส่วนนี้ [t=1:01:06]"
+   "why": "Naegele's rule = LMP + 7 วัน − 3 เดือน\n15 มิ.ย. + 7 วัน = 22 มิ.ย. → − 3 เดือน = 22 มี.ค. (ปีถัดไป)\n✗ A: ลืมบวก 7 วัน และคำนวณผิด\n✓ B: 22 มีนาคม\n✗ C: ไม่ตรงสูตร\n✗ D: ลบไป 2 เดือนแทน 3 เดือน\n✗ E: ไม่ตรงสูตร\n▶ ฟังเนื้อหาส่วนนี้ [t=1:01:06]"
   },
   "Mock/36": {
    "box": 11,
@@ -825,7 +825,7 @@
    },
    "answer": "C",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "ไขมันมี aromatase เปลี่ยน T → E2 มากขึ้น E2 สูงกด GnRH/LH ต่อ → T ต่ำ · คนอ้วน leptin สูงไม่ใช่ต่ำ (ตรงกับข้อ 75.1/88) · ▶ ฟังอาจารย์เฉลย [t=1:15:49]"
+   "why": "ไขมันมี aromatase เปลี่ยน T → E2 มากขึ้น E2 สูงกด GnRH/LH ต่อ → T ต่ำ\n✗ A: คนอ้วน leptin สูง ไม่ใช่ต่ำ\n✗ B: Inhibin B มักลดลง\n✓ C: Estradiol สูงในชายอ้วนที่มี hypogonadism (เหมือนข้อ 75.1/88)\n✗ D: Free testosterone ต่ำ ไม่ใช่สูง\n✗ E: PSA ไม่เกี่ยวข้อง\n▶ ฟังอาจารย์เฉลย [t=1:15:49]"
   },
   "Mock/37": {
    "box": 12,
@@ -839,7 +839,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "LH surge ทำให้ meiosis I เสร็จและ follicle แตก · estrogen สูงเป็นตัวกระตุ้นให้เกิด LH surge แต่ไม่ใช่ตัวทำให้ตกไข่โดยตรง · ▶ ฟังอาจารย์เฉลย [t=1:16:24]",
+   "why": "LH surge ทำให้ meiosis I เสร็จและ follicle แตก = ตกไข่\n✗ A: FSH กระตุ้น follicle ให้โต ไม่ใช่ตัวทำให้ตกไข่\n✓ B: LH surge ทำให้ตกไข่โดยตรง\n✗ C: Estrogen สูงกระตุ้นให้เกิด LH surge แต่ไม่ได้ทำให้ตกไข่โดยตรง\n✗ D: Progesterone สูงหลังตกไข่ (luteal phase)\n✗ E: Prolactin สูงกดการตกไข่\n▶ ฟังอาจารย์เฉลย [t=1:16:24]",
    "doubt": "อาจารย์บอกว่าข้อนี้ตอบได้ทั้งคู่ เพราะ estrogen ก็มีบทบาทกระตุ้น LH surge"
   },
   "Mock/38": {
@@ -854,7 +854,7 @@
    },
    "answer": "D",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Oxytocin บีบ myoepithelial cell ให้น้ำนมไหล (let-down) · prolactin สร้างน้ำนม · dopamine กด prolactin · ▶ ฟังอาจารย์เฉลย [t=1:17:24]"
+   "why": "Oxytocin บีบ myoepithelial cell ให้น้ำนมไหล (let-down)\n✗ A: Estrogen เจริญท่อน้ำนม\n✗ B: Progesterone เจริญ lobule/alveoli\n✗ C: Prolactin สร้างน้ำนม ไม่ใช่ขับน้ำนม\n✓ D: Oxytocin ทำให้น้ำนมไหล\n✗ E: Dopamine กด prolactin\n▶ ฟังอาจารย์เฉลย [t=1:17:24]"
   },
   "Mock/39": {
    "box": 11,
@@ -868,7 +868,7 @@
    },
    "answer": "C",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "5α-reductase เปลี่ยน T เป็น DHT ในต่อมลูกหมาก DHT ทำให้ต่อมโต จึงรักษาด้วย finasteride · ▶ ฟังอาจารย์เฉลย [t=1:21:03]"
+   "why": "5α-reductase เปลี่ยน T เป็น DHT ในต่อมลูกหมาก DHT ทำให้ต่อมโต\n✗ A: Estrogen มีส่วนเสริม แต่ไม่ใช่กลไกหลัก\n✗ B: Testosterone ต้องเปลี่ยนเป็น DHT ก่อนจึงออกฤทธิ์ที่ต่อมลูกหมากเต็มที่\n✓ C: DHT เป็นตัวหลัก จึงรักษาด้วย finasteride (5α-reductase inhibitor)\n✗ D: LH ลดไม่ทำให้ต่อมโต\n✗ E: FSH ไม่เกี่ยวกับ BPH\n▶ ฟังอาจารย์เฉลย [t=1:21:03]"
   },
   "Mock/40": {
    "box": 14,
@@ -882,7 +882,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "อายุ 45–55 ขาดประจำเดือน ≥ 12 เดือน gonadotropin สูง E2 ต่ำ = menopause · POI ต้องอายุ < 40 · ▶ ฟังอาจารย์เฉลย [t=1:19:27]"
+   "why": "อายุ 45–55 + ขาดประจำเดือน ≥ 12 เดือน + FSH/LH สูง + E2 ต่ำ = menopause\n✓ A: Menopause ตรงทั้งอายุ อาการ และฮอร์โมน\n✗ B: Premature ovarian failure ต้องอายุ < 40 ปี\n✗ C: PCOS มี LH เด่น E2 ไม่ต่ำ\n✗ D: Pituitary tumor มักทำให้ FSH/LH ต่ำ (หรือ prolactin สูง)\n✗ E: Adrenal tumor ไม่ทำให้ FSH/LH สูง\n▶ ฟังอาจารย์เฉลย [t=1:19:27]"
   },
   "Mock/41": {
    "box": 12,
@@ -896,7 +896,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Luteal phase คงที่ 14 วัน รอบ 24 วันจึงตกไข่วันที่ 10 วันที่ 13 อยู่ luteal phase ซึ่งเยื่อบุเป็น secretory · ▶ ฟังอาจารย์เฉลย [t=1:17:55] (luteal phase ยาว 14 วันคงที่ รอบ 24 วันจึงตกไข่วันที่ 10 · ข้อนี้ของอาจารย์จันกิ่ง)"
+   "why": "Luteal phase คงที่ 14 วัน รอบ 24 วันจึงตกไข่วันที่ 10\nวันที่ 13 ของรอบ = หลังตกไข่ → luteal phase + เยื่อบุเป็น secretory\n✓ A: Luteal phase (รังไข่) + secretory phase (เยื่อบุ)\n✗ B: Follicular/proliferative เป็นช่วงก่อนตกไข่ (วันที่ 1–10)\n✗ C: Ovulation เกิดวันที่ 10 ไม่ใช่วันที่ 13\n✗ D: Luteal phase คู่กับ secretory ไม่ใช่ proliferative\n✗ E: Follicular phase คู่กับ proliferative ไม่ใช่ secretory\n▶ ฟังอาจารย์เฉลย [t=1:17:55] (luteal phase ยาว 14 วันคงที่ รอบ 24 วันจึงตกไข่วันที่ 10 · ข้อนี้ของอาจารย์จันกิ่ง)"
   },
   "Mock/42": {
    "box": 14,
@@ -910,7 +910,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Gynecomastia เกิดจากสัดส่วน estrogen ต่อ androgen สูงขึ้น ในผู้สูงอายุ T ลดและ aromatase ในไขมันเพิ่ม E2 · ▶ ฟังอาจารย์เฉลย [t=1:16:54]",
+   "why": "Gynecomastia เกิดจากสัดส่วน estrogen ต่อ androgen สูงขึ้น\nผู้สูงอายุ T ลด และ aromatase ในไขมันเพิ่ม E2\n✓ A: Estrogen เพิ่มขึ้น (เทียบกับ androgen) เป็นกลไกหลัก\n✗ B: Testosterone ลดลงมีส่วน แต่ตัวที่กระตุ้นเนื้อเต้านมคือ estrogen\n✗ C: Estrogen ลดลงจะไม่ทำให้เต้านมโต\n✗ D: Androgen เพิ่มขึ้นจะยับยั้งเนื้อเต้านม\n✗ E: LH ลดลงไม่ได้ทำให้เต้านมโตโดยตรง\n▶ ฟังอาจารย์เฉลย [t=1:16:54]",
    "doubt": "อาจารย์บอกว่าส่วนใหญ่มาจาก estrogen เพิ่ม แต่ข้อนี้ก็กำกวม"
   },
   "Mock/43": {
@@ -925,7 +925,7 @@
    },
    "answer": "C",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "ขาดประจำเดือนในวัยเจริญพันธุ์ ต้องแยกการตั้งครรภ์ก่อนเสมอ และก่อนเริ่มยาคุม · ▶ ฟังอาจารย์เฉลย [t=1:20:32]"
+   "why": "ขาดประจำเดือนในวัยเจริญพันธุ์ ต้องแยกการตั้งครรภ์ก่อนเสมอ และก่อนเริ่มยาคุม\n✗ A: GnRH stimulation test ใช้หาสาเหตุเฉพาะทาง ไม่ใช่ขั้นแรก\n✗ B: FSH/LH ตรวจหลังตัดการตั้งครรภ์แล้ว\n✓ C: Urine hCG เป็นการตรวจแรกเสมอ\n✗ D: Transvaginal US ทำหลัง hCG บวกหรือหาสาเหตุอื่น\n✗ E: Pap smear เป็นการคัดกรองมะเร็งปากมดลูก ไม่ใช่ขั้นแรกของ amenorrhea\n▶ ฟังอาจารย์เฉลย [t=1:20:32]"
   },
   "Mock/44": {
    "box": 15,
@@ -939,7 +939,7 @@
    },
    "answer": "C",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Ceftriaxone เป็นยาหลักของ N. gonorrhoeae · azithromycin/doxycycline ใช้ครอบคลุม Chlamydia ร่วม · ▶ ฟังอาจารย์เฉลย [t=1:36:31]"
+   "why": "Gram-negative diplococci = N. gonorrhoeae\n✗ A: Azithromycin ให้ร่วมเพื่อครอบคลุม Chlamydia ไม่ใช่ยาหลักของ gonorrhea\n✗ B: Doxycycline ใช้รักษา Chlamydia\n✓ C: Ceftriaxone IM เป็นยาหลักของ gonorrhea\n✗ D: Metronidazole ใช้กับ Trichomonas, BV\n✗ E: Amoxicillin เชื้อดื้อแล้ว\n▶ ฟังอาจารย์เฉลย [t=1:36:31]"
   },
   "Mock/45": {
    "box": 15,
@@ -953,7 +953,7 @@
    },
    "answer": "A",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "พบเชื้อ (Gram − diplococci) ในน้ำไขข้อหลัง urethritis = disseminated gonococcal infection · reactive arthritis จะไม่พบเชื้อในข้อ · ▶ ฟังอาจารย์เฉลย [t=1:36:31]",
+   "why": "พบเชื้อ (Gram-negative diplococci) ในน้ำไขข้อหลัง urethritis = disseminated gonococcal infection\n✓ A: Gonococcal arthritis เจอเชื้อในข้อ\n✗ B: Septic arthritis กว้างเกินไป เชื้อในรูปบอกชนิดได้\n✗ C: Reactive arthritis ไม่พบเชื้อในข้อ\n✗ D: RA เป็น autoimmune ไม่มีเชื้อ\n✗ E: OA เป็นข้อเสื่อม ไม่มีเชื้อ\n▶ ฟังอาจารย์เฉลย [t=1:36:31]",
    "needs_image": true
   },
   "Mock/46": {
@@ -968,7 +968,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Condyloma acuminata จาก HPV 6, 11 · syphilis ระยะ 2 ทำ condyloma lata (แบนเรียบ) ไม่ใช่ดอกกะหล่ำ · ▶ ฟังเนื้อหาส่วนนี้ [t=1:32:12]"
+   "why": "ก้อนคล้ายดอกกะหล่ำที่อวัยวะเพศ = condyloma acuminata\n✓ A: HPV 6, 11 ทำ condyloma acuminata\n✗ B: HSV ทำตุ่มน้ำเป็นกลุ่ม แผลเจ็บ\n✗ C: Chlamydia ทำ urethritis/cervicitis (LGV ทำต่อมน้ำเหลืองโต)\n✗ D: Syphilis ระยะ 2 ทำ condyloma lata (แบนเรียบ) ไม่ใช่ดอกกะหล่ำ\n✗ E: Gonorrhea ทำหนอง ไม่ทำก้อน\n▶ ฟังเนื้อหาส่วนนี้ [t=1:32:12]"
   },
   "Mock/47": {
    "box": 15,
@@ -982,7 +982,7 @@
    },
    "answer": "B",
    "source": "อาจารย์เฉลยในคลิป",
-   "why": "Gram-negative diplococci ใน neutrophil = N. gonorrhoeae · Chlamydia ย้อม Gram ไม่เห็น · ▶ ฟังอาจารย์เฉลย [t=1:36:31]"
+   "why": "Gram-negative diplococci ใน neutrophil = N. gonorrhoeae\n✗ A: Chlamydia ย้อม Gram ไม่เห็นเชื้อ\n✓ B: N. gonorrhoeae หนองเหลืองข้น เห็น diplococci ใน PMN\n✗ C: T. pallidum ทำแผล ย้อม Gram ไม่ติด\n✗ D: Mycoplasma ไม่มี cell wall ย้อม Gram ไม่เห็น\n✗ E: Trichomonas เห็นเป็น protozoa เคลื่อนที่ใน wet mount\n▶ ฟังอาจารย์เฉลย [t=1:36:31]"
   },
   "Mock/48": {
    "box": 12,
@@ -996,7 +996,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์ · อาจารย์สอนเรื่องนี้ในคลิป",
-   "why": "Primary oocyte หยุดที่ prophase I (dictyotene) ตั้งแต่ในครรภ์จนถึง LH surge ของแต่ละรอบ · ▶ ฟังเนื้อหาส่วนนี้ [t=53:03]",
+   "why": "Primary oocyte หยุดที่ prophase I (dictyotene) ตั้งแต่ในครรภ์จนถึง LH surge\n✗ A: Metaphase II เป็นจุดหยุดของ secondary oocyte หลังตกไข่ (รอปฏิสนธิ)\n✓ B: Prophase I คือจุดที่ oocyte หยุดนานที่สุด รอสัญญาณ LH\n✗ C: Anaphase I ไม่ใช่จุดหยุด\n✗ D: Telophase II เกิดหลังปฏิสนธิ\n✗ E: Prophase II ไม่ใช่จุดหยุด\n▶ ฟังเนื้อหาส่วนนี้ [t=53:03]",
    "doubt": "⚠ Metaphase II ก็เป็นจุดหยุดครั้งที่ 2 (รอปฏิสนธิ) โจทย์พูดถึง 'รอสัญญาณฮอร์โมน' จึงเลือก prophase I"
   },
   "Clip/1": {
@@ -1010,7 +1010,7 @@
    },
    "answer": "B",
    "source": "อาจารย์ยกในคลิป (เรียบเรียงโจทย์)",
-   "why": "Rubella = หู ตา ใจ (SNHL, cataract, PDA) · CMV เด่นที่ periventricular calcification · Parvovirus B19 → hydrops · ▶ [t=1:49:32]"
+   "why": "Rubella = หู ตา ใจ (SNHL, cataract, PDA)\n✗ A: CMV เด่นที่ periventricular calcification + SNHL แต่ไม่ใช่ cataract + PDA\n✓ B: Congenital rubella มี triad หูหนวก + ต้อกระจก + PDA\n✗ C: Toxoplasma เด่นที่ diffuse intracranial calcification, hydrocephalus, chorioretinitis\n✗ D: Parvovirus B19 ทำ hydrops fetalis (ซีดรุนแรง)\n▶ [t=1:49:32]"
   },
   "Clip/2": {
    "box": 19,
@@ -1023,7 +1023,7 @@
    },
    "answer": "A",
    "source": "อาจารย์ยกในคลิป (เรียบเรียงโจทย์)",
-   "why": "แผลผ่าตัดคลอดเดิมทำให้ decidua บกพร่อง รกฝังลึก ยิ่งร่วมกับ placenta previa ยิ่งเสี่ยง · ▶ [t=2:23:23]"
+   "why": "แผลผ่าตัดคลอดเดิมทำให้ decidua บกพร่อง รกฝังลึก\n✓ A: Previous cesarean เป็นปัจจัยเสี่ยงสำคัญที่สุด ยิ่งร่วมกับ placenta previa ยิ่งเสี่ยง\n✗ B: Multiparity เป็นปัจจัยเสี่ยงรอง\n✗ C: Advanced maternal age เป็นปัจจัยเสี่ยงรอง\n✗ D: Smoking สัมพันธ์กับ abruption/previa มากกว่า accreta\n▶ [t=2:23:23]"
   },
   "Clip/3": {
    "box": 21,
@@ -1036,7 +1036,7 @@
    },
    "answer": "B",
    "source": "อาจารย์ยกในคลิป (เรียบเรียงโจทย์)",
-   "why": "Fried egg = seminoma พบบ่อยสุดช่วง 30–40 ปี · yolk sac มี Schiller-Duval body และ AFP · ▶ [t=2:24:32]"
+   "why": "Fried egg (cytoplasm ใส nucleus กลาง) = seminoma พบบ่อยสุดช่วง 30–40 ปี\n✗ A: Yolk sac tumor มี Schiller-Duval body และ AFP สูง พบในเด็ก\n✓ B: Seminoma เซลล์เหมือนกันเป็นแผ่น fried egg ไวต่อรังสี\n✗ C: Embryonal carcinoma เซลล์ pleomorphic มี necrosis\n✗ D: Leydig cell tumor มี Reinke crystals\n▶ [t=2:24:32]"
   },
   "Clip/4": {
    "box": 21,
@@ -1049,7 +1049,7 @@
    },
    "answer": "C",
    "source": "อาจารย์ยกในคลิป (เรียบเรียงโจทย์)",
-   "why": "Reinke crystals = Leydig cell tumor สร้าง androgen/estrogen → gynecomastia หรือ precocious puberty ในเด็ก · ▶ [t=2:24:32]"
+   "why": "Reinke crystals = Leydig cell tumor\n✗ A: Seminoma มีเซลล์ fried egg\n✗ B: Sertoli cell tumor ไม่มี Reinke crystals\n✓ C: Leydig cell tumor สร้าง androgen/estrogen → gynecomastia หรือ precocious puberty ในเด็ก\n✗ D: Teratoma มีเนื้อเยื่อหลายชนิด (ผม ฟัน)\n▶ [t=2:24:32]"
   },
   "Clip/5": {
    "box": 20,
@@ -1062,7 +1062,7 @@
    },
    "answer": "A",
    "source": "อาจารย์ยกในคลิป (เรียบเรียงโจทย์)",
-   "why": "4T: tone, trauma, tissue, thrombin · tone (uterine atony) บ่อยสุด · ▶ [t=2:23:58]"
+   "why": "4T ของ PPH: tone, trauma, tissue, thrombin\n✓ A: Uterine atony (tone) พบบ่อยที่สุด\n✗ B: Retained placenta (tissue) พบรองลงมา\n✗ C: Laceration (trauma) พบรองลงมา\n✗ D: Coagulopathy (thrombin) พบน้อยที่สุด\n▶ [t=2:23:58]"
   },
   "Clip/6": {
    "box": 18,
@@ -1075,7 +1075,7 @@
    },
    "answer": "B",
    "source": "อาจารย์ยกในคลิป (เรียบเรียงโจทย์)",
-   "why": "Complete mole: ไข่ว่าง + sperm ไม่มีส่วนทารก hCG สูงหลักแสน snowstorm เสี่ยง choriocarcinoma มากกว่า partial · ▶ [t=1:56:08]"
+   "why": "มดลูกโตกว่าอายุครรภ์ + hCG หลักแสน + snowstorm + ไม่เห็นทารก = complete mole\n✗ A: Partial mole มีส่วนทารก hCG ไม่สูงมาก\n✓ B: Complete mole = ไข่ว่าง + sperm ไม่มีส่วนทารก เสี่ยง choriocarcinoma มากกว่า partial\n✗ C: Missed abortion hCG ต่ำ เห็นถุงทารกที่ไม่มีหัวใจเต้น\n✗ D: Ectopic pregnancy hCG ไม่สูงขนาดนี้ มดลูกไม่โต\n▶ [t=1:56:08]"
   },
   "Clip/7": {
    "box": 22,
@@ -1088,7 +1088,7 @@
    },
    "answer": "B",
    "source": "อาจารย์ยกในคลิป (เรียบเรียงโจทย์)",
-   "why": "Unopposed estrogen กระตุ้นเยื่อบุให้หนา → ให้ progesterone · ▶ [t=2:33:04]"
+   "why": "Unopposed estrogen กระตุ้นเยื่อบุให้หนา → ต้องมี progesterone มาต้าน\n✗ A: ให้ estrogen เพิ่มจะยิ่งหนา\n✓ B: Progesterone ทำให้เยื่อบุเปลี่ยนเป็น secretory และบางลง\n✗ C: Testosterone ไม่ใช่การรักษามาตรฐาน\n✗ D: GnRH agonist ใช้กับ endometriosis/myoma ไม่ใช่ทางเลือกแรก\n▶ [t=2:33:04]"
   }
  }
 }
