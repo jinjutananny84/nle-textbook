@@ -850,7 +850,7 @@
     "E": "Piperacillin/tazobactam"
    },
    "answer": "A",
-   "why": "MSSA สร้าง penicillinase จึงใช้ penicillinase-resistant penicillin เช่น cloxacillin (หรือ cefazolin) เป็นยาหลัก Ampicillin และ piperacillin ถูก β-lactamase ทำลาย Piperacillin/tazobactam ครอบคลุมได้แต่กว้างเกินจำเป็น cefoxitin ใช้ทดสอบ methicillin resistance และเน้น anaerobe มากกว่า",
+   "why": "MSSA สร้าง penicillinase → ใช้ penicillinase-resistant penicillin\n✓ A: Cloxacillin (หรือ cefazolin)\n✗ B: Ampicillin ถูก β-lactamase ทำลาย\n✗ C: Piperacillin ถูก β-lactamase ทำลาย\n✗ D: Cefoxitin ใช้ทดสอบ methicillin resistance เน้น anaerobe มากกว่า\n✗ E: Pip/tazo ครอบคลุมได้แต่กว้างเกินจำเป็น",
    "source": "วิเคราะห์"
   },
   "76/38": {
@@ -864,7 +864,7 @@
     "E": "LPS"
    },
    "answer": "B",
-   "why": "S. pyogenes สร้าง streptococcal pyrogenic exotoxin (SpeA/C) ซึ่งเป็น superantigen ทำให้เกิด scarlet fever และ streptococcal TSS Protein A เป็นของ S. aureus P1 adhesin เป็นของ Mycoplasma pneumoniae LPS อยู่ในแบคทีเรีย gram-negative เท่านั้น ส่วน hyaluronic acid capsule ของ S. pyogenes มีจริงแต่ไม่ immunogenic และไม่ใช่คำตอบเด่นที่ข้อสอบต้องการ",
+   "why": "✗ A: Protein A เป็นของ S. aureus\n✓ B: Pyrogenic exotoxin (SpeA/C) = superantigen → scarlet fever, strep TSS\n✗ C: P1 adhesin เป็นของ Mycoplasma pneumoniae\n✗ D: Hyaluronic capsule มีจริง แต่ไม่ใช่คำตอบเด่นที่ข้อสอบต้องการ\n✗ E: LPS มีเฉพาะ gram-negative",
    "source": "วิเคราะห์",
    "doubt": "⚠ hyaluronic acid capsule ก็เป็น virulence factor ของ S. pyogenes ด้วย แต่ pyrogenic exotoxin เฉพาะเจาะจงกว่า"
   },
@@ -879,7 +879,7 @@
     "E": "Emulsion"
    },
    "answer": "A",
-   "why": "Ointment มีฐานเป็นไขมัน (เช่น petrolatum) ไม่ผสมน้ำ จึงเหนียวเหนอะ ล้างด้วยน้ำยากที่สุดและเปื้อนเสื้อผ้า Paste คือ ointment ผสมผง ทำให้แห้งกว่าและอยู่เฉพาะที่ Suspension (lotion) ผงเป็นผงแห้ง และ emulsion ชนิด O/W (cream) ล้างออกด้วยน้ำได้ง่าย",
+   "why": "✓ A: Ointment ฐานไขมัน (petrolatum) ไม่ผสมน้ำ ล้างยากสุด เปื้อนเสื้อผ้า\n✗ B: Paste = ointment ผสมผง แห้งกว่า อยู่เฉพาะที่\n✗ C: Suspension (lotion) ล้างออกง่าย\n✗ D: Powder เป็นผงแห้ง ล้างออกง่าย\n✗ E: Emulsion O/W (cream) ล้างด้วยน้ำได้ง่าย",
    "source": "วิเคราะห์",
    "doubt": "⚠ paste ก็ล้างยาก ตัวเลือกนี้เป็นตัวหลอกใกล้เคียง"
   },
@@ -894,7 +894,7 @@
     "E": "Autoimmune-mediated hemidesmosome destruction"
    },
    "answer": "C",
-   "why": "Psoriasis เกิดจาก dendritic cell หลั่ง IL-23 กระตุ้น Th17 (IL-17, IL-22) และ Th1/TNF-α ทำให้ keratinocyte แบ่งตัวเร็วผิดปกติ (turnover ราว 3–5 วัน) จนเกิด parakeratosis และ acanthosis Th2 เป็นกลไกของ atopic dermatitis immune complex ในหลอดเลือดคือ vasculitis และการทำลาย hemidesmosome คือ bullous pemphigoid ส่วน epidermal hyperplasia เป็นผลทางพยาธิที่ตามมา ไม่ใช่กลไกต้นเหตุ",
+   "why": "DC หลั่ง IL-23 → Th17 (IL-17, IL-22) + Th1/TNF-α → keratinocyte แบ่งตัวเร็วผิดปกติ (turnover 3–5 วัน)\n✗ A: Th2 = atopic dermatitis\n✗ B: Epidermal hyperplasia เป็นผลที่ตามมา ไม่ใช่กลไกต้นเหตุ\n✓ C: Keratinocyte proliferation\n✗ D: Immune complex ในหลอดเลือด = vasculitis\n✗ E: ทำลาย hemidesmosome = bullous pemphigoid",
    "source": "วิเคราะห์",
    "doubt": "⚠ B กับ C ใกล้เคียงกันมาก ชีทเลือก keratinocyte proliferation"
   },
@@ -909,7 +909,7 @@
     "E": "ADEM"
    },
    "answer": "A",
-   "why": "VZV แฝงอยู่ใน dorsal root/cranial ganglion เมื่อ reactivate จะทำลายเส้นประสาทรับความรู้สึก ทำให้ปวดแสบร้อนต่อเนื่องตาม dermatome เกิน 90 วันหลังผื่นหาย = postherpetic neuralgia พบมากในผู้สูงอายุ โรคอื่นเป็น autoimmune/demyelinating ของระบบประสาท ไม่ได้เป็นผลแทรกซ้อนที่เด่นของงูสวัด",
+   "why": "VZV reactivate ทำลายเส้นประสาทรับความรู้สึก → ปวดแสบร้อนตาม dermatome > 90 วันหลังผื่นหาย (พบมากในผู้สูงอายุ)\n✓ A: Postherpetic neuralgia\n✗ B: MG เป็น autoimmune ของ NMJ ไม่ใช่ผลแทรกซ้อนของงูสวัด\n✗ C: MS เป็น demyelinating ไม่ใช่ผลแทรกซ้อนของงูสวัด\n✗ D: NMO เป็น autoimmune ไม่ใช่ผลแทรกซ้อนของงูสวัด\n✗ E: ADEM ไม่ใช่ผลแทรกซ้อนเด่นของงูสวัด",
    "source": "วิเคราะห์"
   },
   "76/67": {
@@ -923,7 +923,7 @@
     "E": "Middle ethmoid cells"
    },
    "answer": "C",
-   "why": "Nasolacrimal duct ระบายน้ำตาจาก lacrimal sac ลงเปิดที่ inferior meatus (มี valve of Hasner) การอุดกั้นจึงทำให้น้ำตาไหลล้น (epiphora) Maxillary sinus, frontonasal duct, anterior และ middle ethmoid cells เปิดที่ middle meatus (hiatus semilunaris/ethmoid bulla) ส่วน posterior ethmoid เปิดที่ superior meatus",
+   "why": "Nasolacrimal duct เปิดที่ inferior meatus (valve of Hasner) → อุดกั้นแล้ว epiphora\n✗ A: Maxillary sinus เปิดที่ middle meatus\n✗ B: Frontonasal duct เปิดที่ middle meatus\n✓ C: Nasolacrimal duct\n✗ D: Anterior ethmoid เปิดที่ middle meatus\n✗ E: Middle ethmoid เปิดที่ middle meatus (ethmoid bulla)",
    "source": "วิเคราะห์",
    "doubt": "⚠ เป็นข้อ anatomy โพรงจมูก จัดเข้ากล่องตาเพราะถามเรื่องท่อน้ำตา"
   },
@@ -938,7 +938,7 @@
     "E": "Actinomyces israelii"
    },
    "answer": "A",
-   "why": "รอยโรคผิวหนังที่ชาร่วมกับย้อมพบ AFB = leprosy จาก M. leprae ซึ่งชอบอุณหภูมิต่ำ จึงอยู่ที่ผิวหนังและเส้นประสาทส่วนปลาย Nocardia เป็น weakly acid-fast แต่ทำให้ mycetoma/ฝี ไม่ใช่ผื่นชา M. tuberculosis ที่ผิว (lupus vulgaris, scrofuloderma) ไม่ชา Malassezia และ Actinomyces ไม่ติดสี AFB",
+   "why": "รอยโรคผิวหนังชา + AFB บวก = leprosy (ชอบอุณหภูมิต่ำ อยู่ผิวหนัง + เส้นประสาทส่วนปลาย)\n✓ A: Mycobacterium leprae\n✗ B: Nocardia weakly acid-fast แต่ทำ mycetoma/ฝี ไม่ใช่ผื่นชา\n✗ C: M. tuberculosis ที่ผิว (lupus vulgaris, scrofuloderma) ไม่ชา\n✗ D: Malassezia ไม่ติดสี AFB\n✗ E: Actinomyces ไม่ติดสี AFB",
    "source": "วิเคราะห์"
   },
   "76/85": {
@@ -952,7 +952,7 @@
     "E": "Culture"
    },
    "answer": "D",
-   "why": "แผลริมแข็งไม่เจ็บ = primary syphilis การเห็นตัวเชื้อ T. pallidum โดยตรงจาก serous exudate ของแผลทำได้ด้วย dark-field microscopy VDRL/RPR (non-treponemal) และ FTA-ABS (treponemal) เป็น serology ตรวจแอนติบอดี ไม่ใช่ตัวเชื้อ และ T. pallidum เพาะเชื้อในอาหารเลี้ยงเชื้อไม่ได้",
+   "why": "แผลริมแข็งไม่เจ็บ = primary syphilis; ต้องการเห็นตัวเชื้อโดยตรง\n✗ A: VDRL เป็น serology (non-treponemal)\n✗ B: RPR เป็น serology (non-treponemal)\n✗ C: FTA-ABS เป็น serology (treponemal)\n✓ D: Dark-field microscopy จาก serous exudate\n✗ E: T. pallidum เพาะเชื้อไม่ได้",
    "source": "วิเคราะห์"
   },
   "76/89": {
@@ -966,7 +966,7 @@
     "E": "Pediculus humanus capitis"
    },
    "answer": "A",
-   "why": "ชีทคาดว่าเป็นหิด: Sarcoptes scabiei ไชเป็นอุโมงค์ (burrow) ในชั้น stratum corneum ตามง่ามนิ้ว ข้อมือ รักแร้ รอบสะดือ คันมากกลางคืน ตัวเลือกอื่นต่างกันที่ลักษณะตัว: โลน (Pthirus) ตัวกว้างคล้ายปู เหาศีรษะ (Pediculus) ตัวยาว เรือด (Cimex) แบนรี Demodex ตัวยาวอยู่ในรูขุมขน",
+   "why": "ชีทคาดว่าเป็นหิด\n✓ A: Sarcoptes scabiei ไชอุโมงค์ใน stratum corneum ตามง่ามนิ้ว ข้อมือ คันมากกลางคืน\n✗ B: Pthirus (โลน) ตัวกว้างคล้ายปู\n✗ C: Cimex (เรือด) แบนรี\n✗ D: Demodex ตัวยาว อยู่ในรูขุมขน\n✗ E: Pediculus (เหาศีรษะ) ตัวยาว",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไม่เห็นรูป คำตอบตามชีท",
    "needs_image": true
@@ -982,7 +982,7 @@
     "E": "Hypopigmentation"
    },
    "answer": "A",
-   "why": "Steroid ยับยั้ง fibroblast ลดการสร้าง collagen ทำให้ dermis บาง หลอดเลือดฝอยขาดโครงค้ำจึงเห็นเป็น telangiectasia และมี striae/purpura ง่าย Acne, hypertrichosis และ hypopigmentation เป็นผลข้างเคียงของ topical steroid ก็จริง แต่ไม่ได้เกิดจากกลไก atrophy ส่วนการติดเชื้อเกิดจากฤทธิ์กดภูมิ",
+   "why": "Steroid ยับยั้ง fibroblast → collagen ลด → dermis บาง → หลอดเลือดฝอยขาดโครงค้ำ\n✓ A: Telangiectasia (+ striae, purpura)\n✗ B: Acne เป็น SE จริง แต่ไม่ได้มาจากกลไก atrophy\n✗ C: Infection มาจากฤทธิ์กดภูมิ\n✗ D: Hypertrichosis เป็น SE จริง แต่ไม่ได้มาจากกลไก atrophy\n✗ E: Hypopigmentation เป็น SE จริง แต่ไม่ได้มาจากกลไก atrophy",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตัวเลือกอื่นก็เป็น SE ของ steroid แต่ไม่ได้เกิดจาก atrophy"
   },
@@ -997,7 +997,7 @@
     "E": "Diabetes insipidus"
    },
    "answer": "D",
-   "why": "Primary adrenal insufficiency ทำให้ cortisol ต่ำ ต่อมใต้สมองหลั่ง ACTH มาก ซึ่งตัดมาจาก POMC พร้อม MSH จึงกระตุ้น melanocyte ให้ผิวและเยื่อบุคล้ำ ร่วมกับอ่อนเพลีย เบื่ออาหาร น้ำหนักลด Sheehan เป็น secondary (ACTH ต่ำ) จึงผิวซีด ไม่คล้ำ Cushing มีน้ำหนักเพิ่ม Crohn และ DI ไม่มีผิวคล้ำ",
+   "why": "Primary adrenal insufficiency: cortisol ต่ำ → ACTH สูง (จาก POMC พร้อม MSH) → ผิว/เยื่อบุคล้ำ + เบื่ออาหาร น้ำหนักลด\n✗ A: Cushing มีน้ำหนักเพิ่ม\n✗ B: Crohn ไม่มีผิวคล้ำ\n✗ C: Sheehan เป็น secondary (ACTH ต่ำ) ผิวซีดไม่คล้ำ\n✓ D: Addison's disease\n✗ E: DI ไม่มีผิวคล้ำ",
    "source": "วิเคราะห์"
   },
   "76/124": {
@@ -1011,7 +1011,7 @@
     "E": "The mother's egg"
    },
    "answer": "B",
-   "why": "OI ชนิดรุนแรงส่วนใหญ่เป็น autosomal dominant de novo ของ COL1A1/COL1A2 เมื่อพ่อแม่ปกติแต่ลูกเป็นโรค ต้องคิดถึง gonadal (germline) mosaicism ซึ่งตรวจได้ง่ายจากอสุจิของพ่อ WBC ของพ่อแม่ปกติอยู่แล้วจึงไม่ช่วย ทารกไม่มีอสุจิ และไข่ของแม่เก็บมาตรวจได้ยาก",
+   "why": "OI รุนแรงส่วนใหญ่เป็น AD de novo ของ COL1A1/2; พ่อแม่ปกติแต่ลูกเป็น → นึกถึง gonadal (germline) mosaicism\n✗ A: WBC ของพ่อปกติอยู่แล้ว ไม่ช่วย\n✓ B: อสุจิของพ่อ ตรวจหา germline mosaicism ได้ง่าย\n✗ C: ทารกไม่มีอสุจิ\n✗ D: WBC ของแม่ปกติอยู่แล้ว ไม่ช่วย\n✗ E: ไข่ของแม่เก็บมาตรวจได้ยาก",
    "source": "วิเคราะห์"
   },
   "76/145": {
@@ -1025,7 +1025,7 @@
     "E": "Staphylococcal scalded skin syndrome"
    },
    "answer": "C",
-   "why": "ตุ่มแดง ตุ่มน้ำเล็ก (vesicle) และสะเก็ดหลังสัมผัสสารใหม่ = acute eczematous dermatitis แบบ contact dermatitis (ระคายเคืองหรือแพ้ type IV) พยาธิเป็น spongiosis Erythema migrans คือผื่นวงของ Lyme Impetigo เป็นสะเก็ดสีน้ำผึ้งจากแบคทีเรีย Lichen planus เป็น papule ม่วงเหลี่ยม SSSS เป็นผิวแดงลอกทั่วตัวในเด็ก",
+   "why": "ตุ่มแดง + vesicle + สะเก็ด หลังสัมผัสสารใหม่ = acute eczematous (contact) dermatitis พยาธิเป็น spongiosis\n✗ A: Erythema migrans = ผื่นวงของ Lyme\n✗ B: Impetigo = สะเก็ดสีน้ำผึ้งจากแบคทีเรีย\n✓ C: Eczematous dermatitis\n✗ D: Lichen planus = papule ม่วงเหลี่ยม\n✗ E: SSSS = ผิวแดงลอกทั่วตัวในเด็ก",
    "source": "วิเคราะห์"
   },
   "76/154": {
@@ -1039,7 +1039,7 @@
     "E": "Budding fission yeast"
    },
    "answer": "C",
-   "why": "ผื่นวงขอบแดงชัดมีขุย กลางจาง = tinea corporis จาก dermatophyte ซึ่ง KOH พบ septate branching hyphae Pseudohyphae กับ budding yeast เป็นของ Candida Short hyphae กับ yeast (spaghetti and meatballs) เป็นของ Malassezia ในเกลื้อน Nonseptate hyphae เป็นของ Mucorales",
+   "why": "ผื่นวงขอบแดงมีขุย กลางจาง = tinea corporis (dermatophyte)\n✗ A: Pseudohyphae + budding yeast = Candida\n✗ B: Short hyphae + yeast (spaghetti and meatballs) = Malassezia\n✓ C: Septate branching hyphae\n✗ D: Nonseptate hyphae = Mucorales\n✗ E: Fission yeast ไม่ใช่ลักษณะของ dermatophyte",
    "source": "วิเคราะห์"
   },
   "76/157": {
@@ -1053,7 +1053,7 @@
     "E": "ตัวเลือกไม่ชัด (เเพ้เธอ)"
    },
    "answer": "B",
-   "why": "นิกเกิลเป็น hapten จับโปรตีนผิว Langerhans cell นำไปเสนอ T cell เมื่อสัมผัสซ้ำจะเกิด allergic contact dermatitis ภายใน 48–72 ชม. = type IV (T cell-mediated, delayed) IgE-mediated คือ type I ที่เกิดเร็วเป็นนาที cytotoxic คือ type II และ immune complex คือ type III",
+   "why": "นิกเกิลเป็น hapten → Langerhans cell เสนอ T cell → สัมผัสซ้ำเกิด allergic contact dermatitis 48–72 ชม.\n✗ A: Immune complex = type III\n✓ B: Cell-mediated (type IV, delayed)\n✗ C: IgE-mediated = type I เกิดในนาที\n✗ D: Cytotoxic = type II\n✗ E: ตัวเลือกไม่ชัดในไฟล์",
    "source": "วิเคราะห์"
   },
   "76/165": {
@@ -1066,7 +1066,7 @@
     "D": "Rheumatoid factor"
    },
    "answer": "B",
-   "why": "อาการเข้าได้กับ SLE ตรวจคัดกรองที่ดีที่สุดคือ ANA (sensitivity สูง) แต่ในตัวเลือกที่อ่านได้ไม่มี ANA จึงเลือก anti-dsDNA ซึ่งจำเพาะต่อ SLE และสัมพันธ์กับ lupus nephritis Anti-Sm จำเพาะสูงแต่ sensitivity ต่ำ ไม่เหมาะเป็นการคัดกรอง RF เป็นการตรวจของ rheumatoid arthritis",
+   "why": "อาการเข้ากับ SLE; คัดกรองที่ดีสุดคือ ANA แต่ไม่มีในตัวเลือกที่อ่านได้\n✗ A: Anti-Sm จำเพาะสูงแต่ sensitivity ต่ำ ไม่เหมาะคัดกรอง\n✓ B: Anti-dsDNA จำเพาะต่อ SLE สัมพันธ์กับ lupus nephritis\n✗ C: ตัวเลือกไม่ครบในไฟล์\n✗ D: RF ใช้กับ rheumatoid arthritis",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตัวเลือก C ถูกตัดในไฟล์ อาจเป็น ANA ซึ่งจะเป็นคำตอบที่ดีที่สุด"
   },
@@ -1081,7 +1081,7 @@
     "E": "Acyclovir triple phosphate crystals"
    },
    "answer": "A",
-   "why": "Valacyclovir เป็น prodrug ที่ถูก esterase เปลี่ยนเป็น acyclovir จากนั้น viral thymidine kinase เติมฟอสเฟตตัวแรก (จึงเลือกทำงานในเซลล์ติดเชื้อ) และ kinase ของเซลล์เติมต่อจนเป็น acyclovir triphosphate ซึ่งยับยั้ง viral DNA polymerase และทำให้สาย DNA หยุดต่อ ตัว valacyclovir ไม่ถูก phosphorylate โดยตรง ส่วน crystal ของ acyclovir เกี่ยวกับพิษต่อไต",
+   "why": "Valacyclovir (prodrug) → esterase → acyclovir → viral TK เติมฟอสเฟตตัวแรก → kinase ของเซลล์ → triphosphate\n✓ A: Acyclovir triphosphate ยับยั้ง viral DNA polymerase + chain termination\n✗ B: Acyclovir ยังไม่ใช่ active form\n✗ C: Valacyclovir ไม่ถูก phosphorylate โดยตรง\n✗ D: Valacyclovir เป็น prodrug\n✗ E: Crystal ของ acyclovir เกี่ยวกับพิษต่อไต",
    "source": "วิเคราะห์"
   },
   "76/169": {
@@ -1093,7 +1093,7 @@
     "C": "Vasculitis"
    },
    "answer": "C",
-   "why": "ชีทคาดว่าเป็นภาพ palpable purpura ซึ่งเกิดจาก leukocytoclastic vasculitis ของหลอดเลือดเล็ก (เม็ดเลือดแดงรั่วออกพร้อมการอักเสบ จึงคลำนูนได้) Vasoconstriction เป็นกลไกของ Raynaud phenomenon (ปลายนิ้วซีด-ม่วง-แดง) และ thrombosis ทำให้เกิด retiform purpura หรือเนื้อตาย",
+   "why": "ชีทคาดว่าเป็น palpable purpura\n✗ A: Vasoconstriction = Raynaud (ซีด-ม่วง-แดง)\n✗ B: Thrombosis → retiform purpura หรือเนื้อตาย\n✓ C: Leukocytoclastic vasculitis ของหลอดเลือดเล็ก (RBC รั่ว + อักเสบ จึงคลำนูนได้)",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไม่เห็นรูป คำตอบตามชีท",
    "needs_image": true
@@ -1107,7 +1107,7 @@
     "C": "Koilocytosis"
    },
    "answer": "A",
-   "why": "ตุ่มน้ำ/แผลที่ริมฝีปากในเด็ก = herpes labialis จาก HSV-1 การทำ Tzanck smear จากก้นแผลพบ multinucleated giant cell และ Cowdry type A intranuclear inclusion Koilocytosis เป็นลักษณะของ HPV ส่วน intracytoplasmic inclusion พบใน molluscum (Henderson-Paterson body) หรือ rabies ไม่ใช่ HSV",
+   "why": "ตุ่มน้ำ/แผลที่ริมฝีปากในเด็ก = herpes labialis (HSV-1)\n✓ A: Tzanck smear → multinucleated giant cell (+ Cowdry A intranuclear)\n✗ B: Intracytoplasmic inclusion = molluscum หรือ rabies\n✗ C: Koilocytosis = HPV",
    "source": "วิเคราะห์"
   },
   "76/176": {
@@ -1119,7 +1119,7 @@
     "C": "Nonshivering thermogenesis"
    },
    "answer": "A",
-   "why": "ไข้เกิดจาก pyrogen (IL-1, IL-6, TNF) กระตุ้นการสร้าง PGE2 ที่ hypothalamus ทำให้ set point สูงขึ้น ร่างกายจึงหนาวสั่นเพื่อเพิ่มอุณหภูมิไปยังจุดใหม่ ส่วนการออกกำลังกายเป็น hyperthermia ที่ set point ปกติแต่ผลิตความร้อนเกิน ร่างกายจึงขับเหงื่อระบายความร้อน การขับเหงื่อเกิดได้ทั้งสองภาวะ (ไข้ลง) และ nonshivering thermogenesis ไม่ใช่ลักษณะเฉพาะของไข้",
+   "why": "ไข้: pyrogen → PGE2 ที่ hypothalamus → set point สูงขึ้น\nออกกำลังกาย: hyperthermia ที่ set point ปกติ\n✓ A: Increased set point\n✗ B: เหงื่อเกิดได้ทั้งสองภาวะ (ตอนไข้ลง)\n✗ C: Nonshivering thermogenesis ไม่ใช่ลักษณะเฉพาะของไข้",
    "source": "วิเคราะห์"
   },
   "76/211": {
@@ -1130,7 +1130,7 @@
     "B": "Dermatophyte infection"
    },
    "answer": "B",
-   "why": "ผื่นวงแหวนขอบแดงมีขุย กลางจาง (central clearing) = tinea corporis จาก dermatophyte ติดจากดิน สัตว์ หรือคน และพบบ่อยในที่อับชื้น Annular psoriasis พบได้น้อย มี silvery scale หนาทั่วผื่นและมักมีรอยโรค psoriasis ที่อื่น",
+   "why": "✗ A: Annular psoriasis พบน้อย มี silvery scale หนาทั่วผื่น และมีรอยโรคที่อื่น\n✓ B: Dermatophyte: วงขอบแดงมีขุย central clearing ติดจากดิน สัตว์ คน",
    "source": "วิเคราะห์",
    "doubt": "⚠ ถ้าโจทย์เดิมมี erythema migrans (Lyme หลังตั้งแคมป์) ต้องพิจารณาใหม่ แต่ตัวเลือกที่ให้มีเพียงสองข้อนี้"
   },
@@ -1143,7 +1143,7 @@
     "C": "Intestinal polyps with intermittent intussusception"
    },
    "answer": "A",
-   "why": "HSP (IgA vasculitis) ในเด็กมีสี่อาการ: palpable purpura ที่ขา/ก้น ปวดข้อ ปวดท้อง (บวมเลือดออกที่ผนังลำไส้จนเป็น ileo-ileal intussusception ได้) และ glomerulonephritis (hematuria) จาก IgA immune complex Crohn ไม่ทำให้ purpura และ hematuria ร่วมกัน ส่วน polyp (เช่น Peutz-Jeghers) ทำให้ลำไส้กลืนซ้ำแต่มีจุดสีที่ริมฝีปาก ไม่ใช่ purpura และไม่มี hematuria",
+   "why": "HSP (IgA vasculitis) ในเด็ก: palpable purpura ที่ขา/ก้น + ปวดข้อ + ปวดท้อง (ileo-ileal intussusception) + hematuria\n✓ A: Henoch-Schönlein purpura\n✗ B: Crohn ไม่ทำให้ purpura + hematuria ร่วมกัน\n✗ C: Polyp (Peutz-Jeghers) มีจุดสีที่ริมฝีปาก ไม่ใช่ purpura และไม่มี hematuria",
    "source": "วิเคราะห์"
   },
   "76/226": {
@@ -1155,7 +1155,7 @@
     "C": "IgG affinity toward virus"
    },
    "answer": "C",
-   "why": "การติดเชื้อ dengue ครั้งที่สองต่างซีโรไทป์ แอนติบอดี IgG จากครั้งก่อนจับไวรัสได้แต่ไม่ neutralize กลับช่วยพาไวรัสเข้า monocyte/macrophage ผ่าน Fc receptor = antibody-dependent enhancement ทำให้ไวรัสเพิ่มจำนวนมากและเกิด plasma leakage รุนแรง การสร้าง IgM ช้าไม่ใช่กลไกหลัก ส่วน cross-reactive T cell activation (original antigenic sin) มีบทบาทเสริมใน cytokine storm",
+   "why": "ติดเชื้อครั้งที่สองต่างซีโรไทป์: IgG เดิมจับไวรัสแต่ไม่ neutralize → พาเข้า monocyte ผ่าน Fc receptor (ADE) → plasma leakage รุนแรง\n✗ A: การสร้าง IgM ช้าไม่ใช่กลไกหลัก\n✗ B: Cross-reactive T cell มีบทบาทเสริมใน cytokine storm\n✓ C: IgG affinity ต่อไวรัส (antibody-dependent enhancement)",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตัวเลือกในไฟล์ไม่ครบ คำว่า IgG affinity ตีความว่าหมายถึง ADE จาก IgG ที่จับไวรัสโดยไม่ neutralize"
   },
@@ -1170,7 +1170,7 @@
     "E": "Type V"
    },
    "answer": "A",
-   "why": "กระดูกหักง่ายซ้ำๆ จากแรงเพียงเล็กน้อย (ร่วมกับ blue sclera ในรูป) = osteogenesis imperfecta จากความผิดปกติของ type I collagen (COL1A1/COL1A2) ซึ่งเป็นส่วนหลักของกระดูก ฟัน ตาขาว และเอ็น Type II อยู่ในกระดูกอ่อนและ vitreous Type III เกี่ยวกับ vascular EDS Type IV เป็น basement membrane (Alport) Type V เกี่ยวกับ classic EDS",
+   "why": "กระดูกหักซ้ำจากแรงน้อย (+ blue sclera) = osteogenesis imperfecta (COL1A1/COL1A2)\n✓ A: Type I (กระดูก ฟัน ตาขาว เอ็น)\n✗ B: Type II อยู่ในกระดูกอ่อน + vitreous\n✗ C: Type III = vascular EDS\n✗ D: Type IV = basement membrane (Alport)\n✗ E: Type V = classic EDS",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -1183,7 +1183,7 @@
     "C": "Cavity"
    },
    "answer": "B",
-   "why": "ฝีทำลายเนื้อเยื่อและ extracellular matrix framework ไปเป็นโพรง เนื้อเยื่อเดิมจึงฟื้นกลับแบบ resolution ไม่ได้ ต้องหายโดยการสร้าง granulation tissue แล้วแทนที่ด้วย collagen จนเป็นแผลเป็น (healing by fibrosis/second intention) Resolution เกิดเมื่อการอักเสบไม่ทำลายโครงสร้าง เช่น lobar pneumonia ส่วนโพรงที่ค้างอยู่ไม่ใช่ผลของการหาย",
+   "why": "ฝีทำลายเนื้อเยื่อ + ECM framework → ฟื้นแบบเดิมไม่ได้\n✗ A: Resolution เกิดเมื่อโครงสร้างไม่ถูกทำลาย (เช่น lobar pneumonia)\n✓ B: Scarring: granulation tissue → collagen (healing by fibrosis)\n✗ C: โพรงที่ค้างอยู่ไม่ใช่ผลของการหาย",
    "source": "วิเคราะห์"
   },
   "77/13": {
@@ -1196,7 +1196,7 @@
     "D": "Vitamin A"
    },
    "answer": "A",
-   "why": "การขาด riboflavin ทำให้ FAD/FMN ไม่พอ เกิด angular cheilitis/stomatitis, cheilosis, glossitis ลิ้นสีม่วงแดง และ seborrheic dermatitis Thiamine ทำให้ beriberi/Wernicke Vitamin C ทำให้ scurvy (เหงือกบวมเลือดออก perifollicular hemorrhage) Vitamin A ทำให้ night blindness และ follicular hyperkeratosis",
+   "why": "✓ A: Riboflavin (B2): FAD/FMN ไม่พอ → angular stomatitis, cheilosis, glossitis ลิ้นม่วงแดง\n✗ B: Thiamine → beriberi / Wernicke\n✗ C: Vitamin C → scurvy (เหงือกบวมเลือดออก perifollicular hemorrhage)\n✗ D: Vitamin A → night blindness, follicular hyperkeratosis",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์ให้มาเพียงคำตอบ riboflavin จึงสร้างตัวเลือกอื่นเพิ่ม",
    "options_reconstructed": true
@@ -1211,7 +1211,7 @@
     "D": "High C3 low C4 low CH50"
    },
    "answer": "A",
-   "why": "Malar rash บ่งถึง SLE ซึ่งเป็น type III hypersensitivity immune complex กระตุ้น classical pathway ทำให้ C3 และ C4 ถูกใช้ไปจนต่ำ และ CH50 (total hemolytic complement) ต่ำตามไปด้วย ตัวเลือกที่มี CH50 สูงขัดกับการใช้ complement หมด และ C3 สูงร่วม C4 ต่ำไม่เข้ากับการกระตุ้น classical pathway",
+   "why": "Malar rash = SLE → immune complex กระตุ้น classical pathway → complement ถูกใช้จนต่ำ\n✓ A: C3 ต่ำ C4 ต่ำ CH50 ต่ำ\n✗ B: CH50 สูงขัดกับการใช้ complement หมด\n✗ C: C4 + CH50 สูง ขัดกับการกระตุ้น classical pathway\n✗ D: C3 สูงร่วม C4 ต่ำ ไม่เข้ากับ classical pathway",
    "source": "วิเคราะห์"
   },
   "77/30": {
@@ -1225,7 +1225,7 @@
     "E": "EBV"
    },
    "answer": "B",
-   "why": "แผลในปากร่วมกับผื่นตุ่มน้ำที่ฝ่ามือฝ่าเท้าในเด็กเล็ก = hand-foot-and-mouth disease จาก coxsackievirus A16 (และ enterovirus 71) Coxsackie B ทำให้ myocarditis/pleurodynia HSV ทำ gingivostomatitis แต่ไม่มีผื่นฝ่ามือฝ่าเท้า Mpox มีตุ่มหนองทั่วตัวร่วมต่อมน้ำเหลืองโต EBV ทำ infectious mononucleosis",
+   "why": "แผลในปาก + ผื่นตุ่มน้ำฝ่ามือฝ่าเท้าในเด็กเล็ก = hand-foot-and-mouth disease\n✗ A: Mpox: ตุ่มหนองทั่วตัว + ต่อมน้ำเหลืองโต\n✓ B: Coxsackie A16 (และ EV71)\n✗ C: Coxsackie B → myocarditis / pleurodynia\n✗ D: HSV ทำ gingivostomatitis แต่ไม่มีผื่นฝ่ามือฝ่าเท้า\n✗ E: EBV → infectious mononucleosis",
    "source": "วิเคราะห์"
   },
   "77/45": {
@@ -1238,7 +1238,7 @@
     "D": "Eye irritation"
    },
    "answer": "A",
-   "why": "Erlotinib เป็น EGFR tyrosine kinase inhibitor EGFR สำคัญต่อการเจริญของ keratinocyte และต่อมไขมัน จึงเกิด acneiform (papulopustular) rash บนหน้าและลำตัวบ่อยที่สุด ร่วมกับท้องเสีย ความเป็นพิษต่อหัวใจเด่นใน anthracycline/trastuzumab neuropathy เด่นใน taxane/vinca/platinum ส่วนการระคายตา (trichomegaly, conjunctivitis) พบได้แต่ไม่บ่อยเท่า",
+   "why": "Erlotinib = EGFR TKI; EGFR สำคัญต่อ keratinocyte + ต่อมไขมัน\n✓ A: Acneiform (papulopustular) rash พบบ่อยสุด (+ ท้องเสีย)\n✗ B: Cardiotoxic เด่นใน anthracycline/trastuzumab\n✗ C: Neuropathy เด่นใน taxane/vinca/platinum\n✗ D: ระคายตาพบได้แต่ไม่บ่อยเท่า",
    "source": "วิเคราะห์"
   },
   "77/103": {
@@ -1252,7 +1252,7 @@
     "E": "Alcohol"
    },
    "answer": "A",
-   "why": "ชีทคาดว่าเป็นมะเร็งผิวหนังบริเวณที่โดนแดด ปัจจัยเสี่ยงหลักคือรังสี UV (โดยเฉพาะ UVB ทำให้เกิด pyrimidine dimer และการกลายพันธุ์ของ p53) Arsenic สัมพันธ์กับ keratosis ที่ฝ่ามือฝ่าเท้าและ Bowen disease ในที่ไม่โดนแดด X-ray เป็นสาเหตุที่พบน้อย บุหรี่สัมพันธ์กับ SCC ที่ริมฝีปาก ส่วนแอลกอฮอล์ไม่ใช่ปัจจัยเด่น",
+   "why": "ชีทคาดว่าเป็นมะเร็งผิวหนังบริเวณที่โดนแดด\n✓ A: UV (UVB → pyrimidine dimer + p53 mutation)\n✗ B: Arsenic → keratosis ฝ่ามือฝ่าเท้า + Bowen ในที่ไม่โดนแดด\n✗ C: X-ray เป็นสาเหตุที่พบน้อย\n✗ D: Smoking สัมพันธ์กับ SCC ที่ริมฝีปาก\n✗ E: Alcohol ไม่ใช่ปัจจัยเด่น",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไม่เห็นรูป ถ้ารูปเป็น keratosis หลายจุดที่ฝ่ามือฝ่าเท้า คำตอบจะเป็น arsenic",
    "needs_image": true
@@ -1267,7 +1267,7 @@
     "D": "Gap junction"
    },
    "answer": "A",
-   "why": "ตุ่มน้ำที่เยื่อบุปากร่วมผิวหนังและแยกชั้นภายใน epidermis (suprabasal/acantholysis) = pemphigus vulgaris จาก IgG ต่อ desmoglein 3 และ 1 ซึ่งเป็นส่วนของ desmosome ที่ยึดระหว่าง keratinocyte Hemidesmosome (BP180/BP230) เป็นเป้าของ bullous pemphigoid ซึ่งแยกใต้ epidermis และตุ่มตึง Tight junction และ gap junction ไม่ใช่เป้าของโรคตุ่มน้ำนี้",
+   "why": "ตุ่มน้ำเยื่อบุปาก + ผิวหนัง + แยกชั้นใน epidermis (acantholysis) = pemphigus vulgaris (IgG ต่อ desmoglein 3/1)\n✓ A: Desmosome ยึดระหว่าง keratinocyte\n✗ B: Hemidesmosome (BP180/230) = bullous pemphigoid แยกใต้ epidermis ตุ่มตึง\n✗ C: Tight junction ไม่ใช่เป้าของโรคตุ่มน้ำนี้\n✗ D: Gap junction ไม่ใช่เป้าของโรคตุ่มน้ำนี้",
    "source": "วิเคราะห์"
   },
   "77/105": {
@@ -1279,7 +1279,7 @@
     "C": "Necrosis (ตัวเลือกไม่ครบในไฟล์)"
    },
    "answer": "B",
-   "why": "อาการครบของ HSP (IgA vasculitis) ซึ่งเกิดจาก galactose-deficient IgA1 รวมเป็น immune complex สะสมในผนังหลอดเลือดเล็กของผิว ลำไส้ และ mesangium ของไต เกิด leukocytoclastic vasculitis Eosinophil activation เป็นกลไกของ EGPA หรือภูมิแพ้ ส่วน necrotizing vasculitis แบบไม่มี immune complex (pauci-immune) คือ ANCA vasculitis",
+   "why": "HSP (IgA vasculitis): galactose-deficient IgA1 เป็น immune complex สะสมในหลอดเลือดเล็กของผิว ลำไส้ mesangium\n✗ A: Eosinophil activation = EGPA หรือภูมิแพ้\n✓ B: IgA immune complex deposition\n✗ C: Necrotizing แบบไม่มี immune complex (pauci-immune) = ANCA vasculitis",
    "source": "วิเคราะห์"
   },
   "77/106": {
@@ -1292,7 +1292,7 @@
     "D": "Mucocutaneous candida"
    },
    "answer": "B",
-   "why": "หิดจาก Sarcoptes scabiei ขุดอุโมงค์ใน stratum corneum ตามง่ามนิ้ว ข้อมือ รักแร้ รอบสะดือ อวัยวะเพศ คันมากกลางคืนจากภูมิไวเกินต่อตัวไรและมูลไร และมักเป็นทั้งบ้าน Pediculosis คันที่ศีรษะหรือหัวหน่าวตามตำแหน่งที่มีขน contact dermatitis อยู่ตามตำแหน่งที่สัมผัสสาร candida เป็นผื่นแดงชื้นตามข้อพับ",
+   "why": "หิด (Sarcoptes) ขุดอุโมงค์ตามง่ามนิ้ว ข้อมือ รักแร้ รอบสะดือ คันมากกลางคืน มักเป็นทั้งบ้าน\n✗ A: Pediculosis คันที่ศีรษะ/หัวหน่าว ตามตำแหน่งที่มีขน\n✓ B: Scabies\n✗ C: Contact dermatitis อยู่ตามตำแหน่งที่สัมผัสสาร\n✗ D: Candida เป็นผื่นแดงชื้นตามข้อพับ",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -1304,7 +1304,7 @@
     "B": "Stevens-Johnson syndrome"
    },
    "answer": "A",
-   "why": "SJS และ TEN เป็นโรคกลุ่มเดียวกันจาก cytotoxic T cell ทำให้ keratinocyte ตาย (granulysin, Fas-FasL) แบ่งตามพื้นที่ผิวที่หลุดลอก: SJS <10% overlap 10–30% และ TEN >30% ของ BSA จึงตอบ TEN (โจทย์พิมพ์ว่า Toxic Epidermolytic Necrosis)",
+   "why": "SJS/TEN = cytotoxic T cell ทำให้ keratinocyte ตาย; แบ่งตาม BSA: SJS < 10%, overlap 10–30%, TEN > 30%\n✓ A: Toxic epidermal necrolysis (> 30%)\n✗ B: SJS < 10% BSA",
    "source": "วิเคราะห์"
   },
   "77/108": {
@@ -1317,7 +1317,7 @@
     "D": "Nevocellular nevus"
    },
    "answer": "B",
-   "why": "เปลือกตาและบริเวณกลางใบหน้าที่โดนแดดเป็นตำแหน่งพบบ่อยของ BCC ซึ่งพยาธิมีกลุ่มเซลล์ basaloid เรียงตัวแบบ peripheral palisading และมีช่องว่าง (retraction artifact) จาก stroma มักเป็น pearly papule ที่มี telangiectasia SCC มีเซลล์ squamous กับ keratin pearl actinic keratosis มี atypia ใน epidermis ชั้นล่าง nevus มีรัง melanocyte",
+   "why": "เปลือกตา/กลางหน้าที่โดนแดด = ตำแหน่งพบบ่อยของ BCC\n✗ A: SCC มีเซลล์ squamous + keratin pearl\n✓ B: BCC: basaloid cell + peripheral palisading + retraction artifact\n✗ C: Actinic keratosis: atypia ใน epidermis ชั้นล่าง\n✗ D: Nevus: รัง melanocyte",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไม่เห็นรูป คำตอบตามชีท ถ้าภาพเป็นรัง nevus cell คำตอบจะเป็น D",
    "needs_image": true
@@ -1332,7 +1332,7 @@
     "D": "Erythromycin"
    },
    "answer": "B",
-   "why": "สะเก็ดสีเหลืองน้ำผึ้ง = impetigo จาก S. aureus เป็นหลัก (บางส่วน S. pyogenes) ซึ่งส่วนใหญ่สร้าง penicillinase จึงเลือก dicloxacillin (หรือ cephalexin) ที่ครอบคลุมทั้งสองเชื้อ Penicillin V ถูก β-lactamase ทำลาย erythromycin มีอัตราดื้อสูง และ cefixime ครอบคลุม gram-positive ได้ไม่ดี",
+   "why": "สะเก็ดสีน้ำผึ้ง = impetigo จาก S. aureus เป็นหลัก (± S. pyogenes) ส่วนใหญ่สร้าง penicillinase\n✗ A: Penicillin V ถูก β-lactamase ทำลาย\n✓ B: Dicloxacillin (หรือ cephalexin) ครอบคลุมทั้งสองเชื้อ\n✗ C: Cefixime ครอบคลุม gram-positive ไม่ดี\n✗ D: Erythromycin อัตราดื้อสูง",
    "source": "วิเคราะห์"
   },
   "77/110": {
@@ -1344,7 +1344,7 @@
     "C": "Lipopolysaccharide"
    },
    "answer": "A",
-   "why": "Gas gangrene (clostridial myonecrosis) จาก Clostridium perfringens ซึ่งในเนื้อเยื่อมักไม่เห็นสปอร์ α-toxin เป็น lecithinase (phospholipase C) ทำลายเยื่อหุ้มเซลล์ ทำให้กล้ามเนื้อตาย hemolysis และเกิดก๊าซ (crepitus) Teichoic acid เป็นส่วนประกอบผนังเซลล์ที่ไม่ใช่สาเหตุหลักของอาการ LPS พบเฉพาะในแบคทีเรีย gram-negative",
+   "why": "Gas gangrene = C. perfringens (ในเนื้อเยื่อมักไม่เห็นสปอร์)\n✓ A: Lecithinase (α-toxin, phospholipase C) ทำลายเยื่อหุ้มเซลล์ → กล้ามเนื้อตาย hemolysis ก๊าซ\n✗ B: Teichoic acid เป็นส่วนประกอบผนังเซลล์ ไม่ใช่สาเหตุหลักของอาการ\n✗ C: LPS มีเฉพาะ gram-negative",
    "source": "วิเคราะห์"
   },
   "77/111": {
@@ -1357,7 +1357,7 @@
     "D": "Oral itraconazole"
    },
    "answer": "B",
-   "why": "ไม่เห็นรูป ชีทแบ่งตามรอยโรค: tinea capitis ต้องใช้ยากิน เพราะยาทาเข้าไม่ถึงรากขน ยามาตรฐานในเด็กคือ griseofulvin (หรือ terbinafine) tinea corporis หรือเกลื้อนขนาดเล็กใช้ topical ketoconazole ได้ ส่วนหิดใช้ topical permethrin itraconazole ใช้กับเชื้อราที่เล็บหรือการติดเชื้อลึก",
+   "why": "ไม่เห็นรูป ชีทแบ่งตามรอยโรค\n✗ A: Permethrin ใช้กับหิด\n✓ B: Tinea capitis ต้องใช้ยากิน (ยาทาไม่ถึงรากขน) ยามาตรฐานในเด็กคือ griseofulvin\n✗ C: Topical ketoconazole ใช้กับ tinea corporis/เกลื้อนขนาดเล็ก\n✗ D: Itraconazole ใช้กับเชื้อราที่เล็บหรือติดเชื้อลึก",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไม่เห็นรูป เลือกคำตอบตามสมมติฐานว่าเป็น tinea capitis ซึ่งไม่แน่นอน ถ้ารูปเป็นหิดคำตอบคือ A ถ้าเป็นเกลื้อน/กลากผิวหนังคือ C",
    "needs_image": true
@@ -1373,7 +1373,7 @@
     "E": "Fibroblast"
    },
    "answer": "E",
-   "why": "ก้อนที่ติ่งหูหลังเจาะ = keloid เกิดจาก fibroblast ตอบสนองเกิน (TGF-β สูง) สร้าง type I/III collagen หนาเป็นมัดใหญ่ (hyalinized keloidal collagen) ลามเกินขอบแผลเดิม Macrophage, lymphocyte, mast cell และ neutrophil มีส่วนในการอักเสบระหว่างหายของแผล แต่ไม่ใช่เซลล์ที่สร้างก้อนแผลเป็น",
+   "why": "ก้อนที่ติ่งหูหลังเจาะ = keloid: fibroblast ตอบสนองเกิน (TGF-β สูง) สร้าง collagen หนา ลามเกินขอบแผล\n✗ A: Macrophage มีส่วนในการอักเสบ แต่ไม่ได้สร้างก้อนแผลเป็น\n✗ B: Lymphocyte มีส่วนในการอักเสบ แต่ไม่ได้สร้างก้อนแผลเป็น\n✗ C: Mast cell มีส่วนในการอักเสบ แต่ไม่ได้สร้างก้อนแผลเป็น\n✗ D: Neutrophil มีส่วนในการอักเสบ แต่ไม่ได้สร้างก้อนแผลเป็น\n✓ E: Fibroblast",
    "source": "วิเคราะห์"
   },
   "77/113": {
@@ -1385,7 +1385,7 @@
     "C": "Heat production from muscle metabolism"
    },
    "answer": "A",
-   "why": "Sympathetic ผ่าน α1 กระตุ้น arrector pili ให้ขนตั้ง เพื่อกักชั้นอากาศไว้เป็นฉนวนลดการเสียความร้อน (เด่นในสัตว์ที่มีขนมาก ในคนเหลือเพียงร่องรอย) ไม่ใช่การผลิตความร้อน การผลิตความร้อนจากการสั่นเกิดจากกล้ามเนื้อลาย และ arrector pili เป็นกล้ามเนื้อเรียบเล็กๆ ที่ไม่ได้ผลิตความร้อนอย่างมีนัยสำคัญ",
+   "why": "Sympathetic (α1) → arrector pili หด → ขนตั้ง กักชั้นอากาศเป็นฉนวน (ในคนเหลือแค่ร่องรอย)\n✓ A: Heat insulation\n✗ B: Shivering เป็นกล้ามเนื้อลาย แยกจาก piloerection\n✗ C: Arrector pili เป็นกล้ามเนื้อเรียบเล็ก ไม่ได้ผลิตความร้อนอย่างมีนัยสำคัญ",
    "source": "วิเคราะห์"
   },
   "77/114": {
@@ -1398,7 +1398,7 @@
     "D": "Herpes simplex virus"
    },
    "answer": "A",
-   "why": "Koilocyte คือ keratinocyte ที่มีนิวเคลียสหยักเข้มและ halo รอบนิวเคลียส เป็นลักษณะจำเพาะของ HPV ที่เท้าคือ plantar wart (HPV 1) EBV ทำให้ oral hairy leukoplakia HBV ไม่ก่อรอยโรคนี้ HSV ให้ multinucleated giant cell กับ intranuclear inclusion",
+   "why": "Koilocyte (นิวเคลียสหยักเข้ม + halo) จำเพาะต่อ HPV; ที่เท้า = plantar wart (HPV 1)\n✓ A: HPV\n✗ B: EBV → oral hairy leukoplakia\n✗ C: HBV ไม่ก่อรอยโรคนี้\n✗ D: HSV → multinucleated giant cell + intranuclear inclusion",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -1413,7 +1413,7 @@
     "E": "Zika RT-PCR"
    },
    "answer": "B",
-   "why": "Congenital CMV เป็นการติดเชื้อแต่กำเนิดที่พบบ่อยที่สุด มี periventricular calcification, microcephaly, chorioretinitis, ตับม้ามโต, blueberry muffin rash และ SNHL (สาเหตุ SNHL ไม่ใช่พันธุกรรมที่พบบ่อยที่สุด) Toxoplasma มี diffuse/parenchymal calcification Rubella มี cataract, PDA และ SNHL แต่ไม่มี periventricular calcification Zika มี microcephaly รุนแรง ส่วน congenital syphilis มีกระดูกผิดปกติและน้ำมูก",
+   "why": "Congenital CMV พบบ่อยสุด: periventricular calcification + chorioretinitis + ตับม้ามโต + SNHL\n✗ A: HSV: ตุ่มน้ำ, encephalitis\n✓ B: CMV\n✗ C: Rubella: cataract, PDA, SNHL แต่ไม่มี periventricular calcification\n✗ D: Congenital syphilis: กระดูกผิดปกติ + น้ำมูก\n✗ E: Zika: microcephaly รุนแรง + subcortical calcification",
    "source": "วิเคราะห์"
   },
   "77/209": {
@@ -1425,7 +1425,7 @@
     "C": "RPR"
    },
    "answer": "C",
-   "why": "ผื่นทั่วตัวเข้าได้กับ secondary syphilis การตรวจแบบ reverse algorithm เริ่มจาก treponemal test อัตโนมัติ (CMIA) ถ้า reactive ต้องตามด้วย non-treponemal test (RPR/VDRL) เพื่อยืนยันว่าเป็นโรคที่ยัง active และใช้ติดตามผลการรักษา FTA-ABS และ TPHA เป็น treponemal test เหมือน CMIA จึงไม่ได้ข้อมูลเพิ่ม (TPPA ใช้ตัดสินเฉพาะเมื่อ RPR ลบ)",
+   "why": "ผื่นทั่วตัว = secondary syphilis; reverse algorithm เริ่มจาก treponemal (CMIA) → ถ้า reactive ตามด้วย non-treponemal\n✗ A: FTA-ABS เป็น treponemal เหมือน CMIA ไม่ได้ข้อมูลเพิ่ม\n✗ B: TPHA เป็น treponemal เหมือน CMIA (TPPA ใช้ตัดสินเฉพาะเมื่อ RPR ลบ)\n✓ C: RPR ยืนยันว่ายัง active และใช้ติดตามการรักษา",
    "source": "วิเคราะห์"
   },
   "77/213": {
@@ -1438,7 +1438,7 @@
     "D": "Limb hypoplasia"
    },
    "answer": "A",
-   "why": "Parvovirus B19 ติดเชื้อ erythroid progenitor ผ่าน P antigen ทำให้ทารกซีดรุนแรง (aplastic) ร่วมกับ myocarditis จนหัวใจล้มเหลวและเกิด nonimmune hydrops fetalis Cataract/PDA เป็นของ congenital rubella periventricular calcification เป็นของ CMV และ limb hypoplasia กับแผลเป็นตาม dermatome เป็นของ congenital varicella",
+   "why": "Parvovirus B19 ติด erythroid progenitor (P antigen) → ทารกซีดรุนแรง + myocarditis → หัวใจล้มเหลว\n✓ A: Nonimmune hydrops fetalis\n✗ B: Cataract + PDA = congenital rubella\n✗ C: Periventricular calcification = CMV\n✗ D: Limb hypoplasia + แผลเป็นตาม dermatome = congenital varicella",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์ให้มาเพียงคำตอบ hydrops fetalis จึงสร้างตัวเลือกอื่นเพิ่ม",
    "options_reconstructed": true
@@ -1453,7 +1453,7 @@
     "D": "Congenital adrenal hyperplasia"
    },
    "answer": "A",
-   "why": "Cortisol ไม่ตอบสนองต่อ ACTH แสดงว่าต่อมหมวกไตเสียเอง (primary adrenal insufficiency) ACTH และ MSH จาก POMC จึงสูงจนผิวคล้ำ = Addison disease Secondary adrenal insufficiency มี ACTH ต่ำจึงไม่คล้ำ Cushing มี cortisol สูง ส่วน CAH มักวินิจฉัยตั้งแต่เด็กด้วยภาวะ virilization หรือเกลือต่ำ",
+   "why": "Cortisol ไม่ตอบสนองต่อ ACTH = ต่อมหมวกไตเสียเอง → ACTH + MSH สูง → ผิวคล้ำ\n✓ A: Addison disease (primary)\n✗ B: Secondary มี ACTH ต่ำ ไม่คล้ำ\n✗ C: Cushing มี cortisol สูง\n✗ D: CAH มักวินิจฉัยตั้งแต่เด็ก (virilization หรือเกลือต่ำ)",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์ให้มาเพียงคำตอบ Addison disease จึงสร้างตัวเลือกอื่นเพิ่ม",
    "options_reconstructed": true
@@ -1469,7 +1469,7 @@
     "E": "ยับยั้ง interleukin"
    },
    "answer": "C",
-   "why": "ไข้เกิดจาก pyrogen (IL-1, IL-6, TNF) กระตุ้นการสร้าง PGE2 ที่ hypothalamus ทำให้ set point สูงขึ้น paracetamol ยับยั้ง COX ในระบบประสาทส่วนกลางเป็นหลัก จึงลด PGE2 และดึง set point กลับลงมา ฤทธิ์ต้าน COX ที่ส่วนปลายอ่อนมาก (จึงแทบไม่มีฤทธิ์ต้านอักเสบ) การระบายความร้อนและเพิ่มเลือดไปผิวเป็นผลตามมาหลัง set point ลด ไม่ใช่กลไกหลัก และยาไม่ได้ยับยั้ง interleukin โดยตรง",
+   "why": "ไข้: pyrogen → PGE2 ที่ hypothalamus → set point สูง; paracetamol ยับยั้ง COX ใน CNS เป็นหลัก\n✗ A: การระบายความร้อนเป็นผลตามมาหลัง set point ลด\n✗ B: ฤทธิ์ต้าน COX ส่วนปลายอ่อนมาก (จึงแทบไม่ต้านอักเสบ)\n✓ C: ยับยั้งการสร้าง prostaglandin ที่ hypothalamus\n✗ D: เลือดไปผิวเพิ่มเป็นผลตามมา ไม่ใช่กลไกหลัก\n✗ E: ไม่ได้ยับยั้ง interleukin โดยตรง",
    "source": "เฉลย78"
   },
   "78/4": {
@@ -1481,7 +1481,7 @@
     "C": "Squamous cell carcinoma"
    },
    "answer": "A",
-   "why": "Bowen disease คือ squamous cell carcinoma in situ: เซลล์ผิดปกติเต็มความหนา epidermis (full-thickness dysplasia) แต่ยังไม่ทะลุ basement membrane ที่องคชาตอาจเรียก erythroplasia of Queyrat (ปื้นแดง) Balanitis เป็นการอักเสบ ไม่มี dysplasia เต็มชั้น ส่วน invasive SCC ต้องเห็นเซลล์มะเร็งลุกลามลง dermis ซึ่งโจทย์ไม่ได้บอก",
+   "why": "Dysplasia เต็มความหนา epidermis แต่ไม่ทะลุ basement membrane = SCC in situ (ที่องคชาต = erythroplasia of Queyrat)\n✓ A: Bowen disease\n✗ B: Balanitis เป็นการอักเสบ ไม่มี dysplasia เต็มชั้น\n✗ C: Invasive SCC ต้องเห็นมะเร็งลุกลามลง dermis ซึ่งโจทย์ไม่ได้บอก",
    "source": "เฉลย78"
   },
   "78/35": {
@@ -1493,7 +1493,7 @@
     "C": "Neisseria gonorrhoeae"
    },
    "answer": "C",
-   "why": "Ophthalmia neonatorum คือเยื่อบุตาอักเสบในทารกอายุไม่เกิน 4 สัปดาห์ ติดจากช่องคลอดมารดา N. gonorrhoeae ทำให้ตาแดงหนองมากใน 2–5 วัน และอาจทะลุกระจกตา (Chlamydia เป็นอีกสาเหตุที่มักเกิดช้ากว่า 5–14 วัน) T. pallidum ทำให้ congenital syphilis ไม่ใช่ conjunctivitis เป็นหลัก H. ducreyi ทำให้ chancroid ในผู้ใหญ่",
+   "why": "Ophthalmia neonatorum = เยื่อบุตาอักเสบในทารก ≤ 4 สัปดาห์ ติดจากช่องคลอด\n✗ A: T. pallidum → congenital syphilis ไม่ใช่ conjunctivitis เป็นหลัก\n✗ B: H. ducreyi → chancroid ในผู้ใหญ่\n✓ C: N. gonorrhoeae: ตาแดงหนองมากใน 2–5 วัน อาจทะลุกระจกตา (Chlamydia เกิดช้ากว่า 5–14 วัน)",
    "source": "เฉลย78"
   },
   "78/37": {
@@ -1506,7 +1506,7 @@
     "D": "Chlamydia trachomatis"
    },
    "answer": "A",
-   "why": "แผลริมแข็ง (chancre) ขอบแข็ง ก้นสะอาด ไม่เจ็บ คือ primary syphilis จาก T. pallidum H. ducreyi ทำให้ chancroid ซึ่งเป็นแผลเจ็บ ขอบไม่เรียบ ก้นมีหนอง N. gonorrhoeae ทำให้ urethritis มีหนอง ไม่เป็นแผล ส่วน C. trachomatis serovar L1–L3 (LGV) อาจมีแผลเล็กไม่เจ็บแต่หายเร็วและเด่นที่ต่อมน้ำเหลืองขาหนีบโต",
+   "why": "Chancre: ขอบแข็ง ก้นสะอาด ไม่เจ็บ = primary syphilis\n✓ A: Treponema pallidum\n✗ B: H. ducreyi → chancroid แผลเจ็บ ขอบไม่เรียบ ก้นมีหนอง\n✗ C: N. gonorrhoeae → urethritis มีหนอง ไม่เป็นแผล\n✗ D: C. trachomatis L1–L3 (LGV) แผลเล็กหายเร็ว เด่นที่ต่อมน้ำเหลืองขาหนีบโต",
    "source": "เฉลย78",
    "needs_image": true
   },
@@ -1520,7 +1520,7 @@
     "D": "Bactrim (co-trimoxazole)"
    },
    "answer": "A",
-   "why": "ตามเฉลยรูปเป็นรอยโรค herpes simplex (ตุ่มน้ำเป็นกลุ่ม/Tzanck smear พบ multinucleated giant cell) จึงรักษาด้วย acyclovir หรือ valacyclovir ซึ่งเป็น prodrug ดูดซึมดีกว่า ถูก viral thymidine kinase เติม phosphate แล้วยับยั้ง viral DNA polymerase Metronidazole ใช้กับ Trichomonas/anaerobe Ceftriaxone ใช้กับ gonorrhea/chancroid และ Bactrim ไม่มีฤทธิ์ต่อไวรัส",
+   "why": "ตามเฉลยรูปเป็น herpes simplex\n✓ A: Valacyclovir (prodrug ของ acyclovir ดูดซึมดีกว่า) ยับยั้ง viral DNA polymerase\n✗ B: Metronidazole ใช้กับ Trichomonas/anaerobe\n✗ C: Ceftriaxone ใช้กับ gonorrhea/chancroid\n✗ D: Bactrim ไม่มีฤทธิ์ต่อไวรัส",
    "source": "เฉลย78",
    "doubt": "⚠ ไม่เห็นรูป — อาศัยคำอธิบายในเฉลย78 ว่าเป็น HSV",
    "needs_image": true
@@ -1536,7 +1536,7 @@
     "E": "Antimuscarinic"
    },
    "answer": "C",
-   "why": "การขยายรูม่านตาทำได้ 2 ทาง: กระตุ้น α1 receptor ที่ iris dilator muscle (เช่น phenylephrine ซึ่งขยายรูม่านตาโดยไม่ทำให้ cycloplegia) หรือยับยั้ง M3 ที่ sphincter pupillae (tropicamide, atropine ซึ่งทำให้ cycloplegia ร่วมด้วย) ยากลุ่ม β ไม่มีผลต่อขนาดรูม่านตาโดยตรง β-blocker (timolol) ลดการสร้าง aqueous humor ใช้รักษา glaucoma",
+   "why": "ขยายรูม่านตา 2 ทาง: กระตุ้น α1 ที่ dilator หรือยับยั้ง M3 ที่ sphincter\n✗ A: β1 ไม่มีผลต่อขนาดรูม่านตาโดยตรง\n✗ B: β2 ไม่มีผลต่อขนาดรูม่านตาโดยตรง\n✓ C: α1 agonist (phenylephrine) ขยายโดยไม่ทำ cycloplegia\n✗ D: β-blocker ลดการสร้าง aqueous ใช้รักษา glaucoma\n✗ E: Antimuscarinic ก็ขยายได้ แต่เฉลยเลือก α1 agonist",
    "source": "เฉลย78",
    "doubt": "⚠ เฉลย78 ให้ C, E — antimuscarinic ก็ขยายรูม่านตาได้ ต้องดูรายละเอียดโจทย์จริง (มี cycloplegia หรือไม่)"
   },
@@ -1551,7 +1551,7 @@
     "E": "Graves disease"
    },
    "answer": "C",
-   "why": "Primary adrenal insufficiency ทำให้ cortisol ต่ำ จึงไม่มี negative feedback ACTH และ POMC เพิ่มขึ้น ส่วนหนึ่งของ POMC คือ α-MSH กระตุ้น melanocyte ผิวและเยื่อบุจึงคล้ำ ร่วมกับอ่อนเพลีย เบื่ออาหาร น้ำหนักลด Primary aldosteronism ให้ความดันสูง K ต่ำ ไม่คล้ำ Cushing ให้อ้วนลงพุงและ striae Pheochromocytoma ให้ความดันสูงเป็นพักๆ Graves ให้น้ำหนักลดแต่กินเก่ง ใจสั่น ไม่คล้ำที่เยื่อบุ",
+   "why": "Cortisol ต่ำ → ไม่มี negative feedback → ACTH/POMC เพิ่ม → α-MSH → ผิวและเยื่อบุคล้ำ\n✗ A: Primary aldosteronism: ความดันสูง K ต่ำ ไม่คล้ำ\n✗ B: Cushing: อ้วนลงพุง striae\n✓ C: Addison disease\n✗ D: Pheochromocytoma: ความดันสูงเป็นพัก ๆ\n✗ E: Graves: น้ำหนักลดแต่กินเก่ง ใจสั่น ไม่คล้ำที่เยื่อบุ",
    "source": "เฉลย78"
   },
   "78/93": {
@@ -1565,7 +1565,7 @@
     "E": "HSV"
    },
    "answer": "E",
-   "why": "Tzanck smear จากก้นตุ่มน้ำพบ multinucleated giant cell (นิวเคลียสซ้อน ขอบ chromatin ชัด) เป็นลักษณะเด่นของ HSV และ VZV HPV ให้ koilocyte ไม่ใช่ giant cell CMV ให้ owl's eye intranuclear inclusion ในเซลล์ขนาดใหญ่ EBV ให้ atypical lymphocyte ส่วน HBV ให้ ground-glass hepatocyte",
+   "why": "Tzanck smear พบ multinucleated giant cell = HSV/VZV\n✗ A: EBV → atypical lymphocyte\n✗ B: HPV → koilocyte\n✗ C: HBV → ground-glass hepatocyte\n✗ D: CMV → owl's eye intranuclear inclusion\n✓ E: HSV",
    "source": "เฉลย78"
   },
   "78/97": {
@@ -1576,7 +1576,7 @@
     "B": "สูญเสียสารน้ำจากการสูญเสียผิวหนัง"
    },
    "answer": "B",
-   "why": "Burn กว้างทำให้ capillary leak และสูญเสียน้ำ/พลาสมาผ่านผิวที่หายไป เกิด burn shock (hypovolemia) ความดันต่ำ เลือดไปไตลด เกิด prerenal AKI จึง BUN/Cr สูง ร่วมกับ K สูงจากเซลล์ที่ถูกทำลายและไตขับไม่ได้ Cytokine มีส่วนต่อ capillary leak แต่ไม่ใช่กลไกหลักของความดันต่ำและไตวายในระยะแรก",
+   "why": "Burn กว้าง → capillary leak + สูญเสียน้ำ/พลาสมาผ่านผิว → burn shock → prerenal AKI (BUN/Cr สูง) + K สูงจากเซลล์ถูกทำลาย\n✗ A: Cytokine มีส่วนต่อ capillary leak แต่ไม่ใช่กลไกหลักในระยะแรก\n✓ B: สูญเสียสารน้ำจากการสูญเสียผิวหนัง",
    "source": "เฉลย78",
    "doubt": "⚠ hypovolemia ควรทำให้ tachycardia — bradycardia ในโจทย์น่าจะอธิบายด้วย hyperkalemia"
   },
@@ -1591,7 +1591,7 @@
     "E": "Sulfasalazine"
    },
    "answer": "D",
-   "why": "Hydroxychloroquine สะสมใน retinal pigment epithelium ทำให้เกิด retinopathy (bull's-eye maculopathy) ซึ่งไม่หายกลับ จึงต้องตรวจตาก่อนเริ่มและตรวจคัดกรองทุกปีหลังใช้ 5 ปี Methotrexate มีพิษต่อตับ ไขกระดูก ปอด Leflunomide พิษต่อตับและก่อวิรูป Infliximab เสี่ยงติดเชื้อ (TB reactivation) Sulfasalazine ทำให้ผื่น เม็ดเลือดขาวต่ำ อสุจิน้อย",
+   "why": "✗ A: Methotrexate พิษต่อตับ ไขกระดูก ปอด\n✗ B: Leflunomide พิษต่อตับ ก่อวิรูป\n✗ C: Infliximab เสี่ยงติดเชื้อ (TB reactivation)\n✓ D: Hydroxychloroquine สะสมใน RPE → bull's-eye maculopathy (ตรวจคัดกรองทุกปีหลังใช้ 5 ปี)\n✗ E: Sulfasalazine ผื่น เม็ดเลือดขาวต่ำ อสุจิน้อย",
    "source": "เฉลย78"
   },
   "78/101": {
@@ -1605,7 +1605,7 @@
     "E": "Topical antifungals"
    },
    "answer": "B",
-   "why": "รอยโรคที่หนังศีรษะ KOH บวกคือ tinea capitis เชื้อ dermatophyte อยู่ในรากผมและเส้นผม ยาทาและแชมพูซึมไปไม่ถึง จึงต้องใช้ยากิน เช่น griseofulvin หรือ terbinafine Oral ketoconazole ไม่ใช้แล้วเพราะพิษต่อตับ Nystatin ไม่ดูดซึมจากทางเดินอาหาร ใช้กับ candida ในปาก ส่วน ketoconazole shampoo ใช้เสริมลดการแพร่เชื้อเท่านั้น",
+   "why": "Tinea capitis: dermatophyte อยู่ในรากผม ยาทา/แชมพูไม่ถึง ต้องใช้ยากิน\n✗ A: Oral ketoconazole ไม่ใช้แล้ว (พิษต่อตับ)\n✓ B: Oral griseofulvin (หรือ terbinafine)\n✗ C: Nystatin ไม่ดูดซึม ใช้กับ candida ในปาก\n✗ D: Ketoconazole shampoo ใช้เสริมลดการแพร่เชื้อเท่านั้น\n✗ E: ยาทาไม่ถึงรากผม",
    "source": "เฉลย78",
    "doubt": "⚠ ไม่เห็นรูป — อาศัยเฉลยว่าเป็น tinea capitis",
    "needs_image": true
@@ -1621,7 +1621,7 @@
     "E": "Beta-1,3-D-glucan"
    },
    "answer": "A",
-   "why": "ผื่นสีจางชาคือ leprosy จาก Mycobacterium leprae ซึ่งมี phenolic glycolipid-1 (PGL-1) ที่ cell wall จับ laminin-α2 บน Schwann cell ทำให้เชื้อเข้าเส้นประสาทส่วนปลาย และใช้ตรวจ serology (anti-PGL-1) LPS เป็นของแบคทีเรีย gram-negative Teichoic acid เป็นของแบคทีเรีย gram-positive ส่วน galactomannan และ beta-glucan เป็นองค์ประกอบผนังเซลล์เชื้อรา (เช่น Aspergillus)",
+   "why": "ผื่นสีจางชา = leprosy (M. leprae)\n✓ A: PGL-1 จับ laminin-α2 บน Schwann cell → เชื้อเข้าเส้นประสาท (ใช้ตรวจ anti-PGL-1)\n✗ B: LPS = gram-negative\n✗ C: Teichoic acid = gram-positive\n✗ D: Galactomannan = ผนังเซลล์เชื้อรา (Aspergillus)\n✗ E: β-1,3-D-glucan = ผนังเซลล์เชื้อรา",
    "source": "เฉลย78"
   },
   "78/111": {
@@ -1634,7 +1634,7 @@
     "D": "Abacavir"
    },
    "answer": "A",
-   "why": "HLA-B*58:01 สัมพันธ์กับ SJS/TEN และ DRESS จาก allopurinol โดยเฉพาะในคนเอเชีย ควรตรวจก่อนเริ่มยา Colchicine และ indomethacin ใช้รักษา acute gout ไม่สัมพันธ์กับ HLA นี้ Abacavir สัมพันธ์กับ HLA-B*57:01 (hypersensitivity) และไม่ใช่ยารักษา gout",
+   "why": "HLA-B*58:01 สัมพันธ์กับ SJS/TEN/DRESS จาก allopurinol (โดยเฉพาะคนเอเชีย)\n✓ A: Allopurinol\n✗ B: Colchicine ใช้ใน acute gout ไม่สัมพันธ์กับ HLA นี้\n✗ C: Indomethacin ใช้ใน acute gout ไม่สัมพันธ์กับ HLA นี้\n✗ D: Abacavir สัมพันธ์กับ HLA-B*57:01 และไม่ใช่ยา gout",
    "source": "เฉลย78"
   },
   "78/114": {
@@ -1647,7 +1647,7 @@
     "D": "Sturge-Weber syndrome"
    },
    "answer": "A",
-   "why": "NF1 (ยีน NF1 บน chr 17 สร้าง neurofibromin ซึ่งยับยั้ง RAS) มี café-au-lait ≥6 จุด, axillary/inguinal freckling, neurofibroma, Lisch nodule และ optic glioma NF2 (chr 22, merlin) เด่นที่ bilateral vestibular schwannoma Tuberous sclerosis มี ash-leaf macule, angiofibroma, shagreen patch Sturge-Weber มี port-wine stain ตามแนว V1 และ leptomeningeal angioma",
+   "why": "NF1 (chr 17, neurofibromin ยับยั้ง RAS): café-au-lait ≥ 6 จุด + axillary freckling + neurofibroma + Lisch nodule + optic glioma\n✓ A: NF1\n✗ B: NF2 (chr 22, merlin) เด่นที่ bilateral vestibular schwannoma\n✗ C: Tuberous sclerosis: ash-leaf, angiofibroma, shagreen patch\n✗ D: Sturge-Weber: port-wine stain แนว V1 + leptomeningeal angioma",
    "source": "เฉลย78"
   },
   "78/126": {
@@ -1659,7 +1659,7 @@
     "C": "Collagen cross-link"
    },
    "answer": "C",
-   "why": "ผิวยืด ข้อหลวม ช้ำง่าย คือ Ehlers-Danlos syndrome ซึ่งเป็นความผิดปกติของการสร้าง/ประกอบ collagen ทำให้เส้นใยไม่แข็งแรง ตามเฉลยเลือกความผิดปกติของ cross-link (เช่น EDS ชนิดที่ขาด lysyl hydroxylase หรือ procollagen peptidase) Hydroxylation ผิดปกติจากขาดวิตามินซี (scurvy) ให้เลือดออกเหงือกและรอบรูขุมขน ไม่ใช่ผิวยืด ส่วน COL1 mutation เป็นสาเหตุหลักของ osteogenesis imperfecta",
+   "why": "ผิวยืด ข้อหลวม ช้ำง่าย = Ehlers-Danlos syndrome\n✗ A: COL1 mutation เป็นสาเหตุหลักของ osteogenesis imperfecta\n✗ B: Hydroxylation ผิดปกติ (ขาดวิตามินซี) = scurvy เลือดออกเหงือก ไม่ใช่ผิวยืด\n✓ C: ความผิดปกติของ cross-link (เช่น ขาด lysyl hydroxylase หรือ procollagen peptidase)",
    "source": "เฉลย78",
    "doubt": "⚠ เฉลยเขียน C > A — EDS ชนิด classic เกิดจาก COL5A1/COL5A2 และบางชนิดจาก COL1 จึงอาจตอบ A ได้ ขึ้นกับถ้อยคำตัวเลือกจริง"
   },
