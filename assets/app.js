@@ -250,7 +250,7 @@
       if (!c.ready) continue;
       if ((c.group || '') !== grp) { grp = c.group || ''; if (grp) h += `<div class="side-grp">${esc(grp)}</div>`; }
       const p = ch ? chProgress(ch) : null;
-      h += `<div class="side-ch"><a href="#/${c.id}">${esc(c.title)}</a>`;
+      h += `<div class="side-ch ${grpCls(c)}"><a href="#/${c.id}">${esc(c.title)}</a>`;
       if (p) h += `<div class="side-bar">${lvBar(p)}</div>`;
       if (ch && c.id === curCh) {
         for (const pg of ch.pages) {
@@ -849,26 +849,114 @@
       localStorage.setItem(KEY, JSON.stringify(data.S)); toast('กู้คืนแล้ว กำลังโหลดใหม่'); setTimeout(() => { location.hash = '#/'; location.reload(); }, 600);
     };
   }
+  // กลุ่มสีประจำบท: บทสรุป B (เขียว) / คลิปติว (ม่วง)
+  const grpCls = c => c.group ? 'g-clip' : 'g-main';
+  // วงแหวนความคืบหน้า แบ่งสีตามดาว (conic-gradient)
+  function ring(p) {
+    let a = 0; const st = [];
+    for (const l of [4, 3, 2, 1]) { if (!p.c[l]) continue; const b = a + p.c[l] * 100 / p.n; st.push(`var(--lv${l}) ${a}% ${b}%`); a = b; }
+    st.push(`var(--surface2) ${a}% 100%`);
+    return `<div class="ring" style="background:conic-gradient(${st.join(',')})" title="ประเมินแล้ว ${p.d}/${p.n} หัวข้อ"><span><b>${p.n ? Math.round(p.d * 100 / p.n) : 0}%</b><small>${p.d}/${p.n}</small></span></div>`;
+  }
+  // กล่องที่อ่านล่าสุดของบท (จาก S.lastByCh หรือย้อนหาจากบันทึกการอ่าน)
+  function lastOf(id) {
+    const h = (S.lastByCh || {})[id]; if (h) return h;
+    const days = Object.keys(S.read || {}).map(Number).sort((a, b) => b - a);
+    for (const d of days) { const k = Object.keys(S.read[d]).filter(x => x.startsWith(id + '/')).pop(); if (k) return '#/' + k; }
+    return null;
+  }
+  function weakestBox() {
+    let best = null;
+    for (const ch of loadedCH()) for (const s of ch.sections) {
+      let r = 0, n = 0;
+      for (const qid of s.examIds || []) { const st = S.stats[`${ch.id}|${qid}`]; if (st) { r += st.r; n += st.r + st.w; } }
+      if (n < 2) continue; const p = Math.round(r * 100 / n);
+      if (p < 70 && (!best || p < best.p)) best = { ch, s, p };
+    }
+    return best;
+  }
+  // ---------- แผนอ่านถึงวันสอบ (S.plan = { date:'YYYY-MM-DD', buf: วันเผื่อทวน, chs:[id] }) ----------
+  const dayOf = iso => { const [y, m, d] = iso.split('-').map(Number); return Math.floor(Date.UTC(y, m - 1, d) / 864e5); };
+  function everRead() { const r = new Set(); for (const d in S.read || {}) for (const k in S.read[d]) if (S.read[d][k] >= 60) r.add(k); return r; }
+  function planInfo() {
+    const P = S.plan; if (!P || !P.date) return null;
+    const left = dayOf(P.date) - today();
+    const chs = (P.chs && P.chs.length ? P.chs : INDEX.filter(c => c.ready).map(c => c.id)).filter(id => CH[id]);
+    const seen = everRead(), day = (S.read || {})[today()] || {};
+    const rest = [];   // กล่องที่ยังไม่อ่าน (ไม่นับที่อ่านวันนี้ เพื่อให้เป้าวันนี้ไม่ขยับระหว่างวัน)
+    let total = 0;
+    for (const id of chs) for (const s of CH[id].sections) { total++; const k = `${id}/${s.no}`; if ((!seen.has(k) && !lvOf(id, s.no)) || (day[k] >= 60)) rest.push({ id, s, k, doneToday: day[k] >= 60 }); }
+    const studyDays = Math.max(1, left - (P.buf || 0));
+    const target = Math.ceil(rest.length / studyDays);
+    const doneToday = rest.filter(x => x.doneToday).length;
+    const todo = rest.filter(x => !x.doneToday).slice(0, Math.max(0, target - doneToday));
+    return { left, studyDays, target, doneToday, todo, remaining: rest.length - doneToday, total, buf: P.buf || 0, date: P.date, chs };
+  }
+  function planHTML() {
+    const pi = planInfo();
+    const chList = INDEX.filter(c => c.ready);
+    const sel = new Set((S.plan && S.plan.chs && S.plan.chs.length) ? S.plan.chs : chList.map(c => c.id));
+    const form = `<details class="plan-set"${pi ? '' : ' open'}><summary>${pi ? '⚙️ ตั้งค่าแผน' : '🗓️ ตั้งวันสอบเพื่อให้เว็บแบ่งกล่องอ่านต่อวัน'}</summary>
+      <div class="plan-form"><label>วันสอบ <input type="date" id="plDate" value="${S.plan && S.plan.date || ''}"></label>
+      <label>เผื่อวันทวนก่อนสอบ <input type="number" id="plBuf" min="0" max="60" value="${S.plan && S.plan.buf != null ? S.plan.buf : 7}"> วัน</label>
+      <div class="plan-chs">${chList.map(c => `<label class="${grpCls(c)}"><input type="checkbox" value="${c.id}"${sel.has(c.id) ? ' checked' : ''}>${esc(c.title.split(' · ')[0])}</label>`).join('')}</div>
+      <div class="plan-btns"><button class="btn small primary" id="plSave">บันทึกแผน</button>${pi ? '<button class="btn small" id="plClear">ลบแผน</button>' : ''}</div></div></details>`;
+    if (!pi) return `<div class="plan empty-plan">${form}</div>`;
+    if (pi.left < 0) return `<div class="plan">${form.replace('<details class="plan-set"', '<details class="plan-set" open')}<p class="bar-label">วันสอบที่ตั้งไว้ผ่านไปแล้ว ตั้งวันใหม่ได้เลย</p></div>`;
+    const pct = pi.target ? Math.min(100, Math.round(pi.doneToday * 100 / pi.target)) : 100;
+    const readAll = pi.total - pi.remaining;
+    const inReview = pi.left <= pi.buf;
+    const goal = inReview ? `<b>ช่วงทวนก่อนสอบ</b> เน้น Review, กองข้อผิด และกล่องที่อ่อน` : pi.remaining <= 0 ? '<b>อ่านครบทุกกล่องแล้ว</b> ใช้เวลาที่เหลือทวนได้เลย' : `<b>เป้าวันนี้ ${pi.target} กล่อง</b> · อ่านแล้ว ${pi.doneToday}${pi.doneToday >= pi.target ? ' ✓ ครบเป้า' : ''}`;
+    const list = !inReview && pi.todo.length ? `<div class="plan-list">${pi.todo.slice(0, 8).map(x => `<a class="${grpCls(INDEX.find(c => c.id === x.id) || {})}" href="#/${x.id}/${x.s.no}"><b>${esc(chTitle(x.id))} ${x.s.no}</b> ${esc(x.s.title)}</a>`).join('')}${pi.todo.length > 8 ? `<span class="more">+ อีก ${pi.todo.length - 8} กล่อง</span>` : ''}</div>` : '';
+    return `<div class="plan"><div class="plan-top"><div class="cd"><b>${pi.left}</b><small>วันก่อนสอบ</small></div>
+      <div class="plan-body"><div class="plan-goal">${goal}</div><div class="plan-bar"><i style="width:${pct}%"></i></div>
+      <small class="bar-label">อ่านแล้วทั้งหมด ${readAll}/${pi.total} กล่อง · เหลือ ${pi.remaining} กล่อง ใน ${pi.studyDays} วันอ่าน${pi.buf ? ` + ${pi.buf} วันทวน` : ''}</small></div></div>${list}${form}</div>`;
+  }
+  function bindPlan() {
+    const sv = $('#plSave'); if (!sv) return;
+    sv.onclick = () => {
+      const date = $('#plDate').value; if (!date) { toast('เลือกวันสอบก่อนนะ'); return; }
+      const chs = [...view.querySelectorAll('.plan-chs input:checked')].map(x => x.value);
+      if (!chs.length) { toast('เลือกอย่างน้อย 1 บท'); return; }
+      S.plan = { date, buf: Math.max(0, parseInt($('#plBuf').value) || 0), chs }; save(); rerender(); toast('บันทึกแผนแล้ว');
+    };
+    const cl = $('#plClear'); if (cl) cl.onclick = () => { delete S.plan; save(); rerender(); };
+  }
   async function vHome() {
     await loadAll();
     renderSidebar();
     const tile = c => {
       const ch = CH[c.id];
-      if (!c.ready) return `<div class="tile soon"><h3>${esc(c.title)}</h3><p>${esc(c.desc || 'เร็ว ๆ นี้')}</p></div>`;
+      if (!c.ready) return `<div class="tile soon ${grpCls(c)}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || 'เร็ว ๆ นี้')}</p></div>`;
       const p = chProgress(ch);
       const rt = readToday(c.id);
+      const lh = lastOf(c.id); const lm = lh && lh.match(/\/(\d+)$/);
       const todayLine = `<div class="today-line"><b>Today</b> ${rt.done} boxes read · ${Math.round(rt.done * 100 / p.n)}% of chapter${rt.seen > rt.done ? ` · ${rt.seen - rt.done} in progress` : ''}<i style="width:${Math.round(rt.done * 100 / p.n)}%"></i></div>`;
-      return `<a class="tile" href="#/${c.id}"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p>${todayLine}${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</a>`;
+      return `<div class="tile ${grpCls(c)}${rt.done ? ' read-today' : ''}">
+        <a class="tile-main" href="#/${c.id}">${ring(p)}<div class="tile-txt"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p></div></a>
+        <div class="tile-acts"><a class="btn small primary" href="${lh || '#/' + c.id + '/' + (ch.sections[0] ? ch.sections[0].no : 1)}">${lm ? `📖 อ่านต่อ กล่อง ${lm[1]}` : '📖 เริ่มอ่าน'}</a><a class="btn small" href="#/quiz?ch=${c.id}">📝 Quiz</a>${rt.done ? `<span class="tile-today">วันนี้ ${rt.done} กล่อง</span>` : ''}</div>
+        <details class="tile-more"><summary>สถิติ</summary>${todayLine}${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</details></div>`;
     };
     // บทหลักก่อน แล้วตามด้วยกลุ่มพิเศษ (chapters.json → group) เช่น คลิปติวอาจารย์
     const groups = [...new Set(INDEX.map(c => c.group || ''))];
-    const tiles = groups.map(g => (g ? `<h2 class="grid-h">${esc(g)}</h2>` : '') + `<div class="grid">${INDEX.filter(c => (c.group || '') === g).map(tile).join('')}</div>`).join('');
+    const tiles = groups.map(g => `<h2 class="grid-h ${g ? 'g-clip' : 'g-main'}">${esc(g || '📘 สรุปบท A3')}</h2><div class="grid">${INDEX.filter(c => (c.group || '') === g).map(tile).join('')}</div>`).join('');
     const lr = S.lastRead && S.lastRead.h.match(/^#\/([^/]+)\/(\d+)$/);
     const lrSec = lr && CH[lr[1]] && CH[lr[1]].sections.find(x => x.no === +lr[2]);
     const rtAll = readToday(); const rvDone = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
-    const chips = `<div class="today-chips"><span>📖 Read today <b>${rtAll.done}</b> boxes</span><span>📅 Reviewed <b>${rvDone}</b></span><span>🔥 Streak <b>${streak()}</b> days</span></div>`;
-    view.innerHTML = `<div class="hero"><h1>nannie compre website</h1>${chips}${backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : ''}<p>เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p><div class="hero-acts">${lrSec ? `<a class="btn primary resume" id="resumeBtn" href="${S.lastRead.h}">📖 Continue reading · Box ${lrSec.no}. ${esc(lrSec.title)}</a>` : ''}${(() => { const n = dueItems().length; return n ? `<a class="btn resume rv-btn" href="#/review">📅 Review today · ${n} due</a>` : ''; })()}</div></div>${tiles}
-    <div class="panel"><h3>สัญลักษณ์</h3><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><div class="card hint" style="margin:8px 0"><div class="lbl">🎯 อาจารย์บอกข้อสอบ</div>ข้อที่อาจารย์ผู้ออกข้อสอบยกมาหรือบอกว่าออก กด ▶ เวลา เพื่อเปิดคลิปตรงจุดนั้น</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-v">6</mark> <mark class="user-hl c-r">สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></div>`;
+    const due = dueItems().length, nWrong = Object.keys(S.wrong).length, wk = weakestBox();
+    const act = (href, ic, t, sub, cls = '', id = '') => `<a class="dash-act ${cls}" href="${href}"${id ? ` id="${id}"` : ''}><span class="da-ic">${ic}</span><span class="da-t"><b>${t}</b><small>${sub}</small></span></a>`;
+    const acts = [
+      lrSec ? act(S.lastRead.h, '📖', 'อ่านต่อ', `${esc(chTitle(lr[1]))} · กล่อง ${lrSec.no}. ${esc(lrSec.title)}`, 'main', 'resumeBtn') : act('#/' + (INDEX.find(c => c.ready) || {}).id, '📖', 'เริ่มอ่าน', 'เลือกบทด้านล่างได้เลย', 'main'),
+      due ? act('#/review', '📅', `ทวนวันนี้ ${due} รายการ`, 'กล่องและ keyword ที่ถึงรอบทวน', 'due') : act('#/review', '📅', 'ทวนครบแล้ว', rvDone ? `วันนี้ทวนไป ${rvDone} รายการ` : 'ไม่มีรายการถึงกำหนดวันนี้', 'done'),
+      wk ? act(`#/${wk.ch.id}/${wk.s.no}`, '🎯', `กล่องที่อ่อนสุด ${wk.p}%`, `${esc(chTitle(wk.ch.id))} · ${wk.s.no}. ${esc(wk.s.title)}`, 'weak') : act('#/quiz', '📝', 'ทำ Quiz 10 ข้อ', 'เพื่อให้เว็บหาจุดอ่อนให้', ''),
+      nWrong ? act('#/wrong', '📕', `ข้อผิด ${nWrong} ข้อ`, 'ทำซ้ำให้ถูกเพื่อเคลียร์กอง', 'wrong') : ''
+    ].join('');
+    const chips = `<div class="today-chips"><span>📖 อ่านวันนี้ <b>${rtAll.done}</b> กล่อง</span><span>📅 ทวนแล้ว <b>${rvDone}</b></span><span>🔥 ต่อเนื่อง <b>${streak()}</b> วัน</span></div>`;
+    view.innerHTML = `<div class="hero home-hero"><h1>nannie compre website</h1>${backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : ''}</div>
+    <section class="dash"><div class="dash-h"><h2>วันนี้ควรทำอะไร</h2>${chips}</div>${planHTML()}<div class="dash-grid">${acts}</div></section>
+    <p class="split-hint">เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p>${tiles}
+    <details class="panel legend-panel"><summary>สัญลักษณ์ในเนื้อหา</summary><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><div class="card hint" style="margin:8px 0"><div class="lbl">🎯 อาจารย์บอกข้อสอบ</div>ข้อที่อาจารย์ผู้ออกข้อสอบยกมาหรือบอกว่าออก กด ▶ เวลา เพื่อเปิดคลิปตรงจุดนั้น</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-v">6</mark> <mark class="user-hl c-r">สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></details>`;
+    bindPlan();
   }
   async function vChapter(id) {
     await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
@@ -1615,7 +1703,7 @@
   addEventListener('scroll', () => {
     curY = scrollY;
     if (/^#\/[^/]+\/\d+$/.test(location.hash)) {
-      clearTimeout(lrT); lrT = setTimeout(() => { S.lastRead = { h: location.hash, y: Math.round(scrollY) }; save(); }, 500);
+      clearTimeout(lrT); lrT = setTimeout(() => { S.lastRead = { h: location.hash, y: Math.round(scrollY) }; (S.lastByCh = S.lastByCh || {})[location.hash.split('/')[1]] = location.hash; save(); }, 500);
     }
   }, { passive: true });
   iconize(document.querySelector('.topbar'));
