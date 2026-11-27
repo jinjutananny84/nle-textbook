@@ -2215,7 +2215,7 @@
     "C": "Heat production from muscle metabolism"
    },
    "answer": "A",
-   "why": "เมื่อ posterior hypothalamus รับรู้ความเย็นจะกระตุ้น sympathetic (α1) ให้ arrector pili หดตัวทำให้ขนตั้ง ในสัตว์ที่มีขนหนาจะกักชั้นอากาศไว้เป็นฉนวนลดการสูญเสียความร้อน (ในคนเป็นกลไกหลงเหลือ) ไม่ได้สร้างความร้อน ส่วน shivering และ muscle metabolism เป็นกลไกเพิ่มการผลิตความร้อนแยกต่างหาก",
+   "why": "ความเย็น → sympathetic (α1) → arrector pili หด → ขนตั้ง กักชั้นอากาศเป็นฉนวน (ในคนเป็นกลไกหลงเหลือ)\n✓ A: Heat insulation ลดการสูญเสียความร้อน\n✗ B: Shivering เป็นกลไกสร้างความร้อนแยกต่างหาก\n✗ C: Muscle metabolism เป็นกลไกสร้างความร้อนแยกต่างหาก",
    "source": "วิเคราะห์"
   },
   "77/115": {
@@ -2229,7 +2229,7 @@
     "E": "Interossei"
    },
    "answer": "C",
-   "why": "Supracondylar fracture ทำให้ median nerve โดยเฉพาะแขนง anterior interosseous nerve บาดเจ็บบ่อยที่สุด ซึ่งเลี้ยง flexor pollicis longus, FDP นิ้วชี้-กลาง และ pronator quadratus จึงทำ OK sign ไม่ได้ deltoid เป็นของ axillary nerve, EPL เป็นของ radial nerve (PIN) และ interossei เป็นของ ulnar nerve",
+   "why": "Supracondylar fracture ทำ anterior interosseous n. (แขนง median) บาดเจ็บบ่อยสุด\nAIN เลี้ยง FPL + FDP นิ้วชี้-กลาง + pronator quadratus → ทำ OK sign ไม่ได้\n✗ A: Deltoid = axillary n.\n✗ B: Brachialis = musculocutaneous n. อยู่เหนือจุดหัก\n✓ C: Flexor pollicis longus (AIN)\n✗ D: EPL = radial n. (PIN)\n✗ E: Interossei = ulnar n.",
    "source": "วิเคราะห์"
   },
   "77/116": {
@@ -2242,7 +2242,7 @@
     "D": "Sciatic nerve"
    },
    "answer": "B",
-   "why": "Common peroneal (fibular) nerve พันรอบ neck of fibula จึงบาดเจ็บง่ายเมื่อหักบริเวณนี้ เสียทั้ง deep branch (dorsiflexion → foot drop) และ superficial branch (eversion) superficial หรือ deep peroneal อย่างเดียวจะเสียเพียงหน้าที่เดียว ส่วน sciatic nerve จะเสีย knee flexion และ plantarflexion ด้วย",
+   "why": "Common peroneal n. พันรอบ neck of fibula\nเสียทั้ง dorsiflexion และ eversion = บาดเจ็บก่อนแตกแขนง\n✗ A: Superficial peroneal อย่างเดียวเสียแค่ eversion\n✓ B: Common peroneal n. เสียทั้ง deep (foot drop) และ superficial (eversion)\n✗ C: Deep peroneal อย่างเดียวเสียแค่ dorsiflexion\n✗ D: Sciatic n. เสีย knee flexion และ plantarflexion ด้วย",
    "source": "วิเคราะห์"
   },
   "77/118": {
@@ -2256,7 +2256,7 @@
     "E": "T1"
    },
    "answer": "B",
-   "why": "Brachioradialis reflex ใช้ radial nerve ระดับ C5-C6 โดยเด่นที่ C6 (ร่วมกับ biceps reflex C5-C6) ส่วน triceps reflex เป็น C7 และ C8-T1 เกี่ยวกับกล้ามเนื้อมือ (finger flexor, intrinsic) ไม่มี deep tendon reflex มาตรฐาน",
+   "why": "Brachioradialis reflex = C5–C6 เด่นที่ C6\n✗ A: C5 เด่นใน biceps reflex\n✓ B: C6\n✗ C: C7 = triceps reflex\n✗ D: C8 = finger flexor ไม่มี DTR มาตรฐาน\n✗ E: T1 = intrinsic muscle ไม่มี DTR มาตรฐาน",
    "source": "วิเคราะห์"
   },
   "77/119": {
@@ -2270,7 +2270,7 @@
     "E": "Autonomic reflex"
    },
    "answer": "B",
-   "why": "แรงตึงสูงที่ tendon กระตุ้น Golgi tendon organ ส่งสัญญาณทาง Ib afferent ไปยัง inhibitory interneuron ทำให้กล้ามเนื้อนั้นคลายตัว (autogenic inhibition หรือ inverse stretch reflex) จึงป้องกันกล้ามเนื้อและ tendon ฉีกขาด stretch reflex (muscle spindle, Ia) กลับทำให้กล้ามเนื้อหดตัวต้านการยืด withdrawal reflex ตอบสนองต่อ noxious stimulus",
+   "why": "แรงตึงสูงที่ tendon → Golgi tendon organ (Ib) → inhibitory interneuron → กล้ามเนื้อคลาย (autogenic inhibition)\n✗ A: Stretch reflex (muscle spindle, Ia) ทำให้กล้ามเนื้อหดตัวต้าน\n✓ B: Tendon reflex (inverse stretch reflex) ป้องกันกล้ามเนื้อ/tendon ฉีกขาด\n✗ C: Mass reflex พบใน spinal cord injury\n✗ D: Withdrawal reflex ตอบสนองต่อสิ่งที่ทำให้เจ็บ\n✗ E: Autonomic reflex ไม่เกี่ยว",
    "source": "วิเคราะห์"
   },
   "77/120": {
@@ -2284,7 +2284,7 @@
     "E": "Disc herniation of L5-S1"
    },
    "answer": "D",
-   "why": "Hip abduction (gluteus medius) และ dorsiflexion/big toe extension รวมถึงชาหลังเท้าเป็นหน้าที่ของ L5 root ซึ่ง posterolateral disc herniation ที่ L4-L5 จะกด L5 root เป็นหลัก L5-S1 กด S1 (plantarflexion, ankle jerk, ชาฝ่าเท้าด้านข้าง) และ L3-L4 กด L4 (knee jerk, quadriceps)",
+   "why": "Hip abduction (gluteus medius) อ่อน + dorsiflexion อ่อน + ชาหลังเท้า = L5 root\nPosterolateral herniation ที่ L4–L5 กด L5 root\n✗ A: Lumbar sprain ไม่มีอาการทางระบบประสาท\n✗ B: Spondylosis เป็นข้อเสื่อมเรื้อรัง\n✗ C: L3–L4 กด L4 (knee jerk, quadriceps)\n✓ D: L4–L5 กด L5\n✗ E: L5–S1 กด S1 (plantarflexion, ankle jerk, ชาฝ่าเท้าด้านข้าง)",
    "source": "วิเคราะห์",
    "doubt": "⚠ การชาที่ฝ่าเท้าเป็นของ S1 มากกว่า แต่ภาพรวม motor (hip abduction + dorsiflexion) ชี้ L5 มากที่สุด"
   },
@@ -2299,7 +2299,7 @@
     "E": "Pituitary adenoma"
    },
    "answer": "A",
-   "why": "Vestibular schwannoma (acoustic neuroma) เกิดจาก Schwann cell ของ vestibular nerve ใน internal acoustic meatus ขยายไปที่ cerebellopontine angle อาการคือ unilateral SNHL, tinnitus, เสียการทรงตัว และกด CN V/VII ได้ ถ้าเป็นสองข้างนึกถึง NF2 meningioma ที่ CPA พบได้รองลงมาแต่ไม่อยู่ใน IAM เป็นหลัก",
+   "why": "ก้อนใน internal acoustic meatus = vestibular schwannoma (acoustic neuroma)\n✓ A: Schwannoma ของ vestibular nerve → SNHL ข้างเดียว tinnitus เสียการทรงตัว\n  สองข้าง = NF2\n✗ B: Meningioma ที่ CPA พบรองลงมา แต่ไม่อยู่ใน IAM เป็นหลัก\n✗ C: Ependymoma อยู่ในโพรงสมอง (4th ventricle ในเด็ก)\n✗ D: Glioblastoma อยู่ในเนื้อสมอง (cerebral hemisphere)\n✗ E: Pituitary adenoma อยู่ที่ sella",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -2311,7 +2311,7 @@
     "B": "Oligodendrocyte"
    },
    "answer": "B",
-   "why": "Corpus callosum เป็น white matter ของ CNS ซึ่ง myelin สร้างจาก oligodendrocyte (1 เซลล์หุ้มได้หลาย axon) การ remyelination ใน CNS อาศัย oligodendrocyte precursor cell Schwann cell เป็น glia ของ PNS จึงไม่ใช่คำตอบ (แม้ regeneration ใน CNS จะจำกัดกว่า PNS มาก)",
+   "why": "Corpus callosum = white matter ของ CNS → myelin สร้างจาก oligodendrocyte\n✗ A: Schwann cell เป็น glia ของ PNS\n✓ B: Oligodendrocyte (1 เซลล์หุ้มได้หลาย axon) remyelinate ผ่าน OPC",
    "source": "วิเคราะห์"
   },
   "77/175": {
@@ -2323,7 +2323,7 @@
     "C": "Inhibit 5-HT4 receptor"
    },
    "answer": "A",
-   "why": "Acute dystonia เป็น extrapyramidal side effect จากการ block D2 receptor ใน nigrostriatal pathway ซึ่งเกิดกับ metoclopramide หรือ prochlorperazine ที่ใช้เป็นยาแก้อาเจียน รักษาด้วย anticholinergic (benztropine) หรือ diphenhydramine ส่วน 5-HT3 antagonist (ondansetron) ไม่ทำให้ EPS",
+   "why": "Acute dystonia = EPS จากการบล็อก D2 ใน nigrostriatal (metoclopramide, prochlorperazine)\n✓ A: D2 antagonist รักษา dystonia ด้วย benztropine/diphenhydramine\n✗ B: 5-HT3 antagonist (ondansetron) ไม่ทำ EPS\n✗ C: 5-HT4 ไม่ใช่กลไกที่ทำ dystonia",
    "source": "วิเคราะห์"
   },
   "77/206": {
@@ -2337,7 +2337,7 @@
     "E": "Zika RT-PCR"
    },
    "answer": "B",
-   "why": "Congenital CMV เป็นการติดเชื้อแต่กำเนิดที่พบบ่อยที่สุด มี periventricular calcification, microcephaly, SNHL (สาเหตุ non-genetic SNHL อันดับหนึ่ง), chorioretinitis และ hepatosplenomegaly ส่วน toxoplasmosis มี diffuse/parenchymal calcification และ hydrocephalus congenital rubella มี cataract, PDA และ SNHL แต่ไม่เด่นเรื่อง periventricular calcification",
+   "why": "Periventricular calcification + SNHL + chorioretinitis + HSM = congenital CMV\n✗ A: HSV แต่กำเนิดมักเป็นตุ่มน้ำ encephalitis ช่วงทารกแรกเกิด\n✓ B: CMV เป็นการติดเชื้อแต่กำเนิดที่พบบ่อยสุด และสาเหตุ non-genetic SNHL อันดับหนึ่ง\n✗ C: Rubella = cataract, PDA, SNHL ไม่เด่น periventricular calcification\n✗ D: Syphilis = snuffles, rash, bone change\n✗ E: Zika = microcephaly + subcortical calcification",
    "source": "วิเคราะห์"
   },
   "77/236": {
@@ -2348,7 +2348,7 @@
     "B": "Delta-9-tetrahydrocannabinol"
    },
    "answer": "B",
-   "why": "อาการหัวเราะง่าย euphoria ร่วมกับตาแดง (conjunctival injection) หลังสูบ เข้ากับ cannabis ซึ่งสารออกฤทธิ์คือ Δ9-THC จับ CB1 receptor และตรวจพบ metabolite (THC-COOH) ในปัสสาวะได้นาน methamphetamine ทำให้ตื่นตัว mydriasis กระวนกระวาย ไม่เด่นเรื่องตาแดง",
+   "why": "หัวเราะง่าย + ตาแดงปรือ หลังสูบ = cannabis\n✗ A: Methamphetamine ทำตื่นตัว ม่านตาขยาย กระวนกระวาย ไม่เด่นตาแดง\n✓ B: Δ9-THC (ตรวจพบ THC-COOH ในปัสสาวะได้นาน)",
    "source": "วิเคราะห์"
   },
   "77/240": {
@@ -2362,7 +2362,7 @@
     "E": "Beta adrenergic antagonist"
    },
    "answer": "D",
-   "why": "ยาพ่นหลักของ COPD คือ long-acting muscarinic antagonist (tiotropium) หรือ ipratropium ซึ่ง block M3 receptor บน airway smooth muscle และต่อมเมือก ลด bronchoconstriction และเสมหะ muscarinic agonist ทำให้หลอดลมตีบ beta blocker ทำให้หลอดลมหดตัวมากขึ้น ส่วน nicotinic receptor ไม่ได้ควบคุม airway tone โดยตรง",
+   "why": "COPD ยาพ่นหลักคือ muscarinic antagonist (tiotropium, ipratropium)\n✗ A: Nicotinic receptor ไม่ได้ควบคุม airway tone โดยตรง\n✗ B: Nicotinic agonist ไม่ใช้รักษา COPD\n✗ C: Muscarinic agonist ทำหลอดลมตีบ\n✓ D: บล็อก M3 ที่ airway smooth muscle และต่อมเมือก → ขยายหลอดลม ลดเสมหะ\n✗ E: β-blocker ทำหลอดลมหดตัวมากขึ้น",
    "source": "วิเคราะห์"
   },
   "78/3": {
@@ -2376,7 +2376,7 @@
     "E": "ยับยั้ง interleukin"
    },
    "answer": "C",
-   "why": "ไข้เกิดจาก pyrogen (IL-1, IL-6, TNF) กระตุ้น COX-2 ใน hypothalamus ให้สร้าง PGE2 ไปยก set point. Paracetamol ยับยั้ง COX ได้ดีใน CNS (ที่ peroxide ต่ำ) จึงลด PGE2 ใน hypothalamus ทำให้ set point กลับลง. แต่แทบไม่ยับยั้ง COX ที่ peripheral tissue (ที่มี peroxide สูง) จึงไม่ต้านการอักเสบ ข้อ B จึงผิด. การระบายความร้อนที่ผิวเป็นผลตามมา ไม่ใช่กลไกหลัก",
+   "why": "Pyrogen → COX-2 ใน hypothalamus → PGE2 → set point สูงขึ้น\n✗ A: การระบายความร้อนที่ผิวเป็นผลตามมา ไม่ใช่กลไกหลัก\n✗ B: Paracetamol แทบไม่ยับยั้ง COX ที่ peripheral (peroxide สูง) จึงไม่ต้านการอักเสบ\n✓ C: ยับยั้ง COX ใน CNS (peroxide ต่ำ) → PGE2 ใน hypothalamus ลด → set point ลง\n✗ D: เพิ่ม peripheral blood flow เป็นผลตามมา\n✗ E: Paracetamol ไม่ได้ยับยั้ง interleukin",
    "source": "เฉลย78"
   },
   "78/49": {
@@ -2388,7 +2388,7 @@
     "C": "Dry mouth"
    },
    "answer": "C",
-   "why": "ยา OAB หลักคือ antimuscarinic (oxybutynin, tolterodine) ซึ่งบล็อก M3 ที่ detrusor และบล็อก M3 ที่ต่อมน้ำลายด้วย จึงปากแห้ง (พบบ่อยที่สุด). Antimuscarinic ทำให้ท้องผูก ไม่ใช่ท้องเสีย. ภาวะสับสน/cognitive impairment เกิดได้ในผู้สูงอายุ (oxybutynin ผ่าน BBB) แต่ dry mouth เป็น SE ที่เด่นและพบบ่อยกว่ามาก",
+   "why": "ยา urge incontinence = antimuscarinic บล็อก M3 ที่ detrusor และต่อมน้ำลายด้วย\n✗ A: Antimuscarinic ทำท้องผูก ไม่ใช่ท้องเสีย\n✗ B: สับสน/cognitive impairment เกิดได้ในผู้สูงอายุ แต่พบน้อยกว่า\n✓ C: Dry mouth เป็น SE ที่พบบ่อยที่สุด",
    "source": "เฉลย78"
   },
   "78/55": {
@@ -2402,7 +2402,7 @@
     "E": "SIADH"
    },
    "answer": "B",
-   "why": "อดน้ำแล้วปัสสาวะยังเจือจาง แปลว่าไตเข้มข้นปัสสาวะเองไม่ได้ (เป็น DI ไม่ใช่ primary polydipsia ซึ่งจะเข้มข้นได้และ serum osm มักต่ำ). เมื่อให้ desmopressin (V2 agonist) แล้ว urine osm เพิ่ม แปลว่าไตตอบสนองต่อ ADH ปกติ ปัญหาอยู่ที่ hypothalamus/posterior pituitary สร้าง ADH ไม่ได้ = central DI. ถ้าเป็น nephrogenic DI จะไม่ตอบสนองต่อ desmopressin",
+   "why": "อดน้ำแล้วปัสสาวะยังเจือจาง = DI · ให้ desmopressin แล้ว urine osm เพิ่ม = ไตตอบสนองต่อ ADH ปกติ\n✗ A: Nephrogenic DI ไม่ตอบสนองต่อ desmopressin\n✓ B: Central DI: hypothalamus/posterior pituitary สร้าง ADH ไม่ได้\n✗ C: Psychogenic polydipsia อดน้ำแล้วปัสสาวะเข้มข้นได้ serum osm มักต่ำ\n✗ D: Primary polydipsia อดน้ำแล้วปัสสาวะเข้มข้นได้\n✗ E: SIADH ปัสสาวะเข้มข้นตั้งแต่แรก serum osm ต่ำ",
    "source": "เฉลย78"
   },
   "78/70": {
@@ -2416,7 +2416,7 @@
     "E": "Nicotinic receptor"
    },
    "answer": "C",
-   "why": "Spinal anesthesia บล็อก preganglionic sympathetic fiber ทำให้ norepinephrine ที่ปลายประสาทไปกระตุ้น alpha-1 ที่ vascular smooth muscle ลดลง จึงเกิด vasodilation ทั้ง arteriole (SVR ลด) และ vein (venous return ลด) BP จึงตก. Beta-1 เกี่ยวกับหัวใจไม่ใช่หลอดเลือดส่วนปลาย. Beta-2 ทำให้ vasodilate อยู่แล้ว. Nicotinic ที่ ganglion เป็นจุดที่ถูกตัดสัญญาณต้นทาง แต่ receptor ที่ควบคุม tone หลอดเลือดโดยตรงคือ alpha-1",
+   "why": "Spinal anesthesia บล็อก preganglionic sympathetic → NE กระตุ้น α1 ที่หลอดเลือดลดลง\n✗ A: β1 เกี่ยวกับหัวใจ ไม่ใช่หลอดเลือดส่วนปลาย\n✗ B: β2 ทำให้หลอดเลือดขยายอยู่แล้ว\n✓ C: α1 ที่ vascular smooth muscle ถูกกระตุ้นน้อยลง → arteriole + vein ขยาย → BP ตก\n✗ D: Muscarinic ไม่ใช่ตัวคุม tone หลอดเลือดส่วนปลาย\n✗ E: Nicotinic ที่ ganglion เป็นต้นทาง แต่ receptor ที่คุม tone หลอดเลือดโดยตรงคือ α1",
    "source": "เฉลย78"
   },
   "78/71": {
@@ -2429,7 +2429,7 @@
     "D": "Pig"
    },
    "answer": "B",
-   "why": "Chorioretinitis + โปรโตซัวที่ติดจากแม่ = congenital toxoplasmosis (Toxoplasma gondii) ซึ่งมี triad chorioretinitis, hydrocephalus, diffuse intracranial calcification. Sexual reproduction ของ T. gondii เกิดในลำไส้แมว แมวจึงเป็น definitive host และขับ oocyst ออกทางอุจจาระ. คน หมู และสัตว์อื่นเป็น intermediate host (มี tissue cyst)",
+   "why": "Chorioretinitis + โปรโตซัวจากแม่ = congenital toxoplasmosis\n✗ A: คนเป็น intermediate host (มี tissue cyst)\n✓ B: แมวเป็น definitive host (sexual reproduction ในลำไส้แมว ขับ oocyst)\n✗ C: สุนัขไม่ใช่ host ของวงจรนี้\n✗ D: หมูเป็น intermediate host",
    "source": "เฉลย78"
   },
   "78/79": {
@@ -2443,7 +2443,7 @@
     "E": "Antimuscarinic"
    },
    "answer": "C",
-   "why": "ยาขยายม่านตาตัวคลาสสิกคือ phenylephrine ซึ่งเป็น alpha-1 agonist กระตุ้น radial (dilator) muscle ของ iris ให้หดตัว ม่านตาจึงขยายโดยไม่เสีย accommodation (ไม่มี cycloplegia). Antimuscarinic (tropicamide, atropine) ก็ขยายม่านตาได้โดยคลาย sphincter pupillae แต่จะมี cycloplegia ร่วมด้วย. Beta receptor ไม่มีบทบาทสำคัญต่อขนาดรูม่านตา",
+   "why": "Phenylephrine (α1 agonist) กระตุ้น dilator muscle ของ iris → ม่านตาขยายโดยไม่เสีย accommodation\n✗ A: β1 ไม่มีบทบาทสำคัญต่อขนาดรูม่านตา\n✗ B: β2 ไม่มีบทบาทสำคัญต่อขนาดรูม่านตา\n✓ C: α1 agonist ขยายม่านตาโดยไม่มี cycloplegia\n✗ D: β2 antagonist ไม่ขยายม่านตา\n✗ E: Antimuscarinic ก็ขยายได้ แต่มี cycloplegia ร่วม (คำตอบคลาสสิกคือ α1 agonist)",
    "source": "เฉลย78",
    "doubt": "⚠ เฉลย78 ให้ทั้ง C และ E เพราะ antimuscarinic ก็ขยายม่านตาได้ ต้องดูโจทย์จริงว่าระบุว่าไม่มี cycloplegia หรือไม่ ถ้าระบุให้ตอบ alpha-1 agonist"
   },
@@ -2457,7 +2457,7 @@
     "D": "Indomethacin"
    },
    "answer": "A",
-   "why": "Terbutaline เป็น beta-2 agonist ที่คลาย myometrium แต่กระตุ้น beta receptor ที่หัวใจด้วย ทำให้ tachycardia ใจสั่น และร่วมกับการกักเก็บน้ำ/ADH-like effect ทำให้เกิด pulmonary edema ได้ (เป็น SE ที่เด่นของ beta-mimetic). MgSO4 ทำให้กดการหายใจ reflex หาย. Nifedipine ทำให้ hypotension ปวดศีรษะ (reflex tachycardia เล็กน้อย). Indomethacin ทำให้ ductus arteriosus ปิดก่อนกำหนดและ oligohydramnios",
+   "why": "Terbutaline (β2 agonist) กระตุ้น β ที่หัวใจด้วย + กักน้ำ → tachycardia + pulmonary edema\n✓ A: Terbutaline\n✗ B: MgSO4 กดการหายใจ reflex หาย\n✗ C: Nifedipine ความดันต่ำ ปวดศีรษะ\n✗ D: Indomethacin ทำ ductus arteriosus ปิดก่อนกำหนด oligohydramnios",
    "source": "เฉลย78"
   },
   "78/98": {
@@ -2471,7 +2471,7 @@
     "E": "Psychosis"
    },
    "answer": "B",
-   "why": "อาการ manic (ไม่นอน ใช้จ่ายเกินตัว grandiosity) เกิดขึ้นหลังเริ่ม corticosteroid ในผู้สูงอายุที่ไม่เคยมีประวัติจิตเวช จึงเป็น substance/medication-induced bipolar disorder คือ steroid-induced mania ซึ่งเป็น neuropsychiatric SE ที่พบบ่อยในช่วงแรกของการได้ steroid ขนาดสูง. ไม่ใช่ primary manic episode เพราะมีสาเหตุจากยาชัดเจน. ไม่มี hallucination หรือ delusion จึงไม่ใช่ psychosis",
+   "why": "Manic (ไม่นอน ใช้จ่ายเกินตัว) หลังเริ่ม steroid ในผู้สูงอายุที่ไม่เคยมีประวัติจิตเวช\n✗ A: Primary manic episode ไม่ใช่ เพราะมีสาเหตุจากยาชัดเจน\n✓ B: Steroid-induced mania (medication-induced bipolar disorder)\n✗ C: ไม่ได้ใช้สารเสพติด\n✗ D: ไม่มี hallucination/delusion จึงไม่ใช่ psychosis\n✗ E: ไม่มี hallucination/delusion จึงไม่ใช่ psychosis",
    "source": "เฉลย78"
   },
   "78/100": {
@@ -2485,7 +2485,7 @@
     "E": "Sulfasalazine"
    },
    "answer": "D",
-   "why": "Hydroxychloroquine สะสมใน retinal pigment epithelium ทำให้เกิด retinopathy แบบ bull's-eye maculopathy ซึ่งสูญเสียการมองเห็นถาวร จึงต้องตรวจตาเป็นระยะ. Methotrexate ทำให้ hepatotoxicity, myelosuppression, mucositis. Leflunomide ทำให้ hepatotoxicity และ teratogenic. Infliximab เสี่ยง TB reactivation",
+   "why": "Hydroxychloroquine สะสมใน retinal pigment epithelium → bull's-eye maculopathy\n✗ A: Methotrexate: hepatotoxicity, myelosuppression, mucositis\n✗ B: Leflunomide: hepatotoxicity, teratogenic\n✗ C: Infliximab: เสี่ยง TB reactivation\n✓ D: Hydroxychloroquine ต้องตรวจตาเป็นระยะ\n✗ E: Sulfasalazine: ปัสสาวะสีส้ม, oligospermia, hemolysis ใน G6PD",
    "source": "เฉลย78"
   },
   "78/102": {
@@ -2499,7 +2499,7 @@
     "E": "tone เพิ่ม การเคลื่อนไหวลด"
    },
    "answer": "E",
-   "why": "Parkinson disease เกิดจากการเสื่อมของ dopaminergic neuron ใน substantia nigra pars compacta ทำให้ direct pathway ทำงานลดและ indirect pathway เด่น thalamus ถูกยับยั้งมากเกิน จึงเป็น hypokinetic disorder (bradykinesia). ขณะเดียวกันมี rigidity แบบ cogwheel/lead-pipe คือ tone เพิ่ม. ภาวะที่การเคลื่อนไหวเพิ่ม (hyperkinetic) เช่น Huntington chorea หรือ hemiballismus",
+   "why": "Parkinson = hypokinetic disorder + rigidity\n✗ A: Tone ไม่ปกติ (rigidity)\n✗ B: การเคลื่อนไหวลดลง ไม่ใช่เพิ่ม\n✗ C: Tone เพิ่ม ไม่ใช่ลด\n✗ D: Tone ลด + เคลื่อนไหวเพิ่มพบใน chorea (Huntington)\n✓ E: Tone เพิ่ม (cogwheel/lead-pipe) + การเคลื่อนไหวลด (bradykinesia)",
    "source": "เฉลย78"
   },
   "78/105": {
@@ -2510,7 +2510,7 @@
     "B": "Superior orbital fissure"
    },
    "answer": "B",
-   "why": "Superior orbital fissure มี CN III, IV, V1 และ VI ผ่าน แต่ไม่มี V2 (V2 ออกทาง foramen rotundum) จึงตรงกับโจทย์ที่ V2 ปกติ. Cavernous sinus มี V2 วิ่งอยู่ใน lateral wall ด้วย lesion ที่ cavernous sinus จึงมักเสีย V2 ร่วม (และอาจมี Horner จาก sympathetic plexus รอบ ICA)",
+   "why": "CN III, IV, V1, VI เสีย แต่ V2 ปกติ\n✗ A: Cavernous sinus มี V2 อยู่ใน lateral wall ด้วย จึงมักเสีย V2 ร่วม\n✓ B: Superior orbital fissure มี III, IV, V1, VI ผ่าน (V2 ออกทาง foramen rotundum)",
    "source": "เฉลย78"
   },
   "78/106": {
@@ -2521,7 +2521,7 @@
     "B": "Left CN III"
    },
    "answer": "A",
-   "why": "Horizontal diplopia ที่แย่ลงเมื่อมองไปด้านซ้ายหมายถึงกล้ามเนื้อที่ทำหน้าที่มองซ้ายอ่อนแรง คือ left lateral rectus (CN VI ซ้าย). การมองไกลต้องให้ตา diverge ซึ่งอาศัย lateral rectus จึงยิ่งแย่ ส่วนมองใกล้ตา converge (medial rectus) จึงดีขึ้น. ถ้าเป็น left CN III จะมองขวา (adduct ตาซ้าย) ไม่ได้ และมี ptosis หรือรูม่านตาขยายร่วม",
+   "why": "ภาพซ้อนแนวนอน แย่ลงเมื่อมองซ้าย = กล้ามเนื้อที่มองซ้ายอ่อน (left lateral rectus)\nมองไกลต้อง diverge (lateral rectus) จึงแย่ลง · มองใกล้ converge จึงดีขึ้น\n✓ A: Left CN VI\n✗ B: Left CN III จะมองขวาไม่ได้ มี ptosis/ม่านตาขยายร่วม",
    "source": "เฉลย78"
   },
   "78/107": {
@@ -2535,7 +2535,7 @@
     "E": "Beta 1,3 D glucan"
    },
    "answer": "A",
-   "why": "Hypopigmented patch + sensory loss = leprosy จาก Mycobacterium leprae. Phenolic glycolipid-1 (PGL-1) ที่ผนังเซลล์จับกับ laminin-alpha2 บน basal lamina ของ Schwann cell ทำให้เชื้อเข้า Schwann cell และทำลายเส้นประสาทส่วนปลาย (ทั้งยังใช้ตรวจ serology). LPS เป็นของ gram-negative. Teichoic acid เป็นของ gram-positive. Galactomannan และ beta-D-glucan เป็นของเชื้อรา",
+   "why": "ผื่นด่างขาว + ชา = leprosy (M. leprae)\n✓ A: PGL-1 จับ laminin-α2 บน Schwann cell → เชื้อเข้า Schwann cell ทำลายเส้นประสาท\n✗ B: LPS เป็นของ gram-negative\n✗ C: Teichoic acid เป็นของ gram-positive\n✗ D: Galactomannan เป็นของเชื้อรา (Aspergillus)\n✗ E: β-D-glucan เป็นของเชื้อรา",
    "source": "เฉลย78"
   },
   "78/109": {
@@ -2549,7 +2549,7 @@
     "E": "CN12"
    },
    "answer": "D",
-   "why": "Prepontine (pontine) cistern อยู่หน้า pons มี basilar artery และ CN VI ซึ่งออกจาก pontomedullary junction แล้ววิ่งขึ้นผ่าน cistern นี้ก่อนเข้า Dorello canal. CN III อยู่ใน interpeduncular cistern. CN IV อ้อมรอบ midbrain ใน ambient cistern. CN VIII อยู่ที่ cerebellopontine cistern. CN XII อยู่ระดับ medulla",
+   "why": "Prepontine cistern อยู่หน้า pons มี basilar artery และ CN VI\n✗ A: CN III อยู่ใน interpeduncular cistern\n✗ B: CN IV อ้อมรอบ midbrain ใน ambient cistern\n✗ C: CN VIII อยู่ที่ cerebellopontine cistern\n✓ D: CN VI ออกจาก pontomedullary junction วิ่งขึ้นผ่าน cistern นี้ก่อนเข้า Dorello canal\n✗ E: CN XII อยู่ระดับ medulla",
    "source": "เฉลย78"
   },
   "78/110": {
@@ -2563,7 +2563,7 @@
     "E": "Guaifenesin"
    },
    "answer": "D",
-   "why": "ไอแห้งไม่มีเสมหะที่รบกวนการนอนควรใช้ antitussive ที่กด cough center. Codeine เป็น opioid ที่ออกฤทธิ์ที่ mu receptor ใน medulla กด cough reflex (ระวังง่วง ท้องผูก). Acetylcysteine, ambroxol, bromhexine เป็น mucolytic และ guaifenesin เป็น expectorant ใช้กับไอมีเสมหะเหนียว ไม่ช่วยกดไอแห้ง",
+   "why": "ไอแห้งรบกวนการนอน → ยากดไอ (antitussive)\n✗ A: Acetylcysteine เป็น mucolytic\n✗ B: Ambroxol เป็น mucolytic\n✗ C: Bromhexine เป็น mucolytic\n✓ D: Codeine (opioid) กด cough center ใน medulla\n✗ E: Guaifenesin เป็น expectorant ใช้ตอนมีเสมหะ",
    "source": "เฉลย78"
   },
   "78/114": {
@@ -2576,7 +2576,7 @@
     "D": "Sturge-Weber"
    },
    "answer": "A",
-   "why": "NF1 (von Recklinghausen, ยีน NF1 บน chr 17 สร้าง neurofibromin) มี café-au-lait ≥6, axillary/inguinal freckling, neurofibroma, Lisch nodule และ optic pathway glioma. NF2 (chr 22, merlin) เด่นที่ bilateral vestibular schwannoma และ meningioma. Tuberous sclerosis มี ash-leaf spot, cortical tuber, angiofibroma. Sturge-Weber มี port-wine stain ตาม V1 และ leptomeningeal angioma",
+   "why": "Optic glioma + café-au-lait + axillary freckling = NF1\n✓ A: NF1 (chr 17, neurofibromin): café-au-lait ≥ 6, freckling, neurofibroma, Lisch nodule, optic glioma\n✗ B: NF2 (chr 22, merlin): bilateral vestibular schwannoma, meningioma\n✗ C: Tuberous sclerosis: ash-leaf spot, cortical tuber, angiofibroma\n✗ D: Sturge-Weber: port-wine stain ตาม V1, leptomeningeal angioma",
    "source": "เฉลย78"
   },
   "78/115": {
@@ -2589,7 +2589,7 @@
     "D": "Modafinil"
    },
    "answer": "A",
-   "why": "Schizophrenia รักษาด้วย antipsychotic. Risperidone เป็น atypical antipsychotic ที่บล็อก D2 ใน mesolimbic pathway (ลด positive symptom) และบล็อก 5-HT2A ร่วม. Clonazepam เป็น benzodiazepine ใช้ลด anxiety หรือ agitation ไม่รักษา psychosis. Fluoxetine เป็น SSRI สำหรับ depression. Modafinil เป็นยากระตุ้นการตื่นสำหรับ narcolepsy",
+   "why": "Schizophrenia รักษาด้วย antipsychotic\n✓ A: Risperidone (atypical) บล็อก D2 + 5-HT2A\n✗ B: Clonazepam (BZD) ลด anxiety/agitation ไม่รักษา psychosis\n✗ C: Fluoxetine (SSRI) ใช้กับ depression\n✗ D: Modafinil ใช้กับ narcolepsy",
    "source": "เฉลย78"
   },
   "78/116": {
@@ -2602,7 +2602,7 @@
     "D": "GABA agonist"
    },
    "answer": "A",
-   "why": "Antipsychotic ออกฤทธิ์โดยบล็อก D2 receptor. เมื่อบล็อก D2 ใน nigrostriatal pathway ด้วย จะเกิดภาวะคล้ายขาด dopamine คือ extrapyramidal symptom เช่น drug-induced parkinsonism (rigidity, tremor), acute dystonia, akathisia. Dopamine agonist ใช้รักษา Parkinson และไม่ทำให้ rigidity. SSRI และ GABA agonist ไม่ใช่กลไกของ antipsychotic",
+   "why": "Antipsychotic บล็อก D2 → บล็อก nigrostriatal ด้วย → EPS (rigidity)\n✓ A: Dopamine receptor antagonist\n✗ B: Dopamine agonist ใช้รักษา Parkinson ไม่ทำ rigidity\n✗ C: SSRI ไม่ใช่กลไกของ antipsychotic\n✗ D: GABA agonist ไม่ใช่กลไกของ antipsychotic",
    "source": "เฉลย78"
   },
   "78/118": {
