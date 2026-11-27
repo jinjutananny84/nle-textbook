@@ -5,26 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>nannie compre website</title>
 <meta name="description" content="ตำราอธิบายละเอียดคู่กับชีท A3 สรุป NLE Step 1 พร้อมโจทย์ ข้อสอบเก่า และ flashcard">
-<meta name="theme-color" content="#2b2b3a">
+<meta name="theme-color" content="#0e1424">
 <link rel="manifest" href="manifest.json">
-<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icon-mv.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="NLE Study">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=60">
-<link rel="stylesheet" href="assets/pixel.css?v=60">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Josefin+Sans:wght@500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=61">
+<link rel="stylesheet" id="themeCss" href="assets/monument.css?v=61">
 <script>
-  try { var s = JSON.parse(localStorage.getItem('nle-tb-v1') || '{}'); if (s.theme) document.documentElement.dataset.theme = s.theme; if (s.font) document.documentElement.style.setProperty('--fs', s.font + 'px'); if (s.hlOff) document.documentElement.classList.add('no-hl'); } catch (e) {}
+  try {
+    var s = JSON.parse(localStorage.getItem('nle-tb-v1') || '{}');
+    if (s.theme) document.documentElement.dataset.theme = s.theme;
+    if (s.font) document.documentElement.style.setProperty('--fs', s.font + 'px');
+    if (s.hlOff) document.documentElement.classList.add('no-hl');
+    var ui = s.uiStyle === 'pixel' ? 'pixel' : 'monument';
+    document.documentElement.dataset.ui = ui;
+    if (ui === 'pixel') document.getElementById('themeCss').href = 'assets/pixel.css?v=61';
+  } catch (e) {}
 </script>
 </head>
 <body>
 <header class="topbar">
   <button class="icon-btn" id="menuBtn" aria-label="เมนู">☰</button>
-  <a class="brand" href="#/"><img class="brand-logo" src="assets/icon.svg" alt="nannie compre logo" width="28" height="28"><span class="brand-txt">nannie compre website</span></a>
+  <a class="brand" href="#/"><img class="brand-logo" id="brandLogo" src="assets/icon-mv.svg" alt="nannie compre logo" width="28" height="28"><span class="brand-txt">nannie compre website</span></a>
   <form class="search" id="searchForm" role="search">
     <input id="searchInput" type="search" placeholder="Search…" autocomplete="off">
   </form>
@@ -49,8 +57,8 @@
   <div class="scrim" id="scrim"></div>
   <main class="main" id="view" tabindex="-1"><p class="loading">กำลังโหลด…</p></main>
 </div>
-<script src="assets/firebase-config.js?v=60"></script>
-<script src="assets/sync.js?v=60"></script>
-<script src="assets/app.js?v=60"></script>
+<script src="assets/firebase-config.js?v=61"></script>
+<script src="assets/sync.js?v=61"></script>
+<script src="assets/app.js?v=61"></script>
 </body>
 </html>

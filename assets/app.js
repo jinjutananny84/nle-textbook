@@ -283,6 +283,169 @@
     });
   }
 
+  /* ---------- สลับสไตล์ธีม (Monument Valley / Pixel Classic — เปลี่ยนได้ตลอดไม่เสียข้อมูล) ---------- */
+  const APP_VER = '61';
+  const uiStyle = () => S.uiStyle === 'pixel' ? 'pixel' : 'monument';
+  function applyUiStyle() {
+    const u = uiStyle();
+    document.documentElement.dataset.ui = u;
+    const link = document.getElementById('themeCss');
+    const want = `assets/${u === 'pixel' ? 'pixel' : 'monument'}.css?v=${APP_VER}`;
+    if (link && !link.getAttribute('href').endsWith(want)) link.href = want;
+    const logo = document.getElementById('brandLogo');
+    if (logo) logo.src = u === 'pixel' ? 'assets/icon.svg' : 'assets/icon-mv.svg';
+    const fav = document.querySelector('link[rel="icon"]');
+    if (fav) fav.href = u === 'pixel' ? 'assets/icon.svg' : 'assets/icon-mv.svg';
+  }
+  function setUiStyle(u) {
+    S.uiStyle = u === 'pixel' ? 'pixel' : 'monument';
+    save(); applyUiStyle(); rerender();
+    toast(S.uiStyle === 'pixel' ? 'สลับกลับเป็นธีม Pixel Classic แล้ว' : 'เปิดใช้ธีม Monument Valley แล้ว');
+  }
+
+  /* ---------- หอคอยโปรเกรสไอโซเมตริก Monument Valley สำหรับแถบด้านซ้าย ---------- */
+  function mvTowerHTML(ch, curNo) {
+    if (uiStyle() !== 'monument' || !ch || !ch.sections || !ch.sections.length) return '';
+    const secs = ch.sections, n = secs.length;
+    const p = chProgress(ch);
+    const pct = Math.round(p.d * 100 / Math.max(1, p.n));
+    const hide = !!S.mvMapHide;
+    // เส้นทางไอโซเมตริกซิกแซก 4 ช่วง จากฐานล่างซ้ายขึ้นสู่ยอดวิหารกลางบน
+    const WP = [[42, 194], [192, 144], [68, 102], [178, 64], [130, 38]];
+    const segs = []; let totalLen = 0;
+    for (let i = 0; i < WP.length - 1; i++) {
+      const dx = WP[i + 1][0] - WP[i][0], dy = WP[i + 1][1] - WP[i][1];
+      const len = Math.hypot(dx, dy);
+      segs.push({ a: WP[i], b: WP[i + 1], len, s0: totalLen });
+      totalLen += len;
+    }
+    const atDist = d => {
+      const cl = Math.max(0, Math.min(totalLen, d));
+      for (const sg of segs) {
+        if (cl <= sg.s0 + sg.len + 1e-6) {
+          const t = sg.len ? (cl - sg.s0) / sg.len : 0;
+          return [sg.a[0] + (sg.b[0] - sg.a[0]) * t, sg.a[1] + (sg.b[1] - sg.a[1]) * t];
+        }
+      }
+      return WP[WP.length - 1];
+    };
+    const pts = secs.map((s, i) => {
+      const d = n === 1 ? totalLen : (totalLen * i / (n - 1));
+      const [x, y] = atDist(d);
+      return { s, i, x: +x.toFixed(1), y: +y.toFixed(1), d, lv: lvOf(ch.id, s.no) };
+    });
+    // ตำแหน่งตัวละคร: กล่องที่กำลังอ่าน หรือกล่องท้ายสุดที่เคยประเมินแล้ว
+    let actIdx = curNo ? pts.findIndex(q => q.s.no === curNo) : -1;
+    if (actIdx < 0) {
+      for (let i = pts.length - 1; i >= 0; i--) if (pts[i].lv) { actIdx = i; break; }
+      if (actIdx < 0) actIdx = 0;
+    }
+    const act = pts[actIdx];
+    // เส้นเรืองแสงสีฟ้าอมเขียวตามทางที่เดินผ่านแล้ว
+    const trailPts = [];
+    for (const sg of segs) {
+      if (act.d >= sg.s0) {
+        if (!trailPts.length) trailPts.push(`${sg.a[0]},${sg.a[1]}`);
+        if (act.d >= sg.s0 + sg.len) trailPts.push(`${sg.b[0]},${sg.b[1]}`);
+        else { trailPts.push(`${act.x},${act.y}`); break; }
+      }
+    }
+    const lvCol = { 4: '#5eead4', 3: '#ffd97d', 2: '#fb923c', 5: '#f472b6', 1: '#a78bfa' };
+    const r = n > 28 ? 3.2 : n > 16 ? 4 : 4.8;
+    const nodes = pts.map(q => {
+      const fill = q.lv ? lvCol[q.lv] : 'var(--mv-node)';
+      const isOn = q.i === actIdx;
+      return `<a class="mv-node" href="#/${ch.id}/${q.s.no}"><title>กล่อง ${q.s.no}: ${esc(q.s.title)}</title>
+        ${isOn ? `<circle cx="${q.x}" cy="${q.y}" r="${r + 4}" fill="none" stroke="#5eead4" stroke-width="1.2" opacity=".85" class="mv-pulse"/>` : ''}
+        <polygon class="mv-tile" points="${q.x},${(q.y - r * 0.72).toFixed(1)} ${(q.x + r * 1.25).toFixed(1)},${q.y} ${q.x},${(q.y + r * 0.72).toFixed(1)} ${(q.x - r * 1.25).toFixed(1)},${q.y}" fill="${fill}" stroke="${isOn ? '#ffffff' : 'rgba(15,20,40,.45)'}" stroke-width="${isOn ? 1.1 : 0.6}"/></a>`;
+    }).join('');
+    const gid = 'mvg-' + ch.id.replace(/[^a-z0-9]/gi, '');
+    const doneAll = p.n > 0 && p.d >= p.n;
+    const svg = `<svg class="mv-tower-svg" viewBox="0 0 260 226" aria-label="แผนที่โปรเกรสของบท">
+      <defs>
+        <linearGradient id="${gid}s" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="var(--mv-sky1)"/>
+          <stop offset="56%" stop-color="var(--mv-sky2)"/>
+          <stop offset="100%" stop-color="var(--mv-sky3)"/>
+        </linearGradient>
+        <radialGradient id="${gid}b" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="${doneAll ? '#ffe28a' : '#5eead4'}" stop-opacity="${doneAll ? '.85' : '.48'}"/>
+          <stop offset="100%" stop-color="#5eead4" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="${gid}t" cx="50%" cy="65%" r="50%">
+          <stop offset="0%" stop-color="#67e8f9" stop-opacity=".6"/>
+          <stop offset="100%" stop-color="#67e8f9" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="260" height="226" fill="url(#${gid}s)"/>
+      <!-- Stars & Crescent Moon -->
+      <g fill="#eef2ff" opacity=".68">
+        <circle cx="22" cy="18" r=".8"/><circle cx="72" cy="14" r=".9"/><circle cx="198" cy="18" r=".9"/>
+        <circle cx="234" cy="30" r=".8"/><circle cx="218" cy="54" r=".7"/><circle cx="28" cy="64" r=".7"/>
+      </g>
+      <path d="M34 20a8.5 8.5 0 1 0 9.6 11.4 6.8 6.8 0 1 1-9.6-11.4z" fill="var(--mv-moon)" opacity=".92"/>
+      <!-- Distant misty spires -->
+      <g fill="var(--mv-spire)" opacity=".65">
+        <path d="M18 226V138q0-10 9-17 9 7 9 17v88z"/>
+        <path d="M222 226V124q0-10 10-18 10 8 10 18v102z"/>
+      </g>
+      <!-- Sacred geometry rings behind Summit Beacon -->
+      <circle cx="130" cy="22" r="${doneAll ? 22 : 16}" fill="url(#${gid}b)" class="mv-pulse"/>
+      <circle cx="130" cy="22" r="14" fill="none" stroke="var(--mv-gold)" stroke-opacity=".35" stroke-width=".8"/>
+      <circle cx="130" cy="22" r="21" fill="none" stroke="#5eead4" stroke-opacity=".22" stroke-width=".7" stroke-dasharray="2 3"/>
+      <!-- Isometric Monument Architecture (back to front) -->
+      <!-- Summit tower & Tier 3 skyway -->
+      <polygon points="116,42 130,35 144,42 144,96 116,96" fill="var(--mv-wall-r)"/>
+      <polygon points="116,42 130,49 130,96 116,96" fill="var(--mv-wall-l)"/>
+      <polygon points="178,64 130,38 130,68 178,94" fill="var(--mv-wall-r)"/>
+      <polygon points="68,102 178,64 178,96 68,134" fill="var(--mv-wall-l)"/>
+      <path d="M108 120v-18a8 8 0 0 1 16 0v18z" fill="var(--mv-arch)"/>
+      <path d="M142 108v-17a7 7 0 0 1 14 0v17z" fill="var(--mv-arch)"/>
+      <!-- Left upper turret -->
+      <polygon points="54,104 68,97 82,104 82,168 54,168" fill="var(--mv-wall-r)"/>
+      <polygon points="54,104 68,111 68,168 54,168" fill="var(--mv-wall-l)"/>
+      <rect x="61" y="118" width="3.2" height="7" rx="1.6" fill="var(--mv-win)"/>
+      <!-- Tier 2 central bridge (right-to-left) -->
+      <polygon points="68,102 192,144 192,178 68,136" fill="var(--mv-wall-r)"/>
+      <path d="M102 154v-18a8 8 0 0 1 16 0v18z" fill="var(--mv-arch)"/>
+      <path d="M138 166v-18a8 8 0 0 1 16 0v18z" fill="var(--mv-arch)"/>
+      <!-- Right corner tower -->
+      <polygon points="180,146 194,139 208,146 208,226 180,226" fill="var(--mv-wall-r)"/>
+      <polygon points="180,146 194,153 194,226 180,226" fill="var(--mv-wall-l)"/>
+      <rect x="199" y="160" width="3.5" height="8" rx="1.7" fill="var(--mv-win)"/>
+      <rect x="186" y="176" width="3.2" height="7" rx="1.6" fill="#f284b6" opacity=".85"/>
+      <!-- Tier 1 lower viaduct (left-to-right) -->
+      <polygon points="42,194 192,144 192,226 42,226" fill="var(--mv-wall-l)"/>
+      <path d="M76 226v-26a11 11 0 0 1 22 0v26z" fill="var(--mv-arch)"/>
+      <path d="M122 226v-32a11 11 0 0 1 22 0v32z" fill="var(--mv-arch)"/>
+      <!-- Entry plinth bottom-left -->
+      <polygon points="28,196 42,189 56,196 56,226 28,226" fill="var(--mv-wall-r)"/>
+      <polygon points="28,196 42,203 42,226 28,226" fill="var(--mv-wall-l)"/>
+      <!-- Illuminated Isometric Walkway Decks -->
+      <polyline points="42,194 192,144 68,102 178,64 130,38" fill="none" stroke="var(--mv-top)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" opacity=".92"/>
+      <!-- Glowing cyan-teal energy trail up to current position -->
+      ${trailPts.length > 1 ? `<polyline points="${trailPts.join(' ')}" fill="none" stroke="#5eead4" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" opacity=".28"/>
+      <polyline points="${trailPts.join(' ')}" fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>` : ''}
+      <!-- Summit Crystal Beacon -->
+      <polygon points="130,11 136,21 130,31 124,21" fill="${doneAll ? '#fff5c2' : '#e0fdfa'}"/>
+      <polygon points="130,11 136,21 130,31" fill="${doneAll ? '#ffd97d' : '#5eead4'}" opacity=".75"/>
+      <!-- Clickable box waypoints -->
+      ${nodes}
+      <!-- Luminous white geometric traveler on active box -->
+      <g class="mv-traveler" transform="translate(${act.x},${act.y - 2})" style="pointer-events:none">
+        <circle cx="0" cy="-6" r="11" fill="url(#${gid}t)"/>
+        <polygon points="0,-13 4.2,-1.5 -4.2,-1.5" fill="#ffffff"/>
+        <circle cx="0" cy="-14.2" r="1.8" fill="#1e2745"/>
+        <polygon points="0,-21 3.3,-14 -3.3,-14" fill="#ffffff"/>
+      </g>
+    </svg>`;
+    return `<div class="mv-tower-card">
+      <div class="mv-tower-head"><b>Monument Progress</b><span>${curNo ? `กล่อง ${curNo}/${n}` : `${p.d}/${n} กล่อง`} <button type="button" id="mvMapToggle" style="border:0;background:none;padding:0 2px;font-size:11px;color:var(--muted)" title="${hide ? 'แสดงแผนที่' : 'ย่อแผนที่'}">${hide ? '▾' : '▴'}</button></span></div>
+      ${hide ? '' : svg}
+      <div class="mv-tower-foot"><span>ประเมิน <b>${p.d}/${p.n}</b> · มั่นใจ <b>${p.c[4]}</b></span><span class="mv-pct">${pct}%</span></div>
+    </div>`;
+  }
+
   /* ---------- sidebar ---------- */
   function renderSidebar(curCh, curNo) {
     const ready = INDEX.filter(c => c.ready);
@@ -293,6 +456,7 @@
       let out = `<div class="side-ch ${grpCls(c)}${expanded ? ' side-cur' : ''}"><a href="#/${c.id}">${esc(c.title)}</a>`;
       if (p) out += `<div class="side-bar">${lvBar(p)}</div>`;
       if (expanded && ch) {
+        out += mvTowerHTML(ch, curNo);
         for (const pg of ch.pages) {
           out += `<div class="side-pg">หน้า ${pg.no} · ${esc(pg.title)}</div>`;
           for (const s of ch.sections.filter(x => x.page === pg.no)) {
@@ -303,7 +467,7 @@
       }
       return out + '</div>';
     };
-    const linksHtml = `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/flows${curCh ? '?ch=' + curCh : ''}">🩺 Diagnosis flowchart</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/db?view=table&ch=${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/sync">☁️ Sync & App</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a></div>`;
+    const linksHtml = `<div class="side-links"><a href="#/">🏠 Home</a><a href="#/quiz">📝 Quiz</a><a href="#/wrong">📕 Mistakes</a><a href="#/cards">🃏 Flashcard</a><a href="#/stats">📊 Weak spots</a><a href="#/review">📅 Today's review</a><a href="#/db">💊 Drug & Bug</a><a href="#/numbers">🔢 Numbers</a><a href="#/flows${curCh ? '?ch=' + curCh : ''}">🩺 Diagnosis flowchart</a><a href="#/drill">🧠 Name drill</a>${curCh ? `<a href="#/map/${curCh}">🗺️ Chapter map</a><a href="#/db?view=table&ch=${curCh}">💊 Drug table</a>` : ''}<a href="#/notes">🗒️ My notes</a><a href="#/keywords">🔑 My keywords</a><a href="#/sync">☁️ Sync & App</a><a href="#/backup">💾 Backup</a><a href="#" id="hlToggle">🖍 Auto highlight: ${S.hlOff ? 'OFF' : 'ON'}</a><a href="#" id="uiToggle">🎨 ธีม: ${uiStyle() === 'pixel' ? 'Pixel Classic' : 'Monument Valley'}</a></div>`;
     let h = '';
     if (curMeta) {
       // ตอนอ่านบทใดบทหนึ่ง: โชว์เฉพาะหัวข้อย่อยของบทที่เลือก ส่วนบทอื่นย่อไว้เป็นแถบ กดถึงจะเปิดดู
@@ -1324,7 +1488,15 @@
 
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v60</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    const curUi = uiStyle();
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v61</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+      <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
+        <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
+        <div class="style-pick">
+          <button type="button" class="btn${curUi === 'monument' ? ' on' : ''}" data-ui-pick="monument">🏛️ Monument Valley</button>
+          <button type="button" class="btn${curUi === 'pixel' ? ' on' : ''}" data-ui-pick="pixel">👾 Pixel Classic (แบบเดิม)</button>
+        </div>
+      </div>
       <div class="panel"><h3>🔐 Google Cloud Sync</h3>${cloudHtml}
         <div class="today-chips" style="margin-top:12px"><span>ไฮไลต์/โน้ต <b>${nHl}</b></span><span>Keywords <b>${S.kw.length}</b></span><span>ประเมินแล้ว <b>${Object.keys(S.lvl).length}</b></span><span>รูป <b>${imgKeys.length}</b></span></div>
       </div>
@@ -1343,6 +1515,7 @@
       </div>
       <div class="panel"><h3>💾 สำรองข้อมูลเป็นไฟล์ (เผื่อไว้)</h3><p class="muted">ต้องการเก็บไฟล์ <code>.json</code> สำรองไว้ในเครื่องด้วยตนเอง กดไปที่หน้า Backup ได้ตลอด</p><div class="choice"><a class="btn" href="#/backup">เปิดหน้า Backup</a></div></div>`;
 
+    view.querySelectorAll('[data-ui-pick]').forEach(b => b.onclick = () => setUiStyle(b.dataset.uiPick));
     const bIn = $('#syIn'); if (bIn) bIn.onclick = () => window.NLE_SYNC.signInGoogle();
     const bOut = $('#syOut'); if (bOut) bOut.onclick = () => window.NLE_SYNC.signOut();
     const bNow = $('#syNow'); if (bNow) bNow.onclick = () => window.NLE_SYNC.syncNow();
@@ -2427,6 +2600,15 @@
   $('#menuBtn').onclick = () => document.body.classList.toggle('nav-open');
   $('#scrim').onclick = closeNav;
   sidebar.addEventListener('click', e => {
+    if (e.target.id === 'mvMapToggle') {
+      e.preventDefault(); S.mvMapHide = !S.mvMapHide; save();
+      const m = location.hash.match(/^#\/([^/]+)(?:\/(\d+))?/);
+      renderSidebar(m && CH[m[1]] ? m[1] : undefined, m && m[2] ? +m[2] : undefined);
+      return;
+    }
+    if (e.target.id === 'uiToggle') {
+      e.preventDefault(); setUiStyle(uiStyle() === 'pixel' ? 'monument' : 'pixel'); return;
+    }
     if (e.target.id !== 'hlToggle') return;
     e.preventDefault(); S.hlOff = !S.hlOff; save();
     document.documentElement.classList.toggle('no-hl', S.hlOff);
@@ -2437,7 +2619,7 @@
   const isDark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
   const syncTheme = () => { themeBtn.textContent = isDark() ? '☀️' : '🌙'; };
   themeBtn.onclick = () => { S.theme = isDark() ? 'light' : 'dark'; document.documentElement.dataset.theme = S.theme; save(); syncTheme(); };
-  syncTheme();
+  syncTheme(); applyUiStyle();
   $('#fontBtn').onclick = () => { const sizes = [15, 17, 19, 21]; const cur = S.font || 17; S.font = sizes[(sizes.indexOf(cur) + 1) % sizes.length]; document.documentElement.style.setProperty('--fs', S.font + 'px'); save(); };
   updateWrongCount();
   function updateAuthBtn(st) {
@@ -2465,7 +2647,7 @@
         if (S.font) document.documentElement.style.setProperty('--fs', S.font + 'px');
         document.documentElement.classList.toggle('no-hl', !!S.hlOff);
         document.body.classList.toggle('focus', !!S.focus);
-        syncTheme();
+        syncTheme(); applyUiStyle();
         route();
       },
       hasData,
