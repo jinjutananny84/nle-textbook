@@ -3128,7 +3128,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v84</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v85</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4994,17 +4994,18 @@
       { name: 'Crystal Lotus & Whale (บัวคริสตัล + วาฬ)', min: 480 }
     ];
     let lastUnlocked = Math.min(REEF_SPECIES.length, Math.floor(getTodaySec() / 1800));
+    let reefPreviewMin = null;
     const reefHost = document.createElement('aside');
     reefHost.className = 'reef-host';
     reefHost.setAttribute('aria-label', 'Infographic ปราสาทใต้น้ำบันทึกเวลาอ่านรายวัน');
     reefHost.innerHTML = `<button type="button" class="reef-tab" id="reefTab" title="เปิดกรอบปราสาทใต้น้ำ" hidden><span class="reef-tab-arr">‹</span><span class="reef-tab-ic">🪸</span><span class="reef-tab-m" id="reefTabM">0 น.</span></button>
       <div class="reef-dock" id="reefDock">
         <div class="reef-hd">
-          <div class="reef-hd-l"><span class="reef-hd-t" id="reefToday">วันนี้ 0 น.</span><span class="reef-hd-c" id="reefCount">0/16 ชนิด</span></div>
-          <button type="button" class="reef-hide" id="reefHide" title="หุบเก็บกรอบปราสาทใต้น้ำ">›</button>
+          <div class="reef-hd-l"><span class="reef-hd-t" id="reefToday">0 น.</span><span class="reef-hd-c" id="reefCount">0/16</span></div>
+          <div class="reef-hd-r"><button type="button" class="reef-pv-btn" id="reefPvToggle" title="ดู Preview เต็ม 8 ชม. (16 ชนิด)">👁️</button><button type="button" class="reef-hide" id="reefHide" title="หุบเก็บกรอบปราสาทใต้น้ำ">›</button></div>
         </div>
         <div class="reef-scene">
-          <svg viewBox="0 0 180 460" aria-hidden="true">
+          <svg viewBox="0 0 180 460" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
             <defs>
               <linearGradient id="rfBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2b8ea8"/><stop offset="22%" stop-color="#1a6382"/><stop offset="56%" stop-color="#113b5c"/><stop offset="86%" stop-color="#0b233d"/><stop offset="100%" stop-color="#071629"/></linearGradient>
               <linearGradient id="rfRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5f3fc" stop-opacity=".28"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/></linearGradient>
@@ -5089,7 +5090,8 @@
           </svg>
         </div>
         <div class="reef-ft">
-          <div class="reef-next" id="reefNext">อ่านอีก 30 น. ปลดล็อกปะการังแรก</div>
+          <div class="reef-pv-bar" id="reefPvBar" hidden><button type="button" id="rfPvPrev" title="ลด 30 นาที">−</button><span id="rfPvLbl">8 ชม.</span><button type="button" id="rfPvNext" title="เพิ่ม 30 นาที">+</button></div>
+          <div class="reef-next" id="reefNext">อีก 30 น.</div>
           <div class="reef-pbar"><i id="reefPbar"></i></div>
         </div>
       </div>`;
@@ -5104,33 +5106,46 @@
       const collapsed = S.reefHidden != null ? !!S.reefHidden : window.innerWidth < 1240;
       $('#reefDock', reefHost).hidden = collapsed;
       $('#reefTab', reefHost).hidden = !collapsed;
-      const sec = getTodaySec();
-      const mins = Math.floor(sec / 60);
+      const isPv = reefPreviewMin != null;
+      const realSec = getTodaySec();
+      const dispSec = isPv ? reefPreviewMin * 60 : realSec;
+      const mins = Math.floor(dispSec / 60);
       const count = Math.min(REEF_SPECIES.length, Math.floor(mins / 30));
       const rem = 30 - (mins % 30);
-      $('#reefToday', reefHost).textContent = `วันนี้ ${fmtHM(sec)}`;
-      $('#reefTabM', reefHost).textContent = fmtHM(sec);
-      $('#reefCount', reefHost).textContent = `${count}/${REEF_SPECIES.length} ชนิด`;
+      $('#reefToday', reefHost).textContent = isPv ? `PV ${fmtHM(dispSec)}` : fmtHM(realSec);
+      $('#reefTabM', reefHost).textContent = fmtHM(realSec);
+      $('#reefCount', reefHost).textContent = `${count}/${REEF_SPECIES.length}`;
+      const pvBtn = $('#reefPvToggle', reefHost);
+      if (pvBtn) pvBtn.classList.toggle('on', isPv);
+      const pvBar = $('#reefPvBar', reefHost);
+      if (pvBar) {
+        pvBar.hidden = !isPv;
+        $('#rfPvLbl', reefHost).textContent = fmtHM(dispSec);
+      }
       for (let i = 0; i < REEF_SPECIES.length; i++) {
         const g = $(`#rfSp${i}`, reefHost);
         if (g) g.classList.toggle('on', i < count);
       }
       if (count >= REEF_SPECIES.length) {
-        $('#reefNext', reefHost).textContent = '✨ ครบทั้ง 16 ชนิดแล้ววันนี้!';
+        $('#reefNext', reefHost).textContent = isPv ? 'ครบ 8 ชม. (16/16)' : 'ครบ 16 ชนิด!';
         $('#reefPbar', reefHost).style.width = '100%';
       } else {
         const nxt = REEF_SPECIES[count];
-        $('#reefNext', reefHost).textContent = `อีก ${rem} น. → ${nxt.name.split(' (')[0]}`;
+        $('#reefNext', reefHost).textContent = isPv ? `${count > 0 ? REEF_SPECIES[count - 1].name.split(' (')[0] : 'เริ่มต้น'}` : `+${rem}น. ${nxt.name.split(' (')[0]}`;
         $('#reefPbar', reefHost).style.width = `${(((mins % 30) / 30) * 100).toFixed(1)}%`;
       }
-      if (announce && count > lastUnlocked) {
-        const sp = REEF_SPECIES[count - 1];
+      const realCount = Math.min(REEF_SPECIES.length, Math.floor(realSec / 1800));
+      if (announce && realCount > lastUnlocked) {
+        const sp = REEF_SPECIES[realCount - 1];
         if (sp) toast(`🪸 ปลดล็อกปราสาทใต้น้ำใหม่: ${sp.name}!`);
       }
-      lastUnlocked = count;
+      lastUnlocked = realCount;
     };
     $('#reefHide', reefHost).onclick = () => { S.reefHidden = true; save(); syncReef(false); };
     $('#reefTab', reefHost).onclick = () => { S.reefHidden = false; save(); syncReef(false); };
+    $('#reefPvToggle', reefHost).onclick = () => { reefPreviewMin = reefPreviewMin == null ? 480 : null; syncReef(false); };
+    $('#rfPvPrev', reefHost).onclick = () => { reefPreviewMin = Math.max(0, (reefPreviewMin || 0) - 30); syncReef(false); };
+    $('#rfPvNext', reefHost).onclick = () => { reefPreviewMin = Math.min(480, (reefPreviewMin || 0) + 30); syncReef(false); };
 
     const applyCustomMins = () => {
       const inp = $('#pmCustomIn', wrap);
