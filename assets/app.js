@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v100</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v101</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3501,6 +3501,19 @@
   async function vGuide() {
     await loadIndex();
     renderSidebar();
+    const newItems = [
+      draftOn('round2Rating') && `<li><b>ประเมินอ่านรอบ 2 &amp; แถบสารบัญ 2 สี:</b> ท้ายแต่ละกล่องมีช่องประเมิน <b>รอบ 1</b> และ <b>รอบ 2</b> เรียงซ้าย-ขวาให้เห็นพัฒนาการ (เช่น ★ → ★★★★) กล่องที่ประเมินครบ 2 รอบแถบซ้ายจะแบ่งเป็น <b>2 สี (ซ้ายรอบ 1 / ขวารอบ 2)</b> และวงแหวนหน้าหลักจะนับจากรอบล่าสุด</li>`,
+      (draftOn('underwaterReefTimer') || draftOn('reefTankExpand')) && `<li><b>จับเวลาอ่าน + Tank ปราสาทใต้น้ำ 🪸:</b> กดปุ่มจับเวลามุมขวาล่าง (ตั้งเวลาอ่านเองเป็นนาทีได้) ทุก 30 นาทีที่อ่านสะสมในวันนั้นจะปลดล็อกปะการัง/สัตว์ทะเลเพิ่ม 1 ชนิด (ครบ 16 ชนิดที่ 8 ชม.)${draftOn('reefTankExpand') ? ' · กดปุ่ม <b>⤢</b> บนกรอบขวาเพื่อขยายตู้ปลาออกด้านข้าง ดูปราสาท 5 ชั้น + วาฬ + นางเงือก และกด <b>🐟 ให้อาหารปลา</b> ให้ปลาเรืองแสงหรือแตะน้ำปล่อยฟองแก้เครียดได้!' : ''}</li>`,
+      draftOn('anatomySidebarInfographic') && `<li><b>น้อง Ida Anatomy ด้านซ้ายหน้าอ่านบท:</b> บนหน้าจอคอมจะมีหุ่นน้อง Ida ลอยด้านซ้ายพร้อมหน้าต่างคริสตัลโชว์อวัยวะที่จะ <b>เรืองแสงอัตโนมัติตามบทที่กำลังอ่าน</b> (แตะดูชื่ออวัยวะได้ และกด <b>–</b> เพื่อย่อเป็นน้อง Ida ตัวจิ๋วได้ตลอดเวลา)</li>`,
+      (draftOn('noteNeonMascot') || draftOn('notePopViewportArt')) && `<li><b>Sticky Note 2 สี + สติ๊กเกอร์น่ารัก 🗒️:</b> ลากคลุมข้อความแล้วเลือก 🗒️ เพื่อแปะโน้ต เลือกได้ทั้ง <b>สีเหลือง</b> และ <b>สีเขียวนีออน</b> พร้อมตัวการ์ตูน Monument Valley มุมขวาล่าง</li>`,
+      draftOn('drugBloomTree') && `<li><b>ต้นไม้ผลิดอกจำยา &amp; เชื้อ 🌸:</b> ในหน้า <a href="#/db">💊 Drug &amp; Bug</a> กดปุ่ม <b>+ จำได้</b> บนการ์ดยาหรือเชื้อ ยิ่งจำได้เยอะ ดอกไม้กังหันหลากสีและผีเสื้อสีฟ้าจะค่อย ๆ ผลิบานเต็มต้น</li>`,
+      draftOn('mazeReviewQuest') && `<li><b>เขาวงกตมรกตปลดล็อกคริสตัล 🧩:</b> ในหน้า <a href="#/wrong">📕 Mistakes</a>, <a href="#/review">📅 Review</a> และ <a href="#/mock">⏱️ Mock Exam</a> ยิ่งเคลียร์ข้อผิดหรือทวนครบ น้อง Ro จะเดินเหยียบสวิตช์สีชมพูไปปลดล็อกคริสตัลสีม่วงกลางวิหาร</li>`,
+      draftOn('homeFloatingIslands') && `<li><b>3 เกาะปราสาทลอยน้ำหน้าแรก 🏰:</b> แยก 3 ทางลัดหลัก (เกาะทอง = อ่านต่อ/รอบ 2, เกาะชมพู = โจทย์/ข้อผิด/Mock, เกาะมิ้นต์ = จำยา/เชื้อ) พร้อมแถบ Shortcuts ด้านล่าง</li>`,
+      draftOn('aiPopViewportFit') && `<li><b>ถาม Gemini AI ในหน้าเดิม 🔍:</b> ลากคลุมคำแล้วกด 🔍 หน้าต่างจะลอยพอดีกลางจอ สามารถลากคลุมท่อนที่ชอบในคำตอบแล้วกดปุ่มแปะเป็น Sticky Note ได้ทันที</li>`
+    ].filter(Boolean);
+    const newPanel = newItems.length ? `<div class="panel"><h3>5. ฟีเจอร์ใหม่ &amp; กิมมิคกระตุ้นการอ่าน ✨</h3>
+        <ul class="guide-list">${newItems.join('')}</ul>
+      </div>` : '';
     view.innerHTML = `<div class="hero"><h1>📖 คู่มือการใช้งาน</h1><p>สรุปวิธีใช้เว็บอ่านเตรียมสอบให้คุ้มที่สุด (อ่านจบใน 1 นาที)</p></div>
       <div class="panel"><h3>1. เริ่มต้นใช้งาน (ไม่ต้องล็อกอินก่อนก็ได้)</h3>
         <ul class="guide-list">
@@ -3528,6 +3541,7 @@
           <li><b>ออฟไลน์ &amp; AI:</b> เข้า <a href="#/sync">☁️ Sync</a> เพื่อติดตั้งเป็นแอป (PWA), กดโหลดทุกบทไว้ใช้ออฟไลน์, ใส่ Gemini API Key ฟรี และสลับธีม Monument Valley / Pixel Classic ได้</li>
         </ul>
       </div>
+      ${newPanel}
       <div class="choice">
         <a class="btn primary" href="#/">🏠 กลับหน้าแรก</a>
         <a class="btn" href="#/mock">⏱️ ลองทำ Mock Exam</a>
