@@ -1,15 +1,15 @@
 /* Service Worker สำหรับ PWA: เปิดใช้งาน Offline ได้ และอัปเดตอัตโนมัติเมื่อออนไลน์ */
-const CACHE = 'nle-tb-v101';
+const CACHE = 'nle-tb-v102';
 const SHELL = [
   './',
   './index.html',
   './manifest.json',
-  './assets/style.css?v=101',
-  './assets/monument.css?v=101',
-  './assets/pixel.css?v=101',
-  './assets/app.js?v=101',
-  './assets/sync.js?v=101',
-  './assets/firebase-config.js?v=101',
+  './assets/style.css?v=102',
+  './assets/monument.css?v=102',
+  './assets/pixel.css?v=102',
+  './assets/app.js?v=102',
+  './assets/sync.js?v=102',
+  './assets/firebase-config.js?v=102',
   './assets/icon-mv.svg',
   './assets/icon.svg',
   './assets/icon-192.png',

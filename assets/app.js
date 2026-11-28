@@ -2871,7 +2871,7 @@
       selBar.querySelectorAll('button').forEach(b => b.onclick = () => {
         const txt = pickedSnippet; if (!txt) return;
         if (cleanupSel) { cleanupSel(); cleanupSel = null; }
-        if (b.dataset.s === 'sticky' && onNote) { onNote(txt, true); hidePop(); toast('🗒️ บันทึกท่อนที่คลุมเป็น Sticky note แล้ว'); }
+        if (b.dataset.s === 'sticky' && onNote) { onNote(txt, true, draftOn('noteNeonMascot') ? 'g' : 'y'); hidePop(); toast('🗒️ บันทึกท่อนที่คลุมเป็น Sticky note แล้ว'); }
         else if (b.dataset.s === 'star' && onNote) { onNote(txt, false); hidePop(); toast('★ บันทึกท่อนที่คลุมเป็น Star note แล้ว'); }
         else if (b.dataset.s === 'cp') { navigator.clipboard && navigator.clipboard.writeText(txt).then(() => toast('คัดลอกท่อนที่คลุมแล้ว')).catch(() => {}); }
       });
@@ -2956,7 +2956,7 @@
     const isLong = (cur || '').length > 140;
     const useArt = draftOn('notePopViewportArt');
     const useColor = !!sticky && draftOn('noteNeonMascot');
-    let noteCol = curColor === 'g' ? 'g' : 'y';
+    let noteCol = curColor ? (curColor === 'g' ? 'g' : 'y') : (cur ? 'y' : 'g');
     pop.dataset.mode = 'note';
     pop.classList.toggle('ai-pop', isLong || useArt);
     pop.classList.toggle('ai-pop-fit', useArt || (isLong && draftOn('aiPopViewportFit')));
@@ -3043,7 +3043,7 @@
         </g>
       </svg>
     </div>`) : '';
-    const colPickHtml = useColor ? `<span class="note-col-pick"><button type="button" class="nc-sw nc-y${noteCol === 'y' ? ' on' : ''}" data-nc="y" title="สีเหลือง">เหลือง</button><button type="button" class="nc-sw nc-g${noteCol === 'g' ? ' on' : ''}" data-nc="g" title="สีเขียวนีออนอ่อน">เขียวนีออน</button></span>` : '';
+    const colPickHtml = useColor ? `<span class="note-col-pick"><button type="button" class="nc-sw nc-g${noteCol === 'g' ? ' on' : ''}" data-nc="g" title="สีเขียวนีออนอ่อน">เขียวนีออน</button><button type="button" class="nc-sw nc-y${noteCol === 'y' ? ' on' : ''}" data-nc="y" title="สีเหลือง">เหลือง</button></span>` : '';
     pop.innerHTML = `<div class="note-kind"><span>${sticky ? '🗒️ Sticky note' : '★ Star note'}${isLong ? ' · ลบ/ตัดแต่งข้อความแล้วกด Save ได้เลย' : ''}</span>${colPickHtml}</div><textarea class="note-in${sticky ? ' sticky' : ''}${useColor && noteCol === 'g' ? ' st-g' : ''}" rows="${isLong ? 10 : 3}" placeholder="พิมพ์โน้ต จะแสดงต่อจากข้อความที่เลือก">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">Delete note</button>' : ''}<button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div>${artHtml}`;
     const ta = pop.querySelector('textarea'); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
     if (useColor) {
@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v101</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v102</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
