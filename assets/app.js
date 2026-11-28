@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v98</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v99</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -6118,9 +6118,22 @@
   anatHost.id = 'anatHost';
   anatHost.hidden = true;
   anatHost.setAttribute('aria-label', 'Infographic หุ่น Anatomy เรืองแสงตามบท');
-  anatHost.innerHTML = `<button type="button" class="anat-tab" id="anatTab" title="เปิดหุ่น Anatomy ด้านซ้าย" hidden><span>👤</span><span>›</span></button>
+  anatHost.innerHTML = `<button type="button" class="anat-tab anat-mini-ida" id="anatTab" title="ขยายน้อง Ida Anatomy" hidden>
+      <svg viewBox="0 0 44 68" aria-hidden="true">
+        <polygon points="22,60 36,65 22,68 8,65" fill="#5eead4" opacity=".28"/>
+        <line x1="19" y1="48" x2="19" y2="61" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round"/>
+        <line x1="25" y1="48" x2="25" y2="61" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+        <polygon points="22,19 36,50 8,50" fill="#e6faf7"/>
+        <polygon points="22,19 36,50 22,50" fill="#5eead4" opacity=".42"/>
+        <polygon points="22,25 30,37 22,48 14,37" fill="#0b1f36" stroke="#5eead4" stroke-width=".9"/>
+        <circle cx="22" cy="36" r="3" fill="#5eead4"/>
+        <circle cx="22" cy="15" r="5.2" fill="#f8fafc"/>
+        <polygon points="22,2 27,12 17,12" fill="#5eead4"/>
+      </svg>
+      <span class="anat-mini-lbl">Ida ⤢</span>
+    </button>
     <div class="anat-dock" id="anatDock">
-      <button type="button" class="anat-hide" id="anatHide" title="ซ่อนหุ่น Anatomy">×</button>
+      <button type="button" class="anat-hide" id="anatHide" title="ย่อเป็นน้อง Ida ตัวเล็ก">–</button>
       <div class="anat-stage">
         <svg viewBox="0 0 180 342" aria-hidden="true">
           <defs>
@@ -6133,6 +6146,16 @@
           <!-- แท่นเงาเพชรเรขาคณิต Monument Valley ใต้เท้า -->
           <polygon class="anat-shadow" points="90,308 136,324 90,338 44,324" fill="#5eead4" opacity=".22"/>
           <polygon class="anat-ring" points="90,313 122,324 90,334 58,324" fill="#1e1b4b" opacity=".52" stroke="#5eead4" stroke-opacity=".42" stroke-width="1"/>
+
+          <!-- ✨ วิ้งค์เรืองแสงรอบตัวน้อง Ida -->
+          <g class="anat-winks" aria-hidden="true">
+            <path class="an-wink" d="M36 44 l2 6 l6 2 l-6 2 l-2 6 l-2-6 l-6-2 l6-2 Z" fill="#fde047"/>
+            <path class="an-wink" d="M144 58 l1.8 5 l5 1.8 l-5 1.8 l-1.8 5 l-1.8-5 l-5-1.8 l5-1.8 Z" fill="#5eead4" style="animation-delay:.7s"/>
+            <path class="an-wink" d="M22 162 l1.6 4.5 l4.5 1.6 l-4.5 1.6 l-1.6 4.5 l-1.6-4.5 l-4.5-1.6 l4.5-1.6 Z" fill="#f9a8d4" style="animation-delay:1.3s"/>
+            <path class="an-wink" d="M156 196 l2 5.5 l5.5 2 l-5.5 2 l-2 5.5 l-2-5.5 l-5.5-2 l5.5-2 Z" fill="#a5f3fc" style="animation-delay:1.9s"/>
+            <circle class="an-wink" cx="128" cy="24" r="2.2" fill="#fef08a" style="animation-delay:.35s"/>
+            <circle class="an-wink" cx="44" cy="248" r="2" fill="#5eead4" style="animation-delay:1.55s"/>
+          </g>
 
           <!-- หุ่นน้อง Ida สไตล์ Monument Valley ลอยตัวพร้อมหน้าต่างคริสตัลโชว์อวัยวะละเอียด -->
           <g class="anat-body" filter="url(#anDrop)">
@@ -6154,8 +6177,8 @@
             <polygon points="90,92 135,176 90,258 45,176" fill="url(#mvWin)" stroke="#5eead4" stroke-opacity=".62" stroke-width="1.4"/>
             <polygon points="90,97 130,176 90,253 50,176" fill="none" stroke="#a5f3fc" stroke-opacity=".22" stroke-width=".8"/>
 
-            <!-- 🦴 กระดูกสำคัญครึ่งตัวบน (ไหปลาร้า + กระดูกอก + ซี่โครง 6 คู่ + กระดูกสันหลัง) -->
-            <g class="an-org" data-org="msk" data-name="กระดูกสำคัญครึ่งตัวบน (MSK)" stroke="#e2e8f0" stroke-linecap="round" fill="none">
+            <!-- 🦴 กระดูกสำคัญ: ครึ่งตัวบน + กระดูกแขนด้านซ้าย (Humerus/Radius-Ulna) + กระดูกขาด้านซ้าย 1 ข้าง (Femur/Knee/Tibia-Fibula) -->
+            <g class="an-org" data-org="msk" data-name="กระดูกสำคัญ (ซี่โครง + แขนซ้าย + ขาซ้าย)" stroke="#e2e8f0" stroke-linecap="round" fill="none">
               <!-- กระดูกสันหลัง -->
               <line x1="90" y1="84" x2="90" y2="196" stroke-width="2.8" stroke-dasharray="4 3"/>
               <!-- ไหปลาร้า (Clavicles) -->
@@ -6164,11 +6187,21 @@
               <path d="M90 109 v34" stroke="#f8fafc" stroke-width="3.6"/>
               <!-- ซี่โครง 6 คู่ (Ribcage) -->
               <path d="M70 118 Q90 124 110 118 M64 126 Q90 133 116 126 M61 135 Q90 142 119 135 M62 144 Q90 151 118 144 M66 153 Q90 159 114 153 M72 162 Q90 167 108 162" stroke-width="1.7" opacity=".88"/>
-              <!-- หัวไหล่ & ต้นแขนครึ่งบน -->
-              <circle cx="60" cy="113" r="3" fill="#e2e8f0" stroke="none"/>
-              <circle cx="120" cy="113" r="3" fill="#e2e8f0" stroke="none"/>
-              <line x1="59" y1="116" x2="50" y2="162" stroke-width="2.4" opacity=".72"/>
-              <line x1="121" y1="116" x2="130" y2="162" stroke-width="2.4" opacity=".72"/>
+              <!-- กระดูกแขนด้านซ้ายละเอียด (ข้อไหล่ -> Humerus -> ข้อศอก -> Radius/Ulna -> มือ) -->
+              <circle cx="59" cy="113" r="3.4" fill="#f8fafc" stroke="none"/>
+              <line x1="58" y1="116" x2="46" y2="154" stroke="#f8fafc" stroke-width="3.2"/>
+              <circle cx="45" cy="156" r="2.8" fill="#cbd5e1" stroke="none"/>
+              <line x1="44" y1="159" x2="36" y2="196" stroke="#f8fafc" stroke-width="2.2"/>
+              <line x1="47" y1="159" x2="40" y2="196" stroke="#cbd5e1" stroke-width="1.5"/>
+              <circle cx="37" cy="199" r="2.2" fill="#e2e8f0" stroke="none"/>
+              <!-- เชิงกรานซ้าย + กระดูกขาด้านซ้าย 1 ข้าง (Hip -> Femur -> Patella/เข่า -> Tibia/Fibula -> ข้อเท้า) -->
+              <path d="M88 196 Q74 202 68 214" stroke="#cbd5e1" stroke-width="2.6"/>
+              <circle cx="69" cy="215" r="3.4" fill="#f8fafc" stroke="none"/>
+              <line x1="70" y1="218" x2="77" y2="262" stroke="#f8fafc" stroke-width="3.4"/>
+              <circle cx="78" cy="265" r="3.2" fill="#e2e8f0" stroke="#94a3b8" stroke-width=".7"/>
+              <line x1="79" y1="268" x2="80" y2="303" stroke="#f8fafc" stroke-width="2.6"/>
+              <line x1="75" y1="270" x2="77" y2="302" stroke="#cbd5e1" stroke-width="1.4"/>
+              <ellipse cx="81" cy="306" rx="4.5" ry="2.1" fill="#e2e8f0" stroke="none"/>
             </g>
 
             <!-- 🧠 สมองละเอียด (Cerebrum + รอยหยัก Gyri + Cerebellum + Brainstem + Spinal cord) -->
