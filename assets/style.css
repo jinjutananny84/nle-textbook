@@ -1237,7 +1237,7 @@ body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 
 /* 4. Frameless 3D 30-deg Floating Human Anatomy Figure (overlapping sidebar edge, no box) */
 .anat-host[hidden]{display:none}
-.anat-dock{position:fixed;left:calc(var(--side) - 26px);top:54%;transform:translateY(-50%);width:176px;z-index:26;display:flex;flex-direction:column;align-items:center;background:none;border:0;box-shadow:none;padding:0;pointer-events:none}
+.anat-dock{position:fixed;left:calc(var(--side) - 24px);top:54%;transform:translateY(-50%);width:184px;z-index:26;display:flex;flex-direction:column;align-items:center;background:none;border:0;box-shadow:none;padding:0;pointer-events:none}
 body.focus .anat-dock{left:12px}
 .anat-dock[hidden]{display:none}
 .anat-hide{position:absolute;top:2px;right:12px;width:20px;height:20px;border:0;border-radius:999px;background:rgba(15,23,42,.55);color:#cbd5e1;font-size:13px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0;opacity:0;pointer-events:auto;transition:opacity .18s,background .15s}
