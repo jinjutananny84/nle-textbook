@@ -1133,5 +1133,10 @@ body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 .kw-art .kw-spirit{animation:kwSpirit 3.4s ease-in-out infinite}
 .kw-art .kw-wf{animation:kwWf 1.4s linear infinite}
 .kw-art .kw-bob{animation:pmBob 1.8s ease-in-out infinite}
+@keyframes ntFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes ntFlag{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.92) skewY(2deg)}}
+.kw-art .nt-cube{animation:ntFloat 3.4s ease-in-out infinite}
+.kw-art .nt-cube2{animation:ntFloat 4.2s ease-in-out infinite .8s}
+.kw-art .nt-flag{transform-box:fill-box;transform-origin:left center;animation:ntFlag 2.4s ease-in-out infinite}
 :root.owner-preview .side-ch-mz{cursor:pointer}
 @media print{.reef-host{display:none}}

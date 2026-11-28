@@ -2890,13 +2890,94 @@
   // กล่องพิมพ์โน้ตในแถบเดียวกัน (ถ้าข้อความยาวจาก Gemini จะขยายกล่องให้ตัด/แก้สะดวก)
   function openNote(onNote, cur, sticky) {
     const isLong = (cur || '').length > 140;
-    pop.dataset.mode = 'note'; pop.classList.toggle('ai-pop', isLong); pop.classList.toggle('ai-pop-fit', isLong && draftOn('aiPopViewportFit')); pop.classList.add('writing');
-    if (isLong) {
+    const useArt = draftOn('notePopViewportArt');
+    pop.dataset.mode = 'note';
+    pop.classList.toggle('ai-pop', isLong || useArt);
+    pop.classList.toggle('ai-pop-fit', useArt || (isLong && draftOn('aiPopViewportFit')));
+    pop.classList.toggle('kw-pop-fit', useArt && !isLong);
+    pop.classList.add('writing');
+    if (isLong && !useArt) {
       const w = Math.min(540, document.documentElement.clientWidth - 16);
       const curLeft = parseFloat(pop.style.left) || 8;
       pop.style.left = Math.max(8, Math.min(curLeft, document.documentElement.clientWidth - w - 8)) + 'px';
     }
-    pop.innerHTML = `<div class="note-kind">${sticky ? '🗒️ Sticky note' : '★ Star note'}${isLong ? ' · ลบ/ตัดแต่งข้อความแล้วกด Save ได้เลย' : ''}</div><textarea class="note-in${sticky ? ' sticky' : ''}" rows="${isLong ? 10 : 3}" placeholder="พิมพ์โน้ต จะแสดงต่อจากข้อความที่เลือก">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">Delete note</button>' : ''}<button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div>`;
+    const artHtml = useArt ? (sticky ? `<div class="kw-art" aria-hidden="true">
+      <svg viewBox="0 0 360 108" preserveAspectRatio="xMidYMid meet">
+        <!-- ปราสาททอง Monument Valley 2 (Ro + ลูก + Totem + ธงชมพู + กล่องลอย) -->
+        <g transform="translate(306,42)"><g class="nt-cube"><polygon points="0,-10 10,-5 0,0 -10,-5" fill="#fde047"/><polygon points="-10,-5 0,0 0,11 -10,6" fill="#f59e0b"/><polygon points="10,-5 0,0 0,11 10,6" fill="#d97706"/></g></g>
+        <g transform="translate(52,66)"><g class="nt-cube2"><polygon points="0,-7 7,-3.5 0,0 -7,-3.5" fill="#7ce0d3"/><polygon points="-7,-3.5 0,0 0,8 -7,4.5" fill="#38989c"/><polygon points="7,-3.5 0,0 0,8 7,4.5" fill="#23666b"/></g></g>
+        <g transform="translate(88,82)"><g class="nt-cube"><polygon points="0,-5 6,-2 0,1 -6,-2" fill="#fde047"/><polygon points="-6,-2 0,1 0,6 -6,3" fill="#f59e0b"/><polygon points="6,-2 0,1 0,6 6,3" fill="#d97706"/></g></g>
+        <g transform="translate(122,88)"><g class="nt-cube2"><polygon points="0,-5 7,-2 0,1 -7,-2" fill="#99f6e4"/><polygon points="-7,-2 0,1 0,6 -7,3" fill="#2dd4bf"/><polygon points="7,-2 0,1 0,6 7,3" fill="#0d9488"/></g></g>
+        <!-- หอคอยทอง + โดมเหลี่ยมสีกรมท่า + ธงชมพูพลิ้ว -->
+        <polygon points="196,42 222,30 248,42 248,108 196,108" fill="#fbbf24"/>
+        <polygon points="222,30 248,42 248,108 222,108" fill="#f59e0b"/>
+        <path d="M206 72 v-18 a7 7 0 0 1 14 0 v18 Z" fill="#b45309"/>
+        <path d="M204 42 Q222 14 240 42 Z" fill="#334155"/>
+        <path d="M222 22 Q232 30 240 42 L222 44 Z" fill="#1e293b"/>
+        <line x1="222" y1="20" x2="222" y2="8" stroke="#e2e8f0" stroke-width="1.3"/>
+        <path class="nt-flag" d="M222,10 Q238,14 248,22 Q256,26 266,24 Q254,28 242,24 Q232,18 222,18 Z" fill="#f472b6"/>
+        <!-- ระเบียงทองหน้าปราสาท + บันได -->
+        <polygon points="150,74 222,42 292,74 222,108" fill="#fde68a"/>
+        <polygon points="150,74 222,108 222,112 150,112" fill="#f59e0b"/>
+        <polygon points="222,108 292,74 292,112 222,112" fill="#d97706"/>
+        <!-- Totem ฟ้า-ชมพู -->
+        <polygon points="232,58 250,50 268,58 250,66" fill="#99f6e4"/>
+        <polygon points="232,58 250,66 250,86 232,78" fill="#38bdf8"/>
+        <polygon points="250,66 268,58 268,78 250,86" fill="#f472b6"/>
+        <circle cx="241" cy="72" r="4.5" fill="#0f172a" stroke="#fff" stroke-width="1.4"/>
+        <!-- Ro & ลูกจับมือกัน -->
+        <g transform="translate(178,74)"><g class="kw-bob">
+          <line x1="-2" y1="-2" x2="-2" y2="4" stroke="#1e293b" stroke-width="1.3"/><line x1="2" y1="-2" x2="2" y2="4" stroke="#1e293b" stroke-width="1.3"/>
+          <polygon points="0,-13 -7,-2 7,-2" fill="#fb7185"/>
+          <circle cx="0" cy="-16" r="3" fill="#fff"/>
+          <circle cx="-1.5" cy="-19" r="2.2" fill="#1e3a8a"/>
+        </g></g>
+        <g transform="translate(198,78)"><g class="kw-bob" style="animation-delay:.4s">
+          <line x1="-1.5" y1="-1" x2="-1.5" y2="3.5" stroke="#1e293b" stroke-width="1.2"/><line x1="1.5" y1="-1" x2="1.5" y2="3.5" stroke="#1e293b" stroke-width="1.2"/>
+          <polygon points="0,-9 -4.5,-1 4.5,-1" fill="#fff"/>
+          <circle cx="0" cy="-11" r="2.3" fill="#e11d48"/>
+          <polygon points="2,-14 -2,-11 3,-10" fill="#e11d48"/>
+        </g></g>
+      </svg>
+    </div>` : `<div class="kw-art" aria-hidden="true">
+      <svg viewBox="0 0 360 108" preserveAspectRatio="xMidYMid meet">
+        <!-- ปราสาทเขียวมิ้นต์ Monument Valley 1 (Ida + Crow + Totem ทอง + ธงเหลือง + กล่องลอย) -->
+        <g transform="translate(52,58)"><g class="nt-cube"><polygon points="0,-10 10,-5 0,0 -10,-5" fill="#99f6e4"/><polygon points="-10,-5 0,0 0,11 -10,6" fill="#2dd4bf"/><polygon points="10,-5 0,0 0,11 10,6" fill="#0f766e"/></g></g>
+        <g transform="translate(304,50)"><g class="nt-cube2"><polygon points="0,-7 7,-3.5 0,0 -7,-3.5" fill="#fde047"/><polygon points="-7,-3.5 0,0 0,8 -7,4.5" fill="#f59e0b"/><polygon points="7,-3.5 0,0 0,8 7,4.5" fill="#b45309"/></g></g>
+        <g transform="translate(264,78)"><g class="nt-cube"><polygon points="0,-5 7,-2 0,1 -7,-2" fill="#99f6e4"/><polygon points="-7,-2 0,1 0,6 -7,3" fill="#2dd4bf"/><polygon points="7,-2 0,1 0,6 7,3" fill="#0d9488"/></g></g>
+        <g transform="translate(232,86)"><g class="nt-cube2"><polygon points="0,-5 7,-2 0,1 -7,-2" fill="#fde68a"/><polygon points="-7,-2 0,1 0,6 -7,3" fill="#fbbf24"/><polygon points="7,-2 0,1 0,6 7,3" fill="#d97706"/></g></g>
+        <!-- หอคอยเขียวมิ้นต์ + โดมสีกรมท่า + ธงเหลืองพลิ้ว -->
+        <polygon points="108,38 134,26 160,38 160,108 108,108" fill="#4db6ac"/>
+        <polygon points="134,26 160,38 160,108 134,108" fill="#2b7a78"/>
+        <path d="M122 68 v-18 a7 7 0 0 1 14 0 v18 Z" fill="#133a42"/>
+        <path d="M114 38 Q134 10 154 38 Z" fill="#334155"/>
+        <path d="M134 18 Q144 26 154 38 L134 40 Z" fill="#1e293b"/>
+        <line x1="134" y1="16" x2="134" y2="6" stroke="#e2e8f0" stroke-width="1.3"/>
+        <path class="nt-flag" d="M134,8 Q152,12 162,20 Q170,24 180,22 Q168,26 156,22 Q146,16 134,16 Z" fill="#fde047"/>
+        <!-- บันไดเฉียงเขียวมิ้นต์ + Totem สีทอง -->
+        <polygon points="122,70 198,108 176,108 100,70" fill="#80cbc4"/>
+        <path d="M128 76 l16 8 M140 82 l16 8 M152 88 l16 8 M164 94 l16 8" stroke="#1f5c5b" stroke-width="1.4"/>
+        <polygon points="168,54 186,46 204,54 186,62" fill="#fde047"/>
+        <polygon points="168,54 186,62 186,86 168,78" fill="#facc15"/>
+        <polygon points="186,62 204,54 204,78 186,86" fill="#ca8a04"/>
+        <circle cx="177" cy="68" r="4.5" fill="#1e1b4b" stroke="#fff" stroke-width="1.4"/>
+        <!-- น้อง Ida บนบันได -->
+        <g transform="translate(148,66)"><g class="kw-bob">
+          <line x1="-1.5" y1="0" x2="-1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/><line x1="1.5" y1="0" x2="1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/>
+          <polygon points="0,-10 -5,0 5,0" fill="#fff"/>
+          <circle cx="0" cy="-12" r="2.5" fill="#1e293b"/>
+          <polygon points="0,-22 -3.4,-12 3.4,-12" fill="#fff"/>
+        </g></g>
+        <!-- นกกา Crow นั่งอยู่ชั้นล่าง -->
+        <g transform="translate(128,86)">
+          <ellipse cx="0" cy="4" rx="4" ry="5.5" fill="#111827"/>
+          <circle cx="0" cy="-2.5" r="3" fill="#111827"/>
+          <polygon points="2.5,-3.5 9,-1.5 2.5,0" fill="#111827"/>
+          <circle cx=".8" cy="-2.8" r="1" fill="#fff"/>
+        </g>
+      </svg>
+    </div>`) : '';
+    pop.innerHTML = `<div class="note-kind">${sticky ? '🗒️ Sticky note' : '★ Star note'}${isLong ? ' · ลบ/ตัดแต่งข้อความแล้วกด Save ได้เลย' : ''}</div><textarea class="note-in${sticky ? ' sticky' : ''}" rows="${isLong ? 10 : 3}" placeholder="พิมพ์โน้ต จะแสดงต่อจากข้อความที่เลือก">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">Delete note</button>' : ''}<button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div>${artHtml}`;
     const ta = pop.querySelector('textarea'); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
     ta.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); onNote(ta.value.trim(), sticky); hidePop(); } });
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { const a = b.dataset.a; if (a === 'ok') onNote(ta.value.trim(), sticky); if (a === 'del') onNote('', sticky); hidePop(); });
@@ -3184,7 +3265,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v89</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v90</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4791,6 +4872,13 @@
       area: 'ป๊อปอัปเพิ่ม Keyword (เมื่อลากคลุมคำ)',
       desc: 'จัดกล่องเพิ่ม Keyword ให้ลอยกลางจอไม่ต้องเลื่อนลงแม้คลุมคำอยู่ล่างสุด พร้อมกราฟิกน้ำตกและวิญญาณเรืองแสงน่ารักด้านล่าง',
       added: 'v88'
+    },
+    {
+      key: 'notePopViewportArt',
+      title: 'หน้าต่าง Star & Sticky Note พอดีจอ + กราฟิก Monument Valley',
+      area: 'ป๊อปอัป ★ Star note & 🗒️ Sticky note',
+      desc: 'จัดกล่องโน้ตขนาดเท่ากล่อง Keyword ลอยกลางจอไม่ต้องเลื่อน พร้อมกราฟิกปราสาท Ida/Crow (★) และ Ro & ลูก (Sticky) เบลนด์กลืนพื้นหลังด้านล่าง',
+      added: 'v90'
     }
   ];
   const _onOwnerChange = [];
