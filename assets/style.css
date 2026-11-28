@@ -1175,6 +1175,9 @@ body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 .reef-dock.is-expanded .reef-hd-c{font-size:11px}
 .reef-hd-pearl{font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;background:rgba(253,224,71,.16);color:#fef08a;border:1px solid rgba(253,224,71,.35)}
 .reef-hd-pearl[hidden],.reef-exp-glow[hidden],.reef-exp-btn[hidden],.reef-exp-panel[hidden],.reef-next-card[hidden],#reefMiniSvg[hidden],#reefExpSvg[hidden]{display:none!important}
+.reef-dock:not(.is-expanded) #reefExpSvg{display:none!important}
+.reef-dock.is-expanded #reefMiniSvg{display:none!important}
+.reef-dock.is-expanded #reefExpSvg{display:block!important}
 .reef-dock.is-expanded .reef-scene{background:linear-gradient(180deg,#2e99b5 0%,#1e6f8f 16%,#134569 46%,#0b2642 78%,#061426 100%)}
 .reef-exp-btn,.reef-exp-glow{width:20px;height:20px;border:0;border-radius:6px;background:rgba(76,242,242,.22);color:#7ce0d3;font-size:12px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0}
 .reef-exp-btn:hover,.reef-exp-glow:hover{background:rgba(76,242,242,.38);color:#fff}
