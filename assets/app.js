@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v96</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v97</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3572,17 +3572,19 @@
     const chips = `<div class="today-chips"><span>📖 อ่านวันนี้ <b>${rtAll.done}</b> กล่อง</span><span>📅 ทวนแล้ว <b>${rvDone}</b></span><span>🔥 ต่อเนื่อง <b>${streak()}</b> วัน</span></div>`;
     const bkWarn = backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : '';
     const heroHtml = uiStyle() === 'monument' ? mvGrandCitadelHTML(bkWarn) : `<div class="hero home-hero"><h1>nannie compre website</h1>${bkWarn}</div>`;
-    const islandsHtml = draftOn('homeFloatingIslands') ? mvHomeIslandsHTML({
+    const useIslands = draftOn('homeFloatingIslands');
+    const dashBlock = useIslands ? mvHomeIslandsHTML({
       lrHref: lrSec ? S.lastRead.h : ('#/' + (INDEX.find(c => c.ready) || {}).id),
       lrSub: lrSec ? `${chTitle(lr[1])} · กล่อง ${lrSec.no}` : 'เริ่มอ่านบทแรก',
-      nWrong, due,
+      nWrong, due, rvDone, wk,
+      readTodayDone: rtAll.done,
+      streakDays: streak(),
       dbKnown: Object.keys(S.known || {}).filter(k => k.startsWith('db:')).length
-    }) : '';
-    view.innerHTML = `${heroHtml}${islandsHtml}
-    <section class="dash"><div class="dash-h"><h2>วันนี้ควรทำอะไร</h2>${chips}</div>${planHTML()}<div class="dash-grid">${acts}</div></section>
+    }) : `<section class="dash"><div class="dash-h"><h2>วันนี้ควรทำอะไร</h2>${chips}</div>${planHTML()}<div class="dash-grid">${acts}</div></section>`;
+    view.innerHTML = `${heroHtml}${dashBlock}
     <p class="split-hint">เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p>${tiles}
     <details class="panel legend-panel"><summary>สัญลักษณ์ในเนื้อหา</summary><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><div class="card hint" style="margin:8px 0"><div class="lbl">🎯 อาจารย์บอกข้อสอบ</div>ข้อที่อาจารย์ผู้ออกข้อสอบยกมาหรือบอกว่าออก กด ▶ เวลา เพื่อเปิดคลิปตรงจุดนั้น</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-v">6</mark> <mark class="user-hl c-r">สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></details>`;
-    bindPlan();
+    if (!useIslands) bindPlan();
   }
   let _routeSeq = 0;
   async function vChapter(id, seq) {
@@ -6494,44 +6496,54 @@
     </section>`;
   }
 
-  /* 🏰 3. Three Pastel Floating Castle Islands (Home — homeFloatingIslands) */
-  function mvHomeIslandsHTML({ lrHref, lrSub, nWrong, due, dbKnown }) {
+  /* 🏰 3. Three Pastel Floating Castle Islands + Compact Shortcuts (Home — homeFloatingIslands) */
+  function mvHomeIslandsHTML({ lrHref, lrSub, nWrong, due, rvDone = 0, wk = null, readTodayDone = 0, streakDays = 0, dbKnown = 0 }) {
     const islandSvg = (id, topC, leftC, rightC, flagC, stripe1, stripe2, stripe3) => `<svg viewBox="0 0 150 175" aria-hidden="true">
-      <!-- ฐานเกาะลอยหลากสีพาสเทล -->
       <polygon points="75,92 126,116 75,140 24,116" fill="${topC}"/>
       <path d="M24 116 L75 140 L126 116 L118 134 L75 156 L32 134 Z" fill="${stripe1}"/>
       <path d="M32 134 L75 156 L118 134 L106 149 L75 165 L44 149 Z" fill="${stripe2}"/>
       <path d="M44 149 L75 165 L106 149 L92 162 L75 171 L58 162 Z" fill="${stripe3}"/>
-      <!-- หอคอยซ้าย -->
       <polygon points="36,56 54,65 54,114 36,105" fill="${leftC}"/>
       <polygon points="54,65 68,58 68,107 54,114" fill="${rightC}"/>
       <polygon points="52,22 36,56 54,65 68,58" fill="#1e3a4c"/>
       <line x1="52" y1="22" x2="52" y2="10" stroke="#1e293b" stroke-width="1.3"/>
       <path class="isl-flag" d="M52,12 Q66,15 76,22 Q64,23 52,19 Z" fill="${flagC}"/>
-      <!-- หอคอยขวา -->
       <polygon points="84,48 102,57 102,114 84,105" fill="${leftC}"/>
       <polygon points="102,57 116,50 116,107 102,114" fill="${rightC}"/>
       <polygon points="100,14 84,48 102,57 116,50" fill="#162e40"/>
       <line x1="100" y1="14" x2="100" y2="3" stroke="#1e293b" stroke-width="1.3"/>
       <path class="isl-flag" d="M100,5 Q114,8 126,15 Q114,16 100,12 Z" fill="${flagC}"/>
-      <!-- ประตูโค้ง + สะพานเชื่อม -->
       <path d="M43 96 v-14 a4.5 4.5 0 0 1 9 0 v14 Z" fill="#13293d"/>
       <path d="M91 92 v-14 a4.5 4.5 0 0 1 9 0 v14 Z" fill="#13293d"/>
       <polygon points="62,92 88,92 88,108 62,108" fill="${topC}"/>
     </svg>`;
-    return `<section class="mv-islands-wrap" aria-label="3 เกาะปราสาทลอยน้ำพอร์ทัลหลัก">
-      <a class="mv-isl isl-gold" href="${esc(lrHref)}">
-        <div class="mv-isl-art">${islandSvg('g', '#7ce0d3', '#fde047', '#f59e0b', '#fb7185', '#fb7185', '#1e3a5f', '#4ade80')}</div>
-        <div class="mv-isl-txt"><span class="mv-isl-tag">📖 เกาะอ่านบทเรียน</span><b>อ่านต่อ &amp; รอบ 2</b><small>${esc(lrSub)}</small></div>
-      </a>
-      <a class="mv-isl isl-pink" href="${nWrong ? '#/wrong' : '#/mock'}">
-        <div class="mv-isl-art">${islandSvg('p', '#fde68a', '#fb7185', '#e11d48', '#2dd4bf', '#38bdf8', '#fde047', '#1e3a5f')}</div>
-        <div class="mv-isl-txt"><span class="mv-isl-tag">📕 เกาะฝึกโจทย์</span><b>${nWrong ? `เคลียร์ข้อผิด ${nWrong} ข้อ` : 'Mock Exam & Quiz'}</b><small>${due ? `ทวนวันนี้ ${due} รายการ` : 'เดินเขาวงกตปลดล็อกคริสตัล'}</small></div>
-      </a>
-      <a class="mv-isl isl-mint" href="#/db">
-        <div class="mv-isl-art">${islandSvg('m', '#f9a8d4', '#5eead4', '#0d9488', '#fbbf24', '#fb7185', '#fde047', '#38bdf8')}</div>
-        <div class="mv-isl-txt"><span class="mv-isl-tag">💊 เกาะจำยา &amp; เชื้อ</span><b>ปลูกต้นไม้ดอกไม้</b><small>${dbKnown ? `จำได้แล้ว ${dbKnown} ตัว 🌸` : 'Drug & Bug · Name Drill'}</small></div>
-      </a>
+    const shortcuts = [
+      `<a class="isl-sc${due ? ' due' : ''}" href="#/review">📅 ${due ? `ทวนวันนี้ (${due})` : (rvDone ? `ทวนแล้ว (${rvDone})` : 'ทวนวันนี้')}</a>`,
+      wk ? `<a class="isl-sc weak" href="#/${wk.ch.id}/${wk.s.no}">🎯 จุดอ่อนสุด ${wk.p}%</a>` : `<a class="isl-sc" href="#/quiz">📝 Quiz 10 ข้อ</a>`,
+      `<a class="isl-sc" href="#/mock">⏱️ Mock Exam</a>`,
+      nWrong ? `<a class="isl-sc wrong" href="#/wrong">📕 ข้อผิด (${nWrong})</a>` : '',
+      `<a class="isl-sc" href="#/drill">🧠 Name Drill</a>`,
+      `<a class="isl-sc" href="#/cards">🃏 Flashcards</a>`
+    ].join('');
+    return `<section class="mv-islands-sec" aria-label="3 เกาะปราสาทลอยน้ำและทางลัดหลัก">
+      <div class="mv-islands-wrap">
+        <a class="mv-isl isl-gold" id="resumeBtn" href="${esc(lrHref)}">
+          <div class="mv-isl-art">${islandSvg('g', '#7ce0d3', '#fde047', '#f59e0b', '#fb7185', '#fb7185', '#1e3a5f', '#4ade80')}</div>
+          <div class="mv-isl-txt"><span class="mv-isl-tag">📖 เกาะอ่านบทเรียน</span><b>อ่านต่อ &amp; รอบ 2</b><small>${esc(lrSub)}</small></div>
+        </a>
+        <a class="mv-isl isl-pink" href="${nWrong ? '#/wrong' : '#/mock'}">
+          <div class="mv-isl-art">${islandSvg('p', '#fde68a', '#fb7185', '#e11d48', '#2dd4bf', '#38bdf8', '#fde047', '#1e3a5f')}</div>
+          <div class="mv-isl-txt"><span class="mv-isl-tag">📕 เกาะฝึกโจทย์</span><b>${nWrong ? `เคลียร์ข้อผิด ${nWrong} ข้อ` : 'Mock Exam & Quiz'}</b><small>${due ? `ทวนวันนี้ ${due} รายการ` : 'เดินเขาวงกตปลดล็อกคริสตัล'}</small></div>
+        </a>
+        <a class="mv-isl isl-mint" href="#/db">
+          <div class="mv-isl-art">${islandSvg('m', '#f9a8d4', '#5eead4', '#0d9488', '#fbbf24', '#fb7185', '#fde047', '#38bdf8')}</div>
+          <div class="mv-isl-txt"><span class="mv-isl-tag">💊 เกาะจำยา &amp; เชื้อ</span><b>ปลูกต้นไม้ดอกไม้</b><small>${dbKnown ? `จำได้แล้ว ${dbKnown} ตัว 🌸` : 'Drug & Bug · Name Drill'}</small></div>
+        </a>
+      </div>
+      <div class="mv-isl-bar">
+        <div class="mv-isl-scs">${shortcuts}</div>
+        <div class="mv-isl-stats"><span>📖 วันนี้ <b>${readTodayDone}</b> กล่อง</span><span>🔥 <b>${streakDays}</b> วัน</span></div>
+      </div>
     </section>`;
   }
 
