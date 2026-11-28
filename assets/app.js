@@ -3115,7 +3115,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v76</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v77</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3386,9 +3386,9 @@
     h += `<details class="panel mynote" ${S.notes[k] ? 'open' : ''}><summary>🗒️ My notes${S.notes[k] ? ' ·  มีโน้ต' : ''}<span id="myHlCount" data-k="${k}">${myHl ? ` · ไฮไลต์ ${myHl} จุด` : ''}</span></summary>
       <textarea id="noteIn" rows="4" placeholder="จดสิ่งที่อยากจำของกล่องนี้ (บันทึกอัตโนมัติ)">${esc(S.notes[k] || '')}</textarea>
       <div class="bar-label">เลือกข้อความในเนื้อหาหรือข้อสอบแล้วกดเลือกสี เปลี่ยนสีตัวอักษร (A) เขียนโน้ต ★ หรือ sticky note 🗒️ ต่อจากข้อความนั้น ตัวหนา (B) ขีดเส้นใต้ (U) และไฮไลต์ข้อความในโน้ตได้ด้วย (เหลือง เขียว ฟ้า ชมพู แดงอ่อน) · แตะโน้ตที่บันทึกแล้วเพื่อแก้ · แตะรูปเพื่อปรับขนาดหรือครอป · แตะไฮไลต์ซ้ำเพื่อลบ · ปุ่ม ↶ มุมขวาล่างใช้เลิกทำ · <a href="#/notes">ดูโน้ตทั้งหมด</a></div></details>`;
+    h += mvExamBreakHTML(id);
     if (s.examIds.length) {
       const doneCnt = s.examIds.filter(qid => S.ans[`${id}|${qid}`]).length;
-      h += mvExamBreakHTML(id, s.examIds.length);
       h += `<section class="exam-sec"><div class="exam-sec-h"><h2>📝 Past exam questions</h2><button class="btn small" id="redoBoxExams"${doneCnt ? '' : ' hidden'}>↺ ล้างคำตอบกล่องนี้</button></div><p class="bar-label">กดเลือกคำตอบแล้วระบบจะจำคำตอบไว้ให้อัตโนมัติ (ข้อที่ตอบผิดเข้ากองข้อผิดด้วย · กด ↺ ทำใหม่ ได้ทุกเมื่อ)</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid], { showSaved: true });
       h += '<div id="boxExamRes"></div></section>';
@@ -3402,7 +3402,8 @@
     expandAbbr($('article.content', view), ch.abbr);
     initFigs($('article.content', view), k);
     buildToc(); setTimeout(trackRead, 300); coverTools(view); flowHints(view);
-    if (s.examIds.length) { initExamBreakGame(id, s.examIds.length); maybeShowBoxExamRes(); }
+    initExamBreakGame(id);
+    if (s.examIds.length) maybeShowBoxExamRes();
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
