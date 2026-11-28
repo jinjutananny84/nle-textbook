@@ -2127,7 +2127,7 @@
     const stk = e.target.closest('.strike');
     if (stk) { const o = stk.closest('.opt'); if (!o.classList.contains('off')) o.classList.toggle('struck'); return; }
     const opt = e.target.closest('.opt');
-    if (opt && !opt.classList.contains('off')) { if (!getSelection().isCollapsed) return; const box = opt.closest('.mcq'); answerMCQ(box, opt.dataset.l, box._onDone); return; }
+    if (opt && !opt.classList.contains('off')) { if (!getSelection().isCollapsed) return; const box = opt.closest('.mcq'); if (box.classList.contains('mock-pending')) return; answerMCQ(box, opt.dataset.l, box._onDone); return; }
     const rv = e.target.closest('[data-reveal]');
     if (rv) { const a = rv.nextElementSibling; a.hidden = !a.hidden; rv.textContent = a.hidden ? 'Show answer' : 'Hide answer'; return; }
     const bx = e.target.closest('[data-box]');
@@ -3104,7 +3104,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v71</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v72</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3293,6 +3293,7 @@
       lrSec ? act(S.lastRead.h, '📖', 'อ่านต่อ', `${esc(chTitle(lr[1]))} · กล่อง ${lrSec.no}. ${esc(lrSec.title)}`, 'main', 'resumeBtn') : act('#/' + (INDEX.find(c => c.ready) || {}).id, '📖', 'เริ่มอ่าน', 'เลือกบทด้านล่างได้เลย', 'main'),
       due ? act('#/review', '📅', `ทวนวันนี้ ${due} รายการ`, 'กล่องและ keyword ที่ถึงรอบทวน', 'due') : act('#/review', '📅', 'ทวนครบแล้ว', rvDone ? `วันนี้ทวนไป ${rvDone} รายการ` : 'ไม่มีรายการถึงกำหนดวันนี้', 'done'),
       wk ? act(`#/${wk.ch.id}/${wk.s.no}`, '🎯', `กล่องที่อ่อนสุด ${wk.p}%`, `${esc(chTitle(wk.ch.id))} · ${wk.s.no}. ${esc(wk.s.title)}`, 'weak') : act('#/quiz', '📝', 'ทำ Quiz 10 ข้อ', 'เพื่อให้เว็บหาจุดอ่อนให้', ''),
+      act('#/mock', '⏱️', 'Mock Exam แยกตามปี', 'จำลองทำข้อสอบจริงรายปี', ''),
       nWrong ? act('#/wrong', '📕', `ข้อผิด ${nWrong} ข้อ`, 'ทำซ้ำให้ถูกเพื่อเคลียร์กอง', 'wrong') : ''
     ].join('');
     const chips = `<div class="today-chips"><span>📖 อ่านวันนี้ <b>${rtAll.done}</b> กล่อง</span><span>📅 ทวนแล้ว <b>${rvDone}</b></span><span>🔥 ต่อเนื่อง <b>${streak()}</b> วัน</span></div>`;
@@ -3423,6 +3424,7 @@
     const ready = INDEX.filter(c => c.ready);
     const pre = params.get('ch');
     view.innerHTML = `<div class="hero"><h1>📝 Quiz</h1><p>เลือกบทแล้วสุ่มข้อ ข้อที่ผิดจะเก็บเข้ากองข้อผิด</p></div>
+    <div class="mode-tabs"><a class="btn primary" href="#/quiz">📝 สุ่ม Quiz ตามบท</a><a class="btn" href="#/mock">⏱️ Mock Exam แยกตามปี</a></div>
     <div class="panel"><div class="sel-bar"><h3>บท</h3>${selActs('qCh')}</div><div class="choice" id="qCh">${ready.map(c => `<label><input type="checkbox" value="${c.id}" ${!pre || pre === c.id ? 'checked' : ''}>${esc(c.title)}</label>`).join('')}</div>
     <h3>ขอบเขต</h3><div class="choice" id="qScope"><label><input type="radio" name="sc" value="all" checked>ทุกหัวข้อ</label><label><input type="radio" name="sc" value="weak">เฉพาะหัวข้อที่ยังไม่แม่น (★–★★)</label><label><input type="radio" name="sc" value="mem">เฉพาะสีชมพู (ใช้ความจำเยอะ)</label><label><input type="radio" name="sc" value="done">เฉพาะหัวข้อที่ประเมินแล้ว</label><label><input type="radio" name="sc" value="hot">เฉพาะหัวข้อออกบ่อย (★★★)</label><label><input type="radio" name="sc" value="new">ข้อที่ยังไม่เคยทำ</label></div>
     <h3>จำนวนข้อ</h3><div class="choice" id="qN">${[10, 20, 40].map((n, i) => `<label><input type="radio" name="qn" value="${n}" ${i === 0 ? 'checked' : ''}>${n} ข้อ</label>`).join('')}<label><input type="radio" name="qn" value="999">ทั้งหมด</label></div>
@@ -3460,6 +3462,193 @@
       $('#skip').onclick = () => { i++; step(); window.scrollTo(0, 0); };
     };
     step();
+  }
+
+  /* mock exam แยกตามปี */
+  let mockTmr = null;
+  function stopMockTimer() { if (mockTmr) { clearInterval(mockTmr); mockTmr = null; } }
+  function mockGroupOf(qid) { return qid.includes('/') ? qid.split('/')[0] : 'อื่นๆ'; }
+  function mockGroupLabel(g) { return /^\d+(\.\d+)?$/.test(g) ? `ปี ${g}` : g === 'Mock' ? 'ชุด Mock' : `ชุด ${g}`; }
+  function mockGroupOrder(a, b) {
+    const na = parseFloat(a), nb = parseFloat(b);
+    const ia = !isNaN(na), ib = !isNaN(nb);
+    if (ia && ib) return nb - na;
+    if (ia !== ib) return ia ? -1 : 1;
+    if (a === 'Mock' || b === 'Mock') return a === 'Mock' ? -1 : 1;
+    return a.localeCompare(b);
+  }
+  async function vMock(params) {
+    await loadAll(); renderSidebar();
+    const groups = {};
+    for (const c of INDEX.filter(x => x.ready)) {
+      const ch = CH[c.id]; if (!ch) continue;
+      for (const qid of Object.keys(ch.exams)) {
+        const g = mockGroupOf(qid);
+        (groups[g] = groups[g] || []).push({ ch: c.id, id: qid });
+      }
+    }
+    const keys = Object.keys(groups).sort(mockGroupOrder);
+    if (!keys.length) { view.innerHTML = '<div class="hero"><h1>⏱️ Mock Exam แยกตามปี</h1></div><p class="empty">ยังไม่มีข้อสอบในระบบ</p>'; return; }
+    const preYr = params.get('year') && groups[params.get('year')] ? params.get('year') : keys[0];
+    view.innerHTML = `<div class="hero"><h1>⏱️ Mock Exam แยกตามปี</h1><p>จำลองทำข้อสอบจริงแยกแต่ละปี ใช้หน้าตาข้อสอบเดียวกับท้ายบทและ Quiz</p></div>
+    <div class="mode-tabs"><a class="btn" href="#/quiz">📝 สุ่ม Quiz ตามบท</a><a class="btn primary" href="#/mock">⏱️ Mock Exam แยกตามปี</a></div>
+    <div class="panel">
+      <h3>เลือกปี / ชุดข้อสอบ</h3>
+      <div class="choice" id="mYr">${keys.map(g => `<label><input type="radio" name="myr" value="${esc(g)}" ${g === preYr ? 'checked' : ''}>${esc(mockGroupLabel(g))} (${groups[g].length} ข้อ)</label>`).join('')}</div>
+      <h3>รูปแบบการทำ</h3>
+      <div class="choice" id="mMode">
+        <label><input type="radio" name="mmode" value="exam" checked>⏱️ จำลองสอบจริง (ทำรวดเดียว ส่งทีเดียว)</label>
+        <label><input type="radio" name="mmode" value="quiz">📝 เฉลยทีละข้อ (เหมือน Quiz)</label>
+      </div>
+      <h3>ลำดับข้อ</h3>
+      <div class="choice" id="mOrd">
+        <label><input type="radio" name="mord" value="seq" checked>เรียงตามเลขข้อ</label>
+        <label><input type="radio" name="mord" value="rand">สุ่มลำดับข้อ</label>
+      </div>
+      <h3>จำนวนข้อ</h3>
+      <div class="choice" id="mN">
+        <label><input type="radio" name="mn" value="9999" checked>ทั้งหมด</label>
+        <label><input type="radio" name="mn" value="50">50 ข้อ</label>
+        <label><input type="radio" name="mn" value="100">100 ข้อ</label>
+      </div>
+      <div id="mTimeWrap">
+        <h3>จับเวลา (โหมดจำลองสอบจริง)</h3>
+        <div class="choice" id="mTime">
+          <label><input type="radio" name="mtime" value="1" checked>จับเวลา (1 นาที/ข้อ)</label>
+          <label><input type="radio" name="mtime" value="0">ไม่จับเวลา</label>
+        </div>
+      </div>
+      <button class="btn primary" id="mGo">เริ่มทำข้อสอบ</button> <span class="bar-label" id="mInfo"></span>
+    </div>`;
+    const getItems = () => {
+      const yr = view.querySelector('#mYr input:checked').value;
+      const ord = view.querySelector('#mOrd input:checked').value;
+      const n = +view.querySelector('#mN input:checked').value;
+      let list = [...groups[yr]];
+      if (ord === 'rand') list = shuffle(list);
+      else list.sort((a, b) => (parseInt(a.id.split('/')[1]) || 0) - (parseInt(b.id.split('/')[1]) || 0) || a.ch.localeCompare(b.ch));
+      return { yr, items: list.slice(0, n) };
+    };
+    const syncInfo = () => {
+      const mode = view.querySelector('#mMode input:checked').value;
+      $('#mTimeWrap').hidden = mode !== 'exam';
+      const r = getItems();
+      $('#mInfo').textContent = `${mockGroupLabel(r.yr)} · ${r.items.length} ข้อ`;
+    };
+    view.querySelectorAll('input').forEach(x => x.addEventListener('change', syncInfo));
+    syncInfo();
+    $('#mGo').onclick = () => {
+      const { yr, items } = getItems();
+      const mode = view.querySelector('#mMode input:checked').value;
+      const title = `Mock ${mockGroupLabel(yr)}`;
+      if (mode === 'quiz') return runQuiz(items, title);
+      const timed = view.querySelector('#mTime input:checked').value === '1';
+      runMockExam(items, title, timed, yr);
+    };
+  }
+  function runMockExam(items, title, timed, yr) {
+    stopMockTimer();
+    const picks = new Array(items.length).fill('');
+    let cur = 0, secLeft = timed ? items.length * 60 : 0;
+    const startMs = Date.now();
+    const fmtT = s => { const m = Math.floor(s / 60), r = s % 60; return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`; };
+    const submit = auto => {
+      stopMockTimer();
+      const unans = picks.filter(x => !x).length;
+      if (!auto && unans && !confirm(`ยังไม่ได้ตอบ ${unans} ข้อ ต้องการส่งข้อสอบเลยไหม?`)) {
+        if (timed) startTimer();
+        return;
+      }
+      let right = 0, wrong = 0;
+      const byCh = {};
+      items.forEach((it, idx) => {
+        const q = CH[it.ch].exams[it.id], p = picks[idx], ok = p === q.answer;
+        const b = byCh[it.ch] = byCh[it.ch] || { ok: 0, tot: 0 };
+        b.tot++;
+        if (ok) { right++; b.ok++; } else if (p) wrong++;
+        if (p) {
+          const k = `${it.ch}|${it.id}`;
+          S.ans[k] = p;
+          S.stats[k] = S.stats[k] || { r: 0, w: 0 };
+          if (ok) { S.stats[k].r++; delete S.wrong[k]; }
+          else { S.stats[k].w++; S.wrong[k] = { ch: it.ch, id: it.id, n: (S.wrong[k]?.n || 0) + 1, t: Date.now() }; }
+        }
+      });
+      save();
+      const usedSec = Math.round((Date.now() - startMs) / 1000);
+      const pct = Math.round(right * 100 / items.length);
+      const chBadges = Object.entries(byCh).map(([c, v]) => `<span>${esc(chTitle(c))} <b>${v.ok}/${v.tot}</b></span>`).join('');
+      const renderList = flt => {
+        const rows = items.map((it, idx) => ({ it, idx, q: CH[it.ch].exams[it.id], ok: picks[idx] === CH[it.ch].exams[it.id].answer }))
+          .filter(x => flt === 'all' ? true : flt === 'wrong' ? !x.ok : x.ok);
+        return rows.map(x => `<div class="mock-rev-item">${!picks[x.idx] ? '<p class="bar-label" style="margin:10px 0 -8px">ข้อ ' + (x.idx + 1) + ' · ยังไม่ได้ตอบในรอบนี้</p>' : ''}${mcqHTML(x.it.ch, x.it.id, x.q, { showBox: true, showSaved: true })}</div>`).join('') || '<p class="empty">ไม่มีข้อในหมวดนี้</p>';
+      };
+      view.innerHTML = `<div class="hero"><h1>📊 ${esc(title)}</h1><p>ได้ <b>${right}</b> / ${items.length} ข้อ (<b>${pct}%</b>) · ผิด ${wrong} · ไม่ได้ตอบ ${unans} · ใช้เวลา ${fmtT(usedSec)}</p></div>
+        <div class="mock-ch-stats">${chBadges}</div>
+        <div class="choice">
+          <button class="btn primary" id="mRetake">🔄 สอบใหม่ชุดนี้</button>
+          <a class="btn" href="#/mock">⏱️ เลือกปีอื่น</a>
+          <a class="btn" href="#/wrong">📕 กองข้อผิด</a>
+        </div>
+        <div class="mode-tabs" id="mFlt">
+          <button class="btn primary" data-f="all">ทั้งหมด (${items.length})</button>
+          <button class="btn" data-f="wrong">ผิด / ไม่ได้ตอบ (${items.length - right})</button>
+          <button class="btn" data-f="right">ถูก (${right})</button>
+        </div>
+        <div id="mRev">${renderList('all')}</div>`;
+      applyAllHL(view);
+      $('#mRetake').onclick = () => runMockExam(items, title, timed, yr);
+      $('#mFlt').addEventListener('click', e => {
+        const b = e.target.closest('button[data-f]'); if (!b) return;
+        view.querySelectorAll('#mFlt button').forEach(x => x.classList.toggle('primary', x === b));
+        $('#mRev').innerHTML = renderList(b.dataset.f);
+        applyAllHL($('#mRev'));
+      });
+      window.scrollTo(0, 0);
+    };
+    const startTimer = () => {
+      stopMockTimer();
+      if (!timed) return;
+      mockTmr = setInterval(() => {
+        secLeft--;
+        const el = $('#mTmr');
+        if (el) { el.textContent = '⏱️ ' + fmtT(Math.max(0, secLeft)); el.classList.toggle('low', secLeft <= 60); }
+        if (secLeft <= 0) { toast('หมดเวลา! ระบบส่งข้อสอบให้อัตโนมัติ'); submit(true); }
+      }, 1000);
+    };
+    const draw = () => {
+      const it = items[cur], q = CH[it.ch].exams[it.id];
+      const answered = picks.filter(Boolean).length;
+      view.innerHTML = `<div class="qhead"><span><b>${esc(title)}</b> · ข้อ ${cur + 1} / ${items.length} (ตอบแล้ว ${answered})</span>${timed ? `<span class="mock-timer${secLeft <= 60 ? ' low' : ''}" id="mTmr">⏱️ ${fmtT(secLeft)}</span>` : ''}</div>
+        <div class="bar walk"><i style="width:${Math.round(answered * 100 / items.length)}%"></i></div>
+        ${mcqHTML(it.ch, it.id, q, { showBox: false })}
+        <div class="choice" style="justify-content:space-between;margin-top:12px">
+          <div style="display:flex;gap:8px"><button class="btn" id="mPrev"${cur === 0 ? ' disabled' : ''}>← ก่อนหน้า</button><button class="btn" id="mNext"${cur === items.length - 1 ? ' disabled' : ''}>ถัดไป →</button></div>
+          <button class="btn primary" id="mSub">📤 ส่งข้อสอบ (${answered}/${items.length})</button>
+        </div>
+        <details class="panel" style="margin-top:12px"><summary style="cursor:pointer;font-weight:700">🔢 ข้ามไปข้อที่… (${answered}/${items.length})</summary><div class="mock-nav" id="mNav">${items.map((_, idx) => `<button type="button" data-i="${idx}" class="${picks[idx] ? 'ans' : ''}${idx === cur ? ' cur' : ''}">${idx + 1}</button>`).join('')}</div></details>`;
+      const box = $('.mcq', view);
+      box.classList.add('mock-pending');
+      if (picks[cur]) { const po = box.querySelector(`.opt[data-l="${picks[cur]}"]`); if (po) po.classList.add('picked'); }
+      applyAllHL(view);
+      box.addEventListener('click', e => {
+        if (e.target.closest('.strike')) return;
+        const opt = e.target.closest('.opt');
+        if (!opt || !getSelection().isCollapsed) return;
+        const l = opt.dataset.l;
+        picks[cur] = picks[cur] === l ? '' : l;
+        box.querySelectorAll('.opt').forEach(o => o.classList.toggle('picked', o.dataset.l === picks[cur]));
+        const cnt = picks.filter(Boolean).length;
+        const nb = $(`#mNav button[data-i="${cur}"]`); if (nb) nb.classList.toggle('ans', !!picks[cur]);
+        $('#mSub').textContent = `📤 ส่งข้อสอบ (${cnt}/${items.length})`;
+      });
+      $('#mPrev').onclick = () => { if (cur > 0) { cur--; draw(); window.scrollTo(0, 0); } };
+      $('#mNext').onclick = () => { if (cur < items.length - 1) { cur++; draw(); window.scrollTo(0, 0); } };
+      $('#mSub').onclick = () => submit(false);
+      $('#mNav').addEventListener('click', e => { const b = e.target.closest('button[data-i]'); if (b) { cur = +b.dataset.i; draw(); window.scrollTo(0, 0); } });
+    };
+    draw();
+    startTimer();
   }
   async function vWrong() {
     await loadAll(); renderSidebar();
@@ -4100,6 +4289,193 @@
     };
     step();
   }
+
+  /* mock exam แยกตามปี */
+  let mockTmr = null;
+  function stopMockTimer() { if (mockTmr) { clearInterval(mockTmr); mockTmr = null; } }
+  function mockGroupOf(qid) { return qid.includes('/') ? qid.split('/')[0] : 'อื่นๆ'; }
+  function mockGroupLabel(g) { return /^\d+(\.\d+)?$/.test(g) ? `ปี ${g}` : g === 'Mock' ? 'ชุด Mock' : `ชุด ${g}`; }
+  function mockGroupOrder(a, b) {
+    const na = parseFloat(a), nb = parseFloat(b);
+    const ia = !isNaN(na), ib = !isNaN(nb);
+    if (ia && ib) return nb - na;
+    if (ia !== ib) return ia ? -1 : 1;
+    if (a === 'Mock' || b === 'Mock') return a === 'Mock' ? -1 : 1;
+    return a.localeCompare(b);
+  }
+  async function vMock(params) {
+    await loadAll(); renderSidebar();
+    const groups = {};
+    for (const c of INDEX.filter(x => x.ready)) {
+      const ch = CH[c.id]; if (!ch) continue;
+      for (const qid of Object.keys(ch.exams)) {
+        const g = mockGroupOf(qid);
+        (groups[g] = groups[g] || []).push({ ch: c.id, id: qid });
+      }
+    }
+    const keys = Object.keys(groups).sort(mockGroupOrder);
+    if (!keys.length) { view.innerHTML = '<div class="hero"><h1>⏱️ Mock Exam แยกตามปี</h1></div><p class="empty">ยังไม่มีข้อสอบในระบบ</p>'; return; }
+    const preYr = params.get('year') && groups[params.get('year')] ? params.get('year') : keys[0];
+    view.innerHTML = `<div class="hero"><h1>⏱️ Mock Exam แยกตามปี</h1><p>จำลองทำข้อสอบจริงแยกแต่ละปี ใช้หน้าตาข้อสอบเดียวกับท้ายบทและ Quiz</p></div>
+    <div class="mode-tabs"><a class="btn" href="#/quiz">📝 สุ่ม Quiz ตามบท</a><a class="btn primary" href="#/mock">⏱️ Mock Exam แยกตามปี</a></div>
+    <div class="panel">
+      <h3>เลือกปี / ชุดข้อสอบ</h3>
+      <div class="choice" id="mYr">${keys.map(g => `<label><input type="radio" name="myr" value="${esc(g)}" ${g === preYr ? 'checked' : ''}>${esc(mockGroupLabel(g))} (${groups[g].length} ข้อ)</label>`).join('')}</div>
+      <h3>รูปแบบการทำ</h3>
+      <div class="choice" id="mMode">
+        <label><input type="radio" name="mmode" value="exam" checked>⏱️ จำลองสอบจริง (ทำรวดเดียว ส่งทีเดียว)</label>
+        <label><input type="radio" name="mmode" value="quiz">📝 เฉลยทีละข้อ (เหมือน Quiz)</label>
+      </div>
+      <h3>ลำดับข้อ</h3>
+      <div class="choice" id="mOrd">
+        <label><input type="radio" name="mord" value="seq" checked>เรียงตามเลขข้อ</label>
+        <label><input type="radio" name="mord" value="rand">สุ่มลำดับข้อ</label>
+      </div>
+      <h3>จำนวนข้อ</h3>
+      <div class="choice" id="mN">
+        <label><input type="radio" name="mn" value="9999" checked>ทั้งหมด</label>
+        <label><input type="radio" name="mn" value="50">50 ข้อ</label>
+        <label><input type="radio" name="mn" value="100">100 ข้อ</label>
+      </div>
+      <div id="mTimeWrap">
+        <h3>จับเวลา (โหมดจำลองสอบจริง)</h3>
+        <div class="choice" id="mTime">
+          <label><input type="radio" name="mtime" value="1" checked>จับเวลา (1 นาที/ข้อ)</label>
+          <label><input type="radio" name="mtime" value="0">ไม่จับเวลา</label>
+        </div>
+      </div>
+      <button class="btn primary" id="mGo">เริ่มทำข้อสอบ</button> <span class="bar-label" id="mInfo"></span>
+    </div>`;
+    const getItems = () => {
+      const yr = view.querySelector('#mYr input:checked').value;
+      const ord = view.querySelector('#mOrd input:checked').value;
+      const n = +view.querySelector('#mN input:checked').value;
+      let list = [...groups[yr]];
+      if (ord === 'rand') list = shuffle(list);
+      else list.sort((a, b) => (parseInt(a.id.split('/')[1]) || 0) - (parseInt(b.id.split('/')[1]) || 0) || a.ch.localeCompare(b.ch));
+      return { yr, items: list.slice(0, n) };
+    };
+    const syncInfo = () => {
+      const mode = view.querySelector('#mMode input:checked').value;
+      $('#mTimeWrap').hidden = mode !== 'exam';
+      const r = getItems();
+      $('#mInfo').textContent = `${mockGroupLabel(r.yr)} · ${r.items.length} ข้อ`;
+    };
+    view.querySelectorAll('input').forEach(x => x.addEventListener('change', syncInfo));
+    syncInfo();
+    $('#mGo').onclick = () => {
+      const { yr, items } = getItems();
+      const mode = view.querySelector('#mMode input:checked').value;
+      const title = `Mock ${mockGroupLabel(yr)}`;
+      if (mode === 'quiz') return runQuiz(items, title);
+      const timed = view.querySelector('#mTime input:checked').value === '1';
+      runMockExam(items, title, timed, yr);
+    };
+  }
+  function runMockExam(items, title, timed, yr) {
+    stopMockTimer();
+    const picks = new Array(items.length).fill('');
+    let cur = 0, secLeft = timed ? items.length * 60 : 0;
+    const startMs = Date.now();
+    const fmtT = s => { const m = Math.floor(s / 60), r = s % 60; return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`; };
+    const submit = auto => {
+      stopMockTimer();
+      const unans = picks.filter(x => !x).length;
+      if (!auto && unans && !confirm(`ยังไม่ได้ตอบ ${unans} ข้อ ต้องการส่งข้อสอบเลยไหม?`)) {
+        if (timed) startTimer();
+        return;
+      }
+      let right = 0, wrong = 0;
+      const byCh = {};
+      items.forEach((it, idx) => {
+        const q = CH[it.ch].exams[it.id], p = picks[idx], ok = p === q.answer;
+        const b = byCh[it.ch] = byCh[it.ch] || { ok: 0, tot: 0 };
+        b.tot++;
+        if (ok) { right++; b.ok++; } else if (p) wrong++;
+        if (p) {
+          const k = `${it.ch}|${it.id}`;
+          S.ans[k] = p;
+          S.stats[k] = S.stats[k] || { r: 0, w: 0 };
+          if (ok) { S.stats[k].r++; delete S.wrong[k]; }
+          else { S.stats[k].w++; S.wrong[k] = { ch: it.ch, id: it.id, n: (S.wrong[k]?.n || 0) + 1, t: Date.now() }; }
+        }
+      });
+      save();
+      const usedSec = Math.round((Date.now() - startMs) / 1000);
+      const pct = Math.round(right * 100 / items.length);
+      const chBadges = Object.entries(byCh).map(([c, v]) => `<span>${esc(chTitle(c))} <b>${v.ok}/${v.tot}</b></span>`).join('');
+      const renderList = flt => {
+        const rows = items.map((it, idx) => ({ it, idx, q: CH[it.ch].exams[it.id], ok: picks[idx] === CH[it.ch].exams[it.id].answer }))
+          .filter(x => flt === 'all' ? true : flt === 'wrong' ? !x.ok : x.ok);
+        return rows.map(x => `<div class="mock-rev-item">${!picks[x.idx] ? '<p class="bar-label" style="margin:10px 0 -8px">ข้อ ' + (x.idx + 1) + ' · ยังไม่ได้ตอบในรอบนี้</p>' : ''}${mcqHTML(x.it.ch, x.it.id, x.q, { showBox: true, showSaved: true })}</div>`).join('') || '<p class="empty">ไม่มีข้อในหมวดนี้</p>';
+      };
+      view.innerHTML = `<div class="hero"><h1>📊 ${esc(title)}</h1><p>ได้ <b>${right}</b> / ${items.length} ข้อ (<b>${pct}%</b>) · ผิด ${wrong} · ไม่ได้ตอบ ${unans} · ใช้เวลา ${fmtT(usedSec)}</p></div>
+        <div class="mock-ch-stats">${chBadges}</div>
+        <div class="choice">
+          <button class="btn primary" id="mRetake">🔄 สอบใหม่ชุดนี้</button>
+          <a class="btn" href="#/mock">⏱️ เลือกปีอื่น</a>
+          <a class="btn" href="#/wrong">📕 กองข้อผิด</a>
+        </div>
+        <div class="mode-tabs" id="mFlt">
+          <button class="btn primary" data-f="all">ทั้งหมด (${items.length})</button>
+          <button class="btn" data-f="wrong">ผิด / ไม่ได้ตอบ (${items.length - right})</button>
+          <button class="btn" data-f="right">ถูก (${right})</button>
+        </div>
+        <div id="mRev">${renderList('all')}</div>`;
+      applyAllHL(view);
+      $('#mRetake').onclick = () => runMockExam(items, title, timed, yr);
+      $('#mFlt').addEventListener('click', e => {
+        const b = e.target.closest('button[data-f]'); if (!b) return;
+        view.querySelectorAll('#mFlt button').forEach(x => x.classList.toggle('primary', x === b));
+        $('#mRev').innerHTML = renderList(b.dataset.f);
+        applyAllHL($('#mRev'));
+      });
+      window.scrollTo(0, 0);
+    };
+    const startTimer = () => {
+      stopMockTimer();
+      if (!timed) return;
+      mockTmr = setInterval(() => {
+        secLeft--;
+        const el = $('#mTmr');
+        if (el) { el.textContent = '⏱️ ' + fmtT(Math.max(0, secLeft)); el.classList.toggle('low', secLeft <= 60); }
+        if (secLeft <= 0) { toast('หมดเวลา! ระบบส่งข้อสอบให้อัตโนมัติ'); submit(true); }
+      }, 1000);
+    };
+    const draw = () => {
+      const it = items[cur], q = CH[it.ch].exams[it.id];
+      const answered = picks.filter(Boolean).length;
+      view.innerHTML = `<div class="qhead"><span><b>${esc(title)}</b> · ข้อ ${cur + 1} / ${items.length} (ตอบแล้ว ${answered})</span>${timed ? `<span class="mock-timer${secLeft <= 60 ? ' low' : ''}" id="mTmr">⏱️ ${fmtT(secLeft)}</span>` : ''}</div>
+        <div class="bar walk"><i style="width:${Math.round(answered * 100 / items.length)}%"></i></div>
+        ${mcqHTML(it.ch, it.id, q, { showBox: false })}
+        <div class="choice" style="justify-content:space-between;margin-top:12px">
+          <div style="display:flex;gap:8px"><button class="btn" id="mPrev"${cur === 0 ? ' disabled' : ''}>← ก่อนหน้า</button><button class="btn" id="mNext"${cur === items.length - 1 ? ' disabled' : ''}>ถัดไป →</button></div>
+          <button class="btn primary" id="mSub">📤 ส่งข้อสอบ (${answered}/${items.length})</button>
+        </div>
+        <details class="panel" style="margin-top:12px"><summary style="cursor:pointer;font-weight:700">🔢 ข้ามไปข้อที่… (${answered}/${items.length})</summary><div class="mock-nav" id="mNav">${items.map((_, idx) => `<button type="button" data-i="${idx}" class="${picks[idx] ? 'ans' : ''}${idx === cur ? ' cur' : ''}">${idx + 1}</button>`).join('')}</div></details>`;
+      const box = $('.mcq', view);
+      box.classList.add('mock-pending');
+      if (picks[cur]) { const po = box.querySelector(`.opt[data-l="${picks[cur]}"]`); if (po) po.classList.add('picked'); }
+      applyAllHL(view);
+      box.addEventListener('click', e => {
+        if (e.target.closest('.strike')) return;
+        const opt = e.target.closest('.opt');
+        if (!opt || !getSelection().isCollapsed) return;
+        const l = opt.dataset.l;
+        picks[cur] = picks[cur] === l ? '' : l;
+        box.querySelectorAll('.opt').forEach(o => o.classList.toggle('picked', o.dataset.l === picks[cur]));
+        const cnt = picks.filter(Boolean).length;
+        const nb = $(`#mNav button[data-i="${cur}"]`); if (nb) nb.classList.toggle('ans', !!picks[cur]);
+        $('#mSub').textContent = `📤 ส่งข้อสอบ (${cnt}/${items.length})`;
+      });
+      $('#mPrev').onclick = () => { if (cur > 0) { cur--; draw(); window.scrollTo(0, 0); } };
+      $('#mNext').onclick = () => { if (cur < items.length - 1) { cur++; draw(); window.scrollTo(0, 0); } };
+      $('#mSub').onclick = () => submit(false);
+      $('#mNav').addEventListener('click', e => { const b = e.target.closest('button[data-i]'); if (b) { cur = +b.dataset.i; draw(); window.scrollTo(0, 0); } });
+    };
+    draw();
+    startTimer();
+  }
   async function vSearch(q) {
     await loadAll(); renderSidebar();
     q = (q || '').trim();
@@ -4158,6 +4534,7 @@
   /* ---------- router ---------- */
   async function route() {
     stopExamBreakGame();
+    stopMockTimer();
     closeNav();
     const raw = location.hash.replace(/^#\/?/, '');
     const [path, qs] = raw.split('?');
@@ -4167,6 +4544,7 @@
       await loadIndex();
       if (!parts.length) return vHome();
       if (parts[0] === 'quiz') return vQuiz(params);
+      if (parts[0] === 'mock') return vMock(params);
       if (parts[0] === 'wrong') return vWrong();
       if (parts[0] === 'cards') return vCards(params);
       if (parts[0] === 'search') return vSearch(params.get('q'));
