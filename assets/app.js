@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v94</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v95</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3572,7 +3572,13 @@
     const chips = `<div class="today-chips"><span>📖 อ่านวันนี้ <b>${rtAll.done}</b> กล่อง</span><span>📅 ทวนแล้ว <b>${rvDone}</b></span><span>🔥 ต่อเนื่อง <b>${streak()}</b> วัน</span></div>`;
     const bkWarn = backupDue() ? `<a class="bk-warn" href="#/backup">💾 ${S.lastBackup ? 'ไม่ได้สำรองข้อมูลมาเกิน 7 วัน' : 'ยังไม่เคยสำรองไฮไลต์และโน้ต'} · กดเพื่อ Backup</a>` : '';
     const heroHtml = uiStyle() === 'monument' ? mvGrandCitadelHTML(bkWarn) : `<div class="hero home-hero"><h1>nannie compre website</h1>${bkWarn}</div>`;
-    view.innerHTML = `${heroHtml}
+    const islandsHtml = draftOn('homeFloatingIslands') ? mvHomeIslandsHTML({
+      lrHref: lrSec ? S.lastRead.h : ('#/' + (INDEX.find(c => c.ready) || {}).id),
+      lrSub: lrSec ? `${chTitle(lr[1])} · กล่อง ${lrSec.no}` : 'เริ่มอ่านบทแรก',
+      nWrong, due,
+      dbKnown: Object.keys(S.known || {}).filter(k => k.startsWith('db:')).length
+    }) : '';
+    view.innerHTML = `${heroHtml}${islandsHtml}
     <section class="dash"><div class="dash-h"><h2>วันนี้ควรทำอะไร</h2>${chips}</div>${planHTML()}<div class="dash-grid">${acts}</div></section>
     <p class="split-hint">เลขหัวข้อในเว็บตรงกับเลขกล่องในชีท A3 เปิดคู่กันแบบ split view แล้วพิมพ์เลขกล่องที่ปุ่มมุมขวาล่างเพื่อกระโดดไปได้ทันที</p>${tiles}
     <details class="panel legend-panel"><summary>สัญลักษณ์ในเนื้อหา</summary><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><div class="card hint" style="margin:8px 0"><div class="lbl">🎯 อาจารย์บอกข้อสอบ</div>ข้อที่อาจารย์ผู้ออกข้อสอบยกมาหรือบอกว่าออก กด ▶ เวลา เพื่อเปิดคลิปตรงจุดนั้น</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-v">6</mark> <mark class="user-hl c-r">สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></details>`;
@@ -3950,7 +3956,14 @@
     const keys = Object.keys(groups).sort(mockGroupOrder);
     if (!keys.length) { view.innerHTML = '<div class="hero"><h1>⏱️ Mock Exam แยกตามปี</h1></div><p class="empty">ยังไม่มีข้อสอบในระบบ</p>'; return; }
     const preYr = params.get('year') && groups[params.get('year')] ? params.get('year') : keys[0];
-    view.innerHTML = `<div class="hero"><h1>⏱️ Mock Exam แยกตามปี</h1><p>จำลองทำข้อสอบจริงแยกแต่ละปี ใช้หน้าตาข้อสอบเดียวกับท้ายบทและ Quiz</p></div>
+    const mTotal = groups[preYr] ? groups[preYr].length : 0;
+    const mDone = groups[preYr] ? groups[preYr].filter(x => S.ans[`${x.ch}|${x.id}`]).length : 0;
+    const mockMaze = draftOn('mazeReviewQuest') ? mvEmeraldMazeHTML({
+      done: mDone, total: Math.max(1, mTotal),
+      title: `เขาวงกต Mock Exam · ${mockGroupLabel(preYr)}`,
+      sub: mDone >= mTotal && mTotal > 0 ? '✨ ทำครบชุดนี้แล้ว! คริสตัลปลดล็อก' : `ทำไปแล้ว ${mDone}/${mTotal} ข้อ · เดินเหยียบสวิตช์สีชมพูไปให้ถึงคริสตัลกลางวิหาร!`
+    }) : '';
+    view.innerHTML = `<div class="hero"><h1>⏱️ Mock Exam แยกตามปี</h1><p>จำลองทำข้อสอบจริงแยกแต่ละปี ใช้หน้าตาข้อสอบเดียวกับท้ายบทและ Quiz</p></div>${mockMaze}
     <div class="mode-tabs"><a class="btn" href="#/quiz">📝 สุ่ม Quiz ตามบท</a><a class="btn primary" href="#/mock">⏱️ Mock Exam แยกตามปี</a></div>
     <div class="panel">
       <h3>เลือกปี / ชุดข้อสอบ</h3>
@@ -4109,7 +4122,15 @@
     const wList = Object.values(S.wrong).filter(w => CH[w.ch] && CH[w.ch].exams[w.id]).sort((a, b) => b.t - a.t);
     const fList = Object.values(S.flag).filter(w => CH[w.ch] && CH[w.ch].exams[w.id]).sort((a, b) => b.t - a.t);
     const list = isFlag ? fList : wList;
-    let h = `<div class="hero"><h1>${isFlag ? '🚩 ข้อที่ปักหมุดไว้ทวน' : '📕 Mistakes'}</h1><p>${isFlag ? 'ข้อที่กดปักหมุดไว้ (เช่น เดาถูกแต่ยังไม่ชัวร์) ไว้กลับมาทวนซ้ำ' : 'ตอบถูกเมื่อไหร่ ข้อนั้นจะออกจากกองเอง'}</p></div>
+    const totalAttempted = Object.keys(S.stats || {}).length;
+    const clearedCnt = Math.max(0, totalAttempted - wList.length);
+    const wrongMaze = draftOn('mazeReviewQuest') ? mvEmeraldMazeHTML({
+      done: list.length === 0 ? 1 : clearedCnt,
+      total: list.length === 0 ? 1 : Math.max(1, totalAttempted),
+      title: isFlag ? 'เขาวงกตข้อที่ปักหมุด' : 'เขาวงกตเคลียร์ข้อผิด (Mistakes)',
+      sub: !list.length ? '✨ เคลียร์ข้อผิดหมดแล้ว! คริสตัลสีม่วงปลดล็อกสว่างไสว' : `เหลืออีก ${list.length} ข้อที่ต้องเคลียร์ · ตอบถูกเมื่อไหร่ น้อง Ro จะก้าวเข้าใกล้คริสตัล!`
+    }) : '';
+    let h = `<div class="hero"><h1>${isFlag ? '🚩 ข้อที่ปักหมุดไว้ทวน' : '📕 Mistakes'}</h1><p>${isFlag ? 'ข้อที่กดปักหมุดไว้ (เช่น เดาถูกแต่ยังไม่ชัวร์) ไว้กลับมาทวนซ้ำ' : 'ตอบถูกเมื่อไหร่ ข้อนั้นจะออกจากกองเอง'}</p></div>${wrongMaze}
       <div class="mode-tabs"><a class="btn${isFlag ? '' : ' primary'}" href="#/wrong">📕 ข้อที่ผิด (${wList.length})</a><a class="btn${isFlag ? ' primary' : ''}" href="#/wrong?tab=flag">🚩 ปักหมุด (${fList.length})</a></div>`;
     if (!list.length) { view.innerHTML = h + `<p class="empty">${isFlag ? 'ยังไม่มีข้อที่ปักหมุด กดปุ่ม 🚩 บนข้อสอบข้อไหนก็ได้เพื่อเก็บไว้ทวน' : 'ยังไม่มีข้อผิด ลองทำข้อสอบท้ายหัวข้อหรือโหมดทำข้อสอบดูนะ'}</p>`; return; }
     h += `<div class="choice"><button class="btn primary" id="wGo">Review all (${list.length})</button><button class="btn" id="wClear">Clear</button></div>`;
@@ -4244,8 +4265,14 @@
     const done = S.revDone && S.revDone.d === today() ? S.revDone.n : 0;
     const nb = items.filter(x => x.type === 'box'), ne = items.filter(x => x.type === 'exam'), nk = items.filter(x => x.type === 'kw');
     const total = items.length + done;
+    const revMaze = draftOn('mazeReviewQuest') ? mvEmeraldMazeHTML({
+      done: total ? done : 1,
+      total: total || 1,
+      title: 'เขาวงกตทบทวนประจำวัน (Today\'s Review)',
+      sub: !items.length ? '✨ ทวนวันนี้ครบทุกข้อแล้ว! คริสตัลปลดล็อกแล้ว' : `ทวนไปแล้ว ${done}/${total} รายการ · กด "Got it" เพื่อให้น้อง Ro เดินเหยียบสวิตช์ไปถึงกลางวิหาร`
+    }) : '';
     let h = `<div class="hero rv-hero"><h1>📅 Today's review</h1><p>ระบบนัดทวนให้เอง: ตอบ "จำได้" รอบถัดไปจะห่างออก (1 → 2 → 5 → 11 วัน…) ตอบ "ยังไม่แม่น" จะกลับมาพรุ่งนี้</p>
-      <div class="rv-stat"><div><b>${items.length}</b><span>Due</span></div><div><b>${done}</b><span>Done today</span></div><div class="rv-ring" style="--p:${total ? Math.round(done * 100 / total) : 100}"><span>${total ? Math.round(done * 100 / total) : 100}%</span></div></div></div>`;
+      <div class="rv-stat"><div><b>${items.length}</b><span>Due</span></div><div><b>${done}</b><span>Done today</span></div><div class="rv-ring" style="--p:${total ? Math.round(done * 100 / total) : 100}"><span>${total ? Math.round(done * 100 / total) : 100}%</span></div></div></div>${revMaze}`;
     if (!items.length) {
       view.innerHTML = h + `<p class="empty">🎉 วันนี้ทวนครบแล้ว${Object.keys(S.lvl).length ? '' : '<br>ให้ดาวกล่องที่อ่าน (★–★★★) เก็บ keyword หรือทำข้อสอบ แล้วรายการจะมาโผล่ที่นี่เอง'}</p>`;
       return;
@@ -4399,7 +4426,12 @@
     const all = chs.flatMap(ch => tableFacts(ch).map(t => Object.assign(t, { ch: ch.id, chTitle: ch.title })));
     const db = all.filter(t => DRUGBUG.test(t.head.join(' ')));
     const weak = S.drillWrong || {};
-    let h = `<div class="hero"><h1>🧠 Name drill</h1><p>ข้อสอบจับคู่ที่สร้างเองจากตารางในเนื้อหา เหมาะกับเรื่องที่ต้องจำชื่อเยอะ (ยา เชื้อ โรค อาชีพ) ถามทั้งสองทาง: ชื่อ → คุณสมบัติ และ คุณสมบัติ → ชื่อ</p></div>
+    const drillTree = draftOn('drugBloomTree') ? mvDrugBloomTreeHTML({
+      known: Object.keys(S.known || {}).filter(k => k.startsWith('db:')).length,
+      total: Math.max(12, db.reduce((a, t) => a + (t.rows ? t.rows.length : 4), 0)),
+      mode: 'drill'
+    }) : '';
+    let h = `<div class="hero"><h1>🧠 Name drill</h1><p>ข้อสอบจับคู่ที่สร้างเองจากตารางในเนื้อหา เหมาะกับเรื่องที่ต้องจำชื่อเยอะ (ยา เชื้อ โรค อาชีพ) ถามทั้งสองทาง: ชื่อ → คุณสมบัติ และ คุณสมบัติ → ชื่อ</p></div>${drillTree}
       <div class="panel"><h3>เลือกตาราง</h3><div class="drill-pick">
         <label class="dp"><input type="radio" name="dsc" value="db" checked><b>ยา & เชื้อ</b><small>${db.length} ตาราง</small></label>
         <label class="dp"><input type="radio" name="dsc" value="all"><b>ทุกตาราง</b><small>${all.length} ตาราง</small></label>
@@ -4465,7 +4497,11 @@
     f.cat = Array.isArray(f.cat) ? f.cat : [];
     const chs = [...new Set(all.flatMap(e => e.src.map(x => x.ch)))];
     const n = k => all.filter(e => k === 'all' || e.kind === k).length;
+    const useTree = draftOn('drugBloomTree');
+    const dbKeyOf = e => `db:${e.kind}|${e.name}`;
+    const dbKnownCount = () => all.filter(e => S.known[dbKeyOf(e)]).length;
     view.innerHTML = `<div class="hero"><h1>💊 Drug & Bug</h1><p>รวมยาและเชื้อจากตารางของทุกบทไว้ที่เดียว เรียง A–Z ถ้าชื่อเดียวกันอยู่หลายกล่องจะรวมเป็นการ์ดเดียว · เพิ่มบทใหม่แล้วหน้านี้อัปเดตเอง</p></div>
+      ${useTree ? `<div id="dbTreeSlot">${mvDrugBloomTreeHTML({ known: dbKnownCount(), total: Math.max(1, all.length), mode: 'db' })}</div>` : ''}
       ${dbViews('cards')}
       <div class="db-bar"><div class="seg">${[['all', 'All'], ['drug', 'Drugs'], ['bug', 'Bugs']].map(([k, l]) => `<button class="${f.k === k ? 'on' : ''}" data-k="${k}">${l} <small>${n(k)}</small></button>`).join('')}</div>
         <input id="dbq" type="search" placeholder="ค้นชื่อ กลไก อาการ…" value="${esc(params.get('q') || '')}">
@@ -4509,20 +4545,43 @@
       grid.innerHTML = list.map(e => {
         const L = /^[a-z]/i.test(e.name) ? e.name[0].toUpperCase() : '#'; let anc = '';
         if (L !== last) { last = L; letters.push(L); anc = ` id="db-${L}"`; }
-        return `<div class="db-card ${e.kind}"${anc}><div class="db-h"><span class="db-k">${e.kind === 'drug' ? 'Drug' : 'Bug'}</span><b>${esc(e.name)}</b><span class="db-cat">${esc(e.g)} › ${esc(e.sub)}</span></div>
+        const dk = dbKeyOf(e), isK = !!S.known[dk];
+        const kBtn = useTree ? `<button type="button" class="db-know-btn${isK ? ' on' : ''}" data-dbk="${esc(dk)}" title="กดเมื่อจำตัวนี้ได้แล้ว เพื่อปลูกดอกไม้บนต้นไม้">${isK ? '✓ จำได้แล้ว' : '+ จำได้'}</button>` : '';
+        return `<div class="db-card ${e.kind}${isK && useTree ? ' is-known' : ''}"${anc}><div class="db-h"><span class="db-k">${e.kind === 'drug' ? 'Drug' : 'Bug'}</span><b>${esc(e.name)}</b><span class="db-cat">${esc(e.g)} › ${esc(e.sub)}</span>${kBtn}</div>
           ${e.facts.map(x => `<div class="db-f"><span>${esc(x.k)}</span><div class="db-v">${x.v}</div></div>`).join('')}
           <div class="db-src">${e.src.map(x => `<a href="#/${x.h}">${x.ch.toUpperCase()} · กล่อง ${x.no} ↗</a>`).join('')}${e.ex.length ? `<span class="db-ex">ออกสอบ ${e.ex.length} ข้อ</span>` : ''}</div></div>`;
       }).join('') || `<p class="empty">${anyCh ? 'ไม่เจอชื่อที่ค้น' : 'ยังไม่ได้เลือกบท — ติ๊กเลือกบทที่ต้องการด้านบน'}</p>`;
       az.innerHTML = letters.map(L => `<a href="#" data-l="${L}">${L}</a>`).join('');
       grid.classList.toggle('covering', !!f.cover);
     };
+    const refreshTree = () => {
+      if (!useTree) return;
+      const slot = $('#dbTreeSlot');
+      if (slot) { slot.innerHTML = mvDrugBloomTreeHTML({ known: dbKnownCount(), total: Math.max(1, all.length), mode: 'db' }); bindTreePv(slot); }
+    };
+    const bindTreePv = root => {
+      const pv = root && root.querySelector('.mv-tree-pv');
+      if (pv) pv.onclick = () => {
+        const card = pv.closest('.mv-tree-card');
+        if (card) { card.classList.toggle('is-pv'); pv.classList.toggle('on'); }
+      };
+    };
+    if (useTree) bindTreePv($('#dbTreeSlot'));
     view.querySelectorAll('.seg button').forEach(b => b.onclick = () => { f.k = b.dataset.k; save(); view.querySelectorAll('.seg button').forEach(x => x.classList.toggle('on', x === b)); drawCats(); draw(); });
     $('#dbq').oninput = draw;
     $('#dbCover').onchange = e => { f.cover = e.target.checked ? 1 : 0; save(); grid.querySelectorAll('.db-v.shown').forEach(x => x.classList.remove('shown')); draw(); };
     view.querySelectorAll('.db-chs input').forEach(x => x.onchange = () => { drawCats(); draw(); });
     bindSelActs(view, () => { drawCats(); draw(); });
     az.onclick = e => { const a = e.target.closest('a'); if (!a) return; e.preventDefault(); const t = document.getElementById('db-' + a.dataset.l); if (t) scrollTo({ top: t.getBoundingClientRect().top + scrollY - 70, behavior: 'smooth' }); };
-    grid.addEventListener('click', e => { if (!f.cover) return; const v = e.target.closest('.db-v'); if (v && !e.target.closest('a')) v.classList.toggle('shown'); });
+    grid.addEventListener('click', e => {
+      const kb = e.target.closest('.db-know-btn');
+      if (kb) {
+        const dk = kb.dataset.dbk;
+        if (S.known[dk]) delete S.known[dk]; else { S.known[dk] = 1; toast('✨ ดอกไม้ผลิบานบนต้นไม้จำยาแล้ว!'); }
+        save(); draw(); refreshTree(); return;
+      }
+      if (!f.cover) return; const v = e.target.closest('.db-v'); if (v && !e.target.closest('a')) v.classList.toggle('shown');
+    });
     drawCats(); draw();
   }
   /* ---------- Drug table: ตารางรวมยาต่อบท (#/drugs/<id>) ----------
@@ -5004,8 +5063,29 @@
       key: 'anatomySidebarInfographic',
       title: 'Infographic หุ่น Anatomy ลอยด้านซ้าย + อวัยวะเรืองแสงตามบท',
       area: 'พื้นที่ด้านซ้ายหน้าอ่านเนื้อหา (Desktop)',
-      desc: 'เพิ่มหุ่นคนยืนลอยพร้อมเงาบนพื้นและ Anatomy จำลองด้านซ้ายของเนื้อหา พร้อมทำให้อวัยวะที่ตรงกับบทและหัวข้อที่กำลังอ่านเรืองแสงอัตโนมัติ',
+      desc: 'เพิ่มหุ่นคนยืนผิวใสลอยพร้อมเงาบนพื้นและ Anatomy จำลองด้านซ้ายของเนื้อหา พร้อมทำให้อวัยวะที่ตรงกับบทและหัวข้อที่กำลังอ่านเรืองแสงอัตโนมัติ',
       added: 'v91'
+    },
+    {
+      key: 'drugBloomTree',
+      title: 'ต้นไม้ผลิดอกเรขาคณิต + ผีเสื้อ (จำยา & เชื้อ)',
+      area: 'หน้า Drug & Bug (#/db) & Name Drill (#/drill)',
+      desc: 'เพิ่มต้นไม้ Monument Valley บนลานหิน ยิ่งกดติ๊กจำยา/เชื้อได้เยอะ ดอกไม้กังหันหลากสีและผีเสื้อสีฟ้าจะค่อย ๆ ผลิบานและบินวนรอบต้นไม้',
+      added: 'v95'
+    },
+    {
+      key: 'mazeReviewQuest',
+      title: 'เขาวงกตมรกต + คริสตัลปลดล็อก (Mistakes / Review / Mock)',
+      area: 'หน้า Mistakes (#/wrong), Review (#/review) & Mock (#/mock)',
+      desc: 'เพิ่มเขาวงกตมรกต Monument Valley ที่น้อง Ro ค่อย ๆ เดินเหยียบสวิตช์สีชมพูไปปลดล็อกคริสตัลสีม่วงตรงกลางเมื่อเคลียร์ข้อผิดหรือทวนวันนี้ครบ',
+      added: 'v95'
+    },
+    {
+      key: 'homeFloatingIslands',
+      title: 'เกาะปราสาทลอยน้ำ 3 สีพาสเทล (3 พอร์ทัลหลักหน้า Home)',
+      area: 'หน้าแรก (#/)',
+      desc: 'เพิ่มเกาะปราสาทลอยน้ำ 3 สีพาสเทล (ทอง=อ่านบทเรียน, ชมพู=โจทย์/ข้อผิด/Mock, มิ้นต์=ยา/เชื้อ/Drill) ลอยขึ้นลงพร้อมธงพลิ้วบนหน้าแรก',
+      added: 'v95'
     }
   ];
   var _onOwnerChange = [];
@@ -5450,7 +5530,7 @@
           </svg>
 
           <!-- 🏛️ โหมดขยายด้านข้าง (ความสูงเท่าเดิม 620, กว้าง 540): ปราสาท 5 ชั้นเดิมตรงกลาง + ปีกปราสาทซ้ายขวาอลังการ + วาฬ & นางเงือก + ปะการังเป็นกลุ่ม -->
-          <svg id="reefExpSvg" viewBox="0 0 540 620" preserveAspectRatio="xMidYMid slice" hidden>
+          <svg id="reefExpSvg" viewBox="0 0 540 620" preserveAspectRatio="xMidYMid meet" hidden>
             <defs>
               <linearGradient id="reBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e99b5"/><stop offset="16%" stop-color="#1e6f8f"/><stop offset="46%" stop-color="#134569"/><stop offset="78%" stop-color="#0b2642"/><stop offset="100%" stop-color="#061426"/></linearGradient>
               <linearGradient id="reRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5f3fc" stop-opacity=".28"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/></linearGradient>
@@ -6041,43 +6121,33 @@
           <defs>
             <!-- เงาพื้นทรงรีสีม่วง-น้ำเงินแบบ 3D ลอยตัว -->
             <radialGradient id="anShadow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4c1d95" stop-opacity=".75"/><stop offset="68%" stop-color="#2e1065" stop-opacity=".42"/><stop offset="100%" stop-color="#0f172a" stop-opacity="0"/></radialGradient>
-            <!-- ผิว 3D หัน 30 องศา (แสงเข้าด้านซ้าย เงาด้านขวา) -->
-            <linearGradient id="anSkin3D" x1="15%" y1="0%" x2="88%" y2="0%"><stop offset="0%" stop-color="#f6c7a8"/><stop offset="48%" stop-color="#e3a27d"/><stop offset="82%" stop-color="#c27d5b"/><stop offset="100%" stop-color="#9b5c42"/></linearGradient>
-            <linearGradient id="anSkinBack" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#d49370"/><stop offset="100%" stop-color="#8c4f38"/></linearGradient>
-            <linearGradient id="anCavity" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2a1118"/><stop offset="60%" stop-color="#19090f"/><stop offset="100%" stop-color="#0e050a"/></linearGradient>
-            <linearGradient id="anHair" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#090d16"/></linearGradient>
-            <filter id="anDrop" x="-25%" y="-15%" width="150%" height="130%"><feDropShadow dx="4" dy="8" stdDeviation="5" flood-color="#020617" flood-opacity=".42"/></filter>
+            <!-- ผิวใส 3D โฮโลแกรมหัน 30 องศา (ดูสะอาด ไมน่ากลัว ไม่มีตา) -->
+            <linearGradient id="anSkin3D" x1="12%" y1="0%" x2="88%" y2="0%"><stop offset="0%" stop-color="#bae6fd" stop-opacity=".42"/><stop offset="48%" stop-color="#7dd3fc" stop-opacity=".28"/><stop offset="85%" stop-color="#38bdf8" stop-opacity=".2"/><stop offset="100%" stop-color="#0284c7" stop-opacity=".24"/></linearGradient>
+            <linearGradient id="anSkinBack" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7dd3fc" stop-opacity=".24"/><stop offset="100%" stop-color="#0369a1" stop-opacity=".18"/></linearGradient>
+            <linearGradient id="anCavity" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a1f36" stop-opacity=".55"/><stop offset="100%" stop-color="#061224" stop-opacity=".42"/></linearGradient>
+            <filter id="anDrop" x="-25%" y="-15%" width="150%" height="130%"><feDropShadow dx="2" dy="6" stdDeviation="4" flood-color="#020617" flood-opacity=".3"/></filter>
           </defs>
           <!-- เงาวงรีบนพื้นใต้เท้าหุ่น -->
-          <ellipse class="anat-shadow" cx="92" cy="366" rx="50" ry="14" fill="url(#anShadow)"/>
-          <ellipse class="anat-ring" cx="92" cy="366" rx="38" ry="9" fill="none" stroke="#a78bfa" stroke-opacity=".35" stroke-width="1.1"/>
-          <!-- หุ่นคนยืนหันข้าง ~30 องศา ลอยขึ้นมาแบบ 3D -->
+          <ellipse class="anat-shadow" cx="92" cy="368" rx="50" ry="13" fill="url(#anShadow)"/>
+          <ellipse class="anat-ring" cx="92" cy="368" rx="38" ry="8.5" fill="none" stroke="#5eead4" stroke-opacity=".38" stroke-width="1.1"/>
+          <!-- หุ่นคนยืนผิวใสหันข้าง ~30 องศา ลอยขึ้นมาแบบ 3D -->
           <g class="anat-body" filter="url(#anDrop)">
             <!-- แขนขวา (อยู่ด้านหลังเล็กน้อยเพราะหัน 30 องศา) -->
-            <path d="M114 96 Q126 104 128 128 L134 202 Q137 216 131 224 Q126 227 123 218 L119 198 L114 132 Z" fill="url(#anSkinBack)"/>
+            <path d="M114 96 Q126 104 128 128 L134 202 Q137 216 131 224 Q126 227 123 218 L119 198 L114 132 Z" fill="url(#anSkinBack)" stroke="#7dd3fc" stroke-opacity=".26" stroke-width=".9"/>
             <!-- ขาขวา (ก้าวถอยหลังเล็กน้อยแบบ 30 องศา) -->
-            <path d="M98 206 L122 204 L124 276 L127 334 Q138 342 135 348 Q125 352 112 346 L108 278 L98 228 Z" fill="url(#anSkinBack)"/>
-            <!-- โครงร่างหลัก 3D (หัว + คอ + ลำตัว + แขนซ้าย + ขาซ้ายนำหน้า) -->
+            <path d="M98 206 L122 204 L124 276 L127 334 Q138 342 135 348 Q125 352 112 346 L108 278 L98 228 Z" fill="url(#anSkinBack)" stroke="#7dd3fc" stroke-opacity=".26" stroke-width=".9"/>
+            <!-- โครงร่างหลักผิวใส 3D (หัวไร้หน้าแบบหุ่นจำลอง + คอ + ลำตัว + แขนซ้าย + ขาซ้ายนำหน้า) -->
             <g class="an-org" data-org="skin" data-name="ผิวหนัง (Skin)">
-              <!-- ขาซ้าย (อยู่ด้านหน้า) -->
-              <path d="M68 202 L100 206 L96 280 L94 344 Q102 356 92 361 Q79 363 72 353 L74 282 L68 220 Z" fill="url(#anSkin3D)"/>
-              <!-- ลำตัว 3/4 เอียง 30 องศา -->
-              <path d="M58 92 Q86 80 116 90 Q124 98 122 136 L118 206 Q92 220 66 206 L62 136 Q54 106 58 92 Z" fill="url(#anSkin3D)"/>
-              <!-- แขนซ้าย (อยู่ด้านหน้าฝั่งแสงเข้า) -->
-              <path d="M58 94 Q46 106 45 138 L42 206 Q39 224 46 229 Q52 231 54 221 L58 202 L64 136 Z" fill="url(#anSkin3D)"/>
-              <!-- ลำคอ + เงาใต้คาง -->
-              <path d="M77 66 L98 66 L102 92 Q88 99 74 91 Z" fill="url(#anSkin3D)"/>
-              <path d="M80 72 Q91 78 99 71 L99 78 Q89 83 79 77 Z" fill="#9b5c42" opacity=".4"/>
-              <!-- ศีรษะหัน 30 องศาไปทางขวา -->
-              <path d="M69 36 C69 18 104 17 107 38 C109 50 105 64 96 71 C88 76 76 72 72 62 C68 54 68 44 69 36 Z" fill="url(#anSkin3D)"/>
-              <!-- ใบหูฝั่งซ้าย -->
-              <ellipse cx="69" cy="48" rx="3.4" ry="6.2" fill="#d99773"/>
-              <!-- ผมทรง 3D เหมือนเรฟ -->
-              <path d="M66 44 C62 28 70 14 88 14 C104 14 111 23 110 34 C104 29 94 27 83 31 C76 34 74 42 72 48 C68 48 67 46 66 44 Z" fill="url(#anHair)"/>
+              <path d="M68 202 L100 206 L96 280 L94 344 Q102 356 92 361 Q79 363 72 353 L74 282 L68 220 Z" fill="url(#anSkin3D)" stroke="#93c5fd" stroke-opacity=".42" stroke-width="1.1"/>
+              <path d="M58 92 Q86 80 116 90 Q124 98 122 136 L118 206 Q92 220 66 206 L62 136 Q54 106 58 92 Z" fill="url(#anSkin3D)" stroke="#93c5fd" stroke-opacity=".46" stroke-width="1.1"/>
+              <path d="M58 94 Q46 106 45 138 L42 206 Q39 224 46 229 Q52 231 54 221 L58 202 L64 136 Z" fill="url(#anSkin3D)" stroke="#93c5fd" stroke-opacity=".4" stroke-width="1.1"/>
+              <path d="M77 66 L98 66 L102 92 Q88 99 74 91 Z" fill="url(#anSkin3D)" stroke="#93c5fd" stroke-opacity=".32" stroke-width=".9"/>
+              <path d="M69 36 C69 17 104 16 107 38 C109 50 105 64 96 71 C88 76 76 72 72 62 C68 54 68 44 69 36 Z" fill="url(#anSkin3D)" stroke="#bae6fd" stroke-opacity=".5" stroke-width="1.15"/>
+              <ellipse cx="69" cy="48" rx="3" ry="5.5" fill="url(#anSkin3D)" stroke="#93c5fd" stroke-opacity=".35" stroke-width=".8"/>
             </g>
 
-            <!-- ช่องตัดผ่า Anatomy 3D กลางอก-ท้อง (หันตามมุม 30 องศา) -->
-            <path d="M72 104 Q92 97 112 104 C118 122 117 166 112 196 C104 210 82 212 74 196 C67 166 66 122 72 104 Z" fill="url(#anCavity)" stroke="#7c2d12" stroke-opacity=".55" stroke-width="1.3"/>
+            <!-- ช่องอก-ท้องโปร่งแสง -->
+            <path d="M72 104 Q92 97 112 104 C118 122 117 166 112 196 C104 210 82 212 74 196 C67 166 66 122 72 104 Z" fill="url(#anCavity)" stroke="#5eead4" stroke-opacity=".22" stroke-width="1"/>
 
             <!-- กระดูกและกล้ามเนื้อ (MSK) -->
             <g class="an-org" data-org="msk" data-name="กระดูก & กล้ามเนื้อ (MSK)" stroke="#e2e8f0" stroke-linecap="round" fill="none">
@@ -6097,8 +6167,8 @@
               <line x1="87" y1="45" x2="88" y2="88" stroke="#c084fc" stroke-width="2.6" stroke-linecap="round"/>
             </g>
 
-            <!-- ตา (Eyes) -->
-            <g class="an-org" data-org="eye" data-name="ตา (Eyes)">
+            <!-- ตา (เรืองแสงเฉพาะตอนอ่านเรื่องตา ปกติซ่อนไว้ไม่ให้น่ากลัว) -->
+            <g class="an-org an-eye-only" data-org="eye" data-name="ตา (Eyes)">
               <ellipse cx="94" cy="44" rx="2.6" ry="1.7" fill="#38bdf8"/>
               <ellipse cx="102" cy="43.5" rx="2.2" ry="1.6" fill="#38bdf8"/>
             </g>
@@ -6250,6 +6320,217 @@
   });
   addEventListener('hashchange', () => setTimeout(syncAnatomyUI, 45));
   _onOwnerChange.push(() => syncAnatomyUI());
+
+  /* 🌸 1. Sacred Blooming Tree (Drug & Bug / Name Drill — drugBloomTree) */
+  function mvDrugBloomTreeHTML({ known = 0, total = 1, mode = 'db' }) {
+    const pct = Math.min(100, Math.round((known / Math.max(1, total)) * 100));
+    const BLOOMS = [
+      { x: 96, y: 84, c1: '#fb7185', c2: '#fb923c', c3: '#f472b6' },
+      { x: 118, y: 60, c1: '#fb923c', c2: '#fde047', c3: '#f472b6' },
+      { x: 146, y: 46, c1: '#f472b6', c2: '#fb923c', c3: '#e879f9' },
+      { x: 174, y: 54, c1: '#fb923c', c2: '#f472b6', c3: '#facc15' },
+      { x: 196, y: 42, c1: '#e879f9', c2: '#fde047', c3: '#fb7185' },
+      { x: 132, y: 92, c1: '#f472b6', c2: '#fb7185', c3: '#fde047' },
+      { x: 108, y: 122, c1: '#fb923c', c2: '#f472b6', c3: '#facc15' },
+      { x: 214, y: 76, c1: '#fb923c', c2: '#facc15', c3: '#f472b6' },
+      { x: 238, y: 66, c1: '#f472b6', c2: '#fb923c', c3: '#e879f9' },
+      { x: 262, y: 88, c1: '#facc15', c2: '#fb923c', c3: '#4ade80' },
+      { x: 282, y: 74, c1: '#fb923c', c2: '#fde047', c3: '#f472b6' },
+      { x: 246, y: 114, c1: '#e879f9', c2: '#fb923c', c3: '#facc15' },
+      { x: 184, y: 84, c1: '#fb7185', c2: '#f472b6', c3: '#fde047' },
+      { x: 216, y: 118, c1: '#4ade80', c2: '#f472b6', c3: '#fb923c' }
+    ];
+    // ปลดล็อกดอกไม้ตามจำนวนที่จำได้ (อย่างน้อย 1 ดอกต่อทุกตัวที่จำได้ช่วงแรก หรือตามสัดส่วน)
+    const litCount = known <= 0 ? 0 : Math.min(BLOOMS.length, Math.max(Math.min(known, 5), Math.ceil((known / Math.max(1, total)) * BLOOMS.length)));
+    const bflies = [
+      { x: 74, y: 78, r: -18 }, { x: 204, y: 20, r: 12 }, { x: 244, y: 14, r: -10 }, { x: 312, y: 62, r: 16 }, { x: 294, y: 116, r: -24 }
+    ];
+    const litBf = known <= 0 ? 0 : Math.min(bflies.length, Math.max(1, Math.ceil((litCount / BLOOMS.length) * bflies.length)));
+    return `<section class="mv-tree-card">
+      <div class="mv-tree-art">
+        <svg viewBox="0 0 360 250" aria-hidden="true">
+          <defs>
+            <linearGradient id="trSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f8efe9" stop-opacity=".18"/><stop offset="100%" stop-color="#7ce0d3" stop-opacity=".08"/></linearGradient>
+            <linearGradient id="trWood" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8b6b64"/><stop offset="100%" stop-color="#5c423d"/></linearGradient>
+            <radialGradient id="trCubeG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#67e8f9" stop-opacity=".75"/><stop offset="100%" stop-color="#67e8f9" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="360" height="250" rx="14" fill="url(#trSky)"/>
+          <!-- ลานหินเรขาคณิต Monument Valley -->
+          <g transform="translate(180,186)">
+            <polygon points="0,-46 116,8 0,60 -116,8" fill="#8fb3a8" opacity=".92"/>
+            <polygon points="-116,8 0,60 0,72 -116,20" fill="#52756d"/>
+            <polygon points="0,60 116,8 116,20 0,72" fill="#3a5953"/>
+            <polygon points="0,-36 96,8 0,50 -96,8" fill="#dce7e2" opacity=".94"/>
+            <polygon points="0,-24 68,8 0,38 -68,8" fill="#bfd4cd" opacity=".9"/>
+            <polygon points="0,-16 48,6 0,28 -48,6" fill="#eef4f0" opacity=".92"/>
+            <!-- วงคลื่นแสงรอบลูกบาศก์คริสตัล -->
+            <ellipse cx="26" cy="8" rx="22" ry="11" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1"/>
+            <ellipse cx="26" cy="8" rx="34" ry="17" fill="none" stroke="#7ce0d3" stroke-opacity=".34" stroke-width=".9"/>
+            <!-- ลูกบาศก์คริสตัลใต้ต้นไม้ -->
+            <g transform="translate(26,4)">
+              <circle cx="0" cy="-4" r="16" fill="url(#trCubeG)" opacity=".7"/>
+              <polygon points="0,-12 10,-7 0,-2 -10,-7" fill="#a5f3fc"/>
+              <polygon points="-10,-7 0,-2 0,9 -10,4" fill="#2b5968"/>
+              <polygon points="10,-7 0,-2 0,9 10,4" fill="#133442"/>
+              <polygon points="0,-9 6,-6 0,-3 -6,-6" fill="#fff" opacity=".8"/>
+            </g>
+            <!-- น้อง Ida ยืนมองต้นไม้ -->
+            <g transform="translate(8,18)">
+              <ellipse cx="0" cy="3" rx="4" ry="1.6" fill="rgba(0,0,0,.22)"/>
+              <line x1="-1.2" y1="0" x2="-1.2" y2="3" stroke="#1e293b" stroke-width="1.1"/><line x1="1.2" y1="0" x2="1.2" y2="3" stroke="#1e293b" stroke-width="1.1"/>
+              <polygon points="0,-10 -5,0 5,0" fill="#fff"/>
+              <circle cx="0" cy="-12" r="2.5" fill="#1e293b"/>
+              <polygon points="0,-22 -3.4,-12 3.4,-12" fill="#fff"/>
+            </g>
+          </g>
+          <!-- ลำต้นและกิ่งก้านเรขาคณิต Monument Valley -->
+          <g fill="none" stroke="url(#trWood)" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M168 186 Q174 162 162 138 Q144 106 146 48" stroke-width="11"/>
+            <path d="M162 146 Q198 134 212 104 L214 78" stroke-width="7.5"/>
+            <path d="M196 130 Q232 126 244 100 L240 68" stroke-width="5.5"/>
+            <path d="M228 118 Q264 114 278 90 L282 76" stroke-width="4.2"/>
+            <path d="M154 128 Q118 124 106 102 L96 86" stroke-width="5.5"/>
+            <path d="M148 96 Q126 86 118 62" stroke-width="4.5"/>
+            <path d="M148 82 Q170 72 174 56" stroke-width="4"/>
+            <path d="M164 68 Q186 58 196 44" stroke-width="3.6"/>
+            <path d="M214 96 Q244 96 262 88" stroke-width="3.4"/>
+            <path d="M132 124 L108 122 M146 102 L132 94 M214 118 L246 114" stroke-width="3"/>
+          </g>
+          <!-- โคนต้นไม้ 3D -->
+          <path d="M148 188 L164 168 L184 176 L190 192 L172 195 L154 192 Z" fill="#6b4e48"/>
+          <!-- ดอกไม้กังหันเรขาคณิต 14 ช่อ (ผลิบานตามจำนวนที่จำได้!) -->
+          ${BLOOMS.map((b, i) => `<g class="mv-bloom${i < litCount ? ' on' : ''}" transform="translate(${b.x},${b.y})" style="animation-delay:${(i * 0.12).toFixed(2)}s">
+            <ellipse cx="-8" cy="0" rx="8.5" ry="3.2" fill="${b.c1}" transform="rotate(-18)"/>
+            <ellipse cx="8" cy="0" rx="8.5" ry="3.2" fill="${b.c2}" transform="rotate(18)"/>
+            <ellipse cx="0" cy="-7" rx="7" ry="3" fill="${b.c3}" transform="rotate(-72)"/>
+            <ellipse cx="0" cy="6" rx="6.5" ry="2.8" fill="${b.c1}" transform="rotate(68)"/>
+            <circle cx="0" cy="0" r="2.2" fill="#fff"/>
+          </g>`).join('')}
+          <!-- ผีเสื้อสีฟ้าเรืองแสงบินวนรอบต้นไม้ -->
+          ${bflies.map((f, i) => `<g class="mv-bfly${i < litBf ? ' on' : ''}" transform="translate(${f.x},${f.y}) rotate(${f.r})" style="animation-delay:${(i * 0.45).toFixed(2)}s">
+            <polygon points="0,0 -7,-5 -4,3" fill="#22d3ee"/>
+            <polygon points="0,0 7,-5 4,3" fill="#67e8f9"/>
+            <polygon points="0,1 -5,5 -1,6" fill="#06b6d4"/>
+            <polygon points="0,1 5,5 1,6" fill="#38bdf8"/>
+          </g>`).join('')}
+        </svg>
+      </div>
+      <div class="mv-tree-info">
+        <div class="mv-tree-badge">✨ ต้นไม้จำยา &amp; เชื้อ (Blooming Tree)</div>
+        <h3>จำได้แล้ว <b>${known}</b> / ${total} ตัว (${pct}%)</h3>
+        <p>${mode === 'db' ? 'กดปุ่ม <b>+ จำได้</b> บนการ์ดยาหรือเชื้อด้านล่าง เพื่อปลูกดอกไม้กังหันหลากสีและเรียกผีเสื้อสีฟ้าให้บินวนรอบต้นไม้!' : 'ฝึกทำ Name Drill และติ๊กจำยา/เชื้อในหน้า Drug & Bug เพื่อปลูกดอกไม้ให้บานเต็มต้น!'}</p>
+        <div class="mv-tree-bar"><i style="width:${pct}%"></i></div>
+        <div class="mv-tree-acts">
+          <button type="button" class="btn small mv-tree-pv">👁️ Preview บานเต็มต้น</button>
+          ${mode === 'db' ? '<a class="btn small primary" href="#/drill">🧠 ไปฝึก Name Drill</a>' : '<a class="btn small primary" href="#/db">💊 ไปติ๊กจำยาใน Drug &amp; Bug</a>'}
+        </div>
+      </div>
+    </section>`;
+  }
+
+  /* 🧩 2. Emerald Sanctuary Maze (Mistakes / Today's Review / Mock Exam — mazeReviewQuest) */
+  function mvEmeraldMazeHTML({ done = 0, total = 1, title = '', sub = '' }) {
+    const pct = Math.max(0, Math.min(1, done / Math.max(1, total)));
+    const unlocked = pct >= 1;
+    // จุดเดินของน้อง Ro จากประตูบน -> สวิตช์ชมพู 1 -> สวิตช์ชมพู 2 -> กลางวิหาร
+    const pts = [{ x: 112, y: 66 }, { x: 152, y: 98 }, { x: 162, y: 132 }, { x: 120, y: 174 }, { x: 120, y: 128 }];
+    const sc = pct * (pts.length - 1), idx = Math.min(pts.length - 2, Math.floor(sc)), t = sc - idx;
+    const rx = (pts[idx].x + (pts[idx + 1].x - pts[idx].x) * t).toFixed(1);
+    const ry = (pts[idx].y + (pts[idx + 1].y - pts[idx].y) * t).toFixed(1);
+    const sw1 = pct >= 0.35, sw2 = pct >= 0.72;
+    return `<section class="mv-maze-card${unlocked ? ' is-unlocked' : ''}">
+      <div class="mv-maze-art">
+        <svg viewBox="0 0 240 240" aria-hidden="true">
+          <defs>
+            <linearGradient id="mzBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#86efac" stop-opacity=".24"/><stop offset="100%" stop-color="#10b981" stop-opacity=".12"/></linearGradient>
+            <linearGradient id="mzTop" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#8ff3d1"/><stop offset="100%" stop-color="#52d1a8"/></linearGradient>
+            <linearGradient id="mzL" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#48be98"/><stop offset="100%" stop-color="#2c8f73"/></linearGradient>
+            <linearGradient id="mzR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#35a684"/><stop offset="100%" stop-color="#1e6e58"/></linearGradient>
+            <radialGradient id="mzCryG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#818cf8" stop-opacity=".85"/><stop offset="100%" stop-color="#818cf8" stop-opacity="0"/></radialGradient>
+          </defs>
+          <rect width="240" height="240" rx="16" fill="url(#mzBg)"/>
+          <!-- โครงเปลือกวิหารมรกตโค้งมน Monument Valley -->
+          <path d="M120 14 C146 14 164 34 166 56 C188 64 202 88 200 116 L200 176 C200 202 162 214 120 228 C78 214 40 202 40 176 L40 116 C38 88 52 64 74 56 C76 34 94 14 120 14 Z" fill="url(#mzL)" stroke="#a7f3d0" stroke-opacity=".55" stroke-width="1.4"/>
+          <path d="M120 22 C142 22 156 38 158 58 C178 66 190 88 188 114 L188 172 C188 192 156 204 120 218 C84 204 52 192 52 172 L52 114 C50 88 62 66 82 58 C84 38 98 22 120 22 Z" fill="url(#mzR)"/>
+          <!-- ทางเดินและบันไดเขาวงกตชั้นบน -->
+          <polygon points="120,56 172,82 120,108 68,82" fill="url(#mzTop)"/>
+          <path d="M106 66 v-16 a5 5 0 0 1 10 0 v16 Z" fill="#183d38"/>
+          <!-- บันไดเฉียงซ้าย-ขวา -->
+          <path d="M84 74 l-14 14 M88 78 l-14 14 M92 82 l-14 14" stroke="#1d6b56" stroke-width="2"/>
+          <path d="M156 74 l14 14 M152 78 l14 14 M148 82 l14 14" stroke="#1d6b56" stroke-width="2"/>
+          <!-- ทางเดินโค้งชั้นล่าง -->
+          <path d="M62 126 Q120 198 178 126 L178 144 Q120 216 62 144 Z" fill="url(#mzTop)"/>
+          <path d="M72 144 Q120 202 168 144 L168 162 Q120 220 72 162 Z" fill="url(#mzL)"/>
+          <!-- แท่นกลางวิหาร + คริสตัลสีม่วง Sacred Geometry -->
+          <polygon points="120,98 146,112 120,126 94,112" fill="url(#mzTop)"/>
+          <polygon points="94,112 120,126 120,156 94,142" fill="url(#mzL)"/>
+          <polygon points="120,126 146,112 146,142 120,156" fill="url(#mzR)"/>
+          <g class="mz-crystal${unlocked ? ' lit' : ''}" transform="translate(120,126)">
+            <circle cx="0" cy="0" r="${unlocked ? 26 : 16}" fill="url(#mzCryG)" opacity="${unlocked ? '.92' : '.38'}"/>
+            <polygon points="0,-16 11,-4 11,6 0,16 -11,6 -11,-4" fill="${unlocked ? '#818cf8' : '#4338ca'}" stroke="#e0e7ff" stroke-width="1.2"/>
+            <polygon points="0,-10 6,-2 0,10 -6,-2" fill="#c7d2fe" opacity=".88"/>
+          </g>
+          <!-- สวิตช์สีชมพูเรืองแสง 2 จุด -->
+          <g transform="translate(162,114)"><polygon points="0,-5 9,0 0,5 -9,0" fill="${sw1 ? '#f472b6' : '#f9a8d4'}" opacity="${sw1 ? '1' : '.65'}"/><polygon points="0,-2.5 4.5,0 0,2.5 -4.5,0" fill="#fff"/></g>
+          <g transform="translate(120,174)"><polygon points="0,-5 9,0 0,5 -9,0" fill="${sw2 ? '#f472b6' : '#f9a8d4'}" opacity="${sw2 ? '1' : '.65'}"/><polygon points="0,-2.5 4.5,0 0,2.5 -4.5,0" fill="#fff"/></g>
+          <!-- น้อง Ro เดินตามความคืบหน้าในเขาวงกต -->
+          <g class="mz-ro" transform="translate(${rx},${ry})">
+            <ellipse cx="0" cy="4" rx="4.5" ry="1.8" fill="rgba(0,0,0,.28)"/>
+            <polygon points="0,-11 -5.5,1 5.5,1" fill="#fb7185"/>
+            <circle cx="0" cy="-14" r="3" fill="#fff"/>
+            <circle cx="-1.5" cy="-16" r="2.2" fill="#1e3a8a"/>
+          </g>
+        </svg>
+      </div>
+      <div class="mv-maze-info">
+        <div class="mv-maze-badge">${unlocked ? '✨ ปลดล็อกคริสตัลแล้ว!' : '🏛️ Emerald Sanctuary Maze'}</div>
+        <h3>${esc(title)}</h3>
+        <p>${esc(sub)}</p>
+        <div class="mv-maze-bar"><i style="width:${Math.round(pct * 100)}%"></i></div>
+      </div>
+    </section>`;
+  }
+
+  /* 🏰 3. Three Pastel Floating Castle Islands (Home — homeFloatingIslands) */
+  function mvHomeIslandsHTML({ lrHref, lrSub, nWrong, due, dbKnown }) {
+    const islandSvg = (id, topC, leftC, rightC, flagC, stripe1, stripe2, stripe3) => `<svg viewBox="0 0 150 175" aria-hidden="true">
+      <!-- ฐานเกาะลอยหลากสีพาสเทล -->
+      <polygon points="75,92 126,116 75,140 24,116" fill="${topC}"/>
+      <path d="M24 116 L75 140 L126 116 L118 134 L75 156 L32 134 Z" fill="${stripe1}"/>
+      <path d="M32 134 L75 156 L118 134 L106 149 L75 165 L44 149 Z" fill="${stripe2}"/>
+      <path d="M44 149 L75 165 L106 149 L92 162 L75 171 L58 162 Z" fill="${stripe3}"/>
+      <!-- หอคอยซ้าย -->
+      <polygon points="36,56 54,65 54,114 36,105" fill="${leftC}"/>
+      <polygon points="54,65 68,58 68,107 54,114" fill="${rightC}"/>
+      <polygon points="52,22 36,56 54,65 68,58" fill="#1e3a4c"/>
+      <line x1="52" y1="22" x2="52" y2="10" stroke="#1e293b" stroke-width="1.3"/>
+      <path class="isl-flag" d="M52,12 Q66,15 76,22 Q64,23 52,19 Z" fill="${flagC}"/>
+      <!-- หอคอยขวา -->
+      <polygon points="84,48 102,57 102,114 84,105" fill="${leftC}"/>
+      <polygon points="102,57 116,50 116,107 102,114" fill="${rightC}"/>
+      <polygon points="100,14 84,48 102,57 116,50" fill="#162e40"/>
+      <line x1="100" y1="14" x2="100" y2="3" stroke="#1e293b" stroke-width="1.3"/>
+      <path class="isl-flag" d="M100,5 Q114,8 126,15 Q114,16 100,12 Z" fill="${flagC}"/>
+      <!-- ประตูโค้ง + สะพานเชื่อม -->
+      <path d="M43 96 v-14 a4.5 4.5 0 0 1 9 0 v14 Z" fill="#13293d"/>
+      <path d="M91 92 v-14 a4.5 4.5 0 0 1 9 0 v14 Z" fill="#13293d"/>
+      <polygon points="62,92 88,92 88,108 62,108" fill="${topC}"/>
+    </svg>`;
+    return `<section class="mv-islands-wrap" aria-label="3 เกาะปราสาทลอยน้ำพอร์ทัลหลัก">
+      <a class="mv-isl isl-gold" href="${esc(lrHref)}">
+        <div class="mv-isl-art">${islandSvg('g', '#7ce0d3', '#fde047', '#f59e0b', '#fb7185', '#fb7185', '#1e3a5f', '#4ade80')}</div>
+        <div class="mv-isl-txt"><span class="mv-isl-tag">📖 เกาะอ่านบทเรียน</span><b>อ่านต่อ &amp; รอบ 2</b><small>${esc(lrSub)}</small></div>
+      </a>
+      <a class="mv-isl isl-pink" href="${nWrong ? '#/wrong' : '#/mock'}">
+        <div class="mv-isl-art">${islandSvg('p', '#fde68a', '#fb7185', '#e11d48', '#2dd4bf', '#38bdf8', '#fde047', '#1e3a5f')}</div>
+        <div class="mv-isl-txt"><span class="mv-isl-tag">📕 เกาะฝึกโจทย์</span><b>${nWrong ? `เคลียร์ข้อผิด ${nWrong} ข้อ` : 'Mock Exam & Quiz'}</b><small>${due ? `ทวนวันนี้ ${due} รายการ` : 'เดินเขาวงกตปลดล็อกคริสตัล'}</small></div>
+      </a>
+      <a class="mv-isl isl-mint" href="#/db">
+        <div class="mv-isl-art">${islandSvg('m', '#f9a8d4', '#5eead4', '#0d9488', '#fbbf24', '#fb7185', '#fde047', '#38bdf8')}</div>
+        <div class="mv-isl-txt"><span class="mv-isl-tag">💊 เกาะจำยา &amp; เชื้อ</span><b>ปลูกต้นไม้ดอกไม้</b><small>${dbKnown ? `จำได้แล้ว ${dbKnown} ตัว 🌸` : 'Drug & Bug · Name Drill'}</small></div>
+      </a>
+    </section>`;
+  }
 
   route();
 })();

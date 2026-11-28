@@ -1174,7 +1174,8 @@ body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 .reef-dock.is-expanded .reef-hd-t{font-size:12px}
 .reef-dock.is-expanded .reef-hd-c{font-size:11px}
 .reef-hd-pearl{font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;background:rgba(253,224,71,.16);color:#fef08a;border:1px solid rgba(253,224,71,.35)}
-.reef-hd-pearl[hidden],.reef-exp-glow[hidden],.reef-exp-btn[hidden],.reef-exp-panel[hidden],.reef-next-card[hidden],#reefMiniSvg[hidden],#reefExpSvg[hidden]{display:none}
+.reef-hd-pearl[hidden],.reef-exp-glow[hidden],.reef-exp-btn[hidden],.reef-exp-panel[hidden],.reef-next-card[hidden],#reefMiniSvg[hidden],#reefExpSvg[hidden]{display:none!important}
+.reef-dock.is-expanded .reef-scene{background:linear-gradient(180deg,#2e99b5 0%,#1e6f8f 16%,#134569 46%,#0b2642 78%,#061426 100%)}
 .reef-exp-btn,.reef-exp-glow{width:20px;height:20px;border:0;border-radius:6px;background:rgba(76,242,242,.22);color:#7ce0d3;font-size:12px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0}
 .reef-exp-btn:hover,.reef-exp-glow:hover{background:rgba(76,242,242,.38);color:#fff}
 .reef-exp-glow.on{background:rgba(253,224,71,.28);color:#fef08a;box-shadow:0 0 8px rgba(253,224,71,.45)}
@@ -1251,8 +1252,62 @@ body.focus .anat-tab{left:0}
 .anat-body{animation:anatFloat 3.6s ease-in-out infinite}
 .anat-shadow,.anat-ring{transform-box:fill-box;transform-origin:center;animation:anatShadow 3.6s ease-in-out infinite}
 .anat-stage .an-org{opacity:.42;transition:opacity .35s ease,filter .35s ease;pointer-events:auto}
+.anat-stage .an-org.an-eye-only:not(.lit){opacity:0!important;pointer-events:none}
 .anat-stage .an-org[data-org="skin"]{opacity:1;pointer-events:none}
 .anat-stage .an-org[data-org="skin"].lit{filter:drop-shadow(0 0 8px #5eead4) drop-shadow(0 0 16px #38bdf8)}
 .anat-stage .an-org.lit{opacity:1;animation:anatOrganGlow 2.4s ease-in-out infinite}
 @media (max-width:1119px){body:not(.focus) .anat-host{display:none!important}}
 @media (max-width:959px){.anat-host{display:none!important}}
+
+/* ===== v95 New Monument Valley Motivation Graphics ===== */
+/* 5. Sacred Blooming Tree (Drug & Bug / Name Drill) */
+.mv-tree-card{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:14px;align-items:center;margin:12px 0 16px;padding:12px 14px;border-radius:16px;border:1px solid color-mix(in srgb,var(--accent) 32%,var(--line));background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 92%,#7ce0d3 8%),var(--surface2));box-shadow:var(--shadow)}
+@media (max-width:680px){.mv-tree-card{grid-template-columns:1fr}}
+.mv-tree-art svg{width:100%;height:auto;display:block}
+.mv-tree-art .mv-bloom{opacity:.14;transform-box:fill-box;transform-origin:center;transition:opacity .45s ease,filter .45s ease}
+.mv-tree-art .mv-bloom.on,.mv-tree-card.is-pv .mv-bloom{opacity:1;filter:drop-shadow(0 0 4px rgba(244,114,182,.55))}
+.mv-tree-art .mv-bfly{opacity:0;transition:opacity .5s ease}
+@keyframes mvBfly{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.mv-tree-art .mv-bfly.on,.mv-tree-card.is-pv .mv-bfly{opacity:1;animation:mvBfly 3.2s ease-in-out infinite}
+.mv-tree-badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:700;background:color-mix(in srgb,var(--accent) 18%,var(--surface));color:var(--accent);margin-bottom:4px}
+.mv-tree-info h3{margin:2px 0 4px;font-size:1.08em}
+.mv-tree-info p{margin:0 0 8px;font-size:13px;color:var(--muted);line-height:1.5}
+.mv-tree-bar{height:8px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);overflow:hidden;margin-bottom:10px}
+.mv-tree-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#fb7185,#fb923c,#fde047,#4ade80);transition:width .4s ease}
+.mv-tree-acts{display:flex;flex-wrap:wrap;gap:6px}
+.mv-tree-pv.on{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.db-know-btn{margin-left:auto;border:1px solid var(--line);background:var(--surface2);color:var(--muted);border-radius:999px;padding:2px 9px;font:inherit;font-size:11.5px;font-weight:700;cursor:pointer;white-space:nowrap}
+.db-know-btn:hover{border-color:var(--ok);color:var(--ok)}
+.db-know-btn.on{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
+.db-card.is-known{border-left:3.5px solid var(--ok)}
+
+/* 6. Emerald Sanctuary Maze (Mistakes / Review / Mock) */
+.mv-maze-card{display:grid;grid-template-columns:168px 1fr;gap:14px;align-items:center;margin:10px 0 14px;padding:12px 14px;border-radius:16px;border:1px solid rgba(52,211,153,.38);background:linear-gradient(135deg,color-mix(in srgb,var(--surface) 88%,#34d399 12%),var(--surface2));box-shadow:var(--shadow)}
+@media (max-width:560px){.mv-maze-card{grid-template-columns:1fr;text-align:center}}
+.mv-maze-art svg{width:100%;max-width:170px;margin:0 auto;display:block}
+.mv-maze-art .mz-crystal.lit{filter:drop-shadow(0 0 10px #818cf8) drop-shadow(0 0 18px #c084fc)}
+.mv-maze-badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11.5px;font-weight:700;background:rgba(16,185,129,.16);color:#10b981;margin-bottom:4px}
+.mv-maze-card.is-unlocked .mv-maze-badge{background:rgba(129,140,248,.2);color:#818cf8}
+.mv-maze-info h3{margin:2px 0 4px;font-size:1.05em}
+.mv-maze-info p{margin:0 0 8px;font-size:13px;color:var(--muted);line-height:1.5}
+.mv-maze-bar{height:8px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);overflow:hidden}
+.mv-maze-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#34d399,#f472b6,#818cf8);transition:width .4s ease}
+
+/* 7. Three Pastel Floating Castle Islands (Home) */
+.mv-islands-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 14px}
+@media (max-width:680px){.mv-islands-wrap{grid-template-columns:1fr}}
+.mv-isl{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:var(--fg);padding:10px 10px 12px;border-radius:16px;border:1px solid var(--line);background:linear-gradient(180deg,color-mix(in srgb,var(--surface) 88%,transparent),var(--surface2));box-shadow:var(--shadow);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.mv-isl:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 14px 28px rgba(0,0,0,.22)}
+.mv-isl.isl-gold{border-top:3px solid #f59e0b}
+.mv-isl.isl-pink{border-top:3px solid #fb7185}
+.mv-isl.isl-mint{border-top:3px solid #2dd4bf}
+@keyframes mvIslFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.mv-isl-art{width:112px;height:126px;animation:mvIslFloat 3.8s ease-in-out infinite}
+.mv-isl.isl-pink .mv-isl-art{animation-delay:.6s}
+.mv-isl.isl-mint .mv-isl-art{animation-delay:1.2s}
+.mv-isl-art svg{width:100%;height:100%;display:block;filter:drop-shadow(0 8px 14px rgba(0,0,0,.18))}
+.mv-isl-art .isl-flag{transform-box:fill-box;transform-origin:left center;animation:ntFlag 2.4s ease-in-out infinite}
+.mv-isl-txt{display:flex;flex-direction:column;gap:2px;margin-top:4px}
+.mv-isl-tag{font-size:11px;font-weight:700;color:var(--accent)}
+.mv-isl-txt b{font-size:13.5px;line-height:1.3}
+.mv-isl-txt small{font-size:11.5px;color:var(--muted)}
