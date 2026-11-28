@@ -1220,8 +1220,8 @@ body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--stk-g:#0c3b38;--stk-g-fg:#a7f3d0;--stk-g-bd:rgba(94,234,212,.52)}}
 .inote.sticky.st-g{background:var(--stk-g);color:var(--stk-g-fg);border:1px solid var(--stk-g-bd);box-shadow:0 2px 10px rgba(45,212,191,.18)}
 .hl-pop .note-in.sticky.st-g{background:var(--stk-g);color:var(--stk-g-fg);border-color:var(--stk-g-bd)}
-.inote.sticky.has-mascot{position:relative;padding:7px 46px 8px 11px;min-height:38px}
-.inote-mascot{position:absolute;right:5px;bottom:2px;width:34px;height:34px;pointer-events:none;user-select:none;display:block;transition:transform .2s ease}
+.inote.sticky.has-mascot{position:relative;padding:8px 62px 9px 11px;min-height:54px}
+.inote-mascot{position:absolute;right:4px;bottom:2px;width:52px;height:52px;pointer-events:none;user-select:none;display:block;transition:transform .2s ease}
 .inote-mascot svg{width:100%;height:100%;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.22))}
 .inote.sticky.has-mascot:hover .inote-mascot{transform:translateY(-2px) scale(1.06)}
 .hl-pop .note-kind{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
