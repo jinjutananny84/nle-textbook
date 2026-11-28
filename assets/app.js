@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v99</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v100</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -6147,14 +6147,11 @@
           <polygon class="anat-shadow" points="90,308 136,324 90,338 44,324" fill="#5eead4" opacity=".22"/>
           <polygon class="anat-ring" points="90,313 122,324 90,334 58,324" fill="#1e1b4b" opacity=".52" stroke="#5eead4" stroke-opacity=".42" stroke-width="1"/>
 
-          <!-- ✨ วิ้งค์เรืองแสงรอบตัวน้อง Ida -->
+          <!-- ✨ วิ้งค์เรืองแสงรอบตัวน้อง Ida (นุ่มนวล ช้า ๆ ไม่กวนสมาธิ) -->
           <g class="anat-winks" aria-hidden="true">
-            <path class="an-wink" d="M36 44 l2 6 l6 2 l-6 2 l-2 6 l-2-6 l-6-2 l6-2 Z" fill="#fde047"/>
-            <path class="an-wink" d="M144 58 l1.8 5 l5 1.8 l-5 1.8 l-1.8 5 l-1.8-5 l-5-1.8 l5-1.8 Z" fill="#5eead4" style="animation-delay:.7s"/>
-            <path class="an-wink" d="M22 162 l1.6 4.5 l4.5 1.6 l-4.5 1.6 l-1.6 4.5 l-1.6-4.5 l-4.5-1.6 l4.5-1.6 Z" fill="#f9a8d4" style="animation-delay:1.3s"/>
-            <path class="an-wink" d="M156 196 l2 5.5 l5.5 2 l-5.5 2 l-2 5.5 l-2-5.5 l-5.5-2 l5.5-2 Z" fill="#a5f3fc" style="animation-delay:1.9s"/>
-            <circle class="an-wink" cx="128" cy="24" r="2.2" fill="#fef08a" style="animation-delay:.35s"/>
-            <circle class="an-wink" cx="44" cy="248" r="2" fill="#5eead4" style="animation-delay:1.55s"/>
+            <path class="an-wink" d="M38 46 l1.5 4.2 l4.2 1.5 l-4.2 1.5 l-1.5 4.2 l-1.5-4.2 l-4.2-1.5 l4.2-1.5 Z" fill="#fde047"/>
+            <path class="an-wink" d="M144 66 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#5eead4" style="animation-delay:2.2s"/>
+            <path class="an-wink" d="M150 202 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#a5f3fc" style="animation-delay:4.3s"/>
           </g>
 
           <!-- หุ่นน้อง Ida สไตล์ Monument Valley ลอยตัวพร้อมหน้าต่างคริสตัลโชว์อวัยวะละเอียด -->
