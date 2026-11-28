@@ -12,7 +12,7 @@
   function ensureS() {
     S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {};
     S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {};
-    S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; S.figw = S.figw || {}; S.ans = S.ans || {};
+    S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; S.figw = S.figw || {}; S.ans = S.ans || {}; S.flag = S.flag || {};
   }
   ensureS();
   if (S.focus) document.body.classList.add('focus');
@@ -2050,8 +2050,9 @@
       }
       return `<div class="${cls}" role="button"${saved ? '' : ' tabindex="0"'} data-l="${l}"><span class="l">${l}</span><span class="ot" data-hlk="${esc(qKey(chId, qid, l))}">${inline(esc(q.options[l]))}</span><button class="strike" type="button" aria-label="ตัดชอยส์นี้" title="ตัดชอยส์ (ยังไม่ใช่การตอบ)">✕</button></div>`;
     }).join('');
+    const flagged = !!S.flag[k];
     return `<div class="mcq" data-ch="${chId}" data-q="${esc(qid)}"${saved ? ' data-done="1"' : ''}${opts.showSaved ? ' data-saved-mode="1"' : ''}>
-      <div class="qid">ข้อ ${esc(qid)} ${src} ${wasWrong} ${opts.showBox ? `<a class="src" href="#/${chId}/${q.box}">กล่อง ${q.box}</a>` : ''}</div>
+      <div class="qid">ข้อ ${esc(qid)} ${src} ${wasWrong} ${opts.showBox ? `<a class="src" href="#/${chId}/${q.box}">กล่อง ${q.box}</a>` : ''}<button type="button" class="flag-btn${flagged ? ' on' : ''}" data-flag="${esc(k)}" title="ปักหมุดไว้ทวน (เดาถูก/ยังไม่ชัวร์)">🚩${flagged ? ' ปักหมุดแล้ว' : ''}</button></div>
       <div class="stem" data-hlk="${esc(qKey(chId, qid, 'stem'))}">${inline(esc(q.stem))}</div>
       ${q.needs_image ? '<div class="warn">ข้อนี้ข้อสอบจริงมีรูปประกอบ</div>' : ''}
       <div class="opts">${optHtml}</div>
@@ -2103,6 +2104,7 @@
     const rdAllBtn = $('#redoBoxExams'); if (rdAllBtn && box.dataset.savedMode === '1') rdAllBtn.hidden = false;
     applyAllHL(ex);
     if (onDone) onDone(ok);
+    if (box.dataset.savedMode === '1') maybeShowBoxExamRes();
     if (/^#\/[^/]+\/\d+/.test(location.hash)) { const m = location.hash.match(/^#\/([^/]+)\/(\d+)/); const y = sidebar.scrollTop; renderSidebar(m[1], +m[2]); sidebar.scrollTop = y; }
   }
   function resetMCQ(box) {
@@ -2115,12 +2117,21 @@
     save();
   }
   view.addEventListener('click', e => {
+    const fl = e.target.closest('[data-flag]');
+    if (fl) {
+      const k = fl.dataset.flag, [ch, ...rest] = k.split('|'), id = rest.join('|');
+      if (S.flag[k]) { delete S.flag[k]; fl.classList.remove('on'); fl.textContent = '🚩'; toast('เอาหมุดออกแล้ว'); }
+      else { S.flag[k] = { ch, id, t: Date.now() }; fl.classList.add('on'); fl.textContent = '🚩 ปักหมุดแล้ว'; toast('🚩 ปักหมุดไว้ทวนแล้ว'); }
+      save();
+      return;
+    }
     const rd = e.target.closest('[data-redo]');
     if (rd) { const box = rd.closest('.mcq'); if (box) resetMCQ(box); return; }
     const rdAll = e.target.closest('#redoBoxExams');
     if (rdAll) {
       view.querySelectorAll('.exam-sec .mcq[data-done]').forEach(b => resetMCQ(b));
       rdAll.hidden = true;
+      const br = $('#boxExamRes'); if (br) br.innerHTML = '';
       toast('ล้างคำตอบในกล่องนี้แล้ว ทำใหม่ได้เลย');
       return;
     }
@@ -3104,7 +3115,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v74</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v75</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3380,7 +3391,7 @@
       h += mvExamBreakHTML(id, s.examIds.length);
       h += `<section class="exam-sec"><div class="exam-sec-h"><h2>📝 Past exam questions</h2><button class="btn small" id="redoBoxExams"${doneCnt ? '' : ' hidden'}>↺ ล้างคำตอบกล่องนี้</button></div><p class="bar-label">กดเลือกคำตอบแล้วระบบจะจำคำตอบไว้ให้อัตโนมัติ (ข้อที่ตอบผิดเข้ากองข้อผิดด้วย · กด ↺ ทำใหม่ ได้ทุกเมื่อ)</p>`;
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid], { showSaved: true });
-      h += '</section>';
+      h += '<div id="boxExamRes"></div></section>';
     }
     h += `<div class="lvpick"><div class="lvq">How well do you understand this box? (tap again to clear)</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
       <nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
@@ -3391,7 +3402,7 @@
     expandAbbr($('article.content', view), ch.abbr);
     initFigs($('article.content', view), k);
     buildToc(); setTimeout(trackRead, 300); coverTools(view); flowHints(view);
-    if (s.examIds.length) initExamBreakGame(id, s.examIds.length);
+    if (s.examIds.length) { initExamBreakGame(id, s.examIds.length); maybeShowBoxExamRes(); }
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
     let tmr; $('#noteIn').addEventListener('input', e => { clearTimeout(tmr); tmr = setTimeout(() => { const v = e.target.value.trim(); if (v) S.notes[k] = v; else delete S.notes[k]; save(); }, 400); });
@@ -3485,18 +3496,168 @@
     bindSelActs(view, info); info();
     $('#qGo').onclick = () => { const r = go(); if (!r.items.length) { $('#qInfo').textContent = 'ไม่มีข้อในขอบเขตนี้'; return; } runQuiz(r.items, 'ผลการทำข้อสอบ'); };
   }
+  /* 🏛️ หน้าสรุปผลสอบสไตล์ Monument Valley + วิเคราะห์จุดอ่อน (ใช้ร่วมกันทั้ง Mock / Quiz / ท้ายกล่อง) */
+  function renderExamResult(container, title, results, opts = {}) {
+    if (!container || !results.length) return;
+    const total = results.length;
+    const right = results.filter(r => r.ok).length;
+    const wrong = results.filter(r => !r.ok && r.picked).length;
+    const unans = total - right - wrong;
+    const pct = Math.round(right * 100 / total);
+    const pass = pct >= 60;
+    const flagCnt = results.filter(r => S.flag[`${r.ch}|${r.id}`]).length;
+    const fmtT = s => `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;
+    const dark = isDark();
+
+    // จัดกลุ่มตามบท (ถ้ามีบทเดียว จัดกลุ่มตามเลขกล่อง/หัวข้อแทน)
+    const chSet = [...new Set(results.map(r => r.ch))];
+    const byGrp = {};
+    for (const r of results) {
+      const q = CH[r.ch] && CH[r.ch].exams[r.id];
+      const key = chSet.length > 1 ? r.ch : `box:${q ? q.box : 0}`;
+      const label = chSet.length > 1 ? chTitle(r.ch) : `กล่อง ${q ? q.box : '?'}`;
+      const short = chSet.length > 1 ? r.ch.toUpperCase().replace('KT-', '') : `#${q ? q.box : '?'}`;
+      const g = byGrp[key] = byGrp[key] || { key, ch: r.ch, label, short, ok: 0, tot: 0 };
+      g.tot++; if (r.ok) g.ok++;
+    }
+    const grps = Object.values(byGrp);
+    const sortedWeak = [...grps].sort((a, b) => (a.ok / a.tot) - (b.ok / b.tot));
+    const maxP = Math.max(...grps.map(g => g.ok / g.tot));
+    const bestIdx = grps.findIndex(g => g.ok / g.tot === maxP);
+
+    // สร้าง SVG หอคอยไอโซเมตริก Monument Valley (coral-red + mint mist + 60% threshold + Ida & Totem)
+    const n = grps.length;
+    const vw = Math.max(420, Math.min(820, n * 86 + 72));
+    const baseY = 236, maxH = 148, passY = baseY - maxH * 0.6;
+    const stepX = (vw - 88) / Math.max(1, n);
+    let svg = '';
+    const bgF = dark ? 'rgba(124,224,211,.08)' : 'rgba(255,255,255,.28)';
+    svg += `<polygon points="20,210 52,194 84,210 52,226" fill="${bgF}"/>`;
+    svg += `<polygon points="${vw - 84},204 ${vw - 52},188 ${vw - 20},204 ${vw - 52},220" fill="${bgF}"/>`;
+    if (n > 1) svg += `<rect x="44" y="${baseY - 22}" width="${vw - 88}" height="20" fill="${dark ? '#a83630' : '#e8584a'}" opacity=".42"/>`;
+    svg += `<line x1="18" y1="${passY}" x2="${vw - 18}" y2="${passY}" stroke="${dark ? '#4cf2f2' : '#0284c7'}" stroke-width="1.8" stroke-dasharray="6 5" opacity=".88"/>`;
+    svg += `<rect x="${vw - 102}" y="${passY - 11}" width="84" height="19" rx="9" fill="${dark ? '#0f2b36' : '#ffffff'}" opacity=".92"/>`;
+    svg += `<text x="${vw - 60}" y="${passY + 2}" text-anchor="middle" font-size="10.5" font-weight="700" fill="${dark ? '#4cf2f2' : '#0284c7'}">เกณฑ์ 60%</text>`;
+
+    grps.forEach((g, idx) => {
+      const gp = Math.round(g.ok * 100 / g.tot);
+      const h = Math.max(30, Math.round((gp / 100) * maxH));
+      const cx = Math.round(44 + stepX * idx + stepX / 2);
+      const w = Math.min(26, Math.max(16, Math.round(stepX * 0.31)));
+      const ty = baseY - h, isP = gp >= 60;
+      const cT = isP ? '#ff8470' : '#e2b6a3', cL = isP ? '#ff5f4d' : '#c99682', cR = isP ? '#d13c32' : '#a37261';
+      svg += `<g class="mv-tw" data-i="${idx}">`;
+      svg += `<polygon points="${cx},${baseY + 14} ${cx - w},${baseY + 4} ${cx},${baseY - 4} ${cx + w},${baseY + 4}" fill="rgba(14,45,54,.18)"/>`;
+      svg += `<polygon points="${cx - w},${ty + 10} ${cx},${ty + 20} ${cx},${baseY + 10} ${cx - w},${baseY}" fill="${cL}"/>`;
+      svg += `<polygon points="${cx},${ty + 20} ${cx + w},${ty + 10} ${cx + w},${baseY} ${cx},${baseY + 10}" fill="${cR}"/>`;
+      svg += `<polygon points="${cx},${ty} ${cx + w},${ty + 10} ${cx},${ty + 20} ${cx - w},${ty + 10}" fill="${cT}"/>`;
+      if (isP) svg += `<polygon points="${cx},${ty + 4} ${cx + 8},${ty + 9} ${cx},${ty + 14} ${cx - 8},${ty + 9}" fill="#4cf2f2" opacity=".95"/>`;
+      if (idx === bestIdx) {
+        const iy = ty - 3;
+        svg += `<rect x="${cx - 5}" y="${iy - 15}" width="10" height="15" rx="1.5" fill="#facc15" stroke="#ca8a04" stroke-width=".9"/>`;
+        svg += `<circle cx="${cx}" cy="${iy - 9}" r="2.2" fill="#fff"/><circle cx="${cx}" cy="${iy - 9}" r="1" fill="#14343d"/>`;
+        svg += `<polygon points="${cx},${iy - 25} ${cx - 4.2},${iy - 15} ${cx + 4.2},${iy - 15}" fill="#fff"/>`;
+      }
+      const ly = idx === bestIdx ? ty - 31 : ty - 7;
+      svg += `<text x="${cx}" y="${ly}" text-anchor="middle" font-size="11.5" font-weight="800" fill="${dark ? '#fff' : '#14343d'}">${gp}%</text>`;
+      svg += `<text x="${cx}" y="${baseY + 25}" text-anchor="middle" font-size="11" font-weight="700" fill="${dark ? '#d9faf5' : '#14343d'}">${esc(g.short)}</text>`;
+      svg += `<text x="${cx}" y="${baseY + 38}" text-anchor="middle" font-size="10" font-weight="600" fill="${dark ? '#8cdcd2' : '#1f5360'}">${g.ok}/${g.tot}</text>`;
+      svg += `</g>`;
+    });
+
+    const needPass = Math.max(0, Math.ceil(total * 0.6) - right);
+    const w1 = sortedWeak[0], w2 = sortedWeak[1], best = sortedWeak[sortedWeak.length - 1];
+    const missTop2 = (w1 ? w1.tot - w1.ok : 0) + (w2 ? w2.tot - w2.ok : 0);
+    const boost = Math.min(Math.max(2, needPass), missTop2);
+    const projPct = Math.min(100, Math.round((right + boost) * 100 / total));
+    const anaText = pass
+      ? `<b>จุดแข็ง:</b> ทำได้ดีใน <b>${esc(best.label)}</b> (${best.ok}/${best.tot} · ${Math.round(best.ok * 100 / best.tot)}%)` + (missTop2 > 0 ? `<br><b>เก็บเพิ่มได้อีก:</b> <b>${esc(w1.label)}</b> (${w1.ok}/${w1.tot})${w2 && w2.ok < w2.tot ? ` และ <b>${esc(w2.label)}</b> (${w2.ok}/${w2.tot})` : ''} — ถ้าเก็บเพิ่มได้อีก ${boost} ข้อ คะแนนจะขึ้นเป็น <b>${projPct}%</b>` : `<br>เยี่ยมมาก! ทำได้ครบทุกข้อในชุดนี้แล้ว`)
+      : `<b>ต่ำกว่าเกณฑ์ 60%</b> (ขาดอีก <b>${needPass} ข้อ</b>)<br>แนะนำให้ทวน <b>${esc(w1.label)}</b> (${w1.ok}/${w1.tot})${w2 && w2.ok < w2.tot ? ` และ <b>${esc(w2.label)}</b> (${w2.ok}/${w2.tot})` : ''} ก่อน — เก็บเพิ่มอีก ${boost} ข้อจะขยับขึ้นเป็น <b>${projPct}%</b>`;
+
+    const barsHtml = sortedWeak.map(g => {
+      const gp = Math.round(g.ok * 100 / g.tot);
+      const col = gp >= 75 ? '#10b981' : gp >= 60 ? '#0ea5e9' : '#ff6b57';
+      return `<div class="mv-bar-row"><div class="mv-bar-lbl"><b>${esc(g.label)}</b><span>${g.ok}/${g.tot} (<b>${gp}%</b>)</span></div><div class="mv-bar-trk"><i style="width:${gp}%;background:${col}"></i></div></div>`;
+    }).join('');
+
+    const weakHref = w1 ? `#/quiz?ch=${w1.ch}` : '#/quiz';
+    container.innerHTML = `<div class="mv-res">
+        <div class="mv-res-top">
+          <div>
+            <span class="mv-res-badge">🏛️ ${esc(title)}</span>
+            <div class="mv-res-score"><span class="mv-res-pct">${pct}%</span><span class="mv-res-sub">ถูก ${right} / ${total} ข้อ${opts.usedSec != null ? ' · ใช้เวลา ' + fmtT(opts.usedSec) : ''}</span></div>
+          </div>
+          <div class="mv-res-pill${pass ? '' : ' fail'}">${pass ? `✓ ผ่านเกณฑ์ 60% (+${pct - 60}%)` : `⚠ ต่ำกว่า 60% (ขาด ${needPass} ข้อ)`}</div>
+        </div>
+        <svg class="mv-res-svg" viewBox="0 0 ${vw} 284">${svg}</svg>
+        <div class="mv-res-foot"><div class="mv-res-detail">👆 แตะที่หอคอยแต่ละบทเพื่อดูคะแนนรายบท</div></div>
+      </div>
+      <div class="mv-res-grid">
+        <div class="panel" style="margin:0"><h3>📊 คะแนนแยกตามหัวข้อ</h3>${barsHtml}</div>
+        <div class="panel" style="margin:0"><h3>🎯 วิเคราะห์จุดอ่อน</h3>
+          <div class="mv-ana-box">${anaText}</div>
+          <div class="mv-stat-trio">
+            <div><small>ถูก</small><b style="color:var(--ok)">${right}</b></div>
+            <div><small>ผิด / ข้าม</small><b style="color:var(--bad)">${wrong + unans}</b></div>
+            <div><small>ปักหมุด 🚩</small><b style="color:#f59e0b">${flagCnt}</b></div>
+          </div>
+          <div class="choice" style="margin:0">
+            ${opts.onRetake ? '<button class="btn primary" id="resRetake">🔄 ทำใหม่ชุดนี้</button>' : `<a class="btn primary" href="${weakHref}">📝 ทำ Quiz บทที่อ่อนสุด</a>`}
+            <a class="btn" href="#/wrong">📕 ข้อผิด</a>
+            <a class="btn" href="#/wrong?tab=flag">🚩 ปักหมุด</a>
+            ${opts.extraHref ? `<a class="btn" href="${opts.extraHref}">${esc(opts.extraLabel || 'เลือกชุดอื่น')}</a>` : ''}
+          </div>
+        </div>
+      </div>`;
+    const det = container.querySelector('.mv-res-detail');
+    container.querySelectorAll('.mv-tw').forEach(tw => {
+      tw.addEventListener('click', () => {
+        container.querySelectorAll('.mv-tw').forEach(x => x.classList.remove('sel'));
+        tw.classList.add('sel');
+        const g = grps[+tw.dataset.i], gp = Math.round(g.ok * 100 / g.tot);
+        if (det) det.innerHTML = `🏛️ <b>${esc(g.label)}</b>: ถูก <b>${g.ok} / ${g.tot} ข้อ (${gp}%)</b> · ${gp >= 60 ? 'ผ่านเกณฑ์แล้ว' : 'ควรทวนเพิ่ม'}`;
+      });
+    });
+    const rt = container.querySelector('#resRetake');
+    if (rt && opts.onRetake) rt.onclick = opts.onRetake;
+  }
+  function maybeShowBoxExamRes() {
+    const holder = $('#boxExamRes'); if (!holder) return;
+    const boxes = [...view.querySelectorAll('.exam-sec .mcq')];
+    if (!boxes.length || boxes.some(b => !b.dataset.done)) { holder.innerHTML = ''; return; }
+    const results = boxes.map(b => {
+      const ch = b.dataset.ch, id = b.dataset.q, q = CH[ch] && CH[ch].exams[id];
+      const p = S.ans[`${ch}|${id}`] || '';
+      return { ch, id, picked: p, ok: !!(q && p === q.answer) };
+    });
+    renderExamResult(holder, 'สรุปผลข้อสอบท้ายกล่อง', results, {});
+  }
   function runQuiz(items, title) {
     let i = 0, score = 0;
+    const results = [];
+    const startMs = Date.now();
     const step = () => {
       if (i >= items.length) {
-        view.innerHTML = `<div class="hero"><h1>${title}</h1><p>ได้ ${score} จาก ${items.length} ข้อ (${Math.round(score * 100 / items.length)}%)</p></div><div class="choice"><a class="btn primary" href="#/wrong">📕 Go to Mistakes</a><a class="btn" href="#/quiz">New set</a></div>`;
+        view.innerHTML = '<div id="quizRes"></div>';
+        renderExamResult($('#quizRes'), title, results, {
+          usedSec: Math.round((Date.now() - startMs) / 1000),
+          onRetake: () => runQuiz(items, title),
+          extraHref: '#/quiz', extraLabel: '📝 ชุดใหม่'
+        });
         return;
       }
       const it = items[i], q = CH[it.ch].exams[it.id];
+      let answered = false;
       view.innerHTML = `<div class="qhead"><span>ข้อ ${i + 1} / ${items.length}</span><span>ถูก ${score}</span></div><div class="bar walk"><i style="width:${Math.round(i * 100 / items.length)}%"></i></div>${mcqHTML(it.ch, it.id, q, { showBox: true })}<div class="choice" style="justify-content:flex-end"><button class="btn" id="skip">Skip</button></div>`;
       const box = $(".mcq", view); applyAllHL(view);
-      box._onDone = ok => { if (ok) score++; $('#skip').textContent = i + 1 < items.length ? 'Next →' : 'See result'; $('#skip').classList.add('primary'); };
-      $('#skip').onclick = () => { i++; step(); window.scrollTo(0, 0); };
+      box._onDone = ok => {
+        answered = true;
+        if (ok) score++;
+        results.push({ ch: it.ch, id: it.id, ok, picked: S.ans[`${it.ch}|${it.id}`] || '1' });
+        $('#skip').textContent = i + 1 < items.length ? 'Next →' : 'See result';
+        $('#skip').classList.add('primary');
+      };
+      $('#skip').onclick = () => { if (!answered) results.push({ ch: it.ch, id: it.id, ok: false, picked: '' }); i++; step(); window.scrollTo(0, 0); };
     };
     step();
   }
@@ -3596,13 +3757,8 @@
         if (timed) startTimer();
         return;
       }
-      let right = 0, wrong = 0;
-      const byCh = {};
-      items.forEach((it, idx) => {
+      const results = items.map((it, idx) => {
         const q = CH[it.ch].exams[it.id], p = picks[idx], ok = p === q.answer;
-        const b = byCh[it.ch] = byCh[it.ch] || { ok: 0, tot: 0 };
-        b.tot++;
-        if (ok) { right++; b.ok++; } else if (p) wrong++;
         if (p) {
           const k = `${it.ch}|${it.id}`;
           S.ans[k] = p;
@@ -3610,31 +3766,29 @@
           if (ok) { S.stats[k].r++; delete S.wrong[k]; }
           else { S.stats[k].w++; S.wrong[k] = { ch: it.ch, id: it.id, n: (S.wrong[k]?.n || 0) + 1, t: Date.now() }; }
         }
+        return { ch: it.ch, id: it.id, picked: p, ok };
       });
       save();
+      const right = results.filter(r => r.ok).length;
       const usedSec = Math.round((Date.now() - startMs) / 1000);
-      const pct = Math.round(right * 100 / items.length);
-      const chBadges = Object.entries(byCh).map(([c, v]) => `<span>${esc(chTitle(c))} <b>${v.ok}/${v.tot}</b></span>`).join('');
       const renderList = flt => {
         const rows = items.map((it, idx) => ({ it, idx, q: CH[it.ch].exams[it.id], ok: picks[idx] === CH[it.ch].exams[it.id].answer }))
           .filter(x => flt === 'all' ? true : flt === 'wrong' ? !x.ok : x.ok);
         return rows.map(x => `<div class="mock-rev-item">${!picks[x.idx] ? '<p class="bar-label" style="margin:10px 0 -8px">ข้อ ' + (x.idx + 1) + ' · ยังไม่ได้ตอบในรอบนี้</p>' : ''}${mcqHTML(x.it.ch, x.it.id, x.q, { showBox: true, showSaved: true })}</div>`).join('') || '<p class="empty">ไม่มีข้อในหมวดนี้</p>';
       };
-      view.innerHTML = `<div class="hero"><h1>📊 ${esc(title)}</h1><p>ได้ <b>${right}</b> / ${items.length} ข้อ (<b>${pct}%</b>) · ผิด ${wrong} · ไม่ได้ตอบ ${unans} · ใช้เวลา ${fmtT(usedSec)}</p></div>
-        <div class="mock-ch-stats">${chBadges}</div>
-        <div class="choice">
-          <button class="btn primary" id="mRetake">🔄 สอบใหม่ชุดนี้</button>
-          <a class="btn" href="#/mock">⏱️ เลือกปีอื่น</a>
-          <a class="btn" href="#/wrong">📕 กองข้อผิด</a>
-        </div>
+      view.innerHTML = `<div id="mockRes"></div>
         <div class="mode-tabs" id="mFlt">
           <button class="btn primary" data-f="all">ทั้งหมด (${items.length})</button>
           <button class="btn" data-f="wrong">ผิด / ไม่ได้ตอบ (${items.length - right})</button>
           <button class="btn" data-f="right">ถูก (${right})</button>
         </div>
         <div id="mRev">${renderList('all')}</div>`;
+      renderExamResult($('#mockRes'), title, results, {
+        usedSec,
+        onRetake: () => runMockExam(items, title, timed, yr),
+        extraHref: '#/mock', extraLabel: '⏱️ เลือกปีอื่น'
+      });
       applyAllHL(view);
-      $('#mRetake').onclick = () => runMockExam(items, title, timed, yr);
       $('#mFlt').addEventListener('click', e => {
         const b = e.target.closest('button[data-f]'); if (!b) return;
         view.querySelectorAll('#mFlt button').forEach(x => x.classList.toggle('primary', x === b));
@@ -3687,16 +3841,20 @@
     draw();
     startTimer();
   }
-  async function vWrong() {
+  async function vWrong(params) {
     await loadAll(); renderSidebar();
-    const list = Object.values(S.wrong).filter(w => CH[w.ch] && CH[w.ch].exams[w.id]).sort((a, b) => b.t - a.t);
-    let h = `<div class="hero"><h1>📕 Mistakes</h1><p>ตอบถูกเมื่อไหร่ ข้อนั้นจะออกจากกองเอง</p></div>`;
-    if (!list.length) { view.innerHTML = h + '<p class="empty">ยังไม่มีข้อผิด ลองทำข้อสอบท้ายหัวข้อหรือโหมดทำข้อสอบดูนะ</p>'; return; }
+    const isFlag = params && params.get('tab') === 'flag';
+    const wList = Object.values(S.wrong).filter(w => CH[w.ch] && CH[w.ch].exams[w.id]).sort((a, b) => b.t - a.t);
+    const fList = Object.values(S.flag).filter(w => CH[w.ch] && CH[w.ch].exams[w.id]).sort((a, b) => b.t - a.t);
+    const list = isFlag ? fList : wList;
+    let h = `<div class="hero"><h1>${isFlag ? '🚩 ข้อที่ปักหมุดไว้ทวน' : '📕 Mistakes'}</h1><p>${isFlag ? 'ข้อที่กดปักหมุดไว้ (เช่น เดาถูกแต่ยังไม่ชัวร์) ไว้กลับมาทวนซ้ำ' : 'ตอบถูกเมื่อไหร่ ข้อนั้นจะออกจากกองเอง'}</p></div>
+      <div class="mode-tabs"><a class="btn${isFlag ? '' : ' primary'}" href="#/wrong">📕 ข้อที่ผิด (${wList.length})</a><a class="btn${isFlag ? ' primary' : ''}" href="#/wrong?tab=flag">🚩 ปักหมุด (${fList.length})</a></div>`;
+    if (!list.length) { view.innerHTML = h + `<p class="empty">${isFlag ? 'ยังไม่มีข้อที่ปักหมุด กดปุ่ม 🚩 บนข้อสอบข้อไหนก็ได้เพื่อเก็บไว้ทวน' : 'ยังไม่มีข้อผิด ลองทำข้อสอบท้ายหัวข้อหรือโหมดทำข้อสอบดูนะ'}</p>`; return; }
     h += `<div class="choice"><button class="btn primary" id="wGo">Review all (${list.length})</button><button class="btn" id="wClear">Clear</button></div>`;
-    h += list.map(w => { const q = CH[w.ch].exams[w.id]; return `<a class="search-hit" href="#/${w.ch}/${q.box}"><b>${esc(w.id)}</b> · ${esc(CH[w.ch].title)} กล่อง ${q.box} · ผิด ${w.n} ครั้ง<small>${esc(q.stem)}</small></a>`; }).join('');
+    h += list.map(w => { const q = CH[w.ch].exams[w.id]; return `<a class="search-hit" href="#/${w.ch}/${q.box}"><b>${esc(w.id)}</b> · ${esc(CH[w.ch].title)} กล่อง ${q.box}${w.n ? ` · ผิด ${w.n} ครั้ง` : ' · 🚩 ปักหมุด'}<small>${esc(q.stem)}</small></a>`; }).join('');
     view.innerHTML = h; applyAllHL(view);
-    $('#wGo').onclick = () => runQuiz(shuffle(list.map(w => ({ ch: w.ch, id: w.id }))), 'ทวนกองข้อผิด');
-    $('#wClear').onclick = () => { if (confirm('ล้างกองข้อผิดทั้งหมด?')) { S.wrong = {}; save(); vWrong(); } };
+    $('#wGo').onclick = () => runQuiz(shuffle(list.map(w => ({ ch: w.ch, id: w.id }))), isFlag ? 'ทวนข้อที่ปักหมุด' : 'ทวนกองข้อผิด');
+    $('#wClear').onclick = () => { if (confirm(isFlag ? 'ล้างข้อที่ปักหมุดทั้งหมด?' : 'ล้างกองข้อผิดทั้งหมด?')) { if (isFlag) S.flag = {}; else S.wrong = {}; save(); vWrong(params); } };
   }
   async function vCards(params) {
     await loadAll(); renderSidebar(params.get('ch'));
@@ -4395,7 +4553,7 @@
       if (!parts.length) return vHome();
       if (parts[0] === 'quiz') return vQuiz(params);
       if (parts[0] === 'mock') return vMock(params);
-      if (parts[0] === 'wrong') return vWrong();
+      if (parts[0] === 'wrong') return vWrong(params);
       if (parts[0] === 'cards') return vCards(params);
       if (parts[0] === 'search') return vSearch(params.get('q'));
       if (parts[0] === 'stats') return vStats();
@@ -4517,5 +4675,140 @@
       }
     });
   }
+  /* 🍅 Monument Valley Rotating Castle Pomodoro Widget (persistent across routes) */
+  function initPomodoro() {
+    const PATH = [
+      { x: 95, y: 156, msg: 'ออกเดินทางจากฐานปราสาท' },
+      { x: 112, y: 164, msg: 'เหยียบแท่นไฟสีฟ้า…' },
+      { x: 132, y: 173, msg: 'เข้าใกล้จุดเชื่อมสะพาน' },
+      { x: 156, y: 165, msg: 'ข้ามทางเดินสีปะการัง…' },
+      { x: 186, y: 152, msg: 'ขึ้นสู่สะพานกลไก' },
+      { x: 152, y: 118, msg: 'เดินข้ามสะพานกลางปราสาท!' },
+      { x: 108, y: 84, msg: 'ไต่ขึ้นชั้นบนหอคอย' },
+      { x: 144, y: 60, msg: 'ใกล้ถึงยอดคริสตัลแล้ว!' },
+      { x: 176, y: 72, msg: '✨ ครบเวลาแล้ว!' }
+    ];
+    let total = 25 * 60, left = 25 * 60, tmr = null, open = false, spin = 0;
+    const fmt = s => `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;
+    const chime = () => {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        [523.25, 659.25, 783.99].forEach((f, idx) => {
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.type = 'sine'; o.frequency.value = f;
+          g.gain.setValueAtTime(0.08, ctx.currentTime + idx * 0.14);
+          g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.14 + 0.55);
+          o.connect(g); g.connect(ctx.destination);
+          o.start(ctx.currentTime + idx * 0.14); o.stop(ctx.currentTime + idx * 0.14 + 0.6);
+        });
+      } catch (e) {}
+    };
+    const wrap = document.createElement('div');
+    wrap.className = 'pomo-wrap';
+    wrap.innerHTML = `<button type="button" class="pomo-mini" id="pmMini" title="เปิดปราสาทจับเวลา Pomodoro">
+        <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="rgba(124,224,211,.28)" stroke-width="2"/><circle id="pmArc" cx="12" cy="12" r="10" fill="none" stroke="#4cf2f2" stroke-width="2.2" stroke-dasharray="62.8" stroke-dashoffset="62.8" transform="rotate(-90 12 12)"/><polygon points="12,5 9,15 15,15" fill="#fff"/><circle cx="12" cy="8.5" r="1.4" fill="#fff"/></svg>
+        <span class="pm-t" id="pmMiniT">25:00</span>
+      </button>
+      <div class="pomo-card" id="pmCard" hidden>
+        <div class="pomo-hd"><span id="pmTitle">🍅 โฟกัส · 25 นาที</span><div class="pm-acts"><button type="button" id="pmSpin" title="หมุนกลไกปราสาท">↻ หมุน</button><button type="button" id="pmHide" title="ย่อเก็บ">– ย่อ</button></div></div>
+        <div class="pomo-stage" id="pmStage" title="คลิกเพื่อหมุนกลไกปราสาท">
+          <svg viewBox="0 0 280 250" aria-hidden="true">
+            <defs>
+              <radialGradient id="pmAG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4cf2f2" stop-opacity=".55"/><stop offset="100%" stop-color="#4cf2f2" stop-opacity="0"/></radialGradient>
+              <linearGradient id="pmST" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a8d5cb"/><stop offset="100%" stop-color="#74aba2"/></linearGradient>
+              <linearGradient id="pmSL" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5d948d"/><stop offset="100%" stop-color="#3a6868"/></linearGradient>
+              <linearGradient id="pmSR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2c555c"/><stop offset="100%" stop-color="#193740"/></linearGradient>
+            </defs>
+            <g><circle class="pm-star" cx="28" cy="24" r="1.4" fill="#fff"/><circle class="pm-star" cx="62" cy="14" r="1.1" fill="#ff9e9e" style="animation-delay:.8s"/><circle class="pm-star" cx="242" cy="28" r="1.5" fill="#7ce0d3" style="animation-delay:.4s"/><circle class="pm-star" cx="256" cy="64" r="1.2" fill="#fff" style="animation-delay:1.5s"/><path class="pm-star" d="M214 14v8M210 18h8" stroke="#fff" stroke-width="1"/></g>
+            <g>
+              <polygon points="140,188 228,224 140,248 52,224" fill="#1e313b"/><polygon points="52,224 140,248 140,256 52,232" fill="#122029"/><polygon points="140,248 228,224 228,232 140,256" fill="#0b151c"/>
+              <polygon points="140,174 210,204 140,228 70,204" fill="#2b454f"/><polygon points="70,204 140,228 140,238 70,214" fill="#1a2e36"/><polygon points="140,228 210,204 210,214 140,238" fill="#112026"/>
+              <polygon points="140,162 192,184 140,206 88,184" fill="#416970"/><polygon points="88,184 140,206 140,216 88,194" fill="#27464d"/><polygon points="140,206 192,184 192,194 140,216" fill="#183038"/>
+              <circle cx="106" cy="200" r="2.4" fill="#0d1d24" stroke="#6aa09a" stroke-width=".7"/><circle cx="116" cy="204" r="2.4" fill="#0d1d24" stroke="#6aa09a" stroke-width=".7"/><circle cx="126" cy="208" r="2.4" fill="#0d1d24" stroke="#6aa09a" stroke-width=".7"/>
+            </g>
+            <g>
+              <polygon points="131,58 140,62 140,174 131,170" fill="url(#pmSL)"/><polygon points="140,62 149,58 149,170 140,174" fill="url(#pmSR)"/>
+              <polygon points="62,92 73,97 73,168 62,163" fill="url(#pmSL)"/><polygon points="73,97 82,93 82,164 73,168" fill="url(#pmSR)"/>
+              <polygon points="198,92 209,97 209,168 198,163" fill="url(#pmSL)"/><polygon points="209,97 218,93 218,164 209,168" fill="url(#pmSR)"/>
+            </g>
+            <g>
+              <polygon points="73,154 140,186 140,198 73,166" fill="url(#pmSL)"/><polygon points="73,154 84,149 150,180 140,186" fill="url(#pmST)"/>
+              <polygon points="140,186 208,154 208,166 140,198" fill="url(#pmSR)"/><polygon points="140,186 130,180 197,149 208,154" fill="url(#pmST)"/>
+              <polygon id="pmT0" points="92,155 103,160 96,164 85,159" fill="#4cf2f2" opacity=".3"/>
+              <polygon id="pmT1" points="107,162 118,167 111,171 100,166" fill="#4cf2f2" opacity=".3"/>
+              <polygon id="pmT2" points="122,169 133,174 126,178 115,173" fill="#4cf2f2" opacity=".3"/>
+              <polygon id="pmT3" points="154,169 165,164 172,168 161,173" fill="#ff7c6e" opacity=".3"/>
+              <polygon id="pmT4" points="169,162 180,157 187,161 176,166" fill="#ff7c6e" opacity=".3"/>
+              <polygon id="pmT5" points="184,155 195,150 202,154 191,159" fill="#ff7c6e" opacity=".3"/>
+            </g>
+            <g id="pmBridge" class="pomo-bridge">
+              <polygon points="78,142 198,86 208,91 88,147" fill="url(#pmST)"/><polygon points="78,142 88,147 88,158 78,153" fill="url(#pmSL)"/><polygon points="88,147 208,91 208,102 88,158" fill="url(#pmSR)"/>
+              <polygon points="140,113 149,117 140,121 131,117" fill="#4cf2f2" opacity=".9"/>
+            </g>
+            <g>
+              <polygon points="62,92 140,56 151,61 73,97" fill="url(#pmST)"/><polygon points="62,92 73,97 73,108 62,103" fill="url(#pmSL)"/>
+              <polygon points="140,56 218,92 207,97 129,61" fill="url(#pmST)"/><polygon points="129,61 207,97 207,108 129,72" fill="url(#pmSR)"/>
+            </g>
+            <g>
+              <circle cx="184" cy="72" r="26" fill="url(#pmAG)"/>
+              <circle class="pm-ring" cx="184" cy="72" r="14" fill="none" stroke="#7ce0d3" stroke-width="1"/>
+              <circle class="pm-ring" cx="184" cy="72" r="21" fill="none" stroke="#7ce0d3" stroke-width=".7" style="animation-delay:1.2s"/>
+              <polygon points="184,65 193,70 184,75 175,70" fill="#133a42" stroke="#7ce0d3" stroke-width="1"/>
+              <g id="pmCry"><polygon points="184,54 190,61 184,66 178,61" fill="#ff7c6e" stroke="#fff" stroke-width=".7"/></g>
+            </g>
+            <g transform="translate(86,152)"><ellipse cx="0" cy="4" rx="3.4" ry="4.8" fill="#111827"/><circle cx="0" cy="-2" r="2.6" fill="#111827"/><polygon points="2,-3 7,-1 2,0" fill="#111827"/><circle cx=".6" cy="-2.2" r=".9" fill="#fff"/></g>
+            <g id="pmIda" transform="translate(95,156)"><g class="pm-bob"><ellipse cx="0" cy="3" rx="4.2" ry="1.8" fill="rgba(0,0,0,.32)"/><line x1="-1.5" y1="0" x2="-1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/><line x1="1.5" y1="0" x2="1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/><polygon points="0,-10 -5,0 5,0" fill="#fff"/><circle cx="0" cy="-12" r="2.7" fill="#1e293b"/><polygon points="0,-24 -3.8,-12 3.8,-12" fill="#fff"/></g></g>
+          </svg>
+        </div>
+        <div class="pomo-ctl">
+          <div class="pomo-toprow"><div class="pomo-time" id="pmTime">25:00</div><div class="pomo-stat" id="pmStat">พร้อมออกเดินทาง</div></div>
+          <div class="pomo-presets"><button type="button" data-pm="25" class="on">25/5</button><button type="button" data-pm="50">50/10</button><button type="button" data-pm="5">พัก 5 น.</button></div>
+          <div class="pomo-btns"><button type="button" class="pm-go" id="pmGo">▶ เริ่มจับเวลา</button><button type="button" id="pmReset" title="รีเซ็ต">↺</button></div>
+        </div>
+      </div>`;
+    document.body.appendChild(wrap);
+    const sync = () => {
+      const p = Math.max(0, Math.min(1, 1 - left / total));
+      const sc = p * (PATH.length - 1), i = Math.min(PATH.length - 2, Math.floor(sc)), t = sc - i;
+      const a = PATH[i], b = PATH[i + 1];
+      const x = a.x + (b.x - a.x) * t, y = a.y + (b.y - a.y) * t;
+      const ida = $('#pmIda', wrap); if (ida) ida.setAttribute('transform', `translate(${x.toFixed(1)},${y.toFixed(1)})`);
+      for (let k = 0; k < 6; k++) { const el = $(`#pmT${k}`, wrap); if (el) el.setAttribute('opacity', p >= (k + 1) * 0.11 ? '.95' : '.28'); }
+      const tilt = p > 0.35 && p < 0.78 ? -6 : 0;
+      const br = $('#pmBridge', wrap); if (br) br.style.transform = `rotate(${spin + tilt}deg)`;
+      const cr = $('#pmCry', wrap); if (cr) cr.setAttribute('transform', p >= 1 ? 'translate(0,-4) scale(1.15)' : 'translate(0,0)');
+      const ts = fmt(left);
+      $('#pmTime', wrap).textContent = ts;
+      $('#pmMiniT', wrap).textContent = ts;
+      $('#pmStat', wrap).textContent = p === 0 && !tmr ? 'พร้อมออกเดินทาง' : (p >= 1 ? PATH[PATH.length - 1].msg : a.msg);
+      $('#pmArc', wrap).setAttribute('stroke-dashoffset', (62.8 * (1 - p)).toFixed(1));
+    };
+    const setOpen = v => { open = v; $('#pmMini', wrap).hidden = v; $('#pmCard', wrap).hidden = !v; };
+    const doSpin = () => { spin = spin === 0 ? 12 : spin === 12 ? -12 : 0; sync(); };
+    $('#pmMini', wrap).onclick = () => setOpen(true);
+    $('#pmHide', wrap).onclick = () => setOpen(false);
+    $('#pmSpin', wrap).onclick = e => { e.stopPropagation(); doSpin(); };
+    $('#pmStage', wrap).onclick = doSpin;
+    wrap.querySelectorAll('[data-pm]').forEach(b => b.onclick = () => {
+      clearInterval(tmr); tmr = null;
+      const m = +b.dataset.pm; total = left = m * 60;
+      $('#pmTitle', wrap).textContent = m === 5 ? '☕ พักเบรก · 5 นาที' : `🍅 โฟกัส · ${m} นาที`;
+      $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา';
+      wrap.querySelectorAll('[data-pm]').forEach(x => x.classList.toggle('on', x === b));
+      sync();
+    });
+    $('#pmGo', wrap).onclick = () => {
+      if (tmr) { clearInterval(tmr); tmr = null; $('#pmGo', wrap).textContent = '▶ เริ่มต่อ'; return; }
+      if (left <= 0) left = total;
+      $('#pmGo', wrap).textContent = '⏸ พักชั่วคราว';
+      tmr = setInterval(() => {
+        if (left > 0) { left--; sync(); }
+        else { clearInterval(tmr); tmr = null; $('#pmGo', wrap).textContent = '✨ ครบเวลาแล้ว!'; chime(); toast('✨ Ida ถึงยอดปราสาทแล้ว! ครบเวลา Pomodoro'); }
+      }, 1000);
+    };
+    $('#pmReset', wrap).onclick = () => { clearInterval(tmr); tmr = null; left = total; $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา'; sync(); };
+    sync();
+  }
+  initPomodoro();
   route();
 })();
