@@ -4,7 +4,7 @@
   'use strict';
 
   const FB_VER = '11.6.0';
-  const CACHE_NAME = 'nle-tb-v90';
+  const CACHE_NAME = 'nle-tb-v91';
   const CLIENT_ID = Math.random().toString(36).slice(2) + Date.now().toString(36);
   const MAX_IMG_CHARS = 760000; // เผื่อให้เล็กกว่าลิมิต 1MB ของ Firestore document เสมอ
 
@@ -172,8 +172,9 @@
     const older = lTime >= rTime ? remote : local;
     const out = Object.assign({}, older, newer);
 
-    // lvl: เก็บครบทุกกล่อง (ถ้าซ้ำเอาของใหม่กว่า)
+    // lvl & lvl2: เก็บครบทุกกล่อง (ถ้าซ้ำเอาของใหม่กว่า)
     out.lvl = Object.assign({}, older.lvl || {}, newer.lvl || {});
+    out.lvl2 = Object.assign({}, older.lvl2 || {}, newer.lvl2 || {});
     out.done = {};
 
     // hl: รวมไฮไลต์/โน้ตแทรก/รูปแทรกจากทั้งสองฝั่งแบบไม่ซ้ำ

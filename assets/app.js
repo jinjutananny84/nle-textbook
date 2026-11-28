@@ -10,7 +10,7 @@
   let S = {};
   try { S = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { S = {}; }
   function ensureS() {
-    S.done = S.done || {}; S.lvl = S.lvl || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {};
+    S.done = S.done || {}; S.lvl = S.lvl || {}; S.lvl2 = S.lvl2 || {}; for (const k in S.done) { if (!S.lvl[k]) S.lvl[k] = 4; } S.done = {};
     S.wrong = S.wrong || {}; S.known = S.known || {}; S.stats = S.stats || {}; S.notes = S.notes || {};
     S.hl = S.hl || {}; S.kw = S.kw || []; S.srs = S.srs || {}; S.figw = S.figw || {}; S.ans = S.ans || {}; S.flag = S.flag || {};
   }
@@ -208,7 +208,9 @@
     5: { s: '🧠 จำเยอะ', t: 'ใช้ความจำเยอะ ให้กลับมาจำหน่อย' }
   };
   const LV_ORD = [4, 3, 2, 1, 5];
-  const lvOf = (c, no) => S.lvl[secKey(c, no)] || 0;
+  const lv1Of = (c, no) => S.lvl[secKey(c, no)] || 0;
+  const lv2Of = (c, no) => (typeof draftOn === 'function' && draftOn('round2Rating')) ? ((S.lvl2 && S.lvl2[secKey(c, no)]) || 0) : 0;
+  const lvOf = (c, no) => lv2Of(c, no) || lv1Of(c, no);
   // คะแนนข้อสอบของกล่อง (คำตอบล่าสุดแต่ละข้อ) แสดงเมื่อทำครบทุกข้อแล้ว
   function boxScore(c, s) {
     const ids = s.examIds || []; if (!ids.length) return '';
@@ -247,7 +249,8 @@
   function dueItems() {
     const t = today(), out = [];
     const due = id => { const r = S.srs[id]; return !r || r.due <= t; };
-    for (const k in S.lvl) { const l = S.lvl[k]; if (((l >= 1 && l <= 3) || l === 5) && due('b:' + k)) out.push({ type: 'box', id: 'b:' + k, k, l }); }
+    const allLvKeys = new Set([...Object.keys(S.lvl), ...((typeof draftOn === 'function' && draftOn('round2Rating')) ? Object.keys(S.lvl2 || {}) : [])]);
+    for (const k of allLvKeys) { const l = ((typeof draftOn === 'function' && draftOn('round2Rating')) && S.lvl2 && S.lvl2[k]) || S.lvl[k]; if (((l >= 1 && l <= 3) || l === 5) && due('b:' + k)) out.push({ type: 'box', id: 'b:' + k, k, l }); }
     for (const k in S.wrong) if (due('q:' + k)) out.push({ type: 'exam', id: 'q:' + k, w: S.wrong[k] });
     for (const x of S.kw) if (!x.ok && due('k:' + x.at)) out.push({ type: 'kw', id: 'k:' + x.at, x });
     return out;
@@ -2000,12 +2003,19 @@
           const pgSecs = ch.sections.filter(x => x.page === pg.no);
           if (isMv) out += '<div class="mv-maze-list">';
           for (const s of pgSecs) {
-            const l = lvOf(ch.id, s.no);
+            const l1 = lv1Of(ch.id, s.no), l2 = lv2Of(ch.id, s.no);
+            const l = l2 || l1;
+            const dual = draftOn('round2Rating') && l1 && l2;
             const isOn = s.no === curNo;
             const lit = isOn || !!l || (curPos >= 0 && gIdx <= curPos);
             const zig = isMv ? (gIdx % 2 ? ' mz-r' : ' mz-l') : '';
             const node = isMv ? `<span class="mz-node${isOn ? ' on' : ''}${l ? ' lv' + l : ''}" aria-hidden="true">${isOn ? MV_MINI_HERO : '<i class="mz-gem"></i>'}</span>` : '';
-            out += `<a class="side-sec${isOn ? ' on' : ''}${l ? ' lv' + l : ''}${zig}${lit ? ' mz-lit' : ''}" href="#/${ch.id}/${s.no}">${node}<span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${boxScore(ch.id, s)}${l ? `<span class="ck">${LV[l].s}</span>` : ''}</a>`;
+            const dualStyle = dual ? ` style="--lv-l:var(--lv${l1}s);--lv-r:var(--lv${l2}s);--lv-lb:var(--lv${l1});--lv-rb:var(--lv${l2})"` : '';
+            const dualCls = dual ? ` lv-dual${l1 === 1 ? ' lv-l1' : ''}${l2 === 1 ? ' lv-r1' : ''}` : (l ? ` lv${l}` : '');
+            const ckHtml = dual
+              ? `<span class="ck ck-dual" title="รอบ 1: ${LV[l1].s} → รอบ 2: ${LV[l2].s}"><small>R2</small>${LV[l2].s}</span>`
+              : (l ? `<span class="ck">${LV[l].s}</span>` : '');
+            out += `<a class="side-sec${isOn ? ' on' : ''}${dualCls}${zig}${lit ? ' mz-lit' : ''}"${dualStyle} href="#/${ch.id}/${s.no}">${node}<span class="n">${s.no}</span><span class="t">${esc(s.title)}</span>${boxScore(ch.id, s)}${ckHtml}</a>`;
             gIdx++;
           }
           if (isMv) out += '</div>';
@@ -2277,7 +2287,11 @@
     globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/>',
     tag: '<path d="M3.5 11.5V4h7.5l9.5 9.5-7.5 7.5z"/><circle cx="8" cy="8.5" r="1.3" fill="currentColor" stroke="none"/>',
     link: '<path d="M10 14a4.5 4.5 0 0 1 0-6.4l2.2-2.2a4.5 4.5 0 1 1 6.4 6.4L17 13.4M14 10a4.5 4.5 0 0 1 0 6.4l-2.2 2.2a4.5 4.5 0 1 1-6.4-6.4L7 10.6"/>',
-    coral: '<path d="M12 21V9M12 14l-5-4V6M12 12l5-4V5M9 17l-4-2M15 16l4-2M6 21h12"/>'
+    coral: '<path d="M12 21V9M12 14l-5-4V6M12 12l5-4V5M9 17l-4-2M15 16l4-2M6 21h12"/>',
+    fish: '<path d="M3 12c3.5-4.5 9-5 13-1.5L21 7v10l-5-3.5C12 17 6.5 16.5 3 12Z"/><circle cx="8" cy="11.2" r="1" fill="currentColor" stroke="none"/>',
+    bubble: '<circle cx="9.5" cy="14" r="5"/><circle cx="16.5" cy="8.5" r="3"/><circle cx="17.5" cy="16" r="2"/>',
+    whale: '<path d="M3 14c0-4.5 4-7.5 10-7.5 3.5 0 6 1.5 7 4l1.5-2.5 1 4.5c-1.5 2-4 3-7 3H6.5C4.5 15.5 3 15 3 14Z"/><circle cx="8" cy="12" r="1" fill="currentColor" stroke="none"/>',
+    dna: '<path d="M7 3c0 5 10 5 10 10s-10 5-10 8M17 3c0 5-10 5-10 10s10 5 10 8M8 6.5h8M9 12h6M8 17.5h8"/>'
   };
   /* ---------- ไอคอนสถาปัตยกรรมเรขาคณิตสไตล์ Monument Valley ---------- */
   const ICON_MV = {
@@ -2337,9 +2351,13 @@
     globe: '<polygon points="12,2.5 21.5,12 12,21.5 2.5,12" fill="currentColor" fill-opacity=".1"/><polygon points="12,2.5 21.5,12 12,21.5 2.5,12"/><path d="M2.5 12h19M12 2.5v19"/><polygon points="12,7 17,12 12,17 7,12"/>',
     tag: '<polygon points="3.5,4 11,4 20.5,13.5 13,21 3.5,11.5" fill="currentColor" fill-opacity=".12"/><polygon points="3.5,4 11,4 20.5,13.5 13,21 3.5,11.5"/><polygon points="8,7.2 9.3,8.5 8,9.8 6.7,8.5" fill="currentColor" stroke="none"/>',
     link: '<polygon points="11.5,6.5 15.5,2.5 21.5,8.5 17.5,12.5" fill="currentColor" fill-opacity=".12"/><polygon points="11.5,6.5 15.5,2.5 21.5,8.5 17.5,12.5"/><polygon points="6.5,11.5 2.5,15.5 8.5,21.5 12.5,17.5" fill="currentColor" fill-opacity=".12"/><polygon points="6.5,11.5 2.5,15.5 8.5,21.5 12.5,17.5"/><path d="m9 15 6-6"/>',
-    coral: '<polygon points="12,18 18,21 6,21" fill="currentColor" fill-opacity=".16"/><path d="M12 20V8l-2-3M12 14l-4.5-3.5V6.5M12 12l4.5-3.5V5M7.5 10.5l-2.5-.5M16.5 8.5l2.5-.5M5 21h14"/>'
+    coral: '<polygon points="12,18 18,21 6,21" fill="currentColor" fill-opacity=".16"/><path d="M12 20V8l-2-3M12 14l-4.5-3.5V6.5M12 12l4.5-3.5V5M7.5 10.5l-2.5-.5M16.5 8.5l2.5-.5M5 21h14"/>',
+    fish: '<polygon points="3,12 10,7 16,12 10,17" fill="currentColor" fill-opacity=".16"/><polygon points="3,12 10,7 16,12 10,17"/><polygon points="16,12 21,8 21,16"/><circle cx="8" cy="11.5" r="1" fill="currentColor" stroke="none"/>',
+    bubble: '<polygon points="9.5,9 14,13.5 9.5,18 5,13.5" fill="currentColor" fill-opacity=".14"/><polygon points="9.5,9 14,13.5 9.5,18 5,13.5"/><polygon points="16.5,5.5 19.5,8.5 16.5,11.5 13.5,8.5"/><circle cx="17.5" cy="16" r="1.5"/>',
+    whale: '<polygon points="3,14 8,7.5 17,9 21,6.5 20,13.5 14,16.5 5,16.5" fill="currentColor" fill-opacity=".14"/><polygon points="3,14 8,7.5 17,9 21,6.5 20,13.5 14,16.5 5,16.5"/><circle cx="8.5" cy="12" r="1" fill="currentColor" stroke="none"/>',
+    dna: '<polygon points="12,3 17,8 12,13 7,8" fill="currentColor" fill-opacity=".14"/><polygon points="12,11 17,16 12,21 7,16" fill="currentColor" fill-opacity=".14"/><path d="M7 4 17 12 7 20M17 4 7 12 17 20"/>'
   };
-  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '📍': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back', '✨': 'spark', '🎬': 'clip', '🎯': 'target', '📋': 'clipb', '⚙': 'gear', '✂': 'crop', '🎨': 'palette', '📲': 'phone', '📥': 'dl', '🗂': 'folder', '📚': 'stack', '🧰': 'tools', '💡': 'bulb', '✏': 'edit', '📡': 'radar', '🏛': 'temple', '👾': 'pixel', '🔐': 'lock', '🔒': 'lock', '👁': 'eye', '🔄': 'sync', '🗓': 'sched', '📘': 'codex', '🦠': 'bug', '👤': 'user', '👑': 'crown', '🚀': 'rocket', '🌐': 'globe', '🏷': 'tag', '🔗': 'link', '🪸': 'coral' };
+  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '📍': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back', '✨': 'spark', '🎬': 'clip', '🎯': 'target', '📋': 'clipb', '⚙': 'gear', '✂': 'crop', '🎨': 'palette', '📲': 'phone', '📥': 'dl', '🗂': 'folder', '📚': 'stack', '🧰': 'tools', '💡': 'bulb', '✏': 'edit', '📡': 'radar', '🏛': 'temple', '👾': 'pixel', '🔐': 'lock', '🔒': 'lock', '👁': 'eye', '🔄': 'sync', '🗓': 'sched', '📘': 'codex', '🦠': 'bug', '👤': 'user', '👑': 'crown', '🚀': 'rocket', '🌐': 'globe', '🏷': 'tag', '🔗': 'link', '🪸': 'coral', '🐟': 'fish', '🫧': 'bubble', '🐋': 'whale', '🧬': 'dna' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => {
     const mv = uiStyle() === 'monument' && ICON_MV[n];
@@ -2427,14 +2445,60 @@
         drawImg(fig, h); cropImg(fig, h.cr); return;
       }
       if (!h.id) { h.id = Date.now().toString(36) + i; save(); }
-      const d = document.createElement('span'); d.className = 'inote' + (h.ns ? ' sticky' : ''); d.dataset.hl = i;
+      const useMascot = !!h.ns && typeof draftOn === 'function' && draftOn('noteNeonMascot');
+      const d = document.createElement('span');
+      d.className = 'inote' + (h.ns ? ' sticky' : '') + (useMascot ? ' has-mascot' + (h.nc === 'g' ? ' st-g' : '') : '');
+      d.dataset.hl = i;
       d.dataset.hlk = z.dataset.hlk + '~' + h.id; d.textContent = h.n; d.title = 'แตะเพื่อแก้โน้ต';
       // วางต่อจากข้อความที่จุดไว้ทันที (ออกจากตัวหนา/ลิงก์ก่อน เพื่อไม่ให้สีพื้นติดมา)
       const segs = z.querySelectorAll(`mark.user-hl[data-hl="${i}"]`); let at = segs[segs.length - 1];
       while (at.parentNode !== z && /^(B|STRONG|I|EM|A|SPAN|MARK|CODE|SUB|SUP)$/.test(at.parentNode.tagName)) at = at.parentNode;
       let after = at; while (after.nextSibling && after.nextSibling.nodeType === 1 && after.nextSibling.classList.contains('inote')) after = after.nextSibling;
       after.after(d); applyHL(d);
+      if (useMascot) {
+        const mc = document.createElement('span');
+        mc.className = 'inote-mascot';
+        mc.setAttribute('aria-hidden', 'true');
+        mc.innerHTML = stickyMascotSVG(h.nc);
+        d.appendChild(mc);
+      }
     });
+  }
+  function stickyMascotSVG(color) {
+    if (color === 'g') {
+      // ตัวการ์ตูนมุมขวาสำหรับ Sticky สีเขียวนีออน: น้อง Crow + คริสตัลมิ้นต์เรืองแสง (สไตล์ Monument Valley)
+      return `<svg viewBox="0 0 36 36" aria-hidden="true">
+        <circle cx="25" cy="9" r="5" fill="#5eead4" opacity=".28"/>
+        <polygon points="25,4 28,9 25,14 22,9" fill="#5eead4" stroke="#e6faf7" stroke-width=".8"/>
+        <g transform="translate(15,24)">
+          <line x1="-2.2" y1="6" x2="-2.2" y2="10" stroke="#0f172a" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="2.2" y1="6" x2="2.2" y2="10" stroke="#0f172a" stroke-width="1.4" stroke-linecap="round"/>
+          <ellipse cx="0" cy="1" rx="6.2" ry="7.6" fill="#1e293b"/>
+          <circle cx="0" cy="-7" r="4.6" fill="#1e293b"/>
+          <polygon points="3.5,-8.5 11.5,-6.2 3.5,-4" fill="#fbbf24"/>
+          <circle cx="1.6" cy="-7.6" r="1.7" fill="#fff"/>
+          <circle cx="2" cy="-7.6" r=".8" fill="#0f172a"/>
+          <path d="M-5.5 0 Q-9 3 -6 6" fill="none" stroke="#334155" stroke-width="1.6" stroke-linecap="round"/>
+        </g>
+      </svg>`;
+    }
+    // ตัวการ์ตูนมุมขวาสำหรับ Sticky สีเหลือง: น้อง Ida ยืนบน Totem ทองคำ (สไตล์ Monument Valley)
+    return `<svg viewBox="0 0 36 36" aria-hidden="true">
+      <g transform="translate(18,26)">
+        <polygon points="-7,-1 0,-4.5 7,-1 0,2.5" fill="#fde047"/>
+        <polygon points="-7,-1 0,2.5 0,9 -7,5.5" fill="#f59e0b"/>
+        <polygon points="7,-1 0,2.5 0,9 7,5.5" fill="#d97706"/>
+        <circle cx="-3.5" cy="3.8" r="1.9" fill="#1e1b4b" stroke="#fff" stroke-width=".7"/>
+      </g>
+      <g transform="translate(18,21)">
+        <line x1="-1.5" y1="0" x2="-1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/>
+        <line x1="1.5" y1="0" x2="1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/>
+        <polygon points="0,-9 -5.5,0 5.5,0" fill="#fff" stroke="#cbd5e1" stroke-width=".5"/>
+        <circle cx="0" cy="-11" r="2.7" fill="#1e293b"/>
+        <polygon points="0,-20 -3.6,-11 3.6,-11" fill="#fff" stroke="#cbd5e1" stroke-width=".5"/>
+      </g>
+      <circle cx="29" cy="9" r="1.6" fill="#fb7185"/>
+    </svg>`;
   }
   // วาดไฮไลต์ใหม่เฉพาะพื้นที่นั้น ไม่ต้องโหลดหน้าใหม่ (ข้อสอบที่กำลังทำอยู่จึงไม่หาย)
   function refreshZone(z) {
@@ -2868,7 +2932,7 @@
       hidePop();
     });
   }
-  function showPalette(rect, onColor, onErase, onNote, curNote) {
+  function showPalette(rect, onColor, onErase, onNote, curNote, curNoteColor) {
     pop.classList.remove('writing', 'ai-pop', 'ai-pop-fit', 'kw-pop-fit');
     const noNote = pop.dataset.inNote === '1';
     // แถว 1 สีไฮไลต์ + ยางลบ · แถว 2 สีตัวอักษร + ตัวหนา/ขีดเส้นใต้ · แถว 3 โน้ต รูป keyword ค้นหา
@@ -2880,7 +2944,7 @@
     const w = 380, top = rect.bottom + scrollY + 10, left = Math.max(8, Math.min(rect.left + scrollX + rect.width / 2 - w / 2, document.documentElement.clientWidth - w - 8));
     pop.style.top = top + 'px'; pop.style.left = left + 'px';
     pop.querySelectorAll('button').forEach(b => b.onclick = () => {
-      if (b.dataset.c === 'n' || b.dataset.c === 'k') return openNote(onNote, curNote, b.dataset.c === 'k');
+      if (b.dataset.c === 'n' || b.dataset.c === 'k') return openNote(onNote, curNote, b.dataset.c === 'k', curNoteColor);
       if (b.dataset.c === 'i') { const ctx = popImg; hidePop(); if (moveImg && ctx && ctx.idx == null) return placeMoved(ctx); return pickImage(f => insertImage(ctx, f)); }
       if (b.dataset.c === 's') return openSearch(noNote ? null : onNote);
       if (b.dataset.c === 'w') { if (kwHas(popZone, popText)) { kwToggle(popZone, popText); return hidePop(); } return openKw(); }
@@ -2888,9 +2952,11 @@
     });
   }
   // กล่องพิมพ์โน้ตในแถบเดียวกัน (ถ้าข้อความยาวจาก Gemini จะขยายกล่องให้ตัด/แก้สะดวก)
-  function openNote(onNote, cur, sticky) {
+  function openNote(onNote, cur, sticky, curColor) {
     const isLong = (cur || '').length > 140;
     const useArt = draftOn('notePopViewportArt');
+    const useColor = !!sticky && draftOn('noteNeonMascot');
+    let noteCol = curColor === 'g' ? 'g' : 'y';
     pop.dataset.mode = 'note';
     pop.classList.toggle('ai-pop', isLong || useArt);
     pop.classList.toggle('ai-pop-fit', useArt || (isLong && draftOn('aiPopViewportFit')));
@@ -2977,16 +3043,25 @@
         </g>
       </svg>
     </div>`) : '';
-    pop.innerHTML = `<div class="note-kind">${sticky ? '🗒️ Sticky note' : '★ Star note'}${isLong ? ' · ลบ/ตัดแต่งข้อความแล้วกด Save ได้เลย' : ''}</div><textarea class="note-in${sticky ? ' sticky' : ''}" rows="${isLong ? 10 : 3}" placeholder="พิมพ์โน้ต จะแสดงต่อจากข้อความที่เลือก">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">Delete note</button>' : ''}<button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div>${artHtml}`;
+    const colPickHtml = useColor ? `<span class="note-col-pick"><button type="button" class="nc-sw nc-y${noteCol === 'y' ? ' on' : ''}" data-nc="y" title="สีเหลือง">เหลือง</button><button type="button" class="nc-sw nc-g${noteCol === 'g' ? ' on' : ''}" data-nc="g" title="สีเขียวนีออนอ่อน">เขียวนีออน</button></span>` : '';
+    pop.innerHTML = `<div class="note-kind"><span>${sticky ? '🗒️ Sticky note' : '★ Star note'}${isLong ? ' · ลบ/ตัดแต่งข้อความแล้วกด Save ได้เลย' : ''}</span>${colPickHtml}</div><textarea class="note-in${sticky ? ' sticky' : ''}${useColor && noteCol === 'g' ? ' st-g' : ''}" rows="${isLong ? 10 : 3}" placeholder="พิมพ์โน้ต จะแสดงต่อจากข้อความที่เลือก">${esc(cur || '')}</textarea><div class="note-act">${cur ? '<button class="btn small" data-a="del">Delete note</button>' : ''}<button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save</button></div>${artHtml}`;
     const ta = pop.querySelector('textarea'); ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
-    ta.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); onNote(ta.value.trim(), sticky); hidePop(); } });
-    pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { const a = b.dataset.a; if (a === 'ok') onNote(ta.value.trim(), sticky); if (a === 'del') onNote('', sticky); hidePop(); });
+    if (useColor) {
+      pop.querySelectorAll('[data-nc]').forEach(b => b.onclick = () => {
+        noteCol = b.dataset.nc === 'g' ? 'g' : 'y';
+        pop.querySelectorAll('[data-nc]').forEach(x => x.classList.toggle('on', x.dataset.nc === noteCol));
+        ta.classList.toggle('st-g', noteCol === 'g');
+        ta.focus();
+      });
+    }
+    ta.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); onNote(ta.value.trim(), sticky, noteCol); hidePop(); } });
+    pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => { const a = b.dataset.a; if (a === 'ok') onNote(ta.value.trim(), sticky, noteCol); if (a === 'del') onNote('', sticky, noteCol); hidePop(); });
   }
   // บันทึก/แก้/ลบโน้ตของไฮไลต์ที่มีอยู่แล้ว (ใช้ทั้งตอนแตะไฮไลต์และแตะตัวโน้ต)
-  const noteSaver = (k, idx, z) => (n, st) => {
+  const noteSaver = (k, idx, z) => (n, st, nc) => {
     snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k] || [])); if (!arr[idx]) return;
-    if (n) { arr[idx].n = n; if (st) arr[idx].ns = 1; else delete arr[idx].ns; if (!arr[idx].id) arr[idx].id = Date.now().toString(36); }
-    else { delete arr[idx].n; delete arr[idx].ns; if (arr[idx].c === 'n') arr.splice(idx, 1); }
+    if (n) { arr[idx].n = n; if (st) { arr[idx].ns = 1; if (nc === 'g') arr[idx].nc = 'g'; else delete arr[idx].nc; } else { delete arr[idx].ns; delete arr[idx].nc; } if (!arr[idx].id) arr[idx].id = Date.now().toString(36); }
+    else { delete arr[idx].n; delete arr[idx].ns; delete arr[idx].nc; if (arr[idx].c === 'n') arr.splice(idx, 1); }
     setHL(k, arr); refreshZone(z);
   };
   /* ครอปรูป: เก็บเป็นสัดส่วน [x, y, กว้าง, สูง] (0–1) ของรูปเต็ม · ไม่แก้ไฟล์จริง กดไม่ครอปเพื่อกลับเป็นรูปเต็มได้เสมอ */
@@ -3087,9 +3162,9 @@
         }
         if (keep.length === arr.length) return;
         snap(k); setHL(k, keep); sel.removeAllRanges(); refreshZone(z);
-      }, (() => { const { s } = selOffsets(z, r); return (n, st) => {
+      }, (() => { const { s } = selOffsets(z, r); return (n, st, nc) => {
         // โน้ตอย่างเดียว = ขีดเส้นใต้ประ ไม่ระบายสี
-        if (!n) return; const h = { s, t, c: 'n', n, id: Date.now().toString(36) }; if (st) h.ns = 1;
+        if (!n) return; const h = { s, t, c: 'n', n, id: Date.now().toString(36) }; if (st) { h.ns = 1; if (nc === 'g') h.nc = 'g'; }
         snap(k); setHL(k, (S.hl[k] || []).concat([h]));
         getSelection().removeAllRanges(); refreshZone(z);
       }; })());
@@ -3146,7 +3221,7 @@
       snap(k); const arr = JSON.parse(JSON.stringify(S.hl[k])); arr[idx].c = c; setHL(k, arr); refreshZone(z);
     }, () => {
       snap(k); const arr = S.hl[k].slice(); arr.splice(idx, 1); setHL(k, arr); refreshZone(z);
-    }, noteSaver(k, idx, z), (S.hl[k][idx] || {}).n);
+    }, noteSaver(k, idx, z), (S.hl[k][idx] || {}).n, (S.hl[k][idx] || {}).nc);
   }, true);
   // แตะตัวโน้ต ★ / sticky ที่บันทึกแล้ว → เปิดกล่องแก้ข้อความได้ทันที
   view.addEventListener('click', e => {
@@ -3156,7 +3231,7 @@
     e.stopPropagation();
     const r = d.getBoundingClientRect(), w = 320;
     pop.style.top = (r.bottom + scrollY + 8) + 'px'; pop.style.left = Math.max(8, Math.min(r.left + scrollX, document.documentElement.clientWidth - w - 8)) + 'px';
-    pop.hidden = false; openNote(noteSaver(k, idx, z), h.n, !!h.ns);
+    pop.hidden = false; openNote(noteSaver(k, idx, z), h.n, !!h.ns, h.nc);
   }, true);
   // ปิดแถบสีเมื่อแตะที่อื่น (การเลื่อนหน้า หรือลากคลุมข้อความในกล่อง Gemini ไม่ปิด)
   document.addEventListener('click', e => {
@@ -3265,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v90</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v91</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3558,16 +3633,28 @@
       for (const qid of s.examIds) h += mcqHTML(id, qid, ch.exams[qid], { showSaved: true });
       h += '<div id="boxExamRes"></div></section>';
     }
-    h += `<div class="lvpick"><div class="lvq">How well do you understand this box? (tap again to clear)</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${S.lvl[k] === l ? ' on' : ''}" data-lv="${l}"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
-      <nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
+    const r2On = draftOn('round2Rating');
+    const r1v = S.lvl[k] || 0, r2v = (S.lvl2 && S.lvl2[k]) || 0;
+    const r2Prog = (r2On && r1v && r2v) ? `<span class="lv-prog">${LV[r1v].s} → ${LV[r2v].s}${r2v === 4 && r1v !== 4 ? ' ✨ เข้าใจแล้ว!' : (r2v > r1v && r2v <= 4 && r1v <= 4 ? ' ↗ ดีขึ้น!' : '')}</span>` : '';
+    h += `<div class="lvpick${r2On ? ' lvpick-r1' : ''}"><div class="lvq">${r2On ? '<span class="lv-rbadge r1">รอบ 1</span> ' : ''}How well do you understand this box? (tap again to clear)</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${r1v === l ? ' on' : ''}" data-lv="${l}" data-r="1"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>`;
+    if (r2On) {
+      h += `<div class="lvpick lvpick-r2"><div class="lvq"><span class="lv-rbadge r2">รอบ 2</span> ประเมินอ่านรอบสอง · เห็นพัฒนาการชัดเจน (วงแหวนหน้าหลักจะใช้ผลรอบล่าสุด) ${r2Prog}</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${r2v === l ? ' on' : ''}" data-lv="${l}" data-r="2"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>`;
+    }
+    h += `<nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
       <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><button id="undoBtn" hidden title="เลิกทำไฮไลต์ล่าสุด" aria-label="เลิกทำ">↶</button><button id="focusBtn" title="โหมดอ่าน: ซ่อนเมนูข้าง" aria-label="โหมดอ่าน">${S.focus ? '⤡' : '⤢'}</button><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
     view.innerHTML = h;
-    view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => { const l = +b.dataset.lv; if (S.lvl[k] === l) delete S.lvl[k]; else S.lvl[k] = l; save(); rerender(); });
+    view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => {
+      const l = +b.dataset.lv, r = b.dataset.r === '2' ? 2 : 1;
+      if (r === 2) { S.lvl2 = S.lvl2 || {}; if (S.lvl2[k] === l) delete S.lvl2[k]; else S.lvl2[k] = l; }
+      else { if (S.lvl[k] === l) delete S.lvl[k]; else S.lvl[k] = l; }
+      save(); rerender();
+    });
     pop.hidden = true; pop.dataset.mode = '';
     expandAbbr($('article.content', view), ch.abbr);
     initFigs($('article.content', view), k);
     buildToc(); setTimeout(trackRead, 300); coverTools(view); flowHints(view);
     initExamBreakGame(id);
+    if (typeof updateAnatomyInfographic === 'function') updateAnatomyInfographic(id, s, pg);
     if (s.examIds.length) maybeShowBoxExamRes();
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
@@ -4101,12 +4188,20 @@
   /* หน้ารวมโน้ต */
   async function vNotes() {
     await loadAll(); renderSidebar();
+    const useMascot = draftOn('noteNeonMascot');
+    const renderNoteItem = x => {
+      if (!x.n) return '';
+      if (useMascot && x.ns) {
+        return `<span class="inote sticky has-mascot${x.nc === 'g' ? ' st-g' : ''}" style="cursor:default">${esc(x.n)}<span class="inote-mascot" aria-hidden="true">${stickyMascotSVG(x.nc)}</span></span>`;
+      }
+      return `<span class="inote-txt">${x.ns ? '🗒️ ' : '★ '}${esc(x.n)}</span>`;
+    };
     let h = `<div class="hero"><h1>🗒️ My notes & highlights</h1><p>เรียงตามบทและกล่อง กดชื่อกล่องเพื่อไปอ่านต่อ</p></div>`;
     let any = false;
     for (const ch of loadedCH()) for (const s of ch.sections) {
       const k = secKey(ch.id, s.no), note = S.notes[k], hl = S.hl[k] || [];
       if (!note && !hl.length) continue; any = true;
-      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl c-${x.c || 'g'}">${esc(x.t)}</mark>${x.n ? `<span class="inote-txt">★ ${esc(x.n)}</span>` : ''}</p>`).join('')}</div>`;
+      h += `<div class="panel"><h3><a href="#/${ch.id}/${s.no}">${esc(ch.title)} · ${s.no}. ${esc(s.title)}</a></h3>${note ? `<p style="white-space:pre-wrap;margin:6px 0">${esc(note)}</p>` : ''}${hl.map(x => `<p style="margin:6px 0"><mark class="user-hl c-${x.c || 'g'}">${esc(x.t)}</mark>${renderNoteItem(x)}</p>`).join('')}</div>`;
     }
     const qk = {};
     for (const k of Object.keys(S.hl)) { const m = k.match(/^q:([^|]+)\|(.+)\|([^|]+)$/); if (m && S.hl[k].length) (qk[m[1] + '|' + m[2]] = qk[m[1] + '|' + m[2]] || []).push(...S.hl[k]); }
@@ -4114,7 +4209,7 @@
     if (qs.length) {
       any = true; h += '<h2 style="margin:22px 0 8px">📝 ไฮไลต์ในข้อสอบ</h2>';
       for (const x of qs) { const [c, qid] = x.split('|'); const q = CH[c] && CH[c].exams[qid];
-        h += `<div class="panel"><h3>${q ? `<a href="#/${c}/${q.box}">ข้อ ${esc(qid)} · กล่อง ${q.box}</a>` : esc(qid)}</h3>${qk[x].map(y => `<p style="margin:6px 0"><mark class="user-hl c-${y.c || 'g'}">${esc(y.t)}</mark>${y.n ? `<span class="inote-txt">★ ${esc(y.n)}</span>` : ''}</p>`).join('')}</div>`; }
+        h += `<div class="panel"><h3>${q ? `<a href="#/${c}/${q.box}">ข้อ ${esc(qid)} · กล่อง ${q.box}</a>` : esc(qid)}</h3>${qk[x].map(y => `<p style="margin:6px 0"><mark class="user-hl c-${y.c || 'g'}">${esc(y.t)}</mark>${renderNoteItem(y)}</p>`).join('')}</div>`; }
     }
     view.innerHTML = h + (any ? '' : '<p class="empty">ยังไม่มีโน้ต เปิดกล่องไหนก็ได้แล้วจดที่ "โน้ตของฉัน" หรือเลือกข้อความเพื่อไฮไลต์</p>');
   }
@@ -4879,6 +4974,34 @@
       area: 'ป๊อปอัป ★ Star note & 🗒️ Sticky note',
       desc: 'จัดกล่องโน้ตขนาดเท่ากล่อง Keyword ลอยกลางจอไม่ต้องเลื่อน พร้อมกราฟิกปราสาท Ida/Crow (★) และ Ro & ลูก (Sticky) เบลนด์กลืนพื้นหลังด้านล่าง',
       added: 'v90'
+    },
+    {
+      key: 'round2Rating',
+      title: 'ประเมินความเข้าใจรอบ 2 + แถบซ้าย 2 สี (ซ้ายรอบ 1 / ขวารอบ 2)',
+      area: 'หน้าอ่านบท + แถบสารบัญซ้าย + วงแหวนหน้าหลัก',
+      desc: 'เพิ่มปุ่มประเมินรอบสองเพื่อให้เห็นพัฒนาการ (เช่น ★ → ★★★★) การ์ดแถบซ้ายแบ่ง 2 สีซ้าย-ขวา และวงแหวนความคืบหน้าหน้าหลักใช้ผลรอบล่าสุด',
+      added: 'v91'
+    },
+    {
+      key: 'reefTankExpand',
+      title: 'ขยายปราสาทใต้น้ำกลางจอ + นางเงือก วาฬ กลุ่มปะการัง & เกมส์ให้อาหารปลา',
+      area: 'Tank น้ำจับเวลา (กรอบขวา → หน้าต่างกลางจอ)',
+      desc: 'กดขยายแทงก์น้ำมาดูกลางจอแก้เบื่อได้ ปราสาทใต้น้ำอลังการกว่าเดิม มีนางเงือกและวาฬว่ายช้า ๆ เป็นฉากหลัง ปะการังขยายเป็นกลุ่มตามชนิดที่สะสมวันนี้ พร้อมปุ่มให้อาหารปลาเรืองแสง โหมดเรืองแสงกลางคืน และแตะฟองอากาศ/ไข่มุก',
+      added: 'v91'
+    },
+    {
+      key: 'noteNeonMascot',
+      title: 'Sticky Note สีเขียวนีออนอ่อน + ตัวการ์ตูนมุมขวาทั้ง 2 สี',
+      area: 'Sticky Note ในบทอ่าน & หน้า Notes',
+      desc: 'เพิ่มสีเขียวนีออนอ่อนสไตล์หัวข้อย่อย (เข้มสวยในโหมดมืด) ให้เลือกคู่กับสีเหลือง พร้อมตัวการ์ตูน Monument Valley น่ารักมุมขวาล่างทั้งสองสี',
+      added: 'v91'
+    },
+    {
+      key: 'anatomySidebarInfographic',
+      title: 'Infographic หุ่น Anatomy ลอยด้านซ้าย + อวัยวะเรืองแสงตามบท',
+      area: 'พื้นที่ด้านซ้ายหน้าอ่านเนื้อหา (Desktop)',
+      desc: 'เพิ่มหุ่นคนยืนลอยพร้อมเงาบนพื้นและ Anatomy จำลองด้านซ้ายของเนื้อหา พร้อมทำให้อวัยวะที่ตรงกับบทและหัวข้อที่กำลังอ่านเรืองแสงอัตโนมัติ',
+      added: 'v91'
     }
   ];
   const _onOwnerChange = [];
@@ -5192,7 +5315,7 @@
       <div class="reef-dock" id="reefDock">
         <div class="reef-hd">
           <div class="reef-hd-l"><span class="reef-hd-t" id="reefToday">0 น.</span><span class="reef-hd-c" id="reefCount">0/16</span></div>
-          <div class="reef-hd-r"><button type="button" class="reef-pv-btn" id="reefPvToggle" title="ดู Preview เต็ม 8 ชม. (16 ชนิด)">👁️</button><button type="button" class="reef-hide" id="reefHide" title="หุบเก็บกรอบปราสาทใต้น้ำ">›</button></div>
+          <div class="reef-hd-r"><button type="button" class="reef-exp-btn" id="reefExpBtn" title="ขยายปราสาทใต้น้ำกลางจอ" hidden>⤢</button><button type="button" class="reef-pv-btn" id="reefPvToggle" title="ดู Preview เต็ม 8 ชม. (16 ชนิด)">👁️</button><button type="button" class="reef-hide" id="reefHide" title="หุบเก็บกรอบปราสาทใต้น้ำ">›</button></div>
         </div>
         <div class="reef-scene">
           <svg viewBox="0 0 180 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -5324,6 +5447,434 @@
       </div>`;
     document.body.appendChild(reefHost);
 
+    /* 🐋 Expanded Centered Underwater Aquarium Modal (reefTankExpand) */
+    let reefExpOpen = false, reefNight = false, reefPearls = 0, feedGlowTmr = null;
+    const playWaterChime = (notes = [587.33, 783.99, 1046.5]) => {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        notes.forEach((f, idx) => {
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.type = 'sine'; o.frequency.value = f;
+          g.gain.setValueAtTime(0.045, ctx.currentTime + idx * 0.09);
+          g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.09 + 0.45);
+          o.connect(g); g.connect(ctx.destination);
+          o.start(ctx.currentTime + idx * 0.09); o.stop(ctx.currentTime + idx * 0.09 + 0.48);
+        });
+      } catch (_) {}
+    };
+    const reefModal = document.createElement('div');
+    reefModal.className = 'reef-modal';
+    reefModal.id = 'reefModal';
+    reefModal.hidden = true;
+    reefModal.innerHTML = `<div class="reef-exp" role="dialog" aria-modal="true" aria-label="ปราสาทใต้น้ำขยายเต็มจอ">
+      <div class="reef-exp-hd">
+        <div class="reef-exp-title">
+          <span class="reef-exp-ic">🪸</span>
+          <b>ปราสาทใต้น้ำของฉัน</b>
+          <span class="reef-exp-pill" id="reefExpTime">0 น.</span>
+          <span class="reef-exp-pill" id="reefExpCount">0/16 ชนิด</span>
+          <span class="reef-exp-pill pearl" id="reefExpPearl">🫧 ไข่มุก 0</span>
+        </div>
+        <div class="reef-exp-acts">
+          <button type="button" class="reef-exp-abtn" id="reefExpGlow" title="สลับโหมดเรืองแสงกลางคืน">✨ เรืองแสง</button>
+          <button type="button" class="reef-exp-abtn" id="reefExpPv" title="ดู Preview เต็ม 8 ชม.">👁️ Preview</button>
+          <button type="button" class="reef-exp-close" id="reefExpClose" title="ปิดหน้าต่าง">✕</button>
+        </div>
+      </div>
+      <div class="reef-exp-stage" id="reefExpStage" title="แตะน้ำเพื่อปล่อยฟอง หรือแตะวาฬ นางเงือก และปะการังเพื่อเก็บไข่มุก">
+        <svg id="reefExpSvg" viewBox="0 0 920 500" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="reBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e99b5"/><stop offset="18%" stop-color="#1d6d8e"/><stop offset="50%" stop-color="#114063"/><stop offset="82%" stop-color="#09213a"/><stop offset="100%" stop-color="#051224"/></linearGradient>
+            <linearGradient id="reRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5f3fc" stop-opacity=".28"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/></linearGradient>
+            <linearGradient id="reSand" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fde4be"/><stop offset="100%" stop-color="#e3b685"/></linearGradient>
+            <linearGradient id="reWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#69b3da"/><stop offset="100%" stop-color="#2b5d87"/></linearGradient>
+            <linearGradient id="reSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f3c699"/><stop offset="100%" stop-color="#c68d5f"/></linearGradient>
+            <linearGradient id="reRose" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f9a8d4"/><stop offset="100%" stop-color="#be4b82"/></linearGradient>
+            <linearGradient id="reTeal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7ce0d3"/><stop offset="100%" stop-color="#2f8f96"/></linearGradient>
+            <radialGradient id="reGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#67e8f9" stop-opacity=".75"/><stop offset="100%" stop-color="#67e8f9" stop-opacity="0"/></radialGradient>
+            <radialGradient id="rePinkGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#f472b6" stop-opacity=".62"/><stop offset="100%" stop-color="#f472b6" stop-opacity="0"/></radialGradient>
+            <radialGradient id="reGoldGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fde047" stop-opacity=".65"/><stop offset="100%" stop-color="#fde047" stop-opacity="0"/></radialGradient>
+            <filter id="reSoftGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <!-- พื้นหลังน้ำเหมือนเดิม + แสงแดดส่องทะลุผิวน้ำ -->
+          <rect width="920" height="500" fill="url(#reBg)"/>
+          <g class="re-rays">
+            <polygon points="80,0 190,0 320,380 150,380" fill="url(#reRay)"/>
+            <polygon points="340,0 470,0 560,410 380,410" fill="url(#reRay)"/>
+            <polygon points="620,0 760,0 840,370 670,370" fill="url(#reRay)"/>
+          </g>
+          <path d="M0 16 Q90 6 180 16 T360 16 T540 16 T720 16 T920 16" fill="none" stroke="#a5f3fc" stroke-opacity=".34" stroke-width="2"/>
+          <path d="M0 30 Q110 22 220 30 T440 30 T660 30 T920 30" fill="none" stroke="#99f6e4" stroke-opacity=".2" stroke-width="1.2"/>
+          <!-- ภูเขาหินใต้น้ำฉากหลังจาง ๆ -->
+          <path d="M0 360 Q120 270 250 340 T540 325 T810 290 L920 350 L920 500 L0 500 Z" fill="#0c2f4d" opacity=".52"/>
+          <!-- แพลงก์ตอนเรืองแสงลอยเอื่อย ๆ -->
+          <g class="re-dust" fill="#a5f3fc" opacity=".65">
+            <circle cx="110" cy="120" r="1.8"/><circle cx="240" cy="84" r="1.4"/><circle cx="390" cy="145" r="2"/>
+            <circle cx="540" cy="76" r="1.6"/><circle cx="690" cy="130" r="2.1"/><circle cx="820" cy="96" r="1.5"/>
+            <circle cx="170" cy="240" r="1.4"/><circle cx="760" cy="220" r="1.7"/><circle cx="460" cy="60" r="1.8"/>
+          </g>
+          <!-- 🐋 ปลาวาฬว่ายช้า ๆ เป็นฉากหลัง (คลิกได้!) -->
+          <g id="reWhale" class="re-whale" style="cursor:pointer"><title>วาฬน้อยผู้พิทักษ์ · แตะเพื่อปล่อยฟองดนตรี</title>
+            <g transform="translate(0,78)">
+              <ellipse cx="48" cy="18" rx="68" ry="26" fill="url(#reGlow)" opacity=".42"/>
+              <!-- ลำตัววาฬพาสเทลเรืองแสง + หอโคมไฟจิ๋วบนหลัง -->
+              <path d="M-24 14 Q2 -16 56 -10 Q90 -5 108 10 Q96 22 66 24 Q18 28 -24 14 Z" fill="#7dd3fc" fill-opacity=".86" stroke="#bae6fd" stroke-width="1.2"/>
+              <path d="M-16 16 Q26 26 84 18 Q62 27 16 25 Z" fill="#e0f2fe" opacity=".62"/>
+              <path d="M-22 14 L-44 0 Q-36 14 -44 28 Z" fill="#38bdf8" fill-opacity=".85"/>
+              <path d="M46 21 Q54 36 32 32 Q40 25 46 21 Z" fill="#38bdf8" opacity=".82"/>
+              <circle cx="84" cy="10" r="2.2" fill="#0f172a"/><circle cx="85" cy="9.2" r=".7" fill="#fff"/>
+              <!-- หอโคมไฟปราสาทจิ๋วบนหลังวาฬ -->
+              <rect x="34" y="-22" width="14" height="12" rx="2" fill="#fde68a" opacity=".92"/>
+              <polygon points="31,-22 41,-31 51,-22" fill="#f472b6" opacity=".95"/>
+              <circle cx="41" cy="-16" r="2.6" fill="#fef08a" filter="url(#reSoftGlow)"/>
+            </g>
+          </g>
+          <!-- 🧜‍♀️ นางเงือกว่ายช้า ๆ เป็นฉากหลัง (คลิกได้!) -->
+          <g id="reMermaid" class="re-mermaid" style="cursor:pointer"><title>นางเงือกแห่งปราสาทใต้น้ำ · แตะเพื่อโปรยละอองมุก</title>
+            <g transform="translate(0,188)">
+              <circle cx="0" cy="0" r="34" fill="url(#rePinkGlow)" opacity=".38"/>
+              <!-- หางเงือกสีเทอร์ควอยซ์-มุกพลิ้วไหว -->
+              <path d="M-8 4 Q-26 10 -44 2 Q-56 -3 -64 6 Q-52 12 -46 18 Q-58 22 -64 28 Q-48 28 -36 18 Q-18 16 -4 10 Z" fill="#5eead4" fill-opacity=".88" stroke="#ccfbf1" stroke-width="1"/>
+              <!-- ลำตัว + แขนถือไข่มุกเรืองแสง -->
+              <path d="M-6 5 Q4 -2 14 2 L10 10 Q0 10 -6 5 Z" fill="#fde4cf"/>
+              <path d="M2 3 Q8 0 11 5 L4 7 Z" fill="#f472b6"/>
+              <path d="M12 2 Q22 -4 28 -1" fill="none" stroke="#fde4cf" stroke-width="2.6" stroke-linecap="round"/>
+              <circle cx="31" cy="-1" r="3.4" fill="#fef08a" filter="url(#reSoftGlow)"/>
+              <!-- ศีรษะ + ผมยาวพาสเทลพลิ้วในน้ำ -->
+              <circle cx="17" cy="-6" r="5.2" fill="#fde4cf"/>
+              <path d="M16 -11 Q4 -16 -14 -8 Q-24 -3 -34 -7 Q-22 2 -6 -2 Q6 -4 14 -5 Z" fill="#f9a8d4" fill-opacity=".9"/>
+              <circle cx="19.5" cy="-6.5" r=".9" fill="#1e293b"/>
+            </g>
+          </g>
+          <!-- สาหร่ายเคลป์สูง 2 ฝั่ง (สไตล์ Abyssrium) -->
+          <g class="re-kelp" fill="none" stroke-linecap="round" opacity=".55">
+            <path d="M36 490 Q20 410 42 330 T30 180 T46 80" stroke="#10b981" stroke-width="6"/>
+            <path d="M62 490 Q80 420 58 350 T72 220" stroke="#14b8a6" stroke-width="4.5"/>
+            <path d="M884 490 Q900 400 874 310 T892 160 T876 70" stroke="#10b981" stroke-width="6"/>
+            <path d="M854 490 Q838 420 860 340 T846 210" stroke="#0d9488" stroke-width="4.5"/>
+          </g>
+          <!-- พื้นทรายใต้ทะเลหลายระดับ -->
+          <path d="M0 404 Q160 382 320 400 T640 392 T920 398 L920 500 L0 500 Z" fill="#133859"/>
+          <path d="M0 434 Q210 414 440 432 T920 424 L920 500 L0 500 Z" fill="#0d2640"/>
+          <path d="M0 464 Q190 452 420 466 T920 458 L920 500 L0 500 Z" fill="#07182c"/>
+
+          <!-- 🏛️ ปราสาทใต้น้ำ Monument Valley ขนาดใหญ่อลังการ (Grand Citadel) -->
+          <g class="re-castle">
+            <ellipse cx="460" cy="436" rx="228" ry="30" fill="#030d19" opacity=".55"/>
+            <!-- ฐานวิหารใหญ่ 3 ชั้น -->
+            <polygon points="460,368 656,422 460,466 264,422" fill="#235078"/>
+            <polygon points="264,422 460,466 460,482 264,438" fill="#173857"/>
+            <polygon points="460,466 656,422 656,438 460,482" fill="#0f2740"/>
+            <polygon points="460,342 612,388 460,428 308,388" fill="#326c9a"/>
+            <polygon points="308,388 460,428 460,444 308,404" fill="#204a6e"/>
+            <polygon points="460,428 612,388 612,404 460,444" fill="#153452"/>
+
+            <!-- หอคอยปีกซ้าย (สไตล์หอพาสเทล Monument Valley + สะพานเชื่อม) -->
+            <polygon points="274,230 318,248 318,390 274,372" fill="url(#reRose)"/>
+            <polygon points="318,248 352,232 352,374 318,390" fill="url(#reWall)"/>
+            <polygon points="274,230 314,212 352,232 318,248" fill="url(#reSand)"/>
+            <path d="M286,348 v-30 a10 10 0 0 1 20 0 v30 Z" fill="#162e49"/>
+            <path d="M288,292 v-22 a8 8 0 0 1 16 0 v22 Z" fill="#162e49"/>
+            <circle cx="296" cy="278" r="2.5" fill="#fde047"/>
+            <path d="M288,218 Q314,174 340,218 Z" fill="url(#reTeal)"/>
+            <line x1="314" y1="184" x2="314" y2="164" stroke="#fde68a" stroke-width="2"/>
+            <polygon points="314,158 318,164 314,170 310,164" fill="#7ce0d3"/>
+
+            <!-- หอคอยปีกขวา -->
+            <polygon points="568,232 602,248 602,390 568,374" fill="url(#reWall)"/>
+            <polygon points="602,248 646,230 646,372 602,390" fill="url(#reRose)"/>
+            <polygon points="568,232 606,212 646,230 602,248" fill="url(#reSand)"/>
+            <path d="M614,348 v-30 a10 10 0 0 1 20 0 v30 Z" fill="#162e49"/>
+            <path d="M616,292 v-22 a8 8 0 0 1 16 0 v22 Z" fill="#162e49"/>
+            <circle cx="624" cy="278" r="2.5" fill="#fde047"/>
+            <path d="M580,218 Q606,174 632,218 Z" fill="url(#reTeal)"/>
+            <line x1="606" y1="184" x2="606" y2="164" stroke="#fde68a" stroke-width="2"/>
+            <polygon points="606,158 610,164 606,170 602,164" fill="#7ce0d3"/>
+
+            <!-- สะพานเฉียงเชื่อมหอซ้าย-ขวาเข้าสู่มหาวิหารกลาง -->
+            <polygon points="332,300 404,268 416,274 344,306" fill="url(#reTeal)"/>
+            <polygon points="332,300 344,306 344,316 332,310" fill="#1e5e68"/>
+            <polygon points="504,274 516,268 588,300 576,306" fill="url(#reTeal)"/>
+            <polygon points="576,306 588,300 588,310 576,316" fill="#164652"/>
+
+            <!-- มหาวิหารกลาง 4 ชั้น + ซุ้มโค้งคู่ + บันไดหน้าวิหาร -->
+            <polygon points="376,274 460,312 460,398 376,360" fill="url(#reWall)"/>
+            <polygon points="460,312 544,274 544,360 460,398" fill="url(#reSide)"/>
+            <path d="M398,370 v-36 a14 14 0 0 1 28 0 v36 Z" fill="#0b2238"/>
+            <path d="M494,370 v-36 a14 14 0 0 1 28 0 v36 Z" fill="#163652"/>
+            <circle cx="412" cy="340" r="3.4" fill="#5eead4" filter="url(#reSoftGlow)"/>
+            <circle cx="508" cy="340" r="3.4" fill="#5eead4" filter="url(#reSoftGlow)"/>
+            <!-- บันไดเฉียงใหญ่หน้าวิหาร -->
+            <polygon points="434,378 486,378 504,424 416,424" fill="url(#reSand)" opacity=".92"/>
+            <path d="M430,388 h60 M426,398 h68 M422,408 h76 M418,418 h84" stroke="#9e6d44" stroke-width="1.4" opacity=".65"/>
+
+            <!-- ระเบียงกลาง + สระบัวเรืองแสง + วงแหวนศักดิ์สิทธิ์ลอย -->
+            <polygon points="460,224 556,268 460,312 364,268" fill="url(#reSand)"/>
+            <polygon points="364,268 460,312 460,324 364,280" fill="url(#reWall)"/>
+            <polygon points="460,312 556,268 556,280 460,324" fill="url(#reSide)"/>
+            <polygon points="460,242 512,266 460,290 408,266" fill="#4cc9c8" opacity=".88"/>
+            <circle cx="460" cy="252" r="36" fill="url(#reGlow)" opacity=".6"/>
+
+            <!-- หอคอยกลางชั้นสูง + ศาลาโดมปะการังยอดปราสาท -->
+            <polygon points="414,142 460,164 460,246 414,224" fill="url(#reWall)"/>
+            <polygon points="460,164 506,142 506,224 460,246" fill="url(#reSide)"/>
+            <path d="M428,224 v-28 a9 9 0 0 1 18 0 v28 Z" fill="#0d253d"/>
+            <path d="M474,224 v-28 a9 9 0 0 1 18 0 v28 Z" fill="#8b5a34"/>
+            <polygon points="460,114 514,140 460,166 406,140" fill="url(#reSand)"/>
+            <polygon points="406,140 460,166 460,176 406,150" fill="url(#reWall)"/>
+            <polygon points="460,166 514,140 514,150 460,176" fill="url(#reSide)"/>
+            <!-- เสา + โดมสีปะการังยอดสูงสุด + คริสตัลเรืองแสง -->
+            <line x1="436" y1="126" x2="436" y2="88" stroke="#fde4be" stroke-width="3"/>
+            <line x1="484" y1="126" x2="484" y2="88" stroke="#e3b685" stroke-width="3"/>
+            <line x1="460" y1="132" x2="460" y2="90" stroke="#7ce0d3" stroke-width="2"/>
+            <path d="M424,88 Q460,36 496,88 Z" fill="#f43f5e"/>
+            <path d="M460,48 Q478,66 496,88 L460,92 Z" fill="#be123c"/>
+            <circle cx="460" cy="42" r="5" fill="#fde047" filter="url(#reSoftGlow)"/>
+            <line x1="460" y1="36" x2="460" y2="18" stroke="#fde047" stroke-width="2.2"/>
+            <polygon points="460,10 466,18 460,26 454,18" fill="#5eead4" filter="url(#reSoftGlow)"/>
+            <!-- ดอกคาลล่าลิลลี่ใต้น้ำประดับข้างปราสาท (สไตล์ Monument Valley) -->
+            <g opacity=".82">
+              <path d="M250,420 Q235,380 248,350" fill="none" stroke="#2dd4bf" stroke-width="2.6"/>
+              <path d="M248,350 Q232,334 252,324 Q264,340 248,350 Z" fill="#fbcfe8"/>
+              <path d="M670,420 Q685,380 672,350" fill="none" stroke="#2dd4bf" stroke-width="2.6"/>
+              <path d="M672,350 Q688,334 668,324 Q656,340 672,350 Z" fill="#fbcfe8"/>
+            </g>
+          </g>
+
+          <!-- 🐟 ฝูงปลาตัวจิ๋วประจำปราสาท (มีเสมอแม้ยังไม่ถึง 30 น. เพื่อเล่นเกมส์ให้อาหารปลาได้ตลอด) -->
+          <g class="re-fish-grp re-ambient-fish">
+            <g class="rf-swim" transform="translate(230,270)"><ellipse cx="0" cy="0" rx="6" ry="3.2" fill="#99f6e4"/><polygon points="5,0 10,-3 10,3" fill="#5eead4"/><circle cx="-3.5" cy="-.5" r=".8" fill="#0f172a"/></g>
+            <g class="rf-swim2" transform="translate(690,260)"><ellipse cx="0" cy="0" rx="6.5" ry="3.4" fill="#fbcfe8"/><polygon points="-5.5,0 -10.5,-3 -10.5,3" fill="#f472b6"/><circle cx="3.5" cy="-.5" r=".8" fill="#0f172a"/></g>
+            <g class="rf-swim" transform="translate(380,195)"><ellipse cx="0" cy="0" rx="5.5" ry="2.8" fill="#fde68a"/><polygon points="4.5,0 9,-2.6 9,2.6" fill="#fbbf24"/><circle cx="-3" cy="-.5" r=".8" fill="#0f172a"/></g>
+          </g>
+
+          <!-- 🪸 16 ชนิดปะการัง & สัตว์ทะเลแบบจัดเต็มเป็นกลุ่ม (โชว์เฉพาะชนิดที่สะสมได้ในวันนี้!) -->
+          <!-- 0: Staghorn Coral (กลุ่มปะการังเขากวางทอง) -->
+          <g id="reSp0" class="rf-sp rf-sway re-coral" data-sp="0"><title>0:30 · กลุ่ม Staghorn Coral (ปะการังเขากวาง)</title>
+            <g transform="translate(116,456)" stroke="#facc15" stroke-linecap="round" fill="none"><path d="M0 0v-32m0 14-12-15m12 9 11-16m-11 22-9-5" stroke-width="4.2"/><path d="M26 4v-24m0 11-9-11m9 6 9-12" stroke-width="3.6" stroke="#fde047"/><path d="M-24 6v-22m0 10-8-10m8 5 8-11" stroke-width="3.4" stroke="#eab308"/></g>
+            <g transform="translate(780,452)" stroke="#facc15" stroke-linecap="round" fill="none"><path d="M0 0v-28m0 12-10-13m10 7 10-14" stroke-width="3.8"/><path d="M22 6v-20m0 9-7-9m7 4 7-10" stroke-width="3.2" stroke="#fde047"/></g>
+          </g>
+          <!-- 1: Clownfish (ฝูงปลาการ์ตูน) -->
+          <g id="reSp1" class="rf-sp rf-swim re-fish-grp" data-sp="1"><title>1:00 · ฝูง Clownfish (ปลาการ์ตูน)</title>
+            <g transform="translate(650,350)"><ellipse cx="0" cy="0" rx="11" ry="6" fill="#fb923c"/><polygon points="9.5,0 17,-6 17,6" fill="#fb923c"/><rect x="-4" y="-5.4" width="2.8" height="10.8" fill="#fff"/><rect x="2.5" y="-4.6" width="2.4" height="9.2" fill="#fff"/><circle cx="-6.5" cy="-1.2" r="1.4" fill="#0f172a"/></g>
+            <g transform="translate(684,368) scale(.82)"><ellipse cx="0" cy="0" rx="11" ry="6" fill="#fb923c"/><polygon points="9.5,0 17,-6 17,6" fill="#fb923c"/><rect x="-4" y="-5.4" width="2.8" height="10.8" fill="#fff"/><rect x="2.5" y="-4.6" width="2.4" height="9.2" fill="#fff"/><circle cx="-6.5" cy="-1.2" r="1.4" fill="#0f172a"/></g>
+            <g transform="translate(260,340) scale(-.88,.88)"><ellipse cx="0" cy="0" rx="11" ry="6" fill="#fb923c"/><polygon points="9.5,0 17,-6 17,6" fill="#fb923c"/><rect x="-4" y="-5.4" width="2.8" height="10.8" fill="#fff"/><rect x="2.5" y="-4.6" width="2.4" height="9.2" fill="#fff"/><circle cx="-6.5" cy="-1.2" r="1.4" fill="#0f172a"/></g>
+          </g>
+          <!-- 2: Carnation Coral (กลุ่มปะการังอ่อนส้มชมพู) -->
+          <g id="reSp2" class="rf-sp rf-sway re-coral" data-sp="2"><title>1:30 · กลุ่ม Carnation Coral (ปะการังอ่อนส้ม)</title>
+            <g transform="translate(690,462)"><path d="M0 0v-26m0 12-11-13m11 16 11-14" fill="none" stroke="#ff7c6e" stroke-width="4.2" stroke-linecap="round"/><circle cx="-12" cy="-27" r="4" fill="#fda4af"/><circle cx="12" cy="-25" r="4" fill="#fda4af"/><circle cx="0" cy="-28" r="4.4" fill="#fecdd3"/><g transform="translate(30,6) scale(.82)"><path d="M0 0v-24m0 11-10-12m10 15 10-13" fill="none" stroke="#fb7185" stroke-width="4" stroke-linecap="round"/><circle cx="-11" cy="-24" r="3.8" fill="#fecdd3"/><circle cx="11" cy="-22" r="3.8" fill="#fda4af"/><circle cx="0" cy="-26" r="4" fill="#ffe4e6"/></g><g transform="translate(-28,4) scale(.78)"><path d="M0 0v-24m0 11-10-12m10 15 10-13" fill="none" stroke="#ff7c6e" stroke-width="4" stroke-linecap="round"/><circle cx="-11" cy="-24" r="3.8" fill="#fda4af"/><circle cx="11" cy="-22" r="3.8" fill="#fecdd3"/><circle cx="0" cy="-26" r="4" fill="#fda4af"/></g></g>
+          </g>
+          <!-- 3: Blue Tang (ฝูงปลาขี้ตังเบ็ดฟ้า) -->
+          <g id="reSp3" class="rf-sp rf-swim2 re-fish-grp" data-sp="3"><title>2:00 · ฝูง Blue Tang (ปลาขี้ตังเบ็ดฟ้า)</title>
+            <g transform="translate(184,218)"><ellipse cx="0" cy="0" rx="12" ry="7" fill="#38bdf8"/><polygon points="-10.5,0 -18,-6 -18,6" fill="#facc15"/><path d="M-5 -2.5 Q2 -6.5 8 0" fill="none" stroke="#0f172a" stroke-width="2"/><circle cx="6.5" cy="-1.2" r="1.4" fill="#0f172a"/></g>
+            <g transform="translate(148,242) scale(.8)"><ellipse cx="0" cy="0" rx="12" ry="7" fill="#38bdf8"/><polygon points="-10.5,0 -18,-6 -18,6" fill="#facc15"/><path d="M-5 -2.5 Q2 -6.5 8 0" fill="none" stroke="#0f172a" stroke-width="2"/><circle cx="6.5" cy="-1.2" r="1.4" fill="#0f172a"/></g>
+            <g transform="translate(740,210) scale(-.85,.85)"><ellipse cx="0" cy="0" rx="12" ry="7" fill="#38bdf8"/><polygon points="-10.5,0 -18,-6 -18,6" fill="#facc15"/><path d="M-5 -2.5 Q2 -6.5 8 0" fill="none" stroke="#0f172a" stroke-width="2"/><circle cx="6.5" cy="-1.2" r="1.4" fill="#0f172a"/></g>
+          </g>
+          <!-- 4: Cauliflower Coral (กลุ่มปะการังดอกกะหล่ำชมพูบานสะพรั่ง!) -->
+          <g id="reSp4" class="rf-sp rf-sway re-coral" data-sp="4"><title>2:30 · กลุ่ม Cauliflower Coral (ปะการังดอกกะหล่ำ)</title>
+            <g transform="translate(228,462)" fill="#f472b6"><circle cx="-18" cy="2" r="10"/><circle cx="-6" cy="-6" r="11.5"/><circle cx="8" cy="-2" r="10.5"/><circle cx="19" cy="4" r="9"/><circle cx="-4" cy="7" r="9" fill="#db2777"/><circle cx="10" cy="8" r="8" fill="#be185d"/></g>
+            <g transform="translate(274,474) scale(.82)" fill="#f9a8d4"><circle cx="-14" cy="2" r="9"/><circle cx="-3" cy="-5" r="10.5"/><circle cx="10" cy="0" r="9.5"/><circle cx="0" cy="7" r="8" fill="#ec4899"/></g>
+            <g transform="translate(186,472) scale(.76)" fill="#ec4899"><circle cx="-12" cy="2" r="8.5"/><circle cx="0" cy="-5" r="10"/><circle cx="11" cy="1" r="8.5"/><circle cx="0" cy="6" r="7.5" fill="#be185d"/></g>
+            <g transform="translate(612,468) scale(.86)" fill="#f472b6"><circle cx="-14" cy="2" r="9.5"/><circle cx="-2" cy="-5" r="11"/><circle cx="11" cy="1" r="9.5"/><circle cx="2" cy="7" r="8.5" fill="#db2777"/></g>
+          </g>
+          <!-- 5: Sun Coral (กลุ่มปะการังถ้วยส้มเรืองแสง) -->
+          <g id="reSp5" class="rf-sp rf-sway re-coral" data-sp="5"><title>3:00 · กลุ่ม Sun Coral (ปะการังถ้วยส้มเรืองแสง)</title>
+            <g transform="translate(534,464)"><circle cx="0" cy="0" r="24" fill="url(#reGoldGlow)" opacity=".5"/><circle cx="-12" cy="2" r="7.5" fill="#f59e0b"/><circle cx="2" cy="-4" r="8.5" fill="#fde047"/><circle cx="14" cy="3" r="7.2" fill="#fb923c"/><circle cx="-4" cy="9" r="6.8" fill="#f97316"/><circle cx="-12" cy="2" r="3" fill="#fef08a"/><circle cx="2" cy="-4" r="3.4" fill="#fff"/><circle cx="14" cy="3" r="2.8" fill="#fef08a"/></g>
+            <g transform="translate(362,468) scale(.85)"><circle cx="0" cy="0" r="20" fill="url(#reGoldGlow)" opacity=".45"/><circle cx="-10" cy="2" r="7" fill="#f59e0b"/><circle cx="3" cy="-4" r="8" fill="#fde047"/><circle cx="13" cy="3" r="6.8" fill="#fb923c"/><circle cx="-10" cy="2" r="2.8" fill="#fef08a"/><circle cx="3" cy="-4" r="3" fill="#fff"/></g>
+          </g>
+          <!-- 6: Moon Jellyfish (ฝูงแมงกะพรุนเรืองแสง) -->
+          <g id="reSp6" class="rf-sp rf-float re-fish-grp" data-sp="6"><title>3:30 · ฝูง Moon Jellyfish (แมงกะพรุนเรืองแสง)</title>
+            <g transform="translate(760,148)"><circle cx="0" cy="-2" r="22" fill="url(#reGlow)" opacity=".45"/><path d="M-13 0 a13 11.5 0 0 1 26 0 Z" fill="#67e8f9" fill-opacity=".76" stroke="#cffafe" stroke-width="1.3"/><path d="M-7 1 Q-10 12 -6 22 M0 1 Q3 14 -2 25 M7 1 Q10 12 6 22" fill="none" stroke="#a5f3fc" stroke-width="1.3"/></g>
+            <g transform="translate(808,186) scale(.74)"><path d="M-13 0 a13 11.5 0 0 1 26 0 Z" fill="#a5f3fc" fill-opacity=".72" stroke="#ecfeff" stroke-width="1.3"/><path d="M-7 1 Q-10 12 -6 22 M0 1 Q3 14 -2 25 M7 1 Q10 12 6 22" fill="none" stroke="#cffafe" stroke-width="1.3"/></g>
+            <g transform="translate(124,158) scale(.82)"><path d="M-13 0 a13 11.5 0 0 1 26 0 Z" fill="#67e8f9" fill-opacity=".74" stroke="#cffafe" stroke-width="1.3"/><path d="M-7 1 Q-10 12 -6 22 M0 1 Q3 14 -2 25 M7 1 Q10 12 6 22" fill="none" stroke="#a5f3fc" stroke-width="1.3"/></g>
+          </g>
+          <!-- 7: Sea Fan (กลุ่มกัลปังหาพัดแดง) -->
+          <g id="reSp7" class="rf-sp rf-sway re-coral" data-sp="7"><title>4:00 · กลุ่ม Sea Fan (กัลปังหาพัดแดง)</title>
+            <g transform="translate(154,424)" stroke="#fb7185" fill="none" stroke-linecap="round"><path d="M0 0v-38m0 24-15-17m15 11 15-17m-15 5-8-18m8 18 8-18" stroke-width="2.6"/><path d="M26 8v-28m0 17-11-12m11 7 11-12" stroke-width="2.2" stroke="#fda4af"/></g>
+            <g transform="translate(744,420)" stroke="#fb7185" fill="none" stroke-linecap="round"><path d="M0 0v-34m0 21-13-15m13 9 13-15m-13 4-7-16m7 16 7-16" stroke-width="2.4"/></g>
+          </g>
+          <!-- 8: Brain Coral (กลุ่มปะการังสมองมรกต) -->
+          <g id="reSp8" class="rf-sp re-coral" data-sp="8"><title>4:30 · กลุ่ม Brain Coral (ปะการังสมองมรกต)</title>
+            <g transform="translate(460,474)"><ellipse cx="0" cy="0" rx="19" ry="12.5" fill="#34d399"/><path d="M-12 -2 Q-5 -8 0 -2 T12 -2 M-10 4 Q-3 0 3 4 T10 3" fill="none" stroke="#065f46" stroke-width="1.8" stroke-linecap="round"/></g>
+            <g transform="translate(494,480) scale(.76)"><ellipse cx="0" cy="0" rx="19" ry="12.5" fill="#10b981"/><path d="M-12 -2 Q-5 -8 0 -2 T12 -2 M-10 4 Q-3 0 3 4 T10 3" fill="none" stroke="#064e3b" stroke-width="1.8" stroke-linecap="round"/></g>
+            <g transform="translate(424,482) scale(.72)"><ellipse cx="0" cy="0" rx="19" ry="12.5" fill="#6ee7b7"/><path d="M-12 -2 Q-5 -8 0 -2 T12 -2 M-10 4 Q-3 0 3 4 T10 3" fill="none" stroke="#065f46" stroke-width="1.8" stroke-linecap="round"/></g>
+          </g>
+          <!-- 9: Butterflyfish (ฝูงปลาผีเสื้อเหลือง) -->
+          <g id="reSp9" class="rf-sp rf-swim re-fish-grp" data-sp="9"><title>5:00 · ฝูง Butterflyfish (ปลาผีเสื้อเหลือง)</title>
+            <g transform="translate(604,194)"><polygon points="-11,0 0,-10 11,0 0,10" fill="#fde047"/><polygon points="10,0 18,-6 18,6" fill="#fef08a"/><line x1="-2.5" y1="-7.5" x2="-2.5" y2="7.5" stroke="#0f172a" stroke-width="2"/><circle cx="-6" cy="-1.2" r="1.3" fill="#0f172a"/></g>
+            <g transform="translate(642,216) scale(.78)"><polygon points="-11,0 0,-10 11,0 0,10" fill="#fde047"/><polygon points="10,0 18,-6 18,6" fill="#fef08a"/><line x1="-2.5" y1="-7.5" x2="-2.5" y2="7.5" stroke="#0f172a" stroke-width="2"/><circle cx="-6" cy="-1.2" r="1.3" fill="#0f172a"/></g>
+          </g>
+          <!-- 10: Sea Anemone (กลุ่มดอกไม้ทะเลมิ้นต์) -->
+          <g id="reSp10" class="rf-sp rf-sway re-coral" data-sp="10"><title>5:30 · กลุ่ม Sea Anemone (ดอกไม้ทะเลมิ้นต์)</title>
+            <g transform="translate(650,432)"><ellipse cx="0" cy="10" rx="13" ry="5.5" fill="#0d9488"/><path d="M-9 8 Q-14 -4 -6 -12 M-3 8 Q-5 -7 0 -15 M3 8 Q6 -7 9 -13 M9 8 Q15 -3 12 -10" fill="none" stroke="#5eead4" stroke-width="2.8" stroke-linecap="round"/></g>
+            <g transform="translate(678,440) scale(.8)"><ellipse cx="0" cy="10" rx="13" ry="5.5" fill="#0f766e"/><path d="M-9 8 Q-14 -4 -6 -12 M-3 8 Q-5 -7 0 -15 M3 8 Q6 -7 9 -13 M9 8 Q15 -3 12 -10" fill="none" stroke="#99f6e4" stroke-width="2.8" stroke-linecap="round"/></g>
+            <g transform="translate(264,432) scale(.85)"><ellipse cx="0" cy="10" rx="13" ry="5.5" fill="#0d9488"/><path d="M-9 8 Q-14 -4 -6 -12 M-3 8 Q-5 -7 0 -15 M3 8 Q6 -7 9 -13 M9 8 Q15 -3 12 -10" fill="none" stroke="#5eead4" stroke-width="2.8" stroke-linecap="round"/></g>
+          </g>
+          <!-- 11: Sea Turtle (คู่เต่าทะเลน้อย) -->
+          <g id="reSp11" class="rf-sp rf-swim2 re-fish-grp" data-sp="11"><title>6:00 · คู่ Sea Turtle (เต่าทะเลน้อย)</title>
+            <g transform="translate(216,128)"><ellipse cx="0" cy="0" rx="15" ry="9.5" fill="#10b981" stroke="#6ee7b7" stroke-width="1.4"/><circle cx="16.5" cy="-1.2" r="4.4" fill="#34d399"/><path d="M4 -7 L12 -16 M4 7 L10 16 M-10 -4 L-16 -8 M-10 4 L-16 8" stroke="#34d399" stroke-width="3.4" stroke-linecap="round"/></g>
+            <g transform="translate(174,154) scale(.66)"><ellipse cx="0" cy="0" rx="15" ry="9.5" fill="#10b981" stroke="#6ee7b7" stroke-width="1.4"/><circle cx="16.5" cy="-1.2" r="4.4" fill="#34d399"/><path d="M4 -7 L12 -16 M4 7 L10 16 M-10 -4 L-16 -8 M-10 4 L-16 8" stroke="#34d399" stroke-width="3.4" stroke-linecap="round"/></g>
+          </g>
+          <!-- 12: Organ Pipe Coral (กลุ่มปะการังออร์แกนม่วง) -->
+          <g id="reSp12" class="rf-sp rf-sway re-coral" data-sp="12"><title>6:30 · กลุ่ม Organ Pipe Coral (ปะการังออร์แกน)</title>
+            <g transform="translate(78,468)" stroke="#a78bfa" stroke-width="3.6" stroke-linecap="round"><line x1="-10" y1="12" x2="-10" y2="-8"/><line x1="-2" y1="12" x2="-2" y2="-16"/><line x1="6" y1="12" x2="6" y2="-11"/><line x1="14" y1="12" x2="14" y2="-6"/><circle cx="-10" cy="-9" r="3" fill="#e9d5ff" stroke="none"/><circle cx="-2" cy="-17" r="3.4" fill="#e9d5ff" stroke="none"/><circle cx="6" cy="-12" r="3" fill="#e9d5ff" stroke="none"/><circle cx="14" cy="-7" r="2.8" fill="#e9d5ff" stroke="none"/></g>
+            <g transform="translate(838,468) scale(.9)" stroke="#c084fc" stroke-width="3.6" stroke-linecap="round"><line x1="-8" y1="12" x2="-8" y2="-8"/><line x1="0" y1="12" x2="0" y2="-15"/><line x1="8" y1="12" x2="8" y2="-10"/><circle cx="-8" cy="-9" r="3" fill="#f3e8ff" stroke="none"/><circle cx="0" cy="-16" r="3.4" fill="#f3e8ff" stroke="none"/><circle cx="8" cy="-11" r="3" fill="#f3e8ff" stroke="none"/></g>
+          </g>
+          <!-- 13: Manta Ray (คู่ปลากระเบนราหู) -->
+          <g id="reSp13" class="rf-sp rf-float re-fish-grp" data-sp="13"><title>7:00 · คู่ Manta Ray (ปลากระเบนราหู)</title>
+            <g transform="translate(340,136)"><path d="M-28 3 Q0 -18 28 3 Q10 6 0 14 Q-10 6 -28 3 Z" fill="#60a5fa" fill-opacity=".88"/><line x1="0" y1="13" x2="0" y2="31" stroke="#93c5fd" stroke-width="1.6"/></g>
+            <g transform="translate(578,124) scale(.75)"><path d="M-28 3 Q0 -18 28 3 Q10 6 0 14 Q-10 6 -28 3 Z" fill="#93c5fd" fill-opacity=".84"/><line x1="0" y1="13" x2="0" y2="31" stroke="#bfdbfe" stroke-width="1.6"/></g>
+          </g>
+          <!-- 14: Elkhorn Coral (กลุ่มปะการังเขากวางใหญ่) -->
+          <g id="reSp14" class="rf-sp rf-sway re-coral" data-sp="14"><title>7:30 · กลุ่ม Elkhorn Coral (ปะการังเขากวางใหญ่)</title>
+            <g transform="translate(812,472)" stroke="#fbbf24" fill="none" stroke-linecap="round"><path d="M0 0v-30m0 14-14-18m14 11 13-16m-14 6-6-12m20 8 4-10" stroke-width="4.4"/><path d="M-28 6v-24m0 10-10-14m10 9 10-13" stroke-width="3.8" stroke="#fcd34d"/></g>
+            <g transform="translate(316,474) scale(.84)" stroke="#fbbf24" fill="none" stroke-linecap="round"><path d="M0 0v-28m0 12-13-16m13 9 12-15" stroke-width="4.2"/></g>
+          </g>
+          <!-- 15: Crystal Lotus & Golden Whale (บัวคริสตัล + วาฬทองคำ) -->
+          <g id="reSp15" class="rf-sp rf-float re-fish-grp" data-sp="15"><title>8:00 · Crystal Lotus &amp; Golden Whale</title>
+            <g transform="translate(460,262)"><circle cx="0" cy="-6" r="24" fill="url(#reGoldGlow)"/><polygon points="0,-18 9,-4 0,5 -9,-4" fill="#ff7c6e" stroke="#fff" stroke-width="1.2"/></g>
+            <g transform="translate(546,66)"><path d="M-24 0 Q-5 -14 22 -3 Q28 0 34 -7 L32 5 Q25 7 19 6 Q-5 13 -24 0 Z" fill="#fef08a" fill-opacity=".95" filter="url(#reSoftGlow)"/><circle cx="-14" cy="-1.5" r="1.6" fill="#0f172a"/></g>
+          </g>
+
+          <!-- เลเยอร์ฟองอากาศ & อาหารปลาแบบ Interactive -->
+          <g id="reefFxLayer"></g>
+        </svg>
+      </div>
+      <div class="reef-exp-ft">
+        <div class="reef-exp-games">
+          <button type="button" class="reef-game-btn feed" id="reefFeedBtn">🐟 ให้อาหารปลา (เรืองแสง!)</button>
+          <button type="button" class="reef-game-btn" id="reefBubBtn">🫧 ปล่อยฟองอากาศ</button>
+          <div class="reef-exp-pvbar" id="reefExpPvBar" hidden>
+            <button type="button" id="rePvPrev" title="ลด 30 นาที">−</button>
+            <span id="rePvLbl">8 ชม.</span>
+            <button type="button" id="rePvNext" title="เพิ่ม 30 นาที">+</button>
+          </div>
+        </div>
+        <div class="reef-exp-coll" id="reefExpColl"></div>
+      </div>
+    </div>`;
+    document.body.appendChild(reefModal);
+
+    const spawnFx = (svgEl, html, ms = 2400) => {
+      const layer = $('#reefFxLayer', reefModal);
+      if (!layer) return;
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.innerHTML = html;
+      layer.appendChild(g);
+      setTimeout(() => g.remove(), ms);
+    };
+    const addPearls = n => {
+      reefPearls += n;
+      const el = $('#reefExpPearl', reefModal);
+      if (el) el.textContent = `🫧 ไข่มุก ${reefPearls}`;
+    };
+    const triggerFeedFish = () => {
+      playWaterChime([523.25, 659.25, 783.99, 1046.5]);
+      let pellets = '';
+      for (let i = 0; i < 8; i++) {
+        const x = 210 + Math.random() * 500;
+        const y = 70 + Math.random() * 60;
+        const delay = (i * 0.1).toFixed(2);
+        pellets += `<circle class="re-pellet" cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${(3.2 + Math.random() * 1.8).toFixed(1)}" fill="${i % 2 ? '#fde047' : '#f9a8d4'}" style="animation-delay:${delay}s"/>`;
+      }
+      spawnFx(reefModal, pellets, 2800);
+      const stage = $('#reefExpStage', reefModal);
+      stage.classList.add('fish-glow');
+      clearTimeout(feedGlowTmr);
+      feedGlowTmr = setTimeout(() => stage.classList.remove('fish-glow'), 3600);
+      addPearls(3);
+      toast('🐟 ให้อาหารปลาแล้ว! ปลาเรืองแสงดีใจมาก (+3 ไข่มุก)');
+    };
+    const triggerBubbles = (cx, cy, cnt = 6) => {
+      playWaterChime([659.25, 880]);
+      let html = `<circle class="re-ripple" cx="${cx}" cy="${cy}" r="6" fill="none" stroke="#a5f3fc" stroke-width="1.6"/>`;
+      for (let i = 0; i < cnt; i++) {
+        const bx = cx + (Math.random() - 0.5) * 44;
+        const by = cy + (Math.random() - 0.5) * 18;
+        const r = (2.4 + Math.random() * 4.2).toFixed(1);
+        html += `<circle class="re-fx-bub" cx="${bx.toFixed(0)}" cy="${by.toFixed(0)}" r="${r}" fill="rgba(165,243,252,.22)" stroke="#a5f3fc" stroke-width="1.2" style="animation-delay:${(i * 0.08).toFixed(2)}s"/>`;
+      }
+      spawnFx(reefModal, html, 2200);
+    };
+    $('#reefFeedBtn', reefModal).onclick = triggerFeedFish;
+    $('#reefBubBtn', reefModal).onclick = () => { triggerBubbles(460 + (Math.random() - 0.5) * 320, 320, 10); addPearls(1); };
+    $('#reefExpGlow', reefModal).onclick = () => {
+      reefNight = !reefNight;
+      reefModal.classList.toggle('is-night', reefNight);
+      $('#reefExpGlow', reefModal).classList.toggle('on', reefNight);
+    };
+    $('#reefExpClose', reefModal).onclick = () => { reefExpOpen = false; reefModal.hidden = true; };
+    reefModal.addEventListener('click', e => { if (e.target === reefModal) { reefExpOpen = false; reefModal.hidden = true; } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && reefExpOpen) { reefExpOpen = false; reefModal.hidden = true; } });
+    $('#reefExpStage', reefModal).addEventListener('click', e => {
+      const svg = $('#reefExpSvg', reefModal);
+      const pt = svg.getBoundingClientRect();
+      const sx = ((e.clientX - pt.left) / pt.width) * 920;
+      const sy = ((e.clientY - pt.top) / pt.height) * 500;
+      if (e.target.closest('#reWhale')) {
+        playWaterChime([392, 493.88, 587.33, 783.99]);
+        triggerBubbles(sx, sy, 12);
+        addPearls(5);
+        toast('🐋 วาฬร้องเพลงและปล่อยฟองเรืองแสง! (+5 ไข่มุก)');
+        return;
+      }
+      if (e.target.closest('#reMermaid')) {
+        playWaterChime([659.25, 783.99, 987.77, 1318.5]);
+        triggerBubbles(sx, sy, 10);
+        addPearls(5);
+        toast('✨ นางเงือกโปรยละอองไข่มุกให้กำลังใจ! (+5 ไข่มุก)');
+        return;
+      }
+      const spEl = e.target.closest('[data-sp]');
+      if (spEl && spEl.classList.contains('on')) {
+        const sp = REEF_SPECIES[+spEl.dataset.sp];
+        spEl.classList.add('re-pulse');
+        setTimeout(() => spEl.classList.remove('re-pulse'), 900);
+        triggerBubbles(sx, sy, 7);
+        addPearls(2);
+        if (sp) toast(`🪸 ${sp.name} เรืองแสง! (+2 ไข่มุก)`);
+        return;
+      }
+      triggerBubbles(sx, sy, 6);
+    });
+
+    const syncReefExpanded = (count, isPv, dispSec, realSec) => {
+      const expEnabled = draftOn('reefTankExpand');
+      const expBtn = $('#reefExpBtn', reefHost);
+      if (expBtn) expBtn.hidden = !expEnabled;
+      if (!expEnabled && reefExpOpen) { reefExpOpen = false; reefModal.hidden = true; }
+      if (!expEnabled) return;
+      $('#reefExpTime', reefModal).textContent = isPv ? `PV ${fmtHM(dispSec)}` : fmtHM(realSec);
+      $('#reefExpCount', reefModal).textContent = `${count}/${REEF_SPECIES.length} ชนิด`;
+      $('#reefExpPv', reefModal).classList.toggle('on', isPv);
+      const pvBar = $('#reefExpPvBar', reefModal);
+      if (pvBar) { pvBar.hidden = !isPv; $('#rePvLbl', reefModal).textContent = fmtHM(dispSec); }
+      for (let i = 0; i < REEF_SPECIES.length; i++) {
+        const g = $(`#reSp${i}`, reefModal);
+        if (g) g.classList.toggle('on', i < count);
+      }
+      const coll = $('#reefExpColl', reefModal);
+      if (coll) {
+        if (count === 0) {
+          coll.innerHTML = `<span class="reef-coll-empty">อ่านครบ 30 นาทีแรกเพื่อปลดล็อก <b>${esc(REEF_SPECIES[0].short)}</b> (ระหว่างนี้กด 🐟 ให้อาหารปลาเล่นก่อนได้เลย!)</span>`;
+        } else {
+          coll.innerHTML = REEF_SPECIES.slice(0, count).map((sp, i) => `<span class="reef-coll-chip" title="${esc(sp.name)}"><svg viewBox="0 0 32 32" aria-hidden="true">${sp.ic}</svg><span>${esc(sp.short)}</span></span>`).join('')
+            + (count < REEF_SPECIES.length ? `<span class="reef-coll-next">ถัดไป: ${esc(REEF_SPECIES[count].short)}</span>` : '<span class="reef-coll-next done">✨ ครบ 16/16!</span>');
+        }
+      }
+    };
+    const openReefExpanded = () => {
+      if (!draftOn('reefTankExpand')) return;
+      reefExpOpen = true;
+      reefModal.hidden = false;
+      syncReef(false);
+    };
+    $('#reefExpBtn', reefHost).onclick = openReefExpanded;
+    $('.reef-scene', reefHost).onclick = () => { if (draftOn('reefTankExpand')) openReefExpanded(); };
+    $('#reefExpPv', reefModal).onclick = () => { reefPreviewMin = reefPreviewMin == null ? 480 : null; syncReef(false); };
+    $('#rePvPrev', reefModal).onclick = () => { reefPreviewMin = Math.max(0, (reefPreviewMin || 0) - 30); syncReef(false); };
+    $('#rePvNext', reefModal).onclick = () => { reefPreviewMin = Math.min(480, (reefPreviewMin || 0) + 30); syncReef(false); };
+
     const syncReef = (announce) => {
       const enabled = draftOn('underwaterReefTimer');
       reefHost.hidden = !enabled;
@@ -5375,6 +5926,7 @@
         if (sp) toast(`🪸 ปลดล็อกปราสาทใต้น้ำใหม่: ${sp.name}!`);
       }
       lastUnlocked = realCount;
+      syncReefExpanded(count, isPv, dispSec, realSec);
     };
     $('#reefHide', reefHost).onclick = () => { S.reefHidden = true; save(); syncReef(false); };
     $('#reefTab', reefHost).onclick = () => { S.reefHidden = false; save(); syncReef(false); };
@@ -5534,5 +6086,212 @@
     sync();
   }
   initPomodoro();
+
+  /* 🫀 Floating Human Anatomy Infographic with Glowing Organs (anatomySidebarInfographic) */
+  let _anatCur = null;
+  const anatHost = document.createElement('aside');
+  anatHost.className = 'anat-host';
+  anatHost.id = 'anatHost';
+  anatHost.hidden = true;
+  anatHost.setAttribute('aria-label', 'Infographic หุ่น Anatomy เรืองแสงตามบท');
+  anatHost.innerHTML = `<button type="button" class="anat-tab" id="anatTab" title="เปิดหุ่น Anatomy ด้านซ้าย" hidden><span>👤</span><span>›</span></button>
+    <div class="anat-dock" id="anatDock">
+      <div class="anat-hd"><span class="anat-sys" id="anatSys">Anatomy</span><button type="button" class="anat-hide" id="anatHide" title="ซ่อนหุ่น Anatomy">‹</button></div>
+      <div class="anat-stage">
+        <svg viewBox="0 0 130 296" aria-hidden="true">
+          <defs>
+            <radialGradient id="anShadow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#040b16" stop-opacity=".72"/><stop offset="65%" stop-color="#0f2942" stop-opacity=".35"/><stop offset="100%" stop-color="#040b16" stop-opacity="0"/></radialGradient>
+            <linearGradient id="anBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#94b8d4" stop-opacity=".34"/><stop offset="50%" stop-color="#648cb0" stop-opacity=".26"/><stop offset="100%" stop-color="#3b5f82" stop-opacity=".2"/></linearGradient>
+            <filter id="anGlow" x="-45%" y="-45%" width="190%" height="190%"><feGaussianBlur stdDeviation="3.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <!-- เงาบนพื้นใต้หุ่นลอย -->
+          <ellipse class="anat-shadow" cx="65" cy="280" rx="34" ry="8.5" fill="url(#anShadow)"/>
+          <ellipse class="anat-ring" cx="65" cy="280" rx="26" ry="5.5" fill="none" stroke="#5eead4" stroke-opacity=".34" stroke-width="1"/>
+          <!-- หุ่นคนยืนลอยขึ้นมาพร้อม Anatomy จำลอง -->
+          <g class="anat-body">
+            <!-- โครงร่างหุ่นคนยืน -->
+            <g class="an-org" data-org="skin" data-name="ผิวหนัง (Skin)">
+              <!-- ศีรษะและลำคอ -->
+              <ellipse cx="65" cy="28" rx="13.5" ry="16" fill="url(#anBody)" stroke="#7dd3fc" stroke-opacity=".45" stroke-width="1.2"/>
+              <rect x="59" y="42" width="12" height="11" rx="4" fill="url(#anBody)"/>
+              <!-- ลำตัว + แขน 2 ข้าง + ขา 2 ข้าง -->
+              <path d="M40 56 Q65 49 90 56 Q97 60 99 74 L105 138 Q106 146 101 147 Q96 147 94 139 L88 86 L86 154 L91 248 Q91 258 84 259 Q77 259 76 248 L69 170 L65 168 L61 170 L54 248 Q53 259 46 259 Q39 258 39 248 L44 154 L42 86 L36 139 Q34 147 29 147 Q24 146 25 138 L31 74 Q33 60 40 56 Z" fill="url(#anBody)" stroke="#7dd3fc" stroke-opacity=".42" stroke-width="1.2"/>
+            </g>
+            <!-- ช่องอก-ท้องจำลองด้านใน -->
+            <path d="M47 64 Q65 59 83 64 L82 146 Q65 156 48 146 Z" fill="#091a2e" fill-opacity=".55" stroke="#38bdf8" stroke-opacity=".18" stroke-width=".8"/>
+
+            <!-- กระดูกและกล้ามเนื้อ (MSK) -->
+            <g class="an-org" data-org="msk" data-name="กระดูก & กล้ามเนื้อ (MSK)" stroke="#cbd5e1" stroke-linecap="round" fill="none">
+              <line x1="65" y1="50" x2="65" y2="148" stroke-width="2.2" stroke-dasharray="3 2.5"/>
+              <path d="M46 61 Q65 56 84 61" stroke-width="2"/>
+              <path d="M51 74 Q65 79 79 74 M50 84 Q65 89 80 84 M52 94 Q65 98 78 94" stroke-width="1.2" opacity=".7"/>
+              <path d="M49 144 Q65 156 81 144" stroke-width="2.4"/>
+              <line x1="48" y1="162" x2="46" y2="244" stroke-width="2.4" opacity=".75"/>
+              <line x1="82" y1="162" x2="84" y2="244" stroke-width="2.4" opacity=".75"/>
+              <line x1="36" y1="74" x2="31" y2="132" stroke-width="2" opacity=".7"/>
+              <line x1="94" y1="74" x2="99" y2="132" stroke-width="2" opacity=".7"/>
+            </g>
+
+            <!-- สมอง (Brain / CNS) -->
+            <g class="an-org" data-org="brain" data-name="สมอง & ระบบประสาท (CNS)">
+              <path d="M55 24 C55 15 75 15 75 24 C77 27 74 33 65 32 C56 33 53 27 55 24 Z" fill="#c084fc"/>
+              <path d="M59 22 Q65 19 71 22 M58 26 Q65 29 72 26" fill="none" stroke="#f5d0fe" stroke-width="1"/>
+              <line x1="65" y1="32" x2="65" y2="54" stroke="#c084fc" stroke-width="2.2" stroke-linecap="round"/>
+            </g>
+
+            <!-- ตา (Eyes) -->
+            <g class="an-org" data-org="eye" data-name="ตา (Eyes)">
+              <ellipse cx="60" cy="29" rx="2.4" ry="1.5" fill="#38bdf8"/>
+              <ellipse cx="70" cy="29" rx="2.4" ry="1.5" fill="#38bdf8"/>
+            </g>
+
+            <!-- ต่อมไทรอยด์ (Thyroid / Endocrine) -->
+            <g class="an-org" data-org="thyroid" data-name="ต่อมไทรอยด์ (Thyroid)">
+              <path d="M59 46 Q62 43 65 47 Q68 43 71 46 Q71 51 65 50 Q59 51 59 46 Z" fill="#f59e0b"/>
+            </g>
+
+            <!-- ปอด & หลอดลม (Lungs) -->
+            <g class="an-org" data-org="lungs" data-name="ปอด & ทางเดินหายใจ (Lungs)">
+              <line x1="65" y1="50" x2="65" y2="70" stroke="#93c5fd" stroke-width="2.4"/>
+              <path d="M62 67 C52 67 48 80 49 95 C50 100 58 100 62 94 Z" fill="#fb7185"/>
+              <path d="M68 67 C78 67 82 80 81 95 C80 100 72 100 68 94 Z" fill="#fb7185"/>
+            </g>
+
+            <!-- หัวใจ (Heart & Vessels) -->
+            <g class="an-org" data-org="heart" data-name="หัวใจ & หลอดเลือด (Heart)">
+              <path d="M67 76 C67 72 61 72 61 77 C61 83 68 88 71 91 C74 88 76 82 75 77 C74 73 69 73 67 76 Z" fill="#ef4444"/>
+              <path d="M65 73 Q65 65 70 66" fill="none" stroke="#f87171" stroke-width="1.8" stroke-linecap="round"/>
+            </g>
+
+            <!-- ตับ & ถุงน้ำดี (Liver & Biliary) -->
+            <g class="an-org" data-org="liver" data-name="ตับ & ทางเดินน้ำดี (Liver)">
+              <path d="M49 100 Q58 96 68 101 Q62 112 50 112 Z" fill="#b45309"/>
+              <ellipse cx="56" cy="112" rx="2.6" ry="1.8" fill="#4ade80"/>
+            </g>
+
+            <!-- กระเพาะอาหาร & หลอดอาหาร (Stomach) -->
+            <g class="an-org" data-org="stomach" data-name="กระเพาะอาหาร (Stomach)">
+              <path d="M65 98 Q74 98 76 107 Q77 116 67 116 Q61 115 62 109 Q64 105 65 98 Z" fill="#fb923c"/>
+            </g>
+
+            <!-- ม้าม (Spleen) -->
+            <g class="an-org" data-org="spleen" data-name="ม้าม (Spleen)">
+              <ellipse cx="79" cy="107" rx="3.4" ry="5.5" fill="#a855f7"/>
+            </g>
+
+            <!-- ตับอ่อน (Pancreas) -->
+            <g class="an-org" data-org="pancreas" data-name="ตับอ่อน (Pancreas)">
+              <path d="M58 117 Q67 114 76 116 Q75 121 65 121 Q59 121 58 117 Z" fill="#facc15"/>
+            </g>
+
+            <!-- ไต & ต่อมหมวกไต (Kidneys / Adrenals) -->
+            <g class="an-org" data-org="kidneys" data-name="ไต & ต่อมหมวกไต (Kidneys)">
+              <ellipse cx="54" cy="122" rx="3.6" ry="5.5" fill="#e11d48"/>
+              <ellipse cx="76" cy="122" rx="3.6" ry="5.5" fill="#e11d48"/>
+              <path d="M51 116 Q54 113 57 116 Z M73 116 Q76 113 79 116 Z" fill="#fde047"/>
+            </g>
+
+            <!-- ลำไส้ (Intestines) -->
+            <g class="an-org" data-org="intestines" data-name="ลำไส้ (Intestines)">
+              <path d="M51 124 Q51 120 65 121 Q79 120 79 124 L78 139 Q65 144 52 139 Z" fill="#f472b6" fill-opacity=".82"/>
+              <path d="M55 127 Q65 124 75 127 M55 132 Q65 135 75 132 M57 137 Q65 139 73 137" fill="none" stroke="#9d174d" stroke-width="1.2" stroke-linecap="round"/>
+            </g>
+
+            <!-- กระเพาะปัสสาวะ (Bladder) -->
+            <g class="an-org" data-org="bladder" data-name="กระเพาะปัสสาวะ (Bladder)">
+              <path d="M59 144 Q65 140 71 144 Q71 151 65 153 Q59 151 59 144 Z" fill="#38bdf8"/>
+            </g>
+
+            <!-- ระบบสืบพันธุ์ (Reproductive) -->
+            <g class="an-org" data-org="repro" data-name="ระบบสืบพันธุ์ (Repro)">
+              <path d="M58 148 Q65 144 72 148 L68 156 Q65 158 62 156 Z" fill="#f472b6"/>
+              <circle cx="56" cy="148" r="2.2" fill="#fbcfe8"/>
+              <circle cx="74" cy="148" r="2.2" fill="#fbcfe8"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="anat-ft" id="anatFt">กำลังอ่าน</div>
+    </div>`;
+  document.body.appendChild(anatHost);
+
+  function resolveOrgans(chId, sec, pg) {
+    const txt = `${sec ? sec.title : ''} ${pg ? pg.title : ''}`.toLowerCase();
+    if (chId === 'b3') {
+      if (/eye|optic|ตา|vision|cn\s*2|cn\s*3|pupil/.test(txt)) return { organs: ['brain', 'eye'], label: 'Brain & Eyes' };
+      return { organs: ['brain'], label: 'Brain · CNS' };
+    }
+    if (chId === 'b4') {
+      if (/ตา|eye|optic|glaucoma|retina|cornea|uveit|conjunct/.test(txt)) return { organs: ['eye', 'skin'], label: 'Eyes & Skin' };
+      return { organs: ['skin'], label: 'Skin · Derm' };
+    }
+    if (chId === 'b5' || chId === 'kt-msk') return { organs: ['msk'], label: 'Bones & Muscles' };
+    if (chId === 'b6' || chId === 'kt-rs') return { organs: ['lungs'], label: 'Lungs · Resp' };
+    if (chId === 'b7') return { organs: ['heart'], label: 'Heart · CVS' };
+    if (chId === 'b8') {
+      if (/ตับอ่อน|pancrea/.test(txt)) return { organs: ['pancreas'], label: 'Pancreas' };
+      if (/ตับ|liver|hepat|bilirubin|ดีซ่าน|gallstone|biliary|portal|cirrh/.test(txt)) return { organs: ['liver'], label: 'Liver & Biliary' };
+      if (/ม้าม|spleen/.test(txt)) return { organs: ['spleen'], label: 'Spleen' };
+      if (/gastric|peptic|ulcer|pylori|การหลั่งกรด|dysphagia|achalasia|gerd|barrett|ยาลดกรด|vomiting|antiemetic|foregut/.test(txt)) return { organs: ['stomach'], label: 'Stomach & Esoph' };
+      if (/ibd|celiac|polyp|colorectal|ท้องเสีย|diarrhea|colitis|ischemia|midgut|hindgut|hirschsprung|ibs|ยาแก้ท้องเสีย|ยาระบาย|digestion|absorption|steatorrhea|protozoa|helminth|food poisoning/.test(txt)) return { organs: ['intestines'], label: 'Intestines · GI' };
+      return { organs: ['stomach', 'liver', 'intestines'], label: 'GI System' };
+    }
+    if (chId === 'b9') {
+      if (/bladder|prostate|กระเพาะปัสสาวะ|ต่อมลูกหมาก|uti/.test(txt)) return { organs: ['bladder', 'kidneys'], label: 'Kidneys & Bladder' };
+      return { organs: ['kidneys'], label: 'Kidneys · Renal' };
+    }
+    if (chId === 'b10') {
+      if (/thyroid|ไทรอยด์|parathyroid|calcium/.test(txt)) return { organs: ['thyroid'], label: 'Thyroid' };
+      if (/dm|diabet|insulin|glucose|obesity|pancrea/.test(txt)) return { organs: ['pancreas'], label: 'Pancreas · DM' };
+      if (/adrenal|cushing|addison|pheo|aldosteron/.test(txt)) return { organs: ['kidneys'], label: 'Adrenal Glands' };
+      if (/pituitary|hypothal|prolactin|adh/.test(txt)) return { organs: ['brain'], label: 'Pituitary · Brain' };
+      return { organs: ['thyroid', 'pancreas', 'kidneys'], label: 'Endocrine' };
+    }
+    if (chId === 'kt-repro') return { organs: ['repro'], label: 'Reproductive' };
+    if (chId === 'kt-embryo') {
+      if (/nerv|neural|brain/.test(txt)) return { organs: ['brain'], label: 'Embryo · CNS' };
+      if (/cvs|heart/.test(txt)) return { organs: ['heart'], label: 'Embryo · CVS' };
+      if (/resp|lung/.test(txt)) return { organs: ['lungs'], label: 'Embryo · Resp' };
+      if (/gi|gut|foregut|midgut|hindgut/.test(txt)) return { organs: ['stomach', 'intestines'], label: 'Embryo · GI' };
+      return { organs: ['heart', 'lungs', 'stomach', 'kidneys'], label: 'Embryology' };
+    }
+    if (chId === 'kt-parasit') {
+      if (/malaria|filaria|blood/.test(txt)) return { organs: ['heart', 'spleen'], label: 'Blood & Spleen' };
+      if (/toxo|amoeba|brain/.test(txt)) return { organs: ['brain'], label: 'CNS Parasite' };
+      if (/เหา|โลน|หิด|skin/.test(txt)) return { organs: ['skin'], label: 'Skin Parasite' };
+      return { organs: ['intestines', 'liver'], label: 'GI Parasite' };
+    }
+    return { organs: ['heart', 'lungs'], label: 'Anatomy' };
+  }
+  function syncAnatomyUI() {
+    const onSec = /^#\/[^/]+\/\d+$/.test(location.hash);
+    const enabled = draftOn('anatomySidebarInfographic') && onSec && !!_anatCur;
+    anatHost.hidden = !enabled;
+    document.body.classList.toggle('anat-open', enabled && !S.anatHidden);
+    if (!enabled) return;
+    const collapsed = !!S.anatHidden;
+    $('#anatDock', anatHost).hidden = collapsed;
+    $('#anatTab', anatHost).hidden = !collapsed;
+    const res = resolveOrgans(_anatCur.chId, _anatCur.sec, _anatCur.pg);
+    $('#anatSys', anatHost).textContent = res.label;
+    $('#anatFt', anatHost).textContent = `${chTitle(_anatCur.chId)} · กล่อง ${_anatCur.sec.no}`;
+    const litSet = new Set(res.organs);
+    anatHost.querySelectorAll('.an-org').forEach(g => {
+      g.classList.toggle('lit', litSet.has(g.dataset.org));
+    });
+  }
+  function updateAnatomyInfographic(chId, sec, pg) {
+    _anatCur = { chId, sec, pg };
+    syncAnatomyUI();
+  }
+  $('#anatHide', anatHost).onclick = () => { S.anatHidden = true; save(); syncAnatomyUI(); };
+  $('#anatTab', anatHost).onclick = () => { S.anatHidden = false; save(); syncAnatomyUI(); };
+  anatHost.querySelectorAll('.an-org').forEach(g => {
+    g.style.cursor = 'pointer';
+    g.addEventListener('click', () => { if (g.dataset.name) toast(`🧬 ${g.dataset.name}`); });
+  });
+  addEventListener('hashchange', () => setTimeout(syncAnatomyUI, 45));
+  _onOwnerChange.push(() => syncAnatomyUI());
+
   route();
 })();

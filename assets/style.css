@@ -1139,4 +1139,129 @@ body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 .kw-art .nt-cube2{animation:ntFloat 4.2s ease-in-out infinite .8s}
 .kw-art .nt-flag{transform-box:fill-box;transform-origin:left center;animation:ntFlag 2.4s ease-in-out infinite}
 :root.owner-preview .side-ch-mz{cursor:pointer}
-@media print{.reef-host{display:none}}
+@media print{.reef-host,.anat-host,.reef-modal{display:none}}
+
+/* ===== v91 Owner Draft Features ===== */
+
+/* 1. Round-2 Rating: 2-color split sidebar card (left=R1, right=R2) + R2 picker */
+.side-sec.lv-dual,.mv-maze-list .side-sec.lv-dual{
+  background:linear-gradient(90deg,var(--lv-l) 0% 50%,var(--lv-r) 50% 100%)!important;
+  border-left:3px solid var(--lv-lb)!important;
+  border-right:3px solid var(--lv-rb)!important;
+}
+.side-sec.lv-dual.lv-l1 .n,.side-sec.lv-dual.lv-l1 .t{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.side-sec.lv-dual.lv-r1 .ck{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+.side-sec .ck-dual{display:inline-flex;align-items:center;gap:3px}
+.side-sec .ck-dual small{font-size:9px;font-weight:800;letter-spacing:0;padding:0 4px;border-radius:4px;background:rgba(0,0,0,.22);color:inherit}
+.lvpick-r2{margin-top:14px;padding:12px 14px;border-radius:14px;border:1.5px dashed color-mix(in srgb,var(--accent) 52%,var(--line));background:color-mix(in srgb,var(--accent) 6%,var(--surface))}
+.lv-rbadge{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11.5px;font-weight:800;vertical-align:1px}
+.lv-rbadge.r1{background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+.lv-rbadge.r2{background:var(--accent);color:var(--accent-fg)}
+.lv-prog{display:inline-block;margin-left:6px;padding:1px 9px;border-radius:999px;font-size:12px;font-weight:700;background:var(--ok-soft);color:var(--ok)}
+
+/* 2. Expanded Centered Underwater Aquarium Modal (reefTankExpand) */
+.reef-exp-btn{width:20px;height:20px;border:0;border-radius:6px;background:rgba(76,242,242,.22);color:#7ce0d3;font-size:12px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0}
+.reef-exp-btn[hidden]{display:none}
+.reef-exp-btn:hover{background:rgba(76,242,242,.38);color:#fff}
+.reef-scene{cursor:pointer}
+.reef-modal{position:fixed;inset:0;z-index:75;display:grid;place-items:center;padding:16px;background:rgba(3,10,22,.74);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.reef-modal[hidden]{display:none}
+.reef-exp{width:min(940px,calc(100vw - 28px));height:min(636px,calc(100dvh - 32px));display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1.5px solid rgba(124,224,211,.46);background:#07182b;color:#e6faf7;box-shadow:0 28px 72px rgba(2,8,20,.72),0 0 36px rgba(76,242,242,.18)}
+.reef-exp-hd{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:linear-gradient(90deg,rgba(8,26,44,.94),rgba(13,44,68,.92));border-bottom:1px solid rgba(124,224,211,.22)}
+.reef-exp-title{display:flex;flex-wrap:wrap;align-items:center;gap:7px;font-size:14px}
+.reef-exp-ic .ic{width:18px;height:18px;color:#5eead4}
+.reef-exp-pill{font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:999px;background:rgba(255,255,255,.1);color:#a5f3fc;border:1px solid rgba(124,224,211,.25)}
+.reef-exp-pill.pearl{background:rgba(253,224,71,.14);color:#fef08a;border-color:rgba(253,224,71,.35)}
+.reef-exp-acts{display:flex;align-items:center;gap:6px}
+.reef-exp-abtn,.reef-exp-close{border:1px solid rgba(124,224,211,.3);background:rgba(255,255,255,.1);color:#e6faf7;border-radius:999px;padding:4px 11px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.reef-exp-abtn:hover,.reef-exp-close:hover{background:rgba(255,255,255,.2)}
+.reef-exp-abtn.on{background:rgba(76,242,242,.26);border-color:#5eead4;color:#5eead4;box-shadow:0 0 12px rgba(94,234,212,.35)}
+.reef-exp-close{width:30px;height:30px;padding:0;justify-content:center;font-size:14px}
+.reef-exp-stage{flex:1 1 auto;min-height:0;position:relative;overflow:hidden;cursor:crosshair;background:#07182b}
+.reef-exp-stage svg{width:100%;height:100%;display:block;user-select:none}
+.reef-exp-stage .rf-sp{opacity:0;transition:opacity .7s ease,filter .4s ease;pointer-events:none}
+.reef-exp-stage .rf-sp.on{opacity:1;pointer-events:auto;cursor:pointer}
+.reef-exp-stage .rf-sp.on.rf-sway{transform-box:fill-box;transform-origin:bottom center;animation:rfSway 4.6s ease-in-out infinite}
+.reef-exp-stage .rf-sp.on.rf-swim{animation:rfSwim 5.6s ease-in-out infinite}
+.reef-exp-stage .rf-sp.on.rf-swim2{animation:rfSwim2 6.4s ease-in-out infinite}
+.reef-exp-stage .rf-sp.on.rf-float{animation:rfFloat 4.8s ease-in-out infinite}
+@keyframes reWhaleGlide{0%{transform:translateX(-160px) translateY(0)}25%{transform:translateX(210px) translateY(-12px)}50%{transform:translateX(560px) translateY(6px)}75%{transform:translateX(840px) translateY(-8px)}100%{transform:translateX(1060px) translateY(0)}}
+@keyframes reMermaidGlide{0%{transform:translateX(980px) translateY(0) scaleX(-1)}48%{transform:translateX(140px) translateY(-16px) scaleX(-1)}50%{transform:translateX(120px) translateY(-14px) scaleX(1)}98%{transform:translateX(960px) translateY(8px) scaleX(1)}100%{transform:translateX(980px) translateY(0) scaleX(-1)}}
+@keyframes reRayShimmer{0%,100%{opacity:.78}50%{opacity:1}}
+@keyframes reDustFloat{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(-14px);opacity:.9}}
+@keyframes rePelletDrop{0%{transform:translateY(0);opacity:1}80%{opacity:1}100%{transform:translateY(290px);opacity:0}}
+@keyframes reFxBubRise{0%{transform:translateY(0) scale(.6);opacity:.9}100%{transform:translateY(-130px) scale(1.25);opacity:0}}
+@keyframes reRippleOut{0%{r:6;opacity:.9}100%{r:34;opacity:0}}
+@keyframes reFishHappy{0%,100%{filter:drop-shadow(0 0 10px #fde047) drop-shadow(0 0 20px #5eead4) brightness(1.32)}50%{filter:drop-shadow(0 0 16px #f472b6) drop-shadow(0 0 28px #4cf2f2) brightness(1.52)}}
+.reef-exp-stage .re-whale{animation:reWhaleGlide 38s linear infinite}
+.reef-exp-stage .re-mermaid{animation:reMermaidGlide 32s ease-in-out infinite}
+.reef-exp-stage .re-rays{animation:reRayShimmer 6s ease-in-out infinite}
+.reef-exp-stage .re-dust{animation:reDustFloat 5.5s ease-in-out infinite}
+.reef-exp-stage .re-pellet{animation:rePelletDrop 2.6s ease-in forwards}
+.reef-exp-stage .re-fx-bub{animation:reFxBubRise 2.1s ease-out forwards}
+.reef-exp-stage .re-ripple{animation:reRippleOut 1.1s ease-out forwards}
+.reef-exp-stage.fish-glow .re-fish-grp,.reef-exp-stage.fish-glow .re-whale,.reef-exp-stage.fish-glow .re-mermaid{animation-timing-function:ease-in-out;filter:drop-shadow(0 0 12px #fde047) drop-shadow(0 0 22px #5eead4) brightness(1.38)}
+.reef-exp-stage.fish-glow .re-ambient-fish{animation:reFishHappy 1s ease-in-out infinite}
+.reef-exp-stage .re-pulse{filter:drop-shadow(0 0 14px #5eead4) drop-shadow(0 0 24px #f472b6) brightness(1.45)!important}
+.reef-modal.is-night .reef-exp-stage svg{filter:brightness(.76) contrast(1.18) saturate(1.35)}
+.reef-modal.is-night .re-coral.on,.reef-modal.is-night .re-fish-grp.on,.reef-modal.is-night .re-whale,.reef-modal.is-night .re-mermaid{filter:drop-shadow(0 0 10px rgba(94,234,212,.85)) drop-shadow(0 0 20px rgba(244,114,182,.45)) brightness(1.25)}
+.reef-exp-ft{display:flex;flex-direction:column;gap:8px;padding:10px 14px 12px;background:linear-gradient(180deg,rgba(7,22,38,.94),rgba(4,12,24,.98));border-top:1px solid rgba(124,224,211,.22)}
+.reef-exp-games{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.reef-game-btn{border:1px solid rgba(124,224,211,.36);background:rgba(255,255,255,.09);color:#e6faf7;border-radius:999px;padding:5px 13px;font:inherit;font-size:12.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:transform .12s,background .15s}
+.reef-game-btn:hover{background:rgba(76,242,242,.22)}
+.reef-game-btn:active{transform:scale(.95)}
+.reef-game-btn.feed{background:linear-gradient(90deg,rgba(251,146,60,.32),rgba(244,114,182,.32));border-color:rgba(253,224,71,.55);color:#fef08a}
+.reef-game-btn.feed:hover{background:linear-gradient(90deg,rgba(251,146,60,.48),rgba(244,114,182,.48))}
+.reef-exp-pvbar{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:3px 8px;border-radius:999px;background:rgba(76,242,242,.14);border:1px solid rgba(76,242,242,.35);font-size:12px;font-weight:700;color:#7ce0d3}
+.reef-exp-pvbar[hidden]{display:none}
+.reef-exp-pvbar button{width:22px;height:22px;border:0;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;cursor:pointer;font-weight:800;display:grid;place-items:center;padding:0}
+.reef-exp-coll{display:flex;flex-wrap:wrap;align-items:center;gap:5px;max-height:56px;overflow-y:auto}
+.reef-coll-chip{display:inline-flex;align-items:center;gap:4px;padding:2px 8px 2px 4px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(124,224,211,.24);font-size:11px;font-weight:600;color:#e2f8f5}
+.reef-coll-chip svg{width:17px;height:17px;display:block}
+.reef-coll-next{font-size:11px;color:#94a3b8;padding:2px 6px}
+.reef-coll-next.done{color:#fde047;font-weight:700}
+.reef-coll-empty{font-size:12px;color:#cbd5e1}
+
+/* 3. Neon-Green Sticky Notes + Corner Cartoon Mascots (noteNeonMascot) */
+:root{--stk-g:#d6fbe8;--stk-g-fg:#064e3b;--stk-g-bd:#34d399}
+:root[data-theme="dark"]{--stk-g:#0c3b38;--stk-g-fg:#a7f3d0;--stk-g-bd:rgba(94,234,212,.52)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--stk-g:#0c3b38;--stk-g-fg:#a7f3d0;--stk-g-bd:rgba(94,234,212,.52)}}
+.inote.sticky.st-g{background:var(--stk-g);color:var(--stk-g-fg);border:1px solid var(--stk-g-bd);box-shadow:0 2px 10px rgba(45,212,191,.18)}
+.hl-pop .note-in.sticky.st-g{background:var(--stk-g);color:var(--stk-g-fg);border-color:var(--stk-g-bd)}
+.inote.sticky.has-mascot{position:relative;padding:7px 46px 8px 11px;min-height:38px}
+.inote-mascot{position:absolute;right:5px;bottom:2px;width:34px;height:34px;pointer-events:none;user-select:none;display:block;transition:transform .2s ease}
+.inote-mascot svg{width:100%;height:100%;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.22))}
+.inote.sticky.has-mascot:hover .inote-mascot{transform:translateY(-2px) scale(1.06)}
+.hl-pop .note-kind{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.note-col-pick{display:inline-flex;gap:5px;align-items:center}
+.nc-sw{border:1.5px solid var(--line);border-radius:999px;padding:2px 9px;font:inherit;font-size:11.5px;font-weight:700;cursor:pointer;line-height:1.35}
+.nc-sw.nc-y{background:var(--stk);color:var(--stk-fg)}
+.nc-sw.nc-g{background:var(--stk-g);color:var(--stk-g-fg);border-color:var(--stk-g-bd)}
+.nc-sw.on{outline:2px solid var(--accent);outline-offset:1px}
+
+/* 4. Floating Human Anatomy Infographic on Left Reading Margin (anatomySidebarInfographic) */
+.anat-host[hidden]{display:none}
+.anat-dock{position:fixed;left:calc(var(--side) + 12px);top:53%;transform:translateY(-50%);width:116px;z-index:22;display:flex;flex-direction:column;align-items:center;border-radius:16px;padding:7px 6px 8px;background:color-mix(in srgb,var(--surface) 76%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid color-mix(in srgb,var(--accent) 28%,var(--line));box-shadow:0 12px 30px rgba(4,12,24,.28)}
+body.focus .anat-dock{left:14px}
+.anat-dock[hidden]{display:none}
+.anat-hd{width:100%;display:flex;align-items:center;justify-content:space-between;gap:4px;margin-bottom:2px}
+.anat-sys{font-size:10px;font-weight:800;color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.01em}
+.anat-hide{width:18px;height:18px;border:0;border-radius:5px;background:color-mix(in srgb,var(--surface2) 85%,transparent);color:var(--muted);font-size:12px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0}
+.anat-hide:hover{color:var(--fg);background:var(--surface2)}
+.anat-stage{width:100%;line-height:0}
+.anat-stage svg{width:100%;height:auto;display:block;overflow:visible}
+.anat-ft{font-size:9.5px;font-weight:600;color:var(--muted);margin-top:3px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.anat-tab{position:fixed;left:calc(var(--side) + 4px);top:53%;transform:translateY(-50%);z-index:22;display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 5px;border-radius:0 10px 10px 0;border:1px solid color-mix(in srgb,var(--accent) 36%,var(--line));border-left:0;background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--accent);font-size:12px;font-weight:700;cursor:pointer;box-shadow:4px 4px 16px rgba(0,0,0,.22)}
+body.focus .anat-tab{left:0}
+.anat-tab[hidden]{display:none}
+@keyframes anatFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes anatShadow{0%,100%{transform:scaleX(1);opacity:.88}50%{transform:scaleX(.84);opacity:.55}}
+@keyframes anatOrganGlow{0%,100%{filter:drop-shadow(0 0 5px #5eead4) drop-shadow(0 0 12px #38bdf8) brightness(1.3)}50%{filter:drop-shadow(0 0 9px #fde047) drop-shadow(0 0 18px #5eead4) brightness(1.55)}}
+.anat-body{animation:anatFloat 3.6s ease-in-out infinite}
+.anat-shadow,.anat-ring{transform-box:fill-box;transform-origin:center;animation:anatShadow 3.6s ease-in-out infinite}
+.anat-stage .an-org{opacity:.28;transition:opacity .35s ease,filter .35s ease}
+.anat-stage .an-org[data-org="skin"]{opacity:.88}
+.anat-stage .an-org[data-org="skin"].lit path,.anat-stage .an-org[data-org="skin"].lit ellipse{stroke:#5eead4;stroke-opacity:1;stroke-width:2}
+.anat-stage .an-org.lit{opacity:1;animation:anatOrganGlow 2.4s ease-in-out infinite}
+@media (max-width:1279px){body:not(.focus) .anat-host{display:none!important}}
+@media (max-width:1039px){.anat-host{display:none!important}}
