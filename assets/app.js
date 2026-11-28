@@ -37,37 +37,50 @@
   function chNum(id) { const m = /\d+/.exec(id || ''); return m ? Number(m[0]) : Infinity; }
   // บทที่โหลดแล้ว เรียงตามลำดับใน INDEX (ไม่ขึ้นกับว่าไฟล์ไหนโหลดเสร็จก่อน)
   function loadedCH() { return (INDEX || []).map(c => CH[c.id]).filter(Boolean); }
+  const CH_PROM = {};
+  let _globalAbbrProm = null;
   async function loadChapter(id) {
     if (CH[id]) return CH[id];
+    const fast = typeof draftOn === 'function' && draftOn('fastSidebarNav');
+    if (fast && CH_PROM[id]) return CH_PROM[id];
     const meta = INDEX.find(c => c.id === id);
     if (!meta || !meta.ready) return null;
-    const j = u => fetch(u, { cache: 'no-cache' }).then(r => r.ok ? r.json() : {}).catch(() => ({}));
-    const [md, ex, ga, ca, nu, fl] = await Promise.all([
-      fetch(`data/${id}.md`, { cache: 'no-cache' }).then(r => r.text()),
-      j(`data/${id}-exams.json`), j('data/abbr.json'), j(`data/${id}-abbr.json`), j(`data/${id}-numbers.json`), j(`data/${id}-flows.json`)
-    ]);
-    const ch = parseChapter(md, meta);
-    ch.abbr = Object.assign({}, ga, ca);
-    ch.numbers = nu.items || [];
-    ch.flows = fl.flows || [];
-    // flowchart ในกล่อง: วางตรง "::: flow <id>" ถ้าไม่มีจุดวางก็ต่อท้ายกล่อง
-    for (const s of ch.sections) {
-      for (const f of ch.flows.filter(x => +x.box === s.no)) {
-        const html = flowHTML(f, `${id}/${s.no}|flow:${f.id}`, `<a class="fl-all" href="#/flows?ch=${id}">ดูทุก flowchart ›</a>`);
-        const slot = `<div class="flow-slot" data-f="${f.id}"></div>`;
-        s.html = s.html.includes(slot) ? s.html.replace(slot, html) : s.html + html;
+    const job = (async () => {
+      const fOpt = fast ? undefined : { cache: 'no-cache' };
+      const j = u => fetch(u, fOpt).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+      const gaP = fast ? (_globalAbbrProm || (_globalAbbrProm = j('data/abbr.json'))) : j('data/abbr.json');
+      const [md, ex, ga, ca, nu, fl] = await Promise.all([
+        fetch(`data/${id}.md`, fOpt).then(r => r.text()),
+        j(`data/${id}-exams.json`), gaP, j(`data/${id}-abbr.json`), j(`data/${id}-numbers.json`), j(`data/${id}-flows.json`)
+      ]);
+      const ch = parseChapter(md, meta);
+      ch.abbr = Object.assign({}, ga, ca);
+      ch.numbers = nu.items || [];
+      ch.flows = fl.flows || [];
+      // flowchart ในกล่อง: วางตรง "::: flow <id>" ถ้าไม่มีจุดวางก็ต่อท้ายกล่อง
+      for (const s of ch.sections) {
+        for (const f of ch.flows.filter(x => +x.box === s.no)) {
+          const html = flowHTML(f, `${id}/${s.no}|flow:${f.id}`, `<a class="fl-all" href="#/flows?ch=${id}">ดูทุก flowchart ›</a>`);
+          const slot = `<div class="flow-slot" data-f="${f.id}"></div>`;
+          s.html = s.html.includes(slot) ? s.html.replace(slot, html) : s.html + html;
+        }
+        s.html = s.html.replace(/<div class="flow-slot" data-f="[^"]*"><\/div>/g, '');
       }
-      s.html = s.html.replace(/<div class="flow-slot" data-f="[^"]*"><\/div>/g, '');
+      ch.exams = ex.exams || ex;
+      for (const s of ch.sections) s.examIds = [];
+      for (const [qid, q] of Object.entries(ch.exams)) {
+        const s = ch.sections.find(x => x.no === Number(q.box));
+        if (s) s.examIds.push(qid);
+      }
+      for (const s of ch.sections) s.examIds.sort(byYearDesc);
+      CH[id] = ch;
+      return ch;
+    })();
+    if (fast) {
+      CH_PROM[id] = job;
+      job.finally(() => { delete CH_PROM[id]; });
     }
-    ch.exams = ex.exams || ex;
-    for (const s of ch.sections) s.examIds = [];
-    for (const [qid, q] of Object.entries(ch.exams)) {
-      const s = ch.sections.find(x => x.no === Number(q.box));
-      if (s) s.examIds.push(qid);
-    }
-    for (const s of ch.sections) s.examIds.sort(byYearDesc);
-    CH[id] = ch;
-    return ch;
+    return job;
   }
   async function loadAll() { await loadIndex(); return Promise.all(INDEX.filter(c => c.ready).map(c => loadChapter(c.id))); }
   function yearNum(id) { const y = parseFloat(id.split('/')[0]); return isNaN(y) ? 0 : y; }
@@ -3128,7 +3141,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v85</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v86</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3366,8 +3379,16 @@
     <details class="panel legend-panel"><summary>สัญลักษณ์ในเนื้อหา</summary><div class="card think" style="margin:8px 0"><div class="lbl">🤔 หยุดคิดก่อน</div>คำถามสั้นให้ลองตอบในใจก่อนกดดูเฉลย</div><div class="card trap" style="margin:8px 0"><div class="lbl">⚠️ กับดักข้อสอบ</div>จุดที่ข้อสอบชอบหลอก</div><div class="card note" style="margin:8px 0"><div class="lbl">📌 อาจารย์เน้น</div>สิ่งที่อาจารย์ติวย้ำ</div><div class="card hint" style="margin:8px 0"><div class="lbl">🎯 อาจารย์บอกข้อสอบ</div>ข้อที่อาจารย์ผู้ออกข้อสอบยกมาหรือบอกว่าออก กด ▶ เวลา เพื่อเปิดคลิปตรงจุดนั้น</div><p style="margin:8px 0 0"><span class="tag e">ออกสอบ</span> <span class="tag s">เสริม</span> นอกคลิป <span class="tag x">ข้ามบท</span></p><div class="content legend-row"><span><b>คำสำคัญ</b> ไฮไลต์เหลือง</span><span class="hl-exam" style="display:inline-block;background:var(--hl-exam);border-left:3px solid var(--exam);padding:0 8px">ประโยคที่เคยออกสอบ</span><span><mark class="user-hl c-y">ไฮไลต์</mark> <mark class="user-hl c-g">ของ</mark> <mark class="user-hl c-b">ฉัน</mark> <mark class="user-hl c-p">มี</mark> <mark class="user-hl c-v">6</mark> <mark class="user-hl c-r">สี</mark> เลือกข้อความเอง</span></div><p class="bar-label">ปิดไฮไลต์อัตโนมัติได้ที่เมนูด้านข้าง</p></details>`;
     bindPlan();
   }
-  async function vChapter(id) {
-    await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
+  let _routeSeq = 0;
+  async function vChapter(id, seq) {
+    await loadIndex();
+    if (draftOn('fastSidebarNav') && !CH[id]) {
+      const m = INDEX.find(c => c.id === id);
+      view.innerHTML = `<p class="loading">กำลังโหลด ${esc(m ? m.title : id)}…</p>`;
+    }
+    const ch = await loadChapter(id);
+    if (draftOn('fastSidebarNav') && seq != null && seq !== _routeSeq) return;
+    if (!ch) return vHome();
     renderSidebar(id);
     const p = chProgress(ch);
     let h = `<div class="crumb"><a href="#/">หน้าแรก</a></div><div class="hero mv-ch-hero">${uiStyle() === 'monument' ? mvSideCardBG(id) : ''}<h1>${esc(ch.title)}</h1><p>${esc(ch.source || '')}</p></div>
@@ -3383,8 +3404,15 @@
     }
     view.innerHTML = h;
   }
-  async function vSection(id, no) {
-    await loadIndex(); const ch = await loadChapter(id); if (!ch) return vHome();
+  async function vSection(id, no, seq) {
+    await loadIndex();
+    if (draftOn('fastSidebarNav') && !CH[id]) {
+      const m = INDEX.find(c => c.id === id);
+      view.innerHTML = `<p class="loading">กำลังโหลด ${esc(m ? m.title : id)}…</p>`;
+    }
+    const ch = await loadChapter(id);
+    if (draftOn('fastSidebarNav') && seq != null && seq !== _routeSeq) return;
+    if (!ch) return vHome();
     const idx = ch.sections.findIndex(s => s.no === no);
     if (idx < 0) return vChapter(id);
     const s = ch.sections[idx], prev = ch.sections[idx - 1], next = ch.sections[idx + 1];
@@ -4560,6 +4588,7 @@
 
   /* ---------- router ---------- */
   async function route() {
+    const seq = ++_routeSeq;
     stopExamBreakGame();
     stopMockTimer();
     closeNav();
@@ -4589,8 +4618,8 @@
       if (parts[0] === 'guide') return vGuide();
       if (parts[0] === 'backup') return vBackup();
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
-      if (parts[1]) return vSection(parts[0], parseInt(parts[1]));
-      return vChapter(parts[0]);
+      if (parts[1]) return vSection(parts[0], parseInt(parts[1]), seq);
+      return vChapter(parts[0], seq);
     } catch (err) {
       console.error(err);
       view.innerHTML = `<p class="empty">โหลดข้อมูลไม่สำเร็จ (${esc(err.message)})<br>ถ้าเปิดไฟล์จากเครื่องโดยตรง ให้เปิดผ่านลิงก์เว็บแทน</p>`;
@@ -4630,7 +4659,23 @@
   });
   $('#menuBtn').onclick = () => document.body.classList.toggle('nav-open');
   $('#scrim').onclick = closeNav;
+  sidebar.addEventListener('pointerover', e => {
+    if (!draftOn('fastSidebarNav') || !INDEX) return;
+    const card = e.target.closest('.side-ch-mz');
+    if (!card) return;
+    const a = card.querySelector('a[href^="#/"]');
+    if (!a) return;
+    const cid = a.getAttribute('href').replace(/^#\/?/, '').split('/')[0];
+    if (cid && !CH[cid]) loadChapter(cid).catch(() => {});
+  });
   sidebar.addEventListener('click', e => {
+    if (draftOn('fastSidebarNav')) {
+      const card = e.target.closest('.side-ch-mz');
+      if (card && !e.target.closest('a,button,summary')) {
+        const a = card.querySelector('a[href^="#/"]');
+        if (a) { e.preventDefault(); location.hash = a.getAttribute('href'); return; }
+      }
+    }
     if (e.target.closest('#mvMapToggle')) {
       e.preventDefault(); S.mvMapHide = !S.mvMapHide; save();
       const m = location.hash.match(/^#\/([^/]+)(?:\/(\d+))?/);
@@ -4689,6 +4734,13 @@
       area: 'Widget จับเวลา + กรอบแนวตั้งด้านขวา',
       desc: 'พิมพ์กำหนดเวลาอ่านเองได้ (นาที) บันทึกเวลาอ่านสะสมรายวัน และแสดงกรอบปราสาทใต้น้ำแนวตั้งด้านขวาที่มีปะการัง/สัตว์ทะเลค่อย ๆ เพิ่มขึ้นทีละชนิดทุก 30 นาที (กดหุบเก็บได้)',
       added: 'v84'
+    },
+    {
+      key: 'fastSidebarNav',
+      title: 'กดเปลี่ยนบทจากแถบข้างติดทันที + โหลดไวขึ้น',
+      area: 'แถบสารบัญด้านข้าง (Sidebar)',
+      desc: 'กดได้ทั้งการ์ดบท (รวมถึงตรงแถบความคืบหน้า) พรีโหลดบทล่วงหน้าตอนชี้เมาส์ ตัดการโหลดซ้ำ และแสดงสถานะกำลังโหลดทันที',
+      added: 'v86'
     }
   ];
   const _onOwnerChange = [];

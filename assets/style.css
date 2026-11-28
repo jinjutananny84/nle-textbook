@@ -1118,4 +1118,5 @@ body.has-readbar .reef-dock{top:96px;bottom:212px}
 .reef-scene .rf-sp.on.rf-swim2{animation:rfSwim2 6s ease-in-out infinite}
 .reef-scene .rf-sp.on.rf-float{animation:rfFloat 4.6s ease-in-out infinite}
 .reef-scene .rf-bub{animation:rfBub 5.4s linear infinite}
+:root.owner-preview .side-ch-mz{cursor:pointer}
 @media print{.reef-host{display:none}}
