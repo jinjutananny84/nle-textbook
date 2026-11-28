@@ -2263,7 +2263,8 @@
     rocket: '<path d="M12 2.5c3.5 2.5 5 6.5 5 11l-5 3-5-3c0-4.5 1.5-8.5 5-11z"/><path d="M7 13.5 4 16.5v3l3-1.5M17 13.5l3 3v3l-3-1.5M10 18.5l2 3 2-3"/><circle cx="12" cy="9.5" r="1.5"/>',
     globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/>',
     tag: '<path d="M3.5 11.5V4h7.5l9.5 9.5-7.5 7.5z"/><circle cx="8" cy="8.5" r="1.3" fill="currentColor" stroke="none"/>',
-    link: '<path d="M10 14a4.5 4.5 0 0 1 0-6.4l2.2-2.2a4.5 4.5 0 1 1 6.4 6.4L17 13.4M14 10a4.5 4.5 0 0 1 0 6.4l-2.2 2.2a4.5 4.5 0 1 1-6.4-6.4L7 10.6"/>'
+    link: '<path d="M10 14a4.5 4.5 0 0 1 0-6.4l2.2-2.2a4.5 4.5 0 1 1 6.4 6.4L17 13.4M14 10a4.5 4.5 0 0 1 0 6.4l-2.2 2.2a4.5 4.5 0 1 1-6.4-6.4L7 10.6"/>',
+    coral: '<path d="M12 21V9M12 14l-5-4V6M12 12l5-4V5M9 17l-4-2M15 16l4-2M6 21h12"/>'
   };
   /* ---------- ไอคอนสถาปัตยกรรมเรขาคณิตสไตล์ Monument Valley ---------- */
   const ICON_MV = {
@@ -2322,9 +2323,10 @@
     rocket: '<polygon points="12,2.5 16.5,8.5 16.5,15.5 12,18 7.5,15.5 7.5,8.5" fill="currentColor" fill-opacity=".14"/><polygon points="12,2.5 16.5,8.5 16.5,15.5 12,18 7.5,15.5 7.5,8.5"/><path d="M7.5 13.5 4 17v2.5l3.5-1.5M16.5 13.5 20 17v2.5l-3.5-1.5M12 18v3.5"/><polygon points="12,8 13.6,10 12,12 10.4,10" fill="currentColor" stroke="none"/>',
     globe: '<polygon points="12,2.5 21.5,12 12,21.5 2.5,12" fill="currentColor" fill-opacity=".1"/><polygon points="12,2.5 21.5,12 12,21.5 2.5,12"/><path d="M2.5 12h19M12 2.5v19"/><polygon points="12,7 17,12 12,17 7,12"/>',
     tag: '<polygon points="3.5,4 11,4 20.5,13.5 13,21 3.5,11.5" fill="currentColor" fill-opacity=".12"/><polygon points="3.5,4 11,4 20.5,13.5 13,21 3.5,11.5"/><polygon points="8,7.2 9.3,8.5 8,9.8 6.7,8.5" fill="currentColor" stroke="none"/>',
-    link: '<polygon points="11.5,6.5 15.5,2.5 21.5,8.5 17.5,12.5" fill="currentColor" fill-opacity=".12"/><polygon points="11.5,6.5 15.5,2.5 21.5,8.5 17.5,12.5"/><polygon points="6.5,11.5 2.5,15.5 8.5,21.5 12.5,17.5" fill="currentColor" fill-opacity=".12"/><polygon points="6.5,11.5 2.5,15.5 8.5,21.5 12.5,17.5"/><path d="m9 15 6-6"/>'
+    link: '<polygon points="11.5,6.5 15.5,2.5 21.5,8.5 17.5,12.5" fill="currentColor" fill-opacity=".12"/><polygon points="11.5,6.5 15.5,2.5 21.5,8.5 17.5,12.5"/><polygon points="6.5,11.5 2.5,15.5 8.5,21.5 12.5,17.5" fill="currentColor" fill-opacity=".12"/><polygon points="6.5,11.5 2.5,15.5 8.5,21.5 12.5,17.5"/><path d="m9 15 6-6"/>',
+    coral: '<polygon points="12,18 18,21 6,21" fill="currentColor" fill-opacity=".16"/><path d="M12 20V8l-2-3M12 14l-4.5-3.5V6.5M12 12l4.5-3.5V5M7.5 10.5l-2.5-.5M16.5 8.5l2.5-.5M5 21h14"/>'
   };
-  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '📍': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back', '✨': 'spark', '🎬': 'clip', '🎯': 'target', '📋': 'clipb', '⚙': 'gear', '✂': 'crop', '🎨': 'palette', '📲': 'phone', '📥': 'dl', '🗂': 'folder', '📚': 'stack', '🧰': 'tools', '💡': 'bulb', '✏': 'edit', '📡': 'radar', '🏛': 'temple', '👾': 'pixel', '🔐': 'lock', '🔒': 'lock', '👁': 'eye', '🔄': 'sync', '🗓': 'sched', '📘': 'codex', '🦠': 'bug', '👤': 'user', '👑': 'crown', '🚀': 'rocket', '🌐': 'globe', '🏷': 'tag', '🔗': 'link' };
+  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '📍': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back', '✨': 'spark', '🎬': 'clip', '🎯': 'target', '📋': 'clipb', '⚙': 'gear', '✂': 'crop', '🎨': 'palette', '📲': 'phone', '📥': 'dl', '🗂': 'folder', '📚': 'stack', '🧰': 'tools', '💡': 'bulb', '✏': 'edit', '📡': 'radar', '🏛': 'temple', '👾': 'pixel', '🔐': 'lock', '🔒': 'lock', '👁': 'eye', '🔄': 'sync', '🗓': 'sched', '📘': 'codex', '🦠': 'bug', '👤': 'user', '👑': 'crown', '🚀': 'rocket', '🌐': 'globe', '🏷': 'tag', '🔗': 'link', '🪸': 'coral' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => {
     const mv = uiStyle() === 'monument' && ICON_MV[n];
@@ -2688,6 +2690,7 @@
   // ช่องค้นหาในแอปด้วย Gemini Streaming: แก้คำถามให้เสร็จแล้วค่อยกดถาม + ลากคลุมบางส่วนของคำตอบเซฟเป็น Sticky ได้ทันที
   function openSearch(onNote) {
     pop.dataset.mode = 'note'; pop.classList.add('writing', 'ai-pop');
+    pop.classList.toggle('ai-pop-fit', draftOn('aiPopViewportFit'));
     const w = Math.min(540, document.documentElement.clientWidth - 16);
     const curLeft = parseFloat(pop.style.left) || 8;
     pop.style.left = Math.max(8, Math.min(curLeft, document.documentElement.clientWidth - w - 8)) + 'px';
@@ -2810,7 +2813,7 @@
     });
   }
   function showPalette(rect, onColor, onErase, onNote, curNote) {
-    pop.classList.remove('writing', 'ai-pop');
+    pop.classList.remove('writing', 'ai-pop', 'ai-pop-fit');
     const noNote = pop.dataset.inNote === '1';
     // แถว 1 สีไฮไลต์ + ยางลบ · แถว 2 สีตัวอักษร + ตัวหนา/ขีดเส้นใต้ · แถว 3 โน้ต รูป keyword ค้นหา
     pop.innerHTML = `<div class="row">${['y', 'g', 'b', 'p', 'v', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>${noNote ? '' : '<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button>'}</div>`
@@ -2831,7 +2834,7 @@
   // กล่องพิมพ์โน้ตในแถบเดียวกัน (ถ้าข้อความยาวจาก Gemini จะขยายกล่องให้ตัด/แก้สะดวก)
   function openNote(onNote, cur, sticky) {
     const isLong = (cur || '').length > 140;
-    pop.dataset.mode = 'note'; pop.classList.toggle('ai-pop', isLong); pop.classList.add('writing');
+    pop.dataset.mode = 'note'; pop.classList.toggle('ai-pop', isLong); pop.classList.toggle('ai-pop-fit', isLong && draftOn('aiPopViewportFit')); pop.classList.add('writing');
     if (isLong) {
       const w = Math.min(540, document.documentElement.clientWidth - 16);
       const curLeft = parseFloat(pop.style.left) || 8;
@@ -2909,7 +2912,7 @@
     if (!S.figw) S.figw = {};
     art.querySelectorAll('figure.fig').forEach((f, i) => { const im = f.querySelector('img'); f.dataset.fk = k + '|' + (im ? im.getAttribute('src').split('/').pop() : 'fig' + i); f.title = 'แตะเพื่อปรับขนาดรูป'; figSize(f); });
   }
-  function hidePop() { pop.hidden = true; pop.dataset.mode = ''; pop.dataset.inNote = ''; pop.classList.remove('writing', 'ai-pop'); }
+  function hidePop() { pop.hidden = true; pop.dataset.mode = ''; pop.dataset.inNote = ''; pop.classList.remove('writing', 'ai-pop', 'ai-pop-fit'); }
   function selOffsets(z, r) {
     let s = 0;
     for (const n of zoneNodes(z)) {
@@ -3125,7 +3128,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v83</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v84</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4672,6 +4675,20 @@
       area: 'Widget จับเวลา (มุมขวาล่าง)',
       desc: 'เปลี่ยนปุ่มจับเวลาตอนย่อจากวงกลม เป็นเขาวงกตสี่เหลี่ยม Monument Valley ที่มีตัวน้อง Ida เดินตามเวลาเหมือนหน้าจับเวลาเต็ม',
       added: 'v81'
+    },
+    {
+      key: 'aiPopViewportFit',
+      title: 'หน้าต่างถาม Gemini + ปุ่ม Sticky พอดีจอไม่ต้องเลื่อน',
+      area: 'ป๊อปอัปถาม Gemini (เมื่อลากคลุมคำ)',
+      desc: 'จัดหน้าต่างถาม Gemini ให้ลอยกลางจอพอดีความสูง MacBook และตรึงปุ่มลัด Sticky Note ไว้ด้านล่างเสมอ ไม่ว่าจะคลุมคำอยู่ล่างสุดของหน้าก็ไม่ต้องเลื่อนจอลง',
+      added: 'v84'
+    },
+    {
+      key: 'underwaterReefTimer',
+      title: 'จับเวลาแบบกำหนดเอง + Infographic ปราสาทใต้น้ำ',
+      area: 'Widget จับเวลา + กรอบแนวตั้งด้านขวา',
+      desc: 'พิมพ์กำหนดเวลาอ่านเองได้ (นาที) บันทึกเวลาอ่านสะสมรายวัน และแสดงกรอบปราสาทใต้น้ำแนวตั้งด้านขวาที่มีปะการัง/สัตว์ทะเลค่อย ๆ เพิ่มขึ้นทีละชนิดทุก 30 นาที (กดหุบเก็บได้)',
+      added: 'v84'
     }
   ];
   const _onOwnerChange = [];
@@ -4835,6 +4852,7 @@
         document.documentElement.classList.toggle('no-hl', !!S.hlOff);
         document.body.classList.toggle('focus', !!S.focus);
         syncTheme(); applyUiStyle();
+        notifyOwnerUI();
         route();
       },
       hasData,
@@ -4943,10 +4961,190 @@
         <div class="pomo-ctl">
           <div class="pomo-toprow"><div class="pomo-time" id="pmTime">25:00</div><div class="pomo-stat" id="pmStat">พร้อมออกเดินทาง</div></div>
           <div class="pomo-presets"><button type="button" data-pm="25" class="on">25/5</button><button type="button" data-pm="50">50/10</button><button type="button" data-pm="5">พัก 5 น.</button></div>
+          <div class="pomo-custom" id="pmCustomRow" hidden><input type="number" id="pmCustomIn" min="1" max="240" value="30" inputmode="numeric" aria-label="กำหนดเวลาอ่าน (นาที)"><span>นาที</span><button type="button" id="pmCustomSet">ตั้งเวลา</button></div>
           <div class="pomo-btns"><button type="button" class="pm-go" id="pmGo">▶ เริ่มจับเวลา</button><button type="button" id="pmReset" title="รีเซ็ต">↺</button></div>
         </div>
       </div>`;
     document.body.appendChild(wrap);
+    let isBreak = false, saveTick = 0;
+    const localDay = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+    const getTodaySec = () => ((S.pomoLog && S.pomoLog[localDay()]) || 0);
+    const fmtHM = sec => {
+      const m = Math.floor(sec / 60), h = Math.floor(m / 60), rm = m % 60;
+      return h ? `${h} ชม. ${rm} น.` : `${rm} น.`;
+    };
+
+    /* 🪸 Underwater Monument Valley Castle Infographic (แนวตั้งด้านขวา · เพิ่มปะการัง/สัตว์ทะเลทุก 30 นาที) */
+    const REEF_SPECIES = [
+      { name: 'Staghorn Coral (ปะการังเขากวาง)', min: 30 },
+      { name: 'Clownfish (ปลาการ์ตูน)', min: 60 },
+      { name: 'Carnation Coral (ปะการังอ่อนส้ม)', min: 90 },
+      { name: 'Blue Tang (ปลาขี้ตังเบ็ดฟ้า)', min: 120 },
+      { name: 'Cauliflower Coral (ปะการังดอกกะหล่ำ)', min: 150 },
+      { name: 'Sun Coral (ปะการังถ้วยส้มเรืองแสง)', min: 180 },
+      { name: 'Moon Jellyfish (แมงกะพรุนเรืองแสง)', min: 210 },
+      { name: 'Sea Fan (กัลปังหาพัดแดง)', min: 240 },
+      { name: 'Brain Coral (ปะการังสมองมรกต)', min: 270 },
+      { name: 'Butterflyfish (ปลาผีเสื้อเหลือง)', min: 300 },
+      { name: 'Sea Anemone (ดอกไม้ทะเลมิ้นต์)', min: 330 },
+      { name: 'Sea Turtle (เต่าทะเลน้อย)', min: 360 },
+      { name: 'Organ Pipe Coral (ปะการังออร์แกน)', min: 390 },
+      { name: 'Manta Ray (ปลากระเบนราหู)', min: 420 },
+      { name: 'Elkhorn Coral (ปะการังเขากวางใหญ่)', min: 450 },
+      { name: 'Crystal Lotus & Whale (บัวคริสตัล + วาฬ)', min: 480 }
+    ];
+    let lastUnlocked = Math.min(REEF_SPECIES.length, Math.floor(getTodaySec() / 1800));
+    const reefHost = document.createElement('aside');
+    reefHost.className = 'reef-host';
+    reefHost.setAttribute('aria-label', 'Infographic ปราสาทใต้น้ำบันทึกเวลาอ่านรายวัน');
+    reefHost.innerHTML = `<button type="button" class="reef-tab" id="reefTab" title="เปิดกรอบปราสาทใต้น้ำ" hidden><span class="reef-tab-arr">‹</span><span class="reef-tab-ic">🪸</span><span class="reef-tab-m" id="reefTabM">0 น.</span></button>
+      <div class="reef-dock" id="reefDock">
+        <div class="reef-hd">
+          <div class="reef-hd-l"><span class="reef-hd-t" id="reefToday">วันนี้ 0 น.</span><span class="reef-hd-c" id="reefCount">0/16 ชนิด</span></div>
+          <button type="button" class="reef-hide" id="reefHide" title="หุบเก็บกรอบปราสาทใต้น้ำ">›</button>
+        </div>
+        <div class="reef-scene">
+          <svg viewBox="0 0 180 460" aria-hidden="true">
+            <defs>
+              <linearGradient id="rfBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2b8ea8"/><stop offset="22%" stop-color="#1a6382"/><stop offset="56%" stop-color="#113b5c"/><stop offset="86%" stop-color="#0b233d"/><stop offset="100%" stop-color="#071629"/></linearGradient>
+              <linearGradient id="rfRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5f3fc" stop-opacity=".28"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/></linearGradient>
+              <linearGradient id="rfSand" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fce0b8"/><stop offset="100%" stop-color="#e3b685"/></linearGradient>
+              <linearGradient id="rfWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5a9bc4"/><stop offset="100%" stop-color="#2d5f8a"/></linearGradient>
+              <linearGradient id="rfSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8be90"/><stop offset="100%" stop-color="#c99568"/></linearGradient>
+              <radialGradient id="rfGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7ce0d3" stop-opacity=".65"/><stop offset="100%" stop-color="#7ce0d3" stop-opacity="0"/></radialGradient>
+            </defs>
+            <rect width="180" height="460" fill="url(#rfBg)"/>
+            <polygon points="18,0 56,0 92,220 42,220" fill="url(#rfRay)"/>
+            <polygon points="86,0 132,0 158,240 112,240" fill="url(#rfRay)"/>
+            <path d="M0 16 Q45 8 90 16 T180 16" fill="none" stroke="#99f6e4" stroke-opacity=".28" stroke-width="1.5"/>
+            <g class="rf-bubbles" fill="none" stroke="#a5f3fc" stroke-opacity=".45" stroke-width="1">
+              <circle class="rf-bub" cx="26" cy="360" r="2.2"/><circle class="rf-bub" cx="152" cy="330" r="2.8" style="animation-delay:1.4s"/>
+              <circle class="rf-bub" cx="42" cy="240" r="1.8" style="animation-delay:2.6s"/><circle class="rf-bub" cx="144" cy="190" r="2.2" style="animation-delay:.7s"/>
+              <circle class="rf-bub" cx="90" cy="270" r="1.6" style="animation-delay:3.2s"/>
+            </g>
+            <!-- พื้นทรายใต้ทะเล -->
+            <path d="M0 398 Q48 386 90 396 T180 392 L180 460 L0 460 Z" fill="#13304d"/>
+            <path d="M0 416 Q60 404 115 414 T180 410 L180 460 L0 460 Z" fill="#0d2238"/>
+            <!-- ปราสาทใต้น้ำสไตล์ Monument Valley (อิงทรงหอคอยซุ้มโค้งสูง) -->
+            <g class="rf-castle">
+              <!-- เงาสะท้อนฐาน -->
+              <ellipse cx="90" cy="408" rx="64" ry="12" fill="#04101e" opacity=".48"/>
+              <!-- ฐานล่างและบันได -->
+              <polygon points="90,348 144,374 90,400 36,374" fill="#2c5f8a"/>
+              <polygon points="36,374 90,400 90,414 36,388" fill="#1e4466"/>
+              <polygon points="90,400 144,374 144,388 90,414" fill="#14324d"/>
+              <!-- ซุ้มโค้งชั้นล่าง -->
+              <polygon points="48,302 90,322 90,374 48,354" fill="url(#rfWall)"/>
+              <polygon points="90,322 132,302 132,354 90,374" fill="url(#rfSide)"/>
+              <path d="M62 360 v-22 a8 8 0 0 1 16 0 v22 Z" fill="#0d263d"/>
+              <path d="M102 360 v-22 a8 8 0 0 1 16 0 v22 Z" fill="#1a3b57"/>
+              <!-- ระเบียงกลาง + บันไดเฉียงสองฝั่ง -->
+              <polygon points="90,262 148,290 90,318 32,290" fill="url(#rfSand)"/>
+              <polygon points="32,290 90,318 90,330 32,302" fill="url(#rfWall)"/>
+              <polygon points="90,318 148,290 148,302 90,330" fill="url(#rfSide)"/>
+              <!-- เสาสองข้างหอคอยสูง -->
+              <polygon points="50,152 66,160 66,278 50,270" fill="url(#rfWall)"/>
+              <polygon points="66,160 76,155 76,273 66,278" fill="#1f4d73"/>
+              <polygon points="114,155 124,160 124,278 114,273" fill="url(#rfWall)"/>
+              <polygon points="124,160 134,152 134,270 124,278" fill="url(#rfSide)"/>
+              <!-- ช่องซุ้มกลางโปร่ง + ต้นไม้ใต้น้ำเรืองแสง -->
+              <circle cx="92" cy="242" r="24" fill="url(#rfGlow)"/>
+              <path d="M92 276 Q92 256 84 246 M92 262 Q100 250 105 244 M92 254 Q88 242 93 234" fill="none" stroke="#c084fc" stroke-width="2.2" stroke-linecap="round"/>
+              <!-- ระเบียงยอด + สระบัว -->
+              <polygon points="90,114 136,136 90,158 44,136" fill="url(#rfSand)"/>
+              <polygon points="44,136 90,158 90,170 44,148" fill="url(#rfWall)"/>
+              <polygon points="90,158 136,136 136,148 90,170" fill="url(#rfSide)"/>
+              <polygon points="90,124 114,136 90,148 66,136" fill="#4cc9c8" opacity=".82"/>
+              <!-- ศาลาโดมสีปะการังยอดปราสาท -->
+              <line x1="82" y1="118" x2="82" y2="96" stroke="#f5cfa0" stroke-width="2"/>
+              <line x1="98" y1="118" x2="98" y2="96" stroke="#e3b685" stroke-width="2"/>
+              <path d="M77 96 Q90 70 103 96 Z" fill="#e85a6b"/>
+              <path d="M90 78 Q97 86 103 96 L90 98 Z" fill="#c23b51"/>
+              <line x1="90" y1="74" x2="90" y2="66" stroke="#ffd97d" stroke-width="1.6"/>
+              <!-- เรือไม้ใต้น้ำพร้อมใบเรือทอง (มุมซ้ายล่าง) -->
+              <g transform="translate(26,388)">
+                <polygon points="0,8 26,18 32,12 6,2" fill="#e6b884"/>
+                <polygon points="0,8 26,18 26,24 0,14" fill="#b88454"/>
+                <path d="M12 6 Q20 -14 28 2 Z" fill="#facc15" opacity=".92"/>
+                <circle cx="19" cy="-1" r="2.6" fill="#9f1239"/>
+              </g>
+            </g>
+            <!-- 16 ชนิดปะการังและสัตว์ทะเล (ปลดล็อกทีละ 1 ชนิดทุก 30 นาที) -->
+            <g id="rfSp0" class="rf-sp rf-sway"><title>0:30 · Staghorn Coral (ปะการังเขากวาง)</title><path d="M36 420 v-18 m0 8 l-8-9 m8 5 l7-10 m-7 14 l-6-3" fill="none" stroke="#facc15" stroke-width="3.2" stroke-linecap="round"/></g>
+            <g id="rfSp1" class="rf-sp rf-swim"><title>1:00 · Clownfish (ปลาการ์ตูน)</title><g transform="translate(132,332)"><ellipse cx="0" cy="0" rx="8" ry="4.5" fill="#fb923c"/><polygon points="7,0 13,-4 13,4" fill="#fb923c"/><rect x="-3" y="-4" width="2.2" height="8" fill="#fff"/><rect x="2" y="-3.5" width="2" height="7" fill="#fff"/><circle cx="-4.8" cy="-1" r="1" fill="#0f172a"/></g></g>
+            <g id="rfSp2" class="rf-sp rf-sway"><title>1:30 · Carnation Coral (ปะการังอ่อนส้ม)</title><path d="M144 416 v-16 m0 7 l-7-8 m0 0 l-3-4 m7 12 l8-9" fill="none" stroke="#ff7c6e" stroke-width="3.4" stroke-linecap="round"/><circle cx="134" cy="395" r="2.4" fill="#fda4af"/><circle cx="152" cy="398" r="2.4" fill="#fda4af"/><circle cx="144" cy="396" r="2.6" fill="#fecdd3"/></g>
+            <g id="rfSp3" class="rf-sp rf-swim2"><title>2:00 · Blue Tang (ปลาขี้ตังเบ็ดฟ้า)</title><g transform="translate(36,236)"><ellipse cx="0" cy="0" rx="9" ry="5" fill="#38bdf8"/><polygon points="-8,0 -14,-4.5 -14,4.5" fill="#facc15"/><path d="M-4 -2 Q2 -5 6 0" fill="none" stroke="#0f172a" stroke-width="1.6"/><circle cx="5" cy="-1" r="1.1" fill="#0f172a"/></g></g>
+            <g id="rfSp4" class="rf-sp rf-sway"><title>2:30 · Cauliflower Coral (ปะการังดอกกะหล่ำ)</title><g fill="#f472b6"><circle cx="62" cy="422" r="6"/><circle cx="70" cy="418" r="6.5"/><circle cx="77" cy="423" r="5.5"/><circle cx="68" cy="425" r="5" fill="#db2777"/></g></g>
+            <g id="rfSp5" class="rf-sp rf-sway"><title>3:00 · Sun Coral (ปะการังถ้วยส้มเรืองแสง)</title><g transform="translate(116,416)"><circle cx="-5" cy="2" r="5" fill="#f59e0b"/><circle cx="5" cy="0" r="5.5" fill="#fde047"/><circle cx="0" cy="5" r="4.5" fill="#fb923c"/><circle cx="-5" cy="2" r="2" fill="#fef08a"/><circle cx="5" cy="0" r="2.2" fill="#fff"/></g></g>
+            <g id="rfSp6" class="rf-sp rf-float"><title>3:30 · Moon Jellyfish (แมงกะพรุนเรืองแสง)</title><g transform="translate(148,176)"><path d="M-9 0 a9 8 0 0 1 18 0 Z" fill="#67e8f9" fill-opacity=".68" stroke="#cffafe" stroke-width="1"/><path d="M-5 1 Q-7 9 -4 14 M0 1 Q2 10 -1 16 M5 1 Q7 9 4 14" fill="none" stroke="#a5f3fc" stroke-width="1"/></g></g>
+            <g id="rfSp7" class="rf-sp rf-sway"><title>4:00 · Sea Fan (กัลปังหาพัดแดง)</title><path d="M24 342 v-22 m0 14 l-9-11 m9 7 l9-11 m-9 3 l-5-12 m5 12 l5-12" fill="none" stroke="#fb7185" stroke-width="2" stroke-linecap="round"/></g>
+            <g id="rfSp8" class="rf-sp"><title>4:30 · Brain Coral (ปะการังสมองมรกต)</title><g transform="translate(94,424)"><ellipse cx="0" cy="0" rx="11" ry="7.5" fill="#34d399"/><path d="M-7 -1 Q-3 -5 0 -1 T7 -1 M-6 3 Q-2 0 2 3 T6 2" fill="none" stroke="#065f46" stroke-width="1.4" stroke-linecap="round"/></g></g>
+            <g id="rfSp9" class="rf-sp rf-swim"><title>5:00 · Butterflyfish (ปลาผีเสื้อเหลือง)</title><g transform="translate(144,264)"><polygon points="-8,0 0,-7 8,0 0,7" fill="#fde047"/><polygon points="7,0 13,-4 13,4" fill="#fef08a"/><line x1="-2" y1="-5" x2="-2" y2="5" stroke="#0f172a" stroke-width="1.6"/><circle cx="-4.5" cy="-1" r="1" fill="#0f172a"/></g></g>
+            <g id="rfSp10" class="rf-sp rf-sway"><title>5:30 · Sea Anemone (ดอกไม้ทะเลมิ้นต์)</title><g transform="translate(158,368)"><ellipse cx="0" cy="8" rx="8" ry="3.5" fill="#0d9488"/><path d="M-6 6 Q-9 -3 -4 -7 M-2 6 Q-3 -5 0 -9 M2 6 Q4 -5 6 -8 M6 6 Q10 -2 8 -6" fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"/></g></g>
+            <g id="rfSp11" class="rf-sp rf-swim2"><title>6:00 · Sea Turtle (เต่าทะเลน้อย)</title><g transform="translate(40,120)"><ellipse cx="0" cy="0" rx="10" ry="6.5" fill="#10b981" stroke="#6ee7b7" stroke-width="1"/><circle cx="11" cy="-1" r="3" fill="#34d399"/><path d="M3 -5 L8 -11 M3 5 L7 11 M-7 -3 L-11 -6 M-7 3 L-11 6" stroke="#34d399" stroke-width="2.4" stroke-linecap="round"/></g></g>
+            <g id="rfSp12" class="rf-sp rf-sway"><title>6:30 · Organ Pipe Coral (ปะการังออร์แกน)</title><g transform="translate(18,412)" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round"><line x1="-5" y1="8" x2="-5" y2="-4"/><line x1="0" y1="8" x2="0" y2="-8"/><line x1="5" y1="8" x2="5" y2="-3"/><circle cx="-5" cy="-5" r="2" fill="#e9d5ff" stroke="none"/><circle cx="0" cy="-9" r="2.2" fill="#e9d5ff" stroke="none"/><circle cx="5" cy="-4" r="2" fill="#e9d5ff" stroke="none"/></g></g>
+            <g id="rfSp13" class="rf-sp rf-float"><title>7:00 · Manta Ray (ปลากระเบนราหู)</title><g transform="translate(92,204)"><path d="M-18 2 Q0 -12 18 2 Q6 4 0 9 Q-6 4 -18 2 Z" fill="#60a5fa" fill-opacity=".85"/><line x1="0" y1="8" x2="0" y2="20" stroke="#93c5fd" stroke-width="1.2"/></g></g>
+            <g id="rfSp14" class="rf-sp rf-sway"><title>7:30 · Elkhorn Coral (ปะการังเขากวางใหญ่)</title><path d="M162 424 v-18 m0 8 l-10-12 m10 8 l9-11 m-10 3 l-4-7 m14 4 l3-7" fill="none" stroke="#fbbf24" stroke-width="3.6" stroke-linecap="round"/></g>
+            <g id="rfSp15" class="rf-sp rf-float"><title>8:00 · Crystal Lotus &amp; Golden Whale</title><g transform="translate(90,136)"><polygon points="0,-10 5,-3 0,2 -5,-3" fill="#ff7c6e" stroke="#fff" stroke-width=".7"/><circle cx="0" cy="-4" r="12" fill="url(#rfGlow)"/></g><g transform="translate(132,68)"><path d="M-16 0 Q-4 -9 14 -2 Q18 0 22 -5 L21 3 Q16 5 12 4 Q-4 8 -16 0 Z" fill="#fef08a" fill-opacity=".88"/><circle cx="-9" cy="-1" r="1.1" fill="#0f172a"/></g></g>
+          </svg>
+        </div>
+        <div class="reef-ft">
+          <div class="reef-next" id="reefNext">อ่านอีก 30 น. ปลดล็อกปะการังแรก</div>
+          <div class="reef-pbar"><i id="reefPbar"></i></div>
+        </div>
+      </div>`;
+    document.body.appendChild(reefHost);
+
+    const syncReef = (announce) => {
+      const enabled = draftOn('underwaterReefTimer');
+      reefHost.hidden = !enabled;
+      const customRow = $('#pmCustomRow', wrap);
+      if (customRow) customRow.hidden = !enabled;
+      if (!enabled) return;
+      const collapsed = S.reefHidden != null ? !!S.reefHidden : window.innerWidth < 1240;
+      $('#reefDock', reefHost).hidden = collapsed;
+      $('#reefTab', reefHost).hidden = !collapsed;
+      const sec = getTodaySec();
+      const mins = Math.floor(sec / 60);
+      const count = Math.min(REEF_SPECIES.length, Math.floor(mins / 30));
+      const rem = 30 - (mins % 30);
+      $('#reefToday', reefHost).textContent = `วันนี้ ${fmtHM(sec)}`;
+      $('#reefTabM', reefHost).textContent = fmtHM(sec);
+      $('#reefCount', reefHost).textContent = `${count}/${REEF_SPECIES.length} ชนิด`;
+      for (let i = 0; i < REEF_SPECIES.length; i++) {
+        const g = $(`#rfSp${i}`, reefHost);
+        if (g) g.classList.toggle('on', i < count);
+      }
+      if (count >= REEF_SPECIES.length) {
+        $('#reefNext', reefHost).textContent = '✨ ครบทั้ง 16 ชนิดแล้ววันนี้!';
+        $('#reefPbar', reefHost).style.width = '100%';
+      } else {
+        const nxt = REEF_SPECIES[count];
+        $('#reefNext', reefHost).textContent = `อีก ${rem} น. → ${nxt.name.split(' (')[0]}`;
+        $('#reefPbar', reefHost).style.width = `${(((mins % 30) / 30) * 100).toFixed(1)}%`;
+      }
+      if (announce && count > lastUnlocked) {
+        const sp = REEF_SPECIES[count - 1];
+        if (sp) toast(`🪸 ปลดล็อกปราสาทใต้น้ำใหม่: ${sp.name}!`);
+      }
+      lastUnlocked = count;
+    };
+    $('#reefHide', reefHost).onclick = () => { S.reefHidden = true; save(); syncReef(false); };
+    $('#reefTab', reefHost).onclick = () => { S.reefHidden = false; save(); syncReef(false); };
+
+    const applyCustomMins = () => {
+      const inp = $('#pmCustomIn', wrap);
+      const m = Math.max(1, Math.min(240, parseInt(inp.value, 10) || 25));
+      inp.value = m;
+      clearInterval(tmr); tmr = null; isBreak = false;
+      total = left = m * 60;
+      $('#pmTitle', wrap).textContent = `🍅 โฟกัส · ${m} นาที`;
+      $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา';
+      wrap.querySelectorAll('[data-pm]').forEach(x => x.classList.remove('on'));
+      sync();
+    };
+    $('#pmCustomSet', wrap).onclick = applyCustomMins;
+    $('#pmCustomIn', wrap).addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); applyCustomMins(); } });
     const renderMini = () => {
       const btn = $('#pmMini', wrap);
       const useMaze = draftOn('pomoMiniCastle');
@@ -4994,7 +5192,8 @@
       const mb = $('#pmMiniBar', wrap); if (mb) mb.style.width = `${(p * 100).toFixed(1)}%`;
     };
     renderMini();
-    _onOwnerChange.push(() => { renderMini(); sync(); });
+    syncReef(false);
+    _onOwnerChange.push(() => { renderMini(); sync(); syncReef(false); });
     const setOpen = v => { open = v; $('#pmMini', wrap).hidden = v; $('#pmCard', wrap).hidden = !v; };
     const doSpin = () => { spin = spin === 0 ? 12 : spin === 12 ? -12 : 0; sync(); };
     $('#pmMini', wrap).onclick = () => setOpen(true);
@@ -5003,22 +5202,36 @@
     $('#pmStage', wrap).onclick = doSpin;
     wrap.querySelectorAll('[data-pm]').forEach(b => b.onclick = () => {
       clearInterval(tmr); tmr = null;
-      const m = +b.dataset.pm; total = left = m * 60;
+      const m = +b.dataset.pm; total = left = m * 60; isBreak = m === 5;
       $('#pmTitle', wrap).textContent = m === 5 ? '☕ พักเบรก · 5 นาที' : `🍅 โฟกัส · ${m} นาที`;
       $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา';
       wrap.querySelectorAll('[data-pm]').forEach(x => x.classList.toggle('on', x === b));
       sync();
     });
     $('#pmGo', wrap).onclick = () => {
-      if (tmr) { clearInterval(tmr); tmr = null; $('#pmGo', wrap).textContent = '▶ เริ่มต่อ'; return; }
+      if (tmr) { clearInterval(tmr); tmr = null; save(); $('#pmGo', wrap).textContent = '▶ เริ่มต่อ'; return; }
       if (left <= 0) left = total;
       $('#pmGo', wrap).textContent = '⏸ พักชั่วคราว';
       tmr = setInterval(() => {
-        if (left > 0) { left--; sync(); }
-        else { clearInterval(tmr); tmr = null; $('#pmGo', wrap).textContent = '✨ ครบเวลาแล้ว!'; chime(); toast('✨ Ida ถึงยอดปราสาทแล้ว! ครบเวลา Pomodoro'); }
+        if (left > 0) {
+          left--;
+          if (!isBreak) {
+            S.pomoLog = S.pomoLog || {};
+            const d = localDay();
+            S.pomoLog[d] = (S.pomoLog[d] || 0) + 1;
+            if (++saveTick % 15 === 0) save();
+            syncReef(true);
+          }
+          sync();
+        } else {
+          clearInterval(tmr); tmr = null; save();
+          $('#pmGo', wrap).textContent = '✨ ครบเวลาแล้ว!'; chime();
+          toast('✨ Ida ถึงยอดปราสาทแล้ว! ครบเวลาอ่าน');
+          syncReef(true);
+        }
       }, 1000);
     };
-    $('#pmReset', wrap).onclick = () => { clearInterval(tmr); tmr = null; left = total; $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา'; sync(); };
+    $('#pmReset', wrap).onclick = () => { clearInterval(tmr); tmr = null; save(); left = total; $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา'; sync(); };
     sync();
   }
   initPomodoro();

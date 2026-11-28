@@ -1060,3 +1060,54 @@ body.has-readbar .pomo-wrap{bottom:max(68px,calc(env(safe-area-inset-bottom) + 6
 .owner-rules pre{background:var(--surface2);padding:10px 12px;border-radius:8px;overflow-x:auto;font-size:12.5px;line-height:1.5;margin:0}
 .friend-preview-bar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;background:#1e293b;color:#f8fafc;font-size:13px;box-shadow:0 10px 28px rgba(0,0,0,.35);border:1px solid rgba(124,224,211,.45);max-width:calc(100vw - 24px)}
 .friend-preview-bar button{border:0;background:#ff6b57;color:#fff;font-weight:700;padding:4px 10px;border-radius:999px;font-size:12px;white-space:nowrap}
+/* ✨ Gemini Search Popup พอดีจอ MacBook ไม่ต้องเลื่อนหาปุ่ม Sticky Note */
+.hl-pop.ai-pop.ai-pop-fit{position:fixed!important;top:50%!important;left:50%!important;transform:translate(-50%,-50%);width:min(560px,calc(100vw - 24px));max-height:calc(100dvh - 32px);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.55)}
+.hl-pop.ai-pop.ai-pop-fit .ai-ans{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;overflow:hidden}
+.hl-pop.ai-pop.ai-pop-fit .ai-run-slot{flex:0 0 auto}
+.hl-pop.ai-pop.ai-pop-fit .ai-body{flex:1 1 auto;min-height:110px;max-height:none;overflow-y:auto}
+.hl-pop.ai-pop.ai-pop-fit .ai-selbar{position:static;flex:0 0 auto;margin-top:8px}
+.hl-pop.ai-pop.ai-pop-fit .ai-foot{flex:0 0 auto;margin-top:6px}
+.hl-pop.ai-pop.ai-pop-fit .note-in{max-height:46vh}
+/* ⏱️ ช่องกำหนดเวลาเองใน Pomodoro */
+.pomo-custom{display:flex;align-items:center;gap:6px;margin:0 0 7px;font-size:11.5px;color:#d6f5f0}
+.pomo-custom[hidden]{display:none}
+.pomo-custom input{width:58px;padding:3px 7px;border-radius:8px;border:1px solid rgba(124,224,211,.38);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-weight:700;text-align:center}
+.pomo-custom input:focus{outline:none;border-color:#4cf2f2}
+.pomo-custom button{margin-left:auto;border:0;background:rgba(76,242,242,.2);color:#e6faf7;border:1px solid rgba(76,242,242,.42);border-radius:8px;padding:3px 9px;font:inherit;font-size:11px;font-weight:700;cursor:pointer}
+.pomo-custom button:hover{background:rgba(76,242,242,.34)}
+/* 🪸 Underwater Monument Valley Castle Reef Infographic (กรอบแนวตั้งด้านขวา ไม่กินเนื้อหา) */
+.reef-host[hidden]{display:none}
+.reef-dock{position:fixed;right:12px;top:64px;bottom:140px;width:168px;z-index:25;display:flex;flex-direction:column;border-radius:16px;overflow:hidden;border:1px solid rgba(124,224,211,.36);background:linear-gradient(180deg,#123e54 0%,#0b253c 60%,#071629 100%);color:#e6faf7;box-shadow:0 16px 40px rgba(4,12,24,.48)}
+.reef-dock[hidden]{display:none}
+body.has-readbar .reef-dock{bottom:188px}
+.reef-hd{display:flex;align-items:center;justify-content:space-between;gap:4px;padding:7px 9px;background:rgba(5,16,28,.55);border-bottom:1px solid rgba(124,224,211,.18);flex:0 0 auto}
+.reef-hd-l{display:flex;flex-direction:column;min-width:0}
+.reef-hd-t{font-size:11.5px;font-weight:800;color:#7ce0d3;line-height:1.2;white-space:nowrap}
+.reef-hd-c{font-size:10.5px;color:#cbd5e1;line-height:1.2}
+.reef-hide{width:24px;height:24px;border:0;border-radius:7px;background:rgba(255,255,255,.1);color:#e6faf7;font-size:15px;line-height:1;display:grid;place-items:center;cursor:pointer}
+.reef-hide:hover{background:rgba(255,255,255,.22)}
+.reef-scene{flex:1 1 auto;min-height:0;overflow:hidden;position:relative}
+.reef-scene svg{width:100%;height:100%;display:block}
+.reef-ft{flex:0 0 auto;padding:6px 8px 7px;background:rgba(5,16,28,.68);border-top:1px solid rgba(124,224,211,.16)}
+.reef-next{font-size:10.5px;color:#cbd5e1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:4px}
+.reef-pbar{height:4px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden}
+.reef-pbar i{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,#4cf2f2,#fbbf24);transition:width .4s ease}
+.reef-tab{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 6px;border:1px solid rgba(124,224,211,.42);border-right:0;border-radius:12px 0 0 12px;background:linear-gradient(180deg,#123e54,#081b2e);color:#7ce0d3;box-shadow:-4px 6px 20px rgba(4,12,24,.38);font-size:11px;font-weight:700;cursor:pointer}
+.reef-tab[hidden]{display:none}
+.reef-tab:hover{padding-right:9px;color:#fff}
+.reef-tab-arr{font-size:14px;line-height:1}
+.reef-tab-ic .ic{width:16px;height:16px}
+.reef-tab-m{font-size:10px;writing-mode:horizontal-tb;color:#e6faf7}
+.reef-scene .rf-sp{opacity:0;transition:opacity .7s ease,transform .7s ease;pointer-events:none}
+.reef-scene .rf-sp.on{opacity:1;pointer-events:auto}
+@keyframes rfSway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2.5deg)}}
+@keyframes rfSwim{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(-12px) translateY(-4px)}}
+@keyframes rfSwim2{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(14px) translateY(4px)}}
+@keyframes rfFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes rfBub{0%{transform:translateY(0);opacity:0}20%{opacity:.55}100%{transform:translateY(-75px);opacity:0}}
+.reef-scene .rf-sp.on.rf-sway{transform-box:fill-box;transform-origin:bottom center;animation:rfSway 4.2s ease-in-out infinite}
+.reef-scene .rf-sp.on.rf-swim{animation:rfSwim 5.2s ease-in-out infinite}
+.reef-scene .rf-sp.on.rf-swim2{animation:rfSwim2 6s ease-in-out infinite}
+.reef-scene .rf-sp.on.rf-float{animation:rfFloat 4.6s ease-in-out infinite}
+.reef-scene .rf-bub{animation:rfBub 5.4s linear infinite}
+@media print{.reef-host{display:none}}
