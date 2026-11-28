@@ -3115,7 +3115,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v77</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v78</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3421,10 +3421,11 @@
     const art = $('article.content', view); if (!art) return;
     const hs = [...art.querySelectorAll('h2,h3')];
     const head = $('.sec-head', view);
-    if (hs.length < 3 || !head) return;
+    const hasEx = !!$('.exam-sec', view);
+    if ((!hs.length && !hasEx) || !head) return;
     const nav = document.createElement('nav'); nav.className = 'toc';
     nav.innerHTML = hs.map((h, i) => `<button data-i="${i}" class="${h.tagName === 'H3' ? 'sub' : ''}">${esc(h.textContent.replace(/\s+/g, ' ').trim())}</button>`).join('')
-      + (S.focus === undefined ? '' : '') + ($('.exam-sec', view) ? '<button data-ex="1" class="ex">📝 Exam</button>' : '');
+      + (hasEx ? '<button data-ex="1" class="ex">📝 Exam</button>' : '');
     head.after(nav);
     nav.addEventListener('click', e => {
       const b = e.target.closest('button'); if (!b) return;
