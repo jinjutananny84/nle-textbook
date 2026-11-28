@@ -1078,7 +1078,7 @@ body.has-readbar .pomo-wrap{bottom:max(68px,calc(env(safe-area-inset-bottom) + 6
 .pomo-custom button:hover{background:rgba(76,242,242,.34)}
 /* 🪸 Underwater Monument Valley Castle Reef Infographic (กรอบแนวตั้งด้านขวา ไม่กินเนื้อหา) */
 .reef-host[hidden]{display:none}
-.reef-dock{position:fixed;right:14px;top:64px;bottom:158px;width:100px;z-index:25;display:flex;flex-direction:column;border-radius:13px;overflow:hidden;border:1px solid rgba(124,224,211,.42);background:linear-gradient(180deg,#247c96 0%,#134866 35%,#0b253c 72%,#071629 100%);color:#e6faf7;box-shadow:0 14px 32px rgba(4,12,24,.48)}
+.reef-dock{position:fixed;right:14px;top:64px;bottom:158px;width:100px;z-index:25;display:flex;flex-direction:column;border-radius:13px;overflow:hidden;border:1px solid rgba(110,231,183,.42);background:linear-gradient(180deg,#070a1e 0%,#151844 24%,#0d2c4d 52%,#081d38 78%,#040d1e 100%);color:#e6faf7;box-shadow:0 14px 32px rgba(4,12,24,.54)}
 .reef-dock[hidden]{display:none}
 body.has-readbar .reef-dock{top:96px;bottom:212px}
 .reef-hd{display:flex;align-items:center;justify-content:space-between;gap:2px;padding:4px 5px;background:rgba(5,16,28,.62);border-bottom:1px solid rgba(124,224,211,.18);flex:0 0 auto}
@@ -1178,7 +1178,10 @@ body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 .reef-dock:not(.is-expanded) #reefExpSvg{display:none!important}
 .reef-dock.is-expanded #reefMiniSvg{display:none!important}
 .reef-dock.is-expanded #reefExpSvg{display:block!important}
-.reef-dock.is-expanded .reef-scene{background:linear-gradient(180deg,#2e99b5 0%,#1e6f8f 16%,#134569 46%,#0b2642 78%,#061426 100%)}
+.reef-dock.is-expanded .reef-scene{background:linear-gradient(180deg,#070a1e 0%,#151844 24%,#0d2c4d 52%,#081d38 78%,#040d1e 100%)}
+@keyframes rfAuroraDrift{0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.9}50%{transform:translate3d(-8px,6px,0) scale(1.04);opacity:1}}
+.reef-scene .rf-aurora{transform-box:fill-box;transform-origin:center;animation:rfAuroraDrift 14s ease-in-out infinite}
+.reef-scene .rf-def-coral{filter:drop-shadow(0 0 6px rgba(244,114,182,.26))}
 .reef-exp-btn,.reef-exp-glow{width:20px;height:20px;border:0;border-radius:6px;background:rgba(76,242,242,.22);color:#7ce0d3;font-size:12px;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0}
 .reef-exp-btn:hover,.reef-exp-glow:hover{background:rgba(76,242,242,.38);color:#fff}
 .reef-exp-glow.on{background:rgba(253,224,71,.28);color:#fef08a;box-shadow:0 0 8px rgba(253,224,71,.45)}

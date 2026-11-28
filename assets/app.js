@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v106</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v107</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -5505,8 +5505,11 @@
         <div class="reef-scene" id="reefScene">
           <svg id="reefMiniSvg" viewBox="0 0 180 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <defs>
-              <linearGradient id="rfBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e99b5"/><stop offset="16%" stop-color="#1e6f8f"/><stop offset="46%" stop-color="#134569"/><stop offset="78%" stop-color="#0b2642"/><stop offset="100%" stop-color="#061426"/></linearGradient>
-              <linearGradient id="rfRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5f3fc" stop-opacity=".32"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/></linearGradient>
+              <linearGradient id="rfBg" x1="0" y1="0" x2=".3" y2="1"><stop offset="0%" stop-color="#070a1e"/><stop offset="22%" stop-color="#151844"/><stop offset="48%" stop-color="#0d2c4d"/><stop offset="76%" stop-color="#081d38"/><stop offset="100%" stop-color="#040d1e"/></linearGradient>
+              <linearGradient id="rfAurG" x1="0" y1="0" x2=".8" y2="1"><stop offset="0%" stop-color="#6ee7b7" stop-opacity=".75"/><stop offset="45%" stop-color="#2dd4bf" stop-opacity=".42"/><stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/></linearGradient>
+              <linearGradient id="rfAurP" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e879f9" stop-opacity=".5"/><stop offset="55%" stop-color="#8b5cf6" stop-opacity=".28"/><stop offset="100%" stop-color="#6366f1" stop-opacity="0"/></linearGradient>
+              <linearGradient id="rfAurB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#38bdf8" stop-opacity=".35"/><stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/></linearGradient>
+              <filter id="rfAurBlur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="12"/></filter>
               <linearGradient id="rfSand" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fde4be"/><stop offset="100%" stop-color="#e3b685"/></linearGradient>
               <linearGradient id="rfWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5da3cc"/><stop offset="100%" stop-color="#2c5d87"/></linearGradient>
               <linearGradient id="rfSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ecc294"/><stop offset="100%" stop-color="#c69062"/></linearGradient>
@@ -5514,19 +5517,58 @@
               <radialGradient id="rfGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7ce0d3" stop-opacity=".72"/><stop offset="100%" stop-color="#7ce0d3" stop-opacity="0"/></radialGradient>
             </defs>
             <rect width="180" height="620" fill="url(#rfBg)"/>
-            <polygon points="8,0 52,0 98,320 34,320" fill="url(#rfRay)"/>
-            <polygon points="78,0 132,0 166,340 108,340" fill="url(#rfRay)"/>
-            <path d="M0 18 Q45 9 90 18 T180 18" fill="none" stroke="#a5f3fc" stroke-opacity=".34" stroke-width="1.6"/>
-            <path d="M0 32 Q45 25 90 32 T180 32" fill="none" stroke="#99f6e4" stroke-opacity=".2" stroke-width="1"/>
+            <!-- 🌌 แสงออโรร่าตอนกลางคืน (เขียวเขียวมิ้นต์ + ม่วงชมพู + ฟ้าน้ำทะเล) -->
+            <g class="rf-aurora" filter="url(#rfAurBlur)">
+              <path d="M-20 40 C25 10 65 95 115 45 C145 15 170 40 200 10 L200 170 C150 215 105 140 55 195 C20 230 -10 190 -20 175 Z" fill="url(#rfAurG)"/>
+              <path d="M-25 120 C20 90 70 155 120 110 C155 80 180 120 205 95 L205 260 C155 280 95 230 45 275 C10 305 -15 265 -25 250 Z" fill="url(#rfAurP)"/>
+              <path d="M40 0 C70 65 115 40 165 115 L145 310 C95 270 60 295 25 245 Z" fill="url(#rfAurB)"/>
+            </g>
+            <!-- ✨ ดาวและละอองเรืองแสง -->
+            <g fill="#e0f2fe" opacity=".72">
+              <circle cx="24" cy="36" r="1.1"/><circle cx="72" cy="22" r="1.4"/><circle cx="136" cy="44" r="1.2"/>
+              <circle cx="158" cy="96" r="1"/><circle cx="42" cy="118" r="1.2"/><circle cx="114" cy="148" r=".9"/>
+              <circle cx="28" cy="212" r="1"/><circle cx="148" cy="236" r="1.2"/>
+            </g>
+            <path d="M0 18 Q45 9 90 18 T180 18" fill="none" stroke="#6ee7b7" stroke-opacity=".35" stroke-width="1.6"/>
+            <path d="M0 32 Q45 25 90 32 T180 32" fill="none" stroke="#c084fc" stroke-opacity=".24" stroke-width="1"/>
             <g class="rf-bubbles" fill="none" stroke="#a5f3fc" stroke-opacity=".48" stroke-width="1">
               <circle class="rf-bub" cx="22" cy="510" r="2.2"/><circle class="rf-bub" cx="156" cy="460" r="2.8" style="animation-delay:1.3s"/>
               <circle class="rf-bub" cx="38" cy="340" r="2" style="animation-delay:2.4s"/><circle class="rf-bub" cx="146" cy="240" r="2.2" style="animation-delay:.7s"/>
               <circle class="rf-bub" cx="90" cy="180" r="1.6" style="animation-delay:3.1s"/><circle class="rf-bub" cx="30" cy="140" r="1.8" style="animation-delay:1.9s"/>
             </g>
-            <path d="M0 546 Q46 530 92 542 T180 538 L180 620 L0 620 Z" fill="#133454"/>
-            <path d="M0 568 Q60 554 118 566 T180 560 L180 620 L0 620 Z" fill="#0d243c"/>
-            <path d="M0 592 Q50 582 104 592 T180 588 L180 620 L0 620 Z" fill="#08182b"/>
+            <path d="M0 546 Q46 530 92 542 T180 538 L180 620 L0 620 Z" fill="#122749"/>
+            <path d="M0 568 Q60 554 118 566 T180 560 L180 620 L0 620 Z" fill="#0b1a34"/>
+            <path d="M0 592 Q50 582 104 592 T180 588 L180 620 L0 620 Z" fill="#061024"/>
             <g class="rf-castle">${rfCastleCore('rf')}</g>
+            <!-- 🪸 ปะการัง Default สีสันสดใส (โชว์ตั้งแต่เริ่มอ่าน ไม่ให้ตู้โล่ง) -->
+            <g class="rf-def-coral" aria-hidden="true">
+              <!-- ซ้าย: ปะการังอ่อนชมพูมาเจนต้า + ซากุระพาสเทล + เขากวางส้ม -->
+              <g transform="translate(14,578)">
+                <path d="M0 24 Q-8 4 -12 -16 M0 24 Q2 2 8 -18 M0 24 Q8 8 16 -8" fill="none" stroke="#be185d" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="-11" cy="-16" r="7" fill="#ec4899" opacity=".92"/><circle cx="-4" cy="-22" r="8" fill="#f43f8e" opacity=".9"/><circle cx="7" cy="-18" r="7.5" fill="#db2777" opacity=".92"/><circle cx="15" cy="-9" r="6.5" fill="#f472b6" opacity=".88"/>
+                <circle cx="-6" cy="-10" r="6" fill="#fbcfe8" opacity=".82"/><circle cx="4" cy="-8" r="7" fill="#f9a8d4" opacity=".85"/><circle cx="12" cy="0" r="5.5" fill="#fbcfe8" opacity=".8"/>
+              </g>
+              <g transform="translate(42,598)" fill="none" stroke-linecap="round">
+                <path d="M0 16 v-22 m0 11 l-10-12 m10 6 l9-13 m-9 12 l-12-4 m12 2 l11-5" stroke="#f97316" stroke-width="3.2"/>
+                <circle cx="-10" cy="-7" r="2.6" fill="#fdba74" stroke="none"/><circle cx="9" cy="-8" r="2.6" fill="#fde047" stroke="none"/><circle cx="0" cy="-7" r="2.8" fill="#fb923c" stroke="none"/>
+              </g>
+              <!-- ขวา: ปะการังอ่อนมาเจนต้าแดง + พีชซากุระ + ม่วงลาเวนเดอร์ -->
+              <g transform="translate(164,576)">
+                <path d="M0 26 Q-10 4 -18 -14 M0 26 Q0 0 -4 -22 M0 26 Q10 6 14 -12" fill="none" stroke="#9d174d" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="-16" cy="-14" r="7.5" fill="#e11d74" opacity=".92"/><circle cx="-6" cy="-22" r="8.5" fill="#f43f8e" opacity=".92"/><circle cx="6" cy="-18" r="7.5" fill="#ec4899" opacity=".9"/><circle cx="12" cy="-8" r="6.5" fill="#fda4af" opacity=".86"/>
+                <circle cx="-10" cy="-4" r="6.5" fill="#fbcfe8" opacity=".82"/><circle cx="2" cy="-5" r="7" fill="#fed7aa" opacity=".86"/>
+              </g>
+              <g transform="translate(132,602)" fill="none" stroke-linecap="round">
+                <path d="M0 14 v-18 m0 9 l-8-10 m8 5 l9-10" stroke="#fb923c" stroke-width="3"/>
+                <circle cx="-8" cy="-5" r="3" fill="#fda4af" stroke="none"/><circle cx="9" cy="-5" r="3" fill="#fde68a" stroke="none"/><circle cx="0" cy="-5" r="3.2" fill="#fed7aa" stroke="none"/>
+              </g>
+              <!-- กลางด้านล่าง: กอปะการังพาสเทลหลากสีปิดขอบพื้นทราย -->
+              <g transform="translate(88,608)">
+                <circle cx="-16" cy="4" r="7" fill="#f472b6" opacity=".85"/><circle cx="-7" cy="0" r="8" fill="#fbcfe8" opacity=".82"/>
+                <circle cx="4" cy="2" r="7.5" fill="#fb923c" opacity=".88"/><circle cx="14" cy="4" r="6.5" fill="#c084fc" opacity=".82"/>
+                <circle cx="-1" cy="6" r="6" fill="#fde047" opacity=".85"/>
+              </g>
+            </g>
             <g id="rfSp0" class="rf-sp rf-sway"><title>0:30 · Staghorn Coral (ปะการังเขากวาง)</title><path d="M36 574 v-20 m0 9 l-9-10 m9 6 l8-11 m-8 15 l-6-3" fill="none" stroke="#facc15" stroke-width="3.4" stroke-linecap="round"/></g>
             <g id="rfSp1" class="rf-sp rf-swim"><title>1:00 · Clownfish (ปลาการ์ตูน)</title><g transform="translate(136,482)"><ellipse cx="0" cy="0" rx="8.5" ry="4.8" fill="#fb923c"/><polygon points="7.5,0 14,-4.5 14,4.5" fill="#fb923c"/><rect x="-3" y="-4.2" width="2.2" height="8.4" fill="#fff"/><rect x="2" y="-3.6" width="2" height="7.2" fill="#fff"/><circle cx="-5" cy="-1" r="1.1" fill="#0f172a"/></g></g>
             <g id="rfSp2" class="rf-sp rf-sway"><title>1:30 · Carnation Coral (ปะการังอ่อนส้ม)</title><path d="M148 566 v-18 m0 8 l-7-9 m7 12 l8-10" fill="none" stroke="#ff7c6e" stroke-width="3.5" stroke-linecap="round"/><circle cx="139" cy="547" r="2.6" fill="#fda4af"/><circle cx="156" cy="549" r="2.6" fill="#fda4af"/><circle cx="148" cy="546" r="2.8" fill="#fecdd3"/></g>
@@ -5548,8 +5590,11 @@
           <!-- 🏛️ โหมดขยายด้านข้าง (ความสูงเท่าเดิม 620, กว้าง 540): ปราสาท 5 ชั้นเดิมตรงกลาง + ปีกปราสาทซ้ายขวาอลังการ + วาฬ & นางเงือก + ปะการังเป็นกลุ่ม -->
           <svg id="reefExpSvg" viewBox="0 0 540 620" preserveAspectRatio="xMidYMid meet" hidden>
             <defs>
-              <linearGradient id="reBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e99b5"/><stop offset="16%" stop-color="#1e6f8f"/><stop offset="46%" stop-color="#134569"/><stop offset="78%" stop-color="#0b2642"/><stop offset="100%" stop-color="#061426"/></linearGradient>
-              <linearGradient id="reRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5f3fc" stop-opacity=".28"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/></linearGradient>
+              <linearGradient id="reBg" x1="0" y1="0" x2=".3" y2="1"><stop offset="0%" stop-color="#070a1e"/><stop offset="22%" stop-color="#151844"/><stop offset="48%" stop-color="#0d2c4d"/><stop offset="76%" stop-color="#081d38"/><stop offset="100%" stop-color="#040d1e"/></linearGradient>
+              <linearGradient id="reAurG" x1="0" y1="0" x2=".9" y2="1"><stop offset="0%" stop-color="#6ee7b7" stop-opacity=".75"/><stop offset="45%" stop-color="#2dd4bf" stop-opacity=".4"/><stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/></linearGradient>
+              <linearGradient id="reAurP" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e879f9" stop-opacity=".48"/><stop offset="55%" stop-color="#8b5cf6" stop-opacity=".28"/><stop offset="100%" stop-color="#6366f1" stop-opacity="0"/></linearGradient>
+              <linearGradient id="reAurB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#38bdf8" stop-opacity=".34"/><stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/></linearGradient>
+              <filter id="reAurBlur" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="16"/></filter>
               <linearGradient id="reSand" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fde4be"/><stop offset="100%" stop-color="#e3b685"/></linearGradient>
               <linearGradient id="reWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5da3cc"/><stop offset="100%" stop-color="#2c5d87"/></linearGradient>
               <linearGradient id="reSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ecc294"/><stop offset="100%" stop-color="#c69062"/></linearGradient>
@@ -5561,14 +5606,15 @@
               <filter id="reSoftGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
             </defs>
             <rect width="540" height="620" fill="url(#reBg)"/>
-            <g class="re-rays">
-              <polygon points="30,0 110,0 190,370 70,370" fill="url(#reRay)"/>
-              <polygon points="195,0 285,0 355,390 230,390" fill="url(#reRay)"/>
-              <polygon points="370,0 465,0 520,370 400,370" fill="url(#reRay)"/>
+            <!-- 🌌 ม่านแสงออโรร่าตอนกลางคืนพาดผ่านเหนือปราสาทใต้น้ำ -->
+            <g class="rf-aurora" filter="url(#reAurBlur)">
+              <path d="M-30 35 C75 -10 175 110 285 40 C380 -18 465 55 570 10 L570 185 C450 235 340 135 225 205 C120 265 30 185 -30 210 Z" fill="url(#reAurG)"/>
+              <path d="M-30 130 C95 85 205 180 335 115 C430 70 495 135 570 95 L570 285 C455 310 315 245 190 295 C85 335 15 270 -30 275 Z" fill="url(#reAurP)"/>
+              <path d="M120 0 C185 85 275 45 375 125 L340 345 C255 295 170 325 95 260 Z" fill="url(#reAurB)"/>
             </g>
-            <path d="M0 18 Q68 8 135 18 T270 18 T405 18 T540 18" fill="none" stroke="#a5f3fc" stroke-opacity=".34" stroke-width="1.8"/>
-            <path d="M0 32 Q90 24 180 32 T360 32 T540 32" fill="none" stroke="#99f6e4" stroke-opacity=".2" stroke-width="1.1"/>
-            <path d="M0 470 Q95 390 195 452 T395 438 T540 460 L540 620 L0 620 Z" fill="#0d3152" opacity=".5"/>
+            <path d="M0 18 Q68 8 135 18 T270 18 T405 18 T540 18" fill="none" stroke="#6ee7b7" stroke-opacity=".35" stroke-width="1.8"/>
+            <path d="M0 32 Q90 24 180 32 T360 32 T540 32" fill="none" stroke="#c084fc" stroke-opacity=".24" stroke-width="1.1"/>
+            <path d="M0 470 Q95 390 195 452 T395 438 T540 460 L540 620 L0 620 Z" fill="#0d2345" opacity=".55"/>
             <g class="re-dust" fill="#a5f3fc" opacity=".62">
               <circle cx="66" cy="138" r="1.7"/><circle cx="152" cy="92" r="1.4"/><circle cx="230" cy="64" r="1.8"/>
               <circle cx="348" cy="84" r="1.5"/><circle cx="442" cy="126" r="2"/><circle cx="496" cy="78" r="1.4"/>
@@ -5610,9 +5656,39 @@
               <path d="M498 610 Q486 520 502 440 T492 300" stroke="#0d9488" stroke-width="3.6"/>
             </g>
             <!-- พื้นทรายใต้ทะเลหลายชั้นเต็มกว้าง 540 -->
-            <path d="M0 546 Q110 526 220 542 T430 534 T540 540 L540 620 L0 620 Z" fill="#133454"/>
-            <path d="M0 568 Q135 552 270 566 T540 558 L540 620 L0 620 Z" fill="#0d243c"/>
-            <path d="M0 592 Q125 582 260 592 T540 586 L540 620 L0 620 Z" fill="#08182b"/>
+            <path d="M0 546 Q110 526 220 542 T430 534 T540 540 L540 620 L0 620 Z" fill="#122749"/>
+            <path d="M0 568 Q135 552 270 566 T540 558 L540 620 L0 620 Z" fill="#0b1a34"/>
+            <path d="M0 592 Q125 582 260 592 T540 586 L540 620 L0 620 Z" fill="#061024"/>
+            <!-- 🪸 สวนปะการัง Default สีสันสดใส (โชว์ตั้งแต่เริ่มอ่าน ไม่ให้ตู้กว้างโล่ง) -->
+            <g class="rf-def-coral" aria-hidden="true">
+              <!-- ซ้ายสุด: กอปะการังมาเจนต้า + ซากุระชมพูอ่อน + เขากวางส้ม -->
+              <g transform="translate(36,574)">
+                <path d="M0 30 Q-14 4 -20 -20 M0 30 Q2 2 10 -24 M0 30 Q14 8 24 -10" fill="none" stroke="#be185d" stroke-width="4.6" stroke-linecap="round"/>
+                <circle cx="-18" cy="-20" r="11" fill="#ec4899" opacity=".92"/><circle cx="-4" cy="-28" r="12" fill="#f43f8e" opacity=".92"/><circle cx="11" cy="-22" r="11" fill="#db2777" opacity=".92"/><circle cx="22" cy="-10" r="9.5" fill="#f472b6" opacity=".88"/>
+                <circle cx="-10" cy="-8" r="9.5" fill="#fbcfe8" opacity=".85"/><circle cx="6" cy="-8" r="10.5" fill="#f9a8d4" opacity=".86"/><circle cx="18" cy="4" r="8.5" fill="#fbcfe8" opacity=".82"/>
+              </g>
+              <g transform="translate(106,596)" fill="none" stroke-linecap="round">
+                <path d="M0 18 v-26 m0 13 l-14-14 m14 8 l13-16 m-13 14 l-16-5 m16 3 l15-7" stroke="#f97316" stroke-width="3.6"/>
+                <circle cx="-14" cy="-9" r="3.4" fill="#fdba74" stroke="none"/><circle cx="13" cy="-10" r="3.4" fill="#fde047" stroke="none"/><circle cx="0" cy="-9" r="3.6" fill="#fb923c" stroke="none"/>
+              </g>
+              <!-- กลาง-ซ้าย & กลาง-ขวา: ปะการังดอกนุ่มพาสเทล + ลาเวนเดอร์ -->
+              <g transform="translate(192,604)">
+                <circle cx="-18" cy="4" r="9" fill="#f472b6" opacity=".86"/><circle cx="-6" cy="-2" r="10.5" fill="#fbcfe8" opacity=".86"/><circle cx="8" cy="2" r="9.5" fill="#e11d74" opacity=".88"/><circle cx="20" cy="6" r="8" fill="#fed7aa" opacity=".85"/>
+              </g>
+              <g transform="translate(348,604)">
+                <circle cx="-20" cy="6" r="8.5" fill="#c084fc" opacity=".84"/><circle cx="-7" cy="0" r="10" fill="#fb923c" opacity=".88"/><circle cx="8" cy="-2" r="10.5" fill="#f9a8d4" opacity=".86"/><circle cx="20" cy="4" r="9" fill="#fde047" opacity=".84"/>
+              </g>
+              <!-- ขวาสุด: กอปะการังมาเจนต้าแดง + พีช + ส้มเขากวาง -->
+              <g transform="translate(432,596)" fill="none" stroke-linecap="round">
+                <path d="M0 18 v-24 m0 12 l-12-13 m12 7 l12-14 m-12 12 l14-4" stroke="#fb923c" stroke-width="3.4"/>
+                <circle cx="-12" cy="-8" r="3.4" fill="#fda4af" stroke="none"/><circle cx="12" cy="-8" r="3.4" fill="#fde68a" stroke="none"/><circle cx="0" cy="-8" r="3.6" fill="#fed7aa" stroke="none"/>
+              </g>
+              <g transform="translate(502,572)">
+                <path d="M0 32 Q-14 4 -24 -18 M0 32 Q0 0 -6 -28 M0 32 Q14 6 20 -16" fill="none" stroke="#9d174d" stroke-width="4.6" stroke-linecap="round"/>
+                <circle cx="-22" cy="-18" r="11" fill="#e11d74" opacity=".92"/><circle cx="-8" cy="-28" r="12.5" fill="#f43f8e" opacity=".92"/><circle cx="8" cy="-22" r="11" fill="#ec4899" opacity=".9"/><circle cx="18" cy="-10" r="9.5" fill="#fda4af" opacity=".86"/>
+                <circle cx="-14" cy="-4" r="9.5" fill="#fbcfe8" opacity=".84"/><circle cx="2" cy="-5" r="10.5" fill="#fed7aa" opacity=".88"/>
+              </g>
+            </g>
 
             <!-- 🏛️ ปีกปราสาทซ้ายสุดอลังการ (เชื่อมสะพานเข้ากับปราสาท 5 ชั้นเดิมตรงกลาง!) -->
             <g class="re-wing-l">
