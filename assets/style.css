@@ -1154,6 +1154,9 @@ body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 .side-sec .ck-dual{display:inline-flex;align-items:center;gap:3px}
 .side-sec .ck-dual small{font-size:9px;font-weight:800;letter-spacing:0;padding:0 4px;border-radius:4px;background:rgba(0,0,0,.22);color:inherit}
 .lvpick-dual{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:stretch;margin:28px 0 10px}
+.main>.lvpick-dual.rate-centered{margin:28px auto 10px;width:100%;max-width:780px}
+.main>.lvpick.rate-centered{margin:34px auto 10px;width:100%;max-width:780px}
+.main>.pager.rate-centered{margin:16px auto;width:100%;max-width:780px}
 .lvpick-dual .lvpick{margin:0;padding:11px 12px;border-radius:14px;border:1px solid var(--line);background:var(--surface);gap:6px;align-content:start}
 .lvpick-dual .lvpick-r2{border:1.5px dashed color-mix(in srgb,var(--accent) 52%,var(--line));background:color-mix(in srgb,var(--accent) 6%,var(--surface))}
 .lvpick-dual .lvq{font-size:13px;line-height:1.4;margin-bottom:2px}

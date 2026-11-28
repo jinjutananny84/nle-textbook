@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v108</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v109</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3656,17 +3656,18 @@
       h += '<div id="boxExamRes"></div></section>';
     }
     const r2On = draftOn('round2Rating');
+    const cRate = draftOn('centerBottomRating') ? ' rate-centered' : '';
     const r1v = S.lvl[k] || 0, r2v = (S.lvl2 && S.lvl2[k]) || 0;
     const r2Prog = (r2On && r1v && r2v) ? `<span class="lv-prog">${LV[r1v].s} → ${LV[r2v].s}${r2v === 4 && r1v !== 4 ? ' ✨ เข้าใจแล้ว!' : (r2v > r1v && r2v <= 4 && r1v <= 4 ? ' ↗ ดีขึ้น!' : '')}</span>` : '';
     if (r2On) {
-      h += `<div class="lvpick-dual">
+      h += `<div class="lvpick-dual${cRate}">
         <div class="lvpick lvpick-r1"><div class="lvq"><span class="lv-rbadge r1">รอบ 1</span> ประเมินครั้งแรก (แตะซ้ำเพื่อล้าง)</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${r1v === l ? ' on' : ''}" data-lv="${l}" data-r="1"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
         <div class="lvpick lvpick-r2"><div class="lvq"><span class="lv-rbadge r2">รอบ 2</span> ประเมินรอบสอง ${r2Prog}</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${r2v === l ? ' on' : ''}" data-lv="${l}" data-r="2"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>
       </div>`;
     } else {
-      h += `<div class="lvpick"><div class="lvq">How well do you understand this box? (tap again to clear)</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${r1v === l ? ' on' : ''}" data-lv="${l}" data-r="1"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>`;
+      h += `<div class="lvpick${cRate}"><div class="lvq">How well do you understand this box? (tap again to clear)</div>${LV_ORD.map(l => `<button class="lvbtn lv${l}${r1v === l ? ' on' : ''}" data-lv="${l}" data-r="1"><span class="st">${LV[l].s}</span><span>${LV[l].t}</span></button>`).join('')}</div>`;
     }
-    h += `<nav class="pager">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
+    h += `<nav class="pager${cRate}">${prev ? `<a href="#/${id}/${prev.no}"><small>← ก่อนหน้า</small>${prev.no}. ${esc(prev.title)}</a>` : '<span></span>'}${next ? `<a class="next" href="#/${id}/${next.no}"><small>ถัดไป →</small>${next.no}. ${esc(next.title)}</a>` : ''}</nav>
       <div class="jump"><a href="${prev ? `#/${id}/${prev.no}` : '#/' + id}" aria-label="ก่อนหน้า">‹</a><button id="undoBtn" hidden title="เลิกทำไฮไลต์ล่าสุด" aria-label="เลิกทำ">↶</button><button id="focusBtn" title="โหมดอ่าน: ซ่อนเมนูข้าง" aria-label="โหมดอ่าน">${S.focus ? '⤡' : '⤢'}</button><input id="jumpIn" inputmode="numeric" placeholder="${s.no}" aria-label="ไปกล่อง"><a href="${next ? `#/${id}/${next.no}` : '#/' + id}" aria-label="ถัดไป">›</a></div>`;
     view.innerHTML = h;
     view.querySelectorAll('.lvbtn').forEach(b => b.onclick = () => {
@@ -5102,6 +5103,13 @@
       area: 'หน้าแรก (#/)',
       desc: 'เพิ่มเกาะปราสาทลอยน้ำ 3 สีพาสเทล (ทอง=อ่านบทเรียน, ชมพู=โจทย์/ข้อผิด/Mock, มิ้นต์=ยา/เชื้อ/Drill) ลอยขึ้นลงพร้อมธงพลิ้วบนหน้าแรก',
       added: 'v95'
+    },
+    {
+      key: 'centerBottomRating',
+      title: 'จัดกล่องประเมิน + ปุ่มก่อนหน้า/ถัดไปตรงกลางเท่าเนื้อหา',
+      area: 'ท้ายหน้าอ่านบท (แบบประเมิน & ปุ่มเปลี่ยนกล่อง)',
+      desc: 'จัดกล่องประเมินความเข้าใจ (รอบ 1/รอบ 2) และปุ่มก่อนหน้า/ถัดไปให้อยู่ตรงกลางและกว้างเท่าเนื้อหา เพื่อไม่ให้ทับกับฟังก์ชันเสริมด้านซ้าย',
+      added: 'v109'
     }
   ];
   var _onOwnerChange = [];
