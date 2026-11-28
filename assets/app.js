@@ -3115,7 +3115,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v80</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v81</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4652,6 +4652,31 @@
       b.title = 'Google Sync & App';
     }
   }
+  /* 🔒 Owner-only Draft / Preview Mode (เฉพาะ jinjuta.nanny84@docchula.com จนกว่าจะสั่ง publish) */
+  const OWNER_EMAIL = 'jinjuta.nanny84@docchula.com';
+  const DRAFT_FEATURES = {
+    pomoMiniCastle: true
+  };
+  const _onOwnerChange = [];
+  function isOwner() {
+    const st = window.NLE_SYNC ? window.NLE_SYNC.getState() : null;
+    const em = st && st.user && st.user.email ? st.user.email.toLowerCase() : '';
+    if (em) return em === OWNER_EMAIL;
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return true;
+    try { return localStorage.getItem('nle-owner-preview') === '1'; } catch (_) { return false; }
+  }
+  function draftOn(flag) { return !!(DRAFT_FEATURES[flag] && isOwner()); }
+  function syncOwnerPreview(st) {
+    const em = st && st.user && st.user.email ? st.user.email.toLowerCase() : '';
+    try {
+      if (em === OWNER_EMAIL) localStorage.setItem('nle-owner-preview', '1');
+      else if (em) localStorage.removeItem('nle-owner-preview');
+    } catch (_) {}
+    const on = isOwner();
+    document.documentElement.classList.toggle('owner-preview', on);
+    _onOwnerChange.forEach(fn => { try { fn(on); } catch (_) {} });
+  }
+  document.documentElement.classList.toggle('owner-preview', isOwner());
   if (window.NLE_SYNC) {
     window.NLE_SYNC.init({
       getS: () => S,
@@ -4676,6 +4701,7 @@
         if (view.querySelector('.uimg.missing')) route();
       },
       onChange: st => {
+        syncOwnerPreview(st);
         updateAuthBtn(st);
         if (INDEX && location.hash.replace(/^#\/?/, '').split('?')[0] === 'sync') vSync();
       }
@@ -4709,33 +4735,12 @@
         });
       } catch (e) {}
     };
-    const wrap = document.createElement('div');
-    wrap.className = 'pomo-wrap';
-    wrap.innerHTML = `<button type="button" class="pomo-mini" id="pmMini" title="ขยายปราสาทจับเวลา Monument Valley">
-        <svg viewBox="0 0 64 64" aria-hidden="true">
-          <circle cx="32" cy="32" r="24" fill="none" stroke="rgba(168,213,203,.24)" stroke-width="4.5"/>
-          <circle cx="32" cy="32" r="24" fill="none" stroke="rgba(124,224,211,.35)" stroke-width="1" stroke-dasharray="3 4"/>
-          <circle id="pmArc" cx="32" cy="32" r="24" fill="none" stroke="#4cf2f2" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8" transform="rotate(-90 32 32)"/>
-          <polygon points="32,5 34.5,8 32,11 29.5,8" fill="#ff7c6e" stroke="#fff" stroke-width=".5"/>
-          <g id="pmMiniIda" transform="rotate(0 32 32)">
-            <g transform="translate(32,8)">
-              <polygon points="0,-5 -2.6,1.5 2.6,1.5" fill="#fff"/>
-              <circle cx="0" cy="-6" r="1.4" fill="#1e293b"/>
-              <polygon points="0,-11.5 -2,-6 2,-6" fill="#fff"/>
-            </g>
-          </g>
-        </svg>
-        <span class="pm-t" id="pmMiniT">25:00</span>
-      </button>
-      <div class="pomo-card" id="pmCard" hidden>
-        <div class="pomo-hd"><span id="pmTitle">🍅 โฟกัส · 25 นาที</span><div class="pm-acts"><button type="button" id="pmSpin" title="หมุนกลไกปราสาท">↻ หมุน</button><button type="button" id="pmHide" title="ย่อเก็บ">– ย่อ</button></div></div>
-        <div class="pomo-stage" id="pmStage" title="คลิกเพื่อหมุนกลไกปราสาท">
-          <svg viewBox="0 0 280 250" aria-hidden="true">
+    const castleSvg = (p, vb = '0 0 280 250') => `<svg viewBox="${vb}" aria-hidden="true">
             <defs>
-              <radialGradient id="pmAG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4cf2f2" stop-opacity=".55"/><stop offset="100%" stop-color="#4cf2f2" stop-opacity="0"/></radialGradient>
-              <linearGradient id="pmST" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a8d5cb"/><stop offset="100%" stop-color="#74aba2"/></linearGradient>
-              <linearGradient id="pmSL" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5d948d"/><stop offset="100%" stop-color="#3a6868"/></linearGradient>
-              <linearGradient id="pmSR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2c555c"/><stop offset="100%" stop-color="#193740"/></linearGradient>
+              <radialGradient id="${p}AG" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4cf2f2" stop-opacity=".55"/><stop offset="100%" stop-color="#4cf2f2" stop-opacity="0"/></radialGradient>
+              <linearGradient id="${p}ST" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a8d5cb"/><stop offset="100%" stop-color="#74aba2"/></linearGradient>
+              <linearGradient id="${p}SL" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5d948d"/><stop offset="100%" stop-color="#3a6868"/></linearGradient>
+              <linearGradient id="${p}SR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2c555c"/><stop offset="100%" stop-color="#193740"/></linearGradient>
             </defs>
             <g><circle class="pm-star" cx="28" cy="24" r="1.4" fill="#fff"/><circle class="pm-star" cx="62" cy="14" r="1.1" fill="#ff9e9e" style="animation-delay:.8s"/><circle class="pm-star" cx="242" cy="28" r="1.5" fill="#7ce0d3" style="animation-delay:.4s"/><circle class="pm-star" cx="256" cy="64" r="1.2" fill="#fff" style="animation-delay:1.5s"/><path class="pm-star" d="M214 14v8M210 18h8" stroke="#fff" stroke-width="1"/></g>
             <g>
@@ -4745,38 +4750,45 @@
               <circle cx="106" cy="200" r="2.4" fill="#0d1d24" stroke="#6aa09a" stroke-width=".7"/><circle cx="116" cy="204" r="2.4" fill="#0d1d24" stroke="#6aa09a" stroke-width=".7"/><circle cx="126" cy="208" r="2.4" fill="#0d1d24" stroke="#6aa09a" stroke-width=".7"/>
             </g>
             <g>
-              <polygon points="131,58 140,62 140,174 131,170" fill="url(#pmSL)"/><polygon points="140,62 149,58 149,170 140,174" fill="url(#pmSR)"/>
-              <polygon points="62,92 73,97 73,168 62,163" fill="url(#pmSL)"/><polygon points="73,97 82,93 82,164 73,168" fill="url(#pmSR)"/>
-              <polygon points="198,92 209,97 209,168 198,163" fill="url(#pmSL)"/><polygon points="209,97 218,93 218,164 209,168" fill="url(#pmSR)"/>
+              <polygon points="131,58 140,62 140,174 131,170" fill="url(#${p}SL)"/><polygon points="140,62 149,58 149,170 140,174" fill="url(#${p}SR)"/>
+              <polygon points="62,92 73,97 73,168 62,163" fill="url(#${p}SL)"/><polygon points="73,97 82,93 82,164 73,168" fill="url(#${p}SR)"/>
+              <polygon points="198,92 209,97 209,168 198,163" fill="url(#${p}SL)"/><polygon points="209,97 218,93 218,164 209,168" fill="url(#${p}SR)"/>
             </g>
             <g>
-              <polygon points="73,154 140,186 140,198 73,166" fill="url(#pmSL)"/><polygon points="73,154 84,149 150,180 140,186" fill="url(#pmST)"/>
-              <polygon points="140,186 208,154 208,166 140,198" fill="url(#pmSR)"/><polygon points="140,186 130,180 197,149 208,154" fill="url(#pmST)"/>
-              <polygon id="pmT0" points="92,155 103,160 96,164 85,159" fill="#4cf2f2" opacity=".3"/>
-              <polygon id="pmT1" points="107,162 118,167 111,171 100,166" fill="#4cf2f2" opacity=".3"/>
-              <polygon id="pmT2" points="122,169 133,174 126,178 115,173" fill="#4cf2f2" opacity=".3"/>
-              <polygon id="pmT3" points="154,169 165,164 172,168 161,173" fill="#ff7c6e" opacity=".3"/>
-              <polygon id="pmT4" points="169,162 180,157 187,161 176,166" fill="#ff7c6e" opacity=".3"/>
-              <polygon id="pmT5" points="184,155 195,150 202,154 191,159" fill="#ff7c6e" opacity=".3"/>
+              <polygon points="73,154 140,186 140,198 73,166" fill="url(#${p}SL)"/><polygon points="73,154 84,149 150,180 140,186" fill="url(#${p}ST)"/>
+              <polygon points="140,186 208,154 208,166 140,198" fill="url(#${p}SR)"/><polygon points="140,186 130,180 197,149 208,154" fill="url(#${p}ST)"/>
+              <polygon id="${p}T0" points="92,155 103,160 96,164 85,159" fill="#4cf2f2" opacity=".3"/>
+              <polygon id="${p}T1" points="107,162 118,167 111,171 100,166" fill="#4cf2f2" opacity=".3"/>
+              <polygon id="${p}T2" points="122,169 133,174 126,178 115,173" fill="#4cf2f2" opacity=".3"/>
+              <polygon id="${p}T3" points="154,169 165,164 172,168 161,173" fill="#ff7c6e" opacity=".3"/>
+              <polygon id="${p}T4" points="169,162 180,157 187,161 176,166" fill="#ff7c6e" opacity=".3"/>
+              <polygon id="${p}T5" points="184,155 195,150 202,154 191,159" fill="#ff7c6e" opacity=".3"/>
             </g>
-            <g id="pmBridge" class="pomo-bridge">
-              <polygon points="78,142 198,86 208,91 88,147" fill="url(#pmST)"/><polygon points="78,142 88,147 88,158 78,153" fill="url(#pmSL)"/><polygon points="88,147 208,91 208,102 88,158" fill="url(#pmSR)"/>
+            <g id="${p}Bridge" class="pomo-bridge">
+              <polygon points="78,142 198,86 208,91 88,147" fill="url(#${p}ST)"/><polygon points="78,142 88,147 88,158 78,153" fill="url(#${p}SL)"/><polygon points="88,147 208,91 208,102 88,158" fill="url(#${p}SR)"/>
               <polygon points="140,113 149,117 140,121 131,117" fill="#4cf2f2" opacity=".9"/>
             </g>
             <g>
-              <polygon points="62,92 140,56 151,61 73,97" fill="url(#pmST)"/><polygon points="62,92 73,97 73,108 62,103" fill="url(#pmSL)"/>
-              <polygon points="140,56 218,92 207,97 129,61" fill="url(#pmST)"/><polygon points="129,61 207,97 207,108 129,72" fill="url(#pmSR)"/>
+              <polygon points="62,92 140,56 151,61 73,97" fill="url(#${p}ST)"/><polygon points="62,92 73,97 73,108 62,103" fill="url(#${p}SL)"/>
+              <polygon points="140,56 218,92 207,97 129,61" fill="url(#${p}ST)"/><polygon points="129,61 207,97 207,108 129,72" fill="url(#${p}SR)"/>
             </g>
             <g>
-              <circle cx="184" cy="72" r="26" fill="url(#pmAG)"/>
+              <circle cx="184" cy="72" r="26" fill="url(#${p}AG)"/>
               <circle class="pm-ring" cx="184" cy="72" r="14" fill="none" stroke="#7ce0d3" stroke-width="1"/>
               <circle class="pm-ring" cx="184" cy="72" r="21" fill="none" stroke="#7ce0d3" stroke-width=".7" style="animation-delay:1.2s"/>
               <polygon points="184,65 193,70 184,75 175,70" fill="#133a42" stroke="#7ce0d3" stroke-width="1"/>
-              <g id="pmCry"><polygon points="184,54 190,61 184,66 178,61" fill="#ff7c6e" stroke="#fff" stroke-width=".7"/></g>
+              <g id="${p}Cry"><polygon points="184,54 190,61 184,66 178,61" fill="#ff7c6e" stroke="#fff" stroke-width=".7"/></g>
             </g>
             <g transform="translate(86,152)"><ellipse cx="0" cy="4" rx="3.4" ry="4.8" fill="#111827"/><circle cx="0" cy="-2" r="2.6" fill="#111827"/><polygon points="2,-3 7,-1 2,0" fill="#111827"/><circle cx=".6" cy="-2.2" r=".9" fill="#fff"/></g>
-            <g id="pmIda" transform="translate(95,156)"><g class="pm-bob"><ellipse cx="0" cy="3" rx="4.2" ry="1.8" fill="rgba(0,0,0,.32)"/><line x1="-1.5" y1="0" x2="-1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/><line x1="1.5" y1="0" x2="1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/><polygon points="0,-10 -5,0 5,0" fill="#fff"/><circle cx="0" cy="-12" r="2.7" fill="#1e293b"/><polygon points="0,-24 -3.8,-12 3.8,-12" fill="#fff"/></g></g>
-          </svg>
+            <g id="${p}Ida" transform="translate(95,156)"><g class="pm-bob"><ellipse cx="0" cy="3" rx="4.2" ry="1.8" fill="rgba(0,0,0,.32)"/><line x1="-1.5" y1="0" x2="-1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/><line x1="1.5" y1="0" x2="1.5" y2="3" stroke="#1e293b" stroke-width="1.2"/><polygon points="0,-10 -5,0 5,0" fill="#fff"/><circle cx="0" cy="-12" r="2.7" fill="#1e293b"/><polygon points="0,-24 -3.8,-12 3.8,-12" fill="#fff"/></g></g>
+          </svg>`;
+    const wrap = document.createElement('div');
+    wrap.className = 'pomo-wrap';
+    wrap.innerHTML = `<button type="button" class="pomo-mini" id="pmMini" title="ขยายปราสาทจับเวลา Monument Valley"></button>
+      <div class="pomo-card" id="pmCard" hidden>
+        <div class="pomo-hd"><span id="pmTitle">🍅 โฟกัส · 25 นาที</span><div class="pm-acts"><button type="button" id="pmSpin" title="หมุนกลไกปราสาท">↻ หมุน</button><button type="button" id="pmHide" title="ย่อเก็บ">– ย่อ</button></div></div>
+        <div class="pomo-stage" id="pmStage" title="คลิกเพื่อหมุนกลไกปราสาท">
+          ${castleSvg('pm')}
         </div>
         <div class="pomo-ctl">
           <div class="pomo-toprow"><div class="pomo-time" id="pmTime">25:00</div><div class="pomo-stat" id="pmStat">พร้อมออกเดินทาง</div></div>
@@ -4785,23 +4797,54 @@
         </div>
       </div>`;
     document.body.appendChild(wrap);
+    const renderMini = () => {
+      const btn = $('#pmMini', wrap);
+      const useMaze = draftOn('pomoMiniCastle');
+      btn.classList.toggle('pomo-mini-maze', useMaze);
+      if (useMaze) {
+        btn.innerHTML = `<div class="pm-mini-stage">${castleSvg('pmM', '38 30 204 220')}</div>
+          <div class="pm-mini-bar"><span class="pm-t" id="pmMiniT">25:00</span><span class="pm-mini-prog"><i id="pmMiniBar"></i></span></div>`;
+      } else {
+        btn.innerHTML = `<svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="24" fill="none" stroke="rgba(168,213,203,.24)" stroke-width="4.5"/>
+            <circle cx="32" cy="32" r="24" fill="none" stroke="rgba(124,224,211,.35)" stroke-width="1" stroke-dasharray="3 4"/>
+            <circle id="pmArc" cx="32" cy="32" r="24" fill="none" stroke="#4cf2f2" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8" transform="rotate(-90 32 32)"/>
+            <polygon points="32,5 34.5,8 32,11 29.5,8" fill="#ff7c6e" stroke="#fff" stroke-width=".5"/>
+            <g id="pmMiniIda" transform="rotate(0 32 32)">
+              <g transform="translate(32,8)">
+                <polygon points="0,-5 -2.6,1.5 2.6,1.5" fill="#fff"/>
+                <circle cx="0" cy="-6" r="1.4" fill="#1e293b"/>
+                <polygon points="0,-11.5 -2,-6 2,-6" fill="#fff"/>
+              </g>
+            </g>
+          </svg>
+          <span class="pm-t" id="pmMiniT">25:00</span>`;
+      }
+    };
+    const syncCastle = (pref, x, y, p, tilt) => {
+      const ida = $(`#${pref}Ida`, wrap); if (ida) ida.setAttribute('transform', `translate(${x.toFixed(1)},${y.toFixed(1)})`);
+      for (let k = 0; k < 6; k++) { const el = $(`#${pref}T${k}`, wrap); if (el) el.setAttribute('opacity', p >= (k + 1) * 0.11 ? '.95' : '.28'); }
+      const br = $(`#${pref}Bridge`, wrap); if (br) br.style.transform = `rotate(${spin + tilt}deg)`;
+      const cr = $(`#${pref}Cry`, wrap); if (cr) cr.setAttribute('transform', p >= 1 ? 'translate(0,-4) scale(1.15)' : 'translate(0,0)');
+    };
     const sync = () => {
       const p = Math.max(0, Math.min(1, 1 - left / total));
       const sc = p * (PATH.length - 1), i = Math.min(PATH.length - 2, Math.floor(sc)), t = sc - i;
       const a = PATH[i], b = PATH[i + 1];
       const x = a.x + (b.x - a.x) * t, y = a.y + (b.y - a.y) * t;
-      const ida = $('#pmIda', wrap); if (ida) ida.setAttribute('transform', `translate(${x.toFixed(1)},${y.toFixed(1)})`);
-      for (let k = 0; k < 6; k++) { const el = $(`#pmT${k}`, wrap); if (el) el.setAttribute('opacity', p >= (k + 1) * 0.11 ? '.95' : '.28'); }
       const tilt = p > 0.35 && p < 0.78 ? -6 : 0;
-      const br = $('#pmBridge', wrap); if (br) br.style.transform = `rotate(${spin + tilt}deg)`;
-      const cr = $('#pmCry', wrap); if (cr) cr.setAttribute('transform', p >= 1 ? 'translate(0,-4) scale(1.15)' : 'translate(0,0)');
+      syncCastle('pm', x, y, p, tilt);
+      syncCastle('pmM', x, y, p, tilt);
       const ts = fmt(left);
       $('#pmTime', wrap).textContent = ts;
-      $('#pmMiniT', wrap).textContent = ts;
+      const mt = $('#pmMiniT', wrap); if (mt) mt.textContent = ts;
       $('#pmStat', wrap).textContent = p === 0 && !tmr ? 'พร้อมออกเดินทาง' : (p >= 1 ? PATH[PATH.length - 1].msg : a.msg);
-      $('#pmArc', wrap).setAttribute('stroke-dashoffset', (150.8 * (1 - p)).toFixed(1));
+      const arc = $('#pmArc', wrap); if (arc) arc.setAttribute('stroke-dashoffset', (150.8 * (1 - p)).toFixed(1));
       const mi = $('#pmMiniIda', wrap); if (mi) mi.setAttribute('transform', `rotate(${(p * 360).toFixed(1)} 32 32)`);
+      const mb = $('#pmMiniBar', wrap); if (mb) mb.style.width = `${(p * 100).toFixed(1)}%`;
     };
+    renderMini();
+    _onOwnerChange.push(() => { renderMini(); sync(); });
     const setOpen = v => { open = v; $('#pmMini', wrap).hidden = v; $('#pmCard', wrap).hidden = !v; };
     const doSpin = () => { spin = spin === 0 ? 12 : spin === 12 ? -12 : 0; sync(); };
     $('#pmMini', wrap).onclick = () => setOpen(true);

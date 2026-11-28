@@ -989,6 +989,14 @@ body.has-readbar .pomo-wrap{bottom:max(68px,calc(env(safe-area-inset-bottom) + 6
 .pomo-mini:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 12px 28px rgba(6,14,24,.55),0 0 18px rgba(76,242,242,.32)}
 .pomo-mini svg{width:60px;height:60px;display:block;overflow:visible}
 .pomo-mini .pm-t{position:absolute;inset:0;display:grid;place-items:center;font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;color:#e6faf7;text-shadow:0 1px 4px rgba(0,0,0,.75);pointer-events:none}
+.pomo-mini.pomo-mini-maze{width:100px;height:auto;border-radius:13px;overflow:hidden;display:flex;flex-direction:column;align-items:stretch;background:linear-gradient(180deg,#070f17 0%,#102a34 26%,#1f4f5c 50%,#7d456b 72%,#281e3b 88%,#0b0f1c 100%);border:1px solid rgba(124,224,211,.46)}
+.pomo-mini-maze .pm-mini-stage{width:100%;padding:2px 2px 0;line-height:0}
+.pomo-mini-maze .pm-mini-stage svg{width:100%;height:auto;display:block;overflow:hidden}
+.pomo-mini-maze .pm-mini-bar{display:flex;flex-direction:column;align-items:center;gap:2px;padding:3px 6px 4px;background:rgba(7,15,23,.72);backdrop-filter:blur(4px);border-top:1px solid rgba(124,224,211,.18)}
+.pomo-mini-maze .pm-t{position:static;inset:auto;display:block;font-size:11px;line-height:1.15;letter-spacing:.02em}
+.pomo-mini-maze .pm-mini-prog{width:100%;height:3px;border-radius:999px;background:rgba(255,255,255,.16);overflow:hidden}
+.pomo-mini-maze .pm-mini-prog i{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,#4cf2f2,#ff7c6e);transition:width .4s ease}
+@media (max-width:680px){.pomo-mini.pomo-mini-maze{width:86px;border-radius:11px}.pomo-mini-maze .pm-t{font-size:10.5px}}
 .pomo-card{width:264px;border-radius:16px;overflow:hidden;border:1px solid rgba(124,224,211,.36);background:linear-gradient(180deg,#070f17 0%,#102a34 26%,#1f4f5c 48%,#7d456b 68%,#281e3b 86%,#0b0f1c 100%);color:#f0fdfa;box-shadow:0 18px 44px rgba(6,14,24,.55)}
 .pomo-hd{display:flex;align-items:center;justify-content:space-between;padding:7px 10px;background:rgba(0,0,0,.22);font-size:11.5px;font-weight:700}
 .pomo-hd .pm-acts{display:flex;gap:4px}
@@ -1000,9 +1008,9 @@ body.has-readbar .pomo-wrap{bottom:max(68px,calc(env(safe-area-inset-bottom) + 6
 @keyframes pmTwinkle{0%,100%{opacity:.35}50%{opacity:1}}
 @keyframes pmPulse{0%{opacity:.7;transform:scale(.88)}70%{opacity:.15;transform:scale(1.16)}100%{opacity:0;transform:scale(1.22)}}
 @keyframes pmBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
-.pomo-stage .pm-star{animation:pmTwinkle 3.2s ease-in-out infinite}
-.pomo-stage .pm-ring{transform-origin:184px 72px;animation:pmPulse 3s ease-out infinite}
-.pomo-stage .pm-bob{animation:pmBob .9s ease-in-out infinite}
+.pomo-stage .pm-star,.pomo-mini-maze .pm-star{animation:pmTwinkle 3.2s ease-in-out infinite}
+.pomo-stage .pm-ring,.pomo-mini-maze .pm-ring{transform-origin:184px 72px;animation:pmPulse 3s ease-out infinite}
+.pomo-stage .pm-bob,.pomo-mini-maze .pm-bob{animation:pmBob .9s ease-in-out infinite}
 .pomo-ctl{padding:7px 11px 10px;background:rgba(7,15,23,.58);backdrop-filter:blur(6px)}
 .pomo-toprow{display:flex;align-items:baseline;justify-content:space-between;gap:6px}
 .pomo-time{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums;color:#fff}

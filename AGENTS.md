@@ -14,6 +14,12 @@
 - `sw.js` + `manifest.json` + `tools/gen_pwa_icons.py` — PWA offline service worker (network-first for same-origin; never intercepts Firebase/Google Auth/Gemini API).
 - `data/` — Chapters (`<id>.md`), exams (`<id>-exams.json`), flows, numbers, abbr, `chapters.json`. Follow `FORMAT.md` when editing content.
 
+## Owner-Only Draft / Preview Mode (Default for All Future Edits)
+- **Owner email:** `jinjuta.nanny84@docchula.com`
+- **Do NOT publish new edits to friends by default:** All new features/UI changes from now on MUST be gated behind `draftOn('<featureKey>')` (registered in `DRAFT_FEATURES` in `assets/app.js`, or `.owner-preview` class on `<html>`) so ONLY `jinjuta.nanny84@docchula.com` (and `localhost`) sees them while friends continue seeing the stable published version.
+- **Publish only on explicit user command:** Keep each new edit gated until the user explicitly asks to **publish** (สั่ง publish); only then remove the gate / promote it to public.
+- **Still push to `origin main`:** Pushing deploys the owner-gated code so the owner can test immediately on all her devices at `https://jinjutananny84.github.io/nle-textbook/` without affecting friends.
+
 ## Mandatory Checklist Before Every Push
 1. **Sync with remote first:** Run `git pull --rebase origin main` before pushing (other tools/PRs may push content/exam updates concurrently).
 2. **Pixel theme edits:** Never hand-edit `assets/pixel.css`. Edit `tools/pixel_theme.css` or `tools/pixel_sprites.py`, then run:
