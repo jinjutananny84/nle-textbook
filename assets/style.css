@@ -1126,8 +1126,8 @@ body.has-readbar .reef-dock{top:96px;bottom:212px}
 body.reef-open .mv-toy-ctrl{right:126px;transition:right .2s ease}
 @media (max-width:680px){body.reef-open .mv-toy-ctrl{right:110px}}
 .hl-pop.kw-pop-fit{width:min(440px,calc(100vw - 24px))}
-.kw-art{margin-top:8px;border-radius:10px;overflow:hidden;border:1px solid rgba(124,224,211,.24);line-height:0;flex:0 0 auto}
-.kw-art svg{width:100%;height:auto;display:block}
+.kw-art{margin:4px -4px -6px;overflow:hidden;line-height:0;flex:0 0 auto;background:transparent;-webkit-mask-image:linear-gradient(to bottom,#000 76%,transparent 100%);mask-image:linear-gradient(to bottom,#000 76%,transparent 100%)}
+.kw-art svg{width:100%;height:84px;display:block}
 @keyframes kwSpirit{0%,100%{transform:translate(234px,58px)}50%{transform:translate(234px,51px)}}
 @keyframes kwWf{0%{stroke-dashoffset:0}100%{stroke-dashoffset:-18}}
 .kw-art .kw-spirit{animation:kwSpirit 3.4s ease-in-out infinite}

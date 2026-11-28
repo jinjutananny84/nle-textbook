@@ -2502,20 +2502,18 @@
     pop.classList.toggle('ai-pop-fit', useArt);
     pop.classList.toggle('kw-pop-fit', useArt);
     const artHtml = useArt ? `<div class="kw-art" aria-hidden="true">
-      <svg viewBox="0 0 360 116">
+      <svg viewBox="0 4 360 108" preserveAspectRatio="xMidYMid meet">
         <defs>
-          <linearGradient id="kwBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0b1526"/><stop offset="100%" stop-color="#060b14"/></linearGradient>
-          <linearGradient id="kwWf" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0f2fe" stop-opacity=".85"/><stop offset="100%" stop-color="#5eead4" stop-opacity=".22"/></linearGradient>
-          <radialGradient id="kwSp" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5eead4" stop-opacity=".9"/><stop offset="100%" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+          <linearGradient id="kwWf" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0f2fe" stop-opacity=".88"/><stop offset="100%" stop-color="#5eead4" stop-opacity=".18"/></linearGradient>
+          <radialGradient id="kwSp" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5eead4" stop-opacity=".85"/><stop offset="100%" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
         </defs>
-        <rect width="360" height="116" rx="10" fill="url(#kwBg)"/>
         <g fill="#bae6fd" opacity=".55"><circle cx="28" cy="22" r="1"/><circle cx="72" cy="16" r="1.2"/><circle cx="152" cy="18" r="1"/><circle cx="298" cy="20" r="1.3"/><circle cx="332" cy="42" r="1"/><circle cx="240" cy="14" r=".9"/><circle cx="316" cy="86" r="1.1"/></g>
         <!-- หอคอยซ้าย + โดม Monument Valley -->
-        <polygon points="82,30 98,22 114,30 114,116 82,116" fill="#3b5368"/>
-        <polygon points="98,22 114,30 114,116 98,116" fill="#25384a"/>
+        <polygon points="82,30 98,22 114,30 114,112 82,112" fill="#3b5368"/>
+        <polygon points="98,22 114,30 114,112 98,112" fill="#25384a"/>
         <path d="M84 30 Q98 12 112 30 Z" fill="#88a4bc"/>
         <line x1="98" y1="14" x2="98" y2="8" stroke="#e2e8f0" stroke-width="1.4"/>
-        <path d="M93 52 v-14 a5 5 0 0 1 10 0 v14 Z" fill="#0b1526"/>
+        <path d="M93 52 v-14 a5 5 0 0 1 10 0 v14 Z" fill="var(--surface,#0b1526)"/>
         <!-- สะพานน้ำตกที่เป็นไปไม่ได้ (อิงภาพ Monument Valley) -->
         <polygon points="104,48 258,92 246,98 92,54" fill="#cbd5e1"/>
         <polygon points="92,54 246,98 246,108 92,64" fill="#47637a"/>
@@ -3186,7 +3184,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v88</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v89</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
