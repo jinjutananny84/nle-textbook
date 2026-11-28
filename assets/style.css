@@ -1369,8 +1369,10 @@ body.focus .chtree-dock{left:14px}
 .chtree-orb svg{width:100%;height:100%;display:block;overflow:visible}
 @keyframes chtFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3.5px)}}
 @keyframes chtTwinkle{0%,100%{opacity:.5;transform:scale(.93)}50%{opacity:1;transform:scale(1.07)}}
+@keyframes chtAurWave{0%,100%{transform:translateX(0) scaleY(1);opacity:.88}50%{transform:translateX(-4px) scaleY(1.06);opacity:1}}
 .chtree-orb .cht-island{animation:chtFloat 4.2s ease-in-out infinite}
 .chtree-orb .cht-spk{transform-box:fill-box;transform-origin:center;animation:chtTwinkle 2.8s ease-in-out infinite}
+.chtree-orb .cht-aur,.home-tree-orb .cht-aur{transform-box:fill-box;transform-origin:center;animation:chtAurWave 9s ease-in-out infinite}
 .chtree-hide{position:absolute;top:0;right:2px;width:20px;height:20px;border:1px solid color-mix(in srgb,var(--accent) 42%,transparent);border-radius:999px;background:color-mix(in srgb,var(--surface) 84%,transparent);color:var(--fg);font-size:13px;font-weight:700;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0;opacity:0;pointer-events:auto;transition:opacity .18s,transform .15s}
 .chtree-dock:hover .chtree-hide,.chtree-hide:focus-visible{opacity:.9}
 .chtree-hide:hover{opacity:1;transform:scale(1.1)}

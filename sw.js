@@ -1,5 +1,5 @@
 /* Service Worker สำหรับ PWA: เปิดใช้งาน Offline ได้ และอัปเดตอัตโนมัติเมื่อออนไลน์ */
-const CACHE = 'nle-tb-v112';
+const CACHE = 'nle-tb-v113';
 const SHELL = [
   './',
   './index.html',

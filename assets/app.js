@@ -3343,7 +3343,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v112</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v113</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4998,7 +4998,7 @@
   const themeBtn = $('#themeBtn');
   const isDark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
   const syncTheme = () => { themeBtn.textContent = isDark() ? '☀️' : '🌙'; };
-  themeBtn.onclick = () => { S.theme = isDark() ? 'light' : 'dark'; document.documentElement.dataset.theme = S.theme; save(); syncTheme(); if (uiStyle() === 'monument') rerender(); };
+  themeBtn.onclick = () => { S.theme = isDark() ? 'light' : 'dark'; document.documentElement.dataset.theme = S.theme; save(); syncTheme(); if (typeof syncChapterTreeUI === 'function') syncChapterTreeUI(); if (uiStyle() === 'monument' || !location.hash || location.hash === '#/') rerender(); };
   syncTheme(); applyUiStyle();
   $('#fontBtn').onclick = () => { const sizes = [15, 17, 19, 21]; const cur = S.font || 17; S.font = sizes[(sizes.indexOf(cur) + 1) % sizes.length]; document.documentElement.style.setProperty('--fs', S.font + 'px'); save(); };
   updateWrongCount();
@@ -6985,6 +6985,88 @@
     const st = chTreeStage(pct);
     const r = 93, circ = 2 * Math.PI * r, off = circ * (1 - Math.max(0, Math.min(100, pct)) / 100);
     const u = String(uid).replace(/[^a-zA-Z0-9_-]/g, '');
+    if (isDark()) {
+      const coolTree = /^(kt-msk|kt-embryo|b7|b9|kt-parasit)$/.test(chId);
+      const a1c1 = coolTree ? '#f472b6' : '#34d399';
+      const a1c2 = coolTree ? '#c084fc' : '#5eead4';
+      const a1c3 = coolTree ? '#818cf8' : '#2dd4bf';
+      const a2c1 = coolTree ? '#5eead4' : '#e879f9';
+      const a2c2 = coolTree ? '#38bdf8' : '#a855f7';
+      const backGlow = coolTree ? 'rgba(244,114,182,.26)' : 'rgba(94,234,212,.18)';
+      return `<svg viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <radialGradient id="chtSky-${u}" cx="50%" cy="28%" r="76%">
+            <stop offset="0%" stop-color="#0b2840"/>
+            <stop offset="52%" stop-color="#0a1936"/>
+            <stop offset="100%" stop-color="#050b1c"/>
+          </radialGradient>
+          <linearGradient id="chtAur1-${u}" x1="0" y1="0" x2="1" y2=".85">
+            <stop offset="0%" stop-color="${a1c1}" stop-opacity=".86"/>
+            <stop offset="52%" stop-color="${a1c2}" stop-opacity=".64"/>
+            <stop offset="100%" stop-color="${a1c3}" stop-opacity="0"/>
+          </linearGradient>
+          <linearGradient id="chtAur2-${u}" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${a2c1}" stop-opacity=".72"/>
+            <stop offset="58%" stop-color="${a2c2}" stop-opacity=".36"/>
+            <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="chtBack-${u}" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="${backGlow}"/>
+            <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+          </radialGradient>
+          <linearGradient id="chtMtnL-${u}" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#e0f2fe" stop-opacity=".72"/>
+            <stop offset="58%" stop-color="#64748b" stop-opacity=".58"/>
+            <stop offset="100%" stop-color="#1e3a5f" stop-opacity=".88"/>
+          </linearGradient>
+          <linearGradient id="chtMtnR-${u}" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#334155"/>
+            <stop offset="100%" stop-color="#0f1f3a"/>
+          </linearGradient>
+          <linearGradient id="chtSoilT-${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e3b5a"/><stop offset="100%" stop-color="#122642"/></linearGradient>
+          <linearGradient id="chtSoilS-${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0f233d"/><stop offset="100%" stop-color="#081426"/></linearGradient>
+          <filter id="chtBlur-${u}" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="6.5"/></filter>
+          <clipPath id="chtClip-${u}"><circle cx="100" cy="100" r="88"/></clipPath>
+        </defs>
+        <circle cx="100" cy="100" r="97" fill="none" stroke="rgba(94,234,212,.14)" stroke-width="4.5"/>
+        <circle cx="100" cy="100" r="88" fill="url(#chtSky-${u})" stroke="rgba(165,243,252,.42)" stroke-width="1.5"/>
+        <g clip-path="url(#chtClip-${u})">
+          <!-- 🌌 แสงออโรร่าเขียวมิ้นต์ + ม่วงชมพูพาดผ่านภูเขา -->
+          <g class="cht-aur" filter="url(#chtBlur-${u})">
+            <path d="M-8 56 C38 22 86 78 136 34 C162 12 185 32 210 18 L210 78 C162 96 116 62 68 92 C32 112 8 92 -8 84 Z" fill="url(#chtAur1-${u})"/>
+            <path d="M16 18 C66 58 122 22 198 66 L186 114 C124 88 74 106 14 78 Z" fill="url(#chtAur2-${u})"/>
+          </g>
+          <g fill="#e0f2fe" opacity=".82">
+            <circle cx="46" cy="38" r="1.2"/><circle cx="78" cy="26" r="1.4"/><circle cx="136" cy="34" r="1.3"/>
+            <circle cx="158" cy="56" r="1.1"/><circle cx="34" cy="72" r="1"/><circle cx="164" cy="82" r="1.2"/>
+          </g>
+          <!-- 🏔️ ภูเขาหิมะ Kirkjufell ใต้แสงออโรร่า -->
+          <g opacity=".82">
+            <path d="M10 132 L46 96 L84 124 L132 104 L190 132 Z" fill="#0d2240"/>
+            <path d="M36 130 Q68 104 82 54 Q86 48 90 54 Q106 102 146 130 Z" fill="url(#chtMtnR-${u})"/>
+            <path d="M86 52 Q100 96 142 130 L96 130 Q89 96 86 52 Z" fill="url(#chtMtnL-${u})"/>
+            <path d="M74 86 Q88 83 102 88 M65 104 Q88 100 116 106" fill="none" stroke="rgba(224,242,254,.44)" stroke-width="1.2" stroke-linecap="round"/>
+            <ellipse cx="100" cy="128" rx="64" ry="8" fill="#38bdf8" opacity=".16"/>
+          </g>
+          <!-- แสงรัศมีอ่อน ๆ หลังต้นไม้ช่วยให้ต้นไม้เด่นไม่กลืน -->
+          <circle cx="100" cy="96" r="46" fill="url(#chtBack-${u})"/>
+          <g class="cht-island">
+            <path d="M40,145 Q100,180 160,145 Q150,164 100,173 Q50,164 40,145 Z" fill="#0a2829"/>
+            <path d="M36,138 C38,151 48,158 56,156 C62,163 72,164 79,161 C88,168 112,168 121,161 C128,164 138,163 144,156 C152,158 162,151 164,138 Z" fill="#115e59"/>
+            <path d="M39,141 C45,152 55,154 62,152 C70,159 83,160 92,157 C101,161 114,160 123,156 C133,158 145,155 153,148 C158,145 161,142 162,139 Z" fill="#0f766e"/>
+            <circle cx="57" cy="153" r="2" fill="#5eead4"/><circle cx="76" cy="157" r="2.2" fill="#e0f2fe"/><circle cx="115" cy="158" r="2.2" fill="#fde047"/><circle cx="139" cy="152" r="2" fill="#5eead4"/>
+            <path d="M32,131 Q33,144 45,147 Q72,154 100,154 Q128,154 155,147 Q167,144 168,131 Z" fill="url(#chtSoilS-${u})"/>
+            <ellipse cx="100" cy="131" rx="68" ry="18" fill="url(#chtSoilT-${u})"/>
+            <ellipse cx="100" cy="132" rx="34" ry="7" fill="#38bdf8" opacity=".16"/>
+            ${chTreeArtSVG(chId, st, meta)}
+          </g>
+        </g>
+        <ellipse cx="144" cy="48" rx="15" ry="7" fill="#fff" opacity=".18" transform="rotate(34 144 48)"/>
+        <circle cx="100" cy="100" r="${r}" fill="none" stroke="rgba(148,163,184,.22)" stroke-width="3.6"/>
+        <circle cx="100" cy="100" r="${r}" fill="none" stroke="${meta.accent}" stroke-width="4.2" stroke-linecap="round"
+          stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 100 100)"/>
+      </svg>`;
+    }
     return `<svg viewBox="0 0 200 200" aria-hidden="true">
       <defs>
         <radialGradient id="chtOrbG-${u}" cx="65%" cy="22%" r="76%">
