@@ -3115,7 +3115,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v75</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v76</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4705,8 +4705,20 @@
     };
     const wrap = document.createElement('div');
     wrap.className = 'pomo-wrap';
-    wrap.innerHTML = `<button type="button" class="pomo-mini" id="pmMini" title="เปิดปราสาทจับเวลา Pomodoro">
-        <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="rgba(124,224,211,.28)" stroke-width="2"/><circle id="pmArc" cx="12" cy="12" r="10" fill="none" stroke="#4cf2f2" stroke-width="2.2" stroke-dasharray="62.8" stroke-dashoffset="62.8" transform="rotate(-90 12 12)"/><polygon points="12,5 9,15 15,15" fill="#fff"/><circle cx="12" cy="8.5" r="1.4" fill="#fff"/></svg>
+    wrap.innerHTML = `<button type="button" class="pomo-mini" id="pmMini" title="ขยายปราสาทจับเวลา Monument Valley">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="24" fill="none" stroke="rgba(168,213,203,.24)" stroke-width="4.5"/>
+          <circle cx="32" cy="32" r="24" fill="none" stroke="rgba(124,224,211,.35)" stroke-width="1" stroke-dasharray="3 4"/>
+          <circle id="pmArc" cx="32" cy="32" r="24" fill="none" stroke="#4cf2f2" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8" transform="rotate(-90 32 32)"/>
+          <polygon points="32,5 34.5,8 32,11 29.5,8" fill="#ff7c6e" stroke="#fff" stroke-width=".5"/>
+          <g id="pmMiniIda" transform="rotate(0 32 32)">
+            <g transform="translate(32,8)">
+              <polygon points="0,-5 -2.6,1.5 2.6,1.5" fill="#fff"/>
+              <circle cx="0" cy="-6" r="1.4" fill="#1e293b"/>
+              <polygon points="0,-11.5 -2,-6 2,-6" fill="#fff"/>
+            </g>
+          </g>
+        </svg>
         <span class="pm-t" id="pmMiniT">25:00</span>
       </button>
       <div class="pomo-card" id="pmCard" hidden>
@@ -4781,7 +4793,8 @@
       $('#pmTime', wrap).textContent = ts;
       $('#pmMiniT', wrap).textContent = ts;
       $('#pmStat', wrap).textContent = p === 0 && !tmr ? 'พร้อมออกเดินทาง' : (p >= 1 ? PATH[PATH.length - 1].msg : a.msg);
-      $('#pmArc', wrap).setAttribute('stroke-dashoffset', (62.8 * (1 - p)).toFixed(1));
+      $('#pmArc', wrap).setAttribute('stroke-dashoffset', (150.8 * (1 - p)).toFixed(1));
+      const mi = $('#pmMiniIda', wrap); if (mi) mi.setAttribute('transform', `rotate(${(p * 360).toFixed(1)} 32 32)`);
     };
     const setOpen = v => { open = v; $('#pmMini', wrap).hidden = v; $('#pmCard', wrap).hidden = !v; };
     const doSpin = () => { spin = spin === 0 ? 12 : spin === 12 ? -12 : 0; sync(); };
