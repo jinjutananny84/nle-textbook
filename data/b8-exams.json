@@ -10,7 +10,7 @@
     "D": "Enterotoxin ของ Staphylococcus aureus (ข้อสอบพิมพ์ว่า heat-labile)"
    },
    "answer": "D",
-   "why": "อาเจียนเด่นภายใน 1–6 ชม. หลังกินอาหารที่มือคนสัมผัสมาก (สลัดไข่ แซนด์วิช) = preformed enterotoxin ของ S. aureus ซึ่งทนร้อน ETEC ต้องฟักตัว >16 ชม. และทำให้ถ่ายเหลวเป็นหลัก B. cereus แบบ heat-labile เป็นชนิดท้องเสีย (8–16 ชม.) ส่วนชนิดอาเจียนมักมากับข้าวผัด C. perfringens ฟักตัว 8–16 ชม. ทำให้ถ่ายเหลว",
+   "why": "อาเจียนเด่นภายใน 1–6 ชม. หลังกินอาหารที่มือสัมผัสมาก เช่น สลัดไข่ เป็นลักษณะของ preformed enterotoxin จาก S. aureus\n✗ A: ฟักตัวนานกว่า 16 ชม. และทำให้ถ่ายเหลวเป็นน้ำเด่น\n✗ B: ชนิด heat-labile ทำให้ท้องเสียใน 8–16 ชม. ส่วนชนิดอาเจียนมักมากับข้าวผัด\n✗ C: C. perfringens ฟักตัว 8–16 ชม. และทำให้ถ่ายเหลวพร้อมปวดบิดท้อง\n✓ D: เป็น preformed enterotoxin ที่ออกฤทธิ์เร็วใน 1–6 ชม. ทำให้อาเจียนเด่น (จริงแล้วทนร้อน)",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตัวเลือกในไฟล์เขียนว่า heat-labile S. aureus ซึ่งจริงๆ toxin ทนร้อน (heat-stable) แต่ยังเป็นตัวเลือกที่ใกล้ที่สุด"
   },
@@ -25,7 +25,7 @@
     "E": "หอยดิบ"
    },
    "answer": "A",
-   "why": "Lung fluke คือ Paragonimus ไข่มีฝาปิด (operculum) มีขอบนูนรอบฝา โฮสต์กึ่งกลางที่สองคือปู/กุ้งน้ำจืด จึงติดจากการกินปูดิบ ปลาดิบเป็นทางติดของ Opisthorchis พืชน้ำเป็นทางติดของ Fasciolopsis/Fasciola หมูดิบเป็นของ Taenia solium/Trichinella หอยดิบเป็นของ Angiostrongylus",
+   "why": "Lung fluke คือ Paragonimus westermani ซึ่งมีโฮสต์กึ่งกลางที่สองเป็นปูหรือกุ้งน้ำจืด\n✓ A: มี metacercaria ของ Paragonimus อยู่ในกล้ามเนื้อและเหงือกของปูน้ำจืด\n✗ B: เป็นทางติดต่อของพยาธิใบไม้ตับ Opisthorchis viverrini\n✗ C: เป็นทางติดต่อของ Taenia solium และ Trichinella spiralis\n✗ D: เป็นทางติดต่อของ Fasciolopsis buski และ Fasciola hepatica\n✗ E: เป็นทางติดต่อของ Angiostrongylus cantonensis",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์ข้อสอบมีเพียงตัวเลือก ปูดิบ จึงสร้างตัวเลือกอื่นเพิ่ม และเป็นปรสิตปอดมากกว่าระบบทางเดินอาหาร แต่ชีท A3 จัดไว้ในกล่องพยาธิ",
    "options_reconstructed": true,
@@ -42,7 +42,7 @@
     "E": "Senna"
    },
    "answer": "A",
-   "why": "Docusate เป็น surfactant ช่วยให้น้ำและไขมันซึมเข้าก้อนอุจจาระ จึงจัดเป็น stool softener ส่วน castor oil, bisacodyl และ senna เป็นยาระบายกลุ่ม stimulant ที่กระตุ้นการบีบตัว และ lactulose เป็นยาระบายกลุ่ม osmotic",
+   "why": "ผู้สูงอายุที่ต้องการยาระบายกลุ่ม stool softener ต้องเลือกยาที่ช่วยให้น้ำและไขมันแทรกเข้าก้อนอุจจาระได้ง่ายขึ้น\n✓ A: เป็น surfactant ที่ลดแรงตึงผิว ทำให้น้ำและไขมันซึมเข้าก้อนอุจจาระจนนิ่มลง\n✗ B: เป็นยาระบายกลุ่ม stimulant ที่กระตุ้นการบีบตัวของลำไส้โดยตรง\n✗ C: เป็นยาระบายกลุ่ม stimulant ที่กระตุ้นผนังลำไส้ใหญ่ให้บีบตัว\n✗ D: เป็นยาระบายกลุ่ม osmotic ที่ดึงน้ำเข้าสู่ลำไส้\n✗ E: เป็นยาระบายกลุ่ม stimulant จากกลุ่ม anthraquinone",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -57,7 +57,7 @@
     "E": "Enterochromaffin(-like) cell"
    },
    "answer": "B",
-   "why": "Gastrinoma หลั่ง gastrin มากเรื้อรัง ซึ่งมีฤทธิ์ trophic ต่อ parietal cell ทำให้ parietal cell mass เพิ่มขึ้น รอยพับ (rugae) หนา และหลั่งกรดมาก แผลจึงเกิดหลายที่หรือเกิดในตำแหน่งแปลก chief cell และ mucous cell ไม่ใช่เป้าหมายหลักของ gastrin",
+   "why": "Zollinger-Ellison syndrome มี gastrinoma หลั่ง gastrin สูงเรื้อรังซึ่งออกฤทธิ์ trophic ต่อเซลล์สร้างกรดในกระเพาะ\n✗ A: ทำหน้าที่หลั่ง pepsinogen ไม่ใช่เป้าหมายหลักของฤทธิ์ trophic จาก gastrin\n✓ B: ถูก gastrin กระตุ้นให้แบ่งตัวเพิ่มจำนวน (hyperplasia) จนรอยพับกระเพาะหนาและหลั่งกรดมากผิดปกติ\n✗ C: สร้างเมือกและเป็นเซลล์ต้นกำเนิด ไม่เกิด hyperplasia เด่นในภาวะนี้\n✗ D: สร้างเมือกและ bicarbonate เพื่อป้องกันกรด ไม่ใช่เป้าหมายหลักของ gastrin\n✗ E: ถูกกระตุ้นให้หลั่ง histamine ได้แต่เซลล์ที่เกิด hyperplasia เด่นชัดจนเห็น rugae หนาคือ parietal cell",
    "source": "วิเคราะห์",
    "doubt": "⚠ gastrin กระตุ้น ECL cell ให้ hyperplasia ได้ด้วย (ตัวเลือก E) แต่คำตอบคลาสสิกของ ZES คือ parietal cell hyperplasia"
   },
@@ -72,7 +72,7 @@
     "E": "Cortisol"
    },
    "answer": "A",
-   "why": "Ghrelin หลั่งจาก fundus ของกระเพาะเมื่อท้องว่าง และกระตุ้น hypothalamus (arcuate nucleus, NPY/AgRP) ให้หิว Leptin จากเซลล์ไขมันและ insulin กดความอยากอาหาร catecholamine ลดความอยากอาหาร cortisol เพิ่มความอยากอาหารได้แต่เป็นผลทางอ้อม ไม่ใช่ฮอร์โมนหลักที่ควบคุมความหิว",
+   "why": "ฮอร์โมนหลักที่หลั่งเมื่อท้องว่างเพื่อกระตุ้นศูนย์หิวใน hypothalamus คือ ghrelin\n✓ A: หลั่งจาก fundus ของกระเพาะเมื่อท้องว่างแล้วกระตุ้น NPY/AgRP ใน arcuate nucleus ให้หิว\n✗ B: หลั่งหลังกินอาหารและส่งสัญญาณกดความอยากอาหารที่สมอง\n✗ C: หลั่งจากเซลล์ไขมันเพื่อกระตุ้น POMC/CART ทำให้รู้สึกอิ่มและลดความอยากอาหาร\n✗ D: กระตุ้นระบบ sympathetic ซึ่งช่วยลดความอยากอาหาร\n✗ E: อาจเพิ่มความอยากอาหารทางอ้อมเมื่อสูงเรื้อรัง แต่ไม่ใช่ฮอร์โมนหลักที่ควบคุมความหิว",
    "source": "วิเคราะห์"
   },
   "74.1/46": {
@@ -85,7 +85,7 @@
     "D": "Smooth ER"
    },
    "answer": "D",
-   "why": "Smooth ER ของ hepatocyte มีเอนไซม์ cytochrome P450 สำหรับ phase I และเอนไซม์ glucuronidation สำหรับ phase II และขยายตัวได้เมื่อได้ยาที่ induce เอนไซม์ (เช่น phenobarbital) Lysosome ย่อยสลายโมเลกุลใหญ่ Golgi ทำหน้าที่ดัดแปลงและบรรจุโปรตีน RER สังเคราะห์โปรตีนเช่น albumin",
+   "why": "เซลล์ตับใช้เอนไซม์ใน smooth ER สำหรับกำจัดยาและสารพิษ (xenobiotics)\n✗ A: ทำหน้าที่ย่อยสลายโมเลกุลขนาดใหญ่และออร์แกเนลล์ที่เสื่อมสภาพ\n✗ B: ทำหน้าที่ดัดแปลง คัดแยก และบรรจุโปรตีนเพื่อส่งออก\n✗ C: มีไรโบโซมเกาะอยู่ ทำหน้าที่สังเคราะห์โปรตีนส่งออก เช่น albumin\n✓ D: มีเอนไซม์ cytochrome P450 (phase I) และ glucuronidation (phase II) สำหรับกำจัดยาและสารพิษ",
    "source": "วิเคราะห์"
   },
   "74.1/49": {
@@ -99,7 +99,7 @@
     "E": "Anus"
    },
    "answer": "A",
-   "why": "Trisomy 21 สัมพันธ์ชัดกับ duodenal atresia ที่เกิดจาก recanalization ล้มเหลว (เห็น double bubble และอาเจียนน้ำดีตั้งแต่แรกเกิด) Jejunal/ileal atresia เกิดจากหลอดเลือดขาดเลือดในครรภ์ ไม่ใช่ความผิดปกติของโครโมโซม Esophageal atresia และ anorectal malformation พบร่วมกับกลุ่ม VACTERL มากกว่า",
+   "why": "Down syndrome (trisomy 21) สัมพันธ์ชัดเจนกับการอุดตันแต่กำเนิดของ duodenum จากความล้มเหลวของ recanalization\n✓ A: เกิดจาก recanalization ล้มเหลว พบบ่อยใน Down syndrome และเห็นภาพ double bubble sign\n✗ B: มักพบร่วมกับกลุ่มอาการ VACTERL มากกว่า trisomy 21\n✗ C: เกิดจากภาวะหลอดเลือดขาดเลือดในครรภ์ ไม่สัมพันธ์เฉพาะกับ Down syndrome\n✗ D: เกิดจากหลอดเลือดขาดเลือดในครรภ์เช่นเดียวกับ jejunal atresia\n✗ E: ความผิดปกติของรูทวารมักสัมพันธ์กับกลุ่มอาการ VACTERL",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -113,7 +113,7 @@
     "D": "Sarcocystis (suihominis)"
    },
    "answer": "B",
-   "why": "Trichuris ติดจากการกลืนไข่ที่ปนเปื้อนดิน/อาหาร ไม่มีระยะในเนื้อสัตว์ ส่วน Trichinella (larva ใน muscle), Toxoplasma (tissue cyst) และ Sarcocystis suihominis (sarcocyst) ติดได้จากการกินหมูดิบ",
+   "why": "พยาธิที่ติดจากการกลืนไข่ในดินโดยไม่ผ่านเนื้อสัตว์คือ Trichuris trichiura\n✗ A: ติดจากการกินเนื้อหมูดิบที่มีตัวอ่อนระยะ encysted larva ในกล้ามเนื้อ\n✓ B: ติดจากการกลืนไข่ระยะติดต่อที่ปนเปื้อนในดินหรืออาหาร ไม่เกี่ยวกับการกินเนื้อหมูดิบ\n✗ C: ติดได้จากการกินเนื้อหมูดิบที่มี tissue cyst (bradyzoite)\n✗ D: ติดจากการกินเนื้อหมูดิบที่มีระยะ sarcocyst ในกล้ามเนื้อ",
    "source": "วิเคราะห์"
   },
   "74.1/54": {
@@ -127,7 +127,7 @@
     "E": "Domperidone"
    },
    "answer": "E",
-   "why": "Domperidone เป็น D2 antagonist ที่ออกฤทธิ์นอกสมอง เป็น prokinetic เพิ่มการบีบตัวของกระเพาะและช่วยแก้คลื่นไส้ Ranitidine และ omeprazole ลดกรดแต่ไม่เร่ง emptying Simethicone ลดฟองแก๊ส Dicyclomine เป็น antimuscarinic ซึ่งยิ่งทำให้กระเพาะเคลื่อนไหวช้าลง",
+   "why": "ภาวะ gastroparesis ต้องการยากลุ่ม prokinetic ที่ช่วยเพิ่มการบีบตัวและเร่งการระบายอาหารออกจากกระเพาะ\n✗ A: เป็น H2 receptor antagonist ช่วยลดกรดแต่ไม่เพิ่มการบีบตัวของกระเพาะ\n✗ B: เป็น proton pump inhibitor ช่วยลดกรดแต่ไม่ช่วยเรื่อง gastric emptying\n✗ C: ช่วยลดแรงตึงผิวของฟองแก๊ส แก้ท้องอืดจากลมแต่ไม่เร่งการบีบตัว\n✗ D: เป็น antimuscarinic ที่ลดการบีบตัวของลำไส้ ทำให้อาการ gastroparesis แย่ลง\n✓ E: เป็น peripheral D2 antagonist ที่ออกฤทธิ์เป็น prokinetic เพิ่มการบีบตัวของกระเพาะและแก้คลื่นไส้",
    "source": "วิเคราะห์"
   },
   "74.1/64": {
@@ -138,7 +138,7 @@
     "B": "TIBC สูง, ferritin ต่ำ"
    },
    "answer": "B",
-   "why": "แผลเรื้อรังทำให้เลือดออกเล็กน้อยต่อเนื่องและเกิด iron deficiency anemia แหล่งเหล็กสะสมหมดจึงทำให้ ferritin ต่ำ และตับสร้าง transferrin เพิ่มจึงทำให้ TIBC สูง ข้อ A คือรูปแบบของ anemia of chronic disease ที่ hepcidin สูงจนเหล็กถูกกักไว้",
+   "why": "แผลในกระเพาะเรื้อรังทำให้เสียเลือดทีละน้อยจนเกิดภาวะโลหิตจางจากการขาดธาตุเหล็ก (IDA)\n✗ A: เป็นรูปแบบของ anemia of chronic disease ที่ hepcidin สูงจนกักเหล็กไว้ในเซลล์\n✓ B: เหล็กสะสมหมดลงจึงทำให้ ferritin ต่ำ และตับสร้าง transferrin เพิ่มขึ้นทำให้ TIBC สูง",
    "source": "วิเคราะห์"
   },
   "74.1/67": {
@@ -151,7 +151,7 @@
     "D": "Branched-chain fatty acid"
    },
    "answer": "A",
-   "why": "วิตามินที่ละลายในไขมัน (A, D, E, K) ต้องอาศัย bile salt micelle ในการดูดซึม จึงขาดได้เมื่อน้ำดีไม่พอ SCFA สร้างจากแบคทีเรียในลำไส้ใหญ่และถูกดูดซึมโดยตรง MCFA ละลายน้ำได้พอที่จะผ่านเข้า portal vein โดยไม่ต้องใช้ micelle (จึงใช้เป็นอาหารเสริมในผู้ป่วยกลุ่มนี้)",
+   "why": "ภาวะน้ำดีลงลำไส้ไม่พอทำให้สร้าง micelle ไม่ได้ ส่งผลต่อการดูดซึมไขมันสายยาวและวิตามินที่ละลายในไขมัน\n✓ A: เป็นวิตามินที่ละลายในไขมัน (A, D, E, K) ซึ่งต้องอาศัย bile salt micelle ในการดูดซึม\n✗ B: สร้างจากแบคทีเรียในลำไส้ใหญ่และดูดซึมผ่านเยื่อบุได้โดยตรงไม่ต้องใช้ micelle\n✗ C: ละลายน้ำได้บางส่วนจึงดูดซึมเข้า portal vein ได้โดยตรงโดยไม่ต้องพึ่งน้ำดี\n✗ D: เป็นกรดไขมันส่วนน้อยที่ไม่ได้เป็นสารหลักที่ขาดจากการไม่มี bile salt micelle",
    "source": "วิเคราะห์",
    "doubt": "⚠ ข้อความในไฟล์จำโจทย์ได้ไม่ครบ (จำไม่ได้ว่าเป็นโรคถุงน้ำดีแบบใด)"
   },
@@ -165,7 +165,7 @@
     "D": "Transverse colon"
    },
    "answer": "A",
-   "why": "ถุงน้ำดีอยู่ติดกับ duodenum ส่วนที่ 1–2 จึงเกิด cholecystoduodenal fistula บ่อยที่สุด นิ่วหลุดผ่านเข้าลำไส้แล้วไปอุดตรงที่แคบที่สุดคือ terminal ileum/ileocecal valve (gallstone ileus มี pneumobilia) ileum คือจุดที่อุดตัน ไม่ใช่จุดเกิด fistula ส่วน colon พบ fistula ได้น้อยกว่า",
+   "why": "ถุงน้ำดีวางตัวแนบชิดกับ duodenum ส่วนต้น จึงเกิดรูทะลุ (fistula) เชื่อมกันบ่อยที่สุดเมื่อนิ่วกดเบียดผนังเรื้อรัง\n✓ A: อยู่ชิดถุงน้ำดีมากที่สุด ทำให้เกิด cholecystoduodenal fistula บ่อยที่สุด\n✗ B: อยู่ห่างจากถุงน้ำดีมากกว่า จึงพบการเกิด fistula ได้น้อย\n✗ C: เป็นจุดที่แคบที่สุดซึ่งนิ่วมักไปอุดตัน (gallstone ileus) ไม่ใช่ตำแหน่งที่เกิด fistula\n✗ D: อยู่ใกล้ถุงน้ำดีรองลงมา จึงเกิด cholecystocolonic fistula ได้น้อยกว่า duodenum",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -179,7 +179,7 @@
     "D": "Granuloma"
    },
    "answer": "C",
-   "why": "Alcoholic hepatitis มี macrovesicular steatosis, hepatocyte ballooning, Mallory-Denk body และมี neutrophil ล้อมรอบเซลล์ เด่นที่ zone 3 Lymphoplasmacytic infiltrate ที่ interface ชวนนึกถึง autoimmune/viral hepatitis Ground-glass hepatocyte เกิดจาก HBsAg ใน chronic HBV Granuloma ไม่ใช่ลักษณะของโรคตับจากแอลกอฮอล์",
+   "why": "พยาธิสภาพจำเพาะของ alcoholic hepatitis คือไขมันพอก เซลล์บวม มี Mallory-Denk body และนิวโทรฟิลแทรกเด่นที่ zone 3\n✗ A: เป็นลักษณะเด่นของ autoimmune hepatitis หรือ chronic viral hepatitis\n✗ B: พบใน chronic HBV infection จากการสะสม HBsAg ในไซโทพลาซึม\n✓ C: เป็นชุดพยาธิสภาพจำเพาะของ alcoholic hepatitis ที่พบเด่นบริเวณ pericentral (zone 3)\n✗ D: พบบ่อยในโรคติดเชื้อ เช่น วัณโรค ซาร์คอยโดซิส หรือ primary biliary cholangitis",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์มีแค่ตัวเลือก A, B ซึ่งไม่ใช่ alcoholic ทั้งคู่ จึงสร้างตัวเลือก C ตามชีท A3",
    "options_reconstructed": true
@@ -194,7 +194,7 @@
     "D": "Acute biliary obstruction"
    },
    "answer": "A",
-   "why": "ภาวะช็อกทำให้เลือดไปเลี้ยงตับลดลง zone 3 ตายเฉียบพลัน transaminase จึงพุ่งเป็นหลักพันภายใน 1–3 วัน แล้วลดลงเร็วเมื่อความดันกลับมา (มักพบ LDH สูงมากร่วมด้วย) บริบทช็อกตรงนี้มากกว่า viral หรือ autoimmune hepatitis ซึ่งมักค่อยๆ เกิดและมีประวัติอื่น Biliary obstruction จะมี ALP/bilirubin เด่น ไม่ใช่ AST/ALT หลักพัน",
+   "why": "ภาวะ septic shock ที่ต้องใช้ vasopressor ร่วมกับ AST/ALT พุ่งเป็นหลักพันอย่างเฉียบพลันคือ ischemic hepatitis (shock liver)\n✓ A: เลือดไปเลี้ยงตับลดลงเฉียบพลันทำให้ zone 3 ขาดเลือดและตาย จน AST/ALT พุ่งสูงเป็นหลักพันใน 1–3 วัน\n✗ B: มักมีประวัติเสี่ยงหรืออาการนำมาก่อน ไม่ได้สัมพันธ์ตรงกับภาวะช็อกฉับพลันแบบนี้\n✗ C: มักดำเนินโรคค่อยเป็นค่อยไปและมี autoantibody เป็นตัวช่วยวินิจฉัย\n✗ D: จะมี ALP และ bilirubin สูงเด่น ไม่ใช่ transaminase สูงระดับหลักพันทันที",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์ตัวเลือก D ขาด (\"Acute ...\") จึงสร้างขึ้นใหม่",
    "options_reconstructed": true
@@ -208,7 +208,7 @@
     "C": "Inferior mesenteric artery"
    },
    "answer": "A",
-   "why": "Splenic artery เป็นแขนงของ celiac trunk (ร่วมกับ left gastric และ common hepatic) วิ่งตามขอบบนของตับอ่อนไปยังม้าม SMA เลี้ยง midgut ส่วน IMA เลี้ยง hindgut ไม่ได้ไปเลี้ยงม้าม",
+   "why": "หลอดเลือดหลักที่เลี้ยงม้ามคือ splenic artery ซึ่งเป็นหนึ่งในสามแขนงหลักของ celiac trunk\n✓ A: แตกแขนงเป็น splenic artery (ร่วมกับ left gastric และ common hepatic) เพื่อไปเลี้ยงม้าม\n✗ B: เลี้ยงอวัยวะกลุ่ม midgut ตั้งแต่ duodenum ส่วนปลายจนถึง transverse colon\n✗ C: เลี้ยงอวัยวะกลุ่ม hindgut ตั้งแต่ distal transverse colon จนถึง rectum ส่วนบน",
    "source": "วิเคราะห์"
   },
   "74.2/64": {
@@ -220,7 +220,7 @@
     "C": "Antibody detection"
    },
    "answer": "A",
-   "why": "Norovirus เป็น RNA virus ที่เพาะเลี้ยงไม่ได้ตามปกติ วิธีมาตรฐานคือ RT-PCR จากอุจจาระ ซึ่ง sensitive และแยก genotype สำหรับสอบสวนการระบาดได้ Antigen EIA มี sensitivity ต่ำ ส่วน antibody ไม่ช่วยวินิจฉัยการติดเชื้อเฉียบพลัน",
+   "why": "Norovirus เป็น RNA virus ที่ไม่สามารถเพาะเลี้ยงได้ทั่วไป วิธีมาตรฐานสำหรับยืนยันและสอบสวนการระบาดคือ RT-PCR\n✓ A: มีความไวและความจำเพาะสูง สามารถตรวจสารพันธุกรรมจากอุจจาระและแยกสายพันธุ์ได้\n✗ B: วิธี EIA มีความไวต่ำ จึงไม่เหมาะเป็นวิธีหลักในการยืนยันการระบาด\n✗ C: ไม่ช่วยวินิจฉัยการติดเชื้อเฉียบพลันและแยกสายพันธุ์ระบาดไม่ได้",
    "source": "วิเคราะห์"
   },
   "75.1/10": {
@@ -234,7 +234,7 @@
     "E": "Edema"
    },
    "answer": "D",
-   "why": "Metoclopramide เป็น D2 antagonist ที่ผ่าน BBB ได้ จึงเกิด EPS ได้ และถ้าใช้นานโดยเฉพาะในผู้สูงอายุจะเกิด tardive dyskinesia ซึ่งอาจถาวร (มี boxed warning) ยานี้เร่ง emptying จึงไม่ทำให้ท้องอืด ท้องผูก หรือ gastroparesis และ edema ไม่ใช่ ADR เด่นของยานี้",
+   "why": "Metoclopramide ผ่าน blood-brain barrier ได้ จึงเสี่ยงต่อผลข้างเคียงทางระบบประสาทโดยเฉพาะในผู้สูงอายุ\n✗ A: ยานี้ช่วยเร่งการระบายอาหาร จึงช่วยลดอาการท้องอืดมากกว่าทำให้เกิด\n✗ B: ยานี้กระตุ้นการเคลื่อนไหวของทางเดินอาหาร ไม่ได้ทำให้ท้องผูก\n✗ C: ยานี้ใช้รักษาภาวะ gastroparesis ไม่ใช่ผลข้างเคียงของยา\n✓ D: การบล็อก D2 receptor ในสมองระยะยาวเสี่ยงเกิด tardive dyskinesia ที่อาจถาวรได้\n✗ E: อาการบวมน้ำไม่ใช่ผลข้างเคียงเด่นของ metoclopramide",
    "source": "วิเคราะห์"
   },
   "75.1/12": {
@@ -248,7 +248,7 @@
     "E": "ตัวอ่อน Strongyloides"
    },
    "answer": "B",
-   "why": "Capillaria philippinensis ติดจากการกินปลาน้ำจืดดิบ และเพิ่มจำนวนในลำไส้ได้เอง (autoinfection) ทำให้เกิด protein-losing enteropathy ท้องเสียเรื้อรัง albumin/K ต่ำ ไข่รูปถั่วลิสง มี plug แบนสองข้าง Opisthorchis ก็ติดจากปลาแต่ก่อโรคท่อน้ำดีและไม่ทำให้ท้องเสีย malabsorption รุนแรง Ascaris และ Trichuris ติดจากไข่ในดิน Strongyloides ไชผ่านผิวหนัง",
+   "why": "กินปลาน้ำจืดดิบ ท้องเสียเรื้อรังรุนแรง กล้ามเนื้อลีบ และ albumin/K ต่ำมาก เป็นลักษณะจำเพาะของ Capillaria philippinensis\n✗ A: ติดจากการกลืนไข่ในดิน ไม่ได้ติดจากปลาน้ำจืดดิบ\n✓ B: ติดจากปลาน้ำจืดดิบและเกิด autoinfection ได้ ทำให้เกิด protein-losing enteropathy รุนแรง (ไข่รูปถั่วลิสงมี plug สองข้าง)\n✗ C: ติดจากปลาดิบเช่นกัน แต่ก่อโรคในท่อน้ำดี ไม่ทำให้ท้องเสียจน albumin/K ต่ำรุนแรง\n✗ D: ติดจากการกลืนไข่ในดิน และมักทำให้ถ่ายเป็นมูกเลือดหรือ rectal prolapse ในเด็ก\n✗ E: ติดโดยตัวอ่อนไชผ่านผิวหนัง ไม่ใช่จากการกินปลาดิบ",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -263,7 +263,7 @@
     "E": "Duodenum ส่วนที่ 2"
    },
    "answer": "E",
-   "why": "Duodenum ส่วนที่ 2–4 เป็น secondarily retroperitoneal และถูกกดกับกระดูกสันหลังเมื่อโดนกระแทก (เช่น โดนแฮนด์จักรยาน) ทะลุแล้วจะมีอากาศหรือเลือดใน retroperitoneum ไม่ใช่ free air ใต้กระบังลม Stomach, transverse colon, sigmoid colon และ jejunum/ileum เป็น intraperitoneal ถ้าทะลุจะมี pneumoperitoneum",
+   "why": "Blunt abdominal trauma ที่มีเลือดและลมรั่วเข้า retroperitoneum บ่งชี้การบาดเจ็บของอวัยวะที่อยู่ใน retroperitoneum\n✗ A: อยู่ในช่องท้อง (intraperitoneal) หากทะลุจะพบ free air ใต้กระบังลม\n✗ B: อยู่ในช่องท้องและมี mesentery ไม่ใช่อวัยวะ retroperitoneal\n✗ C: อยู่ในช่องท้องและมี transverse mesocolon\n✗ D: อยู่ในช่องท้องเกือบทั้งหมด หากทะลุจะมี pneumoperitoneum\n✓ E: เป็น secondarily retroperitoneal ที่พาดผ่านกระดูกสันหลัง จึงถูกกระแทกแตกแล้วมีเลือดและลมใน retroperitoneum",
    "source": "วิเคราะห์"
   },
   "75.1/35": {
@@ -277,7 +277,7 @@
     "E": "Enteric adenovirus"
    },
    "answer": "A",
-   "why": "Norovirus เป็นสาเหตุหลักของการระบาดท้องเสียในกลุ่มคนทุกวัย (โรงเรียน เรือสำราญ) พบมากหน้าหนาว อาเจียนเด่น ไวรัสขนาดเล็กราว 27–40 nm Rotavirus ขนาดใหญ่ (~70 nm รูปล้อ) และมักเกิดในเด็กเล็กต่ำกว่า 5 ปี Enteric adenovirus ขนาด 70–90 nm Sapovirus และ astrovirus ก่อโรคในเด็กเล็กเป็นหลัก ไม่ค่อยทำให้ระบาดในวัยเรียนโต",
+   "why": "การระบาดของอาเจียนและท้องเสียในโรงเรียนช่วงฤดูหนาวจากไวรัสขนาดเล็ก 27–48 nm คือ norovirus\n✓ A: เป็นสาเหตุหลักของการระบาดในกลุ่มคนทุกวัยช่วงหน้าหนาว อาเจียนเด่น และมีขนาดเล็กประมาณ 27–40 nm\n✗ B: พบได้น้อยกว่าและมักก่อโรคในเด็กเล็ก ไม่เด่นเรื่องการระบาดในโรงเรียนมัธยม\n✗ C: มักก่อโรคท้องเสียไม่รุนแรงในเด็กเล็กเป็นหลัก\n✗ D: มีขนาดใหญ่ประมาณ 70 nm (รูปล้อ) และมักเกิดในเด็กเล็กต่ำกว่า 5 ปี\n✗ E: มีขนาดใหญ่ประมาณ 70–90 nm และมักทำให้ท้องเสียยืดเยื้อในเด็กเล็ก",
    "source": "วิเคราะห์"
   },
   "75.1/36": {
@@ -289,7 +289,7 @@
     "C": "ตับสังเคราะห์โปรตีนลดลง"
    },
    "answer": "B",
-   "why": "ตับแข็งเก็บ glycogen ได้น้อย จึงเข้าภาวะ 'accelerated starvation' เร็วตั้งแต่อดอาหารข้ามคืน ร่างกายต้องสลายกล้ามเนื้อเอา amino acid ไปทำ gluconeogenesis จึงเกิด sarcopenia ในภาวะนี้ gluconeogenesis เพิ่มขึ้น ไม่ได้ลดลง ส่วนการสังเคราะห์โปรตีนที่ลดลงอธิบาย hypoalbuminemia/ascites ได้ แต่ไม่ได้อธิบายการสลายกล้ามเนื้อโดยตรง",
+   "why": "ตับแข็งเก็บสะสม glycogen ได้น้อยลงมาก ทำให้ร่างกายต้องสลายโปรตีนจากกล้ามเนื้อมาใช้สร้างพลังงานแทน\n✗ A: ในภาวะนี้ gluconeogenesis จะเพิ่มขึ้นเพื่อนำ amino acid มาสร้างน้ำตาล ไม่ได้ลดลง\n✓ B: ตับเก็บ glycogen ได้น้อยจึงเข้าสู่ภาวะ accelerated starvation เร็ว ต้องสลายกล้ามเนื้อเอา amino acid มาทำ gluconeogenesis\n✗ C: อธิบายภาวะ hypoalbuminemia และ ascites ได้ แต่ไม่ได้เป็นกลไกหลักที่ทำให้กล้ามเนื้อสลายลีบ",
    "source": "วิเคราะห์",
    "doubt": "⚠ ข้อนี้ตีความได้หลายแบบ ตอบตามชีท A3 ซึ่ง อ.ติวเลือก B"
   },
@@ -303,7 +303,7 @@
     "E": "Intestinal goblet cell"
    },
    "answer": "B",
-   "why": "Hepatocyte มี SER มากเพื่อ detoxify ยา (CYP450) สังเคราะห์ lipid/cholesterol และสลาย glycogen (glucose-6-phosphatase อยู่ใน SER) Neuron มี RER (Nissl body) เด่น Parafollicular cell หลั่งโปรตีนฮอร์โมน calcitonin Goblet cell มี RER/Golgi เด่นเพื่อสร้าง mucin",
+   "why": "เซลล์ที่มี smooth ER มากที่สุดและต้องพึ่งพาในการกำจัดสารพิษ สังเคราะห์ไขมัน และสลาย glycogen คือ hepatocyte\n✗ A: มี rough ER (Nissl body) เด่นมากเพื่อสังเคราะห์โปรตีนและสารสื่อประสาท\n✓ B: มี smooth ER จำนวนมากสำหรับ CYP450, สร้างไขมัน และเอนไซม์ glucose-6-phosphatase\n✗ C: เป็นเซลล์ต่อมไร้ท่อที่สร้างเปปไทด์ฮอร์โมน calcitonin จึงเด่นที่ rough ER\n✗ E: สร้างและหลั่ง mucin จึงเด่นที่ rough ER และ Golgi apparatus",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์ไม่มีตัวเลือก D"
   },
@@ -318,7 +318,7 @@
     "E": "Ileum และ/หรือ jejunum"
    },
    "answer": "B",
-   "why": "ข้อเดียวกับ 75.1/16: duodenum ส่วนที่ 2 อยู่ retroperitoneal จึงเป็นอวัยวะเดียวในตัวเลือกที่บาดเจ็บแล้วทำให้เกิด hematoma หรืออากาศใน retroperitoneum อวัยวะอื่นอยู่ intraperitoneal มี mesentery ของตัวเอง",
+   "why": "การเกิด retroperitoneal hematoma หลังอุบัติเหตุกระแทกหน้าท้องเกิดจากอวัยวะที่วางตัวในช่อง retroperitoneum\n✗ A: เป็นอวัยวะ intraperitoneal จึงมักทำให้เกิดเลือดในช่องท้อง\n✓ B: อยู่ตำแหน่ง secondarily retroperitoneal และพาดหน้ากระดูกสันหลัง จึงบาดเจ็บแล้วเกิด retroperitoneal hematoma\n✗ C: เป็นอวัยวะ intraperitoneal ที่มี mesentery\n✗ D: เป็นอวัยวะ intraperitoneal ที่มี sigmoid mesocolon\n✗ E: เป็นอวัยวะ intraperitoneal ทั้งหมด",
    "source": "วิเคราะห์"
   },
   "75.1/47": {
@@ -332,7 +332,7 @@
     "E": "GIST"
    },
    "answer": "A",
-   "why": "H. pylori ทำให้เกิด chronic gastritis → atrophy → intestinal metaplasia → dysplasia → gastric adenocarcinoma แบบ intestinal type (และ MALT lymphoma ซึ่งไม่อยู่ในตัวเลือก) GIST เกิดจาก KIT/PDGFRA mutation SCC เกิดที่หลอดอาหาร Gastric NET สัมพันธ์กับ hypergastrinemia จาก autoimmune gastritis มากกว่า Leiomyosarcoma ไม่เกี่ยวกับ H. pylori",
+   "why": "การติดเชื้อ H. pylori เรื้อรังที่กระเพาะอาหารกระตุ้นลำดับการเปลี่ยนแปลงจนเกิดมะเร็งชนิด adenocarcinoma\n✓ A: กระตุ้นให้เกิด chronic gastritis, atrophy, intestinal metaplasia และ dysplasia จนกลายเป็น intestinal-type adenocarcinoma\n✗ B: เป็นมะเร็งกล้ามเนื้อเรียบ ไม่มีความสัมพันธ์กับ H. pylori\n✗ C: เป็นมะเร็งหลอดอาหาร ไม่ใช่ผลจากการติดเชื้อ H. pylori ที่กระเพาะ\n✗ D: มักสัมพันธ์กับภาวะ hypergastrinemia เรื้อรังจาก autoimmune gastritis มากกว่า\n✗ E: เกิดจากการกลายพันธุ์ของยีน KIT หรือ PDGFRA ไม่ได้เกิดจาก H. pylori",
    "source": "วิเคราะห์",
    "doubt": "⚠ MALT lymphoma ก็สัมพันธ์กับ H. pylori แต่ไม่มีในตัวเลือก"
   },
@@ -346,7 +346,7 @@
     "D": "ติดต่อเฉพาะจากคนสู่คน"
    },
    "answer": "B",
-   "why": "Colony สีดำตรงกลางบน SS agar = Salmonella (non-lactose fermenter, H2S+) เชื้อรุกล้ำเยื่อบุลำไส้ (ผ่าน M cell, T3SS) กระตุ้นการหลั่ง IL-8 และเรียก neutrophil จึงเกิด inflammatory diarrhea ระยะฟักตัวคือ 6–72 ชม. ไม่ใช่ <6 ชม. (<6 ชม. เป็นของ preformed toxin) อาหารทะเลชวนนึกถึง Vibrio parahaemolyticus Non-typhoidal Salmonella มีแหล่งรังโรคในสัตว์ (ไข่ ไก่) ส่วน Shigella/S. Typhi จึงจะติดจากคนสู่คนเท่านั้น",
+   "why": "Colony สีดำตรงกลางบน SS agar (H2S+) คือ Salmonella ซึ่งรุกล้ำเยื่อบุลำไส้และกระตุ้นการอักเสบแบบนิวโทรฟิลเด่น\n✗ A: ระยะฟักตัวสั้นกว่า 6 ชม. เป็นลักษณะของ preformed toxin เช่น S. aureus หรือ B. cereus\n✓ B: เชื้อรุกล้ำเยื่อบุผ่าน M cell แล้วกระตุ้นการหลั่ง IL-8 เพื่อดึงดูด neutrophil ทำให้เกิด inflammatory diarrhea\n✗ C: การติดเชื้อจากอาหารทะเลเป็นลักษณะเด่นของ Vibrio parahaemolyticus\n✗ D: Non-typhoidal Salmonella มีสัตว์ปีกและไข่เป็นแหล่งรังโรค ไม่ได้ติดจากคนสู่คนเท่านั้น",
    "source": "วิเคราะห์"
   },
   "75.1/55": {
@@ -358,7 +358,7 @@
     "C": "Urorectal septum"
    },
    "answer": "C",
-   "why": "Urorectal septum แบ่ง cloaca ออกเป็น urogenital sinus ด้านหน้าและ anorectal canal ด้านหลัง ถ้าแบ่งไม่สมบูรณ์จะเกิด rectourethral/rectovesical fistula ขี้เทาจึงออกทางปัสสาวะ (มักพบร่วมกับ imperforate anus) Ureteric bud สร้างท่อไตและ collecting system Urogenital diaphragm เป็นกล้ามเนื้อของ perineum ไม่ได้ทำหน้าที่แบ่งลำไส้ออกจากทางเดินปัสสาวะ",
+   "why": "ทารกมีขี้เทาปนออกทางปัสสาวะแสดงว่ามี fistula ระหว่างลำไส้ตรงกับทางเดินปัสสาวะ จากการแบ่ง cloaca ไม่สมบูรณ์\n✗ A: พัฒนาเป็นท่อไตและระบบท่อรวมของไต ไม่เกี่ยวกับการแบ่งลำไส้และทางเดินปัสสาวะ\n✗ B: เป็นชั้นกล้ามเนื้อบริเวณฝีเย็บ ไม่ได้ทำหน้าที่แบ่ง cloaca\n✓ C: ทำหน้าที่แบ่ง cloaca เป็น urogenital sinus และ anorectal canal หากไม่สมบูรณ์จะเกิด rectourethral หรือ rectovesical fistula",
    "source": "วิเคราะห์"
   },
   "75.1/56": {
@@ -372,7 +372,7 @@
     "E": "Cellulose"
    },
    "answer": "B",
-   "why": "Hereditary fructose intolerance: fructose-1-P สะสมในตับ ทำให้ phosphate หมด จึงเกิด hypoglycemia และตับเสียหาย Sorbitol ถูก sorbitol dehydrogenase เปลี่ยนเป็น fructose ในตับ จึงต้องเลี่ยงด้วย (รวมถึง sucrose ที่มี fructose) Lactose, glucose และ maltose ไม่ได้ให้ fructose Cellulose มนุษย์ย่อยไม่ได้",
+   "why": "ภาวะขาด aldolase B (hereditary fructose intolerance) ต้องเลี่ยง fructose รวมถึงสารที่ร่างกายเปลี่ยนเป็น fructose ได้\n✗ A: ย่อยได้เป็น glucose และ galactose จึงไม่สร้าง fructose-1-phosphate\n✓ B: ถูกเอนไซม์ sorbitol dehydrogenase ในตับเปลี่ยนเป็น fructose ทำให้ fructose-1-phosphate สะสมและเกิดพิษต่อตับ\n✗ C: นำไปใช้ใน glycolysis ได้ตามปกติโดยไม่ต้องผ่าน aldolase B\n✗ D: ย่อยได้เป็น glucose สองโมเลกุล จึงปลอดภัยในภาวะนี้\n✗ E: เป็นใยอาหารที่มนุษย์ย่อยไม่ได้ ไม่ถูกดูดซึมเป็นน้ำตาล",
    "source": "วิเคราะห์"
   },
   "75.1/61": {
@@ -386,7 +386,7 @@
     "E": "Tardive dyskinesia"
    },
    "answer": "E",
-   "why": "ข้อเดียวกับ 75.1/10: metoclopramide ผ่าน BBB และบล็อก D2 ใน nigrostriatal pathway ทำให้เกิด acute dystonia, parkinsonism และ tardive dyskinesia เมื่อใช้ระยะยาว ยานี้เป็น prokinetic จึงแก้ bloating และ gastroparesis และไม่ทำให้ท้องผูก",
+   "why": "ผลข้างเคียงที่สำคัญและรุนแรงที่สุดของ metoclopramide คืออาการผิดปกติของการเคลื่อนไหวจากฤทธิ์ต้าน D2 ในสมอง\n✗ A: อาการบวมน้ำไม่ใช่ผลข้างเคียงสำคัญของยานี้\n✗ B: ยานี้ช่วยเร่งการระบายอาหารจึงบรรเทาอาการท้องอืด ไม่ใช่ทำให้เกิด\n✗ C: ยานี้กระตุ้นการบีบตัวของลำไส้ ไม่ได้ทำให้ท้องผูก\n✗ D: ยานี้ใช้รักษา gastroparesis ไม่ใช่ผลข้างเคียง\n✓ E: ยาผ่าน BBB ไปบล็อก D2 ใน nigrostriatal pathway ทำให้เกิด EPS และ tardive dyskinesia ได้เมื่อใช้นาน",
    "source": "วิเคราะห์"
   },
   "75.1/75": {
@@ -399,7 +399,7 @@
     "D": "อยู่รอดและแบ่งตัวใน macrophage"
    },
    "answer": "D",
-   "why": "Widal สูง + ไข้นาน + ตับม้ามโต = typhoid (S. Typhi) เชื้อผ่าน M cell แล้วอยู่รอดใน macrophage (ทน phagolysosome) แพร่ไปยัง reticuloendothelial system ตับ ม้าม และไขกระดูก Endoflagella เป็นของ spirochete (Leptospira) การติด endothelial cell เป็นของ Rickettsia/scrub typhus และ typhoid ติดจากอาหาร/น้ำ ไม่ผ่าน vector",
+   "why": "ไข้เรื้อรัง 3 สัปดาห์ ตับม้ามโต และ Widal titer สูงมาก คือไข้ไทฟอยด์จาก Salmonella Typhi\n✗ A: เป็นกลไกการไชเนื้อเยื่อของเชื้อกลุ่ม spirochete เช่น Leptospira\n✗ B: เป็นพยาธิกำเนิดของเชื้อกลุ่ม Rickettsia และ Orientia tsutsugamushi\n✗ C: ไข้ไทฟอยด์ติดต่อผ่านอาหารและน้ำปนเปื้อน (fecal-oral) ไม่ได้ผ่านพาหะนำโรค\n✓ D: เชื้อผ่าน M cell แล้วอยู่รอดและแบ่งตัวภายใน macrophage เพื่อแพร่กระจายสู่ระบบ RES (ตับ ม้าม ไขกระดูก)",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์มีตัวเลือกแค่ A–C ซึ่งไม่ถูกต้องสักข้อ จึงเพิ่มตัวเลือก D ตามข้อซ้ำ 75.1/90",
    "options_reconstructed": true
@@ -414,7 +414,7 @@
     "D": "Tight junction"
    },
    "answer": "B",
-   "why": "M cell บน Peyer patch จับ antigen/เชื้อจาก lumen แล้วส่งผ่าน (transcytosis) ไปให้ dendritic cell/lymphocyte ด้านล่าง เพื่อเริ่มการตอบสนองของ mucosal immunity Paneth cell หลั่ง defensin/lysozyme Tight junction เป็น barrier ไม่ได้ขนส่ง",
+   "why": "การนำ antigen จากโพรงลำไส้เล็กข้ามเยื่อบุไปให้เซลล์ภูมิคุ้มกันด้านล่าง (transcytosis) ทำหน้าที่โดย M cell\n✗ A: อยู่ที่ก้น crypt ทำหน้าที่หลั่งสารต้านจุลชีพ เช่น defensin และ lysozyme\n✓ B: อยู่บนผิว Peyer patch ทำหน้าที่จับและขนส่ง antigen แบบ transcytosis ไปยัง dendritic cell และ lymphocyte ด้านล่าง\n✗ C: เป็นแอนติบอดีที่หลั่งออกมาดักจับเชื้อในโพรงลำไส้ ไม่ใช่เซลล์ที่ทำ transcytosis นำ antigen เข้ามา\n✗ D: เป็นโครงสร้างปิดกั้นช่องว่างระหว่างเซลล์เยื่อบุเพื่อป้องกันเชื้อลอดผ่าน",
    "source": "วิเคราะห์",
    "doubt": "⚠ IgA ก็ถูก transcytose ผ่าน enterocyte โดย pIgR (ไปในทิศตรงข้าม) ถ้าโจทย์เน้น IgA secretion อาจตอบ C ได้ ตอบตามชีท A3"
   },
@@ -426,7 +426,7 @@
     "B": "กรดจำนวนมากทำให้ pancreatic lipase หมดฤทธิ์"
    },
    "answer": "B",
-   "why": "ใน ZES กรดจำนวนมากไหลลง duodenum ทำให้ pH ต่ำ pancreatic lipase จึงถูก inactivate และ bile salt ตกตะกอน micelle จึงไม่เกิด ไขมันย่อยไม่ได้และกลายเป็น steatorrhea (ร่วมกับเยื่อบุเสียหาย) ZES ไม่ได้ทำให้ท่อน้ำดีอุดตัน",
+   "why": "ใน Zollinger-Ellison syndrome กรดที่หลั่งออกมามากเกินไปทำให้สภาพใน duodenum เป็นกรดจัดจนย่อยไขมันไม่ได้\n✗ A: Gastrinoma ไม่ได้ทำให้เกิดการอุดตันของท่อน้ำดีโดยตรง\n✓ B: pH ที่ต่ำมากใน duodenum ทำให้ pancreatic lipase เสื่อมสภาพและ bile salt ตกตะกอน จึงย่อยและดูดซึมไขมันไม่ได้",
    "source": "วิเคราะห์"
   },
   "75.1/82": {
@@ -440,7 +440,7 @@
     "E": "Gastroschisis"
    },
    "answer": "A",
-   "why": "Hirschsprung disease เกิดจาก neural crest cell เคลื่อนลงมาไม่ถึงลำไส้ส่วนปลาย (เกี่ยวกับ RET) ทำให้ rectum/sigmoid ไม่มี ganglion cell และบีบตัวค้างไว้ จึงถ่ายขี้เทาช้า ท้องอืด และลำไส้ส่วนต้นโป่ง (megacolon) Omphalocele และ gastroschisis เป็นความผิดปกติของผนังหน้าท้อง Midgut volvulus เกิดจาก malrotation อาเจียนน้ำดีเฉียบพลัน Umbilical hernia ไม่ทำให้อุดตันในลักษณะนี้",
+   "why": "ทารกท้องอืด ถ่ายขี้เทาไม่ออก จากการที่เซลล์ประสาทเคลื่อนลงมาไม่สมบูรณ์คือ Hirschsprung disease\n✓ A: Neural crest cell เคลื่อนลงมาไม่ถึงลำไส้ส่วนปลาย ทำให้ขาด ganglion cell ในผนังลำไส้และเกิดการอุดตัน\n✗ B: เป็นความผิดปกติของผนังหน้าท้องที่ลำไส้ไม่กลับเข้าช่องท้องและมีถุงหุ้ม\n✗ C: เป็นไส้เลื่อนสะดือจากวงแหวนสะดือปิดไม่สนิท ไม่เกี่ยวกับการเคลื่อนของเซลล์ประสาท\n✗ D: เกิดจาก malrotation ของลำไส้ ทำให้ลำไส้บิดพันและอาเจียนน้ำดีเฉียบพลัน\n✗ E: เป็นความผิดปกติของผนังหน้าท้องด้านข้างสะดือที่ลำไส้โผล่ออกมาโดยไม่มีถุงหุ้ม",
    "source": "วิเคราะห์"
   },
   "75.1/90": {
@@ -454,7 +454,7 @@
     "E": "อยู่ใน renal proximal tubule"
    },
    "answer": "D",
-   "why": "Typhoid fever (มี relative bradycardia, Widal สูง, HSM) S. Typhi เป็น facultative intracellular อยู่รอดใน macrophage และแพร่ไปทั่วระบบ RES ข้อ A, C เป็นของ rickettsia ข้อ B และ E เป็นของ Leptospira (spirochete ที่มี endoflagella และอยู่ใน proximal tubule ของไต)",
+   "why": "ไข้สูง 3 สัปดาห์ร่วมกับชีพจรช้าสัมพันธ์กับไข้ ตับม้ามโต และ Widal สูงมาก คือไข้ไทฟอยด์จาก S. Typhi\n✗ A: ไทฟอยด์ติดต่อทางอาหารและน้ำ ไม่ใช่โรคติดต่อผ่านแมลงพาหะแบบ rickettsia\n✗ B: เป็นลักษณะของ spirochete เช่น Leptospira\n✗ C: เป็นกลไกของ Rickettsia และ scrub typhus ที่ทำลายเซลล์บุหลอดเลือด\n✓ D: S. Typhi เป็น facultative intracellular bacteria ที่อยู่รอดและแบ่งตัวใน macrophage แล้วแพร่ทั่วระบบ RES\n✗ E: เป็นแหล่งอาศัยของเชื้อ Leptospira เพื่อขับออกทางปัสสาวะ",
    "source": "วิเคราะห์"
   },
   "75.1/93": {
@@ -468,7 +468,7 @@
     "E": "Serum IgM"
    },
    "answer": "B",
-   "why": "OPV เป็นเชื้อเป็นที่เพิ่มจำนวนในลำไส้ กระตุ้น mucosal immunity (secretory IgA ใน lumen) ได้ดี จึงช่วยป้องกันการติดเชื้อและการแพร่เชื้อทางลำไส้ ส่วน IPV กระตุ้น serum IgG ได้ดีพอกันแต่กระตุ้น mucosal IgA ได้น้อย ระดับ serum IgG/IgM ใกล้เคียงกันในสองกลุ่ม ส่วน CSF IgG ไม่ใช่ตัวชี้วัด",
+   "why": "วัคซีนโปลิโอชนิดกิน (OPV) เป็นเชื้อเป็นที่เพิ่มจำนวนในลำไส้ จึงกระตุ้นภูมิคุ้มกันระดับเยื่อบุ (mucosal IgA) ได้ดีกว่าแบบฉีดมาก\n✗ A: แอนติบอดีในน้ำไขสันหลังไม่ใช่ตัวที่แตกต่างกันจากการให้วัคซีนสองชนิดนี้\n✓ B: OPV กระตุ้น Peyer patch ให้สร้าง secretory IgA ในโพรงลำไส้ได้สูงมาก ช่วยป้องกันการติดเชื้อและการแพร่เชื้อทางอุจจาระ\n✗ C: ทั้ง IPV และ OPV กระตุ้นระดับ serum IgG ได้ดีใกล้เคียงกัน\n✗ D: ระดับ IgA ในเลือดไม่ได้ต่างกันชัดเจนเท่า secretory IgA ในโพรงลำไส้\n✗ E: เป็นแอนติบอดีระยะแรกซึ่งกระตุ้นได้ใกล้เคียงกันทั้งสองชนิด",
    "source": "วิเคราะห์"
   },
   "75.1/95": {
@@ -482,7 +482,7 @@
     "E": "Praziquantel + Metronidazole"
    },
    "answer": "D",
-   "why": "คำว่า 'กำจัดปรสิตทั้งหมด' และมีตัวเลือกเป็นยาสองตัวรวมกัน บอกว่ารูปน่าจะเป็นการติดเชื้อผสมระหว่าง protozoa (เช่น cyst ของ Entamoeba/Giardia → metronidazole) กับ nematode (เช่น ไข่ hookworm/Ascaris → albendazole) Praziquantel ใช้กับ trematode/cestode ถ้าในรูปมีไข่ fluke หรือ tapeworm คำตอบจะเปลี่ยนเป็น E",
+   "why": "โจทย์ต้องการกำจัดปรสิตทั้งหมดในร่างกายจากการติดเชื้อผสมระหว่างโปรโตซัวกับพยาธิตัวกลม จึงต้องใช้ยาสองกลุ่มร่วมกัน\n✗ A: ออกฤทธิ์ดีต่อพยาธิตัวกลม (nematode) แต่ไม่สามารถกำจัดโปรโตซัวบางชนิดได้ครบ\n✗ B: ออกฤทธิ์ต่อโปรโตซัวในลำไส้ เช่น Entamoeba หรือ Giardia แต่ไม่ได้ผลกับพยาธิตัวกลม\n✗ C: ใช้รักษาพยาธิใบไม้และพยาธิตัวตืดเป็นหลัก ไม่ครอบคลุมพยาธิตัวกลมและโปรโตซัว\n✓ D: ครอบคลุมทั้งพยาธิตัวกลม (albendazole) และโปรโตซัวในลำไส้ (metronidazole) พร้อมกัน\n✗ E: เหมาะกับการติดเชื้อผสมระหว่างพยาธิใบไม้/ตัวตืดกับโปรโตซัว",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไม่เห็นรูป คำตอบเป็นการเดาจากรูปแบบตัวเลือก ต้องตรวจกับรูปจริง",
    "needs_image": true
@@ -497,7 +497,7 @@
     "D": "Gastroparesis"
    },
    "answer": "B",
-   "why": "Metoclopramide เป็น D2 antagonist ที่เข้าสมองได้ จึงเกิด EPS/tardive dyskinesia (ต่างจาก domperidone ที่เข้าสมองน้อย) ตัวเลือกอื่นเป็นสิ่งที่ยานี้ใช้รักษา ไม่ใช่ผลข้างเคียง",
+   "why": "Metoclopramide เป็น D2 antagonist ที่ผ่านเข้าสมองได้ จึงมีผลข้างเคียงสำคัญด้านการเคลื่อนไหวผิดปกติ\n✗ A: ยานี้ช่วยลดอาการท้องอืดโดยเร่งการบีบตัวของกระเพาะ\n✓ B: การต้าน D2 receptor ในระบบประสาทส่วนกลางทำให้เกิด EPS และ tardive dyskinesia เมื่อใช้นาน\n✗ C: ยานี้ช่วยเพิ่มการเคลื่อนไหวของทางเดินอาหาร ไม่ได้ทำให้ท้องผูก\n✗ D: ยานี้เป็นยารักษาภาวะ gastroparesis ไม่ใช่ผลข้างเคียง",
    "source": "วิเคราะห์"
   },
   "75.2/2": {
@@ -511,7 +511,7 @@
     "E": "SMA"
    },
    "answer": "B",
-   "why": "Gastroduodenal artery วิ่งอยู่หลัง duodenum ส่วนที่ 1 แผลที่ผนังด้านหลังจึงกัดหลอดเลือดนี้ ทำให้เลือดออกมาก (แผลด้านหน้ามักทะลุจนเกิด free air) Right gastric a. วิ่งตาม lesser curvature Proper hepatic a. และ portal vein อยู่ใน hepatoduodenal ligament สูงกว่าแผล SMA อยู่ด้านหลัง duodenum ส่วนที่ 3",
+   "why": "แผลเปื่อยที่ผนังด้านหลังของ duodenum ส่วนที่ 1 หากทะลุจะกัดโดนหลอดเลือดแดงใหญ่ที่วิ่งพาดอยู่ด้านหลังพอดี\n✗ A: วิ่งตามขอบ lesser curvature ของกระเพาะอาหาร ไม่ได้อยู่หลัง duodenum ส่วนที่ 1\n✓ B: วิ่งอยู่ด้านหลัง duodenum ส่วนที่ 1 โดยตรง หากแผลกัดทะลุจะทำให้เลือดออกในทางเดินอาหารรุนแรง\n✗ C: อยู่ใน hepatoduodenal ligament ซึ่งอยู่สูงกว่าตำแหน่งแผล\n✗ D: อยู่ใน hepatoduodenal ligament ด้านหลังหลอดเลือดแดงและท่อน้ำดี สูงกว่าตำแหน่งแผล\n✗ E: พาดผ่านด้านหน้า duodenum ส่วนที่ 3 ไม่ใช่ด้านหลัง duodenum ส่วนที่ 1",
    "source": "วิเคราะห์"
   },
   "75.2/7": {
@@ -523,7 +523,7 @@
     "C": "Cloacal membrane"
    },
    "answer": "B",
-   "why": "ข้อเดียวกับ 75.1/55: urorectal septum แบ่ง cloaca ไม่สมบูรณ์ → fistula ระหว่าง rectum กับ urethra/bladder Cloacal membrane เป็นแผ่นปิดที่ต้องสลายไปเพื่อเปิดรูทวาร ถ้าผิดปกติจะเกิด imperforate anus แต่ไม่ได้ทำให้เกิดทางเชื่อมระหว่างลำไส้กับทางเดินปัสสาวะ",
+   "why": "ทารกถ่ายขี้เทาปนออกทางปัสสาวะเกิดจากมีทางเชื่อมระหว่างลำไส้ตรงกับทางเดินปัสสาวะ เพราะ cloaca แบ่งไม่สมบูรณ์\n✗ A: เป็นกล้ามเนื้อพื้นเชิงกราน ไม่ได้ทำหน้าที่แบ่งแยกท่อลำไส้กับทางเดินปัสสาวะ\n✓ B: แบ่ง cloaca ไม่สมบูรณ์ทำให้เกิด rectourethral หรือ rectovesical fistula ขี้เทาจึงไหลปนออกมาในปัสสาวะ\n✗ C: หากไม่สลายจะทำให้เกิด imperforate anus แต่ไม่ได้สร้างทางเชื่อมเข้าสู่ทางเดินปัสสาวะ",
    "source": "วิเคราะห์"
   },
   "75.2/9": {
@@ -534,7 +534,7 @@
     "B": "Domperidone"
    },
    "answer": "A",
-   "why": "เคมีบำบัดทำลาย enterochromaffin cell ของลำไส้ให้หลั่ง serotonin ซึ่งกระตุ้น 5-HT3 receptor บน vagal afferent และ CTZ Ondansetron (5-HT3 antagonist) จึงเป็นยาหลักสำหรับ CINV (ใช้ร่วมกับ dexamethasone ± NK1 antagonist) Domperidone เป็น D2 antagonist ที่ใช้เป็น prokinetic และได้ผลน้อยใน CINV",
+   "why": "อาการคลื่นไส้อาเจียนจากเคมีบำบัด (CINV) เกิดจาก serotonin ที่หลั่งจากลำไส้มากระตุ้น 5-HT3 receptor\n✓ A: เป็น 5-HT3 receptor antagonist ที่ยับยั้งสัญญาณอาเจียนจาก vagal afferent และ CTZ จึงเป็นยาหลักสำหรับ CINV\n✗ B: เป็น peripheral D2 antagonist ที่ใช้เป็น prokinetic และมีประสิทธิภาพต่ำใน CINV",
    "source": "วิเคราะห์"
   },
   "75.2/14": {
@@ -546,7 +546,7 @@
     "C": "Nitric oxide"
    },
    "answer": "C",
-   "why": "Receptive relaxation เกิดผ่าน vagovagal reflex ซึ่งเส้นประสาท inhibitory (NANC) หลั่ง nitric oxide และ VIP ทำให้ LES และ fundus คลายตัว (achalasia เกิดจากการสูญเสีย NO neuron) Motilin กระตุ้น MMC ทำให้บีบตัว Gastrin เพิ่มการหลั่งกรดและเพิ่ม tone ของ LES",
+   "why": "การคลายตัวของหูรูดหลอดอาหารส่วนล่าง (LES) และ fundus เพื่อรับอาหารอาศัยสารสื่อประสาทกลุ่มยับยั้งจาก vagovagal reflex\n✗ A: กระตุ้น migrating motor complex (MMC) ทำให้ลำไส้บีบตัวช่วงท้องว่าง\n✗ B: กระตุ้นการหลั่งกรดและเพิ่มความตึงตัว (tone) ของ LES\n✓ C: หลั่งจากเส้นประสาท NANC (ร่วมกับ VIP) เพื่อทำให้กล้ามเนื้อเรียบของ LES และ fundus คลายตัว",
    "source": "วิเคราะห์"
   },
   "75.2/20": {
@@ -560,7 +560,7 @@
     "E": "Cellulose"
    },
    "answer": "B",
-   "why": "ข้อเดียวกับ 75.1/56: sorbitol → (sorbitol dehydrogenase) → fructose จึงทำให้ fructose-1-P สะสมในภาวะขาด aldolase B ได้เช่นกัน Lactose ให้ glucose + galactose, maltose ให้ glucose 2 โมเลกุล Cellulose ไม่ถูกย่อย",
+   "why": "ผู้ป่วยขาด aldolase B (hereditary fructose intolerance) ต้องเลี่ยงทั้ง fructose และน้ำตาลแอลกอฮอล์ที่เปลี่ยนเป็น fructose ได้\n✗ A: แตกตัวเป็น glucose และ galactose ไม่ผ่านเอนไซม์ aldolase B\n✓ B: ถูกเปลี่ยนเป็น fructose ในตับโดย sorbitol dehydrogenase ทำให้ fructose-1-phosphate สะสมจนเกิดพิษ\n✗ C: แตกตัวเป็น glucose สองโมเลกุล ไม่ก่อให้เกิดการสะสม fructose-1-phosphate\n✗ D: เข้าสู่กระบวนการ glycolysis ได้ตามปกติ\n✗ E: เป็นใยอาหารที่ร่างกายมนุษย์ย่อยไม่ได้",
    "source": "วิเคราะห์"
   },
   "75.2/22": {
@@ -574,7 +574,7 @@
     "E": "ฉีดวัคซีนไม่ครบ"
    },
    "answer": "A",
-   "why": "Anti-HBc เกิดเฉพาะเมื่อติดเชื้อจริงเท่านั้น (วัคซีนมีแค่ HBsAg) เมื่อมี anti-HBs ร่วมและ HBsAg ลบ จึงหมายถึงติดเชื้อในอดีตและหายแล้วโดยมีภูมิคุ้มกัน ถ้าได้ภูมิจากวัคซีนจะมี anti-HBs บวกเพียงอย่างเดียว ถ้าไม่มีภูมิจะลบทั้งหมด",
+   "why": "การตรวจพบ anti-HBs ร่วมกับ anti-HBc โดยที่ HBsAg เป็นลบ บ่งชี้ว่าเคยติดเชื้อไวรัสตับอักเสบบีจริงและหายขาดจนมีภูมิคุ้มกันแล้ว\n✓ A: anti-HBc เกิดเฉพาะจากการติดเชื้อตามธรรมชาติ ส่วน anti-HBs บอกว่ามีภูมิและ HBsAg ลบยืนยันว่าหายแล้ว\n✗ B: การฉีดวัคซีนจะตรวจพบเฉพาะ anti-HBs บวกเพียงตัวเดียว โดย anti-HBc เป็นลบ\n✗ C: หากไม่มีภูมิคุ้มกันและไม่เคยติดเชื้อ ผลทั้ง HBsAg, anti-HBs และ anti-HBc จะเป็นลบทั้งหมด\n✗ D: รูปแบบนี้แสดงถึงภูมิคุ้มกันสมบูรณ์จากการหายป่วย ไม่ใช่ภูมิบางส่วน\n✗ E: การฉีดวัคซีนไม่ครบจะไม่ทำให้เกิด anti-HBc บวก",
    "source": "วิเคราะห์"
   },
   "75.2/25": {
@@ -587,7 +587,7 @@
     "D": "Bacterial infection"
    },
    "answer": "B",
-   "why": "Transudate เกิดจาก hydrostatic pressure เพิ่มหรือ oncotic pressure ลด เช่น CHF, cirrhosis, nephrotic syndrome Malignancy และการติดเชื้อทำให้เกิด exudate (protein/LDH สูง) Pancreatitis ทำให้ได้ exudate ที่ amylase สูง",
+   "why": "น้ำในช่องท้องหรือช่องเยื่อหุ้มที่เป็น transudate ร่วมกับ amylase ปกติเกิดจากแรงดัน hydrostatic เพิ่มหรือ oncotic ลดลง\n✗ A: ทำให้เกิด exudate ที่มีโปรตีนและ LDH สูงจากการอักเสบและหลอดเลือดรั่ว\n✓ B: ทำให้ความดันหลอดเลือดดำ (hydrostatic pressure) สูงขึ้นจนน้ำซึมออกเป็น transudate\n✗ C: ทำให้เกิด exudate ที่มีระดับ amylase สูงมาก\n✗ D: การติดเชื้อแบคทีเรียกระตุ้นการอักเสบจนได้น้ำแบบ exudate",
    "source": "วิเคราะห์"
   },
   "75.2/27": {
@@ -601,7 +601,7 @@
     "E": "ไม่เปลี่ยนแปลง"
    },
    "answer": "A",
-   "why": "Vagus ควบคุม receptive relaxation ของ fundus และการบด/บีบไล่ (antral pump) ของ antrum เมื่อตัด vagus fundus ไม่คลายตัว ความดันในกระเพาะจึงสูงและของเหลวไหลออกเร็ว (เสี่ยง dumping) แต่ antrum บดและบีบอาหารแข็งได้ไม่ดี อาหารแข็งจึงค้าง (จึงมักทำ pyloroplasty ร่วมด้วย)",
+   "why": "การตัดเส้นประสาท vagus ทำให้ fundus ไม่คลายตัวรับอาหารและความดันในกระเพาะสูงขึ้น แต่ antrum อ่อนแรงในการบดอาหารแข็ง\n✓ A: fundus ไม่คลายตัวทำให้ความดันในกระเพาะสูงและดันของเหลวออกเร็วขึ้น ส่วน antrum บดและบีบอาหารแข็งได้ไม่ดีจึงออกช้าลง\n✗ B: ของเหลวไม่ได้ออกช้าลง แต่ไหลออกเร็วขึ้นจากความดันใน fundus ที่สูง (เสี่ยง dumping syndrome)\n✗ C: อาหารแข็งต้องอาศัยการบดและบีบตัวของ antrum จึงออกช้าลง ไม่ใช่เร็วขึ้น\n✗ D: สลับกันระหว่างอาหารแข็งและของเหลว\n✗ E: การตัด vagus ส่งผลชัดเจนต่อทั้ง receptive relaxation และ antral pump",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไม่มีตัวเลือกในไฟล์ สร้างใหม่ตามหลักสรีรวิทยา",
    "options_reconstructed": true
@@ -617,7 +617,7 @@
     "E": "Left kidney"
    },
    "answer": "C",
-   "why": "ม้ามอยู่ใต้ซี่โครงซ้ายที่ 9–11 และเปราะ เลือดมาก จึงเป็นอวัยวะในช่องท้องที่บาดเจ็บบ่อยที่สุดใน blunt trauma และทำให้ช็อกจากเลือดออกใน peritoneum ตับอยู่ด้านขวา ไตซ้ายและตับอ่อนอยู่ retroperitoneal (เลือดออกใน retroperitoneum) ileum เป็นอวัยวะกลวง ถ้าบาดเจ็บมักทะลุมากกว่าทำให้เสียเลือดมาก",
+   "why": "ซี่โครงซ้ายที่ 9–10 หักร่วมกับภาวะช็อกและเลือดออกในช่องท้องเป็นภาพจำเพาะของการบาดเจ็บที่ม้าม\n✗ A: อยู่ที่ช่องท้องด้านขวาบนใต้ซี่โครงขวา\n✗ B: เป็นอวัยวะกลวง หากบาดเจ็บมักทะลุเกิดลมในช่องท้องมากกว่าเสียเลือดรุนแรงจนช็อกทันที\n✓ C: วางตัวใต้ซี่โครงซ้ายที่ 9–11 และมีเลือดมาเลี้ยงมาก เป็นอวัยวะในช่องท้องที่แตกบ่อยที่สุดจาก blunt trauma\n✗ D: อยู่ใน retroperitoneum เลือดที่ออกจึงมักขังในช่อง retroperitoneum\n✗ E: อยู่ใน retroperitoneum เช่นกัน เลือดออกจึงไม่เด่นในช่องท้อง (intraperitoneal)",
    "source": "วิเคราะห์"
   },
   "75.2/57": {
@@ -631,7 +631,7 @@
     "E": "0.89"
    },
    "answer": "C",
-   "why": "โจทย์ถามหา PPV ในประชากร 1000 คนจะเป็นโรค 100 คน ตรวจบวกจริง 80 คน ส่วนคนไม่เป็นโรค 900 คนจะบวกลวง 10% คือ 90 คน PPV = 80/(80+90) ≈ 0.47 ข้อ 0.8 คือ sensitivity และ 0.89 ใกล้กับ NPV (810/830 ≈ 0.98) หรือค่าที่ไม่ได้ถาม ข้อนี้เป็นการคำนวณข้ามบท biostat",
+   "why": "โจทย์ถามโอกาสที่จะเป็นมะเร็งจริงเมื่อผลตรวจเป็นบวก ซึ่งก็คือ positive predictive value (PPV)\n✗ A: ไม่ใช่ค่า PPV ที่คำนวณจากความชุก 10%\n✗ B: ค่านี้คือสัดส่วน true positive ต่อประชากรทั้งหมด (0.8 × 0.1 = 0.08) ไม่ใช่ PPV\n✓ C: ใน 1,000 คนเป็นโรค 100 คน (TP = 80) ไม่เป็นโรค 900 คน (FP = 90) ดังนั้น PPV = 80 / (80 + 90) ≈ 0.47\n✗ D: ค่านี้คือ sensitivity (80%) ของการตรวจ ไม่ใช่ PPV\n✗ E: ไม่ใช่ค่า PPV (ส่วน NPV ในข้อนี้คือ 810 / 830 ≈ 0.98)",
    "source": "วิเคราะห์",
    "doubt": "⚠ ไฟล์ไม่มีตัวเลือก B จึงใส่ค่าหลอกขึ้นมาเอง",
    "options_reconstructed": true
@@ -647,7 +647,7 @@
     "E": "SJS"
    },
    "answer": "A",
-   "why": "Valproate มี boxed warning เรื่อง hepatotoxicity ซึ่งอาจถึงตาย (โดยเฉพาะเด็ก <2 ปี ผู้ที่ได้ยากันชักหลายตัว หรือมี mitochondrial disease เช่น POLG) และเรื่อง pancreatitis กับ teratogenicity (NTD) SJS พบกับ carbamazepine, lamotrigine และ phenytoin มากกว่า valproate ไม่ทำให้เกิดพิษต่อไต",
+   "why": "Valproate มีคำเตือนสำคัญ (boxed warning) ด้านพิษต่อตับที่อาจรุนแรงถึงชีวิต\n✓ A: เกิด hepatotoxicity รุนแรงได้โดยเฉพาะในเด็กอายุน้อยกว่า 2 ปี ผู้ที่ใช้ยากันชักหลายตัว หรือมีโรคไมโทคอนเดรีย\n✗ B: ไม่ใช่พิษหลักของ valproate\n✗ C: อาการซึมหรือโคม่าอาจเกิดจากภาวะ hyperammonemia แต่ไม่ใช่ ADR หลักที่โจทย์เน้นเท่าพิษต่อตับ\n✗ D: ไม่ใช่ผลข้างเคียงเด่นของ valproate (พบได้ในยากลุ่ม sodium channel blocker บางชนิดใน absence seizure)\n✗ E: ผื่นแพ้รุนแรง SJS พบเด่นกับ carbamazepine, lamotrigine และ phenytoin มากกว่า",
    "source": "วิเคราะห์",
    "doubt": "⚠ ข้ามบท pharm (ยากันชัก)"
   },
@@ -662,7 +662,7 @@
     "E": "Tubular reabsorption ของ basic drug"
    },
    "answer": "D",
-   "why": "Albumin จับยาที่เป็นกรด (เช่น warfarin, phenytoin, NSAID) เป็นหลัก ส่วนยาเบสจับ alpha-1 acid glycoprotein เมื่อ albumin ต่ำ free fraction ของ acidic drug จะเพิ่ม และเฉพาะส่วนที่ไม่จับโปรตีนเท่านั้นที่กรองผ่าน glomerulus ได้ จึงกระทบ glomerular filtration ของยากรดมากที่สุด Tubular secretion ใช้ transporter และดึงยาที่จับโปรตีนออกมาได้ จึงไวต่อระดับ albumin น้อยกว่า",
+   "why": "Albumin จับยาที่เป็นกรดเป็นหลัก เมื่อระดับ albumin ต่ำลง สัดส่วนยาอิสระ (free fraction) ที่กรองผ่านไตได้จะเพิ่มขึ้นมาก\n✗ A: ยาที่เป็นเบสจับกับ alpha-1 acid glycoprotein เป็นหลัก และ tubular secretion ดึงยาจากโปรตีนได้\n✗ B: Tubular secretion ใช้ transporter ดึงยาที่จับโปรตีนออกได้ จึงได้รับผลกระทบจาก albumin ต่ำน้อยกว่า\n✗ C: ยาที่เป็นเบสจับกับ alpha-1 acid glycoprotein ไม่ใช่ albumin เป็นหลัก\n✓ D: ยาที่เป็นกรดจับกับ albumin เป็นหลัก เมื่อ albumin ต่ำ free fraction จะเพิ่มและถูกกรองผ่าน glomerulus มากขึ้น\n✗ E: ยาที่เป็นเบสไม่ค่อยพึ่งพา albumin และการดูดกลับที่ท่อไตขึ้นกับ pH และความละลายไขมัน",
    "source": "วิเคราะห์",
    "doubt": "⚠ ข้ามบท pharmacokinetics"
   },
@@ -675,7 +675,7 @@
     "C": "Reticulocyte เพิ่มขึ้น"
    },
    "answer": "B",
-   "why": "ใน intravascular hemolysis hemoglobin อิสระจะจับกับ haptoglobin แล้วถูกกำจัด haptoglobin จึงลดลง (ไม่ใช่เพิ่ม) LDH เพิ่มเพราะ RBC แตกปล่อยเอนไซม์ออกมา และ reticulocyte เพิ่มเพราะไขกระดูกชดเชย bilirubin ที่สูงเป็นแบบ unconjugated เพราะสร้างเกินกว่าที่ตับจะ conjugate ได้",
+   "why": "ภาวะ intravascular hemolysis ทำให้ฮีโมโกลบินอิสระถูกปล่อยออกมาจับกับ haptoglobin จนระดับในเลือดลดต่ำลง\n✗ A: พบเพิ่มขึ้นจริงเพราะเม็ดเลือดแดงที่แตกจะปล่อยเอนไซม์ LDH ออกสู่กระแสเลือด\n✓ B: ในภาวะเม็ดเลือดแดงแตกในหลอดเลือด haptoglobin จะจับกับ free hemoglobin แล้วถูกกำจัด ทำให้ระดับลดลง ไม่ใช่เพิ่มขึ้น\n✗ C: พบเพิ่มขึ้นจริงจากการที่ไขกระดูกเร่งสร้างเม็ดเลือดแดงใหม่มาชดเชย",
    "source": "วิเคราะห์"
   },
   "75.2/130": {
@@ -687,7 +687,7 @@
     "C": "Preformed toxin ที่อยู่ในน้ำผึ้ง"
    },
    "answer": "A",
-   "why": "Infant botulism: น้ำผึ้งมี spore ของ C. botulinum ซึ่งลำไส้ทารกที่ flora ยังไม่สมบูรณ์ปล่อยให้ spore งอกและสร้าง botulinum toxin ขึ้นในลำไส้ toxin ยับยั้งการหลั่ง ACh จึงเกิด floppy baby และท้องผูก Exotoxin A เป็นของ Pseudomonas/diphtheria-like ADP-ribosylation Preformed toxin เป็นกลไกของ foodborne botulism ในผู้ใหญ่ (อาหารกระป๋อง) ไม่ใช่ของทารกที่กินน้ำผึ้ง",
+   "why": "ทารกกินน้ำผึ้งแล้วกล้ามเนื้ออ่อนแรง (infant botulism) เกิดจากการกลืน spore ของ C. botulinum เข้าไปเจริญในลำไส้\n✓ A: ลำไส้ทารกยังมี normal flora ไม่สมบูรณ์ ทำให้ spore ที่ปนในน้ำผึ้งงอกและสร้าง botulinum toxin ยับยั้งการหลั่ง ACh\n✗ B: เป็นสารพิษของ Pseudomonas aeruginosa ที่ออกฤทธิ์ยับยั้ง EF-2\n✗ C: การกิน preformed toxin โดยตรงเป็นกลไกของ foodborne botulism ในผู้ใหญ่จากอาหารกระป๋อง",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตัวเลือกในไฟล์ไม่ครบ ได้เพิ่มตัวเลือก C",
    "options_reconstructed": true
@@ -703,7 +703,7 @@
     "E": "Sporozoite"
    },
    "answer": "B",
-   "why": "Falling-leaf motility คือ trophozoite ของ Giardia lamblia แต่ระยะติดต่อ (infective stage) คือ mature cyst (4 nuclei) ที่ปนเปื้อนในน้ำหรืออาหาร ทนกรดในกระเพาะได้ Trophozoite เป็นระยะก่อโรคในลำไส้แต่ตายง่ายนอกร่างกาย Oocyst เป็นของ Cryptosporidium/coccidia ส่วนพืชน้ำเป็นตัวกลางของ Fasciolopsis และ sporozoite เป็นระยะของ Plasmodium/coccidia",
+   "why": "เชื้อโปรโตซัวที่เคลื่อนที่แบบ falling leaf และทำให้เกิด steatorrhea คือ Giardia lamblia ซึ่งติดต่อด้วยระยะ mature cyst\n✗ A: เป็นระยะก่อโรคที่พบในอุจจาระเหลว แต่ตายง่ายในสิ่งแวดล้อมและถูกกรดในกระเพาะทำลาย\n✓ B: เป็นระยะติดต่อ (infective stage) ที่มี 4 นิวเคลียส ทนกรดในกระเพาะและปนเปื้อนมากับน้ำหรืออาหารได้\n✗ C: เป็นระยะติดต่อของเชื้อกลุ่ม coccidia เช่น Cryptosporidium หรือ Cyclospora\n✗ D: เป็นแหล่งปนเปื้อนระยะติดต่อของพยาธิใบไม้ เช่น Fasciolopsis buski\n✗ E: เป็นระยะติดต่อของเชื้อมาลาเรีย (Plasmodium) หรือ coccidia",
    "source": "วิเคราะห์"
   },
   "76/21": {
@@ -717,7 +717,7 @@
     "E": "Serotonin receptor antagonist"
    },
    "answer": "E",
-   "why": "Ondansetron เป็น 5-HT3 receptor antagonist ออกฤทธิ์ที่ vagal afferent ในลำไส้และ CTZ ใช้ป้องกันคลื่นไส้อาเจียนจากเคมีบำบัด D2 antagonist คือ metoclopramide/domperidone, H1 antagonist คือ dimenhydrinate/promethazine ส่วน serotonin agonist (5-HT4) เป็นกลไกของ prokinetic เช่น prucalopride ไม่ใช่ antiemetic",
+   "why": "Ondansetron เป็นยาต้านอาเจียนหลักที่ออกฤทธิ์ยับยั้งตัวรับ serotonin ชนิด 5-HT3\n✗ A: เป็นกลไกของยาแก้เมารถหรือแก้แพ้ เช่น dimenhydrinate และ promethazine\n✗ B: เป็นกลไกของ metoclopramide และ domperidone\n✗ C: ใช้รักษาโรคพาร์กินสันหรือ hyperprolactinemia และมักกระตุ้นให้คลื่นไส้อาเจียน\n✗ D: ยากลุ่ม 5-HT4 agonist ใช้เป็น prokinetic เช่น prucalopride ไม่ใช่ยาต้านอาเจียน\n✓ E: ยับยั้ง 5-HT3 receptor ที่ vagal afferent ในลำไส้และ CTZ ช่วยป้องกันอาเจียนจากเคมีบำบัดได้ดี",
    "source": "วิเคราะห์"
   },
   "76/40": {
@@ -731,7 +731,7 @@
     "E": "5-HT4 antagonist"
    },
    "answer": "D",
-   "why": "เคมีบำบัดทำให้ enterochromaffin cell หลั่ง serotonin ไปกระตุ้น 5-HT3 receptor บน vagal afferent และ CTZ ยามาตรฐานจึงเป็น 5-HT3 antagonist (-setron) ตัวเลือก agonist จะยิ่งกระตุ้นอาเจียน 5-HT2 ไม่ใช่เป้าหมายหลักของ antiemetic และ 5-HT4 เกี่ยวกับ motility (agonist เป็น prokinetic)",
+   "why": "ยาเคมีบำบัดกระตุ้นการหลั่ง serotonin จากลำไส้ไปจับ 5-HT3 receptor จึงต้องใช้ยาต้านตัวรับนี้เพื่อป้องกันอาเจียน\n✗ A: ไม่ใช่กลไกของยาต้านอาเจียน\n✗ B: เป็นกลไกของยารักษาจิตเวชหรือยาป้องกันไมเกรน ไม่ใช่ยาหลักสำหรับ CINV\n✗ C: การกระตุ้น 5-HT3 receptor จะยิ่งทำให้คลื่นไส้อาเจียนมากขึ้น\n✓ D: ยับยั้งสัญญาณจาก enterochromaffin cell ผ่าน vagal afferent และ CTZ (กลุ่ม -setron เช่น ondansetron)\n✗ E: ตัวรับ 5-HT4 เกี่ยวข้องกับการเคลื่อนไหวของลำไส้ (agonist เป็น prokinetic) ไม่ใช่กลไกหลักของ CINV",
    "source": "วิเคราะห์"
   },
   "76/42": {
@@ -745,7 +745,7 @@
     "E": "Severe combined immunodeficiency"
    },
    "answer": "C",
-   "why": "CGD ขาด NADPH oxidase ทำให้ phagocyte สร้าง ROS ไม่ได้ เชื้อ catalase-positive (S. aureus, Aspergillus, Serratia, Nocardia) ทำลาย H2O2 ของตัวเองได้จึงรอด เกิดฝีซ้ำที่ตับ ปอด ผิวหนัง ภาวะ antibody deficiency (XLA, CVID, IgA def) มักติดเชื้อมีแคปซูลในทางเดินหายใจ/Giardia ส่วน SCID มีอาการรุนแรงตั้งแต่ทารก ติดเชื้อฉวยโอกาสหลายชนิด",
+   "why": "ฝีในตับเป็นซ้ำหลายครั้งจากแบคทีเรีย catalase-positive เป็นลักษณะจำเพาะของ chronic granulomatous disease (CGD)\n✗ A: มักติดเชื้อทางเดินหายใจและทางเดินอาหารซ้ำ เช่น Giardia ไม่เด่นเรื่องฝีจากเชื้อ catalase-positive\n✗ B: ขาด B cell ทำให้ติดเชื้อแบคทีเรียที่มีแคปซูลในทางเดินหายใจและ Giardia ซ้ำ\n✓ C: ขาด NADPH oxidase จึงสร้าง ROS ทำลายเชื้อไม่ได้ ทำให้ติดเชื้อ catalase-positive (เช่น S. aureus) เกิดฝีซ้ำที่ตับ ปอด ผิวหนัง\n✗ D: ขาดแอนติบอดีและมักมีปอดอักเสบหรือไซนัสอักเสบซ้ำในวัยผู้ใหญ่\n✗ E: ขาดทั้ง T และ B cell ทำให้ติดเชื้อฉวยโอกาสหลากหลายรุนแรงตั้งแต่ทารก",
    "source": "วิเคราะห์",
    "doubt": "⚠ ข้ามบท immunology"
   },
@@ -760,7 +760,7 @@
     "E": "Haptoglobin"
    },
    "answer": "D",
-   "why": "Factor VIII สร้างจาก endothelial cell (ไม่ใช่ hepatocyte) จึงปกติหรือสูงในตับแข็ง แต่ถูกใช้หมดใน DIC จึงต่ำ ใช้แยกได้ดี Fibrinogen ต่ำได้ทั้งสองภาวะ Factor X ลดทั้งสองภาวะ Hepcidin เกี่ยวกับ iron และ haptoglobin เป็นตัวบอก hemolysis",
+   "why": "การแยก DIC ออกจาก coagulopathy ในโรคตับแข็งใช้ปัจจัยการแข็งตัวของเลือดที่ไม่ได้สร้างจากเซลล์ตับ\n✗ A: ลดลงได้ทั้งในตับแข็ง (สร้างลดลง) และ DIC (ถูกใช้หมด)\n✗ B: เป็นฮอร์โมนควบคุมสมดุลธาตุเหล็ก ไม่ใช่ปัจจัยการแข็งตัวของเลือด\n✗ C: สร้างจากตับจึงลดลงได้ทั้งในตับแข็งและ DIC\n✓ D: สร้างจากเซลล์บุผนังหลอดเลือดจึงมีค่าปกติหรือสูงในตับแข็ง แต่จะต่ำลงจากการถูกใช้หมดใน DIC\n✗ E: ใช้ประเมินภาวะเม็ดเลือดแดงแตกในหลอดเลือด ไม่ใช้แยก coagulopathy",
    "source": "วิเคราะห์"
   },
   "76/74": {
@@ -774,7 +774,7 @@
     "E": "Ranitidine"
    },
    "answer": "A",
-   "why": "PPI (pantoprazole) จับ H+/K+ ATPase แบบ irreversible ที่ขั้นสุดท้ายของการหลั่งกรด กดกรดได้แรงและนานที่สุด แผลหายเร็วสุด H2 blocker (cimetidine, ranitidine) กดกรดได้น้อยกว่าและเกิด tolerance Misoprostol ใช้ป้องกันแผลจาก NSAID ผลข้างเคียงท้องเสียมาก ส่วน antacid แค่บรรเทาอาการ",
+   "why": "ยาที่รักษาแผลในกระเพาะอาหารได้ผลดีและหายเร็วที่สุดคือกลุ่ม proton pump inhibitor (PPI)\n✓ A: จับยับยั้ง H+/K+ ATPase แบบถาวรที่ขั้นตอนสุดท้ายของการหลั่งกรด จึงลดกรดได้แรงและยาวนานที่สุด\n✗ B: เป็น H2 blocker ที่กดกรดได้น้อยกว่า PPI มีฤทธิ์ยับยั้ง CYP450 และเกิด tolerance ได้\n✗ C: ใช้ป้องกันแผลจาก NSAID แต่ผลข้างเคียงท้องเสียมากและรักษาแผลสู้ PPI ไม่ได้\n✗ D: ช่วยสะเทินกรดเพื่อบรรเทาอาการชั่วคราว แต่ไม่ได้ทำให้แผลหายได้ดีเท่า PPI\n✗ E: เป็น H2 blocker ที่กดกรดได้น้อยกว่ากลุ่ม PPI",
    "source": "วิเคราะห์"
   },
   "76/80": {
@@ -788,7 +788,7 @@
     "E": "Vitamin D"
    },
    "answer": "D",
-   "why": "B12 ในอาหารจับกับโปรตีน ต้องใช้กรดและ pepsin ปล่อยออกมาก่อนจับ R-binder/IF การกดกรดนานด้วย PPI จึงทำให้ขาด B12 (และ Mg, Fe, Ca ดูดซึมลดลงด้วย) วิตามิน A, D เป็น fat-soluble อาศัย bile/micelle ไม่ขึ้นกับกรด ส่วน B1, B6 ไม่ได้สัมพันธ์กับ PPI โดยตรง",
+   "why": "การใช้ PPI ต่อเนื่องเป็นเวลานานทำให้กรดในกระเพาะลดลง ส่งผลเสียต่อการปลดปล่อยและดูดซึมวิตามิน B12 จากอาหาร\n✗ A: เป็นวิตามินละลายในไขมันที่อาศัยน้ำดีในการดูดซึม ไม่ขึ้นกับกรดในกระเพาะ\n✗ B: การขาดวิตามิน B1 สัมพันธ์กับสุราหรือทุพโภชนาการ ไม่ได้เกิดจากการใช้ PPI\n✗ C: การขาดวิตามิน B6 สัมพันธ์กับยาบางชนิด เช่น isoniazid ไม่ใช่ PPI\n✓ D: ต้องใช้กรดและ pepsin แยกวิตามิน B12 ออกจากโปรตีนในอาหารก่อนจับ R-binder และ IF การกิน PPI นานจึงเสี่ยงขาด\n✗ E: เป็นวิตามินละลายในไขมันที่ดูดซึมผ่าน micelle ไม่ได้ขึ้นตรงกับกรดในกระเพาะ",
    "source": "วิเคราะห์"
   },
   "76/83": {
@@ -802,7 +802,7 @@
     "E": "Hyperplasia of head of pancreas"
    },
    "answer": "A",
-   "why": "อาการปวดร้าวหลังร่วมกับเอนไซม์สูงขึ้นคือ acute pancreatitis เอนไซม์ที่ถูก activate ย่อยตัวเอง เกิด acinar necrosis และ fat necrosis (saponification จับ Ca) Fibrosis, glandular atrophy และ duct stenosis/calcification เป็นลักษณะ chronic pancreatitis ซึ่งเอนไซม์มักไม่สูง ส่วน hyperplasia ของหัวตับอ่อนไม่ใช่พยาธิสภาพของโรคนี้",
+   "why": "ปวดท้องร้าวไปหลังร่วมกับ amylase และ lipase สูงในผู้ดื่มสุราคือ acute pancreatitis ซึ่งมีการย่อยทำลายเนื้อตับอ่อนและไขมัน\n✓ A: เอนไซม์ตับอ่อนที่ถูกกระตุ้นก่อนกำหนดจะย่อยทำลายเซลล์ acini และเกิด fat necrosis รอบตับอ่อน\n✗ B: เป็นพยาธิสภาพของ chronic pancreatitis ซึ่งเอนไซม์ตับอ่อนมักไม่สูงเด่น\n✗ C: เป็นลักษณะของ chronic pancreatitis ระยะหลังที่เนื้อตับอ่อนฝ่อลีบ\n✗ D: พบใน chronic pancreatitis จากพังผืดรัดท่อหรือนิ่วอุดตัน\n✗ E: ไม่ใช่พยาธิสภาพของตับอ่อนอักเสบเฉียบพลัน",
    "source": "วิเคราะห์"
   },
   "76/97": {
@@ -816,7 +816,7 @@
     "E": "Tetrodotoxin"
    },
    "answer": "A",
-   "why": "หน่อไม้ปี๊บ/อาหารกระป๋องที่ไม่ผ่านความร้อนพอเป็นภาวะ anaerobic ให้ C. botulinum สร้าง toxin ตัด SNARE ยับยั้งการหลั่ง ACh ที่ NMJ เกิด descending flaccid paralysis Tetanus toxin ทำให้เกร็ง (spastic) Shiga และ cholera toxin ก่อท้องเสีย ส่วน tetrodotoxin มาจากปลาปักเป้า บล็อก Na channel",
+   "why": "กล้ามเนื้ออ่อนแรงหลังกินหน่อไม้ปี๊บ (อาหารบรรจุกระป๋องในสภาวะไร้อากาศ) เกิดจาก botulinum toxin ของ C. botulinum\n✓ A: ตัดโปรตีน SNARE ทำให้ยับยั้งการหลั่ง ACh ที่ NMJ เกิดภาวะกล้ามเนื้ออ่อนแรงแบบ descending flaccid paralysis\n✗ B: ยับยั้งการหลั่ง GABA และ glycine ทำให้เกิดอาการเกร็งกระตุก (spastic paralysis)\n✗ C: ยับยั้งการสังเคราะห์โปรตีนที่ 60S ribosome ทำให้ถ่ายเป็นมูกเลือดและเสี่ยง HUS\n✗ D: เพิ่มระดับ cAMP ในเยื่อบุลำไส้ ทำให้ถ่ายเหลวเป็นน้ำซาวข้าว\n✗ E: พบในปลาปักเป้า ออกฤทธิ์บล็อก voltage-gated Na+ channel",
    "source": "วิเคราะห์"
   },
   "76/100": {
@@ -830,7 +830,7 @@
     "E": "Misoprostol"
    },
    "answer": "D",
-   "why": "แนวปฏิบัติปัจจุบันใช้ PPI (omeprazole) เป็นยาหลักในการป้องกันแผลจาก aspirin/NSAID เพราะได้ผลดี กินง่ายและผลข้างเคียงน้อย Misoprostol (PGE1 analog) ป้องกันได้จริงแต่ท้องเสีย ปวดท้องบ่อยและห้ามในหญิงตั้งครรภ์ H2 blocker ขนาดปกติป้องกันแผลกระเพาะได้ไม่ดี ส่วน antacid ไม่ได้ป้องกัน",
+   "why": "แนวทางเวชปฏิบัติแนะนำใช้ PPI เป็นยาหลักในการป้องกันแผลในกระเพาะอาหารในผู้ที่ต้องใช้ aspirin หรือ NSAID ต่อเนื่อง\n✗ A: H2 blocker ขนาดปกติป้องกันแผลในกระเพาะจาก NSAID ได้ไม่ดีเท่า PPI และมีปฏิกิริยากับยาอื่นมาก\n✗ B: ช่วยเพียงสะเทินกรดชั่วคราว ไม่สามารถป้องกันการเกิดแผลจาก aspirin ได้\n✗ C: ป้องกันแผลในกระเพาะจาก NSAID ได้ด้อยกว่า PPI\n✓ D: ลดกรดได้อย่างมีประสิทธิภาพ ป้องกันแผลและเลือดออกจาก aspirin ได้ดีที่สุดและทนยาได้ดี\n✗ E: แม้ป้องกันแผลจาก NSAID ได้แต่ทำให้ท้องเสียและปวดบิดท้องบ่อย รวมถึงห้ามใช้ในหญิงตั้งครรภ์",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตำราบางเล่มตอบ misoprostol (E) เพราะทดแทน prostaglandin ตรงกลไก ต้องดูบริบทโจทย์"
   },
@@ -845,7 +845,7 @@
     "E": "HEV"
    },
    "answer": "B",
-   "why": "HBV มี antigen หลายส่วนที่ใช้ตรวจ: surface (HBsAg/anti-HBs), core (anti-HBc IgM/IgG) และ e antigen (HBeAg/anti-HBe) จึงแปลผล serology ได้หลายระยะ HAV และ HEV ตรวจ IgM/IgG ต่อไวรัสทั้งตัวเพียงชนิดเดียว HCV ใช้ anti-HCV + HCV RNA ส่วน HDV ตรวจ anti-HDV ร่วมกับ HBsAg",
+   "why": "ไวรัสตับอักเสบที่มีโครงสร้างแอนติเจนหลายส่วนให้ตรวจแอนติบอดีแยกกันเพื่อบอกระยะโรคคือ HBV\n✗ A: ตรวจเฉพาะ anti-HAV IgM และ IgG ต่อตัวไวรัสโดยรวม\n✓ B: มีหลายแอนติเจนให้ตรวจคู่แอนติบอดี ได้แก่ HBsAg/anti-HBs, anti-HBc (IgM/IgG) และ HBeAg/anti-HBe\n✗ C: ตรวจคัดกรองด้วย anti-HCV แล้วใช้ HCV RNA ยืนยันการติดเชื้อปัจจุบัน\n✗ D: ตรวจ anti-HDV ร่วมกับผล HBsAg ไม่ได้แยกตรวจหลายแอนติเจนแบบ HBV\n✗ E: ตรวจเฉพาะ anti-HEV IgM และ IgG",
    "source": "วิเคราะห์"
   },
   "76/111": {
@@ -859,7 +859,7 @@
     "E": "Vibrio cholerae"
    },
    "answer": "C",
-   "why": "ใช้ระยะฟักตัวแยก: S. aureus และ B. cereus emetic (preformed, heat-stable) มีอาการใน 1-6 ชม. เด่นอาเจียน ส่วน B. cereus diarrheal type (heat-labile enterotoxin) ใช้เวลา 8-16 ชม. ถ่ายเป็นน้ำ ตรงกับ 10 ชม. ETEC, Shiga toxin และ V. cholerae ต้องเพิ่มจำนวนในลำไส้ ระยะฟักตัวมักเกิน 16-24 ชม.",
+   "why": "ถ่ายเหลวเป็นน้ำหลังกินอาหารประมาณ 10 ชม. ตรงกับระยะฟักตัว 8–16 ชม. ของ Bacillus cereus ชนิดท้องเสีย\n✗ A: ต้องเข้าไปเพิ่มจำนวนและสร้างสารพิษในลำไส้ ระยะฟักตัวมักนานกว่า 16–24 ชม.\n✗ B: ออกฤทธิ์เร็วมากใน 1–6 ชม. และมีอาการอาเจียนเด่นมากกว่าถ่ายเหลว\n✓ C: ชนิด diarrheal type มีระยะฟักตัว 8–16 ชม. และทำให้ถ่ายเหลวเป็นน้ำปวดท้องเด่น\n✗ D: ทำให้ถ่ายเป็นมูกเลือดและมีระยะฟักตัวนานกว่า (มัก 1–3 วัน)\n✗ E: ทำให้ถ่ายเหลวเป็นน้ำซาวข้าวรุนแรงและระยะฟักตัวมักเกิน 16–24 ชม.",
    "source": "วิเคราะห์",
    "doubt": "⚠ ETEC จากผักสดก็เป็นไปได้ แต่ระยะฟักตัวมัก >16 ชม."
   },
@@ -874,7 +874,7 @@
     "E": "Tetrodotoxin"
    },
    "answer": "C",
-   "why": "Bongkrekic acid สร้างโดย Burkholderia gladioli pv. cocovenenans ในผลิตภัณฑ์ข้าวโพด/มะพร้าวหมัก ยับยั้ง adenine nucleotide translocase ในไมโทคอนเดรีย อัตราตายสูง Aflatoxin จากถั่วลิสง/ข้าวโพดขึ้นราทำให้เกิด HCC ระยะยาว ไม่ใช่พิษเฉียบพลันแบบนี้ Tetanus, cholera และ tetrodotoxin ไม่เกี่ยวกับซุปข้าวโพด",
+   "why": "อาหารเป็นพิษรุนแรงจากผลิตภัณฑ์ข้าวโพดหรือแป้งข้าวโพดหมักเกิดจากสารพิษ bongkrekic acid\n✗ A: สร้างจาก C. tetani ผ่านบาดแผล ทำให้กล้ามเนื้อเกร็ง\n✗ B: สร้างจาก Vibrio cholerae ทำให้ถ่ายเหลวเป็นน้ำซาวข้าว\n✓ C: สร้างจาก Burkholderia gladioli ในแป้งข้าวโพดหรือมะพร้าวหมัก ออกฤทธิ์ยับยั้งการสร้าง ATP ในไมโทคอนเดรีย\n✗ D: สร้างจากเชื้อรา Aspergillus ในถั่วหรือข้าวโพดขึ้นรา ก่อพิษเรื้อรังและมะเร็งตับ (HCC)\n✗ E: สารพิษในปลาปักเป้าที่บล็อกโซเดียมแชนเนล",
    "source": "วิเคราะห์"
   },
   "76/132": {
@@ -888,7 +888,7 @@
     "E": "Enteric adenovirus"
    },
    "answer": "A",
-   "why": "Rotavirus เป็นสาเหตุอันดับหนึ่งของท้องเสียรุนแรงในเด็ก 6 เดือน-2 ปี ทำลาย villi ทำให้ขาด lactase น้ำตาลที่ไม่ถูกดูดซึมถูกหมักเป็นกรด อุจจาระ pH ต่ำและ reducing substance บวก (osmotic diarrhea) Norovirus เด่นในผู้ใหญ่/การระบาดเป็นกลุ่ม ส่วน astro-, sapo-, enteric adenovirus อาการมักไม่รุนแรงเท่า",
+   "why": "ทารก 1 ปี ถ่ายเหลวอาเจียนขาดน้ำรุนแรง ร่วมกับอุจจาระเป็นกรด (pH < 5) และ reducing substance บวกจากภาวะขาด lactase ชั่วคราว คือ rotavirus\n✓ A: เป็นสาเหตุหลักของท้องเสียรุนแรงในเด็กเล็ก ทำลาย villi จนขาด lactase เกิด osmotic diarrhea ที่อุจจาระเป็นกรด\n✗ B: มักเด่นเรื่องการระบาดเป็นกลุ่มในเด็กโตและผู้ใหญ่ โดยมีอาเจียนเด่น\n✗ C: ทำให้ท้องเสียในเด็กเล็กแต่อาการมักไม่รุนแรงเท่า rotavirus\n✗ D: ก่อโรคในเด็กเล็กแต่พบน้อยกว่าและอาการเบากว่า rotavirus\n✗ E: มักทำให้ท้องเสียยืดเยื้อกว่าแต่ไม่เด่นเรื่องขาดน้ำรุนแรงเท่า rotavirus",
    "source": "วิเคราะห์"
   },
   "76/143": {
@@ -902,7 +902,7 @@
     "E": "Coagulogram"
    },
    "answer": "D",
-   "why": "การป้องกัน Giardia ที่เยื่อบุลำไส้อาศัย secretory IgA ผู้ที่ติดซ้ำบ่อยจึงควรนึกถึง IgA deficiency (หรือ CVID/XLA) ซึ่งเป็น primary immunodeficiency ที่พบบ่อยสุด Anti-HIV ไม่ใช่ตัวที่สัมพันธ์จำเพาะกับ Giardia (HIV สัมพันธ์กับ Cryptosporidium มากกว่า) Small bowel series และ coagulogram ไม่ได้หาสาเหตุ ส่วน lactulose เป็นยาระบาย",
+   "why": "การติดเชื้อ Giardia lamblia ซ้ำหลายครั้งบ่งชี้ความบกพร่องของภูมิคุ้มกันระดับเยื่อบุ โดยเฉพาะ secretory IgA\n✗ A: การติดเชื้อ HIV สัมพันธ์จำเพาะกับท้องเสียเรื้อรังจาก Cryptosporidium หรือ Microsporidia มากกว่า\n✗ B: ใช้ตรวจโครงสร้างทางเดินอาหาร ไม่ได้หาความบกพร่องทางภูมิคุ้มกันที่เป็นต้นเหตุ\n✗ C: เป็นยาระบายกลุ่ม osmotic ไม่ใช่การตรวจวินิจฉัย\n✓ D: ตรวจหาภาวะ selective IgA deficiency ซึ่งเป็น primary immunodeficiency ที่พบบ่อยที่สุดและทำให้ติด Giardia ซ้ำ\n✗ E: ใช้ตรวจการแข็งตัวของเลือด ไม่เกี่ยวข้องกับการติดเชื้อปรสิตซ้ำ",
    "source": "วิเคราะห์"
   },
   "76/158": {
@@ -916,7 +916,7 @@
     "E": "Neutrophil (ข้อความไม่ครบ)"
    },
    "answer": "A",
-   "why": "C. difficile ขึ้นมาแทนที่เมื่อ normal flora ถูกยาปฏิชีวนะทำลาย toxin A/B glucosylate Rho GTPase ทำลาย cytoskeleton จน colonocyte ตาย (apoptosis) เกิด pseudomembrane Attaching and effacement เป็นกลไกของ EPEC/EHEC การมี leukocyte/neutrophil ใน pseudomembrane เป็นผลตามหลังจากเซลล์ตาย ไม่ใช่กลไกหลัก ส่วน descending necrosis ไม่ใช่กลไกของโรคนี้",
+   "why": "Antibiotic-associated colitis จาก Clostridioides difficile เกิดจาก toxin A/B ที่ทำลายโครงสร้างเซลล์จนเยื่อบุลำไส้ตาย\n✓ A: Toxin A และ B เติมน้ำตาล (glucosylate) บนโปรตีน Rho GTPase ทำลาย cytoskeleton จนเซลล์เยื่อบุลำไส้ตายแบบ apoptosis\n✗ B: เป็นกลไกการทำลาย microvilli ของเชื้อ EPEC และ EHEC\n✗ C: ไม่ใช่กลไกพยาธิกำเนิดของเชื้อ C. difficile\n✗ D: การอักเสบและเม็ดเลือดขาวที่มาสะสมเป็นผลตามหลังจากเซลล์เยื่อบุถูกทำลาย\n✗ E: นิวโทรฟิลที่ก่อเป็น pseudomembrane เป็นปฏิกิริยาอักเสบที่ตามมา ไม่ใช่กลไกเริ่มต้นของสารพิษ",
    "source": "วิเคราะห์",
    "options_reconstructed": true,
    "doubt": "⚠ ตัวเลือก E ในไฟล์ไม่ครบ"
@@ -930,7 +930,7 @@
     "C": "Fulminant hepatitis"
    },
    "answer": "B",
-   "why": "NAFLD ดำเนินโรคจาก steatosis → NASH (inflammation + ballooning) → fibrosis → cirrhosis และ HCC ได้ Hypercholesterolemia เป็นปัจจัยเสี่ยง/ภาวะร่วม (metabolic syndrome) ไม่ใช่ผลแทรกซ้อน ส่วน fulminant hepatitis เป็นภาวะเฉียบพลันจากไวรัสหรือยา ไม่ใช่การดำเนินโรคปกติของ fatty liver",
+   "why": "ภาวะไขมันพอกตับที่ไม่ได้เกิดจากสุรา (NAFLD) หากปล่อยไว้ไม่รักษาสามารถลุกลามเป็นตับอักเสบ พังผืด และตับแข็งได้\n✗ A: เป็นปัจจัยเสี่ยงหรือโรคร่วมในกลุ่ม metabolic syndrome ไม่ใช่ภาวะแทรกซ้อนปลายทางของไขมันพอกตับ\n✓ B: ดำเนินโรคจาก steatosis เป็น NASH เกิดพังผืดสะสมจนกลายเป็นตับแข็ง (cirrhosis) และเสี่ยงมะเร็งตับ\n✗ C: เป็นภาวะตับวายเฉียบพลันจากไวรัสหรือยา ไม่ใช่การดำเนินโรคตามธรรมชาติของ fatty liver",
    "source": "วิเคราะห์"
   },
   "76/174": {
@@ -942,7 +942,7 @@
     "C": "Vitelline duct"
    },
    "answer": "C",
-   "why": "Vitelline (omphalomesenteric) duct เชื่อม midgut กับ yolk sac ถ้าค้างจะเกิด umbilical polyp/fistula ที่มี intestinal mucosa หรือ Meckel diverticulum Urachus ที่ค้างมาจาก allantois ทำให้ปัสสาวะออกทางสะดือ (เยื่อบุ transitional) ส่วน umbilical cord เป็นแค่ทางผ่านของหลอดเลือด ไม่ได้สร้างเยื่อบุลำไส้",
+   "why": "การพบเยื่อบุลำไส้โผล่ที่สะดือเกิดจากการที่ท่อเชื่อมระหว่าง midgut กับ yolk sac ในระยะตัวอ่อนไม่ฝ่อสลาย\n✗ A: มีต้นกำเนิดจาก allantois หากไม่ฝ่อจะพบปัสสาวะรั่วออกทางสะดือและมีเยื่อบุชนิด transitional\n✗ B: เป็นสายสะดือที่เป็นทางผ่านของหลอดเลือด ไม่ได้สร้างเยื่อบุลำไส้\n✓ C: หาก vitelline (omphalomesenteric) duct ไม่สลายสมบูรณ์จะเกิด umbilical polyp หรือ fistula ที่มีเยื่อบุลำไส้",
    "source": "วิเคราะห์"
   },
   "76/188": {
@@ -956,7 +956,7 @@
     "E": "Rectum"
    },
    "answer": "B",
-   "why": "ลมใน pararenal space แปลว่าอวัยวะ retroperitoneal ทะลุ ascending (และ descending) colon เป็น secondarily retroperitoneal จึงรั่วเข้าช่องนี้ Appendix, transverse และ sigmoid colon เป็น intraperitoneal มี mesentery ถ้าทะลุจะเกิด free air ใต้กระบังลม ส่วน rectum ส่วนล่างอยู่ใต้ peritoneum ในเชิงกราน ไม่ใช่ pararenal space",
+   "why": "การพบลมรั่วใน pararenal fat หลังตัดติ่งเนื้อลำไส้ใหญ่แสดงว่าลำไส้ส่วนที่ทะลุวางตัวอยู่ในช่อง retroperitoneum\n✗ A: อยู่ในช่องท้อง (intraperitoneal) หากทะลุลมจะรั่วเข้าช่องท้อง\n✓ B: เป็นลำไส้ใหญ่ส่วนที่อยู่แบบ secondarily retroperitoneal หากทะลุลมจึงรั่วเข้า pararenal space โดยตรง\n✗ C: อยู่ในช่องท้องและมี transverse mesocolon หากทะลุจะเกิด pneumoperitoneum\n✗ D: อยู่ในช่องท้องและมี sigmoid mesocolon หากทะลุจะเกิดลมในช่องท้อง\n✗ E: ส่วนล่างอยู่ในอุ้งเชิงกรานใต้เยื่อบุช่องท้อง ไม่ได้อยู่ชิด pararenal space",
    "source": "วิเคราะห์"
   },
   "76/209": {
@@ -969,7 +969,7 @@
     "D": "Colon mass movement"
    },
    "answer": "B",
-   "why": "MMC เกิดช่วงท้องว่าง (ควบคุมโดย motilin) เป็นคลื่นบีบตัวเป็นรอบ ~90-120 นาที กวาดเศษอาหารที่ย่อยไม่ได้และแบคทีเรียจากกระเพาะ-ลำไส้เล็กลงสู่ colon ป้องกัน SIBO การบีบไล่อาหารหลังมื้อเป็น postprandial motility ไม่ใช่ MMC การกลืนเป็น reflex ที่ medulla ส่วน mass movement เป็นการเคลื่อนไหวของ colon ที่ถูกกระตุ้นด้วย gastrocolic reflex",
+   "why": "Migrating motor complex (MMC) คือคลื่นการบีบตัวช่วงท้องว่างเพื่อทำความสะอาดทางเดินอาหารส่วนบน\n✗ A: การบีบไล่อาหารหลังมื้อเป็น postprandial motility ไม่ใช่หน้าที่ของ MMC\n✓ B: กระตุ้นโดย motilin ช่วงท้องว่างทุก 90–120 นาที เพื่อกวาดเศษอาหารตกค้างและแบคทีเรียลงสู่ลำไส้ใหญ่ป้องกัน SIBO\n✗ C: การกลืนเป็นรีเฟล็กซ์ที่ควบคุมโดยก้านสมองส่วน medulla\n✗ D: เป็นการบีบตัวของลำไส้ใหญ่หลังกินอาหารผ่าน gastrocolic reflex",
    "source": "วิเคราะห์"
   },
   "76/213": {
@@ -980,7 +980,7 @@
     "B": "Pyloric sphincter hyperplasia"
    },
    "answer": "A",
-   "why": "Esophageal atresia + distal TEF (แบบที่พบบ่อยสุด) ทำให้กลืนน้ำลาย/นมไม่ลง น้ำลายล้น สำลักเข้าปอด และลมผ่าน fistula เข้ากระเพาะทำให้ท้องอืด ใส่ NG tube ไม่ผ่าน Hypertrophic pyloric stenosis มาอายุ 2-6 สัปดาห์ด้วย projectile non-bilious vomiting และคลำก้อน olive ไม่มีน้ำลายล้นหรืออาการปอดตั้งแต่แรกเกิด",
+   "why": "ทารกแรกเกิดน้ำลายล้นปาก สำลักเข้าปอด และท้องอืดตั้งแต่แรกเกิด เป็นอาการจำเพาะของ esophageal atresia ร่วมกับ TEF\n✓ A: หลอดอาหารตันทำให้กลืนน้ำลายและนมไม่ได้จนสำลักเข้าปอด และมีรูเชื่อมหลอดลมกับหลอดอาหารส่วนล่างให้ลมเข้ากระเพาะจนท้องอืด\n✗ B: อาการจะเริ่มตอนอายุ 2–6 สัปดาห์ด้วยอาเจียนพุ่งไม่มีน้ำดีปนและคลำก้อน olive ไม่ใช่อาการน้ำลายล้นตั้งแต่แรกเกิด",
    "source": "วิเคราะห์"
   },
   "76/215": {
@@ -992,7 +992,7 @@
     "C": "Liver glycogen phosphorylase"
    },
    "answer": "A",
-   "why": "ขาด glucose-6-phosphatase (Von Gierke, GSD I) ตับปล่อยกลูโคสไม่ได้ทั้งจาก glycogenolysis และ gluconeogenesis จึงน้ำตาลต่ำรุนแรง G6P สะสมไหลไป glycolysis เกิด lactic acidosis, hyperuricemia, hypertriglyceridemia PDH deficiency ทำให้ lactate สูงแต่ไม่เด่นเรื่อง fasting hypoglycemia ส่วนขาด liver phosphorylase (Hers) มี hypoglycemia เล็กน้อยโดยไม่มี lactic acidosis",
+   "why": "ภาวะน้ำตาลในเลือดต่ำรุนแรงร่วมกับ lactic acidosis เป็นลักษณะจำเพาะของโรคสะสมไกลโคเจนชนิดที่ 1 (Von Gierke disease)\n✓ A: ขาด glucose-6-phosphatase ทำให้ตับปล่อยกลูโคสออกสู่เลือดไม่ได้และ G6P ค้างจนไหลเข้า glycolysis เกิด lactic acidosis\n✗ B: ทำให้เกิด lactic acidosis รุนแรงและอาการทางระบบประสาท แต่ไม่ได้เด่นเรื่อง fasting hypoglycemia จากการปล่อยกลูโคสไม่ได้\n✗ C: โรค Hers disease ทำให้เกิดน้ำตาลต่ำเพียงเล็กน้อยและไม่มีภาวะ lactic acidosis",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -1005,7 +1005,7 @@
     "C": "Intestinal polyps with intermittent intussusception"
    },
    "answer": "A",
-   "why": "HSP (IgA vasculitis) มี palpable purpura ที่ขา ปวดท้อง/ปวดข้อ และ IgA nephritis (hematuria) ลำไส้บวมเลือดออกที่ผนังเป็น lead point ให้เกิด intussusception ได้ (มักเป็น ileo-ileal) Crohn's ไม่ทำให้ purpura กับ hematuria ส่วน polyp (เช่น Peutz-Jeghers) อธิบาย intussusception ได้แต่ไม่อธิบายจ้ำเลือดและปัสสาวะเป็นเลือด",
+   "why": "เด็กที่มีประวัติ intussusception ร่วมกับจ้ำเลือดสีม่วง (palpable purpura) และปัสสาวะเป็นเลือด คือ Henoch-Schönlein purpura\n✓ A: เป็น IgA vasculitis ที่ทำให้เกิดจ้ำเลือดที่ขา ไตอักเสบมีเลือดในปัสสาวะ และผนังลำไส้บวมเลือดออกจนเป็น lead point ของ intussusception\n✗ B: ทำให้ปวดท้องและถ่ายเหลวเรื้อรัง แต่ไม่ได้ทำให้เกิดจ้ำเลือดสีม่วงและไตอักเสบแบบนี้\n✗ C: อธิบายการเกิด intussusception ซ้ำได้ แต่ไม่สามารถอธิบายจ้ำเลือดและปัสสาวะเป็นเลือดได้",
    "source": "วิเคราะห์"
   },
   "76/217": {
@@ -1017,7 +1017,7 @@
     "C": "GLUT4"
    },
    "answer": "A",
-   "why": "Alpha-glucosidase inhibitor (acarbose) ยับยั้งเอนไซม์ที่ brush border ไม่ให้ย่อย oligo/disaccharide เป็น monosaccharide น้ำตาลค้างในลำไส้ถูกแบคทีเรียหมัก เกิดแก๊ส ท้องอืดและ osmotic diarrhea GLP-1 analog (ไม่ใช่ inhibitor) ทำให้คลื่นไส้จาก gastric emptying ช้า ส่วน GLUT4 เป็นตัวขนส่งกลูโคสในกล้ามเนื้อ/ไขมัน ไม่ใช่ยา",
+   "why": "ยาเบาหวานที่ออกฤทธิ์ยับยั้งการย่อยแป้งที่ผนังลำไส้ทำให้น้ำตาลค้างถูกแบคทีเรียหมักจนท้องอืดและท้องเสียคือ alpha-glucosidase inhibitor\n✓ A: ยับยั้งเอนไซม์ที่ brush border ไม่ให้ย่อย disaccharide เป็น monosaccharide น้ำตาลจึงค้างในลำไส้เกิดแก๊สและ osmotic diarrhea\n✗ B: ยาเบาหวานที่ใช้จริงคือ GLP-1 receptor agonist (ไม่ใช่ inhibitor) ซึ่งเด่นเรื่องคลื่นไส้จากกระเพาะบีบตัวช้า\n✗ C: เป็นตัวขนส่งกลูโคสที่พึ่งพาอินซูลินในกล้ามเนื้อและเซลล์ไขมัน ไม่ใช่กลุ่มยา",
    "source": "วิเคราะห์"
   },
   "76/219": {
@@ -1031,7 +1031,7 @@
     "E": "Reduce chocolate consumption"
    },
    "answer": "A",
-   "why": "อาหารใยอาหารสูง (ผัก ผลไม้ ธัญพืช) เพิ่ม bulk ลดเวลาที่สารก่อมะเร็งสัมผัสเยื่อบุ และได้ butyrate จากการหมัก จึงลดความเสี่ยง CRC เนื้อแดงและเนื้อแปรรูป/ปิ้งย่าง (heterocyclic amine, PAH) เพิ่มความเสี่ยง แอลกอฮอล์เพิ่มความเสี่ยงตามขนาด และช็อกโกแลตไม่ใช่ปัจจัยที่มีหลักฐาน",
+   "why": "การลดความเสี่ยงมะเร็งลำไส้ใหญ่ทำได้ด้วยการเพิ่มใยอาหารและลดปัจจัยเสี่ยงจากเนื้อแดง ปิ้งย่าง และแอลกอฮอล์\n✓ A: ใยอาหารจากผักช่วยเพิ่มกาก ลดเวลาที่สารก่อมะเร็งสัมผัสเยื่อบุ และสร้าง butyrate ที่ช่วยปกป้องเซลล์ลำไส้\n✗ B: การกินเนื้อแดงมากเพิ่มความเสี่ยงมะเร็งลำไส้ใหญ่\n✗ C: อาหารปิ้งย่างมีสารก่อมะเร็งกลุ่ม heterocyclic amine และ PAH จึงเพิ่มความเสี่ยง\n✗ D: การดื่มแอลกอฮอล์ในปริมาณดังกล่าวเกินเกณฑ์และเพิ่มความเสี่ยงมะเร็งลำไส้ใหญ่\n✗ E: ไม่มีหลักฐานว่าการลดช็อกโกแลตช่วยป้องกันมะเร็งลำไส้ใหญ่",
    "source": "วิเคราะห์"
   },
   "76/227": {
@@ -1042,7 +1042,7 @@
     "B": "Visceral mesoderm"
    },
    "answer": "A",
-   "why": "Hirschsprung disease เกิดจาก neural crest cell ไม่ migrate ลงมาถึงลำไส้ส่วนปลาย ขาด ganglion cell ทั้ง Meissner และ Auerbach plexus ส่วนนั้นจึงบีบตัวคลายไม่ได้ ลำไส้เหนือขึ้นไปโป่ง Visceral (splanchnic) mesoderm สร้างกล้ามเนื้อเรียบและ connective tissue ของผนังลำไส้ ไม่ได้สร้างเซลล์ประสาท",
+   "why": "ทารกไม่ถ่ายขี้เทาและลำไส้ใหญ่ส่วนต้นโป่งพอง (Hirschsprung disease) เกิดจากความผิดปกติของการเคลื่อนย้ายเซลล์ประสาท\n✓ A: Neural crest cell เคลื่อนลงมาไม่ถึงลำไส้ส่วนปลาย ทำให้ขาด ganglion cell ในชั้น submucosa และ myenteric plexus\n✗ B: พัฒนาเป็นกล้ามเนื้อเรียบและเนื้อเยื่อเกี่ยวพันของผนังลำไส้ ไม่ได้สร้างเซลล์ประสาทของลำไส้",
    "source": "วิเคราะห์"
   },
   "76/228": {
@@ -1058,7 +1058,7 @@
     "G": "Acute recent infection"
    },
    "answer": "B",
-   "why": "HBsAg+ กับ anti-HBc+ คือมีการติดเชื้อ HBV อยู่ HBeAg+ แปลว่าไวรัส replicate มาก แต่ ALT ปกติและไม่มีอาการแปลว่าร่างกายยังไม่ตอบสนองต่อไวรัส ตรงกับ immune-tolerant phase (HBeAg+ chronic infection) ถ้า ALT สูงจะเป็น immune-active หรือ chronic active ถ้า HBeAg− กับ anti-HBe+ และ ALT ปกติจะเป็น inactive carrier ส่วน acute infection ต้องมี IgM anti-HBc และมักมีตับอักเสบ",
+   "why": "HBsAg บวก, anti-HBc บวก, HBeAg บวก แต่ ALT ปกติและไม่มีอาการ แสดงถึงไวรัสแบ่งตัวสูงโดยภูมิคุ้มกันยังไม่ทำลายตับ\n✗ A: มักใช้เรียกกลุ่มที่ HBeAg ลบและไวรัสต่ำ (inactive carrier) มากกว่ากลุ่มที่ HBeAg บวก\n✓ B: อยู่ในระยะ immune-tolerant phase ที่ไวรัสแบ่งตัวมาก (HBeAg บวก) แต่ภูมิคุ้มกันยังไม่ตอบสนองจึงไม่มีตับอักเสบและ ALT ปกติ\n✗ C: ระยะฟักตัวก่อนเกิดอาการไม่ใช่คำเรียกของภาวะติดเชื้อเรื้อรังแบบนี้\n✗ D: ระยะฟื้นตัวจะต้องเริ่มกำจัดไวรัสได้แล้ว ไม่ใช่ HBeAg บวก\n✗ E: ขัดแย้งกับโจทย์ที่ระบุว่า HBeAg บวก\n✗ F: ระยะตับอักเสบเรื้อรังที่ยังดำเนินโรค (immune-active) จะต้องมีค่า ALT สูงขึ้น\n✗ G: การติดเชื้อเฉียบพลันจะมีอาการตับอักเสบ ALT สูง และต้องตรวจพบ IgM anti-HBc",
    "source": "วิเคราะห์",
    "doubt": "⚠ ตัวเลือกในไฟล์ไม่แน่ใจว่าครบ/เกินมา (ผู้รวบรวมระบุ)"
   },
@@ -1073,7 +1073,7 @@
     "E": "Left colic artery"
    },
    "answer": "A",
-   "why": "ม้ามได้เลือดจาก splenic artery ซึ่งเป็นแขนงของ celiac trunk วิ่งตามขอบบนของตับอ่อนเข้า splenic hilum เป็น end artery จึงเกิด wedge-shaped infarct ได้ Gastric artery เลี้ยงกระเพาะ suprarenal เลี้ยงต่อมหมวกไต jejunoileal (SMA) เลี้ยงลำไส้เล็ก ส่วน left colic (IMA) เลี้ยง descending colon",
+   "why": "ภาวะม้ามขาดเลือด (splenic infarction) เกิดจากการอุดตันของหลอดเลือดแดงหลักที่เลี้ยงม้ามโดยตรง\n✓ A: เป็นแขนงของ celiac trunk ที่วิ่งตามขอบบนตับอ่อนเข้าขั้วม้ามและเป็น end artery จึงเกิด wedge-shaped infarction ได้\n✗ B: เลี้ยงกระเพาะอาหาร ไม่ได้เลี้ยงม้าม\n✗ C: เลี้ยงต่อมหมวกไต\n✗ D: เป็นแขนงของ SMA ที่เลี้ยงลำไส้เล็กส่วน jejunum และ ileum\n✗ E: เป็นแขนงของ IMA ที่เลี้ยงลำไส้ใหญ่ด้านซ้าย",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -1088,7 +1088,7 @@
     "E": "Left colic artery"
    },
    "answer": "E",
-   "why": "Descending colon เป็น hindgut ได้เลือดจาก left colic artery ซึ่งเป็นแขนงของ IMA (บริเวณ splenic flexure เป็น watershed ระหว่าง SMA-IMA) Splenic และ gastric artery เป็นแขนง celiac เลี้ยง foregut Jejunoileal เป็นแขนง SMA เลี้ยงลำไส้เล็ก ส่วน suprarenal เลี้ยงต่อมหมวกไต",
+   "why": "ลำไส้ใหญ่ด้านซ้าย (descending colon) เป็นส่วนของ hindgut จึงได้รับเลือดเลี้ยงจากแขนงของ inferior mesenteric artery\n✗ A: เป็นแขนงของ celiac trunk ที่เลี้ยงม้าม\n✗ B: เป็นแขนงของ celiac trunk ที่เลี้ยงกระเพาะอาหาร\n✗ C: เลี้ยงต่อมหมวกไต\n✗ D: เป็นแขนงของ SMA ที่เลี้ยงลำไส้เล็ก\n✓ E: เป็นแขนงของ IMA ที่เลี้ยง descending colon (โดยเฉพาะจุด splenic flexure ซึ่งเป็น watershed area)",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -1102,7 +1102,7 @@
     "D": "Decreased hepatic secretion"
    },
    "answer": "B",
-   "why": "นิ่วสีเหลืองคือ cholesterol stone เกิดเมื่อน้ำดีมี cholesterol มากเกิน (supersaturated) เทียบกับ bile salt และ lecithin ร่วมกับ gallbladder stasis และ nucleation ปัจจัยเสี่ยงคือ 4F/อ้วน/estrogen Intravascular hemolysis ทำให้ bilirubin สูงจนเกิด black pigment stone ส่วน hepatic uptake/secretion ที่ลดลงทำให้เหลือง (jaundice) ไม่ใช่กลไกนิ่ว cholesterol",
+   "why": "นิ่วในถุงน้ำดีสีเหลืองเป็นนิ่วคอเลสเตอรอล ซึ่งเกิดจากการขับคอเลสเตอรอลลงในน้ำดีมากเกินกว่าที่เกลือน้ำดีจะละลายได้\n✗ A: ทำให้ unconjugated bilirubin สูงและเกิดนิ่วเม็ดสีดำ (black pigment stone) ไม่ใช่นิ่วสีเหลือง\n✓ B: น้ำดีมีความอิ่มตัวของคอเลสเตอรอลมากเกิน (supersaturation) จนตกผลึกรวมตัวเป็นนิ่วสีเหลือง\n✗ C: ทำให้เกิดภาวะตัวเหลืองจาก unconjugated bilirubin สูง ไม่ใช่กลไกหลักของนิ่วคอเลสเตอรอล\n✗ D: ทำให้เกิดภาวะคั่งน้ำดีและ conjugated hyperbilirubinemia ไม่ใช่สาเหตุของนิ่วคอเลสเตอรอล",
    "source": "วิเคราะห์",
    "needs_image": true
   },
@@ -1115,7 +1115,7 @@
     "C": "Brunner gland hyperplasia / gastric metaplasia"
    },
    "answer": "C",
-   "why": "กรดที่ไหลลง duodenum มากเรื้อรังกระตุ้นให้ Brunner gland (หลั่งเมือก alkaline) ขยายตัว และเยื่อบุเกิด gastric metaplasia เป็นการปรับตัวป้องกันกรด (พื้นที่ให้ H. pylori เกาะ) S cell หลั่ง secretin ตอบสนองกรดในเชิงหน้าที่ แต่ไม่ใช่การเปลี่ยนแปลงทางพยาธิวิทยาที่ตำราใช้ ส่วน crypt of Lieberkühn หลั่งน้ำ/เอนไซม์ ไม่ได้เพิ่มเพื่อต้านกรด",
+   "why": "เมื่อกรดจากกระเพาะไหลลง duodenum มากเรื้อรัง เยื่อบุจะปรับตัวโดยเพิ่มต่อมสร้างเมือกด่างและเปลี่ยนชนิดเซลล์ให้ทนกรด\n✗ A: S cell หลั่ง secretin เพื่อตอบสนองต่อกรดในเชิงสรีรวิทยา แต่ไม่ใช่การเปลี่ยนแปลงทางพยาธิวิทยาที่โดดเด่น\n✗ B: Crypt of Lieberkühn ทำหน้าที่สร้างเซลล์ใหม่และหลั่งน้ำ ไม่ใช่การปรับตัวหลักเพื่อต้านกรด\n✓ C: Brunner gland เกิด hyperplasia เพื่อหลั่งเมือกด่างมากขึ้น และเยื่อบุเกิด gastric metaplasia เพื่อทนต่อกรด",
    "source": "วิเคราะห์",
    "options_reconstructed": true,
    "doubt": "⚠ ไฟล์มีตัวเลือกแค่ A, B; คำตอบ Brunner gland เป็นการวิเคราะห์ ต้องตรวจ"
@@ -1129,7 +1129,7 @@
     "C": "GM1 ganglioside"
    },
    "answer": "C",
-   "why": "B subunit ของ cholera toxin จับ GM1 ganglioside บน enterocyte จากนั้น A subunit ADP-ribosylate Gs-alpha ทำให้ adenylate cyclase ทำงานตลอด cAMP สูง CFTR หลั่ง Cl- และน้ำ เกิด secretory diarrhea แบบ rice-water Muscarinic/ACh receptor ไม่ใช่ตัวรับของ toxin นี้",
+   "why": "Cholera toxin ใช้หน่วยย่อย B จับกับตัวรับจำเพาะบนผิวเซลล์เยื่อบุลำไส้ก่อนส่งหน่วยย่อย A เข้าไปเพิ่ม cAMP\n✗ A: เป็นตัวรับของระบบประสาท parasympathetic ไม่ใช่ตัวรับของ cholera toxin\n✗ B: เป็นตัวรับสารสื่อประสาทที่กล้ามเนื้อและปมประสาท ไม่เกี่ยวข้องกับ cholera toxin\n✓ C: เป็นตัวรับบนผิว enterocyte ที่จับกับ B subunit ของ cholera toxin เพื่อนำ A subunit เข้าเซลล์ไปกระตุ้น Gs และ cAMP",
    "source": "วิเคราะห์"
   },
   "76/272": {
@@ -1142,7 +1142,7 @@
     "D": "Hemolysis"
    },
    "answer": "A",
-   "why": "Gilbert เกิดจาก promoter ของยีน UGT1A1 ผิดปกติ เอนไซม์ UGT ทำงานลดลงบางส่วน indirect bilirubin สูงเล็กน้อยเวลาอดอาหาร/เครียด/ป่วย ไม่มี hemolysis ขาดเอนไซม์ทั้งหมดคือ Crigler-Najjar type I ซึ่งรุนแรงตั้งแต่ทารก ส่วนขับ conjugated bilirubin ไม่ได้คือ Dubin-Johnson ซึ่งเป็น direct hyperbilirubinemia",
+   "why": "Gilbert syndrome เป็นภาวะตัวเหลืองชนิด indirect hyperbilirubinemia ที่ไม่รุนแรงและไม่มีภาวะเม็ดเลือดแดงแตก\n✓ A: มีการกลายพันธุ์บริเวณ promoter ของยีน UGT1A1 ทำให้เอนไซม์ทำงานลดลงบางส่วน จึงเหลืองเล็กน้อยเวลาอดอาหารหรือเครียด\n✗ B: การขาดเอนไซม์ทั้งหมดคือ Crigler-Najjar syndrome type I ซึ่งรุนแรงและเสี่ยง kernicterus ตั้งแต่ทารก\n✗ C: ความผิดปกติของ MRP2 คือ Dubin-Johnson syndrome ซึ่งทำให้เกิด direct hyperbilirubinemia\n✗ D: Gilbert syndrome มีระดับฮีโมโกลบินและ reticulocyte ปกติ ไม่มีภาวะเม็ดเลือดแดงแตก",
    "source": "วิเคราะห์",
    "options_reconstructed": true
   },
@@ -1155,7 +1155,7 @@
     "C": "Glycolysis"
    },
    "answer": "A",
-   "why": "GSD I ขาด glucose-6-phosphatase ซึ่งเป็นขั้นสุดท้ายร่วมของทั้ง gluconeogenesis และ glycogenolysis ในตับ เฉลยเลือก gluconeogenesis เพราะ G6Pase เป็นเอนไซม์จำเพาะของ gluconeogenesis (ไม่มีใน glycolysis) และอธิบายได้ว่าทำไม lactate/alanine เปลี่ยนเป็นกลูโคสไม่ได้ จึงเกิด lactic acidosis ร่วม Glycolysis ไม่ได้บกพร่อง กลับทำงานมากขึ้นจาก G6P ที่ค้าง",
+   "why": "Glycogen storage disease type I (Von Gierke) ขาดเอนไซม์ glucose-6-phosphatase ซึ่งเป็นขั้นสุดท้ายในการปล่อยกลูโคสจากตับ\n✓ A: ขาดเอนไซม์จำเพาะขั้นสุดท้ายของ gluconeogenesis ทำให้เปลี่ยน lactate และสารตั้งต้นอื่นเป็นกลูโคสไม่ได้ จึงเกิดน้ำตาลต่ำร่วมกับ lactic acidosis\n✗ B: แม้ glycogenolysis จะปล่อยกลูโคสอิสระไม่ได้เช่นกัน แต่เอนไซม์ G6Pase เป็นเอนไซม์จำเพาะที่อธิบายความบกพร่องของ gluconeogenesis และ lactic acidosis ได้ตรงกว่า\n✗ C: กระบวนการ glycolysis ไม่ได้บกพร่อง แต่กลับทำงานเพิ่มขึ้นจาก G6P ที่คั่งค้างอยู่",
    "source": "เฉลย77",
    "doubt": "⚠ G6Pase เป็นขั้นสุดท้ายของ glycogenolysis ด้วย (B ก็มีเหตุผล); ตอบตามเฉลย"
   },
@@ -1168,7 +1168,7 @@
     "C": "Anemia ที่รักษาไม่หายจากขาดเหล็ก"
    },
    "answer": "B",
-   "why": "Hepcidin สร้างจากตับ ทำหน้าที่สลาย ferroportin เพื่อลดการดูดซึมเหล็กที่ duodenum ถ้าขาด hepcidin (เช่น hereditary hemochromatosis/juvenile HH) เหล็กถูกดูดซึมไม่หยุด สะสมในตับจนเกิด fibrosis/cirrhosis, DM, cardiomyopathy Polycythemia vera เกิดจาก JAK2 mutation ไม่ใช่เหล็กเกิน ส่วน anemia ที่ดื้อต่อเหล็ก (IRIDA) เกิดจาก hepcidin สูงเกิน ไม่ใช่ขาด",
+   "why": "Hepcidin ยับยั้งการดูดซึมเหล็กจากลำไส้ หากขาดอย่างรุนแรงเหล็กจะถูกดูดซึมเกินจนสะสมทำลายตับและอวัยวะอื่น\n✗ A: เกิดจากการกลายพันธุ์ของยีน JAK2 ไม่ได้เกิดจากภาวะเหล็กเกิน\n✓ B: ขาด hepcidin ทำให้ ferroportin ทำงานไม่หยุด เหล็กดูดซึมและสะสมในตับจนเกิดพังผืดและตับแข็ง (hemochromatosis)\n✗ C: ภาวะโลหิตจางที่ดื้อต่อธาตุเหล็ก (IRIDA) เกิดจากระดับ hepcidin สูงเกิน ไม่ใช่ขาด",
    "source": "วิเคราะห์",
    "options_reconstructed": false
   },
@@ -1182,7 +1182,7 @@
     "D": "Interstitial cells of Cajal เท่านั้น"
    },
    "answer": "A",
-   "why": "Hirschsprung disease เกิดจาก neural crest cell ไม่ migrate ถึงลำไส้ส่วนปลาย rectal suction biopsy จะไม่พบ ganglion cell ทั้งใน Meissner และ Auerbach plexus (มักพบ nerve trunk หนาและ AChE เพิ่ม) ส่วนที่ไม่มี ganglion บีบรัดตลอดจึงตีบ ลำไส้เหนือขึ้นไปโป่ง กล้ามเนื้อเรียบและ crypt ยังมีอยู่ปกติ การขาด ICC อย่างเดียวไม่ใช่พยาธิสภาพหลักของโรคนี้",
+   "why": "ทารกไม่ถ่ายขี้เทาร่วมกับลำไส้ตรงตีบแคบและลำไส้เหนือขึ้นไปโป่งพอง (Hirschsprung disease) เกิดจากการขาดเซลล์ประสาทในผนังลำไส้\n✓ A: การตัดชิ้นเนื้อลำไส้ตรง (rectal suction biopsy) จะไม่พบ ganglion cell ในชั้น submucosa และ myenteric plexus\n✗ B: ชั้นกล้ามเนื้อเรียบของผนังลำไส้ยังคงมีอยู่ตามปกติ\n✗ C: ต่อมและเยื่อบุลำไส้ไม่ได้ขาดหายไปในโรคนี้\n✗ D: การขาดเฉพาะ interstitial cells of Cajal ไม่ใช่พยาธิสภาพจำเพาะของ Hirschsprung disease",
    "source": "เฉลย77",
    "options_reconstructed": true
   },
@@ -1197,7 +1197,7 @@
     "E": "Pyrazinamide"
    },
    "answer": "D",
-   "why": "ยาวัณโรคที่ทำให้ตับอักเสบคือ isoniazid, rifampicin และ pyrazinamide (PZA เป็นพิษต่อตับมากสุด) ส่วน ethambutol แทบไม่เป็นพิษต่อตับ ผลข้างเคียงเด่นคือ optic neuritis (เสียการมองสีแดง-เขียว) จึงเป็นยาที่ใช้ต่อได้ช่วงตับอักเสบ Linezolid ไม่อยู่ในสูตรมาตรฐานของเชื้อไม่ดื้อยา และพิษเด่นคือ myelosuppression/neuropathy",
+   "why": "ยาวัณโรคสูตรมาตรฐาน (IRZE) มี 3 ตัวที่เป็นพิษต่อตับชัดเจน ยกเว้น ethambutol ที่เด่นเรื่องพิษต่อเส้นประสาทตาแทน\n✗ A: ไม่ได้อยู่ในสูตรมาตรฐานสำหรับเชื้อไม่ดื้อยา และมีพิษเด่นคือไขกระดูกถูกกดและปลายประสาทอักเสบ\n✗ B: ทำให้เกิดพิษต่อตับและภาวะคั่งน้ำดีได้ รวมถึงกระตุ้น CYP450\n✗ C: ทำให้เกิดตับอักเสบจากยาได้บ่อยร่วมกับปลายประสาทอักเสบจากการขาดวิตามิน B6\n✓ D: แทบไม่ทำให้เกิดตับอักเสบ ผลข้างเคียงเด่นคือ optic neuritis (ตาบอดสีแดง-เขียว) จึงปลอดภัยต่อตับที่สุดในสูตรมาตรฐาน\n✗ E: เป็นยาที่มีโอกาสทำให้เกิดพิษต่อตับสูงที่สุดในกลุ่มยาวัณโรคแนวหน้า",
    "source": "วิเคราะห์"
   },
   "77/163": {
@@ -1211,7 +1211,7 @@
     "E": "Somatostatinoma"
    },
    "answer": "B",
-   "why": "VIPoma (Verner-Morrison, WDHA) หลั่ง VIP กระตุ้น cAMP ที่ลำไส้ ทำให้ secretory diarrhea ปริมาณมาก hypokalemia achlorhydria (VIP ยับยั้งการหลั่งกรด) และ flushing จาก vasodilation Gastrinoma ทำให้กรดสูง แผลหลายตำแหน่ง Insulinoma ทำให้น้ำตาลต่ำ Glucagonoma มี necrolytic migratory erythema + DM Somatostatinoma มีนิ่วถุงน้ำดี DM และ steatorrhea",
+   "why": "ถ่ายเหลวเป็นน้ำปริมาณมากจนเกลือแร่ต่ำ ไม่มีกรดในกระเพาะ (achlorhydria) และหน้าแดง เป็นกลุ่มอาการ WDHA จาก VIPoma\n✗ A: หลั่ง gastrin มากทำให้กรดในกระเพาะสูงมากและเกิดแผลเปื่อยหลายตำแหน่ง ไม่ใช่ไม่มีกรด\n✓ B: หลั่ง VIP กระตุ้น cAMP ในลำไส้จนถ่ายเป็นน้ำและ K ต่ำ ยับยั้งการหลั่งกรดจนเกิด achlorhydria และขยายหลอดเลือดจนหน้าแดง\n✗ C: หลั่งอินซูลินเกินจนเกิดภาวะน้ำตาลในเลือดต่ำ (Whipple triad)\n✗ D: หลั่งกลูคากอนทำให้เกิดเบาหวานและผื่น necrolytic migratory erythema\n✗ E: หลั่ง somatostatin ทำให้เกิดนิ่วถุงน้ำดี เบาหวาน และถ่ายเป็นไขมัน",
    "source": "เฉลย77"
   },
   "77/164": {
@@ -1225,7 +1225,7 @@
     "E": "Left gastric a."
    },
    "answer": "A",
-   "why": "Splenic artery ให้แขนง short gastric และ left gastroepiploic artery (เลี้ยง greater curvature ด้านซ้าย) จึงขาดเลือดตาม Right gastroepiploic มาจาก gastroduodenal ซึ่งเป็นแขนงของ common hepatic artery ส่วน left gastric แยกจาก celiac trunk โดยตรง จึงไม่ได้รับผลกระทบ",
+   "why": "Splenic artery แตกแขนงไปเลี้ยงผนังกระเพาะด้านซ้ายและ fundus หากถูกผูกหรือตัดแขนงเหล่านี้จะขาดเลือดตามไปด้วย\n✓ A: เป็นแขนงของ splenic artery ที่วิ่งเลาะ greater curvature ด้านซ้าย จึงขาดเลือดทันทีเมื่อตัด splenic artery\n✗ B: แตกแขนงมาจาก gastroduodenal artery ซึ่งเป็นแขนงของ common hepatic artery\n✗ C: แยกออกจาก celiac trunk โดยตรง ไม่ได้แตกมาจาก splenic artery\n✗ D: แตกแขนงมาจาก common hepatic artery จึงไม่กระทบจากการผูก splenic artery\n✗ E: แยกออกจาก celiac trunk โดยตรง",
    "source": "เฉลย77"
   },
   "77/165": {
@@ -1238,7 +1238,7 @@
     "D": "Umbilical vein"
    },
    "answer": "A",
-   "why": "Esophageal varices เป็น portosystemic anastomosis ระหว่าง left gastric (coronary) vein ฝั่ง portal กับ esophageal vein ที่ระบายลง azygos ฝั่ง systemic เมื่อมี portal hypertension เลือดไหลย้อนผ่านทางนี้จนเส้นโป่ง Rectal vein เกี่ยวกับ anorectal varices (superior vs middle/inferior rectal) Umbilical (paraumbilical) vein ทำให้เกิด caput medusae ส่วน right gastric ไม่ใช่ทางหลักของ varices",
+   "why": "Esophageal varices เกิดจากความดันพอร์ทัลสูงดันเลือดย้อนเข้าสู่ทางเชื่อมระหว่างระบบพอร์ทัลกับระบบหลอดเลือดดำของหลอดอาหาร\n✓ A: เป็นหลอดเลือดดำฝั่งพอร์ทัลที่เชื่อมกับ esophageal vein ฝั่ง azygos ทำให้เส้นเลือดหลอดอาหารส่วนล่างโป่งพอง\n✗ B: ไม่ใช่เส้นทางหลักของการเกิด esophageal varices\n✗ C: เกี่ยวข้องกับการเกิด anorectal varices หรือริดสีดวงทวาร\n✗ D: การขยายตัวของ paraumbilical vein ทำให้เกิดเส้นเลือดขอดรอบสะดือ (caput medusae)",
    "source": "เฉลย77"
   },
   "77/166": {
@@ -1249,7 +1249,7 @@
     "B": "Tuberculosis"
    },
    "answer": "A",
-   "why": "Splenic flexure (Griffiths point, ระหว่าง SMA-IMA) และ rectosigmoid (Sudeck point) เป็น watershed area ผู้ป่วย heart failure มี low-flow state จึงเกิด ischemic colitis มี pseudomembrane/exudate ที่ตำแหน่งดังกล่าว TB ลำไส้มักเป็นที่ ileocecal region (มี lymphoid tissue มากและ stasis) ไม่ได้เลือกที่ watershed",
+   "why": "ผู้ป่วยหัวใจล้มเหลวที่มีภาวะเลือดไปเลี้ยงน้อยแล้วเกิดแผลและ exudate ที่ splenic flexure และ rectosigmoid คือ ischemic colitis\n✓ A: Splenic flexure (Griffiths point) และ rectosigmoid (Sudeck point) เป็นจุด watershed area ที่ขาดเลือดง่ายที่สุดในภาวะ low-flow state\n✗ B: วัณโรคลำไส้มักเกิดบริเวณ ileocecal region ไม่ได้จำเพาะต่อตำแหน่ง watershed area ทั้งสองจุดนี้",
    "source": "เฉลย77"
   },
   "77/167": {
@@ -1263,7 +1263,7 @@
     "E": "Necator americanus"
    },
    "answer": "C",
-   "why": "Enterobius vermicularis (pinworm) อาศัยที่ cecum/appendix พบในชิ้นเนื้อไส้ติ่งได้บ่อย ไข่รูป D (แบนด้านหนึ่ง) ตัวแก่มี lateral alae และวางไข่รอบทวารตอนกลางคืน Ascaris อาจอุดท่อน้ำดี/ลำไส้ Ancylostoma และ Necator เกาะ jejunum ดูดเลือด Trichuris อยู่ cecum/colon แต่ไข่เป็นรูปถังมี bipolar plug",
+   "why": "พยาธิตัวกลมขนาดเล็กที่อาศัยบริเวณ cecum และพบได้บ่อยในชิ้นเนื้อไส้ติ่งคือพยาธิเข็มหมุด (Enterobius vermicularis)\n✗ A: อาศัยในลำไส้เล็กและมักทำให้เกิดลำไส้อุดตันหรือไชเข้าท่อน้ำดี\n✗ B: พยาธิปากขอเกาะดูดเลือดที่ลำไส้เล็กส่วน jejunum ทำให้โลหิตจาง\n✓ C: อาศัยที่ cecum และไส้ติ่ง พบในชิ้นเนื้อไส้ติ่งได้บ่อย ตัวแก่มี lateral alae และไข่รูปตัว D\n✗ D: อาศัยที่ cecum และลำไส้ใหญ่แต่ไม่เด่นเรื่องพบในไส้ติ่งเท่าพยาธิเข็มหมุด (ไข่รูปถังมีจุกสองข้าง)\n✗ E: พยาธิปากขอเกาะดูดเลือดที่ลำไส้เล็กส่วนต้นเช่นเดียวกับ Ancylostoma",
    "source": "เฉลย77",
    "needs_image": true
   },
@@ -1278,7 +1278,7 @@
     "E": "เคยได้รับวัคซีน"
    },
    "answer": "E",
-   "why": "วัคซีน HBV มีแค่ HBsAg ผู้ได้วัคซีนจะมี anti-HBs+ เพียงอย่างเดียว ไม่มีทางมี anti-HBc ส่วน isolated anti-HBc เกิดได้จาก window period ของ acute infection, resolved infection นานจน anti-HBs ลดต่ำจนตรวจไม่พบ, occult HBV (มี DNA แต่ HBsAg ต่ำ) หรือ false positive",
+   "why": "ผลเลือด isolated anti-HBc positive (HBsAg ลบ, anti-HBs ลบ) เกิดได้หลายสาเหตุ แต่ไม่สามารถเกิดจากการฉีดวัคซีน HBV ได้\n✗ A: เกิดได้ใน occult HBV ที่ตรวจไม่พบ HBsAg แต่ยังมีไวรัสแฝงและมี anti-HBc บวก\n✗ B: เกิดได้เมื่อเคยติดเชื้อและหายนานแล้วจนระดับ anti-HBs ลดต่ำกว่าเกณฑ์ตรวจพบ\n✗ C: เกิดได้ในช่วง window period ที่ HBsAg หายไปแล้วแต่ anti-HBs ยังไม่ขึ้น\n✗ D: เกิดได้จากผลบวกลวงของการตรวจ anti-HBc\n✓ E: วัคซีน HBV ประกอบด้วย HBsAg เท่านั้น จึงกระตุ้นได้เฉพาะ anti-HBs ไม่มีทางทำให้เกิด anti-HBc บวก",
    "source": "เฉลย77"
   },
   "77/169": {
@@ -1291,7 +1291,7 @@
     "D": "Free-living adult"
    },
    "answer": "B",
-   "why": "Strongyloides stercoralis ในอุจจาระพบเป็น rhabditiform larva (ระยะวินิจฉัย) แต่ระยะติดต่อคือ filariform larva (L3) ที่ไชผ่านผิวหนัง และทำ autoinfection ได้ ไข่ของ Strongyloides ฟักในลำไส้จึงไม่ค่อยพบในอุจจาระ ส่วน free-living adult อยู่ในดิน ไม่ใช่ระยะติดคน",
+   "why": "Strongyloides stercoralis วินิจฉัยได้จากการพบตัวอ่อน rhabditiform ในอุจจาระ แต่ระยะที่เข้าสู่ร่างกายคือ filariform larva\n✗ A: เป็นระยะวินิจฉัย (diagnostic stage) ที่พบในอุจจาระ ไม่ใช่ระยะที่ไชเข้าผิวหนัง\n✓ B: เป็นระยะติดต่อ (infective stage, L3) ที่ไชผ่านผิวหนังเข้าสู่ร่างกายและสามารถก่อ autoinfection ในลำไส้ได้\n✗ C: ไข่ฟักเป็นตัวอ่อนตั้งแต่ในผนังลำไส้ จึงแทบไม่พบในอุจจาระและไม่ใช่ระยะติดต่อ\n✗ D: เป็นวงจรชีวิตอิสระในดิน ไม่ใช่ระยะที่เข้าสู่ร่างกายมนุษย์",
    "source": "เฉลย77",
    "needs_image": true,
    "doubt": "⚠ ยังไม่เห็นรูป ตอบตามเฉลย/บริบท Strongyloides"
@@ -1306,7 +1306,7 @@
     "D": "Metronidazole"
    },
    "answer": "A",
-   "why": "ในตัวเลือกนี้มีแต่ benzimidazole (mebendazole/albendazole) ที่ออกฤทธิ์ต่อ nematode โดยจับ beta-tubulin ใช้กับ Strongyloides ได้แม้ประสิทธิภาพด้อยกว่า ivermectin ซึ่งเป็นยาหลักจริง Praziquantel ใช้กับ trematode/cestode Niclosamide ใช้กับพยาธิตัวตืด ส่วน metronidazole ใช้กับ protozoa/anaerobe",
+   "why": "ในตัวเลือกที่ให้มา ยาที่ออกฤทธิ์ต่อพยาธิตัวกลม (nematode) อย่าง Strongyloides ได้คือยากลุ่ม benzimidazole\n✓ A: ออกฤทธิ์ยับยั้งการสร้าง microtubule ของพยาธิตัวกลม (แม้ยาหลักจริงๆ ของ Strongyloides คือ ivermectin แต่มีเพียงตัวเลือกนี้ที่ออกฤทธิ์ต่อ nematode)\n✗ B: ใช้รักษาพยาธิใบไม้และพยาธิตัวตืด ไม่ได้ผลต่อพยาธิตัวกลม\n✗ C: ใช้รักษาพยาธิตัวตืดเท่านั้น\n✗ D: ใช้รักษาโปรโตซัวและแบคทีเรียที่ไม่ใช้ออกซิเจน ไม่ได้ผลต่อพยาธิตัวกลม",
    "source": "เฉลย77",
    "needs_image": true,
    "doubt": "⚠ ยาหลักของ Strongyloides คือ ivermectin (ไม่มีในตัวเลือก); เฉลยเลือก mebendazole ตามตัวเลือกที่มี"
@@ -1321,7 +1321,7 @@
     "D": "Sinusoidal cell"
    },
    "answer": "A",
-   "why": "หลักพยาธิวิทยา: steatosis คือ triglyceride สะสมเป็น vacuole ใน hepatocyte (macrovesicular ดันนิวเคลียสไปขอบ) ส่วน hepatic stellate (Ito) cell ใน space of Disse เก็บไขมันในรูป vitamin A และเมื่อถูกกระตุ้นจะเปลี่ยนเป็น myofibroblast สร้าง fibrosis เฉลยเลือก stellate cell (อาจตีความจาก 'lipid-storing cell') Kupffer cell (macrophage) และ sinusoidal endothelial cell ไม่ใช่ที่สะสมไขมันหลัก",
+   "why": "ตามหลักพยาธิวิทยาไขมันพอกตับสะสมใน hepatocyte แต่เฉลยข้อนี้เน้นเซลล์ที่ทำหน้าที่เก็บสะสมไขมันและวิตามิน A ในตับคือ stellate cell\n✓ A: Hepatic stellate (Ito) cell ใน space of Disse เป็นเซลล์เก็บไขมัน (วิตามิน A) ในตับ และเปลี่ยนเป็น myofibroblast สร้างพังผืดเมื่อตับบาดเจ็บ\n✗ B: Kupffer cell ทำหน้าที่เก็บกินเชื้อโรคและเศษเซลล์ ไม่ใช่เซลล์สะสมไขมันหลัก\n✗ C: ในทางพยาธิวิทยาจริง steatosis คือ triglyceride สะสมใน hepatocyte แต่โจทย์ข้อนี้ยึดเฉลยเป็นเซลล์เก็บไขมันจำเพาะ (stellate cell)\n✗ D: เซลล์บุผนัง sinusoid ทำหน้าที่กรองและแลกเปลี่ยนสาร ไม่ใช่เซลล์สะสมไขมัน",
    "source": "เฉลย77",
    "doubt": "⚠ เฉลย77 ตอบ A (stellate cell) แต่ตามหลัก steatosis เกิดใน hepatocyte (C); อ.ติวตอบ hepatocyte — ตรวจกับอาจารย์"
   },
@@ -1334,7 +1334,7 @@
     "C": "Decreased production of intrinsic factor"
    },
    "answer": "A",
-   "why": "IF-B12 complex ถูกดูดซึมผ่าน cubilin receptor ที่ terminal ileum เท่านั้น ตัด ileum จึงดูดซึมไม่ได้แม้ IF ปกติ Autoantibody ต่อ IF คือ pernicious anemia และการสร้าง IF ลดลงเกิดจากโรคหรือการผ่าตัดกระเพาะ (parietal cell) ไม่ใช่จากการตัด ileum",
+   "why": "การผ่าตัดตัด terminal ileum ทำให้สูญเสียตำแหน่งเดียวในทางเดินอาหารที่ใช้ดูดซึมวิตามิน B12\n✓ A: Intrinsic factor-B12 complex ถูกดูดซึมจำเพาะผ่านตัวรับ cubilin ที่ terminal ileum เท่านั้น\n✗ B: เป็นกลไกของ pernicious anemia ซึ่งเป็นโรคแพ้ภูมิตัวเอง ไม่ได้เกิดจากการตัดลำไส้\n✗ C: Intrinsic factor สร้างจาก parietal cell ในกระเพาะอาหาร จึงยังสร้างได้ปกติหลังตัด ileum",
    "source": "เฉลย77"
   },
   "77/173": {
@@ -1347,7 +1347,7 @@
     "D": "Lymphatic obstruction"
    },
    "answer": "A",
-   "why": "Bile salt ถูกดูดกลับที่ terminal ileum (enterohepatic circulation) ตัด ileum จึงสูญเสีย bile salt ทางอุจจาระ ตับสร้างทดแทนไม่ทัน micelle/emulsification ลดลง ไขมันดูดซึมไม่ได้ ตับอ่อนยังหลั่ง lipase ปกติ jejunum ยังปกติ และไม่ได้มี lymphatic obstruction",
+   "why": "การตัด terminal ileum ทำให้เสียวงจรดูดกลับเกลือน้ำดี ส่งผลให้เกลือน้ำดีไม่พอสำหรับการย่อยและดูดซึมไขมัน\n✓ A: เกลือน้ำดีถูกดูดกลับที่ terminal ileum เมื่อตัดออกจึงสูญเสียไปกับอุจจาระจน micelle ลดลงและเกิด steatorrhea\n✗ B: ตับอ่อนไม่ได้ถูกตัดและยังหลั่ง lipase ได้ตามปกติ\n✗ C: ลักษณะ villous atrophy ของลำไส้เล็กส่วนต้นพบใน celiac disease ไม่ใช่ผลจากการตัด ileum\n✗ D: การอุดตันทางเดินน้ำเหลืองพบในโรคเช่น Whipple disease หรือ intestinal lymphangiectasia",
    "source": "เฉลย77",
    "options_reconstructed": true
   },
@@ -1360,7 +1360,7 @@
     "C": "Chronic inflammation ของตับอ่อน"
    },
    "answer": "C",
-   "why": "อาการมีทั้ง endocrine (DM: polyuria polydipsia) และ exocrine insufficiency (steatorrhea) จึงอธิบายได้ด้วย chronic inflammation/fibrosis ที่ทำลายเนื้อตับอ่อนทั้งต่อม การทำลาย beta cell อย่างเดียว (เช่น T1DM) อธิบาย DM แต่ไม่อธิบาย steatorrhea ส่วน alpha cell ถูกทำลายจะเกิดปัญหา glucagon ไม่ใช่ภาพนี้",
+   "why": "ผู้ป่วยตับอ่อนอักเสบจากภูมิคุ้มกันที่มีทั้งอาการเบาหวาน (polyuria, polydipsia) และถ่ายเป็นไขมัน แสดงว่าเสียหน้าที่ทั้งต่อมไร้ท่อและต่อมมีท่อ\n✗ A: การทำลาย alpha cell จะทำให้ขาด glucagon ไม่ได้ทำให้เกิดเบาหวานและ steatorrhea\n✗ B: การทำลายเฉพาะ beta cell อธิบายภาวะเบาหวานได้แต่ไม่อธิบายภาวะขาดเอนไซม์ย่อยไขมัน (steatorrhea)\n✓ C: การอักเสบเรื้อรังและพังผืดทำลายเนื้อตับอ่อนทั้งส่วน exocrine (เกิด steatorrhea) และ endocrine (เกิดเบาหวาน) พร้อมกัน",
    "source": "เฉลย77"
   },
   "77/175": {
@@ -1372,7 +1372,7 @@
     "C": "Inhibit 5-HT4 receptor"
    },
    "answer": "A",
-   "why": "Acute dystonia เป็น extrapyramidal side effect จากการบล็อก D2 ใน nigrostriatal pathway ยาแก้อาเจียนที่ทำแบบนี้คือ metoclopramide (ผ่าน BBB) ซึ่งเป็น D2 antagonist (+5-HT4 agonist) Ondansetron (5-HT3 antagonist) ผลข้างเคียงคือปวดหัว ท้องผูก QT ยาว ไม่ทำ EPS ส่วนการยับยั้ง 5-HT4 ไม่ใช่กลไกของยาแก้อาเจียน",
+   "why": "อาการเกร็งบิดเฉียบพลัน (acute dystonia) หลังได้ยาแก้อาเจียนเป็นผลข้างเคียงกลุ่ม EPS จากการยับยั้งตัวรับ D2 ในสมอง\n✓ A: Metoclopramide ผ่านเข้าสมองไปบล็อก D2 receptor ใน nigrostriatal pathway ทำให้เกิด acute dystonia ได้\n✗ B: ยากลุ่ม 5-HT3 antagonist (ondansetron) ทำให้ปวดศีรษะ ท้องผูก หรือ QT ยาว แต่ไม่ทำให้เกิด EPS\n✗ C: ไม่ใช่กลไกของยาแก้อาเจียนที่ทำให้เกิดอาการทางระบบประสาทนอกพีระมิด",
    "source": "เฉลย77"
   },
   "77/176": {
@@ -1385,7 +1385,7 @@
     "D": "Have hydrogenosome"
    },
    "answer": "D",
-   "why": "เชื้อคือ Entamoeba histolytica ก่อโรคโดยเกาะด้วย Gal/GalNAc lectin, ใช้ cysteine protease ย่อยเนื้อเยื่อและ tight junction, ใช้ amoebapore เจาะเซลล์ ทำให้เกิด flask-shaped ulcer Hydrogenosome เป็น organelle ของ Trichomonas (E. histolytica มี mitosome) จึงไม่ใช่กลไกก่อโรคของเชื้อนี้",
+   "why": "เชื้อโปรโตซัวที่ทำให้ถ่ายมีมูก ปวดเบ่ง และกินเม็ดเลือดแดงคือ Entamoeba histolytica ซึ่งไม่มีออร์แกเนลล์ชื่อ hydrogenosome\n✗ A: ใช้เอนไซม์ cysteine protease ย่อยสลาย extracellular matrix เพื่อบุกรุกผนังลำไส้\n✗ B: หลั่งโปรตีน amoebapore เจาะรูทำลายเซลล์เยื่อบุและเม็ดเลือดขาวของโฮสต์\n✗ C: ทำลาย tight junction ระหว่างเซลล์เยื่อบุลำไส้จนเกิดแผลรูปขวด (flask-shaped ulcer)\n✓ D: Hydrogenosome เป็นออร์แกเนลล์ของ Trichomonas vaginalis ส่วน E. histolytica ไม่มี (มี mitosome แทน)",
    "source": "เฉลย77"
   },
   "77/177": {
@@ -1398,7 +1398,7 @@
     "D": "Signet-ring cell ในรังไข่"
    },
    "answer": "A",
-   "why": "เฉลยตีความว่า rugae หายไป = atrophic gastritis (autoimmune) parietal cell ถูกทำลาย ขาด IF จึงขาด B12 เกิด megaloblastic anemia (macrocyte + hypersegmented neutrophil) ในความเป็นจริง Ménétrier disease มี rugal fold ใหญ่หนา (foveolar hyperplasia จาก TGF-alpha) ทำให้เสียโปรตีน hypoalbuminemia และกรดลดลง Gastrin สูงกับแผลหลายตำแหน่งคือ ZES ส่วน signet-ring ในรังไข่คือ Krukenberg tumor",
+   "why": "โจทย์บรรยายภาวะที่ rugal fold ของกระเพาะหายไป ซึ่งเฉลยตีความเข้ากับ atrophic gastritis ที่ทำให้ขาด intrinsic factor และวิตามิน B12\n✓ A: เมื่อ parietal cell ฝ่อหายจะขาด intrinsic factor ทำให้ดูดซึม B12 ไม่ได้และเกิด megaloblastic anemia (macrocyte ร่วมกับ hypersegmented neutrophil)\n✗ B: เป็นลักษณะแท้จริงของ Ménétrier disease ที่มี rugal fold หนาใหญ่จาก foveolar hyperplasia แต่เฉลยข้อนี้ยึดตามคีย์เวิร์ด rugal fold หายไป\n✗ C: เป็นลักษณะของ Zollinger-Ellison syndrome จากเนื้องอกหลั่ง gastrin\n✗ D: เป็นลักษณะของ Krukenberg tumor จากมะเร็งกระเพาะอาหารชนิด diffuse ที่แพร่กระจายไปรังไข่",
    "source": "เฉลย77",
    "options_reconstructed": true,
    "doubt": "⚠ เฉลย77 ตอบ A (ภาพ atrophic gastritis) แต่ Ménétrier ตัวจริง = rugae ใหญ่หนา + protein loss (B); ตรวจกับอาจารย์"
@@ -1413,7 +1413,7 @@
     "D": "เคลื่อนที่แบบ falling leaf"
    },
    "answer": "A",
-   "why": "Trophozoite ของ E. histolytica กิน RBC (erythrophagocytosis) ซึ่งเป็นลักษณะที่ใช้แยกจาก E. dispar/E. coli ที่ไม่ก่อโรค Cyst ของ E. histolytica มี 4 nuclei (8 nuclei คือ E. coli) Hydrogenosome อยู่ใน Trichomonas และ falling-leaf motility เป็นของ Giardia",
+   "why": "ลักษณะจำเพาะที่ใช้ยืนยันเชื้อก่อโรค Entamoeba histolytica ในอุจจาระคือการพบ trophozoite ที่กินเม็ดเลือดแดงอยู่ภายใน\n✓ A: การพบเม็ดเลือดแดงในไซโทพลาซึม (erythrophagocytosis) ใช้แยก E. histolytica ออกจาก E. dispar ที่ไม่ก่อโรค\n✗ B: Cyst ของ E. histolytica มี 4 นิวเคลียส ส่วนชนิดที่มี 8 นิวเคลียสคือ Entamoeba coli\n✗ C: Hydrogenosome เป็นออร์แกเนลล์ที่พบใน Trichomonas ไม่ใช่ E. histolytica\n✗ D: การเคลื่อนที่แบบใบไม้ร่วง (falling-leaf) เป็นลักษณะจำเพาะของ Giardia lamblia",
    "source": "เฉลย77",
    "options_reconstructed": true
   },
@@ -1427,7 +1427,7 @@
     "D": "Ampulla of Vater"
    },
    "answer": "A",
-   "why": "Murphy sign บวกและปวดร้าวสะบักขวา (phrenic/dermatome) คือ acute cholecystitis จากนิ่วอุด cystic duct ถุงน้ำดีจึงอักเสบโดยไม่เหลือง นิ่วใน CBD ทำให้ obstructive jaundice/cholangitis ส่วน duct of Wirsung และ ampulla of Vater อุดแล้วทำให้ pancreatitis ± jaundice",
+   "why": "ปวดท้องขวาบนร้าวสะบักขวาและมี Murphy sign บวก คือถุงน้ำดีอักเสบเฉียบพลันจากนิ่วอุดตันท่อถุงน้ำดี\n✓ A: นิ่วอุดตัน cystic duct ทำให้ถุงน้ำดีบวมอักเสบ (acute cholecystitis) และปวดเมื่อหายใจเข้าลึกโดยมักไม่มีตัวเหลือง\n✗ B: นิ่วอุดตัน common bile duct ทำให้เกิดภาวะดีซ่านอุดกั้น (obstructive jaundice) หรือท่อน้ำดีอักเสบ\n✗ C: การอุดตันท่อตับอ่อนหลักทำให้เกิดตับอ่อนอักเสบเฉียบพลัน\n✗ D: การอุดตันที่ ampulla of Vater ทำให้เกิดทั้งตับอ่อนอักเสบและดีซ่านอุดกั้นร่วมกัน",
    "source": "เฉลย77"
   },
   "77/180": {
@@ -1440,7 +1440,7 @@
     "D": "High conjugated (glucuronide) bilirubin ในน้ำดี"
    },
    "answer": "D",
-   "why": "Hemolysis ทำให้ bilirubin ผลิตมาก ตับ conjugate แล้วขับลงน้ำดีในปริมาณสูง บางส่วนถูก deconjugate เป็น unconjugated bilirubin ตกตะกอนกับ Ca เป็น black pigment stone Stasis เป็นปัจจัยของ cholesterol stone/sludge Bacterial colonization (เช่น E. coli beta-glucuronidase, liver fluke) ทำให้เกิด brown stone ในท่อน้ำดี ส่วน secretin กระตุ้นการหลั่ง bicarbonate ไม่ทำให้เกิดนิ่ว",
+   "why": "ภาวะเม็ดเลือดแดงแตกเรื้อรังทำให้ร่างกายสร้างและขับ bilirubin ลงในน้ำดีมากผิดปกติจนตกตะกอนเป็นนิ่วเม็ดสีดำ\n✗ A: เป็นปัจจัยสำคัญของนิ่วคอเลสเตอรอลหรือ biliary sludge มากกว่ากลไกหลักจาก hemolysis\n✗ B: การติดเชื้อแบคทีเรียที่มีเอนไซม์ beta-glucuronidase ทำให้เกิดนิ่วเม็ดสีน้ำตาล (brown pigment stone) ในท่อน้ำดี\n✗ C: เป็นฮอร์โมนที่กระตุ้นการหลั่งน้ำและ bicarbonate จากท่อตับอ่อนและท่อน้ำดี ไม่ได้ทำให้เกิดนิ่ว\n✓ D: ตับต้อง conjugate และขับ bilirubin ลงน้ำดีปริมาณมาก ส่วนหนึ่งถูกย่อยกลับเป็น unconjugated bilirubin แล้วตกตะกอนกับแคลเซียมเป็น black pigment stone",
    "source": "เฉลย77",
    "doubt": "⚠ ตัวเลือกในไฟล์เขียน 'high gluconate bilirubin'"
   },
@@ -1452,7 +1452,7 @@
     "B": "Increased hydrostatic pressure in liver (portal hypertension)"
    },
    "answer": "B",
-   "why": "ในตับแข็ง fibrosis และ regenerative nodule ทำให้ความต้านทานในตับเพิ่ม (sinusoidal portal hypertension) hydrostatic pressure ใน sinusoid สูงเป็นจุดเริ่มต้นของ ascites (SAAG ≥1.1) ร่วมกับ albumin ต่ำและ RAAS activation ส่วน portal blood flow ที่เพิ่ม (splanchnic vasodilation) เป็นผลตามมาที่ทำให้ portal HT แย่ลง ไม่ใช่กลไกเริ่มต้น Spider nevi เกิดจาก estrogen ที่ตับกำจัดไม่ได้",
+   "why": "ภาวะท้องมาน (ascites) และ spider nevi ในโรคตับแข็งมีจุดเริ่มต้นจากความต้านทานในเนื้อตับเพิ่มขึ้นจนความดันพอร์ทัลสูง\n✗ A: การเพิ่มเลือดไหลเข้าหลอดเลือดพอร์ทัลจาก splanchnic vasodilation เป็นกลไกที่เกิดตามมาภายหลังเพื่อซ้ำเติมความดันให้สูงขึ้น\n✓ B: พังผืดและก้อนเนื้อตับงอกใหม่เพิ่มแรงต้านใน sinusoid ทำให้ความดัน hydrostatic ในตับและระบบพอร์ทัลสูงเป็นจุดเริ่มต้นของท้องมาน",
    "source": "เฉลย77"
   },
   "77/182": {
@@ -1466,7 +1466,7 @@
     "E": "Glossitis"
    },
    "answer": "A",
-   "why": "การตัด ileum ทำให้ขาด B12 ชัดเจน จึงเกิด macrocytosis, glossitis และ polyneuropathy (subacute combined degeneration) ได้แน่ ส่วนการเสีย bile salt ทำให้ดูดซึม vitamin D และแคลเซียมลดลง (เกิด osteomalacia, กระดูกสันหลังยุบได้ในระยะยาว) ส่วน tetany จากแคลเซียมต่ำเฉียบพลันเกิดได้น้อยเพราะ PTH ชดเชยได้",
+   "why": "หลังตัด ileum ผู้ป่วยจะขาดวิตามิน B12 และดูดซึมวิตามิน D ได้ลดลง แต่ภาวะชักเกร็งจากแคลเซียมต่ำเฉียบพลันพบได้น้อยมาก\n✓ A: ภาวะแคลเซียมต่ำรุนแรงจนเกิด tetany พบได้น้อยเพราะฮอร์โมนพาราไทรอยด์ (PTH) จะหลั่งมาสลายกระดูกชดเชยระดับแคลเซียมในเลือดไว้ได้\n✗ B: การขาดวิตามิน D เรื้อรังทำให้กระดูกนิ่ม (osteomalacia) และเกิดกระดูกสันหลังยุบได้ในระยะยาว\n✗ C: การขาดวิตามิน B12 ทำให้เกิดความเสียหายต่อเส้นประสาทส่วนปลายและไขสันหลังได้ชัดเจน\n✗ D: การขาดวิตามิน B12 ทำให้เม็ดเลือดแดงโต (macrocytosis)\n✗ E: ลิ้นอักเสบเลี่ยน (atrophic glossitis) เป็นอาการที่พบได้บ่อยในภาวะขาดวิตามิน B12",
    "source": "เฉลย77",
    "doubt": "⚠ สรุป A3 ระบุเฉลยเป็น 'A Tetany · B vertebral disc' (อาจมีสองคำตอบ) ตัวเลือก A/B ล้วนเกิดได้จาก vit D/Ca ต่ำ; ไม่ชัดเจน ตรวจกับอาจารย์"
   },
@@ -1478,7 +1478,7 @@
     "B": "Defect in recanalization ของ duodenum"
    },
    "answer": "A",
-   "why": "Hypertrophic pyloric stenosis: กล้ามเนื้อ pylorus หนาตัว อาเจียนพุ่งแบบไม่มีน้ำดี (อุดเหนือ ampulla) คลำได้ก้อนรูป olive มี hypochloremic hypokalemic metabolic alkalosis Duodenal atresia (recanalization ล้มเหลว) อาเจียนมีน้ำดีตั้งแต่วันแรกๆ ภาพ double bubble พบร่วมกับ Down syndrome และคลำก้อนไม่ได้",
+   "why": "ทารกอาเจียนพุ่งไม่มีน้ำดีปนและคลำได้ก้อนที่ลิ้นปี่ (olive mass) เป็นอาการจำเพาะของ pyloric stenosis\n✓ A: กล้ามเนื้อหูรูด pylorus หนาตัวอุดกั้นทางออกกระเพาะซึ่งอยู่เหนือรูเปิดท่อน้ำดี จึงอาเจียนพุ่งไม่มีน้ำดีและคลำก้อนได้\n✗ B: Duodenal atresia มักอาเจียนมีน้ำดีตั้งแต่วันแรกๆ เห็นภาพ double bubble และคลำก้อนที่ลิ้นปี่ไม่ได้",
    "source": "เฉลย77"
   },
   "77/184": {
@@ -1490,7 +1490,7 @@
     "C": "Hemosiderin"
    },
    "answer": "B",
-   "why": "Kayser-Fleischer ring คือ copper สะสมที่ Descemet membrane บ่งชี้ Wilson disease (ATP7B mutation) ทองแดงขับลงน้ำดีไม่ได้ สะสมในตับ (ย้อม rhodanine) เกิด chronic hepatitis → cirrhosis Fat accumulation เป็น steatosis ที่ไม่สัมพันธ์กับวงที่กระจกตา Hemosiderin พบใน hemochromatosis ซึ่งมีผิวคล้ำ DM ไม่มี KF ring",
+   "why": "ตับแข็งร่วมกับวงแหวนสีน้ำตาลที่ขอบกระจกตา (Kayser-Fleischer ring) เป็นลักษณะจำเพาะของ Wilson disease\n✗ A: ไขมันสะสมในตับไม่ได้ทำให้เกิดวงแหวนสีน้ำตาลที่กระจกตา\n✓ B: การกลายพันธุ์ของยีน ATP7B ทำให้ตับขับทองแดงลงน้ำดีไม่ได้ ทองแดงจึงสะสมในตับจนเกิดตับแข็งและสะสมที่กระจกตา\n✗ C: การสะสมธาตุเหล็ก (hemosiderin) พบใน hemochromatosis ซึ่งมีผิวสีคล้ำและเบาหวาน แต่ไม่มี Kayser-Fleischer ring",
    "source": "เฉลย77"
   },
   "77/185": {
@@ -1503,7 +1503,7 @@
     "D": "Peutz-Jeghers syndrome"
    },
    "answer": "A",
-   "why": "FAP เกิดจาก APC mutation (autosomal dominant) มี adenomatous polyp หลายร้อยถึงหลายพันอันเริ่มวัยรุ่น เป็นมะเร็งแน่นอนถ้าไม่ตัด colon HNPCC/Lynch (mismatch repair) มี polyp น้อย ไม่ใช่หลายร้อย VHL เป็น hemangioblastoma/RCC/pheochromocytoma ส่วน Peutz-Jeghers มี hamartomatous polyp ร่วมกับจุดสีคล้ำที่ริมฝีปาก",
+   "why": "ชายอายุน้อยมีประวัติครอบครัวเป็นมะเร็งลำไส้ใหญ่และส่องกล้องพบติ่งเนื้อหลายร้อยอันคือ familial adenomatous polyposis (FAP)\n✓ A: ถ่ายทอดแบบ autosomal dominant จากการกลายพันธุ์ของยีน APC ทำให้เกิด adenomatous polyp มากกว่า 100 อันและเสี่ยงเป็นมะเร็งเกือบ 100%\n✗ B: Lynch syndrome เกิดจากความผิดปกติของยีนซ่อมแซม DNA (MMR) มักมีติ่งเนื้อจำนวนน้อย ไม่ใช่หลายร้อยอัน\n✗ C: เป็นกลุ่มอาการที่สัมพันธ์กับเนื้องอกหลอดเลือดในสมอง มะเร็งไต และ pheochromocytoma\n✗ D: มีติ่งเนื้อชนิด hamartomatous polyp ร่วมกับจุดสีคล้ำบริเวณริมฝีปากและเยื่อบุช่องปาก",
    "source": "เฉลย77"
   },
   "77/186": {
@@ -1517,7 +1517,7 @@
     "E": "PAS-positive globule ใน periportal hepatocyte"
    },
    "answer": "A",
-   "why": "NAFLD เห็น macrovesicular steatosis (เด่นที่ zone 3) ถ้าเป็น NASH จะมี lobular inflammation, hepatocyte ballooning, Mallory-Denk body และ pericellular fibrosis ภาพคล้าย alcoholic liver disease แต่ไม่มีประวัติดื่ม Copper สะสมคือ Wilson ground-glass hepatocyte คือ HBsAg ใน chronic HBV Councilman body เด่นใน acute viral hepatitis ส่วน PAS+ globule คือ alpha-1 antitrypsin deficiency",
+   "why": "พยาธิสภาพหลักของภาวะไขมันพอกตับที่ไม่ได้เกิดจากสุรา (NAFLD) คือการสะสมหยดไขมันขนาดใหญ่ในเซลล์ตับ\n✓ A: พบ macrovesicular steatosis เด่นที่ zone 3 และหากลุกลามเป็น NASH จะพบเซลล์บวม Mallory-Denk body และการอักเสบ\n✗ B: เป็นลักษณะจำเพาะของ Wilson disease\n✗ C: พบในผู้ติดเชื้อไวรัสตับอักเสบบีเรื้อรังจากการสะสม HBsAg ในเซลล์ตับ\n✗ D: พบเด่นในตับอักเสบเฉียบพลันรุนแรงจากไวรัสหรือสารพิษ\n✗ E: เป็นลักษณะจำเพาะของภาวะขาดเอนไซม์ alpha-1 antitrypsin",
    "source": "เฉลย77",
    "options_reconstructed": true,
    "doubt": "⚠ ไฟล์ไม่มีตัวเลือก"
@@ -1530,7 +1530,7 @@
     "B": "Aeromonas hydrophila"
    },
    "answer": "A",
-   "why": "V. parahaemolyticus เป็น halophilic vibrio ต้องการเกลือและโตได้ใน NaCl 6-8% พบในอาหารทะเลดิบ/สุกไม่พอ ทำให้ท้องเสียเป็นน้ำ (Kanagawa hemolysin) Aeromonas hydrophila อยู่ในน้ำจืด ไม่ทนเกลือสูง ส่วน V. cholerae โตได้ในเกลือต่ำ (non-halophilic)",
+   "why": "ท้องเสียหลังกินอาหารทะเลจากเชื้อที่เจริญเติบโตได้ดีในความเข้มข้นเกลือสูง (NaCl 6%) คือ Vibrio parahaemolyticus\n✓ A: เป็นเชื้อ halophilic ที่ต้องการเกลือในการเจริญเติบโต (ทน NaCl 6–8%) พบในอาหารทะเลดิบหรือปรุงไม่สุก\n✗ B: อาศัยอยู่ในน้ำจืดเป็นหลักและไม่สามารถเจริญเติบโตในความเข้มข้นเกลือสูงระดับ 6% ได้",
    "source": "วิเคราะห์"
   },
   "78/7": {
@@ -1545,7 +1545,7 @@
     "F": "Splenic a."
    },
    "answer": "A",
-   "why": "Greater curvature ฝั่งขวาได้เลือดจาก right gastroepiploic a. ซึ่งแตกจาก gastroduodenal a. (GDA เป็นต้นทางแต่ไม่ได้วิ่งเลาะ curvature เอง) ส่วน left gastroepiploic และ short gastric มาจาก splenic a. เลี้ยงฝั่งซ้ายและ fundus ขณะที่ right gastric a. วิ่งตาม lesser curvature ไม่ใช่ greater",
+   "why": "ผนังกระเพาะอาหารด้านโค้งใหญ่ (greater curvature) ฝั่งขวาได้รับเลือดเลี้ยงจาก right gastroepiploic artery\n✓ A: แตกแขนงจาก gastroduodenal artery แล้ววิ่งเลาะขอบ greater curvature ด้านขวาโดยตรง\n✗ B: เป็นแขนงของ splenic artery ที่เลี้ยงบริเวณ fundus ของกระเพาะ\n✗ C: เป็นหลอดเลือดต้นทางที่แตกแขนงให้ right gastroepiploic artery แต่ไม่ได้วิ่งเลาะขอบกระเพาะเอง\n✗ D: วิ่งเลาะขอบโค้งเล็ก (lesser curvature) ด้านขวา ไม่ใช่ greater curvature\n✗ E: เป็นแขนงของ splenic artery ที่เลี้ยงขอบ greater curvature ด้านซ้าย\n✗ F: วิ่งไปเลี้ยงม้ามและแตกแขนงให้ short gastric กับ left gastroepiploic artery",
    "source": "เฉลย78"
   },
   "78/8": {
@@ -1559,7 +1559,7 @@
     "E": "Lactose intolerance"
    },
    "answer": "E",
-   "why": "Falling-leaf motility เป็นลักษณะของ trophozoite ของ Giardia lamblia ซึ่งเกาะ duodenum/jejunum ทำลาย brush border ทำให้ขาด lactase จึงเกิด lactose intolerance ตามมาได้นานแม้หายติดเชื้อแล้ว Giardia ไม่ invade จึงไม่ทำให้ colitis หรือ liver abscess (นั่นคือ Entamoeba histolytica) และไม่สัมพันธ์กับ colorectal cancer หรือ appendicitis",
+   "why": "เชื้อโปรโตซัวที่เคลื่อนที่แบบใบไม้ร่วงคือ Giardia lamblia ซึ่งเกาะทำลายเยื่อบุลำไส้เล็กส่วนต้นจนเกิดภาวะย่อยน้ำตาลนมไม่ได้ตามมา\n✗ A: เชื้อนี้อาศัยที่ลำไส้เล็กและไม่บุกรุกผนังลำไส้ จึงไม่ทำให้เกิดลำไส้ใหญ่อักเสบ\n✗ B: ไม่มีความสัมพันธ์กับการเกิดมะเร็งลำไส้ใหญ่\n✗ C: ฝีในตับเป็นภาวะแทรกซ้อนของ Entamoeba histolytica ไม่ใช่ Giardia\n✗ D: ไม่ใช่สาเหตุของไส้ติ่งอักเสบ\n✓ E: การเกาะของ trophozoite ทำลาย microvilli ที่ brush border จนขาดเอนไซม์ lactase ทำให้เกิด secondary lactose intolerance นานหลังหายป่วย",
    "source": "เฉลย78"
   },
   "78/10": {
@@ -1573,7 +1573,7 @@
     "E": "Malignancy ที่ peritoneum"
    },
    "answer": "B",
-   "why": "SAAG = 3 − 1.2 = 1.8 (≥1.1) แปลว่า portal hypertension ส่วน ascitic protein 1 (<2.5) บอกว่า sinusoid ไม่รั่วโปรตีนแล้ว ซึ่งเข้ากับ cirrhosis ที่ sinusoid กลายเป็น capillary (capillarization, เสีย fenestration) ถ้าเป็น cardiac ascites จาก back pressure ล้วนๆ sinusoid ยังปกติ protein จะสูง (≥2.5) malignancy และ protein loss มัก SAAG ต่ำ (<1.1)",
+   "why": "ค่า SAAG = 1.8 (≥ 1.1) บ่งชี้ portal hypertension ส่วนโปรตีนในน้ำช่องท้องต่ำ (< 2.5) แปลว่า sinusoid ตับกลายเป็นพังผืดจนโปรตีนรั่วออกไม่ได้แล้ว\n✗ A: หากเป็น cardiac ascites จากแรงดันย้อนกลับโดยที่เนื้อตับยังปกติ sinusoid จะยังมีรูพรุนทำให้โปรตีนในน้ำช่องท้องสูง (≥ 2.5 g/dL)\n✓ B: ตับแข็ง (เช่น cardiac cirrhosis) ทำให้ sinusoid สูญเสีย fenestration กลายเป็น capillary (capillarization) โปรตีนจึงรั่วออกไม่ได้ทำให้ ascitic protein ต่ำ\n✗ C: เป็นคำกว้างที่ไม่ได้ระบุกลไกการลดลงของโปรตีนในน้ำช่องท้องจำเพาะเท่าการเปลี่ยนแปลงของ sinusoid\n✗ D: ภาวะเสียโปรตีนนอกตับ เช่น nephrotic syndrome จะมีค่า SAAG ต่ำ (< 1.1)\n✗ E: มะเร็งแพร่กระจายเยื่อบุช่องท้องจะมี SAAG ต่ำ (< 1.1) และโปรตีนสูง",
    "source": "เฉลย78",
    "doubt": "⚠ โจทย์ให้ประวัติ PHT + HF ชวนตอบ A แต่ตัวเลข protein ต่ำชี้ cirrhosis (cardiac cirrhosis) เฉลยจึงเลือก B"
   },
@@ -1588,7 +1588,7 @@
     "E": "Skin penetration"
    },
    "answer": "B",
-   "why": "เคส cholangitis ในบริบทไทยที่พบพยาธิคือ liver fluke Opisthorchis viverrini ซึ่งติดจากการกินปลาน้ำจืดเกล็ดขาวดิบหรือสุกๆดิบๆ (เช่น ก้อยปลา ปลาร้า) ที่มี metacercaria ส่วนหมูดิบคือ Taenia solium/Trichinella, soil-transmitted และ skin penetration คือ hookworm/Strongyloides และว่ายน้ำคือ Schistosoma",
+   "why": "ผู้ป่วยท่อน้ำดีอักเสบ (cholangitis) ที่ตรวจพบไข่พยาธิในบริบทประเทศไทยคือพยาธิใบไม้ตับ Opisthorchis viverrini\n✗ A: เป็นทางติดต่อของ Taenia solium และ Trichinella spiralis\n✓ B: ติดจากการกินปลาน้ำจืดเกล็ดขาวดิบหรือสุกๆ ดิบๆ ที่มีระยะ metacercaria (เช่น ก้อยปลา ปลาร้าดิบ)\n✗ C: เป็นทางติดต่อของพยาธิตัวกลมในดิน เช่น Ascaris และ Trichuris\n✗ D: เป็นทางติดต่อของพยาธิใบไม้ในเลือด Schistosoma\n✗ E: เป็นทางติดต่อของพยาธิปากขอและ Strongyloides",
    "source": "เฉลย78",
    "needs_image": true,
    "doubt": "⚠ โจทย์อาศัยรูปเชื้อ/ไข่ ที่ไม่เห็นในฉบับที่มี ใช้คำตอบตามเฉลย (Opisthorchis)"
@@ -1602,7 +1602,7 @@
     "C": "เพิ่มการสร้าง mucus"
    },
    "answer": "A",
-   "why": "Omeprazole เป็น PPI จับแบบ irreversible กับ H⁺/K⁺-ATPase ของ parietal cell จึงลดการหลั่งกรด การสะเทินกรดโดยตรงเป็นกลไกของ antacid ส่วนการเพิ่ม mucus/ป้องกันเยื่อบุเป็นของ misoprostol หรือ sucralfate/bismuth",
+   "why": "Omeprazole เป็นยากลุ่ม proton pump inhibitor ที่รักษาโรคกรดไหลย้อนโดยยับยั้งการหลั่งกรดที่ต้นทาง\n✓ A: จับยับยั้ง H+/K+-ATPase บน parietal cell แบบถาวร จึงลดการหลั่งกรดได้อย่างมีประสิทธิภาพ\n✗ B: การสะเทินกรดในกระเพาะโดยตรงเป็นกลไกของยาลดกรดกลุ่ม antacid\n✗ C: การเพิ่มเมือกและปกป้องเยื่อบุเป็นกลไกของ misoprostol, sucralfate หรือ bismuth",
    "source": "เฉลย78"
   },
   "78/19": {
@@ -1613,7 +1613,7 @@
     "B": "เพิ่มการขับ ammonia ทางน้ำดี"
    },
    "answer": "A",
-   "why": "Lactulose ถูกแบคทีเรียในลำไส้ใหญ่ย่อยเป็นกรดอินทรีย์ ทำให้ pH ต่ำ NH₃ จึงถูกเปลี่ยนเป็น NH₄⁺ ซึ่งดูดซึมไม่ได้และถูกขับออก (ion trapping) ร่วมกับฤทธิ์ osmotic laxative เร่งการขับถ่าย ร่างกายไม่ได้กำจัด ammonia ทางน้ำดี แต่ผ่าน urea cycle ที่ตับ",
+   "why": "Lactulose ใช้รักษา hepatic encephalopathy โดยลดปริมาณแอมโมเนียที่จะถูกดูดซึมจากลำไส้ใหญ่เข้าสู่กระแสเลือด\n✓ A: แบคทีเรียในลำไส้ใหญ่ย่อย lactulose เป็นกรดอินทรีย์ทำให้ลำไส้เป็นกรด เปลี่ยน NH3 เป็น NH4+ ที่ดูดซึมไม่ได้แล้วขับออกทางอุจจาระ\n✗ B: ร่างกายไม่ได้กำจัดแอมโมเนียออกทางน้ำดี แต่กำจัดผ่าน urea cycle ที่ตับ",
    "source": "เฉลย78"
   },
   "78/20": {
@@ -1626,7 +1626,7 @@
     "D": "C-MYC"
    },
    "answer": "B",
-   "why": "Polyp ชนิด adenoma จำนวนมากชี้ familial adenomatous polyposis จาก germline mutation ของ APC (tumor suppressor ใน Wnt/β-catenin) ซึ่งเป็นขั้นแรกของ adenoma–carcinoma sequence K-RAS เป็นขั้นตามมาระหว่างการโตของ adenoma ไม่ใช่ต้นเหตุของ polyposis, RET สัมพันธ์กับ MEN2/Hirschsprung และ C-MYC กับ Burkitt lymphoma",
+   "why": "การพบติ่งเนื้อชนิด tubular adenoma จำนวนมากในลำไส้ใหญ่คือกลุ่มอาการ FAP ซึ่งเกิดจากการกลายพันธุ์ของยีน APC\n✗ A: สัมพันธ์กับกลุ่มอาการ MEN2 และ Hirschsprung disease\n✓ B: เป็น tumor suppressor gene ในวิถี Wnt/beta-catenin ที่กลายพันธุ์เป็นขั้นแรกของ FAP และ adenoma-carcinoma sequence\n✗ C: กลายพันธุ์ในขั้นตอนถัดมาระหว่างที่ adenoma โตขึ้น ไม่ใช่ยีนต้นเหตุของ polyposis แต่กำเนิด\n✗ D: เป็น oncogene ที่สัมพันธ์เด่นกับ Burkitt lymphoma",
    "source": "เฉลย78"
   },
   "78/24": {
@@ -1639,7 +1639,7 @@
     "D": "PEG"
    },
    "answer": "A",
-   "why": "เมื่อปัญหาหลักคือกินไฟเบอร์น้อย bulk-forming laxative อย่าง ispaghula (psyllium) เพิ่มกากอาหาร ปลอดภัย ไม่ติดยา จึงเหมาะใช้ยาว Glycerin suppository ใช้ครั้งคราว magnesium เสี่ยง hypermagnesemia ในผู้สูงอายุ/ไตเสื่อม ส่วน PEG ใช้ได้แต่ไม่ได้แก้ต้นเหตุเรื่องไฟเบอร์ตามแนวเฉลย",
+   "why": "ผู้สูงอายุที่ท้องผูกจากการรับประทานใยอาหารน้อยและต้องการใช้ยาระบายระยะยาวควรเลือกกลุ่มเพิ่มกากอาหารที่ปลอดภัยที่สุด\n✓ A: เป็นยาระบายกลุ่ม bulk-forming (psyllium) ที่ช่วยเพิ่มกากใยอาหาร ปลอดภัยต่อการใช้ระยะยาวและแก้ตรงสาเหตุ\n✗ B: เหมาะสำหรับใช้สวนบรรเทาอาการเฉพาะครั้งคราว ไม่เหมาะใช้ประจำทุกวัน\n✗ C: เสี่ยงต่อภาวะแมกนีเซียมในเลือดสูงในผู้สูงอายุหรือผู้ที่มีการทำงานของไตลดลง\n✗ D: เป็น osmotic laxative ที่ใช้ได้จริงแต่ไม่ได้ช่วยเติมใยอาหารที่ผู้ป่วยขาดโดยตรง",
    "source": "เฉลย78",
    "doubt": "⚠ ในทางคลินิก PEG ก็ใช้ระยะยาวได้ดีในผู้สูงอายุ/Parkinson และต้องดื่มน้ำพอเมื่อใช้ ispaghula เฉลยเลือกตามคีย์ 'ไฟเบอร์น้อย'"
   },
@@ -1652,7 +1652,7 @@
     "C": "Focal nodular hyperplasia"
    },
    "answer": "B",
-   "why": "Hepatic (hepatocellular) adenoma สัมพันธ์ชัดกับ estrogen/OCP และ anabolic steroid เสี่ยงแตกเลือดออกโดยเฉพาะช่วงตั้งครรภ์ Hemangioma เป็นก้อนตับที่พบบ่อยสุดแต่ไม่ได้เกิดจาก OCP โดยตรง ส่วน FNH เป็นรอยโรคตอบสนองต่อหลอดเลือดผิดปกติ (central scar) ความสัมพันธ์กับ OCP อ่อนกว่ามาก",
+   "why": "หญิงที่ใช้ยาเม็ดคุมกำเนิดชนิดฮอร์โมนรวมเป็นเวลานานแล้วพบก้อนที่ตับต้องนึกถึง hepatic adenoma ซึ่งเสี่ยงแตกเลือดออก\n✗ A: เป็นเนื้องอกหลอดเลือดตับที่พบบ่อยที่สุดแต่ไม่ได้มีสาเหตุโดยตรงจากยาคุมกำเนิด\n✓ B: สัมพันธ์ชัดเจนกับการใช้ estrogen/OCP และ anabolic steroid มีความเสี่ยงแตกเลือดออกในช่องท้องโดยเฉพาะขณะตั้งครรภ์\n✗ C: เป็นการตอบสนองต่อหลอดเลือดผิดปกติที่มีแผลเป็นตรงกลาง (central scar) และสัมพันธ์กับ OCP น้อยกว่ามาก",
    "source": "เฉลย78"
   },
   "78/32": {
@@ -1664,7 +1664,7 @@
     "C": "Common hepatic duct"
    },
    "answer": "B",
-   "why": "มีทั้ง acute pancreatitis (lipase สูง) และ obstructive jaundice (direct bilirubin สูง) แปลว่านิ่วอุดจุดร่วมของ CBD กับ pancreatic duct คือ ampulla of Vater (gallstone pancreatitis) นิ่วที่ cystic duct ทำให้ cholecystitis ไม่เหลือง ส่วน common hepatic duct อยู่เหนือจุดบรรจบ pancreatic duct จึงไม่ทำให้ตับอ่อนอักเสบ",
+   "why": "ปวดลิ้นปี่ร้าวไปหลังร่วมกับ lipase สูง (ตับอ่อนอักเสบ) และ conjugated bilirubin สูง (ดีซ่านอุดกั้น) แสดงว่านิ่วอุดที่ทางออกร่วม\n✗ A: อุดตันที่ท่อถุงน้ำดีทำให้เกิดถุงน้ำดีอักเสบเฉียบพลันโดยไม่มีดีซ่านและตับอ่อนอักเสบ\n✓ B: เป็นจุดบรรจบของท่อน้ำดีรวมและท่อตับอ่อน เมื่อนิ่วอุดตันจึงเกิดทั้ง obstructive jaundice และ gallstone pancreatitis พร้อมกัน\n✗ C: อยู่เหนือจุดบรรจบของท่อตับอ่อน จึงทำให้เกิดเฉพาะดีซ่านอุดกั้นโดยไม่ทำให้ตับอ่อนอักเสบ",
    "source": "เฉลย78"
   },
   "78/39": {
@@ -1676,7 +1676,7 @@
     "C": "เคยเป็น viral diarrhea"
    },
    "answer": "B",
-   "why": "อาการเข้าได้กับ lactose intolerance ชนิด primary (adult-type lactase non-persistence) ซึ่งพบสูงมากในคนเอเชีย และกิจกรรม lactase ลดลงตามอายุ เพศไม่ใช่ปัจจัยเสี่ยง ส่วน viral diarrhea ทำให้เกิด secondary lactase deficiency แบบชั่วคราว ไม่ใช่สาเหตุหลักของอาการเรื้อรังในวัยกลางคน",
+   "why": "อาการปวดท้องท้องอืดหลังดื่มนมในหญิงวัยกลางคนคือภาวะขาดเอนไซม์ lactase แบบปฐมภูมิซึ่งพบสูงมากในประชากรเอเชีย\n✗ A: เพศไม่ใช่ปัจจัยเสี่ยงจำเพาะของภาวะ lactose intolerance\n✓ B: ความชุกของภาวะ adult-type lactase non-persistence สูงมากในคนเอเชีย (และแอฟริกัน) โดยกิจกรรมเอนไซม์จะลดลงตามอายุ\n✗ C: ท้องเสียจากไวรัสทำให้เกิด secondary lactase deficiency เพียงชั่วคราว ไม่ใช่สาเหตุหลักของอาการเรื้อรังในวัยกลางคน",
    "source": "เฉลย78"
   },
   "78/64": {
@@ -1687,7 +1687,7 @@
     "B": "Ursodeoxycholic acid"
    },
    "answer": "A",
-   "why": "นิ่วถุงน้ำดีที่มีอาการ (biliary colic ซ้ำๆ) รักษามาตรฐานคือผ่าตัดถุงน้ำดี (laparoscopic cholecystectomy) เพราะกลับเป็นซ้ำและเสี่ยงแทรกซ้อน (cholecystitis, pancreatitis) Ursodeoxycholic acid ละลายได้เฉพาะ cholesterol stone เล็กในถุงน้ำดีที่ทำงานดี ใช้เวลานานและกลับเป็นซ้ำบ่อย จึงใช้ในคนที่ผ่าตัดไม่ได้",
+   "why": "นิ่วในถุงน้ำดีที่เริ่มมีอาการปวดท้องหลังอาหารซ้ำๆ และถี่ขึ้น (symptomatic gallstone) มีข้อบ่งชี้ในการผ่าตัดเอาถุงน้ำดีออก\n✓ A: การผ่าตัดถุงน้ำดี (laparoscopic cholecystectomy) เป็นการรักษามาตรฐานเพื่อหายขาดและป้องกันภาวะแทรกซ้อน เช่น ถุงน้ำดีหรือตับอ่อนอักเสบ\n✗ B: ใช้ละลายได้เฉพาะนิ่วคอเลสเตอรอลขนาดเล็ก ใช้เวลานานและกลับเป็นซ้ำบ่อย จึงเก็บไว้เฉพาะผู้ป่วยที่ไม่สามารถผ่าตัดได้",
    "source": "เฉลย78",
    "doubt": "⚠ คีย์ 78 ใส่ '?' ไว้ แต่ความเห็นในคีย์และหลักการสนับสนุน cholecystectomy"
   },
@@ -1701,7 +1701,7 @@
     "D": "กระตุ้น inflammation"
    },
    "answer": "A",
-   "why": "Rice-water stool คือ Vibrio cholerae ซึ่ง cholera toxin ทำ ADP-ribosylation ของ Gsα ทำให้ adenylate cyclase ทำงานตลอด cAMP สูง CFTR หลั่ง Cl⁻ และน้ำออกมาก (secretory diarrhea) เชื้อไม่ invade จึงไม่มีไข้/เลือด Effacement (attaching–effacing) เป็นของ EPEC/EHEC ส่วน invasion/inflammation เป็นของ Shigella, Campylobacter",
+   "why": "อาการถ่ายเหลวเป็นน้ำซาวข้าว (rice-water stool) เป็นลักษณะจำเพาะของ Vibrio cholerae ที่สร้างสารพิษกระตุ้นการหลั่งน้ำและเกลือแร่\n✓ A: Cholera toxin กระตุ้น Gs-alpha ให้ adenylate cyclase ทำงานต่อเนื่องจน cAMP สูง ทำให้ CFTR หลั่ง Cl- และน้ำออกสู่ลำไส้มหาศาล\n✗ B: เชื้ออหิวาต์ไม่บุกรุกผนังลำไส้ จึงมักไม่มีไข้และไม่ถ่ายเป็นมูกเลือด\n✗ C: กลไก attaching and effacement เป็นของเชื้อ EPEC และ EHEC\n✗ D: การอักเสบที่มีเม็ดเลือดขาวเด่นเป็นกลไกของเชื้อกลุ่ม invasive เช่น Shigella และ Campylobacter",
    "source": "เฉลย78"
   },
   "78/84": {
@@ -1713,7 +1713,7 @@
     "C": "E. coli"
    },
    "answer": "B",
-   "why": "Campylobacter jejuni เป็น invasive diarrhea ที่พบบ่อย ทำให้ไข้และถ่ายเป็นเลือด และยาที่เลือกคือ macrolide (azithromycin) เพราะดื้อ fluoroquinolone สูง Vibrio cholerae ถ่ายน้ำไม่มีเลือด ส่วน E. coli (เช่น EHEC) ไม่แนะนำยาปฏิชีวนะเพราะเพิ่มความเสี่ยง HUS",
+   "why": "ไข้ อาเจียน และถ่ายเป็นเลือดที่ตอบสนองดีต่อยากลุ่ม macrolide เป็นลักษณะจำเพาะของ Campylobacter jejuni\n✗ A: ทำให้ถ่ายเหลวเป็นน้ำซาวข้าวโดยไม่มีไข้หรือเลือดปน\n✓ B: เป็นเชื้อก่อโรคท้องเสียแบบ invasive ที่ทำให้มีไข้และถ่ายเป็นเลือด และใช้ macrolide (azithromycin) เป็นยาหลักเนื่องจากดื้อ fluoroquinolone สูง\n✗ C: เชื้อ EHEC ที่ทำให้ถ่ายเป็นเลือดไม่แนะนำให้ยาปฏิชีวนะเพราะเพิ่มความเสี่ยงภาวะ HUS",
    "source": "เฉลย78"
   },
   "78/88": {
@@ -1727,7 +1727,7 @@
     "E": "Smooth muscle ของ sigmoid colon หดตัว"
    },
    "answer": "B",
-   "why": "ขณะถ่าย puborectalis ต้องคลายตัวเพื่อให้ anorectal angle กว้าง/ตรงขึ้น อุจจาระจึงผ่านได้ ถ้าหดตัวจะทำหน้าที่กลั้น ข้ออื่นถูก: rectum และ sigmoid บีบตัว internal anal sphincter คลายผ่าน rectoanal inhibitory reflex และกล้ามเนื้อหน้าท้องหดเพิ่มแรงดัน (Valsalva)",
+   "why": "ขณะขับถ่ายกล้ามเนื้อ puborectalis ต้องคลายตัวเพื่อให้มุมระหว่างลำไส้ตรงกับทวารหนัก (anorectal angle) กางตรงออก\n✗ A: ถูกต้อง เพราะกล้ามเนื้อเรียบของลำไส้ตรงต้องหดตัวเพื่อดันอุจจาระลงสู่ทวารหนัก\n✓ B: ไม่ถูกต้อง เพราะ puborectalis ต้องคลายตัวเพื่อเปิดทางออก (การหดตัวใช้สำหรับกลั้นอุจจาระ)\n✗ C: ถูกต้อง เพราะหูรูดชั้นในต้องคลายตัวผ่าน rectoanal inhibitory reflex\n✗ D: ถูกต้อง เพราะกล้ามเนื้อหน้าท้องหดตัวเพื่อเพิ่มแรงดันในช่องท้อง (Valsalva maneuver)\n✗ E: ถูกต้อง เพราะลำไส้ใหญ่ส่วนซิกมอยด์บีบตัวไล่อุจจาระลงมา",
    "source": "เฉลย78"
   },
   "78/89": {
@@ -1741,7 +1741,7 @@
     "E": "Histamine"
    },
    "answer": "D",
-   "why": "ไขมันและโปรตีนใน duodenum กระตุ้น I cell หลั่ง CCK ซึ่งทำให้ถุงน้ำดีบีบตัว (ถ้ามีนิ่วจะปวด biliary colic หลังอาหารมัน) และกระตุ้นเอนไซม์ตับอ่อน Secretin ตอบสนองต่อกรด เพิ่ม HCO₃⁻ Gastrin และ histamine เกี่ยวกับการหลั่งกรด ส่วน VIP ทำให้หลั่งน้ำ/คลายกล้ามเนื้อเรียบ",
+   "why": "อาการปวดท้องหลังกินอาหารมัน (biliary colic) เกิดจากฮอร์โมนที่หลั่งตอบสนองต่อไขมันแล้วกระตุ้นให้ถุงน้ำดีบีบตัว\n✗ A: ออกฤทธิ์ขยายหลอดเลือด กระตุ้นการหลั่งน้ำและเกลือแร่ และคลายกล้ามเนื้อเรียบ\n✗ B: หลั่งจาก G cell เพื่อกระตุ้นการหลั่งกรดในกระเพาะอาหาร\n✗ C: หลั่งจาก S cell ตอบสนองต่อกรดใน duodenum เพื่อกระตุ้นการหลั่ง bicarbonate จากตับอ่อน\n✓ D: หลั่งจาก I cell ใน duodenum เมื่อมีไขมันและโปรตีน ทำให้ถุงน้ำดีบีบตัวและหูรูด Oddi คลายตัว\n✗ E: หลั่งจาก ECL cell เพื่อกระตุ้น parietal cell ให้หลั่งกรด",
    "source": "เฉลย78"
   },
   "78/91": {
@@ -1753,7 +1753,7 @@
     "C": "กระเพาะเป็นแผล"
    },
    "answer": "B",
-   "why": "GERD เกิดจาก antireflux barrier บกพร่อง โดยกลไกหลักคือ transient LES relaxation (และ LES tone ต่ำ/hiatal hernia) ทำให้กรดไหลย้อนขึ้นหลอดอาหาร ผู้ป่วยส่วนใหญ่หลั่งกรดปกติ จึงไม่ใช่ acid hypersecretion และแผลในกระเพาะไม่ใช่กลไกของ reflux",
+   "why": "พยาธิสรีรวิทยาหลักของโรคกรดไหลย้อน (GERD) คือการคลายตัวผิดปกติชั่วคราวของหูรูดหลอดอาหารส่วนล่าง (transient LES relaxation)\n✗ A: ผู้ป่วย GERD ส่วนใหญ่มีการหลั่งกรดในระดับปกติ ไม่ใช่ภาวะหลั่งกรดเกินแบบ ZES\n✓ B: การคลายตัวของ LES โดยไม่สัมพันธ์กับการกลืนหรือแรงบีบ LES ต่ำทำให้กรดไหลย้อนขึ้นสู่หลอดอาหาร\n✗ C: แผลในกระเพาะอาหารไม่ใช่กลไกที่ทำให้เกิดการไหลย้อนของกรดขึ้นหลอดอาหาร",
    "source": "เฉลย78"
   },
   "78/95": {
@@ -1764,7 +1764,7 @@
     "B": "Failure of recanalization"
    },
    "answer": "A",
-   "why": "Triple bubble ชี้ jejunal atresia ซึ่งเกิดจาก vascular accident/ischemia ของลำไส้ในครรภ์ (เช่น SMA branch อุดตัน, apple-peel) ส่วน failure of recanalization เป็นกลไกของ duodenal atresia ที่ให้ double bubble และสัมพันธ์กับ Down syndrome",
+   "why": "ภาพรังสี triple bubble sign บ่งชี้ jejunal atresia ซึ่งเกิดจากภาวะลำไส้ขาดเลือดขณะอยู่ในครรภ์\n✓ A: การอุดตันของหลอดเลือดเลี้ยงลำไส้ในครรภ์ทำให้ลำไส้ส่วน jejunum ขาดเลือดและตีบตัน เกิดภาพ triple bubble sign\n✗ B: เป็นกลไกของ duodenal atresia ซึ่งเห็นเป็น double bubble sign และสัมพันธ์กับ Down syndrome",
    "source": "เฉลย78"
   },
   "78/96": {
@@ -1775,7 +1775,7 @@
     "B": "Hepatic gluconeogenesis"
    },
    "answer": "A",
-   "why": "ตับแข็งมี hepatocyte ทำงานลดลงและถูกแทนด้วย fibrosis ทำให้เก็บ glycogen ได้น้อย ช่วงอดอาหารสั้นๆ (ระหว่างมื้อ) จึงมี glycogen ให้สลายไม่พอ ร่างกายต้องเปลี่ยนไปใช้ gluconeogenesis จากโปรตีนกล้ามเนื้อเร็วกว่าปกติ (นำไปสู่ sarcopenia) ซึ่งเป็นเหตุผลที่แนะนำ late-night snack เหมือน 79/1 อย่างไรก็ตาม gluconeogenesis ของตับก็บกพร่องได้ในตับแข็งระยะท้าย คีย์จึงรับทั้งสองข้อ",
+   "why": "ผู้ป่วยตับแข็งมีภาวะน้ำตาลในเลือดต่ำช่วงระหว่างมื้อได้ง่ายเพราะตับสูญเสียความสามารถในการสะสม glycogen\n✓ A: เนื้อตับที่ถูกแทนที่ด้วยพังผืดเก็บ glycogen ได้น้อยมาก ทำให้ช่วงอดอาหารสั้นๆ ไม่มีพลังงานสำรองให้สลาย\n✗ B: แม้ gluconeogenesis จะลดลงได้ในตับแข็งระยะท้าย แต่ปัญหาแรกที่ทำให้เกิดน้ำตาลต่ำระหว่างมื้อคือการขาด glycogen สะสมในตับ",
    "source": "เฉลย78",
    "doubt": "⚠ คีย์ 78 ให้ทั้ง B และ A (เขียน 'B, A') เลือก A ให้สอดคล้องกับ 79/1 (glycogenolysis) และแนวที่ อ.ติวเอนไปทาง glycogen"
   },
@@ -1790,7 +1790,7 @@
     "E": "Celiac trunk"
    },
    "answer": "E",
-   "why": "Splenic artery เป็นแขนงใหญ่ที่สุดของ celiac trunk แม้ม้ามจะไม่ใช่อวัยวะ gut tube (มาจาก mesoderm ใน dorsal mesogastrium) แต่ได้เลือดจาก foregut artery GDA และ left gastric เป็นแขนงอื่นของ celiac ที่ไปเลี้ยงกระเพาะ/duodenum ส่วน SMA และ IMA เลี้ยง midgut และ hindgut",
+   "why": "ม้ามได้รับเลือดแดงจาก splenic artery ซึ่งเป็นแขนงใหญ่ของ celiac trunk\n✗ A: เป็นแขนงของ common hepatic artery ที่เลี้ยงกระเพาะอาหารส่วนปลายและ duodenum\n✗ B: เลี้ยงอวัยวะกลุ่ม midgut ตั้งแต่ duodenum ส่วนปลายถึง transverse colon\n✗ C: เลี้ยงอวัยวะกลุ่ม hindgut ตั้งแต่ distal transverse colon ถึง rectum ส่วนบน\n✗ D: เป็นแขนงของ celiac trunk ที่เลี้ยงขอบ lesser curvature ของกระเพาะอาหาร\n✓ E: แตกแขนงเป็น splenic artery เพื่อวิ่งไปเลี้ยงม้ามโดยตรง",
    "source": "เฉลย78"
   },
   "79/1": {
@@ -1804,7 +1804,7 @@
     "E": "Transaminase enzyme function"
    },
    "answer": "A",
-   "why": "ตับแข็งเก็บ glycogen ได้น้อย ช่วงกลางคืนจึงมี glycogen ให้สลาย (glycogenolysis) ไม่พอรักษาระดับน้ำตาล ร่างกายเข้าสู่ภาวะ 'accelerated starvation' ต้องสลายกล้ามเนื้อทำ gluconeogenesis และสลายไขมันเร็วเกินไป late-night snack จึงช่วยลด catabolism และ sarcopenia ข้ออื่นเป็นผลตามมาหรือไม่ใช่ปัญหาหลักที่อาหารมื้อดึกมุ่งแก้",
+   "why": "ผู้ป่วยตับแข็งต้องกินมื้อเล็กบ่อยๆ และมีของว่างคาร์โบไฮเดรตก่อนนอนเพื่อชดเชยภาวะที่ตับมี glycogen ให้สลายไม่พอตลอดคืน\n✓ A: ตับแข็งเก็บ glycogen ได้น้อยทำให้ glycogenolysis ช่วงกลางคืนไม่พอรักษาระดับน้ำตาล จึงต้องกินมื้อดึกเพื่อลดการสลายกล้ามเนื้อ\n✗ B: ในภาวะนี้ร่างกายกลับเร่งทำ gluconeogenesis จากโปรตีนกล้ามเนื้อมากเกินไปจนเกิดภาวะกล้ามเนื้อลีบ\n✗ C: ไม่ใช่ขั้นตอนหลักที่ของว่างก่อนนอนมุ่งทดแทนโดยตรงเท่าการขาดพลังงานจาก glycogenolysis\n✗ D: การสลายกรดไขมันเพิ่มขึ้นเพื่อชดเชยพลังงาน ไม่ได้บกพร่อง\n✗ E: ไม่เกี่ยวข้องกับเหตุผลของการให้ของว่างคาร์โบไฮเดรตก่อนนอน",
    "source": "เฉลย79"
   },
   "79/6": {
@@ -1818,7 +1818,7 @@
     "E": "Lateral body folds เชื่อมกันไม่สมบูรณ์"
    },
    "answer": "E",
-   "why": "Gastroschisis เกิดจาก lateral body folds ปิดไม่สมบูรณ์ ลำไส้ออกมานอกผนังหน้าท้อง (มักด้านขวาของสะดือ) โดยไม่มีเยื่อหุ้ม ถ้าเป็น omphalocele (มีเยื่อหุ้ม ออกที่สะดือ) จะเกิดจาก midgut ไม่กลับเข้าช่องท้องหลัง physiological herniation (ข้อ B) Vitelline duct ไม่ปิดทำให้ Meckel/fistula ส่วน pleuroperitoneal fold คือ congenital diaphragmatic hernia",
+   "why": "ความผิดปกติของผนังหน้าท้องชนิด gastroschisis (ลำไส้ออกมานอกช่องท้องข้างสะดือโดยไม่มีถุงหุ้ม) เกิดจากผนังหน้าท้องปิดไม่สนิท\n✗ A: ทำให้เกิด Meckel diverticulum หรือ umbilical fistula ไม่ใช่ผนังหน้าท้องโหว่\n✗ B: เป็นสาเหตุของ omphalocele ซึ่งลำไส้อยู่ตรงสะดือและมีเยื่อหุ้มคลุมอยู่\n✗ C: การไม่เกิด physiological herniation ไม่ใช่กลไกของความผิดปกติผนังหน้าท้องกลุ่มนี้\n✗ D: ทำให้เกิดไส้เลื่อนกะบังลมแต่กำเนิด (congenital diaphragmatic hernia)\n✓ E: การเชื่อมกันไม่สมบูรณ์ของ lateral body folds ทำให้เกิดช่องเปิดที่ผนังหน้าท้องด้านข้างสะดือจนลำไส้ทะลักออกมาโดยไม่มีถุงหุ้ม",
    "source": "เฉลย79",
    "needs_image": true,
    "doubt": "⚠ ต้องดูรูปเพื่อแยก gastroschisis กับ omphalocele ใช้คำตอบตามเฉลย (E)"
@@ -1834,7 +1834,7 @@
     "E": "Kidney"
    },
    "answer": "B",
-   "why": "ม้ามอยู่ใต้ซี่โครงซ้ายซี่ 9–11 จึงบาดเจ็บร่วมกับซี่โครงซ้ายล่างหักบ่อยที่สุด และเลือดออกในช่องท้องมากจนให้เลือดแล้วไม่ตอบสนอง ตับอยู่ด้านขวา กระเพาะถ้าแตกจะมี free air ปอดถ้าบาดเจ็บจะเห็น pneumothorax/hemothorax ส่วนไตอยู่ retroperitoneum มักมี hematuria และเลือดออกไม่รุนแรงเท่า",
+   "why": "ซี่โครงซ้ายซี่ที่ 8–10 หักร่วมกับภาวะเสียเลือดรุนแรงที่ไม่ตอบสนองต่อการให้เลือดและไม่มีลมในช่องท้อง ชี้ไปที่ม้ามแตก\n✗ A: วางตัวอยู่ด้านขวาบนใต้ซี่โครงขวา\n✓ B: อยู่ใต้ซี่โครงซ้ายที่ 9–11 เป็นอวัยวะที่แตกบ่อยที่สุดจากแรงกระแทกและทำให้เลือดออกในช่องท้องรุนแรง\n✗ C: หากกระเพาะทะลุจะพบลมรั่วในช่องท้อง (free air) ใต้กระบังลม\n✗ D: หากปอดบาดเจ็บมักพบลมหรือเลือดในช่องเยื่อหุ้มปอด (pneumothorax/hemothorax)\n✗ E: อยู่ในช่อง retroperitoneum มักมีปัสสาวะเป็นเลือดและเลือดขังใน retroperitoneum มากกว่า",
    "source": "เฉลย79"
   },
   "79/41": {
@@ -1848,7 +1848,7 @@
     "E": "ป้องกันกดไขกระดูก"
    },
    "answer": "A",
-   "why": "Cisplatin เป็นยาเคมีบำบัดที่ทำให้อาเจียนรุนแรงที่สุดตัวหนึ่ง โดยทำให้ enterochromaffin cell หลั่ง serotonin ไปกระตุ้น 5-HT3 receptor ที่ vagal afferent และ CTZ Ondansetron เป็น 5-HT3 antagonist จึงใช้ป้องกัน CINV ไม่มีผลต่อพิษไต (ป้องกันด้วยการให้สารน้ำ) พิษต่อหู การกดไขกระดูก หรือฤทธิ์ต้านมะเร็ง",
+   "why": "Cisplatin เป็นยาเคมีบำบัดที่กระตุ้นอาเจียนรุนแรง จึงให้ ondansetron เพื่อยับยั้งตัวรับ 5-HT3 และป้องกันอาการคลื่นไส้อาเจียน\n✓ A: ยับยั้ง 5-HT3 receptor ที่ vagal afferent และ CTZ จาก serotonin ที่หลั่งเมื่อเยื่อบุลำไส้ถูก cisplatin กระตุ้น\n✗ B: พิษต่อไตจาก cisplatin ป้องกันด้วยการให้สารน้ำทางหลอดเลือดและ amifostine ไม่ใช่ ondansetron\n✗ C: Ondansetron ไม่มีฤทธิ์ป้องกันพิษต่อหูจาก cisplatin\n✗ D: ไม่มีผลเสริมฤทธิ์ทำลายเซลล์มะเร็งของ cisplatin\n✗ E: ไม่มีผลป้องกันภาวะกดไขกระดูก",
    "source": "เฉลย79"
   },
   "79/53": {
@@ -1862,7 +1862,7 @@
     "E": "Kidney"
    },
    "answer": "B",
-   "why": "เป็นโจทย์แนวเดียวกับ 79/24 ซี่โครงซ้ายล่างหักร่วมกับ hemorrhagic shock ที่ไม่ตอบสนองต่อเลือด ชี้ splenic injury เพราะม้ามเป็นอวัยวะในช่องท้องที่บาดเจ็บบ่อยที่สุดจาก blunt trauma และเลือดออกมาก ไม่มี pneumothorax จึงไม่ใช่ปอด ไม่มี free air จึงไม่ใช่กระเพาะทะลุ ตับอยู่ขวา ไตอยู่ retroperitoneum",
+   "why": "อุบัติเหตุซี่โครงซ้ายล่างหักร่วมกับช็อกเสียเลือดที่ไม่ตอบสนองต่อการให้เลือด โดยไม่มีลมในปอดและช่องท้อง บ่งชี้การบาดเจ็บของม้าม\n✗ A: อยู่ด้านขวาของช่องท้องใต้ซี่โครงขวา\n✓ B: อยู่ใต้ซี่โครงซ้ายซี่ที่ 9–11 เมื่อแตกจะเกิดเลือดออกในช่องท้องมากจนช็อกและตอบสนองต่อการให้เลือดไม่ดี\n✗ C: หากกระเพาะอาหารแตกทะลุควรตรวจพบ free air ในช่องท้อง\n✗ D: โจทย์ระบุว่าไม่มี pneumothorax จึงไม่ใช่อวัยวะหลักที่บาดเจ็บ\n✗ E: อยู่ตำแหน่ง retroperitoneal ไม่ใช่สาเหตุหลักของเลือดออกรุนแรงในช่องท้องแบบไม่ตอบสนองต่อเลือดทันที",
    "source": "เฉลย79"
   },
   "79/165": {
@@ -1876,7 +1876,7 @@
     "E": "Duodenal atresia"
    },
    "answer": "B",
-   "why": "Triple bubble (กระเพาะ + duodenum + jejunum ส่วนต้นโป่ง) คือ jejunal atresia จาก vascular accident ในครรภ์ Duodenal atresia ให้ double bubble Pyloric stenosis อาเจียนพุ่งไม่มีน้ำดีอายุ 2–6 สัปดาห์ Hirschsprung และ meconium ileus อุดตันส่วนปลาย ทำให้ลำไส้โป่งหลายห่วงทั่วท้องมากกว่า",
+   "why": "ทารกแรกเกิดอาเจียนเป็นน้ำดีร่วมกับภาพรังสี triple bubble sign เป็นลักษณะจำเพาะของ jejunal atresia\n✗ A: เป็นการอุดตันลำไส้ใหญ่ส่วนปลาย ทำให้เห็นลำไส้โป่งพองหลายห่วงทั่วท้อง\n✓ B: เกิดการอุดตันที่ลำไส้เล็กส่วน jejunum ทำให้เห็นลมโป่ง 3 กระเปาะ (กระเพาะ, duodenum, proximal jejunum)\n✗ C: อาการจะเริ่มตอนอายุ 2–6 สัปดาห์และอาเจียนพุ่งไม่มีน้ำดีปน\n✗ D: เป็นการอุดตันบริเวณ distal ileum ที่สัมพันธ์กับ cystic fibrosis เห็นลำไส้โป่งหลายห่วงและฟองอากาศแบบ soap-bubble\n✗ E: จะเห็นภาพรังสีเป็น double bubble sign (กระเพาะและ duodenum ส่วนต้น)",
    "source": "เฉลย79"
   },
   "79/166": {
@@ -1890,7 +1890,7 @@
     "E": "Loperamide"
    },
    "answer": "E",
-   "why": "Loperamide เป็น μ-opioid agonist ที่ออกฤทธิ์เฉพาะที่ลำไส้ ผ่าน BBB น้อยเพราะเป็น substrate ของ P-glycoprotein จึงไม่ค่อยมีผลต่อระบบประสาทกลาง Diphenoxylate ก็เป็น opioid แต่เข้าสมองได้มากกว่า จึงผสม atropine กันใช้ผิด Racecadotril เป็น enkephalinase inhibitor (antisecretory) Bismuth ลดการหลั่งและต้านเชื้อ ส่วน cholestyramine ใช้กับ bile acid diarrhea",
+   "why": "ยาแก้ท้องเสียตามอาการที่ออกฤทธิ์กระตุ้นตัวรับ mu-opioid เฉพาะที่ผนังลำไส้และผ่านเข้าสมองน้อยที่สุดคือ loperamide\n✗ A: เป็น enkephalinase inhibitor ที่ออกฤทธิ์ลดการหลั่งน้ำและเกลือแร่ ไม่ใช่ opioid receptor agonist\n✗ B: เป็น opioid agonist แต่ผ่านเข้าสมองได้มากกว่า loperamide จึงต้องผสม atropine เพื่อป้องกันการใช้ในทางที่ผิด\n✗ C: ออกฤทธิ์ลดการหลั่งน้ำ เคลือบเยื่อบุ และต้านเชื้ออ่อนๆ ไม่ใช่ mu-opioid agonist\n✗ D: เป็นสารจับเกลือน้ำดี ใช้รักษาอาการท้องเสียจาก bile acid malabsorption\n✓ E: เป็น peripheral mu-opioid agonist ที่ถูก P-glycoprotein สูบออกนอกสมอง จึงลดการบีบตัวลำไส้โดยแทบไม่มีผลต่อระบบประสาทกลาง",
    "source": "เฉลย79"
   },
   "79/167": {
@@ -1904,7 +1904,7 @@
     "E": "Acute hepatitis E"
    },
    "answer": "C",
-   "why": "HBV เป็น DNA virus ที่ integrate เข้าจีโนมจึงก่อ HCC ได้แม้ไม่มี cirrhosis และ aflatoxin B1 (จาก Aspergillus ในถั่ว/ธัญพืช) ทำให้ p53 กลายพันธุ์ (codon 249) ทั้งสองเสริมฤทธิ์กันอย่างมาก Anti-HCV บวกแต่ไม่มี RNA คือหายแล้ว HAV และ HEV เป็นแบบเฉียบพลันไม่เรื้อรัง (ยกเว้น HEV ในคนภูมิกดต่ำ) ส่วน fatty liver ที่ไม่มี fibrosis ความเสี่ยงต่ำ",
+   "why": "ความเสี่ยงมะเร็งตับ (HCC) สูงที่สุดเกิดจากการเสริมฤทธิ์กันระหว่างการติดเชื้อ HBV เรื้อรังและการสัมผัสสารอะฟลาท็อกซิน\n✗ A: การพบ anti-HCV โดยไม่มี HCV RNA แปลว่าหายจากการติดเชื้อแล้ว ความเสี่ยงต่ำกว่ามาก\n✗ B: ไวรัสตับอักเสบเอเป็นโรคเฉียบพลัน หายขาดได้และไม่กลายเป็นพาหะหรือมะเร็งตับ\n✓ C: HBV แทรกตัวเข้าดีเอ็นเอเซลล์ตับได้โดยตรงและ aflatoxin B1 กระตุ้นการกลายพันธุ์ของยีน p53 จึงเสริมฤทธิ์ก่อมะเร็งตับสูงมาก\n✗ D: ภาวะไขมันพอกตับระยะเริ่มต้นที่ยังไม่มีพังผืดมีความเสี่ยงมะเร็งตับต่ำ\n✗ E: ไวรัสตับอักเสบอีในคนทั่วไปเป็นแบบเฉียบพลัน ไม่ก่อมะเร็งตับ",
    "source": "เฉลย79"
   },
   "79/168": {
@@ -1918,7 +1918,7 @@
     "E": "Allantois"
    },
    "answer": "A",
-   "why": "Meckel diverticulum คือ vitelline (omphalomesenteric) duct ที่ปิดไม่สมบูรณ์ เป็น true diverticulum ที่ ileum มักมี ectopic gastric mucosa หลั่งกรดทำให้แผลเลือดออกไม่เจ็บ (กฎ 2s) Urachus/allantois ค้างทำให้ปัสสาวะออกสะดือ Septum transversum เกี่ยวกับกะบังลม/ตับ ส่วน dorsal mesentery ไม่ได้ทำให้เกิด diverticulum",
+   "why": "เด็กถ่ายเป็นเลือดแบบไม่เจ็บและตรวจ Tc-99m scan พบเยื่อบุกระเพาะผิดที่ในลำไส้เล็กคือ Meckel diverticulum จาก vitelline duct\n✓ A: Vitelline (omphalomesenteric) duct ที่ฝ่อไม่สมบูรณ์เหลือเป็น Meckel diverticulum ที่ ileum ซึ่งมักมี ectopic gastric mucosa หลั่งกรดกัดแผล\n✗ B: หากไม่ฝ่อจะทำให้ปัสสาวะรั่วออกทางสะดือ ไม่เกี่ยวกับลำไส้เล็ก\n✗ C: เป็นเยื่อแขวนลำไส้ ไม่ได้ทำให้เกิด diverticulum ที่มีเยื่อบุกระเพาะ\n✗ D: พัฒนาเป็นส่วนหนึ่งของกะบังลมและเนื้อเยื่อตับ\n✗ E: เป็นต้นกำเนิดของ urachus ที่เชื่อมกับกระเพาะปัสสาวะ",
    "source": "เฉลย79"
   },
   "79/169": {
@@ -1932,7 +1932,7 @@
     "E": "เพิ่ม Ca²⁺ ในเซลล์"
    },
    "answer": "B",
-   "why": "ภาพเข้ากับ cholera: toxin ทำให้ Gsα ทำงานตลอด cAMP สูง CFTR หลั่ง Cl⁻ และน้ำมหาศาลโดยไม่มีการอักเสบ cGMP เป็นกลไกของ ETEC heat-stable toxin ยับยั้ง 60S คือ Shiga toxin การรุกรานเยื่อบุทำให้ไข้และถ่ายเป็นเลือด ส่วน Ca²⁺ เกี่ยวกับ rotavirus NSP4 เป็นหลัก",
+   "why": "ถ่ายเหลวเป็นน้ำปริมาณมากไม่ปวดท้อง ไม่มีไข้ และขาดน้ำรุนแรง คืออหิวาตกโรคซึ่งเกิดจาก cholera toxin เพิ่มระดับ cAMP\n✗ A: เป็นกลไกของ heat-stable enterotoxin (ST) จากเชื้อ ETEC\n✓ B: Cholera toxin กระตุ้น Gs-alpha ให้ adenylate cyclase ทำงานต่อเนื่องจน cAMP สูง ทำให้ CFTR หลั่ง Cl- และน้ำออกมามหาศาล\n✗ C: เป็นกลไกของ Shiga toxin ที่ทำให้เซลล์ตายและถ่ายเป็นมูกเลือด\n✗ D: เป็นกลไกของเชื้อ invasive เช่น Shigella หรือ Campylobacter ซึ่งจะมีไข้และถ่ายเป็นเลือด\n✗ E: เป็นกลไกหลักของสารพิษ NSP4 จากเชื้อ rotavirus",
    "source": "เฉลย79"
   },
   "79/170": {
@@ -1946,7 +1946,7 @@
     "E": "Entamoeba histolytica"
    },
    "answer": "A",
-   "why": "Rotavirus เป็นสาเหตุอันดับหนึ่งของท้องเสียรุนแรงในเด็กอายุ 6 เดือน–2 ปี ระบาดในสถานรับเลี้ยงเด็ก มีอาเจียนนำ ตามด้วยถ่ายเป็นน้ำและไข้ต่ำ Norovirus ก่อการระบาดในทุกวัย (เรือสำราญ โรงเรียน) และระยะสั้นกว่า Shigella/Entamoeba ทำให้ถ่ายมูกเลือด ส่วน cholera พบในพื้นที่ระบาดและถ่ายน้ำมากไม่มีไข้",
+   "why": "เด็กอายุ 2 ปี ถ่ายเป็นน้ำ อาเจียน ไข้ต่ำ และมีการระบาดในสถานรับเลี้ยงเด็ก เชื้อที่เป็นสาเหตุอันดับหนึ่งคือ rotavirus\n✓ A: เป็นสาเหตุหลักของท้องเสียรุนแรงในเด็กอายุ 6 เดือนถึง 2 ปี ระบาดง่ายในเนอสเซอรี มีอาเจียนนำแล้วถ่ายเหลวเป็นน้ำ\n✗ B: มักก่อการระบาดในทุกช่วงวัย เช่น โรงเรียนหรือเรือสำราญ และอาการสั้นกว่า\n✗ C: ทำให้เกิดอาการถ่ายเป็นมูกเลือด ปวดเบ่ง และไข้สูง\n✗ D: ทำให้ถ่ายเหลวเป็นน้ำซาวข้าวปริมาณมากอย่างรวดเร็วและมักไม่มีไข้\n✗ E: ทำให้ถ่ายเป็นมูกเลือดและไม่ค่อยก่อการระบาดเฉียบพลันในเนอสเซอรีแบบนี้",
    "source": "เฉลย79"
   },
   "79/171": {
@@ -1960,7 +1960,7 @@
     "E": "Strongyloides stercoralis"
    },
    "answer": "B",
-   "why": "Giardia เกาะเยื่อบุลำไส้เล็กส่วนต้นด้วย ventral sucking disc โดยไม่รุกราน ทำให้ villi ทู่และ brush border เสีย จึงถ่ายเป็นมัน (steatorrhea) ติดจาก cyst ในน้ำธรรมชาติ Entamoeba รุกรานลำไส้ใหญ่ทำให้ถ่ายเป็นเลือด Cryptosporidium/Cyclospora อยู่ใต้เยื่อหุ้มเซลล์ ทำให้ถ่ายน้ำ (เด่นในคนภูมิกดต่ำ) ส่วน Strongyloides เป็นหนอนพยาธิที่ไชผ่านผิวหนัง",
+   "why": "ถ่ายเหลวเป็นมันกลิ่นเหม็นหลังดื่มน้ำธรรมชาติจากเชื้อที่เกาะผิวเยื่อบุ duodenum ทำลาย brush border คือ Giardia lamblia\n✗ A: บุกรุกผนังลำไส้ใหญ่ทำให้ถ่ายเป็นมูกเลือดและเกิดแผลรูปขวด\n✓ B: ติดจาก cyst ในน้ำลำธาร ตัว trophozoite เกาะ duodenum ด้วย ventral sucking disc ทำลาย brush border จนดูดซึมไขมันไม่ได้ (steatorrhea)\n✗ C: ก่อท้องเสียเป็นน้ำรุนแรงเด่นในผู้ป่วยภูมิคุ้มกันบกพร่อง (HIV)\n✗ D: ก่อท้องเสียเป็นน้ำยืดเยื้อและไม่มีลักษณะเกาะทำลายเยื่อบุจนถ่ายเป็นมันเด่นเท่า Giardia\n✗ E: เป็นพยาธิตัวกลมที่ไชผ่านผิวหนัง ไม่ได้ติดจากการดื่มน้ำลำธาร",
    "source": "เฉลย79"
   },
   "79/172": {
@@ -1974,7 +1974,7 @@
     "E": "Hepatoblastoma"
    },
    "answer": "C",
-   "why": "เซลล์มะเร็งที่ยังทำหน้าที่ของ hepatocyte เช่นสร้างน้ำดี (bile canaliculi) บ่งชี้ HCC ซึ่งเชื่อมโยงกับ chronic HBV โดยตรง Cholangiocarcinoma และ metastatic adenocarcinoma สร้างต่อม/mucin ไม่สร้างน้ำดี Hepatic adenoma เป็นก้อนไม่ร้ายสัมพันธ์กับ OCP ส่วน hepatoblastoma พบในเด็กเล็ก",
+   "why": "ชายติดเชื้อ HBV เรื้อรังที่มีก้อนเดี่ยวในตับและชิ้นเนื้อพบเซลล์มะเร็งที่ยังสร้างน้ำดีได้ คือ hepatocellular carcinoma (HCC)\n✗ A: เป็นเนื้องอกไม่ร้ายที่สัมพันธ์กับการใช้ยาคุมกำเนิดในหญิงวัยเจริญพันธุ์\n✗ B: เป็นมะเร็งท่อน้ำดีที่สร้างโครงสร้างต่อมและเมือก ไม่สร้างน้ำดี\n✓ C: เป็นมะเร็งของเซลล์ตับโดยตรงจึงยังเห็นการสร้างน้ำดีในเซลล์หรือท่อน้ำดีเล็ก และสัมพันธ์ชัดเจนกับ HBV เรื้อรัง\n✗ D: เป็นมะเร็งแพร่กระจายจากอวัยวะอื่น มักพบหลายก้อนและสร้างเมือก ไม่สร้างน้ำดี\n✗ E: เป็นมะเร็งตับที่พบในเด็กเล็กอายุต่ำกว่า 3 ปี",
    "source": "เฉลย79"
   },
   "79/173": {
@@ -1988,7 +1988,7 @@
     "E": "เอนไซม์ตับอ่อนหลั่งมากจนดูดซึมผิดปกติ"
    },
    "answer": "C",
-   "why": "UC เป็น inflammatory diarrhea เยื่อบุลำไส้ใหญ่อักเสบเป็นแผล สูญเสียพื้นที่และความสามารถดูดซึม Na⁺/น้ำ ร่วมกับมีมูก เลือด และ exudate รั่วออกมา การหลั่ง Cl⁻ จาก crypt ลำไส้เล็กเป็นกลไก secretory (cholera) ลำไส้ใหญ่ปกติดูดซึม Na⁺ ไม่ได้หลั่ง การทำลาย ENS ทำให้ท้องผูก/อุดตัน (Hirschsprung) ส่วนเอนไซม์ตับอ่อนมากไม่ทำให้ malabsorption",
+   "why": "Ulcerative colitis มีการอักเสบเป็นแผลต่อเนื่องที่เยื่อบุลำไส้ใหญ่ ทำให้สูญเสียหน้าที่หลักในการดูดซึมน้ำและเกลือแร่กลับ\n✗ A: เป็นกลไกของ secretory diarrhea ในลำไส้เล็ก เช่น อหิวาตกโรค\n✗ B: หน้าที่ปกติของลำไส้ใหญ่คือการดูดซึม Na+ กลับ ไม่ใช่การหลั่ง Na+\n✓ C: เยื่อบุลำไส้ใหญ่ที่อักเสบและเป็นแผลดูดซึมน้ำและโซเดียมไม่ได้ ร่วมกับมีเลือดและเมือกรั่วออกมาจึงเกิดท้องเสีย\n✗ D: การสูญเสีย enteric nervous system ทำให้ลำไส้คลายตัวไม่ได้และเกิดท้องผูกอุดตัน เช่น Hirschsprung disease\n✗ E: การหลั่งเอนไซม์ตับอ่อนมากไม่ได้เป็นสาเหตุของท้องเสียใน ulcerative colitis",
    "source": "เฉลย79"
   },
   "79/174": {
@@ -2002,7 +2002,7 @@
     "E": "ท่อน้ำดีในตับอุดตัน"
    },
    "answer": "B",
-   "why": "Bilirubin สูงแบบ unconjugated เป็นหลัก เอนไซม์ตับปกติ ม้ามโต และนิ่วหลายก้อนในคนอายุน้อย (pigment stone) ชี้ภาวะ hemolysis เช่น hereditary spherocytosis/thalassemia นิ่วอุด CBD หรือท่อในตับจะทำให้ direct bilirubin และ ALP สูง ท่อขยาย การบาดเจ็บของเซลล์ตับจะมี AST/ALT สูง ส่วน conjugation บกพร่อง (Gilbert/Crigler-Najjar) ไม่อธิบายม้ามโตและนิ่ว",
+   "why": "ตัวเหลืองชนิด indirect bilirubin เด่น เอนไซม์ตับปกติ ม้ามโต และมีนิ่วถุงน้ำดีตั้งแต่อายุน้อย บ่งชี้ภาวะเม็ดเลือดแดงแตกเรื้อรัง\n✗ A: จะทำให้ direct bilirubin และ ALP สูง พร้อมท่อน้ำดีขยายตัว\n✓ B: เม็ดเลือดแดงแตกเรื้อรังทำให้สร้าง unconjugated bilirubin เกินและขับลงน้ำดีมากจนตกตะกอนเป็นนิ่วเม็ดสีดำร่วมกับม้ามโต\n✗ C: ภาวะ conjugation บกพร่อง เช่น Gilbert syndrome ไม่ทำให้ม้ามโตและไม่เกิดนิ่วถุงน้ำดีหลายก้อน\n✗ D: การบาดเจ็บของเซลล์ตับจะทำให้ค่า AST และ ALT สูงขึ้นชัดเจน\n✗ E: ท่อน้ำดีในตับอุดตันจะทำให้ direct bilirubin และ ALP สูงเด่น",
    "source": "เฉลย79"
   },
   "79/175": {
@@ -2016,7 +2016,7 @@
     "E": "Left colic v."
    },
    "answer": "A",
-   "why": "เหนือ pectinate line มาจาก hindgut (endoderm) เลือดดำระบายผ่าน superior rectal v. → IMV → portal system (internal hemorrhoid ไม่เจ็บ) ใต้ pectinate line มาจาก ectoderm ระบายผ่าน inferior rectal v. → internal pudendal → systemic ส่วน middle rectal v. ระบายส่วนล่างของ rectum เข้า internal iliac เป็นทางรอง Left colic v. ระบาย descending colon",
+   "why": "ลำไส้ตรงส่วนที่อยู่เหนือ pectinate line มีต้นกำเนิดจาก hindgut จึงระบายเลือดดำเข้าสู่ระบบพอร์ทัลผ่าน superior rectal vein\n✓ A: ระบายเลือดจาก rectum เหนือ pectinate line ขึ้นไปยัง inferior mesenteric vein และเข้าสู่ระบบพอร์ทัล\n✗ B: ระบายเลือดจาก rectum ส่วนล่างเข้าสู่ internal iliac vein เป็นทางรอง\n✗ C: ระบายเลือดจากบริเวณใต้ pectinate line เข้าสู่ internal pudendal vein (ระบบ systemic)\n✗ D: รับเลือดจาก inferior rectal vein ในบริเวณใต้ pectinate line\n✗ E: ระบายเลือดดำจากลำไส้ใหญ่ส่วน descending colon",
    "source": "เฉลย79"
   },
   "79/176": {
@@ -2030,7 +2030,7 @@
     "E": "Hyoscine"
    },
    "answer": "C",
-   "why": "ตามเฉลย domperidone เป็น peripheral D2 antagonist ใช้ลดอาเจียนได้ ยาปฏิชีวนะ (norfloxacin, ceftriaxone) ไม่มีประโยชน์ในการติดเชื้อไวรัส loperamide ห้ามใช้ในเด็กเล็กเพราะเสี่ยง ileus/กดหายใจ และ hyoscine ซึ่งเป็น antimuscarinic ไม่ได้แก้อาเจียนในกรณีนี้และทำให้ลำไส้หยุดเคลื่อนไหว หลักของการรักษาจริงคือ ORS และ zinc",
+   "why": "ท้องเสียและอาเจียนจาก rotavirus ไม่ต้องใช้ยาปฏิชีวนะและห้ามใช้ยาหยุดถ่ายในเด็กเล็ก ตามเฉลยเลือกใช้ domperidone บรรเทาอาเจียน\n✗ A: เป็นยาปฏิชีวนะ ไม่มีประโยชน์ในการติดเชื้อไวรัสและไม่ควรใช้ในเด็กเล็ก\n✗ B: เป็นยาปฏิชีวนะ ไม่ได้ผลต่อเชื้อไวรัส rotavirus\n✓ C: เป็น peripheral D2 antagonist ที่ช่วยบรรเทาอาการอาเจียนได้ (โดยการรักษาหลักยังคงเป็น ORS และ zinc)\n✗ D: ห้ามใช้ในเด็กเล็กเพราะเสี่ยงเกิดภาวะลำไส้อืด (ileus) และกดการหายใจ\n✗ E: เป็นยาต้านโคลิเนอร์จิกที่ไม่ได้แก้อาเจียนและเสี่ยงทำให้ลำไส้หยุดเคลื่อนไหว",
    "source": "เฉลย79",
    "doubt": "⚠ เฉลยอาจขัดหลัก: แนวทางเด็กเน้น ORS + zinc ± ondansetron และ domperidone ไม่แนะนำในทารก (QT prolongation, ประโยชน์น้อย) อ.ติวก็ตั้งข้อสังเกต ในตัวเลือกที่ให้มา C เป็นข้อที่อันตรายน้อยที่สุด"
   },
@@ -2045,7 +2045,7 @@
     "E": "Heat-labile enterotoxin"
    },
    "answer": "A",
-   "why": "IMViC ++-- (indole+, methyl red+, VP−, citrate−) คือ E. coli ซึ่งในตัวเลือกมี virulence factor ของ E. coli คือ P fimbriae (UPEC), K1 capsule (neonatal meningitis) และ LT (ETEC) เฉลยให้ P fimbriae M protein เป็นของ Streptococcus pyogenes และ Vi capsule เป็นของ Salmonella Typhi",
+   "why": "แบคทีเรียแท่งแกรมลบที่มีผล IMViC ++-- คือ Escherichia coli ซึ่งมีปัจจัยก่อโรคจำเพาะหลายชนิดตามสายพันธุ์\n✓ A: เป็น virulence factor ของ E. coli (สายพันธุ์ UPEC) ที่ใช้ยึดเกาะเยื่อบุทางเดินปัสสาวะ (เฉลยข้อนี้เลือก P fimbriae)\n✗ B: เป็นแคปซูลของ E. coli สายพันธุ์ก่อเยื่อหุ้มสมองอักเสบในทารกแรกเกิด (ไม่ใช่คำตอบตามเฉลยข้อนี้)\n✗ C: เป็นปัจจัยก่อโรคของเชื้อแบคทีเรียแกรมบวก Streptococcus pyogenes\n✗ D: เป็นแคปซูลของเชื้อ Salmonella Typhi\n✗ E: แม้เป็นสารพิษของ ETEC ที่ก่อท้องเสียเป็นน้ำ แต่เฉลยข้อนี้กำหนดคำตอบเป็น P fimbriae",
    "source": "เฉลย79",
    "doubt": "⚠ เฉลย A แต่บริบทท้องเสียเป็นน้ำ (ETEC) ควรตอบ E Heat-labile enterotoxin ตามหลัก P fimbriae เป็นของ UPEC ใน pyelonephritis ควรตรวจกับอาจารย์"
   },
@@ -2060,7 +2060,7 @@
     "E": "Magnesium hydroxide"
    },
    "answer": "B",
-   "why": "Ranitidine (เช่นเดียวกับ cimetidine, famotidine) เป็น H2 receptor antagonist แบบ competitive ลดการหลั่งกรดโดยเฉพาะกลางคืน Omeprazole เป็น PPI ยับยั้ง H⁺/K⁺-ATPase แบบ irreversible Misoprostol เป็น PGE1 analog Sucralfate เคลือบแผลในสภาวะกรด ส่วน magnesium hydroxide เป็น antacid สะเทินกรดโดยตรง",
+   "why": "ยาลดกรดที่ออกฤทธิ์ยับยั้งตัวรับ H2 บนเซลล์ parietal แบบแข่งขัน (competitive) คือยากลุ่ม H2 blocker เช่น ranitidine\n✗ A: เป็นกลุ่ม PPI ที่ยับยั้ง H+/K+-ATPase แบบถาวร (irreversible)\n✓ B: เป็น competitive H2 receptor antagonist บน parietal cell ช่วยลดการหลั่งกรดโดยเฉพาะช่วงกลางคืน\n✗ C: เป็นสารเลียนแบบ prostaglandin E1 ที่ช่วยเพิ่มเมือกและลดกรด\n✗ D: ออกฤทธิ์เคลือบก้นแผลในสภาวะที่เป็นกรด ไม่ได้จับ H2 receptor\n✗ E: เป็นยาลดกรดกลุ่ม antacid ที่สะเทินกรดในกระเพาะโดยตรง",
    "source": "เฉลย79"
   },
   "79/179": {
@@ -2074,7 +2074,7 @@
     "E": "Breast"
    },
    "answer": "B",
-   "why": "Krukenberg tumor คือมะเร็งแพร่กระจายไปรังไข่ทั้งสองข้าง ที่มี signet-ring cell ซึ่งต้นกำเนิดที่พบบ่อยที่สุดคือ diffuse-type gastric adenocarcinoma (สัมพันธ์กับการเสีย E-cadherin/CDH1) Colon, breast (lobular) และ pancreas แพร่ไปรังไข่ได้แต่เป็นรองมาก ส่วน lung ไม่ใช่แหล่งปกติของ Krukenberg",
+   "why": "ก้อนมะเร็งที่รังไข่ทั้งสองข้างซึ่งพบ signet-ring cell ที่มีเมือกมากคือ Krukenberg tumor ซึ่งมักแพร่กระจายมาจากกระเพาะอาหาร\n✗ A: ไม่ใช่แหล่งปฐมภูมิที่พบบ่อยของ Krukenberg tumor\n✓ B: มะเร็งกระเพาะอาหารชนิด diffuse-type adenocarcinoma (พบ signet-ring cell) เป็นต้นกำเนิดที่พบบ่อยที่สุดของ Krukenberg tumor\n✗ C: แพร่กระจายไปรังไข่ได้แต่พบน้อยกว่ากระเพาะอาหารมาก\n✗ D: แพร่กระจายไปรังไข่ได้น้อยกว่ากระเพาะอาหารมาก\n✗ E: มะเร็งเต้านมชนิด lobular แพร่ไปรังไข่ได้บ้างแต่ไม่ใช่แหล่งปฐมภูมิหลักของ Krukenberg tumor",
    "source": "เฉลย79"
   },
   "79/180": {
@@ -2088,7 +2088,7 @@
     "E": "กินหมูไม่สุก"
    },
    "answer": "D",
-   "why": "ไข่ขนาดเล็กมีฝา shoulder และ knob คือ liver fluke Opisthorchis viverrini (หรือ Clonorchis) ติดจากการกินปลาน้ำจืดที่มี metacercaria แบบดิบหรือสุกๆดิบๆ ผ่านท่อน้ำดีทำให้ cholangitis และเสี่ยง cholangiocarcinoma ไชผิวหนังคือ hookworm/Strongyloides ผักน้ำคือ Fasciola/Fasciolopsis น้ำ/ผักปนเปื้อนไข่คือ Ascaris ส่วนหมูดิบคือ Taenia solium/Trichinella",
+   "why": "อาการทางท่อน้ำดีร่วมกับไข่พยาธิขนาดเล็กมีฝาปิด บ่า (shoulder) และปุ่มท้าย (knob) คือพยาธิใบไม้ตับ Opisthorchis viverrini\n✗ A: เป็นทางติดต่อของพยาธิปากขอและ Strongyloides\n✗ B: ไม่ใช่ทางติดต่อหลักของพยาธิใบไม้ตับ\n✗ C: เป็นทางติดต่อของพยาธิใบไม้ลำไส้ใหญ่ (Fasciolopsis) หรือพยาธิในดิน (Ascaris)\n✓ D: ติดจากการกินปลาน้ำจืดดิบหรือสุกๆ ดิบๆ ที่มีระยะ metacercaria ซึ่งเป็นสาเหตุของท่อน้ำดีอักเสบและมะเร็งท่อน้ำดี\n✗ E: เป็นทางติดต่อของ Taenia solium และ Trichinella spiralis",
    "source": "เฉลย79"
   },
   "79/181": {
@@ -2102,7 +2102,7 @@
     "E": "Gastroduodenal a."
    },
    "answer": "B",
-   "why": "Greater curvature ส่วน antrum (ฝั่งขวา/ล่าง) เลี้ยงโดย right gastroepiploic a. แขนงของ GDA Left gastroepiploic a. เลี้ยง greater curvature ส่วนบนซ้าย Left และ right gastric a. วิ่งตาม lesser curvature ส่วน GDA เองเป็นแหล่งเลือดออกคลาสสิกของแผลที่ผนังหลังของ duodenal bulb",
+   "why": "แผลเลือดออกบริเวณ greater curvature ของ gastric antrum (ส่วนล่างขวาของกระเพาะ) อยู่ตรงแนวของ right gastroepiploic artery\n✗ A: วิ่งเลี้ยง greater curvature ส่วนบนด้านซ้าย ไม่ใช่บริเวณ antrum\n✓ B: เป็นแขนงของ gastroduodenal artery ที่วิ่งเลาะ greater curvature บริเวณ antrum ด้านขวาโดยตรง\n✗ C: วิ่งเลี้ยงขอบ lesser curvature ด้านบน\n✗ D: วิ่งเลี้ยงขอบ lesser curvature ด้านล่าง\n✗ E: เป็นแหล่งเลือดออกจำเพาะของแผลผนังด้านหลังของ duodenal bulb ไม่ใช่ greater curvature ของกระเพาะ",
    "source": "เฉลย79"
   },
   "79/182": {
@@ -2116,7 +2116,7 @@
     "E": "กระตุ้นการสร้าง prostaglandin"
    },
    "answer": "B",
-   "why": "PPI (เช่น omeprazole) เป็น prodrug ที่ถูก activate ในกรดแล้วจับ H⁺/K⁺-ATPase แบบ covalent ซึ่งเป็นขั้นสุดท้ายของการหลั่งกรด แม้ half-life สั้นแต่ฤทธิ์อยู่จนกว่าจะสร้างปั๊มใหม่ จึงกินวันละครั้งได้และแรงที่สุด Antacid ฤทธิ์สั้น H2 blocker อ่อนกว่าและเกิด tolerance ยาไม่ได้ลด gastrin (PPI กลับทำให้ gastrin สูง) ส่วนการเพิ่ม prostaglandin เป็นของ misoprostol",
+   "why": "ยาลดกรดที่กินวันละครั้งแต่กดกรดได้แรงและยาวนานที่สุดคือกลุ่ม PPI ที่ยับยั้งปั๊มกรดแบบถาวร\n✗ A: เป็นกลไกของ antacid ซึ่งออกฤทธิ์สั้นและต้องกินบ่อย\n✓ B: PPI จับกับ H+/K+-ATPase แบบ covalent (irreversible) ทำให้ต้องรอเซลล์สร้างปั๊มใหม่จึงออกฤทธิ์นานและกินวันละครั้งได้\n✗ C: เป็นกลไกของ H2 blocker ซึ่งกดกรดได้น้อยกว่าและเกิดภาวะดื้อยา (tolerance) ได้\n✗ D: ยากลุ่ม PPI ไม่ได้ลด gastrin แต่กลับทำให้ระดับ gastrin สูงขึ้นจากการที่กรดลดลง\n✗ E: เป็นกลไกของ misoprostol ซึ่งไม่ได้กดกรดได้แรงเท่า PPI",
    "source": "เฉลย79"
   },
   "79/183": {
@@ -2130,7 +2130,7 @@
     "E": "Fibrate"
    },
    "answer": "E",
-   "why": "TG >1,000 mg/dL เสี่ยง acute pancreatitis ต้องลด TG เป็นเป้าหมายแรก Fibrate กระตุ้น PPAR-α เพิ่ม lipoprotein lipase ลด TG ได้มากที่สุด Statin, PCSK9 inhibitor และ ezetimibe เน้นลด LDL ส่วน bile acid sequestrant ทำให้ TG สูงขึ้น จึงห้ามใช้ในภาวะนี้",
+   "why": "ระดับ triglyceride สูงเกิน 1,000 mg/dL เสี่ยงเกิดตับอ่อนอักเสบเฉียบพลันสูง ต้องเลือกยาที่ลด TG ได้แรงที่สุดเป็นอันดับแรก\n✗ A: เน้นลดระดับ LDL-C เป็นหลัก ลด TG ได้เพียงเล็กน้อย\n✗ B: ยากลุ่ม statin เน้นลด LDL-C เป็นหลัก ไม่ใช่ยาหลักสำหรับ TG > 1,000 mg/dL\n✗ C: ยับยั้งการดูดซึมคอเลสเตอรอลที่ลำไส้ เน้นลด LDL-C\n✗ D: ทำให้ระดับ triglyceride สูงขึ้นได้ จึงเป็นข้อห้ามใช้ในภาวะ hypertriglyceridemia รุนแรง\n✓ E: กระตุ้นตัวรับ PPAR-alpha เพิ่มการทำงานของ lipoprotein lipase จึงลดระดับ TG ได้มากที่สุดและป้องกันตับอ่อนอักเสบ",
    "source": "เฉลย79"
   },
   "79/184": {
@@ -2144,7 +2144,7 @@
     "E": "G cells"
    },
    "answer": "C",
-   "why": "Gastrin มีฤทธิ์ trophic ต่อ enterochromaffin-like (ECL) cell โดยตรงผ่าน CCK2 receptor ทำให้ ECL hyperplasia และหลั่ง histamine มาก (อาจเกิด gastric carcinoid) ซึ่งเป็นคำตอบตามเฉลย Parietal cell ก็เพิ่มจำนวนได้แต่ไม่ใช่เป้าหมายหลักที่ตำราเน้น G cell ใน ZES เป็นเนื้องอกนอกกระเพาะ (gastrinoma ที่ duodenum/ตับอ่อน) ไม่ใช่ hyperplasia ในกระเพาะ ส่วน chief และ mucous neck cell ไม่ได้ตอบสนองต่อ gastrin แบบนี้",
+   "why": "ใน Zollinger-Ellison syndrome ระดับ gastrin ที่สูงมากกระตุ้นตัวรับ CCK2 บน ECL cell ให้แบ่งตัวเพิ่มจำนวน (hyperplasia)\n✗ A: ไม่ใช่เซลล์เป้าหมายหลักของฤทธิ์ trophic จาก gastrin\n✗ B: แม้เพิ่มจำนวนได้แต่เฉลยข้อนี้เน้น ECL cell ซึ่งเป็นตัวกลางหลักที่ถูก gastrin กระตุ้นให้หลั่ง histamine และอาจพัฒนาเป็น carcinoid\n✓ C: ถูก gastrin กระตุ้นโดยตรงผ่านตัวรับ CCK2 ทำให้เกิด ECL cell hyperplasia หลั่ง histamine มาก และเสี่ยงเกิด gastric carcinoid\n✗ D: ทำหน้าที่หลั่ง pepsinogen ไม่เกิด hyperplasia เด่นจาก gastrin\n✗ E: เนื้องอก gastrinoma มักอยู่นอกกระเพาะ (duodenum หรือตับอ่อน) ไม่ใช่ G cell hyperplasia ในกระเพาะ",
    "source": "เฉลย79"
   },
   "79/185": {
@@ -2158,7 +2158,7 @@
     "E": "ไม่เคยติดเชื้อ"
    },
    "answer": "D",
-   "why": "HBsAg บวกในคนไม่มีอาการ ตรวจคัดกรอง พร้อม HBeAg ลบ บ่งว่าไวรัสแบ่งตัวน้อย เข้าได้กับ inactive carrier (HBeAg-negative infection; ยืนยันด้วย HBV DNA ต่ำและ ALT ปกติ) Window period ต้อง HBsAg ลบ วัคซีนมีแค่ anti-HBs ไม่เคยติดเชื้อต้องลบหมด ส่วน chronic active มักมี HBeAg บวก (หรือ DNA สูง/ALT สูง) ซึ่งโจทย์ไม่ได้ให้",
+   "why": "ตรวจคัดกรองในคนไม่มีอาการพบ HBsAg บวก, total anti-HBc บวก แต่ HBeAg ลบ บ่งชี้ว่าติดเชื้อเรื้อรังในระยะไวรัสแบ่งตัวน้อย\n✗ A: ช่วง window period ของการติดเชื้อเฉียบพลันจะต้องตรวจพบ HBsAg เป็นลบ\n✗ B: มักมี HBeAg บวก หรือมีระดับ HBV DNA และค่าเอนไซม์ตับ ALT สูงร่วมด้วย\n✗ C: ผู้ที่ได้รับวัคซีนจะมีผลตรวจเฉพาะ anti-HBs เป็นบวกเพียงอย่างเดียว\n✓ D: เป็นภาวะ inactive carrier (HBeAg-negative chronic HBV infection) ที่มีการติดเชื้อแต่ไวรัสแบ่งตัวต่ำ\n✗ E: ผู้ที่ไม่เคยติดเชื้อจะมีผล HBsAg, anti-HBs และ anti-HBc เป็นลบทั้งหมด",
    "source": "เฉลย79"
   },
   "79/186": {
@@ -2172,7 +2172,7 @@
     "E": "กระตุ้นการหลั่งกรดโดยตรง"
    },
    "answer": "C",
-   "why": "Ibuprofen เป็น non-selective NSAID ยับยั้งทั้ง COX-1 และ COX-2 ทำให้ PG ที่คงเกราะเยื่อบุ (mucus, HCO₃⁻, blood flow) ลดลง จึงเกิดแผลและเลือดออก ไม่ใช่ COX-1 selective หรือ COX-2 selective การยับยั้งเกล็ดเลือดเพิ่มความรุนแรงของเลือดออกแต่ไม่ใช่กลไกหลักของแผล และ NSAID ไม่ได้กระตุ้นการหลั่งกรดโดยตรง",
+   "why": "Ibuprofen เป็นยาแก้ปวดกลุ่ม non-selective NSAID ที่ทำให้เกิดแผลและเลือดออกในกระเพาะจากการลด prostaglandin ที่ปกป้องเยื่อบุ\n✗ A: Ibuprofen ไม่ใช่ยาที่จำเพาะต่อ COX-1 เพียงอย่างเดียว\n✗ B: การยับยั้งเฉพาะ COX-2 (เช่น celecoxib) ทำให้เกิดแผลในกระเพาะน้อยกว่ามาก\n✓ C: ยับยั้งทั้ง COX-1 และ COX-2 ทำให้ prostaglandin (PGE2/PGI2) ที่ช่วยสร้างเมือก ไบคาร์บอเนต และเลือดเลี้ยงเยื่อบุลดลง\n✗ D: การยับยั้งเกล็ดเลือดช่วยเสริมให้เลือดออกง่ายขึ้น แต่ไม่ใช่กลไกหลักที่ทำให้เกิดแผลในเยื่อบุกระเพาะ\n✗ E: NSAID ไม่ได้กระตุ้นการหลั่งกรดโดยตรง แต่ทำลายเกราะป้องกันกรดของเยื่อบุกระเพาะ",
    "source": "เฉลย79"
   },
   "79/187": {
@@ -2186,7 +2186,7 @@
     "E": "Ondansetron"
    },
    "answer": "B",
-   "why": "Racecadotril ยับยั้ง enkephalinase ทำให้ enkephalin ในลำไส้อยู่นานขึ้น ลดการหลั่ง cAMP/น้ำและเกลือแร่ (antisecretory) โดยไม่ทำให้ลำไส้หยุดเคลื่อนไหว จึงรักษาท้องเสียโดยตรง Hyoscine ใช้แก้ปวดเกร็ง Metoclopramide และ ondansetron เป็นยาแก้อาเจียน ไม่ได้ลดการถ่าย ส่วน sucralfate ใช้เคลือบแผลในกระเพาะ",
+   "why": "ท้องเสียเฉียบพลันแบบถ่ายเป็นน้ำที่ไม่มีไข้หรือเลือด สามารถใช้ยาที่ลดการหลั่งน้ำและเกลือแร่โดยตรงโดยไม่ทำให้ลำไส้หยุดบีบตัว\n✗ A: เป็นยาต้านโคลิเนอร์จิกใช้บรรเทาอาการปวดบิดเกร็ง ไม่ได้ลดการหลั่งน้ำในลำไส้\n✓ B: เป็น enkephalinase inhibitor ที่ลดการหลั่ง cAMP น้ำ และเกลือแร่ในลำไส้ (antisecretory) จึงลดอาการถ่ายเป็นน้ำได้ตรงจุด\n✗ C: เป็นยาแก้อาเจียนและเพิ่มการเคลื่อนไหวของลำไส้ ไม่ได้รักษาอาการท้องเสีย\n✗ D: เป็นยาเคลือบแผลในกระเพาะอาหาร ไม่ได้ใช้รักษาอาการท้องเสีย\n✗ E: เป็นยาแก้อาเจียนกลุ่ม 5-HT3 antagonist ไม่ได้ลดปริมาณอุจจาระที่ถ่ายเป็นน้ำ",
    "source": "เฉลย79"
   },
   "79/188": {
@@ -2200,7 +2200,7 @@
     "E": "ดูดซึม cholesterol จากลำไส้มากขึ้น"
    },
    "answer": "A",
-   "why": "Cholesterol stone เกิดจาก 3 ปัจจัย: น้ำดีมี cholesterol อิ่มตัวเกิน (หรือ bile acid ลดลง), การตกผลึกเร็ว และ gallbladder hypomotility/stasis ซึ่งในตัวเลือกมีเพียง stasis ที่ถูก (เช่น ตั้งครรภ์, อดอาหาร, TPN) Bile acid ที่มากขึ้นช่วยละลาย cholesterol จึงตรงข้าม Hemolysis และการติดเชื้อ (E. coli β-glucuronidase) ทำให้ pigment stone ส่วนการดูดซึม cholesterol จากลำไส้ไม่ใช่กลไกหลัก",
+   "why": "นิ่วคอเลสเตอรอลเกิดจากสามปัจจัยหลักคือน้ำดีอิ่มตัวด้วยคอเลสเตอรอล การตกผลึกเร็ว และการคั่งค้างของน้ำดีในถุงน้ำดี\n✓ A: ถุงน้ำดีบีบตัวน้อยทำให้น้ำดีค้างนาน (stasis) จึงเอื้อให้ผลึกคอเลสเตอรอลรวมตัวกันเป็นนิ่วได้ง่าย\n✗ B: การสร้างหรือสลายฮีโมโกลบินมากเกินทำให้เกิดนิ่วเม็ดสีดำ (black pigment stone)\n✗ C: การหลั่ง bile acid มากขึ้นจะช่วยละลายคอเลสเตอรอลได้ดีขึ้น จึงลดโอกาสเกิดนิ่ว\n✗ D: การติดเชื้อแบคทีเรียในท่อน้ำดีทำให้เกิดนิ่วเม็ดสีน้ำตาล (brown pigment stone)\n✗ E: การดูดซึมคอเลสเตอรอลจากลำไส้ไม่ใช่กลไกหลักของการเกิดนิ่วคอเลสเตอรอลในถุงน้ำดี",
    "source": "เฉลย79"
   },
   "79/189": {
@@ -2214,7 +2214,7 @@
     "E": "Triglyceride >1,000 mg/dL"
    },
    "answer": "E",
-   "why": "Hypertriglyceridemia มาก (>1,000 mg/dL) เป็นสาเหตุอันดับสามของ acute pancreatitis รองจากนิ่วและแอลกอฮอล์ เพราะ pancreatic lipase ย่อย TG เป็น free fatty acid ที่เป็นพิษต่อ acinar cell และ chylomicron อุดหลอดเลือดฝอย ค่า Lp(a), LDL, HDL หรือ cholesterol รวม สัมพันธ์กับโรคหลอดเลือดแต่ไม่ทำให้ตับอ่อนอักเสบ",
+   "why": "ภาวะไขมันไตรกลีเซอไรด์ในเลือดสูงรุนแรง (> 1,000 mg/dL) เป็นสาเหตุสำคัญที่กระตุ้นให้เกิดตับอ่อนอักเสบเฉียบพลัน\n✗ A: เป็นปัจจัยเสี่ยงโรคหลอดเลือดหัวใจ ไม่ได้ทำให้เกิดตับอ่อนอักเสบเฉียบพลัน\n✗ B: สัมพันธ์กับภาวะหลอดเลือดแดงแข็ง (atherosclerosis) ไม่ใช่สาเหตุของตับอ่อนอักเสบ\n✗ C: เป็นปัจจัยเสี่ยงโรคหลอดเลือดหัวใจ ไม่ได้ทำให้เกิดตับอ่อนอักเสบ\n✗ D: ระดับคอเลสเตอรอลรวมสูงไม่ได้เป็นสาเหตุโดยตรงของตับอ่อนอักเสบเฉียบพลัน\n✓ E: เอนไซม์ lipase ย่อย TG ปริมาณมหาศาลเป็นกรดไขมันอิสระที่เป็นพิษต่อเซลล์ตับอ่อนและ chylomicron อุดตันหลอดเลือดฝอย",
    "source": "เฉลย79"
   },
   "79/190": {
@@ -2228,7 +2228,7 @@
     "E": "Escherichia coli"
    },
    "answer": "C",
-   "why": "ข้าวผัด/ข้าวค้างเป็นคีย์ของ Bacillus cereus ชนิด emetic ซึ่ง spore ทนความร้อนแล้วสร้าง cereulide (preformed toxin) ทำให้อาเจียนภายใน 1–6 ชม. S. aureus ก็อาเจียนเร็วแต่สัมพันธ์กับอาหารที่ใช้มือจับ เช่น สลัดมายองเนส ขนม C. perfringens เกิดจากเนื้อตุ๋นอุ่นซ้ำ ฟักตัว 8–16 ชม. ถ่ายเป็นน้ำ ส่วน Salmonella และ E. coli ฟักตัวนานกว่า เด่นที่ท้องเสีย",
+   "why": "อาเจียนเด่นภายในไม่กี่ชั่วโมงหลังกินข้าวผัดที่วางทิ้งไว้ที่อุณหภูมิห้อง เป็นลักษณะจำเพาะของ Bacillus cereus ชนิดอาเจียน\n✗ A: อาเจียนเร็วเช่นกันแต่มักสัมพันธ์กับอาหารที่มือสัมผัสมาก เช่น สลัดไข่ มายองเนส หรือขนมครีม\n✗ B: มักเกิดจากเนื้อสัตว์ตุ๋นอุ่นซ้ำ ฟักตัว 8–16 ชม. และมีอาการถ่ายเป็นน้ำเด่น\n✓ C: สปอร์ทนความร้อนในข้าวสุกงอกสร้าง preformed toxin (cereulide) ขณะวางทิ้งไว้ ทำให้อาเจียนเด่นภายใน 1–6 ชม.\n✗ D: ระยะฟักตัวนานกว่า (6–72 ชม.) และเด่นเรื่องไข้ร่วมกับถ่ายเหลว\n✗ E: ระยะฟักตัวนานกว่าและเด่นเรื่องอาการถ่ายเหลวเป็นหลัก",
    "source": "เฉลย79"
   },
   "79/205": {
@@ -2242,7 +2242,7 @@
     "E": "Portal venous pressure ลดลง"
    },
    "answer": "D",
-   "why": "SAAG = 1.8 (≥1.1) บอก portal hypertension และ protein ต่ำ (<2.5) บอกว่า sinusoid รั่วโปรตีนไม่ได้แล้ว เข้ากับ cirrhosis ที่ sinusoid เสีย fenestration และมี basement membrane (capillarization) แรงดันจึงเพิ่มแต่โปรตีนไม่ออก ข้ออื่นผิดทิศ: ascites เกิดเมื่อ lymph drainage ไม่ทัน outflow อุดตัน oncotic pressure ต่ำ และ portal pressure สูง ไม่ใช่ต่ำ",
+   "why": "ค่า SAAG = 1.8 (≥ 1.1) บ่งชี้ portal hypertension ร่วมกับ ascitic protein ต่ำ (< 2.5) แสดงว่า sinusoid ตับแข็งจนโปรตีนรั่วออกไม่ได้\n✗ A: ท้องมานเกิดขึ้นเมื่อการระบายน้ำเหลืองจากตับไม่เพียงพอ ไม่ใช่เพิ่มขึ้นจนอธิบายโปรตีนต่ำ\n✗ B: การอุดกั้นทางออกหลอดเลือดดำตับ (outflow ลดลง) ต่างหากที่ทำให้เกิดท้องมาน\n✗ C: แรงดัน oncotic ในพลาสมาที่ลดลง (จาก albumin ต่ำ) ต่างหากที่ทำให้เกิดท้องมาน\n✓ D: ในโรคตับแข็ง sinusoid สูญเสียรูพรุนและมี basement membrane (capillarization) ทำให้ความดันสูงแต่โปรตีนรั่วออกไม่ได้\n✗ E: ท้องมานจากโรคตับเกิดจากความดันหลอดเลือดพอร์ทัลสูงขึ้น ไม่ใช่ลดลง",
    "source": "เฉลย79"
   },
   "79/213": {
@@ -2256,7 +2256,7 @@
     "E": "Duodenal ulcer"
    },
    "answer": "A",
-   "why": "ขณะตั้งครรภ์มดลูกกดหลอดเลือดดำในอุ้งเชิงกราน progesterone ทำให้หลอดเลือดขยายและท้องผูก จึงเกิดริดสีดวงทวาร เลือดแดงสดติดผิวอุจจาระ และมักยุบหลังคลอด Spider nevi และ telangiectasia เป็นรอยโรคผิวหนังจาก estrogen ไม่ทำให้ถ่ายเป็นเลือด Angioma ไม่สัมพันธ์กับการตั้งครรภ์แบบนี้ ส่วน duodenal ulcer ให้ถ่ายดำ (melena) ไม่ใช่เลือดแดงสด",
+   "why": "หญิงตั้งครรภ์ปวดรอบทวารหนัก ถ่ายมีเลือดแดงสดติดอุจจาระ และหายเองหลังคลอด เป็นอาการจำเพาะของริดสีดวงทวาร\n✓ A: มดลูกขยายกดหลอดเลือดดำเชิงกรานร่วมกับฮอร์โมนโปรเจสเตอโรนทำให้หลอดเลือดดำทวารหนักโป่งพองและมักยุบลงหลังคลอด\n✗ B: เป็นเนื้องอกหลอดเลือดที่ไม่ใช่สาเหตุของเลือดแดงสดติดอุจจาระที่หายเองหลังคลอด\n✗ C: เป็นรอยโรคหลอดเลือดฝอยบนผิวหนังจากเอสโตรเจน ไม่ได้ทำให้ถ่ายเป็นเลือด\n✗ D: เป็นเส้นเลือดฝอยขยายตัวที่ผิวหนังหรือเยื่อบุ ไม่ใช่สาเหตุหลักที่จำเพาะต่อการตั้งครรภ์และหายหลังคลอดแบบนี้\n✗ E: เลือดออกจากแผล duodenum จะถูกกรดย่อยจนกลายเป็นอุจจาระสีดำ (melena) ไม่ใช่เลือดแดงสด",
    "source": "เฉลย79",
    "doubt": "⚠ ริดสีดวงภายใน (เหนือ pectinate line) ปกติไม่เจ็บ อาการปวดเข้ากับริดสีดวงภายนอก/thrombosed หรือ anal fissure แต่ในตัวเลือกที่ให้ A ถูกที่สุด"
   }

@@ -12,7 +12,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "ARB บล็อก AT1 receptor → efferent arteriole ขยาย → glomerular capillary pressure ลด → GFR ลด (โดยเฉพาะช่วงแรก/ใน renal artery stenosis) แต่ลด proteinuria ระยะยาว · B ผิด: aldosterone ลดลง · C เป็นกลไก ACEI · D bradykinin สะสมเป็นของ ACEI (ทำให้ไอ) · E ผิด: ทำให้ K สูง",
+   "why": "ARB บล็อก AT1 receptor ทำให้ efferent arteriole คลายตัว แรงดันในโกลเมอรูลัสลดลงจึงทำให้ GFR ลดลงช่วงแรก\n✓ A: คลาย efferent arteriole ทำให้แรงดันกรองในโกลเมอรูลัสและ GFR ลดลง โดยเฉพาะในผู้ป่วย renal artery stenosis\n✗ B: ยับยั้งฤทธิ์ angiotensin II จึงทำให้การหลั่ง aldosterone ลดลง ไม่ใช่เพิ่มขึ้น\n✗ C: เป็นกลไกของยากลุ่ม ACEI ที่ยับยั้งเอนไซม์ ACE\n✗ D: การสะสม bradykinin จนเกิดอาการไอแห้งเป็นผลของ ACEI ไม่ใช่ ARB\n✗ E: aldosterone ลดลงทำให้ขับ K⁺ ลดลง จึงเกิด hyperkalemia ไม่ใช่ hypokalemia",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว (Decreased GFR) ตัวเลือกอื่นสร้างขึ้นใหม่"
   },
@@ -28,7 +28,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Ethylene glycol (น้ำยาหล่อเย็น/antifreeze) ถูก alcohol dehydrogenase เปลี่ยนเป็น glycolate → oxalate จับ Ca เป็นผลึก calcium oxalate (รูปซองจดหมาย/dumbbell) → AKI + HAGMA + osmolar gap สูง · B methanol → formic acid ทำตาบอด ไม่มี oxalate · C isopropyl alcohol → acetone, ketosis without acidosis · D salicylate → mixed resp. alkalosis + HAGMA ไม่มีผลึก · E lithium → nephrogenic DI",
+   "why": "ผลึก calcium oxalate ในปัสสาวะ (รูปซองจดหมายหรือ dumbbell) ร่วมกับ AKI และ HAGMA เป็นลักษณะเด่นของพิษน้ำยาหล่อเย็น\n✓ A: ถูก alcohol dehydrogenase เปลี่ยนเป็น glycolate และ oxalate ไปจับกับ Ca²⁺ เป็นผลึก calcium oxalate\n✗ B: ถูกเปลี่ยนเป็น formic acid ทำให้ตาบอดและ HAGMA แต่ไม่สร้างผลึก calcium oxalate\n✗ C: ถูกเปลี่ยนเป็น acetone ทำให้เกิด ketosis และ osmolar gap สูงโดยไม่มี metabolic acidosis\n✗ D: ทำให้เกิด mixed respiratory alkalosis กับ HAGMA โดยไม่พบผลึก calcium oxalate\n✗ E: ทำให้เกิด nephrogenic diabetes insipidus ไม่ได้สร้างผลึก oxalate",
    "needs_image": true,
    "options_reconstructed": true
   },
@@ -44,7 +44,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Zona fasciculata สร้าง cortisol ไม่ใช่ส่วนของ RAAS · A ตับสร้าง angiotensinogen · C ปอด (endothelium) มี ACE มากที่สุด · D JG cell หลั่ง renin · E zona glomerulosa หลั่ง aldosterone ตาม angiotensin II",
+   "why": "ระบบ RAAS ประกอบด้วยตับ ปอด JG cell ของไต และต่อมหมวกไตชั้น zona glomerulosa\n✗ A: สร้าง angiotensinogen ซึ่งเป็นสารตั้งต้นของระบบ RAAS\n✓ B: สร้าง glucocorticoid (cortisol) ภายใต้การควบคุมของ ACTH ไม่ใช่ส่วนหนึ่งของ RAAS\n✗ C: เอนโดทีเลียมของหลอดเลือดปอดมีเอนไซม์ ACE มากที่สุดในการเปลี่ยน angiotensin I เป็น II\n✗ D: สร้างและหลั่ง renin เมื่อแรงดันเลือดต่ำหรือ NaCl ที่ macula densa ลดลง\n✗ E: ตอบสนองต่อ angiotensin II โดยหลั่ง aldosterone เพื่อดูดกลับ Na⁺ และน้ำ",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มี 2 ตัวเลือก (Liver, Zona fasciculata) ที่เหลือสร้างใหม่"
   },
@@ -59,7 +59,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "ARB (irbesartan) และ ACEI เป็น teratogen (fetal renal dysgenesis, oligohydramnios, skull hypoplasia) ห้ามใช้ในครรภ์ · B nifedipine, C hydralazine, D methyldopa เป็นยาที่ใช้ได้/แนะนำในหญิงตั้งครรภ์ (methyldopa, labetalol, nifedipine เป็น first line)"
+   "why": "หญิงตั้งครรภ์ห้ามใช้ยาในกลุ่ม ACEI และ ARB เนื่องจากเป็น teratogen ต่อไตทารก\n✓ A: เป็นยากลุ่ม ARB ทำให้ทารกเกิด renal dysgenesis, oligohydramnios และ skull hypoplasia\n✗ B: เป็นยากลุ่ม calcium channel blocker ที่ปลอดภัยและใช้เป็นยาลดความดันหลักในหญิงตั้งครรภ์ได้\n✗ C: เป็น vasodilator ที่ใช้ลดความดันในหญิงตั้งครรภ์และภาวะ preeclampsia ได้อย่างปลอดภัย\n✗ D: เป็น centrally acting α2-agonist ที่เป็นยาตัวเลือกอันดับต้นในหญิงตั้งครรภ์"
   },
   "74.1/15": {
    "box": 7,
@@ -73,7 +73,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Losartan (ARB) ทำให้ไตทารกไม่พัฒนา, oligohydramnios, IUGR → ห้ามใช้ · B methyldopa, C labetalol, D nifedipine เป็น first line ในครรภ์ · E hydralazine ใช้ใน severe HT/preeclampsia ได้",
+   "why": "ยาลดความดันกลุ่ม ARB และ ACEI เป็นข้อห้ามเด็ดขาดในหญิงตั้งครรภ์เพราะทำลายพัฒนาการไตของทารก\n✓ A: เป็นยากลุ่ม ARB ก่อให้เกิด fetal renal dysgenesis, oligohydramnios และ IUGR\n✗ B: เป็นยาตัวเลือกอันดับต้นที่ปลอดภัยสำหรับความดันสูงในหญิงตั้งครรภ์\n✗ C: เป็น α/β-blocker ที่ปลอดภัยและแนะนำใช้เป็นอันดับต้นในหญิงตั้งครรภ์\n✗ D: เป็น dihydropyridine CCB ที่ปลอดภัยและใช้เป็นอันดับต้นในหญิงตั้งครรภ์\n✗ E: เป็น direct vasodilator ที่ใช้รักษาความดันสูงรุนแรงในหญิงตั้งครรภ์ได้",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มี 2 ตัวเลือก (Losartan, Methyldopa) ที่เหลือสร้างใหม่"
   },
@@ -87,7 +87,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Loop diuretic ยับยั้ง NKCC1 ที่ stria vascularis ของ cochlea (inner ear) → endolymph ผิดปกติ → sensorineural hearing loss/tinnitus (ototoxicity เสริมกับ aminoglycoside) · A middle ear ทำให้ conductive loss ไม่เกี่ยวกับยา · C inferior colliculus เป็นทางเดินประสาทส่วนกลาง ยาไม่ไปทำลาย"
+   "why": "อาการหูอื้อและมีเสียงในหูหลังได้ furosemide เกิดจากพิษต่อหูชั้นใน (ototoxicity)\n✗ A: ความผิดปกติที่หูชั้นกลางทำให้เกิด conductive hearing loss ไม่เกี่ยวกับยาขับปัสสาวะ\n✓ B: ยับยั้ง NKCC1 ที่ stria vascularis ของ cochlea ทำให้องค์ประกอบ endolymph ผิดปกติ เกิด sensorineural hearing loss และ tinnitus\n✗ C: เป็นสถานีส่งต่อสัญญาณเสียงในก้านสมอง ไม่ใช่ตำแหน่งที่ furosemide ก่อพิษ"
   },
   "74.1/25": {
    "box": 26,
@@ -101,7 +101,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Wilms tumor (nephroblastoma) เป็นก้อนในไตที่พบบ่อยที่สุดในเด็ก 2–5 ปี มาด้วยก้อนท้องใหญ่ไม่ข้ามกลางตัว · B neuroblastoma มาจาก adrenal medulla/sympathetic chain (นอกไต, มี calcification, ข้าม midline) · C pheochromocytoma เป็นก้อน adrenal ในผู้ใหญ่ มี HT paroxysmal · D teratoma ไม่ใช่ก้อนในไต · E RCC พบในผู้ใหญ่ 50–70 ปี"
+   "why": "เด็กอายุ 3 ปีมีก้อนขนาดใหญ่ในเนื้อไตเป็นลักษณะจำเพาะของ Wilms tumor\n✓ A: เป็นมะเร็งไตที่พบบ่อยที่สุดในเด็กอายุ 2–5 ปี มักมาด้วยก้อนในท้องขนาดใหญ่ไม่ข้ามแนวกลางลำตัว\n✗ B: มีต้นกำเนิดจากต่อมหมวกไตชั้น medulla หรือ sympathetic chain อยู่นอกเนื้อไตและมักข้ามแนวกลางลำตัว\n✗ C: เป็นเนื้องอกต่อมหมวกไตที่หลั่ง catecholamine พบมากในผู้ใหญ่และมาด้วยความดันสูงเป็นพัก ๆ\n✗ D: เป็น germ cell tumor ที่มักพบในรังไข่หรือแนวกลางลำตัว ไม่ใช่ก้อนหลักในไต\n✗ E: เป็นมะเร็งไตที่พบบ่อยในผู้ใหญ่วัยกลางคนถึงผู้สูงอายุ ไม่ใช่เด็กเล็ก"
   },
   "74.1/29": {
    "box": 3,
@@ -114,7 +114,7 @@
    },
    "answer": "D",
    "source": "วิเคราะห์",
-   "why": "Macula densa คือเซลล์ผนัง tubule ที่ปลาย thick ascending limb ต่อกับต้น DCT ซึ่งแนบกับ afferent arteriole ของ glomerulus ตัวเอง (ส่วนหนึ่งของ JGA) ตรวจจับ NaCl → tubuloglomerular feedback · A PCT, B descending limb, C collecting duct ไม่ได้สัมผัส vascular pole",
+   "why": "Macula densa ทำหน้าที่ตรวจจับความเข้มข้น NaCl เพื่อควบคุม tubuloglomerular feedback โดยอยู่ติดกับ vascular pole\n✗ A: เป็นท่อส่วนต้นที่ดูดกลับสารอาหารและน้ำเป็นหลัก ไม่ได้สัมผัส afferent arteriole\n✗ B: เป็นส่วนดูดน้ำกลับของ Henle's loop ไม่ใช่ตำแหน่งของ macula densa\n✗ C: เป็นท่อส่วนปลายที่ตอบสนองต่อ ADH และ aldosterone ไม่ใช่ส่วนของ JGA\n✓ D: อยู่ที่รอยต่อปลาย thick ascending limb กับต้น DCT โดยแนบชิดกับ afferent arteriole ของโกลเมอรูลัสตัวเอง",
    "doubt": "⚠ ตามจริงอยู่ที่รอยต่อ TAL–early DCT ในตัวเลือกที่มี DCT ใกล้ที่สุด"
   },
   "74.1/30": {
@@ -128,7 +128,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "ใน tubular cell CO2 + H2O → H2CO3 (โดย carbonic anhydrase) → H⁺ + HCO3⁻ · H⁺ ถูกหลั่งผ่าน NHE3/H⁺-ATPase ส่วน HCO3⁻ กลับเข้าเลือด · A น้ำเป็นสารตั้งต้นแต่แหล่งโดยตรงคือ carbonic acid · C bicarbonate เป็นผลผลิตไม่ใช่แหล่ง H⁺ · D phosphate เป็น urinary buffer (titratable acid) รับ H⁺ ใน lumen ไม่ได้ให้ H⁺",
+   "why": "เซลล์ท่อไตสร้าง H⁺ เพื่อขับออกสู่ lumen จากการแตกตัวของกรดคาร์บอนิกภายในเซลล์\n✗ A: เป็นเพียงสารตั้งต้นที่ต้องรวมกับ CO2 ก่อน ไม่ใช่แหล่งให้ H⁺ โดยตรง\n✓ B: CO2 รวมกับ H2O โดย carbonic anhydrase ได้ H2CO3 แล้วแตกตัวให้ H⁺ หลั่งออกทาง lumen และ HCO3⁻ กลับเข้าเลือด\n✗ C: เป็นผลผลิตอีกฝั่งของการแตกตัวที่ถูกดูดกลับเข้าสู่กระแสเลือด\n✗ D: เป็น urinary buffer (titratable acid) ใน lumen ที่คอยรับ H⁺ ไม่ใช่แหล่งกำเนิด H⁺",
    "doubt": "⚠ โจทย์ในไฟล์ไม่ครบ"
   },
   "74.1/31": {
@@ -143,7 +143,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "SGLT2 inhibitor (empagliflozin, dapagliflozin) ยับยั้ง glucose reabsorption ที่ PCT → glucosuria → เชื้อเจริญดี → UTI/genital mycotic infection ซ้ำ · B metformin SE = GI, lactic acidosis, B12 ต่ำ · C sulfonylurea = hypoglycemia, น้ำหนักขึ้น · D DPP-4i = nasopharyngitis, pancreatitis · E pioglitazone = edema, HF, bladder ca, fracture",
+   "why": "ยาเบาหวานที่ขับน้ำตาลออกทางปัสสาวะโดยตรงทำให้เสี่ยงต่อการติดเชื้อทางเดินปัสสาวะและเชื้อราซ้ำ ๆ\n✓ A: ยับยั้งการดูดกลับกลูโคสที่ PCT ทำให้มี glucosuria สูงและเอื้อต่อการเจริญของเชื้อในทางเดินปัสสาวะ\n✗ B: ผลข้างเคียงเด่นคืออาการทางทางเดินอาหาร ภาวะ lactic acidosis และการขาดวิตามิน B12\n✗ C: ผลข้างเคียงเด่นคือภาวะน้ำตาลในเลือดต่ำและน้ำหนักตัวเพิ่มขึ้น\n✗ D: ผลข้างเคียงเด่นคือ nasopharyngitis และความเสี่ยงตับอ่อนอักเสบ ไม่ทำให้เกิด glucosuria\n✗ E: ผลข้างเคียงเด่นคือบวมน้ำ หัวใจล้มเหลว กระดูกพรุน และความเสี่ยงมะเร็งกระเพาะปัสสาวะ",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
   },
@@ -159,7 +159,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "CLED เป็น medium สำหรับเพาะเชื้อปัสสาวะ โคโลนีเหลือง = lactose fermenter เช่น uropathogenic E. coli ใช้ P fimbriae (pili) ยึด uroepithelium → ascending infection ถึง pyelonephritis · B capsule (K1) สำคัญใน neonatal meningitis · C teichoic acid, D protein A (S. aureus), E M protein (S. pyogenes) เป็นของ gram positive",
+   "why": "เชื้อที่ขึ้นบน CLED agar เป็นโคโลนีสีเหลืองคือ lactose fermenter ซึ่งใน UTI ส่วนใหญ่คือ uropathogenic E. coli\n✓ A: ใช้ยึดเกาะกับเยื่อบุทางเดินปัสสาวะ ทำให้เชื้อไต่ขึ้นสู่ไตและก่อโรค pyelonephritis ได้\n✗ B: แคปซูลชนิด K1 ของ E. coli มีบทบาทสำคัญในภาวะเยื่อหุ้มสมองอักเสบในทารกแรกเกิด\n✗ C: เป็นส่วนประกอบผนังเซลล์ของแบคทีเรียแกรมบวก ไม่พบใน E. coli\n✗ D: เป็นปัจจัยก่อโรคของ Staphylococcus aureus ที่จับ Fc ของ IgG\n✗ E: เป็นปัจจัยก่อโรคของ Streptococcus pyogenes ที่ช่วยต้านการจับกินของเม็ดเลือดขาว",
    "options_reconstructed": true,
    "doubt": "⚠ โจทย์ไม่สมบูรณ์ ในไฟล์มีตัวเลือกเดียว (pili)"
   },
@@ -172,7 +172,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Diabetic nephropathy: GBM หนา, mesangial matrix เพิ่ม → diffuse แล้ว nodular glomerulosclerosis (Kimmelstiel–Wilson nodule), hyaline arteriolosclerosis ทั้ง afferent+efferent · A amyloidosis เป็นการสะสม amyloid (Congo red apple-green) สัมพันธ์กับ chronic inflammation/myeloma ไม่ใช่ DM",
+   "why": "รอยโรคทางพยาธิวิทยาของไตในผู้ป่วยเบาหวานคือการหนาตัวของ GBM และการสะสม mesangial matrix จนเป็นก้อน\n✗ A: เป็นการสะสมโปรตีน amyloid ที่ย้อมติด Congo red แสงสีเขียวแอปเปิล พบในโรคอักเสบเรื้อรังหรือ multiple myeloma\n✓ B: เกิดการขยายตัวของ mesangial matrix จนกลายเป็น diffuse และ nodular glomerulosclerosis (Kimmelstiel-Wilson nodule)",
    "doubt": "⚠ ในไฟล์มี 2 ตัวเลือก"
   },
   "74.1/75": {
@@ -186,7 +186,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "ก้อนในไตของเด็กเล็กส่วนใหญ่เป็น Wilms tumor (WT1, WAGR, Denys–Drash, Beckwith–Wiedemann) · B neuroblastoma มาจาก adrenal/sympathetic · C RCC พบในผู้ใหญ่ · D hepatoblastoma เป็นก้อนในตับ",
+   "why": "มะเร็งไตที่พบบ่อยที่สุดในเด็กเล็กคือ Wilms tumor\n✓ A: เป็นเนื้องอกไตอันดับหนึ่งในเด็กเล็ก สัมพันธ์กับการกลายพันธุ์ของยีน WT1 และกลุ่มอาการ WAGR หรือ Denys-Drash\n✗ B: เป็นเนื้องอกของต่อมหมวกไตหรือ sympathetic chain อยู่นอกเนื้อไต\n✗ C: เป็นมะเร็งไตที่พบในผู้ใหญ่ ไม่ใช่เด็กเล็ก\n✗ D: เป็นมะเร็งตับที่พบในเด็ก ไม่ใช่ก้อนในไต",
    "options_reconstructed": true,
    "doubt": "⚠ โจทย์ในไฟล์ไม่ครบ มีตัวเลือกเดียว"
   },
@@ -199,7 +199,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Thrombopoietin (TPO) กระตุ้น megakaryocyte → platelet สร้างที่ตับเป็นหลัก ส่วนน้อยจากไต · A EPO สร้างจาก peritubular interstitial cell ของไต แต่กระตุ้น RBC ไม่ใช่ platelet",
+   "why": "ฮอร์โมนที่กระตุ้นการสร้างเกล็ดเลือดผลิตที่ตับเป็นหลักและผลิตส่วนน้อยจากไต\n✗ A: สร้างจาก peritubular interstitial cell ของไต แต่กระตุ้นการสร้างเม็ดเลือดแดง ไม่ใช่เกล็ดเลือด\n✓ B: กระตุ้น megakaryocyte ในไขกระดูกให้สร้างเกล็ดเลือด โดยไตเป็นแหล่งสร้างรองจากตับ",
    "doubt": "⚠ TPO สร้างที่ตับเป็นหลัก ไตเป็นส่วนน้อย"
   },
   "74.2/5": {
@@ -213,7 +213,7 @@
    },
    "answer": "D",
    "source": "วิเคราะห์",
-   "why": "ACEI (enalapril) และ ARB เป็น teratogen ทำ fetal renal failure, oligohydramnios → ห้ามในครรภ์ · A nifedipine, B methyldopa, C hydralazine ใช้ได้ในหญิงตั้งครรภ์",
+   "why": "หญิงตั้งครรภ์ห้ามใช้ยากลุ่ม ACEI และ ARB เพราะก่อความพิการต่อไตทารกและน้ำคร่ำน้อย\n✗ A: เป็นยากลุ่ม CCB ที่ปลอดภัยและใช้เป็นยาลดความดันหลักในหญิงตั้งครรภ์ได้\n✗ B: เป็น α2-agonist ที่ปลอดภัยและใช้เป็นยาอันดับต้นในหญิงตั้งครรภ์\n✗ C: เป็น direct vasodilator ที่ใช้ลดความดันในหญิงตั้งครรภ์และภาวะ preeclampsia ได้\n✓ D: เป็นยากลุ่ม ACEI ก่อภาวะ fetal renal dysgenesis และ oligohydramnios จึงเป็นข้อห้ามในหญิงตั้งครรภ์",
    "options_reconstructed": true,
    "doubt": "⚠ ตัวเลือกในไฟล์ (nifedipine, methyldopa, hydralazine) ใช้ได้ทั้งหมด ตัวเลือกที่ถูกน่าจะตกหล่น เติม D ให้"
   },
@@ -227,7 +227,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "MCD เป็น nephrotic syndrome ล้วน: proteinuria (selective albumin) มาก, edema, hypoalbuminemia → intravascular volume ลดอาจ oliguria · B hematuria เป็นลักษณะ nephritic ไม่ใช่ MCD · C HT รุนแรงเป็นลักษณะ nephritic/ CKD ไม่ใช่ MCD (BP มักปกติ)",
+   "why": "Minimal change disease เป็นโรคในกลุ่ม nephrotic syndrome ล้วน มีโปรตีนรั่วมากและบวมโดยไม่มีอาการทาง nephritic\n✓ A: โปรตีนรั่วมากจน albumin ในเลือดต่ำทำให้สารน้ำรั่วออกนอกหลอดเลือด ปริมาตรเลือดลดลงจึงอาจปัสสาวะออกน้อย\n✗ B: เป็นอาการเด่นของกลุ่ม nephritic syndrome ไม่ใช่ minimal change disease\n✗ C: ความดันโลหิตใน minimal change disease มักปกติ ต่างจาก nephritic syndrome หรือ CKD ที่มีความดันสูงเด่น",
    "doubt": "⚠ ตัวเลือกในไฟล์ไม่มี proteinuria/edema ที่เป็นคำตอบหลัก"
   },
   "74.2/29": {
@@ -242,7 +242,7 @@
    },
    "answer": "D",
    "source": "วิเคราะห์",
-   "why": "Ureter วิ่งลงตามแนวปลาย transverse process ของ L2–L5 บน psoas ก่อนข้าม sacroiliac joint ลง pelvis → นิ่วระดับ L3 = ureteric stone · A–C calyx/pelvis อยู่ใน hilum ระดับ L1–L2 · E bladder อยู่ใน pelvis หลัง pubic symphysis"
+   "why": "แนวท่อไต (ureter) ทอดตัวลงตามแนวปลาย transverse process ของกระดูกสันหลังระดับ L2–L5\n✗ A: อยู่ในบริเวณ renal hilum ระดับประมาณ L1–L2\n✗ B: อยู่ในบริเวณ renal hilum ระดับประมาณ L1–L2\n✗ C: อยู่ในบริเวณ renal hilum ระดับประมาณ L1–L2 ไม่ได้ลงมาถึงระดับ L3\n✓ D: วิ่งลงบนกล้ามเนื้อ psoas ตามแนวปลาย transverse process ของ L2–L5 นิ่วระดับ L3 จึงอยู่ที่ท่อไต\n✗ E: อยู่ในอุ้งเชิงกรานด้านหลังกระดูกหัวหน่าว ต่ำกว่าระดับ L3 มาก"
   },
   "74.2/69": {
    "box": 8,
@@ -255,7 +255,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Aminoglycoside ฆ่าเชื้อแบบ concentration-dependent + มี post-antibiotic effect → เป้าคือ peak (Cmax) สูงเทียบกับ MIC (Cmax/MIC ≥ 8–10) จึงให้ครั้งเดียวต่อวัน · B peak/trough ไม่ใช่ PK/PD index · C MIC เป็นค่าของเชื้อ ไม่ใช่สิ่งที่ monitor ในผู้ป่วย · D trough สูงสัมพันธ์กับ nephro/ototoxicity ต้องให้ต่ำ ไม่ใช่สูง",
+   "why": "Aminoglycoside ออกฤทธิ์ฆ่าเชื้อแบบ concentration-dependent และมี post-antibiotic effect จึงต้องให้ระดับยาสูงสุดเทียบกับ MIC สูงพอ\n✓ A: เป้าหมายคือให้ระดับ peak (Cmax) สูงเป็น 8–10 เท่าของ MIC เพื่อให้ได้ประสิทธิภาพฆ่าเชื้อสูงสุด\n✗ B: อัตราส่วนระหว่าง peak กับ trough ไม่ใช่ดัชนี PK/PD ที่ใช้ประเมินประสิทธิภาพยา\n✗ C: MIC เป็นคุณสมบัติความไวของเชื้อ ไม่ใช่ค่าที่ติดตามในเลือดผู้ป่วยหลังให้ยา\n✗ D: ระดับ trough ที่สูงสัมพันธ์กับพิษต่อไตและหู จึงต้องควบคุมให้ต่ำ ไม่ใช่ทำให้สูง",
    "doubt": "⚠ ตัวเลือกในไฟล์อาจถูกบันทึกเพี้ยน หลักที่ถูกคือ Cmax/MIC ≥ 8–10 (= peak ≥ 16–20 mg/L)"
   },
   "74.2/84": {
@@ -270,7 +270,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Urea ผ่าน cell membrane ได้อิสระ (ineffective osmole) ความเข้มข้นในและนอกเซลล์เท่ากันจึงไม่ดึงน้ำออก · B glucose (เมื่อไม่มี insulin), C mannitol, D sucrose, E Na ผ่านเยื่อหุ้มเซลล์ไม่ได้/ได้น้อย เป็น effective osmole → น้ำออกจากเซลล์ เซลล์เหี่ยว"
+   "why": "สารที่จะไม่ดึงน้ำออกจากเซลล์ต้องเป็น ineffective osmole ที่แพร่ผ่านเยื่อหุ้มเซลล์ได้อิสระ\n✓ A: แพร่ผ่านเยื่อหุ้มเซลล์ได้อิสระจนความเข้มข้นในและนอกเซลล์เท่ากัน จึงไม่เกิดแรงดึงน้ำออกจากเซลล์\n✗ B: เมื่อขาดอินซูลินจะผ่านเข้าเซลล์ไม่ได้ กลายเป็น effective osmole ที่ดึงน้ำออกจากเซลล์\n✗ C: ผ่านเยื่อหุ้มเซลล์ไม่ได้ เป็น effective osmole ที่ดึงน้ำออกจากเซลล์จึงใช้ลดสมองบวม\n✗ D: ผ่านเยื่อหุ้มเซลล์ไม่ได้ ทำให้เกิดแรงออสโมติกและดึงน้ำออกจากเซลล์จนเซลล์เหี่ยว\n✗ E: เป็น effective osmole หลักในน้ำนอกเซลล์ หากความเข้มข้นสูงจะดึงน้ำออกจากเซลล์"
   },
   "74.2/86": {
    "box": 10,
@@ -283,7 +283,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Calcium gluconate stabilize cardiac membrane (ยก threshold potential) ออกฤทธิ์ภายในนาที เป็นขั้นแรกเมื่อมี EKG change/arrhythmia แต่ไม่ลด K · C resin (SPS, patiromer) ขับ K ออกช้าหลายชั่วโมง · D NaHCO3 shift K เข้าเซลล์ได้น้อย ใช้เมื่อมี acidosis ไม่ได้ป้องกันหัวใจโดยตรง",
+   "why": "เมื่อภาวะ hyperkalemia ทำให้เกิดภาวะหัวใจเต้นผิดจังหวะหรือคลื่นไฟฟ้าหัวใจผิดปกติ ต้องปกป้องกล้ามเนื้อหัวใจทันทีเป็นอันดับแรก\n✓ A: ออกฤทธิ์ภายในไม่กี่นาทีโดยยก threshold potential เพื่อ stabilize เยื่อหุ้มเซลล์หัวใจ แม้ไม่ได้ลดระดับ K⁺\n✗ B: ไม่ใช่ยามาตรฐานสำหรับป้องกันเยื่อหุ้มเซลล์หัวใจจากภาวะหัวใจเต้นผิดจังหวะฉับพลัน\n✗ C: ช่วยขับ K⁺ ออกจากทางเดินอาหารแต่ออกฤทธิ์ช้าหลายชั่วโมง ไม่ทันแก้ arrhythmia เฉียบพลัน\n✗ D: ช่วยดึง K⁺ เข้าเซลล์ได้น้อยและใช้เมื่อมี metabolic acidosis ไม่ได้ stabilize หัวใจโดยตรง",
    "doubt": "⚠ ตัวเลือก B ในไฟล์ไม่ครบ"
   },
   "74.2/90": {
@@ -297,7 +297,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Loop diuretic ยับยั้ง NKCC1 ที่ stria vascularis ใน cochlea (inner ear) → หูอื้อ/tinnitus เมื่อให้ IV เร็ว/ขนาดสูง หรือร่วม aminoglycoside · B middle ear เป็นการนำเสียง ไม่ได้รับผล · C, D ทางประสาทไม่ใช่ตำแหน่งพิษ",
+   "why": "พิษต่อหูของยาขับปัสสาวะกลุ่ม loop diuretic เกิดจากการรบกวนการสร้าง endolymph ใน cochlea\n✓ A: ยับยั้ง NKCC1 ที่ stria vascularis ของ cochlea ทำให้เกิด sensorineural hearing loss และ tinnitus\n✗ B: ทำหน้าที่นำคลื่นเสียงผ่านกระดูกหู ไม่ใช่ตำแหน่งออกฤทธิ์ของ furosemide\n✗ C: พิษของยาไม่ได้ทำลายเส้นประสาทสมองคู่ที่ 8 โดยตรง\n✗ D: เป็นโครงสร้างทางเดินเสียงในสมองส่วนกลาง ไม่ใช่เป้าหมายของยา",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
   },
@@ -313,7 +313,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "α1A receptor อยู่ที่ smooth muscle ของ prostate stroma, capsule และ bladder neck → ยา (tamsulosin, doxazosin) คลาย dynamic obstruction ปัสสาวะออกดีขึ้นเร็ว · B, D เป็นกลไก 5α-reductase inhibitor (finasteride) ซึ่งลดขนาดต่อมช้า · C เป็นผลของ bethanechol · E เป็นกลไกยา OAB (oxybutynin) ซึ่งอาจทำ retention ใน BPH",
+   "why": "ยากลุ่ม α1-antagonist บรรเทาอาการปัสสาวะลำบากใน BPH ได้เร็วด้วยการคลายกล้ามเนื้อเรียบบริเวณทางออกกระเพาะปัสสาวะ\n✓ A: บล็อก α1A receptor ที่กล้ามเนื้อเรียบของต่อมลูกหมากและคอกระเพาะปัสสาวะ ลด dynamic obstruction\n✗ B: เป็นผลของยากลุ่ม 5α-reductase inhibitor (เช่น finasteride) ซึ่งต้องใช้เวลาหลายเดือน\n✗ C: เป็นกลไกของยา muscarinic agonist เช่น bethanechol ไม่ใช่ α1-antagonist\n✗ D: เป็นกลไกของยากลุ่ม 5α-reductase inhibitor ที่ลดการเปลี่ยน testosterone เป็น DHT\n✗ E: เป็นกลไกของยารักษาภาวะกระเพาะปัสสาวะบีบตัวไวเกิน (เช่น oxybutynin) ซึ่งอาจทำให้ปัสสาวะคั่งมากขึ้นใน BPH",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
   },
@@ -329,7 +329,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "Non-contrast CT KUB เป็น gold standard ของ urolithiasis เห็นนิ่วได้ทุกชนิดรวม uric acid ที่ radiolucent · A MRI ไม่ใช่การตรวจนิ่ว · B plain film มองไม่เห็นนิ่ว uric acid (โปร่งรังสี) · D IVP ต้องใช้ contrast ไม่ใช่ทางเลือกแรก · E ultrasound ใช้ในหญิงตั้งครรภ์/เด็ก แต่ sensitivity ต่ำสำหรับ ureteric stone"
+   "why": "นิ่วกรดยูริกเป็นนิ่วชนิดโปร่งรังสี (radiolucent) การตรวจมาตรฐานที่แม่นยำที่สุดสำหรับนิ่วทางเดินปัสสาวะทุกชนิดคือ CT แบบไม่ฉีดสี\n✗ A: ไม่ใช่การตรวจมาตรฐานในการหานิ่วทางเดินปัสสาวะและมองเห็นนิ่วได้ไม่ดี\n✗ B: มองไม่เห็นนิ่วกรดยูริกเพราะมีลักษณะโปร่งรังสี\n✓ C: Non-contrast CT KUB เป็น gold standard ที่ตรวจพบนิ่วได้เกือบทุกชนิดรวมถึงนิ่วกรดยูริก\n✗ D: ต้องฉีดสารทึบรังสีและมีความไวด้อยกว่า CT จึงไม่ใช้เป็นทางเลือกแรก\n✗ E: ความไวในการตรวจหานิ่วในท่อไตต่ำกว่า CT มักสงวนไว้ใช้ในหญิงตั้งครรภ์หรือเด็ก"
   },
   "75.1/3": {
    "box": 19,
@@ -343,7 +343,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "PAP smear เป็น cytology ต้อง wet-fix ทันทีด้วย 95% ethanol (กันเซลล์แห้ง ทำให้ nuclear detail ชัด) · 10% formalin ใช้กับชิ้นเนื้อ (histology) · 3% glutaraldehyde ใช้กับ EM · 0.9% NaCl ไม่ใช่ fixative · ถ้าไม่ fix เซลล์จะ air-dry artifact อ่านผลไม่ได้"
+   "why": "การตรวจ PAP smear เป็นงานเซลล์วิทยา (cytology) ต้องตรึงเซลล์ทันทีขณะเปียกเพื่อคงรายละเอียดของนิวเคลียส\n✓ A: ใช้ wet-fix สไลด์ PAP smear ทันทีเพื่อป้องกันเซลล์แห้งและรักษารายละเอียดนิวเคลียสได้ชัดเจน\n✗ B: ใช้ตรึงชิ้นเนื้อทางพยาธิวิทยา (histology) ไม่ใช่สไลด์ cytology\n✗ C: ใช้ตรึงชิ้นเนื้อสำหรับกล้องจุลทรรศน์อิเล็กตรอน (EM)\n✗ D: เป็นสารละลายน้ำเกลือ ไม่ใช่สารตรึงเซลล์ (fixative)\n✗ E: หากปล่อยแห้งโดยไม่ fix จะเกิด air-dry artifact จนไม่สามารถแปลผลได้"
   },
   "75.1/18": {
    "box": 20,
@@ -357,7 +357,7 @@
    },
    "answer": "D",
    "source": "วิเคราะห์",
-   "why": "Leptospira ทำลาย tubule ผ่าน outer membrane protein → acute tubulointerstitial nephritis เป็นรอยโรคหลัก (non-oliguric, K ต่ำ, UA protein น้อย) · A prerenal อาจร่วมจาก dehydration แต่ไม่ใช่กลไกหลัก · B bile cast ต้องตัวเหลืองมาก bilirubin สูงมาก · C ATN เกิดร่วมได้ใน severe case แต่ลักษณะเด่นของโรคคือ interstitial nephritis · E post-infectious GN มี hematuria/RBC cast เด่น",
+   "why": "ภาวะไตวายเฉียบพลันในโรคฉี่หนูรุนแรงที่มีโปรตีนรั่วน้อยและเม็ดเลือดน้อยเกิดจากการอักเสบของเนื้อเยื่อระหว่างท่อไต\n✗ A: ภาวะขาดน้ำอาจเกิดร่วมได้แต่ไม่ใช่กลไกพยาธิสภาพหลักของไตจากเชื้อนี้\n✗ B: มักพบเมื่อผู้ป่วยตัวเหลืองจัดและมีระดับบิลิรูบินสูงมาก ไม่ตรงกับโจทย์ที่เหลืองเล็กน้อย\n✗ C: อาจพบร่วมได้ในรายรุนแรงมากแต่ไม่ใช่ลักษณะพยาธิสภาพจำเพาะหลักของ leptospirosis\n✓ D: โปรตีนผนังชั้นนอกของเชื้อ Leptospira กระตุ้นการอักเสบที่ท่อไตและเนื้อเยื่อรอบท่อไต ทำให้เกิด AIN แบบ non-oliguric และ K⁺ ต่ำ\n✗ E: จะต้องมีลักษณะ nephritic คือพบเม็ดเลือดแดงและ RBC cast เด่นในปัสสาวะ",
    "doubt": "⚠ Leptospirosis ทำได้ทั้ง TIN และ ATN"
   },
   "75.1/21": {
@@ -372,7 +372,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "LM ใช้ 10% formalin (paraffin section ย้อม H&E/PAS/silver) · IF ต้องใช้เนื้อสดหรือแช่ Michel transport medium (ห้ามใส่ formalin เพราะ cross-link ทำลาย antigen) · EM ใช้ 2.5–3% glutaraldehyde ซึ่งรักษา ultrastructure ได้ดีที่สุด — ตัวเลือกอื่นสลับลำดับ (glutaraldehyde ไม่เหมาะกับ IF, Michel ไม่ใช่ fixative สำหรับ LM) และ 95% ethanol ใช้กับ cytology smear ไม่ใช่ชิ้นเนื้อไต",
+   "why": "การเตรียมชิ้นเนื้อไตต้องแยกใส่สารละลายให้เหมาะกับแต่ละเทคนิค คือ LM ใช้ formalin, IF ใช้ Michel และ EM ใช้ glutaraldehyde\n✓ A: เรียงลำดับถูกต้องสำหรับ LM (formalin), IF (Michel รักษาแอนติเจน) และ EM (glutaraldehyde รักษาโครงสร้างระดับจุลภาค)\n✗ B: สลับลำดับ IF กับ EM เพราะ glutaraldehyde ใช้กับ EM ส่วน Michel ใช้กับ IF\n✗ C: สลับลำดับทั้งหมด โดยนำน้ำยาของ EM ไปไว้ที่ LM และนำของ LM ไปไว้ที่ EM\n✗ D: นำ 95% ethanol ซึ่งใช้กับงาน cytology (เช่น PAP smear) มาใช้กับชิ้นเนื้อ LM แทน formalin\n✗ E: สลับลำดับ LM กับ IF เพราะ Michel ไม่ใช่สารตรึงสำหรับงาน LM",
    "options_reconstructed": true
   },
   "75.1/26": {
@@ -387,7 +387,7 @@
    },
    "answer": "D",
    "source": "วิเคราะห์",
-   "why": "ESBL ทำลาย penicillin และ cephalosporin ทุกรุ่น (รวม 3rd gen) → ยาที่เชื่อถือได้ในการติดเชื้อรุนแรงคือ carbapenem (meropenem) · A colistin สงวนไว้สำหรับ CRE และ nephrotoxic · B gentamicin nephrotoxic ใน CKD · C ceftazidime ถูก ESBL ทำลาย · E ampicillin/sulbactam ไม่ครอบคลุม ESBL"
+   "why": "ผู้ป่วยกรวยไตอักเสบเฉียบพลันจากเชื้อ E. coli ชนิดสร้าง ESBL ดื้อต่อยากลุ่ม cephalosporin ต้องเลือกใช้ยากลุ่ม carbapenem\n✗ A: เป็นยาที่มีพิษต่อไตสูงและสงวนไว้สำหรับเชื้อดื้อต่อ carbapenem (CRE)\n✗ B: เป็นยากลุ่ม aminoglycoside ที่มีพิษต่อไตสูง ไม่เหมาะกับผู้ป่วยที่เป็น CKD stage 3\n✗ C: เป็น cephalosporin รุ่นที่ 3 ซึ่งถูกเอนไซม์ ESBL ทำลายได้\n✓ D: เป็นยากลุ่ม carbapenem ที่ทนต่อเอนไซม์ ESBL และเป็นยาหลักในการติดเชื้อรุนแรงจากเชื้อ ESBL\n✗ E: ไม่สามารถครอบคลุมเชื้อแกรมลบที่สร้างเอนไซม์ ESBL ได้อย่างมีประสิทธิภาพ"
   },
   "75.1/32": {
    "box": 10,
@@ -401,7 +401,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Sodium bicarbonate shift K เข้าเซลล์ได้น้อยมาก ได้ผลเฉพาะเมื่อมี metabolic acidosis จึงเป็นการรักษาที่ประโยชน์น้อยสุด · A β2-agonist และ C insulin+glucose shift K เข้าเซลล์ได้ดี · D IV calcium stabilize membrane เป็นอันดับแรกเมื่อมี EKG change · E resin ขับ K ออกจากร่างกายจริง (แม้ออกฤทธิ์ช้า)",
+   "why": "ในภาวะ hyperkalemia ที่มีคลื่นไฟฟ้าหัวใจผิดปกติ การให้โซเดียมไบคาร์บอเนตช่วยลดระดับ K⁺ ได้น้อยที่สุดหากไม่มีภาวะกรดเกิน\n✗ A: กระตุ้น Na⁺/K⁺-ATPase ช่วยดึง K⁺ เข้าสู่เซลล์ได้อย่างมีประสิทธิภาพ\n✓ B: ดึง K⁺ เข้าเซลล์ได้น้อยมากและเห็นผลเฉพาะเมื่อมี metabolic acidosis ร่วมด้วย จึงได้ประโยชน์น้อยที่สุด\n✗ C: อินซูลินกระตุ้น Na⁺/K⁺-ATPase เพื่อดึง K⁺ เข้าเซลล์ได้เร็วและแรง โดยมีกลูโคสป้องกันน้ำตาลต่ำ\n✗ D: เป็นยาอันดับแรกที่ต้องให้ทันทีเพื่อ stabilize เยื่อหุ้มเซลล์หัวใจเมื่อคลื่นไฟฟ้าหัวใจเปลี่ยนแปลง\n✗ E: ช่วยแลกเปลี่ยนและขับ K⁺ ออกจากร่างกายจริงทางอุจจาระแม้จะออกฤทธิ์ช้า",
    "needs_image": true,
    "options_reconstructed": true,
    "doubt": "⚠ ตัวเลือก B, E ในไฟล์ไม่ครบ (IV sodium…, PO sodium…) ถ้า E เป็น resin ที่ออกฤทธิ์ช้าก็อาจเป็นคำตอบได้"
@@ -418,7 +418,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "CrCl = (UCr × V)/(PCr × t) = (125 × 600)/(2.5 × 480) ≈ 62.5 mL/min → GFR 60–89 = stage 2 และผิดปกติ ≥ 3 เดือน = chronic · A, B ผิดเพราะเกิน 3 เดือนแล้ว (นิยาม AKI/AKD < 3 เดือน) · D stage 3a = 45–59 · E stage 3b = 30–44",
+   "why": "คำนวณ CrCl = (125 × 600) / (2.5 × 480) = 62.5 mL/min และไตผิดปกตินานตั้งแต่ 3 เดือนขึ้นไปจึงเป็น CKD stage 2\n✗ A: ระยะเวลาผิดปกติครบ 3 เดือนแล้วจึงเข้าเกณฑ์โรคไตเรื้อรัง ไม่ใช่ภาวะเฉียบพลัน\n✗ B: ทั้งระยะเวลาและระดับการทำงานของไตไม่ตรงกับภาวะเฉียบพลันระยะที่ 3\n✓ C: ค่า GFR อยู่ระหว่าง 60–89 mL/min (stage 2) ร่วมกับความผิดปกตินานตั้งแต่ 3 เดือนขึ้นไป\n✗ D: CKD stage 3a มีค่า GFR อยู่ระหว่าง 45–59 mL/min ซึ่งต่ำกว่าค่าที่คำนวณได้\n✗ E: CKD stage 3b มีค่า GFR อยู่ระหว่าง 30–44 mL/min ซึ่งต่ำกว่าค่าที่คำนวณได้",
    "doubt": "⚠ ตัวเลขในโจทย์ผู้จดไม่แน่ใจ (มี ?)"
   },
   "75.1/49": {
@@ -433,7 +433,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Ureter ลอดใต้ uterine artery (water under the bridge) ห่างจาก cervix ~2 cm → เสี่ยงถูกหนีบ/ผูกขณะ ligate uterine a. ใน hysterectomy/myomectomy · B obturator nerve อยู่ lateral pelvic wall · C internal iliac vein ลึกกว่า · D pudendal nerve อยู่ใน pudendal canal · E urethra อยู่ต่ำใต้ bladder ไม่อยู่ใน field",
+   "why": "การผ่าตัดมดลูกมีความเสี่ยงบาดเจ็บต่อท่อไตบริเวณที่ทอดลอดใต้หลอดเลือดแดงมดลูก\n✓ A: ทอดลอดใต้ uterine artery (water under the bridge) ใกล้ปากมดลูก จึงเสี่ยงถูกหนีบหรือผูกขณะห้ามเลือด\n✗ B: อยู่ที่ผนังด้านข้างของอุ้งเชิงกราน ไม่ได้อยู่ในแนวผูกหลอดเลือดมดลูก\n✗ C: อยู่ลึกกว่าและไม่ได้ทอดชิดปากมดลูกเท่าท่อไต\n✗ D: อยู่ใน pudendal canal บริเวณฝีเย็บ อยู่นอกบริเวณผ่าตัดมดลูก\n✗ E: อยู่ต่ำใต้กระเพาะปัสสาวะ ไม่ได้อยู่ในบริเวณผ่าตัดเนื้องอกมดลูก",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มีตัวเลือกเดียว"
   },
@@ -449,7 +449,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Ischemic ATN: muddy brown granular cast · PCT (S3 segment) และ medullary TAL ใช้พลังงานสูงจึงไวต่อ ischemia มากที่สุด · A glomerulus เสียจะมี RBC cast/proteinuria · C, D, E เสียได้น้อยกว่า PCT ใน ischemic ATN"
+   "why": "ภาวะช็อกหลังกล้ามเนื้อหัวใจตายตามด้วย AKI และพบ muddy brown granular cast เป็นลักษณะของ ischemic ATN\n✗ A: หากโกลเมอรูลัสเสียหายจะพบเม็ดเลือดแดงผิดรูป RBC cast หรือโปรตีนรั่วเด่น\n✓ B: เซลล์ PCT (โดยเฉพาะส่วน S3) มีความต้องการออกซิเจนสูงจึงไวต่อภาวะขาดเลือดมากที่สุดและหลุดลอกเป็น muddy brown cast\n✗ C: ส่วน medullary thick ascending limb ไวต่อการขาดเลือดรองลงมา แต่ไม่ใช่คำตอบหลักเมื่อเทียบกับ PCT\n✗ D: ใช้พลังงานน้อยกว่าและทนต่อภาวะขาดเลือดได้ดีกว่าท่อไตส่วนต้น\n✗ E: ทนต่อภาวะขาดเลือดได้ดี ไม่ใช่ตำแหน่งเสียหายหลักของ ischemic ATN"
   },
   "75.1/55": {
    "box": 1,
@@ -461,7 +461,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "Urorectal septum แบ่ง cloaca เป็น urogenital sinus (ด้านหน้า) กับ anorectal canal (ด้านหลัง) ถ้าแบ่งไม่สมบูรณ์ → rectovesical/rectourethral fistula มี meconium ในปัสสาวะ · A ureteric bud ผิด → agenesis/duplex ureter · B urogenital diaphragm เป็นกล้ามเนื้อ perineum ไม่เกี่ยว"
+   "why": "ทารกแรกเกิดมีขี้เทาปนในปัสสาวะบ่งชี้ว่ามีรูทะลุระหว่างลำไส้ตรงกับทางเดินปัสสาวะจากการแบ่งตัวของ cloaca ไม่สมบูรณ์\n✗ A: ความผิดปกติทำให้เกิดภาวะไตไม่เจริญหรือท่อไตแฝด ไม่ได้เกิดรูทะลุกับลำไส้\n✗ B: เป็นชั้นกล้ามเนื้อและพังผืดบริเวณฝีเย็บ ไม่เกี่ยวกับการแบ่งช่องทวารหนักกับทางเดินปัสสาวะ\n✓ C: มีหน้าที่แบ่ง cloaca เป็น urogenital sinus และ anorectal canal หากไม่สมบูรณ์จะเกิด rectovesical หรือ rectourethral fistula"
   },
   "75.1/63": {
    "box": 19,
@@ -475,7 +475,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "LM ใช้ 10% formalin (paraffin section ย้อม H&E/PAS/silver) · IF ต้องใช้เนื้อสดหรือแช่ Michel transport medium (ห้ามใส่ formalin เพราะ cross-link ทำลาย antigen) · EM ใช้ 2.5–3% glutaraldehyde ซึ่งรักษา ultrastructure ได้ดีที่สุด — ตัวเลือกอื่นสลับลำดับ (glutaraldehyde ไม่เหมาะกับ IF, Michel ไม่ใช่ fixative สำหรับ LM) และ 95% ethanol ใช้กับ cytology smear ไม่ใช่ชิ้นเนื้อไต",
+   "why": "การส่งตรวจชิ้นเนื้อไตต้องใช้สารตรึงแยกตามประเภทกล้องจุลทรรศน์ คือ LM, IF และ EM ตามลำดับ\n✓ A: 10% formalin สำหรับ LM, Michel solution รักษาแอนติเจนสำหรับ IF และ 3% glutaraldehyde สำหรับ EM\n✗ B: สลับตำแหน่ง IF และ EM โดยนำ glutaraldehyde ไปใช้กับ IF และ Michel ไปใช้กับ EM\n✗ C: สลับตำแหน่งของ LM และ EM ไม่ถูกต้อง\n✗ D: ใช้ 95% ethanol สำหรับงาน LM ซึ่งผิดเพราะแอลกอฮอล์ใช้กับสไลด์ cytology\n✗ E: นำ Michel solution มาใช้กับ LM และนำ formalin ไปใช้กับ IF ซึ่งจะทำลายแอนติเจน",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์ไม่มีตัวเลือก"
   },
@@ -488,7 +488,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "LM ใช้ 10% formalin (paraffin section ย้อม H&E/PAS/silver) · IF ต้องใช้เนื้อสดหรือแช่ Michel transport medium (ห้ามใส่ formalin เพราะ cross-link ทำลาย antigen) · EM ใช้ 2.5–3% glutaraldehyde ซึ่งรักษา ultrastructure ได้ดีที่สุด — ตัวเลือกอื่นสลับลำดับ (glutaraldehyde ไม่เหมาะกับ IF, Michel ไม่ใช่ fixative สำหรับ LM) และ 95% ethanol ใช้กับ cytology smear ไม่ใช่ชิ้นเนื้อไต"
+   "why": "การตรวจชิ้นเนื้อไตด้วย LM, IF และ EM ต้องเลือกสารละลายให้ตรงกับแต่ละวิธีตามลำดับ\n✓ A: LM ใช้ 10% formalin, IF ใช้ Michel solution เพื่อไม่ให้แอนติเจนถูกทำลาย และ EM ใช้ 3% glutaraldehyde\n✗ B: สลับลำดับระหว่าง IF และ EM โดยนำ glutaraldehyde มาใช้กับ IF และ Michel ไปใช้กับ EM"
   },
   "75.1/91": {
    "box": 8,
@@ -502,7 +502,7 @@
    },
    "answer": "E",
    "source": "วิเคราะห์",
-   "why": "SGLT2 inhibitor ยับยั้ง glucose reabsorption ที่ PCT → glucosuria มากทั้งที่น้ำตาลในเลือดปกติ · A metformin ลด hepatic gluconeogenesis · B sulfonylurea กระตุ้น insulin · C DPP-4i เพิ่ม incretin · D acarbose ลดการดูดซึมที่ลำไส้ — ทั้งหมดไม่ทำ glucosuria เมื่อน้ำตาลปกติ"
+   "why": "ผู้ป่วยเบาหวานที่คุมน้ำตาลในเลือดได้ดีมากแต่ตรวจพบน้ำตาลในปัสสาวะสูงถึง 4+ เป็นผลจากยาที่ยับยั้งการดูดกลับน้ำตาลที่ไต\n✗ A: ลดการสร้างกลูโคสจากตับและเพิ่มความไวต่ออินซูลิน ไม่ทำให้ขับน้ำตาลออกทางปัสสาวะเมื่อน้ำตาลปกติ\n✗ B: กระตุ้นตับอ่อนให้หลั่งอินซูลิน ไม่ทำให้เกิด glucosuria เมื่อระดับน้ำตาลในเลือดปกติ\n✗ C: เพิ่มระดับ incretin เพื่อกระตุ้นการหลั่งอินซูลินตามระดับน้ำตาล ไม่ทำให้เกิด glucosuria\n✗ D: ชะลอการย่อยและดูดซึมคาร์โบไฮเดรตในลำไส้ ไม่ได้ขับน้ำตาลออกทางไต\n✓ E: ยับยั้งการดูดกลับกลูโคสที่ท่อไตส่วนต้น ทำให้มีน้ำตาลรั่วในปัสสาวะมากแม้น้ำตาลในเลือดปกติ"
   },
   "75.2/1": {
    "box": 18,
@@ -516,7 +516,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Hyperglycemia/AGEs/TGF-β กระตุ้น mesangial cell ให้ proliferate และสร้าง matrix → mesangial expansion → nodular glomerulosclerosis (K–W) · A JG cell ไม่ได้เพิ่ม (DN มัก hyporeninemic) · C, E podocyte เป็นเซลล์ terminally differentiated ใน DN มีแต่ลดจำนวน/effacement · D endothelium บาดเจ็บแต่ไม่ proliferate"
+   "why": "ภาวะน้ำตาลในเลือดสูงเรื้อรังในเบาหวานกระตุ้นให้เซลล์ mesangial แบ่งตัวและสร้างเมทริกซ์สะสมมากขึ้น\n✗ A: ไม่ได้มีการเพิ่มจำนวน โดยในเบาหวานมักเกิดภาวะ hyporeninemic hypoaldosteronism ด้วยซ้ำ\n✓ B: ถูกกระตุ้นโดย AGEs และ TGF-β ให้เพิ่มจำนวนและสร้างเมทริกซ์จนเกิด mesangial expansion และ Kimmelstiel-Wilson nodule\n✗ C: คือ podocyte ซึ่งเป็นเซลล์ที่แบ่งตัวไม่ได้และมักลดจำนวนลงใน diabetic nephropathy\n✗ D: เกิดการบาดเจ็บของผนังหลอดเลือดแต่ไม่ใช่เซลล์ที่มีการเพิ่มจำนวนเป็นลักษณะเด่น\n✗ E: เป็นเซลล์ที่ไม่แบ่งตัวแล้วและจะเกิด foot process effacement กับการสูญเสียเซลล์แทน"
   },
   "75.2/3": {
    "box": 3,
@@ -529,7 +529,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "NPHS1 encode nephrin ซึ่งเป็นโปรตีนหลักของ slit diaphragm ระหว่าง foot process ของ podocyte → กลายพันธุ์ = congenital nephrotic syndrome (Finnish type) · A GBM, D type IV collagen (COL4A3–5) เกี่ยวกับ Alport · C mesangial matrix ไม่เกี่ยว",
+   "why": "ยีน NPHS1 สร้างโปรตีน nephrin ที่เป็นองค์ประกอบหลักของ slit diaphragm การกลายพันธุ์ทำให้เกิด congenital nephrotic syndrome\n✗ A: โรคที่เกิดจากความผิดปกติของ GBM คือ Alport syndrome ไม่ใช่ยีน NPHS1\n✓ B: ยีน NPHS1 ถอดรหัสเป็นโปรตีน nephrin ตรง slit diaphragm ระหว่าง foot process เพื่อป้องกันอัลบูมินรั่ว\n✗ C: เป็นโครงสร้างค้ำจุนหลอดเลือดฝอยในโกลเมอรูลัส ไม่ใช่ตำแหน่งของโปรตีนจากยีน NPHS1\n✗ D: สร้างจากยีน COL4A5 ซึ่งการกลายพันธุ์ก่อโรค Alport syndrome",
    "options_reconstructed": true,
    "doubt": "⚠ ตัวเลือกในไฟล์ไม่ครบ"
   },
@@ -543,7 +543,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Urorectal septum แบ่ง cloaca ไม่สมบูรณ์ → fistula ระหว่าง rectum กับ bladder/urethra → meconium ในปัสสาวะ · A urogenital diaphragm เป็นกล้ามเนื้อ perineum · C cloacal membrane แตกไม่ได้ทำ imperforate anus แต่ไม่ทำ fistula ทางปัสสาวะ"
+   "why": "ทารกมีขี้เทาปนในปัสสาวะเกิดจากรูทะลุระหว่างลำไส้ตรงกับกระเพาะปัสสาวะหรือท่อปัสสาวะ\n✗ A: เป็นแผ่นกล้ามเนื้อและพังผืดบริเวณฝีเย็บ ไม่เกี่ยวกับการแยกท่อลำไส้กับทางเดินปัสสาวะ\n✓ B: แบ่ง cloaca ไม่สมบูรณ์ทำให้เกิด fistula เชื่อมระหว่างลำไส้ตรงกับทางเดินปัสสาวะ\n✗ C: หากไม่แตกออกจะเกิดภาวะไม่มีรูทวารหนัก (imperforate anus) แต่ไม่ทำให้เกิดรูทะลุเข้าทางเดินปัสสาวะ"
   },
   "75.2/8": {
    "box": 9,
@@ -554,7 +554,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Euvolemic hyponatremia + urine ไม่ dilute (Uosm > 100) + urine Na > 30 = SIADH; small cell lung ca หลั่ง ADH ectopic · B DI ทำให้ปัสสาวะเจือจาง Na ในเลือดปกติหรือสูง ไม่ใช่ต่ำ"
+   "why": "ผู้ป่วยมะเร็งปอดที่มีภาวะ euvolemic hyponatremia ร่วมกับปัสสาวะเข้มข้นและขับโซเดียมออกสูงเป็นลักษณะจำเพาะของ SIADH\n✓ A: มะเร็งปอด (โดยเฉพาะ small cell) หลั่ง ADH ผิดปกติ ทำให้ดูดน้ำกลับเกินจน Na⁺ ในเลือดต่ำแต่ปัสสาวะเข้มข้นและ urine Na⁺ สูง\n✗ B: ขาดฤทธิ์ ADH ทำให้ปัสสาวะเจือจางมากและระดับ Na⁺ ในเลือดปกติหรือสูง"
   },
   "75.2/13": {
    "box": 18,
@@ -565,7 +565,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "DN ทำ podocyte บาดเจ็บ (foot process effacement, podocytopenia) → albuminuria และ GBM หนา + mesangial expansion · A endothelium บาดเจ็บได้แต่ไม่ใช่เป้าหมายหลักที่โจทย์ต้องการ",
+   "why": "พยาธิสภาพสำคัญที่ทำให้เกิดอัลบูมินรั่วในปัสสาวะของผู้ป่วยเบาหวานคือการบาดเจ็บของ podocyte\n✗ A: แม้มีการบาดเจ็บของเอนโดทีเลียมร่วมด้วยได้ แต่ไม่ใช่เป้าหมายหลักที่ทำให้โครงสร้างกรองโปรตีนเสียไปโดยตรง\n✓ B: เกิด podocyte injury, foot process effacement และการลดจำนวน podocyte จนเกิด albuminuria เด่น",
    "doubt": "⚠ ตัวเลือกมีแค่ 2 ข้อ ลักษณะเด่นของ DN คือ GBM หนา + mesangial expansion ซึ่งไม่อยู่ในตัวเลือก"
   },
   "75.2/15": {
@@ -578,7 +578,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "PAP smear เป็น cytology ต้อง wet-fix ทันทีด้วย 95% ethanol (กันเซลล์แห้ง ทำให้ nuclear detail ชัด) · 10% formalin ใช้กับชิ้นเนื้อ (histology) · 3% glutaraldehyde ใช้กับ EM · 0.9% NaCl ไม่ใช่ fixative · ถ้าไม่ fix เซลล์จะ air-dry artifact อ่านผลไม่ได้"
+   "why": "สไลด์ PAP smear เป็นการตรวจเซลล์วิทยาที่ต้องตรึงเซลล์ทันทีด้วยแอลกอฮอล์เข้มข้นเพื่อรักษารายละเอียดนิวเคลียส\n✓ A: ใช้ wet-fix สไลด์ PAP smear ทันทีเพื่อป้องกันเซลล์แห้งและคงสภาพนิวเคลียสให้ชัดเจน\n✗ B: ฟอร์มาลินใช้สำหรับตรึงชิ้นเนื้อทางพยาธิวิทยา (และปกติใช้ 10% ไม่ใช่ 100%)\n✗ C: หากไม่ตรึงเซลล์จะแห้งเสียรูป (air-dry artifact) จนอ่านผลทางเซลล์วิทยาไม่ได้"
   },
   "75.2/16": {
    "box": 23,
@@ -591,7 +591,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Uropathogenic E. coli (P fimbriae) เป็นสาเหตุอันดับหนึ่งของทั้ง cystitis และ pyelonephritis · B Proteus (urease, struvite stone) พบน้อยกว่า · C Enterococcus พบใน catheter/nosocomial · D S. saprophyticus เป็นอันดับสองใน cystitis หญิงวัยเจริญพันธุ์ ไม่ค่อยทำ pyelonephritis",
+   "why": "อาการกดเจ็บที่มุมกระดูกซี่โครง (CVA tenderness) บ่งชี้ภาวะกรวยไตอักเสบเฉียบพลันซึ่งเกิดจาก E. coli บ่อยที่สุด\n✓ A: เป็นเชื้อก่อโรคอันดับหนึ่งของทั้งกระเพาะปัสสาวะอักเสบและกรวยไตอักเสบโดยอาศัย P fimbriae\n✗ B: เป็นเชื้อสร้างเอนไซม์ urease ที่สัมพันธ์กับนิ่ว struvite พบน้อยกว่า E. coli\n✗ C: มักพบในการติดเชื้อในโรงพยาบาลหรือผู้ป่วยที่คาสายสวนปัสสาวะ\n✗ D: เป็นสาเหตุอันดับสองของกระเพาะปัสสาวะอักเสบในหญิงวัยเจริญพันธุ์แต่ไม่ค่อยก่อกรวยไตอักเสบ",
    "doubt": "⚠ ในไฟล์ตัวเลือกข้ามจาก D ไป E (อาจตกหล่น 1 ข้อ)"
   },
   "75.2/17": {
@@ -605,7 +605,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "LM ใช้ 10% formalin (paraffin section ย้อม H&E/PAS/silver) · IF ต้องใช้เนื้อสดหรือแช่ Michel transport medium (ห้ามใส่ formalin เพราะ cross-link ทำลาย antigen) · EM ใช้ 2.5–3% glutaraldehyde ซึ่งรักษา ultrastructure ได้ดีที่สุด — ตัวเลือกอื่นสลับลำดับ (glutaraldehyde ไม่เหมาะกับ IF, Michel ไม่ใช่ fixative สำหรับ LM) และ 95% ethanol ใช้กับ cytology smear ไม่ใช่ชิ้นเนื้อไต · ethylene glycol ไม่ใช่ fixative",
+   "why": "การส่งชิ้นเนื้อไตตรวจ LM, IF และ EM ต้องใช้สารละลายเฉพาะแต่ละขั้นตอนให้ถูกลำดับ\n✗ A: สลับนำน้ำยา EM มาไว้ที่ LM และใช้ ethylene glycol ซึ่งไม่ใช่สารตรึงชิ้นเนื้อ\n✓ B: เรียงถูกต้องคือ 10% formalin สำหรับ LM, Michel solution สำหรับ IF และ 3% glutaraldehyde สำหรับ EM\n✗ C: สลับลำดับระหว่าง IF และ EM โดยนำ glutaraldehyde ไปใช้กับ IF\n✗ D: นำ Michel solution ไปใช้กับ LM และนำ formalin ไปใช้กับ IF ซึ่งทำลายแอนติเจน",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์มีตัวเลือกเดียวซึ่งผิดลำดับ ตัวเลือกที่ถูกสร้างใหม่"
   },
@@ -621,7 +621,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "PAP smear เป็น cytology ต้อง wet-fix ทันทีด้วย 95% ethanol (กันเซลล์แห้ง ทำให้ nuclear detail ชัด) · 10% formalin ใช้กับชิ้นเนื้อ (histology) · 3% glutaraldehyde ใช้กับ EM · 0.9% NaCl ไม่ใช่ fixative · ถ้าไม่ fix เซลล์จะ air-dry artifact อ่านผลไม่ได้"
+   "why": "การเตรียมสไลด์ PAP smear ต้องใช้แอลกอฮอล์ 95% เพื่อตรึงเซลล์ขณะเปียกทันที\n✗ A: ใช้ตรึงชิ้นเนื้อทางพยาธิวิทยา (histology) ไม่ใช่สไลด์ cytology\n✓ B: ใช้ wet-fix สไลด์ PAP smear ทันทีเพื่อป้องกันเซลล์แห้งและให้เห็นรายละเอียดนิวเคลียสชัด\n✗ C: ใช้ตรึงชิ้นเนื้อสำหรับกล้องจุลทรรศน์อิเล็กตรอน (EM)\n✗ D: เป็นน้ำเกลือปกติ ไม่ใช่สารตรึงเซลล์\n✗ E: หากไม่ตรึงเซลล์จะเกิด air-dry artifact ทำให้แปลผลไม่ได้"
   },
   "75.2/65": {
    "box": 8,
@@ -635,7 +635,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Cyclophosphamide (ใน R-CHOP) ถูกเผาผลาญเป็น acrolein ขับทางปัสสาวะ ทำลาย urothelium → hemorrhagic cystitis ป้องกันด้วย mesna + ดื่มน้ำมาก · B rituximab = infusion reaction, HBV reactivation · C doxorubicin = cardiotoxicity · D vincristine = peripheral neuropathy · E prednisolone = hyperglycemia, Cushingoid",
+   "why": "ยาเคมีบำบัดในสูตร R-CHOP ที่ทำให้เกิดกระเพาะปัสสาวะอักเสบมีเลือดออกเกิดจากสารเมแทบอไลต์ acrolein\n✓ A: ถูกเผาผลาญเป็น acrolein แล้วขับออกทางปัสสาวะ ทำลายเยื่อบุกระเพาะปัสสาวะจนเกิด hemorrhagic cystitis (ป้องกันด้วย mesna)\n✗ B: ผลข้างเคียงเด่นคือ infusion reaction และกระตุ้นการกำเริบของไวรัสตับอักเสบบี\n✗ C: ผลข้างเคียงเด่นคือพิษต่อกล้ามเนื้อหัวใจ (dilated cardiomyopathy)\n✗ D: ผลข้างเคียงเด่นคือเส้นประสาทส่วนปลายอักเสบ (peripheral neuropathy) และท้องผูก\n✗ E: ผลข้างเคียงเด่นคือระดับน้ำตาลสูง กลุ่มอาการ Cushing และติดเชื้อง่าย",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์ไม่มีตัวเลือก"
   },
@@ -651,7 +651,7 @@
    },
    "answer": "D",
    "source": "วิเคราะห์",
-   "why": "ยากรดส่วนใหญ่จับ albumin (ยาเบสจับ α1-acid glycoprotein) → albumin ต่ำทำ free fraction ของยากรดเพิ่ม และ glomerular filtration กรองได้เฉพาะยาอิสระ จึงเปลี่ยนมากที่สุด · A, B tubular secretion ดึงยาที่จับโปรตีนออกได้ด้วย จึงไม่ขึ้นกับ protein binding มาก · C ยาเบสไม่ค่อยจับ albumin · E reabsorption ขึ้นกับ pH ปัสสาวะ/ion trapping"
+   "why": "ภาวะอัลบูมินในเลือดต่ำทำให้สัดส่วนยาอิสระของยากรดเพิ่มขึ้น ซึ่งมีผลโดยตรงต่อการกรองผ่านโกลเมอรูลัส\n✗ A: ยาเบสจับกับ α1-acid glycoprotein เป็นหลัก และการหลั่งทางท่อไตไม่ค่อยขึ้นกับระดับการจับโปรตีน\n✗ B: กระบวนการ tubular secretion เป็นการขนส่งเชิงรุกที่ดึงยาออกจากโปรตีนได้ จึงได้รับผลจากอัลบูมินต่ำน้อยกว่าการกรอง\n✗ C: ยาเบสจับกับ α1-acid glycoprotein มากกว่าอัลบูมิน ระดับอัลบูมินต่ำจึงกระทบไม่มาก\n✓ D: ยากรดส่วนใหญ่จับกับอัลบูมิน เมื่ออัลบูมินต่ำยาอิสระจะเพิ่มขึ้นและถูกกรองผ่านโกลเมอรูลัสได้มากขึ้นอย่างชัดเจน\n✗ E: การดูดกลับที่ท่อไตขึ้นกับความสามารถในการละลายไขมันและค่า pH ของปัสสาวะ ไม่ได้ขึ้นกับระดับอัลบูมิน"
   },
   "75.2/121": {
    "box": 6,
@@ -665,7 +665,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Spironolactone แย่งจับ mineralocorticoid receptor ใน principal cell → ENaC และ ROMK ลด → K-sparing · B เป็นกลไก amiloride/triamterene · C thiazide · D loop diuretic · E acetazolamide",
+   "why": "Spironolactone เป็นยาขับปัสสาวะกลุ่มสงวนโพแทสเซียมที่ออกฤทธิ์ต้านฮอร์โมน aldosterone ที่ท่อรวม\n✓ A: แย่งจับตัวรับ aldosterone ใน principal cell ทำให้ลดการสร้าง ENaC และ ROMK จึงขับโซเดียมและเก็บโพแทสเซียม\n✗ B: เป็นกลไกของ amiloride และ triamterene ที่บล็อกช่องโซเดียมโดยตรง\n✗ C: เป็นกลไกของยาขับปัสสาวะกลุ่ม thiazide ที่ท่อไตส่วนปลาย\n✗ D: เป็นกลไกของยาขับปัสสาวะกลุ่ม loop diuretic เช่น furosemide\n✗ E: เป็นกลไกของ acetazolamide ที่ท่อไตส่วนต้น",
    "options_reconstructed": true,
    "doubt": "⚠ ในไฟล์ไม่มีตัวเลือก"
   },
@@ -681,7 +681,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "NSS เป็น isotonic จึงอยู่ใน ECF ทั้งหมด ไม่เข้า ICF (osmolality ไม่เปลี่ยน) และกระจายเป็น plasma ~1/4, interstitial ~3/4 (500/1500 mL) บางส่วนถูกขับออกทางไตตามเวลา → ข้อที่สอดคล้องที่สุดคือ ECF เพิ่ม · B, D, E ผิดเพราะ isotonic saline ไม่ทำให้ ICF เปลี่ยน (D/E เป็นการกระจายของ D5W) · A 500 mL คือส่วนที่อยู่ใน plasma ไม่ใช่ทั้ง ECF",
+   "why": "สารน้ำ 0.9% NaCl เป็น isotonic จึงกระจายตัวอยู่เฉพาะในช่อง ECF โดยไม่เปลี่ยนความเข้มข้นและไม่เข้าสู่ ICF\n✗ A: ปริมาตร 500 mL เป็นเพียงส่วนหนึ่งในสี่ที่อยู่ในหลอดเลือด (plasma) ไม่ใช่ปริมาตร ECF ทั้งหมด\n✗ B: สารน้ำ isotonic ไม่เปลี่ยน osmolality ของเลือดจึงไม่ทำให้น้ำเคลื่อนเข้าสู่ ICF\n✓ C: น้ำเกลืออยู่ในช่อง ECF ทั้งหมดและเมื่อเวลาผ่านไปบางส่วนถูกขับออกทางไต จึงเหลือ ECF เพิ่มขึ้นราว 1500 mL\n✗ D: เป็นการคำนวณแบบสารน้ำที่กระจายเข้าทั้ง ECF และ ICF เช่น D5W ไม่ใช่ 0.9% NaCl\n✗ E: เป็นการคำนวณแบบสารน้ำปราศจากโซเดียม (เช่น D5W) ที่กระจายเข้าสู่ ICF ประมาณสองในสาม",
    "doubt": "⚠ ตามทฤษฎี ECF เพิ่ม ~2000 mL ไม่มีในตัวเลือก ตัวเลือกอาจเดิมเป็น plasma +500/ISF +1500"
   },
   "76/6": {
@@ -696,7 +696,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Gram stain ไม่เห็นเชื้อ = non-gonococcal urethritis (NGU) เชื้อหลักคือ Chlamydia trachomatis, Ureaplasma, Mycoplasma genitalium · Ureaplasma ไม่มี cell wall จึงย้อม Gram ไม่ติด → ตอบ B · A C. psittaci ก่อ psittacosis (ปอด จากนก) ไม่ใช่ STI · C N. gonorrhoeae จะเห็น Gram-negative intracellular diplococci ใน PMN · D Proteus = UTI/นิ่ว struvite ย้อมเห็น Gram-negative rod · E H. ducreyi ทำ chancroid (แผลเจ็บ) ไม่ใช่ urethritis",
+   "why": "หนองเมือกจากท่อปัสสาวะที่ย้อมแกรมไม่พบเชื้อคือภาวะ non-gonococcal urethritis ซึ่งเกิดจากเชื้อที่ไม่มีผนังเซลล์หรืออยู่ในเซลล์\n✗ A: ก่อโรคปอดอักเสบจากสัตว์ปีก (psittacosis) ไม่ใช่เชื้อก่อโรคติดต่อทางเพศสัมพันธ์\n✓ B: ไม่มีผนังเซลล์จึงย้อมสีแกรมไม่ติดและเป็นสาเหตุสำคัญของ non-gonococcal urethritis\n✗ C: จะย้อมสีแกรมพบแบคทีเรียแกรมลบรูปเมล็ดถั่วคู่ (diplococci) อยู่ในเม็ดเลือดขาว\n✗ D: เป็นแบคทีเรียแท่งแกรมลบที่ย้อมติดสีชัดเจน มักก่อ UTI และนิ่ว struvite\n✗ E: ก่อโรคแผลริมอ่อน (chancroid) ที่มีแผลเจ็บที่อวัยวะเพศ ไม่ใช่ท่อปัสสาวะอักเสบ",
    "doubt": "⚠ ตัวเลือกไม่มี Chlamydia trachomatis ซึ่งเป็นเชื้อ NGU ที่พบบ่อยที่สุด จึงเลือก Ureaplasma"
   },
   "76/17": {
@@ -711,7 +711,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "น้ำเปล่าปริมาณมาก → plasma osmolality ลด → ADH ถูกกด → ขับปัสสาวะเจือจางปริมาณมาก (water diuresis) → urine osmolality ลดลง (ถึง ~50 mOsm/kg) · A urine flow เพิ่ม · C GFR คงที่หรือเพิ่มเล็กน้อยจาก volume expansion · D, E น้ำกระจายทุก compartment ตาม osmolality ที่ลด → ECF และ ICF เพิ่มทั้งคู่ (เซลล์บวม)"
+   "why": "การดื่มน้ำเปล่าปริมาณมหาศาลทำให้ plasma osmolality ลดลง กดการหลั่ง ADH และเกิดการขับปัสสาวะเจือจางมาก\n✗ A: อัตราการไหลของปัสสาวะจะเพิ่มขึ้นมากเพื่อขับน้ำส่วนเกินออก\n✓ B: การถูกกด ADH ทำให้ท่อรวมไม่ดูดน้ำกลับ ปัสสาวะจึงเจือจางมากและค่าความเข้มข้นลดลงต่ำสุด\n✗ C: ปริมาตรเลือดที่เพิ่มขึ้นทำให้ GFR คงที่หรือเพิ่มขึ้นเล็กน้อย ไม่ได้ลดลง\n✗ D: น้ำส่วนเกินกระจายเข้าสู่ทุกช่องของร่างกายทำให้ปริมาตร ECF เพิ่มขึ้น\n✗ E: ความเข้มข้นนอกเซลล์ที่ลดลงดึงน้ำเข้าสู่เซลล์ทำให้ปริมาตร ICF เพิ่มขึ้นด้วย"
   },
   "76/22": {
    "box": 21,
@@ -725,7 +725,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "ปัสสาวะตั้งทิ้งไว้นานที่อุณหภูมิห้อง แบคทีเรียที่มี urease ย่อย urea → NH3 ทำให้กลิ่นแอมโมเนีย pH เป็นด่าง cast สลาย = pre-analytical error · A nephrotic ปัสสาวะเป็นฟอง · C MSUD กลิ่นน้ำเชื่อม/maple · D DM ketone ให้กลิ่นผลไม้ (acetone) · E อาหาร เช่น หน่อไม้ฝรั่ง ให้กลิ่นกำมะถัน ไม่ใช่แอมโมเนียเด่น"
+   "why": "ตัวอย่างปัสสาวะที่มีกลิ่นแอมโมเนียฉุนมักเกิดจากการตั้งทิ้งไว้นานจนแบคทีเรียย่อยยูเรียเป็นแอมโมเนีย\n✗ A: ลักษณะเด่นของปัสสาวะคือเป็นฟองมากจากโปรตีนรั่ว ไม่ใช่กลิ่นแอมโมเนีย\n✓ B: การตั้งทิ้งไว้นานที่อุณหภูมิห้องทำให้แบคทีเรียที่มีเอนไซม์ urease เปลี่ยน urea เป็นแอมโมเนียและทำให้ปัสสาวะเป็นด่าง\n✗ C: ปัสสาวะมีกลิ่นหอมหวานคล้ายน้ำเชื่อมเมเปิลหรือน้ำตาลไหม้\n✗ D: ภาวะคีโตนในปัสสาวะจากเบาหวานจะให้กลิ่นคล้ายผลไม้สุกหรืออะซิโตน\n✗ E: อาหารบางชนิดเช่นหน่อไม้ฝรั่งให้กลิ่นกำมะถันเฉพาะตัว ไม่ใช่กลิ่นแอมโมเนียเด่น"
   },
   "76/28": {
    "box": 7,
@@ -739,7 +739,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "ACEI/ARB (losartan) เป็น teratogen ช่วงไตรมาส 2–3 → fetal renal dysgenesis, oligohydramnios, skull hypoplasia จึงห้ามใช้ · A labetalol, D hydralazine, E methyldopa เป็นยาหลักของ HT ในครรภ์ · B nicardipine (CCB) ใช้ได้โดยเฉพาะ severe HT"
+   "why": "ยากลุ่ม ARB และ ACEI เป็นข้อห้ามเด็ดขาดในหญิงตั้งครรภ์เนื่องจากก่อความผิดปกติต่อไตของทารก\n✗ A: เป็นยา α/β-blocker ที่ปลอดภัยและเป็นตัวเลือกอันดับต้นสำหรับความดันสูงในหญิงตั้งครรภ์\n✗ B: เป็นยากลุ่ม CCB ที่ใช้ลดความดันสูงรุนแรงในหญิงตั้งครรภ์ได้\n✓ C: เป็นยากลุ่ม ARB ที่ก่อภาวะ fetal renal dysgenesis, oligohydramnios และ skull hypoplasia\n✗ D: เป็น direct vasodilator ที่ปลอดภัยและใช้รักษาความดันสูงในหญิงตั้งครรภ์ได้\n✗ E: เป็น α2-agonist ที่ปลอดภัยและใช้เป็นยาหลักในหญิงตั้งครรภ์"
   },
   "76/30": {
    "box": 7,
@@ -753,7 +753,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Angiotensin II หดตัว efferent arteriole เด่นกว่า afferent เพื่อคง GFR · ACEI ลด Ang II → efferent ขยาย → glomerular pressure และ GFR ลด (จึงลด proteinuria แต่ระวังใน bilateral RAS) · A afferent ถูกควบคุมโดย myogenic/TGF และ prostaglandin (NSAID มีผล) · C, D เป็นที่ทำงานของ aldosterone/ADH ไม่ใช่เป้าหลักของ ACEI · E ไม่ใช่จุดออกฤทธิ์โดยตรง"
+   "why": "Angiotensin II หดหลอดเลือด efferent arteriole เด่นกว่า afferent การใช้ ACEI จึงคลาย efferent arteriole เป็นหลัก\n✗ A: ถูกควบคุมหลักด้วยกลไก myogenic, TGF และ prostaglandin ซึ่งถูกยับยั้งโดย NSAIDs มากกว่า\n✓ B: ลด angiotensin II ทำให้ efferent arteriole คลายตัว แรงดันในโกลเมอรูลัสและโปรตีนรั่วจึงลดลง\n✗ C: เป็นตำแหน่งออกฤทธิ์หลักของ aldosterone และ ADH ไม่ใช่เป้าหมายหลอดเลือดหลักของ ACEI\n✗ D: เป็นตำแหน่งดูดกลับโซเดียมของยาขับปัสสาวะกลุ่ม thiazide\n✗ E: ไม่ใช่หลอดเลือดที่มีกล้ามเนื้อเรียบให้ ACEI ออกฤทธิ์ขยายโดยตรง"
   },
   "76/70": {
    "box": 7,
@@ -767,7 +767,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Tented T = hyperkalemia · ARB ลด aldosterone → ขับ K ลด → K สูง · B acetazolamide, D furosemide, E thiazide เพิ่ม Na delivery ไป collecting duct → K ต่ำ · C mannitol osmotic diuresis มักทำ K ต่ำจากการขับออก (hyperK ชั่วคราวจาก solvent drag พบน้อย)"
+   "why": "คลื่นไฟฟ้าหัวใจมี tented T wave เป็นลักษณะของภาวะ hyperkalemia ซึ่งเกิดจากยาที่ลดการหลั่ง aldosterone\n✓ A: บล็อก AT1 receptor ทำให้ aldosterone ลดลง การขับ K⁺ ที่ท่อรวมลดลงจึงเกิด hyperkalemia\n✗ B: เพิ่มการส่งโซเดียมไปท่อรวมทำให้ขับ K⁺ มากขึ้น จึงเกิด hypokalemia\n✗ C: ทำให้เกิด osmotic diuresis ซึ่งมักเพิ่มการขับ K⁺ ทางปัสสาวะมากกว่าทำให้สูง\n✗ D: เพิ่มการส่งโซเดียมไปท่อรวมและกระตุ้น RAAS ทำให้เกิด hypokalemia\n✗ E: เพิ่มการขับ K⁺ ที่ท่อรวมจนเกิด hypokalemia"
   },
   "76/76": {
    "box": 11,
@@ -781,7 +781,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "ฮอร์โมนคือ aldosterone (ดูด Na ขับ K/H ที่ principal cell) สร้างที่ zona glomerulosa ภายใต้ Ang II และ K · C fasciculata สร้าง cortisol · D reticularis สร้าง androgen · E medulla สร้าง catecholamine · A capsule เป็น connective tissue ไม่สร้างฮอร์โมน"
+   "why": "ฮอร์โมนที่เพิ่มการดูดกลับโซเดียมและขับโพแทสเซียมคือ aldosterone ซึ่งสร้างจากต่อมหมวกไตชั้นนอกสุด\n✗ A: เป็นชั้นเนื้อเยื่อเกี่ยวพันหุ้มต่อมหมวกไต ไม่ได้สร้างฮอร์โมน\n✓ B: เป็นชั้นนอกสุดของ adrenal cortex ที่สร้างและหลั่ง aldosterone ตอบสนองต่อ angiotensin II และระดับ K⁺\n✗ C: สร้างฮอร์โมนกลุ่ม glucocorticoid (cortisol) เป็นหลัก\n✗ D: สร้างฮอร์โมนเพศชายกลุ่ม adrenal androgen (DHEA) เป็นหลัก\n✗ E: สร้างและหลั่ง catecholamine (epinephrine และ norepinephrine)"
   },
   "76/77": {
    "box": 3,
@@ -795,7 +795,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "GBM ประกอบด้วย type IV collagen, laminin, nidogen และ heparan sulfate proteoglycan (perlecan/agrin) ซึ่งให้ประจุลบ กั้น albumin · B dermatan sulfate อยู่ในผิวหนัง/หลอดเลือด · C chondroitin sulfate ในกระดูกอ่อน · D hyaluronan ใน synovial fluid/vitreous ไม่จับ core protein · E keratan sulfate ใน cornea/กระดูกอ่อน"
+   "why": "เยื่อบุฐานของโกลเมอรูลัส (GBM) มีประจุลบช่วยกั้นโปรตีนอัลบูมินไม่ให้รั่วออก โดยมี heparan sulfate เป็นองค์ประกอบหลัก\n✓ A: เป็น proteoglycan หลักใน GBM (เช่น perlecan, agrin) ที่ให้ประจุลบช่วยกั้นไม่ให้อัลบูมินผ่านออกทางปัสสาวะ\n✗ B: พบมากในผิวหนัง หลอดเลือด และลิ้นหัวใจ ไม่ใช่องค์ประกอบหลักของ GBM\n✗ C: พบมากในกระดูกอ่อนและเนื้อเยื่อเกี่ยวพัน\n✗ D: พบในน้ำไขข้อและน้ำวุ้นตา ไม่ได้ยึดกับแกนโปรตีนใน GBM\n✗ E: พบมากในกระจกตาและกระดูกอ่อน"
   },
   "76/103": {
    "box": 24,
@@ -809,7 +809,7 @@
    },
    "answer": "E",
    "source": "วิเคราะห์",
-   "why": "Uric acid stone เป็น radiolucent บน plain film แต่ NCCT เห็นได้ทุกชนิด (ยกเว้น indinavir) · A struvite, B–C calcium oxalate, D calcium phosphate ล้วน radiopaque เห็นใน plain KUB (struvite ทึบปานกลาง)"
+   "why": "นิ่วที่มองไม่เห็นบนภาพเอกซเรย์ธรรมดา (radiolucent) แต่มองเห็นชัดบน CT คือกลุ่มนิ่วกรดยูริก\n✗ A: เป็นนิ่วทึบรังสีปานกลาง (radiopaque) มองเห็นได้บนภาพ plain KUB\n✗ B: เป็นนิ่วแคลเซียมที่ทึบรังสีชัดเจนบนภาพ plain KUB\n✗ C: เป็นนิ่วแคลเซียมที่ทึบรังสีชัดเจนบนภาพ plain KUB\n✗ D: เป็นนิ่วแคลเซียมที่มีความทึบรังสีสูงมากบนภาพ plain KUB\n✓ E: เป็นนิ่วชนิดโปร่งรังสีจึงมองไม่เห็นบน plain KUB แต่มองเห็นชัดเจนด้วย non-contrast CT"
   },
   "76/135": {
    "box": 2,
@@ -823,7 +823,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "Straddle injury ทำ bulbar (spongy) urethra ขาด ปัสสาวะเข้า superficial perineal pouch ใต้ Colles fascia · Colles fascia ยึดกับขอบหลังของ perineal membrane และ fascia lata จึงกั้นไม่ให้ไปทวาร/ต้นขา แต่ไปต่อกับ Scarpa ขึ้นผนังหน้าท้องได้ · A Buck's fascia ถ้าไม่ขาดจะจำกัดปัสสาวะอยู่ใน penis · B Dartos เป็นชั้นกล้ามเนื้อเรียบของ scrotum ไม่ใช่ตัวกั้น · D Scarpa เป็นส่วนต่อในผนังหน้าท้อง · E Camper เป็นชั้นไขมันตื้น ไม่จำกัดทิศ"
+   "why": "การบาดเจ็บแบบคร่อมกระแทกทำให้ท่อปัสสาวะส่วน bulbar ขาด ปัสสาวะจึงรั่วใน superficial perineal pouch ใต้แผ่นพังผืด Colles\n✗ A: หุ้มรอบองคชาต หากยังไม่ฉีกขาดจะจำกัดปัสสาวะให้อยู่เฉพาะในองคชาต ไม่ลามลงถุงอัณฑะ\n✗ B: เป็นชั้นกล้ามเนื้อเรียบใต้ผิวหนังของถุงอัณฑะ ไม่ใช่แผ่นพังผืดกั้นทางด้านหลัง\n✓ C: ยึดติดแน่นกับขอบหลังของ perineal membrane จึงกั้นไม่ให้ปัสสาวะไหลไปทางทวารหนัก แต่เปิดต่อขึ้นสู่ผนังหน้าท้องได้\n✗ D: เป็นพังผืดชั้นลึกของผนังหน้าท้องที่ต่อเนื่องมาจาก Colles fascia ไม่ใช่ส่วนที่กั้นบริเวณทวารหนัก\n✗ E: เป็นชั้นไขมันตื้นของผนังหน้าท้อง ไม่มีขอบเขตยึดแน่นสำหรับกั้นการไหลของปัสสาวะ"
   },
   "76/139": {
    "box": 27,
@@ -837,7 +837,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Ketoconazole ยับยั้ง CYP3A4 → ระดับ antimuscarinic ที่ถูก metabolize ทาง CYP3A4 สูงขึ้น ผลข้างเคียงมากขึ้น · Trospium เป็น quaternary amine ขับทางไตเป็นหลัก ไม่ผ่าน CYP และไม่ผ่าน BBB จึงเหมาะ · A oxybutynin ผลข้างเคียงปากแห้งมากที่สุดและผ่าน CYP3A4 · C tolterodine (CYP2D6/3A4), D solifenacin, E darifenacin ล้วนพึ่ง CYP3A4 จึงมี interaction"
+   "why": "Ketoconazole ยับยั้งเอนไซม์ CYP3A4 ทำให้ยารักษา OAB ที่สลายผ่านตับมีระดับสูงขึ้น จึงควรเปลี่ยนไปใช้ยาที่ขับทางไตโดยไม่ผ่าน CYP\n✗ A: ถูกทำลายผ่าน CYP3A4 และมีอาการข้างเคียงปากแห้งสูงที่สุดในกลุ่ม\n✓ B: เป็น quaternary amine ที่ไม่ผ่านการเผาผลาญด้วย CYP และไม่ผ่านสมอง จึงเลี่ยงปฏิกิริยากับ ketoconazole ได้ดี\n✗ C: ถูกเผาผลาญผ่าน CYP2D6 และ CYP3A4 จึงยังมีระดับยาสูงขึ้นเมื่อใช้ร่วมกับ ketoconazole\n✗ D: ถูกเผาผลาญหลักผ่าน CYP3A4 จึงเกิดปฏิกิริยากับ ketoconazole\n✗ E: ถูกเผาผลาญผ่าน CYP2D6 และ CYP3A4 จึงมีระดับยาเพิ่มขึ้นเมื่อใช้ร่วมกับ ketoconazole"
   },
   "76/163": {
    "box": 8,
@@ -850,7 +850,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Tenofovir (TDF) สะสมใน proximal tubule ทำ mitochondrial toxicity → Fanconi syndrome: phosphaturia (hypophosphatemia), glucosuria, aminoaciduria, proximal RTA · B Fanconi ทำ K ต่ำ ไม่ใช่สูง · C ไม่ใช่ผลของยา (อาจเกิด nephrogenic DI ได้แต่น้อย) · D proximal RTA ให้ metabolic acidosis ไม่ใช่ alkalosis"
+   "why": "Tenofovir (TDF) ก่อพิษต่อไมโทคอนเดรียของท่อไตส่วนต้น ทำให้เกิดกลุ่มอาการ Fanconi และสูญเสียฟอสเฟตทางปัสสาวะ\n✓ A: ท่อไตส่วนต้นดูดกลับฟอสเฟตไม่ได้ในภาวะ Fanconi syndrome จึงเกิดภาวะฟอสเฟตในเลือดต่ำเด่น\n✗ B: กลุ่มอาการ Fanconi ทำให้สูญเสียโพแทสเซียมจนเกิด hypokalemia ไม่ใช่ hyperkalemia\n✗ C: ไม่ใช่ผลข้างเคียงเด่นของ tenofovir\n✗ D: การสูญเสียไบคาร์บอเนตที่ท่อไตส่วนต้นก่อให้เกิด metabolic acidosis (proximal RTA) ไม่ใช่ alkalosis"
   },
   "76/174": {
    "box": 1,
@@ -862,7 +862,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "เยื่อบุลำไส้ที่สะดือ (umbilical polyp/fistula ที่มีอุจจาระซึม) เกิดจาก vitelline (omphalomesenteric) duct ที่ไม่ปิด ซึ่งเชื่อม midgut กับ yolk sac · A urachus (allantois → median umbilical ligament) ถ้าค้างจะมีปัสสาวะซึมจากสะดือ และเยื่อบุเป็น urothelium · B umbilical cord เป็นโครงสร้างนอกตัวเด็ก ไม่ใช่ต้นกำเนิดของ mucosa ที่ค้าง"
+   "why": "การพบเยื่อบุลำไส้ที่สะดือเกิดจากท่อเชื่อมระหว่างลำไส้ส่วนกลางกับถุงไข่แดงไม่ฝ่อปิดตามปกติ\n✗ A: หากไม่ปิดจะเหลือท่อเชื่อมกระเพาะปัสสาวะกับสะดือ ทำให้มีปัสสาวะซึมและบุด้วยเยื่อบุทางเดินปัสสาวะ (urothelium)\n✗ B: เป็นโครงสร้างสายสะดือภายนอกตัวทารก ไม่ใช่ท่อต้นกำเนิดของเยื่อบุลำไส้ที่ค้างอยู่\n✓ C: เชื่อม midgut กับ yolk sac หากส่วนปลายไม่ฝ่อจะเหลือเป็น umbilical polyp หรือ fistula ที่บุด้วยเยื่อบุลำไส้"
   },
   "76/175": {
    "box": 5,
@@ -874,7 +874,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "PO4 ถูกดูดกลับ ~80% ที่ PCT ผ่าน NaPi-IIa/IIc ถ้าตัวขนส่งบกพร่อง (เช่น hereditary hypophosphatemic rickets) จะเสีย phosphate ทางปัสสาวะอย่างเดียว Ca ปกติ · A hyperPTH ทำ PO4 ต่ำก็จริงแต่ต้องมี Ca สูงร่วม · C lab error ไม่ใช่คำอธิบายแรกเมื่อมีกลไกที่อธิบายได้",
+   "why": "ภาวะฟอสเฟตในเลือดต่ำอย่างเดียวโดยที่แคลเซียมและอิเล็กโทรไลต์อื่นปกติบ่งชี้ความบกพร่องจำเพาะของการดูดกลับฟอสเฟตที่ไต\n✗ A: ทำให้ฟอสเฟตต่ำแต่จะต้องมีภาวะแคลเซียมในเลือดสูงร่วมด้วย ไม่ใช่แคลเซียมปกติ\n✓ B: ตัวขนส่ง NaPi-IIa/IIc ที่ท่อไตส่วนต้นทำหน้าที่ดูดกลับฟอสเฟตเป็นหลัก หากบกพร่องจะเสียฟอสเฟตเพียงอย่างเดียว\n✗ C: ไม่ควรด่วนสรุปว่าเป็นความผิดพลาดทางห้องปฏิบัติการเมื่อมีกลไกโรคที่อธิบายผลได้ชัดเจน",
    "doubt": "⚠ ข้อในไฟล์มีแค่ 3 ตัวเลือก"
   },
   "76/214": {
@@ -887,7 +887,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Linear IgG ตาม GBM = แอนติบอดีจับ type IV collagen (α3 NC1) โดยตรง = anti-GBM disease/Goodpasture (type II hypersensitivity) · A anti-dsDNA (lupus) ให้ immune complex แบบ granular 'full house' · C ANCA = pauci-immune ไม่มี/มี Ig น้อยมาก"
+   "why": "การติดสี IgG เป็นเส้นตรงเรียบตามแนว GBM บ่งชี้ว่าแอนติบอดีจับกับโครงสร้างของ GBM โดยตรงในโรค Goodpasture\n✗ A: เป็นแอนติบอดีในโรค SLE ที่ก่อให้เกิดการสะสม immune complex แบบเม็ดจุด (granular) และติดสีแบบ full-house\n✓ B: แอนติบอดีจับกับคอลลาเจนชนิดที่ 4 ของ GBM โดยตรง (type II hypersensitivity) จึงเห็นเป็นเส้นตรงชัดเจน\n✗ C: ก่อโรคหลอดเลือดอักเสบแบบ pauci-immune ซึ่งตรวจ IF ไม่พบหรือพบการสะสมอิมมูโนโกลบูลินน้อยมาก"
   },
   "76/222": {
    "box": 12,
@@ -900,7 +900,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Opioid กดศูนย์หายใจ → acute respiratory acidosis: pCO2 สูง HCO3 เพิ่มเพียง ~1 ต่อ pCO2 ที่เพิ่ม 10 (40→60 คาด HCO3 ~26) AG ปกติ pH ~7.27 · B pH 7.04 และ HCO3 ลดลง = มี metabolic acidosis ร่วม (ไม่ใช่ opioid อย่างเดียว) · C, D pCO2 ต่ำ = hyperventilation ตรงข้ามกับ opioid",
+   "why": "มอร์ฟีนเกินขนาดกดศูนย์หายใจทำให้เกิดภาวะ acute respiratory acidosis โดย pCO2 สูงและ HCO3 เพิ่มขึ้นเพียงเล็กน้อย\n✓ A: pCO2 เพิ่มขึ้น 20 mmHg จากค่าปกติทำให้ HCO3 เพิ่มราว 2 mEq/L เป็น 26 และ pH ลดลงเป็น 7.27 โดย anion gap ปกติ\n✗ B: ค่า HCO3 ต่ำลงและ pH ต่ำมาก บ่งชี้ว่ามีภาวะ metabolic acidosis ซ้อนร่วมด้วย\n✗ C: ค่า pCO2 ต่ำแสดงถึงภาวะหายใจเร็ว (hyperventilation) ซึ่งตรงข้ามกับฤทธิ์กดการหายใจของมอร์ฟีน\n✗ D: ค่า pCO2 ต่ำมากเป็นลักษณะของ respiratory alkalosis หรือการชดเชยภาวะกรดเมแทบอลิก",
    "doubt": "⚠ ตัวเลือก C, D ในไฟล์ไม่ครบ",
    "options_reconstructed": true
   },
@@ -916,7 +916,7 @@
    },
    "answer": "E",
    "source": "วิเคราะห์",
-   "why": "AG = 144−(95+14) = 35 → HAGMA · ΔAG = 23, ΔHCO3 = 24−14 = 10 → Δ/Δ = 2.3 (>2) แปลว่า HCO3 สูงกว่าที่ควร = มี metabolic alkalosis ซ้อน (จากอาเจียนเสีย HCl) · A ไม่มี pCO2 ให้และ HCO3 ต่ำ · B, C ไม่ 'pure' เพราะ Δ/Δ ผิดปกติ · D NAGMA ร่วมจะให้ Δ/Δ <1",
+   "why": "คำนวณ AG = 35 (HAGMA) และ ΔAG/ΔHCO3 = 23/10 = 2.3 (>2) แสดงว่ามี metabolic alkalosis ซ้อนจากการอาเจียนเสียกรด\n✗ A: โจทย์ไม่ได้ให้ค่า pCO2 และค่า HCO3 ต่ำมากจึงไม่ใช่ respiratory acidosis ล้วน\n✗ B: หากเป็น HAGMA ล้วน ค่า ΔAG/ΔHCO3 ควรอยู่ระหว่าง 1–2\n✗ C: ค่า anion gap สูงถึง 35 ไม่ใช่ภาวะ normal anion gap metabolic acidosis\n✗ D: หากมี NAGMA ซ้อนร่วมกับ HAGMA ค่า ΔAG/ΔHCO3 จะต้องน้อยกว่า 1\n✓ E: ค่า AG สูงร่วมกับ ΔAG/ΔHCO3 มากกว่า 2 บ่งชี้ HAGMA ที่มี metabolic alkalosis ซ้อนจากอาการอาเจียนรุนแรง",
    "doubt": "⚠ ตัวเลือก E ในไฟล์ถูกตัดคำ"
   },
   "76/237": {
@@ -931,7 +931,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Anemia of CKD เป็น normocytic normochromic หลักจาก peritubular interstitial fibroblast สร้าง EPO ลด (ร่วมกับ hepcidin สูง) · A iron deficiency ให้ microcytic hypochromic เป็นปัจจัยร่วมได้แต่ไม่ใช่สาเหตุหลัก · C G-CSF เกี่ยวกับ neutrophil · D, E ให้ macrocytic/hypersegmented neutrophil",
+   "why": "ภาวะซีดแบบ normocytic normochromic ในผู้ป่วยโรคไตเรื้อรังระยะที่ 3 ขึ้นไปมีสาเหตุหลักจากการสร้างฮอร์โมนกระตุ้นเม็ดเลือดแดงลดลง\n✗ A: ทำให้เกิดภาวะซีดแบบ microcytic hypochromic เป็นปัจจัยเสริมได้แต่ไม่ใช่กลไกหลักของโรคไตเรื้อรัง\n✓ B: เซลล์ peritubular interstitial fibroblast ของไตที่เสื่อมลงสร้าง erythropoietin ได้น้อยลงจนไขกระดูกสร้างเม็ดเลือดแดงลดลง\n✗ C: เป็นสารกระตุ้นการสร้างเม็ดเลือดขาวชนิดนิวโทรฟิล ไม่เกี่ยวข้องกับเม็ดเลือดแดง\n✗ D: ทำให้เกิดภาวะซีดแบบ macrocytic และพบ hypersegmented neutrophil\n✗ E: ทำให้เกิดภาวะซีดแบบ macrocytic megaloblastic anemia ไม่ใช่ลักษณะหลักของ CKD",
    "needs_image": true,
    "doubt": "⚠ ไม่เห็นรูป smear"
   },
@@ -944,7 +944,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Segmental sclerosis = FSGS เป็นโรค podocytopathy → nephrotic-range proteinuria เด่น · B hematuria อาจพบได้บ้างแต่ไม่ใช่ลักษณะหลัก (hematuria เด่นในกลุ่ม nephritic เช่น IgA, PSGN)",
+   "why": "รอยโรค segmental sclerosis ของโกลเมอรูลัสคือโรค FSGS ซึ่งเป็นโรคในกลุ่ม podocytopathy ที่ทำให้โปรตีนรั่วมาก\n✓ A: การบาดเจ็บของ podocyte ใน FSGS ทำให้เกิด nephrotic-range proteinuria เป็นอาการแสดงหลัก\n✗ B: เป็นอาการเด่นของกลุ่มโรค nephritic เช่น IgA nephropathy หรือ post-streptococcal GN มากกว่า",
    "needs_image": true,
    "doubt": "⚠ ไม่เห็นรูป"
   },
@@ -958,7 +958,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Calcium gluconate IV ยก threshold potential ทำให้ membrane เสถียรทันที (ไม่ลด K) เป็นขั้นแรกเมื่อ EKG เปลี่ยน · B beta blocker กลับทำให้ K ออกนอกเซลล์มากขึ้น (ตรงข้ามคือ β2 agonist ที่ shift K เข้าเซลล์) · C 7.5% NaHCO3 shift K เข้าเซลล์ ใช้เมื่อมี acidosis แต่ไม่ stabilize membrane",
+   "why": "การปกป้องกล้ามเนื้อหัวใจจากภาวะ hyperkalemia ต้องให้แคลเซียมทางหลอดเลือดดำเป็นอันดับแรก\n✓ A: ออกฤทธิ์ทันทีภายในไม่กี่นาทีโดยยก threshold potential เพื่อ stabilize เยื่อหุ้มเซลล์หัวใจ\n✗ B: ยาต้านตัวรับเบต้ากลับทำให้ K⁺ เคลื่อนออกนอกเซลล์มากขึ้น (ยาที่ช่วยดึง K⁺ เข้าเซลล์คือ β2-agonist)\n✗ C: ช่วยดึง K⁺ เข้าเซลล์เมื่อมีภาวะกรดเกิน แต่ไม่ได้ stabilize เยื่อหุ้มเซลล์หัวใจโดยตรง",
    "options_reconstructed": true
   },
   "76/253": {
@@ -970,7 +970,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "เมื่อ hyperK มีผลต่อ EKG ต้องให้ calcium (gluconate/chloride) ก่อนเพื่อป้องกัน arrhythmia ออกฤทธิ์ในไม่กี่นาที · A K-binding resin (SPS, patiromer) ขับ K ออกทางลำไส้ ช้าเป็นชั่วโมง ใช้เป็นขั้นตอนต่อมา"
+   "why": "เมื่อภาวะ hyperkalemia ทำให้เกิด tall peaked T wave ต้องให้แคลเซียมก่อนเพื่อป้องกันหัวใจเต้นผิดจังหวะฉับพลัน\n✗ A: ขับ K⁺ ออกจากทางเดินอาหารได้จริงแต่ออกฤทธิ์ช้าหลายชั่วโมง ไม่ใช่การรักษาอันดับแรกเมื่อ EKG เปลี่ยน\n✓ B: ออกฤทธิ์ stabilize เยื่อหุ้มเซลล์กล้ามเนื้อหัวใจได้ภายในไม่กี่นาทีจึงต้องให้เป็นอันดับแรก"
   },
   "76/257": {
    "box": 17,
@@ -981,7 +981,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "PSGN เกิดหลังติดเชื้อ GAS 1–3 สัปดาห์ เป็น type III hypersensitivity: immune complex สะสมแบบ subepithelial 'hump' C3 ต่ำ · B anti-GBM เป็น type II linear IgG ไม่สัมพันธ์กับ strep",
+   "why": "ไตอักเสบหลังคออักเสบจากเชื้อสเตรปโตคอคคัส (PSGN) เกิดจากกลไกภูมิคุ้มกันชนิดที่ 3 ที่มี immune complex ไปสะสมที่ไต\n✓ A: เกิด immune complex deposition แบบ subepithelial humps กระตุ้น complement จนระดับ C3 ในเลือดต่ำ\n✗ B: เป็นกลไกภูมิคุ้มกันชนิดที่ 2 ในโรค Goodpasture ที่เห็น linear IgG ไม่สัมพันธ์กับการติดเชื้อสเตรปโตคอคคัส",
    "options_reconstructed": true
   },
   "76/266": {
@@ -994,7 +994,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "Tram-track/double contour = GBM ซ้อนสองชั้น จาก mesangial interposition เข้าไประหว่าง endothelium กับ GBM แล้วสร้าง GBM ใหม่ พบใน MPGN (type I) · A endothelium บาดเจ็บเป็นตัวกระตุ้นแต่ไม่ใช่เส้นที่เห็น · B mesangial cell เป็นตัวที่แทรกเข้าไป แต่เส้นคู่ที่ย้อม PAS/silver คือ GBM"
+   "why": "ลักษณะรางรถไฟ (tram-track หรือ double contour) ใน MPGN เกิดจากการซ้อนชั้นของเยื่อบุฐานโกลเมอรูลัส\n✗ A: เกิดการบาดเจ็บเป็นตัวกระตุ้น แต่ไม่ใช่โครงสร้างเส้นคู่ที่ย้อมติดสี PAS หรือ silver\n✗ B: เป็นเซลล์ที่แทรกตัวเข้าไป (mesangial interposition) เพื่อกระตุ้นให้สร้างชั้นใหม่ แต่ตัวเส้นคู่ที่เห็นคือ GBM\n✓ C: มีการแทรกตัวของเซลล์ mesangial เข้าใต้เอนโดทีเลียมแล้วสร้างชั้น GBM ใหม่ซ้อนทับจนเห็นเป็นสองชั้น"
   },
   "76/268": {
    "box": 18,
@@ -1006,7 +1006,7 @@
    },
    "answer": "C",
    "source": "วิเคราะห์",
-   "why": "Membranous nephropathy: anti-PLA2R จับ antigen บน podocyte → immune complex สะสม subepithelial ใต้ podocyte ใกล้ slit diaphragm เห็น 'spike and dome' · A mesangial deposit = IgA nephropathy, lupus class II · B endocapillary/subendothelial = lupus class IV, MPGN",
+   "why": "Membranous nephropathy เกิดจากแอนติบอดีจับแอนติเจนบน podocyte ทำให้ immune complex สะสมใต้ podocyte\n✗ A: การสะสมที่ชั้น mesangium เป็นลักษณะของ IgA nephropathy หรือ lupus nephritis class II\n✗ B: การสะสมแบบ subendothelial พบใน lupus nephritis class IV หรือ MPGN\n✓ C: Immune complex สะสมในชั้น subepithelial ใต้ podocyte ใกล้ slit diaphragm เห็นลักษณะ spike and dome",
    "doubt": "⚠ โจทย์ในไฟล์ไม่ครบ ตีความจากตัวเลือก (บทเดิมน่าจะให้ภาพ membranous)"
   },
   "77/17": {
@@ -1020,7 +1020,7 @@
    },
    "answer": "D",
    "source": "เฉลย77",
-   "why": "Ureteric bud ให้กำเนิดระบบท่อรวม: ureter, pelvis, major/minor calyx, collecting duct · ถ้า bud ไม่เกิด metanephric blastema ไม่ถูกเหนี่ยวนำ → agenesis + oligohydramnios → pulmonary hypoplasia (Potter) · A pronephros เสื่อมไปเองไม่ทำงาน · B mesonephros ให้ mesonephric duct (bud งอกจากที่นี่) แต่ไม่ใช่ส่วนที่สร้าง calyx โดยตรง · C metanephric mesenchyme สร้าง nephron (glomerulus ถึง DCT) ไม่ใช่ collecting system"
+   "why": "โครงสร้างระบบท่อรวมของไตตั้งแต่ท่อไต กรวยไต คาลิกซ์ จนถึง collecting tubule เจริญมาจาก ureteric bud\n✗ A: เป็นไตระยะแรกในตัวอ่อนที่ฝ่อสลายไปเองและไม่ได้ทำหน้าที่สร้างระบบท่อรวม\n✗ B: ให้กำเนิด mesonephric duct ซึ่งเป็นต้นกำเนิดให้ bud แตกแขนงออกมา แต่ไม่ได้สร้างคาลิกซ์โดยตรง\n✗ C: เจริญเป็นหน่วยไตตั้งแต่โกลเมอรูลัสถึงท่อไตส่วนปลาย (DCT) ไม่ใช่ระบบท่อรวม\n✓ D: แตกแขนงเป็นท่อไต กรวยไต คาลิกซ์ และ collecting tubule หากไม่เจริญจะไม่เหนี่ยวนำเนื้อไตจนเกิด renal agenesis"
   },
   "77/18": {
    "box": 1,
@@ -1032,7 +1032,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "มดลูกเกิดจาก paramesonephric (Müllerian) duct 2 ข้างมาเชื่อมกันส่วนล่าง ถ้าเชื่อมไม่สมบูรณ์ → bicornuate uterus · B mesonephric (Wolffian) duct ในเพศหญิงเสื่อมไป ให้ ureteric bud และท่อในชาย ไม่เกี่ยวกับมดลูก · C ถ้า paramesonephric เสื่อมจะไม่มีมดลูก (agenesis/MRKH) ไม่ใช่ bicornuate (ส่วน septum ที่ไม่สลาย = septate uterus)"
+   "why": "มดลูกเจริญมาจากการเชื่อมรวมกันของท่อ paramesonephric ทั้งสองข้าง หากเชื่อมไม่สมบูรณ์จะเกิดมดลูกสองยอด (bicornuate uterus)\n✓ A: ท่อ paramesonephric (Müllerian) สองข้างไม่หลอมรวมกันส่วนบนจึงเกิดมดลูกแยกเป็นสองยอด\n✗ B: ท่อ mesonephric (Wolffian) พัฒนาเป็นระบบสืบพันธุ์ชายและฝ่อไปในเพศหญิง ไม่ได้สร้างมดลูก\n✗ C: หากท่อ paramesonephric ฝ่อสลายจะทำให้ไม่มีมดลูก (Müllerian agenesis) ไม่ใช่ bicornuate uterus"
   },
   "77/43": {
    "box": 10,
@@ -1046,7 +1046,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "แอลกอฮอล์ที่ยังไม่แห้ง + เข็มเล็ก + ดูดแรง → in vitro hemolysis → K ภายในเม็ดเลือดแดงรั่วออก → pseudohyperkalemia (รวมถึง LDH, AST, PO4) · B, C Na/Cl อยู่นอกเซลล์มากกว่า hemolysis ไม่เพิ่ม (อาจลดเล็กน้อยจากการเจือจาง) · D Ca ไม่เพิ่ม · E hemoconcentration เกิดจากรัด tourniquet นาน ไม่ใช่จากการดูดแรง"
+   "why": "แอลกอฮอล์ที่ไม่แห้ง เข็มขนาดเล็ก และการดูดเลือดแรงทำให้เม็ดเลือดแดงแตกนอกร่างกายจนโพแทสเซียมรั่วออกมาสูงหลอก\n✓ A: เม็ดเลือดแดงแตก (in vitro hemolysis) ปลดปล่อย K⁺ จากในเซลล์ออกมาทำให้เกิด pseudohyperkalemia\n✗ B: โซเดียมมีความเข้มข้นนอกเซลล์สูงกว่าในเซลล์ การแตกของเม็ดเลือดแดงจึงไม่ทำให้ค่าสูงขึ้น\n✗ C: คลอไรด์อยู่นอกเซลล์เป็นหลัก จึงไม่เพิ่มขึ้นจากภาวะเม็ดเลือดแดงแตก\n✗ D: แคลเซียมไม่ได้เพิ่มขึ้นจากการแตกของเม็ดเลือดแดง\n✗ E: ภาวะเลือดข้นเกิดจากการรัดสายยางห้ามเลือดนานเกินไป ไม่ใช่จากการดูดเลือดแรงด้วยเข็มเล็ก"
   },
   "77/47": {
    "box": 8,
@@ -1060,7 +1060,7 @@
    },
    "answer": "D",
    "source": "เฉลย77",
-   "why": "Aminoglycoside ฆ่าเชื้อแบบ concentration-dependent และมี post-antibiotic effect ยาว ให้วันละครั้ง (extended-interval) ได้ peak สูงสุด และ trough ต่ำนาน ลดการสะสมใน proximal tubule/หูชั้นใน → ลด nephrotoxicity และ ototoxicity · หยดใน 30–60 นาทีเลี่ยง peak สูงฉับพลัน (neuromuscular blockade) · A, B, C, E แบ่งให้หลายครั้งทำ peak ต่ำกว่าและ trough สูงต่อเนื่อง เพิ่มพิษต่อไต"
+   "why": "Aminoglycoside ฆ่าเชื้อแบบ concentration-dependent และมี post-antibiotic effect จึงนิยมบริหารวันละครั้งโดยหยดช้า ๆ\n✗ A: การแบ่งให้หลายครั้งทำให้ระดับ peak ต่ำลงและระดับ trough สูงค้าง เพิ่มความเสี่ยงพิษต่อไต\n✗ B: การแบ่งให้ทุก 8 ชั่วโมงทำให้ยาคั่งในท่อไตส่วนต้นได้ง่ายกว่าการให้วันละครั้ง\n✗ C: การแบ่งให้ทุก 12 ชั่วโมงให้ระดับ peak ต่ำกว่าและเสี่ยงพิษต่อไตมากกว่าการให้วันละครั้ง\n✓ D: การหยดวันละครั้งใน 60 นาทีให้ระดับ peak สูงสุดในการฆ่าเชื้อ ระดับ trough ต่ำเพื่อลดพิษต่อไต และเลี่ยง neuromuscular blockade\n✗ E: การแบ่งหยดวันละ 2 ครั้งลดประสิทธิภาพจาก peak และเพิ่มโอกาสสะสมพิษต่อไตและหู"
   },
   "77/48": {
    "box": 12,
@@ -1074,7 +1074,7 @@
    },
    "answer": "E",
    "source": "เฉลย77",
-   "why": "Salicylate กระตุ้นศูนย์หายใจ (A respiratory alkalosis ช่วงแรก) และ uncouple oxidative phosphorylation + สะสมกรด (C HAGMA) · B ยับยั้ง COX-1 ลด prostaglandin ปกป้องกระเพาะ · D ยับยั้ง TXA2 ใน platelet อย่างถาวร · ขนาดสูงยังต้าน vitamin K ทำให้ prothrombin ต่ำ (hypoprothrombinemia) ดังนั้น 'hyperprothrombinemia' จึงเกิดน้อยที่สุด → E"
+   "why": "พิษจากแอสไพรินขนาดสูงยับยั้งการแข็งตัวของเลือดและต้านวิตามินเคทำให้โปรธรอมบินต่ำลง ไม่ใช่สูงขึ้น\n✗ A: ซาลิไซเลตกระตุ้นศูนย์หายใจโดยตรงทำให้หายใจเร็วและเกิด respiratory alkalosis ในระยะแรก\n✗ B: ยับยั้ง COX-1 ลดการสร้าง prostaglandin ที่ปกป้องเยื่อบุกระเพาะอาหาร จึงเสี่ยงแผลในกระเพาะอาหาร\n✗ C: รบกวน oxidative phosphorylation และมีการสะสมกรดอินทรีย์ทำให้เกิด HAGMA\n✗ D: ยับยั้งการสร้าง thromboxane A2 ในเกล็ดเลือดอย่างถาวรทำให้เกล็ดเลือดทำงานผิดปกติ\n✓ E: ซาลิไซเลตขนาดสูงออกฤทธิ์ต้านวิตามินเคจนเกิด hypoprothrombinemia ไม่ใช่ hyperprothrombinemia"
   },
   "77/49": {
    "box": 8,
@@ -1086,7 +1086,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "Cisplatin สะสมใน proximal tubule (ผ่าน OCT2) → ATN, Fanconi-like, hypomagnesemia ป้องกันด้วย hydration · B paclitaxel พิษเด่นคือ peripheral neuropathy, myelosuppression ไม่ใช่ไต · C methotrexate ขนาดสูงก็ตกตะกอนในท่อไตทำ AKI ได้ แต่เป็นยาที่โจทย์ถือว่า nephrotoxic น้อยกว่า cisplatin ซึ่งเป็นตัวแทนคลาสสิก",
+   "why": "ยาเคมีบำบัดที่เป็นต้นแบบคลาสสิกของการก่อพิษต่อท่อไตส่วนต้นจนเกิด AKI คือ cisplatin\n✓ A: สะสมในเซลล์ท่อไตส่วนต้นผ่าน OCT2 ก่อภาวะ ATN, Fanconi-like syndrome และแมกนีเซียมต่ำ\n✗ B: พิษเด่นคือเส้นประสาทส่วนปลายอักเสบและกดไขกระดูก ไม่ใช่พิษต่อไต\n✗ C: แม้ขนาดสูงมากอาจตกตะกอนในท่อไตได้ แต่ cisplatin เป็นตัวแทนคลาสสิกที่ก่อ nephrotoxicity เด่นที่สุด",
    "doubt": "⚠ High-dose methotrexate ก็ทำ crystal nephropathy/AKI ได้ เฉลยเลือก cisplatin ที่เป็นตัวแทนคลาสสิกที่สุด"
   },
   "77/53": {
@@ -1099,7 +1099,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "Thiazide ยับยั้ง NCC ที่ DCT → Na ไปถึง collecting duct มาก + RAAS → K และ H ถูกขับ (hypoK + met. alkalosis) และ Na ในเซลล์ต่ำทำให้ basolateral Na/Ca exchanger ดึง Ca กลับมากขึ้น → hypercalcemia · B furosemide ทำ hypoK/alkalosis เหมือนกันแต่ Ca ต่ำ (เสีย Ca ที่ TAL) · C spironolactone ทำ K สูงและ acidosis"
+   "why": "ยาขับปัสสาวะที่ทำให้โพแทสเซียมต่ำ เลือดเป็นด่าง และแคลเซียมในเลือดสูงคือกลุ่ม thiazide\n✓ A: ยับยั้ง NCC ที่ DCT ทำให้เสีย K⁺ และ H⁺ ที่ท่อรวม และเพิ่มการดูดกลับ Ca²⁺ ผ่าน basolateral Na⁺/Ca²⁺ exchanger\n✗ B: ทำให้โพแทสเซียมต่ำและเลือดเป็นด่างเช่นกัน แต่เพิ่มการขับแคลเซียมออกทางปัสสาวะจนแคลเซียมต่ำ\n✗ C: เป็นยาขับปัสสาวะกลุ่มสงวนโพแทสเซียม ทำให้เกิด hyperkalemia และ metabolic acidosis"
   },
   "77/61": {
    "box": 22,
@@ -1112,7 +1112,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "ESA ต้องมี iron (และ folate) เพียงพอสำหรับสร้างเม็ดเลือด ถ้าตอบสนองไม่ดีต้องเสริม iron · ใน CKD ที่ยังไม่ฟอกเลือด เริ่มด้วย oral iron ได้ · B IV iron ใช้ใน hemodialysis หรือขาด iron มาก/oral ไม่ได้ผล · C vitamin A ไม่เกี่ยว · D การให้เลือดไม่ใช่ทางเลือกแรก เสี่ยง sensitization ก่อนปลูกถ่ายไต",
+   "why": "การตอบสนองไม่ดีต่อยาฉีดกระตุ้นเม็ดเลือดแดง (ESA) ใน CKD มีสาเหตุพบบ่อยที่สุดจากการขาดธาตุเหล็กและสารตั้งต้น\n✓ A: ผู้ป่วย CKD ที่ยังไม่ฟอกเลือดควรเสริมธาตุเหล็กชนิดรับประทานร่วมกับโฟเลตเพื่อให้ไขกระดูกสร้างเม็ดเลือดแดงได้เต็มที่\n✗ B: มักเลือกใช้ในผู้ป่วยฟอกเลือดด้วยเครื่องไตเทียม หรือกรณีที่รับประทานเหล็กไม่ได้ผลหรือขาดรุนแรง\n✗ C: วิตามินเอไม่ใช่วิตามินที่ใช้แก้ภาวะซีดและอาจสะสมเป็นพิษในผู้ป่วยโรคไตเรื้อรัง\n✗ D: การให้เลือดไม่แนะนำเป็นทางเลือกแรกเพราะเสี่ยงต่อภาวะน้ำเกินและกระตุ้นภูมิคุ้มกันก่อนปลูกถ่ายไต",
    "doubt": "⚠ แนวทาง KDIGO มักให้ IV iron ถ้า iron ต่ำมากหรือฟอกเลือด แต่เฉลยตอบ oral iron + folate"
   },
   "77/105": {
@@ -1125,7 +1125,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "อาการ palpable purpura + ปวดท้อง/GI bleed + arthralgia + hematuria = IgA vasculitis (HSP) เกิดจาก galactose-deficient IgA1 ก่อ immune complex สะสมใน small vessel และ mesangium (เหมือน IgA nephropathy) · A eosinophil เด่นใน EGPA (Churg–Strauss) ที่มีหอบหืด · C ANCA vasculitis เป็น pauci-immune ไม่มี IgA deposit",
+   "why": "เด็กที่มีผื่นนูนคลำได้ ปวดข้อ ถ่ายเป็นเลือด และปัสสาวะเป็นเลือดคือโรค IgA vasculitis (Henoch-Schönlein purpura)\n✗ A: เป็นกลไกเด่นของโรค EGPA (Churg-Strauss syndrome) ที่มักมาด้วยหอบหืดและอีโอซิโนฟิลสูง\n✓ B: เกิดจากการสะสมของ IgA immune complex ในผนังหลอดเลือดขนาดเล็กและ mesangium ของไต\n✗ C: เป็นกลไกของ ANCA-associated vasculitis ซึ่งเป็นแบบ pauci-immune ไม่มี IgA สะสม",
    "options_reconstructed": true
   },
   "77/128": {
@@ -1139,7 +1139,7 @@
    },
    "answer": "D",
    "source": "เฉลย77",
-   "why": "AG = 138−(108+9) = 21 → WAGMA · ΔAG = 9, ΔHCO3 = 15 → Δ/Δ = 0.6 (<1) = มี NAGMA ร่วม · pH ปกติแต่ HCO3 ต่ำมาก ร่วมกับ pCO2 ต่ำ = มีส่วนหายใจชดเชย/alkalosis · A ผิดเพราะ Δ/Δ <1 ไม่ pure · B pCO2 ต่ำไม่ใช่ respiratory acidosis · C metabolic alkalosis ร่วมต้อง Δ/Δ >2",
+   "why": "คำนวณ AG = 21 (WAGMA) และ ΔAG/ΔHCO3 = 9/15 = 0.6 (<1) ร่วมกับ pH ปกติและ pCO2 ต่ำ บ่งชี้ความผิดปกติแบบผสม 3 อย่าง\n✗ A: ไม่ใช่ WAGMA ล้วนเพราะค่า ΔAG/ΔHCO3 น้อยกว่า 1 แสดงว่ามี NAGMA ซ้อนอยู่ด้วย\n✗ B: ค่า pCO2 ต่ำถึง 20 mmHg เป็น respiratory alkalosis ไม่ใช่ respiratory acidosis\n✗ C: หากมี metabolic alkalosis ซ้อน ค่า ΔAG/ΔHCO3 จะต้องมากกว่า 2\n✓ D: มีทั้ง WAGMA (AG 21), NAGMA (ΔAG/ΔHCO3 = 0.6) และ respiratory alkalosis (pH 7.43 ทั้งที่ HCO3 ต่ำมาก)",
    "doubt": "⚠ ตาม Winter's formula คาด pCO2 = 1.5×9+8 = 21.5±2 ค่า 20 จึงเป็นการชดเชยที่เหมาะสม ไม่ใช่ primary respiratory alkalosis ชัดเจน แต่ pH 7.43 ชวนให้คิดว่ามี respiratory alkalosis ร่วม; ส่วน metabolic ตอบ WAGMA + NAGMA"
   },
   "77/157": {
@@ -1154,7 +1154,7 @@
    },
    "answer": "B",
    "source": "เฉลย77",
-   "why": "ARB ทำ efferent arteriole ขยาย → glomerular pressure ลด → eGFR ลดลงช่วงแรก (ยอมรับได้ถ้าลด <30%) ซึ่งเป็นผล hemodynamic ไม่ใช่ไตเสีย · A ปริมาณปัสสาวะไม่ลด (aldosterone ลดอาจขับ Na มากขึ้น) · C BUN อาจขึ้นเล็กน้อยได้แต่ผลหลักที่คาดคือ eGFR ลด · D ARB ไม่เพิ่มน้ำตาล (อาจดีขึ้นด้วย) · E ARB ลด proteinuria ไม่ใช่เพิ่ม",
+   "why": "การเริ่มยากลุ่ม ARB ในสัปดาห์แรกจะคลาย efferent arteriole ทำให้แรงดันกรองลดลงและค่า eGFR ลดลงเล็กน้อย\n✗ A: ยาไม่ได้ลดปริมาณปัสสาวะ และการลด aldosterone ยังอาจช่วยให้ขับโซเดียมและน้ำได้ดีขึ้น\n✓ B: การขยาย efferent arteriole ลดแรงดันในโกลเมอรูลัสทำให้ eGFR ลดลงช่วงแรก (ยอมรับได้หากลดไม่เกิน 30%)\n✗ C: แม้ BUN อาจขยับขึ้นเล็กน้อยได้ตามการลดลงของ GFR แต่ผลหลักที่คาดการณ์และติดตามคือ eGFR ที่ลดลง\n✗ D: ยากลุ่ม ARB ไม่ทำให้ระดับน้ำตาลในเลือดสูงขึ้นและอาจช่วยเพิ่มความไวต่ออินซูลิน\n✗ E: ยากลุ่ม ARB ช่วยลดปริมาณโปรตีนรั่วในปัสสาวะ ไม่ใช่เพิ่มขึ้น",
    "doubt": "⚠ BUN อาจสูงขึ้นเล็กน้อยตาม GFR ที่ลด แต่เฉลยตอบ eGFR ลด"
   },
   "77/187": {
@@ -1169,7 +1169,7 @@
    },
    "answer": "B",
    "source": "เฉลย77",
-   "why": "ไตผิดปกติรุนแรงตั้งแต่ในครรภ์ จนเกิด oligohydramnios + Potter = ARPKD (PKHD1, fibrocystin) ไตโตทั้งสองข้าง cyst เล็กจาก collecting duct ร่วม congenital hepatic fibrosis · A ADPKD (PKD1/2) แสดงอาการในผู้ใหญ่ ไม่ทำ Potter · C, D, E ไม่ใช่รูปแบบของ polycystic kidney ในทารก"
+   "why": "ทารกในครรภ์ที่มีไตผิดปกติรุนแรงจนเกิดน้ำคร่ำน้อยและ Potter sequence คือโรค ARPKD ซึ่งถ่ายทอดแบบยีนด้อย\n✗ A: ADPKD มักแสดงอาการในวัยผู้ใหญ่ ไม่ได้ทำให้เกิดไตวายรุนแรงและ Potter sequence ตั้งแต่ในครรภ์\n✓ B: ARPKD เกิดจากการกลายพันธุ์ยีน PKHD1 ถ่ายทอดแบบ autosomal recessive ทำให้ไตโตมีถุงน้ำเล็ก ๆ และน้ำคร่ำน้อยตั้งแต่ในครรภ์\n✗ C: ไม่ใช่รูปแบบการถ่ายทอดของโรคถุงน้ำในไตในทารก\n✗ D: ไม่ใช่รูปแบบการถ่ายทอดของโรคถุงน้ำในไตในทารก\n✗ E: ไม่ใช่โรคที่เกิดจากการถ่ายทอดทางดีเอ็นเอของไมโทคอนเดรีย"
   },
   "77/188": {
    "box": 14,
@@ -1183,7 +1183,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "โจทย์ให้กลไก 'ยับยั้ง H⁺ secretion' ซึ่งเป็นนิยามของ distal RTA (type 1) ที่ α-intercalated cell หลั่ง H⁺ ไม่ได้ urine pH >5.5 · B type 2 เกิดจาก proximal ดูดกลับ HCO3 ไม่ได้ · C type 3 เป็น mixed (CA II deficiency) พบน้อย · D type 4 = aldosterone ต่ำ/ดื้อ มี hyperK · E ไม่ตรงกลไกที่ให้",
+   "why": "กลไกที่โจทย์ระบุว่ายับยั้งการหลั่งโปรตอน (H⁺) ในเซลล์ท่อไตตรงกับนิยามของ distal RTA (type 1)\n✓ A: เกิดจาก α-intercalated cell ที่ท่อรวมไม่สามารถหลั่ง H⁺ ออกสู่ปัสสาวะได้ ทำให้ปัสสาวะเป็นด่าง (pH > 5.5)\n✗ B: เกิดจากความบกพร่องในการดูดกลับไบคาร์บอเนตที่ท่อไตส่วนต้น ไม่ใช่การหลั่งโปรตอน\n✗ C: เป็นภาวะขาด carbonic anhydrase II ชนิดผสมที่พบได้น้อยมาก\n✗ D: เกิดจากภาวะขาดหรือดื้อต่อ aldosterone ทำให้มีภาวะโพแทสเซียมในเลือดสูงเด่น\n✗ E: ไม่ตรงกับกลไกจำเพาะที่โจทย์ระบุว่ายับยั้งการหลั่งโปรตอนเพียงอย่างเดียว",
    "doubt": "⚠ ในทางคลินิก tenofovir มักทำ proximal tubulopathy/Fanconi (RTA type 2) แต่โจทย์ระบุกลไก H⁺ secretion จึงตอบ type 1 ตามเฉลย"
   },
   "77/189": {
@@ -1197,7 +1197,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "Abdominal (periumbilical) bruit + ความดันสูงรุนแรง = renovascular HT จาก renal artery stenosis (atherosclerosis ในผู้สูงอายุ, fibromuscular dysplasia ในหญิงสาว) ไตขาดเลือดหลั่ง renin มาก · B essential HT ไม่มี bruit · C Conn มี hypoK, renin ต่ำ ไม่มี bruit · D pheochromocytoma มีอาการเป็นพัก (ปวดหัว ใจสั่น เหงื่อ)",
+   "why": "ความดันโลหิตสูงรุนแรงร่วมกับเสียงฟู่ในช่องท้อง (abdominal bruit) เป็นลักษณะเด่นของหลอดเลือดแดงไตตีบ\n✓ A: การตีบของหลอดเลือดแดงไตทำให้เกิดเสียง bruit และกระตุ้นการหลั่ง renin สูงจนความดันโลหิตสูงรุนแรง\n✗ B: ความดันโลหิตสูงชนิดปฐมภูมิไม่มีเสียงฟู่ของหลอดเลือดในช่องท้อง\n✗ C: มีภาวะโพแทสเซียมต่ำและเรนินต่ำ แต่ไม่มีเสียงฟู่ในช่องท้อง\n✗ D: มาด้วยอาการความดันสูงเป็นพัก ๆ ร่วมกับปวดศีรษะ ใจสั่น เหงื่อออก และไม่มี abdominal bruit",
    "options_reconstructed": true
   },
   "77/190": {
@@ -1211,7 +1211,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "S. saprophyticus เป็น coagulase-negative staph ที่ดื้อ novobiocin เป็นสาเหตุ UTI อันดับ 2 ในหญิงวัยเจริญพันธุ์ที่มีเพศสัมพันธ์ · B S. epidermidis ไว novobiocin สัมพันธ์กับสายสวน/อุปกรณ์ · C S. aureus coagulase-positive · D S. lugdunensis ไว novobiocin สัมพันธ์ endocarditis"
+   "why": "เชื้อ Staphylococcus ที่ไม่สร้าง coagulase และดื้อต่อยา novobiocin เป็นสาเหตุ UTI อันดับสองในหญิงวัยเจริญพันธุ์\n✓ A: เป็น coagulase-negative Staphylococcus ที่ดื้อต่อ novobiocin และเป็นสาเหตุสำคัญของ UTI ในหญิงวัยเจริญพันธุ์\n✗ B: ไวต่อยา novobiocin และมักสัมพันธ์กับการติดเชื้อจากสายสวนหรืออุปกรณ์การแพทย์\n✗ C: เป็นเชื้อที่สร้างเอนไซม์ coagulase (coagulase-positive)\n✗ D: ไวต่อยา novobiocin และมักก่อโรคเยื่อบุหัวใจอักเสบเฉียบพลัน"
   },
   "77/191": {
    "box": 2,
@@ -1225,7 +1225,7 @@
    },
    "answer": "C",
    "source": "เฉลย77",
-   "why": "ureter วิ่งลงตามแนว transverse process ของ L2–L5 บน psoas นิ่วระดับ L3–L4 ที่อยู่ต่ำกว่าเงาไตจึงอยู่ใน ureter · A, B calyx อยู่ในเงาไตระดับ T12–L2 · D UVJ และ E bladder อยู่ในอุ้งเชิงกราน ระดับ sacrum/pubic symphysis",
+   "why": "เงานิ่วที่อยู่ระดับกระดูกสันหลัง L3–L4 ซึ่งต่ำกว่าเงาไตจะตรงกับแนวของท่อไต (ureter)\n✗ A: อยู่ในเงาไตระดับกระดูกสันหลังประมาณ T12–L2\n✗ B: อยู่ในเงาไตระดับกระดูกสันหลังประมาณ T12–L2\n✓ C: ทอดลงตามแนวปลาย transverse process ของ L2–L5 จึงตรงกับตำแหน่งเงานิ่วระดับ L3–L4\n✗ D: อยู่ต่ำลงไปในอุ้งเชิงกรานระดับกระดูก sacrum\n✗ E: อยู่ในอุ้งเชิงกรานด้านหลังกระดูกหัวหน่าว ต่ำกว่าระดับ L3–L4 มาก",
    "needs_image": true
   },
   "77/192": {
@@ -1240,7 +1240,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "NCCT KUB เป็น gold standard วินิจฉัยนิ่ว เห็นนิ่วเกือบทุกชนิด บอกขนาด ตำแหน่ง hydronephrosis และไม่ถูกเงาอุจจาระรบกวน · B scintigraphy ดูการทำงานแยกข้าง ไม่ใช่วินิจฉัยนิ่ว · C MRI เห็นนิ่วไม่ดี แพง · D UA ช่วยสนับสนุน (hematuria) แต่ไม่บอกตำแหน่ง · E เสียเวลาและยังมีข้อจำกัดของ plain film"
+   "why": "การตรวจมาตรฐานที่แม่นยำที่สุดสำหรับนิ่วทางเดินปัสสาวะและไม่ถูกเงาอุจจาระหรือแก๊สในลำไส้บดบังคือ CT แบบไม่ฉีดสี\n✓ A: เป็น gold standard ที่เห็นนิ่วเกือบทุกชนิด บอกขนาด ตำแหน่ง ภาวะไตบวมน้ำ และไม่ถูกเงาอุจจาระบัง\n✗ B: ใช้ประเมินการทำงานและการระบายน้ำของไตแยกแต่ละข้าง ไม่ใช่การตรวจหานิ่ว\n✗ C: มองเห็นนิ่วได้ไม่ดีและมีค่าใช้จ่ายสูง ไม่ใช่การตรวจมาตรฐานของนิ่วทางเดินปัสสาวะ\n✗ D: ช่วยสนับสนุนว่ามีเลือดออกหรือผลึกในปัสสาวะ แต่ไม่สามารถระบุตำแหน่งหรือขนาดนิ่วได้\n✗ E: เสียเวลาและยังมีข้อจำกัดในการมองเห็นนิ่วโปร่งรังสีหรือนิ่วขนาดเล็ก"
   },
   "77/193": {
    "box": 23,
@@ -1253,7 +1253,7 @@
    },
    "answer": "B",
    "source": "เฉลย77",
-   "why": "E. coli ดื้อ 3rd-gen ceph = ESBL-producer ยาหลักคือ carbapenem แต่ไม่มีในตัวเลือก · aminoglycoside (gentamicin) ยังไวต่อ ESBL ส่วนใหญ่และขับทางไตความเข้มข้นสูงในปัสสาวะ เหมาะกับ cystitis · A sulbactam เดี่ยวใช้กับ Acinetobacter · C colistin สำรองไว้ใช้กับ carbapenem-resistant เท่านั้น พิษต่อไตสูง · D ceftaroline เป็น cephalosporin ที่เด่นเรื่อง MRSA ไม่ทนต่อ ESBL",
+   "why": "E. coli ที่ดื้อ cephalosporin รุ่นที่ 3 เป็นเชื้อสร้าง ESBL เมื่อไม่มี carbapenem ในตัวเลือก ให้เลือก aminoglycoside ที่ขับเข้มข้นในปัสสาวะ\n✗ A: เมื่อใช้เดี่ยวมักออกฤทธิ์ต่อเชื้อ Acinetobacter ไม่ได้ใช้รักษาเชื้อ E. coli สร้าง ESBL\n✓ B: ยากลุ่ม aminoglycoside ส่วนใหญ่ยังไวต่อเชื้อ ESBL และขับออกทางปัสสาวะในความเข้มข้นสูง จึงเหมาะสำหรับ cystitis\n✗ C: เป็นยาพิษต่อไตสูงและสงวนไว้สำหรับเชื้อดื้อต่อ carbapenem (CRE) เท่านั้น\n✗ D: เป็น cephalosporin รุ่นที่ 5 ที่เด่นเรื่องเชื้อ MRSA แต่ไม่ทนต่อเอนไซม์ ESBL",
    "doubt": "⚠ ตัวเลือกไม่มี carbapenem/fosfomycin/nitrofurantoin"
   },
   "77/194": {
@@ -1267,7 +1267,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "CLED agar: lactose fermenter ให้โคโลนีเหลือง · E. coli เป็น lactose fermenter โคโลนีเหลืองทึบ และเป็นสาเหตุ UTI อันดับ 1 · B Proteus ไม่หมัก lactose โคโลนีฟ้า/ใส และ CLED ยับยั้ง swarming · C Klebsiella หมัก lactose แต่โคโลนี mucoid เหลืองถึงขาวอมฟ้า พบน้อยกว่า · D Enterobacter ก็หมักได้แต่พบน้อยกว่า E. coli มาก"
+   "why": "เชื้อก่อโรค UTI ที่ให้ผล nitrite บวกและเจริญเป็นโคโลนีสีเหลือง (lactose fermenter) บน CLED agar พบบ่อยที่สุดคือ E. coli\n✓ A: เป็นแบคทีเรียหมักแลคโตสที่ให้โคโลนีสีเหลืองทึบบน CLED agar และเป็นสาเหตุ UTI อันดับหนึ่ง\n✗ B: ไม่หมักแลคโตสจึงให้โคโลนีสีฟ้าใสบน CLED agar ซึ่งช่วยยับยั้งการลามแบบ swarming\n✗ C: หมักแลคโตสได้แต่โคโลนีมีลักษณะเป็นเมือกเหนียว (mucoid) และพบน้อยกว่า E. coli\n✗ D: หมักแลคโตสได้แต่เป็นสาเหตุของกระเพาะปัสสาวะอักเสบในชุมชนน้อยกว่า E. coli มาก"
   },
   "77/195": {
    "box": 26,
@@ -1278,7 +1278,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "ไข่ S. haematobium ฝังในผนัง bladder → อักเสบเรื้อรัง → squamous metaplasia → SCC (พบมากในอียิปต์/แอฟริกา) · B smoking เป็นปัจจัยเสี่ยงอันดับ 1 ของ urothelial carcinoma ไม่ใช่ SCC"
+   "why": "การติดเชื้อพยาธิใบไม้ในเลือดเรื้อรังทำให้เยื่อบุกระเพาะปัสสาวะเปลี่ยนเป็นเซลล์สความัสและกลายเป็นมะเร็งชนิด SCC\n✓ A: ไข่พยาธิฝังในผนังกระเพาะปัสสาวะก่อการอักเสบเรื้อรังจนเกิด squamous metaplasia และกลายเป็น squamous cell carcinoma\n✗ B: เป็นปัจจัยเสี่ยงอันดับหนึ่งของมะเร็งเยื่อบุทางเดินปัสสาวะชนิด urothelial carcinoma ไม่ใช่ SCC"
   },
   "77/196": {
    "box": 26,
@@ -1291,7 +1291,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "Painless gross hematuria ในผู้ใหญ่ + aromatic amine (สีย้อม aniline, β-naphthylamine) + สูบบุหรี่ = urothelial carcinoma · B นิ่วจะปวดบิด (colicky) · C BPH มีอาการถ่ายปัสสาวะลำบาก hematuria พบได้แต่ไม่สัมพันธ์กับสีย้อม · D IgA nephropathy มักในคนหนุ่มหลังติดเชื้อทางเดินหายใจ"
+   "why": "ปัสสาวะเป็นเลือดแบบไม่เจ็บในผู้ใหญ่ที่มีประวัติสูบบุหรี่และสัมผัสสีย้อม (aromatic amine) เป็นลักษณะเด่นของมะเร็งเยื่อบุทางเดินปัสสาวะ\n✓ A: ปัจจัยเสี่ยงสำคัญคือบุหรี่และสาร aromatic amine ในอุตสาหกรรมสีย้อม มาด้วย painless gross hematuria\n✗ B: นิ่วในท่อไตร่วมกับปัสสาวะเป็นเลือดมักมาด้วยอาการปวดบิดรุนแรงร้าวลงขาหนีบ\n✗ C: อาการเด่นคือปัสสาวะลำบากและไม่พุ่ง ไม่ได้สัมพันธ์กับการสัมผัสสีย้อม\n✗ D: มักพบในคนอายุน้อยโดยมีปัสสาวะเป็นเลือดตามหลังการติดเชื้อทางเดินหายใจส่วนบน"
   },
   "77/198": {
    "box": 9,
@@ -1303,7 +1303,7 @@
    },
    "answer": "B",
    "source": "เฉลย77",
-   "why": "ADH เพิ่ม UT-A1/UT-A3 ที่ inner medullary collecting duct → urea ดูดกลับเข้า interstitium เพิ่ม medullary osmolality ช่วยให้ปัสสาวะเข้มข้น (800) · A plasma osm ต่ำจาก SIADH กดศูนย์กระหายน้ำ ไม่ใช่กระตุ้น · C ADH เพิ่ม AQP2 ที่ collecting duct ไม่ใช่ loop of Henle (descending limb มี AQP1 คงที่ไม่ขึ้นกับ ADH)"
+   "why": "ในภาวะ SIADH ฮอร์โมน ADH ที่สูงเกินไปกระตุ้นการดูดกลับทั้งน้ำและยูเรียที่ท่อรวมชั้นในเพื่อทำให้ปัสสาวะเข้มข้น\n✗ A: ความเข้มข้นเลือดที่ต่ำ (Na⁺ 120) จะไปยับยั้งศูนย์กระหายน้ำ ไม่ใช่กระตุ้นมากขึ้น\n✓ B: ADH กระตุ้นตัวขนส่ง UT-A1/UT-A3 ที่ inner medullary collecting duct เพิ่มการดูดกลับยูเรียเข้าเนื้อไตเพื่อคงความเข้มข้นสูง\n✗ C: ADH เพิ่มช่องน้ำ AQP2 ที่ collecting duct ไม่ใช่ loop of Henle (descending limb มี AQP1 คงที่อยู่แล้ว)"
   },
   "77/199": {
    "box": 27,
@@ -1316,7 +1316,7 @@
    },
    "answer": "B",
    "source": "เฉลย77",
-   "why": "ประมาณ 70% ของ adenocarcinoma เกิดที่ peripheral zone (ด้านหลัง) จึงคลำได้จาก DRE และไม่ค่อยทำให้ปัสสาวะขัดระยะแรก · A, D periurethral/transition zone เป็นแหล่งของ BPH · C central zone เกิดมะเร็งน้อยที่สุด"
+   "why": "มะเร็งต่อมลูกหมากส่วนใหญ่เกิดที่ส่วนนอกด้านหลังจึงคลำพบก้อนแข็งได้จากการตรวจทางทวารหนัก (DRE)\n✗ A: เป็นบริเวณที่พบภาวะต่อมลูกหมากโตชนิดไม่ร้ายแรง (BPH) ไม่ใช่มะเร็ง\n✓ B: เป็นตำแหน่งที่เกิด adenocarcinoma ของต่อมลูกหมากราว 70% และอยู่ติดผนังลำไส้ตรงจึงคลำได้จาก DRE\n✗ C: เป็นส่วนที่เกิดมะเร็งต่อมลูกหมากพบน้อยที่สุด\n✗ D: เป็นตำแหน่งหลักของภาวะต่อมลูกหมากโต (BPH) ซึ่งกดท่อปัสสาวะให้ปัสสาวะลำบากได้ง่ายกว่า"
   },
   "77/200": {
    "box": 3,
@@ -1329,7 +1329,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "Mesangial cell เป็น modified smooth muscle อยู่ระหว่าง capillary loop: ค้ำจุนโครงสร้าง สร้าง mesangial matrix หดตัวปรับพื้นที่กรอง phagocytose โปรตีน/immune complex · B barrier หลักคือ endothelium + GBM + podocyte slit diaphragm · C ที่แยก Bowman's space คือ podocyte/parietal epithelium · D renin หลั่งจาก JG cell ของ afferent arteriole (extraglomerular mesangial/lacis cell ไม่ใช่ตัวหลั่ง)",
+   "why": "Mesangial cell เป็นเซลล์กล้ามเนื้อเรียบดัดแปลงที่แทรกอยู่ระหว่างหลอดเลือดฝอยในโกลเมอรูลัสเพื่อค้ำจุนโครงสร้าง\n✓ A: ค้ำจุนผนังหลอดเลือดฝอย สร้าง mesangial matrix หดตัวปรับพื้นที่กรอง และเก็บกินโปรตีนหรือ immune complex\n✗ B: ชั้นกรองหลักประกอบด้วยเอนโดทีเลียม, GBM และ podocyte slit diaphragm\n✗ C: โครงสร้างที่กั้น Bowman's space คือ podocyte (visceral) และ parietal epithelial cell\n✗ D: การหลั่ง renin เป็นหน้าที่ของ juxtaglomerular cell ที่ผนัง afferent arteriole",
    "options_reconstructed": true,
    "doubt": "⚠ ตัวเลือก B, C ในไฟล์ถูกตัด เรียบเรียงใหม่"
   },
@@ -1343,7 +1343,7 @@
    },
    "answer": "B",
    "source": "เฉลย77",
-   "why": "PSGN/diffuse proliferative GN มี neutrophil จำนวนมากใน glomerulus → พบ RBC cast และ WBC cast ได้ (nephritic) · A microalbuminuria เป็นลักษณะ diabetic nephropathy ระยะแรก · C broad (waxy) cast บ่งบอก CKD ที่ท่อไตขยาย",
+   "why": "ไตอักเสบเฉียบพลันหลังติดเชื้อสเตรปโตคอคคัส (PSGN) มีนิวโทรฟิลแทรกจำนวนมากในโกลเมอรูลัสจึงพบเม็ดเลือดขาวอัดเป็นแท่งในปัสสาวะได้\n✗ A: เป็นลักษณะการตรวจคัดกรองโรคไตจากเบาหวานระยะเริ่มต้น\n✓ B: การอักเสบเฉียบพลันแบบ diffuse proliferative GN ที่มี PMN เด่นทำให้พบได้ทั้ง RBC cast และ WBC cast\n✗ C: แท่งคาสต์ขนาดกว้าง (broad/waxy cast) บ่งชี้ภาวะไตวายเรื้อรังระยะท้ายที่ท่อไตขยายตัว",
    "needs_image": true,
    "doubt": "⚠ ไม่เห็นรูป อาศัยคำอธิบายในชีท"
   },
@@ -1356,7 +1356,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "Protein 3+ ชวน nephrotic syndrome → ไขมันในเลือดสูงและ lipiduria: เซลล์ท่อไตที่อมไขมัน = oval fat body (Maltese cross ใต้ polarized light) และ fatty cast · B broad cast พบใน CKD ระยะท้าย ไม่จำเพาะกับ proteinuria"
+   "why": "โปรตีนรั่วในปัสสาวะระดับ 3+ บ่งชี้กลุ่มอาการ nephrotic ซึ่งมีไขมันในเลือดสูงและไขมันรั่วในปัสสาวะ (lipiduria)\n✓ A: เซลล์เยื่อบุท่อไตที่ดูดซับไขมันเข้าไปจะหลุดลอกเป็น oval fat body (เห็นรูป Maltese cross ใต้แสงโพลาไรซ์)\n✗ B: พบในภาวะไตวายเรื้อรังระยะท้าย ไม่ได้จำเพาะกับภาวะโปรตีนรั่วระดับ nephrotic"
   },
   "77/207": {
    "box": 2,
@@ -1370,7 +1370,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "Left testicular vein เทเข้า left renal vein เป็นมุมฉาก ยาวกว่า และอาจถูกบีบระหว่าง aorta–SMA (nutcracker) → ความดันสูง → varicocele ข้างซ้ายบ่อย · B เป็น artery และไม่เทเข้า IVC · C, D ไม่ใช่ทางระบายของ testicular vein · E เป็นทางของ right testicular vein ไม่ใช่ซ้าย"
+   "why": "หลอดเลือดดำอัณฑะด้านซ้ายเทตั้งฉากเข้าหลอดเลือดดำไตซ้าย ทำให้ความดันสูงและเกิดเส้นเลือดขอดในถุงอัณฑะได้บ่อยกว่าข้างขวา\n✓ A: หลอดเลือดดำอัณฑะซ้ายยาวและเทตั้งฉากเข้า left renal vein ซึ่งอาจถูกบีบระหว่าง aorta กับ SMA จนความดันสูงและเกิด varicocele\n✗ B: หลอดเลือดแดงไม่ได้เทเข้า IVC และ varicocele เป็นความผิดปกติของระบบหลอดเลือดดำ\n✗ C: หลอดเลือดดำอัณฑะไม่ได้ระบายเข้าสู่ common iliac vein\n✗ D: หลอดเลือดดำอัณฑะไม่ได้ระบายเข้าสู่ internal iliac vein\n✗ E: การเทเข้าสู่ IVC โดยตรงเป็นทางระบายของหลอดเลือดดำอัณฑะด้านขวา ไม่ใช่ด้านซ้าย"
   },
   "77/212": {
    "box": 23,
@@ -1383,7 +1383,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "ceftriaxone ครอบคลุม N. gonorrhoeae แต่ไม่ครอบคลุม Chlamydia trachomatis (intracellular ไม่มี peptidoglycan แบบปกติ) ซึ่งติดร่วมบ่อย → ให้ doxycycline (หรือ azithromycin) · B ceftriaxone ไม่ได้ผลกับ Chlamydia · C penicillin G benzathine ใช้รักษา syphilis · D metronidazole ใช้กับ Trichomonas ไม่ใช่ตัวแรกที่คิด",
+   "why": "ท่อปัสสาวะอักเสบที่ยังเหลือหนองเมือกหลังฉีด ceftriaxone มักเกิดจากการติดเชื้อ Chlamydia trachomatis ร่วมด้วย\n✓ A: ครอบคลุมเชื้อ Chlamydia trachomatis ซึ่งเป็นเชื้อในเซลล์ที่มักติดร่วมกับหนองในแท้และไม่ตอบสนองต่อ ceftriaxone\n✗ B: กลุ่ม cephalosporin ไม่มีฤทธิ์ฆ่าเชื้อ Chlamydia ที่ไม่มีผนังเซลล์ peptidoglycan แบบปกติ\n✗ C: เป็นยารักษาโรคซิฟิลิส ไม่ได้ใช้รักษาท่อปัสสาวะอักเสบจาก Chlamydia\n✗ D: ใช้รักษาการติดเชื้อ Trichomonas หรือแบคทีเรียไม่ใช้ออกซิเจน ไม่ใช่ยาหลักสำหรับเชื้อที่พบร่วมบ่อยที่สุด",
    "options_reconstructed": true
   },
   "77/223": {
@@ -1397,7 +1397,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "PTH เพิ่มการดูดกลับ Ca ที่ DCT (TRPV5) ลดการดูดกลับ phosphate โดยยับยั้ง NaPi-IIa ที่ PCT (phosphaturia) และยับยั้ง NHE3 ที่ PCT → ดูดกลับ Na (และ HCO3) ลดลง · B, C, D ทิศทางของ Ca/PO4 ไม่ตรงกับฤทธิ์ PTH",
+   "why": "ฮอร์โมนพาราไทรอยด์ (PTH) ออกฤทธิ์ที่ไตเพื่อเก็บแคลเซียมและขับฟอสเฟตออกทางปัสสาวะ\n✓ A: กระตุ้นการดูดกลับ Ca²⁺ ที่ DCT พร้อมยับยั้ง NaPi-IIa และ NHE3 ที่ PCT ทำให้ดูดกลับฟอสเฟตและโซเดียมลดลง\n✗ B: ทิศทางตรงข้ามกับฤทธิ์จริงของ PTH ที่ต้องเพิ่มการดูดกลับแคลเซียมและลดการดูดกลับฟอสเฟต\n✗ C: PTH ยับยั้งการดูดกลับฟอสเฟตที่ PCT เพื่อขับออก ไม่ได้เพิ่มการดูดกลับ\n✗ D: PTH เพิ่มการดูดกลับแคลเซียมที่ท่อไตส่วนปลาย ไม่ได้ลดลง",
    "options_reconstructed": true
   },
   "77/224": {
@@ -1411,7 +1411,7 @@
    },
    "answer": "A",
    "source": "เฉลย77",
-   "why": "Aldosterone สูง + renin ต่ำ (ARR สูง) + hypoK + HT ดื้อยา = primary hyperaldosteronism (Conn) · B pheochromocytoma ไม่เกี่ยวกับ RAAS โดยตรง · C RAS ให้ renin สูง aldosterone สูง (secondary) · D Addison มี aldosterone ต่ำ K สูง ความดันต่ำ"
+   "why": "ความดันโลหิตสูงดื้อยา ร่วมกับโพแทสเซียมต่ำ aldosterone สูง และ renin ต่ำ เป็นลักษณะจำเพาะของ primary hyperaldosteronism\n✓ A: ต่อมหมวกไตสร้าง aldosterone เองมากเกินไปจนกดการหลั่ง renin เกิดความดันสูงและ hypokalemia\n✗ B: เป็นเนื้องอกหลั่ง catecholamine ไม่ได้ทำให้ aldosterone สูงและ renin ต่ำเป็นหลัก\n✗ C: กระตุ้นระบบ RAAS แบบทุติยภูมิ ทำให้ทั้ง renin และ aldosterone สูงขึ้นพร้อมกัน\n✗ D: เป็นภาวะพร่องฮอร์โมนต่อมหมวกไต มี aldosterone ต่ำ ความดันต่ำ และโพแทสเซียมสูง"
   },
   "77/225": {
    "box": 15,
@@ -1423,7 +1423,7 @@
    },
    "answer": "C",
    "source": "เฉลย77",
-   "why": "เฉลยเลือก tertiary โดยมองว่า PTH สูงมาก (>1000) จนเกิด brown tumor/osteitis fibrosa cystica ใน CKD ที่ต่อมทำงานอิสระ · A primary HPT จะมี Ca สูงและไม่มีบริบท CKD · B secondary HPT จาก CKD (PO4 คั่ง, calcitriol ต่ำ) มี Ca ต่ำ/ปกติ เป็นคำตอบตามหลักทั่วไป",
+   "why": "ผู้ป่วย CKD stage 4 ที่มีระดับ PTH สูงมากเกิน 1,000 จนเกิดรอยโรคกระดูก (brown tumor) เฉลยข้อนี้เน้นภาวะต่อมพาราไทรอยด์ทำงานอิสระ\n✗ A: มีระดับแคลเซียมในเลือดสูงเด่นและไม่ได้เกิดจากบริบทของโรคไตเรื้อรังระยะท้าย\n✗ B: แม้จะเป็นกลไกตั้งต้นใน CKD ที่แคลเซียมปกติหรือต่ำ แต่โจทย์ข้อนี้เฉลยเน้นระดับ PTH สูงจัดจนเป็น tertiary\n✓ C: การกระตุ้นต่อมพาราไทรอยด์เรื้อรังใน CKD จนต่อมโตและหลั่ง PTH สูงมากเกิน 1,000 จนเกิด brown tumor ที่ขากรรไกร",
    "doubt": "⚠ ตามหลัก CKD + Ca ปกติ/ต่ำ + PTH สูง = secondary HPT ส่วน tertiary ต้องมี Ca สูง (มักหลังปลูกถ่ายไต) แต่เฉลย77 ตอบ tertiary"
   },
   "78/5": {
@@ -1438,7 +1438,7 @@
    },
    "answer": "E",
    "source": "เฉลย78",
-   "why": "NKCC2 ที่ TAL เป็นตัวสร้าง medullary hypertonicity (countercurrent multiplier) ถ้าขาด (Bartter) interstitium ไม่เข้มข้น → ทำ urine ให้เข้มสุดไม่ได้ → max urine osm ลด (E) · A ผิด: เสีย Na → volume ลด BP ปกติ/ต่ำ · B ผิด: Na มาถึง CD มาก + aldosterone สูง → เสีย K = hypokalemia · C ผิด: เสีย H+ → metabolic alkalosis · D ผิด: Na ใน medulla ลดลงไม่ใช่เพิ่ม"
+   "why": "ตัวขนส่ง NKCC2 ที่ thick ascending limb สร้างความเข้มข้นสูงในเนื้อไตชั้นใน หากบกพร่องไตจะไม่สามารถทำให้ปัสสาวะเข้มข้นสูงสุดได้\n✗ A: การสูญเสียโซเดียมและน้ำทำให้ปริมาตรเลือดลดลง ความดันโลหิตจึงปกติหรือต่ำ\n✗ B: โซเดียมไปถึงท่อรวมมากขึ้นร่วมกับ aldosterone สูง ทำให้ขับ K⁺ มากจนเกิด hypokalemia\n✗ C: การขับ H⁺ เพิ่มขึ้นที่ท่อรวมทำให้เกิดภาวะ metabolic alkalosis ไม่ใช่ acidosis\n✗ D: เมื่อขาด NKCC2 โซเดียมไม่ถูกสูบเข้าเนื้อไตชั้นใน ความเข้มข้นใน medulla จึงลดลง\n✓ E: เนื้อไตชั้นในไม่เข้มข้นพอ (countercurrent multiplier เสีย) ทำให้ความสามารถในการเข้มข้นปัสสาวะสูงสุดลดลง"
   },
   "78/6": {
    "box": 27,
@@ -1452,7 +1452,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Acute retention จาก BPH ต้องระบาย bladder ทันทีด้วย urethral (Foley) catheter (A) · B ผิด: α1 blocker เป็นยากิน ใช้ระยะยาว/ช่วย trial without catheter ไม่ใช่แก้เฉียบพลัน · C ผิด: U/S ใช้ประเมินหลังระบายแล้ว ไม่ใช่ขั้นแรก · D ผิด: suprapubic ใช้เมื่อใส่ Foley ไม่ได้ · E ผิด: ปล่อยไว้ → hydronephrosis/postrenal AKI"
+   "why": "ภาวะปัสสาวะไม่ออกเฉียบพลันจากต่อมลูกหมากโตต้องรีบระบายปัสสาวะออกทันทีเพื่อป้องกันไตวายและการบาดเจ็บของกระเพาะปัสสาวะ\n✓ A: การใส่สายสวนปัสสาวะทางท่อปัสสาวะเป็นการรักษาฉุกเฉินอันดับแรกเพื่อลดแรงดันในกระเพาะปัสสาวะทันที\n✗ B: ยาต้าน α1 เป็นยารับประทานเพื่อช่วยคลายกล้ามเนื้อเรียบและเตรียมถอดสายสวน ไม่ใช่การระบายฉุกเฉิน\n✗ C: การทำอัลตราซาวนด์ใช้ประเมินภายหลัง ไม่ควรชะลอการระบายปัสสาวะในภาวะฉุกเฉิน\n✗ D: การเจาะระบายหน้าท้องสงวนไว้ใช้เมื่อไม่สามารถใส่สายสวนทางท่อปัสสาวะได้หรือมีข้อห้าม\n✗ E: การสังเกตอาการโดยไม่ระบายจะทำให้เกิดไตบวมน้ำและไตวายเฉียบพลันจากทางเดินปัสสาวะอุดกั้น"
   },
   "78/9": {
    "box": 4,
@@ -1466,7 +1466,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "1α-hydroxylase ที่ PCT เปลี่ยน 25(OH)D → 1,25(OH)2D (calcitriol) CKD สร้างไม่ได้ → Ca ดูดซึมน้อย + secondary HPT → renal osteodystrophy (A) · D: 24-hydroxylase เป็นตัวทำลาย vitamin D ไม่ได้ขาด · E: 25-hydroxylation เกิดที่ตับ ไม่เกี่ยวกับไต · B, C ไม่มีบทบาทใน vitamin D"
+   "why": "โรคไตเรื้อรังขาดเอนไซม์ 1α-hydroxylase ที่ท่อไตส่วนต้น ทำให้สร้างวิตามินดีรูปออกฤทธิ์ไม่ได้และเกิดโรคกระดูกจากไต\n✓ A: ทำหน้าที่เปลี่ยน 25(OH)D เป็น 1,25(OH)2D (calcitriol) ที่ PCT เมื่อขาดจึงดูดซึมแคลเซียมลดลงและกระดูกหักง่าย\n✗ B: ไม่ใช่เอนไซม์ในวิถีการสร้างวิตามินดีรูปออกฤทธิ์ของไต\n✗ C: ไม่ใช่เอนไซม์ในกระบวนการกระตุ้นวิตามินดีของไต\n✗ D: เป็นเอนไซม์ที่ใช้ทำลายวิตามินดีให้อยู่ในรูปไม่ออกฤทธิ์ ไม่ใช่เอนไซม์ที่ขาดใน CKD\n✗ E: เป็นเอนไซม์ที่ทำงานในตับเพื่อเปลี่ยนวิตามินดีเป็น 25(OH)D ไม่ใช่เอนไซม์ที่ไต"
   },
   "78/11": {
    "box": 9,
@@ -1480,7 +1480,7 @@
    },
    "answer": "C",
    "source": "เฉลย78",
-   "why": "Crystalloid = สารละลายโมเลกุลเล็ก (electrolyte, dextrose) ผ่านผนัง capillary ได้อิสระ จึงกระจายไปทั้ง ECF (C) · A, D, E เป็นลักษณะของ colloid (albumin = plasma-derived, HES/gelatin = semi-synthetic, MW สูงค้างใน vessel) · B ผิด: crystalloid หลายตัวมีสารอินทรีย์ เช่น dextrose, lactate, acetate",
+   "why": "สารน้ำกลุ่ม crystalloid ประกอบด้วยโมเลกุลขนาดเล็กที่สามารถแพร่ผ่านผนังหลอดเลือดฝอยเข้าสู่ช่องระหว่างเซลล์ได้อิสระ\n✗ A: สารที่มีน้ำหนักโมเลกุลสูงจนค้างอยู่ในหลอดเลือดเป็นคุณสมบัติของสารน้ำกลุ่ม colloid\n✗ B: สารน้ำ crystalloid หลายชนิดมีสารอินทรีย์ผสมอยู่ด้วย เช่น dextrose, lactate หรือ acetate\n✓ C: โมเลกุลอิเล็กโทรไลต์และน้ำตาลมีขนาดเล็กจึงผ่านผนังหลอดเลือดฝอยที่เป็นเยื่อเลือกผ่านได้และกระจายทั่ว ECF\n✗ D: สารสังเคราะห์กึ่งธรรมชาติ เช่น HES หรือ gelatin จัดเป็นสารน้ำกลุ่ม colloid\n✗ E: สารอนุพันธ์จากพลาสมาธรรมชาติ เช่น albumin จัดเป็นสารน้ำกลุ่ม colloid",
    "doubt": "⚠ เฉลยพิมพ์ \"C?\" (ไม่มั่นใจ) แต่ตรงหลัก"
   },
   "78/14": {
@@ -1493,7 +1493,7 @@
    },
    "answer": "B",
    "source": "เฉลย78",
-   "why": "บุหรี่เป็น risk factor อันดับหนึ่งของ urothelial ca (aromatic amines ขับทางปัสสาวะ) (B) · A: alcohol ไม่ใช่ risk หลัก · C: Schistosoma สัมพันธ์กับ squamous cell carcinoma ของ bladder ไม่ใช่ urothelial และพบในพื้นที่ระบาดเท่านั้น"
+   "why": "ปัจจัยเสี่ยงที่พบบ่อยที่สุดของมะเร็งเยื่อบุทางเดินปัสสาวะชนิด urothelial carcinoma คือการสูบบุหรี่\n✗ A: แอลกอฮอล์ไม่ใช่ปัจจัยเสี่ยงหลักของมะเร็งกระเพาะปัสสาวะ\n✓ B: สารก่อมะเร็งกลุ่ม aromatic amine ในควันบุหรี่ถูกขับทางปัสสาวะและเป็นสาเหตุอันดับหนึ่งของ urothelial carcinoma\n✗ C: การติดเชื้อพยาธิใบไม้ในเลือดสัมพันธ์กับมะเร็งชนิด squamous cell carcinoma มากกว่าและพบเฉพาะพื้นที่ระบาด"
   },
   "78/18": {
    "box": 17,
@@ -1504,7 +1504,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Crescentic GN ที่ IF ไม่ติด = pauci-immune → สัมพันธ์กับ ANCA (GPA, MPA) (A) · B ผิด: anti-GBM disease ให้ IF แบบ linear IgG ตาม GBM ไม่ใช่ไม่ติด",
+   "why": "ชิ้นเนื้อไตอักเสบที่ย้อม immunofluorescence ไม่ติดสี (pauci-immune) สัมพันธ์กับการตรวจพบแอนติบอดี ANCA ในเลือด\n✓ A: ภาวะ pauci-immune crescentic GN เกิดจากหลอดเลือดฝอยอักเสบที่สัมพันธ์กับ c-ANCA (GPA) หรือ p-ANCA (MPA)\n✗ B: โรค anti-GBM จะย้อม immunofluorescence ติดสี IgG เป็นเส้นตรง (linear) ตามแนว GBM ไม่ใช่ไม่ติดสี",
    "doubt": "⚠ เฉลย78 พิมพ์ \"B A?\" และหมายเหตุเห็นด้วยกับ A — ยึดหลัก pauci-immune = ANCA",
    "needs_image": true
   },
@@ -1518,7 +1518,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Allantois → urachus เชื่อม bladder กับสะดือ ปกติฝ่อเป็น median umbilical ligament ถ้าไม่ปิด → ปัสสาวะไหลจากสะดือ (A) · B: cloacal membrane เกี่ยวกับ anal/urogenital membrane ไม่ได้ต่อสะดือ · C: vitelline duct ค้าง → ขี้/อุจจาระหรือ mucus จากสะดือ, Meckel diverticulum"
+   "why": "ของเหลวใส (ปัสสาวะ) ไหลซึมจากสะดือในเด็กที่มีท่อเชื่อมกับกระเพาะปัสสาวะเกิดจากท่อ urachus ไม่ฝ่อปิด\n✓ A: ท่อ urachus ที่พัฒนามาจาก allantois ไม่ปิดเป็น median umbilical ligament ทำให้ปัสสาวะไหลออกทางสะดือได้\n✗ B: เกี่ยวข้องกับการเปิดของรูทวารหนักและช่องทางเดินปัสสาวะ ไม่ได้เชื่อมกับสะดือ\n✗ C: หากท่อ vitelline ไม่ฝ่อจะมีอุจจาระหรือเมือกลำไส้ไหลจากสะดือ หรือเกิด Meckel diverticulum ไม่ใช่ปัสสาวะ"
   },
   "78/22": {
    "box": 6,
@@ -1531,7 +1531,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Acetazolamide ยับยั้ง CA ที่ PCT → ดูด HCO3⁻ กลับไม่ได้ → เสีย HCO3⁻ ทางปัสสาวะ → hyperchloremic NAGMA (เหมือน proximal RTA) (A) · B: hypoK ก็เกิดได้ (Na มาถึง CD มาก) แต่เฉลยเลือก acidosis เป็นผลหลัก · C ผิดทิศ · D: Na ถูกขับเพิ่ม ไม่ทำ Na สูง",
+   "why": "ยาต้านเอนไซม์ carbonic anhydrase (acetazolamide) ทำให้สูญเสียไบคาร์บอเนตทางปัสสาวะจนเลือดเป็นกรดแบบ NAGMA\n✓ A: ยับยั้งการดูดกลับ HCO3⁻ ที่ท่อไตส่วนต้นทำให้เกิด hyperchloremic normal anion gap metabolic acidosis\n✗ B: แม้จะเกิดภาวะโพแทสเซียมต่ำร่วมได้แต่ผลกระทบหลักจำเพาะของกลไกยาคือการเสียไบคาร์บอเนตจนเลือดเป็นกรด\n✗ C: ยาทำให้สูญเสียด่างจึงเกิดภาวะเลือดเป็นกรด ไม่ใช่เลือดเป็นด่าง\n✗ D: ยาเพิ่มการขับโซเดียมออกทางปัสสาวะจึงไม่ทำให้ระดับโซเดียมในเลือดสูง",
    "doubt": "⚠ เฉลยพิมพ์ \"A > B\" — hypokalemia ก็เป็นผลจริง แต่ acidosis เป็นผลเด่น"
   },
   "78/23": {
@@ -1546,7 +1546,7 @@
    },
    "answer": "D",
    "source": "เฉลย78",
-   "why": "ผู้ใหญ่ hematuria + ไตโตสองข้างมี cyst หลายขนาด = ADPKD (PKD1/PKD2) → autosomal dominant (D) · E: ARPKD เป็นในทารก/เด็ก ไตโต cyst เล็ก · A, B: X-linked ไม่ใช่ (Alport เป็น X-linked แต่ไม่มี cyst) · C ไม่เกี่ยว",
+   "why": "ชายวัยกลางคนที่มีปัสสาวะเป็นเลือดร่วมกับภาพ CT พบถุงน้ำจำนวนมากในไตทั้งสองข้างคือโรค ADPKD\n✗ A: ไม่ใช่รูปแบบการถ่ายทอดของโรคถุงน้ำในไตในผู้ใหญ่ (โรคไตแบบ X-linked คือ Alport syndrome ซึ่งไม่มีถุงน้ำ)\n✗ B: ไม่ใช่รูปแบบการถ่ายทอดของโรคถุงน้ำในไตในผู้ใหญ่\n✗ C: ไม่ใช่โรคที่ถ่ายทอดทางพันธุกรรมของไมโทคอนเดรีย\n✓ D: โรค ADPKD (ยีน PKD1/PKD2) ถ่ายทอดแบบยีนเด่นและมักแสดงอาการไตโตมีถุงน้ำหลายขนาดในวัยผู้ใหญ่\n✗ E: โรค ARPKD แสดงอาการรุนแรงตั้งแต่ทารกในครรภ์หรือเด็กเล็กพร้อมพังผืดในตับ",
    "needs_image": true
   },
   "78/26": {
@@ -1560,7 +1560,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Latency 1–3 สัปดาห์หลัง pharyngitis = PSGN ในเด็กพยากรณ์ดี >95% หายสนิท (A) · B: RPGN พบน้อย (ผู้ใหญ่มากกว่า) · C: ไม่ใช่ tubulointerstitial · D: CKD พบน้อยในเด็ก"
+   "why": "เด็กที่มีอาการไตอักเสบตามหลังเจ็บคอประมาณ 2 สัปดาห์คือ PSGN ซึ่งในเด็กมีการพยากรณ์โรคดีมากและมักหายขาด\n✓ A: เด็กที่เป็น post-streptococcal GN มากกว่าร้อยละ 95 จะฟื้นตัวและหายสนิทได้เองด้วยการรักษาประคับประคอง\n✗ B: การดำเนินโรคไปเป็น RPGN พบได้น้อยมากในเด็ก (พบได้บ่อยกว่าในผู้ใหญ่)\n✗ C: พยาธิสภาพเกิดที่โกลเมอรูลัสจาก immune complex ไม่ใช่การอักเสบของท่อไตและเนื้อเยื่อรอบท่อไต\n✗ D: โอกาสพัฒนาไปเป็นโรคไตเรื้อรังในเด็กมีน้อยมากเมื่อเทียบกับผู้ใหญ่"
   },
   "78/31": {
    "box": 4,
@@ -1573,7 +1573,7 @@
    },
    "answer": "B",
    "source": "เฉลย78",
-   "why": "Dextrose ถูกใช้หมด เหลือสารน้ำ hypotonic + volume มาก → osmolality ลด → ADH ลด และ volume เพิ่ม → RAAS ลด (ANP เพิ่ม) (B) · A ผิด: volume เพิ่ม ANP ต้องเพิ่มไม่ใช่ถูกกด · C, D ผิด: hypotonic load กด ADH",
+   "why": "การให้สารน้ำ D5/N/2 ปริมาณมากทำให้เลือดเจือจางลงและมีปริมาตรเพิ่มขึ้น จึงกดทั้งการหลั่ง ADH และระบบ RAAS\n✗ A: ปริมาตรเลือดที่เพิ่มขึ้นจะกระตุ้นหัวใจห้องบนให้หลั่ง ANP เพิ่มขึ้น ไม่ใช่ถูกกด\n✓ B: กลูโคสถูกเผาผลาญหมดเหลือน้ำ hypotonic จึงลด plasma osmolality จนกด ADH และปริมาตรน้ำที่เพิ่มจะกด RAAS\n✗ C: เลือดที่เจือจางลงจะยับยั้งการหลั่ง ADH ไม่ใช่กระตุ้นให้เพิ่มขึ้น\n✗ D: การได้รับน้ำเจือจางปริมาณมากจะลดการหลั่ง ADH ไม่ใช่เพิ่ม ADH",
    "doubt": "⚠ เฉลยเขียนว่า \"เดา\" แต่ตรงหลักสรีรวิทยา"
   },
   "78/38": {
@@ -1587,7 +1587,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Ureter ลอดใต้ uterine artery (water under the bridge) ข้าง cervix ผูก uterine a. ตอน hysterectomy จึงเสี่ยงตัด/ผูก ureter (A) · B: bladder อยู่ด้านหน้า เสี่ยงน้อยกว่าในจุดนี้ · C: ไตอยู่สูงไกล · D: urethra อยู่ต่ำใต้ bladder"
+   "why": "การผ่าตัดที่ต้องผูกหลอดเลือดแดงมดลูก (uterine artery) มีความเสี่ยงสูงที่จะบาดเจ็บต่อท่อไตที่ทอดลอดอยู่ด้านล่าง\n✓ A: ทอดลอดใต้ uterine artery (water under the bridge) บริเวณข้างปากมดลูกจึงเสี่ยงถูกตัดหรือผูกขณะผ่าตัดมดลูก\n✗ B: อยู่ด้านหน้าต่อมดลูก มีโอกาสบาดเจ็บในจุดผูก uterine artery น้อยกว่าท่อไต\n✗ C: อยู่ในช่องท้องส่วนบนด้านหลัง อยู่ห่างจากบริเวณผ่าตัดอุ้งเชิงกรานมาก\n✗ D: อยู่ต่ำใต้กระเพาะปัสสาวะ อยู่นอกบริเวณที่ผูกหลอดเลือดแดงมดลูก"
   },
   "78/42": {
    "box": 1,
@@ -1600,7 +1600,7 @@
    },
    "answer": "B",
    "source": "เฉลย78",
-   "why": "Hypospadias = urethral meatus เปิดด้าน ventral จาก urethral folds เชื่อมไม่สมบูรณ์ (B) · A: epispadias เปิดด้าน dorsal (สัมพันธ์ bladder exstrophy, genital tubercle วางผิดตำแหน่ง) · C: อัณฑะไม่ลง · D: หนังหุ้มปลายตีบ"
+   "why": "ความผิดปกติแต่กำเนิดที่รูเปิดท่อปัสสาวะอยู่ด้านล่าง (ventral) ขององคชาตคือ hypospadias\n✗ A: รูเปิดท่อปัสสาวะอยู่ด้านบน (dorsal) ขององคชาตและมักพบร่วมกับภาวะกระเพาะปัสสาวะเปิดนอกช่องท้อง\n✓ B: เกิดจาก urethral folds เชื่อมปิดไม่สมบูรณ์ทำให้รูเปิดท่อปัสสาวะมาเปิดอยู่ด้านล่างขององคชาต\n✗ C: ภาวะลูกอัณฑะไม่เคลื่อนลงสู่ถุงอัณฑะ ไม่ใช่ความผิดปกติของรูเปิดท่อปัสสาวะ\n✗ D: ภาวะหนังหุ้มปลายองคชาตตีบเปิดรูดไม่ได้"
   },
   "78/46": {
    "box": 6,
@@ -1613,7 +1613,7 @@
    },
    "answer": "D",
    "source": "เฉลย78",
-   "why": "Tented T = hyperkalemia → ยาขับปัสสาวะที่ทำ K สูง = K-sparing เช่น spironolactone (MR antagonist ที่ principal cell) (D) · A: acetazolamide ทำ hypokalemia · B: loop diuretic ทำ hypokalemia · C: thiazide ทำ hypokalemia"
+   "why": "คลื่นไฟฟ้าหัวใจมี tented T wave จากภาวะ hyperkalemia เกิดจากยาขับปัสสาวะกลุ่มสงวนโพแทสเซียมที่ต้าน aldosterone\n✗ A: ยาต้าน carbonic anhydrase (acetazolamide) ทำให้เกิดภาวะโพแทสเซียมต่ำ\n✗ B: ยาขับปัสสาวะกลุ่ม loop diuretic ทำให้เกิดภาวะโพแทสเซียมต่ำ\n✗ C: ยาขับปัสสาวะกลุ่ม thiazide ทำให้เกิดภาวะโพแทสเซียมต่ำ\n✓ D: ยาต้านตัวรับ mineralocorticoid เช่น spironolactone ยับยั้งการขับ K⁺ ที่ท่อรวมจนเกิด hyperkalemia"
   },
   "78/49": {
    "box": 27,
@@ -1625,7 +1625,7 @@
    },
    "answer": "C",
    "source": "เฉลย78",
-   "why": "ยาหลักคือ antimuscarinic (oxybutynin, tolterodine) → ปากแห้งเป็น SE พบบ่อยสุด (C) · A ผิด: antimuscarinic ทำท้องผูก ไม่ใช่ท้องเสีย · B: ทำสับสน/cognitive impairment ในผู้สูงอายุได้ (oxybutynin เข้า CNS) แต่ไม่ใช่ SE เด่น"
+   "why": "ยาหลักในการรักษากระเพาะปัสสาวะบีบตัวไวเกิน (urge incontinence) คือกลุ่ม antimuscarinic ซึ่งเด่นเรื่องผลข้างเคียงต้านโคลิเนอร์จิก\n✗ A: ยากลุ่ม antimuscarinic ลดการบีบตัวของลำไส้ทำให้ท้องผูก ไม่ใช่ท้องเสีย\n✗ B: แม้ยาบางตัวที่ผ่านสมองอาจทำให้สับสนในผู้สูงอายุได้ แต่ไม่ใช่ผลข้างเคียงที่พบบ่อยที่สุด\n✓ C: การบล็อกตัวรับ M3 ที่ต่อมน้ำลายทำให้เกิดอาการปากแห้งคอแห้งซึ่งเป็นผลข้างเคียงที่พบบ่อยที่สุด"
   },
   "78/51": {
    "box": 1,
@@ -1637,7 +1637,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "PUV อุดกั้น outlet → ปัสสาวะค้าง/VUR → UTI ซ้ำเป็นอาการแสดงที่พบบ่อย (A) · B: ทารกยังมีปัสสาวะ (อ่อน/หยด) oliguria ไม่ใช่ลักษณะหลัก แต่ในครรภ์อาจ oligohydramnios · C: นิ่วไม่ใช่ลักษณะเด่น",
+   "why": "ลิ้นอุดกั้นท่อปัสสาวะส่วนหลัง (posterior urethral valve) ในเด็กชายทำให้ปัสสาวะคั่งและไหลย้อนกลับ จึงติดเชื้อทางเดินปัสสาวะซ้ำบ่อย\n✓ A: การอุดกั้นทางออกกระเพาะปัสสาวะทำให้ปัสสาวะคั่งและเกิด vesicoureteral reflux จนเกิด UTI ซ้ำเป็นอาการแสดงหลัก\n✗ B: เด็กมักปัสสาวะพุ่งอ่อนหรือหยด แต่ภาวะปัสสาวะออกน้อยหลังคลอดไม่ใช่ลักษณะแสดงหลักเท่า UTI\n✗ C: นิ่วในทางเดินปัสสาวะไม่ใช่ลักษณะแสดงหลักที่พบบ่อยที่สุดของ PUV",
    "doubt": "⚠ เฉลยพิมพ์ \"A B?\" — ผู้เฉลยลังเลกับ oliguria"
   },
   "78/53": {
@@ -1649,7 +1649,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Finasteride/dutasteride ยับยั้ง 5α-reductase → DHT ลด → prostate เล็กลง (A) · B: PDE5 inhibitor (tadalafil) ใช้ได้กับ LUTS แต่เป็นตัวเสริม ไม่ใช่คำตอบหลักของโจทย์นี้"
+   "why": "ยารักษาต่อมลูกหมากโตที่ช่วยลดขนาดต่อมลูกหมากโดยลดการสร้างฮอร์โมน DHT คือยากลุ่ม 5α-reductase inhibitor\n✓ A: ยา finasteride และ dutasteride ยับยั้งเอนไซม์นี้เพื่อลดการเปลี่ยน testosterone เป็น DHT ทำให้ต่อมลูกหมากฝ่อเล็กลง\n✗ B: ยายับยั้ง PDE5 (เช่น tadalafil) ใช้เป็นทางเลือกเสริมบรรเทาอาการทางเดินปัสสาวะส่วนล่าง แต่ไม่ใช่กลไกหลักของข้อนี้"
   },
   "78/54": {
    "box": 23,
@@ -1660,7 +1660,7 @@
    },
    "answer": "B",
    "source": "เฉลย78",
-   "why": "ไข้ + CVA tenderness = upper UTI คือ acute pyelonephritis (B) · A: cystitis มีแค่ dysuria frequency ไม่มีไข้สูง/ปวดเอว"
+   "why": "อาการไข้ร่วมกับกดเจ็บที่มุมกระดูกซี่โครง (CVA tenderness) เป็นลักษณะของการติดเชื้อทางเดินปัสสาวะส่วนบน\n✗ A: กระเพาะปัสสาวะอักเสบจะมีอาการปัสสาวะแสบขัดและบ่อยโดยไม่มีไข้สูงหรือปวดเอว\n✓ B: ไข้ร่วมกับอาการปวดและกดเจ็บบริเวณบั้นเอว (CVA) บ่งชี้การอักเสบติดเชื้อที่เนื้อไตและกรวยไต"
   },
   "78/55": {
    "box": 9,
@@ -1674,7 +1674,7 @@
    },
    "answer": "B",
    "source": "เฉลย78",
-   "why": "อดน้ำแล้วปัสสาวะยังเจือจาง = DI และตอบสนองต่อ desmopressin = ไตยังทำงานได้ ขาด ADH → central DI (B) · A: nephrogenic ไม่ตอบสนอง desmopressin · C, D: polydipsia มี Sosm ต่ำ-ปกติต่ำ และอดน้ำแล้ว Uosm ต้องขึ้น · E: SIADH ปัสสาวะเข้ม Sosm ต่ำ"
+   "why": "ปัสสาวะยังเจือจางหลังอดน้ำแสดงว่าเป็นเบาจืด และเมื่อให้ desmopressin แล้วปัสสาวะเข้มข้นขึ้นแสดงว่าไตตอบสนองดีแต่สมองขาด ADH\n✗ A: ไตดื้อต่อฮอร์โมน ADH ดังนั้นเมื่อให้ desmopressin ความเข้มข้นปัสสาวะจะไม่เพิ่มขึ้น\n✓ B: ต่อมใต้สมองสร้าง ADH ไม่พอ เมื่อให้ desmopressin ทดแทนท่อรวมจึงดูดน้ำกลับและ urine osmolality เพิ่มขึ้นชัดเจน\n✗ C: ระดับความเข้มข้นเลือดมักค่อนข้างต่ำ และเมื่ออดน้ำปัสสาวะจะเข้มข้นขึ้นได้เองโดยไม่ต้องใช้ยา\n✗ D: เหมือน psychogenic polydipsia ที่เมื่ออดน้ำร่างกายจะหลั่ง ADH ทำให้ปัสสาวะเข้มข้นขึ้นได้เอง\n✗ E: จะมีระดับความเข้มข้นเลือดต่ำ (hyponatremia) แต่ปัสสาวะเข้มข้นสูงตั้งแต่ต้น"
   },
   "78/62": {
    "box": 5,
@@ -1687,7 +1687,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "TAL และ early DCT (NCC) ดูด solute โดยไม่ให้น้ำผ่าน (diluting segment) ของเหลวเจือจางต่อเนื่องจนต่ำสุด (~50–100 mOsm) ที่ early DCT (A) · B: TAL เริ่มเจือจางแต่ยังไม่ต่ำสุด · C: tip of loop เข้มข้นที่สุด · D: medullary CD เข้มขึ้นเมื่อมี ADH",
+   "why": "ของเหลวในท่อไตจะถูกดูดเกลือกลับโดยไม่ให้น้ำตามไปตลอดช่วง diluting segment จนเจือจางที่สุดที่ต้นท่อไตส่วนปลาย\n✓ A: รับของเหลวที่ถูกดูดเกลือออกแล้วจาก TAL และยังดูดเกลือต่อผ่าน NCC โดยไม่ให้น้ำผ่าน จึงเจือจางที่สุดราว 50–100 mOsm/kg\n✗ B: เริ่มกระบวนการเจือจางของเหลวแต่ยังไม่ได้จุดที่ความเข้มข้นต่ำที่สุด\n✗ C: เป็นจุดที่ของเหลวมีความเข้มข้นสูงสุดในหน่วยไตเพราะน้ำถูกดูดออกตลอด descending limb\n✗ D: เมื่อมี ADH จะดูดน้ำกลับทำให้ของเหลวกลับมาเข้มข้นขึ้น ไม่ใช่จุดเจือจางที่สุด",
    "doubt": "⚠ เฉลยพิมพ์ \"B A?\" — ตามหลัก early DCT เจือจางที่สุด"
   },
   "78/63": {
@@ -1701,7 +1701,7 @@
    },
    "answer": "B",
    "source": "เฉลย78",
-   "why": "NSAID ลด PG ที่ขยาย afferent arteriole → GFR ลด (hemodynamic AKI) แก้ด้วยหยุดยา + ให้ volume พอ (B) · A: COX-2 inhibitor ก็ลด renal PG เหมือนกัน ไม่ปลอดภัยกว่า · C: ACEI ขยาย efferent → GFR ลดซ้ำ (triple whammy) · D: diuretic ทำ volume ลด ยิ่งแย่",
+   "why": "NSAIDs ยับยั้งพรอสตาแกลนดินที่ขยาย afferent arteriole ทำให้ GFR ลดลง ควรหยุดยาและดูแลสารน้ำให้เพียงพอ\n✗ A: ยากลุ่ม COX-2 inhibitor ก็ยับยั้งพรอสตาแกลนดินในไตและลด GFR ได้เช่นเดียวกับ NSAIDs ทั่วไป\n✓ B: หยุดยาต้นเหตุและให้สารน้ำอย่างเหมาะสมเพื่อฟื้นฟูเลือดไปเลี้ยงไตและช่วยให้ GFR กลับคืน\n✗ C: ยากลุ่ม ACEI ขยาย efferent arteriole จะยิ่งทำให้แรงดันกรองและ GFR ลดลงซ้ำเติม (triple whammy)\n✗ D: ยาขับปัสสาวะทำให้ปริมาตรเลือดลดลง ยิ่งซ้ำเติมภาวะเลือดไปเลี้ยงไตน้อยให้แย่ลง",
    "doubt": "⚠ ตัวเลือกไม่มี \"หยุด NSAID\" ตรง ๆ จึงเลือก fluid"
   },
   "78/65": {
@@ -1714,7 +1714,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Synpharyngitic hematuria (1–2 วันหลัง URI) ซ้ำ ๆ = IgA nephropathy → IgA deposit ที่ mesangium (A) · B: granular IC ทั่วไปเหมือน PSGN ซึ่งมาหลังติดเชื้อ 1–3 สัปดาห์ · C: linear = anti-GBM"
+   "why": "ปัสสาวะเป็นเลือดซ้ำ ๆ ภายในไม่กี่วันหลังเจ็บคอ (synpharyngitic hematuria) เป็นลักษณะจำเพาะของ IgA nephropathy\n✓ A: ตรวจชิ้นเนื้อไตจะพบการสะสมของ IgA immune complex เด่นในชั้น mesangium\n✗ B: การสะสม immune complex แบบกระจายทั่วไปพบใน PSGN ซึ่งมักเกิดห่างจากการติดเชื้อ 1–3 สัปดาห์\n✗ C: การติดสีเป็นเส้นตรงตาม GBM เป็นลักษณะของโรค anti-GBM (Goodpasture) ไม่ใช่ IgA nephropathy"
   },
   "78/75": {
    "box": 18,
@@ -1726,7 +1726,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Nephrotic-range proteinuria สะท้อนความเสียหายของ podocyte/slit diaphragm (foot process effacement) (A) · B: lamina densa (GBM) ผิดปกติใน Alport/thin BM → hematuria เด่น · C: mesangium เด่นใน IgA ให้ hematuria"
+   "why": "ภาวะโปรตีนรั่วระดับ nephrotic (มากกว่า 3.5 กรัม/วัน) สะท้อนการบาดเจ็บของโครงสร้าง podocyte และ slit diaphragm\n✓ A: การบาดเจ็บและ foot process effacement ของ podocyte ทำให้เสียเยื่อกรองโปรตีนจนเกิดโปรตีนรั่วมาก\n✗ B: ความผิดปกติของ GBM (lamina densa) เช่น Alport syndrome มักเด่นเรื่องปัสสาวะเป็นเลือด\n✗ C: พยาธิสภาพที่ mesangium เช่น IgA nephropathy มักแสดงออกด้วยปัสสาวะเป็นเลือดเป็นหลัก"
   },
   "78/78": {
    "box": 23,
@@ -1738,7 +1738,7 @@
    },
    "answer": "B",
    "source": "เฉลย78",
-   "why": "ไข้ + WBC cast = acute pyelonephritis ต้องส่ง urine culture ก่อนให้ antibiotic (B) · A: ปล่อยกลับโดยไม่ตรวจ/รักษาไม่ได้ · C: biopsy ไม่จำเป็นใน pyelonephritis"
+   "why": "ไข้หนาวสั่นร่วมกับตรวจปัสสาวะพบ WBC และ WBC cast บ่งชี้กรวยไตอักเสบเฉียบพลัน ต้องส่งเพาะเชื้อปัสสาวะก่อนให้ยาปฏิชีวนะ\n✗ A: การติดเชื้อที่ไตต้องได้รับการตรวจเพาะเชื้อและให้ยาปฏิชีวนะ ไม่สามารถปล่อยกลับบ้านเฉย ๆ ได้\n✓ B: ต้องส่งเพาะเชื้อปัสสาวะเพื่อทราบชนิดเชื้อและความไวต่อยาก่อนเริ่มยาปฏิชีวนะแบบครอบคลุม\n✗ C: การเจาะชิ้นเนื้อไตไม่มีข้อบ่งชี้ในการวินิจฉัยหรือรักษากรวยไตอักเสบเฉียบพลัน"
   },
   "78/94": {
    "box": 15,
@@ -1749,7 +1749,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "CKD ขับ PO4 ไม่ได้ → phosphate จับ Ca ion → ionized Ca ต่ำ กระตุ้น PTH (A) · B ผิด: สิ่งที่ลดคือ 1,25(OH)2D (ไตขาด 1α-hydroxylase) ไม่ใช่ 25(OH)D ที่สร้างจากตับ",
+   "why": "ในโรคไตเรื้อรัง การขับฟอสเฟตลดลงทำให้ฟอสเฟตที่คั่งในเลือดจับกับแคลเซียมอิสระจน ionized calcium ลดต่ำลงและกระตุ้น PTH\n✓ A: ฟอสเฟตที่สะสมสูงในเลือดจับกับแคลเซียมเกิดเป็นสารประกอบเชิงซ้อน ทำให้ ionized Ca²⁺ ต่ำลง\n✗ B: สิ่งที่ลดลงในโรคไตเรื้อรังคือ 1,25(OH)2D จากการขาด 1α-hydroxylase ที่ไต ไม่ใช่ 25(OH)D ที่สร้างจากตับ",
    "doubt": "⚠ ในความจริงทั้ง phosphate retention และ calcitriol ต่ำร่วมกัน แต่ตัวเลือก B ระบุผิดเป็น 25-OH"
   },
   "78/97": {
@@ -1761,7 +1761,7 @@
    },
    "answer": "B",
    "source": "เฉลย78",
-   "why": "Burn เสีย plasma/fluid ทางแผลจำนวนมาก → hypovolemia → prerenal AKI (B) · A: SIRS มีบทบาทแต่ไม่ใช่กลไกหลักของ AKI ในระยะแรก",
+   "why": "แผลไฟไหม้บริเวณกว้างถึง 45% TBSA ทำให้สูญเสียพลาสมาและสารน้ำมหาศาลทางผิวหนังจนช็อกและเกิด prerenal AKI\n✗ A: การอักเสบทั่วร่างกายมีส่วนร่วมได้ในระยะต่อมา แต่ไม่ใช่กลไกหลักที่ทำให้เกิดภาวะช็อกและไตวายระยะแรก\n✓ B: การสูญเสียสารน้ำผ่านแผลไฟไหม้ขนาดใหญ่ทำให้ปริมาตรเลือดลดลงรุนแรงและเลือดไปเลี้ยงไตไม่พอ",
    "doubt": "⚠ โจทย์ให้ bradycardia ซึ่งไม่เข้ากับ hypovolemia (อาจจากโจทย์จำผิด หรือจาก hyperK)"
   },
   "78/120": {
@@ -1775,7 +1775,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "ไข่มี terminal spine พบในปัสสาวะ = S. haematobium (อยู่ venous plexus ของ bladder; เสี่ยง SCC bladder) (A) · B: lateral spine พบในอุจจาระ · C: ไข่กลม spine เล็ก ในอุจจาระ · D: ไข่มี operculum ในเสมหะ"
+   "why": "ไข่พยาธิในปัสสาวะที่มีหนามแหลมอยู่ตรงปลาย (terminal spine) เป็นลักษณะจำเพาะของ Schistosoma haematobium\n✓ A: อาศัยในหลอดเลือดดำรอบกระเพาะปัสสาวะ ไข่มี terminal spine ถูกขับออกทางปัสสาวะและเสี่ยงมะเร็ง SCC กระเพาะปัสสาวะ\n✗ B: ไข่มีหนามด้านข้าง (lateral spine) และตรวจพบในอุจจาระ\n✗ C: ไข่ทรงกลมมีหนามขนาดเล็กมากด้านข้างและตรวจพบในอุจจาระ\n✗ D: เป็นพยาธิใบไม้ปอด ไข่มีฝาปิด (operculum) และตรวจพบในเสมหะหรืออุจจาระ"
   },
   "78/188": {
    "box": 12,
@@ -1788,7 +1788,7 @@
    },
    "answer": "D",
    "source": "เฉลย78",
-   "why": "ใน ICF buffer หลักคือ protein (เช่น hemoglobin, protein ในเซลล์) มีปริมาณมาก (D) · A: phosphate สำคัญใน ICF และปัสสาวะ แต่รองจาก protein · B: bicarbonate เป็น buffer หลักของ ECF · C: ammonium เป็นระบบขับกรดทางปัสสาวะ"
+   "why": "ระบบบัฟเฟอร์ที่มีปริมาณมากและทรงพลังที่สุดในการรักษาสมดุลกรด-ด่างภายในเซลล์ (ICF) คือระบบโปรตีน\n✗ A: มีบทบาทสำคัญในเซลล์และในท่อปัสสาวะ แต่มีปริมาณและความจุรองจากโปรตีนในเซลล์\n✗ B: เป็นระบบบัฟเฟอร์หลักของน้ำนอกเซลล์ (ECF) ไม่ใช่ในเซลล์\n✗ C: เป็นระบบช่วยขับกรดส่วนเกินออกทางปัสสาวะที่ท่อไต ไม่ใช่บัฟเฟอร์หลักในเซลล์\n✓ D: โปรตีนภายในเซลล์และฮีโมโกลบินมีปริมาณสูงมากและมีหมู่ histidine ที่รับ-ให้ H⁺ ได้ดี จึงเป็นบัฟเฟอร์แรงที่สุดใน ICF"
   },
   "78/192": {
    "box": 7,
@@ -1800,7 +1800,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "ยาขั้นแรกคือ ACEI/ARB, CCB, thiazide การเพิ่ม thiazide (หรือ CCB) ร่วมกับ ACEI เป็นมาตรฐาน (A) · B: β-blocker ไม่ใช่ add-on แรกถ้าไม่มีข้อบ่งชี้ labetalol เก็บไว้ใน pregnancy/emergency · C: α-blocker เป็นยาท้าย ๆ (resistant HT/BPH)"
+   "why": "ผู้ป่วยความดันโลหิตสูงร่วมเบาหวานที่ได้ ACEI แล้วความดันยังคุมไม่ได้ ควรเพิ่มยาอันดับแรกอีกกลุ่มคือ thiazide หรือ CCB\n✓ A: เป็นยาลดความดันอันดับแรกที่เสริมฤทธิ์กับ ACEI ได้ดีและเป็นสูตรมาตรฐาน\n✗ B: ยากลุ่ม β-blocker ไม่ใช่ยาเสริมอันดับแรกหากไม่มีข้อบ่งชี้เฉพาะ โดย labetalol มักใช้ในหญิงตั้งครรภ์หรือภาวะฉุกเฉิน\n✗ C: ยากลุ่ม α-blocker สงวนไว้เป็นยาทางเลือกหลัง ๆ เช่น ความดันสูงดื้อยาหรือมีต่อมลูกหมากโตร่วมด้วย"
   },
   "78/195": {
    "box": 7,
@@ -1814,7 +1814,7 @@
    },
    "answer": "C",
    "source": "เฉลย78",
-   "why": "Essential HT สัมพันธ์กับ vascular remodelling (ผนังหนา lumen แคบ → TPR สูง) (C) · A ผิดทิศ: ใน HT pressure-natriuresis เลื่อนไปขวา (ต้องใช้ BP สูงขึ้นเพื่อขับ Na) · B: มีส่วนได้แต่ไม่ใช่คำตอบที่เฉลยเลือก · D, E ผิด: sympathetic/RAAS ทำงานมากขึ้น ไม่ใช่ถูกกด",
+   "why": "ความดันโลหิตสูงชนิดปฐมภูมิ (essential hypertension) สัมพันธ์กับการหนาตัวและตีบแคบของผนังหลอดเลือดแดงเล็กจนแรงต้านทานสูงขึ้น\n✗ A: ในความดันโลหิตสูง กราฟ pressure-natriuresis จะเลื่อนไปทางขวา (ต้องใช้ความดันสูงขึ้นเพื่อขับโซเดียม) ไม่ใช่ทางซ้าย\n✗ B: แม้ความผิดปกติของเอนโดทีเลียมอาจมีส่วนร่วม แต่ไม่ใช่กลไกหลักที่โจทย์ข้อนี้เฉลย\n✓ C: ผนังหลอดเลือดแดงเล็กหนาตัวและรูหลอดเลือดแคบลงทำให้แรงต้านทานหลอดเลือดส่วนปลาย (TPR) เพิ่มสูงขึ้นเรื้อรัง\n✗ D: ระบบประสาทซิมพาเทติกมักทำงานเพิ่มขึ้น ไม่ใช่ถูกกด\n✗ E: ระบบ RAAS มักทำงานไม่เหมาะสมหรือเพิ่มขึ้น ไม่ใช่ถูกกด",
    "doubt": "⚠ หมายเหตุในเฉลยว่า B ก็อาจถูก — ยึด C ตามเฉลย"
   },
   "78/207": {
@@ -1827,7 +1827,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Triad wet (urinary incontinence), wobbly (magnetic gait แต่ขยับขาท่านอนได้), wacky (dementia) = NPH; ventricle ขยายกด frontal micturition center (A) · B: FTD เด่นพฤติกรรม/ภาษา ไม่มี gait apraxia ระยะแรก · C: Alzheimer เด่นความจำ gait ปกติระยะแรก"
+   "why": "กลุ่มอาการเดินก้าวไม่ออกเหมือนเท้าติดพื้น (magnetic gait) ร่วมกับกลั้นปัสสาวะไม่อยู่และสมองเสื่อมคือ normal pressure hydrocephalus\n✓ A: โพรงสมองขยายตัวกดศูนย์ควบคุมการเดินและการกลั้นปัสสาวะที่สมองกลีบหน้า เกิด triad คือ wet, wobbly และ wacky\n✗ B: อาการเด่นระยะแรกคือความเปลี่ยนแปลงทางพฤติกรรม บุคลิกภาพ และภาษา ไม่ใช่ความผิดปกติของการเดิน\n✗ C: อาการเด่นระยะแรกคือความจำระยะสั้นเสื่อม โดยการเดินและการกลั้นปัสสาวะมักยังปกติในช่วงแรก"
   },
   "78/X1": {
    "box": 23,
@@ -1840,7 +1840,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Non-gonococcal urethritis ที่ gram stain พบ PMN แต่ไม่เห็นเชื้อ = Chlamydia (obligate intracellular ไม่มี peptidoglycan ชัด ย้อม gram ไม่ติด) (A) · B: gonorrhea เห็น gram-negative diplococci ใน PMN · C: syphilis ให้ painless chancre ไม่ใช่ urethritis · D: Candida เห็น yeast/pseudohyphae",
+   "why": "ท่อปัสสาวะอักเสบที่ย้อมแกรมไม่พบเชื้อแบคทีเรีย (non-gonococcal urethritis) มีสาเหตุหลักจาก Chlamydia trachomatis\n✓ A: เป็นแบคทีเรียในเซลล์ที่ไม่มีผนังเซลล์ peptidoglycan ชัดเจนจึงย้อมสีแกรมไม่ติด\n✗ B: จะย้อมสีแกรมพบแบคทีเรียแกรมลบรูปเมล็ดถั่วคู่อยู่ภายในเม็ดเลือดขาว\n✗ C: ก่อโรคซิฟิลิสที่มาด้วยแผลริมแข็งไม่เจ็บ ไม่ใช่ท่อปัสสาวะอักเสบ\n✗ D: เป็นเชื้อราที่ย้อมเห็นเซลล์ยีสต์และ pseudohyphae ไม่ใช่สาเหตุหลักของท่อปัสสาวะอักเสบในผู้ชาย",
    "options_reconstructed": true
   },
   "78/X3": {
@@ -1855,7 +1855,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "ไข้ + CVA tenderness + pyuria = ติดเชื้อถึงไต (A) · B: cystitis ไม่มีไข้/CVA tenderness · C: urethritis มี discharge/dysuria ไม่มีไข้สูง · D: นิ่วปวดร้าวแต่ไม่มีไข้หากไม่ติดเชื้อ · E: AIN มักสัมพันธ์ยา ผื่น eosinophiluria",
+   "why": "อาการไข้ร่วมกับกดเจ็บบริเวณมุมกระดูกซี่โครง (CVA tenderness) และพบเม็ดเลือดขาวในปัสสาวะคือกรวยไตอักเสบเฉียบพลัน\n✓ A: ไข้ร่วมกับ CVA tenderness และ pyuria บ่งชี้การติดเชื้อลุกลามถึงเนื้อไตและกรวยไต\n✗ B: กระเพาะปัสสาวะอักเสบจะมีปัสสาวะแสบขัดและบ่อยโดยไม่มีไข้สูงหรือ CVA tenderness\n✗ C: ท่อปัสสาวะอักเสบเด่นเรื่องมีมูกหนองและปัสสาวะแสบ โดยไม่มีไข้สูงหรือปวดเอว\n✗ D: นิ่วท่อไตทำให้ปวดบิดร้าวลงขาหนีบ แต่จะไม่มีไข้สูงหากไม่มีการติดเชื้อแทรกซ้อน\n✗ E: มักสัมพันธ์กับประวัติแพ้ยา มีผื่น และตรวจพบ eosinophiluria มากกว่าไข้สูงติดเชื้อ",
    "options_reconstructed": true
   },
   "78/X5": {
@@ -1870,7 +1870,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "Klebsiella หมัก lactose (ชมพู) + capsule หนา → โคโลนี mucoid (A) · B: Proteus ไม่หมัก lactose และ swarming · C: Pseudomonas non-lactose fermenter สีเขียว กลิ่นองุ่น · D: E. coli ชมพูแต่โคโลนีแห้ง ไม่ mucoid · E: Serratia สร้างสีแดง",
+   "why": "เชื้อก่อโรค UTI ที่หมักแลคโตสได้โคโลนีสีชมพูและมีลักษณะเมือกเยิ้ม (mucoid) บน MacConkey agar คือ Klebsiella pneumoniae\n✓ A: หมักแลคโตสให้สีชมพูและมีแคปซูลโพลีแซ็กคาไรด์หนาจึงเห็นเป็นโคโลนีเยิ้มชัดเจน\n✗ B: ไม่หมักแลคโตสจึงให้โคโลนีไม่มีสีและมีลักษณะลามเป็นคลื่น (swarming)\n✗ C: ไม่หมักแลคโตส ให้โคโลนีไม่มีสีหรือสีเขียวอมฟ้าและมีกลิ่นคล้ายองุ่น\n✗ D: หมักแลคโตสให้โคโลนีสีชมพูเช่นกัน แต่ลักษณะโคโลนีแห้ง ไม่เยิ้มเหมือน Klebsiella\n✗ E: มักไม่หมักแลคโตสเร็วและบางสายพันธุ์สร้างเม็ดสีแดง (prodigiosin)",
    "options_reconstructed": true
   },
   "78/X7": {
@@ -1884,7 +1884,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "α1 blocker (tamsulosin, doxazosin) คลาย smooth muscle ที่ bladder neck/prostate ออกฤทธิ์เร็ว เป็นยาแรก (A) · B: ไม่มีบทบาทใน BPH · C: antimuscarinic ใช้ OAB และอาจทำ retention ใน BPH · D: diuretic เพิ่มปัสสาวะ ทำอาการแย่ลง",
+   "why": "ยาหลักที่นิยมใช้เป็นอันดับแรกเพื่อบรรเทาอาการปัสสาวะลำบากจากต่อมลูกหมากโตคือยากลุ่ม α1-antagonist\n✓ A: คลายกล้ามเนื้อเรียบบริเวณต่อมลูกหมากและคอกระเพาะปัสสาวะ ทำให้อาการปัสสาวะขัดดีขึ้นเร็ว\n✗ B: ใช้ขยายหลอดลมในโรคหืดหรือปอดอุดกั้นเรื้อรัง ไม่มีบทบาทในการรักษา BPH\n✗ C: ใช้รักษากระเพาะปัสสาวะบีบตัวไวเกินและอาจทำให้เกิดภาวะปัสสาวะคั่งมากขึ้นในผู้ป่วย BPH\n✗ D: เพิ่มปริมาณปัสสาวะซึ่งยิ่งทำให้อาการปัสสาวะบ่อยและลำบากในผู้ป่วย BPH แย่ลง",
    "options_reconstructed": true
   },
   "78/X10": {
@@ -1898,7 +1898,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "เมื่อ renal artery ตีบ GFR พึ่ง angiotensin II ที่บีบ efferent arteriole ACEI ตัดกลไกนี้ → GFR ตก Cr พุ่ง (A) · B: essential HT Cr ขึ้นเล็กน้อย (<30%) ยอมรับได้ · C: Conn มี hypoK, renin ต่ำ ไม่ทำ Cr พุ่งจาก ACEI · D: pheo ให้ BP แกว่ง ใจสั่น เหงื่อออก",
+   "why": "ค่าครีเอตินินพุ่งสูงขึ้นมากหลังเริ่มยา ACEI เป็นสัญญาณจำเพาะของภาวะหลอดเลือดแดงไตตีบทั้งสองข้าง\n✓ A: เมื่อหลอดเลือดแดงไตตีบทั้งสองข้าง GFR พึ่งพาการบีบ efferent arteriole จาก angiotensin II เมื่อได้ ACEI จึงทำให้ GFR ตกฮวบ\n✗ B: ในความดันสูงทั่วไปค่าครีเอตินินอาจขึ้นเล็กน้อยไม่เกิน 30% ซึ่งถือว่ายอมรับได้และไม่ต้องหยุดยา\n✗ C: มีระดับโพแทสเซียมต่ำและเรนินต่ำ ไม่ได้ทำให้ครีเอตินินพุ่งสูงรุนแรงเมื่อได้ ACEI\n✗ D: มาด้วยความดันโลหิตสูงเป็นพัก ๆ ใจสั่น เหงื่อออก ไม่ใช่ครีเอตินินพุ่งหลังได้ ACEI",
    "options_reconstructed": true
   },
   "78/X19": {
@@ -1912,7 +1912,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "ทรัพยากรจำกัดใช้หลัก justice: จัดสรรด้วยเกณฑ์ทางการแพทย์ (ความจำเป็น ประโยชน์ที่คาดว่าจะได้) ที่โปร่งใส ใช้เท่าเทียมทุกคน (A) · B: ใช้ฐานะเศรษฐกิจเป็นเกณฑ์ไม่เป็นธรรม · C: เลือกปฏิบัติ · D: ไม่มีมาตรฐาน ขาดความสม่ำเสมอ",
+   "why": "เมื่อทรัพยากรทางการแพทย์มีจำกัด ต้องยึดหลักความยุติธรรม (justice) โดยจัดสรรตามเกณฑ์ทางการแพทย์ที่โปร่งใสและเท่าเทียม\n✓ A: สอดคล้องกับหลัก justice โดยใช้เกณฑ์ความจำเป็นและประโยชน์ทางการแพทย์อย่างโปร่งใสเป็นธรรมกับทุกคน\n✗ B: การใช้ฐานะทางการเงินเป็นเกณฑ์เลือกปฏิบัติขัดต่อหลักความยุติธรรมทางการแพทย์\n✗ C: การให้สิทธิพิเศษแก่คนรู้จักหรือคนสำคัญเป็นการเลือกปฏิบัติที่ไม่เป็นธรรม\n✗ D: การตัดสินใจตามอำเภอใจของแพทย์แต่ละคนขาดมาตรฐานและความโปร่งใส",
    "doubt": "⚠ ไฟล์ไม่มีตัวเลือกและไม่มีเฉลย — ตัวเลือกสร้างใหม่และคำตอบเป็นการวิเคราะห์",
    "options_reconstructed": true
   },
@@ -1927,7 +1927,7 @@
    },
    "answer": "A",
    "source": "เฉลย78",
-   "why": "เมื่อ pCO2 ต่ำ และ HCO3⁻ ลดลงมากกว่าที่ chronic respiratory alkalosis ชดเชยได้ (คาด ΔHCO3 ≈ 0.4×ΔpCO2) แสดงว่ามี metabolic acidosis ซ้อน (A) · B: acute resp alk HCO3 ลดเพียง 0.2×ΔpCO2 · C: ถ้าชดเชยพอดี pCO2 = 1.5×HCO3+8±2 · D: ทิศทางตรงข้าม",
+   "why": "เมื่อค่า pCO2 ต่ำร่วมกับ HCO3⁻ ลดลงมากเกินกว่าที่การชดเชยของ chronic respiratory alkalosis อธิบายได้ แสดงว่ามี metabolic acidosis ซ้อน\n✓ A: ใน chronic respiratory alkalosis ค่า HCO3⁻ ควรลดเพียง ~0.4 เท่าของ ΔpCO2 หากลดมากกว่านั้นแสดงว่ามี metabolic acidosis ร่วมด้วย\n✗ B: ในภาวะเฉียบพลันค่า HCO3⁻ จะลดลงน้อยกว่ามาก (เพียง ~0.2 เท่าของ ΔpCO2)\n✗ C: หากเป็น metabolic acidosis ที่ชดเชยพอดี ค่า pCO2 จะต้องเป็นไปตามสูตร Winter (1.5 × HCO3⁻ + 8 ± 2)\n✗ D: ทิศทางของทั้ง pCO2 และ HCO3⁻ ตรงกันข้ามกับภาวะดังกล่าว",
    "doubt": "⚠ ไฟล์โจทย์ไม่มีค่าตัวเลขและตัวเลือก มีเพียงคำตอบ — ตัวเลือกสร้างใหม่",
    "options_reconstructed": true
   },
@@ -1943,7 +1943,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "Metanephric blastema (mesenchyme) ถูก ureteric bud เหนี่ยวนำ → glomerulus, PCT, loop, DCT = nephron (B) · D: ureteric bud ให้ collecting duct, calyces, pelvis, ureter (ไม่ใช่ nephron) · A: mesonephric duct ให้ ureteric bud/ductus deferens ในชาย · C: paramesonephric → มดลูก ท่อนำไข่ · E: pronephros ฝ่อไปไม่ทำงาน"
+   "why": "หน่วยไต (nephron) ตั้งแต่โกลเมอรูลัสจนถึงท่อไตส่วนปลายเจริญมาจาก metanephric blastema\n✗ A: เป็นท่อต้นกำเนิดที่ให้ ureteric bud และระบบสืบพันธุ์ชาย ไม่ได้เจริญเป็นหน่วยไตโดยตรง\n✓ B: ถูกเหนี่ยวนำโดย ureteric bud ให้เจริญเป็นโกลเมอรูลัส, PCT, loop of Henle และ DCT\n✗ C: เจริญเป็นท่อนำไข่ มดลูก และช่องคลอดส่วนบนในเพศหญิง\n✗ D: เจริญเป็นระบบท่อรวม ได้แก่ ท่อไต กรวยไต คาลิกซ์ และ collecting duct ไม่ใช่ตัวหน่วยไต\n✗ E: เป็นไตระยะแรกในตัวอ่อนที่ฝ่อสลายไปและไม่ทำงาน"
   },
   "79/94": {
    "box": 9,
@@ -1957,7 +1957,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "ADH สร้างที่ supraoptic/paraventricular nucleus ของ hypothalamus → ใส่ AQP2 ที่ collecting duct ดูดน้ำอิสระกลับ (B) · C, D: renin/aldosterone คั่ง Na (น้ำตาม) และไม่ได้มาจาก hypothalamus · A: cortisol ไม่ใช่ตัวคุมน้ำหลัก · E: ANP ขับ Na และน้ำ"
+   "why": "ฮอร์โมนที่สร้างจากไฮโปทาลามัสและควบคุมการดูดน้ำกลับที่ไตโดยตรงคือ ADH\n✗ A: สร้างจากต่อมหมวกไตชั้นนอก ไม่ใช่ฮอร์โมนหลักที่ควบคุมการดูดน้ำกลับที่ท่อรวมโดยตรง\n✓ B: สร้างที่ supraoptic และ paraventricular nucleus ของไฮโปทาลามัส แล้วกระตุ้น AQP2 ที่ท่อรวมเพื่อดูดน้ำอิสระกลับ\n✗ C: สร้างจากไต (JG cell) และกระตุ้นระบบ RAAS ไม่ได้สร้างจากไฮโปทาลามัส\n✗ D: สร้างจากต่อมหมวกไตเพื่อดูดกลับโซเดียมเป็นหลัก ไม่ได้สร้างจากไฮโปทาลามัส\n✗ E: สร้างจากหัวใจห้องบนและออกฤทธิ์ขับโซเดียมและน้ำออก ไม่ใช่เก็บน้ำ"
   },
   "79/146": {
    "box": 10,
@@ -1971,7 +1971,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "EKG เปลี่ยนแปลง = ต้อง stabilize cardiac membrane ทันทีด้วย IV calcium (ออกฤทธิ์ในนาที ไม่ลด K) (B) แล้วค่อย shift/ขับ K · A: resin ออกฤทธิ์ช้าหลายชั่วโมง · C: furosemide ขับ K ช้าและ CKD ตอบสนองน้อย · D: insulin ต้องให้คู่ glucose กัน hypoglycemia · E: bicarbonate เดี่ยว ๆ ได้ผลน้อย ใช้เมื่อมี acidosis"
+   "why": "ภาวะ hyperkalemia รุนแรง (K⁺ 7.2) ที่มีคลื่นไฟฟ้าหัวใจผิดปกติ (peaked T, QRS กว้าง) ต้องให้แคลเซียมทางหลอดเลือดดำทันที\n✗ A: ขับโพแทสเซียมทางอุจจาระแต่ออกฤทธิ์ช้าหลายชั่วโมง ไม่ทันป้องกันภาวะหัวใจหยุดเต้นเฉียบพลัน\n✓ B: ออกฤทธิ์ภายในไม่กี่นาทีเพื่อ stabilize เยื่อหุ้มเซลล์กล้ามเนื้อหัวใจ ป้องกัน arrhythmia ก่อนเริ่มลดระดับ K⁺\n✗ C: ขับโพแทสเซียมออกได้ช้าและผู้ป่วยโรคไตเรื้อรังมักตอบสนองต่อยาขับปัสสาวะได้ไม่ดี\n✗ D: การให้อินซูลินโดยไม่ให้กลูโคสคู่กันเสี่ยงต่อภาวะน้ำตาลในเลือดต่ำรุนแรง และไม่ได้ stabilize หัวใจทันที\n✗ E: ช่วยดึง K⁺ เข้าเซลล์ได้น้อยหากไม่มีภาวะกรดรุนแรงและไม่ได้ป้องกันเยื่อหุ้มเซลล์หัวใจโดยตรง"
   },
   "79/191": {
    "box": 20,
@@ -1985,7 +1985,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "ยา (β-lactam, sulfa) → hypersensitivity: ไข้ ผื่น (± eosinophilia/eosinophiluria) + AKI = AIN (B) · A: ATN จากยา (aminoglycoside) ไม่มีผื่น/ไข้ · C: pyelonephritis ควรดีขึ้นด้วย antibiotic และไม่มีผื่น · D: MCD ให้ nephrotic ไม่ใช่ไข้ผื่น · E: PSGN ตามหลังติด strep ที่คอ/ผิวหนัง มี hematuria HT"
+   "why": "ไข้ ผื่นคัน ร่วมกับไตวายเฉียบพลันหลังเริ่มยาปฏิชีวนะประมาณ 1 สัปดาห์ เป็นลักษณะคลาสสิกของ acute interstitial nephritis จากการแพ้ยา\n✗ A: พิษต่อท่อไตจากยา (เช่น aminoglycoside) มักไม่มีไข้และผื่นแพ้ร่วมด้วย\n✓ B: เกิดจากปฏิกิริยาภูมิไวเกินต่อยาปฏิชีวนะ (เช่น β-lactam หรือ sulfa) มาด้วยไข้ ผื่น ปวดเอว และ AKI\n✗ C: อาการควรดีขึ้นหลังได้ยาปฏิชีวนะและไม่ทำให้เกิดผื่นแพ้ยา\n✗ D: แสดงอาการด้วยกลุ่มอาการ nephrotic (บวม โปรตีนรั่วมาก) ไม่ใช่ไข้และผื่นคัน\n✗ E: เกิดตามหลังการติดเชื้อสเตรปโตคอคคัส 1–3 สัปดาห์ เด่นเรื่องปัสสาวะเป็นเลือดและความดันสูง"
   },
   "79/192": {
    "box": 2,
@@ -1999,7 +1999,7 @@
    },
    "answer": "A",
    "source": "เฉลย79",
-   "why": "บน KUB ureter วิ่งผ่านปลาย transverse process ของ lumbar vertebra แล้วข้าม SI joint ที่ pelvic brim (จุดข้าม iliac vessels เป็นจุดแคบ) จึงเห็นนิ่วตามแนวนี้ (A) · B: rib 12 อยู่ระดับไต ไม่ใช่แนว ureter · C: pubic symphysis อยู่หน้าต่อ bladder · D: greater trochanter อยู่นอกเชิงกราน · E: ureter ส่วน pelvic วิ่งใกล้ ischial spine ได้ แต่ไม่ใช่ตำแหน่งที่เฉลยเลือก",
+   "why": "บนภาพถ่ายรังสีช่องท้อง ท่อไตทอดตัวลงตามแนวปลาย transverse process ของกระดูกเอวแล้วข้ามข้อต่อ sacroiliac ที่ขอบเชิงกราน\n✓ A: ท่อไตทอดผ่านปลาย transverse process ของกระดูกสันหลังส่วนเอวลงไปข้ามข้อต่อ SI ซึ่งเป็นจุดแคบที่นิ่วมักติดค้าง\n✗ B: ซี่โครงซี่ที่ 12 อยู่ระดับเนื้อไตด้านบน ไม่ใช่แนวท่อไตส่วนล่าง\n✗ C: กระดูกหัวหน่าวอยู่ด้านหน้าต่อกระเพาะปัสสาวะ ต่ำกว่าแนวท่อไต\n✗ D: อยู่ที่ต้นขาด้านนอก อยู่นอกแนวทางเดินปัสสาวะทั้งหมด\n✗ E: แม้ท่อไตส่วนเชิงกรานจะเฉียดใกล้ ischial spine ได้ แต่แนวมาตรฐานที่โจทย์เน้นคือแนว L5 เหนือข้อต่อ SI",
    "doubt": "⚠ จุดแคบที่สุดตามตำราคือ UVJ; คำตอบนี้ขึ้นกับภาพในข้อสอบ (pelvic brim/ข้าม iliac vessels)",
    "needs_image": true
   },
@@ -2015,7 +2015,7 @@
    },
    "answer": "C",
    "source": "เฉลย79",
-   "why": "Loop diuretic ยับยั้ง NKCC2 ที่ TAL → ลด lumen-positive potential → ลด paracellular Ca reabsorption → ขับ Ca (หลัง volume พอ) (C) · D: thiazide เพิ่มการดูด Ca ที่ DCT → Ca สูงขึ้น ห้ามใช้ · A: acetazolamide ไม่ช่วยลด Ca · B: tolvaptan ใช้ hyponatremia/SIADH · E: spironolactone ไม่มีผลต่อ Ca",
+   "why": "ในภาวะแคลเซียมในเลือดสูงจากมะเร็ง หลังให้สารน้ำเพียงพอแล้ว ยาขับปัสสาวะที่ช่วยเร่งขับแคลเซียมทางปัสสาวะคือ loop diuretic\n✗ A: ยับยั้ง carbonic anhydrase ที่ PCT ไม่ได้ช่วยเพิ่มการขับแคลเซียม\n✗ B: เป็นยาต้านตัวรับ V2 ใช้รักษาภาวะโซเดียมต่ำหรือ SIADH ไม่เกี่ยวกับแคลเซียม\n✓ C: ยับยั้ง NKCC2 ที่ TAL ทำให้เสียศักย์ไฟฟ้าบวกใน lumen จึงลดการดูดกลับแคลเซียมแบบ paracellular และขับแคลเซียมออกมากขึ้น\n✗ D: ยากลุ่ม thiazide เพิ่มการดูดกลับแคลเซียมที่ DCT ทำให้แคลเซียมในเลือดยิ่งสูงขึ้น จึงห้ามใช้\n✗ E: เป็นยาขับปัสสาวะกลุ่มสงวนโพแทสเซียม ไม่มีฤทธิ์ขับแคลเซียม",
    "doubt": "⚠ แนวปัจจุบันเน้น IV fluid + bisphosphonate/calcitonin; furosemide ใช้เมื่อ volume overload — แต่ในตัวเลือกนี้ furosemide ถูกที่สุด"
   },
   "79/194": {
@@ -2030,7 +2030,7 @@
    },
    "answer": "A",
    "source": "เฉลย79",
-   "why": "Wire-loop = subendothelial immune complex หนาตาม capillary loop เด่นใน diffuse proliferative lupus nephritis (class IV) (A) · B: cryoglobulin ใน cryoglobulinemic GN (HCV) · C: crescent พบได้หลายโรค (RPGN) ไม่จำเพาะ · D: exudative lesion เป็นลักษณะ diabetic (fibrin cap/capsular drop) · E: glomerulosclerosis เป็นระยะท้ายของหลายโรค"
+   "why": "รอยโรคชิ้นเนื้อไตที่จำเพาะต่อโรค lupus nephritis ชนิดรุนแรง (class IV) คือผนังหลอดเลือดฝอยหนาตัวคล้ายห่วงลวด (wire-loop)\n✓ A: เกิดจากการสะสม immune complex จำนวนมากในชั้น subendothelial จนผนังหลอดเลือดฝอยหนาแข็งคล้ายห่วงลวด\n✗ B: พบในโรค cryoglobulinemic glomerulonephritis ที่มักสัมพันธ์กับการติดเชื้อไวรัสตับอักเสบซี\n✗ C: พบได้ในกลุ่มโรค RPGN หลายชนิด จึงไม่จำเพาะต่อโรค SLE\n✗ D: เช่น fibrin cap หรือ capsular drop เป็นลักษณะของโรคไตจากเบาหวาน\n✗ E: เป็นรอยโรคแผลเป็นระยะท้ายที่พบได้ในโรคไตเรื้อรังหลายชนิด ไม่จำเพาะต่อ SLE"
   },
   "79/195": {
    "box": 22,
@@ -2044,7 +2044,7 @@
    },
    "answer": "A",
    "source": "เฉลย79",
-   "why": "ผู้ป่วยมี decision-making capacity และได้รับข้อมูลครบ → เคารพการตัดสินใจ (A) · B: paternalism คือแพทย์ตัดสินแทน ขัดกับ capacity ที่มี · C, D: เป็นหลักสำคัญแต่ไม่ลบล้างการปฏิเสธของผู้มี capacity · E: justice เกี่ยวกับการจัดสรรทรัพยากร"
+   "why": "ผู้ป่วยที่มีสติสัมปชัญญะและความสามารถในการตัดสินใจครบถ้วนมีสิทธิปฏิเสธการรักษาได้ตามหลักเคารพการตัดสินใจของผู้ป่วย\n✓ A: ผู้ป่วยมีความสามารถในการตัดสินใจ (capacity) และเข้าใจข้อมูลครบถ้วน แพทย์จึงต้องเคารพสิทธิการปฏิเสธการรักษา\n✗ B: การที่แพทย์ตัดสินใจแทนผู้ป่วยขัดกับสิทธิของผู้ป่วยที่มีสติสัมปชัญญะสมบูรณ์\n✗ C: หลักการทำประโยชน์แก่ผู้ป่วยไม่สามารถนำมาลบล้างการปฏิเสธการรักษาของผู้ที่มีความสามารถในการตัดสินใจได้\n✗ D: หลักการไม่ทำอันตรายไม่ได้อนุญาตให้บังคับรักษาผู้ป่วยที่มีสติสัมปชัญญะครบถ้วน\n✗ E: เกี่ยวข้องกับความเป็นธรรมในการจัดสรรทรัพยากรทางการแพทย์"
   },
   "79/196": {
    "box": 11,
@@ -2058,7 +2058,7 @@
    },
    "answer": "C",
    "source": "เฉลย79",
-   "why": "HT + hypoK + metabolic alkalosis → สงสัย Conn; screening = ARR (aldosterone สูง renin ต่ำ) (C) · A: EKG ดู hypoK แต่ไม่วินิจฉัยสาเหตุ · B: ไม่เกี่ยว · D: Cushing ต้องใช้ dexamethasone suppression/late-night cortisol ไม่ใช่ cortisol อย่างเดียว · E: ใช้คัดกรอง pheochromocytoma"
+   "why": "ความดันโลหิตสูงร่วมกับโพแทสเซียมต่ำและไบคาร์บอเนตสูงโดยไม่ได้ใช้ยาขับปัสสาวะต้องคัดกรอง primary hyperaldosteronism ด้วยค่า ARR\n✗ A: ช่วยดูผลของโพแทสเซียมต่ำต่อหัวใจได้ แต่ไม่สามารถใช้วินิจฉัยคัดกรองสาเหตุของโรคได้\n✗ B: ไม่เกี่ยวข้องกับการตรวจคัดกรองภาวะฮอร์โมน aldosterone เกิน\n✓ C: การตรวจคัดกรองอันดับแรกสำหรับ Conn syndrome คืออัตราส่วน plasma aldosterone ต่อ renin ซึ่งจะสูงขึ้นชัดเจน\n✗ D: การคัดกรอง Cushing syndrome ต้องใช้ dexamethasone suppression test หรือ late-night cortisol ไม่ใช่การเจาะสุ่มครั้งเดียว\n✗ E: เป็นการตรวจคัดกรองเนื้องอกต่อมหมวกไตชนิด pheochromocytoma"
   },
   "79/197": {
    "box": 8,
@@ -2072,7 +2072,7 @@
    },
    "answer": "E",
    "source": "เฉลย79",
-   "why": "Ion trapping: weak base ในปัสสาวะกรดจะอยู่ในรูป ionized (BH⁺) ดูดกลับผ่าน membrane ไม่ได้ → ขับออกมากขึ้น (E) · A: urine ด่างทำ weak base เป็น non-ionized → ถูกดูดกลับ (ใช้กับ weak acid เช่น salicylate) · B: CO เพิ่มมีผลน้อยและไม่ใช่คำตอบหลัก · C: ไม่เกี่ยว · D: ยานี้ไม่ได้อาศัย secretion และการยับยั้งยิ่งลดการขับ",
+   "why": "ตามหลัก ion trapping ยาที่มีสมบัติเป็นด่างอ่อนจะแตกตัวมีประจุในปัสสาวะที่เป็นกรด ทำให้ไม่ถูกดูดกลับและขับออกได้มากขึ้น\n✗ A: ปัสสาวะที่เป็นด่างทำให้ยาด่างอ่อนไม่แตกตัวและถูกดูดกลับเข้าเลือดมากขึ้น (วิธีนี้ใช้เร่งขับยากรดอ่อนเช่นแอสไพริน)\n✗ B: การเพิ่ม cardiac output มีผลต่อการขับยาผ่านท่อไตน้อยและไม่ใช่กลไก ion trapping\n✗ C: เอนไซม์ในลำไส้ไม่เกี่ยวข้องกับการขับยาออกทางปัสสาวะ\n✗ D: ยานี้ขับออกผ่านการกรองเป็นหลักและการยับยั้งการหลั่งจะยิ่งลดการขับยา\n✓ E: ปัสสาวะที่เป็นกรดทำให้ยาด่างอ่อนแตกตัวเป็นรูปมีประจุ (BH⁺) จึงแพร่กลับผ่านเยื่อหุ้มเซลล์ท่อไตไม่ได้และถูกขับออกมาก",
    "doubt": "⚠ โจทย์บอก minimal reabsorption ซึ่งทำให้ ion trapping มีผลน้อยในทางทฤษฎี แต่เฉลยตอบตามหลัก ion trapping"
   },
   "79/198": {
@@ -2087,7 +2087,7 @@
    },
    "answer": "A",
    "source": "เฉลย79",
-   "why": "Hyperglycemia → non-enzymatic glycation ของ GBM, heparan sulfate (anionic) ลด → เสีย charge barrier → albumin (ประจุลบ) รั่ว (A) · B: ไม่ได้มีประจุบวกเพิ่ม (ตัวหลอก) · C: podocyte ลดลง (podocytopenia) แต่ไม่ได้หายหมด · D: ไม่ใช่ลักษณะเด่น · E: DN ทำ GBM หนาขึ้น ไม่ใช่บาง (บางคือ thin BM disease)"
+   "why": "ภาวะน้ำตาลสูงเรื้อรังในเบาหวานทำให้ heparan sulfate ใน GBM ลดลงจนสูญเสียประจุลบและปล่อยให้อัลบูมินรั่วออกทางปัสสาวะ\n✓ A: เกิด non-enzymatic glycation และสูญเสีย heparan sulfate ที่มีประจุลบ ทำให้เสีย charge barrier และเกิด albuminuria\n✗ B: GBM ไม่ได้มีการเพิ่มประจุบวกขึ้นมา แต่เกิดจากการสูญเสียประจุลบเดิมที่มีอยู่\n✗ C: แม้จำนวน podocyte จะลดลงในโรคไตจากเบาหวาน แต่ไม่ได้หายไปทั้งหมด\n✗ D: การเปลี่ยนแปลงของรูพรุนเอนโดทีเลียมไม่ใช่กลไกหลักของการรั่วของอัลบูมินในเบาหวาน\n✗ E: โรคไตจากเบาหวานทำให้ GBM หนาตัวขึ้น ไม่ใช่บางลง (GBM บางพบใน thin basement membrane disease)"
   },
   "79/199": {
    "box": 18,
@@ -2101,7 +2101,7 @@
    },
    "answer": "C",
    "source": "เฉลย79",
-   "why": "พยาธิสภาพอยู่ที่ tubule/interstitium (TBM หนา + chronic inflammation) ในเบาหวาน = diabetic tubulointerstitial nephropathy (C) · A: glomerulosclerosis ต้องเห็น mesangial expansion/K-W nodule ที่ glomerulus · B: AIN เป็นเฉียบพลันจากยา · D: MCD ไม่มีความผิดปกติใน LM · E: ATN เป็นเฉียบพลัน เซลล์ tubule ตาย ไม่ใช่ TBM หนา"
+   "why": "ผู้ป่วยเบาหวานที่ชิ้นเนื้อไตพบการหนาตัวของ tubular basement membrane ร่วมกับการอักเสบเรื้อรังใน interstitium คือ diabetic tubulointerstitial nephropathy\n✗ A: พยาธิสภาพหลักต้องอยู่ที่โกลเมอรูลัส เช่น mesangial expansion หรือ Kimmelstiel-Wilson nodule\n✗ B: เป็นการอักเสบเฉียบพลันที่มักสัมพันธ์กับการแพ้ยา ไม่ใช่การหนาตัวของ TBM ร่วมกับการอักเสบเรื้อรัง\n✓ C: ตรงกับผลชิ้นเนื้อที่พบพยาธิสภาพเด่นที่ท่อไตและเนื้อเยื่อระหว่างท่อไตในบริบทของผู้ป่วยเบาหวานคุมไม่ดี\n✗ D: ตรวจด้วยกล้องจุลทรรศน์แสงธรรมดาจะพบโครงสร้างไตปกติ ไม่มีการหนาตัวของ TBM\n✗ E: เป็นการตายของเซลล์เยื่อบุท่อไตแบบเฉียบพลัน ไม่ใช่การหนาตัวเรื้อรังของ TBM"
   },
   "79/200": {
    "box": 17,
@@ -2115,7 +2115,7 @@
    },
    "answer": "D",
    "source": "เฉลย79",
-   "why": "Anti-GBM (anti-collagen IV α3) โจมตีทั้ง GBM และ alveolar BM → pulmonary hemorrhage + RPGN = Goodpasture (D) · A: lupus ใช้ ANA/dsDNA, IF full house · B: IgA ไม่มีอาการปอด · C: Alport เป็นพันธุกรรม collagen IV + หูหนวก ตา ไม่มี antibody · E: GPA มีปอด-ไตได้แต่ c-ANCA บวก ไม่ใช่ anti-GBM"
+   "why": "อาการไอเป็นเลือดร่วมกับไตอักเสบเฉียบพลันและตรวจพบ anti-GBM antibody บวกเป็นลักษณะจำเพาะของ Goodpasture syndrome\n✗ A: สัมพันธ์กับ ANA และ anti-dsDNA โดยย้อม IF พบลักษณะ full-house ไม่ใช่ anti-GBM\n✗ B: ก่อไตอักเสบจาก IgA สะสมที่ mesangium โดยไม่มีอาการเลือดออกในปอด\n✗ C: เป็นโรคทางพันธุกรรมของคอลลาเจนชนิดที่ 4 ร่วมกับหูหนวกและตาผิดปกติ ไม่มีแอนติบอดี anti-GBM\n✓ D: แอนติบอดี anti-GBM โจมตีคอลลาเจนชนิดที่ 4 (α3) ทั้งที่เยื่อบุถุงลมปอดและโกลเมอรูลัส เกิด pulmonary-renal syndrome\n✗ E: แม้มีอาการปอดและไตได้เช่นกัน แต่ตรวจพบ c-ANCA บวก ไม่ใช่ anti-GBM"
   },
   "79/201": {
    "box": 18,
@@ -2129,7 +2129,7 @@
    },
    "answer": "D",
    "source": "เฉลย79",
-   "why": "Nephrotic (GBM หนา = membranous) ความเสียหายหลักอยู่ที่ podocyte (subepithelial deposit, foot process effacement, slit diaphragm nephrin) (D) · A: mesangial เกี่ยวกับ IgA/DN และ hematuria · B: macula densa รับรู้ NaCl (TGF) · C: JG cell หลั่ง renin · E: parietal cell เกี่ยวกับ crescent ไม่ใช่ barrier"
+   "why": "อาการบวมและโปรตีนรั่วระดับ 4+ ร่วมกับ GBM หนาใน membranous nephropathy มีเซลล์ podocyte เป็นโครงสร้างหลักที่เสียหาย\n✗ A: มีบทบาทค้ำจุนหลอดเลือดฝอยและเกี่ยวข้องกับโรคกลุ่ม IgA หรือเบาหวานมากกว่า\n✗ B: ทำหน้าที่รับรู้ความเข้มข้น NaCl เพื่อควบคุม tubuloglomerular feedback\n✗ C: ทำหน้าที่สร้างและหลั่งฮอร์โมน renin\n✓ D: เป็นเซลล์หลักที่สร้าง slit diaphragm (nephrin) ป้องกันโปรตีนรั่ว และเป็นตำแหน่งที่เกิด foot process effacement\n✗ E: บุผนังด้านนอกของ Bowman capsule และมีบทบาทในการสร้าง crescent ใน RPGN ไม่ใช่เยื่อกรองโปรตีน"
   },
   "79/202": {
    "box": 26,
@@ -2143,7 +2143,7 @@
    },
    "answer": "A",
    "source": "เฉลย79",
-   "why": "Smoking เป็น risk factor อันดับหนึ่ง (aromatic amines เช่น 2-naphthylamine ขับทางปัสสาวะ) (A) · B: Schistosoma → SCC ของ bladder · C, E: ไม่ใช่ risk หลัก · D: hereditary (Lynch) มีน้อยมาก"
+   "why": "ปัสสาวะเป็นเลือดแบบไม่เจ็บในชายอายุ 55 ปีที่ผลชิ้นเนื้อเป็น urothelial carcinoma มีปัจจัยเสี่ยงสำคัญอันดับหนึ่งคือการสูบบุหรี่\n✓ A: ควันบุหรี่มีสารก่อมะเร็งกลุ่ม aromatic amine ที่ถูกขับทางปัสสาวะและเป็นปัจจัยเสี่ยงอันดับหนึ่งของ urothelial carcinoma\n✗ B: สัมพันธ์กับมะเร็งกระเพาะปัสสาวะชนิด squamous cell carcinoma ไม่ใช่ urothelial carcinoma\n✗ C: แอลกอฮอล์ไม่ใช่ปัจจัยเสี่ยงหลักของมะเร็งเยื่อบุทางเดินปัสสาวะ\n✗ D: ปัจจัยทางพันธุกรรม (เช่น Lynch syndrome) เป็นสาเหตุส่วนน้อยมากเมื่อเทียบกับการสูบบุหรี่\n✗ E: อาหารโปรตีนสูงไม่ใช่ปัจจัยเสี่ยงสำคัญของมะเร็งกระเพาะปัสสาวะ"
   },
   "79/203": {
    "box": 26,
@@ -2157,7 +2157,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "Muscle-invasive (≥T2) = ลุกถึง muscularis propria คือ detrusor (B) · A: muscularis mucosae เป็นใยกล้ามเนื้อบาง ๆ ใน lamina propria ยังเป็น T1 (ต้องแยกให้ออก) · C, D: ผ่าน BM เข้า lamina propria = T1 non-muscle invasive · E: อยู่ใน epithelium = Ta/CIS"
+   "why": "มะเร็งกระเพาะปัสสาวะจะจัดเป็นระยะลุกลามชั้นกล้ามเนื้อ (muscle-invasive, ≥T2) เมื่อเซลล์มะเร็งลุกลามเข้าไปถึงชั้นกล้ามเนื้อ detrusor\n✗ A: เป็นเพียงใยกล้ามเนื้อบาง ๆ ในชั้น lamina propria การลุกลามถึงชั้นนี้ยังจัดเป็นระยะ T1 (non-muscle invasive)\n✓ B: คือชั้น muscularis propria ของกระเพาะปัสสาวะ การลุกลามถึงชั้นนี้จัดเป็น muscle-invasive bladder cancer\n✗ C: หากยังไม่ทะลุ basement membrane จัดเป็นมะเร็งระยะผิวเผิน (Ta หรือ CIS)\n✗ D: การลุกลามเข้าชั้น lamina propria จัดเป็นระยะ T1 ซึ่งยังไม่ถือว่าลุกลามชั้นกล้ามเนื้อหลัก\n✗ E: มะเร็งที่จำกัดอยู่เฉพาะชั้นเยื่อบุผิวจัดเป็นระยะ Ta หรือ CIS"
   },
   "79/204": {
    "box": 4,
@@ -2171,7 +2171,7 @@
    },
    "answer": "A",
    "source": "เฉลย79",
-   "why": "CrCl = UCr×V/PCr (เก็บปัสสาวะ 24 ชม.) ประเมิน GFR โดยตรง แยกจากการสร้าง creatinine ที่เปลี่ยน (A) · B: UACR วัดการรั่วของ albumin (ความเสียหาย barrier) ไม่ใช่ GFR · C, D: ใช้แยก prerenal vs ATN · E: ประเมินความสามารถทำปัสสาวะเข้มข้น"
+   "why": "การยืนยันว่าครีเอตินินที่สูงขึ้นเกิดจากการกรองของไตลดลงจริง ไม่ใช่จากการสร้างเพิ่ม ต้องวัด creatinine clearance โดยตรง\n✓ A: คำนวณจากปริมาณครีเอตินินในปัสสาวะ 24 ชั่วโมงเทียบกับในเลือด (UCr × V / PCr) จึงสะท้อนอัตราการกรองของไตได้โดยตรง\n✗ B: ใช้ประเมินการรั่วของอัลบูมินจากความเสียหายของ filtration barrier ไม่ใช่วัดอัตราการกรอง\n✗ C: ใช้ช่วยแยกสาเหตุของภาวะไตวายเฉียบพลันหรือโซเดียมต่ำ ไม่ใช่วัด GFR\n✗ D: ใช้แยกภาวะ prerenal azotemia ออกจาก intrinsic ATN ไม่ได้ยืนยันอัตราการกรองจริง\n✗ E: ใช้ประเมินความสามารถในการทำให้ปัสสาวะเข้มข้นหรือเจือจางของไต"
   },
   "79/206": {
    "box": 6,
@@ -2185,7 +2185,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "ยับยั้ง CA ที่ PCT → H⁺ secretion ผ่าน NHE3 ลด และ HCO3⁻ ที่กรองดูดกลับไม่ได้ → bicarbonaturia ปัสสาวะด่าง (B) · A: urine pH เพิ่ม ไม่ใช่ลด · C: H⁺ secretion ลด · D: ammoniagenesis/NH4⁺ excretion ลดเมื่อปัสสาวะด่าง · E: Na reabsorption ที่ PCT ลด (จึงเป็น diuretic)"
+   "why": "Acetazolamide ยับยั้ง carbonic anhydrase ที่ท่อไตส่วนต้น ทำให้ดูดกลับไบคาร์บอเนตไม่ได้และขับออกทางปัสสาวะมากขึ้น\n✗ A: การมีไบคาร์บอเนตขับออกในปัสสาวะมากทำให้ค่า pH ของปัสสาวะสูงขึ้น (เป็นด่าง) ไม่ใช่ลดลง\n✓ B: ยับยั้งการดูดกลับ HCO3⁻ ที่ PCT ทำให้เกิด bicarbonaturia และปัสสาวะมีฤทธิ์เป็นด่าง\n✗ C: การยับยั้ง carbonic anhydrase ลดการสร้างและหลั่ง H⁺ ผ่าน NHE3 ไม่ใช่เพิ่มขึ้น\n✗ D: เมื่อปัสสาวะเป็นด่างการขับแอมโมเนียมจะลดลง ไม่ใช่เพิ่มขึ้น\n✗ E: การดูดกลับโซเดียมที่ PCT ลดลงร่วมกับการเสียไบคาร์บอเนต จึงเกิดฤทธิ์ขับปัสสาวะ"
   },
   "79/207": {
    "box": 9,
@@ -2199,7 +2199,7 @@
    },
    "answer": "D",
    "source": "เฉลย79",
-   "why": "Hypotonic hyponatremia + ปัสสาวะเจือจางสุด (Uosm <100) = ADH ถูกกดเหมาะสม แต่ดื่มน้ำเกินความสามารถขับ (พบบ่อยใน schizophrenia) (D) · A: SIADH ต้อง Uosm >100 และ UNa >20-40 · B, C: DI ทำ Na สูง ไม่ใช่ต่ำ · E: CSW เสีย Na ทางปัสสาวะ (UNa สูง) และ hypovolemia"
+   "why": "ผู้ป่วยจิตเภทที่มีโซเดียมในเลือดต่ำมากร่วมกับปัสสาวะเจือจางสุด (Uosm < 100) แสดงว่าดื่มน้ำมากเกินความสามารถขับของไต\n✗ A: ในภาวะ SIADH ปัสสาวะต้องไม่เจือจาง (Uosm > 100) และมี urine Na⁺ สูงกว่า 20–40 mEq/L\n✗ B: โรคเบาจืดทำให้สูญเสียน้ำจนระดับโซเดียมในเลือดปกติหรือสูง ไม่ใช่ต่ำ\n✗ C: โรคเบาจืดจากไตทำให้ระดับโซเดียมในเลือดสูง ไม่ใช่ภาวะโซเดียมต่ำ\n✓ D: ภาวะดื่มน้ำมากผิดปกติ (พบบ่อยในโรคจิตเภท) กดการหลั่ง ADH จนปัสสาวะเจือจางสุดและ urine Na⁺ ต่ำ\n✗ E: มีการสูญเสียโซเดียมทางปัสสาวะมาก (urine Na⁺ สูง) ร่วมกับภาวะขาดสารน้ำ"
   },
   "79/208": {
    "box": 18,
@@ -2213,7 +2213,7 @@
    },
    "answer": "C",
    "source": "เฉลย79",
-   "why": "Primary membranous ~70–80% มี anti-PLA2R (podocyte antigen) (C) · A: NELL1 เป็น antigen ที่พบรองลงมา สัมพันธ์มะเร็ง · D: THSD7A พบ ~2–3% สัมพันธ์มะเร็ง · B: NCAM1 สัมพันธ์ lupus membranous · E: collagen IV เป็นเป้าของ anti-GBM ให้ linear pattern ไม่ใช่ granular"
+   "why": "โรค primary membranous nephropathy กว่าร้อยละ 70–80 เกิดจากแอนติบอดีต่อตัวรับ PLA2R บนผิวเซลล์ podocyte\n✗ A: เป็นแอนติเจนที่พบรองลงมาและมักสัมพันธ์กับโรคมะเร็งหรือยาบางชนิด\n✗ B: เป็นแอนติเจนที่สัมพันธ์กับ membranous lupus nephritis มากกว่า primary MN\n✓ C: เป็นแอนติเจนเป้าหมายหลักบน podocyte ที่พบมากที่สุดใน primary membranous nephropathy\n✗ D: พบได้เพียงประมาณร้อยละ 2–3 และมักสัมพันธ์กับโรคมะเร็ง\n✗ E: เป็นเป้าหมายของแอนติบอดี anti-GBM ซึ่งย้อม IF เป็นเส้นตรง (linear) ไม่ใช่แบบเม็ดจุด (granular)"
   },
   "79/209": {
    "box": 4,
@@ -2227,7 +2227,7 @@
    },
    "answer": "D",
    "source": "เฉลย79",
-   "why": "Urea เป็น ineffective osmole ผ่าน membrane ได้อิสระ → เพิ่ม measured osmolarity แต่ไม่เพิ่ม tonicity น้ำจึงไม่ย้ายระหว่าง ICF/ECF (D) · A, B: ไม่มีแรงดึงน้ำ เซลล์ไม่เหี่ยว/ไม่บวม · C: tonicity (effective osmolality) ไม่เปลี่ยน · E: urea เข้าเซลล์ได้ ทำให้ nitrogen ในเซลล์เพิ่มด้วย"
+   "why": "ยูเรียที่สะสมสูงในภาวะไตวายเฉียบพลันเป็น ineffective osmole ที่ผ่านเยื่อหุ้มเซลล์ได้ จึงเพิ่มค่า osmolarity แต่ไม่ดึงน้ำข้ามเซลล์\n✗ A: ยูเรียแพร่เข้าเซลล์ได้จนสมดุลทั้งสองฝั่ง จึงไม่เกิดแรงดึงน้ำออกและเซลล์ไม่เหี่ยว\n✗ B: ไม่เกิดความต่างของ effective osmolality จึงไม่มีน้ำเคลื่อนเข้าเซลล์\n✗ C: tonicity (effective osmolality) ไม่เปลี่ยนแปลงเพราะยูเรียเป็น ineffective osmole\n✓ D: ค่า osmolarity ที่วัดได้จะเพิ่มขึ้นตามความเข้มข้นของยูเรีย (BUN/2.8) โดยไม่เปลี่ยน tonicity\n✗ E: ยูเรียแพร่ผ่านเยื่อหุ้มเซลล์เข้าไปได้ ทำให้ความเข้มข้นไนโตรเจนภายในเซลล์เพิ่มขึ้นตามไปด้วย"
   },
   "79/210": {
    "box": 25,
@@ -2241,7 +2241,7 @@
    },
    "answer": "A",
    "source": "เฉลย79",
-   "why": "ผู้ใหญ่ + ประวัติครอบครัว + cyst ไตหลายขนาดสองข้าง = ADPKD (PKD1 polycystin-1 chr16, PKD2) (A) · B: ARPKD (PKHD1, fibrocystin) แสดงอาการในทารก ไตโต cyst เล็ก ร่วม congenital hepatic fibrosis · C, D, E: ไม่ใช่รูปแบบของ PKD",
+   "why": "ชายอายุ 25 ปีที่มีประวัติครอบครัวและภาพไตมีถุงน้ำหลายขนาดทั้งสองข้างคือโรค ADPKD ซึ่งถ่ายทอดแบบยีนเด่น\n✓ A: โรค ADPKD (ยีน PKD1 หรือ PKD2) ถ่ายทอดแบบ autosomal dominant และแสดงอาการในวัยผู้ใหญ่ตอนต้นถึงกลางคน\n✗ B: โรค ARPKD (ยีน PKHD1) แสดงอาการรุนแรงตั้งแต่ทารกแรกเกิดพร้อมถุงน้ำเล็ก ๆ และพังผืดในตับ\n✗ C: ไม่ใช่รูปแบบการถ่ายทอดทางพันธุกรรมของโรคถุงน้ำในไต\n✗ D: ไม่ใช่รูปแบบการถ่ายทอดของโรคถุงน้ำในไต\n✗ E: ไม่ใช่โรคที่ถ่ายทอดผ่านดีเอ็นเอของไมโทคอนเดรีย",
    "needs_image": true
   },
   "79/211": {
@@ -2256,7 +2256,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "ARPKD: cyst เป็นการขยายตัวแบบรัศมีของ collecting duct (มาจาก ureteric bud) ไตโตผิวเรียบ (B) · E: metanephric blastema → nephron; ความผิดปกติจากส่วนนี้คือ multicystic dysplastic/ agenesis ไม่ใช่ ARPKD · A: urachus เกี่ยวกับสะดือ-bladder · C, D: เกี่ยวกับระบบสืบพันธุ์"
+   "why": "ทารกแรกเกิดที่มีไตโตสองข้างและมีถุงน้ำขนาดเล็กจำนวนมากคือโรค ARPKD ซึ่งเกิดจากการขยายตัวของท่อรวม\n✗ A: เป็นท่อเชื่อมกระเพาะปัสสาวะกับสะดือ ไม่เกี่ยวกับถุงน้ำในเนื้อไต\n✓ B: ใน ARPKD ถุงน้ำเกิดจากการโป่งพองแบบรัศมีของ collecting duct (ซึ่งเจริญมาจาก ureteric bud)\n✗ C: เจริญเป็นท่อระบบสืบพันธุ์ชาย ไม่ใช่โครงสร้างหลักที่เกิดถุงน้ำใน ARPKD\n✗ D: เจริญเป็นระบบสืบพันธุ์หญิง ไม่เกี่ยวข้องกับถุงน้ำในไต\n✗ E: ความผิดปกติของ metanephric blastema ทำให้เกิด multicystic dysplastic kidney หรือ renal agenesis ไม่ใช่ ARPKD"
   },
   "79/212": {
    "box": 26,
@@ -2270,7 +2270,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "S. haematobium: ไข่ที่ติดในผนังหลั่ง soluble egg antigen → Th2/type IV hypersensitivity → granuloma, fibrosis, calcification (B) · A: ไม่ได้ทำลายด้วย toxin · C: ตัวเต็มวัยอยู่ใน vesical venous plexus ไม่ได้อุดกั้น · D: superinfection เกิดได้แต่ไม่ใช่สาเหตุ granuloma · E: พยาธิไม่เข้าเซลล์"
+   "why": "ก้อนแกรนูโลมาและหินปูนในผนังกระเพาะปัสสาวะจากการติดเชื้อ Schistosoma haematobium เกิดจากปฏิกิริยาภูมิคุ้มกันต่อไข่พยาธิ\n✗ A: พยาธิไม่ได้หลั่งสารพิษทำลายผนังกระเพาะปัสสาวะโดยตรง\n✓ B: ไข่ที่ฝังตัวในผนังหลั่ง soluble egg antigen กระตุ้น Th2 และ type IV hypersensitivity จนเกิดแกรนูโลมา พังผืด และหินปูน\n✗ C: ตัวเต็มวัยอาศัยอยู่ในหลอดเลือดดำรอบกระเพาะปัสสาวะ ไม่ได้อุดกั้นทางเดินปัสสาวะโดยตรง\n✗ D: การติดเชื้อแบคทีเรียแทรกซ้อนไม่ใช่กลไกหลักที่สร้างก้อนแกรนูโลมารอบไข่พยาธิ\n✗ E: พยาธิไม่ได้บุกรุกเข้าไปเจริญภายในเซลล์เยื่อบุทางเดินปัสสาวะ"
   },
   "79/242": {
    "box": 27,
@@ -2284,7 +2284,7 @@
    },
    "answer": "C",
    "source": "เฉลย79",
-   "why": "Overactive bladder (urge) → antimuscarinic (M3 blocker) ลดการบีบตัวของ detrusor (C) · A: α1 agonist เพิ่ม tone ของ sphincter ไม่รักษา OAB · B: desmopressin ใช้ nocturia/DI · D: tamsulosin สำหรับ BPH ในชาย · E: furosemide เพิ่มปัสสาวะ ยิ่งแย่ลง"
+   "why": "หญิงที่มีอาการปัสสาวะบ่อยและปวดปัสสาวะกะทันหันกลั้นยากโดยผลตรวจปัสสาวะปกติคือ overactive bladder ควรรักษาด้วย antimuscarinic\n✗ A: เป็น α1-agonist ที่เพิ่มแรงตึงของหูรูด ไม่ใช่ยารักษาภาวะกระเพาะปัสสาวะบีบตัวไวเกิน\n✗ B: ใช้รักษาภาวะเบาจืดหรือปัสสาวะรดที่นอน/ปัสสาวะกลางคืน ไม่ใช่ยาลดการบีบตัวของกระเพาะปัสสาวะ\n✓ C: เป็นยากลุ่ม antimuscarinic (บล็อก M3) ช่วยลดการบีบตัวของกล้ามเนื้อ detrusor ในภาวะ overactive bladder\n✗ D: เป็น α1A-blocker ใช้คลายกล้ามเนื้อต่อมลูกหมากในผู้ชายที่เป็น BPH\n✗ E: เป็นยาขับปัสสาวะซึ่งจะยิ่งทำให้อาการปัสสาวะบ่อยและกลั้นไม่อยู่แย่ลง"
   },
   "79/252": {
    "box": 8,
@@ -2298,7 +2298,7 @@
    },
    "answer": "C",
    "source": "เฉลย79",
-   "why": "SGLT2 inhibitor (-gliflozin) ทำ glucosuria → เชื้อเจริญใน genitourinary tract → genital mycotic infection/UTI (C) · A: DPP-4i SE คือ nasopharyngitis, pancreatitis · B: GLP-1 RA ทำคลื่นไส้ · D: sulfonylurea ทำ hypoglycemia น้ำหนักขึ้น · E: acarbose ทำท้องอืด ผายลม"
+   "why": "ยาเบาหวานชนิดรับประทานที่ทำให้เกิดการติดเชื้อทางเดินปัสสาวะและเชื้อราที่อวัยวะเพศซ้ำ ๆ คือยากลุ่ม SGLT2 inhibitor\n✗ A: ผลข้างเคียงเด่นคือคออักเสบและตับอ่อนอักเสบ ไม่ทำให้มีน้ำตาลรั่วในปัสสาวะ\n✗ B: ผลข้างเคียงเด่นคืออาการคลื่นไส้อาเจียนและเบื่ออาหาร\n✓ C: ยับยั้งการดูดกลับกลูโคสที่ท่อไตส่วนต้นทำให้เกิด glucosuria สูง เอื้อต่อการติดเชื้อในทางเดินปัสสาวะและอวัยวะเพศ\n✗ D: เป็นกลไกของยากลุ่ม sulfonylurea ซึ่งผลข้างเคียงเด่นคือน้ำตาลในเลือดต่ำและน้ำหนักเพิ่ม\n✗ E: เป็นกลไกของ acarbose ซึ่งผลข้างเคียงเด่นคือท้องอืดและผายลมบ่อย"
   },
   "79/256": {
    "box": 9,
@@ -2312,7 +2312,7 @@
    },
    "answer": "B",
    "source": "เฉลย79",
-   "why": "ADH จาก hypothalamus (ปล่อยที่ posterior pituitary) → V2 receptor → AQP2 ที่ collecting duct ดูดน้ำอิสระ; บาดเจ็บ → central DI (B) · C, D, E: RAAS เพิ่มการดูด Na เป็นหลักและไม่ได้สร้างที่ hypothalamus · A: cortisol ไม่ใช่ตัวคุมการดูดน้ำ"
+   "why": "การบาดเจ็บที่ไฮโปทาลามัสรบกวนการสร้างฮอร์โมน ADH ซึ่งควบคุมการดูดน้ำกลับที่ท่อรวมของไตโดยตรง\n✗ A: สร้างจากต่อมหมวกไตชั้นนอก ไม่ใช่ฮอร์โมนหลักที่ควบคุมการดูดน้ำอิสระที่ท่อรวม\n✓ B: สร้างจากไฮโปทาลามัสและหลั่งที่ต่อมใต้สมองส่วนหลัง ออกฤทธิ์ผ่านตัวรับ V2 เพิ่ม AQP2 เพื่อดูดน้ำกลับที่ท่อรวม\n✗ C: สร้างจากไตและกระตุ้นระบบ RAAS ไม่ได้สร้างที่ไฮโปทาลามัส\n✗ D: สร้างจากต่อมหมวกไตและเน้นการดูดกลับโซเดียม ไม่ใช่การดูดน้ำอิสระโดยตรงจากไฮโปทาลามัส\n✗ E: เกิดจากการกระตุ้นระบบ RAAS และออกฤทธิ์หดหลอดเลือดกับกระตุ้น aldosterone ไม่ได้สร้างจากไฮโปทาลามัส"
   },
   "79/150": {
    "box": 7,
@@ -2326,7 +2326,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "ACEI ยับยั้ง kininase II → bradykinin/substance P สะสม → ไอแห้ง (A) · B: ARB ไม่เพิ่ม bradykinin จึงใช้แทนเมื่อไอ · C: statin SE คือ myopathy, transaminase สูง · D, E: ไม่มี atorvastatin หรือ losartan ทำไอ",
+   "why": "อาการไอแห้งเรื้อรังในผู้ป่วยที่ใช้ยาลดความดันโลหิตเป็นผลข้างเคียงจำเพาะของยากลุ่ม ACEI จากการสะสมของ bradykinin\n✓ A: ยับยั้งเอนไซม์ ACE (kininase II) ทำให้ bradykinin และ substance P สะสมจนกระตุ้นอาการไอแห้งเรื้อรัง\n✗ B: เป็นยากลุ่ม ARB ที่ไม่ยับยั้งการสลาย bradykinin จึงไม่ก่ออาการไอแห้งและมักใช้เปลี่ยนแทน ACEI\n✗ C: เป็นยาลดไขมันกลุ่ม statin ที่มีผลข้างเคียงเด่นคือปวดกล้ามเนื้อและค่าเอนไซม์ตับสูง ไม่ทำให้ไอ\n✗ D: ทั้ง losartan และ atorvastatin ไม่ได้ทำให้เกิดอาการไอแห้งเรื้อรัง\n✗ E: atorvastatin ไม่ได้เป็นสาเหตุของอาการไอแห้งเรื้อรัง",
    "doubt": "⚠ ไฟล์ 79 ไม่มีเฉลย (KEY79 เป็นไฮไลต์) และชีทไม่ได้อ้างข้อนี้ — คำตอบจากการวิเคราะห์"
   },
   "79/233": {
@@ -2341,7 +2341,7 @@
    },
    "answer": "A",
    "source": "วิเคราะห์",
-   "why": "Methyldopa (central α2 agonist) ปลอดภัยในครรภ์ (ร่วมกับ labetalol, nifedipine) (A) · B, C, D: ACEI/ARB/direct renin inhibitor เป็น teratogen (fetal renal dysgenesis, oligohydramnios) · E: spironolactone มีฤทธิ์ antiandrogen → feminization ของทารกชาย",
+   "why": "ยาลดความดันโลหิตที่ปลอดภัยและแนะนำใช้ในหญิงตั้งครรภ์ที่เป็นความดันโลหิตสูงเรื้อรังคือ methyldopa\n✓ A: เป็น centrally acting α2-agonist ที่ปลอดภัยและเป็นยาตัวเลือกอันดับต้นในหญิงตั้งครรภ์\n✗ B: เป็นยากลุ่ม ACEI ที่ก่อความพิการต่อไตทารกและน้ำคร่ำน้อย จึงห้ามใช้ในหญิงตั้งครรภ์\n✗ C: เป็นยากลุ่ม ARB ที่ก่อ fetal renal dysgenesis และ oligohydramnios จึงห้ามใช้ในหญิงตั้งครรภ์\n✗ D: เป็น direct renin inhibitor ที่มีพิษต่อไตทารกเช่นเดียวกับ ACEI/ARB จึงห้ามใช้ในหญิงตั้งครรภ์\n✗ E: มีฤทธิ์ต้านฮอร์โมนเพศชาย (antiandrogen) อาจทำให้ทารกเพศชายมีอวัยวะเพศพัฒนาผิดปกติ จึงไม่แนะนำในครรภ์",
    "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
   },
   "79/258": {
@@ -2356,7 +2356,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "DKA: ขาด insulin + hyperosmolality (solvent drag) + acidosis → K เคลื่อนออกนอกเซลล์ serum K มักสูง ทั้งที่ total body K พร่อง (B) · A: hypoK จะเกิดหลังเริ่ม insulin · C: glucose สูงดึงน้ำออกจากเซลล์ → Na เจือจาง (pseudo/translocational hyponatremia) · D: ไม่ใช่ลักษณะ · E: pseudohyperK เกิดจาก hemolysis ตอนเจาะเลือด ไม่ใช่กลไกนี้",
+   "why": "ภาวะ DKA ที่ขาดอินซูลินร่วมกับเลือดเป็นกรดและความเข้มข้นสูงทำให้โพแทสเซียมเคลื่อนออกจากเซลล์จนระดับในเลือดสูงขึ้น\n✗ A: ภาวะโพแทสเซียมในเลือดต่ำมักเกิดขึ้นภายหลังเมื่อเริ่มให้การรักษาด้วยอินซูลิน\n✓ B: การขาดอินซูลิน ภาวะเลือดเป็นกรด และ solvent drag จากน้ำตาลสูงผลัก K⁺ ออกจากเซลล์จน serum K⁺ สูงทั้งที่ปริมาณรวมในร่างกายพร่อง\n✗ C: น้ำตาลในเลือดที่สูงมากดึงน้ำออกจากเซลล์มาเจือจางโซเดียม ทำให้มักพบภาวะโซเดียมต่ำ (translocational hyponatremia)\n✗ D: ไม่ใช่ความผิดปกติของอิเล็กโทรไลต์ที่เป็นลักษณะเด่นของภาวะ DKA\n✗ E: เกิดจากเม็ดเลือดแดงแตกขณะเจาะเลือดนอกร่างกาย ไม่ใช่กลไกการเคลื่อนย้าย K⁺ ในภาวะ DKA",
    "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
   },
   "79/263": {
@@ -2371,7 +2371,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "FHH: CaSR เสียหน้าที่ → parathyroid ต้องใช้ Ca สูงกว่าปกติจึงกด PTH (set point สูง) และที่ TAL ดูด Ca กลับมาก → urine Ca ต่ำ (B) · A: เป็นลักษณะ activating mutation (autosomal dominant hypocalcemia) · C: ไม่เกี่ยวกับ osteoblast · D, E: ไตดูด Ca กลับเพิ่ม (Ca ปัสสาวะต่ำ) ไม่ใช่ขับเพิ่ม",
+   "why": "การกลายพันธุ์แบบสูญเสียหน้าที่ของตัวรับแคลเซียม (CaSR) ในโรค FHH ทำให้ต่อมพาราไทรอยด์ไวต่อแคลเซียมลดลงและไตดูดกลับแคลเซียมมากขึ้น\n✗ A: การกลายพันธุ์ที่ทำให้ CaSR ไวขึ้นจะกด PTH และทำให้แคลเซียมต่ำ (autosomal dominant hypocalcemia)\n✓ B: CaSR ไวต่อแคลเซียมลดลงจึงต้องใช้ระดับแคลเซียมสูงขึ้นเพื่อกด PTH ทำให้ PTH ปกติหรือสูงเล็กน้อยคู่กับแคลเซียมสูงและแคลเซียมในปัสสาวะต่ำ\n✗ C: กลไกของโรค FHH เกิดจากตัวรับแคลเซียมที่ต่อมพาราไทรอยด์และไต ไม่ได้เกิดจากเซลล์สร้างกระดูกไวต่อ PTH\n✗ D: ที่ไต (TAL) การที่ CaSR ทำงานลดลงกลับเพิ่มการดูดกลับแคลเซียมทำให้แคลเซียมในปัสสาวะต่ำมาก\n✗ E: ไตดูดกลับแคลเซียมมากขึ้นจนแคลเซียมในปัสสาวะต่ำมาก ไม่ใช่ขับแคลเซียมเพิ่ม",
    "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
   },
   "79/226": {
@@ -2386,7 +2386,7 @@
    },
    "answer": "B",
    "source": "วิเคราะห์",
-   "why": "Urethral folds เชื่อมไม่สมบูรณ์ → meatus เปิดด้าน ventral = hypospadias (B) · A: epispadias เปิดด้าน dorsal (genital tubercle ผิดตำแหน่ง ร่วม bladder exstrophy) · C: หนังหุ้มปลายรูดไม่ได้ · D: หนังหุ้มรูดแล้วคืนไม่ได้ รัด glans · E: glans อักเสบ",
+   "why": "ความผิดปกติแต่กำเนิดที่รูเปิดท่อปัสสาวะอยู่ด้านล่าง (ventral) ขององคชาตเกิดจาก urethral folds เชื่อมปิดไม่สมบูรณ์\n✗ A: รูเปิดท่อปัสสาวะอยู่ด้านบน (dorsal) ขององคชาตและมักพบร่วมกับ bladder exstrophy\n✓ B: Urethral folds เชื่อมไม่สมบูรณ์ทำให้รูเปิดท่อปัสสาวะมาเปิดด้าน ventral ขององคชาต\n✗ C: ภาวะหนังหุ้มปลายองคชาตตีบไม่สามารถรูดเปิดได้\n✗ D: ภาวะหนังหุ้มปลายองคชาตที่รูดเปิดแล้วไม่สามารถรูดกลับลงมาได้จนรัดส่วนหัวองคชาต\n✗ E: ภาวะอักเสบติดเชื้อของส่วนหัวองคชาต (glans penis)",
    "doubt": "⚠ ไม่มีเฉลยอ่านได้และชีทไม่ได้อ้าง — คำตอบจากการวิเคราะห์"
   }
  }
