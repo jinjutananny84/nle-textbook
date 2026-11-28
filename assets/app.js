@@ -3115,7 +3115,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v78</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v79</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4375,7 +4375,7 @@
     return `<div class="flow" id="fl-${esc(f.id)}"${hlk ? ` data-hlk="${esc(hlk)}"` : ''}><div class="fl-h">${ic('flow')} <b>${inline(esc(f.title))}</b>${extra || ''}</div><div class="fl-scroll"><div class="fl-tree">${flowNode(f.root)}</div></div></div>`;
   }
   // แผนภาพที่กว้างกว่าจอ (มือถือ) ขึ้นป้ายบอกให้เลื่อนด้านข้าง
-  function flowHints(root) { root.querySelectorAll('.flow').forEach(x => { const sc = x.querySelector('.fl-scroll'); x.classList.toggle('fl-wide', sc.scrollWidth > sc.clientWidth + 2); }); }
+  function flowHints(root) { root.querySelectorAll('.flow').forEach(x => { const sc = x.querySelector('.fl-scroll'); if (sc) x.classList.toggle('fl-wide', sc.scrollWidth > sc.clientWidth + 2); }); }
   async function vFlows(params) {
     await loadAll(); renderSidebar(params.get('ch') || undefined);
     const chs = loadedCH().filter(c => c.flows && c.flows.length);
