@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v103</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v104</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -5408,7 +5408,7 @@
       { name: 'Crystal Lotus & Whale (บัวคริสตัล + วาฬ)', short: 'Golden Whale', min: 480, ic: '<path d="M5 17q9-8 18-2 3 1 5-3l-1 6q-3 2-6 1-9 3-16-2Z" fill="#fef08a"/><circle cx="10" cy="16" r="1.2" fill="#0f172a"/><polygon points="16,4 19,8 16,11 13,8" fill="#ff7c6e" stroke="#fff" stroke-width=".8"/>' }
     ];
     let lastUnlocked = Math.min(REEF_SPECIES.length, Math.floor(getTodaySec() / 1800));
-    let reefPreviewMin = null, reefExpOpen = false, reefNight = false, reefPearls = 0, feedGlowTmr = null;
+    let reefPreviewMin = null, reefExpOpen = false, reefAutoHideOnHome = true, reefNight = false, reefPearls = 0, feedGlowTmr = null;
     const playWaterChime = (notes = [587.33, 783.99, 1046.5]) => {
       try {
         const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -5919,7 +5919,9 @@
       const customRow = $('#pmCustomRow', wrap);
       if (customRow) customRow.hidden = !enabled;
       if (!enabled) { document.body.classList.remove('reef-open'); return; }
-      const collapsed = S.reefHidden != null ? !!S.reefHidden : window.innerWidth < 1240;
+      const onHome = !location.hash.replace(/^#\/?/, '').split('?')[0];
+      const collapsed = (onHome && reefAutoHideOnHome) ? true : (S.reefHidden != null ? !!S.reefHidden : window.innerWidth < 1240);
+      if (collapsed) reefExpOpen = false;
       $('#reefDock', reefHost).hidden = collapsed;
       $('#reefTab', reefHost).hidden = !collapsed;
       document.body.classList.toggle('reef-open', !collapsed);
@@ -5966,14 +5968,15 @@
       lastUnlocked = realCount;
       syncReefExpanded(count, isPv, dispSec, realSec);
     };
-    $('#reefHide', reefHost).onclick = () => { S.reefHidden = true; save(); syncReef(false); };
-    $('#reefTab', reefHost).onclick = () => { S.reefHidden = false; save(); syncReef(false); };
+    $('#reefHide', reefHost).onclick = () => { S.reefHidden = true; reefExpOpen = false; save(); syncReef(false); };
+    $('#reefTab', reefHost).onclick = () => { reefAutoHideOnHome = false; S.reefHidden = false; save(); syncReef(false); };
     $('#reefPvToggle', reefHost).onclick = () => { reefPreviewMin = reefPreviewMin == null ? 480 : null; syncReef(false); };
     $('#rfPvPrev', reefHost).onclick = () => { reefPreviewMin = Math.max(0, (reefPreviewMin || 0) - 30); syncReef(false); };
     $('#rfPvNext', reefHost).onclick = () => { reefPreviewMin = Math.min(480, (reefPreviewMin || 0) + 30); syncReef(false); };
     window.addEventListener('hashchange', () => {
       const h = location.hash.replace(/^#\/?/, '').split('?')[0];
-      if (!h && reefExpOpen) { reefExpOpen = false; syncReef(false); }
+      if (!h) { reefExpOpen = false; reefAutoHideOnHome = true; }
+      syncReef(false);
     });
 
     const updatePomoTitle = () => {
