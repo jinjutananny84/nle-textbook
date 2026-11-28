@@ -1091,15 +1091,19 @@ body.has-readbar .reef-dock{top:96px;bottom:212px}
 .reef-pv-btn.on{background:rgba(76,242,242,.28);color:#5eead4;box-shadow:0 0 8px rgba(94,234,212,.45)}
 .reef-scene{flex:1 1 auto;min-height:0;overflow:hidden;position:relative}
 .reef-scene svg{width:100%;height:100%;display:block}
-.reef-ft{flex:0 0 auto;padding:4px 5px 5px;background:rgba(5,16,28,.72);border-top:1px solid rgba(124,224,211,.16)}
-.reef-pv-bar{display:flex;align-items:center;justify-content:space-between;gap:2px;margin-bottom:3px;font-size:9.5px;font-weight:700;color:#5eead4}
+.reef-ft{flex:0 0 auto;padding:5px 6px 6px;background:linear-gradient(180deg,rgba(8,24,43,.82),rgba(5,14,26,.94));border-top:1px solid rgba(124,224,211,.2)}
+.reef-pv-bar{display:flex;align-items:center;justify-content:space-between;gap:2px;margin-bottom:4px;font-size:9.5px;font-weight:700;color:#5eead4}
 .reef-pv-bar[hidden]{display:none}
 .reef-pv-bar button{width:18px;height:18px;border:0;border-radius:5px;background:rgba(255,255,255,.14);color:#fff;font-size:12px;line-height:1;display:grid;place-items:center;padding:0;cursor:pointer}
 .reef-pv-bar button:hover{background:rgba(76,242,242,.3)}
-.reef-next{font-size:9.5px;color:#cbd5e1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:3px;text-align:center}
-@media (max-width:680px){.reef-dock{width:86px;border-radius:11px;bottom:146px}body.has-readbar .reef-dock{bottom:200px}}
-.reef-pbar{height:4px;border-radius:999px;background:rgba(255,255,255,.14);overflow:hidden}
-.reef-pbar i{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,#4cf2f2,#fbbf24);transition:width .4s ease}
+.reef-next-card{display:flex;flex-direction:column;align-items:center;gap:3px}
+.reef-next-ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,rgba(124,224,211,.24),rgba(255,255,255,.06));border:1px solid rgba(124,224,211,.42);box-shadow:0 0 12px rgba(76,242,242,.22),inset 0 1px 0 rgba(255,255,255,.22)}
+.reef-next-ic svg{width:26px;height:26px;display:block;filter:drop-shadow(0 1px 3px rgba(0,0,0,.45))}
+.reef-next-lbl{font-size:9.5px;font-weight:700;color:#e6faf7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;text-align:center;line-height:1.15}
+.reef-pbar{position:relative;width:100%;height:12px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(124,224,211,.28);overflow:hidden}
+.reef-pbar i{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,#4cf2f2,#f472b6,#fbbf24);transition:width .4s ease}
+.reef-pbar span{position:absolute;inset:0;display:grid;place-items:center;font-size:8.5px;font-weight:800;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.85);line-height:1;font-variant-numeric:tabular-nums}
+@media (max-width:680px){.reef-dock{width:86px;border-radius:11px;bottom:146px}body.has-readbar .reef-dock{bottom:200px}.reef-next-ic{width:28px;height:28px}.reef-next-ic svg{width:22px;height:22px}}
 .reef-tab{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:25;display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 6px;border:1px solid rgba(124,224,211,.42);border-right:0;border-radius:12px 0 0 12px;background:linear-gradient(180deg,#123e54,#081b2e);color:#7ce0d3;box-shadow:-4px 6px 20px rgba(4,12,24,.38);font-size:11px;font-weight:700;cursor:pointer}
 .reef-tab[hidden]{display:none}
 .reef-tab:hover{padding-right:9px;color:#fff}

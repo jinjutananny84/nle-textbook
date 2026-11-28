@@ -3141,7 +3141,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v86</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v87</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -5026,24 +5026,24 @@
       return h ? `${h} ชม. ${rm} น.` : `${rm} น.`;
     };
 
-    /* 🪸 Underwater Monument Valley Castle Infographic (แนวตั้งด้านขวา · เพิ่มปะการัง/สัตว์ทะเลทุก 30 นาที) */
+    /* 🪸 Underwater Monument Valley Castle Infographic (แนวตั้งเต็มกรอบ ไม่มีขอบ + ปราสาท 5 ชั้นซับซ้อน + ไอคอนรางวัลถัดไป) */
     const REEF_SPECIES = [
-      { name: 'Staghorn Coral (ปะการังเขากวาง)', min: 30 },
-      { name: 'Clownfish (ปลาการ์ตูน)', min: 60 },
-      { name: 'Carnation Coral (ปะการังอ่อนส้ม)', min: 90 },
-      { name: 'Blue Tang (ปลาขี้ตังเบ็ดฟ้า)', min: 120 },
-      { name: 'Cauliflower Coral (ปะการังดอกกะหล่ำ)', min: 150 },
-      { name: 'Sun Coral (ปะการังถ้วยส้มเรืองแสง)', min: 180 },
-      { name: 'Moon Jellyfish (แมงกะพรุนเรืองแสง)', min: 210 },
-      { name: 'Sea Fan (กัลปังหาพัดแดง)', min: 240 },
-      { name: 'Brain Coral (ปะการังสมองมรกต)', min: 270 },
-      { name: 'Butterflyfish (ปลาผีเสื้อเหลือง)', min: 300 },
-      { name: 'Sea Anemone (ดอกไม้ทะเลมิ้นต์)', min: 330 },
-      { name: 'Sea Turtle (เต่าทะเลน้อย)', min: 360 },
-      { name: 'Organ Pipe Coral (ปะการังออร์แกน)', min: 390 },
-      { name: 'Manta Ray (ปลากระเบนราหู)', min: 420 },
-      { name: 'Elkhorn Coral (ปะการังเขากวางใหญ่)', min: 450 },
-      { name: 'Crystal Lotus & Whale (บัวคริสตัล + วาฬ)', min: 480 }
+      { name: 'Staghorn Coral (ปะการังเขากวาง)', short: 'Staghorn', min: 30, ic: '<path d="M16 26V10m0 7-6-7m6 4 6-8m-6 11-5-2" fill="none" stroke="#facc15" stroke-width="2.8" stroke-linecap="round"/>' },
+      { name: 'Clownfish (ปลาการ์ตูน)', short: 'Clownfish', min: 60, ic: '<ellipse cx="14" cy="16" rx="8" ry="5" fill="#fb923c"/><polygon points="21,16 27,11 27,21" fill="#fb923c"/><rect x="11" y="11" width="2.4" height="10" fill="#fff"/><rect x="16" y="12" width="2" height="8" fill="#fff"/><circle cx="9.5" cy="15" r="1.2" fill="#0f172a"/>' },
+      { name: 'Carnation Coral (ปะการังอ่อนส้ม)', short: 'Carnation', min: 90, ic: '<path d="M16 26V12m0 6-6-6m6 8 6-7" fill="none" stroke="#ff7c6e" stroke-width="2.8" stroke-linecap="round"/><circle cx="10" cy="11" r="2.6" fill="#fda4af"/><circle cx="22" cy="12" r="2.6" fill="#fda4af"/><circle cx="16" cy="10" r="2.8" fill="#fecdd3"/>' },
+      { name: 'Blue Tang (ปลาขี้ตังเบ็ดฟ้า)', short: 'Blue Tang', min: 120, ic: '<ellipse cx="17" cy="16" rx="8.5" ry="5.5" fill="#38bdf8"/><polygon points="9,16 4,11 4,21" fill="#facc15"/><path d="M13 14q5-3 9 2" fill="none" stroke="#0f172a" stroke-width="1.8"/><circle cx="21" cy="15" r="1.2" fill="#0f172a"/>' },
+      { name: 'Cauliflower Coral (ปะการังดอกกะหล่ำ)', short: 'Cauliflower', min: 150, ic: '<g fill="#f472b6"><circle cx="11" cy="19" r="5.5"/><circle cx="17" cy="15" r="6"/><circle cx="22" cy="20" r="5"/><circle cx="16" cy="22" r="4.8" fill="#db2777"/></g>' },
+      { name: 'Sun Coral (ปะการังถ้วยส้มเรืองแสง)', short: 'Sun Coral', min: 180, ic: '<circle cx="12" cy="17" r="5" fill="#f59e0b"/><circle cx="20" cy="15" r="5.5" fill="#fde047"/><circle cx="16" cy="21" r="4.5" fill="#fb923c"/><circle cx="12" cy="17" r="2" fill="#fef08a"/><circle cx="20" cy="15" r="2.2" fill="#fff"/>' },
+      { name: 'Moon Jellyfish (แมงกะพรุนเรืองแสง)', short: 'Jellyfish', min: 210, ic: '<path d="M8 15a8 7.5 0 0 1 16 0Z" fill="#67e8f9" fill-opacity=".8" stroke="#cffafe" stroke-width="1.2"/><path d="M11 16q-2 6 0 10M16 16q2 7-1 11M21 16q2 6 0 10" fill="none" stroke="#a5f3fc" stroke-width="1.3"/>' },
+      { name: 'Sea Fan (กัลปังหาพัดแดง)', short: 'Sea Fan', min: 240, ic: '<path d="M16 27V9m0 11-8-9m8 5 8-9m-8 2-4-8m4 8 4-8" fill="none" stroke="#fb7185" stroke-width="2.1" stroke-linecap="round"/>' },
+      { name: 'Brain Coral (ปะการังสมองมรกต)', short: 'Brain Coral', min: 270, ic: '<ellipse cx="16" cy="18" rx="10" ry="7.5" fill="#34d399"/><path d="M9 17q4-4 7 0t7 0M10 21q3-3 6 0t6-1" fill="none" stroke="#065f46" stroke-width="1.5" stroke-linecap="round"/>' },
+      { name: 'Butterflyfish (ปลาผีเสื้อเหลือง)', short: 'Butterfly', min: 300, ic: '<polygon points="8,16 16,9 24,16 16,23" fill="#fde047"/><polygon points="23,16 28,12 28,20" fill="#fef08a"/><line x1="14" y1="11" x2="14" y2="21" stroke="#0f172a" stroke-width="1.8"/><circle cx="11.5" cy="15" r="1.1" fill="#0f172a"/>' },
+      { name: 'Sea Anemone (ดอกไม้ทะเลมิ้นต์)', short: 'Anemone', min: 330, ic: '<ellipse cx="16" cy="23" rx="7.5" ry="3.5" fill="#0d9488"/><path d="M11 21q-3-8 1-11M15 21q-1-9 1-12M18 21q2-9 4-11M21 21q3-6 2-10" fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"/>' },
+      { name: 'Sea Turtle (เต่าทะเลน้อย)', short: 'Sea Turtle', min: 360, ic: '<ellipse cx="14" cy="16" rx="8" ry="5.5" fill="#10b981" stroke="#6ee7b7" stroke-width="1.1"/><circle cx="24" cy="15" r="2.8" fill="#34d399"/><path d="M17 11l4-5M17 21l3 5M8 13l-4-3M8 19l-4 3" stroke="#34d399" stroke-width="2.3" stroke-linecap="round"/>' },
+      { name: 'Organ Pipe Coral (ปะการังออร์แกน)', short: 'Organ Pipe', min: 390, ic: '<g stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round"><line x1="11" y1="24" x2="11" y2="12"/><line x1="16" y1="24" x2="16" y2="9"/><line x1="21" y1="24" x2="21" y2="13"/></g><circle cx="11" cy="11" r="2.2" fill="#e9d5ff"/><circle cx="16" cy="8" r="2.4" fill="#e9d5ff"/><circle cx="21" cy="12" r="2.2" fill="#e9d5ff"/>' },
+      { name: 'Manta Ray (ปลากระเบนราหู)', short: 'Manta Ray', min: 420, ic: '<path d="M4 16q12-10 24 0-8 2-12 6-4-4-12-6Z" fill="#60a5fa"/><line x1="16" y1="21" x2="16" y2="29" stroke="#93c5fd" stroke-width="1.4"/>' },
+      { name: 'Elkhorn Coral (ปะการังเขากวางใหญ่)', short: 'Elkhorn', min: 450, ic: '<path d="M16 26V11m0 7-8-9m8 6 8-9m-8 2-3-6m11 3 2-5" fill="none" stroke="#fbbf24" stroke-width="3.2" stroke-linecap="round"/>' },
+      { name: 'Crystal Lotus & Whale (บัวคริสตัล + วาฬ)', short: 'Golden Whale', min: 480, ic: '<path d="M5 17q9-8 18-2 3 1 5-3l-1 6q-3 2-6 1-9 3-16-2Z" fill="#fef08a"/><circle cx="10" cy="16" r="1.2" fill="#0f172a"/><polygon points="16,4 19,8 16,11 13,8" fill="#ff7c6e" stroke="#fff" stroke-width=".8"/>' }
     ];
     let lastUnlocked = Math.min(REEF_SPECIES.length, Math.floor(getTodaySec() / 1800));
     let reefPreviewMin = null;
@@ -5057,94 +5057,131 @@
           <div class="reef-hd-r"><button type="button" class="reef-pv-btn" id="reefPvToggle" title="ดู Preview เต็ม 8 ชม. (16 ชนิด)">👁️</button><button type="button" class="reef-hide" id="reefHide" title="หุบเก็บกรอบปราสาทใต้น้ำ">›</button></div>
         </div>
         <div class="reef-scene">
-          <svg viewBox="0 0 180 460" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <svg viewBox="0 0 180 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <defs>
-              <linearGradient id="rfBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2b8ea8"/><stop offset="22%" stop-color="#1a6382"/><stop offset="56%" stop-color="#113b5c"/><stop offset="86%" stop-color="#0b233d"/><stop offset="100%" stop-color="#071629"/></linearGradient>
-              <linearGradient id="rfRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5f3fc" stop-opacity=".28"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/></linearGradient>
-              <linearGradient id="rfSand" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fce0b8"/><stop offset="100%" stop-color="#e3b685"/></linearGradient>
-              <linearGradient id="rfWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5a9bc4"/><stop offset="100%" stop-color="#2d5f8a"/></linearGradient>
-              <linearGradient id="rfSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8be90"/><stop offset="100%" stop-color="#c99568"/></linearGradient>
-              <radialGradient id="rfGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7ce0d3" stop-opacity=".65"/><stop offset="100%" stop-color="#7ce0d3" stop-opacity="0"/></radialGradient>
+              <linearGradient id="rfBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2e99b5"/><stop offset="16%" stop-color="#1e6f8f"/><stop offset="46%" stop-color="#134569"/><stop offset="78%" stop-color="#0b2642"/><stop offset="100%" stop-color="#061426"/></linearGradient>
+              <linearGradient id="rfRay" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5f3fc" stop-opacity=".32"/><stop offset="100%" stop-color="#a5f3fc" stop-opacity="0"/></linearGradient>
+              <linearGradient id="rfSand" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fde4be"/><stop offset="100%" stop-color="#e3b685"/></linearGradient>
+              <linearGradient id="rfWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5da3cc"/><stop offset="100%" stop-color="#2c5d87"/></linearGradient>
+              <linearGradient id="rfSide" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ecc294"/><stop offset="100%" stop-color="#c69062"/></linearGradient>
+              <linearGradient id="rfTeal" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7ce0d3"/><stop offset="100%" stop-color="#38989c"/></linearGradient>
+              <radialGradient id="rfGlow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7ce0d3" stop-opacity=".72"/><stop offset="100%" stop-color="#7ce0d3" stop-opacity="0"/></radialGradient>
             </defs>
-            <rect width="180" height="460" fill="url(#rfBg)"/>
-            <polygon points="18,0 56,0 92,220 42,220" fill="url(#rfRay)"/>
-            <polygon points="86,0 132,0 158,240 112,240" fill="url(#rfRay)"/>
-            <path d="M0 16 Q45 8 90 16 T180 16" fill="none" stroke="#99f6e4" stroke-opacity=".28" stroke-width="1.5"/>
-            <g class="rf-bubbles" fill="none" stroke="#a5f3fc" stroke-opacity=".45" stroke-width="1">
-              <circle class="rf-bub" cx="26" cy="360" r="2.2"/><circle class="rf-bub" cx="152" cy="330" r="2.8" style="animation-delay:1.4s"/>
-              <circle class="rf-bub" cx="42" cy="240" r="1.8" style="animation-delay:2.6s"/><circle class="rf-bub" cx="144" cy="190" r="2.2" style="animation-delay:.7s"/>
-              <circle class="rf-bub" cx="90" cy="270" r="1.6" style="animation-delay:3.2s"/>
+            <rect width="180" height="620" fill="url(#rfBg)"/>
+            <polygon points="8,0 52,0 98,320 34,320" fill="url(#rfRay)"/>
+            <polygon points="78,0 132,0 166,340 108,340" fill="url(#rfRay)"/>
+            <path d="M0 18 Q45 9 90 18 T180 18" fill="none" stroke="#a5f3fc" stroke-opacity=".34" stroke-width="1.6"/>
+            <path d="M0 32 Q45 25 90 32 T180 32" fill="none" stroke="#99f6e4" stroke-opacity=".2" stroke-width="1"/>
+            <g class="rf-bubbles" fill="none" stroke="#a5f3fc" stroke-opacity=".48" stroke-width="1">
+              <circle class="rf-bub" cx="22" cy="510" r="2.2"/><circle class="rf-bub" cx="156" cy="460" r="2.8" style="animation-delay:1.3s"/>
+              <circle class="rf-bub" cx="38" cy="340" r="2" style="animation-delay:2.4s"/><circle class="rf-bub" cx="146" cy="240" r="2.2" style="animation-delay:.7s"/>
+              <circle class="rf-bub" cx="90" cy="180" r="1.6" style="animation-delay:3.1s"/><circle class="rf-bub" cx="30" cy="140" r="1.8" style="animation-delay:1.9s"/>
             </g>
-            <!-- พื้นทรายใต้ทะเล -->
-            <path d="M0 398 Q48 386 90 396 T180 392 L180 460 L0 460 Z" fill="#13304d"/>
-            <path d="M0 416 Q60 404 115 414 T180 410 L180 460 L0 460 Z" fill="#0d2238"/>
-            <!-- ปราสาทใต้น้ำสไตล์ Monument Valley (อิงทรงหอคอยซุ้มโค้งสูง) -->
+            <!-- พื้นทรายใต้ทะเลหลายชั้นเต็มขอบล่าง -->
+            <path d="M0 546 Q46 530 92 542 T180 538 L180 620 L0 620 Z" fill="#133454"/>
+            <path d="M0 568 Q60 554 118 566 T180 560 L180 620 L0 620 Z" fill="#0d243c"/>
+            <path d="M0 592 Q50 582 104 592 T180 588 L180 620 L0 620 Z" fill="#08182b"/>
+            <!-- ปราสาทใต้น้ำ Monument Valley 5 ชั้นเต็มความสูง -->
             <g class="rf-castle">
-              <!-- เงาสะท้อนฐาน -->
-              <ellipse cx="90" cy="408" rx="64" ry="12" fill="#04101e" opacity=".48"/>
-              <!-- ฐานล่างและบันได -->
-              <polygon points="90,348 144,374 90,400 36,374" fill="#2c5f8a"/>
-              <polygon points="36,374 90,400 90,414 36,388" fill="#1e4466"/>
-              <polygon points="90,400 144,374 144,388 90,414" fill="#14324d"/>
-              <!-- ซุ้มโค้งชั้นล่าง -->
-              <polygon points="48,302 90,322 90,374 48,354" fill="url(#rfWall)"/>
-              <polygon points="90,322 132,302 132,354 90,374" fill="url(#rfSide)"/>
-              <path d="M62 360 v-22 a8 8 0 0 1 16 0 v22 Z" fill="#0d263d"/>
-              <path d="M102 360 v-22 a8 8 0 0 1 16 0 v22 Z" fill="#1a3b57"/>
-              <!-- ระเบียงกลาง + บันไดเฉียงสองฝั่ง -->
-              <polygon points="90,262 148,290 90,318 32,290" fill="url(#rfSand)"/>
-              <polygon points="32,290 90,318 90,330 32,302" fill="url(#rfWall)"/>
-              <polygon points="90,318 148,290 148,302 90,330" fill="url(#rfSide)"/>
-              <!-- เสาสองข้างหอคอยสูง -->
-              <polygon points="50,152 66,160 66,278 50,270" fill="url(#rfWall)"/>
-              <polygon points="66,160 76,155 76,273 66,278" fill="#1f4d73"/>
-              <polygon points="114,155 124,160 124,278 114,273" fill="url(#rfWall)"/>
-              <polygon points="124,160 134,152 134,270 124,278" fill="url(#rfSide)"/>
-              <!-- ช่องซุ้มกลางโปร่ง + ต้นไม้ใต้น้ำเรืองแสง -->
-              <circle cx="92" cy="242" r="24" fill="url(#rfGlow)"/>
-              <path d="M92 276 Q92 256 84 246 M92 262 Q100 250 105 244 M92 254 Q88 242 93 234" fill="none" stroke="#c084fc" stroke-width="2.2" stroke-linecap="round"/>
-              <!-- ระเบียงยอด + สระบัว -->
-              <polygon points="90,114 136,136 90,158 44,136" fill="url(#rfSand)"/>
-              <polygon points="44,136 90,158 90,170 44,148" fill="url(#rfWall)"/>
-              <polygon points="90,158 136,136 136,148 90,170" fill="url(#rfSide)"/>
-              <polygon points="90,124 114,136 90,148 66,136" fill="#4cc9c8" opacity=".82"/>
-              <!-- ศาลาโดมสีปะการังยอดปราสาท -->
-              <line x1="82" y1="118" x2="82" y2="96" stroke="#f5cfa0" stroke-width="2"/>
-              <line x1="98" y1="118" x2="98" y2="96" stroke="#e3b685" stroke-width="2"/>
-              <path d="M77 96 Q90 70 103 96 Z" fill="#e85a6b"/>
-              <path d="M90 78 Q97 86 103 96 L90 98 Z" fill="#c23b51"/>
-              <line x1="90" y1="74" x2="90" y2="66" stroke="#ffd97d" stroke-width="1.6"/>
+              <ellipse cx="90" cy="558" rx="68" ry="13" fill="#04101e" opacity=".52"/>
+              <!-- ชั้น 1: ฐานวิหาร 3 ขั้น + ท่าเรือ -->
+              <polygon points="90,504 152,534 90,564 28,534" fill="#27557d"/>
+              <polygon points="28,534 90,564 90,576 28,546" fill="#1a3d5c"/>
+              <polygon points="90,564 152,534 152,546 90,576" fill="#122c45"/>
+              <polygon points="90,486 138,510 90,534 42,510" fill="#37719e"/>
+              <polygon points="42,510 90,534 90,545 42,521" fill="#234f75"/>
+              <polygon points="90,534 138,510 138,521 90,545" fill="#173857"/>
+              <!-- ชั้น 2: ซุ้มโค้งคู่ + บันไดเฉียงเชื่อมระเบียง -->
+              <polygon points="46,432 90,454 90,510 46,488" fill="url(#rfWall)"/>
+              <polygon points="90,454 134,432 134,488 90,510" fill="url(#rfSide)"/>
+              <path d="M58 494 v-24 a9 9 0 0 1 18 0 v24 Z" fill="#0c2338"/>
+              <path d="M104 494 v-24 a9 9 0 0 1 18 0 v24 Z" fill="#163552"/>
+              <circle cx="67" cy="462" r="2.2" fill="#5eead4" opacity=".8"/><circle cx="113" cy="462" r="2.2" fill="#5eead4" opacity=".8"/>
+              <!-- ระเบียงชั้น 2 + บันไดวนสองข้าง -->
+              <polygon points="90,394 150,424 90,454 30,424" fill="url(#rfSand)"/>
+              <polygon points="30,424 90,454 90,466 30,436" fill="url(#rfWall)"/>
+              <polygon points="90,454 150,424 150,436 90,466" fill="url(#rfSide)"/>
+              <!-- บันไดซ้าย-ขวา (ลายขั้นบันได Monument Valley) -->
+              <polygon points="24,376 46,388 46,420 24,408" fill="url(#rfWall)"/>
+              <polygon points="24,376 36,370 58,382 46,388" fill="url(#rfSand)"/>
+              <path d="M26 384 l18 9 M26 392 l18 9 M26 400 l18 9" stroke="#183b59" stroke-width="1.3"/>
+              <polygon points="156,376 134,388 134,420 156,408" fill="url(#rfSide)"/>
+              <polygon points="156,376 144,370 122,382 134,388" fill="url(#rfSand)"/>
+              <path d="M154 384 l-18 9 M154 392 l-18 9 M154 400 l-18 9" stroke="#9e6d44" stroke-width="1.3"/>
+              <!-- ชั้น 3: เสาสูงซุ้มโค้งกลาง + สะพานเฉียงเชื่อม 2 หอ + ต้นไม้เรืองแสง -->
+              <polygon points="46,246 62,254 62,406 46,398" fill="url(#rfWall)"/>
+              <polygon points="62,254 73,249 73,401 62,406" fill="#1e4b70"/>
+              <polygon points="107,249 118,254 118,406 107,401" fill="url(#rfWall)"/>
+              <polygon points="118,254 134,246 134,398 118,406" fill="url(#rfSide)"/>
+              <!-- ช่องหน้าต่างโค้งบนเสา -->
+              <path d="M51 324 v-14 a3.5 3.5 0 0 1 7 0 v14 Z" fill="#0d2740"/>
+              <path d="M122 324 v-14 a3.5 3.5 0 0 1 7 0 v14 Z" fill="#8f5f38"/>
+              <!-- สะพานเฉียงเชื่อมกลางซุ้ม (ซิกเนเจอร์ Monument Valley) -->
+              <polygon points="60,312 122,282 130,287 68,317" fill="url(#rfTeal)"/>
+              <polygon points="60,312 68,317 68,325 60,320" fill="#23666b"/>
+              <polygon points="68,317 130,287 130,295 68,325" fill="#194a54"/>
+              <polygon points="90,296 97,300 90,304 83,300" fill="#e6faf7" opacity=".9"/>
+              <!-- ต้นไม้ใต้น้ำเรืองแสงกลางลาน -->
+              <circle cx="90" cy="378" r="24" fill="url(#rfGlow)"/>
+              <path d="M90 412 Q90 392 80 380 M90 398 Q100 386 106 378 M90 388 Q86 374 92 364 M84 385 Q77 378 74 374" fill="none" stroke="#c084fc" stroke-width="2.2" stroke-linecap="round"/>
+              <!-- ชั้น 4: ระเบียงกลางบน + สระบัว + ซุ้มหอคอยชั้นบน -->
+              <polygon points="90,210 142,236 90,262 38,236" fill="url(#rfSand)"/>
+              <polygon points="38,236 90,262 90,274 38,248" fill="url(#rfWall)"/>
+              <polygon points="90,262 142,236 142,248 90,274" fill="url(#rfSide)"/>
+              <polygon points="90,222 118,236 90,250 62,236" fill="#4cc9c8" opacity=".88"/>
+              <!-- หอคอยชั้น 4 ขึ้นสู่ยอด -->
+              <polygon points="64,142 90,155 90,222 64,209" fill="url(#rfWall)"/>
+              <polygon points="90,155 116,142 116,209 90,222" fill="url(#rfSide)"/>
+              <path d="M72 202 v-20 a6 6 0 0 1 12 0 v20 Z" fill="#0c2338"/>
+              <path d="M96 202 v-20 a6 6 0 0 1 12 0 v20 Z" fill="#7c5230"/>
+              <!-- ชั้น 5: ลานยอดปราสาท + บันไดขึ้นศาลาโดมสีปะการัง -->
+              <polygon points="90,118 124,135 90,152 56,135" fill="url(#rfSand)"/>
+              <polygon points="56,135 90,152 90,161 56,144" fill="url(#rfWall)"/>
+              <polygon points="90,152 124,135 124,144 90,161" fill="url(#rfSide)"/>
+              <polygon points="90,125 108,134 90,143 72,134" fill="#5eead4" opacity=".82"/>
+              <!-- ศาลาโดมสีปะการังยอดปราสาท + โคมไฟมุก -->
+              <line x1="78" y1="124" x2="78" y2="96" stroke="#fde4be" stroke-width="2.2"/>
+              <line x1="102" y1="124" x2="102" y2="96" stroke="#e3b685" stroke-width="2.2"/>
+              <line x1="90" y1="128" x2="90" y2="98" stroke="#5da3cc" stroke-width="1.6"/>
+              <path d="M72 96 Q90 62 108 96 Z" fill="#e85a6b"/>
+              <path d="M90 72 Q99 83 108 96 L90 99 Z" fill="#b8344c"/>
+              <circle cx="90" cy="64" r="3" fill="#ffd97d"/>
+              <line x1="90" y1="61" x2="90" y2="48" stroke="#ffd97d" stroke-width="1.8"/>
+              <circle cx="90" cy="46" r="2.2" fill="#5eead4"/>
               <!-- เรือไม้ใต้น้ำพร้อมใบเรือทอง (มุมซ้ายล่าง) -->
-              <g transform="translate(26,388)">
-                <polygon points="0,8 26,18 32,12 6,2" fill="#e6b884"/>
-                <polygon points="0,8 26,18 26,24 0,14" fill="#b88454"/>
-                <path d="M12 6 Q20 -14 28 2 Z" fill="#facc15" opacity=".92"/>
-                <circle cx="19" cy="-1" r="2.6" fill="#9f1239"/>
+              <g transform="translate(18,530)">
+                <polygon points="0,8 28,19 35,13 7,2" fill="#e6b884"/>
+                <polygon points="0,8 28,19 28,25 0,14" fill="#b88454"/>
+                <path d="M13 6 Q21 -16 30 2 Z" fill="#facc15" opacity=".95"/>
+                <circle cx="20" cy="-1" r="2.8" fill="#9f1239"/>
               </g>
             </g>
-            <!-- 16 ชนิดปะการังและสัตว์ทะเล (ปลดล็อกทีละ 1 ชนิดทุก 30 นาที) -->
-            <g id="rfSp0" class="rf-sp rf-sway"><title>0:30 · Staghorn Coral (ปะการังเขากวาง)</title><path d="M36 420 v-18 m0 8 l-8-9 m8 5 l7-10 m-7 14 l-6-3" fill="none" stroke="#facc15" stroke-width="3.2" stroke-linecap="round"/></g>
-            <g id="rfSp1" class="rf-sp rf-swim"><title>1:00 · Clownfish (ปลาการ์ตูน)</title><g transform="translate(132,332)"><ellipse cx="0" cy="0" rx="8" ry="4.5" fill="#fb923c"/><polygon points="7,0 13,-4 13,4" fill="#fb923c"/><rect x="-3" y="-4" width="2.2" height="8" fill="#fff"/><rect x="2" y="-3.5" width="2" height="7" fill="#fff"/><circle cx="-4.8" cy="-1" r="1" fill="#0f172a"/></g></g>
-            <g id="rfSp2" class="rf-sp rf-sway"><title>1:30 · Carnation Coral (ปะการังอ่อนส้ม)</title><path d="M144 416 v-16 m0 7 l-7-8 m0 0 l-3-4 m7 12 l8-9" fill="none" stroke="#ff7c6e" stroke-width="3.4" stroke-linecap="round"/><circle cx="134" cy="395" r="2.4" fill="#fda4af"/><circle cx="152" cy="398" r="2.4" fill="#fda4af"/><circle cx="144" cy="396" r="2.6" fill="#fecdd3"/></g>
-            <g id="rfSp3" class="rf-sp rf-swim2"><title>2:00 · Blue Tang (ปลาขี้ตังเบ็ดฟ้า)</title><g transform="translate(36,236)"><ellipse cx="0" cy="0" rx="9" ry="5" fill="#38bdf8"/><polygon points="-8,0 -14,-4.5 -14,4.5" fill="#facc15"/><path d="M-4 -2 Q2 -5 6 0" fill="none" stroke="#0f172a" stroke-width="1.6"/><circle cx="5" cy="-1" r="1.1" fill="#0f172a"/></g></g>
-            <g id="rfSp4" class="rf-sp rf-sway"><title>2:30 · Cauliflower Coral (ปะการังดอกกะหล่ำ)</title><g fill="#f472b6"><circle cx="62" cy="422" r="6"/><circle cx="70" cy="418" r="6.5"/><circle cx="77" cy="423" r="5.5"/><circle cx="68" cy="425" r="5" fill="#db2777"/></g></g>
-            <g id="rfSp5" class="rf-sp rf-sway"><title>3:00 · Sun Coral (ปะการังถ้วยส้มเรืองแสง)</title><g transform="translate(116,416)"><circle cx="-5" cy="2" r="5" fill="#f59e0b"/><circle cx="5" cy="0" r="5.5" fill="#fde047"/><circle cx="0" cy="5" r="4.5" fill="#fb923c"/><circle cx="-5" cy="2" r="2" fill="#fef08a"/><circle cx="5" cy="0" r="2.2" fill="#fff"/></g></g>
-            <g id="rfSp6" class="rf-sp rf-float"><title>3:30 · Moon Jellyfish (แมงกะพรุนเรืองแสง)</title><g transform="translate(148,176)"><path d="M-9 0 a9 8 0 0 1 18 0 Z" fill="#67e8f9" fill-opacity=".68" stroke="#cffafe" stroke-width="1"/><path d="M-5 1 Q-7 9 -4 14 M0 1 Q2 10 -1 16 M5 1 Q7 9 4 14" fill="none" stroke="#a5f3fc" stroke-width="1"/></g></g>
-            <g id="rfSp7" class="rf-sp rf-sway"><title>4:00 · Sea Fan (กัลปังหาพัดแดง)</title><path d="M24 342 v-22 m0 14 l-9-11 m9 7 l9-11 m-9 3 l-5-12 m5 12 l5-12" fill="none" stroke="#fb7185" stroke-width="2" stroke-linecap="round"/></g>
-            <g id="rfSp8" class="rf-sp"><title>4:30 · Brain Coral (ปะการังสมองมรกต)</title><g transform="translate(94,424)"><ellipse cx="0" cy="0" rx="11" ry="7.5" fill="#34d399"/><path d="M-7 -1 Q-3 -5 0 -1 T7 -1 M-6 3 Q-2 0 2 3 T6 2" fill="none" stroke="#065f46" stroke-width="1.4" stroke-linecap="round"/></g></g>
-            <g id="rfSp9" class="rf-sp rf-swim"><title>5:00 · Butterflyfish (ปลาผีเสื้อเหลือง)</title><g transform="translate(144,264)"><polygon points="-8,0 0,-7 8,0 0,7" fill="#fde047"/><polygon points="7,0 13,-4 13,4" fill="#fef08a"/><line x1="-2" y1="-5" x2="-2" y2="5" stroke="#0f172a" stroke-width="1.6"/><circle cx="-4.5" cy="-1" r="1" fill="#0f172a"/></g></g>
-            <g id="rfSp10" class="rf-sp rf-sway"><title>5:30 · Sea Anemone (ดอกไม้ทะเลมิ้นต์)</title><g transform="translate(158,368)"><ellipse cx="0" cy="8" rx="8" ry="3.5" fill="#0d9488"/><path d="M-6 6 Q-9 -3 -4 -7 M-2 6 Q-3 -5 0 -9 M2 6 Q4 -5 6 -8 M6 6 Q10 -2 8 -6" fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"/></g></g>
-            <g id="rfSp11" class="rf-sp rf-swim2"><title>6:00 · Sea Turtle (เต่าทะเลน้อย)</title><g transform="translate(40,120)"><ellipse cx="0" cy="0" rx="10" ry="6.5" fill="#10b981" stroke="#6ee7b7" stroke-width="1"/><circle cx="11" cy="-1" r="3" fill="#34d399"/><path d="M3 -5 L8 -11 M3 5 L7 11 M-7 -3 L-11 -6 M-7 3 L-11 6" stroke="#34d399" stroke-width="2.4" stroke-linecap="round"/></g></g>
-            <g id="rfSp12" class="rf-sp rf-sway"><title>6:30 · Organ Pipe Coral (ปะการังออร์แกน)</title><g transform="translate(18,412)" stroke="#a78bfa" stroke-width="2.6" stroke-linecap="round"><line x1="-5" y1="8" x2="-5" y2="-4"/><line x1="0" y1="8" x2="0" y2="-8"/><line x1="5" y1="8" x2="5" y2="-3"/><circle cx="-5" cy="-5" r="2" fill="#e9d5ff" stroke="none"/><circle cx="0" cy="-9" r="2.2" fill="#e9d5ff" stroke="none"/><circle cx="5" cy="-4" r="2" fill="#e9d5ff" stroke="none"/></g></g>
-            <g id="rfSp13" class="rf-sp rf-float"><title>7:00 · Manta Ray (ปลากระเบนราหู)</title><g transform="translate(92,204)"><path d="M-18 2 Q0 -12 18 2 Q6 4 0 9 Q-6 4 -18 2 Z" fill="#60a5fa" fill-opacity=".85"/><line x1="0" y1="8" x2="0" y2="20" stroke="#93c5fd" stroke-width="1.2"/></g></g>
-            <g id="rfSp14" class="rf-sp rf-sway"><title>7:30 · Elkhorn Coral (ปะการังเขากวางใหญ่)</title><path d="M162 424 v-18 m0 8 l-10-12 m10 8 l9-11 m-10 3 l-4-7 m14 4 l3-7" fill="none" stroke="#fbbf24" stroke-width="3.6" stroke-linecap="round"/></g>
-            <g id="rfSp15" class="rf-sp rf-float"><title>8:00 · Crystal Lotus &amp; Golden Whale</title><g transform="translate(90,136)"><polygon points="0,-10 5,-3 0,2 -5,-3" fill="#ff7c6e" stroke="#fff" stroke-width=".7"/><circle cx="0" cy="-4" r="12" fill="url(#rfGlow)"/></g><g transform="translate(132,68)"><path d="M-16 0 Q-4 -9 14 -2 Q18 0 22 -5 L21 3 Q16 5 12 4 Q-4 8 -16 0 Z" fill="#fef08a" fill-opacity=".88"/><circle cx="-9" cy="-1" r="1.1" fill="#0f172a"/></g></g>
+            <!-- 16 ชนิดปะการังและสัตว์ทะเล กระจายครบทั้ง 5 ชั้น (ปลดล็อกทีละชนิดทุก 30 นาที) -->
+            <g id="rfSp0" class="rf-sp rf-sway"><title>0:30 · Staghorn Coral (ปะการังเขากวาง)</title><path d="M36 574 v-20 m0 9 l-9-10 m9 6 l8-11 m-8 15 l-6-3" fill="none" stroke="#facc15" stroke-width="3.4" stroke-linecap="round"/></g>
+            <g id="rfSp1" class="rf-sp rf-swim"><title>1:00 · Clownfish (ปลาการ์ตูน)</title><g transform="translate(136,482)"><ellipse cx="0" cy="0" rx="8.5" ry="4.8" fill="#fb923c"/><polygon points="7.5,0 14,-4.5 14,4.5" fill="#fb923c"/><rect x="-3" y="-4.2" width="2.2" height="8.4" fill="#fff"/><rect x="2" y="-3.6" width="2" height="7.2" fill="#fff"/><circle cx="-5" cy="-1" r="1.1" fill="#0f172a"/></g></g>
+            <g id="rfSp2" class="rf-sp rf-sway"><title>1:30 · Carnation Coral (ปะการังอ่อนส้ม)</title><path d="M148 566 v-18 m0 8 l-7-9 m7 12 l8-10" fill="none" stroke="#ff7c6e" stroke-width="3.5" stroke-linecap="round"/><circle cx="139" cy="547" r="2.6" fill="#fda4af"/><circle cx="156" cy="549" r="2.6" fill="#fda4af"/><circle cx="148" cy="546" r="2.8" fill="#fecdd3"/></g>
+            <g id="rfSp3" class="rf-sp rf-swim2"><title>2:00 · Blue Tang (ปลาขี้ตังเบ็ดฟ้า)</title><g transform="translate(32,332)"><ellipse cx="0" cy="0" rx="9" ry="5.2" fill="#38bdf8"/><polygon points="-8,0 -14,-4.5 -14,4.5" fill="#facc15"/><path d="M-4 -2 Q2 -5 6 0" fill="none" stroke="#0f172a" stroke-width="1.6"/><circle cx="5" cy="-1" r="1.1" fill="#0f172a"/></g></g>
+            <g id="rfSp4" class="rf-sp rf-sway"><title>2:30 · Cauliflower Coral (ปะการังดอกกะหล่ำ)</title><g fill="#f472b6"><circle cx="64" cy="576" r="6.5"/><circle cx="73" cy="571" r="7"/><circle cx="81" cy="577" r="6"/><circle cx="71" cy="580" r="5.5" fill="#db2777"/></g></g>
+            <g id="rfSp5" class="rf-sp rf-sway"><title>3:00 · Sun Coral (ปะการังถ้วยส้มเรืองแสง)</title><g transform="translate(120,568)"><circle cx="-5" cy="2" r="5.2" fill="#f59e0b"/><circle cx="5" cy="0" r="5.8" fill="#fde047"/><circle cx="0" cy="5.5" r="4.8" fill="#fb923c"/><circle cx="-5" cy="2" r="2.2" fill="#fef08a"/><circle cx="5" cy="0" r="2.4" fill="#fff"/></g></g>
+            <g id="rfSp6" class="rf-sp rf-float"><title>3:30 · Moon Jellyfish (แมงกะพรุนเรืองแสง)</title><g transform="translate(148,186)"><path d="M-9.5 0 a9.5 8.5 0 0 1 19 0 Z" fill="#67e8f9" fill-opacity=".72" stroke="#cffafe" stroke-width="1.1"/><path d="M-5 1 Q-7 9 -4 15 M0 1 Q2 10 -1 17 M5 1 Q7 9 4 15" fill="none" stroke="#a5f3fc" stroke-width="1.1"/></g></g>
+            <g id="rfSp7" class="rf-sp rf-sway"><title>4:00 · Sea Fan (กัลปังหาพัดแดง)</title><path d="M22 462 v-24 m0 15 l-9-11 m9 7 l9-11 m-9 3 l-5-12 m5 12 l5-12" fill="none" stroke="#fb7185" stroke-width="2.1" stroke-linecap="round"/></g>
+            <g id="rfSp8" class="rf-sp"><title>4:30 · Brain Coral (ปะการังสมองมรกต)</title><g transform="translate(96,578)"><ellipse cx="0" cy="0" rx="11.5" ry="7.8" fill="#34d399"/><path d="M-7 -1 Q-3 -5 0 -1 T7 -1 M-6 3 Q-2 0 2 3 T6 2" fill="none" stroke="#065f46" stroke-width="1.4" stroke-linecap="round"/></g></g>
+            <g id="rfSp9" class="rf-sp rf-swim"><title>5:00 · Butterflyfish (ปลาผีเสื้อเหลือง)</title><g transform="translate(146,356)"><polygon points="-8.5,0 0,-7.5 8.5,0 0,7.5" fill="#fde047"/><polygon points="7.5,0 13.5,-4.5 13.5,4.5" fill="#fef08a"/><line x1="-2" y1="-5.5" x2="-2" y2="5.5" stroke="#0f172a" stroke-width="1.7"/><circle cx="-4.8" cy="-1" r="1.1" fill="#0f172a"/></g></g>
+            <g id="rfSp10" class="rf-sp rf-sway"><title>5:30 · Sea Anemone (ดอกไม้ทะเลมิ้นต์)</title><g transform="translate(158,504)"><ellipse cx="0" cy="8" rx="8.5" ry="3.6" fill="#0d9488"/><path d="M-6 6 Q-9 -3 -4 -8 M-2 6 Q-3 -5 0 -10 M2 6 Q4 -5 6 -9 M6 6 Q10 -2 8 -7" fill="none" stroke="#5eead4" stroke-width="2.1" stroke-linecap="round"/></g></g>
+            <g id="rfSp11" class="rf-sp rf-swim2"><title>6:00 · Sea Turtle (เต่าทะเลน้อย)</title><g transform="translate(36,158)"><ellipse cx="0" cy="0" rx="10.5" ry="6.8" fill="#10b981" stroke="#6ee7b7" stroke-width="1.1"/><circle cx="11.5" cy="-1" r="3.2" fill="#34d399"/><path d="M3 -5 L8 -11 M3 5 L7 11 M-7 -3 L-11 -6 M-7 3 L-11 6" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"/></g></g>
+            <g id="rfSp12" class="rf-sp rf-sway"><title>6:30 · Organ Pipe Coral (ปะการังออร์แกน)</title><g transform="translate(18,568)" stroke="#a78bfa" stroke-width="2.8" stroke-linecap="round"><line x1="-5" y1="8" x2="-5" y2="-5"/><line x1="0" y1="8" x2="0" y2="-9"/><line x1="5" y1="8" x2="5" y2="-4"/><circle cx="-5" cy="-6" r="2.2" fill="#e9d5ff" stroke="none"/><circle cx="0" cy="-10" r="2.4" fill="#e9d5ff" stroke="none"/><circle cx="5" cy="-5" r="2.2" fill="#e9d5ff" stroke="none"/></g></g>
+            <g id="rfSp13" class="rf-sp rf-float"><title>7:00 · Manta Ray (ปลากระเบนราหู)</title><g transform="translate(90,268)"><path d="M-20 2 Q0 -13 20 2 Q7 4 0 10 Q-7 4 -20 2 Z" fill="#60a5fa" fill-opacity=".88"/><line x1="0" y1="9" x2="0" y2="22" stroke="#93c5fd" stroke-width="1.3"/></g></g>
+            <g id="rfSp14" class="rf-sp rf-sway"><title>7:30 · Elkhorn Coral (ปะการังเขากวางใหญ่)</title><path d="M162 574 v-20 m0 9 l-10-13 m10 8 l9-11 m-10 4 l-4-8 m14 5 l3-7" fill="none" stroke="#fbbf24" stroke-width="3.6" stroke-linecap="round"/></g>
+            <g id="rfSp15" class="rf-sp rf-float"><title>8:00 · Crystal Lotus &amp; Golden Whale</title><g transform="translate(90,134)"><polygon points="0,-11 5.5,-3 0,2.5 -5.5,-3" fill="#ff7c6e" stroke="#fff" stroke-width=".8"/><circle cx="0" cy="-4" r="14" fill="url(#rfGlow)"/></g><g transform="translate(132,68)"><path d="M-17 0 Q-4 -10 15 -2 Q19 0 23 -5 L22 3 Q17 5 13 4 Q-4 9 -17 0 Z" fill="#fef08a" fill-opacity=".92"/><circle cx="-10" cy="-1" r="1.2" fill="#0f172a"/></g></g>
           </svg>
         </div>
         <div class="reef-ft">
           <div class="reef-pv-bar" id="reefPvBar" hidden><button type="button" id="rfPvPrev" title="ลด 30 นาที">−</button><span id="rfPvLbl">8 ชม.</span><button type="button" id="rfPvNext" title="เพิ่ม 30 นาที">+</button></div>
-          <div class="reef-next" id="reefNext">อีก 30 น.</div>
-          <div class="reef-pbar"><i id="reefPbar"></i></div>
+          <div class="reef-next-card" id="reefNextCard">
+            <div class="reef-next-ic" id="reefNextIc"></div>
+            <div class="reef-next-lbl" id="reefNext">Staghorn</div>
+            <div class="reef-pbar"><i id="reefPbar"></i><span id="reefPtxt">0/30</span></div>
+          </div>
         </div>
       </div>`;
     document.body.appendChild(reefHost);
@@ -5163,7 +5200,7 @@
       const dispSec = isPv ? reefPreviewMin * 60 : realSec;
       const mins = Math.floor(dispSec / 60);
       const count = Math.min(REEF_SPECIES.length, Math.floor(mins / 30));
-      const rem = 30 - (mins % 30);
+      const inStep = mins % 30;
       $('#reefToday', reefHost).textContent = isPv ? `PV ${fmtHM(dispSec)}` : fmtHM(realSec);
       $('#reefTabM', reefHost).textContent = fmtHM(realSec);
       $('#reefCount', reefHost).textContent = `${count}/${REEF_SPECIES.length}`;
@@ -5178,13 +5215,19 @@
         const g = $(`#rfSp${i}`, reefHost);
         if (g) g.classList.toggle('on', i < count);
       }
+      const icEl = $('#reefNextIc', reefHost);
       if (count >= REEF_SPECIES.length) {
-        $('#reefNext', reefHost).textContent = isPv ? 'ครบ 8 ชม. (16/16)' : 'ครบ 16 ชนิด!';
+        const last = REEF_SPECIES[REEF_SPECIES.length - 1];
+        if (icEl) icEl.innerHTML = `<svg viewBox="0 0 32 32" aria-hidden="true">${last.ic}</svg>`;
+        $('#reefNext', reefHost).textContent = 'ครบ 16/16!';
         $('#reefPbar', reefHost).style.width = '100%';
+        $('#reefPtxt', reefHost).textContent = '8 ชม.';
       } else {
         const nxt = REEF_SPECIES[count];
-        $('#reefNext', reefHost).textContent = isPv ? `${count > 0 ? REEF_SPECIES[count - 1].name.split(' (')[0] : 'เริ่มต้น'}` : `+${rem}น. ${nxt.name.split(' (')[0]}`;
-        $('#reefPbar', reefHost).style.width = `${(((mins % 30) / 30) * 100).toFixed(1)}%`;
+        if (icEl) icEl.innerHTML = `<svg viewBox="0 0 32 32" aria-hidden="true">${nxt.ic}</svg>`;
+        $('#reefNext', reefHost).textContent = nxt.short;
+        $('#reefPbar', reefHost).style.width = `${((inStep / 30) * 100).toFixed(1)}%`;
+        $('#reefPtxt', reefHost).textContent = `${inStep}/30 น.`;
       }
       const realCount = Math.min(REEF_SPECIES.length, Math.floor(realSec / 1800));
       if (announce && realCount > lastUnlocked) {
