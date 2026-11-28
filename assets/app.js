@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v91</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v92</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4931,8 +4931,8 @@
     }
   }
   /* 🔒 โหมด "ของเจ้าของ" (jinjuta.nanny84@docchula.com) — รายการ Unpublished & ปุ่ม Publish */
-  const OWNER_EMAIL = 'jinjuta.nanny84@docchula.com';
-  const DRAFT_REGISTRY = [
+  var OWNER_EMAIL = 'jinjuta.nanny84@docchula.com';
+  var DRAFT_REGISTRY = [
     {
       key: 'pomoMiniCastle',
       title: 'ปุ่มจับเวลาย่อขนาดแบบเขาวงกตสี่เหลี่ยม',
@@ -5004,9 +5004,10 @@
       added: 'v91'
     }
   ];
-  const _onOwnerChange = [];
-  let _friendPreview = false;
+  var _onOwnerChange = [];
+  var _friendPreview = false;
   function isOwner() {
+    if (!OWNER_EMAIL) return false;
     const st = window.NLE_SYNC ? window.NLE_SYNC.getState() : null;
     const em = st && st.user && st.user.email ? st.user.email.toLowerCase() : '';
     if (em) return em === OWNER_EMAIL;
@@ -5019,7 +5020,7 @@
   }
   function draftOn(flag) {
     if (isPublished(flag)) return true;
-    if (!DRAFT_REGISTRY.some(f => f.key === flag)) return false;
+    if (!DRAFT_REGISTRY || !DRAFT_REGISTRY.some(f => f.key === flag)) return false;
     return isOwner() && !_friendPreview;
   }
   function updateOwnerBadge() {
