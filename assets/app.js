@@ -270,7 +270,10 @@
     const h = document.documentElement.scrollHeight - innerHeight;
     const pct = h <= 0 ? 100 : Math.min(100, Math.round(scrollY * 100 / h));
     S.read = S.read || {}; const d = today(); const day = S.read[d] = S.read[d] || {};
-    const k = m[1] + '/' + m[2]; if (k in day && day[k] >= pct) return; day[k] = Math.min(100, pct);
+    const k = m[1] + '/' + m[2]; if (k in day && day[k] >= pct) return;
+    const prevPct = day[k] || 0;
+    day[k] = Math.min(100, pct);
+    if (prevPct < 60 && day[k] >= 60 && typeof syncChapterTreeUI === 'function') syncChapterTreeUI();
     clearTimeout(rdT); rdT = setTimeout(() => { for (const x in S.read) if (x < d - 60) delete S.read[x]; save(); }, 800);
   }
   function readToday(chId) {
@@ -3340,7 +3343,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v109</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v110</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3682,6 +3685,7 @@
     buildToc(); setTimeout(trackRead, 300); coverTools(view); flowHints(view);
     initExamBreakGame(id);
     if (typeof updateAnatomyInfographic === 'function') updateAnatomyInfographic(id, s, pg);
+    if (typeof updateChapterTreeOrb === 'function') updateChapterTreeOrb(ch);
     if (s.examIds.length) maybeShowBoxExamRes();
     $('#focusBtn').onclick = () => { S.focus = !S.focus; save(); document.body.classList.toggle('focus', !!S.focus); $('#focusBtn').textContent = S.focus ? '⤡' : '⤢'; };
     applyAllHL(view);
@@ -5110,6 +5114,13 @@
       area: 'ท้ายหน้าอ่านบท (แบบประเมิน & ปุ่มเปลี่ยนกล่อง)',
       desc: 'จัดกล่องประเมินความเข้าใจ (รอบ 1/รอบ 2) และปุ่มก่อนหน้า/ถัดไปให้อยู่ตรงกลางและกว้างเท่าเนื้อหา เพื่อไม่ให้ทับกับฟังก์ชันเสริมด้านซ้าย',
       added: 'v109'
+    },
+    {
+      key: 'chapterTreeOrb',
+      title: 'ต้นไม้ประจำบทในวงแหวนเรืองแสง (มุมซ้ายล่างหน้าอ่าน)',
+      area: 'มุมซ้ายล่างหน้าอ่านเนื้อหา',
+      desc: 'ต้นไม้ประจำตัว 13 แบบต่างกันในแต่ละบทบนแท่นเกาะลอยในวงแหวนเรืองแสง ค่อย ๆ โตทุก 20% ตามความคืบหน้าการอ่านของบทนั้น (0–19% หน่ออ่อน, 20–39% ต้นเด็ก, 40–59% ต้นวัยรุ่น, ≥60% ต้นเต็มวัย)',
+      added: 'v110'
     }
   ];
   var _onOwnerChange = [];
@@ -6877,6 +6888,194 @@
       </div>
     </section>`;
   }
+
+  /* 🌱 Chapter Tree Progress Orb (Bottom-Left of Reading Content · chapterTreeOrb) */
+  const CH_TREES = {
+    b3:          { code: 'B3',      name: 'ต้นโคมทองเรืองแสง',       accent: '#fbbf24', sprout: '#fde047' },
+    b4:          { code: 'B4',      name: 'ต้นโบตั๋นม่วงทอง',        accent: '#c084fc', sprout: '#d8b4fe' },
+    b5:          { code: 'B5',      name: 'ต้นงิ้วดอกแดงปุยนุ่น',     accent: '#fb7185', sprout: '#f97316' },
+    b6:          { code: 'B6',      name: 'ต้นเมฆนกกระเรียน',        accent: '#fcd34d', sprout: '#fde68a' },
+    b7:          { code: 'B7',      name: 'ต้นบีโกเนียลายจุดชมพู',    accent: '#f472b6', sprout: '#86efac' },
+    b8:          { code: 'B8',      name: 'ต้นลูกพลับส้ม',           accent: '#f97316', sprout: '#fb923c' },
+    b9:          { code: 'B9',      name: 'ต้นไข่มุกใต้ทะเล',        accent: '#38bdf8', sprout: '#67e8f9' },
+    b10:         { code: 'B10',     name: 'กล้วยไม้เหลืองออนซิเดียม', accent: '#facc15', sprout: '#bef264' },
+    'kt-embryo': { code: 'Embryo',  name: 'ต้นพลูด่างใบหัวใจ',       accent: '#4ade80', sprout: '#a3e635' },
+    'kt-repro':  { code: 'Repro',   name: 'กล้วยไม้ฟาแลนชมพู',      accent: '#f472b6', sprout: '#f9a8d4' },
+    'kt-msk':    { code: 'MSK',     name: 'ต้นสนคริสต์มาสดาวหิมะ',   accent: '#5eead4', sprout: '#34d399' },
+    'kt-parasit':{ code: 'Parasit', name: 'ต้นบัวคริสตัลน้ำแข็ง',     accent: '#60a5fa', sprout: '#93c5fd' },
+    'kt-rs':     { code: 'RS',      name: 'ต้นซากุระแสงจันทร์',      accent: '#fda4af', sprout: '#fbcfe8' }
+  };
+  function chTreeStage(pct) { return pct >= 60 ? 3 : pct >= 40 ? 2 : pct >= 20 ? 1 : 0; }
+  function chTreeStageName(st) { return ['หน่ออ่อน', 'ต้นเด็ก', 'ต้นวัยรุ่น', 'ต้นเต็มวัย'][st] || 'หน่ออ่อน'; }
+  function chTreeArtSVG(id, stage, meta) {
+    if (stage === 0) return `
+      <g transform="translate(0,2)">
+        <ellipse cx="100" cy="131" rx="11" ry="4" fill="#a88c64" opacity=".6"/>
+        <path d="M100,131 Q99,118 100,111" stroke="#4d7c0f" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+        <path d="M100,115 C90,113 84,104 92,102 C97,101 100,108 100,114 Z" fill="#65a30d"/>
+        <path d="M100,113 C110,111 116,101 108,99 C103,98 100,106 100,113 Z" fill="#84cc16"/>
+        <circle cx="100" cy="107" r="3.6" fill="${meta.sprout}" opacity=".95"/>
+        <circle cx="99" cy="106" r="1.2" fill="#fff" opacity=".8"/>
+      </g>`;
+    switch (id) {
+      case 'b8':
+        if (stage === 1) return `<path d="M97,131 Q95,118 100,107 Q103,118 104,131 Z" fill="#5c4628"/><path d="M99,115 Q89,108 86,104 M100,112 Q110,106 113,101" stroke="#5c4628" stroke-width="3.1" stroke-linecap="round" fill="none"/><ellipse cx="86" cy="101" rx="8" ry="6" fill="#4f9a7f"/><ellipse cx="114" cy="99" rx="8" ry="6" fill="#3d826b"/><ellipse cx="100" cy="95" rx="7" ry="6" fill="#5bb394"/><circle cx="104" cy="105" r="5" fill="#f97316"/><path d="M102,100 L106,100 L104,103 Z" fill="#65a30d"/>`;
+        if (stage === 2) return `<path d="M92,132 Q95,114 102,102 Q105,115 110,132 Q102,128 92,132 Z" fill="#523f23"/><path d="M99,111 Q83,102 77,94 M103,107 Q117,99 122,92" stroke="#523f23" stroke-width="4.8" stroke-linecap="round" fill="none"/><ellipse cx="76" cy="92" rx="10" ry="8" fill="#478f77"/><ellipse cx="97" cy="86" rx="10" ry="8" fill="#5bb394"/><ellipse cx="122" cy="90" rx="10" ry="8" fill="#3b7d67"/><rect x="70" y="92" width="16" height="14" rx="6" fill="#f97316"/><circle cx="78" cy="95" r="3" fill="#65a30d"/><rect x="111" y="85" width="17" height="15" rx="6" fill="#ea580c"/><circle cx="119" cy="88" r="3.2" fill="#65a30d"/><rect x="92" y="89" width="14" height="12" rx="5" fill="#fb923c"/><circle cx="99" cy="91" r="2.5" fill="#65a30d"/><ellipse cx="83" cy="133" rx="6" ry="2.2" fill="#478f77"/><ellipse cx="118" cy="133" rx="5.5" ry="2" fill="#3b7d67"/>`;
+        return `<ellipse cx="76" cy="132" rx="7" ry="2.5" fill="#3d826b" transform="rotate(-10 76 132)"/><ellipse cx="88" cy="135" rx="6" ry="2.2" fill="#4f9a7f" transform="rotate(8 88 135)"/><ellipse cx="116" cy="134" rx="6.5" ry="2.2" fill="#3d826b" transform="rotate(-8 116 134)"/><ellipse cx="126" cy="131" rx="6" ry="2" fill="#5bb394"/><path d="M84,132 Q92,126 93,114 Q90,104 98,96 Q84,91 75,80 L81,77 Q90,87 101,90 Q111,83 119,74 L123,78 Q114,89 107,99 Q115,103 123,106 L120,111 Q110,109 104,108 Q103,121 116,131 Q105,127 98,133 Q93,128 84,132 Z" fill="#4e3d22"/><ellipse cx="94" cy="113" rx="3.4" ry="4.5" fill="#231a0d" transform="rotate(14 94 113)"/><circle cx="71" cy="79" r="9" fill="#3d826b"/><circle cx="84" cy="72" r="8" fill="#5bb394"/><circle cx="101" cy="71" r="8" fill="#4f9a7f"/><circle cx="118" cy="63" r="9" fill="#5bb394"/><circle cx="131" cy="75" r="8.5" fill="#4f9a7f"/><circle cx="129" cy="95" r="8" fill="#3d826b"/><rect x="64" y="64" width="18" height="17" rx="7" fill="#f59e0b"/><circle cx="73" cy="70" r="3.6" fill="#65a30d"/><rect x="70" y="77" width="19" height="17" rx="7" fill="#ea580c"/><circle cx="79.5" cy="83" r="3.8" fill="#84cc16"/><rect x="93" y="75" width="16" height="14" rx="6" fill="#fb923c"/><circle cx="101" cy="78" r="3" fill="#65a30d"/><rect x="110" y="57" width="21" height="19" rx="8" fill="#ea580c"/><circle cx="120.5" cy="64" r="4.2" fill="#84cc16"/><rect x="104" y="81" width="19" height="17" rx="7" fill="#f97316"/><circle cx="113.5" cy="88" r="3.8" fill="#65a30d"/><rect x="122" y="81" width="16" height="15" rx="6" fill="#f59e0b"/><circle cx="130" cy="87" r="3.2" fill="#65a30d"/><rect x="109" y="102" width="16" height="14" rx="6" fill="#ea580c"/><rect x="121" y="104" width="15" height="13" rx="6" fill="#f97316"/><circle cx="118" cy="105" r="3.2" fill="#65a30d"/>`;
+      case 'b3':
+        if (stage === 1) return `<path d="M96,131 Q98,118 100,107 Q103,118 105,131 Z" fill="#9ca3af"/><path d="M98,125 Q102,120 100,113" stroke="#fde047" stroke-width="1.6" fill="none"/><ellipse cx="100" cy="100" rx="14" ry="11" fill="#f59e0b"/><ellipse cx="100" cy="97" rx="11" ry="8" fill="#fde047"/><path d="M97,108 Q100,114 103,108 Z" fill="#fef08a"/>`;
+        if (stage === 2) return `<path d="M91,132 Q95,115 99,102 L105,102 Q108,116 112,132 Z" fill="#94a3b8"/><path d="M95,126 Q103,121 105,112" stroke="#fde047" stroke-width="2" fill="none"/><circle cx="100" cy="90" r="24" fill="#d97706"/><circle cx="95" cy="86" r="17" fill="#fbbf24"/><circle cx="108" cy="89" r="15" fill="#fde047"/><path d="M84,100 Q88,108 92,100 Z M107,99 Q111,108 115,99 Z" fill="#fef9c3"/>`;
+        return `<path d="M77,132 L74,123 L81,130 L82,121 L86,131 Z M115,131 L118,122 L121,130 L126,124 L123,132 Z" fill="#f59e0b"/><path d="M83,132 Q91,123 93,108 L80,96 L87,92 L98,100 L114,91 L119,97 L109,107 Q110,121 119,131 Q109,129 101,133 Q92,129 83,132 Z" fill="#9ca3af"/><path d="M89,126 Q102,121 108,110 M94,117 Q103,113 106,105" stroke="#fde047" stroke-width="2.2" stroke-linecap="round" fill="none"/><ellipse cx="103" cy="107" rx="3" ry="4.5" fill="#fef9c3"/><circle cx="100" cy="81" r="32" fill="#d97706"/><circle cx="84" cy="82" r="18" fill="#ea580c" opacity=".65"/><circle cx="117" cy="81" r="17" fill="#f59e0b"/><circle cx="100" cy="74" r="26" fill="#fbbf24"/><circle cx="100" cy="78" r="14" fill="#fef9c3" opacity=".85"/><g fill="#fde047" stroke="#d97706" stroke-width=".6"><ellipse cx="82" cy="76" rx="8" ry="3.5" transform="rotate(-30 82 76)"/><ellipse cx="98" cy="60" rx="8.5" ry="3.5" transform="rotate(10 98 60)"/><ellipse cx="116" cy="75" rx="8.5" ry="3.5" transform="rotate(28 116 75)"/></g><g class="cht-spk"><path d="M77,94 C77,88 87,88 87,94 L90,104 C85,107 79,107 74,104 Z" fill="#fef08a" stroke="#f59e0b"/><path d="M95,88 C95,82 106,82 106,88 L109,99 C104,102 97,102 92,99 Z" fill="#fef9c3" stroke="#fbbf24"/><path d="M113,93 C113,88 122,88 122,93 L125,102 C120,105 115,105 110,102 Z" fill="#fef08a" stroke="#f59e0b"/></g>`;
+      case 'b4': {
+        if (stage === 1) return `<path d="M96,131 Q98,118 100,106 Q103,118 105,131 Z" fill="#4b8b87"/><ellipse cx="92" cy="105" rx="7" ry="4" fill="#312e81" transform="rotate(-25 92 105)"/><ellipse cx="109" cy="104" rx="7" ry="4" fill="#312e81" transform="rotate(25 109 104)"/><circle cx="100" cy="98" r="8" fill="#9333ea" stroke="#fbbf24" stroke-width="1.2"/><circle cx="100" cy="98" r="3" fill="#fde047"/>`;
+        if (stage === 2) return `<path d="M92,132 Q95,116 99,103 L105,103 Q108,116 112,132 Z" fill="#4b8b87"/><path d="M98,108 L84,96 M103,106 L117,95" stroke="#4b8b87" stroke-width="4" stroke-linecap="round"/><ellipse cx="80" cy="95" rx="9" ry="5" fill="#1e1b4b" transform="rotate(-20 80 95)"/><ellipse cx="120" cy="94" rx="9" ry="5" fill="#1e1b4b" transform="rotate(20 120 94)"/><circle cx="85" cy="92" r="10" fill="#7e22ce" stroke="#f59e0b" stroke-width="1.2"/><circle cx="85" cy="92" r="3.5" fill="#fde047"/><circle cx="114" cy="90" r="10" fill="#a855f7" stroke="#fbbf24" stroke-width="1.2"/><circle cx="114" cy="90" r="3.5" fill="#fde047"/><circle cx="100" cy="80" r="11" fill="#9333ea" stroke="#fbbf24" stroke-width="1.3"/><circle cx="100" cy="80" r="4" fill="#fde047"/>`;
+        const fl = (cx, cy, r) => `<g transform="translate(${cx},${cy})"><circle cx="0" cy="${-r*.52}" r="${r*.5}" fill="#a855f7" stroke="#f59e0b" stroke-width=".9"/><circle cx="${r*.5}" cy="${-r*.16}" r="${r*.5}" fill="#9333ea" stroke="#f59e0b" stroke-width=".9"/><circle cx="${r*.32}" cy="${r*.44}" r="${r*.5}" fill="#7e22ce" stroke="#f59e0b" stroke-width=".9"/><circle cx="${-r*.32}" cy="${r*.44}" r="${r*.5}" fill="#9333ea" stroke="#f59e0b" stroke-width=".9"/><circle cx="${-r*.5}" cy="${-r*.16}" r="${r*.5}" fill="#a855f7" stroke="#f59e0b" stroke-width=".9"/><circle cx="0" cy="0" r="${r*.55}" fill="#6b21a8"/><circle cx="0" cy="0" r="${r*.24}" fill="#facc15"/><circle cx="0" cy="${-r*.38}" r="1.2" fill="#fff"/><circle cx="${r*.36}" cy="${-r*.12}" r="1.2" fill="#fff"/><circle cx="${-r*.36}" cy="${-r*.12}" r="1.2" fill="#fff"/></g>`;
+        return `<ellipse cx="80" cy="133" rx="6" ry="2" fill="#4c1d95"/><ellipse cx="122" cy="133" rx="5.5" ry="2" fill="#4c1d95"/><path d="M84,132 Q92,126 94,108 L77,94 L83,89 L96,99 L101,85 L108,97 L122,88 L126,93 L110,107 Q110,123 121,131 Q108,129 101,134 Q93,129 84,132 Z" fill="#4f958f"/><circle cx="80" cy="83" r="14" fill="#2e1065"/><circle cx="101" cy="75" r="16" fill="#3b0764"/><circle cx="120" cy="84" r="13" fill="#2e1065"/>${fl(75,92,11)}${fl(85,76,11.5)}${fl(107,68,14)}${fl(123,79,10.5)}${fl(111,95,12)}`;
+      }
+      case 'b5': {
+        if (stage === 1) return `<path d="M96,131 L98,103 L102,103 L104,131 Z" fill="#8b7d72"/><circle cx="99" cy="122" r="1.6" fill="#6b5e54"/><circle cx="102" cy="116" r="1.5" fill="#6b5e54"/><circle cx="93" cy="100" r="6" fill="#fffbeb"/><circle cx="107" cy="99" r="5.5" fill="#ea580c"/><circle cx="107" cy="99" r="2" fill="#fde047"/>`;
+        if (stage === 2) return `<path d="M91,132 L96,95 L104,95 L109,132 Z" fill="#8b7d72"/><path d="M98,106 L82,95 M102,103 L118,93" stroke="#8b7d72" stroke-width="4" stroke-linecap="round"/><circle cx="98" cy="122" r="2" fill="#6b5e54"/><circle cx="103" cy="116" r="2" fill="#6b5e54"/><circle cx="81" cy="91" r="8" fill="#fef3c7"/><circle cx="100" cy="84" r="9" fill="#fffbeb"/><circle cx="118" cy="89" r="7.5" fill="#dc2626"/><circle cx="118" cy="89" r="2.5" fill="#fde047"/><circle cx="88" cy="100" r="6.5" fill="#ea580c"/><circle cx="88" cy="100" r="2" fill="#fde047"/>`;
+        const rb = (cx, cy, r) => `<g transform="translate(${cx},${cy})"><circle cx="0" cy="${-r*.5}" r="${r*.48}" fill="#dc2626"/><circle cx="${r*.48}" cy="${-r*.12}" r="${r*.48}" fill="#ea580c"/><circle cx="${r*.3}" cy="${r*.44}" r="${r*.48}" fill="#c2410c"/><circle cx="${-r*.3}" cy="${r*.44}" r="${r*.48}" fill="#dc2626"/><circle cx="${-r*.48}" cy="${-r*.12}" r="${r*.48}" fill="#ea580c"/><circle cx="0" cy="0" r="${r*.26}" fill="#fde047"/></g>`;
+        return `<circle cx="84" cy="133" r="3" fill="#fffbeb"/><circle cx="116" cy="133" r="3.6" fill="#fef3c7"/><circle cx="100" cy="84" r="20" fill="#fde68a" opacity=".55"/><path d="M87,132 Q93,124 94,106 L96,65 L103,65 L105,106 Q107,124 114,132 Q105,129 100,133 Q94,129 87,132 Z" fill="#8b7d72"/><path d="M97,98 L75,86 M97,86 L78,74 M103,94 L125,84 M103,82 L122,70" stroke="#786b61" stroke-width="4" stroke-linecap="round"/><circle cx="96" cy="122" r="2.2" fill="#6b5e54"/><circle cx="103" cy="120" r="2.2" fill="#6b5e54"/><circle cx="99" cy="114" r="2" fill="#6b5e54"/><circle cx="104" cy="110" r="2" fill="#6b5e54"/><circle cx="72" cy="83" r="9.5" fill="#fffbeb"/><circle cx="93" cy="76" r="10.5" fill="#fffbeb"/><circle cx="100" cy="60" r="7.5" fill="#fef3c7"/><circle cx="128" cy="82" r="9" fill="#fffbeb"/><circle cx="119" cy="68" r="7" fill="#fef3c7"/>${rb(112,74,9.5)}${rb(81,96,8.5)}${rb(119,100,9.5)}`;
+      }
+      case 'b6':
+        if (stage === 1) return `<path d="M96,131 Q98,118 100,107 Q103,118 105,131 Z" fill="#855b38"/><ellipse cx="95" cy="103" rx="10" ry="6" fill="#fef3c7"/><ellipse cx="106" cy="101" rx="9" ry="5.5" fill="#fde68a"/><ellipse cx="100" cy="99" rx="8" ry="5" fill="#fffbeb"/>`;
+        if (stage === 2) return `<ellipse cx="91" cy="129" rx="6" ry="5" fill="#94a3b8"/><path d="M96,131 Q98,116 95,103 L103,100 Q106,115 109,131 Z" fill="#7c5230"/><path d="M96,105 L82,95 M102,102 L117,94" stroke="#7c5230" stroke-width="4" stroke-linecap="round"/><g fill="#fff7ed" stroke="#fed7aa"><ellipse cx="83" cy="92" rx="13" ry="7.5"/><ellipse cx="102" cy="84" rx="15" ry="8.5"/><ellipse cx="117" cy="91" rx="12" ry="7"/></g>`;
+        return `<path d="M84,132 Q84,119 92,118 Q98,118 98,132 Z" fill="#94a3b8"/><path d="M87,131 Q88,122 93,121 Q95,125 94,131 Z" fill="#cbd5e1"/><path d="M95,132 Q99,115 94,97 L78,89 L81,85 L97,91 L117,85 L120,89 L104,97 Q108,115 113,132 Z" fill="#7c5332"/><path d="M77,94 Q88,92 94,96 M106,96 Q116,94 123,98" stroke="#a7f3d0" stroke-width="2" stroke-linecap="round" fill="none" opacity=".8"/><g fill="#fff7ed" stroke="#fdba74" stroke-width="1.2"><ellipse cx="78" cy="99" rx="14" ry="7"/><ellipse cx="84" cy="80" rx="17" ry="9.5"/><ellipse cx="115" cy="83" rx="19" ry="10"/><ellipse cx="99" cy="75" rx="16" ry="9"/></g><ellipse cx="84" cy="79" rx="12" ry="5.5" fill="#fffbeb"/><ellipse cx="114" cy="82" rx="13" ry="5.5" fill="#fffbeb"/><g transform="translate(107,61)"><ellipse cx="4" cy="11" rx="7" ry="4" fill="#fff"/><path d="M8,10 Q11,3 7,1" stroke="#334155" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="7" cy="1" r="1.8" fill="#ef4444"/><path d="M9,1 L14,2.5" stroke="#f59e0b" stroke-width="1.3" stroke-linecap="round"/><path d="M0,12 L-4,15" stroke="#334155" stroke-width="1.6" stroke-linecap="round"/></g>`;
+      case 'b7':
+        if (stage === 1) return `<path d="M98,131 L97,112 M102,131 L103,114" stroke="#15803d" stroke-width="3" stroke-linecap="round"/><ellipse cx="92" cy="111" rx="9" ry="6" fill="#16a34a" transform="rotate(-25 92 111)"/><circle cx="91" cy="110" r="1.5" fill="#dcfce7"/><ellipse cx="109" cy="112" rx="8.5" ry="5.5" fill="#22c55e" transform="rotate(22 109 112)"/><circle cx="108" cy="111" r="1.4" fill="#dcfce7"/><circle cx="100" cy="102" r="4" fill="#f472b6"/><circle cx="100" cy="102" r="1.4" fill="#fde047"/>`;
+        if (stage === 2) return `<path d="M95,131 L93,104 M100,131 L100,100 M105,131 L107,106" stroke="#166534" stroke-width="3.5" stroke-linecap="round"/><path d="M93,107 C77,104 74,117 85,123 C93,120 96,112 93,107 Z" fill="#15803d"/><circle cx="85" cy="113" r="1.8" fill="#bbf7d0"/><path d="M107,106 C122,104 125,118 114,124 C106,120 104,112 107,106 Z" fill="#22c55e"/><circle cx="114" cy="113" r="1.8" fill="#dcfce7"/><circle cx="94" cy="91" r="5" fill="#f472b6"/><circle cx="94" cy="91" r="1.8" fill="#fde047"/><circle cx="105" cy="87" r="5.5" fill="#fb7185"/><circle cx="105" cy="87" r="1.8" fill="#fde047"/><circle cx="113" cy="93" r="4.5" fill="#f9a8d4"/><circle cx="113" cy="93" r="1.5" fill="#fde047"/>`;
+        return `<path d="M94,132 L92,88 M99,132 L99,92 M104,132 L106,86 M108,132 L111,100" stroke="#15803d" stroke-width="4" stroke-linecap="round"/><path d="M93,97 C74,94 64,106 67,112 C78,108 88,104 93,97 Z" fill="#16a34a"/><circle cx="77" cy="103" r="2" fill="#dcfce7"/><circle cx="84" cy="101" r="1.8" fill="#dcfce7"/><path d="M92,102 C77,106 72,121 79,129 C89,125 94,113 92,102 Z" fill="#14532d"/><circle cx="83" cy="114" r="2.2" fill="#86efac"/><circle cx="87" cy="121" r="2" fill="#86efac"/><path d="M107,95 C124,96 132,107 131,115 C120,109 112,103 107,95 Z" fill="#15803d"/><circle cx="118" cy="102" r="2" fill="#dcfce7"/><path d="M105,101 C119,105 123,120 116,129 C106,125 102,113 105,101 Z" fill="#22c55e"/><circle cx="112" cy="112" r="2.4" fill="#fff"/><circle cx="115" cy="119" r="2" fill="#fff"/><path d="M92,88 Q86,78 78,74 M106,86 Q114,77 122,76" stroke="#a16207" stroke-width="2" fill="none"/><circle cx="77" cy="73" r="5" fill="#f9a8d4"/><circle cx="77" cy="73" r="1.8" fill="#fde047"/><circle cx="86" cy="70" r="5.5" fill="#f472b6"/><circle cx="86" cy="70" r="1.8" fill="#fde047"/><circle cx="92" cy="80" r="6" fill="#fb7185"/><circle cx="92" cy="80" r="2" fill="#fde047"/><circle cx="109" cy="71" r="5.5" fill="#f472b6"/><circle cx="109" cy="71" r="1.8" fill="#fde047"/><circle cx="119" cy="76" r="5" fill="#f9a8d4"/><circle cx="119" cy="76" r="1.8" fill="#fde047"/><circle cx="101" cy="76" r="5" fill="#fda4af"/><circle cx="101" cy="76" r="1.6" fill="#fde047"/>`;
+      case 'b9':
+        if (stage === 1) return `<path d="M96,131 Q98,118 100,108 Q103,118 105,131 Z" fill="#1e3a5f"/><path d="M100,111 C88,108 84,101 87,97 C94,99 98,104 100,111 Z" fill="#38bdf8"/><path d="M100,111 C112,108 116,101 113,97 C106,99 102,104 100,111 Z" fill="#0ea5e9"/><circle cx="100" cy="100" r="5" fill="#a5f3fc" stroke="#c4b5fd" stroke-width="1.5"/>`;
+        if (stage === 2) return `<path d="M92,132 Q96,118 97,104 L104,104 Q105,118 110,132 Z" fill="#1e3a5f"/><path d="M97,105 C78,100 72,91 77,85 C87,88 94,95 97,105 Z" fill="#38bdf8"/><path d="M103,105 C122,100 128,91 123,85 C113,88 106,95 103,105 Z" fill="#0284c7"/><path d="M100,102 C92,84 100,76 108,85 C106,93 103,98 100,102 Z" fill="#60a5fa"/><circle cx="91" cy="91" r="6" fill="#67e8f9" stroke="#c4b5fd" stroke-width="2"/><circle cx="111" cy="92" r="5.5" fill="#a5f3fc" stroke="#c4b5fd" stroke-width="2"/>`;
+        return `<ellipse cx="100" cy="132" rx="30" ry="6.5" fill="#38bdf8" opacity=".35"/><path d="M80,131 L77,122 M83,131 L84,120" stroke="#10b981" stroke-width="2.6" stroke-linecap="round"/><path d="M116,131 L119,119 M121,131 L125,123" stroke="#a855f7" stroke-width="2.6" stroke-linecap="round"/><circle cx="96" cy="132" r="3" fill="#f472b6"/><circle cx="103" cy="133" r="2.6" fill="#fb7185"/><path d="M87,132 Q95,125 96,102 L106,102 Q107,125 115,132 Z" fill="#1e3a5f"/><path d="M98,103 C76,102 64,108 66,94 C71,82 88,88 98,103 Z" fill="#3b82f6"/><path d="M102,103 C124,102 136,108 134,94 C129,82 112,88 102,103 Z" fill="#2563eb"/><path d="M99,98 C82,82 72,72 86,64 C98,64 103,80 99,98 Z" fill="#38bdf8"/><path d="M101,98 C118,82 128,74 118,65 C106,66 101,80 101,98 Z" fill="#0ea5e9"/><path d="M99,96 C94,76 99,60 108,67 C110,77 104,87 99,96 Z" fill="#7dd3fc"/><g class="cht-spk"><circle cx="88" cy="80" r="10" fill="#c4b5fd" opacity=".88"/><circle cx="88" cy="80" r="6" fill="#67e8f9"/><circle cx="86.5" cy="78.5" r="2" fill="#fff"/><circle cx="114" cy="84" r="9.5" fill="#c4b5fd" opacity=".88"/><circle cx="114" cy="84" r="5.5" fill="#67e8f9"/><circle cx="112.5" cy="82.5" r="1.8" fill="#fff"/></g><circle cx="67" cy="109" r="2" fill="#bae6fd"/><circle cx="132" cy="107" r="2" fill="#bae6fd"/>`;
+      case 'b10':
+        if (stage === 1) return `<path d="M98,131 Q88,120 84,116 Q93,118 99,128 Z" fill="#15803d"/><path d="M102,131 Q112,120 116,116 Q107,118 101,128 Z" fill="#16a34a"/><path d="M100,130 Q101,114 100,104" stroke="#65a30d" stroke-width="2.2" fill="none"/><circle cx="100" cy="102" r="5.5" fill="#facc15"/><circle cx="100" cy="100" r="2.5" fill="#fef08a"/>`;
+        if (stage === 2) return `<path d="M97,132 Q80,122 76,115 Q89,115 99,127 Z" fill="#15803d"/><path d="M103,132 Q120,122 124,115 Q111,115 101,127 Z" fill="#16a34a"/><path d="M97,128 Q90,104 86,94 M103,128 Q110,102 114,92" stroke="#65a30d" stroke-width="2.2" fill="none"/><circle cx="86" cy="94" r="7" fill="#eab308"/><circle cx="94" cy="99" r="6" fill="#fde047"/><circle cx="114" cy="92" r="7.5" fill="#facc15"/><circle cx="104" cy="88" r="6.5" fill="#fef08a"/>`;
+        return `<path d="M96,132 C76,128 66,119 72,113 C84,115 93,121 99,129 Z" fill="#14532d"/><path d="M98,132 C82,121 75,109 85,107 C94,111 97,120 100,129 Z" fill="#15803d"/><path d="M104,132 C124,128 134,119 128,113 C116,115 107,121 101,129 Z" fill="#16a34a"/><path d="M102,132 C118,121 125,109 115,107 C106,111 103,120 100,129 Z" fill="#22c55e"/><path d="M97,125 Q88,98 76,92 M100,125 Q99,90 102,70 M103,125 Q114,96 126,91" stroke="#4d7c0f" stroke-width="2.2" fill="none"/><circle cx="77" cy="95" r="8.5" fill="#eab308"/><circle cx="88" cy="87" r="9.5" fill="#facc15"/><circle cx="96" cy="76" r="9" fill="#fde047"/><circle cx="103" cy="69" r="9.5" fill="#fef08a"/><circle cx="102" cy="89" r="10.5" fill="#facc15"/><circle cx="114" cy="83" r="9" fill="#fde047"/><circle cx="122" cy="94" r="8.5" fill="#eab308"/><circle cx="91" cy="100" r="7.5" fill="#fef08a"/><circle cx="111" cy="99" r="8" fill="#fde047"/>`;
+      case 'kt-embryo':
+        if (stage === 1) return `<path d="M98,131 Q98,115 103,106" stroke="#15803d" stroke-width="3" fill="none"/><path d="M98,117 C87,114 85,123 94,127 C99,125 100,121 98,117 Z" fill="#22c55e"/><path d="M102,110 C113,107 115,116 106,120 C101,118 100,114 102,110 Z" fill="#84cc16"/><path d="M102,110 C109,109 111,113 107,116 Z" fill="#d9f99d"/>`;
+        if (stage === 2) return `<path d="M95,131 Q97,108 106,90" stroke="#16a34a" stroke-width="3.2" fill="none"/><path d="M96,116 C81,110 76,123 89,129 C96,126 98,120 96,116 Z" fill="#15803d"/><path d="M100,113 C115,108 120,121 108,128 C100,124 98,118 100,113 Z" fill="#22c55e"/><path d="M101,100 C88,95 86,107 96,111 C102,108 103,104 101,100 Z" fill="#84cc16"/><path d="M105,92 C117,88 120,99 109,103 C103,100 103,95 105,92 Z" fill="#bef264"/>`;
+        return `<path d="M92,131 Q90,112 95,98 M100,131 Q105,104 98,84 Q91,72 93,62 M108,131 Q110,114 106,102" stroke="#15803d" stroke-width="3.5" stroke-linecap="round" fill="none"/><path d="M90,112 C72,107 67,121 80,129 C89,125 92,118 90,112 Z" fill="#166534"/><path d="M96,114 C82,111 81,126 94,132 C102,127 101,118 96,114 Z" fill="#22c55e"/><path d="M92,118 C87,120 88,126 93,128 Z" fill="#bef264"/><path d="M107,114 C124,110 128,123 115,130 C106,126 104,119 107,114 Z" fill="#16a34a"/><path d="M111,118 C117,118 119,123 114,127 Z" fill="#d9f99d"/><path d="M96,97 C82,93 78,106 90,111 C97,108 99,102 96,97 Z" fill="#4ade80"/><path d="M104,96 C118,93 123,105 111,111 C103,107 102,101 104,96 Z" fill="#84cc16"/><path d="M101,82 C113,78 117,88 106,93 C100,90 99,85 101,82 Z" fill="#4ade80"/><path d="M97,71 C108,67 112,77 102,81 C96,79 95,74 97,71 Z" fill="#bef264"/><path d="M92,64 C85,62 84,69 90,71 C94,70 94,66 92,64 Z" fill="#22c55e"/>`;
+      case 'kt-repro': {
+        if (stage === 1) return `<path d="M98,131 Q87,124 85,118 Q94,120 100,129 Z" fill="#15803d"/><path d="M102,131 Q113,124 115,118 Q106,120 100,129 Z" fill="#16a34a"/><path d="M100,129 L100,104" stroke="#15803d" stroke-width="2.4"/><circle cx="96" cy="102" r="5" fill="#f472b6"/><circle cx="104" cy="102" r="5" fill="#f9a8d4"/><circle cx="100" cy="103" r="2.2" fill="#be185d"/>`;
+        if (stage === 2) return `<path d="M96,132 Q78,125 77,117 Q89,117 99,129 Z" fill="#15803d"/><path d="M104,132 Q122,125 123,117 Q111,117 101,129 Z" fill="#22c55e"/><path d="M97,128 Q94,100 88,88 M103,128 Q108,100 115,90" stroke="#166534" stroke-width="2.5" fill="none"/><circle cx="88" cy="88" r="8" fill="#ec4899"/><circle cx="88" cy="88" r="3" fill="#fde047"/><circle cx="102" cy="83" r="8.5" fill="#f472b6"/><circle cx="102" cy="83" r="3" fill="#be185d"/><circle cx="115" cy="91" r="7.5" fill="#fbcfe8"/><circle cx="115" cy="91" r="2.5" fill="#ec4899"/>`;
+        const mo = (cx, cy, s, c1, c2) => `<g transform="translate(${cx},${cy}) scale(${s})"><ellipse cx="-6.5" cy="0" rx="6.5" ry="5.5" fill="${c1}"/><ellipse cx="6.5" cy="0" rx="6.5" ry="5.5" fill="${c2}"/><ellipse cx="0" cy="-5.5" rx="4.5" ry="5" fill="${c1}"/><ellipse cx="0" cy="4.5" rx="3.2" ry="4" fill="#be185d"/><circle cx="0" cy="1.5" r="2" fill="#fde047"/></g>`;
+        return `<path d="M97,132 C76,130 68,120 75,115 C86,115 95,121 99,130 Z" fill="#15803d"/><path d="M103,132 C124,130 132,120 125,115 C114,115 105,121 101,130 Z" fill="#22c55e"/><path d="M99,131 C86,120 84,111 93,111 C99,116 100,124 100,131 Z" fill="#16a34a"/><path d="M96,126 Q94,95 82,78 M102,126 Q104,92 118,80" stroke="#15803d" stroke-width="2.6" fill="none"/>${mo(82,87,.92,'#db2777','#ec4899')}${mo(96,80,1.05,'#f472b6','#f9a8d4')}${mo(111,74,.95,'#fdf2f8','#fbcfe8')}${mo(109,93,.9,'#f9a8d4','#fbcfe8')}${mo(119,102,.85,'#f472b6','#ec4899')}`;
+      }
+      case 'kt-msk':
+        if (stage === 1) return `<rect x="97" y="121" width="6" height="10" rx="2" fill="#6b4f3b"/><polygon points="100,97 86,123 114,123" fill="#15803d"/><polygon points="100,97 92,113 108,113" fill="#22c55e"/><circle cx="100" cy="95" r="3.5" fill="#bae6fd"/>`;
+        if (stage === 2) return `<rect x="96" y="120" width="8" height="11" rx="2" fill="#6b4f3b"/><polygon points="100,82 78,122 122,122" fill="#166534"/><polygon points="100,74 84,107 116,107" fill="#15803d"/><polygon points="100,68 90,92 110,92" fill="#22c55e"/><path d="M84,114 Q100,119 116,112" stroke="#5eead4" stroke-width="2" fill="none"/><circle cx="100" cy="64" r="5" fill="#e0f2fe" stroke="#c4b5fd" stroke-width="1.2"/>`;
+        return `<rect x="76" y="122" width="13" height="9" rx="1.5" fill="#6366f1"/><rect x="81.5" y="122" width="2.2" height="9" fill="#e0e7ff"/><rect x="103" y="123" width="11" height="8" rx="1.5" fill="#eab308"/><rect x="107.5" y="123" width="2" height="8" fill="#5eead4"/><rect x="115" y="121" width="10" height="10" rx="1.5" fill="#38bdf8"/><rect x="119" y="121" width="2" height="10" fill="#a855f7"/><rect x="96" y="119" width="8" height="12" rx="2" fill="#6b4f3b"/><polygon points="100,79 68,121 132,121" fill="#14532d"/><polygon points="100,71 75,109 125,109" fill="#15803d"/><polygon points="100,63 82,95 118,95" fill="#22c55e"/><polygon points="100,57 89,80 111,80" fill="#4ade80"/><path d="M72,115 Q100,123 128,113 M80,99 Q100,106 120,97 M88,83 Q100,88 112,82" stroke="#5eead4" stroke-width="2" fill="none"/><ellipse cx="83" cy="112" rx="6" ry="2" fill="#fff" opacity=".9"/><ellipse cx="115" cy="105" rx="5.5" ry="2" fill="#fff" opacity=".9"/><circle cx="91" cy="96" r="4.5" fill="#c084fc" stroke="#fef08a" stroke-width="1.2"/><circle cx="112" cy="102" r="4.5" fill="#f472b6" stroke="#fef08a" stroke-width="1.2"/><circle cx="101" cy="112" r="3" fill="#fde047"/><g class="cht-spk"><circle cx="100" cy="53" r="8" fill="#e0f2fe" stroke="#c4b5fd" stroke-width="1.8"/><path d="M100,46 L101.8,51.2 L107,53 L101.8,54.8 L100,60 L98.2,54.8 L93,53 L98.2,51.2 Z" fill="#38bdf8"/></g>`;
+      case 'kt-parasit': {
+        if (stage === 1) return `<polygon points="94,131 100,119 106,131" fill="#38bdf8"/><path d="M100,122 Q101,111 100,103" stroke="#6366f1" stroke-width="2.5" fill="none"/><circle cx="100" cy="101" r="6" fill="#bae6fd" stroke="#60a5fa" stroke-width="1.2"/><circle cx="100" cy="101" r="2.2" fill="#2563eb"/>`;
+        if (stage === 2) return `<polygon points="88,131 94,117 100,131" fill="#0ea5e9"/><polygon points="95,131 102,113 109,131" fill="#38bdf8"/><path d="M98,120 Q88,104 85,95 M102,120 Q112,102 115,94" stroke="#6366f1" stroke-width="2.8" fill="none"/><circle cx="85" cy="93" r="8" fill="#bae6fd" stroke="#60a5fa" stroke-width="1.4"/><circle cx="115" cy="92" r="8" fill="#e0f2fe" stroke="#60a5fa" stroke-width="1.4"/><circle cx="100" cy="82" r="9" fill="#93c5fd" stroke="#38bdf8" stroke-width="1.4"/>`;
+        const lt = (cx, cy, r) => `<g transform="translate(${cx},${cy})"><ellipse cx="0" cy="${-r*.5}" rx="${r*.38}" ry="${r*.6}" fill="#e0f2fe" stroke="#60a5fa" stroke-width=".9"/><ellipse cx="${r*.52}" cy="${-r*.1}" rx="${r*.38}" ry="${r*.6}" fill="#bae6fd" stroke="#60a5fa" stroke-width=".9" transform="rotate(65 ${r*.52} ${-r*.1})"/><ellipse cx="${-r*.52}" cy="${-r*.1}" rx="${r*.38}" ry="${r*.6}" fill="#bae6fd" stroke="#60a5fa" stroke-width=".9" transform="rotate(-65 ${-r*.52} ${-r*.1})"/><ellipse cx="${r*.32}" cy="${r*.42}" rx="${r*.35}" ry="${r*.52}" fill="#93c5fd" stroke="#3b82f6" stroke-width=".8" transform="rotate(140 ${r*.32} ${r*.42})"/><ellipse cx="${-r*.32}" cy="${r*.42}" rx="${r*.35}" ry="${r*.52}" fill="#93c5fd" stroke="#3b82f6" stroke-width=".8" transform="rotate(-140 ${-r*.32} ${r*.42})"/><polygon points="0,${-r*.38} ${r*.26},0 0,${r*.3} ${-r*.26},0" fill="#2563eb"/></g>`;
+        return `<polygon points="81,132 88,116 95,132" fill="#0284c7"/><polygon points="89,132 100,108 111,132" fill="#38bdf8"/><polygon points="103,132 112,115 119,132" fill="#0ea5e9"/><polygon points="94,132 100,114 106,132" fill="#bae6fd"/><path d="M96,118 Q84,102 79,90 M100,114 Q107,90 100,72 M105,118 Q116,102 121,90" stroke="#6366f1" stroke-width="3.2" stroke-linecap="round" fill="none"/><path d="M88,122 C79,118 78,110 84,111 M112,122 C121,118 122,110 116,111" stroke="#818cf8" stroke-width="2.4" stroke-linecap="round" fill="none"/>${lt(77,89,10.5)}${lt(100,70,12.5)}${lt(123,88,10.5)}<g class="cht-spk" fill="#7dd3fc"><circle cx="72" cy="70" r="2.2"/><circle cx="129" cy="72" r="2"/><circle cx="69" cy="108" r="1.8"/><circle cx="131" cy="108" r="1.8"/></g>`;
+      }
+      default: // kt-rs Moonlight Sakura
+        if (stage === 1) return `<path d="M96,131 Q98,118 100,107 Q103,118 105,131 Z" fill="#6d4c5d"/><circle cx="94" cy="102" r="7" fill="#fbcfe8"/><circle cx="106" cy="101" r="7" fill="#f9a8d4"/><circle cx="100" cy="96" r="7.5" fill="#fdf2f8"/>`;
+        if (stage === 2) return `<path d="M92,132 Q96,115 99,102 L104,102 Q107,116 111,132 Z" fill="#6d4c5d"/><path d="M98,106 L84,96 M103,104 L117,94" stroke="#6d4c5d" stroke-width="4" stroke-linecap="round"/><circle cx="83" cy="91" r="12" fill="#f9a8d4"/><circle cx="100" cy="83" r="14" fill="#fbcfe8"/><circle cx="117" cy="90" r="11" fill="#f472b6"/><circle cx="98" cy="80" r="9" fill="#fdf2f8"/>`;
+        return `<ellipse cx="80" cy="133" rx="3.5" ry="1.8" fill="#f9a8d4"/><ellipse cx="119" cy="133" rx="3.5" ry="1.8" fill="#fbcfe8"/><path d="M86,132 Q95,123 95,103 L77,90 L82,85 L97,94 L103,82 L119,86 L122,92 L106,102 Q107,122 117,132 Q105,129 99,133 Q92,129 86,132 Z" fill="#6d4c5d"/><circle cx="76" cy="87" r="14" fill="#f472b6"/><circle cx="122" cy="87" r="14" fill="#f472b6"/><circle cx="87" cy="76" r="16" fill="#f9a8d4"/><circle cx="112" cy="76" r="16" fill="#f9a8d4"/><circle cx="100" cy="69" r="17" fill="#fbcfe8"/><circle cx="99" cy="67" r="11" fill="#fdf2f8"/><circle cx="84" cy="82" r="8" fill="#fdf2f8" opacity=".8"/><circle cx="114" cy="82" r="8" fill="#fdf2f8" opacity=".8"/><g class="cht-spk" fill="#fbcfe8"><ellipse cx="67" cy="103" rx="3" ry="1.6" transform="rotate(-25 67 103)"/><ellipse cx="132" cy="101" rx="3" ry="1.6" transform="rotate(20 132 101)"/></g>`;
+    }
+  }
+  function chTreeOrbSVG(chId, pct) {
+    const meta = CH_TREES[chId] || CH_TREES['kt-rs'];
+    const st = chTreeStage(pct);
+    const r = 93, circ = 2 * Math.PI * r, off = circ * (1 - Math.max(0, Math.min(100, pct)) / 100);
+    return `<svg viewBox="0 0 200 200" aria-hidden="true">
+      <defs>
+        <radialGradient id="chtOrbG" cx="65%" cy="22%" r="76%">
+          <stop offset="0%" stop-color="#f2ffdb" stop-opacity=".96"/>
+          <stop offset="38%" stop-color="#c9f5d7" stop-opacity=".72"/>
+          <stop offset="76%" stop-color="#8be1c8" stop-opacity=".46"/>
+          <stop offset="100%" stop-color="#d4fae8" stop-opacity=".74"/>
+        </radialGradient>
+        <radialGradient id="chtHaloG" cx="50%" cy="50%" r="50%">
+          <stop offset="82%" stop-color="#a7f3d0" stop-opacity="0"/>
+          <stop offset="94%" stop-color="#d1fae5" stop-opacity=".48"/>
+          <stop offset="100%" stop-color="#a7f3d0" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="chtSoilT" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff8e1"/><stop offset="100%" stop-color="#fae1b3"/></linearGradient>
+        <linearGradient id="chtSoilS" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f6d198"/><stop offset="100%" stop-color="#e3b676"/></linearGradient>
+        <clipPath id="chtClip"><circle cx="100" cy="100" r="88"/></clipPath>
+      </defs>
+      <circle cx="100" cy="100" r="99" fill="url(#chtHaloG)"/>
+      <circle cx="100" cy="100" r="88" fill="url(#chtOrbG)" stroke="rgba(255,255,255,.7)" stroke-width="1.6"/>
+      <ellipse cx="144" cy="48" rx="16" ry="9" fill="#fff" opacity=".42" transform="rotate(34 144 48)"/>
+      <circle cx="158" cy="63" r="4" fill="#fff" opacity=".35"/>
+      <g class="cht-island" clip-path="url(#chtClip)">
+        <path d="M40,145 Q100,180 160,145 Q150,164 100,173 Q50,164 40,145 Z" fill="#1e5638"/>
+        <path d="M36,138 C38,151 48,158 56,156 C62,163 72,164 79,161 C88,168 112,168 121,161 C128,164 138,163 144,156 C152,158 162,151 164,138 Z" fill="#3a7d44"/>
+        <path d="M39,141 C45,152 55,154 62,152 C70,159 83,160 92,157 C101,161 114,160 123,156 C133,158 145,155 153,148 C158,145 161,142 162,139 Z" fill="#4f9a53"/>
+        <circle cx="57" cy="153" r="2.2" fill="#fde047"/><circle cx="76" cy="157" r="2.6" fill="#fff"/><circle cx="76" cy="157" r="1" fill="#facc15"/><circle cx="115" cy="158" r="2.8" fill="#fff"/><circle cx="115" cy="158" r="1.1" fill="#facc15"/><circle cx="139" cy="152" r="2.2" fill="#fde047"/>
+        <path d="M32,131 Q33,144 45,147 Q72,154 100,154 Q128,154 155,147 Q167,144 168,131 Z" fill="url(#chtSoilS)"/>
+        <ellipse cx="100" cy="131" rx="68" ry="18" fill="url(#chtSoilT)"/>
+        <path d="M47,125 L50,120 L53,124 L56,121 L57,126 Z M138,125 L141,120 L144,124 L147,121 L148,126 Z" fill="#f2cf97"/>
+        <ellipse cx="100" cy="132" rx="28" ry="7" fill="#c7b28a" opacity=".58"/>
+        ${chTreeArtSVG(chId, st, meta)}
+      </g>
+      <circle cx="100" cy="100" r="${r}" fill="none" stroke="rgba(255,255,255,.24)" stroke-width="3.6"/>
+      <circle cx="100" cy="100" r="${r}" fill="none" stroke="${meta.accent}" stroke-width="4.2" stroke-linecap="round"
+        stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 100 100)"/>
+    </svg>`;
+  }
+  function chReadProgress(ch) {
+    if (!ch || !ch.sections || !ch.sections.length) return { done: 0, total: 0, pct: 0 };
+    const seen = everRead();
+    let done = 0;
+    for (const s of ch.sections) {
+      if (lvOf(ch.id, s.no) > 0 || seen.has(ch.id + '/' + s.no)) done++;
+    }
+    const total = ch.sections.length;
+    return { done, total, pct: Math.round(done * 100 / total) };
+  }
+  const chTreeHost = document.createElement('div');
+  chTreeHost.className = 'chtree-host';
+  chTreeHost.hidden = true;
+  chTreeHost.innerHTML = `
+    <div class="chtree-dock" id="chTreeDock">
+      <button type="button" class="chtree-hide" id="chTreeHide" title="ย่อต้นไม้ประจำบท">–</button>
+      <div class="chtree-orb" id="chTreeOrb"></div>
+      <div class="chtree-pill" id="chTreePill"></div>
+    </div>
+    <button type="button" class="chtree-mini" id="chTreeMini" hidden title="ขยายต้นไม้ประจำบท"></button>`;
+  document.body.appendChild(chTreeHost);
+  let _chTreeCur = null;
+  function syncChapterTreeUI() {
+    const onSec = /^#\/[^/]+\/\d+$/.test(location.hash);
+    const enabled = draftOn('chapterTreeOrb') && onSec && !!_chTreeCur;
+    chTreeHost.hidden = !enabled;
+    const collapsed = !!S.chTreeHidden;
+    document.body.classList.toggle('has-chtree', enabled && !collapsed);
+    if (!enabled) return;
+    const ch = _chTreeCur;
+    const meta = CH_TREES[ch.id] || CH_TREES['kt-rs'];
+    const pr = chReadProgress(ch);
+    const st = chTreeStage(pr.pct);
+    const tip = `${ch.title} · ${meta.name} (${chTreeStageName(st)}) · อ่านแล้ว ${pr.done}/${pr.total} กล่อง (${pr.pct}%)`;
+    $('#chTreeDock', chTreeHost).hidden = collapsed;
+    const mini = $('#chTreeMini', chTreeHost);
+    mini.hidden = !collapsed;
+    if (collapsed) {
+      mini.innerHTML = `<span class="cht-m-dot" style="background:${meta.accent}"></span><b>${meta.code}</b> <span>${pr.pct}%</span>`;
+      mini.title = tip + ' (แตะเพื่อขยาย)';
+      return;
+    }
+    const orb = $('#chTreeOrb', chTreeHost);
+    orb.innerHTML = chTreeOrbSVG(ch.id, pr.pct);
+    orb.title = tip;
+    $('#chTreePill', chTreeHost).innerHTML = `<span class="cht-code" style="color:${meta.accent}">${meta.code}</span> · <b>${pr.pct}%</b> <small>${chTreeStageName(st)}</small>`;
+  }
+  function updateChapterTreeOrb(ch) {
+    _chTreeCur = ch;
+    syncChapterTreeUI();
+  }
+  $('#chTreeHide', chTreeHost).onclick = () => { S.chTreeHidden = true; save(); syncChapterTreeUI(); };
+  $('#chTreeMini', chTreeHost).onclick = () => { S.chTreeHidden = false; save(); syncChapterTreeUI(); };
+  addEventListener('hashchange', () => setTimeout(syncChapterTreeUI, 45));
+  _onOwnerChange.push(() => syncChapterTreeUI());
 
   route();
 })();

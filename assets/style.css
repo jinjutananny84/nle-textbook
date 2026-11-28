@@ -1356,3 +1356,34 @@ body.focus .anat-tab{left:10px}
 .isl-sc.weak{border-color:var(--trap);color:var(--trap);background:var(--trap-soft)}
 .mv-isl-stats{display:inline-flex;gap:8px;font-size:11.5px;color:var(--muted);margin-left:auto}
 .mv-isl-stats b{color:var(--fg)}
+
+/* 8. Chapter Tree Progress Orb (Bottom-Left of Reading Content · chapterTreeOrb) */
+.chtree-host[hidden]{display:none}
+.chtree-dock{position:fixed;left:calc(var(--side) + 12px);bottom:max(14px,env(safe-area-inset-bottom));z-index:27;display:flex;flex-direction:column;align-items:center;pointer-events:none;transition:left .2s ease}
+body.focus .chtree-dock{left:14px}
+.chtree-dock[hidden]{display:none}
+.chtree-orb{width:132px;height:132px;pointer-events:auto;cursor:default;filter:drop-shadow(0 8px 18px rgba(0,0,0,.28));transition:transform .22s ease}
+.chtree-orb:hover{transform:translateY(-3px) scale(1.04)}
+.chtree-orb svg{width:100%;height:100%;display:block;overflow:visible}
+@keyframes chtFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3.5px)}}
+@keyframes chtTwinkle{0%,100%{opacity:.5;transform:scale(.93)}50%{opacity:1;transform:scale(1.07)}}
+.chtree-orb .cht-island{animation:chtFloat 4.2s ease-in-out infinite}
+.chtree-orb .cht-spk{transform-box:fill-box;transform-origin:center;animation:chtTwinkle 2.8s ease-in-out infinite}
+.chtree-hide{position:absolute;top:0;right:2px;width:20px;height:20px;border:1px solid color-mix(in srgb,var(--accent) 42%,transparent);border-radius:999px;background:color-mix(in srgb,var(--surface) 84%,transparent);color:var(--fg);font-size:13px;font-weight:700;line-height:1;display:grid;place-items:center;cursor:pointer;padding:0;opacity:0;pointer-events:auto;transition:opacity .18s,transform .15s}
+.chtree-dock:hover .chtree-hide,.chtree-hide:focus-visible{opacity:.9}
+.chtree-hide:hover{opacity:1;transform:scale(1.1)}
+.chtree-pill{margin-top:3px;padding:2px 10px;border-radius:999px;background:color-mix(in srgb,var(--surface) 84%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid color-mix(in srgb,var(--accent) 34%,transparent);font-size:10.5px;font-weight:700;color:var(--fg);white-space:nowrap;pointer-events:auto;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.chtree-pill small{font-weight:600;color:var(--muted);margin-left:2px}
+.chtree-mini{position:fixed;left:calc(var(--side) + 12px);bottom:max(14px,env(safe-area-inset-bottom));z-index:27;display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:999px;background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid color-mix(in srgb,var(--accent) 44%,transparent);color:var(--fg);font:inherit;font-size:11.5px;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.22);transition:transform .16s ease}
+.chtree-mini:hover{transform:translateY(-2px)}
+.chtree-mini[hidden]{display:none}
+.cht-m-dot{width:8px;height:8px;border-radius:999px;display:inline-block}
+body.focus .chtree-mini{left:14px}
+body.has-chtree .anat-dock{top:38%}
+@media (max-width:1119px){
+  body:not(.focus) .chtree-dock,body:not(.focus) .chtree-mini{left:10px}
+  .chtree-orb{width:96px;height:96px}
+  .chtree-pill{font-size:9.5px;padding:2px 8px}
+  .chtree-hide{opacity:.75}
+}
+@media print{.chtree-host{display:none}}
