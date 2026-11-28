@@ -1385,7 +1385,7 @@
           <span class="mv-step-realm">✦ ${esc(th.name)}</span>
           ${mvCastleLogoSVG(c.id, 26)}
         </div>
-        <a class="tile-main" href="#/${c.id}">${ring(p)}<div class="tile-txt"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p></div></a>
+        <a class="tile-main" href="#/${c.id}">${homeCoverVisual(c, ch, p)}<div class="tile-txt"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p></div></a>
         <div class="tile-acts"><a class="btn small primary" href="${lh || '#/' + c.id + '/' + (ch.sections[0] ? ch.sections[0].no : 1)}">${lm ? `📖 อ่านต่อ กล่อง ${lm[1]}` : '📖 เริ่มอ่าน'}</a><a class="btn small" href="#/quiz?ch=${c.id}">📝 Quiz</a>${rt.done ? `<span class="tile-today">วันนี้ ${rt.done} กล่อง</span>` : ''}</div>
         <details class="tile-more"><summary>สถิติ</summary>${todayLine}${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</details>
       </div>`;
@@ -3343,7 +3343,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v111</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v112</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3563,7 +3563,7 @@
       const lh = lastOf(c.id); const lm = lh && lh.match(/\/(\d+)$/);
       const todayLine = `<div class="today-line"><b>Today</b> ${rt.done} boxes read · ${Math.round(rt.done * 100 / p.n)}% of chapter${rt.seen > rt.done ? ` · ${rt.seen - rt.done} in progress` : ''}<i style="width:${Math.round(rt.done * 100 / p.n)}%"></i></div>`;
       return `<div class="tile ${grpCls(c)}${rt.done ? ' read-today' : ''}">
-        <a class="tile-main" href="#/${c.id}">${ring(p)}<div class="tile-txt"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p></div></a>
+        <a class="tile-main" href="#/${c.id}">${homeCoverVisual(c, ch, p)}<div class="tile-txt"><h3>${esc(c.title)}</h3><p>${esc(c.desc || '')}</p></div></a>
         <div class="tile-acts"><a class="btn small primary" href="${lh || '#/' + c.id + '/' + (ch.sections[0] ? ch.sections[0].no : 1)}">${lm ? `📖 อ่านต่อ กล่อง ${lm[1]}` : '📖 เริ่มอ่าน'}</a><a class="btn small" href="#/quiz?ch=${c.id}">📝 Quiz</a>${rt.done ? `<span class="tile-today">วันนี้ ${rt.done} กล่อง</span>` : ''}</div>
         <details class="tile-more"><summary>สถิติ</summary>${todayLine}${lvBar(p, true)}<div class="bar-label">ประเมินแล้ว ${p.d}/${p.n} หัวข้อ · มั่นใจ ${p.c[4]} หัวข้อ · ข้อสอบ ${Object.keys(ch.exams).length} ข้อ</div>${lvLegend(p)}</details></div>`;
     };
@@ -6889,8 +6889,8 @@
     </section>`;
   }
 
-  /* 🌱 Chapter Tree Progress Orb (Bottom-Left of Reading Content · chapterTreeOrb) */
-  const CH_TREES = {
+  /* 🌱 Chapter Tree Progress Orb (Bottom-Left of Reading Content + Home Cover · chapterTreeOrb) */
+  var CH_TREES = {
     b3:          { code: 'B3',      name: 'ต้นโคมทองเรืองแสง',       accent: '#fbbf24', sprout: '#fde047' },
     b4:          { code: 'B4',      name: 'ต้นโบตั๋นม่วงทอง',        accent: '#c084fc', sprout: '#d8b4fe' },
     b5:          { code: 'B5',      name: 'ต้นงิ้วดอกแดงปุยนุ่น',     accent: '#fb7185', sprout: '#f97316' },
@@ -6980,38 +6980,39 @@
         return `<ellipse cx="80" cy="133" rx="3.5" ry="1.8" fill="#f9a8d4"/><ellipse cx="119" cy="133" rx="3.5" ry="1.8" fill="#fbcfe8"/><path d="M86,132 Q95,123 95,103 L77,90 L82,85 L97,94 L103,82 L119,86 L122,92 L106,102 Q107,122 117,132 Q105,129 99,133 Q92,129 86,132 Z" fill="#6d4c5d"/><circle cx="76" cy="87" r="14" fill="#f472b6"/><circle cx="122" cy="87" r="14" fill="#f472b6"/><circle cx="87" cy="76" r="16" fill="#f9a8d4"/><circle cx="112" cy="76" r="16" fill="#f9a8d4"/><circle cx="100" cy="69" r="17" fill="#fbcfe8"/><circle cx="99" cy="67" r="11" fill="#fdf2f8"/><circle cx="84" cy="82" r="8" fill="#fdf2f8" opacity=".8"/><circle cx="114" cy="82" r="8" fill="#fdf2f8" opacity=".8"/><g class="cht-spk" fill="#fbcfe8"><ellipse cx="67" cy="103" rx="3" ry="1.6" transform="rotate(-25 67 103)"/><ellipse cx="132" cy="101" rx="3" ry="1.6" transform="rotate(20 132 101)"/></g>`;
     }
   }
-  function chTreeOrbSVG(chId, pct) {
+  function chTreeOrbSVG(chId, pct, uid = 'orb') {
     const meta = CH_TREES[chId] || CH_TREES['kt-rs'];
     const st = chTreeStage(pct);
     const r = 93, circ = 2 * Math.PI * r, off = circ * (1 - Math.max(0, Math.min(100, pct)) / 100);
+    const u = String(uid).replace(/[^a-zA-Z0-9_-]/g, '');
     return `<svg viewBox="0 0 200 200" aria-hidden="true">
       <defs>
-        <radialGradient id="chtOrbG" cx="65%" cy="22%" r="76%">
+        <radialGradient id="chtOrbG-${u}" cx="65%" cy="22%" r="76%">
           <stop offset="0%" stop-color="#f2ffdb" stop-opacity=".96"/>
           <stop offset="38%" stop-color="#c9f5d7" stop-opacity=".72"/>
           <stop offset="76%" stop-color="#8be1c8" stop-opacity=".46"/>
           <stop offset="100%" stop-color="#d4fae8" stop-opacity=".74"/>
         </radialGradient>
-        <radialGradient id="chtHaloG" cx="50%" cy="50%" r="50%">
+        <radialGradient id="chtHaloG-${u}" cx="50%" cy="50%" r="50%">
           <stop offset="82%" stop-color="#a7f3d0" stop-opacity="0"/>
           <stop offset="94%" stop-color="#d1fae5" stop-opacity=".48"/>
           <stop offset="100%" stop-color="#a7f3d0" stop-opacity="0"/>
         </radialGradient>
-        <linearGradient id="chtSoilT" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff8e1"/><stop offset="100%" stop-color="#fae1b3"/></linearGradient>
-        <linearGradient id="chtSoilS" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f6d198"/><stop offset="100%" stop-color="#e3b676"/></linearGradient>
-        <clipPath id="chtClip"><circle cx="100" cy="100" r="88"/></clipPath>
+        <linearGradient id="chtSoilT-${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff8e1"/><stop offset="100%" stop-color="#fae1b3"/></linearGradient>
+        <linearGradient id="chtSoilS-${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f6d198"/><stop offset="100%" stop-color="#e3b676"/></linearGradient>
+        <clipPath id="chtClip-${u}"><circle cx="100" cy="100" r="88"/></clipPath>
       </defs>
-      <circle cx="100" cy="100" r="99" fill="url(#chtHaloG)"/>
-      <circle cx="100" cy="100" r="88" fill="url(#chtOrbG)" stroke="rgba(255,255,255,.7)" stroke-width="1.6"/>
+      <circle cx="100" cy="100" r="99" fill="url(#chtHaloG-${u})"/>
+      <circle cx="100" cy="100" r="88" fill="url(#chtOrbG-${u})" stroke="rgba(255,255,255,.7)" stroke-width="1.6"/>
       <ellipse cx="144" cy="48" rx="16" ry="9" fill="#fff" opacity=".42" transform="rotate(34 144 48)"/>
       <circle cx="158" cy="63" r="4" fill="#fff" opacity=".35"/>
-      <g class="cht-island" clip-path="url(#chtClip)">
+      <g class="cht-island" clip-path="url(#chtClip-${u})">
         <path d="M40,145 Q100,180 160,145 Q150,164 100,173 Q50,164 40,145 Z" fill="#1e5638"/>
         <path d="M36,138 C38,151 48,158 56,156 C62,163 72,164 79,161 C88,168 112,168 121,161 C128,164 138,163 144,156 C152,158 162,151 164,138 Z" fill="#3a7d44"/>
         <path d="M39,141 C45,152 55,154 62,152 C70,159 83,160 92,157 C101,161 114,160 123,156 C133,158 145,155 153,148 C158,145 161,142 162,139 Z" fill="#4f9a53"/>
         <circle cx="57" cy="153" r="2.2" fill="#fde047"/><circle cx="76" cy="157" r="2.6" fill="#fff"/><circle cx="76" cy="157" r="1" fill="#facc15"/><circle cx="115" cy="158" r="2.8" fill="#fff"/><circle cx="115" cy="158" r="1.1" fill="#facc15"/><circle cx="139" cy="152" r="2.2" fill="#fde047"/>
-        <path d="M32,131 Q33,144 45,147 Q72,154 100,154 Q128,154 155,147 Q167,144 168,131 Z" fill="url(#chtSoilS)"/>
-        <ellipse cx="100" cy="131" rx="68" ry="18" fill="url(#chtSoilT)"/>
+        <path d="M32,131 Q33,144 45,147 Q72,154 100,154 Q128,154 155,147 Q167,144 168,131 Z" fill="url(#chtSoilS-${u})"/>
+        <ellipse cx="100" cy="131" rx="68" ry="18" fill="url(#chtSoilT-${u})"/>
         <path d="M47,125 L50,120 L53,124 L56,121 L57,126 Z M138,125 L141,120 L144,124 L147,121 L148,126 Z" fill="#f2cf97"/>
         <ellipse cx="100" cy="132" rx="28" ry="7" fill="#c7b28a" opacity=".58"/>
         ${chTreeArtSVG(chId, st, meta)}
@@ -7020,6 +7021,17 @@
       <circle cx="100" cy="100" r="${r}" fill="none" stroke="${meta.accent}" stroke-width="4.2" stroke-linecap="round"
         stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}" transform="rotate(-90 100 100)"/>
     </svg>`;
+  }
+  function homeCoverVisual(c, ch, p) {
+    if (!draftOn('chapterTreeOrb') || !CH_TREES) return ring(p);
+    const pr = chReadProgress(ch);
+    const meta = CH_TREES[c.id] || CH_TREES['kt-rs'];
+    const st = chTreeStage(pr.pct);
+    const tip = `${meta.name} (${chTreeStageName(st)}) · อ่านแล้ว ${pr.done}/${pr.total} กล่อง (${pr.pct}%)`;
+    return `<div class="home-tree-wrap" title="${esc(tip)}">
+      <div class="home-tree-orb">${chTreeOrbSVG(c.id, pr.pct, 'hm-' + c.id)}</div>
+      <span class="home-tree-pct"><b>${pr.pct}%</b> <small>${pr.done}/${pr.total}</small></span>
+    </div>`;
   }
   function chReadProgress(ch) {
     if (!ch || !ch.sections || !ch.sections.length) return { done: 0, total: 0, pct: 0 };
