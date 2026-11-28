@@ -14,11 +14,12 @@
 - `sw.js` + `manifest.json` + `tools/gen_pwa_icons.py` — PWA offline service worker (network-first for same-origin; never intercepts Firebase/Google Auth/Gemini API).
 - `data/` — Chapters (`<id>.md`), exams (`<id>-exams.json`), flows, numbers, abbr, `chapters.json`. Follow `FORMAT.md` when editing content.
 
-## Owner-Only Draft / Preview Mode (Default for All Future Edits)
-- **Owner email:** `jinjuta.nanny84@docchula.com`
-- **Do NOT publish new edits to friends by default:** All new features/UI changes from now on MUST be gated behind `draftOn('<featureKey>')` (registered in `DRAFT_FEATURES` in `assets/app.js`, or `.owner-preview` class on `<html>`) so ONLY `jinjuta.nanny84@docchula.com` (and `localhost`) sees them while friends continue seeing the stable published version.
-- **Publish only on explicit user command:** Keep each new edit gated until the user explicitly asks to **publish** (สั่ง publish); only then remove the gate / promote it to public.
-- **Still push to `origin main`:** Pushing deploys the owner-gated code so the owner can test immediately on all her devices at `https://jinjutananny84.github.io/nle-textbook/` without affecting friends.
+## โหมด "ของเจ้าของ" (Owner-Only Draft / Preview — ใช้เป็นค่าเริ่มต้นทุกครั้ง)
+- **"ของเจ้าของ"** หมายถึงบัญชี `jinjuta.nanny84@docchula.com` เท่านั้น
+- **ห้าม publish ให้เพื่อนใช้จนกว่าผู้ใช้จะสั่ง:** ทุกฟีเจอร์หรือการแก้ไข UI ใหม่ต่อจากนี้ **ต้อง** ลงทะเบียนใน `DRAFT_REGISTRY` ใน `assets/app.js` (ระบุ `key`, `title`, `area`, `desc`, `added`) และครอบด้วย `draftOn('<key>')` (หรือ `.owner-preview` ใน CSS) เพื่อให้เห็นเฉพาะ **ของเจ้าของ** (และ `localhost`) ส่วนเพื่อนจะยังเห็นเวอร์ชันเสถียรเดิม 100%
+- **ขั้นตอนตอนสั่ง publish (ประมาณวันละครั้ง):** เมื่อผู้ใช้บอกว่าต้องการ publish ให้ **ลิสต์รายการที่แตกต่าง / ยัง unpublished ทั้งหมด** ออกมาให้ผู้ใช้ดูก่อน เพื่อให้ผู้ใช้เลือกได้ว่าจะ publish ฟีเจอร์ไหนบ้าง แล้วค่อยถอด gate / promote เฉพาะฟีเจอร์ที่ผู้ใช้เลือก
+- **ปุ่ม Publish ในเว็บ (เมนู `👑 Owner` → `#/owner`):** เฉพาะของเจ้าของสามารถดูรายการที่ยัง unpublished และกด Publish / Unpublish ให้เพื่อนใช้ได้ทันทีผ่าน Firestore `appConfig/flags`
+- **ยัง push ขึ้น `origin main` ตามปกติ:** เพื่อให้เจ้าของเปิดทดสอบฟีเจอร์ใหม่บนทุกเครื่องของตัวเองผ่าน `https://jinjutananny84.github.io/nle-textbook/` ได้ทันทีโดยไม่กระทบเพื่อน
 
 ## Mandatory Checklist Before Every Push
 1. **Sync with remote first:** Run `git pull --rebase origin main` before pushing (other tools/PRs may push content/exam updates concurrently).

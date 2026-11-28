@@ -25,6 +25,10 @@ service cloud.firestore {
     match /users/{userId}/{document=**} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
     }
+    match /appConfig/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null && request.auth.token.email == 'jinjuta.nanny84@docchula.com';
+    }
   }
 }
 ```

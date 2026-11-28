@@ -15,8 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Josefin+Sans:wght@500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=81">
-<link rel="stylesheet" id="themeCss" href="assets/monument.css?v=81">
+<link rel="stylesheet" href="assets/style.css?v=82">
+<link rel="stylesheet" id="themeCss" href="assets/monument.css?v=82">
 <script>
   try {
     var s = JSON.parse(localStorage.getItem('nle-tb-v1') || '{}');
@@ -25,7 +25,7 @@
     if (s.hlOff) document.documentElement.classList.add('no-hl');
     var ui = s.uiStyle === 'pixel' ? 'pixel' : 'monument';
     document.documentElement.dataset.ui = ui;
-    if (ui === 'pixel') document.getElementById('themeCss').href = 'assets/pixel.css?v=81';
+    if (ui === 'pixel') document.getElementById('themeCss').href = 'assets/pixel.css?v=82';
   } catch (e) {}
 </script>
 </head>
@@ -48,6 +48,7 @@
     <a class="tool" href="#/notes" title="My notes">🗒️<span>Notes</span></a>
     <a class="tool" href="#/keywords" title="My keywords">🔑<span>Keywords</span></a>
     <a class="tool guide-btn" href="#/guide" title="คู่มือการใช้งาน">📖<span>Guide</span></a>
+    <a class="tool owner-only" id="ownerBtn" href="#/owner" title="เมนูของเจ้าของ: ดูรายการ Unpublished และกด Publish ให้เพื่อนใช้" hidden>👑<span>Owner</span><b id="ownerDraftCount" class="pill" hidden></b></a>
     <a class="tool auth-btn" id="authBtn" href="#/sync" title="Google Sync & App">☁️<span>Sync</span></a>
     <button class="tool" id="fontBtn" title="Font size">Aa</button>
     <button class="tool" id="themeBtn" title="Dark mode">🌙</button>
@@ -58,8 +59,8 @@
   <div class="scrim" id="scrim"></div>
   <main class="main" id="view" tabindex="-1"><p class="loading">กำลังโหลด…</p></main>
 </div>
-<script src="assets/firebase-config.js?v=81"></script>
-<script src="assets/sync.js?v=81"></script>
-<script src="assets/app.js?v=81"></script>
+<script src="assets/firebase-config.js?v=82"></script>
+<script src="assets/sync.js?v=82"></script>
+<script src="assets/app.js?v=82"></script>
 </body>
 </html>

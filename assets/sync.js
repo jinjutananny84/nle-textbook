@@ -4,16 +4,21 @@
   'use strict';
 
   const FB_VER = '11.6.0';
-  const CACHE_NAME = 'nle-tb-v81';
+  const CACHE_NAME = 'nle-tb-v82';
   const CLIENT_ID = Math.random().toString(36).slice(2) + Date.now().toString(36);
   const MAX_IMG_CHARS = 760000; // เผื่อให้เล็กกว่าลิมิต 1MB ของ Firestore document เสมอ
 
   let bridge = null;
   let fb = null; // { auth, db, modAuth, modFs }
   let unsubDoc = null;
+  let unsubFlags = null;
   let pushTimer = null;
   let pushing = false;
   let deferredPrompt = null;
+  let pubFlags = (() => {
+    try { return JSON.parse(localStorage.getItem('nle-pub-flags') || '{}') || {}; } catch (_) { return {}; }
+  })();
+  const flagsStatus = { loaded: false, error: '' };
 
   const state = {
     configured: false,
@@ -510,6 +515,59 @@
     if (unsubDoc) { unsubDoc(); unsubDoc = null; }
   }
 
+  /* ---------- Remote Feature Flags (appConfig/flags) สำหรับปุ่ม Publish ของเจ้าของ ---------- */
+  function flagsDocRef() {
+    return fb.modFs.doc(fb.db, 'appConfig', 'flags');
+  }
+
+  function emitFlags() {
+    if (bridge && bridge.onFlagsChange) bridge.onFlagsChange(Object.assign({}, pubFlags), Object.assign({}, flagsStatus));
+  }
+
+  function startFlagsRealtime() {
+    if (!fb || unsubFlags) return;
+    try {
+      unsubFlags = fb.modFs.onSnapshot(flagsDocRef(), snap => {
+        flagsStatus.loaded = true;
+        flagsStatus.error = '';
+        const d = snap.exists() ? snap.data() : null;
+        pubFlags = (d && d.published && typeof d.published === 'object') ? Object.assign({}, d.published) : {};
+        try { localStorage.setItem('nle-pub-flags', JSON.stringify(pubFlags)); } catch (_) {}
+        emitFlags();
+      }, err => {
+        flagsStatus.loaded = true;
+        flagsStatus.error = err && err.code ? err.code : 'error';
+        emitFlags();
+      });
+    } catch (e) {
+      flagsStatus.loaded = true;
+      flagsStatus.error = e && e.code ? e.code : 'error';
+      emitFlags();
+    }
+  }
+
+  async function setPublishedFlags(patch) {
+    if (!state.user) throw new Error('กรุณาล็อกอินด้วยบัญชีเจ้าของก่อนกด Publish');
+    const f = await loadFirebase();
+    if (!f) throw new Error('ยังไม่ได้เชื่อมต่อ Firebase');
+    const next = Object.assign({}, pubFlags, patch);
+    await f.modFs.setDoc(flagsDocRef(), {
+      published: next,
+      updatedAt: Date.now(),
+      updatedBy: state.user.email || ''
+    }, { merge: true });
+    pubFlags = next;
+    flagsStatus.loaded = true;
+    flagsStatus.error = '';
+    try { localStorage.setItem('nle-pub-flags', JSON.stringify(pubFlags)); } catch (_) {}
+    emitFlags();
+    return Object.assign({}, pubFlags);
+  }
+
+  async function setPublishedFlag(key, value) {
+    return setPublishedFlags({ [key]: !!value });
+  }
+
   async function signInGoogle() {
     if (!state.configured) {
       bridge.toast('ยังไม่ได้ใส่ค่า Firebase Config ใน assets/firebase-config.js');
@@ -577,6 +635,7 @@
       const f = await loadFirebase();
       if (!f || authBound) return;
       authBound = true;
+      startFlagsRealtime();
       f.modAuth.getRedirectResult(f.auth).catch(e => {
         if (e && e.code) { state.error = e.message; emit(); }
       });
@@ -632,6 +691,10 @@
     schedulePush,
     syncImagePut,
     installPWA,
-    cacheAllOffline
+    cacheAllOffline,
+    getPublishedFlags: () => Object.assign({}, pubFlags),
+    getFlagsStatus: () => Object.assign({}, flagsStatus),
+    setPublishedFlag,
+    setPublishedFlags
   };
 })();

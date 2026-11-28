@@ -3115,7 +3115,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v81</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v82</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4572,6 +4572,7 @@
       if (parts[0] === 'flows') return vFlows(params);
       if (parts[0] === 'drugs') return vDrugs(parts[1], params);
       if (parts[0] === 'sync') return vSync();
+      if (parts[0] === 'owner') return vOwner();
       if (parts[0] === 'guide') return vGuide();
       if (parts[0] === 'backup') return vBackup();
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
@@ -4652,12 +4653,19 @@
       b.title = 'Google Sync & App';
     }
   }
-  /* 🔒 Owner-only Draft / Preview Mode (เฉพาะ jinjuta.nanny84@docchula.com จนกว่าจะสั่ง publish) */
+  /* 🔒 โหมด "ของเจ้าของ" (jinjuta.nanny84@docchula.com) — รายการ Unpublished & ปุ่ม Publish */
   const OWNER_EMAIL = 'jinjuta.nanny84@docchula.com';
-  const DRAFT_FEATURES = {
-    pomoMiniCastle: true
-  };
+  const DRAFT_REGISTRY = [
+    {
+      key: 'pomoMiniCastle',
+      title: 'ปุ่มจับเวลาย่อขนาดแบบเขาวงกตสี่เหลี่ยม',
+      area: 'Widget จับเวลา (มุมขวาล่าง)',
+      desc: 'เปลี่ยนปุ่มจับเวลาตอนย่อจากวงกลม เป็นเขาวงกตสี่เหลี่ยม Monument Valley ที่มีตัวน้อง Ida เดินตามเวลาเหมือนหน้าจับเวลาเต็ม',
+      added: 'v81'
+    }
+  ];
   const _onOwnerChange = [];
+  let _friendPreview = false;
   function isOwner() {
     const st = window.NLE_SYNC ? window.NLE_SYNC.getState() : null;
     const em = st && st.user && st.user.email ? st.user.email.toLowerCase() : '';
@@ -4665,18 +4673,144 @@
     if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') return true;
     try { return localStorage.getItem('nle-owner-preview') === '1'; } catch (_) { return false; }
   }
-  function draftOn(flag) { return !!(DRAFT_FEATURES[flag] && isOwner()); }
+  function isPublished(flag) {
+    const pub = window.NLE_SYNC && window.NLE_SYNC.getPublishedFlags ? window.NLE_SYNC.getPublishedFlags() : {};
+    return !!pub[flag];
+  }
+  function draftOn(flag) {
+    if (isPublished(flag)) return true;
+    if (!DRAFT_REGISTRY.some(f => f.key === flag)) return false;
+    return isOwner() && !_friendPreview;
+  }
+  function updateOwnerBadge() {
+    const on = isOwner();
+    const btn = $('#ownerBtn');
+    const pill = $('#ownerDraftCount');
+    if (btn) btn.hidden = !on;
+    if (pill) {
+      const unpub = DRAFT_REGISTRY.filter(f => !isPublished(f.key)).length;
+      pill.hidden = !on || !unpub;
+      pill.textContent = unpub;
+    }
+    let bar = $('#friendPreviewBar');
+    if (on && _friendPreview) {
+      if (!bar) {
+        bar = document.createElement('div');
+        bar.id = 'friendPreviewBar';
+        bar.className = 'friend-preview-bar';
+        bar.innerHTML = '<span>👁️ กำลังดูใน<b>มุมมองเพื่อน</b> (ซ่อนฟีเจอร์ที่ยัง Unpublished)</span><button type="button" id="fpExitBtn">กลับสู่มุมมองเจ้าของ</button>';
+        document.body.appendChild(bar);
+        $('#fpExitBtn', bar).onclick = () => { _friendPreview = false; notifyOwnerUI(); if (location.hash.replace(/^#\/?/, '').split('?')[0] === 'owner') vOwner(); };
+      }
+    } else if (bar) {
+      bar.remove();
+    }
+  }
+  function notifyOwnerUI() {
+    const on = isOwner();
+    document.documentElement.classList.toggle('owner-preview', on);
+    updateOwnerBadge();
+    _onOwnerChange.forEach(fn => { try { fn(on); } catch (_) {} });
+  }
   function syncOwnerPreview(st) {
     const em = st && st.user && st.user.email ? st.user.email.toLowerCase() : '';
     try {
       if (em === OWNER_EMAIL) localStorage.setItem('nle-owner-preview', '1');
       else if (em) localStorage.removeItem('nle-owner-preview');
     } catch (_) {}
-    const on = isOwner();
-    document.documentElement.classList.toggle('owner-preview', on);
-    _onOwnerChange.forEach(fn => { try { fn(on); } catch (_) {} });
+    notifyOwnerUI();
   }
-  document.documentElement.classList.toggle('owner-preview', isOwner());
+  function vOwner() {
+    renderSidebar();
+    if (!isOwner()) {
+      view.innerHTML = `<div class="hero"><h1>🔒 เฉพาะของเจ้าของ</h1><p>หน้านี้สำหรับจัดการฟีเจอร์ของเจ้าของเว็บไซต์ (<code>${OWNER_EMAIL}</code>) เท่านั้น</p><p><a class="btn" href="#/">← กลับหน้าแรก</a> <a class="btn" href="#/sync">☁️ ไปหน้า Login</a></p></div>`;
+      return;
+    }
+    const st = window.NLE_SYNC ? window.NLE_SYNC.getState() : {};
+    const fs = window.NLE_SYNC && window.NLE_SYNC.getFlagsStatus ? window.NLE_SYNC.getFlagsStatus() : { loaded: false, error: '' };
+    const signedInAsOwner = !!(st.user && st.user.email && st.user.email.toLowerCase() === OWNER_EMAIL);
+    const unpubList = DRAFT_REGISTRY.filter(f => !isPublished(f.key));
+    const pubList = DRAFT_REGISTRY.filter(f => isPublished(f.key));
+    const needRules = fs.error === 'permission-denied';
+    const rulesCode = `rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    match /users/{userId}/{document=**} {\n      allow read, write: if request.auth != null && request.auth.uid == userId;\n    }\n    match /appConfig/{docId} {\n      allow read: if true;\n      allow write: if request.auth != null && request.auth.token.email == '${OWNER_EMAIL}';\n    }\n  }\n}`;
+    const itemHtml = f => {
+      const pub = isPublished(f.key);
+      return `<div class="owner-item ${pub ? 'is-pub' : 'is-draft'}">
+        <div class="owner-item-hd">
+          <div class="owner-item-title">
+            <span class="owner-badge ${pub ? 'pub' : 'draft'}">${pub ? '🌐 Published (เพื่อนใช้ได้แล้ว)' : '🔒 Unpublished (เฉพาะของเจ้าของ)'}</span>
+            <h3>${esc(f.title)}</h3>
+          </div>
+          <div class="owner-item-act">
+            <button type="button" class="btn ${pub ? '' : 'primary'}" data-pub-key="${esc(f.key)}" data-pub-next="${pub ? '0' : '1'}"${!signedInAsOwner ? ' disabled title="กรุณาล็อกอินด้วยบัญชีเจ้าของก่อน"' : ''}>${pub ? '🔒 ซ่อนกลับ (Unpublish)' : '🚀 Publish ให้เพื่อนใช้เลย'}</button>
+          </div>
+        </div>
+        <div class="owner-meta"><span>📍 ${esc(f.area)}</span><span>🏷️ ${esc(f.added)}</span><code>${esc(f.key)}</code></div>
+        <p class="owner-desc">${esc(f.desc)}</p>
+      </div>`;
+    };
+    view.innerHTML = `<div class="hero">
+        <h1>👑 เมนูของเจ้าของ <small style="font-size:.5em;opacity:.65">Draft &amp; Publish</small></h1>
+        <p>บัญชีเจ้าของ: <b>${OWNER_EMAIL}</b> · ยังไม่ Publish <b>${unpubList.length}</b> รายการ · Publish แล้ว <b>${pubList.length}</b> รายการ</p>
+      </div>
+      <div class="owner-bar">
+        <button type="button" class="btn${_friendPreview ? ' primary' : ''}" id="owPreviewBtn">${_friendPreview ? '👑 กลับสู่มุมมองเจ้าของ' : '👁️ ทดลองดูมุมมองเพื่อน'}</button>
+        ${unpubList.length ? `<button type="button" class="btn primary" id="owPubAll"${!signedInAsOwner ? ' disabled' : ''}>🚀 Publish ทั้งหมด (${unpubList.length})</button>` : ''}
+        <button type="button" class="btn" id="owCopyList">📋 คัดลอกรายการ Unpublished</button>
+      </div>
+      ${!signedInAsOwner ? `<div class="owner-notice">⚠️ ตอนนี้ยังไม่ได้ล็อกอิน Google ด้วย <b>${OWNER_EMAIL}</b> — กรุณาไปที่ <a href="#/sync">☁️ Sync</a> เพื่อล็อกอินก่อนกดปุ่ม Publish ให้เพื่อนครับ</div>` : ''}
+      ${needRules ? `<div class="owner-rules">
+        <h3>⚙️ ตั้งค่าสิทธิ์ Firestore ครั้งแรก (ทำครั้งเดียว 15 วินาที)</h3>
+        <p>เพื่อให้ปุ่ม <b>Publish ให้เพื่อนใช้เลย</b> อัปเดตให้เพื่อนทุกคนได้ทันที กรุณานำ Rules ด้านล่างไปวางใน Firebase Console → Firestore Database → Rules แล้วกด <b>Publish</b>:</p>
+        <pre><code>${esc(rulesCode)}</code></pre>
+        <div class="owner-bar"><button type="button" class="btn primary" id="owCopyRules">📋 คัดลอก Rules</button><a class="btn" href="https://console.firebase.google.com/project/jinjutananny84-6965c/firestore/rules" target="_blank" rel="noopener">🔗 เปิดหน้า Firebase Rules</a></div>
+      </div>` : ''}
+      <div class="owner-list">
+        ${DRAFT_REGISTRY.length ? DRAFT_REGISTRY.map(itemHtml).join('') : '<p class="empty">ตอนนี้ไม่มีฟีเจอร์ค้างอยู่ในรายการ Draft แล้วครับ 🎉</p>'}
+      </div>`;
+    const pvBtn = $('#owPreviewBtn', view);
+    if (pvBtn) pvBtn.onclick = () => { _friendPreview = !_friendPreview; notifyOwnerUI(); vOwner(); };
+    const cpRules = $('#owCopyRules', view);
+    if (cpRules) cpRules.onclick = () => navigator.clipboard.writeText(rulesCode).then(() => toast('📋 คัดลอก Firestore Rules แล้ว'));
+    const cpList = $('#owCopyList', view);
+    if (cpList) cpList.onclick = () => {
+      const txt = unpubList.length
+        ? 'รายการที่ยัง Unpublished:\n' + unpubList.map((f, i) => `${i + 1}. ${f.title} (${f.area} · ${f.added}) [${f.key}]`).join('\n')
+        : 'ไม่มีรายการที่ยัง Unpublished';
+      navigator.clipboard.writeText(txt).then(() => toast('📋 คัดลอกรายการแล้ว'));
+    };
+    const handlePublishErr = err => {
+      const msg = err && err.code === 'permission-denied'
+        ? 'ยังไม่ได้เพิ่มสิทธิ์ appConfig ใน Firestore Rules (ดูวิธีด้านบนแล้วกด Publish ใน Firebase Console)'
+        : (err && err.message ? err.message : 'อัปเดตไม่สำเร็จ');
+      toast('⚠️ ' + msg);
+      vOwner();
+    };
+    const pubAll = $('#owPubAll', view);
+    if (pubAll) pubAll.onclick = async () => {
+      pubAll.disabled = true;
+      try {
+        const patch = {};
+        unpubList.forEach(f => { patch[f.key] = true; });
+        await window.NLE_SYNC.setPublishedFlags(patch);
+        toast(`🚀 Publish ทั้งหมด ${unpubList.length} รายการให้เพื่อนใช้เรียบร้อย!`);
+        vOwner();
+      } catch (e) { handlePublishErr(e); }
+    };
+    view.querySelectorAll('[data-pub-key]').forEach(btn => {
+      btn.onclick = async () => {
+        const key = btn.dataset.pubKey;
+        const next = btn.dataset.pubNext === '1';
+        btn.disabled = true;
+        try {
+          await window.NLE_SYNC.setPublishedFlag(key, next);
+          toast(next ? '🚀 Publish ให้เพื่อนใช้เรียบร้อยแล้ว!' : '🔒 ซ่อนกลับเป็นเฉพาะของเจ้าของแล้ว');
+          vOwner();
+        } catch (e) { handlePublishErr(e); }
+      };
+    });
+  }
+  notifyOwnerUI();
   if (window.NLE_SYNC) {
     window.NLE_SYNC.init({
       getS: () => S,
@@ -4700,10 +4834,16 @@
         // วาดรูปใหม่ถ้าหน้าปัจจุบันมีรูปที่เคยขึ้น missing
         if (view.querySelector('.uimg.missing')) route();
       },
+      onFlagsChange: () => {
+        notifyOwnerUI();
+        if (INDEX && location.hash.replace(/^#\/?/, '').split('?')[0] === 'owner') vOwner();
+      },
       onChange: st => {
         syncOwnerPreview(st);
         updateAuthBtn(st);
-        if (INDEX && location.hash.replace(/^#\/?/, '').split('?')[0] === 'sync') vSync();
+        const cur = location.hash.replace(/^#\/?/, '').split('?')[0];
+        if (INDEX && cur === 'sync') vSync();
+        if (INDEX && cur === 'owner') vOwner();
       }
     });
   }
