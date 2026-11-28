@@ -950,35 +950,38 @@ table.dt tr.open td{background:var(--surface2)}
 .flag-btn{margin-left:auto;font:inherit;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid var(--line);background:var(--surface2);color:var(--muted);cursor:pointer;transition:all .15s}
 .flag-btn:hover{border-color:#ff6b57;color:#e84f42}
 .flag-btn.on{background:rgba(255,107,87,.15);border-color:#ff6b57;color:#e84f42}
-/* 🏛️ Monument Valley Post-Exam Result Graphic */
-.mv-res{border-radius:18px;overflow:hidden;border:1px solid rgba(79,179,167,.45);background:linear-gradient(160deg,#b8efe3 0%,#86d8cb 48%,#5dc3b8 100%);color:#14343d;box-shadow:var(--shadow);margin:0 0 16px;position:relative}
+/* 🏛️ Monument Valley Post-Exam Result Graphic (compact single horizontal 3-col strip) */
+.mv-res-row{display:grid;grid-template-columns:1.25fr .9fr 1.05fr;gap:10px;align-items:stretch;margin:12px 0 14px}
+@media (max-width:860px){.mv-res-row{grid-template-columns:1fr}}
+.mv-res{border-radius:14px;overflow:hidden;border:1px solid rgba(79,179,167,.45);background:linear-gradient(160deg,#b8efe3 0%,#86d8cb 48%,#5dc3b8 100%);color:#14343d;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between;position:relative}
 [data-theme="dark"] .mv-res{background:linear-gradient(160deg,#0f2b36 0%,#15404d 50%,#1d5764 100%);color:#e6faf7;border-color:rgba(124,224,211,.28)}
-.mv-res-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:16px 18px 4px;position:relative;z-index:2}
-.mv-res-badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;background:rgba(255,255,255,.85);color:#c7382f}
+.mv-res-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px;padding:10px 12px 2px}
+.mv-res-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;background:rgba(255,255,255,.85);color:#c7382f}
 [data-theme="dark"] .mv-res-badge{background:rgba(15,43,54,.85);color:#ff8470}
-.mv-res-score{display:flex;align-items:baseline;gap:10px;margin-top:4px;flex-wrap:wrap}
-.mv-res-pct{font-size:38px;font-weight:800;line-height:1.05;letter-spacing:-.02em}
-.mv-res-sub{font-size:13.5px;font-weight:600;opacity:.85}
-.mv-res-pill{padding:6px 12px;border-radius:12px;font-size:12.5px;font-weight:700;background:#14343d;color:#7ce0d3}
+.mv-res-score{display:flex;align-items:baseline;gap:7px;margin-top:2px;flex-wrap:wrap}
+.mv-res-pct{font-size:24px;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+.mv-res-sub{font-size:12px;font-weight:600;opacity:.85}
+.mv-res-pill{padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700;background:#14343d;color:#7ce0d3;white-space:nowrap}
 .mv-res-pill.fail{background:#c7382f;color:#fff}
-.mv-res-svg{width:100%;height:auto;display:block;user-select:none}
+.mv-res-svg{width:100%;max-height:132px;height:auto;display:block;user-select:none}
 .mv-res-svg .mv-tw{cursor:pointer;transition:transform .2s,filter .2s}
-.mv-res-svg .mv-tw:hover{filter:brightness(1.08);transform:translateY(-3px)}
-.mv-res-svg .mv-tw.sel{filter:drop-shadow(0 0 8px rgba(76,242,242,.8))}
-.mv-res-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:4px 16px 14px;font-size:12.5px}
-.mv-res-detail{padding:5px 11px;border-radius:9px;background:rgba(255,255,255,.82);color:#14343d;font-weight:600}
+.mv-res-svg .mv-tw:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.mv-res-svg .mv-tw.sel{filter:drop-shadow(0 0 6px rgba(76,242,242,.8))}
+.mv-res-foot{padding:2px 10px 8px;font-size:11px}
+.mv-res-detail{padding:3px 8px;border-radius:7px;background:rgba(255,255,255,.82);color:#14343d;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 [data-theme="dark"] .mv-res-detail{background:rgba(15,43,54,.82);color:#e6faf7}
-.mv-res-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 14px}
-@media (max-width:760px){.mv-res-grid{grid-template-columns:1fr}}
-.mv-bar-row{margin:7px 0}
-.mv-bar-lbl{display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px}
-.mv-bar-trk{height:7px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);overflow:hidden}
+.mv-res-col{margin:0!important;padding:10px 12px!important;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.mv-res-col h3{font-size:13px;margin:0 0 6px!important}
+.mv-bars-scroll{max-height:164px;overflow-y:auto;padding-right:2px}
+.mv-bar-row{margin:5px 0}
+.mv-bar-lbl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:2px;gap:6px}
+.mv-bar-trk{height:6px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);overflow:hidden}
 .mv-bar-trk i{display:block;height:100%;border-radius:999px}
-.mv-ana-box{padding:11px 13px;border-radius:11px;background:rgba(255,107,87,.1);border:1px solid rgba(255,107,87,.32);font-size:13.5px;line-height:1.6;margin-bottom:10px}
-.mv-stat-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;margin-bottom:10px}
-.mv-stat-trio>div{padding:7px 6px;border-radius:10px;background:var(--bg);border:1px solid var(--line)}
-.mv-stat-trio small{display:block;font-size:11.5px;color:var(--muted)}
-.mv-stat-trio b{font-size:17px}
+.mv-ana-box{padding:8px 10px;border-radius:9px;background:rgba(255,107,87,.1);border:1px solid rgba(255,107,87,.3);font-size:12px;line-height:1.48;margin-bottom:7px}
+.mv-stat-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px;font-size:11.5px;font-weight:700}
+.mv-stat-chips span{padding:2px 8px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.mv-res-col .choice{gap:5px;margin:0}
+.mv-res-col .choice .btn{padding:4px 9px;font-size:11.5px}
 /* 🍅 Monument Valley Rotating Castle Pomodoro Widget */
 .pomo-wrap{position:fixed;right:14px;bottom:max(14px,env(safe-area-inset-bottom));z-index:45;font-size:13px}
 body.has-readbar .pomo-wrap{bottom:max(68px,calc(env(safe-area-inset-bottom) + 64px))}

@@ -3115,7 +3115,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v79</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v80</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3527,43 +3527,43 @@
     const maxP = Math.max(...grps.map(g => g.ok / g.tot));
     const bestIdx = grps.findIndex(g => g.ok / g.tot === maxP);
 
-    // สร้าง SVG หอคอยไอโซเมตริก Monument Valley (coral-red + mint mist + 60% threshold + Ida & Totem)
+    // สร้าง SVG หอคอยไอโซเมตริก Monument Valley แบบกระชับ (จบในแถบเดียวไม่ต้องเลื่อน)
     const n = grps.length;
-    const vw = Math.max(420, Math.min(820, n * 86 + 72));
-    const baseY = 236, maxH = 148, passY = baseY - maxH * 0.6;
-    const stepX = (vw - 88) / Math.max(1, n);
+    const vw = Math.max(280, Math.min(680, n * 68 + 60));
+    const baseY = 148, maxH = 88, passY = baseY - maxH * 0.6;
+    const stepX = (vw - 56) / Math.max(1, n);
     let svg = '';
     const bgF = dark ? 'rgba(124,224,211,.08)' : 'rgba(255,255,255,.28)';
-    svg += `<polygon points="20,210 52,194 84,210 52,226" fill="${bgF}"/>`;
-    svg += `<polygon points="${vw - 84},204 ${vw - 52},188 ${vw - 20},204 ${vw - 52},220" fill="${bgF}"/>`;
-    if (n > 1) svg += `<rect x="44" y="${baseY - 22}" width="${vw - 88}" height="20" fill="${dark ? '#a83630' : '#e8584a'}" opacity=".42"/>`;
-    svg += `<line x1="18" y1="${passY}" x2="${vw - 18}" y2="${passY}" stroke="${dark ? '#4cf2f2' : '#0284c7'}" stroke-width="1.8" stroke-dasharray="6 5" opacity=".88"/>`;
-    svg += `<rect x="${vw - 102}" y="${passY - 11}" width="84" height="19" rx="9" fill="${dark ? '#0f2b36' : '#ffffff'}" opacity=".92"/>`;
-    svg += `<text x="${vw - 60}" y="${passY + 2}" text-anchor="middle" font-size="10.5" font-weight="700" fill="${dark ? '#4cf2f2' : '#0284c7'}">เกณฑ์ 60%</text>`;
+    svg += `<polygon points="12,134 34,123 56,134 34,145" fill="${bgF}"/>`;
+    svg += `<polygon points="${vw - 56},130 ${vw - 34},119 ${vw - 12},130 ${vw - 34},141" fill="${bgF}"/>`;
+    if (n > 1) svg += `<rect x="28" y="${baseY - 15}" width="${vw - 56}" height="14" fill="${dark ? '#a83630' : '#e8584a'}" opacity=".42"/>`;
+    svg += `<line x1="12" y1="${passY}" x2="${vw - 12}" y2="${passY}" stroke="${dark ? '#4cf2f2' : '#0284c7'}" stroke-width="1.6" stroke-dasharray="5 4" opacity=".88"/>`;
+    svg += `<rect x="${vw - 78}" y="${passY - 10}" width="66" height="17" rx="8" fill="${dark ? '#0f2b36' : '#ffffff'}" opacity=".92"/>`;
+    svg += `<text x="${vw - 45}" y="${passY + 2}" text-anchor="middle" font-size="9.5" font-weight="700" fill="${dark ? '#4cf2f2' : '#0284c7'}">เกณฑ์ 60%</text>`;
 
     grps.forEach((g, idx) => {
       const gp = Math.round(g.ok * 100 / g.tot);
-      const h = Math.max(30, Math.round((gp / 100) * maxH));
-      const cx = Math.round(44 + stepX * idx + stepX / 2);
-      const w = Math.min(26, Math.max(16, Math.round(stepX * 0.31)));
+      const h = Math.max(22, Math.round((gp / 100) * maxH));
+      const cx = Math.round(28 + stepX * idx + stepX / 2);
+      const w = Math.min(20, Math.max(13, Math.round(stepX * 0.28)));
       const ty = baseY - h, isP = gp >= 60;
       const cT = isP ? '#ff8470' : '#e2b6a3', cL = isP ? '#ff5f4d' : '#c99682', cR = isP ? '#d13c32' : '#a37261';
       svg += `<g class="mv-tw" data-i="${idx}">`;
-      svg += `<polygon points="${cx},${baseY + 14} ${cx - w},${baseY + 4} ${cx},${baseY - 4} ${cx + w},${baseY + 4}" fill="rgba(14,45,54,.18)"/>`;
-      svg += `<polygon points="${cx - w},${ty + 10} ${cx},${ty + 20} ${cx},${baseY + 10} ${cx - w},${baseY}" fill="${cL}"/>`;
-      svg += `<polygon points="${cx},${ty + 20} ${cx + w},${ty + 10} ${cx + w},${baseY} ${cx},${baseY + 10}" fill="${cR}"/>`;
-      svg += `<polygon points="${cx},${ty} ${cx + w},${ty + 10} ${cx},${ty + 20} ${cx - w},${ty + 10}" fill="${cT}"/>`;
-      if (isP) svg += `<polygon points="${cx},${ty + 4} ${cx + 8},${ty + 9} ${cx},${ty + 14} ${cx - 8},${ty + 9}" fill="#4cf2f2" opacity=".95"/>`;
+      svg += `<polygon points="${cx},${baseY + 10} ${cx - w},${baseY + 3} ${cx},${baseY - 3} ${cx + w},${baseY + 3}" fill="rgba(14,45,54,.18)"/>`;
+      svg += `<polygon points="${cx - w},${ty + 7} ${cx},${ty + 14} ${cx},${baseY + 7} ${cx - w},${baseY}" fill="${cL}"/>`;
+      svg += `<polygon points="${cx},${ty + 14} ${cx + w},${ty + 7} ${cx + w},${baseY} ${cx},${baseY + 7}" fill="${cR}"/>`;
+      svg += `<polygon points="${cx},${ty} ${cx + w},${ty + 7} ${cx},${ty + 14} ${cx - w},${ty + 7}" fill="${cT}"/>`;
+      if (isP) svg += `<polygon points="${cx},${ty + 3} ${cx + 6},${ty + 7} ${cx},${ty + 11} ${cx - 6},${ty + 7}" fill="#4cf2f2" opacity=".95"/>`;
       if (idx === bestIdx) {
-        const iy = ty - 3;
-        svg += `<rect x="${cx - 5}" y="${iy - 15}" width="10" height="15" rx="1.5" fill="#facc15" stroke="#ca8a04" stroke-width=".9"/>`;
-        svg += `<circle cx="${cx}" cy="${iy - 9}" r="2.2" fill="#fff"/><circle cx="${cx}" cy="${iy - 9}" r="1" fill="#14343d"/>`;
-        svg += `<polygon points="${cx},${iy - 25} ${cx - 4.2},${iy - 15} ${cx + 4.2},${iy - 15}" fill="#fff"/>`;
+        const iy = ty - 2;
+        svg += `<rect x="${cx - 4}" y="${iy - 12}" width="8" height="12" rx="1" fill="#facc15" stroke="#ca8a04" stroke-width=".8"/>`;
+        svg += `<circle cx="${cx}" cy="${iy - 7}" r="1.8" fill="#fff"/><circle cx="${cx}" cy="${iy - 7}" r=".8" fill="#14343d"/>`;
+        svg += `<polygon points="${cx},${iy - 20} ${cx - 3.5},${iy - 12} ${cx + 3.5},${iy - 12}" fill="#fff"/>`;
       }
-      const ly = idx === bestIdx ? ty - 31 : ty - 7;
-      svg += `<text x="${cx}" y="${ly}" text-anchor="middle" font-size="11.5" font-weight="800" fill="${dark ? '#fff' : '#14343d'}">${gp}%</text>`;
-      svg += `<text x="${cx}" y="${baseY + 25}" text-anchor="middle" font-size="11" font-weight="700" fill="${dark ? '#d9faf5' : '#14343d'}">${esc(g.short)}</text>`;
-      svg += `<text x="${cx}" y="${baseY + 38}" text-anchor="middle" font-size="10" font-weight="600" fill="${dark ? '#8cdcd2' : '#1f5360'}">${g.ok}/${g.tot}</text>`;
+      const ly = idx === bestIdx ? ty - 24 : ty - 5;
+      svg += `<text x="${cx}" y="${ly}" text-anchor="middle" font-size="10.5" font-weight="800" fill="${dark ? '#fff' : '#14343d'}">${gp}%</text>`;
+      svg += `<text x="${cx}" y="${baseY + 20}" text-anchor="middle" font-size="10" font-weight="700" fill="${dark ? '#d9faf5' : '#14343d'}">${esc(g.short)}</text>`;
+      svg += `<text x="${cx}" y="${baseY + 31}" text-anchor="middle" font-size="9.5" font-weight="600" fill="${dark ? '#8cdcd2' : '#1f5360'}">${g.ok}/${g.tot}</text>`;
       svg += `</g>`;
     });
 
@@ -3573,8 +3573,8 @@
     const boost = Math.min(Math.max(2, needPass), missTop2);
     const projPct = Math.min(100, Math.round((right + boost) * 100 / total));
     const anaText = pass
-      ? `<b>จุดแข็ง:</b> ทำได้ดีใน <b>${esc(best.label)}</b> (${best.ok}/${best.tot} · ${Math.round(best.ok * 100 / best.tot)}%)` + (missTop2 > 0 ? `<br><b>เก็บเพิ่มได้อีก:</b> <b>${esc(w1.label)}</b> (${w1.ok}/${w1.tot})${w2 && w2.ok < w2.tot ? ` และ <b>${esc(w2.label)}</b> (${w2.ok}/${w2.tot})` : ''} — ถ้าเก็บเพิ่มได้อีก ${boost} ข้อ คะแนนจะขึ้นเป็น <b>${projPct}%</b>` : `<br>เยี่ยมมาก! ทำได้ครบทุกข้อในชุดนี้แล้ว`)
-      : `<b>ต่ำกว่าเกณฑ์ 60%</b> (ขาดอีก <b>${needPass} ข้อ</b>)<br>แนะนำให้ทวน <b>${esc(w1.label)}</b> (${w1.ok}/${w1.tot})${w2 && w2.ok < w2.tot ? ` และ <b>${esc(w2.label)}</b> (${w2.ok}/${w2.tot})` : ''} ก่อน — เก็บเพิ่มอีก ${boost} ข้อจะขยับขึ้นเป็น <b>${projPct}%</b>`;
+      ? `<b>จุดแข็ง:</b> ${esc(best.label)} (${best.ok}/${best.tot} · ${Math.round(best.ok * 100 / best.tot)}%)` + (missTop2 > 0 ? `<br><b>เก็บเพิ่ม:</b> ${esc(w1.label)} (${w1.ok}/${w1.tot})${w2 && w2.ok < w2.tot ? `, ${esc(w2.label)}` : ''} (+${boost} ข้อ → <b>${projPct}%</b>)` : `<br>เยี่ยมมาก! ครบทุกข้อแล้ว`)
+      : `<b>ต่ำกว่า 60%</b> (ขาด <b>${needPass} ข้อ</b>)<br>ควรทวน <b>${esc(w1.label)}</b> (${w1.ok}/${w1.tot})${w2 && w2.ok < w2.tot ? `, <b>${esc(w2.label)}</b>` : ''} (+${boost} ข้อ → <b>${projPct}%</b>)`;
 
     const barsHtml = sortedWeak.map(g => {
       const gp = Math.round(g.ok * 100 / g.tot);
@@ -3583,34 +3583,38 @@
     }).join('');
 
     const weakHref = w1 ? `#/quiz?ch=${w1.ch}` : '#/quiz';
-    container.innerHTML = `<div class="mv-res">
+    container.innerHTML = `<div class="mv-res-row">
+      <div class="mv-res">
         <div class="mv-res-top">
           <div>
             <span class="mv-res-badge">🏛️ ${esc(title)}</span>
-            <div class="mv-res-score"><span class="mv-res-pct">${pct}%</span><span class="mv-res-sub">ถูก ${right} / ${total} ข้อ${opts.usedSec != null ? ' · ใช้เวลา ' + fmtT(opts.usedSec) : ''}</span></div>
+            <div class="mv-res-score"><span class="mv-res-pct">${pct}%</span><span class="mv-res-sub">${right}/${total} ข้อ${opts.usedSec != null ? ' · ' + fmtT(opts.usedSec) : ''}</span></div>
           </div>
-          <div class="mv-res-pill${pass ? '' : ' fail'}">${pass ? `✓ ผ่านเกณฑ์ 60% (+${pct - 60}%)` : `⚠ ต่ำกว่า 60% (ขาด ${needPass} ข้อ)`}</div>
+          <div class="mv-res-pill${pass ? '' : ' fail'}">${pass ? `✓ ผ่าน 60%` : `⚠ ขาด ${needPass} ข้อ`}</div>
         </div>
-        <svg class="mv-res-svg" viewBox="0 0 ${vw} 284">${svg}</svg>
-        <div class="mv-res-foot"><div class="mv-res-detail">👆 แตะที่หอคอยแต่ละบทเพื่อดูคะแนนรายบท</div></div>
+        <svg class="mv-res-svg" viewBox="0 0 ${vw} 188">${svg}</svg>
+        <div class="mv-res-foot"><div class="mv-res-detail">👆 แตะหอคอยดูคะแนนรายบท</div></div>
       </div>
-      <div class="mv-res-grid">
-        <div class="panel" style="margin:0"><h3>📊 คะแนนแยกตามหัวข้อ</h3>${barsHtml}</div>
-        <div class="panel" style="margin:0"><h3>🎯 วิเคราะห์จุดอ่อน</h3>
+      <div class="panel mv-res-col">
+        <div><h3>📊 คะแนนแยกหัวข้อ</h3><div class="mv-bars-scroll">${barsHtml}</div></div>
+      </div>
+      <div class="panel mv-res-col">
+        <div><h3>🎯 วิเคราะห์ &amp; ไปต่อ</h3>
           <div class="mv-ana-box">${anaText}</div>
-          <div class="mv-stat-trio">
-            <div><small>ถูก</small><b style="color:var(--ok)">${right}</b></div>
-            <div><small>ผิด / ข้าม</small><b style="color:var(--bad)">${wrong + unans}</b></div>
-            <div><small>ปักหมุด 🚩</small><b style="color:#f59e0b">${flagCnt}</b></div>
-          </div>
-          <div class="choice" style="margin:0">
-            ${opts.onRetake ? '<button class="btn primary" id="resRetake">🔄 ทำใหม่ชุดนี้</button>' : `<a class="btn primary" href="${weakHref}">📝 ทำ Quiz บทที่อ่อนสุด</a>`}
-            <a class="btn" href="#/wrong">📕 ข้อผิด</a>
-            <a class="btn" href="#/wrong?tab=flag">🚩 ปักหมุด</a>
-            ${opts.extraHref ? `<a class="btn" href="${opts.extraHref}">${esc(opts.extraLabel || 'เลือกชุดอื่น')}</a>` : ''}
+          <div class="mv-stat-chips">
+            <span style="color:var(--ok)">✓ ถูก ${right}</span>
+            <span style="color:var(--bad)">✗ ผิด ${wrong + unans}</span>
+            <span style="color:#f59e0b">🚩 ปักหมุด ${flagCnt}</span>
           </div>
         </div>
-      </div>`;
+        <div class="choice">
+          ${opts.onRetake ? '<button class="btn primary" id="resRetake">🔄 ทำใหม่</button>' : `<a class="btn primary" href="${weakHref}">📝 Quiz จุดอ่อน</a>`}
+          <a class="btn" href="#/wrong">📕 ข้อผิด</a>
+          <a class="btn" href="#/wrong?tab=flag">🚩 ปักหมุด</a>
+          ${opts.extraHref ? `<a class="btn" href="${opts.extraHref}">${esc(opts.extraLabel || 'ชุดอื่น')}</a>` : ''}
+        </div>
+      </div>
+    </div>`;
     const det = container.querySelector('.mv-res-detail');
     container.querySelectorAll('.mv-tw').forEach(tw => {
       tw.addEventListener('click', () => {
