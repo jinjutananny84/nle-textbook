@@ -3104,7 +3104,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v72</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v73</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -3261,6 +3261,43 @@
       S.plan = { date, buf: Math.max(0, parseInt($('#plBuf').value) || 0), chs }; save(); rerender(); toast('บันทึกแผนแล้ว');
     };
     const cl = $('#plClear'); if (cl) cl.onclick = () => { delete S.plan; save(); rerender(); };
+  }
+  async function vGuide() {
+    await loadIndex();
+    renderSidebar();
+    view.innerHTML = `<div class="hero"><h1>📖 คู่มือการใช้งาน</h1><p>สรุปวิธีใช้เว็บอ่านเตรียมสอบให้คุ้มที่สุด (อ่านจบใน 1 นาที)</p></div>
+      <div class="panel"><h3>1. เริ่มต้นใช้งาน (ไม่ต้องล็อกอินก่อนก็ได้)</h3>
+        <ul class="guide-list">
+          <li>เปิดอ่านบทเรียนและทำข้อสอบได้ทันที ข้อมูลทั้งหมดจะบันทึกไว้ในเครื่องอัตโนมัติ</li>
+          <li><b>แนะนำ:</b> กด <a href="#/sync">☁️ Sync</a> เพื่อเข้าสู่ระบบด้วย Google — ข้อมูลที่ทำไว้ก่อนล็อกอินจะถูกซิงค์ขึ้นคลาวด์ให้ทันที ไม่หาย และเปิดอ่านต่อข้าม iPad / มือถือ / คอมได้</li>
+        </ul>
+      </div>
+      <div class="panel"><h3>2. อ่านคู่ชีท A3 &amp; เครื่องมือระหว่างอ่าน</h3>
+        <ul class="guide-list">
+          <li><b>เลขกล่องตรงกับชีท A3:</b> กดปุ่มกระโดดไปเลขกล่องได้ที่มุมขวาล่าง เพื่อเปิดอ่านคู่กันแบบ Split View</li>
+          <li><b>ลากคลุมข้อความ:</b> ไฮไลต์ได้ <b>6 สี</b>, เพิ่ม<b>โน้ตแปะ</b>, เก็บเป็น <b>Keyword</b> (เอาไปท่องเป็น Flashcard) หรือกด <b>🔍 ถาม Gemini AI</b> ในหน้าเดิมได้ทันที</li>
+          <li><b>ประเมิน 5 ระดับท้ายกล่อง:</b> ช่วยเว็บจัดลำดับทบทวนและหาจุดอ่อน (เช่น สีชมพู 🧠 จำเยอะ / ★–★★ ยังไม่แม่น)</li>
+        </ul>
+      </div>
+      <div class="panel"><h3>3. ทำข้อสอบ &amp; เคลียร์จุดอ่อน</h3>
+        <ul class="guide-list">
+          <li><b>ข้อสอบท้ายกล่อง:</b> ทำแล้วระบบจำคำตอบให้ ข้อที่ตอบผิดจะเข้ากอง <a href="#/wrong">📕 Mistakes</a> อัตโนมัติ (พอทำซ้ำจนถูกจะออกจากกองเอง)</li>
+          <li><a href="#/quiz">📝 Quiz</a>: สุ่มข้อสอบเลือกบทได้ หรือกรองเฉพาะหัวข้อที่ยังไม่แม่น / ข้อที่ยังไม่เคยทำ</li>
+          <li><a href="#/mock">⏱️ Mock Exam แยกตามปี</a>: จำลองทำข้อสอบจริงแยกตามปี (74–79, Mock) จับเวลา + ส่งคำตอบทีเดียว + ดูคะแนนแยกตามบท</li>
+        </ul>
+      </div>
+      <div class="panel"><h3>4. เครื่องมือช่วยจำ &amp; ใช้งานออฟไลน์</h3>
+        <ul class="guide-list">
+          <li><b>ช่วยจำ:</b> <a href="#/cards">🃏 Cards</a> (Flashcards), <a href="#/review">📅 Review</a> (ทวนตามรอบความจำ), <a href="#/db">💊 Drug&amp;Bug</a>, <a href="#/numbers">🔢 Numbers</a>, <a href="#/flows">🩺 Flowchart</a>, <a href="#/drill">🧠 Drill</a></li>
+          <li><b>ออฟไลน์ &amp; AI:</b> เข้า <a href="#/sync">☁️ Sync</a> เพื่อติดตั้งเป็นแอป (PWA), กดโหลดทุกบทไว้ใช้ออฟไลน์, ใส่ Gemini API Key ฟรี และสลับธีม Monument Valley / Pixel Classic ได้</li>
+        </ul>
+      </div>
+      <div class="choice">
+        <a class="btn primary" href="#/">🏠 กลับหน้าแรก</a>
+        <a class="btn" href="#/mock">⏱️ ลองทำ Mock Exam</a>
+        <a class="btn" href="#/sync">☁️ ตั้งค่า Sync / ออฟไลน์</a>
+      </div>`;
+    window.scrollTo(0, 0);
   }
   async function vHome() {
     await loadAll();
@@ -4558,6 +4595,7 @@
       if (parts[0] === 'flows') return vFlows(params);
       if (parts[0] === 'drugs') return vDrugs(parts[1], params);
       if (parts[0] === 'sync') return vSync();
+      if (parts[0] === 'guide') return vGuide();
       if (parts[0] === 'backup') return vBackup();
       if (parts[0] === 'map' && parts[1]) return vMap(parts[1]);
       if (parts[1]) return vSection(parts[0], parseInt(parts[1]));

@@ -940,3 +940,9 @@ table.dt tr.open td{background:var(--surface2)}
 .mock-timer.low{color:var(--bad)}
 .mock-ch-stats{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
 .mock-ch-stats span{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--surface2);border:1px solid var(--line)}
+/* ปุ่มคู่มือสีฟ้าอ่อนเด่นบนแถบด้านบน */
+.tool.guide-btn{color:#0ea5e9;background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.32)}
+.tool.guide-btn:hover{background:rgba(14,165,233,.22)}
+[data-theme="dark"] .tool.guide-btn{color:#38bdf8;background:rgba(56,189,248,.14);border-color:rgba(56,189,248,.35)}
+.guide-list{margin:6px 0 0;padding-left:20px;line-height:1.7}
+.guide-list li{margin:4px 0}
