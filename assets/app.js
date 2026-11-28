@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v102</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v103</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -5971,6 +5971,10 @@
     $('#reefPvToggle', reefHost).onclick = () => { reefPreviewMin = reefPreviewMin == null ? 480 : null; syncReef(false); };
     $('#rfPvPrev', reefHost).onclick = () => { reefPreviewMin = Math.max(0, (reefPreviewMin || 0) - 30); syncReef(false); };
     $('#rfPvNext', reefHost).onclick = () => { reefPreviewMin = Math.min(480, (reefPreviewMin || 0) + 30); syncReef(false); };
+    window.addEventListener('hashchange', () => {
+      const h = location.hash.replace(/^#\/?/, '').split('?')[0];
+      if (!h && reefExpOpen) { reefExpOpen = false; syncReef(false); }
+    });
 
     const updatePomoTitle = () => {
       const m = Math.max(1, Math.round(total / 60));
@@ -5984,7 +5988,6 @@
     };
     const startTicker = () => {
       clearInterval(tmr);
-      if (reefPreviewMin != null) { reefPreviewMin = null; syncReef(false); }
       $('#pmGo', wrap).textContent = '⏸ พักชั่วคราว';
       persistPomo(true, true);
       tmr = setInterval(() => {
