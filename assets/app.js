@@ -2496,9 +2496,54 @@
   // ช่องแก้คำก่อนส่งเป็น keyword (เหมือนช่องโน้ต)
   function openKw() {
     const k = popZone, t = kwNorm(popText), init = t;
+    const useArt = draftOn('kwPopViewportArt');
     pop.dataset.mode = 'note'; pop.classList.add('writing');
-    pop.innerHTML = `<div class="note-kind">🔑 ส่งเป็น keyword · แก้คำได้ก่อนส่ง (เน้นเหลือง: เลือกคำแล้วกดเน้นคำที่เลือก)</div><textarea class="note-in" rows="3">${esc(init)}</textarea><div class="note-act"><button class="btn small" data-a="mk" title="Emphasize selected words">Emphasize</button><button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save keyword</button></div>`;
+    pop.classList.toggle('ai-pop', useArt);
+    pop.classList.toggle('ai-pop-fit', useArt);
+    pop.classList.toggle('kw-pop-fit', useArt);
+    const artHtml = useArt ? `<div class="kw-art" aria-hidden="true">
+      <svg viewBox="0 0 360 116">
+        <defs>
+          <linearGradient id="kwBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0b1526"/><stop offset="100%" stop-color="#060b14"/></linearGradient>
+          <linearGradient id="kwWf" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0f2fe" stop-opacity=".85"/><stop offset="100%" stop-color="#5eead4" stop-opacity=".22"/></linearGradient>
+          <radialGradient id="kwSp" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#5eead4" stop-opacity=".9"/><stop offset="100%" stop-color="#5eead4" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="360" height="116" rx="10" fill="url(#kwBg)"/>
+        <g fill="#bae6fd" opacity=".55"><circle cx="28" cy="22" r="1"/><circle cx="72" cy="16" r="1.2"/><circle cx="152" cy="18" r="1"/><circle cx="298" cy="20" r="1.3"/><circle cx="332" cy="42" r="1"/><circle cx="240" cy="14" r=".9"/><circle cx="316" cy="86" r="1.1"/></g>
+        <!-- หอคอยซ้าย + โดม Monument Valley -->
+        <polygon points="82,30 98,22 114,30 114,116 82,116" fill="#3b5368"/>
+        <polygon points="98,22 114,30 114,116 98,116" fill="#25384a"/>
+        <path d="M84 30 Q98 12 112 30 Z" fill="#88a4bc"/>
+        <line x1="98" y1="14" x2="98" y2="8" stroke="#e2e8f0" stroke-width="1.4"/>
+        <path d="M93 52 v-14 a5 5 0 0 1 10 0 v14 Z" fill="#0b1526"/>
+        <!-- สะพานน้ำตกที่เป็นไปไม่ได้ (อิงภาพ Monument Valley) -->
+        <polygon points="104,48 258,92 246,98 92,54" fill="#cbd5e1"/>
+        <polygon points="92,54 246,98 246,108 92,64" fill="#47637a"/>
+        <polygon points="164,66 266,28 278,34 176,72" fill="#94b0c7"/>
+        <polygon points="176,72 278,34 278,43 176,81" fill="#32495e"/>
+        <!-- สายน้ำตกเรืองแสงไหลลงสู่สะพานล่าง -->
+        <rect class="kw-wf" x="262" y="34" width="12" height="60" fill="url(#kwWf)"/>
+        <line class="kw-wf" x1="266" y1="36" x2="266" y2="92" stroke="#e0f2fe" stroke-width="1.2" stroke-dasharray="5 4"/>
+        <line class="kw-wf" x1="270" y1="40" x2="270" y2="92" stroke="#5eead4" stroke-width="1" stroke-dasharray="4 5"/>
+        <ellipse cx="268" cy="94" rx="11" ry="3.5" fill="#7ce0d3" opacity=".45"/>
+        <!-- น้อง Ida ตัวจิ๋วบนสะพานซ้าย -->
+        <g transform="translate(124,48)" class="kw-bob">
+          <polygon points="0,-7 -3.4,1 3.4,1" fill="#fff"/>
+          <circle cx="0" cy="-8.5" r="2" fill="#1e293b"/>
+          <polygon points="0,-16.5 -2.6,-8.5 2.6,-8.5" fill="#fff"/>
+        </g>
+        <!-- วิญญาณสีฟ้าเรืองแสงลอยน่ารักข้างน้ำตก -->
+        <g transform="translate(234,58)" class="kw-spirit">
+          <circle cx="0" cy="-2" r="15" fill="url(#kwSp)"/>
+          <path d="M0,-10 C4,-10 5,-4 5,2 C2,0 -2,0 -5,2 C-5,-4 -4,-10 0,-10 Z" fill="#67e8f9"/>
+          <circle cx="0" cy="-12" r="2.6" fill="#a5f3fc"/>
+          <polygon points="0,-17 -2.2,-12 2.2,-12" fill="#cffafe"/>
+        </g>
+      </svg>
+    </div>` : '';
+    pop.innerHTML = `<div class="note-kind">🔑 ส่งเป็น keyword · แก้คำได้ก่อนส่ง (เน้นเหลือง: เลือกคำแล้วกดเน้นคำที่เลือก)</div><textarea class="note-in" rows="3">${esc(init)}</textarea><div class="note-act"><button class="btn small" data-a="mk" title="Emphasize selected words">Emphasize</button><button class="btn small" data-a="x">Cancel</button><button class="btn small primary" data-a="ok">Save keyword</button></div>${artHtml}`;
     const ta = pop.querySelector('textarea'); ta.focus();
+    ta.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); const d = ta.value.trim(); if (d) { S.kw.push(Object.assign({ t, k, d, at: Date.now() }, kwBox(k))); save(); toast('🔑 Saved to Keywords'); } hidePop(); } });
     pop.querySelectorAll('[data-a]').forEach(b => b.onclick = () => {
       const a = b.dataset.a;
       if (a === 'mk') { const v = ta.value, s0 = ta.selectionStart, e0 = ta.selectionEnd; if (e0 > s0) { ta.value = v.slice(0, s0) + '==' + v.slice(s0, e0) + '==' + v.slice(e0); } ta.focus(); return; }
@@ -2826,7 +2871,7 @@
     });
   }
   function showPalette(rect, onColor, onErase, onNote, curNote) {
-    pop.classList.remove('writing', 'ai-pop', 'ai-pop-fit');
+    pop.classList.remove('writing', 'ai-pop', 'ai-pop-fit', 'kw-pop-fit');
     const noNote = pop.dataset.inNote === '1';
     // แถว 1 สีไฮไลต์ + ยางลบ · แถว 2 สีตัวอักษร + ตัวหนา/ขีดเส้นใต้ · แถว 3 โน้ต รูป keyword ค้นหา
     pop.innerHTML = `<div class="row">${['y', 'g', 'b', 'p', 'v', 'r'].map(c => `<button class="sw c-${c}" data-c="${c}" aria-label="ไฮไลต์สีนี้"></button>`).join('')}<button class="sw erase" data-c="x" aria-label="ลบไฮไลต์" title="ลบไฮไลต์">✕</button>${noNote ? '' : '<button class="sw nb" data-c="n" aria-label="เขียนโน้ตดาว" title="โน้ตดาวต่อจากข้อความนี้">★</button>'}</div>`
@@ -2925,7 +2970,7 @@
     if (!S.figw) S.figw = {};
     art.querySelectorAll('figure.fig').forEach((f, i) => { const im = f.querySelector('img'); f.dataset.fk = k + '|' + (im ? im.getAttribute('src').split('/').pop() : 'fig' + i); f.title = 'แตะเพื่อปรับขนาดรูป'; figSize(f); });
   }
-  function hidePop() { pop.hidden = true; pop.dataset.mode = ''; pop.dataset.inNote = ''; pop.classList.remove('writing', 'ai-pop', 'ai-pop-fit'); }
+  function hidePop() { pop.hidden = true; pop.dataset.mode = ''; pop.dataset.inNote = ''; pop.classList.remove('writing', 'ai-pop', 'ai-pop-fit', 'kw-pop-fit'); }
   function selOffsets(z, r) {
     let s = 0;
     for (const n of zoneNodes(z)) {
@@ -3141,7 +3186,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v87</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v88</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -4741,6 +4786,13 @@
       area: 'แถบสารบัญด้านข้าง (Sidebar)',
       desc: 'กดได้ทั้งการ์ดบท (รวมถึงตรงแถบความคืบหน้า) พรีโหลดบทล่วงหน้าตอนชี้เมาส์ ตัดการโหลดซ้ำ และแสดงสถานะกำลังโหลดทันที',
       added: 'v86'
+    },
+    {
+      key: 'kwPopViewportArt',
+      title: 'หน้าต่างเพิ่ม Keyword พอดีจอ + กราฟิก Monument Valley',
+      area: 'ป๊อปอัปเพิ่ม Keyword (เมื่อลากคลุมคำ)',
+      desc: 'จัดกล่องเพิ่ม Keyword ให้ลอยกลางจอไม่ต้องเลื่อนลงแม้คลุมคำอยู่ล่างสุด พร้อมกราฟิกน้ำตกและวิญญาณเรืองแสงน่ารักด้านล่าง',
+      added: 'v88'
     }
   ];
   const _onOwnerChange = [];
@@ -5191,16 +5243,18 @@
       reefHost.hidden = !enabled;
       const customRow = $('#pmCustomRow', wrap);
       if (customRow) customRow.hidden = !enabled;
-      if (!enabled) return;
+      if (!enabled) { document.body.classList.remove('reef-open'); return; }
       const collapsed = S.reefHidden != null ? !!S.reefHidden : window.innerWidth < 1240;
       $('#reefDock', reefHost).hidden = collapsed;
       $('#reefTab', reefHost).hidden = !collapsed;
+      document.body.classList.toggle('reef-open', !collapsed);
       const isPv = reefPreviewMin != null;
       const realSec = getTodaySec();
       const dispSec = isPv ? reefPreviewMin * 60 : realSec;
       const mins = Math.floor(dispSec / 60);
       const count = Math.min(REEF_SPECIES.length, Math.floor(mins / 30));
       const inStep = mins % 30;
+      const stepPct = ((dispSec % 1800) / 1800) * 100;
       $('#reefToday', reefHost).textContent = isPv ? `PV ${fmtHM(dispSec)}` : fmtHM(realSec);
       $('#reefTabM', reefHost).textContent = fmtHM(realSec);
       $('#reefCount', reefHost).textContent = `${count}/${REEF_SPECIES.length}`;
@@ -5226,7 +5280,7 @@
         const nxt = REEF_SPECIES[count];
         if (icEl) icEl.innerHTML = `<svg viewBox="0 0 32 32" aria-hidden="true">${nxt.ic}</svg>`;
         $('#reefNext', reefHost).textContent = nxt.short;
-        $('#reefPbar', reefHost).style.width = `${((inStep / 30) * 100).toFixed(1)}%`;
+        $('#reefPbar', reefHost).style.width = `${stepPct.toFixed(1)}%`;
         $('#reefPtxt', reefHost).textContent = `${inStep}/30 น.`;
       }
       const realCount = Math.min(REEF_SPECIES.length, Math.floor(realSec / 1800));
@@ -5242,15 +5296,81 @@
     $('#rfPvPrev', reefHost).onclick = () => { reefPreviewMin = Math.max(0, (reefPreviewMin || 0) - 30); syncReef(false); };
     $('#rfPvNext', reefHost).onclick = () => { reefPreviewMin = Math.min(480, (reefPreviewMin || 0) + 30); syncReef(false); };
 
+    const updatePomoTitle = () => {
+      const m = Math.max(1, Math.round(total / 60));
+      $('#pmTitle', wrap).textContent = isBreak ? `☕ พักเบรก · ${m} นาที` : `🍅 โฟกัส · ${m} นาที`;
+      const inp = $('#pmCustomIn', wrap); if (inp && !isBreak) inp.value = m;
+      wrap.querySelectorAll('[data-pm]').forEach(x => x.classList.toggle('on', (+x.dataset.pm === m && (m === 5) === isBreak)));
+    };
+    const persistPomo = (running, doSave = true) => {
+      S.pomoRun = { total, left, running: !!running, isBreak: !!isBreak, lastTickAt: Date.now(), updatedAt: Date.now() };
+      if (doSave) save();
+    };
+    const startTicker = () => {
+      clearInterval(tmr);
+      if (reefPreviewMin != null) { reefPreviewMin = null; syncReef(false); }
+      $('#pmGo', wrap).textContent = '⏸ พักชั่วคราว';
+      persistPomo(true, true);
+      tmr = setInterval(() => {
+        if (left > 0) {
+          left--;
+          if (!isBreak) {
+            S.pomoLog = S.pomoLog || {};
+            const d = localDay();
+            S.pomoLog[d] = (S.pomoLog[d] || 0) + 1;
+            syncReef(true);
+          }
+          persistPomo(true, (++saveTick % 10 === 0));
+          sync();
+        } else {
+          clearInterval(tmr); tmr = null;
+          persistPomo(false, true);
+          $('#pmGo', wrap).textContent = '✨ ครบเวลาแล้ว!'; chime();
+          toast('✨ Ida ถึงยอดปราสาทแล้ว! ครบเวลาอ่าน');
+          syncReef(true);
+        }
+      }, 1000);
+    };
+    let lastRestoredAt = 0;
+    const restorePomo = () => {
+      const r = S.pomoRun;
+      if (!r || !r.total || (r.updatedAt && r.updatedAt === lastRestoredAt)) return;
+      lastRestoredAt = r.updatedAt || Date.now();
+      clearInterval(tmr); tmr = null;
+      total = Math.max(60, +r.total || 25 * 60);
+      left = Math.max(0, Math.min(total, +r.left || 0));
+      isBreak = !!r.isBreak;
+      if (r.running && left > 0) {
+        const el = Math.max(0, Math.floor((Date.now() - (r.lastTickAt || Date.now())) / 1000));
+        const used = Math.min(left, el);
+        if (used > 0) {
+          left -= used;
+          if (!isBreak) {
+            S.pomoLog = S.pomoLog || {};
+            const d = localDay();
+            S.pomoLog[d] = (S.pomoLog[d] || 0) + used;
+          }
+        }
+        updatePomoTitle();
+        if (left > 0) { startTicker(); }
+        else { persistPomo(false, true); $('#pmGo', wrap).textContent = '✨ ครบเวลาแล้ว!'; syncReef(false); }
+      } else {
+        updatePomoTitle();
+        $('#pmGo', wrap).textContent = left < total && left > 0 ? '▶ เริ่มต่อ' : '▶ เริ่มจับเวลา';
+      }
+      sync();
+    };
+    window.addEventListener('beforeunload', () => { if (tmr) persistPomo(true, true); });
+
     const applyCustomMins = () => {
       const inp = $('#pmCustomIn', wrap);
       const m = Math.max(1, Math.min(240, parseInt(inp.value, 10) || 25));
       inp.value = m;
       clearInterval(tmr); tmr = null; isBreak = false;
       total = left = m * 60;
-      $('#pmTitle', wrap).textContent = `🍅 โฟกัส · ${m} นาที`;
+      updatePomoTitle();
       $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา';
-      wrap.querySelectorAll('[data-pm]').forEach(x => x.classList.remove('on'));
+      persistPomo(false, true);
       sync();
     };
     $('#pmCustomSet', wrap).onclick = applyCustomMins;
@@ -5302,8 +5422,9 @@
       const mb = $('#pmMiniBar', wrap); if (mb) mb.style.width = `${(p * 100).toFixed(1)}%`;
     };
     renderMini();
+    restorePomo();
     syncReef(false);
-    _onOwnerChange.push(() => { renderMini(); sync(); syncReef(false); });
+    _onOwnerChange.push(() => { renderMini(); restorePomo(); sync(); syncReef(false); });
     const setOpen = v => { open = v; $('#pmMini', wrap).hidden = v; $('#pmCard', wrap).hidden = !v; };
     const doSpin = () => { spin = spin === 0 ? 12 : spin === 12 ? -12 : 0; sync(); };
     $('#pmMini', wrap).onclick = () => setOpen(true);
@@ -5313,35 +5434,17 @@
     wrap.querySelectorAll('[data-pm]').forEach(b => b.onclick = () => {
       clearInterval(tmr); tmr = null;
       const m = +b.dataset.pm; total = left = m * 60; isBreak = m === 5;
-      $('#pmTitle', wrap).textContent = m === 5 ? '☕ พักเบรก · 5 นาที' : `🍅 โฟกัส · ${m} นาที`;
+      updatePomoTitle();
       $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา';
-      wrap.querySelectorAll('[data-pm]').forEach(x => x.classList.toggle('on', x === b));
+      persistPomo(false, true);
       sync();
     });
     $('#pmGo', wrap).onclick = () => {
-      if (tmr) { clearInterval(tmr); tmr = null; save(); $('#pmGo', wrap).textContent = '▶ เริ่มต่อ'; return; }
+      if (tmr) { clearInterval(tmr); tmr = null; persistPomo(false, true); $('#pmGo', wrap).textContent = '▶ เริ่มต่อ'; return; }
       if (left <= 0) left = total;
-      $('#pmGo', wrap).textContent = '⏸ พักชั่วคราว';
-      tmr = setInterval(() => {
-        if (left > 0) {
-          left--;
-          if (!isBreak) {
-            S.pomoLog = S.pomoLog || {};
-            const d = localDay();
-            S.pomoLog[d] = (S.pomoLog[d] || 0) + 1;
-            if (++saveTick % 15 === 0) save();
-            syncReef(true);
-          }
-          sync();
-        } else {
-          clearInterval(tmr); tmr = null; save();
-          $('#pmGo', wrap).textContent = '✨ ครบเวลาแล้ว!'; chime();
-          toast('✨ Ida ถึงยอดปราสาทแล้ว! ครบเวลาอ่าน');
-          syncReef(true);
-        }
-      }, 1000);
+      startTicker();
     };
-    $('#pmReset', wrap).onclick = () => { clearInterval(tmr); tmr = null; save(); left = total; $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา'; sync(); };
+    $('#pmReset', wrap).onclick = () => { clearInterval(tmr); tmr = null; left = total; persistPomo(false, true); $('#pmGo', wrap).textContent = '▶ เริ่มจับเวลา'; sync(); };
     sync();
   }
   initPomodoro();

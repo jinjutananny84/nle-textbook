@@ -4,7 +4,7 @@
   'use strict';
 
   const FB_VER = '11.6.0';
-  const CACHE_NAME = 'nle-tb-v87';
+  const CACHE_NAME = 'nle-tb-v88';
   const CLIENT_ID = Math.random().toString(36).slice(2) + Date.now().toString(36);
   const MAX_IMG_CHARS = 760000; // เผื่อให้เล็กกว่าลิมิต 1MB ของ Firestore document เสมอ
 
@@ -228,6 +228,10 @@
       pomoLog[d] = Math.max(pomoLog[d] || 0, sec || 0);
     }
     out.pomoLog = pomoLog;
+    if (newer.pomoRun || older.pomoRun) {
+      const nr = newer.pomoRun, or = older.pomoRun;
+      out.pomoRun = (nr && or) ? ((nr.updatedAt || 0) >= (or.updatedAt || 0) ? nr : or) : (nr || or);
+    }
 
     // kw: รวม keyword แบบไม่ซ้ำ
     const kwSeen = new Set();
