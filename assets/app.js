@@ -2258,7 +2258,12 @@
     sched: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
     codex: '<path d="M5 4h13v16H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M8 4v16"/>',
     bug: '<circle cx="12" cy="12" r="5"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/>',
-    user: '<circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/>'
+    user: '<circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/>',
+    crown: '<path d="M3 18h18l1-10-5 4-5-7-5 7-5-4z"/><path d="M5 20.5h14"/>',
+    rocket: '<path d="M12 2.5c3.5 2.5 5 6.5 5 11l-5 3-5-3c0-4.5 1.5-8.5 5-11z"/><path d="M7 13.5 4 16.5v3l3-1.5M17 13.5l3 3v3l-3-1.5M10 18.5l2 3 2-3"/><circle cx="12" cy="9.5" r="1.5"/>',
+    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/>',
+    tag: '<path d="M3.5 11.5V4h7.5l9.5 9.5-7.5 7.5z"/><circle cx="8" cy="8.5" r="1.3" fill="currentColor" stroke="none"/>',
+    link: '<path d="M10 14a4.5 4.5 0 0 1 0-6.4l2.2-2.2a4.5 4.5 0 1 1 6.4 6.4L17 13.4M14 10a4.5 4.5 0 0 1 0 6.4l-2.2 2.2a4.5 4.5 0 1 1-6.4-6.4L7 10.6"/>'
   };
   /* ---------- ไอคอนสถาปัตยกรรมเรขาคณิตสไตล์ Monument Valley ---------- */
   const ICON_MV = {
@@ -2312,9 +2317,14 @@
     sched: '<path d="M4 7.5 12 3.5l8 4V20H4Z" fill="currentColor" fill-opacity=".1"/><path d="M4 7.5 12 3.5l8 4V20H4Z"/><path d="M4 10.5h16M9 14.5h6"/>',
     codex: '<polygon points="5,3.5 19,3.5 19,20.5 5,20.5" fill="currentColor" fill-opacity=".12"/><polygon points="5,3.5 19,3.5 19,20.5 5,20.5"/><path d="M8.5 3.5v17"/><polygon points="13.5,9 15.5,11 13.5,13 11.5,11" fill="currentColor" fill-opacity=".28"/>',
     bug: '<polygon points="12,6.5 16.5,9.5 16.5,14.5 12,17.5 7.5,14.5 7.5,9.5" fill="currentColor" fill-opacity=".16"/><polygon points="12,6.5 16.5,9.5 16.5,14.5 12,17.5 7.5,14.5 7.5,9.5"/><path d="M12 3v3.5M12 17.5V21M3.5 9.5 7.5 11M16.5 11l4-1.5M3.5 14.5 7.5 13M16.5 13l4 1.5"/>',
-    user: '<polygon points="12,2.5 15,8.5 9,8.5" fill="currentColor" fill-opacity=".22"/><polygon points="12,2.5 15,8.5 9,8.5"/><polygon points="12,10.5 17.5,21 6.5,21" fill="currentColor" fill-opacity=".14"/><polygon points="12,10.5 17.5,21 6.5,21"/>'
+    user: '<polygon points="12,2.5 15,8.5 9,8.5" fill="currentColor" fill-opacity=".22"/><polygon points="12,2.5 15,8.5 9,8.5"/><polygon points="12,10.5 17.5,21 6.5,21" fill="currentColor" fill-opacity=".14"/><polygon points="12,10.5 17.5,21 6.5,21"/>',
+    crown: '<polygon points="3.5,18 20.5,18 21.5,8 16.5,12.5 12,5 7.5,12.5 2.5,8" fill="currentColor" fill-opacity=".18"/><polygon points="3.5,18 20.5,18 21.5,8 16.5,12.5 12,5 7.5,12.5 2.5,8"/><path d="M4.5 20.5h15"/><polygon points="12,11.5 13.4,13.5 12,15.5 10.6,13.5" fill="currentColor" stroke="none"/>',
+    rocket: '<polygon points="12,2.5 16.5,8.5 16.5,15.5 12,18 7.5,15.5 7.5,8.5" fill="currentColor" fill-opacity=".14"/><polygon points="12,2.5 16.5,8.5 16.5,15.5 12,18 7.5,15.5 7.5,8.5"/><path d="M7.5 13.5 4 17v2.5l3.5-1.5M16.5 13.5 20 17v2.5l-3.5-1.5M12 18v3.5"/><polygon points="12,8 13.6,10 12,12 10.4,10" fill="currentColor" stroke="none"/>',
+    globe: '<polygon points="12,2.5 21.5,12 12,21.5 2.5,12" fill="currentColor" fill-opacity=".1"/><polygon points="12,2.5 21.5,12 12,21.5 2.5,12"/><path d="M2.5 12h19M12 2.5v19"/><polygon points="12,7 17,12 12,17 7,12"/>',
+    tag: '<polygon points="3.5,4 11,4 20.5,13.5 13,21 3.5,11.5" fill="currentColor" fill-opacity=".12"/><polygon points="3.5,4 11,4 20.5,13.5 13,21 3.5,11.5"/><polygon points="8,7.2 9.3,8.5 8,9.8 6.7,8.5" fill="currentColor" stroke="none"/>',
+    link: '<polygon points="11.5,6.5 15.5,2.5 21.5,8.5 17.5,12.5" fill="currentColor" fill-opacity=".12"/><polygon points="11.5,6.5 15.5,2.5 21.5,8.5 17.5,12.5"/><polygon points="6.5,11.5 2.5,15.5 8.5,21.5 12.5,17.5" fill="currentColor" fill-opacity=".12"/><polygon points="6.5,11.5 2.5,15.5 8.5,21.5 12.5,17.5"/><path d="m9 15 6-6"/>'
   };
-  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back', '✨': 'spark', '🎬': 'clip', '🎯': 'target', '📋': 'clipb', '⚙': 'gear', '✂': 'crop', '🎨': 'palette', '📲': 'phone', '📥': 'dl', '🗂': 'folder', '📚': 'stack', '🧰': 'tools', '💡': 'bulb', '✏': 'edit', '📡': 'radar', '🏛': 'temple', '👾': 'pixel', '🔐': 'lock', '👁': 'eye', '🔄': 'sync', '🗓': 'sched', '📘': 'codex', '🦠': 'bug', '👤': 'user' };
+  const EMO = { '☁': 'cloud', '🩺': 'flow', '💾': 'save', '🔢': 'hash', '💊': 'pill', '🧠': 'brain', '🖼': 'img', '🏠': 'home', '📝': 'quiz', '📕': 'wrong', '🃏': 'cards', '📊': 'stats', '📅': 'cal', '🗒': 'note', '🔑': 'key', '🗺': 'map', '🖍': 'hl', '🔍': 'search', '📖': 'book', '🔥': 'flame', '🎉': 'done', '🤔': 'think', '⚠': 'warn', '📌': 'pin', '📍': 'pin', '☀': 'sun', '🌙': 'moon', '↩': 'back', '✨': 'spark', '🎬': 'clip', '🎯': 'target', '📋': 'clipb', '⚙': 'gear', '✂': 'crop', '🎨': 'palette', '📲': 'phone', '📥': 'dl', '🗂': 'folder', '📚': 'stack', '🧰': 'tools', '💡': 'bulb', '✏': 'edit', '📡': 'radar', '🏛': 'temple', '👾': 'pixel', '🔐': 'lock', '🔒': 'lock', '👁': 'eye', '🔄': 'sync', '🗓': 'sched', '📘': 'codex', '🦠': 'bug', '👤': 'user', '👑': 'crown', '🚀': 'rocket', '🌐': 'globe', '🏷': 'tag', '🔗': 'link' };
   const EMO_RE = new RegExp(`(${Object.keys(EMO).join('|')})\\ufe0f?`, 'gu');
   const ic = n => {
     const mv = uiStyle() === 'monument' && ICON_MV[n];
@@ -3115,7 +3125,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v82</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v83</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">

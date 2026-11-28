@@ -1039,6 +1039,8 @@ body.has-readbar .pomo-wrap{bottom:max(68px,calc(env(safe-area-inset-bottom) + 6
 /* 👑 โหมดเมนูของเจ้าของ (Owner-only Draft & Publish) */
 .owner-only{display:none!important}
 :root.owner-preview .owner-only{display:flex!important}
+.ic-crown{color:var(--mv-cyan,#5eead4);filter:drop-shadow(0 0 5px rgba(94,234,212,.78)) drop-shadow(0 0 11px rgba(76,242,242,.45))}
+:root[data-theme="light"] .ic-crown{color:#0f8b8d;filter:drop-shadow(0 0 4px rgba(45,212,191,.65)) drop-shadow(0 0 9px rgba(45,212,191,.38))}
 .owner-bar{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
 .owner-list{display:flex;flex-direction:column;gap:12px;margin-top:8px}
 .owner-item{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--trap);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
