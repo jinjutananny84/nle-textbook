@@ -3340,7 +3340,7 @@
     const gKey = (S.geminiKey || '').trim();
     const gMask = gKey ? `${gKey.slice(0, 6)}••••${gKey.slice(-4)}` : '';
     const curUi = uiStyle();
-    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v104</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
+    view.innerHTML = `<div class="hero"><h1>☁️ Sync &amp; App <small style="font-size:.5em;opacity:.65">v105</small></h1><p>ซิงค์ข้อมูลข้ามเครื่องด้วย Google และติดตั้งเป็นแอปไว้อ่านแบบออฟไลน์</p></div>
       <div class="panel"><h3>🎨 ธีมหน้าตาเว็บ (สลับได้ทันทีตลอดเวลา)</h3>
         <p class="muted">ลองสลับได้ระหว่าง <b>Monument Valley</b> (สถาปัตยกรรมไอโซเมตริก + หอคอยโปรเกรสแถบซ้าย) กับ <b>Pixel Classic</b> (น้องหมอพิกเซล+ภูเขาเมฆ v60) โดยข้อมูลการอ่านไม่หาย</p>
         <div class="style-pick">
@@ -6132,7 +6132,7 @@
   initPomodoro();
 
   /* 🫀 Floating Human Anatomy Infographic with Glowing Organs (anatomySidebarInfographic) */
-  let _anatCur = null;
+  let _anatCur = null, _anatMode = null;
   const anatHost = document.createElement('aside');
   anatHost.className = 'anat-host';
   anatHost.id = 'anatHost';
@@ -6154,164 +6154,487 @@
     </button>
     <div class="anat-dock" id="anatDock">
       <button type="button" class="anat-hide" id="anatHide" title="ย่อเป็นน้อง Ida ตัวเล็ก">–</button>
-      <div class="anat-stage">
-        <svg viewBox="0 0 180 342" aria-hidden="true">
-          <defs>
-            <linearGradient id="mvIdaL" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0fdfa" stop-opacity=".95"/><stop offset="100%" stop-color="#99f6e4" stop-opacity=".86"/></linearGradient>
-            <linearGradient id="mvIdaR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5eead4" stop-opacity=".5"/><stop offset="100%" stop-color="#1e5c70" stop-opacity=".55"/></linearGradient>
-            <linearGradient id="mvHat" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#99f6e4"/><stop offset="100%" stop-color="#2dd4bf"/></linearGradient>
-            <linearGradient id="mvWin" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0b1f36" stop-opacity=".9"/><stop offset="100%" stop-color="#061224" stop-opacity=".94"/></linearGradient>
-            <filter id="anDrop" x="-25%" y="-15%" width="150%" height="130%"><feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#020617" flood-opacity=".38"/></filter>
-          </defs>
-          <!-- แท่นเงาเพชรเรขาคณิต Monument Valley ใต้เท้า -->
-          <polygon class="anat-shadow" points="90,308 136,324 90,338 44,324" fill="#5eead4" opacity=".22"/>
-          <polygon class="anat-ring" points="90,313 122,324 90,334 58,324" fill="#1e1b4b" opacity=".52" stroke="#5eead4" stroke-opacity=".42" stroke-width="1"/>
-
-          <!-- ✨ วิ้งค์เรืองแสงรอบตัวน้อง Ida (นุ่มนวล ช้า ๆ ไม่กวนสมาธิ) -->
-          <g class="anat-winks" aria-hidden="true">
-            <path class="an-wink" d="M38 46 l1.5 4.2 l4.2 1.5 l-4.2 1.5 l-1.5 4.2 l-1.5-4.2 l-4.2-1.5 l4.2-1.5 Z" fill="#fde047"/>
-            <path class="an-wink" d="M144 66 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#5eead4" style="animation-delay:2.2s"/>
-            <path class="an-wink" d="M150 202 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#a5f3fc" style="animation-delay:4.3s"/>
-          </g>
-
-          <!-- หุ่นน้อง Ida สไตล์ Monument Valley ลอยตัวพร้อมหน้าต่างคริสตัลโชว์อวัยวะละเอียด -->
-          <g class="anat-body" filter="url(#anDrop)">
-            <!-- ขาน้อง Ida ลอยเหนือแท่นเงา -->
-            <line x1="81" y1="264" x2="81" y2="306" stroke="#cbd5e1" stroke-width="4.2" stroke-linecap="round"/>
-            <line x1="99" y1="264" x2="99" y2="306" stroke="#94a3b8" stroke-width="4.2" stroke-linecap="round"/>
-
-            <!-- โครงร่างผ้าคลุมเรขาคณิต + หมวกทรงกรวย Monument Valley (Skin aura) -->
-            <g class="an-org" data-org="skin" data-name="ผิวหนัง (Skin)">
-              <polygon points="90,76 146,268 34,268" fill="url(#mvIdaL)"/>
-              <polygon points="90,76 146,268 90,268" fill="url(#mvIdaR)"/>
-              <!-- ศีรษะกลมมินิมอล + หมวกกรวยไอคอนิก -->
-              <circle cx="90" cy="58" r="20" fill="#f8fafc" stroke="#99f6e4" stroke-opacity=".55" stroke-width="1"/>
-              <polygon points="90,6 108,42 72,42" fill="url(#mvHat)"/>
-              <polygon points="90,6 108,42 90,42" fill="#0f766e" opacity=".32"/>
-            </g>
-
-            <!-- หน้าต่างคริสตัลขนาดใหญ่กลางตัวสำหรับโชว์อวัยวะสมจริง -->
-            <polygon points="90,92 135,176 90,258 45,176" fill="url(#mvWin)" stroke="#5eead4" stroke-opacity=".62" stroke-width="1.4"/>
-            <polygon points="90,97 130,176 90,253 50,176" fill="none" stroke="#a5f3fc" stroke-opacity=".22" stroke-width=".8"/>
-
-            <!-- 🦴 กระดูกสำคัญ: ครึ่งตัวบน + กระดูกแขนด้านซ้าย (Humerus/Radius-Ulna) + กระดูกขาด้านซ้าย 1 ข้าง (Femur/Knee/Tibia-Fibula) -->
-            <g class="an-org" data-org="msk" data-name="กระดูกสำคัญ (ซี่โครง + แขนซ้าย + ขาซ้าย)" stroke="#e2e8f0" stroke-linecap="round" fill="none">
-              <!-- กระดูกสันหลัง -->
-              <line x1="90" y1="84" x2="90" y2="196" stroke-width="2.8" stroke-dasharray="4 3"/>
-              <!-- ไหปลาร้า (Clavicles) -->
-              <path d="M62 110 Q76 103 90 108 Q104 103 118 110" stroke-width="2.6"/>
-              <!-- กระดูกอก (Sternum) -->
-              <path d="M90 109 v34" stroke="#f8fafc" stroke-width="3.6"/>
-              <!-- ซี่โครง 6 คู่ (Ribcage) -->
-              <path d="M70 118 Q90 124 110 118 M64 126 Q90 133 116 126 M61 135 Q90 142 119 135 M62 144 Q90 151 118 144 M66 153 Q90 159 114 153 M72 162 Q90 167 108 162" stroke-width="1.7" opacity=".88"/>
-              <!-- กระดูกแขนด้านซ้ายละเอียด (ข้อไหล่ -> Humerus -> ข้อศอก -> Radius/Ulna -> มือ) -->
-              <circle cx="59" cy="113" r="3.4" fill="#f8fafc" stroke="none"/>
-              <line x1="58" y1="116" x2="46" y2="154" stroke="#f8fafc" stroke-width="3.2"/>
-              <circle cx="45" cy="156" r="2.8" fill="#cbd5e1" stroke="none"/>
-              <line x1="44" y1="159" x2="36" y2="196" stroke="#f8fafc" stroke-width="2.2"/>
-              <line x1="47" y1="159" x2="40" y2="196" stroke="#cbd5e1" stroke-width="1.5"/>
-              <circle cx="37" cy="199" r="2.2" fill="#e2e8f0" stroke="none"/>
-              <!-- เชิงกรานซ้าย + กระดูกขาด้านซ้าย 1 ข้าง (Hip -> Femur -> Patella/เข่า -> Tibia/Fibula -> ข้อเท้า) -->
-              <path d="M88 196 Q74 202 68 214" stroke="#cbd5e1" stroke-width="2.6"/>
-              <circle cx="69" cy="215" r="3.4" fill="#f8fafc" stroke="none"/>
-              <line x1="70" y1="218" x2="77" y2="262" stroke="#f8fafc" stroke-width="3.4"/>
-              <circle cx="78" cy="265" r="3.2" fill="#e2e8f0" stroke="#94a3b8" stroke-width=".7"/>
-              <line x1="79" y1="268" x2="80" y2="303" stroke="#f8fafc" stroke-width="2.6"/>
-              <line x1="75" y1="270" x2="77" y2="302" stroke="#cbd5e1" stroke-width="1.4"/>
-              <ellipse cx="81" cy="306" rx="4.5" ry="2.1" fill="#e2e8f0" stroke="none"/>
-            </g>
-
-            <!-- 🧠 สมองละเอียด (Cerebrum + รอยหยัก Gyri + Cerebellum + Brainstem + Spinal cord) -->
-            <g class="an-org" data-org="brain" data-name="สมอง & ระบบประสาท (CNS)">
-              <path d="M75 56 C74 44 83 41 90 42 C97 41 106 44 105 56 C106 63 100 68 94 67 L86 67 C80 68 74 63 75 56 Z" fill="#c084fc" stroke="#f5d0fe" stroke-width=".9"/>
-              <!-- รอยหยักสมอง (Gyri / Sulci) -->
-              <path d="M80 51 Q85 47 90 51 Q95 47 100 51 M78 57 Q84 61 90 57 Q96 61 102 57 M90 43 v22" fill="none" stroke="#581c87" stroke-width="1.15" stroke-linecap="round" opacity=".72"/>
-              <!-- สมองน้อย (Cerebellum) + ก้านสมอง (Brainstem) -->
-              <ellipse cx="97" cy="68" rx="5.5" ry="3.6" fill="#a855f7" stroke="#f5d0fe" stroke-width=".7"/>
-              <path d="M88 66 L92 66 L91.5 96 L88.5 96 Z" fill="#d8b4fe"/>
-            </g>
-
-            <!-- 👁️ ตา (ซ่อนไว้ปกติ เรืองแสงเฉพาะตอนอ่านเรื่องตา) -->
-            <g class="an-org an-eye-only" data-org="eye" data-name="ตา & เส้นประสาทตา (Eyes)">
-              <ellipse cx="83" cy="60" rx="3.2" ry="2" fill="#38bdf8"/>
-              <ellipse cx="97" cy="60" rx="3.2" ry="2" fill="#38bdf8"/>
-            </g>
-
-            <!-- 🦋 ต่อมไทรอยด์ (Thyroid) -->
-            <g class="an-org" data-org="thyroid" data-name="ต่อมไทรอยด์ (Thyroid)">
-              <path d="M81 98 Q85 93 90 99 Q95 93 99 98 Q99 106 90 104 Q81 106 81 98 Z" fill="#fbbf24" stroke="#fef08a" stroke-width=".8"/>
-            </g>
-
-            <!-- 🫁 ปอด & หลอดลมสมจริง (Trachea + วงแหวนหลอดลม + ปอดซ้าย/ขวา) -->
-            <g class="an-org" data-org="lungs" data-name="ปอด & ทางเดินหายใจ (Lungs)">
-              <line x1="90" y1="98" x2="90" y2="128" stroke="#bae6fd" stroke-width="3.4"/>
-              <path d="M87.5 104 h5 M87.5 109 h5 M87.5 114 h5 M87.5 119 h5" stroke="#0284c7" stroke-width=".9"/>
-              <path d="M86 122 C73 121 63 136 64 157 C65 166 78 165 86 157 Z" fill="#fb7185" stroke="#fecdd3" stroke-width=".8"/>
-              <path d="M94 122 C107 121 117 136 116 157 C115 166 102 165 94 157 Z" fill="#f43f5e" stroke="#fecdd3" stroke-width=".8"/>
-              <path d="M68 144 Q77 146 84 142 M112 146 Q104 148 96 144" fill="none" stroke="#9f1239" stroke-width="1" opacity=".55"/>
-            </g>
-
-            <!-- ❤️ หัวใจ & หลอดเลือดใหญ่สมจริง (Aortic arch + SVC + Ventricles) -->
-            <g class="an-org" data-org="heart" data-name="หัวใจ & หลอดเลือด (Heart)">
-              <path d="M91 131 Q91 118 99 121 Q103 124 101 133" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round"/>
-              <line x1="87" y1="122" x2="87" y2="134" stroke="#60a5fa" stroke-width="2.6" stroke-linecap="round"/>
-              <path d="M94 134 C93 128 83 129 84 138 C85 148 95 156 100 159 C105 155 110 146 108 137 C106 130 97 130 94 134 Z" fill="#ef4444" stroke="#fecaca" stroke-width=".9"/>
-            </g>
-
-            <!-- 🟤 ตับ & ถุงน้ำดี (Liver + Gallbladder) -->
-            <g class="an-org" data-org="liver" data-name="ตับ & ทางเดินน้ำดี (Liver)">
-              <path d="M62 164 Q76 156 97 165 Q91 178 82 181 Q68 183 63 176 Z" fill="#b45309" stroke="#fdba74" stroke-width=".8"/>
-              <path d="M80 161 L78 179" stroke="#78350f" stroke-width="1.1" opacity=".6"/>
-              <ellipse cx="75" cy="181" rx="4.2" ry="2.8" fill="#4ade80" stroke="#dcfce7" stroke-width=".7"/>
-            </g>
-
-            <!-- 🟠 กระเพาะอาหาร (Stomach J-shape) -->
-            <g class="an-org" data-org="stomach" data-name="กระเพาะอาหาร (Stomach)">
-              <path d="M92 158 C105 156 114 166 113 177 C112 188 97 192 88 186 C83 182 86 175 91 172 C94 170 91 163 92 158 Z" fill="#fb923c" stroke="#fed7aa" stroke-width=".9"/>
-            </g>
-
-            <!-- 🟣 ม้าม (Spleen) -->
-            <g class="an-org" data-org="spleen" data-name="ม้าม (Spleen)">
-              <ellipse cx="116" cy="173" rx="4.8" ry="8.5" fill="#a855f7" stroke="#e9d5ff" stroke-width=".8"/>
-            </g>
-
-            <!-- 🟡 ตับอ่อน (Pancreas) -->
-            <g class="an-org" data-org="pancreas" data-name="ตับอ่อน (Pancreas)">
-              <path d="M80 187 Q94 182 110 185 Q111 193 95 194 Q82 195 80 187 Z" fill="#facc15" stroke="#fef9c3" stroke-width=".8"/>
-              <path d="M83 189 Q96 187 107 188" fill="none" stroke="#a16207" stroke-width="1"/>
-            </g>
-
-            <!-- 🔴 ไต & ต่อมหมวกไต & ท่อไต (Kidneys & Adrenals) -->
-            <g class="an-org" data-org="kidneys" data-name="ไต & ต่อมหมวกไต (Kidneys)">
-              <ellipse cx="73" cy="197" rx="5.5" ry="8.5" fill="#e11d48" stroke="#fecdd3" stroke-width=".8"/>
-              <ellipse cx="107" cy="194" rx="5.5" ry="8.5" fill="#e11d48" stroke="#fecdd3" stroke-width=".8"/>
-              <path d="M68 188 Q73 183 78 188 Z M102 185 Q107 180 112 185 Z" fill="#fde047"/>
-              <path d="M77 202 Q82 216 86 228 M103 199 Q98 216 94 228" fill="none" stroke="#fde047" stroke-width="1.3" opacity=".8"/>
-            </g>
-
-            <!-- 🩷 ลำไส้ใหญ่ & ลำไส้เล็ก (Colon + Small Intestines) -->
-            <g class="an-org" data-org="intestines" data-name="ลำไส้เล็ก & ลำไส้ใหญ่ (Intestines)">
-              <path d="M68 198 Q68 192 90 193 Q112 192 112 198 L109 221 Q90 229 71 221 Z" fill="#f472b6" fill-opacity=".88" stroke="#fbcfe8" stroke-width=".9"/>
-              <path d="M75 203 Q90 199 105 203 M74 210 Q90 214 106 210 M76 217 Q90 221 104 217" fill="none" stroke="#831843" stroke-width="1.5" stroke-linecap="round"/>
-            </g>
-
-            <!-- 💧 กระเพาะปัสสาวะ (Bladder) -->
-            <g class="an-org" data-org="bladder" data-name="กระเพาะปัสสาวะ (Bladder)">
-              <path d="M82 229 Q90 223 98 229 Q98 240 90 244 Q82 240 82 229 Z" fill="#38bdf8" stroke="#e0f2fe" stroke-width=".9"/>
-            </g>
-
-            <!-- 🌸 ระบบสืบพันธุ์ (Reproductive) -->
-            <g class="an-org" data-org="repro" data-name="ระบบสืบพันธุ์ (Repro)">
-              <path d="M81 232 Q90 226 99 232 L94 244 Q90 247 86 244 Z" fill="#f472b6" stroke="#fce7f3" stroke-width=".8"/>
-              <circle cx="77" cy="232" r="3.2" fill="#fbcfe8"/>
-              <circle cx="103" cy="232" r="3.2" fill="#fbcfe8"/>
-            </g>
-          </g>
-        </svg>
-      </div>
+      <div class="anat-stage" id="anatStage"></div>
       <div class="anat-pill"><span class="anat-sys" id="anatSys">Anatomy</span> · <span class="anat-ft" id="anatFt">กำลังอ่าน</span></div>
     </div>`;
   document.body.appendChild(anatHost);
+
+  const IDA_DEFS = `<defs>
+    <linearGradient id="mvIdaL" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f0fdfa" stop-opacity=".95"/><stop offset="100%" stop-color="#99f6e4" stop-opacity=".86"/></linearGradient>
+    <linearGradient id="mvIdaR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5eead4" stop-opacity=".5"/><stop offset="100%" stop-color="#1e5c70" stop-opacity=".55"/></linearGradient>
+    <linearGradient id="mvHat" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#99f6e4"/><stop offset="100%" stop-color="#2dd4bf"/></linearGradient>
+    <linearGradient id="mvWin" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0b1f36" stop-opacity=".9"/><stop offset="100%" stop-color="#061224" stop-opacity=".94"/></linearGradient>
+    <filter id="anDrop" x="-25%" y="-15%" width="150%" height="130%"><feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#020617" flood-opacity=".38"/></filter>
+  </defs>`;
+  const IDA_WINKS = `<g class="anat-winks" aria-hidden="true">
+    <path class="an-wink" d="M38 46 l1.5 4.2 l4.2 1.5 l-4.2 1.5 l-1.5 4.2 l-1.5-4.2 l-4.2-1.5 l4.2-1.5 Z" fill="#fde047"/>
+    <path class="an-wink" d="M168 62 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#5eead4" style="animation-delay:2.2s"/>
+    <path class="an-wink" d="M174 188 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#a5f3fc" style="animation-delay:4.3s"/>
+  </g>`;
+
+  function idaTopShell(innerOrgans, opts = {}) {
+    const bigHead = !!opts.bigHead;
+    const headR = bigHead ? 24 : 15;
+    const headCy = bigHead ? 54 : 40;
+    const hatPts = bigHead ? '105,6 122,33 88,33' : '105,6 118,30 92,30';
+    const cloakTop = bigHead ? 74 : 54;
+    const winTop = bigHead ? 86 : 68;
+    const winMid = bigHead ? 136 : 126;
+    return `
+      <polygon class="anat-shadow" points="105,212 142,223 105,233 68,223" fill="#5eead4" opacity=".22"/>
+      <polygon class="anat-ring" points="105,216 130,223 105,230 80,223" fill="#1e1b4b" opacity=".5" stroke="#5eead4" stroke-opacity=".4" stroke-width=".9"/>
+      <g class="anat-body" filter="url(#anDrop)">
+        <line x1="97" y1="184" x2="97" y2="215" stroke="#cbd5e1" stroke-width="3.6" stroke-linecap="round"/>
+        <line x1="113" y1="184" x2="113" y2="215" stroke="#94a3b8" stroke-width="3.6" stroke-linecap="round"/>
+        <g class="an-org" data-org="skin" data-name="ผิวหนัง (Skin)">
+          <polygon points="105,${cloakTop} 146,188 64,188" fill="url(#mvIdaL)"/>
+          <polygon points="105,${cloakTop} 146,188 105,188" fill="url(#mvIdaR)"/>
+          <circle cx="105" cy="${headCy}" r="${headR}" fill="#f8fafc" stroke="#99f6e4" stroke-opacity=".6" stroke-width="1.1"/>
+          <polygon points="${hatPts}" fill="url(#mvHat)"/>
+          <polygon points="${hatPts.split(' ')[0]} ${hatPts.split(' ')[1]} 105,${bigHead ? 33 : 30}" fill="#0f766e" opacity=".32"/>
+        </g>
+        <polygon points="105,${winTop} 135,${winMid} 105,182 75,${winMid}" fill="url(#mvWin)" stroke="#5eead4" stroke-opacity=".6" stroke-width="1.2"/>
+        ${innerOrgans}
+      </g>`;
+  }
+
+  function anatModeFor(chId) {
+    if (chId === 'b3') return 'neuro';
+    if (chId === 'b4') return 'derm';
+    if (chId === 'b5' || chId === 'kt-msk') return 'msk';
+    if (chId === 'b6' || chId === 'kt-rs') return 'rs';
+    if (chId === 'b7') return 'heart';
+    if (chId === 'b9') return 'renal';
+    if (chId === 'kt-parasit') return 'parasit';
+    return 'default';
+  }
+
+  function idaStageSVG(mode) {
+    if (mode === 'neuro') {
+      const inner = `
+        <g class="an-org" data-org="brain" data-name="สมอง & ไขสันหลัง (CNS)">
+          <path d="M86 52 C84 36 95 31 105 33 C115 31 126 36 124 52 C125 63 117 69 109 67 L101 67 C93 69 85 63 86 52 Z" fill="#fda4af" stroke="#831843" stroke-width=".9"/>
+          <path d="M105 33 v33 M91 44 Q98 38 104 45 M106 45 Q112 38 119 44 M89 53 Q97 59 104 52 M106 52 Q113 59 121 53" fill="none" stroke="#831843" stroke-width="1.15" stroke-linecap="round"/>
+          <path d="M102 66 L108 66 L107 84 L103 84 Z" fill="#fbcfe8"/>
+          <line x1="105" y1="84" x2="105" y2="170" stroke="#c084fc" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M105 108 L90 116 M105 108 L120 116 M105 128 L88 138 M105 128 L122 138 M105 148 L92 156 M105 148 L118 156" stroke="#e9d5ff" stroke-width="1.15" opacity=".88"/>
+        </g>
+        <g class="an-org an-eye-only" data-org="eye" data-name="ตา & เส้นประสาทตา (CN II/III)">
+          <ellipse cx="96" cy="58" rx="3.4" ry="2.2" fill="#38bdf8"/>
+          <ellipse cx="114" cy="58" rx="3.4" ry="2.2" fill="#38bdf8"/>
+        </g>`;
+      return `<svg viewBox="0 0 210 374" aria-hidden="true">${IDA_DEFS}${IDA_WINKS}${idaTopShell(inner, { bigHead: true })}
+        <!-- 🧠 สมอง 2 มุมด้านล่างคู่กัน: ซ้าย Lateral 4 Lobes / ขวา Mid-Sagittal Arbor Vitae -->
+        <g transform="translate(0,296)">
+          <g class="an-org an-sub" data-org="brain" data-name="สมองมุมข้าง (Lateral · 4 Lobes)" transform="translate(52,0) scale(1.06)">
+            <path d="M-38 4 C-40 -18 -20 -28 0 -27 L0 0 Q-20 4 -38 4 Z" fill="#fda4af" stroke="#4c1d95" stroke-width=".9"/>
+            <path d="M0 -27 C18 -27 32 -18 36 -4 L16 2 L0 0 Z" fill="#d8b4fe" stroke="#4c1d95" stroke-width=".9"/>
+            <path d="M36 -4 C40 6 36 16 24 18 L12 8 L16 2 Z" fill="#bef264" stroke="#4c1d95" stroke-width=".9"/>
+            <path d="M-24 6 Q-4 -4 18 4 L14 17 Q-8 20 -24 6 Z" fill="#fcd34d" stroke="#4c1d95" stroke-width=".9"/>
+            <path d="M-30 -6 Q-18 -14 -8 -6 M-24 -16 Q-12 -22 -2 -14 M8 -18 Q18 -12 26 -16 M6 -6 Q16 -2 28 -8 M-14 10 Q0 6 12 12" fill="none" stroke="#581c87" stroke-width="1" stroke-linecap="round" opacity=".68"/>
+            <ellipse cx="18" cy="22" rx="12" ry="7.5" fill="#fb7185" stroke="#881337" stroke-width=".9"/>
+            <path d="M10 21 Q18 18 26 21 M11 24 Q18 22 25 24" fill="none" stroke="#881337" stroke-width=".8"/>
+            <path d="M1 16 L8 16 L7 32 L2 32 Z" fill="#fbcfe8" stroke="#831843" stroke-width=".8"/>
+            <text x="0" y="48" text-anchor="middle" fill="#e9d5ff" font-size="8.5" font-weight="700">Lateral · 4 Lobes</text>
+          </g>
+          <g class="an-org an-sub" data-org="brain" data-name="สมองผ่ากลาง (Mid-Sagittal · Arbor Vitae)" transform="translate(156,0) scale(1.02)">
+            <path d="M-40 6 C-42 -18 -22 -29 0 -28 L-4 -8 Q-24 -6 -40 6 Z" fill="#fda4af" stroke="#701a75" stroke-width=".9"/>
+            <path d="M0 -28 C18 -27 33 -18 38 -2 L20 2 L-4 -8 Z" fill="#d8b4fe" stroke="#701a75" stroke-width=".9"/>
+            <path d="M38 -2 C43 8 37 18 24 18 L14 6 L20 2 Z" fill="#bef264" stroke="#701a75" stroke-width=".9"/>
+            <path d="M-25 2 C-23 -15 10 -17 20 -2 L12 4 C4 -8 -14 -8 -18 4 Z" fill="#fdba74" opacity=".9"/>
+            <path d="M-18 2 C-16 -10 8 -11 16 1 C14 5 8 4 4 0 C-2 -3 -10 -2 -12 5 Z" fill="#fce7f3" stroke="#9d174d" stroke-width=".9"/>
+            <ellipse cx="2" cy="7" rx="9" ry="6" fill="#f472b6" stroke="#831843" stroke-width=".8"/>
+            <circle cx="-4" cy="14" r="2.8" fill="#fde047"/>
+            <circle cx="-10" cy="8" r="2.4" fill="#6366f1"/>
+            <path d="M-2 13 C-8 18 -6 26 0 30 L5 42 L10 41 L7 25 L6 13 Z" fill="#fbcfe8" stroke="#831843" stroke-width=".9"/>
+            <ellipse cx="22" cy="23" rx="13" ry="10.5" fill="#fb7185" stroke="#881337" stroke-width=".9"/>
+            <path d="M12 23 L24 19 M16 22 L26 25 M19 21 L28 16 M18 24 L26 29 M12 23 L20 14" fill="none" stroke="#fff1f2" stroke-width="1.15" stroke-linecap="round"/>
+            <text x="0" y="50" text-anchor="middle" fill="#e9d5ff" font-size="8.5" font-weight="700">Mid-Sagittal</text>
+          </g>
+        </g>
+      </svg>`;
+    }
+    if (mode === 'derm') {
+      const inner = `
+        <g class="an-org an-eye-only" data-org="eye" data-name="ตา & เส้นประสาทตา (Eyes)">
+          <ellipse cx="99" cy="41" rx="3" ry="2" fill="#38bdf8"/>
+          <ellipse cx="111" cy="41" rx="3" ry="2" fill="#38bdf8"/>
+        </g>
+        <g class="an-org" data-org="skin" data-name="ชั้นผิวหนัง (Skin Barrier)" opacity=".7">
+          <path d="M105 76 L128 126 L105 174 L82 126 Z" fill="none" stroke="#5eead4" stroke-width="1.6" stroke-dasharray="3 3"/>
+        </g>`;
+      return `<svg viewBox="0 0 210 374" aria-hidden="true">${IDA_DEFS}${IDA_WINKS}${idaTopShell(inner)}
+        <!-- 🧴👁️ B4 ด้านล่างคู่กัน: ซ้าย ผิวหนังตัดขวาง / ขวา ลูกตาตัดขวาง -->
+        <g transform="translate(0,298)">
+          <!-- ซ้าย: Skin Cross-Section (Epidermis · Dermis · Subcutis + Hair + Sweat gland) -->
+          <g class="an-org an-sub" data-org="skin" data-name="ผิวหนังตัดขวาง (Epidermis · Dermis · Subcutis)" transform="translate(52,0)">
+            <rect x="-40" y="-28" width="80" height="14" rx="4" fill="#fdba74" stroke="#9a3412" stroke-width=".9"/>
+            <path d="M-40 -14 Q-30 -10 -20 -14 Q-10 -10 0 -14 Q10 -10 20 -14 Q30 -10 40 -14 L40 14 L-40 14 Z" fill="#fda4af" stroke="#9f1239" stroke-width=".9"/>
+            <rect x="-40" y="14" width="80" height="20" rx="4" fill="#fde047" stroke="#a16207" stroke-width=".9"/>
+            <!-- Adipose lobules -->
+            <g fill="#fef08a" stroke="#ca8a04" stroke-width=".6">
+              <circle cx="-28" cy="24" r="5"/><circle cx="-14" cy="24" r="5"/><circle cx="0" cy="24" r="5"/><circle cx="14" cy="24" r="5"/><circle cx="28" cy="24" r="5"/>
+            </g>
+            <!-- Hair shaft + follicle + sebaceous gland -->
+            <path d="M-8 -44 Q-4 -26 -10 10" fill="none" stroke="#451a03" stroke-width="3.2" stroke-linecap="round"/>
+            <ellipse cx="-10" cy="10" rx="5.5" ry="7" fill="#78350f"/>
+            <ellipse cx="-2" cy="-2" rx="5" ry="3.5" fill="#fef08a" stroke="#a16207" stroke-width=".7"/>
+            <!-- Sweat gland coil -->
+            <path d="M22 -28 Q20 -12 22 4 Q16 8 24 10 Q18 13 25 12" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+            <!-- Dermal capillaries -->
+            <path d="M-32 10 Q-26 -4 -20 10" fill="none" stroke="#ef4444" stroke-width="1.3"/>
+            <path d="M4 10 Q10 -2 15 10" fill="none" stroke="#3b82f6" stroke-width="1.3"/>
+            <text x="0" y="49" text-anchor="middle" fill="#fed7aa" font-size="8.5" font-weight="700">Skin Layers</text>
+          </g>
+          <!-- ขวา: Eye Cross-Section (Cornea · Iris · Lens · Retina · Optic Nerve) -->
+          <g class="an-org an-sub" data-org="eye" data-name="ลูกตาตัดขวาง (Cornea · Lens · Retina · Optic N.)" transform="translate(156,2)">
+            <!-- Optic nerve exiting right -->
+            <path d="M26 -6 L44 -9 L44 5 L26 6 Z" fill="#fde047" stroke="#a16207" stroke-width=".9"/>
+            <!-- Sclera outer globe -->
+            <circle cx="0" cy="0" r="30" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.4"/>
+            <!-- Retina inner arc (ส้มทอง) -->
+            <path d="M-10 -25 A26 26 0 1 1 -10 25" fill="#38bdf8" fill-opacity=".22" stroke="#f97316" stroke-width="2.6"/>
+            <!-- Cornea dome (ซ้าย) -->
+            <path d="M-24 -16 C-38 -10 -38 10 -24 16" fill="#bae6fd" fill-opacity=".55" stroke="#38bdf8" stroke-width="1.8"/>
+            <!-- Iris & Pupil -->
+            <line x1="-22" y1="-15" x2="-22" y2="-5" stroke="#14b8a6" stroke-width="3.4" stroke-linecap="round"/>
+            <line x1="-22" y1="5" x2="-22" y2="15" stroke="#14b8a6" stroke-width="3.4" stroke-linecap="round"/>
+            <!-- Crystalline Lens -->
+            <ellipse cx="-14" cy="0" rx="5.5" ry="11" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.2"/>
+            <!-- Retinal vessels -->
+            <path d="M28 -2 Q14 -12 4 -18 M28 0 Q14 12 4 18" fill="none" stroke="#ef4444" stroke-width="1.1" opacity=".8"/>
+            <text x="4" y="47" text-anchor="middle" fill="#bae6fd" font-size="8.5" font-weight="700">Eye Anatomy</text>
+          </g>
+        </g>
+      </svg>`;
+    }
+    if (mode === 'msk') {
+      return `<svg viewBox="0 0 180 350" aria-hidden="true">${IDA_DEFS}
+        <polygon class="anat-shadow" points="90,316 136,332 90,346 44,332" fill="#5eead4" opacity=".22"/>
+        <polygon class="anat-ring" points="90,321 122,332 90,342 58,332" fill="#1e1b4b" opacity=".52" stroke="#5eead4" stroke-opacity=".42" stroke-width="1"/>
+        <g class="anat-winks" aria-hidden="true">
+          <path class="an-wink" d="M36 46 l1.5 4.2 l4.2 1.5 l-4.2 1.5 l-1.5 4.2 l-1.5-4.2 l-4.2-1.5 l4.2-1.5 Z" fill="#fde047"/>
+          <path class="an-wink" d="M144 66 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#5eead4" style="animation-delay:2.2s"/>
+          <path class="an-wink" d="M150 202 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#a5f3fc" style="animation-delay:4.3s"/>
+        </g>
+        <g class="anat-body" filter="url(#anDrop)">
+          <line x1="81" y1="268" x2="81" y2="312" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" opacity=".48"/>
+          <line x1="99" y1="268" x2="99" y2="312" stroke="#94a3b8" stroke-width="4" stroke-linecap="round" opacity=".48"/>
+          <g class="an-org" data-org="skin" data-name="ผิวหนัง (Skin)">
+            <polygon points="90,76 146,272 34,272" fill="url(#mvIdaL)" opacity=".88"/>
+            <polygon points="90,76 146,272 90,272" fill="url(#mvIdaR)"/>
+            <circle cx="90" cy="58" r="20" fill="#f8fafc" stroke="#99f6e4" stroke-opacity=".55" stroke-width="1"/>
+            <polygon points="90,6 108,42 72,42" fill="url(#mvHat)"/>
+            <polygon points="90,6 108,42 90,42" fill="#0f766e" opacity=".32"/>
+          </g>
+          <polygon points="90,92 135,176 90,262 45,176" fill="url(#mvWin)" stroke="#5eead4" stroke-opacity=".62" stroke-width="1.4"/>
+          <!-- อวัยวะจาง ๆ ด้านหลังให้เห็นตำแหน่ง -->
+          <path d="M94 134 C93 128 83 129 84 138 C85 148 95 156 100 159 C105 155 110 146 108 137 C106 130 97 130 94 134 Z" fill="#ef4444" opacity=".18"/>
+          <!-- 🦴 โครงกระดูกละเอียดเรืองแสง (Skull · Spine · Clavicle · Sternum · 6 Ribs · Pelvis · Left Arm · Left Leg) -->
+          <g class="an-org" data-org="msk" data-name="โครงกระดูก & กล้ามเนื้อ (Skeleton · MSK)" stroke="#f8fafc" stroke-linecap="round" fill="none">
+            <circle cx="90" cy="56" r="13" stroke="#e2e8f0" stroke-width="1.8"/>
+            <path d="M84 56 h4 M92 56 h4 M87 63 h6" stroke="#94a3b8" stroke-width="1.4"/>
+            <path d="M90 74 v124" stroke="#cbd5e1" stroke-width="2.2" stroke-dasharray="5 3"/>
+            <path d="M58 106 Q74 99 90 104 Q106 99 122 106" stroke-width="2.8"/>
+            <path d="M90 105 v38" stroke="#fff" stroke-width="4.2"/>
+            <path d="M68 112 Q90 119 112 112 M63 120 Q90 128 117 120 M60 128 Q90 137 120 128 M60 137 Q90 146 120 137 M63 146 Q90 154 117 146 M68 155 Q90 162 112 155" stroke-width="1.8"/>
+            <path d="M90 192 C74 190 64 200 66 214 C72 222 84 218 90 210 C96 218 108 222 114 214 C116 200 106 190 90 192 Z" stroke-width="2.2" fill="rgba(248,250,252,.14)"/>
+            <!-- แขนซ้าย -->
+            <circle cx="56" cy="109" r="3.8" fill="#fff" stroke="none"/><line x1="55" y1="113" x2="43" y2="154" stroke-width="3.4"/>
+            <circle cx="42" cy="157" r="3" fill="#cbd5e1" stroke="none"/><line x1="41" y1="160" x2="32" y2="198" stroke-width="2.2"/><line x1="44" y1="160" x2="37" y2="198" stroke="#cbd5e1" stroke-width="1.5"/>
+            <circle cx="33" cy="201" r="2.2" fill="#e2e8f0" stroke="none"/>
+            <!-- ขาซ้าย -->
+            <circle cx="71" cy="215" r="3.8" fill="#fff" stroke="none"/><line x1="72" y1="219" x2="78" y2="266" stroke-width="3.8"/>
+            <circle cx="79" cy="269" r="3.6" fill="#e2e8f0" stroke="#64748b" stroke-width=".8"/><line x1="80" y1="273" x2="81" y2="309" stroke-width="3"/><line x1="75" y1="275" x2="77" y2="308" stroke="#cbd5e1" stroke-width="1.5"/>
+            <ellipse cx="81" cy="312" rx="4.6" ry="2.2" fill="#e2e8f0" stroke="none"/>
+          </g>
+        </g>
+      </svg>`;
+    }
+    if (mode === 'rs') {
+      const inner = `
+        <g class="an-org" data-org="lungs" data-name="ปอด & ทางเดินหายใจ (Lungs · RS)">
+          <line x1="105" y1="80" x2="105" y2="106" stroke="#bae6fd" stroke-width="3.2"/>
+          <path d="M102.5 86 h5 M102.5 91 h5 M102.5 96 h5" stroke="#0284c7" stroke-width=".9"/>
+          <path d="M101 100 C89 99 81 112 82 132 C83 140 94 139 101 132 Z" fill="#fb7185" stroke="#fecdd3" stroke-width=".8"/>
+          <path d="M109 100 C121 99 129 112 128 132 C127 140 116 139 109 132 Z" fill="#f43f5e" stroke="#fecdd3" stroke-width=".8"/>
+        </g>`;
+      return `<svg viewBox="0 0 210 374" aria-hidden="true">${IDA_DEFS}${IDA_WINKS}${idaTopShell(inner)}
+        <!-- 🫁 B6/RS ด้านล่างคู่กัน: ซ้าย ปอด 3/2 กลีบ + หลอดลม / ขวา ถุงลม Alveoli Gas Exchange -->
+        <g transform="translate(0,298)">
+          <!-- ซ้าย: Detailed Lungs (Right 3 Lobes / Left 2 Lobes + Carina) -->
+          <g class="an-org an-sub" data-org="lungs" data-name="ปอดขวา 3 กลีบ / ซ้าย 2 กลีบ + Carina" transform="translate(52,0)">
+            <!-- Trachea + Rings + Carina -->
+            <rect x="-4" y="-44" width="8" height="30" rx="3" fill="#bae6fd" stroke="#0284c7" stroke-width=".9"/>
+            <path d="M-4 -38 h8 M-4 -32 h8 M-4 -26 h8 M-4 -20 h8" stroke="#0369a1" stroke-width="1"/>
+            <path d="M0 -16 L-14 -4 M0 -16 L14 -4" stroke="#bae6fd" stroke-width="4" stroke-linecap="round"/>
+            <!-- Right Lung (ซ้ายมือภาพ = 3 Lobes: Horizontal + Oblique fissures) -->
+            <path d="M-6 -20 C-26 -22 -38 -2 -36 24 C-34 36 -16 36 -6 26 Z" fill="#fb7185" stroke="#fecdd3" stroke-width="1"/>
+            <path d="M-35 2 Q-20 4 -6 0 M-34 18 Q-18 12 -6 4" fill="none" stroke="#881337" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- Left Lung (ขวามือภาพ = 2 Lobes + Cardiac notch) -->
+            <path d="M6 -20 C26 -22 38 -2 36 24 C34 36 18 36 12 26 C14 18 8 14 6 12 Z" fill="#f43f5e" stroke="#fecdd3" stroke-width="1"/>
+            <path d="M35 16 Q20 10 6 0" fill="none" stroke="#881337" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- Bronchial tree hints -->
+            <path d="M-14 -4 L-22 6 M-14 -4 L-18 16 M14 -4 L22 6 M14 -4 L18 16" stroke="#fde68a" stroke-width="1.3" stroke-linecap="round" opacity=".85"/>
+            <text x="0" y="50" text-anchor="middle" fill="#fecdd3" font-size="8.5" font-weight="700">Lungs · 3R / 2L</text>
+          </g>
+          <!-- ขวา: Alveoli + Capillary Gas Exchange -->
+          <g class="an-org an-sub" data-org="lungs" data-name="ถุงลมปอด & แลกเปลี่ยนแก๊ส (Alveoli · O₂/CO₂)" transform="translate(156,0)">
+            <!-- Bronchiole stem -->
+            <path d="M0 -42 L0 -14 M0 -18 L-14 -4 M0 -18 L14 -4" stroke="#bae6fd" stroke-width="5" stroke-linecap="round"/>
+            <!-- Alveolar sacs (พวงองุ่นสีชมพูพาสเทล) -->
+            <g fill="#fda4af" stroke="#ffe4e6" stroke-width="1">
+              <circle cx="-18" cy="2" r="10"/><circle cx="-6" cy="-4" r="10"/><circle cx="8" cy="-4" r="10"/>
+              <circle cx="18" cy="4" r="10"/><circle cx="-16" cy="16" r="10"/><circle cx="0" cy="12" r="11"/>
+              <circle cx="16" cy="18" r="10"/><circle cx="-4" cy="26" r="9"/><circle cx="10" cy="26" r="9"/>
+            </g>
+            <!-- Capillary net (Deoxygenated Blue -> Oxygenated Red) -->
+            <path d="M-30 -6 Q-18 4 -10 16 Q-2 26 8 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M8 24 Q18 18 24 6 Q28 -6 32 -14" fill="none" stroke="#ef4444" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M-20 4 Q0 6 16 14" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="2 2"/>
+            <text x="0" y="50" text-anchor="middle" fill="#bae6fd" font-size="8.5" font-weight="700">Alveoli · O₂/CO₂</text>
+          </g>
+        </g>
+      </svg>`;
+    }
+    if (mode === 'heart') {
+      const inner = `
+        <g class="an-org" data-org="heart" data-name="หัวใจ & หลอดเลือด (Heart · CVS)">
+          <path d="M106 108 Q106 98 113 100 Q116 103 114 110" fill="none" stroke="#f87171" stroke-width="2.6" stroke-linecap="round"/>
+          <line x1="102" y1="101" x2="102" y2="111" stroke="#60a5fa" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M108 110 C107 105 99 106 100 113 C101 120 109 126 113 129 C117 125 121 119 119 112 C118 107 110 107 108 110 Z" fill="#ef4444" stroke="#fecaca" stroke-width=".9"/>
+        </g>`;
+      return `<svg viewBox="0 0 210 380" aria-hidden="true">${IDA_DEFS}${IDA_WINKS}${idaTopShell(inner)}
+        <!-- ❤️ B7 หัวใจ 2 ดวงคู่กันด้านใต้: ซ้าย External / ขวา 4 Chambers + Flow -->
+        <g transform="translate(0,296)">
+          <g class="an-org an-sub" data-org="heart" data-name="หัวใจผิวนอก & โคโรนารี (External)" transform="translate(52,0) scale(.86)">
+            <rect x="-25" y="-56" width="12" height="94" rx="4" fill="#38bdf8"/>
+            <path d="M-25 -36 L-36 -40 M-25 -28 L-36 -30" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+            <rect x="6" y="24" width="11" height="24" rx="3" fill="#b91c1c"/>
+            <path d="M-4 -14 C-14 -46 18 -54 22 -18" fill="none" stroke="#f87171" stroke-width="14" stroke-linecap="round"/>
+            <path d="M-3 -42 L-6 -58 M6 -45 L6 -61 M15 -41 L18 -56" stroke="#f87171" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M-34 -14 L-18 -10 M-34 -6 L-18 -4 M24 -10 L36 -12 M24 -2 L36 -2" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M4 -8 C4 -28 18 -30 34 -26" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+            <path d="M-24 -8 C-30 14 -12 36 16 40 C32 42 40 24 34 2 C28 -16 4 -24 -24 -8 Z" fill="#f87171" stroke="#fecaca" stroke-width="1"/>
+            <path d="M-32 -2 C-34 -22 -14 -30 0 -16 C-8 -6 -16 6 -24 6 C-30 6 -32 2 -32 -2 Z" fill="#fde68a"/>
+            <path d="M18 -16 C28 -18 36 -8 32 4 C24 0 18 -6 18 -16 Z" fill="#fde68a"/>
+            <path d="M12 -8 Q18 10 10 34 M14 6 L26 16 M-10 8 Q-2 18 4 30" fill="none" stroke="#991b1b" stroke-width="1.6" stroke-linecap="round"/>
+            <text x="2" y="60" text-anchor="middle" fill="#fecaca" font-size="9.5" font-weight="700">External</text>
+          </g>
+          <g class="an-org an-sub" data-org="heart" data-name="หัวใจ 4 ห้อง & ทิศทางเลือด (4 Chambers + Flow)" transform="translate(154,0) scale(.86)">
+            <rect x="-25" y="-56" width="12" height="94" rx="4" fill="#38bdf8"/>
+            <rect x="6" y="24" width="11" height="24" rx="3" fill="#b91c1c"/>
+            <path d="M-4 -14 C-14 -46 18 -54 22 -18" fill="none" stroke="#f87171" stroke-width="14" stroke-linecap="round"/>
+            <path d="M-3 -42 L-6 -58 M6 -45 L6 -61 M15 -41 L18 -56" stroke="#f87171" stroke-width="5.5" stroke-linecap="round"/>
+            <path d="M4 -8 C4 -28 18 -30 34 -26" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+            <path d="M-26 -14 C-36 8 -22 36 16 42 C34 44 42 22 36 -2 C30 -22 4 -28 -26 -14 Z" fill="#fecdd3"/>
+            <path d="M-22 -10 C-28 6 -16 28 14 34 C16 26 8 10 4 -6 C-4 -14 -16 -16 -22 -10 Z" fill="#0284c7"/>
+            <path d="M16 -14 C28 -12 34 8 28 28 C20 26 14 14 14 -6 Z" fill="#991b1b"/>
+            <path d="M-12 6 Q-4 2 2 8 M16 2 Q22 -2 28 2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <path d="M-19 -54 L-19 2 Q-12 18 2 14 L8 -20 L32 -26" fill="none" stroke="#0c4a6e" stroke-width="2.2" stroke-linecap="round"/>
+            <polygon points="35,-27 28,-30 29,-22" fill="#0c4a6e"/>
+            <path d="M22 -4 Q24 14 18 20 Q12 4 6 -34 L6 -56" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round"/>
+            <polygon points="6,-60 2,-52 10,-52" fill="#dc2626"/>
+            <text x="4" y="60" text-anchor="middle" fill="#bae6fd" font-size="9.5" font-weight="700">4 Chambers + Flow</text>
+          </g>
+        </g>
+      </svg>`;
+    }
+    if (mode === 'renal') {
+      const inner = `
+        <g class="an-org" data-org="kidneys" data-name="ไต & ต่อมหมวกไต (Kidneys)">
+          <ellipse cx="93" cy="134" rx="5.2" ry="8" fill="#e11d48" stroke="#fecdd3" stroke-width=".8"/>
+          <ellipse cx="117" cy="131" rx="5.2" ry="8" fill="#e11d48" stroke="#fecdd3" stroke-width=".8"/>
+          <path d="M89 125 Q93 121 97 125 Z M113 122 Q117 118 121 122 Z" fill="#fde047"/>
+          <path d="M96 140 L102 160 M114 137 L108 160" stroke="#fde047" stroke-width="1.3"/>
+        </g>
+        <g class="an-org" data-org="bladder" data-name="กระเพาะปัสสาวะ (Bladder)">
+          <path d="M99 160 Q105 156 111 160 Q111 169 105 172 Q99 169 99 160 Z" fill="#38bdf8" stroke="#e0f2fe" stroke-width=".8"/>
+        </g>`;
+      return `<svg viewBox="0 0 210 380" aria-hidden="true">${IDA_DEFS}${IDA_WINKS}${idaTopShell(inner)}
+        <!-- 🔴 B9 ไตใหญ่ 2 ข้างด้านใต้: ซ้าย External / ขวา Cross-Section (ปิรามิดชี้เข้า Calyx ถูกต้อง) -->
+        <g transform="translate(0,298)">
+          <g class="an-org an-sub" data-org="kidneys" data-name="ไตผิวนอก & ต่อมหมวกไต (External)" transform="translate(52,0)">
+            <path d="M-14 -38 Q0 -52 14 -36 Q0 -31 -14 -38 Z" fill="#fde047" stroke="#fef9c3" stroke-width=".9"/>
+            <path d="M12 -6 L38 -6" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M12 4 L38 4" stroke="#3b82f6" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M10 12 Q26 24 28 54" fill="none" stroke="#fde047" stroke-width="3.6" stroke-linecap="round"/>
+            <path d="M-4 -36 C-26 -36 -34 -14 -32 4 C-29 26 -16 40 0 38 C12 37 16 26 14 14 C10 7 10 -7 14 -14 C16 -26 10 -36 -4 -36 Z" fill="#b91c1c" stroke="#fca5a5" stroke-width="1.3"/>
+            <path d="M-20 -18 Q-25 0 -18 20" fill="none" stroke="#fb7185" stroke-width="1.6" opacity=".55" stroke-linecap="round"/>
+            <text x="-4" y="60" text-anchor="middle" fill="#fecdd3" font-size="9" font-weight="700">External</text>
+          </g>
+          <g class="an-org an-sub" data-org="kidneys" data-name="ไตตัดขวาง (Cortex · Pyramids · Calyx · Pelvis)" transform="translate(154,0)">
+            <path d="M-14 -36 Q0 -52 14 -38 Q0 -31 -14 -36 Z" fill="#fde047" stroke="#fef9c3" stroke-width=".9"/>
+            <path d="M4 -36 C26 -36 34 -14 32 4 C29 26 16 40 0 38 C-12 37 -16 26 -14 14 C-10 7 -10 -7 -14 -14 C-16 -26 -10 -36 4 -36 Z" fill="#ea580c" stroke="#7c2d12" stroke-width="1.6"/>
+            <path d="M4 -32 C22 -32 29 -12 27 4 C25 22 14 35 0 33 C-9 32 -12 22 -10 12 C-7 6 -7 -6 -10 -12 C-12 -22 -7 -32 4 -32 Z" fill="#fb923c"/>
+            <g fill="#b91c1c" stroke="#7f1d1d" stroke-width=".7">
+              <path d="M-3 -27 Q4 -30 11 -26 L4 -12 Z"/>
+              <path d="M13 -24 Q22 -18 23 -10 L10 -8 Z"/>
+              <path d="M24 -6 Q26 2 24 9 L11 2 Z"/>
+              <path d="M23 12 Q20 21 13 26 L9 10 Z"/>
+              <path d="M10 28 Q2 32 -5 27 L3 14 Z"/>
+            </g>
+            <path d="M-12 10 Q-22 24 -24 54" fill="none" stroke="#fde047" stroke-width="4.2" stroke-linecap="round"/>
+            <path d="M-12 6 Q-4 2 4 -12 M-10 4 Q0 0 10 -8 M-10 4 Q2 4 11 2 M-10 6 Q0 8 9 10 M-11 8 Q-2 10 3 14" fill="none" stroke="#fef08a" stroke-width="3.2" stroke-linecap="round"/>
+            <path d="M-13 -4 Q-4 -2 -2 6 Q-4 14 -13 14 Q-16 6 -13 -4 Z" fill="#fde047"/>
+            <text x="4" y="60" text-anchor="middle" fill="#fecdd3" font-size="9" font-weight="700">Cross-Section</text>
+          </g>
+        </g>
+      </svg>`;
+    }
+    if (mode === 'parasit') {
+      const inner = `
+        <g class="an-org" data-org="brain" data-name="สมอง (CNS Parasite)">
+          <circle cx="105" cy="40" r="10" fill="#c084fc" stroke="#f5d0fe" stroke-width=".7"/>
+        </g>
+        <g class="an-org" data-org="heart" data-name="เลือด & หัวใจ (Blood Parasite)">
+          <path d="M108 102 C107 98 101 99 102 105 C103 110 108 114 111 116 C114 113 117 109 116 104 C115 100 109 100 108 102 Z" fill="#ef4444"/>
+        </g>
+        <g class="an-org" data-org="liver" data-name="ตับ & ทางเดินน้ำดี (Liver Fluke)">
+          <path d="M86 122 Q98 116 112 123 Q108 132 100 134 Q90 135 87 130 Z" fill="#b45309" stroke="#fdba74" stroke-width=".7"/>
+        </g>
+        <g class="an-org" data-org="spleen" data-name="ม้าม (Malaria · Spleen)">
+          <ellipse cx="122" cy="128" rx="4" ry="7" fill="#a855f7" stroke="#e9d5ff" stroke-width=".7"/>
+        </g>
+        <g class="an-org" data-org="intestines" data-name="ลำไส้ (GI Parasite)">
+          <path d="M90 140 Q105 136 120 140 L118 160 Q105 166 92 160 Z" fill="#f472b6" stroke="#fbcfe8" stroke-width=".8"/>
+          <path d="M95 146 Q105 143 115 146 M95 153 Q105 156 115 153" fill="none" stroke="#831843" stroke-width="1.3" stroke-linecap="round"/>
+        </g>`;
+      return `<svg viewBox="0 0 210 362" aria-hidden="true">${IDA_DEFS}${IDA_WINKS}${idaTopShell(inner)}
+        <!-- 🔬 Parasite ด้านล่าง: เลนส์กล้องจุลทรรศน์ 3 วงพาสเทล (Malaria Ring · Helminth Egg · Nematode) -->
+        <g transform="translate(0,296)">
+          <!-- เลนส์ 1: Malaria Ring Form in RBC -->
+          <g class="an-org an-sub" data-org="heart" data-name="Malaria Ring Form (Blood Smear)" transform="translate(38,0)">
+            <circle cx="0" cy="0" r="25" fill="#0f172a" stroke="#5eead4" stroke-width="2"/>
+            <circle cx="0" cy="0" r="21" fill="#1e1b4b"/>
+            <circle cx="-6" cy="-5" r="9" fill="#fda4af" opacity=".9"/>
+            <circle cx="-6" cy="-5" r="5" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+            <circle cx="-2" cy="-8" r="2" fill="#e11d48"/>
+            <circle cx="8" cy="7" r="8" fill="#fda4af" opacity=".75"/>
+            <circle cx="8" cy="7" r="4" fill="none" stroke="#6366f1" stroke-width="1.3"/>
+            <circle cx="11" cy="5" r="1.8" fill="#e11d48"/>
+            <text x="0" y="38" text-anchor="middle" fill="#fda4af" font-size="8" font-weight="700">Malaria</text>
+          </g>
+          <!-- เลนส์ 2: Helminth Egg -->
+          <g class="an-org an-sub" data-org="intestines" data-name="ไข่พยาธิ (Helminth Egg · Stool Exam)" transform="translate(105,0)">
+            <circle cx="0" cy="0" r="25" fill="#0f172a" stroke="#fde047" stroke-width="2"/>
+            <circle cx="0" cy="0" r="21" fill="#1e293b"/>
+            <ellipse cx="0" cy="0" rx="13" ry="9" fill="#d97706" stroke="#fde68a" stroke-width="1.5" stroke-dasharray="3 1.5"/>
+            <ellipse cx="0" cy="0" rx="8" ry="5" fill="#fef3c7" opacity=".85"/>
+            <circle cx="-2" cy="0" r="2.2" fill="#92400e"/><circle cx="3" cy="-1" r="1.8" fill="#92400e"/>
+            <text x="0" y="38" text-anchor="middle" fill="#fde68a" font-size="8" font-weight="700">Ova / Egg</text>
+          </g>
+          <!-- เลนส์ 3: Nematode / Roundworm -->
+          <g class="an-org an-sub" data-org="liver" data-name="พยาธิตัวกลม/ใบไม้ (Helminth)" transform="translate(172,0)">
+            <circle cx="0" cy="0" r="25" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
+            <circle cx="0" cy="0" r="21" fill="#1e293b"/>
+            <path d="M-12 10 C-14 -4 -2 -14 6 -6 C12 0 4 10 12 12" fill="none" stroke="#fbcfe8" stroke-width="4.2" stroke-linecap="round"/>
+            <path d="M-12 10 C-14 -4 -2 -14 6 -6 C12 0 4 10 12 12" fill="none" stroke="#ec4899" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 2"/>
+            <text x="0" y="38" text-anchor="middle" fill="#fbcfe8" font-size="8" font-weight="700">Helminth</text>
+          </g>
+        </g>
+      </svg>`;
+    }
+    /* Default: Standard Monument Valley Ida with full organs + left arm & leg bones */
+    return `<svg viewBox="0 0 180 342" aria-hidden="true">${IDA_DEFS}
+      <polygon class="anat-shadow" points="90,308 136,324 90,338 44,324" fill="#5eead4" opacity=".22"/>
+      <polygon class="anat-ring" points="90,313 122,324 90,334 58,324" fill="#1e1b4b" opacity=".52" stroke="#5eead4" stroke-opacity=".42" stroke-width="1"/>
+      <g class="anat-winks" aria-hidden="true">
+        <path class="an-wink" d="M38 46 l1.5 4.2 l4.2 1.5 l-4.2 1.5 l-1.5 4.2 l-1.5-4.2 l-4.2-1.5 l4.2-1.5 Z" fill="#fde047"/>
+        <path class="an-wink" d="M144 66 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#5eead4" style="animation-delay:2.2s"/>
+        <path class="an-wink" d="M150 202 l1.4 3.8 l3.8 1.4 l-3.8 1.4 l-1.4 3.8 l-1.4-3.8 l-3.8-1.4 l3.8-1.4 Z" fill="#a5f3fc" style="animation-delay:4.3s"/>
+      </g>
+      <g class="anat-body" filter="url(#anDrop)">
+        <line x1="81" y1="264" x2="81" y2="306" stroke="#cbd5e1" stroke-width="4.2" stroke-linecap="round"/>
+        <line x1="99" y1="264" x2="99" y2="306" stroke="#94a3b8" stroke-width="4.2" stroke-linecap="round"/>
+        <g class="an-org" data-org="skin" data-name="ผิวหนัง (Skin)">
+          <polygon points="90,76 146,268 34,268" fill="url(#mvIdaL)"/>
+          <polygon points="90,76 146,268 90,268" fill="url(#mvIdaR)"/>
+          <circle cx="90" cy="58" r="20" fill="#f8fafc" stroke="#99f6e4" stroke-opacity=".55" stroke-width="1"/>
+          <polygon points="90,6 108,42 72,42" fill="url(#mvHat)"/>
+          <polygon points="90,6 108,42 90,42" fill="#0f766e" opacity=".32"/>
+        </g>
+        <polygon points="90,92 135,176 90,258 45,176" fill="url(#mvWin)" stroke="#5eead4" stroke-opacity=".62" stroke-width="1.4"/>
+        <polygon points="90,97 130,176 90,253 50,176" fill="none" stroke="#a5f3fc" stroke-opacity=".22" stroke-width=".8"/>
+        <g class="an-org" data-org="msk" data-name="กระดูกสำคัญ (ซี่โครง + แขนซ้าย + ขาซ้าย)" stroke="#e2e8f0" stroke-linecap="round" fill="none">
+          <line x1="90" y1="84" x2="90" y2="196" stroke-width="2.8" stroke-dasharray="4 3"/>
+          <path d="M62 110 Q76 103 90 108 Q104 103 118 110" stroke-width="2.6"/>
+          <path d="M90 109 v34" stroke="#f8fafc" stroke-width="3.6"/>
+          <path d="M70 118 Q90 124 110 118 M64 126 Q90 133 116 126 M61 135 Q90 142 119 135 M62 144 Q90 151 118 144 M66 153 Q90 159 114 153 M72 162 Q90 167 108 162" stroke-width="1.7" opacity=".88"/>
+          <circle cx="59" cy="113" r="3.4" fill="#f8fafc" stroke="none"/><line x1="58" y1="116" x2="46" y2="154" stroke="#f8fafc" stroke-width="3.2"/>
+          <circle cx="45" cy="156" r="2.8" fill="#cbd5e1" stroke="none"/><line x1="44" y1="159" x2="36" y2="196" stroke="#f8fafc" stroke-width="2.2"/><line x1="47" y1="159" x2="40" y2="196" stroke="#cbd5e1" stroke-width="1.5"/>
+          <circle cx="37" cy="199" r="2.2" fill="#e2e8f0" stroke="none"/>
+          <path d="M88 196 Q74 202 68 214" stroke="#cbd5e1" stroke-width="2.6"/>
+          <circle cx="69" cy="215" r="3.4" fill="#f8fafc" stroke="none"/><line x1="70" y1="218" x2="77" y2="262" stroke="#f8fafc" stroke-width="3.4"/>
+          <circle cx="78" cy="265" r="3.2" fill="#e2e8f0" stroke="#94a3b8" stroke-width=".7"/><line x1="79" y1="268" x2="80" y2="303" stroke="#f8fafc" stroke-width="2.6"/><line x1="75" y1="270" x2="77" y2="302" stroke="#cbd5e1" stroke-width="1.4"/>
+          <ellipse cx="81" cy="306" rx="4.5" ry="2.1" fill="#e2e8f0" stroke="none"/>
+        </g>
+        <g class="an-org" data-org="brain" data-name="สมอง & ระบบประสาท (CNS)">
+          <path d="M75 56 C74 44 83 41 90 42 C97 41 106 44 105 56 C106 63 100 68 94 67 L86 67 C80 68 74 63 75 56 Z" fill="#c084fc" stroke="#f5d0fe" stroke-width=".9"/>
+          <path d="M80 51 Q85 47 90 51 Q95 47 100 51 M78 57 Q84 61 90 57 Q96 61 102 57 M90 43 v22" fill="none" stroke="#581c87" stroke-width="1.15" stroke-linecap="round" opacity=".72"/>
+          <ellipse cx="97" cy="68" rx="5.5" ry="3.6" fill="#a855f7" stroke="#f5d0fe" stroke-width=".7"/>
+          <path d="M88 66 L92 66 L91.5 96 L88.5 96 Z" fill="#d8b4fe"/>
+        </g>
+        <g class="an-org an-eye-only" data-org="eye" data-name="ตา & เส้นประสาทตา (Eyes)">
+          <ellipse cx="83" cy="60" rx="3.2" ry="2" fill="#38bdf8"/><ellipse cx="97" cy="60" rx="3.2" ry="2" fill="#38bdf8"/>
+        </g>
+        <g class="an-org" data-org="thyroid" data-name="ต่อมไทรอยด์ (Thyroid)">
+          <path d="M81 98 Q85 93 90 99 Q95 93 99 98 Q99 106 90 104 Q81 106 81 98 Z" fill="#fbbf24" stroke="#fef08a" stroke-width=".8"/>
+        </g>
+        <g class="an-org" data-org="lungs" data-name="ปอด & ทางเดินหายใจ (Lungs)">
+          <line x1="90" y1="98" x2="90" y2="128" stroke="#bae6fd" stroke-width="3.4"/>
+          <path d="M87.5 104 h5 M87.5 109 h5 M87.5 114 h5 M87.5 119 h5" stroke="#0284c7" stroke-width=".9"/>
+          <path d="M86 122 C73 121 63 136 64 157 C65 166 78 165 86 157 Z" fill="#fb7185" stroke="#fecdd3" stroke-width=".8"/>
+          <path d="M94 122 C107 121 117 136 116 157 C115 166 102 165 94 157 Z" fill="#f43f5e" stroke="#fecdd3" stroke-width=".8"/>
+          <path d="M68 144 Q77 146 84 142 M112 146 Q104 148 96 144" fill="none" stroke="#9f1239" stroke-width="1" opacity=".55"/>
+        </g>
+        <g class="an-org" data-org="heart" data-name="หัวใจ & หลอดเลือด (Heart)">
+          <path d="M91 131 Q91 118 99 121 Q103 124 101 133" fill="none" stroke="#f87171" stroke-width="3" stroke-linecap="round"/>
+          <line x1="87" y1="122" x2="87" y2="134" stroke="#60a5fa" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M94 134 C93 128 83 129 84 138 C85 148 95 156 100 159 C105 155 110 146 108 137 C106 130 97 130 94 134 Z" fill="#ef4444" stroke="#fecaca" stroke-width=".9"/>
+        </g>
+        <g class="an-org" data-org="liver" data-name="ตับ & ทางเดินน้ำดี (Liver)">
+          <path d="M62 164 Q76 156 97 165 Q91 178 82 181 Q68 183 63 176 Z" fill="#b45309" stroke="#fdba74" stroke-width=".8"/>
+          <path d="M80 161 L78 179" stroke="#78350f" stroke-width="1.1" opacity=".6"/>
+          <ellipse cx="75" cy="181" rx="4.2" ry="2.8" fill="#4ade80" stroke="#dcfce7" stroke-width=".7"/>
+        </g>
+        <g class="an-org" data-org="stomach" data-name="กระเพาะอาหาร (Stomach)">
+          <path d="M92 158 C105 156 114 166 113 177 C112 188 97 192 88 186 C83 182 86 175 91 172 C94 170 91 163 92 158 Z" fill="#fb923c" stroke="#fed7aa" stroke-width=".9"/>
+        </g>
+        <g class="an-org" data-org="spleen" data-name="ม้าม (Spleen)">
+          <ellipse cx="116" cy="173" rx="4.8" ry="8.5" fill="#a855f7" stroke="#e9d5ff" stroke-width=".8"/>
+        </g>
+        <g class="an-org" data-org="pancreas" data-name="ตับอ่อน (Pancreas)">
+          <path d="M80 187 Q94 182 110 185 Q111 193 95 194 Q82 195 80 187 Z" fill="#facc15" stroke="#fef9c3" stroke-width=".8"/>
+          <path d="M83 189 Q96 187 107 188" fill="none" stroke="#a16207" stroke-width="1"/>
+        </g>
+        <g class="an-org" data-org="kidneys" data-name="ไต & ต่อมหมวกไต (Kidneys)">
+          <ellipse cx="73" cy="197" rx="5.5" ry="8.5" fill="#e11d48" stroke="#fecdd3" stroke-width=".8"/>
+          <ellipse cx="107" cy="194" rx="5.5" ry="8.5" fill="#e11d48" stroke="#fecdd3" stroke-width=".8"/>
+          <path d="M68 188 Q73 183 78 188 Z M102 185 Q107 180 112 185 Z" fill="#fde047"/>
+          <path d="M77 202 Q82 216 86 228 M103 199 Q98 216 94 228" fill="none" stroke="#fde047" stroke-width="1.3" opacity=".8"/>
+        </g>
+        <g class="an-org" data-org="intestines" data-name="ลำไส้เล็ก & ลำไส้ใหญ่ (Intestines)">
+          <path d="M68 198 Q68 192 90 193 Q112 192 112 198 L109 221 Q90 229 71 221 Z" fill="#f472b6" fill-opacity=".88" stroke="#fbcfe8" stroke-width=".9"/>
+          <path d="M75 203 Q90 199 105 203 M74 210 Q90 214 106 210 M76 217 Q90 221 104 217" fill="none" stroke="#831843" stroke-width="1.5" stroke-linecap="round"/>
+        </g>
+        <g class="an-org" data-org="bladder" data-name="กระเพาะปัสสาวะ (Bladder)">
+          <path d="M82 229 Q90 223 98 229 Q98 240 90 244 Q82 240 82 229 Z" fill="#38bdf8" stroke="#e0f2fe" stroke-width=".9"/>
+        </g>
+        <g class="an-org" data-org="repro" data-name="ระบบสืบพันธุ์ (Repro)">
+          <path d="M81 232 Q90 226 99 232 L94 244 Q90 247 86 244 Z" fill="#f472b6" stroke="#fce7f3" stroke-width=".8"/>
+          <circle cx="77" cy="232" r="3.2" fill="#fbcfe8"/><circle cx="103" cy="232" r="3.2" fill="#fbcfe8"/>
+        </g>
+      </g>
+    </svg>`;
+  }
+
+  function bindAnatomyClicks() {
+    anatHost.querySelectorAll('.an-org').forEach(g => {
+      g.style.cursor = 'pointer';
+      g.addEventListener('click', () => { if (g.dataset.name) toast(`🧬 ${g.dataset.name}`); });
+    });
+  }
 
   function resolveOrgans(chId, sec, pg) {
     const txt = `${sec ? sec.title : ''} ${pg ? pg.title : ''}`.toLowerCase();
@@ -6368,8 +6691,16 @@
     document.body.classList.toggle('anat-open', enabled && !S.anatHidden);
     if (!enabled) return;
     const collapsed = !!S.anatHidden;
-    $('#anatDock', anatHost).hidden = collapsed;
+    const dock = $('#anatDock', anatHost);
+    dock.hidden = collapsed;
     $('#anatTab', anatHost).hidden = !collapsed;
+    const mode = anatModeFor(_anatCur.chId);
+    if (_anatMode !== mode) {
+      _anatMode = mode;
+      $('#anatStage', anatHost).innerHTML = idaStageSVG(mode);
+      dock.classList.toggle('is-wide', mode !== 'default' && mode !== 'msk');
+      bindAnatomyClicks();
+    }
     const res = resolveOrgans(_anatCur.chId, _anatCur.sec, _anatCur.pg);
     $('#anatSys', anatHost).textContent = res.label;
     $('#anatFt', anatHost).textContent = `${chTitle(_anatCur.chId)} · กล่อง ${_anatCur.sec.no}`;
@@ -6384,10 +6715,6 @@
   }
   $('#anatHide', anatHost).onclick = () => { S.anatHidden = true; save(); syncAnatomyUI(); };
   $('#anatTab', anatHost).onclick = () => { S.anatHidden = false; save(); syncAnatomyUI(); };
-  anatHost.querySelectorAll('.an-org').forEach(g => {
-    g.style.cursor = 'pointer';
-    g.addEventListener('click', () => { if (g.dataset.name) toast(`🧬 ${g.dataset.name}`); });
-  });
   addEventListener('hashchange', () => setTimeout(syncAnatomyUI, 45));
   _onOwnerChange.push(() => syncAnatomyUI());
 
